@@ -1,154 +1,43 @@
-.class public final enum Lf55;
-.super Ljava/lang/Enum;
+.class public final Lf55;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt0c;
 
+# instance fields
+.field public final a:Lfwc;
 
-# static fields
-.field public static final enum a:Lf55;
+.field public final b:J
 
-.field public static final synthetic b:[Lf55;
+.field public final c:Lyid;
+
+.field public final d:Lzid;
+
+.field public e:J
+
+.field public f:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JLzid;Lfwc;)V
+    .locals 2
 
-    new-instance v0, Lf55;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "INSTANCE"
+    const-wide/16 v0, 0x0
 
-    const/4 v2, 0x0
+    iput-wide v0, p0, Lf55;->e:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-wide v0, p0, Lf55;->f:J
 
-    sput-object v0, Lf55;->a:Lf55;
+    iput-wide p1, p0, Lf55;->b:J
 
-    filled-new-array {v0}, [Lf55;
+    iget-object p1, p3, Lzid;->b:Lyid;
 
-    move-result-object v0
+    iput-object p1, p0, Lf55;->c:Lyid;
 
-    sput-object v0, Lf55;->b:[Lf55;
+    iput-object p3, p0, Lf55;->d:Lzid;
 
-    return-void
-.end method
-
-.method public static a(Ljne;)V
-    .locals 1
-
-    sget-object v0, Lf55;->a:Lf55;
-
-    invoke-interface {p0, v0}, Ljne;->d(Llne;)V
-
-    invoke-interface {p0}, Ljne;->b()V
+    iput-object p4, p0, Lf55;->a:Lfwc;
 
     return-void
-.end method
-
-.method public static b(Ljava/lang/Throwable;Ljne;)V
-    .locals 1
-
-    sget-object v0, Lf55;->a:Lf55;
-
-    invoke-interface {p1, v0}, Ljne;->d(Llne;)V
-
-    invoke-interface {p1, p0}, Ljne;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lf55;
-    .locals 1
-
-    const-class v0, Lf55;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lf55;
-
-    return-object p0
-.end method
-
-.method public static values()[Lf55;
-    .locals 1
-
-    sget-object v0, Lf55;->b:[Lf55;
-
-    invoke-virtual {v0}, [Lf55;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lf55;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final cancel()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final clear()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(J)V
-    .locals 0
-
-    invoke-static {p1, p2}, Lnne;->d(J)Z
-
-    return-void
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Should not be called!"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final q(I)I
-    .locals 0
-
-    const/4 p0, 0x2
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "EmptySubscription"
-
-    return-object p0
 .end method

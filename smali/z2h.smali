@@ -1,31 +1,41 @@
-.class public abstract Lz2h;
+.class public final Lz2h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final b:Ljava/lang/String;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget-object v0, Lnig;->a:Ljava/lang/String;
 
-    const/16 v1, 0x1f
+    const/16 v0, 0x24
 
-    if-lt v0, v1, :cond_0
+    const/4 v1, 0x0
 
-    const/high16 v0, 0x2000000
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    const/4 v0, 0x0
+    sput-object v0, Lz2h;->b:Ljava/lang/String;
 
-    :goto_0
-    sput v0, Lz2h;->a:I
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz2h;->a:Ljava/lang/String;
 
     return-void
 .end method

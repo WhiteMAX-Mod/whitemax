@@ -3,22 +3,19 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc6;
+.implements Lhh3;
+.implements Lsr3;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lrkd;
+.field public final synthetic a:Lr6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrkd;I)V
+.method public synthetic constructor <init>(Lr6;)V
     .locals 0
 
-    iput p2, p0, Lqkd;->a:I
-
-    iput-object p1, p0, Lqkd;->b:Lrkd;
+    iput-object p1, p0, Lqkd;->a:Lr6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,36 +24,26 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public accept(Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Lqkd;->a:I
+    check-cast p1, Lccg;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lqkd;->a:Lr6;
 
-    iget-object p0, p0, Lqkd;->b:Lrkd;
-
-    invoke-virtual {p0}, Lrkd;->x()V
+    invoke-interface {p1}, Lr6;->run()V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object p0, p0, Lqkd;->b:Lrkd;
+.method public c(Lyg3;)V
+    .locals 1
 
-    invoke-virtual {p0}, Lckd;->q()Lo0f;
+    iget-object v0, p0, Lqkd;->a:Lr6;
 
-    move-result-object v0
+    invoke-interface {v0}, Lr6;->run()V
 
-    iget-wide v1, p0, Lrkd;->b:J
-
-    invoke-virtual {v0, v1, v2}, Lo0f;->c(J)V
+    invoke-virtual {p1}, Lyg3;->b()V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

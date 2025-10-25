@@ -1,69 +1,165 @@
 .class public final Lf81;
-.super Lcb4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbw1;
 
-# static fields
-.field public static final b:Lf81;
 
-.field public static final c:Lxa4;
+# instance fields
+.field public final a:Lrla;
 
-.field public static final d:Lxa4;
-
-.field public static final e:Lxa4;
+.field public final b:Lwif;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Liu7;Liu7;Liu7;Lrla;Liu7;Liu7;Liu7;Liu7;)V
+    .locals 9
 
-    new-instance v0, Lf81;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lcb4;-><init>()V
+    iput-object p4, p0, Lf81;->a:Lrla;
 
-    sput-object v0, Lf81;->b:Lf81;
+    new-instance v0, La81;
 
-    const/4 v6, 0x0
+    move-object v1, p0
 
-    new-array v2, v6, [Ljava/lang/String;
+    move-object v2, p1
 
-    const/16 v5, 0xe
+    move-object v7, p2
 
-    const/4 v4, 0x0
+    move-object v3, p3
 
-    const-string v1, ":calls-history"
+    move-object v8, p5
+
+    move-object v4, p6
+
+    move-object/from16 v5, p7
+
+    move-object/from16 v6, p8
+
+    invoke-direct/range {v0 .. v8}, La81;-><init>(Lf81;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
+
+    new-instance p1, Lwif;
+
+    invoke-direct {p1, v0}, Lwif;-><init>(Lji6;)V
+
+    iput-object p1, p0, Lf81;->b:Lwif;
+
+    return-void
+.end method
+
+.method public static b(Lorg/json/JSONObject;)Lci1;
+    .locals 4
+
+    new-instance v0, Lci1;
+
+    invoke-direct {v0}, Lci1;-><init>()V
+
+    const-string v1, "mab"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v2
 
     const/4 v3, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    if-eqz v2, :cond_0
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    sput-object v1, Lf81;->c:Lxa4;
+    goto :goto_0
 
-    new-array v2, v6, [Ljava/lang/String;
+    :cond_0
+    move-object v1, v3
 
-    const-string v1, ":call-history-info"
+    :goto_0
+    if-eqz v1, :cond_1
 
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    mul-int/lit16 v1, v1, 0x3e8
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    sput-object v1, Lf81;->d:Lxa4;
+    goto :goto_1
 
-    const-string v1, "chat_id"
+    :cond_1
+    move-object v1, v3
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    :goto_1
+    iput-object v1, v0, Lci1;->d:Ljava/lang/Integer;
 
-    move-result-object v2
+    const-string v1, "nl"
 
-    const-string v1, ":call-presettings"
+    invoke-static {p0, v1}, Lgai;->c(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Boolean;
 
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    move-result-object v1
 
-    move-result-object v0
+    iput-object v1, v0, Lci1;->a:Ljava/lang/Boolean;
 
-    sput-object v0, Lf81;->e:Lxa4;
+    const-string v1, "dlb"
 
-    return-void
+    invoke-static {p0, v1}, Lgai;->c(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lci1;->c:Ljava/lang/Boolean;
+
+    const-string v1, "df"
+
+    invoke-static {p0, v1}, Lgai;->c(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lci1;->b:Ljava/lang/Boolean;
+
+    const-string v1, "dsb"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    goto :goto_2
+
+    :cond_2
+    move-object p0, v3
+
+    :goto_2
+    if-eqz p0, :cond_3
+
+    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+
+    move-result p0
+
+    mul-int/lit16 p0, p0, 0x3e8
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    :cond_3
+    iput-object v3, v0, Lci1;->e:Ljava/lang/Integer;
+
+    return-object v0
 .end method

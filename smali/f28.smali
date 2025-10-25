@@ -1,48 +1,72 @@
 .class public final Lf28;
-.super Ljx3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/AbsListView$OnScrollListener;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lyf7;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Lg28;
 
 
 # direct methods
-.method public constructor <init>(Lyf7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lg28;)V
     .locals 0
 
-    iput-object p1, p0, Lf28;->Y:Lyf7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lf28;->a:Lg28;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onScroll(Landroid/widget/AbsListView;III)V
+    .locals 0
 
-    iput-object p1, p0, Lf28;->o:Ljava/lang/Object;
+    return-void
+.end method
 
-    iget p1, p0, Lf28;->X:I
+.method public final onScrollStateChanged(Landroid/widget/AbsListView;I)V
+    .locals 2
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Lf28;->a:Lg28;
 
-    or-int/2addr p1, v0
+    iget-object v0, p1, Lg28;->A0:Le28;
 
-    iput p1, p0, Lf28;->X:I
+    const/4 v1, 0x1
 
-    iget-object p1, p0, Lf28;->Y:Lyf7;
+    if-ne p2, v1, :cond_1
 
-    const/4 v0, 0x0
+    iget-object p2, p1, Lg28;->I0:Luo;
 
-    invoke-virtual {p1, v0, p0}, Lyf7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/widget/PopupWindow;->getInputMethodMode()I
 
-    move-result-object p0
+    move-result p2
 
-    return-object p0
+    const/4 v1, 0x2
+
+    if-ne p2, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object p2, p1, Lg28;->I0:Luo;
+
+    invoke-virtual {p2}, Landroid/widget/PopupWindow;->getContentView()Landroid/view/View;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
+
+    iget-object p1, p1, Lg28;->E0:Landroid/os/Handler;
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v0}, Le28;->run()V
+
+    :cond_1
+    return-void
 .end method

@@ -1,70 +1,15 @@
 .class public final Lby9;
-.super Lsxe;
+.super Lmmf;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:Lt72;
-
-
-# direct methods
-.method public constructor <init>(Lt39;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lsxe;-><init>(Lt39;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final c(Lt39;Ljava/lang/String;)V
+.method public final P()S
     .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v0, Lm8b;->c:Ln9a;
 
-    const-string v0, "chat"
+    const/16 v0, 0x41
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lt39;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lt72;->a(Lt39;)Lt72;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lby9;->c:Lt72;
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    iget-object p0, p0, Lby9;->c:Lt72;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "{chat="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return v0
 .end method

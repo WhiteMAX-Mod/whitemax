@@ -1,97 +1,181 @@
-.class public final enum Lub2;
-.super Ljava/lang/Enum;
+.class public final Lub2;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final synthetic X:[Lub2;
 
-.field public static final enum a:Lub2;
+# instance fields
+.field public X:I
 
-.field public static final enum b:Lub2;
-
-.field public static final enum c:Lub2;
-
-.field public static final enum o:Lub2;
+.field public final synthetic Y:Llc2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Llc2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lub2;
+    iput-object p1, p0, Lub2;->Y:Llc2;
 
-    const-string v1, "DIALOG"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lub2;->a:Lub2;
-
-    new-instance v1, Lub2;
-
-    const-string v2, "CHAT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lub2;->b:Lub2;
-
-    new-instance v2, Lub2;
-
-    const-string v3, "CHANNEL"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lub2;->c:Lub2;
-
-    new-instance v3, Lub2;
-
-    const-string v4, "GROUP_CHAT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lub2;->o:Lub2;
-
-    filled-new-array {v0, v1, v2, v3}, [Lub2;
-
-    move-result-object v0
-
-    sput-object v0, Lub2;->X:[Lub2;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lub2;
-    .locals 1
 
-    const-class v0, Lub2;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lq54;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lub2;
+    invoke-virtual {p0, p1, p2}, Lub2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lub2;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lub2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lub2;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Lub2;->X:[Lub2;
+    new-instance p1, Lub2;
 
-    invoke-virtual {v0}, [Lub2;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lub2;->Y:Llc2;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Lub2;-><init>(Llc2;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lub2;
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
+
+    iget v0, p0, Lub2;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lub2;->Y:Llc2;
+
+    iget-object v0, p1, Lh72;->f:Lnje;
+
+    new-instance v2, Ll2c;
+
+    sget-object v3, Llc2;->B:[Ltr7;
+
+    invoke-static {}, Lob3;->b()Lu18;
+
+    move-result-object v3
+
+    iget-object p1, p1, Lh72;->i:Lx0f;
+
+    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lw72;
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p1, Lw72;->b:Lv72;
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_0
+    sget-object v4, Lv72;->b:Lv72;
+
+    if-ne p1, v4, :cond_3
+
+    new-instance v5, Lj14;
+
+    sget v6, Lrza;->A0:I
+
+    sget p1, Luza;->y1:I
+
+    new-instance v7, Lorf;
+
+    invoke-direct {v7, p1}, Lorf;-><init>(I)V
+
+    sget p1, Lw0b;->V:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    sget p1, Lpjd;->K1:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    sget p1, Lw0b;->Q:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    invoke-direct/range {v5 .. v10}, Lj14;-><init>(ILtrf;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
+
+    invoke-virtual {v3, v5}, Lu18;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    invoke-static {v3}, Lob3;->a(Ljava/util/List;)Lu18;
+
+    move-result-object p1
+
+    invoke-direct {v2, p1}, Ll2c;-><init>(Lu18;)V
+
+    iput v1, p0, Lub2;->X:I
+
+    invoke-virtual {v0, v2, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_4
 
     return-object v0
+
+    :cond_4
+    :goto_1
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

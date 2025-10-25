@@ -1,192 +1,286 @@
-.class public final Ln0;
+.class public final synthetic Ln0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwpe;
+.implements Ljava/util/function/ToIntFunction;
 
 
 # instance fields
-.field public final synthetic a:Lvv4;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:I
-
-.field public final synthetic e:Lo0;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lo0;Lvv4;Ljava/lang/String;Ljava/lang/Object;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Ln0;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ln0;->e:Lo0;
-
-    iput-object p2, p0, Ln0;->a:Lvv4;
-
-    iput-object p3, p0, Ln0;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Ln0;->c:Ljava/lang/Object;
-
-    iput p5, p0, Ln0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 8
-
-    iget-object v0, p0, Ln0;->e:Lo0;
-
-    iget-object v1, p0, Ln0;->a:Lvv4;
-
-    iget-object v7, p0, Ln0;->b:Ljava/lang/String;
-
-    iget-object v2, p0, Ln0;->c:Ljava/lang/Object;
-
-    iget p0, p0, Ln0;->d:I
-
-    check-cast v0, Lfbb;
-
-    move-object v3, v2
-
-    check-cast v3, Li27;
-
-    iget-object v2, v0, Lfbb;->m:Lv17;
-
-    invoke-static {p0}, Lmw1;->t(I)I
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    const/4 v4, 0x1
-
-    if-eq v0, v4, :cond_4
-
-    const/4 v4, 0x2
-
-    if-ne v0, v4, :cond_0
-
-    sget-object p0, Lh27;->o:Lh27;
-
-    :goto_0
-    move-object v5, p0
-
-    goto :goto_2
-
-    :cond_0
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Cache level"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v2, 0x1
-
-    if-eq p0, v2, :cond_3
-
-    const/4 v2, 0x2
-
-    if-eq p0, v2, :cond_2
-
-    const/4 v2, 0x3
-
-    if-eq p0, v2, :cond_1
-
-    const-string p0, "null"
-
-    goto :goto_1
-
-    :cond_1
-    const-string p0, "BITMAP_MEMORY_CACHE"
-
-    goto :goto_1
-
-    :cond_2
-    const-string p0, "DISK_CACHE"
-
-    goto :goto_1
-
-    :cond_3
-    const-string p0, "FULL_FETCH"
-
-    :goto_1
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "is not supported. "
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_4
-    sget-object p0, Lh27;->c:Lh27;
-
-    goto :goto_0
-
-    :cond_5
-    sget-object p0, Lh27;->b:Lh27;
-
-    goto :goto_0
-
-    :goto_2
-    instance-of p0, v1, Lebb;
-
-    if-eqz p0, :cond_6
-
-    check-cast v1, Lebb;
-
-    monitor-enter v1
-
-    monitor-exit v1
-
-    :cond_6
-    const/4 v4, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-virtual/range {v2 .. v7}, Lv17;->b(Li27;Ljava/lang/Object;Lh27;Ljy;Ljava/lang/String;)Lh0;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final applyAsInt(Ljava/lang/Object;)I
     .locals 2
 
-    invoke-static {p0}, Lkua;->L(Ljava/lang/Object;)Lpv7;
+    iget v0, p0, Ln0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Leic;
+
+    invoke-virtual {p1}, Leic;->c()I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    check-cast p1, Leic;
+
+    check-cast p1, Ln9f;
+
+    iget p1, p1, Ln9f;->o:I
+
+    return p1
+
+    :pswitch_1
+    check-cast p1, Lfic;
+
+    iget-object p1, p1, Lfic;->c:Ljava/util/ArrayList;
+
+    invoke-interface {p1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+
+    move-result-object p1
+
+    new-instance v0, Lpc8;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1}, Lpc8;-><init>(I)V
+
+    invoke-interface {p1, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+
+    move-result-object p1
+
+    new-instance v0, Ln0;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Ln0;-><init>(I)V
+
+    invoke-interface {p1, v0}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/stream/IntStream;->sum()I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_2
+    check-cast p1, Leic;
+
+    invoke-virtual {p1}, Leic;->c()I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_3
+    check-cast p1, Leic;
+
+    invoke-virtual {p1}, Leic;->c()I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_4
+    check-cast p1, Lnxf;
+
+    sget-object v0, Les7;->c:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_5
+    check-cast p1, [B
+
+    array-length p1, p1
+
+    return p1
+
+    :pswitch_6
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object p0, p0, Ln0;->c:Ljava/lang/Object;
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result-object p0
+    move-result v0
 
-    const-string v1, "request"
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, p0, v1}, Lpv7;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object p1
 
-    invoke-virtual {v0}, Lpv7;->toString()Ljava/lang/String;
+    check-cast p1, Ljava/lang/String;
 
-    move-result-object p0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    return-object p0
+    move-result p1
+
+    add-int/2addr p1, v0
+
+    return p1
+
+    :pswitch_7
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_8
+    check-cast p1, Lq83;
+
+    iget-object p1, p1, Lq83;->a:[B
+
+    array-length p1, p1
+
+    add-int/lit8 p1, p1, 0x1
+
+    return p1
+
+    :pswitch_9
+    check-cast p1, Lr83;
+
+    iget-object p1, p1, Lr83;->a:[B
+
+    array-length p1, p1
+
+    add-int/lit8 p1, p1, 0x6
+
+    return p1
+
+    :pswitch_a
+    check-cast p1, Ljk5;
+
+    invoke-virtual {p1}, Ljk5;->a()[B
+
+    move-result-object p1
+
+    array-length p1, p1
+
+    return p1
+
+    :pswitch_b
+    check-cast p1, [B
+
+    array-length p1, p1
+
+    return p1
+
+    :pswitch_c
+    check-cast p1, Ljavax/security/auth/x500/X500Principal;
+
+    invoke-virtual {p1}, Ljavax/security/auth/x500/X500Principal;->getEncoded()[B
+
+    move-result-object p1
+
+    array-length p1, p1
+
+    return p1
+
+    :pswitch_d
+    check-cast p1, Ljava/lang/String;
+
+    const-string v0, "UTF-8"
+
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p1
+
+    array-length p1, p1
+
+    return p1
+
+    :pswitch_e
+    check-cast p1, Lfic;
+
+    invoke-virtual {p1}, Lfic;->o()I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_f
+    check-cast p1, Lfic;
+
+    invoke-virtual {p1}, Lfic;->o()I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_10
+    check-cast p1, Lfic;
+
+    invoke-virtual {p1}, Lfic;->o()I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

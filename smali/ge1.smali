@@ -1,22 +1,110 @@
-.class public abstract Lge1;
+.class public final Lge1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lts7;
+.implements Lie1;
 
 
-# instance fields
-.field public final a:Lv7g;
+# static fields
+.field public static final a:Lge1;
+
+.field public static final b:J
+
+.field public static final c:Lorf;
+
+.field public static final d:Ljqa;
 
 
 # direct methods
-.method public constructor <init>(Lv7g;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lge1;
 
-    iput-object p1, p0, Lge1;->a:Lv7g;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lge1;->a:Lge1;
+
+    sget-wide v0, Lara;->f:J
+
+    sput-wide v0, Lge1;->b:J
+
+    sget v0, Lcra;->k:I
+
+    new-instance v1, Lorf;
+
+    invoke-direct {v1, v0}, Lorf;-><init>(I)V
+
+    sput-object v1, Lge1;->c:Lorf;
+
+    sget-object v0, Ljqa;->a:Ljqa;
+
+    sput-object v0, Lge1;->d:Ljqa;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljqa;
+    .locals 1
+
+    sget-object v0, Lge1;->d:Ljqa;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lge1;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lge1;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lorf;
+    .locals 1
+
+    sget-object v0, Lge1;->c:Lorf;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x38c47456
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "StartCall"
+
+    return-object v0
 .end method

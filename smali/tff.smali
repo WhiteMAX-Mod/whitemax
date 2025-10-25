@@ -1,23 +1,56 @@
-.class public final Ltff;
+.class public final synthetic Ltff;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:[B
+.field public final synthetic b:Lnp4;
 
 
 # direct methods
-.method public constructor <init>([BLjava/lang/String;)V
+.method public synthetic constructor <init>(Lnp4;I)V
     .locals 0
+
+    iput p2, p0, Ltff;->a:I
+
+    iput-object p1, p0, Ltff;->b:Lnp4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ltff;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p1, p0, Ltff;->b:[B
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Ltff;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ltff;->b:Lnp4;
+
+    invoke-virtual {v0}, Lnp4;->b()V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ltff;->b:Lnp4;
+
+    invoke-virtual {v0}, Lnp4;->a()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

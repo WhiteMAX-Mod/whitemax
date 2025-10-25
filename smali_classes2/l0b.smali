@@ -1,496 +1,289 @@
-.class public final synthetic Ll0b;
-.super Ljava/lang/Object;
+.class public final Ll0b;
+.super Lrdi;
 .source "SourceFile"
-
-# interfaces
-.implements Lqm3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:Ly0b;
-
-.field public final synthetic c:Lorg/webrtc/SessionDescription;
+.field public final synthetic o:Lm0b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly0b;Lorg/webrtc/SessionDescription;I)V
+.method public constructor <init>(Lm0b;I)V
     .locals 0
 
-    iput p3, p0, Ll0b;->a:I
+    iput p2, p0, Ll0b;->c:I
 
-    iput-object p1, p0, Ll0b;->b:Ly0b;
+    iput-object p1, p0, Ll0b;->o:Lm0b;
 
-    iput-object p2, p0, Ll0b;->c:Lorg/webrtc/SessionDescription;
+    const/16 p1, 0xc
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    packed-switch p2, :pswitch_data_0
 
-    return-void
-.end method
+    sget-object p2, Ld0b;->a:Ld0b;
 
-
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 9
-
-    iget v0, p0, Ll0b;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ll0b;->b:Ly0b;
-
-    iget-object p0, p0, Ll0b;->c:Lorg/webrtc/SessionDescription;
-
-    check-cast p1, Lorg/webrtc/PeerConnection;
-
-    iget-object v1, p0, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
-
-    iget-object v2, v0, Ly0b;->y:Lfec;
-
-    invoke-static {v1, v2}, Lsu0;->g(Ljava/lang/String;Lfec;)V
-
-    iget-boolean v2, v0, Ly0b;->f0:Z
-
-    const-string v3, "PCRTCClient"
-
-    if-nez v2, :cond_1
-
-    iget-object v2, v0, Ly0b;->U:Lqx7;
-
-    if-eqz v2, :cond_1
-
-    sget-object v2, Ly0b;->k0:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v2, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v0, Ly0b;->y:Lfec;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Ly0b;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, ": remote sdp supports h264 decoding"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v2, v3, v4}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v2, v0, Ly0b;->y:Lfec;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Ly0b;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, ": remote does not support h264 decoding"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v2, v3, v4}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, v0, Ly0b;->U:Lqx7;
-
-    iget v4, v0, Ly0b;->g0:F
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    iget v5, v0, Ly0b;->h0:F
-
-    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v4, v5}, Lqx7;->m(Ljava/lang/Float;Ljava/lang/Float;)V
-
-    :cond_1
-    :goto_0
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ly0b;->e(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Lorg/webrtc/SessionDescription;
-
-    iget-object v4, p0, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
-
-    invoke-direct {v2, v4, v1}, Lorg/webrtc/SessionDescription;-><init>(Lorg/webrtc/SessionDescription$Type;Ljava/lang/String;)V
-
-    iget-object v1, v0, Ly0b;->i:Lmj;
-
-    iget-object v1, v1, Lmj;->c:Ljava/lang/Integer;
-
-    if-eqz v1, :cond_2
-
-    goto/16 :goto_2
-
-    :cond_2
-    iget-object v1, p0, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
-
-    sget-object v4, Ly0b;->l0:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v4, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
-
-    move-result v4
-
-    const/4 v5, 0x1
-
-    if-eqz v4, :cond_4
-
-    invoke-virtual {v1, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-nez v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v5
-
-    :cond_4
-    :goto_1
-    iget-object v1, v0, Ly0b;->z:Lrg1;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x2
-
-    invoke-static {v5, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    iget-object v4, v0, Ly0b;->y:Lfec;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Ly0b;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v7, ": set animoji protocol version: "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v7, "(local: 2, remote: "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v5, ")"
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v4, v3, v5}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v4, v0, Ly0b;->i:Lmj;
-
-    iget-object v5, v4, Lmj;->c:Ljava/lang/Integer;
-
-    if-eqz v5, :cond_6
-
-    new-instance v5, Ljava/lang/Throwable;
-
-    const-string v6, "Resetting animoji protocol version"
-
-    invoke-direct {v5, v6}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    iget-object v6, v4, Lmj;->a:Ln06;
-
-    iget-object v6, v6, Ln06;->a:Ljava/lang/Object;
-
-    check-cast v6, Lfec;
-
-    invoke-virtual {v5}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v7
-
-    if-nez v7, :cond_5
-
-    const-string v7, "animoji error"
-
-    :cond_5
-    const-string v8, "AniSend"
-
-    invoke-interface {v6, v8, v7, v5}, Lfec;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_6
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iput-object v1, v4, Lmj;->c:Ljava/lang/Integer;
-
-    iget-object v1, v4, Lmj;->g:Lkw3;
-
-    if-eqz v1, :cond_7
-
-    invoke-virtual {v1}, Lkw3;->b()V
-
-    :cond_7
-    :goto_2
-    iget-object v1, v0, Ly0b;->y:Lfec;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Ly0b;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, ": set remote sdp from "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-interface {v1, v3, p0}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance p0, Lu0b;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v0, v2, v1}, Lu0b;-><init>(Ly0b;Lorg/webrtc/SessionDescription;I)V
-
-    invoke-virtual {p1, p0, v2}, Lorg/webrtc/PeerConnection;->setRemoteDescription(Lorg/webrtc/SdpObserver;Lorg/webrtc/SessionDescription;)V
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Ll0b;->b:Ly0b;
+    sget-object p2, Lj0b;->a:Lj0b;
 
-    iget-object p0, p0, Ll0b;->c:Lorg/webrtc/SessionDescription;
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
 
-    check-cast p1, Lorg/webrtc/PeerConnection;
+    return-void
 
-    iget-object v1, v0, Ly0b;->x:Liec;
+    nop
 
-    iget-object v2, v0, Ly0b;->x:Liec;
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iget-object v3, p0, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
 
-    iget-object v4, v0, Ly0b;->y:Lfec;
+# virtual methods
+.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-static {v3, v4}, Lsu0;->g(Ljava/lang/String;Lfec;)V
+    iget v0, p0, Ll0b;->c:I
 
-    const/4 v5, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v3, v5}, Ly0b;->e(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v3
+    move-result v0
 
-    iget-boolean v6, v0, Ly0b;->f:Z
+    if-nez v0, :cond_4
 
-    if-eqz v6, :cond_8
+    check-cast p2, Lk0b;
 
-    const-string v6, "dred"
+    check-cast p1, Lk0b;
 
-    const-string v7, "100"
+    sget-object p1, Lg0b;->a:Lg0b;
 
-    invoke-static {v3, v6, v7, v2, v4}, Lsu0;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Liec;Lfec;)Ljava/lang/String;
+    invoke-static {p2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v3
+    move-result p1
 
-    const-string v6, "opus"
+    iget-object v0, p0, Ll0b;->o:Lm0b;
 
-    invoke-static {v6}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    if-eqz p1, :cond_0
 
-    move-result-object v6
+    const/16 p1, 0x28
 
-    invoke-static {v3, v6, v1, v4}, Lsu0;->F(Ljava/lang/String;Ljava/util/List;Liec;Lfec;)Ljava/lang/String;
+    int-to-float p1, p1
 
-    move-result-object v3
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    :cond_8
-    iget-object v6, v0, Ly0b;->g:Ljava/lang/Integer;
+    move-result-object p2
 
-    if-eqz v6, :cond_9
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+    move-result-object p2
 
-    move-result v6
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    mul-float/2addr p1, p2
 
-    move-result-object v6
+    invoke-static {p1}, Lfhi;->b(F)I
 
-    const-string v7, "minptime"
+    move-result p1
 
-    invoke-static {v3, v7, v6, v2, v4}, Lsu0;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Liec;Lfec;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ld73;->setIndicatorSize(I)V
 
-    move-result-object v3
+    const/4 p1, 0x4
 
-    :cond_9
-    iget-object v6, v0, Ly0b;->h:Ljava/lang/Integer;
+    int-to-float p1, p1
 
-    if-eqz v6, :cond_a
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+    move-result-object p2
 
-    move-result v6
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object v6
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
 
-    const-string v7, "maxptime"
+    mul-float/2addr p1, p2
 
-    invoke-static {v3, v7, v6, v2, v4}, Lsu0;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Liec;Lfec;)Ljava/lang/String;
+    invoke-static {p1}, Lfhi;->b(F)I
 
-    move-result-object v3
+    move-result p1
 
-    :cond_a
-    iget-boolean v6, v0, Ly0b;->d:Z
+    invoke-virtual {v0, p1}, Ld73;->setTrackThickness(I)V
 
-    if-eqz v6, :cond_b
+    goto :goto_0
 
-    const-string v6, "red"
+    :cond_0
+    sget-object p1, Lh0b;->a:Lh0b;
 
-    invoke-static {v6}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v6
+    move-result p1
 
-    invoke-static {v3, v6, v1, v4}, Lsu0;->F(Ljava/lang/String;Ljava/util/List;Liec;Lfec;)Ljava/lang/String;
+    if-eqz p1, :cond_1
 
-    move-result-object v3
+    const/16 p1, 0x18
 
-    :cond_b
-    const-string v1, "\n"
+    int-to-float p1, p1
 
-    invoke-virtual {v3, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    move-result v1
+    move-result-object p2
 
-    if-eqz v1, :cond_c
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const-string v1, ""
+    move-result-object p2
 
-    goto :goto_3
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_c
-    const-string v1, "\r\n"
+    mul-float/2addr p1, p2
 
-    :goto_3
-    const-string v6, "a=animoji:2\r\n"
+    invoke-static {p1}, Lfhi;->b(F)I
 
-    invoke-static {v3, v1, v6}, Lsq3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result p1
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Ld73;->setIndicatorSize(I)V
 
-    iget-boolean v3, v0, Ly0b;->e:Z
+    const/4 p1, 0x2
 
-    if-nez v3, :cond_d
+    int-to-float p1, p1
 
-    invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object p2
 
-    const-string v5, "usedtx"
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-static {v1, v5, v3, v2, v4}, Lsu0;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Liec;Lfec;)Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object v1
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_d
-    new-instance v2, Lorg/webrtc/SessionDescription;
+    mul-float/2addr p1, p2
 
-    iget-object p0, p0, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
+    invoke-static {p1}, Lfhi;->b(F)I
 
-    invoke-direct {v2, p0, v1}, Lorg/webrtc/SessionDescription;-><init>(Lorg/webrtc/SessionDescription$Type;Ljava/lang/String;)V
+    move-result p1
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ld73;->setTrackThickness(I)V
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    goto :goto_0
 
-    invoke-virtual {v0}, Ly0b;->toString()Ljava/lang/String;
+    :cond_1
+    sget-object p1, Li0b;->a:Li0b;
 
-    move-result-object v1
+    invoke-static {p2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    const-string v1, ": set local sdp from "
+    if-eqz p1, :cond_2
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 p1, 0x10
 
-    iget-object v1, v2, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
+    int-to-float p1, p1
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object p0
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const-string v1, "PCRTCClient"
+    move-result-object p2
 
-    invoke-interface {v4, v1, p0}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
 
-    new-instance p0, Lu0b;
+    mul-float/2addr p1, p2
 
-    const/4 v1, 0x0
+    invoke-static {p1}, Lfhi;->b(F)I
 
-    invoke-direct {p0, v0, v2, v1}, Lu0b;-><init>(Ly0b;Lorg/webrtc/SessionDescription;I)V
+    move-result p1
 
-    invoke-virtual {p1, p0, v2}, Lorg/webrtc/PeerConnection;->setLocalDescription(Lorg/webrtc/SdpObserver;Lorg/webrtc/SessionDescription;)V
+    invoke-virtual {v0, p1}, Ld73;->setIndicatorSize(I)V
 
+    const/4 p1, 0x1
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lfhi;->b(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ld73;->setTrackThickness(I)V
+
+    goto :goto_0
+
+    :cond_2
+    sget-object p1, Lj0b;->a:Lj0b;
+
+    invoke-static {p2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Luk0;->invalidate()V
+
+    goto :goto_1
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    :goto_1
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    check-cast p2, Lf0b;
+
+    check-cast p1, Lf0b;
+
+    sget-object p1, Ll05;->s0:Lk82;
+
+    iget-object v0, p0, Ll0b;->o:Lm0b;
+
+    invoke-virtual {p1, v0}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lm0b;->d(Lf0b;Lv5b;)I
+
+    move-result p1
+
+    filled-new-array {p1}, [I
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Luk0;->setIndicatorColor([I)V
+
+    :cond_5
     return-void
 
     nop

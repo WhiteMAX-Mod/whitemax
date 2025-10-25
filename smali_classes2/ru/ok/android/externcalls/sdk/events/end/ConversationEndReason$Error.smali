@@ -18,7 +18,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\u0008\u0006\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000e\n\u0000\u0008\u0086\u0008\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\t\u0010\u0007\u001a\u00020\u0003H\u00c6\u0003J\u0013\u0010\u0008\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003H\u00c6\u0001J\u0013\u0010\t\u001a\u00020\n2\u0008\u0010\u000b\u001a\u0004\u0018\u00010\u000cH\u00d6\u0003J\t\u0010\r\u001a\u00020\u000eH\u00d6\u0001J\t\u0010\u000f\u001a\u00020\u0010H\u00d6\u0001R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\u0011"
+        "\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0007\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\u0008\u0086\u0008\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\t\u0010\u000b\u001a\u00020\u0003H\u00c6\u0003J\u0013\u0010\u000c\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003H\u00c6\u0001J\u0013\u0010\r\u001a\u00020\u000e2\u0008\u0010\u000f\u001a\u0004\u0018\u00010\u0010H\u00d6\u0003J\t\u0010\u0011\u001a\u00020\u0012H\u00d6\u0001J\t\u0010\u0013\u001a\u00020\u0006H\u00d6\u0001R\u0014\u0010\u0005\u001a\u00020\u0006X\u0096D\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\t\u0010\n\u00a8\u0006\u0014"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;",
@@ -26,6 +26,10 @@
         "throwable",
         "",
         "(Ljava/lang/Throwable;)V",
+        "key",
+        "",
+        "getKey",
+        "()Ljava/lang/String;",
         "getThrowable",
         "()Ljava/lang/Throwable;",
         "component1",
@@ -37,7 +41,6 @@
         "hashCode",
         "",
         "toString",
-        "",
         "calls-sdk-common_release"
     }
     k = 0x1
@@ -51,6 +54,8 @@
 
 
 # instance fields
+.field private final key:Ljava/lang/String;
+
 .field private final throwable:Ljava/lang/Throwable;
 
 
@@ -61,6 +66,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
+
+    const-string p1, "error"
+
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->key:Ljava/lang/String;
 
     return-void
 .end method
@@ -85,21 +94,21 @@
 
 # virtual methods
 .method public final component1()Ljava/lang/Throwable;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final copy(Ljava/lang/Throwable;)Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;
+    new-instance v0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0, p1}, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;-><init>(Ljava/lang/Throwable;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -123,15 +132,15 @@
     :cond_1
     check-cast p1, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
@@ -139,46 +148,54 @@
     return v0
 .end method
 
+.method public getKey()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->key:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public final getThrowable()Ljava/lang/Throwable;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;->throwable:Ljava/lang/Throwable;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "Error(throwable="
+    const-string v2, "Error(throwable="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, ")"
+    const-string v0, ")"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

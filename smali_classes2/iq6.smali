@@ -1,50 +1,59 @@
 .class public final Liq6;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Liq6;
+# instance fields
+.field public X:Lll0;
 
-.field public static final b:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public Y:[J
 
-.field public static c:Landroid/content/Context;
+.field public Z:J
+
+.field public o:Ljq6;
+
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Ljq6;
+
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljq6;Ly14;)V
+    .locals 0
 
-    new-instance v0, Liq6;
+    iput-object p1, p0, Liq6;->r0:Ljq6;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Liq6;->a:Liq6;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    sput-object v0, Liq6;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Ljava/io/File;)V
-    .locals 1
 
-    invoke-virtual {p0}, Ljava/io/File;->exists()Z
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    move-result v0
+    iput-object p1, p0, Liq6;->q0:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iget p1, p0, Liq6;->s0:I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p0}, Ljava/io/File;->delete()Z
+    or-int/2addr p1, v0
 
-    :cond_0
-    return-void
+    iput p1, p0, Liq6;->s0:I
+
+    const-wide/16 v0, 0x0
+
+    const/4 p1, 0x0
+
+    iget-object v2, p0, Liq6;->r0:Ljq6;
+
+    invoke-virtual {v2, v0, v1, p1, p0}, Ljq6;->b(JLll0;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

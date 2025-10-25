@@ -1,152 +1,182 @@
 .class public final Ltu;
-.super Lure;
+.super Lxi0;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final X:[J
 
-.field public final synthetic Y:Lyv;
-
-.field public final synthetic Z:J
-
-.field public final synthetic r0:Lmc3;
-
-.field public final synthetic s0:Lmc3;
+.field public final Y:J
 
 
 # direct methods
-.method public constructor <init>(Lyv;JLmc3;Lmc3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JI[JJ)V
     .locals 0
 
-    iput-object p1, p0, Ltu;->Y:Lyv;
+    invoke-direct {p0, p1, p2, p3}, Lxi0;-><init>(JI)V
 
-    iput-wide p2, p0, Ltu;->Z:J
+    iput-object p4, p0, Ltu;->X:[J
 
-    iput-object p4, p0, Ltu;->r0:Lmc3;
-
-    iput-object p5, p0, Ltu;->s0:Lmc3;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p6}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p5, p0, Ltu;->Y:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final g()[B
+    .locals 3
 
-    check-cast p1, Ly04;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsListModify;-><init>()V
 
-    invoke-virtual {p0, p1, p2}, Ltu;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget v1, p0, Lxi0;->o:I
 
-    move-result-object p0
+    invoke-static {v1}, Lru/ok/tamtam/nano/b;->p(I)I
 
-    check-cast p0, Ltu;
+    move-result v1
 
-    sget-object p1, Lylf;->a:Lylf;
+    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->assetType:I
 
-    invoke-virtual {p0, p1}, Ltu;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v1, p0, Lym;->a:J
 
-    move-result-object p0
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->requestId:J
 
-    return-object p0
-.end method
+    iget-object v1, p0, Ltu;->X:[J
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->ids:[J
 
-    new-instance v0, Ltu;
+    iget-wide v1, p0, Ltu;->Y:J
 
-    iget-object v4, p0, Ltu;->r0:Lmc3;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->modifyTime:J
 
-    iget-object v5, p0, Ltu;->s0:Lmc3;
+    invoke-static {v0}, Lee9;->toByteArray(Lee9;)[B
 
-    iget-object v1, p0, Ltu;->Y:Lyv;
-
-    iget-wide v2, p0, Ltu;->Z:J
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Ltu;-><init>(Lyv;JLmc3;Lmc3;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ltu;->X:Ljava/lang/Object;
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final getType()Luib;
+    .locals 1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    sget-object v0, Luib;->Q0:Luib;
 
-    iget-object p1, p0, Ltu;->X:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    check-cast p1, Ly04;
+.method public final i()Lmmf;
+    .locals 5
 
-    iget-object v1, p0, Ltu;->Y:Lyv;
+    new-instance v0, Lmu;
 
-    iget-object v6, v1, Lyv;->t:Lq04;
+    const/4 v1, 0x0
 
-    iget-object v7, v1, Lyv;->b:Lxwe;
+    const/4 v2, 0x3
 
-    move-object v0, v7
+    invoke-direct {v0, v1, v2}, Lmu;-><init>(Lm8b;I)V
 
-    check-cast v0, Laga;
+    iget v1, p0, Lxi0;->o:I
 
-    invoke-virtual {v0}, Laga;->b()Ls04;
+    if-eqz v1, :cond_2
 
-    move-result-object v0
+    iget-object v2, p0, Ltu;->X:[J
 
-    invoke-interface {v6, v0}, Lq04;->plus(Lq04;)Lq04;
+    if-eqz v2, :cond_1
 
-    move-result-object v8
+    const-string v3, "type"
 
-    new-instance v0, Lru;
+    invoke-static {v1}, Ldy1;->d(I)Ljava/lang/String;
 
-    iget-object v4, p0, Ltu;->r0:Lmc3;
+    move-result-object v1
 
-    const/4 v5, 0x0
+    invoke-virtual {v0, v3, v1}, Lmmf;->x(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-wide v2, p0, Ltu;->Z:J
+    const-string v1, "ids"
 
-    invoke-direct/range {v0 .. v5}, Lru;-><init>(Lyv;JLmc3;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1, v2}, Lmmf;->q(Ljava/lang/String;[J)V
 
-    const/4 v9, 0x0
+    const-wide/16 v1, 0x0
 
-    const/4 v10, 0x2
+    iget-wide v3, p0, Ltu;->Y:J
 
-    invoke-static {p1, v8, v9, v0, v10}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
+    cmp-long v1, v3, v1
 
-    check-cast v7, Laga;
+    if-ltz v1, :cond_0
 
-    invoke-virtual {v7}, Laga;->b()Ls04;
+    const-string v1, "updateTime"
 
-    move-result-object v0
+    invoke-virtual {v0, v3, v4, v1}, Lmmf;->u(JLjava/lang/String;)V
 
-    invoke-interface {v6, v0}, Lq04;->plus(Lq04;)Lq04;
+    :cond_0
+    return-object v0
 
-    move-result-object v6
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Lsu;
+    const-string v1, "ids must not be null"
 
-    iget-object v4, p0, Ltu;->s0:Lmc3;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-wide v2, p0, Ltu;->Z:J
+    throw v0
 
-    invoke-direct/range {v0 .. v5}, Lsu;-><init>(Lyv;JLmc3;Lkotlin/coroutines/Continuation;)V
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-static {p1, v6, v9, v0, v10}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
+    const-string v1, "type must not be null"
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    return-object p0
+    throw v0
+.end method
+
+.method public final t(Lpmf;)V
+    .locals 4
+
+    check-cast p1, Luu;
+
+    iget-boolean v0, p1, Luu;->c:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v2, p1, Luu;->o:J
+
+    invoke-virtual {p0, v2, v3}, Lxi0;->u(J)V
+
+    iget-object p1, p0, Lym;->c:Lzm;
+
+    if-eqz p1, :cond_0
+
+    move-object v1, p1
+
+    :cond_0
+    invoke-virtual {v1}, Lzm;->b()Lpw0;
+
+    move-result-object p1
+
+    new-instance v0, Lvu;
+
+    iget-wide v1, p0, Lym;->a:J
+
+    invoke-direct {v0, v1, v2}, Luj0;-><init>(J)V
+
+    invoke-virtual {p1, v0}, Lpw0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Lzlf;
+
+    const-string v0, "asset.task.failed"
+
+    const-string v2, "failed to modify asset list"
+
+    invoke-direct {p1, v0, v2, v1}, Lzlf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lxi0;->e(Lzlf;)V
+
+    return-void
 .end method

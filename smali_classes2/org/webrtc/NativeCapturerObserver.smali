@@ -30,23 +30,23 @@
 
 # virtual methods
 .method public onCapturerStarted(Z)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/NativeCapturerObserver;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
+    iget-object v0, p0, Lorg/webrtc/NativeCapturerObserver;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/NativeAndroidVideoTrackSource;->setState(Z)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/NativeAndroidVideoTrackSource;->setState(Z)V
 
     return-void
 .end method
 
 .method public onCapturerStopped()V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/webrtc/NativeCapturerObserver;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
+    iget-object v0, p0, Lorg/webrtc/NativeCapturerObserver;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0}, Lorg/webrtc/NativeAndroidVideoTrackSource;->setState(Z)V
+    invoke-virtual {v0, v1}, Lorg/webrtc/NativeAndroidVideoTrackSource;->setState(Z)V
 
     return-void
 .end method
@@ -85,19 +85,19 @@
 
     move-result-object v1
 
-    iget-object p0, p0, Lorg/webrtc/NativeCapturerObserver;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
+    iget-object v2, p0, Lorg/webrtc/NativeCapturerObserver;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
 
-    new-instance v2, Lorg/webrtc/VideoFrame;
+    new-instance v3, Lorg/webrtc/VideoFrame;
 
     invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getRotation()I
 
     move-result p1
 
-    iget-wide v3, v0, Lorg/webrtc/VideoProcessor$FrameAdaptationParameters;->timestampNs:J
+    iget-wide v4, v0, Lorg/webrtc/VideoProcessor$FrameAdaptationParameters;->timestampNs:J
 
-    invoke-direct {v2, v1, p1, v3, v4}, Lorg/webrtc/VideoFrame;-><init>(Lorg/webrtc/VideoFrame$Buffer;IJ)V
+    invoke-direct {v3, v1, p1, v4, v5}, Lorg/webrtc/VideoFrame;-><init>(Lorg/webrtc/VideoFrame$Buffer;IJ)V
 
-    invoke-virtual {p0, v2}, Lorg/webrtc/NativeAndroidVideoTrackSource;->onFrameCaptured(Lorg/webrtc/VideoFrame;)V
+    invoke-virtual {v2, v3}, Lorg/webrtc/NativeAndroidVideoTrackSource;->onFrameCaptured(Lorg/webrtc/VideoFrame;)V
 
     invoke-interface {v1}, Lorg/webrtc/VideoFrame$Buffer;->release()V
 

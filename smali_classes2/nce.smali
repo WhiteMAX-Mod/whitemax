@@ -1,68 +1,157 @@
-.class public final synthetic Lnce;
-.super Ljava/lang/Object;
+.class public final Lnce;
+.super Lqce;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lnce;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Z
 
-.field public final synthetic b:Luq8;
-
-.field public final synthetic c:Lh0h;
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Luq8;Lh0h;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lo0e;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lo0e;-><init>(I)V
+
+    sput-object v0, Lnce;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput p3, p0, Lnce;->a:I
-
-    iput-object p1, p0, Lnce;->b:Luq8;
-
-    iput-object p2, p0, Lnce;->c:Lh0h;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lnce;->a:Z
+
+    iput-boolean p2, p0, Lnce;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final describeContents()I
     .locals 1
 
-    iget v0, p0, Lnce;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lnce;->b:Luq8;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, v0, Luq8;->f:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Ljava/util/LinkedHashSet;
+    if-ne p0, p1, :cond_0
 
-    iget-object p0, p0, Lnce;->c:Lh0h;
+    return v0
 
-    invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    :cond_0
+    instance-of v1, p1, Lnce;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lnce;
+
+    iget-boolean v1, p0, Lnce;->a:Z
+
+    iget-boolean v3, p1, Lnce;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lnce;->b:Z
+
+    iget-boolean p1, p1, Lnce;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Lnce;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lnce;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", isEnabled="
+
+    const-string v1, ")"
+
+    const-string v2, "Radio(isChecked="
+
+    iget-boolean v3, p0, Lnce;->a:Z
+
+    iget-boolean v4, p0, Lnce;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lfd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-boolean p2, p0, Lnce;->a:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Lnce;->b:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lnce;->b:Luq8;
-
-    iget-object p0, p0, Lnce;->c:Lh0h;
-
-    invoke-virtual {v0, p0}, Luq8;->m(Lh0h;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

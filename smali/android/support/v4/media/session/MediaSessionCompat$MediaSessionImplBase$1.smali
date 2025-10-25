@@ -1,5 +1,5 @@
 .class Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;
-.super Lxag;
+.super Lc3h;
 .source "SourceFile"
 
 
@@ -31,8 +31,8 @@
 
 
 # virtual methods
-.method public onVolumeChanged(Lyag;)V
-    .locals 0
+.method public onVolumeChanged(Ld3h;)V
+    .locals 1
 
     iget-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
@@ -40,13 +40,13 @@
 
     new-instance p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
+    iget-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
-    iget p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mVolumeType:I
+    iget v0, p1, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mVolumeType:I
 
-    iget p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mLocalStream:I
+    iget p1, p1, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mLocalStream:I
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method

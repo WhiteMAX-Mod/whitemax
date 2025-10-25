@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl$syncAudioDeviceList$3;
-.super Lnk7;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Lbc6;
+.implements Lli6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lnk7;",
-        "Lbc6;"
+        "Lst7;",
+        "Lli6;"
     }
 .end annotation
 
@@ -66,7 +66,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lnk7;-><init>(I)V
+    invoke-direct {p0, v0}, Lst7;-><init>(I)V
 
     return-void
 .end method
@@ -79,9 +79,9 @@
     .line 1
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
@@ -92,7 +92,7 @@
 
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl$syncAudioDeviceList$3;->invoke(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)Ljava/lang/CharSequence;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

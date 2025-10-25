@@ -36,45 +36,45 @@
 
 # virtual methods
 .method public getFieldTrialsString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/NetworkMonitor$2;->val$fieldTrialsString:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/NetworkMonitor$2;->val$fieldTrialsString:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public onConnectionTypeChanged(Lorg/webrtc/NetworkChangeDetector$ConnectionType;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/NetworkMonitor$2;->this$0:Lorg/webrtc/NetworkMonitor;
+    iget-object v0, p0, Lorg/webrtc/NetworkMonitor$2;->this$0:Lorg/webrtc/NetworkMonitor;
 
-    invoke-static {p0, p1}, Lorg/webrtc/NetworkMonitor;->d(Lorg/webrtc/NetworkMonitor;Lorg/webrtc/NetworkChangeDetector$ConnectionType;)V
+    invoke-static {v0, p1}, Lorg/webrtc/NetworkMonitor;->d(Lorg/webrtc/NetworkMonitor;Lorg/webrtc/NetworkChangeDetector$ConnectionType;)V
 
     return-void
 .end method
 
 .method public onNetworkConnect(Lorg/webrtc/NetworkChangeDetector$NetworkInformation;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/NetworkMonitor$2;->this$0:Lorg/webrtc/NetworkMonitor;
+    iget-object v0, p0, Lorg/webrtc/NetworkMonitor$2;->this$0:Lorg/webrtc/NetworkMonitor;
 
-    invoke-static {p0, p1}, Lorg/webrtc/NetworkMonitor;->a(Lorg/webrtc/NetworkMonitor;Lorg/webrtc/NetworkChangeDetector$NetworkInformation;)V
+    invoke-static {v0, p1}, Lorg/webrtc/NetworkMonitor;->a(Lorg/webrtc/NetworkMonitor;Lorg/webrtc/NetworkChangeDetector$NetworkInformation;)V
 
     return-void
 .end method
 
 .method public onNetworkDisconnect(J)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/NetworkMonitor$2;->this$0:Lorg/webrtc/NetworkMonitor;
+    iget-object v0, p0, Lorg/webrtc/NetworkMonitor$2;->this$0:Lorg/webrtc/NetworkMonitor;
 
-    invoke-static {p0, p1, p2}, Lorg/webrtc/NetworkMonitor;->b(Lorg/webrtc/NetworkMonitor;J)V
+    invoke-static {v0, p1, p2}, Lorg/webrtc/NetworkMonitor;->b(Lorg/webrtc/NetworkMonitor;J)V
 
     return-void
 .end method
 
 .method public onNetworkPreference(Ljava/util/List;I)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -84,9 +84,9 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/NetworkMonitor$2;->this$0:Lorg/webrtc/NetworkMonitor;
+    iget-object v0, p0, Lorg/webrtc/NetworkMonitor$2;->this$0:Lorg/webrtc/NetworkMonitor;
 
-    invoke-static {p0, p1, p2}, Lorg/webrtc/NetworkMonitor;->c(Lorg/webrtc/NetworkMonitor;Ljava/util/List;I)V
+    invoke-static {v0, p1, p2}, Lorg/webrtc/NetworkMonitor;->c(Lorg/webrtc/NetworkMonitor;Ljava/util/List;I)V
 
     return-void
 .end method

@@ -29,11 +29,11 @@
 
 # virtual methods
 .method public asBinder()Landroid/os/IBinder;
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public extraCallback(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -55,9 +55,9 @@
         }
     .end annotation
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public onMessageChannelReady(Landroid/os/Bundle;)V

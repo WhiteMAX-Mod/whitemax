@@ -1,72 +1,193 @@
-.class public final synthetic Lko0;
+.class public final Lko0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lexf;
-
 
 # instance fields
-.field public final synthetic a:Lno0;
-
-.field public final synthetic b:Landroid/graphics/Bitmap;
-
-.field public final synthetic c:Lo96;
-
-.field public final synthetic d:Lll3;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lno0;Landroid/graphics/Bitmap;Lo96;Lll3;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lko0;->a:Lno0;
-
-    iput-object p2, p0, Lko0;->b:Landroid/graphics/Bitmap;
-
-    iput-object p3, p0, Lko0;->c:Lo96;
-
-    iput-object p4, p0, Lko0;->d:Lll3;
-
-    return-void
-.end method
+.field public a:Lxe6;
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a(Lm75;Lq4e;)V
+    .locals 6
 
-    iget-object v0, p0, Lko0;->d:Lll3;
+    iget-object v0, p0, Lko0;->a:Lxe6;
 
-    invoke-virtual {v0}, Lll3;->a()Z
+    const-string v1, "BiometricPromptCompat"
 
-    move-result v1
+    if-nez v0, :cond_0
 
-    const-string v2, "Bitmap queued but no timestamps provided."
+    const-string p1, "Unable to start authentication. Client fragment manager was null."
 
-    invoke-static {v2, v1}, Lmq0;->b(Ljava/lang/Object;Z)V
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v1, p0, Lko0;->a:Lno0;
+    return-void
 
-    iget-object v2, v1, Lno0;->o:Ljava/util/concurrent/LinkedBlockingQueue;
+    :cond_0
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->Q()Z
 
-    new-instance v3, Lmo0;
+    move-result v0
 
-    iget-object v4, p0, Lko0;->b:Landroid/graphics/Bitmap;
+    if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lko0;->c:Lo96;
+    const-string p1, "Unable to start authentication. Called after onSaveInstanceState()."
 
-    invoke-direct {v3, v4, p0, v0}, Lmo0;-><init>(Landroid/graphics/Bitmap;Lo96;Lll3;)V
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-interface {v2, v3}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
+    return-void
 
-    invoke-virtual {v1}, Lno0;->B()V
+    :cond_1
+    iget-object v0, p0, Lko0;->a:Lxe6;
 
-    const/4 p0, 0x0
+    const-string v1, "androidx.biometric.BiometricFragment"
 
-    iput-boolean p0, v1, Lno0;->t0:Z
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->E(Ljava/lang/String;)Landroidx/fragment/app/a;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/biometric/BiometricFragment;
+
+    const/4 v3, 0x1
+
+    if-nez v2, :cond_2
+
+    new-instance v2, Landroidx/biometric/BiometricFragment;
+
+    invoke-direct {v2}, Landroidx/biometric/BiometricFragment;-><init>()V
+
+    new-instance v4, Lze0;
+
+    invoke-direct {v4, v0}, Lze0;-><init>(Landroidx/fragment/app/c;)V
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v5, v2, v1, v3}, Lze0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
+
+    invoke-virtual {v4, v3}, Lze0;->d(Z)I
+
+    invoke-virtual {v0, v3}, Landroidx/fragment/app/c;->A(Z)Z
+
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->F()V
+
+    :cond_2
+    invoke-virtual {v2}, Landroidx/fragment/app/a;->C()Landroidx/fragment/app/b;
+
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    const-string p1, "BiometricFragment"
+
+    const-string p2, "Not launching prompt. Client activity was null."
+
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_3
+    iget-object v1, v2, Landroidx/biometric/BiometricFragment;->i1:Landroidx/biometric/BiometricViewModel;
+
+    iput-object p1, v1, Landroidx/biometric/BiometricViewModel;->c:Lm75;
+
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x1e
+
+    if-ge p1, v4, :cond_4
+
+    if-nez p2, :cond_4
+
+    invoke-static {}, Lhxi;->b()Lq4e;
+
+    move-result-object p1
+
+    iput-object p1, v1, Landroidx/biometric/BiometricViewModel;->d:Lq4e;
+
+    goto :goto_0
+
+    :cond_4
+    iput-object p2, v1, Landroidx/biometric/BiometricViewModel;->d:Lq4e;
+
+    :goto_0
+    invoke-virtual {v2}, Landroidx/biometric/BiometricFragment;->E0()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, v2, Landroidx/biometric/BiometricFragment;->i1:Landroidx/biometric/BiometricViewModel;
+
+    sget p2, Lhsc;->confirm_device_credential_password:I
+
+    invoke-virtual {v2, p2}, Landroidx/fragment/app/a;->H(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    iput-object p2, p1, Landroidx/biometric/BiometricViewModel;->h:Ljava/lang/String;
+
+    goto :goto_1
+
+    :cond_5
+    iget-object p1, v2, Landroidx/biometric/BiometricFragment;->i1:Landroidx/biometric/BiometricViewModel;
+
+    const/4 p2, 0x0
+
+    iput-object p2, p1, Landroidx/biometric/BiometricViewModel;->h:Ljava/lang/String;
+
+    :goto_1
+    invoke-virtual {v2}, Landroidx/biometric/BiometricFragment;->E0()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    new-instance p1, Lv48;
+
+    new-instance p2, Lpqh;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, v1}, Lpqh;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p1, p2}, Lv48;-><init>(Lpqh;)V
+
+    const/16 p2, 0xff
+
+    invoke-virtual {p1, p2}, Lv48;->r(I)I
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    iget-object p1, v2, Landroidx/biometric/BiometricFragment;->i1:Landroidx/biometric/BiometricViewModel;
+
+    iput-boolean v3, p1, Landroidx/biometric/BiometricViewModel;->k:Z
+
+    invoke-virtual {v2}, Landroidx/biometric/BiometricFragment;->G0()V
+
+    return-void
+
+    :cond_6
+    iget-object p1, v2, Landroidx/biometric/BiometricFragment;->i1:Landroidx/biometric/BiometricViewModel;
+
+    iget-boolean p1, p1, Landroidx/biometric/BiometricViewModel;->m:Z
+
+    if-eqz p1, :cond_7
+
+    iget-object p1, v2, Landroidx/biometric/BiometricFragment;->h1:Landroid/os/Handler;
+
+    new-instance p2, Lgo0;
+
+    invoke-direct {p2, v2}, Lgo0;-><init>(Landroidx/biometric/BiometricFragment;)V
+
+    const-wide/16 v0, 0x258
+
+    invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+
+    :cond_7
+    invoke-virtual {v2}, Landroidx/biometric/BiometricFragment;->L0()V
 
     return-void
 .end method

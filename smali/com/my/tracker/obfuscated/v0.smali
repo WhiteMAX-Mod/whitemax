@@ -37,19 +37,19 @@
 
 # virtual methods
 .method public a()Lcom/my/tracker/obfuscated/u0$a;
-    .locals 2
+    .locals 3
 
     new-instance v0, Lcom/my/tracker/obfuscated/v0$a;
 
     iget-object v1, p0, Lcom/my/tracker/obfuscated/v0;->a:Lcom/my/tracker/obfuscated/j0;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/v0;->b:Ljava/lang/String;
+    iget-object v2, p0, Lcom/my/tracker/obfuscated/v0;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, p0}, Lcom/my/tracker/obfuscated/j0;->a(Ljava/lang/String;)Lcom/my/tracker/obfuscated/j0$d;
+    invoke-virtual {v1, v2}, Lcom/my/tracker/obfuscated/j0;->a(Ljava/lang/String;)Lcom/my/tracker/obfuscated/j0$d;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-direct {v0, v1, p0}, Lcom/my/tracker/obfuscated/v0$a;-><init>(Lcom/my/tracker/obfuscated/j0;Lcom/my/tracker/obfuscated/j0$d;)V
+    invoke-direct {v0, v1, v2}, Lcom/my/tracker/obfuscated/v0$a;-><init>(Lcom/my/tracker/obfuscated/j0;Lcom/my/tracker/obfuscated/j0$d;)V
 
     return-object v0
 .end method

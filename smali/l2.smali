@@ -1,181 +1,340 @@
-.class public Ll2;
-.super Lg2;
+.class public abstract Ll2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/SortedMap;
-
-
-# instance fields
-.field public X:Ljava/util/SortedSet;
-
-.field public final synthetic Y:Lkm9;
-
-
-# direct methods
-.method public constructor <init>(Lkm9;Ljava/util/SortedMap;)V
-    .locals 0
-
-    iput-object p1, p0, Ll2;->Y:Lkm9;
-
-    invoke-direct {p0, p1, p2}, Lg2;-><init>(Lb2;Ljava/util/Map;)V
-
-    return-void
-.end method
+.implements Ljava/util/Map;
+.implements Lir7;
 
 
 # virtual methods
-.method public b()Ljava/util/SortedSet;
+.method public final clear()V
     .locals 2
 
-    new-instance v0, Lm2;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    iget-object v1, p0, Ll2;->Y:Lkm9;
+    const-string v1, "Operation is not supported for read-only collection"
 
-    invoke-virtual {p0}, Ll2;->d()Ljava/util/SortedMap;
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
-
-    invoke-direct {v0, v1, p0}, Lm2;-><init>(Lkm9;Ljava/util/SortedMap;)V
-
-    return-object v0
+    throw v0
 .end method
 
-.method public c()Ljava/util/SortedSet;
-    .locals 1
+.method public final containsValue(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object v0, p0, Ll2;->X:Ljava/util/SortedSet;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Ll2;->b()Ljava/util/SortedSet;
+    invoke-virtual {p0}, Ll2;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
-    iput-object v0, p0, Ll2;->X:Ljava/util/SortedSet;
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    return v2
 
     :cond_0
-    return-object v0
-.end method
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-.method public final comparator()Ljava/util/Comparator;
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ll2;->d()Ljava/util/SortedMap;
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p0
+    move-result v1
 
-    invoke-interface {p0}, Ljava/util/SortedMap;->comparator()Ljava/util/Comparator;
+    if-eqz v1, :cond_2
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public d()Ljava/util/SortedMap;
-    .locals 0
-
-    iget-object p0, p0, Lg2;->c:Ljava/util/Map;
-
-    check-cast p0, Ljava/util/SortedMap;
-
-    return-object p0
-.end method
-
-.method public final firstKey()Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0}, Ll2;->d()Ljava/util/SortedMap;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/SortedMap;->firstKey()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
-    .locals 2
-
-    new-instance v0, Ll2;
-
-    invoke-virtual {p0}, Ll2;->d()Ljava/util/SortedMap;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Ljava/util/SortedMap;->headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
+    check-cast v1, Ljava/util/Map$Entry;
 
-    move-result-object p1
-
-    iget-object p0, p0, Ll2;->Y:Lkm9;
-
-    invoke-direct {v0, p0, p1}, Ll2;-><init>(Lkm9;Ljava/util/SortedMap;)V
-
-    return-object v0
-.end method
-
-.method public bridge synthetic keySet()Ljava/util/Set;
-    .locals 0
-
-    invoke-virtual {p0}, Ll2;->c()Ljava/util/SortedSet;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final lastKey()Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0}, Ll2;->d()Ljava/util/SortedMap;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/SortedMap;->lastKey()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
-    .locals 2
-
-    new-instance v0, Ll2;
-
-    invoke-virtual {p0}, Ll2;->d()Ljava/util/SortedMap;
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-interface {v1, p1, p2}, Ljava/util/SortedMap;->subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    return v2
+.end method
+
+.method public final entrySet()Ljava/util/Set;
+    .locals 3
+
+    move-object v0, p0
+
+    check-cast v0, Lvib;
+
+    new-instance v1, Lcjb;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, v2}, Lcjb;-><init>(Lvib;I)V
+
+    return-object v1
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljava/util/Map;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    move-object v1, p0
+
+    check-cast v1, Lvib;
+
+    check-cast p1, Ljava/util/Map;
+
+    invoke-interface {p1}, Ljava/util/Map;->size()I
+
+    move-result v3
+
+    iget v4, v1, Lvib;->b:I
+
+    if-eq v4, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
 
-    iget-object p0, p0, Ll2;->Y:Lkm9;
+    if-eqz p1, :cond_3
 
-    invoke-direct {v0, p0, p1}, Ll2;-><init>(Lkm9;Ljava/util/SortedMap;)V
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    return v0
+
+    :cond_3
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    if-nez v3, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v4}, Lvib;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-static {v3, v5}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    if-nez v5, :cond_4
+
+    invoke-virtual {v1, v4}, Lvib;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    :goto_0
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Ll2;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    move-object v0, p0
+
+    check-cast v0, Lvib;
+
+    iget v0, v0, Lvib;->b:I
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final keySet()Ljava/util/Set;
+    .locals 3
+
+    move-object v0, p0
+
+    check-cast v0, Lvib;
+
+    new-instance v1, Lcjb;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, v2}, Lcjb;-><init>(Lvib;I)V
+
+    return-object v1
+.end method
+
+.method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final putAll(Ljava/util/Map;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    move-object v0, p0
+
+    check-cast v0, Lvib;
+
+    iget v0, v0, Lvib;->b:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    invoke-virtual {p0}, Ll2;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    new-instance v4, Lj0;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v4, v1, p0}, Lj0;-><init>(ILjava/lang/Object;)V
+
+    const/16 v5, 0x18
+
+    const-string v1, ", "
+
+    const-string v2, "{"
+
+    const-string v3, "}"
+
+    invoke-static/range {v0 .. v5}, Lnb3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lli6;I)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
+.method public final values()Ljava/util/Collection;
     .locals 2
 
-    new-instance v0, Ll2;
+    move-object v0, p0
 
-    invoke-virtual {p0}, Ll2;->d()Ljava/util/SortedMap;
+    check-cast v0, Lvib;
 
-    move-result-object v1
+    new-instance v1, Lejb;
 
-    invoke-interface {v1, p1}, Ljava/util/SortedMap;->tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
+    invoke-direct {v1, v0}, Lejb;-><init>(Lvib;)V
 
-    move-result-object p1
-
-    iget-object p0, p0, Ll2;->Y:Lkm9;
-
-    invoke-direct {v0, p0, p1}, Ll2;-><init>(Lkm9;Ljava/util/SortedMap;)V
-
-    return-object v0
+    return-object v1
 .end method

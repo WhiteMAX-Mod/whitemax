@@ -1,22 +1,14 @@
-.class public final Lxy1;
+.class public interface abstract Lxy1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt07;
-
 
 # virtual methods
-.method public final a(JLix1;)V
-    .locals 0
-
-    invoke-virtual {p3}, Lix1;->a()V
-
-    return-void
+.method public abstract a(Landroid/hardware/camera2/TotalCaptureResult;)Ll28;
 .end method
 
-.method public final clear()V
-    .locals 0
+.method public abstract b()Z
+.end method
 
-    return-void
+.method public abstract c()V
 .end method

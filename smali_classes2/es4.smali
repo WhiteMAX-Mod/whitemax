@@ -1,116 +1,113 @@
 .class public final Les4;
-.super Ljava/lang/Object;
+.super Ldg4;
 .source "SourceFile"
 
-# interfaces
-.implements Lsre;
 
+# static fields
+.field public static final b:Les4;
 
-# instance fields
-.field public final synthetic a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public static final c:Lyf4;
 
-.field public final synthetic b:Ld10;
+.field public static final d:Lyf4;
+
+.field public static final e:Lyf4;
+
+.field public static final f:Lyf4;
+
+.field public static final g:Lyf4;
+
+.field public static final h:Lyf4;
+
+.field public static final i:Lyf4;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Ld10;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Les4;
 
-    iput-object p1, p0, Les4;->a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-direct {v0}, Ldg4;-><init>()V
 
-    iput-object p2, p0, Les4;->b:Ld10;
+    sput-object v0, Les4;->b:Les4;
+
+    const/4 v1, 0x0
+
+    new-array v2, v1, [Ljava/lang/String;
+
+    const-string v3, ":settings/dev"
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x2
+
+    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v2
+
+    sput-object v2, Les4;->c:Lyf4;
+
+    const-string v2, ":settings/dev/logsviewer"
+
+    new-array v3, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v2
+
+    sput-object v2, Les4;->d:Lyf4;
+
+    new-array v2, v1, [Ljava/lang/String;
+
+    const-string v3, ":settings/dev/showroom"
+
+    const/16 v5, 0xa
+
+    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v2
+
+    sput-object v2, Les4;->e:Lyf4;
+
+    const-string v2, ":settings/dev/threadsviewer"
+
+    new-array v3, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v2
+
+    sput-object v2, Les4;->f:Lyf4;
+
+    const-string v2, ":settings/magic-room"
+
+    new-array v3, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v2
+
+    sput-object v2, Les4;->g:Lyf4;
+
+    const-string v2, ":settings/server-host"
+
+    new-array v3, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v2
+
+    sput-object v2, Les4;->h:Lyf4;
+
+    const-string v2, ":settings/server-port"
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v0
+
+    sput-object v0, Les4;->i:Lyf4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(FJJLjx3;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p2, Ljava/lang/Float;
-
-    invoke-direct {p2, p1}, Ljava/lang/Float;-><init>(F)V
-
-    iget-object p1, p0, Les4;->a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object p3, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->D0:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object p0, p0, Les4;->b:Ld10;
-
-    iget-object p0, p0, Ld10;->d:Lc10;
-
-    iget-wide p4, p0, Lc10;->a:J
-
-    new-instance p0, Ljava/lang/Long;
-
-    invoke-direct {p0, p4, p5}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {p3, p0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p1, p6}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-.end method
-
-.method public final e(Ljava/io/File;Ljx3;)Ljava/lang/Object;
-    .locals 3
-
-    iget-object p1, p0, Les4;->a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v0, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->D0:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object p0, p0, Les4;->b:Ld10;
-
-    iget-object p0, p0, Ld10;->d:Lc10;
-
-    iget-wide v1, p0, Lc10;->a:J
-
-    new-instance p0, Ljava/lang/Long;
-
-    invoke-direct {p0, v1, v2}, Ljava/lang/Long;-><init>(J)V
-
-    new-instance v1, Ljava/lang/Float;
-
-    const/high16 v2, 0x42c80000    # 100.0f
-
-    invoke-direct {v1, v2}, Ljava/lang/Float;-><init>(F)V
-
-    invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p1, p2}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-.end method
-
-.method public final getDownloadContext()Ljava/lang/String;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
 .end method

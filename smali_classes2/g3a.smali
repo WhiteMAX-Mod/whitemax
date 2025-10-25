@@ -1,80 +1,108 @@
-.class public final Lg3a;
-.super Lure;
+.class public final synthetic Lg3a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+.field public final synthetic b:Li3a;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
+.method public synthetic constructor <init>(Li3a;I)V
     .locals 0
 
-    iput-object p2, p0, Lg3a;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+    iput p2, p0, Lg3a;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lg3a;->b:Li3a;
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lg3a;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lg3a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    new-instance v0, Lgk0;
 
-    check-cast p0, Lg3a;
+    const/16 v1, 0x18
 
-    sget-object p1, Lylf;->a:Lylf;
+    invoke-direct {v0, v1}, Lgk0;-><init>(I)V
 
-    invoke-virtual {p0, p1}, Lg3a;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lg3a;->b:Li3a;
 
-    return-object p1
-.end method
+    invoke-virtual {v1, v0}, Lf3;->l(Lvr3;)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    return-void
 
-    new-instance v0, Lg3a;
+    :pswitch_0
+    new-instance v0, Lgk0;
 
-    iget-object p0, p0, Lg3a;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+    const/16 v1, 0x1c
 
-    invoke-direct {v0, p2, p0}, Lg3a;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
+    invoke-direct {v0, v1}, Lgk0;-><init>(I)V
 
-    iput-object p1, v0, Lg3a;->X:Ljava/lang/Object;
+    iget-object v1, p0, Lg3a;->b:Li3a;
 
-    return-object v0
-.end method
+    invoke-virtual {v1, v0}, Lf3;->l(Lvr3;)V
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    return-void
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    :pswitch_1
+    new-instance v0, Lgk0;
 
-    iget-object p1, p0, Lg3a;->X:Ljava/lang/Object;
+    const/16 v1, 0x19
 
-    check-cast p1, Ljava/util/List;
+    invoke-direct {v0, v1}, Lgk0;-><init>(I)V
 
-    iget-object p0, p0, Lg3a;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+    iget-object v1, p0, Lg3a;->b:Li3a;
 
-    iget-object p0, p0, Lone/me/notifications/settings/NotificationsSettingsScreen;->Z:Ljh0;
+    invoke-virtual {v1, v0}, Lf3;->l(Lvr3;)V
 
-    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
+    return-void
 
-    sget-object p0, Lylf;->a:Lylf;
+    :pswitch_2
+    new-instance v0, Lgk0;
 
-    return-object p0
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1}, Lgk0;-><init>(I)V
+
+    iget-object v1, p0, Lg3a;->b:Li3a;
+
+    invoke-virtual {v1, v0}, Lf3;->l(Lvr3;)V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, Lgk0;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1}, Lgk0;-><init>(I)V
+
+    iget-object v1, p0, Lg3a;->b:Li3a;
+
+    invoke-virtual {v1, v0}, Lf3;->l(Lvr3;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

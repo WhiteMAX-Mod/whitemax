@@ -165,7 +165,7 @@
 
 # virtual methods
 .method public final component1()Ljava/util/Collection;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -175,13 +175,13 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->addedIds:Ljava/util/Collection;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->addedIds:Ljava/util/Collection;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final component2()Ljava/util/Collection;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -191,13 +191,13 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->accepted:Ljava/util/Collection;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->accepted:Ljava/util/Collection;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final component3()Ljava/util/Collection;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -207,13 +207,13 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->rejectedParticipantsIds:Ljava/util/Collection;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->rejectedParticipantsIds:Ljava/util/Collection;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final component4()Ljava/util/Collection;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -223,13 +223,13 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final copy(Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;)Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -249,11 +249,11 @@
         }
     .end annotation
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;
+    new-instance v0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;-><init>(Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;)V
+    invoke-direct {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;-><init>(Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -281,7 +281,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->addedIds:Ljava/util/Collection;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -294,7 +294,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->accepted:Ljava/util/Collection;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -307,7 +307,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->rejectedParticipantsIds:Ljava/util/Collection;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -316,15 +316,15 @@
     return v2
 
     :cond_4
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_5
+    if-nez p1, :cond_5
 
     return v2
 
@@ -333,7 +333,7 @@
 .end method
 
 .method public final getAccepted()Ljava/util/Collection;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -343,13 +343,13 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->accepted:Ljava/util/Collection;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->accepted:Ljava/util/Collection;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getAddedIds()Ljava/util/Collection;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -359,13 +359,13 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->addedIds:Ljava/util/Collection;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->addedIds:Ljava/util/Collection;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getBannedParticipantIds()Ljava/util/Collection;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -375,13 +375,13 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getRejectedParticipantsIds()Ljava/util/Collection;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -391,9 +391,9 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->rejectedParticipantsIds:Ljava/util/Collection;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->rejectedParticipantsIds:Ljava/util/Collection;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
@@ -427,19 +427,19 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result p0
+    move-result v1
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    return p0
+    return v1
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->addedIds:Ljava/util/Collection;
 
@@ -447,41 +447,41 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->rejectedParticipantsIds:Ljava/util/Collection;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v4, "AddParticipantsResult(addedIds="
+    const-string v5, "AddParticipantsResult(addedIds="
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", accepted="
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", rejectedParticipantsIds="
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", bannedParticipantIds="
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, ")"
+    const-string v0, ")"
 
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

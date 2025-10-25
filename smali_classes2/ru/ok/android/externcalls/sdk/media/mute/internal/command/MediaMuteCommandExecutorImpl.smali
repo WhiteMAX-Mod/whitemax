@@ -17,55 +17,55 @@
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "signalingProvider",
         "Lkotlin/Function0;",
-        "Lty0;",
+        "Lh01;",
         "getCall",
         "Lkotlin/Function1;",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
-        "Lsg1;",
+        "Lhi1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "getInternalId",
-        "Lvmd;",
+        "Ls7e;",
         "getActiveRoomId",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lzb6;Lbc6;Lzb6;)V",
+        "(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lji6;Lli6;Lji6;)V",
         "",
-        "Lvj8;",
-        "Lwj8;",
+        "Lyu8;",
+        "Lzu8;",
         "statesToUpdate",
         "participantId",
         "roomId",
-        "Lylf;",
+        "Lccg;",
         "onSuccess",
         "",
         "onError",
         "updateMediaOptions",
-        "(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lzb6;Lbc6;)V",
+        "(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lji6;Lli6;)V",
         "",
         "mediaOptions",
         "requestToEnableMedia",
-        "(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lzb6;Lbc6;)V",
+        "(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lji6;Lli6;)V",
         "updateMediaOptionsForParticipant",
         "updateMediaOptionsForAll",
-        "(Ljava/util/Map;Lvmd;Lzb6;Lbc6;)V",
+        "(Ljava/util/Map;Ls7e;Lji6;Lli6;)V",
         "requestToEnableMediaForParticipant",
         "requestToEnableMediaForAll",
-        "(Ljava/util/Set;Lvmd;Lzb6;Lbc6;)V",
-        "Lxj8;",
+        "(Ljava/util/Set;Ls7e;Lji6;Lli6;)V",
+        "Lav8;",
         "getMediaOptionsForCall",
-        "(Lvmd;)Lxj8;",
+        "(Ls7e;)Lav8;",
         "getMediaOptionsForCurrentUser",
-        "()Lxj8;",
+        "()Lav8;",
         "",
         "mute",
         "setAudioPlayoutMuted",
         "(Z)V",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
-        "Lzb6;",
-        "Lbc6;",
-        "Lzj8;",
+        "Lji6;",
+        "Lli6;",
+        "Lcv8;",
         "paramsCreator",
-        "Lzj8;",
+        "Lcv8;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -79,45 +79,45 @@
 
 
 # instance fields
-.field private final getActiveRoomId:Lzb6;
+.field private final getActiveRoomId:Lji6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lzb6;"
+            "Lji6;"
         }
     .end annotation
 .end field
 
-.field private final getCall:Lzb6;
+.field private final getCall:Lji6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lzb6;"
+            "Lji6;"
         }
     .end annotation
 .end field
 
-.field private final getInternalId:Lbc6;
+.field private final getInternalId:Lli6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lbc6;"
+            "Lli6;"
         }
     .end annotation
 .end field
 
-.field private final paramsCreator:Lzj8;
+.field private final paramsCreator:Lcv8;
 
 .field private final signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lzb6;Lbc6;Lzb6;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lji6;Lli6;Lji6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
-            "Lzb6;",
-            "Lbc6;",
-            "Lzb6;",
+            "Lji6;",
+            "Lli6;",
+            "Lji6;",
             ")V"
         }
     .end annotation
@@ -126,73 +126,73 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getCall:Lzb6;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getCall:Lji6;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getInternalId:Lbc6;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getInternalId:Lli6;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getActiveRoomId:Lzb6;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getActiveRoomId:Lji6;
 
-    new-instance p1, Lzj8;
+    new-instance p1, Lcv8;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->paramsCreator:Lzj8;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->paramsCreator:Lcv8;
 
     return-void
 .end method
 
-.method public static synthetic a(Lbc6;Lorg/json/JSONObject;)V
+.method public static synthetic a(Lji6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->updateMediaOptions$lambda$1(Lbc6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->updateMediaOptions$lambda$0(Lji6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lbc6;Lorg/json/JSONObject;)V
+.method public static synthetic b(Lli6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->requestToEnableMedia$lambda$3(Lbc6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->requestToEnableMedia$lambda$3(Lli6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic c(Lzb6;Lorg/json/JSONObject;)V
+.method public static synthetic c(Lji6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->updateMediaOptions$lambda$0(Lzb6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->requestToEnableMedia$lambda$2(Lji6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic d(Lzb6;Lorg/json/JSONObject;)V
+.method public static synthetic d(Lli6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->requestToEnableMedia$lambda$2(Lzb6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->updateMediaOptions$lambda$1(Lli6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method private final requestToEnableMedia(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lzb6;Lbc6;)V
+.method private final requestToEnableMedia(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lji6;Lli6;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lvj8;",
+            "Lyu8;",
             ">;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lvmd;",
-            "Lzb6;",
-            "Lbc6;",
+            "Ls7e;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-static {v0, p5}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lbc6;)Lt0e;
+    invoke-static {v0, p5}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lli6;)Lrne;
 
     move-result-object v0
 
@@ -201,13 +201,13 @@
     goto :goto_2
 
     :cond_0
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getInternalId:Lbc6;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getInternalId:Lli6;
 
-    invoke-interface {v1, p2}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, p2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lsg1;
+    check-cast v1, Lhi1;
 
     if-eqz p2, :cond_1
 
@@ -215,36 +215,34 @@
 
     if-eqz p5, :cond_3
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Participant is not prepared"
+    const-string p2, "Participant is not prepared"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p5, p0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p5, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :cond_1
     :try_start_0
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->paramsCreator:Lzj8;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->paramsCreator:Lcv8;
 
     if-nez p3, :cond_2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getActiveRoomId:Lzb6;
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getActiveRoomId:Lji6;
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {p3}, Lji6;->invoke()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p3
 
-    move-object p3, p0
-
-    check-cast p3, Lvmd;
+    check-cast p3, Ls7e;
 
     goto :goto_0
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
@@ -252,23 +250,23 @@
     :goto_0
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1, v1, p3}, Lzj8;->a(Ljava/util/Set;Lsg1;Lvmd;)Lorg/json/JSONObject;
+    invoke-static {p1, v1, p3}, Lcv8;->a(Ljava/util/Set;Lhi1;Ls7e;)Lorg/json/JSONObject;
 
-    move-result-object p0
+    move-result-object p1
 
-    new-instance p1, Lks;
-
-    const/4 p2, 0x5
-
-    invoke-direct {p1, p2, p4}, Lks;-><init>(ILzb6;)V
-
-    new-instance p2, Lls;
+    new-instance p2, Lxt;
 
     const/4 p3, 0x5
 
-    invoke-direct {p2, p3, p5}, Lls;-><init>(ILbc6;)V
+    invoke-direct {p2, p3, p4}, Lxt;-><init>(ILji6;)V
 
-    invoke-virtual {v0, p0, p1, p2}, Lt0e;->j(Lorg/json/JSONObject;Ls0e;Ls0e;)V
+    new-instance p3, Lyt;
+
+    const/4 p4, 0x5
+
+    invoke-direct {p3, p4, p5}, Lyt;-><init>(ILli6;)V
+
+    invoke-virtual {v0, p1, p2, p3}, Lrne;->j(Lorg/json/JSONObject;Lone;Lone;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -277,31 +275,31 @@
     :goto_1
     if-eqz p5, :cond_3
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    const-string p2, "Error while creating params"
+    const-string p3, "Error while creating params"
 
-    invoke-direct {p1, p2, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p2, p3, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {p5, p1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p5, p2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
     :goto_2
     return-void
 .end method
 
-.method private static final requestToEnableMedia$lambda$2(Lzb6;Lorg/json/JSONObject;)V
+.method private static final requestToEnableMedia$lambda$2(Lji6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lji6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final requestToEnableMedia$lambda$3(Lbc6;Lorg/json/JSONObject;)V
+.method private static final requestToEnableMedia$lambda$3(Lli6;Lorg/json/JSONObject;)V
     .locals 3
 
     if-eqz p0, :cond_0
@@ -322,33 +320,33 @@
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, v0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private final updateMediaOptions(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lzb6;Lbc6;)V
+.method private final updateMediaOptions(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lji6;Lli6;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lvj8;",
+            "Lyu8;",
             "+",
-            "Lwj8;",
+            "Lzu8;",
             ">;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lvmd;",
-            "Lzb6;",
-            "Lbc6;",
+            "Ls7e;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-static {v0, p5}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lbc6;)Lt0e;
+    invoke-static {v0, p5}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lli6;)Lrne;
 
     move-result-object v0
 
@@ -357,13 +355,13 @@
     goto :goto_2
 
     :cond_0
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getInternalId:Lbc6;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getInternalId:Lli6;
 
-    invoke-interface {v1, p2}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, p2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lsg1;
+    check-cast v1, Lhi1;
 
     if-eqz p2, :cond_1
 
@@ -371,36 +369,34 @@
 
     if-eqz p5, :cond_3
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Participant is not prepared"
+    const-string p2, "Participant is not prepared"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p5, p0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p5, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :cond_1
     :try_start_0
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->paramsCreator:Lzj8;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->paramsCreator:Lcv8;
 
     if-nez p3, :cond_2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getActiveRoomId:Lzb6;
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getActiveRoomId:Lji6;
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {p3}, Lji6;->invoke()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p3
 
-    move-object p3, p0
-
-    check-cast p3, Lvmd;
+    check-cast p3, Ls7e;
 
     goto :goto_0
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
@@ -408,23 +404,23 @@
     :goto_0
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1, v1, p3}, Lzj8;->b(Ljava/util/Map;Lsg1;Lvmd;)Lorg/json/JSONObject;
+    invoke-static {p1, v1, p3}, Lcv8;->b(Ljava/util/Map;Lhi1;Ls7e;)Lorg/json/JSONObject;
 
-    move-result-object p0
+    move-result-object p1
 
-    new-instance p1, Lks;
-
-    const/4 p2, 0x6
-
-    invoke-direct {p1, p2, p4}, Lks;-><init>(ILzb6;)V
-
-    new-instance p2, Lls;
+    new-instance p2, Lxt;
 
     const/4 p3, 0x6
 
-    invoke-direct {p2, p3, p5}, Lls;-><init>(ILbc6;)V
+    invoke-direct {p2, p3, p4}, Lxt;-><init>(ILji6;)V
 
-    invoke-virtual {v0, p0, p1, p2}, Lt0e;->j(Lorg/json/JSONObject;Ls0e;Ls0e;)V
+    new-instance p3, Lyt;
+
+    const/4 p4, 0x6
+
+    invoke-direct {p3, p4, p5}, Lyt;-><init>(ILli6;)V
+
+    invoke-virtual {v0, p1, p2, p3}, Lrne;->j(Lorg/json/JSONObject;Lone;Lone;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -433,31 +429,31 @@
     :goto_1
     if-eqz p5, :cond_3
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    const-string p2, "Error while creating params"
+    const-string p3, "Error while creating params"
 
-    invoke-direct {p1, p2, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p2, p3, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {p5, p1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p5, p2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
     :goto_2
     return-void
 .end method
 
-.method private static final updateMediaOptions$lambda$0(Lzb6;Lorg/json/JSONObject;)V
+.method private static final updateMediaOptions$lambda$0(Lji6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lji6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final updateMediaOptions$lambda$1(Lbc6;Lorg/json/JSONObject;)V
+.method private static final updateMediaOptions$lambda$1(Lli6;Lorg/json/JSONObject;)V
     .locals 3
 
     if-eqz p0, :cond_0
@@ -478,7 +474,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, v0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -486,127 +482,125 @@
 
 
 # virtual methods
-.method public getMediaOptionsForCall(Lvmd;)Lxj8;
-    .locals 3
+.method public getMediaOptionsForCall(Ls7e;)Lav8;
+    .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getCall:Lzb6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getCall:Lji6;
 
-    invoke-interface {v0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lty0;
+    check-cast v0, Lh01;
 
     if-nez p1, :cond_0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getActiveRoomId:Lzb6;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getActiveRoomId:Lji6;
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    move-object p1, p0
-
-    check-cast p1, Lvmd;
+    check-cast p1, Ls7e;
 
     :cond_0
     if-eqz v0, :cond_1
 
-    iget-object p0, v0, Lty0;->A0:Lwd1;
+    iget-object v0, v0, Lh01;->H0:Lgf1;
 
-    invoke-virtual {p0, p1}, Lwd1;->h(Lvmd;)Lco9;
+    invoke-virtual {v0, p1}, Lgf1;->h(Ls7e;)Lu0a;
 
-    move-result-object p0
+    move-result-object p1
 
-    new-instance p1, Lxj8;
+    new-instance v0, Lav8;
 
-    iget-object v0, p0, Lco9;->a:Lwj8;
+    iget-object v1, p1, Lu0a;->a:Lzu8;
 
-    iget-object v1, p0, Lco9;->b:Lwj8;
+    iget-object v2, p1, Lu0a;->b:Lzu8;
 
-    iget-object v2, p0, Lco9;->c:Lwj8;
+    iget-object v3, p1, Lu0a;->c:Lzu8;
 
-    iget-object p0, p0, Lco9;->d:Lwj8;
+    iget-object p1, p1, Lu0a;->d:Lzu8;
 
-    invoke-direct {p1, v0, v1, v2, p0}, Lxj8;-><init>(Lwj8;Lwj8;Lwj8;Lwj8;)V
+    invoke-direct {v0, v1, v2, v3, p1}, Lav8;-><init>(Lzu8;Lzu8;Lzu8;Lzu8;)V
 
     goto :goto_0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    if-nez p1, :cond_2
+    if-nez v0, :cond_2
 
-    new-instance p0, Lxj8;
+    new-instance p1, Lav8;
 
-    invoke-direct {p0}, Lxj8;-><init>()V
+    invoke-direct {p1}, Lav8;-><init>()V
 
-    return-object p0
+    return-object p1
 
     :cond_2
-    return-object p1
+    return-object v0
 .end method
 
-.method public getMediaOptionsForCurrentUser()Lxj8;
-    .locals 4
+.method public getMediaOptionsForCurrentUser()Lav8;
+    .locals 5
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getCall:Lzb6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getCall:Lji6;
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lty0;
+    check-cast v0, Lh01;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lty0;->A0:Lwd1;
+    iget-object v0, v0, Lh01;->H0:Lgf1;
 
-    iget-object p0, p0, Lwd1;->h:Lco9;
+    iget-object v0, v0, Lgf1;->i:Lu0a;
 
-    new-instance v0, Lxj8;
+    new-instance v1, Lav8;
 
-    iget-object v1, p0, Lco9;->a:Lwj8;
+    iget-object v2, v0, Lu0a;->a:Lzu8;
 
-    iget-object v2, p0, Lco9;->b:Lwj8;
+    iget-object v3, v0, Lu0a;->b:Lzu8;
 
-    iget-object v3, p0, Lco9;->c:Lwj8;
+    iget-object v4, v0, Lu0a;->c:Lzu8;
 
-    iget-object p0, p0, Lco9;->d:Lwj8;
+    iget-object v0, v0, Lu0a;->d:Lzu8;
 
-    invoke-direct {v0, v1, v2, v3, p0}, Lxj8;-><init>(Lwj8;Lwj8;Lwj8;Lwj8;)V
+    invoke-direct {v1, v2, v3, v4, v0}, Lav8;-><init>(Lzu8;Lzu8;Lzu8;Lzu8;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
-    new-instance p0, Lxj8;
+    new-instance v0, Lav8;
 
-    invoke-direct {p0}, Lxj8;-><init>()V
+    invoke-direct {v0}, Lav8;-><init>()V
 
-    return-object p0
+    return-object v0
 
     :cond_1
-    return-object v0
+    return-object v1
 .end method
 
-.method public requestToEnableMediaForAll(Ljava/util/Set;Lvmd;Lzb6;Lbc6;)V
+.method public requestToEnableMediaForAll(Ljava/util/Set;Ls7e;Lji6;Lli6;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lvj8;",
+            "Lyu8;",
             ">;",
-            "Lvmd;",
-            "Lzb6;",
-            "Lbc6;",
+            "Ls7e;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
@@ -623,75 +617,75 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->requestToEnableMedia(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lzb6;Lbc6;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->requestToEnableMedia(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lji6;Lli6;)V
 
     return-void
 .end method
 
-.method public requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lzb6;Lbc6;)V
+.method public requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lji6;Lli6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lvj8;",
+            "Lyu8;",
             ">;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lvmd;",
-            "Lzb6;",
-            "Lbc6;",
+            "Ls7e;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->requestToEnableMedia(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lzb6;Lbc6;)V
+    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->requestToEnableMedia(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lji6;Lli6;)V
 
     return-void
 .end method
 
 .method public setAudioPlayoutMuted(Z)V
-    .locals 3
+    .locals 4
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getCall:Lzb6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->getCall:Lji6;
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lty0;
+    check-cast v0, Lh01;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lty0;->Z:Ltxd;
+    iget-object v0, v0, Lh01;->e0:Lvje;
 
-    iget-object v0, p0, Ltxd;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v1, v0, Lvje;->a:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v1, Lrxd;
+    new-instance v2, Ltje;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x2
 
-    invoke-direct {v1, p0, p1, v2}, Lrxd;-><init>(Ltxd;ZI)V
+    invoke-direct {v2, v0, p1, v3}, Ltje;-><init>(Lvje;ZI)V
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public updateMediaOptionsForAll(Ljava/util/Map;Lvmd;Lzb6;Lbc6;)V
+.method public updateMediaOptionsForAll(Ljava/util/Map;Ls7e;Lji6;Lli6;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lvj8;",
+            "Lyu8;",
             "+",
-            "Lwj8;",
+            "Lzu8;",
             ">;",
-            "Lvmd;",
-            "Lzb6;",
-            "Lbc6;",
+            "Ls7e;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
@@ -708,30 +702,30 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->updateMediaOptions(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lzb6;Lbc6;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->updateMediaOptions(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lji6;Lli6;)V
 
     return-void
 .end method
 
-.method public updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lzb6;Lbc6;)V
+.method public updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lji6;Lli6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lvj8;",
+            "Lyu8;",
             "+",
-            "Lwj8;",
+            "Lzu8;",
             ">;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lvmd;",
-            "Lzb6;",
-            "Lbc6;",
+            "Ls7e;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->updateMediaOptions(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lzb6;Lbc6;)V
+    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->updateMediaOptions(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lji6;Lli6;)V
 
     return-void
 .end method

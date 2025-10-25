@@ -33,59 +33,59 @@
 
 # virtual methods
 .method public lookup(Ljava/lang/String;)Lorg/apache/http/protocol/HttpRequestHandler;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/protocol/HttpRequestHandlerRegistry;->matcher:Lorg/apache/http/protocol/UriPatternMatcher;
+    iget-object v0, p0, Lorg/apache/http/protocol/HttpRequestHandlerRegistry;->matcher:Lorg/apache/http/protocol/UriPatternMatcher;
 
-    invoke-virtual {p0, p1}, Lorg/apache/http/protocol/UriPatternMatcher;->lookup(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lorg/apache/http/protocol/UriPatternMatcher;->lookup(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lorg/apache/http/protocol/HttpRequestHandler;
+    check-cast p1, Lorg/apache/http/protocol/HttpRequestHandler;
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public matchUriRequestPattern(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 0
+    .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object p0, p0, Lorg/apache/http/protocol/HttpRequestHandlerRegistry;->matcher:Lorg/apache/http/protocol/UriPatternMatcher;
+    iget-object v0, p0, Lorg/apache/http/protocol/HttpRequestHandlerRegistry;->matcher:Lorg/apache/http/protocol/UriPatternMatcher;
 
-    invoke-virtual {p0, p1, p2}, Lorg/apache/http/protocol/UriPatternMatcher;->matchUriRequestPattern(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {v0, p1, p2}, Lorg/apache/http/protocol/UriPatternMatcher;->matchUriRequestPattern(Ljava/lang/String;Ljava/lang/String;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public register(Ljava/lang/String;Lorg/apache/http/protocol/HttpRequestHandler;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/protocol/HttpRequestHandlerRegistry;->matcher:Lorg/apache/http/protocol/UriPatternMatcher;
+    iget-object v0, p0, Lorg/apache/http/protocol/HttpRequestHandlerRegistry;->matcher:Lorg/apache/http/protocol/UriPatternMatcher;
 
-    invoke-virtual {p0, p1, p2}, Lorg/apache/http/protocol/UriPatternMatcher;->register(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, p2}, Lorg/apache/http/protocol/UriPatternMatcher;->register(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public setHandlers(Ljava/util/Map;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/protocol/HttpRequestHandlerRegistry;->matcher:Lorg/apache/http/protocol/UriPatternMatcher;
+    iget-object v0, p0, Lorg/apache/http/protocol/HttpRequestHandlerRegistry;->matcher:Lorg/apache/http/protocol/UriPatternMatcher;
 
-    invoke-virtual {p0, p1}, Lorg/apache/http/protocol/UriPatternMatcher;->setHandlers(Ljava/util/Map;)V
+    invoke-virtual {v0, p1}, Lorg/apache/http/protocol/UriPatternMatcher;->setHandlers(Ljava/util/Map;)V
 
     return-void
 .end method
 
 .method public unregister(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/protocol/HttpRequestHandlerRegistry;->matcher:Lorg/apache/http/protocol/UriPatternMatcher;
+    iget-object v0, p0, Lorg/apache/http/protocol/HttpRequestHandlerRegistry;->matcher:Lorg/apache/http/protocol/UriPatternMatcher;
 
-    invoke-virtual {p0, p1}, Lorg/apache/http/protocol/UriPatternMatcher;->unregister(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lorg/apache/http/protocol/UriPatternMatcher;->unregister(Ljava/lang/String;)V
 
     return-void
 .end method

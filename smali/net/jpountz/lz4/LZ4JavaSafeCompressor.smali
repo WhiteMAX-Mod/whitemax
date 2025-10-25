@@ -188,7 +188,7 @@
     int-to-short v2, v2
 
     .line 46
-    invoke-static {v3, v11, v2}, Lyv0;->e(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v3, v11, v2}, Ljx0;->f(Ljava/nio/ByteBuffer;II)V
 
     add-int/lit8 v2, v11, 0x2
 
@@ -437,7 +437,7 @@
 
     .line 4
     :cond_0
-    invoke-static {v8, v0}, Lo2d;->c(I[B)I
+    invoke-static {v8, v0}, Lmld;->d(I[B)I
 
     move-result v14
 
@@ -618,7 +618,7 @@
     add-int/lit8 v2, v8, -0x2
 
     .line 22
-    invoke-static {v2, v0}, Lo2d;->c(I[B)I
+    invoke-static {v2, v0}, Lmld;->d(I[B)I
 
     move-result v9
 
@@ -634,7 +634,7 @@
     aput-short v2, p2, v9
 
     .line 24
-    invoke-static {v8, v0}, Lo2d;->c(I[B)I
+    invoke-static {v8, v0}, Lmld;->d(I[B)I
 
     move-result v2
 
@@ -781,9 +781,9 @@
 
     invoke-virtual/range {v0 .. v6}, Lnet/jpountz/lz4/LZ4JavaSafeCompressor;->compress([BII[BII)I
 
-    move-result v0
+    move-result v1
 
-    return v0
+    return v1
 
     :cond_0
     move/from16 v0, p2
@@ -795,20 +795,20 @@
     move/from16 v6, p6
 
     .line 38
-    invoke-static/range {p1 .. p1}, Lyv0;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static/range {p1 .. p1}, Ljx0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
     .line 39
-    invoke-static/range {p4 .. p4}, Lyv0;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static/range {p4 .. p4}, Ljx0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
     .line 40
-    invoke-static {v1, v0, v2}, Lyv0;->b(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v1, v0, v2}, Ljx0;->c(Ljava/nio/ByteBuffer;II)V
 
     .line 41
-    invoke-static {v4, v3, v6}, Lyv0;->b(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v4, v3, v6}, Ljx0;->c(Ljava/nio/ByteBuffer;II)V
 
     add-int v5, v3, v6
 
@@ -886,7 +886,7 @@
 
     if-le v12, v6, :cond_2
 
-    move/from16 p0, v2
+    move/from16 p1, v2
 
     move v1, v7
 
@@ -909,7 +909,7 @@
     .line 49
     aget v15, v8, v14
 
-    move/from16 p0, v2
+    move/from16 p1, v2
 
     sub-int v2, v10, v15
 
@@ -989,7 +989,7 @@
 
     .line 58
     :goto_4
-    invoke-static {v3, v12, v2}, Lyv0;->e(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v3, v12, v2}, Ljx0;->f(Ljava/nio/ByteBuffer;II)V
 
     add-int/lit8 v2, v12, 0x2
 
@@ -1063,7 +1063,7 @@
     goto/16 :goto_2
 
     :goto_7
-    sub-int v2, p0, v1
+    sub-int v2, p1, v1
 
     .line 65
     invoke-static/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->lastLiterals(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I
@@ -1141,7 +1141,7 @@
 
     move v10, v2
 
-    move/from16 v2, p0
+    move/from16 v2, p1
 
     goto/16 :goto_0
 
@@ -1162,7 +1162,7 @@
     throw v0
 
     :cond_a
-    move/from16 v2, p0
+    move/from16 v2, p1
 
     move v10, v12
 
@@ -1189,10 +1189,10 @@
     move/from16 v5, p6
 
     .line 1
-    invoke-static {v1, v0, v2}, Lo2d;->b(I[BI)V
+    invoke-static {v1, v0, v2}, Lmld;->c(I[BI)V
 
     .line 2
-    invoke-static {v4, v3, v5}, Lo2d;->b(I[BI)V
+    invoke-static {v4, v3, v5}, Lmld;->c(I[BI)V
 
     add-int/2addr v5, v4
 
@@ -1250,7 +1250,7 @@
 
     if-le v12, v6, :cond_1
 
-    move/from16 p0, v2
+    move/from16 p3, v2
 
     move v1, v7
 
@@ -1261,7 +1261,7 @@
 
     .line 8
     :cond_1
-    invoke-static {v10, v0}, Lo2d;->c(I[B)I
+    invoke-static {v10, v0}, Lmld;->d(I[B)I
 
     move-result v14
 
@@ -1272,7 +1272,7 @@
     .line 9
     aget v15, v8, v14
 
-    move/from16 p0, v2
+    move/from16 p3, v2
 
     sub-int v2, v10, v15
 
@@ -1433,7 +1433,7 @@
     goto/16 :goto_2
 
     :goto_7
-    sub-int v2, p0, v1
+    sub-int v2, p3, v1
 
     .line 26
     invoke-static/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4SafeUtils;->lastLiterals([BII[BII)I
@@ -1448,7 +1448,7 @@
     add-int/lit8 v2, v10, -0x2
 
     .line 27
-    invoke-static {v2, v0}, Lo2d;->c(I[B)I
+    invoke-static {v2, v0}, Lmld;->d(I[B)I
 
     move-result v3
 
@@ -1460,7 +1460,7 @@
     aput v2, v8, v3
 
     .line 29
-    invoke-static {v10, v0}, Lo2d;->c(I[B)I
+    invoke-static {v10, v0}, Lmld;->d(I[B)I
 
     move-result v2
 
@@ -1513,7 +1513,7 @@
 
     move v10, v2
 
-    move/from16 v2, p0
+    move/from16 v2, p3
 
     goto/16 :goto_0
 
@@ -1534,7 +1534,7 @@
     throw v0
 
     :cond_9
-    move/from16 v2, p0
+    move/from16 v2, p3
 
     move-object/from16 v3, p4
 

@@ -1,67 +1,64 @@
-.class public final Li63;
-.super Lr3;
+.class public abstract Li63;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Li63;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Ls48;
 
 
 # instance fields
-.field public final a:Landroid/content/Intent;
+.field public final X:I
+
+.field public final Y:Ljava/lang/Object;
+
+.field public final Z:J
+
+.field public final a:J
+
+.field public final b:Lmc4;
+
+.field public final c:I
+
+.field public final o:Lmb6;
+
+.field public final q0:J
+
+.field public final r0:Le2f;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lfvf;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lfvf;-><init>(I)V
-
-    sput-object v0, Li63;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 0
+.method public constructor <init>(Lfc4;Lmc4;ILmb6;ILjava/lang/Object;JJ)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Li63;->a:Landroid/content/Intent;
+    new-instance v0, Le2f;
 
-    return-void
-.end method
+    invoke-direct {v0, p1}, Le2f;-><init>(Lfc4;)V
 
+    iput-object v0, p0, Li63;->r0:Le2f;
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    iput-object p2, p0, Li63;->b:Lmc4;
 
-    const/16 v0, 0x4f45
+    iput p3, p0, Li63;->c:I
 
-    invoke-static {p1, v0}, Ljs9;->U(Landroid/os/Parcel;I)I
+    iput-object p4, p0, Li63;->o:Lmb6;
 
-    move-result v0
+    iput p5, p0, Li63;->X:I
 
-    const/4 v1, 0x1
+    iput-object p6, p0, Li63;->Y:Ljava/lang/Object;
 
-    iget-object p0, p0, Li63;->a:Landroid/content/Intent;
+    iput-wide p7, p0, Li63;->Z:J
 
-    invoke-static {p1, v1, p0, p2}, Ljs9;->O(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    iput-wide p9, p0, Li63;->q0:J
 
-    invoke-static {p1, v0}, Ljs9;->V(Landroid/os/Parcel;I)V
+    sget-object p1, Lj48;->c:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Li63;->a:J
 
     return-void
 .end method

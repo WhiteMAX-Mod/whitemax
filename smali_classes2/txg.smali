@@ -1,127 +1,109 @@
-.class public final Ltxg;
-.super Lure;
+.class public final enum Ltxg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
 
+# static fields
+.field public static final enum X:Ltxg;
 
-# instance fields
-.field public X:I
+.field public static final synthetic Y:[Ltxg;
 
-.field public final synthetic Y:Lwxg;
+.field public static final enum a:Ltxg;
 
-.field public final synthetic Z:D
+.field public static final enum b:Ltxg;
 
-.field public final synthetic r0:D
+.field public static final enum c:Ltxg;
+
+.field public static final enum o:Ltxg;
 
 
 # direct methods
-.method public constructor <init>(Lwxg;DDLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Ltxg;->Y:Lwxg;
+    new-instance v0, Ltxg;
 
-    iput-wide p2, p0, Ltxg;->Z:D
+    const-string v1, "VIDEO"
 
-    iput-wide p4, p0, Ltxg;->r0:D
+    const/4 v2, 0x0
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p0, p1, p6}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Ltxg;->a:Ltxg;
+
+    new-instance v1, Ltxg;
+
+    const-string v2, "SCREEN_CAPTURE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ltxg;->b:Ltxg;
+
+    new-instance v2, Ltxg;
+
+    const-string v3, "ANIMOJI"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ltxg;->c:Ltxg;
+
+    new-instance v3, Ltxg;
+
+    const-string v4, "MOVIE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Ltxg;->o:Ltxg;
+
+    new-instance v4, Ltxg;
+
+    const-string v5, "STREAM"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Ltxg;->X:Ltxg;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Ltxg;
+
+    move-result-object v0
+
+    sput-object v0, Ltxg;->Y:[Ltxg;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ltxg;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Ltxg;
 
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ltxg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
     check-cast p0, Ltxg;
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Ltxg;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
     return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+.method public static values()[Ltxg;
+    .locals 1
 
-    new-instance v0, Ltxg;
+    sget-object v0, Ltxg;->Y:[Ltxg;
 
-    iget-wide v2, p0, Ltxg;->Z:D
+    invoke-virtual {v0}, [Ltxg;->clone()Ljava/lang/Object;
 
-    iget-wide v4, p0, Ltxg;->r0:D
+    move-result-object v0
 
-    iget-object v1, p0, Ltxg;->Y:Lwxg;
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Ltxg;-><init>(Lwxg;DDLkotlin/coroutines/Continuation;)V
+    check-cast v0, [Ltxg;
 
     return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Ltxg;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iput v1, p0, Ltxg;->X:I
-
-    iget-object v0, p0, Ltxg;->Y:Lwxg;
-
-    iget-wide v1, p0, Ltxg;->Z:D
-
-    iget-wide v3, p0, Ltxg;->r0:D
-
-    move-object v5, p0
-
-    invoke-static/range {v0 .. v5}, Lwxg;->d(Lwxg;DDLjx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    return-object p0
 .end method

@@ -1,77 +1,35 @@
 .class public final Lv08;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public A0:I
+.field public final a:Liu7;
 
-.field public X:Lg08;
-
-.field public Y:Lhpc;
-
-.field public Z:Lf53;
-
-.field public o:Ly08;
-
-.field public r0:Lao9;
-
-.field public s0:J
-
-.field public t0:J
-
-.field public u0:J
-
-.field public v0:J
-
-.field public w0:Z
-
-.field public x0:I
-
-.field public synthetic y0:Ljava/lang/Object;
-
-.field public final synthetic z0:Ly08;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ly08;Ljx3;)V
-    .locals 0
+.method public constructor <init>(Liu7;)V
+    .locals 1
 
-    iput-object p1, p0, Lv08;->z0:Ly08;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lv08;->a:Liu7;
+
+    new-instance p1, Lrk7;
+
+    const/16 v0, 0x10
+
+    invoke-direct {p1, v0}, Lrk7;-><init>(I)V
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lv08;->b:Ljava/lang/Object;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iput-object p1, p0, Lv08;->y0:Ljava/lang/Object;
-
-    iget p1, p0, Lv08;->A0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lv08;->A0:I
-
-    const/4 v3, 0x0
-
-    const-wide/16 v4, 0x0
-
-    iget-object v0, p0, Lv08;->z0:Ly08;
-
-    const-wide/16 v1, 0x0
-
-    move-object v6, p0
-
-    invoke-virtual/range {v0 .. v6}, Ly08;->e(JLg08;JLjx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method

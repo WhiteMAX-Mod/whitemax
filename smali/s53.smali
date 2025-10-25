@@ -1,336 +1,164 @@
 .class public final Ls53;
-.super Lge3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
 
 # instance fields
-.field public final k:Lkxb;
+.field public a:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
-.field public final l:J
-
-.field public final m:Z
-
-.field public final n:Ljava/util/ArrayList;
-
-.field public final o:Lm6f;
-
-.field public p:Lq53;
-
-.field public q:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
-
-.field public r:J
-
-.field public s:J
+.field public final synthetic b:Lcom/google/android/material/chip/ChipGroup;
 
 
 # direct methods
-.method public constructor <init>(Lkxb;J)V
+.method public constructor <init>(Lcom/google/android/material/chip/ChipGroup;)V
     .locals 0
 
-    invoke-direct {p0}, Lge3;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ls53;->k:Lkxb;
-
-    iput-wide p2, p0, Ls53;->l:J
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Ls53;->m:Z
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Ls53;->n:Ljava/util/ArrayList;
-
-    new-instance p1, Lm6f;
-
-    invoke-direct {p1}, Lm6f;-><init>()V
-
-    iput-object p1, p0, Ls53;->o:Lm6f;
+    iput-object p1, p0, Ls53;->b:Lcom/google/android/material/chip/ChipGroup;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lxp8;Lhb4;J)Ldk8;
-    .locals 7
+.method public final onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
+    .locals 4
 
-    new-instance v0, Ln53;
+    iget-object v0, p0, Ls53;->b:Lcom/google/android/material/chip/ChipGroup;
 
-    iget-object v1, p0, Ls53;->k:Lkxb;
+    if-ne p1, v0, :cond_2
 
-    invoke-virtual {v1, p1, p2, p3, p4}, Lkxb;->a(Lxp8;Lhb4;J)Ldk8;
+    instance-of v1, p2, Lcom/google/android/material/chip/Chip;
 
-    move-result-object v1
+    if-eqz v1, :cond_2
 
-    iget-wide v3, p0, Ls53;->r:J
-
-    iget-wide v5, p0, Ls53;->s:J
-
-    iget-boolean v2, p0, Ls53;->m:Z
-
-    invoke-direct/range {v0 .. v6}, Ln53;-><init>(Ldk8;ZJJ)V
-
-    iget-object p0, p0, Ls53;->n:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-object v0
-.end method
-
-.method public final f()Lxh8;
-    .locals 0
-
-    iget-object p0, p0, Ls53;->k:Lkxb;
-
-    iget-object p0, p0, Lkxb;->h:Lxh8;
-
-    return-object p0
-.end method
-
-.method public final g()V
-    .locals 1
-
-    iget-object v0, p0, Ls53;->q:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0}, Lge3;->g()V
-
-    return-void
-
-    :cond_0
-    throw v0
-.end method
-
-.method public final i(Ledf;)V
-    .locals 1
-
-    iput-object p1, p0, Lge3;->j:Ledf;
-
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Llrf;->l(Landroid/os/Handler$Callback;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lge3;->i:Landroid/os/Handler;
-
-    iget-object v0, p0, Ls53;->k:Lkxb;
-
-    invoke-virtual {p0, p1, v0}, Lge3;->r(Ljava/lang/Integer;Lcj0;)V
-
-    return-void
-.end method
-
-.method public final k(Ldk8;)V
-    .locals 2
-
-    iget-object v0, p0, Ls53;->n:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {p2}, Landroid/view/View;->getId()I
 
     move-result v1
 
-    invoke-static {v1}, Lxnd;->m(Z)V
+    const/4 v2, -0x1
 
-    check-cast p1, Ln53;
+    if-ne v1, v2, :cond_0
 
-    iget-object p1, p1, Ln53;->a:Ldk8;
+    sget-object v1, Lhzg;->a:Ljava/util/WeakHashMap;
 
-    iget-object v1, p0, Ls53;->k:Lkxb;
+    invoke-static {}, Landroid/view/View;->generateViewId()I
 
-    invoke-virtual {v1, p1}, Lkxb;->k(Ldk8;)V
+    move-result v1
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Ls53;->p:Lq53;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p1, Ll76;->b:Lo6f;
-
-    invoke-virtual {p0, p1}, Ls53;->s(Lo6f;)V
+    invoke-virtual {p2, v1}, Landroid/view/View;->setId(I)V
 
     :cond_0
+    iget-object v0, v0, Lcom/google/android/material/chip/ChipGroup;->t0:La53;
+
+    move-object v1, p2
+
+    check-cast v1, Lcom/google/android/material/chip/Chip;
+
+    iget-object v2, v0, La53;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/HashMap;
+
+    invoke-interface {v1}, Lzi8;->getId()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-interface {v1}, Landroid/widget/Checkable;->isChecked()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v0, v1}, La53;->a(Lzi8;)Z
+
+    :cond_1
+    new-instance v2, Lyxe;
+
+    const/4 v3, 0x7
+
+    invoke-direct {v2, v3, v0}, Lyxe;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v1, v2}, Lzi8;->setInternalOnCheckedChangeListener(Lyi8;)V
+
+    :cond_2
+    iget-object v0, p0, Ls53;->a:Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
+
+    :cond_3
     return-void
 .end method
 
-.method public final m()V
-    .locals 1
+.method public final onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
+    .locals 4
 
-    invoke-super {p0}, Lge3;->m()V
+    iget-object v0, p0, Ls53;->b:Lcom/google/android/material/chip/ChipGroup;
 
-    const/4 v0, 0x0
+    if-ne p1, v0, :cond_0
 
-    iput-object v0, p0, Ls53;->q:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
+    instance-of v1, p2, Lcom/google/android/material/chip/Chip;
 
-    iput-object v0, p0, Ls53;->p:Lq53;
+    if-eqz v1, :cond_0
 
-    return-void
-.end method
+    iget-object v0, v0, Lcom/google/android/material/chip/ChipGroup;->t0:La53;
 
-.method public final q(Ljava/lang/Object;Lcj0;Lo6f;)V
-    .locals 0
+    move-object v1, p2
 
-    check-cast p1, Ljava/lang/Void;
+    check-cast v1, Lcom/google/android/material/chip/Chip;
 
-    iget-object p1, p0, Ls53;->q:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz p1, :cond_0
+    const/4 v2, 0x0
 
-    return-void
+    invoke-interface {v1, v2}, Lzi8;->setInternalOnCheckedChangeListener(Lyi8;)V
+
+    iget-object v2, v0, La53;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/HashMap;
+
+    invoke-interface {v1}, Lzi8;->getId()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, v0, La53;->o:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/HashSet;
+
+    invoke-interface {v1}, Lzi8;->getId()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
     :cond_0
-    invoke-virtual {p0, p3}, Ls53;->s(Lo6f;)V
-
-    return-void
-.end method
-
-.method public final s(Lo6f;)V
-    .locals 13
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Ls53;->o:Lm6f;
-
-    invoke-virtual {p1, v1, v0}, Lo6f;->n(ILm6f;)V
-
-    iget-wide v4, v0, Lm6f;->A0:J
-
-    iget-object v0, p0, Ls53;->p:Lq53;
-
-    iget-wide v6, p0, Ls53;->l:J
-
-    const-wide/high16 v8, -0x8000000000000000L
-
-    iget-object v10, p0, Ls53;->n:Ljava/util/ArrayList;
+    iget-object v0, p0, Ls53;->a:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v10}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-wide v11, p0, Ls53;->r:J
-
-    sub-long/2addr v11, v4
-
-    cmp-long v0, v6, v8
-
-    if-nez v0, :cond_0
-
-    move-wide v6, v8
-
-    goto :goto_0
-
-    :cond_0
-    iget-wide v6, p0, Ls53;->s:J
-
-    sub-long/2addr v6, v4
-
-    :goto_0
-    move-wide v4, v11
-
-    goto :goto_3
+    invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
 
     :cond_1
-    iput-wide v4, p0, Ls53;->r:J
-
-    cmp-long v0, v6, v8
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    add-long v8, v4, v6
-
-    :goto_1
-    iput-wide v8, p0, Ls53;->s:J
-
-    invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    move v2, v1
-
-    :goto_2
-    if-ge v2, v0, :cond_3
-
-    invoke-virtual {v10, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ln53;
-
-    iget-wide v8, p0, Ls53;->r:J
-
-    iget-wide v11, p0, Ls53;->s:J
-
-    iput-wide v8, v4, Ln53;->X:J
-
-    iput-wide v11, v4, Ln53;->Y:J
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    const-wide/16 v11, 0x0
-
-    goto :goto_0
-
-    :goto_3
-    :try_start_0
-    new-instance v2, Lq53;
-
-    move-object v3, p1
-
-    invoke-direct/range {v2 .. v7}, Lq53;-><init>(Lo6f;JJ)V
-
-    iput-object v2, p0, Ls53;->p:Lq53;
-    :try_end_0
-    .catch Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    invoke-virtual {p0, v2}, Lcj0;->j(Lo6f;)V
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    iput-object v0, p0, Ls53;->q:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
-
-    :goto_4
-    invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_4
-
-    invoke-virtual {v10, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ln53;
-
-    iget-object v2, p0, Ls53;->q:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
-
-    iput-object v2, v0, Ln53;->Z:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_4
-
-    :cond_4
     return-void
 .end method

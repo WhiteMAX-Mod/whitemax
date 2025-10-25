@@ -1,128 +1,133 @@
-.class public final synthetic Lq9g;
-.super Led6;
+.class public final Lq9g;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Landroid/view/View;
+.field public final synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic Z:Lt9g;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewTreeObserver;Landroid/view/View;Lr9g;)V
-    .locals 8
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lt9g;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lq9g;->Y:Ljava/lang/Object;
 
-    iput v0, p0, Lq9g;->a:I
+    iput-object p3, p0, Lq9g;->Z:Lt9g;
 
-    iput-object p1, p0, Lq9g;->c:Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lq9g;->b:Landroid/view/View;
-
-    const-string v7, "doOnGlobalLayout$dispose(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V"
-
-    const/4 v3, 0x0
-
-    const/4 v2, 0x0
-
-    .line 2
-    const-class v4, Lcb7;
-
-    const-string v6, "dispose"
-
-    move-object v1, p0
-
-    move-object v5, p3
-
-    invoke-direct/range {v1 .. v7}, Ldd6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lbag;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
-    .locals 8
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lq9g;->a:I
-
-    iput-object p1, p0, Lq9g;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lq9g;->b:Landroid/view/View;
-
-    const-string v7, "attach$dispose(Landroid/view/ViewTreeObserver;Lone/me/sdk/contextmenu/helper/ViewWatcher$attach$listener$1;Landroid/view/View;)V"
-
-    const/4 v3, 0x0
-
-    const/4 v2, 0x0
-
-    .line 1
-    const-class v4, Lcb7;
-
-    const-string v6, "dispose"
-
-    move-object v1, p0
-
-    move-object v5, p3
-
-    invoke-direct/range {v1 .. v7}, Ldd6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lq9g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lq9g;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lq9g;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lq9g;->a:I
+    new-instance p1, Lq9g;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lq9g;->Y:Ljava/lang/Object;
 
-    iget-object v0, p0, Lks1;->receiver:Ljava/lang/Object;
+    iget-object v1, p0, Lq9g;->Z:Lt9g;
 
-    check-cast v0, Landroid/view/ViewTreeObserver;
+    invoke-direct {p1, v0, p2, v1}, Lq9g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lt9g;)V
 
-    iget-object v1, p0, Lq9g;->c:Ljava/lang/Object;
+    return-object p1
+.end method
 
-    check-cast v1, Lbag;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object p0, p0, Lq9g;->b:Landroid/view/View;
+    iget v0, p0, Lq9g;->X:I
 
-    invoke-static {v1, p0, v0}, Lax;->b(Lbag;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    const/4 v1, 0x1
 
-    sget-object p0, Lylf;->a:Lylf;
+    if-eqz v0, :cond_1
 
-    return-object p0
+    if-ne v0, v1, :cond_0
 
-    :pswitch_0
-    iget-object v0, p0, Lks1;->receiver:Ljava/lang/Object;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    check-cast v0, Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+    return-object p1
 
-    iget-object v1, p0, Lq9g;->c:Ljava/lang/Object;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    check-cast v1, Landroid/view/ViewTreeObserver;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object p0, p0, Lq9g;->b:Landroid/view/View;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v1, p0}, Ls9g;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    throw p1
 
-    sget-object p0, Lylf;->a:Lylf;
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    return-object p0
+    iget-object p1, p0, Lq9g;->Y:Ljava/lang/Object;
 
-    nop
+    check-cast p1, Lq54;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object p1, p0, Lq9g;->Z:Lt9g;
+
+    iget-object v0, p1, Lt9g;->o:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lll;
+
+    new-instance v2, Lmu;
+
+    iget-object p1, p1, Lt9g;->b:Ljava/lang/String;
+
+    invoke-direct {v2, p1}, Lmu;-><init>(Ljava/lang/String;)V
+
+    iput v1, p0, Lq9g;->X:I
+
+    check-cast v0, Lmna;
+
+    invoke-virtual {v0, v2, p0}, Lmna;->I(Lmmf;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

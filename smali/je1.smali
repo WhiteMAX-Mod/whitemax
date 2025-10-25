@@ -1,26 +1,91 @@
 .class public final Lje1;
-.super Lj2e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lme1;
 
 
 # virtual methods
-.method public final y(Lts7;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    instance-of v0, p1, Lwy0;
+    if-ne p0, p1, :cond_0
 
-    if-nez v0, :cond_0
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+    instance-of v0, p1, Lje1;
 
-    check-cast p0, Lsrd;
+    if-nez v0, :cond_1
 
-    check-cast p1, Lird;
+    goto :goto_0
 
-    invoke-virtual {p0, p1}, Lsrd;->setModelItem(Lird;)V
+    :cond_1
+    check-cast p1, Lje1;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Ltrf;->b:Lsrf;
+
+    invoke-virtual {p1, p1}, Lsrf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getText()Ltrf;
+    .locals 1
+
+    sget-object v0, Ltrf;->b:Lsrf;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    sget-object v0, Ltrf;->b:Lsrf;
+
+    invoke-virtual {v0}, Lsrf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Error(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Ltrf;->b:Lsrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

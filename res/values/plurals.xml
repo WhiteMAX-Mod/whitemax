@@ -15,13 +15,35 @@
         <item quantity="one">%1$d участник</item>
         <item quantity="few">%1$d участника</item>
     </plurals>
+    <plurals name="channel_screen_confirmation_delete_description">
+        <item quantity="other">Восстановить их не получится</item>
+        <item quantity="one">Восстановить его не получится</item>
+        <item quantity="two">Восстановить их не получится</item>
+        <item quantity="few">Восстановить их не получится</item>
+        <item quantity="many">Восстановить их не получится</item>
+    </plurals>
+    <plurals name="channel_screen_confirmation_delete_title">
+        <item quantity="other">Удалить посты?</item>
+        <item quantity="one">Удалить пост?</item>
+        <item quantity="two">Удалить посты?</item>
+        <item quantity="few">Удалить посты?</item>
+        <item quantity="many">Удалить посты?</item>
+    </plurals>
+    <plurals name="channel_subscribers_count">
+        <item quantity="other">подписчиков</item>
+        <item quantity="zero">подписчиков</item>
+        <item quantity="one">подписчик</item>
+        <item quantity="two">подписчика</item>
+        <item quantity="few">подписчика</item>
+        <item quantity="many">подписчиков</item>
+    </plurals>
     <plurals name="chat_screen_action_copy_success">
-        <item quantity="other">Сообщения скопированы</item>
+        <item quantity="other">Вы скопировали сообщения</item>
         <item quantity="zero">Сообщений скопировано</item>
-        <item quantity="one">Сообщение скопировано</item>
+        <item quantity="one">Вы скопировали сообщение</item>
         <item quantity="two">Сообщения скопированы</item>
-        <item quantity="few">Сообщения скопированы</item>
-        <item quantity="many">Сообщения скопированы</item>
+        <item quantity="few">Вы скопировали сообщения</item>
+        <item quantity="many">Вы скопировали сообщения</item>
     </plurals>
     <plurals name="chat_screen_confirmation_delete_title">
         <item quantity="other">Удалить сообщений?</item>
@@ -165,14 +187,6 @@
         <item quantity="one">%1$d участник</item>
         <item quantity="few">%1$d участника</item>
     </plurals>
-    <plurals name="profile_channel_members_list_toolbar_subtitle">
-        <item quantity="other">%d подписчиков</item>
-        <item quantity="zero">%d подписчиков</item>
-        <item quantity="one">%d подписчик</item>
-        <item quantity="two">%d подписчика</item>
-        <item quantity="few">%d подписчика</item>
-        <item quantity="many">%d подписчиков</item>
-    </plurals>
     <plurals name="profile_chat_members_list_toolbar_subtitle">
         <item quantity="other">%d участников</item>
         <item quantity="zero">%d участников</item>
@@ -213,14 +227,6 @@
         <item quantity="few">в %d чата</item>
         <item quantity="many">в %d чатов</item>
     </plurals>
-    <plurals name="tt_channel_subtitle_count">
-        <item quantity="other">%d подписчиков</item>
-        <item quantity="zero">%d подписчиков</item>
-        <item quantity="one">%d подписчик</item>
-        <item quantity="two">%d подписчика</item>
-        <item quantity="few">%d подписчика</item>
-        <item quantity="many">%d подписчиков</item>
-    </plurals>
     <plurals name="tt_chat_subtitle_count">
         <item quantity="other">%d участников</item>
         <item quantity="zero">%d участников</item>
@@ -228,14 +234,6 @@
         <item quantity="two">%d участника</item>
         <item quantity="few">%d участника</item>
         <item quantity="many">%d участников</item>
-    </plurals>
-    <plurals name="tt_dates_days">
-        <item quantity="other">%d дней</item>
-        <item quantity="zero">%d дней</item>
-        <item quantity="one">%d день</item>
-        <item quantity="two">%d дня</item>
-        <item quantity="few">%d дня</item>
-        <item quantity="many">%d дней</item>
     </plurals>
     <plurals name="tt_dates_days_last_update">
         <item quantity="other">Обновлено %d дней назад</item>

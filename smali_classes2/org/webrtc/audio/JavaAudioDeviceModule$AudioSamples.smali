@@ -44,33 +44,33 @@
 
 # virtual methods
 .method public getAudioFormat()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioSamples;->audioFormat:I
+    iget v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioSamples;->audioFormat:I
 
-    return p0
+    return v0
 .end method
 
 .method public getChannelCount()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioSamples;->channelCount:I
+    iget v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioSamples;->channelCount:I
 
-    return p0
+    return v0
 .end method
 
 .method public getData()[B
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioSamples;->data:[B
+    iget-object v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioSamples;->data:[B
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSampleRate()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioSamples;->sampleRate:I
+    iget v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioSamples;->sampleRate:I
 
-    return p0
+    return v0
 .end method

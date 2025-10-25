@@ -1,170 +1,341 @@
-.class public final enum Ll17;
-.super Ljava/lang/Enum;
+.class public Ll17;
+.super Ln17;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:[Ll17;
+.field public static final n:Ll17;
+
+
+# instance fields
+.field public final d:Ljava/util/List;
+
+.field public final e:Ljava/util/List;
+
+.field public final f:Ljava/util/List;
+
+.field public final g:Ljava/util/List;
+
+.field public final h:Ljava/util/List;
+
+.field public final i:Ljava/util/List;
+
+.field public final j:Lkb6;
+
+.field public final k:Ljava/util/List;
+
+.field public final l:Ljava/util/Map;
+
+.field public final m:Ljava/util/List;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 13
 
     new-instance v0, Ll17;
 
-    const-string v1, "UNKNOWN"
+    sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    const/4 v2, 0x0
+    const/4 v10, 0x0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget-object v11, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    new-instance v1, Ll17;
+    const-string v1, ""
 
-    const-string v2, "REQUESTED"
+    const/4 v8, 0x0
 
-    const/4 v3, 0x1
+    move-object v3, v2
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-object v4, v2
 
-    new-instance v2, Ll17;
+    move-object v5, v2
 
-    const-string v3, "INTERMEDIATE_AVAILABLE"
+    move-object v6, v2
 
-    const/4 v4, 0x2
+    move-object v7, v2
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-object v9, v2
 
-    new-instance v3, Ll17;
+    move-object v12, v2
 
-    const-string v4, "SUCCESS"
+    invoke-direct/range {v0 .. v12}, Ll17;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lkb6;Ljava/util/List;ZLjava/util/Map;Ljava/util/List;)V
 
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v4, Ll17;
-
-    const-string v5, "ERROR"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Ll17;
-
-    const-string v6, "EMPTY_EVENT"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v6, Ll17;
-
-    const-string v7, "RELEASED"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array/range {v0 .. v6}, [Ll17;
-
-    move-result-object v0
-
-    sput-object v0, Ll17;->a:[Ll17;
-
-    invoke-static {}, Ll17;->values()[Ll17;
+    sput-object v0, Ll17;->n:Ll17;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ll17;
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lkb6;Ljava/util/List;ZLjava/util/Map;Ljava/util/List;)V
     .locals 1
 
-    const-class v0, Ll17;
+    invoke-direct {p0, p1, p2, p10}, Ln17;-><init>(Ljava/lang/String;Ljava/util/List;Z)V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance p1, Ljava/util/ArrayList;
 
-    move-result-object p0
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast p0, Ll17;
+    const/4 p2, 0x0
 
-    return-object p0
+    :goto_0
+    invoke-interface {p3}, Ljava/util/List;->size()I
+
+    move-result p10
+
+    if-ge p2, p10, :cond_1
+
+    invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p10
+
+    check-cast p10, Lj17;
+
+    iget-object p10, p10, Lj17;->a:Landroid/net/Uri;
+
+    invoke-virtual {p1, p10}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1, p10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {p1, p4}, Ll17;->b(Ljava/util/ArrayList;Ljava/util/List;)V
+
+    invoke-static {p1, p5}, Ll17;->b(Ljava/util/ArrayList;Ljava/util/List;)V
+
+    invoke-static {p1, p6}, Ll17;->b(Ljava/util/ArrayList;Ljava/util/List;)V
+
+    invoke-static {p1, p7}, Ll17;->b(Ljava/util/ArrayList;Ljava/util/List;)V
+
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll17;->d:Ljava/util/List;
+
+    invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll17;->e:Ljava/util/List;
+
+    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll17;->f:Ljava/util/List;
+
+    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll17;->g:Ljava/util/List;
+
+    invoke-static {p6}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll17;->h:Ljava/util/List;
+
+    invoke-static {p7}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll17;->i:Ljava/util/List;
+
+    iput-object p8, p0, Ll17;->j:Lkb6;
+
+    if-eqz p9, :cond_2
+
+    invoke-static {p9}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_1
+    iput-object p1, p0, Ll17;->k:Ljava/util/List;
+
+    invoke-static {p11}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll17;->l:Ljava/util/Map;
+
+    invoke-static {p12}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll17;->m:Ljava/util/List;
+
+    return-void
 .end method
 
-.method public static values()[Ll17;
-    .locals 1
+.method public static b(Ljava/util/ArrayList;Ljava/util/List;)V
+    .locals 3
 
-    sget-object v0, Ll17;->a:[Ll17;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    move-result-object v0
+    move-result v1
 
-    check-cast v0, [Ll17;
+    if-ge v0, v1, :cond_1
 
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lh17;
+
+    iget-object v1, v1, Lh17;->a:Landroid/net/Uri;
+
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public static c(ILjava/util/List;Ljava/util/List;)Ljava/util/ArrayList;
+    .locals 7
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_2
+
+    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    move v4, v1
+
+    :goto_1
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-ge v4, v5, :cond_1
+
+    invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lr9f;
+
+    iget v6, v5, Lr9f;->b:I
+
+    if-ne v6, p0, :cond_0
+
+    iget v5, v5, Lr9f;->c:I
+
+    if-ne v5, v2, :cond_0
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_0
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final a(Ljava/util/List;)Ljava/lang/Object;
+    .locals 13
 
-    sget-object v0, Lk17;->$EnumSwitchMapping$0:[I
+    new-instance v0, Ll17;
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    iget-object v1, p0, Ll17;->e:Ljava/util/List;
 
-    move-result p0
+    const/4 v2, 0x0
 
-    aget p0, v0, p0
+    invoke-static {v2, v1, p1}, Ll17;->c(ILjava/util/List;Ljava/util/List;)Ljava/util/ArrayList;
 
-    const/4 v0, 0x1
+    move-result-object v3
 
-    if-eq p0, v0, :cond_4
+    sget-object v4, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    const/4 v0, 0x2
+    iget-object v1, p0, Ll17;->g:Ljava/util/List;
 
-    if-eq p0, v0, :cond_3
+    const/4 v2, 0x1
 
-    const/4 v0, 0x3
+    invoke-static {v2, v1, p1}, Ll17;->c(ILjava/util/List;Ljava/util/List;)Ljava/util/ArrayList;
 
-    if-eq p0, v0, :cond_2
+    move-result-object v5
 
-    const/4 v0, 0x4
+    iget-object v1, p0, Ll17;->h:Ljava/util/List;
 
-    if-eq p0, v0, :cond_1
+    const/4 v2, 0x2
 
-    const/4 v0, 0x5
+    invoke-static {v2, v1, p1}, Ll17;->c(ILjava/util/List;Ljava/util/List;)Ljava/util/ArrayList;
 
-    if-eq p0, v0, :cond_0
+    move-result-object v6
 
-    const-string p0, "unknown"
+    iget-object v11, p0, Ll17;->l:Ljava/util/Map;
 
-    return-object p0
+    iget-object v12, p0, Ll17;->m:Ljava/util/List;
 
-    :cond_0
-    const-string p0, "released"
+    iget-object v1, p0, Ln17;->a:Ljava/lang/String;
 
-    return-object p0
+    iget-object v2, p0, Ln17;->b:Ljava/util/List;
 
-    :cond_1
-    const-string p0, "error"
+    iget-object v8, p0, Ll17;->j:Lkb6;
 
-    return-object p0
+    iget-object v9, p0, Ll17;->k:Ljava/util/List;
 
-    :cond_2
-    const-string p0, "intermediate_available"
+    iget-boolean v10, p0, Ln17;->c:Z
 
-    return-object p0
+    move-object v7, v4
 
-    :cond_3
-    const-string p0, "success"
+    invoke-direct/range {v0 .. v12}, Ll17;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lkb6;Ljava/util/List;ZLjava/util/Map;Ljava/util/List;)V
 
-    return-object p0
-
-    :cond_4
-    const-string p0, "requested"
-
-    return-object p0
+    return-object v0
 .end method

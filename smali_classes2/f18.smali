@@ -1,55 +1,29 @@
 .class public final Lf18;
-.super Lx7g;
+.super Ln18;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lyce;
-
-.field public final c:Liic;
+.field public final X:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;)V
-    .locals 2
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 9
 
-    invoke-direct {p0}, Lx7g;-><init>()V
+    const-wide/16 v5, 0x0
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    const-wide/16 v7, 0x0
 
-    invoke-static {v0}, Lzce;->a(Ljava/lang/Object;)Lyce;
+    const-wide/16 v1, 0x0
 
-    move-result-object v0
+    move-object v0, p0
 
-    iput-object v0, p0, Lf18;->b:Lyce;
+    move-wide v3, p1
 
-    new-instance v1, Liic;
+    invoke-direct/range {v0 .. v8}, Ln18;-><init>(JJJJ)V
 
-    invoke-direct {v1, v0}, Liic;-><init>(Lro9;)V
-
-    iput-object v1, p0, Lf18;->c:Liic;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lp2b;
-
-    sget-object p1, Lp2b;->f:[Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Lp2b;->b([Ljava/lang/String;)Z
-
-    move-result p0
-
-    xor-int/lit8 p0, p0, 0x1
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1, p0}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-object p3, v0, Lf18;->X:Ljava/lang/String;
 
     return-void
 .end method

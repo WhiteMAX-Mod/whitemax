@@ -1,57 +1,59 @@
-.class public final Lwjg;
+.class public abstract synthetic Lwjg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lzte;
-
-.field public final b:Lzte;
-
-.field public final c:Lzte;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x4
 
-    new-instance v0, Lfsf;
+    invoke-static {v0}, Ldy1;->y(I)[I
 
-    const/16 v1, 0x11
+    move-result-object v1
 
-    invoke-direct {v0, v1}, Lfsf;-><init>(I)V
+    array-length v1, v1
 
-    new-instance v1, Lzte;
+    new-array v1, v1, [I
 
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
+    const/4 v2, 0x1
 
-    iput-object v1, p0, Lwjg;->a:Lzte;
+    const/4 v3, 0x0
 
-    new-instance v0, Lfsf;
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/16 v1, 0x12
+    :catch_0
+    const/4 v3, 0x2
 
-    invoke-direct {v0, v1}, Lfsf;-><init>(I)V
+    :try_start_1
+    aput v3, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    new-instance v1, Lzte;
+    :catch_1
+    const/4 v2, 0x3
 
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
+    :try_start_2
+    aput v2, v1, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iput-object v1, p0, Lwjg;->b:Lzte;
+    :catch_2
+    :try_start_3
+    aput v0, v1, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    new-instance v0, Lfsf;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lfsf;-><init>(I)V
-
-    new-instance v1, Lzte;
-
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
-
-    iput-object v1, p0, Lwjg;->c:Lzte;
+    :catch_3
+    sput-object v1, Lwjg;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

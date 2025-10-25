@@ -132,7 +132,7 @@
 .end method
 
 .method private validate()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->bitSet:Ljava/util/BitSet;
 
@@ -189,72 +189,72 @@
 
     sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    iget p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->version:I
+    iget v1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->version:I
 
-    const-string v1, "Version "
+    const-string v2, "Version "
 
-    const-string v2, " is unsupported"
+    const-string v3, " is unsupported"
 
-    invoke-static {p0, v1, v2}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_1
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "Dependent block stream is unsupported (BLOCK_INDEPENDENCE must be set)"
+    const-string v1, "Dependent block stream is unsupported (BLOCK_INDEPENDENCE must be set)"
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_2
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "Reserved1 field must be 0"
+    const-string v1, "Reserved1 field must be 0"
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_3
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "Reserved0 field must be 0"
+    const-string v1, "Reserved0 field must be 0"
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 
 # virtual methods
 .method public getVersion()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->version:I
+    iget v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->version:I
 
-    return p0
+    return v0
 .end method
 
 .method public isEnabled(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->bitSet:Ljava/util/BitSet;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->bitSet:Ljava/util/BitSet;
 
     invoke-static {p1}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;->access$100(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)I
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Ljava/util/BitSet;->get(I)Z
+    invoke-virtual {v0, p1}, Ljava/util/BitSet;->get(I)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public toByte()B
@@ -270,15 +270,15 @@
 
     aget-byte v0, v0, v1
 
-    iget p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->version:I
+    iget v1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->version:I
 
-    and-int/lit8 p0, p0, 0x3
+    and-int/lit8 v1, v1, 0x3
 
-    shl-int/lit8 p0, p0, 0x6
+    shl-int/lit8 v1, v1, 0x6
 
-    or-int/2addr p0, v0
+    or-int/2addr v0, v1
 
-    int-to-byte p0, p0
+    int-to-byte v0, v0
 
-    return p0
+    return v0
 .end method

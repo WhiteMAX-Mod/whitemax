@@ -1,69 +1,64 @@
 .class public final Lzx4;
-.super Lbq1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ley4;
+
+
+# static fields
+.field public static final a:Lzx4;
 
 
 # direct methods
-.method public constructor <init>(Lbh1;Lrg1;Lfec;Liec;Lud1;)V
-    .locals 11
+.method static constructor <clinit>()V
+    .locals 1
 
-    new-instance v2, Leo9;
+    new-instance v0, Lzx4;
 
-    invoke-direct {v2}, Leo9;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object/from16 v8, p5
-
-    invoke-direct/range {v0 .. v10}, Lbq1;-><init>(Lbh1;Leo9;Lrg1;Lfec;Liec;Lhq5;Ld;Lud1;Lna8;Lu6d;)V
+    sput-object v0, Lzx4;->a:Lzx4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final D()Ljava/lang/String;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const-string p0, "DummyCallTopology"
+    const/4 v0, 0x1
 
-    return-object p0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lzx4;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final U(Ld1b;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    const v0, -0x6b7e7a81
+
+    return v0
 .end method
 
-.method public final w()Ljava/lang/Runnable;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    const/4 p0, 0x0
+    const-string v0, "Completed"
 
-    return-object p0
-.end method
-
-.method public final y()Lz9f;
-    .locals 0
-
-    sget-object p0, Lz9f;->a:Lz9f;
-
-    return-object p0
+    return-object v0
 .end method

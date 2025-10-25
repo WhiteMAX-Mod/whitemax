@@ -98,7 +98,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIILjava/lang/Long;ZZILld4;)V
+.method public synthetic constructor <init>(IIILjava/lang/Long;ZZILki4;)V
     .locals 7
 
     and-int/lit8 p8, p7, 0x4
@@ -229,61 +229,73 @@
 
 # virtual methods
 .method public final component1()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileSizeKb:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileSizeKb:I
 
-    return p0
+    return v0
 .end method
 
 .method public final component2()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxEventCount:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxEventCount:I
 
-    return p0
+    return v0
 .end method
 
 .method public final component3()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileCount:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileCount:I
 
-    return p0
+    return v0
 .end method
 
 .method public final component4()Ljava/lang/Long;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->timeToUploadNextFileMs:Ljava/lang/Long;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->timeToUploadNextFileMs:Ljava/lang/Long;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final component5()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->compressContent:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->compressContent:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final component6()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final copy(IIILjava/lang/Long;ZZ)Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;
-    .locals 0
+    .locals 7
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;
+    new-instance v0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;
 
-    invoke-direct/range {p0 .. p6}, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;-><init>(IIILjava/lang/Long;ZZ)V
+    move v1, p1
 
-    return-object p0
+    move v2, p2
+
+    move v3, p3
+
+    move-object v4, p4
+
+    move v5, p5
+
+    move v6, p6
+
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;-><init>(IIILjava/lang/Long;ZZ)V
+
+    return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -338,7 +350,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->timeToUploadNextFileMs:Ljava/lang/Long;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -356,11 +368,11 @@
     return v2
 
     :cond_6
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
 
     iget-boolean p1, p1, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
 
-    if-eq p0, p1, :cond_7
+    if-eq v1, p1, :cond_7
 
     return v2
 
@@ -369,51 +381,51 @@
 .end method
 
 .method public final getCompressContent()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->compressContent:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->compressContent:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getDisableUploadWhenCallIsActiveProvider()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getMaxEventCount()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxEventCount:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxEventCount:I
 
-    return p0
+    return v0
 .end method
 
 .method public final getMaxLocalFileCount()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileCount:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileCount:I
 
-    return p0
+    return v0
 .end method
 
 .method public final getMaxLocalFileSizeKb()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileSizeKb:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileSizeKb:I
 
-    return p0
+    return v0
 .end method
 
 .method public final getTimeToUploadNextFileMs()Ljava/lang/Long;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->timeToUploadNextFileMs:Ljava/lang/Long;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->timeToUploadNextFileMs:Ljava/lang/Long;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
@@ -431,13 +443,13 @@
 
     iget v2, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxEventCount:I
 
-    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
     move-result v0
 
     iget v2, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileCount:I
 
-    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
     move-result v0
 
@@ -461,23 +473,23 @@
 
     iget-boolean v2, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->compressContent:Z
 
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
 
     move-result v0
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    move-result p0
+    move-result v1
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    return p0
+    return v1
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 8
+    .locals 9
 
     iget v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileSizeKb:I
 
@@ -489,15 +501,15 @@
 
     iget-boolean v4, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->compressContent:Z
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
+    iget-boolean v5, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->disableUploadWhenCallIsActiveProvider:Z
 
-    const-string v5, ", maxEventCount="
+    const-string v6, ", maxEventCount="
 
-    const-string v6, ", maxLocalFileCount="
+    const-string v7, ", maxLocalFileCount="
 
-    const-string v7, "ConversationAnalyticsUploadConfig(maxLocalFileSizeKb="
+    const-string v8, "ConversationAnalyticsUploadConfig(maxLocalFileSizeKb="
 
-    invoke-static {v7, v0, v5, v1, v6}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v0, v6, v1, v7}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -513,21 +525,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
     const-string v1, ", disableUploadWhenCallIsActiveProvider="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, ")"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, v0, v4, v5}, Lfd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
 
-    const-string p0, ")"
+    move-result-object v0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

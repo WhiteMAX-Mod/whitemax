@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyw3;
+.implements Lo14;
 
 
 # annotations
@@ -20,14 +20,14 @@
     d2 = {
         "Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lyw3;",
+        "Lo14;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lo6d;",
+        "Lqpd;",
         "scopeId",
-        "(Ljava/lang/String;Lld4;)V",
+        "(Ljava/lang/String;Lki4;)V",
         "calls-ui_release"
     }
     k = 0x1
@@ -41,30 +41,30 @@
 
 
 # static fields
-.field public static final synthetic r0:[Lxi7;
+.field public static final synthetic q0:[Ltr7;
 
 
 # instance fields
-.field public final X:Lncb;
+.field public final X:Lw0e;
 
-.field public Y:Lsw3;
+.field public Y:Lh14;
 
-.field public final Z:Lcic;
+.field public final Z:Lh0d;
 
-.field public final a:Lcl7;
+.field public final a:Liu7;
 
-.field public final b:Lcl7;
+.field public final b:Liu7;
 
-.field public final c:Lcl7;
+.field public final c:Liu7;
 
-.field public final o:Lcl7;
+.field public final o:Liu7;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 7
 
-    new-instance v0, Lsxb;
+    new-instance v0, Leec;
 
     const-class v1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
@@ -74,29 +74,29 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Ljpc;->a:Lkpc;
+    sget-object v2, Lz7d;->a:La8d;
 
     const-string v3, "audioLevelJob"
 
     const-string v5, "getAudioLevelJob()Lkotlinx/coroutines/Job;"
 
-    invoke-static {v2, v1, v3, v5}, Lee5;->g(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmo9;
+    invoke-static {v2, v1, v3, v5}, Lu15;->h(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Le1a;
 
     move-result-object v2
 
-    new-instance v3, Lsxb;
+    new-instance v3, Leec;
 
     const-string v5, "callBottomPanel"
 
-    const-string v6, "getCallBottomPanel()Lone/me/calls/ui/view/controls/CallBottomControlViewWrapper;"
+    const-string v6, "getCallBottomPanel()Lone/me/calls/ui/view/controls/CallBottomControlViewNew;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Lxi7;
+    new-array v1, v1, [Ltr7;
 
     aput-object v0, v1, v4
 
@@ -108,7 +108,7 @@
 
     aput-object v3, v1, v0
 
-    sput-object v1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->r0:[Lxi7;
+    sput-object v1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->q0:[Ltr7;
 
     return-void
 .end method
@@ -123,143 +123,143 @@
     const/4 v2, 0x0
 
     .line 4
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILld4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
 
     .line 5
-    new-instance p1, Lo6d;
+    new-instance p1, Lqpd;
 
     const-string v1, "default"
 
-    invoke-direct {p1, v1}, Lo6d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v1}, Lqpd;-><init>(Ljava/lang/String;)V
 
     .line 6
-    new-instance v1, Lfr;
+    new-instance v1, Lqs;
 
-    const-class v3, Lo6d;
+    const-class v3, Lqpd;
 
     const-string v4, "arg_key_scope_id"
 
-    invoke-direct {v1, v3, p1, v4}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v1, v3, p1, v4}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    sget-object p1, Lv31;->a:Lv31;
+    sget-object p1, Lz41;->a:Lz41;
 
     .line 8
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz4;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v3
 
-    const-class v4, Lp2b;
+    const-class v4, Lrib;
 
-    invoke-virtual {v3, v4}, Lz4;->d(Ljava/lang/Class;)Lzte;
+    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v3
 
     .line 9
-    iput-object v3, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->a:Lcl7;
+    iput-object v3, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->a:Liu7;
 
     .line 10
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz4;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object p1
 
-    const-class v3, Ltm1;
+    const-class v3, Llo1;
 
-    invoke-virtual {p1, v3}, Lz4;->d(Ljava/lang/Class;)Lzte;
+    invoke-virtual {p1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object p1
 
     .line 11
-    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->b:Lcl7;
+    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->b:Liu7;
 
     .line 12
-    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->r0:[Lxi7;
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->q0:[Ltr7;
 
     aget-object p1, p1, v0
 
-    invoke-virtual {v1, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v1, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lo6d;
+    check-cast p1, Lqpd;
 
     .line 13
-    iget-object p1, p1, Lo6d;->a:Ljava/lang/String;
+    iget-object p1, p1, Lqpd;->a:Ljava/lang/String;
 
     .line 14
-    const-class v0, Lqm1;
+    const-class v0, Lio1;
 
     .line 15
-    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lzb6;)Lcl7;
+    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 16
-    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->c:Lcl7;
+    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->c:Liu7;
 
     .line 17
-    new-instance p1, Lk;
+    new-instance p1, Ll6;
 
-    const/16 v0, 0x15
+    const/16 v0, 0x13
 
-    invoke-direct {p1, v0, p0}, Lk;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Ll6;-><init>(ILjava/lang/Object;)V
 
     .line 18
     new-instance v0, Lr;
 
     const/16 v1, 0x9
 
-    invoke-direct {v0, v1, p1}, Lr;-><init>(ILzb6;)V
+    invoke-direct {v0, v1, p1}, Lr;-><init>(ILji6;)V
 
-    const-class p1, Lm21;
+    const-class p1, Lq31;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lzb6;)Lcl7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 19
-    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->o:Lcl7;
+    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->o:Liu7;
 
     .line 20
-    invoke-static {}, Lmq0;->L()Lncb;
+    invoke-static {}, Lcxi;->b()Lw0e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->X:Lncb;
+    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->X:Lw0e;
 
     .line 21
-    sget p1, Lt5c;->call_bottom_control:I
+    sget p1, Ljnc;->call_bottom_control:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lcic;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:Lcic;
+    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:Lh0d;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lld4;)V
+.method public constructor <init>(Ljava/lang/String;Lki4;)V
     .locals 1
 
     .line 1
-    new-instance p2, Lo6d;
+    new-instance p2, Lqpd;
 
-    invoke-direct {p2, p1}, Lo6d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Lqpd;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance p1, Lpxa;
+    new-instance p1, Ltcb;
 
     const-string v0, "arg_key_scope_id"
 
-    invoke-direct {p1, v0, p2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
-    filled-new-array {p1}, [Lpxa;
+    filled-new-array {p1}, [Ltcb;
 
     move-result-object p1
 
-    invoke-static {p1}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
+    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -270,53 +270,87 @@
 
 
 # virtual methods
-.method public final E(ILandroid/os/Bundle;)V
+.method public final C0()Le31;
     .locals 2
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lm21;
+    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->q0:[Ltr7;
 
-    move-result-object p0
+    const/4 v1, 0x2
 
-    invoke-virtual {p0}, Lm21;->q()Ljava/util/ArrayList;
+    aget-object v0, v0, v1
 
-    move-result-object p2
+    iget-object v1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:Lh0d;
 
-    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v1, v0
+    check-cast v0, Le31;
 
-    check-cast v1, Lk51;
+    return-object v0
+.end method
 
-    invoke-interface {v1}, Lk51;->getId()I
+.method public final D0()Lq31;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->o:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lq31;
+
+    return-object v0
+.end method
+
+.method public final F(ILandroid/os/Bundle;)V
+    .locals 3
+
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->D0()Lq31;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lq31;->r()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-ne v1, p1, :cond_0
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Ll61;
+
+    invoke-interface {v2}, Ll61;->getId()I
+
+    move-result v2
+
+    if-ne v2, p1, :cond_0
 
     goto :goto_0
 
     :cond_1
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    check-cast v0, Lk51;
+    check-cast v1, Ll61;
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
-    invoke-interface {v0}, Lk51;->b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    invoke-interface {v1}, Ll61;->b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
     move-result-object p1
 
@@ -325,11 +359,11 @@
     goto :goto_1
 
     :cond_2
-    invoke-virtual {p0}, Lm21;->r()Lot1;
+    invoke-virtual {p2}, Lq31;->s()Lcv1;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-virtual {p0, p1}, Lot1;->k(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
+    invoke-virtual {p2, p1}, Lcv1;->k(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
 
     :cond_3
     :goto_1
@@ -339,175 +373,143 @@
 .method public final onAttach(Landroid/view/View;)V
     .locals 5
 
-    invoke-super {p0, p1}, Lxx3;->onAttach(Landroid/view/View;)V
+    invoke-super {p0, p1}, Ll24;->onAttach(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lm21;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lm21;->Z:Lis5;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lzn7;->L()Lbo7;
-
-    move-result-object v0
-
-    sget-object v1, Lcn7;->o:Lcn7;
-
-    invoke-static {p1, v0, v1}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->D0()Lq31;
 
     move-result-object p1
 
-    new-instance v0, Lo21;
+    iget-object p1, p1, Lq31;->Z:Lty5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
+
+    move-result-object v0
+
+    sget-object v1, Lhw7;->o:Lhw7;
+
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+
+    move-result-object p1
+
+    new-instance v0, Ls31;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p0}, Lo21;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    invoke-direct {v0, v2, p0}, Ls31;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
 
-    new-instance v3, Lnu5;
+    new-instance v3, Lb16;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v0, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lm21;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lm21;->r0:Lis5;
+    invoke-static {v3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->D0()Lq31;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lq31;->q0:Lty5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lzn7;->L()Lbo7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
-    new-instance v0, Lp21;
+    new-instance v0, Lt31;
 
-    invoke-direct {v0, v2, p0}, Lp21;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    invoke-direct {v0, v2, p0}, Lt31;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
 
-    new-instance v3, Lnu5;
+    new-instance v3, Lb16;
 
-    invoke-direct {v3, p1, v0, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lm21;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lm21;->t0:Liic;
+    invoke-static {v3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->D0()Lq31;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lq31;->s0:Ln0d;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lzn7;->L()Lbo7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
-    new-instance v0, Lq21;
+    new-instance v0, Lu31;
 
-    invoke-direct {v0, v2, p0}, Lq21;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    invoke-direct {v0, v2, p0}, Lu31;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
 
-    new-instance v3, Lnu5;
+    new-instance v3, Lb16;
 
-    invoke-direct {v3, p1, v0, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lm21;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lm21;->v0:Lnv;
+    invoke-static {v3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->D0()Lq31;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lq31;->t0:Lph0;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lzn7;->L()Lbo7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
-    new-instance v0, Lr21;
+    new-instance v0, Lv31;
 
-    invoke-direct {v0, v2, p0}, Lr21;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    invoke-direct {v0, v2, p0}, Lv31;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
 
-    new-instance v3, Lnu5;
-
-    invoke-direct {v3, p1, v0, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lm21;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lm21;->u0:Liic;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lzn7;->L()Lbo7;
-
-    move-result-object v0
-
-    invoke-static {p1, v0, v1}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
-
-    move-result-object p1
-
-    new-instance v0, Ls21;
-
-    invoke-direct {v0, v2, p0}, Ls21;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
-
-    new-instance v1, Lnu5;
+    new-instance v1, Lb16;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     return-void
 .end method
@@ -515,25 +517,25 @@
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 0
 
-    new-instance p1, Lw11;
+    new-instance p1, Le31;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-direct {p1, p0}, Lw11;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Le31;-><init>(Landroid/content/Context;)V
 
-    sget p0, Lt5c;->call_bottom_control:I
+    sget p2, Ljnc;->call_bottom_control:I
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setId(I)V
+    invoke-virtual {p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    new-instance p0, Landroid/view/ViewGroup$LayoutParams;
+    new-instance p2, Landroid/view/ViewGroup$LayoutParams;
 
-    const/4 p2, -0x1
+    const/4 p3, -0x1
 
-    invoke-direct {p0, p2, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    invoke-direct {p2, p3, p3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-object p1
 .end method
@@ -541,34 +543,28 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 2
 
-    invoke-super {p0, p1}, Lxx3;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Ll24;->onDestroyView(Landroid/view/View;)V
 
-    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->r0:[Lxi7;
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->q0:[Ltr7;
 
     const/4 v0, 0x1
 
     aget-object p1, p1, v0
 
-    iget-object v0, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->X:Lncb;
+    iget-object v0, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->X:Lw0e;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, p1, v1}, Lncb;->h0(Ljava/lang/Object;Lxi7;Ljava/lang/Object;)V
+    invoke-virtual {v0, p0, p1, v1}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->y0()Lw11;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lw11;->a()V
-
-    iget-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Y:Lsw3;
+    iget-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Y:Lh14;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lsw3;->dismiss()V
+    invoke-interface {p1}, Lh14;->dismiss()V
 
     :cond_0
-    iput-object v1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Y:Lsw3;
+    iput-object v1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Y:Lh14;
 
     return-void
 .end method
@@ -578,7 +574,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Y:Lsw3;
+    iput-object v0, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Y:Lh14;
 
     return-void
 .end method
@@ -586,11 +582,11 @@
 .method public final onRequestPermissionsResult(I[Ljava/lang/String;[I)V
     .locals 3
 
-    invoke-super {p0, p1, p2, p3}, Lxx3;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    invoke-super {p0, p1, p2, p3}, Ll24;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
     const/16 p2, 0x9f
 
-    iget-object p3, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->a:Lcl7;
+    iget-object p3, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->a:Liu7;
 
     const/4 v0, 0x0
 
@@ -598,15 +594,15 @@
 
     if-ne p1, p2, :cond_0
 
-    invoke-interface {p3}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-interface {p3}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lp2b;
+    check-cast p2, Lrib;
 
-    sget-object v2, Lp2b;->m:[Ljava/lang/String;
+    sget-object v2, Lrib;->m:[Ljava/lang/String;
 
-    invoke-virtual {p2, v2}, Lp2b;->b([Ljava/lang/String;)Z
+    invoke-virtual {p2, v2}, Lrib;->c([Ljava/lang/String;)Z
 
     move-result p2
 
@@ -624,15 +620,15 @@
 
     if-ne p1, v2, :cond_1
 
-    invoke-interface {p3}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-interface {p3}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lp2b;
+    check-cast p1, Lrib;
 
-    sget-object p3, Lp2b;->h:[Ljava/lang/String;
+    sget-object p3, Lrib;->h:[Ljava/lang/String;
 
-    invoke-virtual {p1, p3}, Lp2b;->b([Ljava/lang/String;)Z
+    invoke-virtual {p1, p3}, Lrib;->c([Ljava/lang/String;)Z
 
     move-result p1
 
@@ -641,26 +637,26 @@
     move v0, v1
 
     :cond_1
-    sget-object p1, Lfa8;->b:Lfa8;
+    sget-object p1, Lzk8;->b:Lzk8;
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lm21;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->D0()Lq31;
 
     move-result-object p3
 
-    invoke-virtual {p3, p1}, Lm21;->u(Lfa8;)V
+    invoke-virtual {p3, p1}, Lq31;->u(Lzk8;)V
 
     goto :goto_1
 
     :cond_2
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lm21;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->D0()Lq31;
 
     move-result-object p3
 
-    invoke-virtual {p3, p1}, Lm21;->s(Lfa8;)V
+    invoke-virtual {p3, p1}, Lq31;->t(Lzk8;)V
 
     :cond_3
     :goto_1
@@ -675,71 +671,39 @@
 
     :cond_5
     :goto_2
-    iget-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->b:Lcl7;
+    iget-object p1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->b:Liu7;
 
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ltm1;
+    check-cast p1, Llo1;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->requireActivity()Lkm;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->requireActivity()Lrn;
 
-    move-result-object p0
+    move-result-object p2
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0}, Ltm1;->c(Landroid/content/Context;)V
+    invoke-static {p2}, Llo1;->d(Landroid/content/Context;)V
 
     return-void
 .end method
 
 .method public final onViewCreated(Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->y0()Lw11;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->C0()Le31;
 
     move-result-object p1
 
-    new-instance v0, Lq2e;
+    new-instance v0, Ls9d;
 
-    invoke-direct {v0, p0}, Lq2e;-><init>(Ljava/lang/Object;)V
+    const/4 v1, 0x5
 
-    invoke-virtual {p1, v0}, Lw11;->setClickListener(Lt11;)V
+    invoke-direct {v0, v1, p0}, Ls9d;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Le31;->setClickListener(Ld31;)V
 
     return-void
-.end method
-
-.method public final y0()Lw11;
-    .locals 2
-
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->r0:[Lxi7;
-
-    const/4 v1, 0x2
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:Lcic;
-
-    invoke-interface {v1, p0, v0}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lw11;
-
-    return-object p0
-.end method
-
-.method public final z0()Lm21;
-    .locals 0
-
-    iget-object p0, p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->o:Lcl7;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lm21;
-
-    return-object p0
 .end method

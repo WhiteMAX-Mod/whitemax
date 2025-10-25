@@ -41,125 +41,125 @@
 
 # virtual methods
 .method public getApkPreinstallParams()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->a()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getBufferingPeriod()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->e()I
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->e()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getForcingPeriod()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->f()I
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->f()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->g()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getLaunchTimeout()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->h()I
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->h()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getVendorAppPackage()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->m()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->m()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public isKidMode()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->n()Z
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->n()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isTrackingLaunchEnabled()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->o()Z
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->o()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isTrackingPreinstallEnabled()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->p()Z
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->p()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isTrackingPreinstallThirdPartyEnabled()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerConfig;->a:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->q()Z
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->q()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public setApkPreinstallParams(Ljava/lang/String;)Lcom/my/tracker/MyTrackerConfig;

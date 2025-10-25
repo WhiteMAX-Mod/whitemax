@@ -1,377 +1,193 @@
 .class public final Lzhf;
-.super Lure;
+.super Lq24;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public final X:Ljava/lang/String;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lfif;
-
-.field public final synthetic r0:Ljava/lang/CharSequence;
+.field public final o:Lgj8;
 
 
 # direct methods
-.method public constructor <init>(Lfif;Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lzhf;->Z:Lfif;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lzhf;->r0:Ljava/lang/CharSequence;
+    .line 1
+    invoke-direct {p0, v0}, Lzhf;-><init>(I)V
 
-    const/4 p1, 0x2
+    return-void
+.end method
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
+    .locals 1
+
+    .line 2
+    new-instance p1, Lgj8;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Lgj8;-><init>(I)V
+
+    .line 3
+    invoke-direct {p0}, Lq24;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lzhf;->o:Lgj8;
+
+    .line 5
+    const-class p1, Lzhf;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 6
+    iput-object p1, p0, Lzhf;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 1
 
-    check-cast p1, Ly04;
+    iget-object v0, p0, Lzhf;->o:Lgj8;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Lmh;->a()V
 
-    invoke-virtual {p0, p1, p2}, Lzhf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lzhf;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lzhf;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final f(Lq24;Ll24;)V
+    .locals 1
 
-    new-instance v0, Lzhf;
+    iget-object v0, p0, Lzhf;->o:Lgj8;
 
-    iget-object v1, p0, Lzhf;->Z:Lfif;
+    invoke-virtual {v0, p1, p2}, Lmh;->f(Lq24;Ll24;)V
 
-    iget-object p0, p0, Lzhf;->r0:Ljava/lang/CharSequence;
-
-    invoke-direct {v0, v1, p0, p2}, Lzhf;-><init>(Lfif;Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lzhf;->Y:Ljava/lang/Object;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 18
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLo24;)V
+    .locals 12
 
-    move-object/from16 v0, p0
+    sget-object v0, Lc98;->o:Lc98;
 
-    iget-object v1, v0, Lzhf;->Z:Lfif;
+    const/4 v1, 0x0
 
-    iget-object v2, v1, Lfif;->A0:Lv85;
+    if-nez p2, :cond_2
 
-    iget-object v3, v1, Lfif;->Z:Ljava/lang/String;
+    if-nez p4, :cond_2
 
-    iget v4, v0, Lzhf;->X:I
+    iget-object p1, p0, Lzhf;->X:Ljava/lang/String;
 
-    iget-object v5, v0, Lzhf;->r0:Ljava/lang/CharSequence;
+    sget-object p2, Ltei;->a:Lmxa;
 
-    sget-object v6, Lylf;->a:Lylf;
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x1
-
-    if-eqz v4, :cond_1
-
-    if-ne v4, v8, :cond_0
-
-    iget-object v0, v0, Lzhf;->Y:Ljava/lang/Object;
-
-    move-object v4, v0
-
-    check-cast v4, Lta7;
-
-    :try_start_0
-    invoke-static/range {p1 .. p1}, Lqe5;->V(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-object/from16 v0, p1
+    if-nez p2, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    invoke-virtual {p2, v0}, Lmxa;->b(Lc98;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    const-string p3, "Already swiped controller manually, skip performChange"
+
+    invoke-virtual {p2, v0, p1, p3, v1}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual/range {p5 .. p5}, Lo24;->n()V
+
+    return-void
+
+    :cond_2
+    if-nez p2, :cond_5
+
+    if-eqz p4, :cond_5
+
+    iget-object v2, p0, Lzhf;->X:Ljava/lang/String;
+
+    sget-object v3, Ltei;->a:Lmxa;
+
+    if-nez v3, :cond_3
 
     goto :goto_1
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object v4, v0, Lzhf;->Y:Ljava/lang/Object;
-
-    check-cast v4, Ly04;
-
-    iget-object v4, v1, Lfif;->Y:Lta7;
-
-    if-nez v4, :cond_2
-
-    const-string v0, "Create add email step: Can\'t finish add because current navData is null"
-
-    invoke-static {v3, v0, v7}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v6
-
-    :cond_2
-    new-instance v9, Lnif;
-
-    invoke-direct {v9, v8}, Lnif;-><init>(Z)V
-
-    invoke-static {v2, v9}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object v9, v1, Lfif;->t0:Lcl7;
-
-    invoke-interface {v9}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lrk;
-
-    new-instance v10, Lys;
-
-    iget-object v11, v1, Lfif;->X:Ljava/lang/String;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-direct {v10, v11, v12}, Lys;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v4, v0, Lzhf;->Y:Ljava/lang/Object;
-
-    iput v8, v0, Lzhf;->X:I
-
-    check-cast v9, Lgaa;
-
-    invoke-virtual {v9, v10, v0}, Lgaa;->H(Lpxe;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v8, Lz04;->a:Lz04;
-
-    if-ne v0, v8, :cond_3
-
-    return-object v8
-
     :cond_3
-    :goto_0
-    :try_start_2
-    check-cast v0, Lm70;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-virtual {v3, v0}, Lmxa;->b(Lc98;)Z
 
-    goto :goto_2
+    move-result v4
 
-    :goto_1
-    new-instance v8, Lhvc;
+    if-eqz v4, :cond_4
 
-    invoke-direct {v8, v0}, Lhvc;-><init>(Ljava/lang/Throwable;)V
+    const-string v4, "Showing controller without animation"
 
-    move-object v0, v8
-
-    :goto_2
-    instance-of v8, v0, Lhvc;
-
-    if-nez v8, :cond_5
-
-    move-object v8, v0
-
-    check-cast v8, Lm70;
-
-    iget-object v9, v4, Lta7;->c:Lsa7;
-
-    if-eqz v9, :cond_4
-
-    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v11
-
-    iget v13, v8, Lm70;->o:I
-
-    iget v5, v8, Lm70;->X:I
-
-    int-to-long v14, v5
-
-    iget-object v12, v9, Lsa7;->b:Ljava/lang/String;
-
-    new-instance v10, Lsa7;
-
-    invoke-direct/range {v10 .. v15}, Lsa7;-><init>(Ljava/lang/String;Ljava/lang/String;IJ)V
-
-    goto :goto_3
+    invoke-virtual {v3, v0, v2, v4, v1}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_4
-    new-instance v11, Lsa7;
+    :goto_1
+    new-instance v5, Lupe;
 
-    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const/4 v0, 0x1
 
-    move-result-object v16
+    invoke-direct {v5, v0}, Lupe;-><init>(Z)V
 
-    iget v12, v8, Lm70;->o:I
+    move-object v6, p1
 
-    iget v5, v8, Lm70;->X:I
+    move-object v7, p2
 
-    int-to-long v14, v5
+    move-object v8, p3
 
-    const/4 v13, 0x2
+    move/from16 v9, p4
 
-    const/16 v17, 0x0
+    move-object/from16 v10, p5
 
-    invoke-direct/range {v11 .. v17}, Lsa7;-><init>(IIJLjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v5 .. v10}, Lupe;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLo24;)V
 
-    move-object v10, v11
-
-    :goto_3
-    const/16 v5, 0x1b
-
-    invoke-static {v4, v7, v7, v10, v5}, Lta7;->a(Lta7;Ljava/lang/String;Ljava/lang/String;Lsa7;I)Lta7;
-
-    move-result-object v4
-
-    iget-object v5, v1, Lfif;->B0:Lv85;
-
-    new-instance v9, Ltif;
-
-    iget-object v8, v8, Lm70;->c:Ljava/lang/String;
-
-    invoke-direct {v9, v8, v4}, Ltif;-><init>(Ljava/lang/String;Lta7;)V
-
-    invoke-static {v5, v9}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+    return-void
 
     :cond_5
-    invoke-static {v0}, Ljvc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    iget-object v6, p0, Lzhf;->o:Lgj8;
 
-    move-result-object v0
+    move-object v7, p1
 
-    if-eqz v0, :cond_9
+    move-object v8, p2
 
-    iget-object v1, v1, Lfif;->w0:Lyce;
+    move-object v9, p3
 
-    const-string v4, "Add email step: can\'t add email"
+    move/from16 v10, p4
 
-    invoke-static {v3, v4, v0}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-object/from16 v11, p5
 
-    instance-of v3, v0, Ljava/util/concurrent/CancellationException;
+    invoke-virtual/range {v6 .. v11}, Lmh;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLo24;)V
 
-    if-nez v3, :cond_8
+    return-void
+.end method
 
-    instance-of v3, v0, Lru/ok/tamtam/errors/TamErrorException;
+.method public final h(Landroid/os/Bundle;)V
+    .locals 1
 
-    const/4 v4, 0x6
+    iget-object v0, p0, Lzhf;->o:Lgj8;
 
-    const/4 v5, 0x0
+    invoke-virtual {v0, p1}, Lmh;->h(Landroid/os/Bundle;)V
 
-    if-nez v3, :cond_6
+    return-void
+.end method
 
-    new-instance v0, Lmif;
+.method public final i(Landroid/os/Bundle;)V
+    .locals 1
 
-    invoke-static {v7}, Lzyd;->o(Lcxe;)Lu2f;
+    iget-object v0, p0, Lzhf;->o:Lgj8;
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Lmh;->i(Landroid/os/Bundle;)V
 
-    invoke-direct {v0, v5, v4, v1}, Lmif;-><init>(IILu2f;)V
-
-    invoke-static {v2, v0}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_6
-    invoke-virtual {v1}, Lyce;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lhkf;
-
-    check-cast v0, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object v0, v0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcxe;
-
-    invoke-static {v0}, Lzyd;->t(Lcxe;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_7
-
-    invoke-static {v0}, Lzyd;->o(Lcxe;)Lu2f;
-
-    move-result-object v0
-
-    iget-object v4, v3, Lhkf;->d:Llkf;
-
-    invoke-static {v4, v0}, Llkf;->a(Llkf;Lu2f;)Llkf;
-
-    move-result-object v0
-
-    iget v4, v3, Lhkf;->a:I
-
-    iget-object v8, v3, Lhkf;->b:Lu2f;
-
-    iget-object v3, v3, Lhkf;->c:Lu2f;
-
-    new-instance v9, Lhkf;
-
-    invoke-direct {v9, v4, v8, v3, v0}, Lhkf;-><init>(ILu2f;Lu2f;Llkf;)V
-
-    invoke-virtual {v1, v7, v9}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    new-instance v0, Lnif;
-
-    invoke-direct {v0, v5}, Lnif;-><init>(Z)V
-
-    invoke-static {v2, v0}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_7
-    new-instance v1, Lmif;
-
-    invoke-static {v0}, Lzyd;->o(Lcxe;)Lu2f;
-
-    move-result-object v0
-
-    invoke-direct {v1, v5, v4, v0}, Lmif;-><init>(IILu2f;)V
-
-    invoke-static {v2, v1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_8
-    throw v0
-
-    :cond_9
-    :goto_4
-    return-object v6
+    return-void
 .end method

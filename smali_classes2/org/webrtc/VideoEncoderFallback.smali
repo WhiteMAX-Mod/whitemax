@@ -28,27 +28,27 @@
 
 # virtual methods
 .method public createNative(J)J
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lorg/webrtc/VideoEncoderFallback;->fallback:Lorg/webrtc/VideoEncoder;
 
-    iget-object p0, p0, Lorg/webrtc/VideoEncoderFallback;->primary:Lorg/webrtc/VideoEncoder;
+    iget-object v1, p0, Lorg/webrtc/VideoEncoderFallback;->primary:Lorg/webrtc/VideoEncoder;
 
-    invoke-static {p1, p2, v0, p0}, Lorg/webrtc/VideoEncoderFallback;->nativeCreate(JLorg/webrtc/VideoEncoder;Lorg/webrtc/VideoEncoder;)J
+    invoke-static {p1, p2, v0, v1}, Lorg/webrtc/VideoEncoderFallback;->nativeCreate(JLorg/webrtc/VideoEncoder;Lorg/webrtc/VideoEncoder;)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public isHardwareEncoder()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/VideoEncoderFallback;->primary:Lorg/webrtc/VideoEncoder;
+    iget-object v0, p0, Lorg/webrtc/VideoEncoderFallback;->primary:Lorg/webrtc/VideoEncoder;
 
-    invoke-interface {p0}, Lorg/webrtc/VideoEncoder;->isHardwareEncoder()Z
+    invoke-interface {v0}, Lorg/webrtc/VideoEncoder;->isHardwareEncoder()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method

@@ -1,24 +1,24 @@
 .class public Landroidx/biometric/BiometricViewModel;
-.super Ly7g;
+.super Lyzg;
 .source "SourceFile"
 
 
 # instance fields
-.field public b:Lzyd;
+.field public b:Lbki;
 
-.field public c:Lzlb;
+.field public c:Lm75;
 
-.field public d:Llhd;
+.field public d:Lq4e;
 
-.field public e:Lim4;
+.field public e:Lo39;
 
-.field public f:Lkga;
+.field public f:Lcs8;
 
-.field public g:Lgn0;
+.field public g:Loo0;
 
-.field public h:Z
+.field public h:Ljava/lang/String;
 
-.field public i:Z
+.field public i:I
 
 .field public j:Z
 
@@ -26,39 +26,51 @@
 
 .field public l:Z
 
-.field public m:Lwn9;
+.field public m:Z
 
-.field public n:Lwn9;
+.field public n:Z
 
-.field public o:Lwn9;
+.field public o:Lo0a;
 
-.field public p:Lwn9;
+.field public p:Lo0a;
 
-.field public q:Lwn9;
+.field public q:Lo0a;
 
-.field public r:Lwn9;
+.field public r:Lo0a;
 
-.field public s:I
+.field public s:Lo0a;
 
-.field public t:Lwn9;
+.field public t:Z
 
-.field public u:Lwn9;
+.field public u:Lo0a;
+
+.field public v:I
+
+.field public w:Lo0a;
+
+.field public x:Lo0a;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
-    invoke-direct {p0}, Ly7g;-><init>()V
+    invoke-direct {p0}, Lyzg;-><init>()V
 
     const/4 v0, 0x0
 
-    iput v0, p0, Landroidx/biometric/BiometricViewModel;->s:I
+    iput v0, p0, Landroidx/biometric/BiometricViewModel;->i:I
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Landroidx/biometric/BiometricViewModel;->t:Z
+
+    iput v0, p0, Landroidx/biometric/BiometricViewModel;->v:I
 
     return-void
 .end method
 
-.method public static i(Lwn9;Ljava/lang/Object;)V
+.method public static j(Lo0a;Ljava/lang/Object;)V
     .locals 2
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -75,106 +87,123 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p0, p1}, Lcu7;->k(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lh38;->k(Ljava/lang/Object;)V
 
     return-void
 
     :cond_0
-    invoke-virtual {p0, p1}, Lcu7;->i(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lh38;->i(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lsm0;)V
+.method public final e()I
     .locals 1
 
-    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->n:Lwn9;
+    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->c:Lm75;
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0xf
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final f(Lyn0;)V
+    .locals 1
+
+    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->p:Lo0a;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lwn9;
+    new-instance v0, Lo0a;
 
-    invoke-direct {v0}, Lcu7;-><init>()V
+    invoke-direct {v0}, Lh38;-><init>()V
 
-    iput-object v0, p0, Landroidx/biometric/BiometricViewModel;->n:Lwn9;
+    iput-object v0, p0, Landroidx/biometric/BiometricViewModel;->p:Lo0a;
 
     :cond_0
-    iget-object p0, p0, Landroidx/biometric/BiometricViewModel;->n:Lwn9;
+    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->p:Lo0a;
 
-    invoke-static {p0, p1}, Landroidx/biometric/BiometricViewModel;->i(Lwn9;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/BiometricViewModel;->j(Lo0a;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final f(Ljava/lang/CharSequence;)V
+.method public final g(Ljava/lang/CharSequence;)V
     .locals 1
 
-    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->u:Lwn9;
+    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->x:Lo0a;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lwn9;
+    new-instance v0, Lo0a;
 
-    invoke-direct {v0}, Lcu7;-><init>()V
+    invoke-direct {v0}, Lh38;-><init>()V
 
-    iput-object v0, p0, Landroidx/biometric/BiometricViewModel;->u:Lwn9;
+    iput-object v0, p0, Landroidx/biometric/BiometricViewModel;->x:Lo0a;
 
     :cond_0
-    iget-object p0, p0, Landroidx/biometric/BiometricViewModel;->u:Lwn9;
+    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->x:Lo0a;
 
-    invoke-static {p0, p1}, Landroidx/biometric/BiometricViewModel;->i(Lwn9;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/BiometricViewModel;->j(Lo0a;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final g(I)V
+.method public final h(I)V
     .locals 1
 
-    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->t:Lwn9;
+    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->w:Lo0a;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lwn9;
+    new-instance v0, Lo0a;
 
-    invoke-direct {v0}, Lcu7;-><init>()V
+    invoke-direct {v0}, Lh38;-><init>()V
 
-    iput-object v0, p0, Landroidx/biometric/BiometricViewModel;->t:Lwn9;
+    iput-object v0, p0, Landroidx/biometric/BiometricViewModel;->w:Lo0a;
 
     :cond_0
-    iget-object p0, p0, Landroidx/biometric/BiometricViewModel;->t:Lwn9;
+    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->w:Lo0a;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/biometric/BiometricViewModel;->i(Lwn9;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/BiometricViewModel;->j(Lo0a;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final h(Z)V
+.method public final i(Z)V
     .locals 1
 
-    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->q:Lwn9;
+    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->s:Lo0a;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lwn9;
+    new-instance v0, Lo0a;
 
-    invoke-direct {v0}, Lcu7;-><init>()V
+    invoke-direct {v0}, Lh38;-><init>()V
 
-    iput-object v0, p0, Landroidx/biometric/BiometricViewModel;->q:Lwn9;
+    iput-object v0, p0, Landroidx/biometric/BiometricViewModel;->s:Lo0a;
 
     :cond_0
-    iget-object p0, p0, Landroidx/biometric/BiometricViewModel;->q:Lwn9;
+    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->s:Lo0a;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/biometric/BiometricViewModel;->i(Lwn9;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/BiometricViewModel;->j(Lo0a;Ljava/lang/Object;)V
 
     return-void
 .end method

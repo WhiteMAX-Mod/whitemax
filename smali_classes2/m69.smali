@@ -1,144 +1,87 @@
 .class public final Lm69;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lo69;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p2, p0, Lm69;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lm69;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lr49;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lm69;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lm69;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lm69;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lm69;
-
-    iget-object p0, p0, Lm69;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {v0, p2, p0}, Lm69;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    iput-object p1, v0, Lm69;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lm69;->X:Ljava/lang/Object;
-
-    check-cast p1, Lr49;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    iget-boolean v1, p1, Lr49;->a:Z
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    move v0, v2
+    return v0
 
     :cond_0
-    sget-object v1, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:[Lxi7;
-
-    iget-object p0, p0, Lm69;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lk19;->setLeftOuterIconVisible(Z)V
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
-
-    move-result-object v0
-
-    new-instance v1, Loa6;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0()Ln59;
-
-    move-result-object v3
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x8
+    instance-of v1, p1, Lm69;
 
     const/4 v2, 0x0
 
-    const-class v4, Ln59;
+    if-nez v1, :cond_1
 
-    const-string v5, "onMiniAppClick"
-
-    const-string v6, "onMiniAppClick$message_write_widget_release()V"
-
-    invoke-direct/range {v1 .. v8}, Loa6;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    invoke-virtual {v0, v1}, Lk19;->setLeftOuterIconOnClickListener(Lzb6;)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
-
-    move-result-object p0
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p1, Lr49;->b:Ljava/lang/CharSequence;
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    const/4 p1, 0x0
+    check-cast p1, Lm69;
 
-    :goto_0
-    invoke-virtual {p0, p1}, Lk19;->setLeftOuterIconText(Ljava/lang/CharSequence;)V
+    iget-wide v3, p0, Lm69;->a:J
+
+    iget-wide v5, p1, Lm69;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
 
     :cond_2
-    sget-object p0, Lylf;->a:Lylf;
+    return v0
+.end method
 
-    return-object p0
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lm69;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "OnOwnerClicked(id="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lm69;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

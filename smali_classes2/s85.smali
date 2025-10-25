@@ -1,52 +1,39 @@
-.class public Ls85;
+.class public final Ls85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Lrm0;
 
-.field public b:Z
+.field public final b:Lqmf;
+
+.field public c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lqmf;Lt85;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ls85;->a:Ljava/lang/Object;
+    new-instance p3, Lrm0;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const/4 v0, 0x0
+
+    invoke-direct {p3, v0}, Lrm0;-><init>(Ljava/lang/Object;)V
+
+    iput-object p3, p0, Ls85;->a:Lrm0;
+
+    iput-object p2, p0, Ls85;->b:Lqmf;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget p2, Lyjd;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 1
-
-    iget-boolean v0, p0, Ls85;->b:Z
-
-    if-eqz v0, :cond_0
-
-    new-instance p0, Lru/ok/tamtam/shared/lifecycle/AlreadyHandledEventException;
-
-    invoke-direct {p0}, Lru/ok/tamtam/shared/lifecycle/AlreadyHandledEventException;-><init>()V
-
-    new-instance v0, Lhvc;
-
-    invoke-direct {v0, p0}, Lhvc;-><init>(Ljava/lang/Throwable;)V
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ls85;->b:Z
-
-    iget-object p0, p0, Ls85;->a:Ljava/lang/Object;
-
-    return-object p0
 .end method

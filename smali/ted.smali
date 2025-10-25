@@ -1,85 +1,112 @@
 .class public final Lted;
-.super Lj1d;
+.super Lv9b;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic r0:Ltw0;
-
-.field public final synthetic s0:Ln74;
-
-.field public final synthetic t0:Lxed;
+.field public final a:Lv9b;
 
 
 # direct methods
-.method public constructor <init>(Lxed;Ltw0;Ln74;)V
+.method public constructor <init>(Lv9b;)V
     .locals 0
 
-    iput-object p1, p0, Lted;->t0:Lxed;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lted;->r0:Ltw0;
-
-    iput-object p3, p0, Lted;->s0:Ln74;
-
-    invoke-direct {p0}, Lj1d;-><init>()V
+    iput-object p1, p0, Lted;->a:Lv9b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Ljava/lang/Object;
-    .locals 5
+.method public final b()Lv9b;
+    .locals 1
 
-    iget-object v0, p0, Lted;->t0:Lxed;
+    iget-object v0, p0, Lted;->a:Lv9b;
 
-    iget-object v0, v0, Lxed;->b:Lfya;
+    return-object v0
+.end method
 
-    new-instance v1, Lbee;
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
 
-    iget-object v2, p0, Lted;->r0:Ltw0;
+    iget-object v0, p0, Lted;->a:Lv9b;
 
-    invoke-direct {v1, v2}, Lbee;-><init>(Lf74;)V
+    invoke-interface {v0, p2, p1}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
-    sget-object v3, Lev7;->c:Ljava/util/concurrent/atomic/AtomicLong;
+    move-result p1
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
+    return p1
+.end method
 
-    const-wide/16 v3, 0x0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-wide v3, v1, Lbee;->b:J
+    if-ne p1, p0, :cond_0
 
-    new-instance v3, Lj74;
+    const/4 p1, 0x1
 
-    iget-object p0, p0, Lted;->s0:Ln74;
+    return p1
 
-    invoke-direct {v3, v1, p0}, Lj74;-><init>(Lf74;Ln74;)V
+    :cond_0
+    instance-of v0, p1, Lted;
 
-    :try_start_0
-    invoke-virtual {v3}, Lj74;->m()V
+    if-eqz v0, :cond_1
 
-    iget-object p0, v2, Ltw0;->s0:Landroid/net/Uri;
+    check-cast p1, Lted;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lted;->a:Lv9b;
 
-    invoke-interface {v0, p0, v3}, Lfya;->k(Landroid/net/Uri;Lj74;)Ljava/lang/Object;
+    iget-object p1, p1, Lted;->a:Lv9b;
 
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v3}, Lnrf;->g(Ljava/io/Closeable;)V
+    move-result p1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return p1
 
-    check-cast p0, Lgp5;
+    :cond_1
+    const/4 p1, 0x0
 
-    return-object p0
+    return p1
+.end method
 
-    :catchall_0
-    move-exception p0
+.method public final hashCode()I
+    .locals 1
 
-    invoke-static {v3}, Lnrf;->g(Ljava/io/Closeable;)V
+    iget-object v0, p0, Lted;->a:Lv9b;
 
-    throw p0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    neg-int v0, v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lted;->a:Lv9b;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ".reverse()"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -2,164 +2,237 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr8b;
-
 
 # static fields
-.field public static final synthetic i:[Lxi7;
+.field public static final f:Li9;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljg6;
 
-.field public final b:Lcl7;
+.field public final b:Ljg6;
 
-.field public final c:Lcl7;
+.field public final c:Ljg6;
 
-.field public d:Ly04;
+.field public final d:Z
 
-.field public final e:Lnxd;
-
-.field public final f:Lhic;
-
-.field public final g:Lncb;
-
-.field public final h:Z
+.field public final e:Ljg6;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 6
 
-    new-instance v0, Lmo9;
+    new-instance v0, Li9;
 
-    const-string v1, "processActionJob"
+    sget-object v2, Ljg6;->s0:Ljg6;
 
-    const-string v2, "getProcessActionJob()Lkotlinx/coroutines/Job;"
+    const/4 v4, 0x0
 
-    const-class v3, Li9;
+    sget-object v1, Ljg6;->b:Ljg6;
 
-    invoke-direct {v0, v3, v1, v2}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    move-object v3, v1
 
-    sget-object v1, Ljpc;->a:Lkpc;
+    move-object v5, v1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct/range {v0 .. v5}, Li9;-><init>(Ljg6;Ljg6;Ljg6;ZLjg6;)V
 
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lxi7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Li9;->i:[Lxi7;
+    sput-object v0, Li9;->f:Li9;
 
     return-void
 .end method
 
-.method public constructor <init>(JLcl7;Lcl7;)V
-    .locals 2
+.method public constructor <init>(Ljg6;Ljg6;Ljg6;ZLjg6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Li9;->a:J
+    iput-object p1, p0, Li9;->a:Ljg6;
 
-    iput-object p3, p0, Li9;->b:Lcl7;
+    iput-object p2, p0, Li9;->b:Ljg6;
 
-    iput-object p4, p0, Li9;->c:Lcl7;
+    iput-object p3, p0, Li9;->c:Ljg6;
 
-    const p4, 0x7fffffff
+    iput-boolean p4, p0, Li9;->d:Z
 
-    const/4 v0, 0x5
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, p4, v0}, Loxd;->b(III)Lnxd;
-
-    move-result-object p4
-
-    iput-object p4, p0, Li9;->e:Lnxd;
-
-    new-instance v0, Lhic;
-
-    invoke-direct {v0, p4}, Lhic;-><init>(Lqo9;)V
-
-    iput-object v0, p0, Li9;->f:Lhic;
-
-    invoke-static {}, Lmq0;->L()Lncb;
-
-    move-result-object p4
-
-    iput-object p4, p0, Li9;->g:Lncb;
-
-    invoke-interface {p3}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lyz2;
-
-    check-cast p3, Ly03;
-
-    invoke-virtual {p3, p1, p2}, Ly03;->N(J)Liic;
-
-    move-result-object p1
-
-    iget-object p1, p1, Liic;->a:Lrce;
-
-    invoke-interface {p1}, Lrce;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ls72;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ls72;->H()Z
-
-    move-result p1
-
-    const/4 p2, 0x1
-
-    if-ne p1, p2, :cond_0
-
-    move v1, p2
-
-    :cond_0
-    iput-boolean v1, p0, Li9;->h:Z
+    iput-object p5, p0, Li9;->e:Ljg6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Li9;->d:Ly04;
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Li9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Li9;
+
+    iget-object v1, p0, Li9;->a:Ljg6;
+
+    iget-object v3, p1, Li9;->a:Ljg6;
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Li9;->b:Ljg6;
+
+    iget-object v3, p1, Li9;->b:Ljg6;
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Li9;->c:Ljg6;
+
+    iget-object v3, p1, Li9;->c:Ljg6;
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Li9;->d:Z
+
+    iget-boolean v3, p1, Li9;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Li9;->e:Ljg6;
+
+    iget-object p1, p1, Li9;->e:Ljg6;
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
 .end method
 
-.method public final b(Lg8b;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    return-void
+    iget-object v0, p0, Li9;->a:Ljg6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Li9;->b:Ljg6;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Li9;->c:Ljg6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Li9;->d:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Li9;->e:Ljg6;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final d(J)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return-void
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 0
+    const-string v1, "AdaptiveTrackSelectionConfig(minFrameSize="
 
-    iput-object p1, p0, Li9;->d:Ly04;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
+    iget-object v1, p0, Li9;->a:Ljg6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxFrameSize="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Li9;->b:Ljg6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", minInitialFrameSize="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Li9;->c:Ljg6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", adaptiveToViewport="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Li9;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", adaptiveToViewportMinFrameSize="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Li9;->e:Ljg6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

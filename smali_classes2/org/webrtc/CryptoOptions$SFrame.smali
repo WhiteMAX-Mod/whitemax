@@ -47,12 +47,12 @@
 
 # virtual methods
 .method public getRequireFrameEncryption()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "SFrame"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/CryptoOptions$SFrame;->requireFrameEncryption:Z
+    iget-boolean v0, p0, Lorg/webrtc/CryptoOptions$SFrame;->requireFrameEncryption:Z
 
-    return p0
+    return v0
 .end method

@@ -1,61 +1,185 @@
 .class public abstract Ltb3;
-.super Ljava/lang/Object;
+.super Lsb3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lrb3;
-
-.field public static final b:Lsb3;
-
-.field public static final c:Lsb3;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static o(Ljava/util/AbstractCollection;[Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lrb3;
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p1
 
-    sput-object v0, Ltb3;->a:Lrb3;
-
-    new-instance v0, Lsb3;
-
-    const/4 v1, -0x1
-
-    invoke-direct {v0, v1}, Lsb3;-><init>(I)V
-
-    sput-object v0, Ltb3;->b:Lsb3;
-
-    new-instance v0, Lsb3;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lsb3;-><init>(I)V
-
-    sput-object v0, Ltb3;->c:Lsb3;
+    invoke-interface {p0, p1}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
 
     return-void
 .end method
 
+.method public static p(Ljava/util/AbstractList;Lk2e;)V
+    .locals 1
 
-# virtual methods
-.method public abstract a(II)Ltb3;
+    invoke-interface {p1}, Lk2e;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {p0, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
-.method public abstract b(JJ)Ltb3;
+.method public static q(Ljava/util/Collection;Ljava/lang/Iterable;)V
+    .locals 1
+
+    instance-of v0, p1, Ljava/util/Collection;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/util/Collection;
+
+    invoke-interface {p0, p1}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
+
+    return-void
+
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {p0, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method
 
-.method public abstract c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ltb3;
+.method public static r(Ljava/util/ArrayList;Lli6;)V
+    .locals 6
+
+    invoke-static {p0}, Lob3;->d(Ljava/util/List;)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-ltz v0, :cond_3
+
+    move v2, v1
+
+    :goto_0
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-interface {p1, v3}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Boolean;
+
+    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
+    const/4 v5, 0x1
+
+    if-ne v4, v5, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-eq v2, v1, :cond_1
+
+    invoke-virtual {p0, v2, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    :goto_1
+    if-eq v1, v0, :cond_2
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    move v1, v2
+
+    :cond_3
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    if-ge v1, p1, :cond_4
+
+    invoke-static {p0}, Lob3;->d(Ljava/util/List;)I
+
+    move-result p1
+
+    if-gt v1, p1, :cond_4
+
+    :goto_2
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    if-eq p1, v1, :cond_4
+
+    add-int/lit8 p1, p1, -0x1
+
+    goto :goto_2
+
+    :cond_4
+    return-void
 .end method
 
-.method public abstract d(ZZ)Ltb3;
-.end method
+.method public static s(Ljava/util/ArrayList;)V
+    .locals 1
 
-.method public abstract e(ZZ)Ltb3;
-.end method
+    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
-.method public abstract f()I
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p0}, Lob3;->d(Ljava/util/List;)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/util/NoSuchElementException;
+
+    const-string v0, "List is empty."
+
+    invoke-direct {p0, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

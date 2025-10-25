@@ -1,244 +1,192 @@
 .class public final Lf6a;
-.super Lwk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ld8a;
 
 
 # instance fields
-.field public X:Loq4;
+.field public final a:Z
 
-.field public volatile Y:Z
+.field public final b:Z
 
-.field public final a:Ld8a;
+.field public final c:Z
 
-.field public final b:Ltx;
-
-.field public final c:Lqc6;
-
-.field public final o:Lxd3;
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Ld8a;Lqc6;)V
+.method public constructor <init>(ZZZZ)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf6a;->a:Ld8a;
+    iput-boolean p1, p0, Lf6a;->a:Z
 
-    iput-object p2, p0, Lf6a;->c:Lqc6;
+    iput-boolean p2, p0, Lf6a;->b:Z
 
-    new-instance p1, Ltx;
+    iput-boolean p3, p0, Lf6a;->c:Z
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lf6a;->b:Ltx;
-
-    new-instance p1, Lxd3;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf6a;->o:Lxd3;
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+    iput-boolean p4, p0, Lf6a;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lf6a;->b:Ltx;
-
-    iget-object p0, p0, Lf6a;->a:Ld8a;
-
-    invoke-virtual {v0, p0}, Ltx;->d(Ld8a;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(Loq4;)V
-    .locals 1
-
-    iget-object v0, p0, Lf6a;->X:Loq4;
-
-    invoke-static {v0, p1}, Lsq4;->h(Loq4;Loq4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lf6a;->X:Loq4;
-
-    iget-object p1, p0, Lf6a;->a:Ld8a;
-
-    invoke-interface {p1, p0}, Ld8a;->c(Loq4;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final clear()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lf6a;->Y:Z
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lf6a;->X:Loq4;
-
-    invoke-interface {v0}, Loq4;->e()V
-
-    iget-object v0, p0, Lf6a;->o:Lxd3;
-
-    invoke-virtual {v0}, Lxd3;->e()V
-
-    iget-object p0, p0, Lf6a;->b:Ltx;
-
-    invoke-virtual {p0}, Ltx;->b()V
-
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    iget-object p0, p0, Lf6a;->X:Loq4;
-
-    invoke-interface {p0}, Loq4;->f()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object v0, p0, Lf6a;->b:Ltx;
-
-    invoke-virtual {v0, p1}, Ltx;->a(Ljava/lang/Throwable;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lf6a;->Y:Z
-
-    iget-object p1, p0, Lf6a;->X:Loq4;
-
-    invoke-interface {p1}, Loq4;->e()V
-
-    iget-object p1, p0, Lf6a;->o:Lxd3;
-
-    invoke-virtual {p1}, Lxd3;->e()V
-
-    iget-object p1, p0, Lf6a;->b:Ltx;
-
-    iget-object p0, p0, Lf6a;->a:Ld8a;
-
-    invoke-virtual {p1, p0}, Ltx;->d(Ld8a;)V
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lf6a;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lf6a;
+
+    iget-boolean v1, p0, Lf6a;->a:Z
+
+    iget-boolean v3, p1, Lf6a;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lf6a;->b:Z
+
+    iget-boolean v3, p1, Lf6a;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lf6a;->c:Z
+
+    iget-boolean v3, p1, Lf6a;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lf6a;->d:Z
+
+    iget-boolean p1, p1, Lf6a;->d:Z
+
+    if-eq v1, p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
 .end method
 
-.method public final poll()Ljava/lang/Object;
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    const/4 p0, 0x0
+    const/4 v0, 0x1
 
-    return-object p0
+    iget-boolean v1, p0, Lf6a;->a:Z
+
+    if-eqz v1, :cond_0
+
+    move v1, v0
+
+    :cond_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v2, p0, Lf6a;->b:Z
+
+    if-eqz v2, :cond_1
+
+    move v2, v0
+
+    :cond_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v2, p0, Lf6a;->c:Z
+
+    if-eqz v2, :cond_2
+
+    move v2, v0
+
+    :cond_2
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v2, p0, Lf6a;->d:Z
+
+    if-eqz v2, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v2
+
+    :goto_0
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final q(I)I
-    .locals 0
-
-    const/4 p0, 0x2
-
-    return p0
-.end method
-
-.method public final s(Ljava/lang/Object;)V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lf6a;->c:Lqc6;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, "NetworkState(isConnected="
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "The mapper returned a null CompletableSource"
+    iget-boolean v1, p0, Lf6a;->a:Z
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    check-cast p1, Lhc3;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v1, ", isValidated="
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Lo2e;
+    iget-boolean v1, p0, Lf6a;->b:Z
 
-    invoke-direct {v0, p0}, Lo2e;-><init>(Lf6a;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lf6a;->Y:Z
+    const-string v1, ", isMetered="
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lf6a;->o:Lxd3;
+    iget-boolean v1, p0, Lf6a;->c:Z
 
-    invoke-virtual {p0, v0}, Lxd3;->a(Loq4;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result p0
+    const-string v1, ", isNotRoaming="
 
-    if-eqz p0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Lhc3;->h(Lrc3;)V
+    iget-boolean v1, p0, Lf6a;->d:Z
 
-    :cond_0
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    :catchall_0
-    move-exception p1
+    const/16 v1, 0x29
 
-    invoke-static {p1}, Lzyd;->F(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lf6a;->X:Loq4;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-interface {v0}, Loq4;->e()V
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lf6a;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object v0
 .end method

@@ -1,176 +1,162 @@
 .class public final Ltl0;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lma5;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lcl7;
-
-.field public final synthetic Z:Lzl0;
-
-.field public final synthetic r0:Lcl7;
+.field public final synthetic a:Lq7b;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lzl0;Lcl7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lq7b;)V
     .locals 0
 
-    iput-object p1, p0, Ltl0;->Y:Lcl7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ltl0;->Z:Lzl0;
-
-    iput-object p3, p0, Ltl0;->r0:Lcl7;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ltl0;->a:Lq7b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final k(Lq7b;Lrxg;)V
+    .locals 1
 
-    check-cast p1, Ly04;
+    iget-object p1, p0, Ltl0;->a:Lq7b;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p1, Lul0;->b:Lpad;
 
-    invoke-virtual {p0, p1, p2}, Ltl0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_1
 
-    move-result-object p0
+    if-eqz p2, :cond_0
 
-    check-cast p0, Ltl0;
+    iget-object p2, p2, Lmmf;->c:Ljava/lang/Object;
 
-    sget-object p1, Lylf;->a:Lylf;
+    check-cast p2, Lpr8;
 
-    invoke-virtual {p0, p1}, Ltl0;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p2, Liog;
 
-    move-result-object p0
+    if-eqz p2, :cond_0
 
-    return-object p0
-.end method
+    iget-object p2, p2, Liog;->j:Lwif;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {p2}, Lwif;->getValue()Ljava/lang/Object;
 
-    new-instance p1, Ltl0;
+    move-result-object p2
 
-    iget-object v0, p0, Ltl0;->Z:Lzl0;
-
-    iget-object v1, p0, Ltl0;->r0:Lcl7;
-
-    iget-object p0, p0, Ltl0;->Y:Lcl7;
-
-    invoke-direct {p1, p0, v0, v1, p2}, Ltl0;-><init>(Lcl7;Lzl0;Lcl7;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Ltl0;->X:I
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lz04;->a:Lz04;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    check-cast p2, Landroid/util/Size;
 
     goto :goto_0
 
-    :cond_2
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    :cond_0
+    const/4 p2, 0x0
 
-    iget-object p1, p0, Ltl0;->Y:Lcl7;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyz2;
-
-    iget-object v0, p0, Ltl0;->Z:Lzl0;
-
-    iget-wide v4, v0, Lzl0;->a:J
-
-    check-cast p1, Ly03;
-
-    invoke-virtual {p1, v4, v5}, Ly03;->N(J)Liic;
-
-    move-result-object p1
-
-    new-instance v0, Lzv2;
-
-    const/16 v4, 0xc
-
-    invoke-direct {v0, p1, v4}, Lzv2;-><init>(Lis5;I)V
-
-    iput v2, p0, Ltl0;->X:I
-
-    invoke-static {v0, p0}, Lo97;->Z(Lis5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
     :goto_0
-    check-cast p1, Ls72;
+    invoke-virtual {v0, p1, p2}, Lpad;->g(Lq7b;Landroid/util/Size;)V
 
-    iget-object v0, p0, Ltl0;->r0:Lcl7;
+    :cond_1
+    return-void
+.end method
 
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+.method public final s(Lul0;II)V
+    .locals 2
 
-    move-result-object v0
+    const/4 p1, 0x3
 
-    check-cast v0, Lrh9;
+    if-ne p3, p1, :cond_2
 
-    iput v1, p0, Ltl0;->X:I
+    iget-object p1, p0, Ltl0;->a:Lq7b;
 
-    invoke-virtual {v0, p1, p0}, Lrh9;->R(Ls72;Lure;)Ljava/lang/Object;
+    iget-object p1, p1, Lul0;->c:Lcxe;
 
-    move-result-object p0
+    iget-object p1, p1, Lcxe;->c:Ljava/lang/Object;
 
-    if-ne p0, v3, :cond_4
+    check-cast p1, Lcvf;
 
-    :goto_1
-    return-object v3
+    monitor-enter p1
 
-    :cond_4
-    :goto_2
-    sget-object p0, Lylf;->a:Lylf;
+    :try_start_0
+    iget-wide p2, p1, Lcvf;->d:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p0
+    const-wide/16 v0, -0x1
+
+    cmp-long p2, p2, v0
+
+    const/4 p3, 0x1
+
+    if-eqz p2, :cond_0
+
+    move p2, p3
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    :goto_0
+    if-eqz p2, :cond_1
+
+    monitor-exit p1
+
+    return-void
+
+    :cond_1
+    :try_start_1
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p1, Lcvf;->d:J
+
+    invoke-virtual {p1, p3, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p1
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
+    monitor-exit p1
+
+    throw p2
+
+    :cond_2
+    iget-object p1, p0, Ltl0;->a:Lq7b;
+
+    iget-object p1, p1, Lul0;->c:Lcxe;
+
+    iget-object p1, p1, Lcxe;->c:Ljava/lang/Object;
+
+    check-cast p1, Lcvf;
+
+    invoke-virtual {p1}, Lcvf;->b()V
+
+    iget-object p1, p0, Ltl0;->a:Lq7b;
+
+    iget-object p2, p1, Lul0;->c:Lcxe;
+
+    iget-object p2, p2, Lcxe;->c:Ljava/lang/Object;
+
+    check-cast p2, Lcvf;
+
+    invoke-virtual {p2}, Lcvf;->a()J
+
+    move-result-wide p2
+
+    invoke-virtual {p1, p2, p3}, Lul0;->b(J)V
+
+    return-void
 .end method

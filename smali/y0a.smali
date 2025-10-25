@@ -1,337 +1,173 @@
-.class public abstract Ly0a;
+.class public final Ly0a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/ListIterator;
+.implements Lir7;
+
 
 # instance fields
-.field public a:Z
+.field public final a:Ljava/lang/Object;
 
-.field public b:Ljava/lang/Object;
-
-.field public c:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(ILjava/util/List;)V
+    .locals 0
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Ly0a;->a:Ljava/lang/Object;
 
-    .line 6
-    iput-boolean v0, p0, Ly0a;->a:Z
+    add-int/lit8 p1, p1, -0x1
 
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/widget/FrameLayout;Lohb;)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 2
-    iput-boolean v0, p0, Ly0a;->a:Z
-
-    .line 3
-    iput-object p1, p0, Ly0a;->c:Ljava/lang/Object;
-
-    .line 4
-    iput-object p2, p0, Ly0a;->d:Ljava/lang/Object;
+    iput p1, p0, Ly0a;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/os/Bundle;)V
+.method public final add(Ljava/lang/Object;)V
     .locals 2
 
-    iget-boolean v0, p0, Ly0a;->a:Z
+    iget v0, p0, Ly0a;->b:I
 
-    if-eqz v0, :cond_0
+    add-int/lit8 v0, v0, 0x1
 
-    iget-object v0, p0, Ly0a;->d:Ljava/lang/Object;
+    iput v0, p0, Ly0a;->b:I
 
-    check-cast v0, Ljava/lang/CharSequence;
+    iget-object v1, p0, Ly0a;->a:Ljava/lang/Object;
 
-    const-string v1, "android.summaryText"
+    invoke-interface {v1, v0, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    :cond_0
-    iget-object v0, p0, Ly0a;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    if-eqz v0, :cond_1
-
-    const-string v1, "android.title.big"
-
-    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    :cond_1
-    invoke-virtual {p0}, Ly0a;->c()Ljava/lang/String;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    const-string v0, "androidx.core.app.extra.COMPAT_TEMPLATE"
-
-    invoke-virtual {p1, v0, p0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
     return-void
 .end method
 
-.method public abstract b(Lyvg;)V
-.end method
+.method public final hasNext()Z
+    .locals 3
 
-.method public c()Ljava/lang/String;
-    .locals 0
+    iget v0, p0, Ly0a;->b:I
 
-    const/4 p0, 0x0
+    iget-object v1, p0, Ly0a;->a:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-.method public abstract d()Landroid/view/View;
-.end method
+    move-result v1
 
-.method public abstract e()Landroid/graphics/Bitmap;
-.end method
+    const/4 v2, 0x1
 
-.method public abstract f()V
-.end method
+    sub-int/2addr v1, v2
 
-.method public abstract g()V
-.end method
+    if-ge v0, v1, :cond_0
 
-.method public abstract h(Lire;Lqz;)V
-.end method
-
-.method public i()V
-    .locals 7
-
-    iget-object v0, p0, Ly0a;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    invoke-virtual {p0}, Ly0a;->d()Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_8
-
-    iget-boolean v2, p0, Ly0a;->a:Z
-
-    if-nez v2, :cond_0
-
-    goto/16 :goto_4
+    return v2
 
     :cond_0
-    iget-object p0, p0, Ly0a;->d:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast p0, Lohb;
+    return v0
+.end method
 
-    new-instance v2, Landroid/util/Size;
+.method public final hasPrevious()Z
+    .locals 1
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    iget v0, p0, Ly0a;->b:I
 
-    move-result v3
+    if-ltz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    const/4 v0, 0x1
 
-    move-result v4
+    return v0
 
-    invoke-direct {v2, v3, v4}, Landroid/util/Size;-><init>(II)V
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
+    return v0
+.end method
 
-    move-result v0
+.method public final next()Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Ly0a;->b:I
 
-    invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
+    add-int/lit8 v0, v0, 0x1
 
-    move-result v3
+    iput v0, p0, Ly0a;->b:I
 
-    if-eqz v3, :cond_7
+    iget-object v1, p0, Ly0a;->a:Ljava/lang/Object;
 
-    invoke-virtual {v2}, Landroid/util/Size;->getWidth()I
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    goto/16 :goto_3
-
-    :cond_1
-    invoke-virtual {p0}, Lohb;->f()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    goto/16 :goto_4
-
-    :cond_2
-    instance-of v3, v1, Landroid/view/TextureView;
-
-    if-eqz v3, :cond_3
-
-    move-object v3, v1
-
-    check-cast v3, Landroid/view/TextureView;
-
-    invoke-virtual {p0}, Lohb;->d()Landroid/graphics/Matrix;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {v1}, Landroid/view/View;->getDisplay()Landroid/view/Display;
-
-    move-result-object v3
-
-    iget-boolean v4, p0, Lohb;->g:Z
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    if-eqz v4, :cond_4
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v3}, Landroid/view/Display;->getRotation()I
-
-    move-result v3
-
-    iget v4, p0, Lohb;->e:I
-
-    if-eq v3, v4, :cond_4
-
-    move v3, v6
-
-    goto :goto_0
-
-    :cond_4
-    move v3, v5
-
-    :goto_0
-    iget-boolean v4, p0, Lohb;->g:Z
-
-    if-nez v4, :cond_6
-
-    if-nez v4, :cond_5
-
-    iget v4, p0, Lohb;->c:I
-
-    goto :goto_1
-
-    :cond_5
-    iget v4, p0, Lohb;->e:I
-
-    invoke-static {v4}, Ljk7;->X(I)I
-
-    move-result v4
-
-    neg-int v4, v4
-
-    :goto_1
-    if-eqz v4, :cond_6
-
-    move v5, v6
-
-    :cond_6
-    :goto_2
-    invoke-virtual {p0, v2, v0}, Lohb;->e(Landroid/util/Size;I)Landroid/graphics/RectF;
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    return-object v0
+.end method
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setPivotX(F)V
+.method public final nextIndex()I
+    .locals 1
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setPivotY(F)V
+    iget v0, p0, Ly0a;->b:I
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
+    add-int/lit8 v0, v0, 0x1
 
-    move-result v2
+    return v0
+.end method
 
-    iget-object v3, p0, Lohb;->a:Landroid/util/Size;
+.method public final previous()Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v3}, Landroid/util/Size;->getWidth()I
+    iget v0, p0, Ly0a;->b:I
 
-    move-result v3
+    add-int/lit8 v1, v0, -0x1
 
-    int-to-float v3, v3
+    iput v1, p0, Ly0a;->b:I
 
-    div-float/2addr v2, v3
+    iget-object v1, p0, Ly0a;->a:Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setScaleX(F)V
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
+    move-result-object v0
 
-    move-result v2
+    return-object v0
+.end method
 
-    iget-object p0, p0, Lohb;->a:Landroid/util/Size;
+.method public final previousIndex()I
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
+    iget v0, p0, Ly0a;->b:I
 
-    move-result p0
+    return v0
+.end method
 
-    int-to-float p0, p0
+.method public final remove()V
+    .locals 2
 
-    div-float/2addr v2, p0
+    iget-object v0, p0, Ly0a;->a:Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setScaleY(F)V
+    iget v1, p0, Ly0a;->b:I
 
-    iget p0, v0, Landroid/graphics/RectF;->left:F
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+    iget v0, p0, Ly0a;->b:I
 
-    move-result v2
+    add-int/lit8 v0, v0, -0x1
 
-    int-to-float v2, v2
+    iput v0, p0, Ly0a;->b:I
 
-    sub-float/2addr p0, v2
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->setTranslationX(F)V
-
-    iget p0, v0, Landroid/graphics/RectF;->top:F
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    sub-float/2addr p0, v0
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->setTranslationY(F)V
-
-    return-void
-
-    :cond_7
-    :goto_3
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    :cond_8
-    :goto_4
     return-void
 .end method
 
-.method public abstract j()Lgt7;
+.method public final set(Ljava/lang/Object;)V
+    .locals 2
+
+    iget-object v0, p0, Ly0a;->a:Ljava/lang/Object;
+
+    iget v1, p0, Ly0a;->b:I
+
+    invoke-interface {v0, v1, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

@@ -38,15 +38,15 @@
 .method public ssrcAllowedCodecInit(Lorg/webrtc/AndroidVideoDecoder;J)Z
     .locals 0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public ssrcAllowedDecode(Lorg/webrtc/AndroidVideoDecoder;J)Z
     .locals 0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method

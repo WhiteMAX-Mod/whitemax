@@ -1,81 +1,31 @@
-.class public final Lv0b;
-.super Luyg;
+.class public abstract Lv0b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic j:I
+# static fields
+.field public static final a:I
 
-.field public final synthetic k:Ly0b;
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly0b;I)V
-    .locals 0
-
-    iput p2, p0, Lv0b;->j:I
-
-    iput-object p1, p0, Lv0b;->k:Ly0b;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onCreateFailure(Ljava/lang/String;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lv0b;->j:I
+    sget v0, Lltc;->oneme_too_many_requests_bottomsheet_positive_button:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lv0b;->a:I
 
-    iget-object p0, p0, Lv0b;->k:Ly0b;
+    sget v0, Lltc;->oneme_too_many_requests_bottomsheet_subtitle:I
 
-    invoke-virtual {p0, p1}, Ly0b;->h(Ljava/lang/String;)V
+    sput v0, Lv0b;->b:I
 
-    return-void
+    sget v0, Lltc;->oneme_too_many_requests_bottomsheet_title:I
 
-    :pswitch_0
-    iget-object p0, p0, Lv0b;->k:Ly0b;
-
-    invoke-virtual {p0, p1}, Ly0b;->h(Ljava/lang/String;)V
+    sput v0, Lv0b;->c:I
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onCreateSuccess(Lorg/webrtc/SessionDescription;)V
-    .locals 1
-
-    iget v0, p0, Lv0b;->j:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lv0b;->k:Ly0b;
-
-    invoke-virtual {p0, p1}, Ly0b;->m(Lorg/webrtc/SessionDescription;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lv0b;->k:Ly0b;
-
-    invoke-virtual {p0, p1}, Ly0b;->m(Lorg/webrtc/SessionDescription;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

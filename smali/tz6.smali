@@ -1,496 +1,591 @@
-.class public abstract Ltz6;
+.class public final Ltz6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly18;
 
-# static fields
-.field public static final a:Llqc;
+
+# instance fields
+.field public final X:Z
+
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Ljava/lang/CharSequence;
+
+.field public final o:Ljava/lang/String;
+
+.field public final q0:Z
+
+.field public final r0:Ljava/lang/CharSequence;
+
+.field public final s0:I
+
+.field public final t0:Llz6;
+
+.field public final u0:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 181
+.method public constructor <init>(JJLjava/lang/CharSequence;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;ZLjava/lang/CharSequence;ILlz6;)V
+    .locals 0
 
-    const-string v179, "Garage Rock"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v180, "Psybient"
+    iput-wide p1, p0, Ltz6;->a:J
 
-    const-string v1, "Other"
+    iput-wide p3, p0, Ltz6;->b:J
 
-    const-string v2, "Pop"
+    iput-object p5, p0, Ltz6;->c:Ljava/lang/CharSequence;
 
-    const-string v3, "R&B"
+    iput-object p6, p0, Ltz6;->o:Ljava/lang/String;
 
-    const-string v4, "Rap"
+    iput-boolean p7, p0, Ltz6;->X:Z
 
-    const-string v5, "Reggae"
+    iput-object p8, p0, Ltz6;->Y:Ljava/lang/String;
 
-    const-string v6, "Rock"
+    iput-object p9, p0, Ltz6;->Z:Ljava/lang/String;
 
-    const-string v7, "Techno"
+    iput-boolean p10, p0, Ltz6;->q0:Z
 
-    const-string v8, "Industrial"
+    iput-object p11, p0, Ltz6;->r0:Ljava/lang/CharSequence;
 
-    const-string v9, "Alternative"
+    iput p12, p0, Ltz6;->s0:I
 
-    const-string v10, "Ska"
+    iput-object p13, p0, Ltz6;->t0:Llz6;
 
-    const-string v11, "Death Metal"
-
-    const-string v12, "Pranks"
-
-    const-string v13, "Soundtrack"
-
-    const-string v14, "Euro-Techno"
-
-    const-string v15, "Ambient"
-
-    const-string v16, "Trip-Hop"
-
-    const-string v17, "Vocal"
-
-    const-string v18, "Jazz+Funk"
-
-    const-string v19, "Fusion"
-
-    const-string v20, "Trance"
-
-    const-string v21, "Classical"
-
-    const-string v22, "Instrumental"
-
-    const-string v23, "Acid"
-
-    const-string v24, "House"
-
-    const-string v25, "Game"
-
-    const-string v26, "Sound Clip"
-
-    const-string v27, "Gospel"
-
-    const-string v28, "Noise"
-
-    const-string v29, "AlternRock"
-
-    const-string v30, "Bass"
-
-    const-string v31, "Soul"
-
-    const-string v32, "Punk"
-
-    const-string v33, "Space"
-
-    const-string v34, "Meditative"
-
-    const-string v35, "Instrumental Pop"
-
-    const-string v36, "Instrumental Rock"
-
-    const-string v37, "Ethnic"
-
-    const-string v38, "Gothic"
-
-    const-string v39, "Darkwave"
-
-    const-string v40, "Techno-Industrial"
-
-    const-string v41, "Electronic"
-
-    const-string v42, "Pop-Folk"
-
-    const-string v43, "Eurodance"
-
-    const-string v44, "Dream"
-
-    const-string v45, "Southern Rock"
-
-    const-string v46, "Comedy"
-
-    const-string v47, "Cult"
-
-    const-string v48, "Gangsta"
-
-    const-string v49, "Top 40"
-
-    const-string v50, "Christian Rap"
-
-    const-string v51, "Pop/Funk"
-
-    const-string v52, "Jungle"
-
-    const-string v53, "Native American"
-
-    const-string v54, "Cabaret"
-
-    const-string v55, "New Wave"
-
-    const-string v56, "Psychadelic"
-
-    const-string v57, "Rave"
-
-    const-string v58, "Showtunes"
-
-    const-string v59, "Trailer"
-
-    const-string v60, "Lo-Fi"
-
-    const-string v61, "Tribal"
-
-    const-string v62, "Acid Punk"
-
-    const-string v63, "Acid Jazz"
-
-    const-string v64, "Polka"
-
-    const-string v65, "Retro"
-
-    const-string v66, "Musical"
-
-    const-string v67, "Rock & Roll"
-
-    const-string v68, "Hard Rock"
-
-    const-string v69, "Folk"
-
-    const-string v70, "Folk-Rock"
-
-    const-string v71, "National Folk"
-
-    const-string v72, "Swing"
-
-    const-string v73, "Fast Fusion"
-
-    const-string v74, "Bebob"
-
-    const-string v75, "Latin"
-
-    const-string v76, "Revival"
-
-    const-string v77, "Celtic"
-
-    const-string v78, "Bluegrass"
-
-    const-string v79, "Avantgarde"
-
-    const-string v80, "Gothic Rock"
-
-    const-string v81, "Progressive Rock"
-
-    const-string v82, "Psychedelic Rock"
-
-    const-string v83, "Symphonic Rock"
-
-    const-string v84, "Slow Rock"
-
-    const-string v85, "Big Band"
-
-    const-string v86, "Chorus"
-
-    const-string v87, "Easy Listening"
-
-    const-string v88, "Acoustic"
-
-    const-string v89, "Humour"
-
-    const-string v90, "Speech"
-
-    const-string v91, "Chanson"
-
-    const-string v92, "Opera"
-
-    const-string v93, "Chamber Music"
-
-    const-string v94, "Sonata"
-
-    const-string v95, "Symphony"
-
-    const-string v96, "Booty Bass"
-
-    const-string v97, "Primus"
-
-    const-string v98, "Porn Groove"
-
-    const-string v99, "Satire"
-
-    const-string v100, "Slow Jam"
-
-    const-string v101, "Club"
-
-    const-string v102, "Tango"
-
-    const-string v103, "Samba"
-
-    const-string v104, "Folklore"
-
-    const-string v105, "Ballad"
-
-    const-string v106, "Power Ballad"
-
-    const-string v107, "Rhythmic Soul"
-
-    const-string v108, "Freestyle"
-
-    const-string v109, "Duet"
-
-    const-string v110, "Punk Rock"
-
-    const-string v111, "Drum Solo"
-
-    const-string v112, "A capella"
-
-    const-string v113, "Euro-House"
-
-    const-string v114, "Dance Hall"
-
-    const-string v115, "Goa"
-
-    const-string v116, "Drum & Bass"
-
-    const-string v117, "Club-House"
-
-    const-string v118, "Hardcore"
-
-    const-string v119, "Terror"
-
-    const-string v120, "Indie"
-
-    const-string v121, "BritPop"
-
-    const-string v122, "Afro-Punk"
-
-    const-string v123, "Polsk Punk"
-
-    const-string v124, "Beat"
-
-    const-string v125, "Christian Gangsta Rap"
-
-    const-string v126, "Heavy Metal"
-
-    const-string v127, "Black Metal"
-
-    const-string v128, "Crossover"
-
-    const-string v129, "Contemporary Christian"
-
-    const-string v130, "Christian Rock"
-
-    const-string v131, "Merengue"
-
-    const-string v132, "Salsa"
-
-    const-string v133, "Thrash Metal"
-
-    const-string v134, "Anime"
-
-    const-string v135, "Jpop"
-
-    const-string v136, "Synthpop"
-
-    const-string v137, "Abstract"
-
-    const-string v138, "Art Rock"
-
-    const-string v139, "Baroque"
-
-    const-string v140, "Bhangra"
-
-    const-string v141, "Big beat"
-
-    const-string v142, "Breakbeat"
-
-    const-string v143, "Chillout"
-
-    const-string v144, "Downtempo"
-
-    const-string v145, "Dub"
-
-    const-string v146, "EBM"
-
-    const-string v147, "Eclectic"
-
-    const-string v148, "Electro"
-
-    const-string v149, "Electroclash"
-
-    const-string v150, "Emo"
-
-    const-string v151, "Experimental"
-
-    const-string v152, "Garage"
-
-    const-string v153, "Global"
-
-    const-string v154, "IDM"
-
-    const-string v155, "Illbient"
-
-    const-string v156, "Industro-Goth"
-
-    const-string v157, "Jam Band"
-
-    const-string v158, "Krautrock"
-
-    const-string v159, "Leftfield"
-
-    const-string v160, "Lounge"
-
-    const-string v161, "Math Rock"
-
-    const-string v162, "New Romantic"
-
-    const-string v163, "Nu-Breakz"
-
-    const-string v164, "Post-Punk"
-
-    const-string v165, "Post-Rock"
-
-    const-string v166, "Psytrance"
-
-    const-string v167, "Shoegaze"
-
-    const-string v168, "Space Rock"
-
-    const-string v169, "Trop Rock"
-
-    const-string v170, "World Music"
-
-    const-string v171, "Neoclassical"
-
-    const-string v172, "Audiobook"
-
-    const-string v173, "Audio theatre"
-
-    const-string v174, "Neue Deutsche Welle"
-
-    const-string v175, "Podcast"
-
-    const-string v176, "Indie-Rock"
-
-    const-string v177, "G-Funk"
-
-    const-string v178, "Dubstep"
-
-    filled-new-array/range {v1 .. v180}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-object v1, Ll37;->b:Lgx5;
-
-    const/16 v1, 0xc0
-
-    new-array v2, v1, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    const-string v4, "Blues"
-
-    aput-object v4, v2, v3
-
-    const/4 v4, 0x1
-
-    const-string v5, "Classic Rock"
-
-    aput-object v5, v2, v4
-
-    const/4 v4, 0x2
-
-    const-string v5, "Country"
-
-    aput-object v5, v2, v4
-
-    const/4 v4, 0x3
-
-    const-string v5, "Dance"
-
-    aput-object v5, v2, v4
-
-    const/4 v4, 0x4
-
-    const-string v5, "Disco"
-
-    aput-object v5, v2, v4
-
-    const/4 v4, 0x5
-
-    const-string v5, "Funk"
-
-    aput-object v5, v2, v4
-
-    const/4 v4, 0x6
-
-    const-string v5, "Grunge"
-
-    aput-object v5, v2, v4
-
-    const/4 v4, 0x7
-
-    const-string v5, "Hip-Hop"
-
-    aput-object v5, v2, v4
-
-    const/16 v4, 0x8
-
-    const-string v5, "Jazz"
-
-    aput-object v5, v2, v4
-
-    const/16 v4, 0x9
-
-    const-string v5, "Metal"
-
-    aput-object v5, v2, v4
-
-    const/16 v4, 0xa
-
-    const-string v5, "New Age"
-
-    aput-object v5, v2, v4
-
-    const/16 v4, 0xb
-
-    const-string v5, "Oldies"
-
-    aput-object v5, v2, v4
-
-    const/16 v4, 0xc
-
-    const/16 v5, 0xb4
-
-    invoke-static {v0, v3, v2, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-static {v1, v2}, Ln4e;->l(I[Ljava/lang/Object;)V
-
-    invoke-static {v1, v2}, Ll37;->h(I[Ljava/lang/Object;)Llqc;
-
-    move-result-object v0
-
-    sput-object v0, Ltz6;->a:Llqc;
+    iput-wide p1, p0, Ltz6;->u0:J
 
     return-void
 .end method
 
-.method public static a(I)Ljava/lang/String;
-    .locals 2
 
-    if-ltz p0, :cond_0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget-object v0, Ltz6;->a:Llqc;
+    if-ne p0, p1, :cond_0
 
-    iget v1, v0, Llqc;->o:I
-
-    if-ge p0, v1, :cond_0
-
-    invoke-virtual {v0, p0}, Llqc;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/String;
-
-    return-object p0
+    goto/16 :goto_1
 
     :cond_0
-    const/4 p0, 0x0
+    instance-of v0, p1, Ltz6;
 
-    return-object p0
+    if-nez v0, :cond_1
+
+    goto/16 :goto_0
+
+    :cond_1
+    check-cast p1, Ltz6;
+
+    iget-wide v0, p0, Ltz6;->a:J
+
+    iget-wide v2, p1, Ltz6;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v0, p0, Ltz6;->b:J
+
+    iget-wide v2, p1, Ltz6;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Ltz6;->c:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Ltz6;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Ltz6;->o:Ljava/lang/String;
+
+    iget-object v1, p1, Ltz6;->o:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-boolean v0, p0, Ltz6;->X:Z
+
+    iget-boolean v1, p1, Ltz6;->X:Z
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v0, p0, Ltz6;->Y:Ljava/lang/String;
+
+    iget-object v1, p1, Ltz6;->Y:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-object v0, p0, Ltz6;->Z:Ljava/lang/String;
+
+    iget-object v1, p1, Ltz6;->Z:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget-boolean v0, p0, Ltz6;->q0:Z
+
+    iget-boolean v1, p1, Ltz6;->q0:Z
+
+    if-eq v0, v1, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget-object v0, p0, Ltz6;->r0:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Ltz6;->r0:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    goto :goto_0
+
+    :cond_a
+    iget v0, p0, Ltz6;->s0:I
+
+    iget v1, p1, Ltz6;->s0:I
+
+    if-eq v0, v1, :cond_b
+
+    goto :goto_0
+
+    :cond_b
+    iget-object v0, p0, Ltz6;->t0:Llz6;
+
+    iget-object p1, p1, Ltz6;->t0:Llz6;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_c
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_c
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Ltz6;->u0:J
+
+    return-wide v0
+.end method
+
+.method public final h(Ly18;)Z
+    .locals 4
+
+    iget-wide v0, p0, Ltz6;->u0:J
+
+    invoke-interface {p1}, Ly18;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Ltz6;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Ltz6;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Ltz6;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v2, v0, v1}, Lu15;->f(Ljava/lang/CharSequence;II)I
+
+    move-result v0
+
+    iget-object v2, p0, Ltz6;->o:Ljava/lang/String;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Ltz6;->X:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v2, p0, Ltz6;->Y:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Ltz6;->Z:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Ltz6;->q0:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v2, p0, Ltz6;->r0:Ljava/lang/CharSequence;
+
+    invoke-static {v2, v0, v1}, Lu15;->f(Ljava/lang/CharSequence;II)I
+
+    move-result v0
+
+    iget v2, p0, Ltz6;->s0:I
+
+    invoke-static {v2, v0, v1}, Laab;->j(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Ltz6;->t0:Llz6;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final k(Ly18;)Ljava/lang/Object;
+    .locals 11
+
+    check-cast p1, Ltz6;
+
+    iget-object v0, p1, Ltz6;->r0:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Ltz6;->Z:Ljava/lang/String;
+
+    invoke-static {}, Lob3;->b()Lu18;
+
+    move-result-object v2
+
+    iget-object v3, p1, Ltz6;->Y:Ljava/lang/String;
+
+    iget-object v4, p0, Ltz6;->Y:Ljava/lang/String;
+
+    invoke-static {v4, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    new-instance v4, Lqz6;
+
+    invoke-direct {v4, v3}, Lqz6;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v4}, Lu18;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    iget-object v3, p0, Ltz6;->o:Ljava/lang/String;
+
+    iget-object v4, p1, Ltz6;->o:Ljava/lang/String;
+
+    invoke-static {v3, v4}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-wide v3, p0, Ltz6;->b:J
+
+    iget-wide v5, p1, Ltz6;->b:J
+
+    cmp-long v3, v3, v5
+
+    if-nez v3, :cond_1
+
+    iget-object v3, p0, Ltz6;->c:Ljava/lang/CharSequence;
+
+    iget-object v4, p1, Ltz6;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v3, v4}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-boolean v3, p0, Ltz6;->X:Z
+
+    iget-boolean v4, p1, Ltz6;->X:Z
+
+    if-eq v3, v4, :cond_2
+
+    :cond_1
+    new-instance v5, Lmz6;
+
+    iget-wide v6, p1, Ltz6;->b:J
+
+    iget-object v8, p1, Ltz6;->c:Ljava/lang/CharSequence;
+
+    iget-object v9, p1, Ltz6;->o:Ljava/lang/String;
+
+    iget-boolean v10, p1, Ltz6;->X:Z
+
+    invoke-direct/range {v5 .. v10}, Lmz6;-><init>(JLjava/lang/CharSequence;Ljava/lang/String;Z)V
+
+    invoke-virtual {v2, v5}, Lu18;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    iget-object v3, p0, Ltz6;->Z:Ljava/lang/String;
+
+    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    new-instance v3, Lrz6;
+
+    invoke-direct {v3, v1}, Lrz6;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v3}, Lu18;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    iget-boolean v1, p1, Ltz6;->q0:Z
+
+    iget-boolean v3, p0, Ltz6;->q0:Z
+
+    if-eq v3, v1, :cond_4
+
+    new-instance v3, Lpz6;
+
+    invoke-direct {v3, v1}, Lpz6;-><init>(Z)V
+
+    invoke-virtual {v2, v3}, Lu18;->add(Ljava/lang/Object;)Z
+
+    :cond_4
+    iget-object v1, p0, Ltz6;->r0:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    new-instance v1, Loz6;
+
+    invoke-direct {v1, v0}, Loz6;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v2, v1}, Lu18;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    iget p1, p1, Ltz6;->s0:I
+
+    iget v0, p0, Ltz6;->s0:I
+
+    if-eq v0, p1, :cond_6
+
+    new-instance v0, Lnz6;
+
+    invoke-direct {v0, p1}, Lnz6;-><init>(I)V
+
+    invoke-virtual {v2, v0}, Lu18;->add(Ljava/lang/Object;)Z
+
+    :cond_6
+    invoke-static {v2}, Lob3;->a(Ljava/util/List;)Lu18;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "HistoryItemState(id="
+
+    const-string v1, ", avatarColorId="
+
+    iget-wide v2, p0, Ltz6;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Ltz6;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", abbreviation="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltz6;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", avatar="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltz6;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isCallLink="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ltz6;->X:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callName="
+
+    const-string v2, ", time="
+
+    iget-object v3, p0, Ltz6;->Y:Ljava/lang/String;
+
+    iget-object v4, p0, Ltz6;->Z:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2, v4}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, ", isMissing="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ltz6;->q0:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltz6;->r0:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callMediaType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ltz6;->s0:I
+
+    invoke-static {v1}, Lu15;->u(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltz6;->t0:Llz6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

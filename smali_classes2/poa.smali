@@ -1,41 +1,61 @@
 .class public final Lpoa;
-.super Ljava/lang/Object;
+.super Lroa;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lx30;
+# static fields
+.field public static final a:Lpoa;
 
 
 # direct methods
-.method public constructor <init>(Lx30;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpoa;
 
-    iput-object p1, p0, Lpoa;->a:Lx30;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lpoa;->a:Lpoa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object p0, p0, Lpoa;->a:Lx30;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne p0, p1, :cond_0
 
-    sget-object v0, Lwoa;->a:Landroid/os/Handler;
+    return v0
 
-    iget-object p0, p0, Lx30;->h:Ljava/lang/Object;
+    :cond_0
+    instance-of p1, p1, Lpoa;
 
-    check-cast p0, Ltoa;
+    if-nez p1, :cond_1
 
-    sget-object v0, Lsoa;->c:Lsoa;
+    const/4 p1, 0x0
 
-    invoke-static {p0, v0}, Lwoa;->b(Ltoa;Lsoa;)V
+    return p1
 
-    return-void
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x601c8f50
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "None"
+
+    return-object v0
 .end method

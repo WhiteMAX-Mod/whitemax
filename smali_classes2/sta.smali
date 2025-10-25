@@ -1,128 +1,109 @@
-.class public final Lsta;
-.super Loj4;
+.class public final enum Lsta;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final j:Lqta;
+# static fields
+.field public static final enum X:Lsta;
+
+.field public static final synthetic Y:[Lsta;
+
+.field public static final enum a:Lsta;
+
+.field public static final enum b:Lsta;
+
+.field public static final enum c:Lsta;
+
+.field public static final enum o:Lsta;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lqta;Lma4;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-static {}, Lgs3;->m()Los7;
+    new-instance v0, Lsta;
 
-    move-result-object v0
-
-    iget-boolean v1, p3, Lma4;->b:Z
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "video/av01"
-
-    invoke-virtual {v0, v1}, Los7;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    iget-boolean v1, p3, Lma4;->a:Z
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "video/x-vnd.on2.vp9"
-
-    invoke-virtual {v0, v1}, Los7;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    const-string v1, "video/avc"
-
-    invoke-virtual {v0, v1}, Los7;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v0}, Lgs3;->f(Ljava/util/List;)Los7;
-
-    move-result-object v0
-
-    invoke-static {}, Lgs3;->m()Los7;
-
-    move-result-object v1
-
-    iget-boolean p3, p3, Lma4;->c:Z
-
-    if-eqz p3, :cond_2
-
-    const-string p3, "audio/opus"
-
-    invoke-virtual {v1, p3}, Los7;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    const-string p3, "audio/mp4a-latm"
-
-    invoke-virtual {v1, p3}, Los7;->add(Ljava/lang/Object;)Z
-
-    const-string p3, "audio/mp4"
-
-    invoke-virtual {v1, p3}, Los7;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v1}, Lgs3;->f(Ljava/util/List;)Los7;
-
-    move-result-object p3
-
-    new-instance v1, Lyi4;
-
-    invoke-direct {v1}, Lyi4;-><init>()V
+    const-string v1, "Themed"
 
     const/4 v2, 0x0
 
-    new-array v3, v2, [Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v3}, Los7;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    sput-object v0, Lsta;->a:Lsta;
+
+    new-instance v1, Lsta;
+
+    const-string v2, "ContrastPinned"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lsta;->b:Lsta;
+
+    new-instance v2, Lsta;
+
+    const-string v3, "NeutralStack"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lsta;->c:Lsta;
+
+    new-instance v3, Lsta;
+
+    const-string v4, "AccentRed"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lsta;->o:Lsta;
+
+    new-instance v4, Lsta;
+
+    const-string v5, "Contrast"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lsta;->X:Lsta;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lsta;
 
     move-result-object v0
 
-    check-cast v0, [Ljava/lang/String;
-
-    array-length v3, v0
-
-    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    invoke-static {v0}, Ll37;->k([Ljava/lang/Object;)Llqc;
-
-    move-result-object v0
-
-    iput-object v0, v1, Llcf;->m:Ll37;
-
-    new-array v0, v2, [Ljava/lang/String;
-
-    invoke-virtual {p3, v0}, Los7;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, [Ljava/lang/String;
-
-    array-length v0, p3
-
-    invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, [Ljava/lang/String;
-
-    invoke-static {p3}, Ll37;->k([Ljava/lang/Object;)Llqc;
-
-    move-result-object p3
-
-    iput-object p3, v1, Llcf;->t:Ll37;
-
-    new-instance p3, Laj4;
-
-    invoke-direct {p3, v1}, Laj4;-><init>(Lyi4;)V
-
-    invoke-direct {p0, p1, p3, p2}, Loj4;-><init>(Landroid/content/Context;Lncf;Lww9;)V
-
-    iput-object p2, p0, Lsta;->j:Lqta;
+    sput-object v0, Lsta;->Y:[Lsta;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lsta;
+    .locals 1
+
+    const-class v0, Lsta;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lsta;
+
+    return-object p0
+.end method
+
+.method public static values()[Lsta;
+    .locals 1
+
+    sget-object v0, Lsta;->Y:[Lsta;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lsta;
+
+    return-object v0
 .end method

@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lld4;)V
+.method public synthetic constructor <init>(Lki4;)V
     .locals 0
 
     .line 1
@@ -57,9 +57,9 @@
 
 # virtual methods
 .method public final isSupported()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method

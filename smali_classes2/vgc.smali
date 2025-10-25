@@ -1,31 +1,21 @@
-.class public abstract Lvgc;
-.super Ljava/lang/Object;
+.class public final Lvgc;
+.super Ldq;
 .source "SourceFile"
 
 
 # static fields
-.field public static a:I
-
-.field public static b:Landroid/util/Size;
+.field public static final a:Lvgc;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
+    new-instance v0, Lvgc;
 
-    const/16 v0, 0x8
+    invoke-direct {v0}, Ldq;-><init>()V
 
-    sput v0, Lvgc;->a:I
-
-    new-instance v0, Landroid/util/Size;
-
-    const/16 v1, 0xa0
-
-    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v0, Lvgc;->b:Landroid/util/Size;
+    sput-object v0, Lvgc;->a:Lvgc;
 
     return-void
 .end method

@@ -30,7 +30,7 @@
 
 # virtual methods
 .method public executeBadge(Landroid/content/Context;Landroid/content/ComponentName;I)V
-    .locals 1
+    .locals 2
     .annotation build Landroid/annotation/TargetApi;
         value = 0xb
     .end annotation
@@ -43,7 +43,7 @@
 
     const-string p2, "app_badge_count"
 
-    invoke-static {p3, p2}, Lyv7;->d(ILjava/lang/String;)Landroid/os/Bundle;
+    invoke-static {p3, p2}, Li57;->e(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p2
 
@@ -51,19 +51,19 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lme/leolin/shortcutbadger/impl/ZukHomeBadger;->CONTENT_URI:Landroid/net/Uri;
+    iget-object p3, p0, Lme/leolin/shortcutbadger/impl/ZukHomeBadger;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string p3, "setAppBadgeCount"
+    const-string v0, "setAppBadgeCount"
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, p0, p3, v0, p2}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    invoke-virtual {p1, p3, v0, v1, p2}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     return-void
 .end method
 
 .method public getSupportLaunchers()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -73,11 +73,11 @@
         }
     .end annotation
 
-    const-string p0, "com.zui.launcher"
+    const-string v0, "com.zui.launcher"
 
-    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

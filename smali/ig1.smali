@@ -1,120 +1,113 @@
 .class public final Lig1;
-.super Lure;
+.super Lrdi;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+# static fields
+.field public static final c:Lig1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p2, p0, Lig1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    new-instance v0, Lig1;
 
-    const/4 p2, 0x2
+    const/16 v1, 0xb
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
+
+    sput-object v0, Lig1;->c:Lig1;
 
     return-void
 .end method
 
+.method public static S0(Lig1;J)Lwf4;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1, p2}, Lig1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v0, ":profile?id="
+
+    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p1, "&type="
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "local_chat"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Lig1;
+    new-instance p1, Lwf4;
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lig1;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p1, p0}, Lwf4;-><init>(Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
 
-    new-instance v0, Lig1;
+# virtual methods
+.method public final T0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
-    iget-object p0, p0, Lig1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-direct {v0, p2, p0}, Lig1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    iput-object p1, v0, Lig1;->X:Ljava/lang/Object;
+    const-string v1, "android.intent.action.SEND"
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    const-string v1, "android.intent.extra.TEXT"
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    iget-object p1, p0, Lig1;->X:Ljava/lang/Object;
+    const-string p1, "text/plain"
 
-    check-cast p1, Lla;
+    invoke-virtual {v0, p1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    iget-object p0, p0, Lig1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    invoke-virtual {p0}, Lrdi;->q0()Lag4;
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->z0:Lcic;
+    move-result-object p1
 
-    sget-object v1, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lxi7;
+    new-instance v1, Ltcb;
 
-    const/16 v2, 0x8
+    const-string v2, "oneme:share:data"
 
-    aget-object v1, v1, v2
+    invoke-direct {v1, v2, v0}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-interface {v0, p0, v1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+    new-instance v0, Ltcb;
 
-    move-result-object v0
+    const-string v2, "oneme:share:title"
 
-    move-object v1, v0
+    invoke-direct {v0, v2, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    check-cast v1, Landroid/widget/TextView;
+    new-instance p2, Ltcb;
 
-    iget-object v0, p1, Lla;->b:Ljava/util/List;
+    const-string v2, "tag"
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    invoke-direct {p2, v2, p3}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move-result v0
+    filled-new-array {v1, v0, p2}, [Ltcb;
 
-    xor-int/lit8 v2, v0, 0x1
+    move-result-object p2
 
-    const/4 v5, 0x0
+    invoke-static {p2}, Leli;->b([Ltcb;)Landroid/os/Bundle;
 
-    const/4 v6, 0x6
+    move-result-object p2
 
-    const-wide/16 v3, 0x0
+    const-string p3, ":chats/share"
 
-    invoke-static/range {v1 .. v6}, Lkua;->j(Landroid/view/View;ZJLbc6;I)V
+    invoke-virtual {p1, p3, p2}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    iget-object p0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lha;
-
-    iget-object p1, p1, Lla;->b:Ljava/util/List;
-
-    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-void
 .end method

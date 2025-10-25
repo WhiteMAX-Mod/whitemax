@@ -1,21 +1,11 @@
-.class public final Luwd;
-.super Lso;
+.class public interface abstract Luwd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly18;
 
-# static fields
-.field public static final a:Luwd;
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Luwd;
-
-    invoke-direct {v0}, Lso;-><init>()V
-
-    sput-object v0, Luwd;->a:Luwd;
-
-    return-void
+# virtual methods
+.method public abstract f()I
 .end method

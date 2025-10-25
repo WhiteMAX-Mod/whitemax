@@ -31,9 +31,9 @@
 
 # virtual methods
 .method public getDeeplink()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerAttribution;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerAttribution;->a:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

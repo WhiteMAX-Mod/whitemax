@@ -1,86 +1,180 @@
 .class public final Lygg;
-.super Lpg7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvgg;
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public final a:Lahg;
+
+.field public final b:Lwif;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lwif;)V
+    .locals 2
 
-    invoke-direct {p0}, Lpg7;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lygg;->c:Ljava/lang/String;
+    new-instance v0, Lahg;
+
+    invoke-direct {v0}, Lahg;-><init>()V
+
+    iput-object v0, p0, Lygg;->a:Lahg;
+
+    new-instance v0, Lduf;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1, p1}, Lduf;-><init>(ILjava/lang/Object;)V
+
+    new-instance p1, Lwif;
+
+    invoke-direct {p1, v0}, Lwif;-><init>(Lji6;)V
+
+    iput-object p1, p0, Lygg;->b:Lwif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Loeg;)Lwg3;
+    .locals 2
+
+    new-instance v0, Lvlf;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, p0, v1, p1}, Lvlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lzg3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final b(J)Lwg3;
+    .locals 2
+
+    new-instance v0, Lrx1;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lrx1;-><init>(Ljava/lang/Object;JI)V
+
+    new-instance p1, Lzg3;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final c(Lweg;)Lwg3;
+    .locals 2
+
+    new-instance v0, Lxgg;
+
+    invoke-direct {v0, p0, p1}, Lxgg;-><init>(Lygg;Lweg;)V
+
+    new-instance p1, Lzg3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final clear()Lwg3;
     .locals 3
 
-    const/4 v0, 0x1
+    new-instance v0, Lwgg;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x1
 
-    return v0
+    invoke-direct {v0, p0, v1}, Lwgg;-><init>(Lygg;I)V
 
-    :cond_0
-    instance-of v1, p1, Lygg;
+    new-instance v1, Lzg3;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v1, v2, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lygg;
-
-    iget-object p0, p0, Lygg;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lygg;->c:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object v1
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public final d(Lweg;)Luj8;
+    .locals 1
 
-    iget-object p0, p0, Lygg;->c:Ljava/lang/String;
+    new-instance v0, Lxgg;
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    invoke-direct {v0, p0, p1}, Lxgg;-><init>(Lygg;Lweg;)V
 
-    move-result p0
+    new-instance p1, Lzj8;
 
-    return p0
+    invoke-direct {p1, v0}, Lzj8;-><init>(Lqk8;)V
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final e(Ljava/lang/String;)Lwg3;
     .locals 2
 
-    const-string v0, "RequestDownloadFile(fileName="
+    new-instance v0, Lvlf;
 
-    const-string v1, ")"
+    const/16 v1, 0xa
 
-    iget-object p0, p0, Lygg;->c:Ljava/lang/String;
+    invoke-direct {v0, p0, v1, p1}, Lvlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v0, p0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    new-instance p1, Lzg3;
 
-    move-result-object p0
+    const/4 v1, 0x0
 
-    return-object p0
+    invoke-direct {p1, v1, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final f(Ljava/lang/String;)Luj8;
+    .locals 1
+
+    iget-object v0, p0, Lygg;->b:Lwif;
+
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvgg;
+
+    invoke-interface {v0, p1}, Lvgg;->f(Ljava/lang/String;)Luj8;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final g()Luj8;
+    .locals 2
+
+    sget-object v0, Logg;->b:Logg;
+
+    new-instance v0, Lwgg;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lwgg;-><init>(Lygg;I)V
+
+    new-instance v1, Lzj8;
+
+    invoke-direct {v1, v0}, Lzj8;-><init>(Lqk8;)V
+
+    return-object v1
 .end method

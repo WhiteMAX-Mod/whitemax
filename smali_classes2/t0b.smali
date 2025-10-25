@@ -1,172 +1,355 @@
-.class public final synthetic Lt0b;
+.class public final Lt0b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/ScheduledFuture;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/util/concurrent/CountDownLatch;
 
-.field public final synthetic b:Ly0b;
+.field public volatile Y:Ljava/lang/Object;
 
-.field public final synthetic c:Lorg/webrtc/SessionDescription;
+.field public final Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final a:Ljava/util/concurrent/Callable;
+
+.field public final b:Ljava/util/concurrent/ExecutorService;
+
+.field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public q0:Ljava/util/concurrent/ScheduledFuture;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly0b;Lorg/webrtc/SessionDescription;I)V
+.method public constructor <init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    iput p3, p0, Lt0b;->a:I
-
-    iput-object p1, p0, Lt0b;->b:Ly0b;
-
-    iput-object p2, p0, Lt0b;->c:Lorg/webrtc/SessionDescription;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lt0b;->a:Ljava/util/concurrent/Callable;
+
+    iput-object p2, p0, Lt0b;->b:Ljava/util/concurrent/ExecutorService;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p1, p0, Lt0b;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p1, p0, Lt0b;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance p1, Ljava/util/concurrent/CountDownLatch;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    iput-object p1, p0, Lt0b;->X:Ljava/util/concurrent/CountDownLatch;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lt0b;->Z:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 9
+.method public final cancel(Z)Z
+    .locals 3
 
-    iget v0, p0, Lt0b;->a:I
+    iget-object v0, p0, Lt0b;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    iget-object v0, p0, Lt0b;->b:Ly0b;
+    move-result v1
 
-    iget-object v1, v0, Ly0b;->E:Ltp5;
+    if-nez v1, :cond_2
 
-    iget-object p0, p0, Lt0b;->c:Lorg/webrtc/SessionDescription;
+    iget-object v1, p0, Lt0b;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iget-object v2, p0, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    iget-boolean v3, v1, Ltp5;->c:Z
+    move-result v2
 
-    const-wide/16 v4, 0x0
-
-    if-nez v3, :cond_0
+    if-eqz v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iput-wide v4, v1, Ltp5;->b:J
+    const/4 v2, 0x1
 
-    iput-wide v4, v1, Ltp5;->a:J
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    iput-boolean v3, v1, Ltp5;->c:Z
+    iget-object v0, p0, Lt0b;->q0:Ljava/util/concurrent/ScheduledFuture;
 
-    :goto_0
-    invoke-static {v2}, Ltp5;->a(Ljava/lang/String;)J
+    if-nez v0, :cond_1
 
-    move-result-wide v2
-
-    iput-wide v2, v1, Ltp5;->a:J
-
-    iget-wide v6, v1, Ltp5;->b:J
-
-    cmp-long v8, v6, v4
-
-    if-eqz v8, :cond_1
-
-    cmp-long v4, v2, v4
-
-    if-eqz v4, :cond_1
-
-    xor-long/2addr v2, v6
-
-    const/4 v4, 0x1
-
-    iput-boolean v4, v1, Ltp5;->c:Z
-
-    iget-object v1, v1, Ltp5;->d:Lsp5;
-
-    invoke-interface {v1, v2, v3}, Lsp5;->c(J)V
+    const/4 v0, 0x0
 
     :cond_1
-    iget-object v1, v0, Ly0b;->N:Lx0b;
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    if-eqz v1, :cond_2
+    iget-object p1, p0, Lt0b;->X:Ljava/util/concurrent/CountDownLatch;
 
-    invoke-interface {v1, v0, p0}, Lx0b;->a(Ly0b;Lorg/webrtc/SessionDescription;)V
+    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    return v2
 
     :cond_2
-    return-void
+    :goto_0
+    const/4 p1, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lt0b;->b:Ly0b;
+    return p1
+.end method
 
-    iget-object v1, v0, Ly0b;->E:Ltp5;
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
 
-    iget-object p0, p0, Lt0b;->c:Lorg/webrtc/SessionDescription;
+    check-cast p1, Ljava/util/concurrent/Delayed;
 
-    iget-object v2, p0, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
+    iget-object v0, p0, Lt0b;->q0:Ljava/util/concurrent/ScheduledFuture;
 
-    iget-boolean v3, v1, Ltp5;->c:Z
+    if-nez v0, :cond_0
 
-    const-wide/16 v4, 0x0
+    const/4 v0, 0x0
 
-    if-nez v3, :cond_3
+    :cond_0
+    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lt0b;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lt0b;->X:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lt0b;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Exception;
+
+    if-eqz v0, :cond_3
+
+    instance-of v1, v0, Ljava/util/concurrent/ExecutionException;
+
+    if-eqz v1, :cond_1
+
+    move-object v1, v0
+
+    check-cast v1, Ljava/util/concurrent/ExecutionException;
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v1, :cond_2
 
     goto :goto_1
 
-    :cond_3
-    iput-wide v4, v1, Ltp5;->b:J
+    :cond_2
+    new-instance v1, Ljava/util/concurrent/ExecutionException;
 
-    iput-wide v4, v1, Ltp5;->a:J
-
-    const/4 v3, 0x0
-
-    iput-boolean v3, v1, Ltp5;->c:Z
+    invoke-direct {v1, v0}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
 
     :goto_1
-    invoke-static {v2}, Ltp5;->a(Ljava/lang/String;)J
+    throw v1
 
-    move-result-wide v2
+    .line 4
+    :cond_3
+    iget-object v0, p0, Lt0b;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-wide v2, v1, Ltp5;->b:J
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    cmp-long v6, v2, v4
+    move-result v0
 
-    if-eqz v6, :cond_4
+    if-nez v0, :cond_4
 
-    iget-wide v6, v1, Ltp5;->a:J
+    .line 5
+    iget-object v0, p0, Lt0b;->Y:Ljava/lang/Object;
 
-    cmp-long v4, v6, v4
+    return-object v0
 
-    if-eqz v4, :cond_4
-
-    xor-long/2addr v2, v6
-
-    const/4 v4, 0x1
-
-    iput-boolean v4, v1, Ltp5;->c:Z
-
-    iget-object v1, v1, Ltp5;->d:Lsp5;
-
-    invoke-interface {v1, v2, v3}, Lsp5;->c(J)V
-
+    .line 6
     :cond_4
-    iget-object v1, v0, Ly0b;->N:Lx0b;
+    new-instance v0, Ljava/util/concurrent/CancellationException;
 
-    if-eqz v1, :cond_5
+    const-string v1, "Future is cancelled"
 
-    invoke-interface {v1, v0, p0}, Lx0b;->n(Ly0b;Lorg/webrtc/SessionDescription;)V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
-    :cond_5
-    return-void
+    throw v0
+.end method
 
-    nop
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    .line 7
+    iget-object v0, p0, Lt0b;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 8
+    iget-object v0, p0, Lt0b;->X:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/util/concurrent/TimeoutException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "No result for "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p1, " "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 9
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lt0b;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Exception;
+
+    if-eqz p1, :cond_4
+
+    instance-of p2, p1, Ljava/util/concurrent/ExecutionException;
+
+    if-eqz p2, :cond_2
+
+    move-object p2, p1
+
+    check-cast p2, Ljava/util/concurrent/ExecutionException;
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p2, 0x0
+
+    :goto_1
+    if-eqz p2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    new-instance p2, Ljava/util/concurrent/ExecutionException;
+
+    invoke-direct {p2, p1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
+
+    :goto_2
+    throw p2
+
+    .line 10
+    :cond_4
+    iget-object p1, p0, Lt0b;->Y:Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
+    .locals 2
+
+    iget-object v0, p0, Lt0b;->q0:Ljava/util/concurrent/ScheduledFuture;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :cond_0
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    iget-object v0, p0, Lt0b;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isDone()Z
+    .locals 1
+
+    iget-object v0, p0, Lt0b;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
 .end method

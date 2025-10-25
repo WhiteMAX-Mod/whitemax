@@ -1,140 +1,292 @@
-.class public final synthetic Lsf8;
+.class public abstract Lsf8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbg8;
-.implements Lpt7;
-.implements Lrt7;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Ldg8;
+.field public b:I
+
+.field public c:I
+
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldg8;I)V
-    .locals 0
-
-    iput p2, p0, Lsf8;->a:I
-
-    iput-object p1, p0, Lsf8;->b:Ldg8;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    sget-object v0, Lnx3;->u0:Lnx3;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lnx3;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lnx3;->u0:Lnx3;
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public c(Lgy6;I)V
-    .locals 1
+.method public a(I)I
+    .locals 2
+
+    iget v0, p0, Lsf8;->c:I
+
+    if-ge p1, v0, :cond_0
+
+    iget-object v0, p0, Lsf8;->o:Ljava/lang/Object;
+
+    check-cast v0, Ljava/nio/ByteBuffer;
+
+    iget v1, p0, Lsf8;->b:I
+
+    add-int/2addr v1, p1
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public b()V
+    .locals 2
+
+    iget-object v0, p0, Lsf8;->o:Ljava/lang/Object;
+
+    check-cast v0, Ltf8;
+
+    iget v0, v0, Ltf8;->q0:I
+
+    iget v1, p0, Lsf8;->c:I
+
+    if-ne v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/util/ConcurrentModificationException;
+
+    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public abstract c(Landroid/view/View;)Ljava/lang/Object;
+.end method
+
+.method public abstract d(Landroid/view/View;Ljava/lang/Object;)V
+.end method
+
+.method public e()V
+    .locals 3
+
+    :goto_0
+    iget v0, p0, Lsf8;->a:I
+
+    iget-object v1, p0, Lsf8;->o:Ljava/lang/Object;
+
+    check-cast v1, Ltf8;
+
+    iget v2, v1, Ltf8;->Y:I
+
+    if-ge v0, v2, :cond_0
+
+    iget-object v1, v1, Ltf8;->c:[I
+
+    aget v1, v1, v0
+
+    if-gez v1, :cond_0
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lsf8;->a:I
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public f(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    iget v1, p0, Lsf8;->b:I
+
+    if-lt v0, v1, :cond_0
+
+    invoke-virtual {p0, p1, p2}, Lsf8;->d(Landroid/view/View;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    iget v1, p0, Lsf8;->b:I
+
+    if-lt v0, v1, :cond_1
+
+    invoke-virtual {p0, p1}, Lsf8;->c(Landroid/view/View;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    iget v0, p0, Lsf8;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lsf8;->o:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Class;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p0, v0, p2}, Lsf8;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-static {p1}, Lhzg;->d(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
+
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_3
+    instance-of v1, v0, Ls4;
+
+    if-eqz v1, :cond_4
+
+    check-cast v0, Ls4;
+
+    iget-object v0, v0, Ls4;->a:Lt4;
+
+    goto :goto_1
+
+    :cond_4
+    new-instance v1, Lt4;
+
+    invoke-direct {v1, v0}, Lt4;-><init>(Landroid/view/View$AccessibilityDelegate;)V
+
+    move-object v0, v1
+
+    :goto_1
+    if-nez v0, :cond_5
+
+    new-instance v0, Lt4;
+
+    invoke-direct {v0}, Lt4;-><init>()V
+
+    :cond_5
+    invoke-static {p1, v0}, Lhzg;->n(Landroid/view/View;Lt4;)V
 
     iget v0, p0, Lsf8;->a:I
 
-    iget-object p0, p0, Lsf8;->b:Ldg8;
+    invoke-virtual {p1, v0, p2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget p2, p0, Lsf8;->c:I
 
-    :pswitch_0
-    iget-object p0, p0, Ldg8;->c:Lng8;
+    invoke-static {p1, p2}, Lhzg;->h(Landroid/view/View;I)V
 
-    invoke-interface {p1, p0, p2}, Lgy6;->p(Lay6;I)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Ldg8;->c:Lng8;
-
-    invoke-interface {p1, p0, p2}, Lgy6;->e(Lay6;I)V
-
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Ldg8;->c:Lng8;
-
-    invoke-interface {p1, p0, p2}, Lgy6;->C(Lay6;I)V
-
-    return-void
-
-    :pswitch_3
-    iget-object p0, p0, Ldg8;->c:Lng8;
-
-    invoke-interface {p1, p0, p2}, Lgy6;->G(Lay6;I)V
-
-    return-void
-
-    :pswitch_4
-    iget-object p0, p0, Ldg8;->c:Lng8;
-
-    invoke-interface {p1, p0, p2}, Lgy6;->U(Lay6;I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public e(Ljava/lang/Object;Lnr5;)V
-    .locals 1
-
-    check-cast p1, Lscb;
-
-    iget-object p0, p0, Lsf8;->b:Ldg8;
-
-    iget-object p0, p0, Ldg8;->a:Ljf8;
-
-    new-instance v0, Lqcb;
-
-    invoke-direct {v0, p2}, Lqcb;-><init>(Lnr5;)V
-
-    invoke-interface {p1, p0, v0}, Lscb;->d0(Lvcb;Lqcb;)V
-
+    :cond_6
     return-void
 .end method
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
+.method public abstract g(Ljava/lang/Object;Ljava/lang/Object;)Z
+.end method
+
+.method public hasNext()Z
+    .locals 2
 
     iget v0, p0, Lsf8;->a:I
 
-    check-cast p1, Lscb;
+    iget-object v1, p0, Lsf8;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v1, Ltf8;
 
-    iget-object p0, p0, Lsf8;->b:Ldg8;
+    iget v1, v1, Ltf8;->Y:I
 
-    iget-object p0, p0, Ldg8;->w:Lpcb;
+    if-ge v0, v1, :cond_0
 
-    invoke-interface {p1, p0}, Lscb;->z0(Lpcb;)V
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public remove()V
+    .locals 3
+
+    iget-object v0, p0, Lsf8;->o:Ljava/lang/Object;
+
+    check-cast v0, Ltf8;
+
+    invoke-virtual {p0}, Lsf8;->b()V
+
+    iget v1, p0, Lsf8;->b:I
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {v0}, Ltf8;->c()V
+
+    iget v1, p0, Lsf8;->b:I
+
+    invoke-virtual {v0, v1}, Ltf8;->h(I)V
+
+    iput v2, p0, Lsf8;->b:I
+
+    iget v0, v0, Ltf8;->q0:I
+
+    iput v0, p0, Lsf8;->c:I
 
     return-void
 
-    :pswitch_0
-    iget-object p0, p0, Lsf8;->b:Ldg8;
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    iget-object p0, p0, Ldg8;->w:Lpcb;
+    const-string v1, "Call next() before removing element from the iterator."
 
-    invoke-interface {p1, p0}, Lscb;->z0(Lpcb;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

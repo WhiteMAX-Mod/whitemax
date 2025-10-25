@@ -77,30 +77,30 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;
+    instance-of p1, p1, Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
 .method public hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, -0x2f4a1962
+    const v0, -0x2f4a1962
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "DisconnectedInfo"
+    const-string v0, "DisconnectedInfo"
 
-    return-object p0
+    return-object v0
 .end method

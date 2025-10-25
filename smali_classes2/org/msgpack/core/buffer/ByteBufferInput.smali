@@ -24,7 +24,7 @@
 
     const-string v0, "input ByteBuffer is null"
 
-    invoke-static {p1, v0}, Lz48;->i(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcvi;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
@@ -50,9 +50,9 @@
 
     if-eqz v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 
     :cond_0
     iget-object v0, p0, Lorg/msgpack/core/buffer/ByteBufferInput;->input:Ljava/nio/ByteBuffer;
@@ -75,7 +75,7 @@
 
     const-string v1, "input ByteBuffer is null"
 
-    invoke-static {p1, v1}, Lz48;->i(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lcvi;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 

@@ -57,22 +57,22 @@
 
     const-wide/16 v2, 0x0
 
-    cmp-long p0, v0, v2
+    cmp-long v2, v0, v2
 
-    if-eqz p0, :cond_0
+    if-eqz v2, :cond_0
 
     invoke-static {v0, v1, p1, p2}, Lorg/webrtc/VpxEncoderWrapper;->nativeEncode(JLorg/webrtc/VideoFrame;Z)I
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "encoder already released"
+    const-string p2, "encoder already released"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public onEncodedImage(Lorg/webrtc/EncodedImage;)V
@@ -98,7 +98,11 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/ByteBuffer;
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     invoke-static {}, Lorg/webrtc/EncodedImage;->builder()Lorg/webrtc/EncodedImage$Builder;
 
@@ -144,9 +148,9 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lorg/webrtc/VpxEncoderWrapper;->consumerCallback:Lorg/webrtc/EncoderCallback;
+    iget-object v1, p0, Lorg/webrtc/VpxEncoderWrapper;->consumerCallback:Lorg/webrtc/EncoderCallback;
 
-    invoke-interface {p0, v0}, Lorg/webrtc/EncoderCallback;->onEncodedImage(Lorg/webrtc/EncodedImage;)V
+    invoke-interface {v1, v0}, Lorg/webrtc/EncoderCallback;->onEncodedImage(Lorg/webrtc/EncodedImage;)V
 
     invoke-virtual {p1}, Lorg/webrtc/EncodedImage;->release()V
 
@@ -155,15 +159,15 @@
 .end method
 
 .method public onFrameDropped(I)V
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/VpxEncoderWrapper;->consumerCallback:Lorg/webrtc/EncoderCallback;
+    iget-object v0, p0, Lorg/webrtc/VpxEncoderWrapper;->consumerCallback:Lorg/webrtc/EncoderCallback;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0, p1}, Lorg/webrtc/EncoderCallback;->onFrameDropped(I)V
+    invoke-interface {v0, p1}, Lorg/webrtc/EncoderCallback;->onFrameDropped(I)V
 
     :cond_0
     return-void

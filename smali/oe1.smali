@@ -1,89 +1,66 @@
-.class public final Loe1;
-.super Lure;
+.class public final synthetic Loe1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;)V
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Loe1;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lej0;Ler6;Lmb2;)V
     .locals 0
 
-    iput-object p2, p0, Loe1;->Y:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
+    .line 2
+    const/4 p1, 0x1
 
-    const/4 p2, 0x2
+    iput p1, p0, Loe1;->a:I
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onLongClick(Landroid/view/View;)Z
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Loe1;->a:I
 
-    invoke-virtual {p0, p1, p2}, Loe1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Loe1;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Loe1;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Loe1;
-
-    iget-object p0, p0, Loe1;->Y:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
-
-    invoke-direct {v0, p2, p0}, Loe1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;)V
-
-    iput-object p1, v0, Loe1;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Loe1;->X:Ljava/lang/Object;
-
-    check-cast p1, Lys9;
-
-    sget-object v0, Lik1;->D:Lik1;
-
-    invoke-static {p1, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Loe1;->Y:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
+    packed-switch p1, :pswitch_data_0
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
+    return p1
 
-    :cond_0
-    sget-object p0, Lylf;->a:Lylf;
+    :pswitch_0
+    sget-object p1, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->z0:Lp9a;
 
-    return-object p0
+    const/4 p1, 0x0
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

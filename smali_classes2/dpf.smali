@@ -1,93 +1,183 @@
-.class public abstract synthetic Ldpf;
+.class public final Ldpf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJ)V
+    .locals 0
 
-    const/16 v0, 0x9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lmw1;->w(I)[I
+    iput-wide p3, p0, Ldpf;->a:J
 
-    move-result-object v0
+    iput-wide p5, p0, Ldpf;->b:J
 
-    array-length v0, v0
+    iput-object p1, p0, Ldpf;->c:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    iput-object p2, p0, Ldpf;->d:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Ldpf;->e:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ldpf;
 
     const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v1, :cond_1
 
-    :catch_0
-    const/4 v2, 0x2
+    return v2
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :cond_1
+    check-cast p1, Ldpf;
 
-    :catch_1
-    const/4 v1, 0x3
+    iget-wide v3, p0, Ldpf;->a:J
 
-    const/16 v3, 0x8
+    iget-wide v5, p1, Ldpf;->a:J
 
-    :try_start_2
-    aput v1, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    cmp-long v1, v3, v5
 
-    :catch_2
-    const/4 v1, 0x4
+    if-eqz v1, :cond_2
 
-    const/4 v4, 0x6
+    return v2
 
-    :try_start_3
-    aput v1, v0, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    :cond_2
+    iget-wide v3, p0, Ldpf;->b:J
 
-    :catch_3
-    const/4 v5, 0x5
+    iget-wide v5, p1, Ldpf;->b:J
 
-    :try_start_4
-    aput v5, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    cmp-long v1, v3, v5
 
-    :catch_4
-    :try_start_5
-    aput v4, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    if-eqz v1, :cond_3
 
-    :catch_5
-    const/4 v1, 0x7
+    return v2
 
-    :try_start_6
-    aput v1, v0, v5
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    :cond_3
+    iget-object v1, p0, Ldpf;->c:Ljava/lang/String;
 
-    :catch_6
-    :try_start_7
-    aput v3, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    iget-object v3, p1, Ldpf;->c:Ljava/lang/String;
 
-    :catch_7
-    sput-object v0, Ldpf;->$EnumSwitchMapping$0:[I
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ldpf;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Ldpf;->d:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Ldpf;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Ldpf;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Ldpf;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v1, p0, Ldpf;->d:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "TaskFileFromWebAppDownloadData(requestId="
+
+    const-string v1, ", botId="
+
+    iget-wide v2, p0, Ldpf;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", fileUrl="
+
+    iget-wide v2, p0, Ldpf;->b:J
+
+    iget-object v4, p0, Ldpf;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3, v1, v4, v0}, Lzb3;->g(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, ", fileName="
+
+    const-string v2, ")"
+
+    iget-object v3, p0, Ldpf;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

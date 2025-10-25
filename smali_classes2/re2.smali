@@ -1,58 +1,57 @@
 .class public final Lre2;
-.super Ljava/lang/Object;
+.super Ldg4;
 .source "SourceFile"
 
-# interfaces
-.implements Lf31;
 
+# static fields
+.field public static final b:Lre2;
 
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public static final c:Lyf4;
+
+.field public static final d:Lyf4;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lre2;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {v0}, Ldg4;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    sput-object v0, Lre2;->b:Lre2;
 
-    iput-object v0, p0, Lre2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const-string v1, "id"
 
-    return-void
-.end method
+    const-string v2, "type"
 
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
-# virtual methods
-.method public final onNewMessage(Lv57;)V
-    .locals 1
+    move-result-object v1
 
-    iget-object p0, p0, Lre2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const-string v2, ":chats"
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    const/4 v3, 0x0
 
-    move-result-object p0
+    const/16 v4, 0xe
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0, v2, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    sput-object v1, Lre2;->c:Lyf4;
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const-string v2, ":saved-messages"
+
+    invoke-static {v0, v2, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
     move-result-object v0
 
-    check-cast v0, Lf31;
+    sput-object v0, Lre2;->d:Lyf4;
 
-    invoke-interface {v0, p1}, Lf31;->onNewMessage(Lv57;)V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method

@@ -3,175 +3,83 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
-
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
+# static fields
+.field public static final a:Lvib;
 
 
 # direct methods
-.method public constructor <init>(Le1e;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltcb;
 
-    iget-boolean v0, p1, Le1e;->a:Z
+    const/4 v1, 0x0
 
-    iput-boolean v0, p0, Lf1e;->a:Z
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-boolean v0, p1, Le1e;->b:Z
+    move-result-object v1
 
-    iput-boolean v0, p0, Lf1e;->b:Z
+    sget-object v2, Le1e;->a:Le1e;
 
-    iget-boolean v0, p1, Le1e;->c:Z
+    invoke-direct {v0, v1, v2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iput-boolean v0, p0, Lf1e;->c:Z
+    new-instance v1, Ltcb;
 
-    iget-boolean v0, p1, Le1e;->e:Z
+    const/4 v2, 0x1
 
-    iput-boolean v0, p0, Lf1e;->e:Z
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-boolean v0, p1, Le1e;->d:Z
+    move-result-object v2
 
-    iput-boolean v0, p0, Lf1e;->d:Z
+    sget-object v3, Le1e;->b:Le1e;
 
-    iget-boolean p1, p1, Le1e;->f:Z
+    invoke-direct {v1, v2, v3}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iput-boolean p1, p0, Lf1e;->f:Z
+    new-instance v2, Ltcb;
 
-    return-void
-.end method
+    const/4 v3, 0x2
 
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    move-result-object v3
 
-    if-ne p0, p1, :cond_0
+    sget-object v4, Le1e;->c:Le1e;
 
-    goto :goto_0
+    invoke-direct {v2, v3, v4}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_0
-    if-eqz p1, :cond_7
+    new-instance v3, Ltcb;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v4, 0x3
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    sget-object v5, Le1e;->o:Le1e;
+
+    invoke-direct {v3, v4, v5}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v4, Ltcb;
+
+    const/4 v5, 0x4
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    sget-object v6, Le1e;->X:Le1e;
+
+    invoke-direct {v4, v5, v6}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Ltcb;
 
     move-result-object v0
 
-    const-class v1, Lf1e;
+    invoke-static {v0}, Ly0j;->b([Ltcb;)Lvib;
 
-    if-eq v1, v0, :cond_1
+    move-result-object v0
 
-    goto :goto_1
+    sput-object v0, Lf1e;->a:Lvib;
 
-    :cond_1
-    check-cast p1, Lf1e;
-
-    iget-boolean v0, p0, Lf1e;->a:Z
-
-    iget-boolean v1, p1, Lf1e;->a:Z
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-boolean v0, p0, Lf1e;->b:Z
-
-    iget-boolean v1, p1, Lf1e;->b:Z
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-boolean v0, p0, Lf1e;->c:Z
-
-    iget-boolean v1, p1, Lf1e;->c:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iget-boolean v0, p0, Lf1e;->d:Z
-
-    iget-boolean v1, p1, Lf1e;->d:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    iget-boolean v0, p0, Lf1e;->f:Z
-
-    iget-boolean v1, p1, Lf1e;->f:Z
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    iget-boolean p0, p0, Lf1e;->e:Z
-
-    iget-boolean p1, p1, Lf1e;->e:Z
-
-    if-ne p0, p1, :cond_7
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_7
-    :goto_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lf1e;->a:Z
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lf1e;->b:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lf1e;->c:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lf1e;->e:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lf1e;->d:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lf1e;->f:Z
-
-    add-int/2addr v0, p0
-
-    return v0
+    return-void
 .end method

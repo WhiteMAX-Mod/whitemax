@@ -1,122 +1,234 @@
 .class public final Lhqd;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
+.method public constructor <init>(IIIIZZZ)V
     .locals 0
 
-    iput-object p2, p0, Lhqd;->Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput p1, p0, Lhqd;->a:I
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lhqd;->b:I
+
+    iput p3, p0, Lhqd;->c:I
+
+    iput p4, p0, Lhqd;->d:I
+
+    iput-boolean p5, p0, Lhqd;->e:Z
+
+    iput-boolean p6, p0, Lhqd;->f:Z
+
+    iput-boolean p7, p0, Lhqd;->g:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lhqd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    return v0
 
-    check-cast p0, Lhqd;
+    :cond_0
+    instance-of v1, p1, Lhqd;
 
-    sget-object p1, Lylf;->a:Lylf;
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1}, Lhqd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    return-object p1
+    return v2
+
+    :cond_1
+    check-cast p1, Lhqd;
+
+    iget v1, p0, Lhqd;->a:I
+
+    iget v3, p1, Lhqd;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lhqd;->b:I
+
+    iget v3, p1, Lhqd;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lhqd;->c:I
+
+    iget v3, p1, Lhqd;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lhqd;->d:I
+
+    iget v3, p1, Lhqd;->d:I
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lhqd;->e:Z
+
+    iget-boolean v3, p1, Lhqd;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lhqd;->f:Z
+
+    iget-boolean v3, p1, Lhqd;->f:Z
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-boolean v1, p0, Lhqd;->g:Z
+
+    iget-boolean p1, p1, Lhqd;->g:Z
+
+    if-eq v1, p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lhqd;
-
-    iget-object p0, p0, Lhqd;->Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
-
-    invoke-direct {v0, p2, p0}, Lhqd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
-
-    iput-object p1, v0, Lhqd;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 3
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget v0, p0, Lhqd;->a:I
 
-    iget-object p1, p0, Lhqd;->X:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    check-cast p1, Ljava/util/Map;
+    move-result v0
 
-    iget-object p0, p0, Lhqd;->Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+    const/16 v1, 0x1f
 
-    iget-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->X:Lcic;
+    mul-int/2addr v0, v1
 
-    sget-object v1, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Z:[Lxi7;
+    iget v2, p0, Lhqd;->b:I
 
-    const/4 v2, 0x1
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
-    aget-object v1, v1, v2
+    move-result v0
 
-    invoke-interface {v0, p0, v1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+    iget v2, p0, Lhqd;->c:I
 
-    move-result-object v0
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
-    check-cast v0, Ldha;
+    move-result v0
 
-    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
+    iget v2, p0, Lhqd;->d:I
 
-    move-result-object v1
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+    move-result v0
+
+    iget-boolean v2, p0, Lhqd;->e:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lhqd;->f:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lhqd;->g:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    add-int/2addr v1, v0
 
-    const/4 v1, 0x0
+    return v1
+.end method
 
-    goto :goto_0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    :cond_0
-    const/16 v1, 0x8
+    const-string v0, ", realWidth="
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ldha;->setVisibility(I)V
+    const-string v1, ", topInset="
 
-    iget-object p0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Y:Lv06;
+    const-string v2, "ScreenInfo(realHeight="
 
-    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
+    iget v3, p0, Lhqd;->a:I
 
-    move-result-object p1
+    iget v4, p0, Lhqd;->b:I
 
-    invoke-static {p1}, Lq73;->B0(Ljava/lang/Iterable;)Ljava/util/List;
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
+    const-string v1, ", bottomInset="
 
-    sget-object p0, Lylf;->a:Lylf;
+    const-string v2, ", isWeakDevice="
 
-    return-object p0
+    iget v3, p0, Lhqd;->c:I
+
+    iget v4, p0, Lhqd;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", isLong="
+
+    const-string v2, ", isWide="
+
+    iget-boolean v3, p0, Lhqd;->e:Z
+
+    iget-boolean v4, p0, Lhqd;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Ldy1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lhqd;->g:Z
+
+    invoke-static {v0, v2, v1}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

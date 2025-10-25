@@ -1,138 +1,135 @@
-.class public final synthetic Lsrf;
-.super Ljava/lang/Object;
+.class public final Lsrf;
+.super Ltrf;
 .source "SourceFile"
 
-# interfaces
-.implements Lbc6;
+
+# static fields
+.field public static final CREATOR:Lrrf;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lrrf;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lsrf;->CREATOR:Lrrf;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/CharSequence;)V
     .locals 0
 
-    iput p1, p0, Lsrf;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsrf;->c:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 1
 
-    iget p0, p0, Lsrf;->a:I
+    const/4 v0, 0x0
 
-    packed-switch p0, :pswitch_data_0
+    return v0
+.end method
 
-    check-cast p1, Ljava/lang/String;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    const-string p0, "worker_class_name LIKE \'"
+    const/4 v0, 0x1
 
-    const-string v0, "%\'"
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p0, p1, v0}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Lsrf;
 
-    return-object p0
+    const/4 v2, 0x0
 
-    :pswitch_0
-    check-cast p1, Lx5g;
+    if-nez v1, :cond_1
 
-    iget-wide p0, p1, Lx5g;->b:J
+    return v2
 
-    invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    :cond_1
+    check-cast p1, Lsrf;
 
-    move-result-object p0
+    iget-object v1, p0, Lsrf;->c:Ljava/lang/CharSequence;
 
-    return-object p0
+    iget-object p1, p1, Lsrf;->c:Ljava/lang/CharSequence;
 
-    :pswitch_1
-    check-cast p1, Landroid/content/Context;
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance p0, Lh6g;
+    move-result p1
 
-    invoke-direct {p0, p1}, Lh6g;-><init>(Landroid/content/Context;)V
+    if-nez p1, :cond_2
 
-    const/16 p1, 0x8
+    return v2
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    :cond_2
+    return v0
+.end method
 
-    const/4 p1, 0x0
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
+    iget-object v0, p0, Lsrf;->c:Ljava/lang/CharSequence;
 
-    return-object p0
+    if-nez v0, :cond_0
 
-    :pswitch_2
-    check-cast p1, Lrl2;
+    const/4 v0, 0x0
 
-    iget-object p0, p1, Lrl2;->a:Lvp3;
+    return v0
 
-    invoke-virtual {p0}, Lvp3;->toString()Ljava/lang/String;
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object p0
+    move-result v0
 
-    return-object p0
+    return v0
+.end method
 
-    :pswitch_3
-    check-cast p1, Luz8;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object p0, p1, Luz8;->t0:Lj39;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-object p0
+    const-string v1, "SimpleText(text="
 
-    :pswitch_4
-    check-cast p1, Luz8;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide p0, p1, Lli0;->a:J
+    iget-object v1, p0, Lsrf;->c:Ljava/lang/CharSequence;
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, ")"
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_5
-    check-cast p1, Luz8;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1}, Luz8;->l()J
+    move-result-object v0
 
-    move-result-wide p0
+    return-object v0
+.end method
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    move-result-object p0
+    iget-object v0, p0, Lsrf;->c:Ljava/lang/CharSequence;
 
-    return-object p0
+    invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    :pswitch_6
-    check-cast p1, Lyx8;
-
-    iget-wide p0, p1, Lyx8;->a:J
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

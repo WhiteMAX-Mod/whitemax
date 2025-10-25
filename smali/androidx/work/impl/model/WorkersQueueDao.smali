@@ -11,11 +11,11 @@
     d2 = {
         "Landroidx/work/impl/model/WorkersQueueDao;",
         "",
-        "Lrwg;",
+        "Lrph;",
         "item",
-        "Lylf;",
+        "Lccg;",
         "insertOrIgnore",
-        "(Lrwg;)V",
+        "(Lrph;)V",
         "insertOrReplace",
         "",
         "state",
@@ -52,7 +52,7 @@
 
 # virtual methods
 .method public contains(Ljava/util/List;)Z
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -68,55 +68,55 @@
 
     invoke-interface {p0, v0}, Landroidx/work/impl/model/WorkersQueueDao;->select(I)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v1, Ljava/util/ArrayList;
 
-    const/16 v1, 0xa
+    const/16 v2, 0xa
 
-    invoke-static {p0, v1}, Ls73;->O(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v2}, Lpb3;->l(Ljava/lang/Iterable;I)I
 
-    move-result v1
+    move-result v2
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v0
 
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lrwg;
+    check-cast v2, Lrph;
 
-    iget-object v1, v1, Lrwg;->a:Ljava/lang/String;
+    iget-object v2, v2, Lrph;->a:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lq73;->z0(Ljava/lang/Iterable;)Ljava/util/HashSet;
+    invoke-static {v1}, Lnb3;->W(Ljava/lang/Iterable;)Ljava/util/HashSet;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p1}, Lq73;->F0(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {p1}, Lnb3;->c0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->containsAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->containsAll(Ljava/util/Collection;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public abstract count(I)I
@@ -139,7 +139,7 @@
         value = {
             "(I)",
             "Ljava/util/List<",
-            "Lrwg;",
+            "Lrph;",
             ">;"
         }
     .end annotation
@@ -154,7 +154,7 @@
 
     const/16 v1, 0xa
 
-    invoke-static {p1, v1}, Ls73;->O(Ljava/lang/Iterable;I)I
+    invoke-static {p1, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
 
     move-result v1
 
@@ -175,9 +175,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lrwg;
+    check-cast v2, Lrph;
 
-    iget-object v2, v2, Lrwg;->a:Ljava/lang/String;
+    iget-object v2, v2, Lrph;->a:Ljava/lang/String;
 
     invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -191,12 +191,12 @@
     return-object p1
 .end method
 
-.method public insert(Lrwg;)V
+.method public insert(Lrph;)V
     .locals 2
 
-    iget-object v0, p1, Lrwg;->c:Lkb5;
+    iget-object v0, p1, Lrph;->c:Loh5;
 
-    sget-object v1, Lxwg;->$EnumSwitchMapping$0:[I
+    sget-object v1, Lwph;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -208,20 +208,20 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-interface {p0, p1}, Landroidx/work/impl/model/WorkersQueueDao;->insertOrIgnore(Lrwg;)V
+    invoke-interface {p0, p1}, Landroidx/work/impl/model/WorkersQueueDao;->insertOrIgnore(Lrph;)V
 
     return-void
 
     :cond_0
-    invoke-interface {p0, p1}, Landroidx/work/impl/model/WorkersQueueDao;->insertOrReplace(Lrwg;)V
+    invoke-interface {p0, p1}, Landroidx/work/impl/model/WorkersQueueDao;->insertOrReplace(Lrph;)V
 
     return-void
 .end method
 
-.method public abstract insertOrIgnore(Lrwg;)V
+.method public abstract insertOrIgnore(Lrph;)V
 .end method
 
-.method public abstract insertOrReplace(Lrwg;)V
+.method public abstract insertOrReplace(Lrph;)V
 .end method
 
 .method public abstract select(I)Ljava/util/List;
@@ -229,7 +229,7 @@
         value = {
             "(I)",
             "Ljava/util/List<",
-            "Lrwg;",
+            "Lrph;",
             ">;"
         }
     .end annotation
@@ -240,7 +240,7 @@
         value = {
             "(II)",
             "Ljava/util/List<",
-            "Lrwg;",
+            "Lrph;",
             ">;"
         }
     .end annotation

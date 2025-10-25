@@ -1,103 +1,89 @@
-.class public final synthetic Lgj0;
+.class public abstract Lgj0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzb6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lnje;
 
-.field public final synthetic b:Lcr9;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcr9;I)V
-    .locals 0
-
-    iput p2, p0, Lgj0;->a:I
-
-    iput-object p1, p0, Lgj0;->b:Lcr9;
+.method public constructor <init>(Lulf;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Loje;->b(III)Lnje;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lgj0;->a:Lnje;
+
+    check-cast p1, Lqta;
+
+    invoke-virtual {p1}, Lqta;->a()Lk54;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgj0;->b:Lkotlinx/coroutines/internal/ContextScope;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final a(Lvx2;)V
+    .locals 3
 
-    iget v0, p0, Lgj0;->a:I
+    new-instance v0, Lfj0;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    iget-object p0, p0, Lgj0;->b:Lcr9;
+    invoke-direct {v0, p0, p1, v1}, Lfj0;-><init>(Lgj0;Lvx2;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v0, p0, Lcr9;->r0:Lzc;
+    const/4 p1, 0x3
 
-    const-string v1, "LOCATION_MAP_TYPE_HYBRID"
+    iget-object v2, p0, Lgj0;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {v0, v1}, Lzc;->f(Ljava/lang/String;)V
+    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
-    new-instance v0, Lej0;
+    return-void
+.end method
 
-    const/16 v1, 0x8
+.method public final b()Lwt3;
+    .locals 4
 
-    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+    sget v0, Lu35;->o:I
 
-    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+    const/16 v0, 0x12c
 
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    sget-object v1, Lz35;->c:Lz35;
 
-    return-object p0
+    invoke-static {v0, v1}, Ltzi;->d(ILz35;)J
 
-    :pswitch_0
-    iget-object p0, p0, Lgj0;->b:Lcr9;
+    move-result-wide v0
 
-    iget-object v0, p0, Lcr9;->r0:Lzc;
+    new-instance v2, Lej0;
 
-    const-string v1, "LOCATION_MAP_TYPE_SATELLITE"
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1}, Lzc;->f(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Lej0;-><init>(I)V
 
-    new-instance v0, Lej0;
+    iget-object v3, p0, Lgj0;->a:Lnje;
 
-    const/4 v1, 0x6
+    invoke-static {v3, v0, v1, v2}, La3j;->a(Lty5;JLzi6;)Lwt3;
 
-    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object p0, p0, Lgj0;->b:Lcr9;
-
-    iget-object v0, p0, Lcr9;->r0:Lzc;
-
-    const-string v1, "LOCATION_MAP_TYPE_NORMAL"
-
-    invoke-virtual {v0, v1}, Lzc;->f(Ljava/lang/String;)V
-
-    new-instance v0, Lej0;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Lej0;-><init>(I)V
-
-    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -4,10 +4,10 @@
 
 
 # static fields
-.field public static final INSTANCE:Lvh7;
+.field public static final INSTANCE:Lpq7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lvh7;"
+            "Lpq7;"
         }
     .end annotation
 .end field
@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lsg1;",
+            "Lhi1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;"
         }
@@ -36,7 +36,7 @@
 
     invoke-direct {v0}, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse$1;-><init>()V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;->INSTANCE:Lvh7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;->INSTANCE:Lpq7;
 
     return-void
 .end method
@@ -47,7 +47,7 @@
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lsg1;",
+            "Lhi1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;)V"
         }
@@ -63,18 +63,18 @@
 
 # virtual methods
 .method public getMapping()Ljava/util/Map;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lsg1;",
+            "Lhi1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;"
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;->internalToExternal:Ljava/util/Map;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;->internalToExternal:Ljava/util/Map;
 
-    return-object p0
+    return-object v0
 .end method

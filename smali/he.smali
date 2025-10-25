@@ -1,41 +1,31 @@
-.class public final Lhe;
-.super Landroid/graphics/drawable/Animatable2$AnimationCallback;
+.class public abstract Lhe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lie;
+# static fields
+.field public static final a:Ldw6;
 
 
 # direct methods
-.method public constructor <init>(Lie;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lhe;->a:Lie;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Animatable2$AnimationCallback;-><init>()V
+    move-result-object v0
 
-    return-void
-.end method
+    sget-object v1, Lie;->a:Lxod;
 
+    new-instance v1, Ldw6;
 
-# virtual methods
-.method public final onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    new-instance v2, Landroid/os/Handler;
 
-    iget-object p0, p0, Lhe;->a:Lie;
+    invoke-direct {v2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-virtual {p0, p1}, Lie;->a(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v1, v2}, Ldw6;-><init>(Landroid/os/Handler;)V
 
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    iget-object p0, p0, Lhe;->a:Lie;
-
-    invoke-virtual {p0, p1}, Lie;->b(Landroid/graphics/drawable/Drawable;)V
+    sput-object v1, Lhe;->a:Ldw6;
 
     return-void
 .end method

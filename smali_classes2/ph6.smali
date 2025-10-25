@@ -1,71 +1,64 @@
-.class public final Lph6;
+.class public final synthetic Lph6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsr3;
+.implements Llne;
+
 
 # instance fields
-.field public final a:Lcl7;
-
-.field public final b:Lcl7;
-
-.field public final c:Lcl7;
+.field public final synthetic a:Lru/ok/messages/settings/caching/FrgCachingSettings;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lcl7;)V
+.method public synthetic constructor <init>(Lru/ok/messages/settings/caching/FrgCachingSettings;)V
     .locals 0
 
+    iput-object p1, p0, Lph6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lph6;->a:Lcl7;
-
-    iput-object p2, p0, Lph6;->b:Lcl7;
-
-    iput-object p3, p0, Lph6;->c:Lcl7;
 
     return-void
 .end method
 
-.method public static a(Lph6;JLjx3;)Ljava/lang/Object;
-    .locals 9
 
-    sget v0, Lfy4;->o:I
+# virtual methods
+.method public a(F)Ljava/lang/String;
+    .locals 1
 
-    const/4 v0, 0x3
+    iget-object v0, p0, Lph6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
 
-    sget-object v1, Lky4;->o:Lky4;
+    iget-object v0, v0, Lru/ok/messages/settings/caching/FrgCachingSettings;->B1:[Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lr94;->b0(ILky4;)J
+    float-to-int p1, p1
 
-    move-result-wide v6
+    aget-object p1, v0, p1
 
-    iget-object v0, p0, Lph6;->c:Lcl7;
+    return-object p1
+.end method
 
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
 
-    move-result-object v0
+    check-cast p1, Lvv4;
 
-    check-cast v0, Lxwe;
+    iget-object v0, p0, Lph6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
 
-    check-cast v0, Laga;
+    iget-object v1, v0, Lru/ok/messages/views/fragments/base/FrgBase;->t1:Lni3;
 
-    invoke-virtual {v0}, Laga;->b()Ls04;
+    if-nez v1, :cond_0
 
-    move-result-object v0
+    new-instance v1, Lni3;
 
-    new-instance v2, Loh6;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    const/4 v8, 0x0
+    iput-object v1, v0, Lru/ok/messages/views/fragments/base/FrgBase;->t1:Lni3;
 
-    move-object v3, p0
+    :cond_0
+    iget-object v0, v0, Lru/ok/messages/views/fragments/base/FrgBase;->t1:Lni3;
 
-    move-wide v4, p1
+    invoke-virtual {v0, p1}, Lni3;->a(Lvv4;)Z
 
-    invoke-direct/range {v2 .. v8}, Loh6;-><init>(Lph6;JJLkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v2, p3}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

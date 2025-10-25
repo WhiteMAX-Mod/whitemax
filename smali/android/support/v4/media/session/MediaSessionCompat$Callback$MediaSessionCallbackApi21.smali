@@ -30,17 +30,17 @@
 .end method
 
 .method private clearCurrentControllerInfo(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;)V
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    invoke-interface {p1, p0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->setCurrentControllerInfo(Lyo8;)V
+    invoke-interface {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->setCurrentControllerInfo(Lx09;)V
 
     return-void
 .end method
 
 .method private getSessionImplIfCallbackIsSet()Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$MediaSessionCallbackApi21;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
@@ -65,34 +65,64 @@
 
     if-eqz v1, :cond_0
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$MediaSessionCallbackApi21;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$MediaSessionCallbackApi21;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->getCallback()Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
-    move-result-object v0
+    move-result-object v2
 
-    if-ne p0, v0, :cond_0
+    if-ne v0, v2, :cond_0
 
     return-object v1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method private setCurrentControllerInfo(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;)V
-    .locals 0
+    .locals 3
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-interface {p1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->getCallingPackage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v0, "android.media.session.MediaController"
+
+    :cond_1
+    new-instance v1, Lx09;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v1, v0, v2, v2}, Lx09;-><init>(Ljava/lang/String;II)V
+
+    invoke-interface {p1, v1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->setCurrentControllerInfo(Lx09;)V
 
     return-void
 .end method
@@ -152,11 +182,11 @@
     :goto_0
     invoke-virtual {p1, v3, v2}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getSession2Token()Lrtf;
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getSession2Token()Lrkg;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lzxa;->t(Landroid/os/Bundle;Lrtf;)V
+    invoke-static {p1, p2}, Lbdb;->j(Landroid/os/Bundle;Lrkg;)V
 
     const/4 p2, 0x0
 
@@ -300,7 +330,15 @@
     :try_end_2
     .catch Landroid/os/BadParcelableException; {:try_start_2 .. :try_end_2} :catch_0
 
+    goto :goto_1
+
     :catch_0
+    const-string p1, "MediaSessionCompat"
+
+    const-string p2, "Could not unparcel the extra data."
+
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_8
     :goto_1
     invoke-direct {p0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$MediaSessionCallbackApi21;->clearCurrentControllerInfo(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;)V
@@ -576,7 +614,15 @@
     :try_end_1
     .catch Landroid/os/BadParcelableException; {:try_start_1 .. :try_end_1} :catch_0
 
+    goto :goto_0
+
     :catch_0
+    const-string p1, "MediaSessionCompat"
+
+    const-string p2, "Could not unparcel the data."
+
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     invoke-direct {p0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$MediaSessionCallbackApi21;->clearCurrentControllerInfo(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;)V
 
@@ -634,9 +680,9 @@
 
     invoke-super {p0, p1}, Landroid/media/session/MediaSession$Callback;->onMediaButtonEvent(Landroid/content/Intent;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
 
     goto :goto_0
 
@@ -645,9 +691,9 @@
 
     :cond_2
     :goto_0
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public onPause()V

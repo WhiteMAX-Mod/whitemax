@@ -14,21 +14,21 @@
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participantId",
-        "Lzi9;",
+        "Lkv9;",
         "position",
         "",
         "isPlaying",
-        "Lkj9;",
+        "Luv9;",
         "volume",
         "isMuted",
-        "Lti9;",
+        "Lev9;",
         "movie",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzi9;ZFZLti9;Lld4;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkv9;ZFZLev9;Lki4;)V",
         "component1",
         "()Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "component2",
-        "()Lzi9;",
+        "()Lkv9;",
         "component3",
         "()Z",
         "component4-_pGdNCs",
@@ -36,9 +36,9 @@
         "component4",
         "component5",
         "component6",
-        "()Lti9;",
+        "()Lev9;",
         "copy-brw6TxU",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzi9;ZFZLti9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkv9;ZFZLev9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;",
         "copy",
         "",
         "toString",
@@ -51,12 +51,12 @@
         "(Ljava/lang/Object;)Z",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "getParticipantId",
-        "Lzi9;",
+        "Lkv9;",
         "getPosition",
         "Z",
         "F",
         "getVolume-_pGdNCs",
-        "Lti9;",
+        "Lev9;",
         "getMovie",
         "calls-sdk_release"
     }
@@ -75,17 +75,17 @@
 
 .field private final isPlaying:Z
 
-.field private final movie:Lti9;
+.field private final movie:Lev9;
 
 .field private final participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-.field private final position:Lzi9;
+.field private final position:Lkv9;
 
 .field private final volume:F
 
 
 # direct methods
-.method private constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzi9;ZFZLti9;)V
+.method private constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkv9;ZFZLev9;)V
     .locals 0
 
     .line 2
@@ -95,7 +95,7 @@
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     .line 4
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lzi9;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lkv9;
 
     .line 5
     iput-boolean p3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isPlaying:Z
@@ -107,21 +107,21 @@
     iput-boolean p5, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isMuted:Z
 
     .line 8
-    iput-object p6, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lti9;
+    iput-object p6, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lev9;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzi9;ZFZLti9;Lld4;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkv9;ZFZLev9;Lki4;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p6}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzi9;ZFZLti9;)V
+    invoke-direct/range {p0 .. p6}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkv9;ZFZLev9;)V
 
     return-void
 .end method
 
-.method public static synthetic copy-brw6TxU$default(Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzi9;ZFZLti9;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;
+.method public static synthetic copy-brw6TxU$default(Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkv9;ZFZLev9;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;
     .locals 0
 
     and-int/lit8 p8, p7, 0x1
@@ -135,7 +135,7 @@
 
     if-eqz p8, :cond_1
 
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lzi9;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lkv9;
 
     :cond_1
     and-int/lit8 p8, p7, 0x4
@@ -163,7 +163,7 @@
 
     if-eqz p7, :cond_5
 
-    iget-object p6, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lti9;
+    iget-object p6, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lev9;
 
     :cond_5
     move p7, p5
@@ -180,7 +180,7 @@
 
     move-object p2, p0
 
-    invoke-virtual/range {p2 .. p8}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->copy-brw6TxU(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzi9;ZFZLti9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;
+    invoke-virtual/range {p2 .. p8}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->copy-brw6TxU(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkv9;ZFZLev9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;
 
     move-result-object p0
 
@@ -190,54 +190,54 @@
 
 # virtual methods
 .method public final component1()Lru/ok/android/externcalls/sdk/id/ParticipantId;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final component2()Lzi9;
-    .locals 0
+.method public final component2()Lkv9;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lzi9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lkv9;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final component3()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isPlaying:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isPlaying:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final component4-_pGdNCs()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->volume:F
+    iget v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->volume:F
 
-    return p0
+    return v0
 .end method
 
 .method public final component5()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isMuted:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isMuted:Z
 
-    return p0
+    return v0
 .end method
 
-.method public final component6()Lti9;
-    .locals 0
+.method public final component6()Lev9;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lti9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lev9;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final copy-brw6TxU(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzi9;ZFZLti9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;
+.method public final copy-brw6TxU(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkv9;ZFZLev9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;
     .locals 8
 
     new-instance v0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;
@@ -256,7 +256,7 @@
 
     move-object v6, p6
 
-    invoke-direct/range {v0 .. v7}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzi9;ZFZLti9;Lld4;)V
+    invoke-direct/range {v0 .. v7}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkv9;ZFZLev9;Lki4;)V
 
     return-object v0
 .end method
@@ -286,7 +286,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -295,11 +295,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lzi9;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lkv9;
 
-    iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lzi9;
+    iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lkv9;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -321,7 +321,7 @@
 
     iget v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->volume:F
 
-    sget v4, Lkj9;->a:F
+    sget v4, Luv9;->a:F
 
     invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
 
@@ -338,15 +338,15 @@
     return v2
 
     :cond_5
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lti9;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lev9;
 
-    iget-object p1, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lti9;
+    iget-object p1, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lev9;
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_6
+    if-nez p1, :cond_6
 
     return v2
 
@@ -357,36 +357,36 @@
     return v2
 .end method
 
-.method public final getMovie()Lti9;
-    .locals 0
+.method public final getMovie()Lev9;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lti9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lev9;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getParticipantId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final getPosition()Lzi9;
-    .locals 0
+.method public final getPosition()Lkv9;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lzi9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lkv9;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getVolume-_pGdNCs()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->volume:F
+    iget v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->volume:F
 
-    return p0
+    return v0
 .end method
 
 .method public hashCode()I
@@ -402,7 +402,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lzi9;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lkv9;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -414,71 +414,71 @@
 
     iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isPlaying:Z
 
-    invoke-static {v2, v1, v0}, Lsq3;->e(IIZ)I
+    invoke-static {v2, v1, v0}, Lrtg;->d(IIZ)I
 
     move-result v0
 
     iget v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->volume:F
 
-    sget v3, Lkj9;->a:F
+    sget v3, Luv9;->a:F
 
-    invoke-static {v0, v2, v1}, Lsq3;->c(IFI)I
+    invoke-static {v0, v2, v1}, Lzb3;->b(IFI)I
 
     move-result v0
 
     iget-boolean v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isMuted:Z
 
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
 
     move-result v0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lti9;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lev9;
 
-    if-nez p0, :cond_0
+    if-nez v1, :cond_0
 
-    const/4 p0, 0x0
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lti9;->hashCode()I
+    invoke-virtual {v1}, Lev9;->hashCode()I
 
-    move-result p0
+    move-result v1
 
     :goto_0
-    add-int/2addr v0, p0
+    add-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final isMuted()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isMuted:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isMuted:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final isPlaying()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isPlaying:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isPlaying:Z
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 8
+    .locals 9
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lzi9;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->position:Lkv9;
 
     iget-boolean v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isPlaying:Z
 
     iget v3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->volume:F
 
-    sget v4, Lkj9;->a:F
+    sget v4, Luv9;->a:F
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -498,51 +498,51 @@
 
     iget-boolean v5, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->isMuted:Z
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lti9;
+    iget-object v6, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;->movie:Lev9;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    const-string v7, "MovieState(participantId="
+    const-string v8, "MovieState(participantId="
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", position="
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", isPlaying="
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v0, ", volume="
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", isMuted="
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v0, ", movie="
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

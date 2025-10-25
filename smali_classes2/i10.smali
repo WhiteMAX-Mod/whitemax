@@ -2,65 +2,62 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/lang/String;
 
-.field public final synthetic b:Lj10;
+.field public b:J
+
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
+
+.field public e:Ljava/lang/String;
+
+.field public f:Ljava/lang/String;
+
+.field public g:Ljava/lang/String;
+
+.field public h:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj10;I)V
-    .locals 0
-
-    iput p2, p0, Li10;->a:I
-
-    iput-object p1, p0, Li10;->b:Lj10;
+.method public constructor <init>(Li10;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iget-object v0, p1, Li10;->a:Ljava/lang/String;
+
+    iput-object v0, p0, Li10;->a:Ljava/lang/String;
+
+    iget-wide v0, p1, Li10;->b:J
+
+    iput-wide v0, p0, Li10;->b:J
+
+    iget-object v0, p1, Li10;->c:Ljava/lang/String;
+
+    iput-object v0, p0, Li10;->c:Ljava/lang/String;
+
+    iget-object v0, p1, Li10;->f:Ljava/lang/String;
+
+    iput-object v0, p0, Li10;->f:Ljava/lang/String;
+
+    iget-object v0, p1, Li10;->g:Ljava/lang/String;
+
+    iput-object v0, p0, Li10;->g:Ljava/lang/String;
+
+    iget-object v0, p1, Li10;->h:Ljava/lang/String;
+
+    iput-object v0, p0, Li10;->h:Ljava/lang/String;
+
+    iget-object v0, p1, Li10;->d:Ljava/lang/String;
+
+    iput-object v0, p0, Li10;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Li10;->e:Ljava/lang/String;
+
+    iput-object p1, p0, Li10;->e:Ljava/lang/String;
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    iget v0, p0, Li10;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Li10;->b:Lj10;
-
-    iget-object p0, p0, Lj10;->o:Landroid/animation/ValueAnimator;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Li10;->b:Lj10;
-
-    iget-object p0, p0, Lj10;->o:Landroid/animation/ValueAnimator;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->cancel()V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

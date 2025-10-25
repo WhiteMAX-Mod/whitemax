@@ -1,89 +1,73 @@
-.class public final Lvwa;
+.class public abstract Lvwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ltsc;
+# static fields
+.field public static final a:I
 
-.field public final b:Luwa;
+.field public static final b:I
 
-.field public final c:Lfec;
+.field public static final c:I
 
-.field public final d:Lvl2;
+.field public static final d:I
 
-.field public final e:Lea;
+.field public static final e:I
 
-.field public final f:Lk14;
+.field public static final f:I
 
-.field public volatile g:Lok7;
+.field public static final g:I
 
-.field public volatile h:Lv5d;
+.field public static final h:I
 
-.field public i:D
+.field public static final i:I
 
-.field public j:J
-
-.field public final k:Lzjd;
-
-.field public l:D
-
-.field public m:D
-
-.field public final n:Lu28;
-
-.field public final o:Lwo0;
-
-.field public final p:Lwo0;
+.field public static final j:I
 
 
 # direct methods
-.method public constructor <init>(Ltsc;Luwa;Lfec;Lvl2;Lea;Lk14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lslc;->add_8:I
 
-    iput-object p1, p0, Lvwa;->a:Ltsc;
+    sput v0, Lvwa;->a:I
 
-    iput-object p2, p0, Lvwa;->b:Luwa;
+    sget v0, Lslc;->apple_outline_24:I
 
-    iput-object p3, p0, Lvwa;->c:Lfec;
+    sput v0, Lvwa;->b:I
 
-    iput-object p4, p0, Lvwa;->d:Lvl2;
+    sget v0, Lslc;->ball_outline_24:I
 
-    iput-object p5, p0, Lvwa;->e:Lea;
+    sput v0, Lvwa;->c:I
 
-    iput-object p6, p0, Lvwa;->f:Lk14;
+    sget v0, Lslc;->car_outline_24:I
 
-    const-wide/high16 p1, 0x3ff0000000000000L    # 1.0
+    sput v0, Lvwa;->d:I
 
-    iput-wide p1, p0, Lvwa;->i:D
+    sget v0, Lslc;->fire_24:I
 
-    new-instance p1, Lzjd;
+    sput v0, Lvwa;->e:I
 
-    invoke-direct {p1}, Lzjd;-><init>()V
+    sget v0, Lslc;->flags_outline_24:I
 
-    iput-object p1, p0, Lvwa;->k:Lzjd;
+    sput v0, Lvwa;->f:I
 
-    new-instance p1, Lu28;
+    sget v0, Lslc;->lamp_outline_24:I
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    sput v0, Lvwa;->g:I
 
-    iput-object p1, p0, Lvwa;->n:Lu28;
+    sget v0, Lslc;->paw_outline_24:I
 
-    new-instance p1, Lwo0;
+    sput v0, Lvwa;->h:I
 
-    const/4 p2, 0x0
+    sget v0, Lslc;->remove_outline_24:I
 
-    invoke-direct {p1, p2}, Lwo0;-><init>(I)V
+    sput v0, Lvwa;->i:I
 
-    iput-object p1, p0, Lvwa;->o:Lwo0;
+    sget v0, Lslc;->symbols_outline_24:I
 
-    new-instance p1, Lwo0;
-
-    invoke-direct {p1, p2}, Lwo0;-><init>(I)V
-
-    iput-object p1, p0, Lvwa;->p:Lwo0;
+    sput v0, Lvwa;->j:I
 
     return-void
 .end method

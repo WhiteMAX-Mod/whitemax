@@ -1,88 +1,69 @@
 .class public final Lea5;
-.super Ljava/util/concurrent/atomic/AtomicBoolean;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-.implements Loq4;
+.implements Li54;
+.implements Ljava/io/Serializable;
 
 
-# instance fields
-.field public final a:Ljava/lang/Runnable;
+# static fields
+.field public static final a:Lea5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    new-instance v0, Lea5;
 
-    iput-object p1, p0, Lea5;->a:Ljava/lang/Runnable;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lea5;->a:Lea5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
-
-    return-void
-.end method
-
-.method public final f()Z
+.method public final fold(Ljava/lang/Object;Lzi6;)Ljava/lang/Object;
     .locals 0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p0
-
-    return p0
+    return-object p1
 .end method
 
-.method public final run()V
-    .locals 2
+.method public final get(Lh54;)Lg54;
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    const/4 p1, 0x0
 
-    move-result v0
+    return-object p1
+.end method
 
-    if-eqz v0, :cond_0
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
 
-    :cond_0
-    const/4 v0, 0x1
+    return v0
+.end method
 
-    :try_start_0
-    iget-object v1, p0, Lea5;->a:Ljava/lang/Runnable;
+.method public final minusKey(Lh54;)Li54;
+    .locals 0
 
-    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return-object p0
+.end method
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
+.method public final plus(Li54;)Li54;
+    .locals 0
 
-    return-void
+    return-object p1
+.end method
 
-    :catchall_0
-    move-exception v1
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    :try_start_1
-    invoke-static {v1}, Ln4e;->D(Ljava/lang/Throwable;)V
+    const-string v0, "EmptyCoroutineContext"
 
-    throw v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception v1
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
-
-    throw v1
+    return-object v0
 .end method

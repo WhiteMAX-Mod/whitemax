@@ -86,21 +86,21 @@
 
 # virtual methods
 .method public getCertificate()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtcCertificatePem;->certificate:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/RtcCertificatePem;->certificate:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getPrivateKey()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtcCertificatePem;->privateKey:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/RtcCertificatePem;->privateKey:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

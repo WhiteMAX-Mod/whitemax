@@ -1,94 +1,63 @@
-.class public final synthetic La6e;
+.class public abstract La6e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ly77;
-
 
 # direct methods
-.method public synthetic constructor <init>(Ly77;I)V
-    .locals 0
+.method public static a([B)Lb6e;
+    .locals 7
 
-    iput p2, p0, La6e;->a:I
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
 
-    iput-object p1, p0, La6e;->b:Ly77;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    invoke-static {v0, p0}, Lee9;->mergeFrom(Lee9;[B)Lee9;
 
-    return-void
-.end method
+    move-result-object p0
 
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-# virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+    new-instance v0, Lb6e;
 
-    iget v0, p0, La6e;->a:I
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->taskId:J
 
-    packed-switch v0, :pswitch_data_0
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->chatId:J
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget v5, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->count:I
 
-    move-result-object p1
+    sget-object v6, Ldq4;->o:Lxo6;
 
-    check-cast p1, Ljava/lang/Integer;
+    iget p0, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->itemTypeId:I
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result p1
+    move-result-object p0
 
-    iget-object p0, p0, La6e;->b:Ly77;
+    invoke-static {v6, p0}, Lxo6;->e(Lxo6;Ljava/lang/Integer;)Ldq4;
 
-    check-cast p0, Ls5e;
+    move-result-object v6
 
-    iget-object p0, p0, Ls5e;->G0:Lej3;
+    invoke-direct/range {v0 .. v6}, Lb6e;-><init>(JJILdq4;)V
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    iget-object p0, v0, Lb6e;->Y:Ljava/lang/String;
 
-    return-void
+    const-string v1, "parseFrom"
 
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-static {p0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p1
+    return-object v0
 
-    check-cast p1, Ljava/lang/Float;
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    move-object p0, v0
 
-    move-result p1
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
 
-    iget-object p0, p0, La6e;->b:Ly77;
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    check-cast p0, Ls5e;
-
-    iget-object v0, p0, Ls5e;->G0:Lej3;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getCurrentTextColor()I
-
-    move-result v0
-
-    invoke-static {v0, p1}, Lf54;->L(IF)I
-
-    move-result p1
-
-    iget-object p0, p0, Ls5e;->G0:Lej3;
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

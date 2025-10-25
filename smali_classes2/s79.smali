@@ -1,164 +1,100 @@
-.class public final Ls79;
+.class public final synthetic Ls79;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lli6;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:Z
+.field public final synthetic b:Ly7d;
 
 
 # direct methods
-.method public constructor <init>(Ls72;Lxx8;Z)V
+.method public synthetic constructor <init>(Ly7d;I)V
     .locals 0
 
-    invoke-virtual {p2, p1}, Lxx8;->c(Ls72;)Ljava/lang/CharSequence;
+    iput p2, p0, Ls79;->a:I
 
-    move-result-object p1
+    iput-object p1, p0, Ls79;->b:Ly7d;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result p1
-
-    iget-object p2, p2, Lxx8;->a:Luz8;
-
-    iget-object p2, p2, Luz8;->O0:Ljava/util/List;
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Ljava/lang/Object;->hashCode()I
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Ls79;->a:I
-
-    iput p2, p0, Ls79;->b:I
-
-    iput-boolean p3, p0, Ls79;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Ls79;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ls79;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
     iget v0, p0, Ls79;->a:I
 
-    iget v1, p1, Ls79;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    if-eq v0, v1, :cond_2
+    iget-object v0, p0, Ls79;->b:Ly7d;
 
-    goto :goto_0
+    check-cast p1, Landroid/view/Surface;
 
-    :cond_2
-    iget v0, p0, Ls79;->b:I
+    iput-object p1, v0, Ly7d;->a:Ljava/lang/Object;
 
-    iget v1, p1, Ls79;->b:I
+    sget-object p1, Lccg;->a:Lccg;
 
-    if-eq v0, v1, :cond_3
+    return-object p1
 
-    goto :goto_0
+    :pswitch_0
+    check-cast p1, Lwr3;
 
-    :cond_3
-    iget-boolean p0, p0, Ls79;->c:Z
+    iget-object v0, p0, Ls79;->b:Ly7d;
 
-    iget-boolean p1, p1, Ls79;->c:Z
+    iget-object v1, v0, Ly7d;->a:Ljava/lang/Object;
 
-    if-eq p0, p1, :cond_4
+    check-cast v1, Le89;
 
-    :goto_0
-    const/4 p0, 0x0
+    new-instance v2, Lqo2;
 
-    return p0
+    invoke-static {p1}, Lvg8;->r(Lwr3;)Lru3;
 
-    :cond_4
-    :goto_1
-    const/4 p0, 0x1
+    move-result-object v3
 
-    return p0
-.end method
+    iget-object v0, v0, Ly7d;->a:Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 3
+    check-cast v0, Le89;
 
-    iget v0, p0, Ls79;->a:I
+    iget-object v0, v0, Le89;->w0:Liu7;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ls79;->b:I
-
-    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
-
-    move-result v0
-
-    iget-boolean p0, p0, Ls79;->c:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", messageElementsHash="
-
-    const-string v1, ", isChild="
-
-    const-string v2, "Key(textHash="
-
-    iget v3, p0, Ls79;->a:I
-
-    iget v4, p0, Ls79;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ")"
+    check-cast v0, Lxxb;
 
-    iget-boolean p0, p0, Ls79;->c:Z
+    invoke-virtual {p1}, Lwr3;->p()J
 
-    invoke-static {v0, p0, v1}, Lmw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    move-result-wide v4
 
-    move-result-object p0
+    invoke-virtual {v0, v4, v5}, Lxxb;->w(J)Ltxb;
 
-    return-object p0
+    move-result-object p1
+
+    invoke-static {p1}, Lvg8;->k(Ltxb;)Luxb;
+
+    move-result-object p1
+
+    const-wide/16 v4, 0x0
+
+    invoke-direct {v2, v3, p1, v4, v5}, Lqo2;-><init>(Lru3;Luxb;J)V
+
+    invoke-virtual {v1, v2}, Le89;->z(Lqo2;)Lg59;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

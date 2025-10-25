@@ -1,54 +1,353 @@
-.class public abstract Lk4c;
+.class public final Lk4c;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static emoji_sprite_0:I = 0x7f080344
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static emoji_sprite_1:I = 0x7f080345
+.field public final b:J
 
-.field public static emoji_sprite_10:I = 0x7f080346
+.field public final c:Ljava/lang/CharSequence;
 
-.field public static emoji_sprite_11:I = 0x7f080347
+.field public final d:Ljava/lang/CharSequence;
 
-.field public static emoji_sprite_12:I = 0x7f080348
+.field public final e:Z
 
-.field public static emoji_sprite_13:I = 0x7f080349
+.field public final f:Z
 
-.field public static emoji_sprite_14:I = 0x7f08034a
+.field public final g:I
 
-.field public static emoji_sprite_15:I = 0x7f08034b
 
-.field public static emoji_sprite_16:I = 0x7f08034c
+# direct methods
+.method public constructor <init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/CharSequence;ZZI)V
+    .locals 0
 
-.field public static emoji_sprite_17:I = 0x7f08034d
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static emoji_sprite_18:I = 0x7f08034e
+    iput-object p1, p0, Lk4c;->a:Ljava/lang/String;
 
-.field public static emoji_sprite_19:I = 0x7f08034f
+    iput-wide p2, p0, Lk4c;->b:J
 
-.field public static emoji_sprite_2:I = 0x7f080350
+    iput-object p4, p0, Lk4c;->c:Ljava/lang/CharSequence;
 
-.field public static emoji_sprite_20:I = 0x7f080351
+    iput-object p5, p0, Lk4c;->d:Ljava/lang/CharSequence;
 
-.field public static emoji_sprite_21:I = 0x7f080352
+    iput-boolean p6, p0, Lk4c;->e:Z
 
-.field public static emoji_sprite_22:I = 0x7f080353
+    iput-boolean p7, p0, Lk4c;->f:Z
 
-.field public static emoji_sprite_23:I = 0x7f080354
+    iput p8, p0, Lk4c;->g:I
 
-.field public static emoji_sprite_24:I = 0x7f080355
+    return-void
+.end method
 
-.field public static emoji_sprite_3:I = 0x7f080356
+.method public static a(Lk4c;Ljava/lang/String;ZI)Lk4c;
+    .locals 9
 
-.field public static emoji_sprite_4:I = 0x7f080357
+    and-int/lit8 v0, p3, 0x1
 
-.field public static emoji_sprite_5:I = 0x7f080358
+    if-eqz v0, :cond_0
 
-.field public static emoji_sprite_6:I = 0x7f080359
+    iget-object p1, p0, Lk4c;->a:Ljava/lang/String;
 
-.field public static emoji_sprite_7:I = 0x7f08035a
+    :cond_0
+    move-object v1, p1
 
-.field public static emoji_sprite_8:I = 0x7f08035b
+    iget-wide v2, p0, Lk4c;->b:J
 
-.field public static emoji_sprite_9:I = 0x7f08035c
+    iget-object v4, p0, Lk4c;->c:Ljava/lang/CharSequence;
+
+    iget-object v5, p0, Lk4c;->d:Ljava/lang/CharSequence;
+
+    and-int/lit8 p1, p3, 0x10
+
+    if-eqz p1, :cond_1
+
+    iget-boolean p2, p0, Lk4c;->e:Z
+
+    :cond_1
+    move v6, p2
+
+    iget-boolean v7, p0, Lk4c;->f:Z
+
+    iget v8, p0, Lk4c;->g:I
+
+    new-instance v0, Lk4c;
+
+    invoke-direct/range {v0 .. v8}, Lk4c;-><init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/CharSequence;ZZI)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lk4c;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lk4c;
+
+    iget-object v0, p0, Lk4c;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lk4c;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v0, p0, Lk4c;->b:J
+
+    iget-wide v2, p1, Lk4c;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lk4c;->c:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Lk4c;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lk4c;->d:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Lk4c;->d:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-boolean v0, p0, Lk4c;->e:Z
+
+    iget-boolean v1, p1, Lk4c;->e:Z
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-boolean v0, p0, Lk4c;->f:Z
+
+    iget-boolean v1, p1, Lk4c;->f:Z
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget v0, p0, Lk4c;->g:I
+
+    iget p1, p1, Lk4c;->g:I
+
+    if-eq v0, p1, :cond_8
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_8
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lk4c;->a:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    const/16 v2, 0x1f
+
+    mul-int/2addr v1, v2
+
+    iget-wide v3, p0, Lk4c;->b:J
+
+    invoke-static {v1, v2, v3, v4}, Lrtg;->c(IIJ)I
+
+    move-result v1
+
+    iget-object v3, p0, Lk4c;->c:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_1
+
+    move v3, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v1, v3
+
+    mul-int/2addr v1, v2
+
+    iget-object v3, p0, Lk4c;->d:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_2
+    add-int/2addr v1, v0
+
+    mul-int/2addr v1, v2
+
+    iget-boolean v0, p0, Lk4c;->e:Z
+
+    invoke-static {v1, v2, v0}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lk4c;->f:Z
+
+    invoke-static {v0, v2, v1}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget v1, p0, Lk4c;->g:I
+
+    invoke-static {v1}, Ldy1;->v(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "ProfileEditAppBarState(avatarUrl="
+
+    const-string v1, ", avatarSourceId="
+
+    iget-wide v2, p0, Lk4c;->b:J
+
+    iget-object v4, p0, Lk4c;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v1}, Lzdf;->u(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", firstName="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lk4c;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", abbreviation="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lk4c;->d:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", showAcceptChanges="
+
+    const-string v2, ", showAddPhoto="
+
+    iget-boolean v3, p0, Lk4c;->e:Z
+
+    iget-boolean v4, p0, Lk4c;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lzb3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ", confirmType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lk4c;->g:I
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "TOOLBAR_ACTION"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "BUTTON"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

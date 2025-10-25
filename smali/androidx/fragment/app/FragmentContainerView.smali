@@ -13,7 +13,7 @@
         "Landroid/widget/FrameLayout;",
         "Landroid/animation/LayoutTransition;",
         "transition",
-        "Lylf;",
+        "Lccg;",
         "setLayoutTransition",
         "(Landroid/animation/LayoutTransition;)V",
         "Landroid/view/View$OnApplyWindowInsetsListener;",
@@ -86,7 +86,7 @@
     move-result-object v1
 
     .line 6
-    sget-object v2, Ltdc;->FragmentContainerView:[I
+    sget-object v2, Lsvc;->FragmentContainerView:[I
 
     .line 7
     invoke-virtual {p1, p2, v2, v0, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -96,7 +96,7 @@
     if-nez v1, :cond_0
 
     .line 8
-    sget p2, Ltdc;->FragmentContainerView_android_name:I
+    sget p2, Lsvc;->FragmentContainerView_android_name:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -120,45 +120,45 @@
     .line 12
     invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
 
     goto :goto_1
 
     .line 13
     :cond_1
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     .line 14
-    new-instance p1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "FragmentContainerView must be within a FragmentActivity to use "
+    const-string v2, "FragmentContainerView must be within a FragmentActivity to use "
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 15
     const-string p2, "=\""
 
     .line 16
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 p2, 0x22
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p2
 
     .line 17
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
     :goto_1
@@ -196,7 +196,7 @@
     move-result-object v1
 
     .line 23
-    sget-object v2, Ltdc;->FragmentContainerView:[I
+    sget-object v2, Lsvc;->FragmentContainerView:[I
 
     const/4 v3, 0x0
 
@@ -208,7 +208,7 @@
     if-nez v1, :cond_0
 
     .line 25
-    sget v1, Ltdc;->FragmentContainerView_android_name:I
+    sget v1, Lsvc;->FragmentContainerView_android_name:I
 
     invoke-virtual {v2, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -216,7 +216,7 @@
 
     .line 26
     :cond_0
-    sget v3, Ltdc;->FragmentContainerView_android_tag:I
+    sget v3, Lsvc;->FragmentContainerView_android_tag:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -231,7 +231,7 @@
     move-result v2
 
     .line 29
-    invoke-virtual {p3, v2}, Landroidx/fragment/app/c;->C(I)Landroidx/fragment/app/a;
+    invoke-virtual {p3, v2}, Landroidx/fragment/app/c;->D(I)Landroidx/fragment/app/a;
 
     move-result-object v4
 
@@ -246,82 +246,82 @@
     if-eqz v3, :cond_1
 
     .line 30
-    const-string p0, " with tag "
+    const-string p1, " with tag "
 
-    invoke-virtual {p0, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
     goto :goto_0
 
     :cond_1
-    const-string p0, ""
+    const-string p1, ""
 
     .line 31
     :goto_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p2, Ljava/lang/IllegalStateException;
 
     .line 32
-    const-string p2, "FragmentContainerView must have an android:id to add Fragment "
+    const-string p3, "FragmentContainerView must have an android:id to add Fragment "
 
     .line 33
-    invoke-static {p2, v1, p0}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, v1, p1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 34
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p2
 
     .line 35
     :cond_2
-    invoke-virtual {p3}, Landroidx/fragment/app/c;->I()Lb86;
+    invoke-virtual {p3}, Landroidx/fragment/app/c;->I()Lpe6;
 
     move-result-object v4
 
     invoke-virtual {p1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
-    invoke-virtual {v4, v1}, Lb86;->a(Ljava/lang/String;)Landroidx/fragment/app/a;
+    invoke-virtual {v4, v1}, Lpe6;->a(Ljava/lang/String;)Landroidx/fragment/app/a;
 
     move-result-object p1
 
     .line 36
-    iput v2, p1, Landroidx/fragment/app/a;->I0:I
+    iput v2, p1, Landroidx/fragment/app/a;->G0:I
 
     .line 37
-    iput v2, p1, Landroidx/fragment/app/a;->J0:I
+    iput v2, p1, Landroidx/fragment/app/a;->H0:I
 
     .line 38
-    iput-object v3, p1, Landroidx/fragment/app/a;->K0:Ljava/lang/String;
+    iput-object v3, p1, Landroidx/fragment/app/a;->I0:Ljava/lang/String;
 
     .line 39
-    iput-object p3, p1, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iput-object p3, p1, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
     .line 40
-    iget-object v1, p3, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v1, p3, Landroidx/fragment/app/c;->w:Lie6;
 
     .line 41
-    iput-object v1, p1, Landroidx/fragment/app/a;->F0:Lu76;
+    iput-object v1, p1, Landroidx/fragment/app/a;->D0:Lie6;
 
     const/4 v1, 0x0
 
     .line 42
-    invoke-virtual {p1, p2, v1}, Landroidx/fragment/app/a;->t0(Landroid/util/AttributeSet;Landroid/os/Bundle;)V
+    invoke-virtual {p1, p2, v1}, Landroidx/fragment/app/a;->e0(Landroid/util/AttributeSet;Landroid/os/Bundle;)V
 
     .line 43
-    new-instance p2, Lce0;
+    new-instance p2, Lze0;
 
-    invoke-direct {p2, p3}, Lce0;-><init>(Landroidx/fragment/app/c;)V
+    invoke-direct {p2, p3}, Lze0;-><init>(Landroidx/fragment/app/c;)V
 
     .line 44
-    iput-boolean v0, p2, Lce0;->o:Z
+    iput-boolean v0, p2, Lze0;->o:Z
 
     .line 45
-    iput-object p0, p1, Landroidx/fragment/app/a;->S0:Landroid/view/ViewGroup;
+    iput-object p0, p1, Landroidx/fragment/app/a;->Q0:Landroid/view/ViewGroup;
 
     .line 46
-    iput-boolean v0, p1, Landroidx/fragment/app/a;->A0:Z
+    iput-boolean v0, p1, Landroidx/fragment/app/a;->y0:Z
 
     .line 47
     invoke-virtual {p0}, Landroid/view/View;->getId()I
@@ -329,29 +329,29 @@
     move-result v1
 
     .line 48
-    invoke-virtual {p2, v1, p1, v3, v0}, Lce0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
+    invoke-virtual {p2, v1, p1, v3, v0}, Lze0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
 
     .line 49
-    iget-boolean p1, p2, Lce0;->g:Z
+    iget-boolean p1, p2, Lze0;->g:Z
 
     if-nez p1, :cond_3
 
     .line 50
-    iget-object p1, p2, Lce0;->q:Landroidx/fragment/app/c;
+    iget-object p1, p2, Lze0;->q:Landroidx/fragment/app/c;
 
-    invoke-virtual {p1, p2, v0}, Landroidx/fragment/app/c;->A(Lce0;Z)V
+    invoke-virtual {p1, p2, v0}, Landroidx/fragment/app/c;->B(Lze0;Z)V
 
     goto :goto_1
 
     .line 51
     :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "This transaction is already being added to the back stack"
+    const-string p2, "This transaction is already being added to the back stack"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     .line 52
     :cond_4
@@ -384,7 +384,7 @@
     iget-object p3, p2, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
 
     .line 54
-    iget v0, p3, Landroidx/fragment/app/a;->J0:I
+    iget v0, p3, Landroidx/fragment/app/a;->H0:I
 
     invoke-virtual {p0}, Landroid/view/View;->getId()I
 
@@ -392,7 +392,7 @@
 
     if-ne v0, v1, :cond_5
 
-    iget-object v0, p3, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+    iget-object v0, p3, Landroidx/fragment/app/a;->R0:Landroid/view/View;
 
     if-eqz v0, :cond_5
 
@@ -404,7 +404,7 @@
     if-nez v0, :cond_5
 
     .line 56
-    iput-object p0, p3, Landroidx/fragment/app/a;->S0:Landroid/view/ViewGroup;
+    iput-object p0, p3, Landroidx/fragment/app/a;->Q0:Landroid/view/ViewGroup;
 
     .line 57
     invoke-virtual {p2}, Landroidx/fragment/app/e;->b()V
@@ -431,9 +431,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Landroidx/fragment/app/FragmentContainerView;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/fragment/app/FragmentContainerView;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
     return-void
@@ -442,7 +442,7 @@
 .method public final addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
     .locals 2
 
-    sget v0, Lr7c;->fragment_container_view_tag:I
+    sget v0, Lhpc;->fragment_container_view_tag:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -467,31 +467,31 @@
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    const-string p2, "Views added to a FragmentContainerView must be associated with a Fragment. View "
+    const-string p3, "Views added to a FragmentContainerView must be associated with a Fragment. View "
 
-    invoke-direct {p0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p1, " is not associated with a Fragment."
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p2, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p2
 .end method
 
 .method public final dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
@@ -499,7 +499,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v0, p1}, Lvug;->f(Landroid/view/View;Landroid/view/WindowInsets;)Lvug;
+    invoke-static {v0, p1}, Lxnh;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lxnh;
 
     move-result-object v1
 
@@ -511,21 +511,21 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lvug;->f(Landroid/view/View;Landroid/view/WindowInsets;)Lvug;
+    invoke-static {v0, v1}, Lxnh;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lxnh;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {p0, v1}, Lh7g;->f(Landroid/view/View;Lvug;)Lvug;
+    invoke-static {p0, v1}, Lhzg;->i(Landroid/view/View;Lxnh;)Lxnh;
 
     move-result-object v0
 
     :goto_0
-    iget-object v1, v0, Lvug;->a:Ltug;
+    iget-object v1, v0, Lxnh;->a:Lvnh;
 
-    invoke-virtual {v1}, Ltug;->m()Z
+    invoke-virtual {v1}, Lvnh;->m()Z
 
     move-result v1
 
@@ -544,7 +544,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v0}, Lh7g;->b(Landroid/view/View;Lvug;)Lvug;
+    invoke-static {v3, v0}, Lhzg;->b(Landroid/view/View;Lxnh;)Lxnh;
 
     add-int/lit8 v2, v2, 0x1
 
@@ -615,16 +615,16 @@
 
     if-eqz v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final endViewTransition(Landroid/view/View;)V
@@ -669,7 +669,7 @@
 
     if-eqz v0, :cond_3
 
-    sget v2, Lr7c;->fragment_container_view_tag:I
+    sget v2, Lhpc;->fragment_container_view_tag:I
 
     invoke-virtual {v0, v2}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -715,13 +715,13 @@
     :goto_2
     if-eqz v2, :cond_5
 
-    invoke-virtual {v2}, Landroidx/fragment/app/a;->d0()Z
+    invoke-virtual {v2}, Landroidx/fragment/app/a;->O()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v2}, Landroidx/fragment/app/a;->R()Landroidx/fragment/app/c;
+    invoke-virtual {v2}, Landroidx/fragment/app/a;->D()Landroidx/fragment/app/c;
 
     move-result-object v0
 
@@ -744,15 +744,15 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, " has already been destroyed. Nested fragments should always use the child FragmentManager."
+    const-string v2, " has already been destroyed. Nested fragments should always use the child FragmentManager."
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -789,20 +789,20 @@
     :goto_4
     if-eqz v1, :cond_8
 
-    invoke-virtual {v1}, Landroidx/fragment/app/b;->C()Lj86;
+    invoke-virtual {v1}, Landroidx/fragment/app/b;->F()Lxe6;
 
     move-result-object v0
 
     :goto_5
     invoke-virtual {p0}, Landroid/view/View;->getId()I
 
-    move-result p0
+    move-result v1
 
-    invoke-virtual {v0, p0}, Landroidx/fragment/app/c;->C(I)Landroidx/fragment/app/a;
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->D(I)Landroidx/fragment/app/a;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_8
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -815,15 +815,15 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, " is not within a subclass of FragmentActivity."
+    const-string v2, " is not within a subclass of FragmentActivity."
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -959,15 +959,15 @@
 .end method
 
 .method public setLayoutTransition(Landroid/animation/LayoutTransition;)V
-    .locals 0
+    .locals 1
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    const-string p1, "FragmentContainerView does not support Layout Transitions or animateLayoutChanges=\"true\"."
+    const-string v0, "FragmentContainerView does not support Layout Transitions or animateLayoutChanges=\"true\"."
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V

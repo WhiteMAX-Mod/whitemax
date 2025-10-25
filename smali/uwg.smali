@@ -1,72 +1,120 @@
-.class public final Luwg;
-.super Lnk7;
+.class public final synthetic Luwg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/work/WorkRequest;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lqvg;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic o:Lm68;
+.field public final synthetic b:Lfqf;
 
 
 # direct methods
-.method public constructor <init>(Lx1b;Lqvg;Ljava/lang/String;Lm68;)V
+.method public synthetic constructor <init>(Lfqf;JI)V
     .locals 0
 
-    iput-object p1, p0, Luwg;->a:Landroidx/work/WorkRequest;
+    .line 1
+    const/4 p2, 0x1
 
-    iput-object p2, p0, Luwg;->b:Lqvg;
+    iput p2, p0, Luwg;->a:I
 
-    iput-object p3, p0, Luwg;->c:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Luwg;->o:Lm68;
+    iput-object p1, p0, Luwg;->b:Lfqf;
 
-    const/4 p1, 0x0
+    return-void
+.end method
 
-    invoke-direct {p0, p1}, Lnk7;-><init>(I)V
+.method public synthetic constructor <init>(Lfqf;Ljava/lang/Exception;)V
+    .locals 0
+
+    .line 2
+    const/4 p2, 0x0
+
+    iput p2, p0, Luwg;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Luwg;->b:Lfqf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final run()V
+    .locals 4
 
-    iget-object v0, p0, Luwg;->a:Landroidx/work/WorkRequest;
+    iget v0, p0, Luwg;->a:I
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    iget-object v1, p0, Luwg;->b:Lfqf;
 
-    move-result-object v5
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v1, Levg;
+    iget-object v0, v1, Lfqf;->b:Ljava/lang/Object;
 
-    sget-object v4, Lkb5;->b:Lkb5;
+    check-cast v0, Lri5;
 
-    const/4 v6, 0x0
+    sget-object v1, Lnig;->a:Ljava/lang/String;
 
-    iget-object v2, p0, Luwg;->b:Lqvg;
+    iget-object v0, v0, Lri5;->a:Lxi5;
 
-    iget-object v3, p0, Luwg;->c:Ljava/lang/String;
+    iget-object v0, v0, Lxi5;->C0:Leh4;
 
-    invoke-direct/range {v1 .. v6}, Levg;-><init>(Lqvg;Ljava/lang/String;Lkb5;Ljava/util/List;I)V
+    iget-object v1, v0, Leh4;->o:Lf76;
 
-    new-instance v0, Lk75;
+    iget-object v1, v1, Lf76;->e:Ljava/lang/Object;
 
-    iget-object p0, p0, Luwg;->o:Lm68;
+    check-cast v1, Lz19;
 
-    invoke-direct {v0, v1, p0}, Lk75;-><init>(Levg;Lm68;)V
+    invoke-virtual {v0, v1}, Leh4;->E(Lz19;)Lnd;
 
-    invoke-virtual {v0}, Lk75;->run()V
+    move-result-object v1
 
-    sget-object p0, Lylf;->a:Lylf;
+    new-instance v2, Lrg4;
 
-    return-object p0
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v3}, Lrg4;-><init>(I)V
+
+    const/16 v3, 0x3fd
+
+    invoke-virtual {v0, v1, v3, v2}, Leh4;->I(Lnd;ILu28;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, v1, Lfqf;->b:Ljava/lang/Object;
+
+    check-cast v0, Lri5;
+
+    sget-object v1, Lnig;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Lri5;->a:Lxi5;
+
+    iget-object v0, v0, Lxi5;->C0:Leh4;
+
+    invoke-virtual {v0}, Leh4;->H()Lnd;
+
+    move-result-object v1
+
+    new-instance v2, Lzg4;
+
+    const/16 v3, 0x9
+
+    invoke-direct {v2, v3}, Lzg4;-><init>(I)V
+
+    const/16 v3, 0x406
+
+    invoke-virtual {v0, v1, v3, v2}, Leh4;->I(Lnd;ILu28;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

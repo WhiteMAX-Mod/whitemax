@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract q(Lha8;)V
+.method public abstract stream()Lm0d;
 .end method

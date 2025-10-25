@@ -3,18 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld8g;
+.implements Ld0h;
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;)Ly7g;
-    .locals 0
+.method public final a(Ljava/lang/Class;)Lyzg;
+    .locals 1
 
-    new-instance p0, Landroidx/fragment/app/FragmentManagerViewModel;
+    new-instance p1, Landroidx/fragment/app/FragmentManagerViewModel;
 
-    const/4 p1, 0x1
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p1}, Landroidx/fragment/app/FragmentManagerViewModel;-><init>(Z)V
+    invoke-direct {p1, v0}, Landroidx/fragment/app/FragmentManagerViewModel;-><init>(Z)V
 
-    return-object p0
+    return-object p1
 .end method

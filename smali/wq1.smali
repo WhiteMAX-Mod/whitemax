@@ -1,49 +1,125 @@
 .class public final Lwq1;
-.super Ljx3;
+.super Lmmi;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lxq1;
+.field public final b:J
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lxq1;Ljx3;)V
+.method public constructor <init>(JZ)V
     .locals 0
 
-    iput-object p1, p0, Lwq1;->X:Lxq1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lwq1;->b:J
+
+    iput-boolean p3, p0, Lwq1;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lwq1;->c:Z
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lwq1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lwq1;
+
+    iget-wide v3, p0, Lwq1;->b:J
+
+    iget-wide v5, p1, Lwq1;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lwq1;->c:Z
+
+    iget-boolean p1, p1, Lwq1;->c:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iput-object p1, p0, Lwq1;->o:Ljava/lang/Object;
+    iget-wide v0, p0, Lwq1;->b:J
 
-    iget p1, p0, Lwq1;->Y:I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iput p1, p0, Lwq1;->Y:I
+    iget-boolean v1, p0, Lwq1;->c:Z
 
-    iget-object p1, p0, Lwq1;->X:Lxq1;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    const-wide/16 v0, 0x0
+    move-result v1
 
-    invoke-virtual {p1, v0, v1, p0}, Lxq1;->c(JLjx3;)Ljava/lang/Object;
+    add-int/2addr v1, v0
 
-    move-result-object p0
+    return v1
+.end method
 
-    return-object p0
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "User(userId="
+
+    const-string v1, ", isVideo="
+
+    iget-wide v2, p0, Lwq1;->b:J
+
+    iget-boolean v4, p0, Lwq1;->c:Z
+
+    invoke-static {v2, v3, v0, v1, v4}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

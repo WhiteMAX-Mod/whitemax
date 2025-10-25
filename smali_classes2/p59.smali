@@ -1,169 +1,122 @@
-.class public final synthetic Lp59;
-.super Ljava/lang/Object;
+.class public final Lp59;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final synthetic Y:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lp59;->a:I
+    iput-wide p1, p0, Lp59;->Y:J
 
-    iput-object p1, p0, Lp59;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Lp59;->a:I
+    check-cast p1, Lwr3;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Lp59;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-virtual {p0, p1, p2}, Lp59;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lone/me/sdk/messagewrite/MessageWriteWidget;->X:Lcx7;
+    move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
+    check-cast p1, Lp59;
 
-    move-result-object v0
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {v0}, Lk19;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Lp59;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-object p1, p1, Lcx7;->f:Lmgd;
+    return-object p1
+.end method
 
-    iput-object v0, p1, Lmgd;->k:Ljava/lang/CharSequence;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0()Ln59;
+    new-instance v0, Lp59;
 
-    move-result-object p0
+    iget-wide v1, p0, Lp59;->Y:J
 
-    iget-object p0, p0, Ln59;->z0:Lv85;
+    invoke-direct {v0, v1, v2, p2}, Lp59;-><init>(JLkotlin/coroutines/Continuation;)V
 
-    sget-object p1, Ly49;->a:Ly49;
+    iput-object p1, v0, Lp59;->X:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+    return-object v0
+.end method
 
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    :pswitch_0
-    iget-object p0, p0, Lp59;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget p1, p0, Lone/me/sdk/messagewrite/MessageWriteWidget;->D0:I
+    iget-object p1, p0, Lp59;->X:Ljava/lang/Object;
 
-    if-nez p1, :cond_0
+    check-cast p1, Lwr3;
+
+    new-instance v0, Llob;
+
+    invoke-virtual {p1}, Lwr3;->p()J
+
+    move-result-wide v3
+
+    invoke-virtual {p1}, Lwr3;->e()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ""
+
+    if-nez v1, :cond_0
+
+    move-object v6, v2
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0()Ln59;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lk19;->getMessageState()Lrce;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lrce;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/CharSequence;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lk19;->getMessagePosition()Lrce;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lrce;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lmw1;->t(I)I
-
-    move-result p1
-
-    const/4 v2, 0x0
-
-    if-eqz p1, :cond_3
-
-    const/4 v3, 0x1
-
-    if-eq p1, v3, :cond_2
-
-    const/4 p0, 0x2
-
-    if-ne p1, p0, :cond_1
-
-    iget-object p0, v0, Ln59;->z0:Lv85;
-
-    new-instance p1, Lx49;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    iget-object p1, v0, Ln59;->P0:Lyce;
-
-    new-instance v3, Lq49;
-
-    invoke-direct {v3, v1, p0}, Lq49;-><init>(Ljava/lang/CharSequence;Ljava/lang/Integer;)V
-
-    invoke-virtual {p1, v2, v3}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    invoke-virtual {v0, v2}, Ln59;->D(Ljava/lang/Long;)V
-
-    goto :goto_0
-
-    :cond_3
-    const/16 p0, 0xe
-
-    invoke-static {v0, v2, v2, v2, p0}, Ln59;->C(Ln59;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/Integer;I)V
+    move-object v6, v1
 
     :goto_0
-    return-void
+    sget-object v1, Lll0;->a:Lll0;
 
-    nop
+    invoke-virtual {p1, v1}, Lwr3;->r(Lll0;)Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    move-object v7, v2
+
+    goto :goto_1
+
+    :cond_1
+    move-object v7, v1
+
+    :goto_1
+    invoke-virtual {p1}, Lwr3;->o()Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    iget-wide v1, p0, Lp59;->Y:J
+
+    invoke-direct/range {v0 .. v7}, Llob;-><init>(JJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
 .end method

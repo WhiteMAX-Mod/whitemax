@@ -1,1743 +1,1547 @@
-.class public abstract Lt5;
-.super Lkm;
+.class public final Lt5;
+.super Lpqe;
 .source "SourceFile"
-
-# interfaces
-.implements Ll4f;
 
 
 # instance fields
-.field public J0:Lr2b;
-
-.field public K0:La8;
-
-.field public L0:Ls2b;
-
-.field public M0:Lcze;
-
-.field public N0:I
-
-.field public O0:Z
-
-.field public final P0:Ljava/util/HashSet;
-
-.field public Q0:Ls5;
-
-.field public R0:J
-
-.field public S0:Ljava/util/HashMap;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    invoke-direct {p0}, Lkm;-><init>()V
+    iput p1, p0, Lt5;->b:I
 
-    new-instance v0, Ljava/util/HashSet;
+    invoke-direct {p0}, Lpqe;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lt5;->P0:Ljava/util/HashSet;
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lt5;->R0:J
-
-    return-void
-.end method
-
-.method public static H(Lcze;Ljava/util/List;)V
-    .locals 4
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/fragment/app/a;
-
-    instance-of v1, v0, Lru/ok/messages/views/fragments/base/FrgBase;
-
-    if-eqz v1, :cond_1
-
-    move-object v1, v0
-
-    check-cast v1, Lru/ok/messages/views/fragments/base/FrgBase;
-
-    iput-object p0, v1, Lru/ok/messages/views/fragments/base/FrgBase;->q1:Lcze;
-
-    iget-object v2, v1, Landroidx/fragment/app/a;->T0:Landroid/view/View;
-
-    instance-of v3, v1, Lgze;
-
-    if-eqz v3, :cond_0
-
-    check-cast v1, Lgze;
-
-    invoke-interface {v1, p0}, Lgze;->s(Lcze;)V
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v1}, Lru/ok/messages/views/fragments/base/FrgBase;->W0()V
-
-    goto :goto_1
-
-    :cond_1
-    instance-of v1, v0, Lgze;
-
-    if-eqz v1, :cond_2
-
-    move-object v1, v0
-
-    check-cast v1, Lgze;
-
-    invoke-interface {v1, p0}, Lgze;->s(Lcze;)V
-
-    :cond_2
-    :goto_1
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->R()Landroidx/fragment/app/c;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
-
-    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Lt5;->H(Lcze;Ljava/util/List;)V
-
-    goto :goto_0
-
-    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public E()V
-    .locals 4
+.method public final b(Lr5;)Ljava/lang/Object;
+    .locals 41
 
-    invoke-super {p0}, Landroidx/fragment/app/b;->E()V
+    move-object/from16 v0, p0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object/from16 v1, p1
 
-    const-string v1, "onResumeFragments: "
+    iget v2, v0, Lt5;->b:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    packed-switch v2, :pswitch_data_0
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getLocalClassName()Ljava/lang/String;
+    sget-object v1, Lone/me/calls/impl/service/CallServiceImpl;->s0:Llo1;
 
-    move-result-object v1
+    return-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    new-instance v2, Ly35;
 
-    const-string v1, "@"
+    const-class v3, Lev1;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "t5"
-
-    invoke-static {v1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lt5;->O0:Z
-
-    iget-object v0, p0, Lt5;->J0:Lr2b;
-
-    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast v0, Lpe3;
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
-
-    move-result-object v0
-
-    const-class v1, Laba;
-
-    invoke-virtual {v0, v1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Laba;
-
-    invoke-virtual {v0}, Laba;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lt5;->J0:Lr2b;
-
-    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast v0, Lpe3;
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lbfa;->r()Ly48;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lt5;->P0:Ljava/util/HashSet;
-
-    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Loi0;
+    check-cast v3, Lev1;
 
-    invoke-virtual {v0, v3}, Ly48;->c(Ljava/lang/Object;)V
+    const-class v4, Lulf;
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/util/HashSet;->clear()V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Lt5;->R()V
-
-    :goto_1
-    iget-object v0, p0, Lt5;->L0:Ls2b;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    iput-object v1, p0, Lt5;->L0:Ls2b;
-
-    :cond_2
-    iget-object v0, p0, Lt5;->K0:La8;
-
-    if-eqz v0, :cond_3
-
-    iget v2, v0, La8;->a:I
-
-    iget v3, v0, La8;->b:I
-
-    iget-object v0, v0, La8;->c:Landroid/content/Intent;
-
-    invoke-virtual {p0, v2, v3, v0}, Lt5;->Q(IILandroid/content/Intent;)V
-
-    iput-object v1, p0, Lt5;->K0:La8;
-
-    :cond_3
-    return-void
-.end method
-
-.method public final J()V
-    .locals 2
-
-    invoke-super {p0}, Landroid/app/Activity;->finish()V
-
-    iget-object v0, p0, Lt5;->J0:Lr2b;
-
-    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast v0, Lpe3;
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lbfa;->n()Ltgb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Ltgb;->c:Ljp;
-
-    invoke-virtual {v0}, Ljp;->t()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    const v1, 0x10a0001
-
-    invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public abstract N()Ljava/lang/String;
-.end method
-
-.method public O()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final P(Landroid/view/View$OnSystemUiVisibilityChangeListener;)V
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setOnSystemUiVisibilityChangeListener(Landroid/view/View$OnSystemUiVisibilityChangeListener;)V
-
-    invoke-virtual {p0}, Lt5;->o()Lcze;
-
-    move-result-object p0
-
-    iget-boolean p0, p0, Lcze;->c:Z
-
-    if-eqz p0, :cond_0
-
-    const/16 p0, 0xf06
-
-    goto :goto_0
-
-    :cond_0
-    const/16 p0, 0xf16
-
-    :goto_0
-    invoke-virtual {v0, p0}, Landroid/view/View;->setSystemUiVisibility(I)V
-
-    return-void
-.end method
-
-.method public Q(IILandroid/content/Intent;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public R()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onLogout "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getLocalClassName()Ljava/lang/String;
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v3, v1}, Ly35;-><init>(Lev1;Liu7;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object v2
 
-    move-result-object v0
+    :pswitch_1
+    new-instance v1, Lx34;
 
-    const-string v1, "t5"
+    invoke-direct {v1}, Lx34;-><init>()V
 
-    invoke-static {v1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    return-object v1
 
-    const/4 v0, 0x0
+    :pswitch_2
+    new-instance v1, Lmw1;
 
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->setResult(I)V
+    invoke-direct {v1}, Lmw1;-><init>()V
 
-    invoke-virtual {p0}, Landroid/app/Activity;->finishAffinity()V
+    return-object v1
 
-    return-void
-.end method
+    :pswitch_3
+    new-instance v2, Lms1;
 
-.method public final S()V
-    .locals 2
+    const-class v8, Lulf;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-virtual {v1, v8}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    const-class v4, Luz3;
 
-    move-result-object v0
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-static {v0, p0}, Lkua;->C(Landroid/view/View;Lzn7;)V
+    move-result-object v4
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    const-class v5, Ly83;
 
-    move-result-object v0
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    move-result-object v5
 
-    move-result-object v0
+    const-class v6, Lst9;
 
-    sget v1, Li8c;->view_tree_view_model_store_owner:I
+    invoke-virtual {v1, v6}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    move-result-object v6
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    const-class v7, Lxac;
 
-    move-result-object v0
+    invoke-virtual {v1, v7}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    move-result-object v7
 
-    move-result-object v0
+    invoke-direct/range {v2 .. v7}, Lms1;-><init>(Liu7;Liu7;Liu7;Liu7;Liu7;)V
 
-    invoke-static {v0, p0}, Lzxa;->w(Landroid/view/View;Lb4d;)V
+    const-class v3, Lx34;
 
-    return-void
-.end method
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-.method public final T(I)V
-    .locals 1
+    move-result-object v3
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    new-instance v7, Lhf1;
 
-    move-result-object p0
+    const-class v4, Lvpd;
 
-    const/high16 v0, 0x4000000
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {p0, v0}, Landroid/view/Window;->clearFlags(I)V
+    move-result-object v5
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v7, v5}, Lhf1;-><init>(Liu7;)V
 
-    invoke-virtual {p0, v0}, Landroid/view/Window;->addFlags(I)V
+    const-class v5, Lmw1;
 
-    invoke-virtual {p0, p1}, Landroid/view/Window;->setStatusBarColor(I)V
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    move-result-object v5
 
-    move-result-object p0
+    const-class v6, Lev1;
 
-    invoke-virtual {p0}, Landroid/view/View;->getSystemUiVisibility()I
+    invoke-virtual {v1, v6}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v6
 
-    or-int/lit16 p1, p1, 0x2000
+    check-cast v6, Lev1;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    return-void
-.end method
+    move-result-object v4
 
-.method public final U(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
-    .locals 1
+    const-class v9, Lou3;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-virtual {v1, v9}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result-object v0
+    move-result-object v9
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    invoke-virtual {v1, v8}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result-object v0
+    move-result-object v10
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setOnSystemUiVisibilityChangeListener(Landroid/view/View$OnSystemUiVisibilityChangeListener;)V
+    move-object v8, v5
 
-    invoke-virtual {p0}, Lt5;->o()Lcze;
+    move-object v5, v6
 
-    move-result-object p0
+    move-object v6, v2
 
-    iget-boolean p0, p0, Lcze;->c:Z
+    new-instance v2, Lkeb;
 
-    if-eqz p0, :cond_0
+    invoke-direct/range {v2 .. v10}, Lkeb;-><init>(Liu7;Liu7;Lev1;Lms1;Lhf1;Liu7;Liu7;Liu7;)V
 
-    const/16 p0, 0x700
+    return-object v2
 
-    goto :goto_0
+    :pswitch_4
+    const-class v2, Lx34;
 
-    :cond_0
-    const/16 p0, 0x710
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    :goto_0
-    invoke-virtual {v0, p0}, Landroid/view/View;->setSystemUiVisibility(I)V
+    move-result-object v4
 
-    return-void
-.end method
+    const-class v2, Lr21;
 
-.method public V()Z
-    .locals 0
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    instance-of p0, p0, Lone/me/android/MainActivity;
+    move-result-object v6
 
-    return p0
-.end method
+    const-class v2, Lz31;
 
-.method public final W()V
-    .locals 3
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    iget-object v0, p0, Lt5;->J0:Lr2b;
+    move-result-object v5
 
-    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
+    const-class v2, Lvpd;
 
-    check-cast v0, Lpe3;
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    check-cast v0, Lbfa;
+    move-result-object v7
 
-    invoke-virtual {v0}, Lbfa;->n()Ltgb;
+    const-class v2, Lev1;
 
-    move-result-object v0
-
-    iget-object v0, v0, Ltgb;->c:Ljp;
-
-    const/4 v1, 0x1
-
-    iget-object v0, v0, Li3;->g:Lfl7;
-
-    const-string v2, "app.pinLock.screenshotEnabled"
-
-    invoke-virtual {v0, v2, v1}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    const/16 v1, 0x2000
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Landroid/view/Window;->clearFlags(I)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Landroid/view/Window;->addFlags(I)V
-
-    return-void
-.end method
-
-.method public final addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 0
-
-    invoke-virtual {p0}, Lt5;->S()V
-
-    invoke-super {p0, p1, p2}, Lkm;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-.method public final applyOverrideConfiguration(Landroid/content/res/Configuration;)V
-    .locals 3
-
-    if-eqz p1, :cond_0
-
-    invoke-static {}, Lyl;->b()Lpe3;
-
-    move-result-object v0
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lbfa;->n()Ltgb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Ltgb;->a:Lh53;
-
-    invoke-virtual {v0}, Lgad;->p()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v2, Ll1h;->d:I
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
-
-    new-instance v1, Ljava/util/Locale;
-
-    invoke-direct {v1, v0}, Ljava/util/Locale;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1}, Ljava/util/Locale;->setDefault(Ljava/util/Locale;)V
-
-    const/4 v0, 0x0
-
-    iput v0, p1, Landroid/content/res/Configuration;->fontScale:F
-
-    invoke-virtual {p1, v1}, Landroid/content/res/Configuration;->setLocale(Ljava/util/Locale;)V
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/ContextThemeWrapper;->applyOverrideConfiguration(Landroid/content/res/Configuration;)V
-
-    return-void
-.end method
-
-.method public final attachBaseContext(Landroid/content/Context;)V
-    .locals 3
-
-    invoke-static {}, Lyl;->b()Lpe3;
-
-    move-result-object v0
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lbfa;->n()Ltgb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Ltgb;->a:Lh53;
-
-    invoke-virtual {v0}, Lgad;->p()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    sget v1, Ll1h;->d:I
-
-    invoke-static {v0}, Lm7g;->m(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Ljava/util/Locale;
-
-    invoke-direct {v1, v0}, Ljava/util/Locale;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1}, Ljava/util/Locale;->setDefault(Ljava/util/Locale;)V
-
-    new-instance v0, Landroid/content/res/Configuration;
-
-    invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
-
-    const/4 v2, 0x0
-
-    iput v2, v0, Landroid/content/res/Configuration;->fontScale:F
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Configuration;->setLocale(Ljava/util/Locale;)V
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Configuration;->setLayoutDirection(Ljava/util/Locale;)V
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
-
-    move-result-object p1
-
-    :cond_0
-    invoke-super {p0, p1}, Lkm;->attachBaseContext(Landroid/content/Context;)V
-
-    return-void
-
-    :cond_1
-    invoke-super {p0, p1}, Lkm;->attachBaseContext(Landroid/content/Context;)V
-
-    return-void
-.end method
-
-.method public finish()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/app/Activity;->finish()V
-
-    iget-object v0, p0, Lt5;->J0:Lr2b;
-
-    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast v0, Lpe3;
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lbfa;->n()Ltgb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Ltgb;->c:Ljp;
-
-    invoke-virtual {v0}, Ljp;->t()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, v0}, Landroid/app/Activity;->overridePendingTransition(II)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final getTheme()Landroid/content/res/Resources$Theme;
-    .locals 2
-
-    invoke-super {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lt5;->o()Lcze;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iget-boolean v1, v1, Lcze;->c:Z
-
-    if-eqz v1, :cond_1
-
-    iget p0, p0, Lt5;->N0:I
-
-    sget v1, Le1d;->c:I
-
-    if-eq p0, v1, :cond_1
-
-    sget v1, Le1d;->d:I
-
-    if-eq p0, v1, :cond_1
-
-    sget v1, Le1d;->e:I
-
-    if-eq p0, v1, :cond_1
-
-    sget v1, Le1d;->f:I
-
-    if-eq p0, v1, :cond_1
-
-    sget v1, Le1d;->b:I
-
-    if-ne p0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget p0, Le1d;->a:I
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p0, v1}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
-
-    :cond_1
-    :goto_0
-    return-object v0
-.end method
-
-.method public o()Lcze;
-    .locals 0
-
-    iget-object p0, p0, Lt5;->M0:Lcze;
-
-    return-object p0
-.end method
-
-.method public final onActivityResult(IILandroid/content/Intent;)V
-    .locals 1
-
-    invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/b;->onActivityResult(IILandroid/content/Intent;)V
-
-    iget-boolean v0, p0, Lt5;->O0:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1, p2, p3}, Lt5;->Q(IILandroid/content/Intent;)V
-
-    return-void
-
-    :cond_0
-    new-instance v0, La8;
-
-    invoke-direct {v0, p1, p2, p3}, La8;-><init>(IILandroid/content/Intent;)V
-
-    iput-object v0, p0, Lt5;->K0:La8;
-
-    return-void
-.end method
-
-.method public final onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
-    .locals 0
-
-    iput p2, p0, Lt5;->N0:I
-
-    invoke-super {p0, p1, p2, p3}, Landroid/view/ContextThemeWrapper;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
-
-    return-void
-.end method
-
-.method public onBackPressed()V
-    .locals 3
-
-    iget-boolean v0, p0, Lt5;->O0:Z
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->C()Lj86;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
-
-    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/fragment/app/a;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Landroidx/fragment/app/a;->d0()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v1}, Landroidx/fragment/app/a;->e0()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    iget-object v2, v1, Landroidx/fragment/app/a;->T0:Landroid/view/View;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
 
-    if-eqz v2, :cond_0
+    move-object v8, v2
 
-    iget-object v2, v1, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+    check-cast v8, Lev1;
 
-    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
+    const-class v2, Lou3;
 
-    move-result v2
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    if-nez v2, :cond_0
+    move-result-object v9
 
-    instance-of v2, v1, Lru/ok/messages/views/fragments/base/FrgBase;
+    const-class v2, Lms1;
 
-    if-eqz v2, :cond_0
-
-    check-cast v1, Lru/ok/messages/views/fragments/base/FrgBase;
-
-    invoke-virtual {v1}, Lru/ok/messages/views/fragments/base/FrgBase;->b1()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-super {p0}, Lpd3;->onBackPressed()V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 3
-
-    invoke-static {}, Lyl;->b()Lpe3;
-
-    move-result-object v0
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
-
-    move-result-object v0
-
-    const-class v1, Lovg;
-
-    invoke-virtual {v0, v1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lovg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v1, "ovg"
-
-    const-string v2, "enableWorkManager"
-
-    invoke-static {v1, v2}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v0, Lovg;->b:Luvg;
-
-    invoke-virtual {v0}, Luvg;->d()V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getLastNonConfigurationInstance()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lld3;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Lld3;->a:Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    instance-of v1, v0, Ljava/util/Map;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Ljava/util/HashMap;
-
-    iput-object v0, p0, Lt5;->S0:Ljava/util/HashMap;
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lt5;->S0:Ljava/util/HashMap;
-
-    :goto_1
-    new-instance v0, Lr2b;
-
-    invoke-static {}, Lyl;->b()Lpe3;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lr2b;-><init>(Lpe3;)V
-
-    iput-object v0, p0, Lt5;->J0:Lr2b;
-
-    invoke-static {}, Lyl;->b()Lpe3;
-
-    move-result-object v0
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
-
-    move-result-object v0
-
-    const-class v1, Ldze;
-
-    invoke-virtual {v0, v1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldze;
-
-    invoke-virtual {v0}, Ldze;->c()Lcze;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lt5;->M0:Lcze;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->C()Lj86;
-
-    move-result-object v0
-
-    new-instance v1, Lr5;
-
-    invoke-direct {v1, p0}, Lr5;-><init>(Lt5;)V
-
-    iget-object v0, v0, Landroidx/fragment/app/c;->p:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {p0}, Lt5;->W()V
-
-    invoke-super {p0, p1}, Landroidx/fragment/app/b;->onCreate(Landroid/os/Bundle;)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onCreate: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getLocalClassName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "@"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "t5"
-
-    invoke-static {v1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lt5;->J0:Lr2b;
-
-    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast v0, Lpe3;
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lbfa;->n()Ltgb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Ltgb;->c:Ljp;
-
-    invoke-virtual {v0}, Ljp;->t()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, v0}, Landroid/app/Activity;->overridePendingTransition(II)V
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    iget-object v0, p0, Lt5;->P0:Ljava/util/HashSet;
-
-    invoke-static {p1, v0}, Lo97;->z0(Landroid/os/Bundle;Ljava/util/HashSet;)V
-
-    :cond_3
-    iget-object p1, p0, Lt5;->J0:Lr2b;
-
-    iget-object p1, p1, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast p1, Lpe3;
-
-    check-cast p1, Lbfa;
-
-    invoke-virtual {p1}, Lbfa;->r()Ly48;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Ly48;->d(Ljava/lang/Object;)V
-
-    new-instance p1, Ls5;
-
-    invoke-direct {p1, p0}, Ls5;-><init>(Lt5;)V
-
-    iput-object p1, p0, Lt5;->Q0:Ls5;
-
-    iget-object p1, p0, Lt5;->J0:Lr2b;
-
-    iget-object p1, p1, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast p1, Lpe3;
-
-    check-cast p1, Lbfa;
-
-    invoke-virtual {p1}, Lbfa;->r()Ly48;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lt5;->Q0:Ls5;
-
-    invoke-virtual {p1, p0}, Ly48;->d(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public onDestroy()V
-    .locals 2
-
-    invoke-super {p0}, Lkm;->onDestroy()V
-
-    :try_start_0
-    iget-object v0, p0, Lt5;->J0:Lr2b;
-
-    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast v0, Lpe3;
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lbfa;->r()Ly48;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ly48;->f(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lt5;->J0:Lr2b;
-
-    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast v0, Lpe3;
-
-    check-cast v0, Lbfa;
-
-    invoke-virtual {v0}, Lbfa;->r()Ly48;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lt5;->Q0:Ls5;
-
-    invoke-virtual {v0, v1}, Ly48;->f(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onDestroy: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getLocalClassName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "@"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "t5"
-
-    invoke-static {v1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->isChangingConfigurations()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object p0, p0, Lt5;->S0:Ljava/util/HashMap;
-
-    invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lrr4;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lrr4;
-
-    const/4 v1, 0x0
-
-    iput v1, v0, Lrr4;->c:I
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 3
-
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->C()Lj86;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
-
-    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/fragment/app/a;
-
-    instance-of v2, v1, Lej7;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Lej7;
-
-    invoke-interface {v1, p1, p2}, Lej7;->E(ILandroid/view/KeyEvent;)Z
-
-    goto :goto_0
-
-    :cond_1
-    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public onNewIntent(Landroid/content/Intent;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onNewIntent: intent ="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getLocalClassName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "@"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "t5"
-
-    invoke-static {v1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-super {p0, p1}, Lpd3;->onNewIntent(Landroid/content/Intent;)V
-
-    return-void
-.end method
-
-.method public onPause()V
-    .locals 4
-
-    invoke-super {p0}, Landroidx/fragment/app/b;->onPause()V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onPause: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getLocalClassName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "@"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "t5"
-
-    invoke-static {v1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lt5;->O0:Z
-
-    invoke-virtual {p0}, Lt5;->N()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lt5;->R0:J
-
-    sub-long/2addr v0, v2
-
-    iget-object v2, p0, Lt5;->J0:Lr2b;
-
-    iget-object v2, v2, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast v2, Lpe3;
-
-    check-cast v2, Lbfa;
-
-    invoke-virtual {v2}, Lbfa;->b()Lzc;
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lt5;->N()Ljava/lang/String;
+    move-object v10, v2
 
-    move-result-object p0
+    check-cast v10, Lms1;
 
-    invoke-virtual {v2, v0, v1, p0}, Lzc;->k(JLjava/lang/String;)V
+    const-class v2, Lcx1;
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-.method public final onRequestPermissionsResult(I[Ljava/lang/String;[I)V
-    .locals 1
+    move-result-object v11
 
-    invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/b;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    const-class v2, Lulf;
 
-    iget-boolean v0, p0, Lt5;->O0:Z
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    if-eqz v0, :cond_0
+    move-result-object v12
 
-    goto :goto_0
+    new-instance v3, Lr11;
 
-    :cond_0
-    new-instance v0, Ls2b;
+    invoke-direct/range {v3 .. v12}, Lr11;-><init>(Liu7;Liu7;Liu7;Liu7;Lev1;Liu7;Lms1;Liu7;Liu7;)V
 
-    invoke-direct {v0, p1, p2, p3}, Ls2b;-><init>(I[Ljava/lang/String;[I)V
+    return-object v3
 
-    iput-object v0, p0, Lt5;->L0:Ls2b;
+    :pswitch_5
+    const-class v2, Lx34;
 
-    :goto_0
-    invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result-object p1
+    move-result-object v2
 
-    const-string p2, "android.permission.READ_CONTACTS"
+    const-class v3, Ldq5;
 
-    invoke-interface {p1, p2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result p1
+    move-result-object v3
 
-    if-eqz p1, :cond_1
+    const-class v4, Lev1;
 
-    sget-object p1, Lw48;->c:[Ljava/lang/String;
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-static {p0, p1}, Lw48;->g(Landroid/content/Context;[Ljava/lang/String;)Z
+    move-result-object v4
 
-    move-result p1
+    const-class v5, Lulf;
 
-    if-eqz p1, :cond_1
-
-    iget-object p0, p0, Lt5;->J0:Lr2b;
-
-    iget-object p0, p0, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast p0, Lpe3;
-
-    check-cast p0, Lbfa;
-
-    invoke-virtual {p0}, Lbfa;->p()Lwwe;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Lwwe;->b()Lswe;
-
-    move-result-object p0
-
-    check-cast p0, Liad;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
-
-    move-result-object p0
-
-    const-class p1, Lc4b;
-
-    invoke-virtual {p0, p1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lc4b;
-
-    check-cast p0, Lk4b;
-
-    invoke-virtual {p0}, Lk4b;->x()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public onResume()V
-    .locals 3
-
-    invoke-super {p0}, Landroidx/fragment/app/b;->onResume()V
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lt5;->R0:J
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onResume: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getLocalClassName()Ljava/lang/String;
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v5, Lvc1;
 
-    const-string v1, "@"
+    invoke-direct {v5, v3, v2, v4, v1}, Lvc1;-><init>(Liu7;Liu7;Liu7;Liu7;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v5
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    :pswitch_6
+    new-instance v2, Lk51;
 
-    move-result v1
+    const-class v3, Lbw1;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v4
 
-    move-result-object v0
+    check-cast v4, Lbw1;
 
-    const-string v1, "t5"
+    const-class v5, Lmw1;
 
-    invoke-static {v1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {p0}, Lt5;->N()Ljava/lang/String;
+    move-result-object v6
 
-    move-result-object v0
+    const-class v7, Lms1;
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v1, v7}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result v0
+    move-result-object v7
 
-    if-nez v0, :cond_0
+    invoke-direct {v2, v4, v6, v7}, Lk51;-><init>(Lbw1;Liu7;Liu7;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-class v4, Landroid/app/Application;
 
-    const-string v2, "sendScreen: onResume "
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v7
 
-    invoke-virtual {p0}, Lt5;->N()Ljava/lang/String;
+    const-class v4, Llo1;
 
-    move-result-object p0
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v8
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result-object p0
+    move-result-object v9
 
-    invoke-static {v1, p0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    const-class v4, Lx34;
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-.method public onSaveInstanceState(Landroid/os/Bundle;)V
-    .locals 2
+    move-result-object v10
 
-    invoke-super {p0, p1}, Lpd3;->onSaveInstanceState(Landroid/os/Bundle;)V
+    const-class v4, Lz31;
 
-    const-string v0, "o97"
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    const-string v1, "onSaveInstanceState"
+    move-result-object v11
 
-    invoke-static {v0, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    new-instance v0, Ljava/util/ArrayList;
+    move-result-object v3
 
-    iget-object p0, p0, Lt5;->P0:Ljava/util/HashSet;
+    move-object/from16 v34, v3
 
-    invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    check-cast v34, Lbw1;
 
-    const-string p0, "ru.ok.tamtam.extra.EXTRA_UNHANDLED_EVENTS"
+    const-class v3, Ly35;
 
-    invoke-virtual {p1, p0, v0}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    return-void
-.end method
+    move-result-object v12
 
-.method public onStart()V
-    .locals 2
+    const-class v3, Lefd;
 
-    invoke-super {p0}, Lkm;->onStart()V
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object v14
 
-    const-string v1, "onStart: "
+    const-class v3, Lr21;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getLocalClassName()Ljava/lang/String;
+    move-result-object v13
+
+    const-class v3, Ltw1;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v18
+
+    const-class v3, Lkqd;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v21
+
+    const-class v3, Lvdb;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v20
+
+    const-class v3, Lmeb;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v16
+
+    const-class v3, Low1;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v23
+
+    const-class v3, Luv4;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v15
+
+    const-class v3, Ln41;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v17
+
+    const-class v3, Lev1;
+
+    invoke-virtual {v1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object/from16 v32, v3
+
+    check-cast v32, Lev1;
+
+    const-class v3, Law1;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v24
+
+    const-class v3, Lulf;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v25
+
+    const-class v3, Lfqa;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v26
+
+    const-class v3, Ls64;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v27
+
+    const-class v3, Lcx1;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v29
+
+    const-class v3, Lrib;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v30
+
+    const-class v3, Lst9;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v35
+
+    const-class v3, Lat3;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v36
+
+    const-class v3, Lvpd;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v22
+
+    const-class v3, Ldq5;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v28
+
+    const-class v3, Lw01;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v31
+
+    const-class v3, Lll;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v37
+
+    const-class v3, Luw1;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v38
+
+    new-instance v3, Lx21;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v1, v4}, Lx21;-><init>(Lr5;I)V
+
+    new-instance v4, Lwif;
+
+    invoke-direct {v4, v3}, Lwif;-><init>(Lji6;)V
+
+    const-class v3, Lhr;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v40
+
+    const-class v3, Lsc1;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v19
+
+    new-instance v6, Luv1;
+
+    move-object/from16 v33, v2
+
+    move-object/from16 v39, v4
+
+    invoke-direct/range {v6 .. v40}, Luv1;-><init>(Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Lev1;Lk51;Lbw1;Liu7;Liu7;Liu7;Liu7;Lwif;Liu7;)V
+
+    return-object v6
+
+    :pswitch_7
+    new-instance v2, Lv48;
+
+    const-class v3, Ly83;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v5, Lj4e;
+
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    const-class v7, Ldx1;
+
+    invoke-virtual {v1, v7}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    invoke-direct {v2, v4, v6, v7}, Lv48;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const-class v4, Landroid/content/Context;
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    const-class v4, Lww1;
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v8
+
+    const-class v4, Lfqa;
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v9
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v11
+
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v12
+
+    const-class v3, Los4;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    new-instance v6, Ly6e;
+
+    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
+
+    iput-object v2, v6, Ly6e;->a:Ljava/lang/Object;
+
+    iput-object v2, v6, Ly6e;->X:Ljava/lang/Object;
+
+    iput-object v2, v6, Ly6e;->Y:Ljava/lang/Object;
+
+    iput-object v4, v6, Ly6e;->b:Ljava/lang/Object;
+
+    iput-object v3, v6, Ly6e;->c:Ljava/lang/Object;
+
+    iput-object v5, v6, Ly6e;->o:Ljava/lang/Object;
+
+    new-instance v2, Lkg1;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    iput-object v2, v6, Ly6e;->Z:Ljava/lang/Object;
+
+    invoke-virtual {v6}, Ly6e;->b()Lrla;
+
+    move-result-object v10
+
+    const-class v2, Ldq5;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v13
+
+    const-class v2, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v14
+
+    new-instance v6, Lf81;
+
+    invoke-direct/range {v6 .. v14}, Lf81;-><init>(Liu7;Liu7;Liu7;Lrla;Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v6
+
+    :pswitch_8
+    new-instance v2, Lj4b;
+
+    const-class v3, Ldra;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v1}, Lj4b;-><init>(Liu7;)V
 
-    const-string v1, "@"
+    return-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_9
+    new-instance v2, Lgx1;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    const-class v3, Lev1;
 
-    move-result p0
+    invoke-virtual {v1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast v3, Lev1;
 
-    move-result-object p0
+    const-class v4, Ly83;
 
-    const-string v0, "t5"
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-static {v0, p0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v4
 
-    return-void
-.end method
+    const-class v5, Ldra;
 
-.method public onStop()V
-    .locals 2
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-super {p0}, Lkm;->onStop()V
+    move-result-object v5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-class v6, Lfqa;
 
-    const-string v1, "onStop: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getLocalClassName()Ljava/lang/String;
+    invoke-virtual {v1, v6}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v3, v4, v5, v1}, Lgx1;-><init>(Lev1;Liu7;Liu7;Liu7;)V
 
-    const-string v1, "@"
+    return-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_a
+    new-instance v2, Lhi0;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    const-class v3, Lrib;
 
-    move-result p0
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-class v4, Luz3;
 
-    move-result-object p0
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    const-string v0, "t5"
+    move-result-object v4
 
-    invoke-static {v0, p0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    const-class v5, Lhm4;
 
-    return-void
-.end method
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-.method public onUserLeaveHint()V
-    .locals 3
+    move-result-object v5
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->C()Lj86;
+    const-class v6, Lulf;
 
-    move-result-object v0
-
-    iget-object v0, v0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
-
-    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1, v6}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/fragment/app/a;
+    invoke-direct {v2, v3, v4, v5, v1}, Lhi0;-><init>(Liu7;Liu7;Liu7;Liu7;)V
 
-    instance-of v2, v1, Lru/ok/messages/views/fragments/base/FrgBase;
+    return-object v2
 
-    if-eqz v2, :cond_0
+    :pswitch_b
+    new-instance v2, Ld50;
 
-    check-cast v1, Lru/ok/messages/views/fragments/base/FrgBase;
+    const-class v3, Landroid/content/Context;
+
+    invoke-virtual {v1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/content/Context;
+
+    const-class v4, Lqz9;
+
+    invoke-virtual {v1, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lqz9;
+
+    const-class v5, Lffc;
+
+    invoke-virtual {v1, v5}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lffc;
+
+    invoke-direct {v2, v3, v4, v1}, Ld50;-><init>(Landroid/content/Context;Lqz9;Lffc;)V
+
+    return-object v2
+
+    :pswitch_c
+    const-class v2, Ldx8;
+
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lzub;
+
+    return-object v1
+
+    :pswitch_d
+    new-instance v2, Ldx8;
+
+    const-class v3, Liqg;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v4, Ljsg;
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v5, Ld50;
+
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    const-class v6, Ld33;
+
+    invoke-virtual {v1, v6}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    const-class v7, Lop9;
+
+    invoke-virtual {v1, v7}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    const-class v8, Lota;
+
+    invoke-virtual {v1, v8}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v8
+
+    const-class v9, Lulf;
+
+    invoke-virtual {v1, v9}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v9
+
+    const-class v10, Lwh2;
+
+    invoke-virtual {v1, v10}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v10
+
+    const-class v11, Ldq5;
+
+    invoke-virtual {v1, v11}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v11
+
+    const-class v12, Lsq;
+
+    invoke-virtual {v1, v12}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v12
+
+    const-class v13, Ll54;
+
+    invoke-virtual {v1, v13}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v13
+
+    const-class v14, Lqz9;
+
+    invoke-virtual {v1, v14}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v14, v1
+
+    check-cast v14, Lqz9;
+
+    invoke-direct/range {v2 .. v14}, Ldx8;-><init>(Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Lqz9;)V
+
+    return-object v2
+
+    :pswitch_e
+    new-instance v3, Lota;
+
+    const-class v2, Lgya;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v5, Lmc9;
+
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    const-class v7, Lck9;
+
+    invoke-virtual {v1, v7}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    const-class v8, Luz3;
+
+    invoke-virtual {v1, v8}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v8
+
+    const-class v9, Lcs3;
+
+    move-object v10, v6
+
+    move-object v6, v7
+
+    move-object v7, v8
+
+    invoke-virtual {v1, v9}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v8
+
+    const-class v11, Lvwb;
+
+    invoke-virtual {v1, v11}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v11
+
+    const-class v12, Landroid/content/Context;
+
+    invoke-virtual {v1, v12}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v13
+
+    check-cast v13, Landroid/content/Context;
+
+    const-class v14, Lyz;
+
+    invoke-virtual {v1, v14}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v14
+
+    check-cast v14, Lyz;
+
+    const-class v15, Lva9;
+
+    invoke-virtual {v1, v15}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v15
+
+    check-cast v15, Lva9;
+
+    new-instance v16, Lnz;
+
+    const-class v0, Lsq;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v17
+
+    const-class v0, Lnsf;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v18
+
+    const-class v0, Ly83;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v19
+
+    const-class v0, Lulf;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v20
+
+    invoke-virtual {v1, v12}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v21
+
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v22
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    goto :goto_0
+    invoke-virtual {v1, v9}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    :cond_1
-    invoke-super {p0}, Lpd3;->onUserLeaveHint()V
+    move-result-object v23
 
-    return-void
-.end method
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-.method public final setContentView(I)V
-    .locals 0
+    move-result-object v24
 
-    .line 1
-    invoke-virtual {p0}, Lt5;->S()V
+    const-class v0, Luw6;
 
-    .line 2
-    invoke-super {p0, p1}, Lkm;->setContentView(I)V
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    return-void
-.end method
+    move-result-object v25
 
-.method public setContentView(Landroid/view/View;)V
-    .locals 0
+    invoke-direct/range {v16 .. v25}, Lnz;-><init>(Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
 
-    .line 3
-    invoke-virtual {p0}, Lt5;->S()V
+    const-class v2, Lst9;
 
-    .line 4
-    invoke-super {p0, p1}, Lkm;->setContentView(Landroid/view/View;)V
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    return-void
-.end method
+    move-result-object v2
 
-.method public final setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 0
+    const-class v5, Lu00;
 
-    .line 5
-    invoke-virtual {p0}, Lt5;->S()V
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    .line 6
-    invoke-super {p0, p1, p2}, Lkm;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v5
 
-    return-void
-.end method
+    const-class v9, Ld33;
 
-.method public final z()Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {v1, v9}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    iget-object p0, p0, Lt5;->S0:Ljava/util/HashMap;
+    move-result-object v9
 
-    return-object p0
+    const-class v12, Lyo6;
+
+    invoke-virtual {v1, v12}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v17
+
+    const-class v12, Ldq5;
+
+    invoke-virtual {v1, v12}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v18
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v19
+
+    const-class v0, Lvw6;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v20
+
+    move-object v12, v15
+
+    move-object v15, v5
+
+    move-object v5, v10
+
+    move-object v10, v13
+
+    move-object/from16 v13, v16
+
+    move-object/from16 v16, v9
+
+    move-object v9, v11
+
+    move-object v11, v14
+
+    move-object v14, v2
+
+    invoke-direct/range {v3 .. v20}, Lota;-><init>(Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Landroid/content/Context;Lyz;Lva9;Lnz;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v3
+
+    :pswitch_f
+    const-class v0, Lfu7;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    const-class v0, Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v6, v0
+
+    check-cast v6, Landroid/content/Context;
+
+    const-class v0, Lbu0;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v0, Lgya;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v0, Lcrf;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    new-instance v1, Lva9;
+
+    invoke-direct/range {v1 .. v6}, Lva9;-><init>(Liu7;Liu7;Liu7;Liu7;Landroid/content/Context;)V
+
+    return-object v1
+
+    :pswitch_10
+    const-class v0, Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Landroid/content/Context;
+
+    const-class v0, Ltt5;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v0, Lir5;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    const-class v0, Lcmf;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    const-class v0, Lcs3;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    const-class v0, Laub;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v0, Lcwg;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v8
+
+    const-class v0, Lgz;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v10
+
+    const-class v0, Lm00;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v11
+
+    const-class v0, Lv80;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v9
+
+    const-class v0, Ljsg;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v12
+
+    const-class v0, Lva9;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v13
+
+    const-class v0, Ldq5;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v14
+
+    const-class v0, Lvkb;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v16
+
+    const-class v0, Ldlg;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v17
+
+    const-class v0, Lj4e;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v18
+
+    const-class v0, Lsq;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v15
+
+    const-class v0, Lhi2;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v19
+
+    new-instance v1, Lyz;
+
+    invoke-direct/range {v1 .. v19}, Lyz;-><init>(Landroid/content/Context;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v1
+
+    :pswitch_11
+    new-instance v0, Ldlg;
+
+    const-class v2, Landroid/content/Context;
+
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/content/Context;
+
+    const-class v3, Lqs4;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v4, Lu00;
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v5, Lflb;
+
+    invoke-virtual {v1, v5}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lflb;
+
+    invoke-direct {v0, v2, v3, v4, v1}, Ldlg;-><init>(Landroid/content/Context;Liu7;Liu7;Lflb;)V
+
+    return-object v0
+
+    :pswitch_12
+    new-instance v5, Lvkb;
+
+    const-class v0, Ly83;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    const-class v0, Lhi2;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    const-class v0, Ltt5;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v8
+
+    const-class v0, Lqs4;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v9
+
+    const-class v0, Lu00;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v10
+
+    const-class v0, Lflb;
+
+    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v11, v0
+
+    check-cast v11, Lflb;
+
+    invoke-direct/range {v5 .. v11}, Lvkb;-><init>(Liu7;Liu7;Liu7;Liu7;Liu7;Lflb;)V
+
+    return-object v5
+
+    :pswitch_13
+    new-instance v0, Lflb;
+
+    const-class v2, Landroid/content/Context;
+
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/content/Context;
+
+    const-class v3, Lqs4;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lflb;-><init>(Landroid/content/Context;Liu7;)V
+
+    return-object v0
+
+    :pswitch_14
+    const-class v0, Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v7, v0
+
+    check-cast v7, Landroid/content/Context;
+
+    const-class v0, Lulf;
+
+    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Lulf;
+
+    const-class v0, Lbu0;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v0, Lfu7;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    const-class v0, Ljm3;
+
+    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    check-cast v3, Ljm3;
+
+    const-class v0, Lyrf;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    new-instance v1, Lck9;
+
+    invoke-direct/range {v1 .. v7}, Lck9;-><init>(Lulf;Ljm3;Liu7;Liu7;Liu7;Landroid/content/Context;)V
+
+    return-object v1
+
+    :pswitch_15
+    new-instance v0, Liya;
+
+    const-class v2, Lunf;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Liya;-><init>(Liu7;)V
+
+    return-object v0
+
+    :pswitch_16
+    new-instance v0, Lpza;
+
+    const-class v2, Lunf;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lpza;-><init>(Liu7;)V
+
+    return-object v0
+
+    :pswitch_17
+    new-instance v0, Lvsa;
+
+    const-class v2, Lunf;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lvsa;-><init>(Liu7;)V
+
+    return-object v0
+
+    :pswitch_18
+    new-instance v0, Ldra;
+
+    const-class v2, Lunf;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    const-class v3, Ly83;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v4, Ljoa;
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v3, v1}, Ldra;-><init>(Liu7;Liu7;Liu7;)V
+
+    return-object v0
+
+    :pswitch_19
+    new-instance v0, Lioa;
+
+    const-class v2, Lunf;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    const-class v3, Ly83;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v4, Lj4e;
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v5, Los4;
+
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v3, v4, v1}, Lioa;-><init>(Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v0
+
+    :pswitch_1a
+    new-instance v5, Ln80;
+
+    const-class v0, Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v6, v0
+
+    check-cast v6, Landroid/content/Context;
+
+    const-class v0, Lv5;
+
+    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v7, v0
+
+    check-cast v7, Lv5;
+
+    const-class v0, Lx5;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v8
+
+    const-class v0, Ljoa;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v9
+
+    const-class v0, Ltph;
+
+    invoke-virtual {v1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v10
+
+    invoke-direct/range {v5 .. v10}, Ln80;-><init>(Landroid/content/Context;Lv5;Liu7;Liu7;Liu7;)V
+
+    return-object v5
+
+    :pswitch_1b
+    const-class v0, Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/Context;
+
+    const-class v2, Lv5;
+
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lv5;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lx5;
+
+    invoke-direct {v1, v0, v2}, Lx5;-><init>(Landroid/content/Context;Lv5;)V
+
+    return-object v1
+
+    :pswitch_1c
+    new-instance v0, Ljoa;
+
+    const-class v2, Lpxb;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    const-class v3, Lx5;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v4, Lv5;
+
+    invoke-virtual {v1, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lv5;
+
+    const-class v5, Ltph;
+
+    invoke-virtual {v1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v3, v4, v1}, Ljoa;-><init>(Liu7;Liu7;Lv5;Liu7;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

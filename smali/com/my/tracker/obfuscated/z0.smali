@@ -129,7 +129,7 @@
 .end method
 
 .method private a(Z)V
-    .locals 3
+    .locals 4
 
     .line 15
     iget-object v0, p0, Lcom/my/tracker/obfuscated/z0;->b:Ljava/util/List;
@@ -138,36 +138,36 @@
 
     .line 16
     :try_start_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->b:Ljava/util/List;
+    iget-object v1, p0, Lcom/my/tracker/obfuscated/z0;->b:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    check-cast v1, Lcom/my/tracker/obfuscated/n;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/my/tracker/obfuscated/n;
 
     .line 17
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-interface {v1, v2}, Lcom/my/tracker/obfuscated/n;->a(Ljava/lang/Object;)V
+    invoke-interface {v2, v3}, Lcom/my/tracker/obfuscated/n;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
@@ -182,7 +182,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method private d(Ljava/lang/String;)V
@@ -276,7 +276,7 @@
 .method private s()V
     .locals 1
 
-    const-string v0, "0.0.0.0"
+    const-string v0, "tracker-api.vk-analytics.ru"
 
     invoke-direct {p0, v0}, Lcom/my/tracker/obfuscated/z0;->d(Ljava/lang/String;)V
 
@@ -286,12 +286,12 @@
 
 # virtual methods
 .method public a()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     .line 4
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->k:Ljava/lang/String;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/z0;->k:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public a(I)V
@@ -406,9 +406,9 @@
     invoke-interface {p1, v1}, Lcom/my/tracker/obfuscated/n;->a(Ljava/lang/Object;)V
 
     .line 13
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->b:Ljava/util/List;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/z0;->b:Ljava/util/List;
 
-    invoke-interface {p0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 14
     monitor-exit v0
@@ -416,13 +416,13 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public a(Ljava/lang/String;)V
@@ -444,12 +444,12 @@
 .end method
 
 .method public b()Landroid/os/Handler;
-    .locals 0
+    .locals 1
 
     .line 9
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->u:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/z0;->u:Landroid/os/Handler;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public b(I)V
@@ -539,12 +539,12 @@
 .end method
 
 .method public c()Lcom/my/tracker/MyTracker$AttributionListener;
-    .locals 0
+    .locals 1
 
     .line 33
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->t:Lcom/my/tracker/MyTracker$AttributionListener;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/z0;->t:Lcom/my/tracker/MyTracker$AttributionListener;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public c(I)V
@@ -808,7 +808,7 @@
     const-string v2, " (reason: invalid url), using default = tracker-api.vk-analytics.ru,\norig error = "
 
     .line 25
-    invoke-static {v1, p1, v2}, Lmw1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2}, Ldy1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -841,12 +841,12 @@
 .end method
 
 .method public d()Ljava/util/concurrent/Executor;
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->o:Ljava/util/concurrent/Executor;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/z0;->o:Ljava/util/concurrent/Executor;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public d(Z)V
@@ -859,12 +859,12 @@
 .end method
 
 .method public e()I
-    .locals 0
+    .locals 1
 
     .line 1
-    iget p0, p0, Lcom/my/tracker/obfuscated/z0;->j:I
+    iget v0, p0, Lcom/my/tracker/obfuscated/z0;->j:I
 
-    return p0
+    return v0
 .end method
 
 .method public e(Ljava/lang/String;)V
@@ -886,43 +886,43 @@
 .end method
 
 .method public f()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lcom/my/tracker/obfuscated/z0;->i:I
+    iget v0, p0, Lcom/my/tracker/obfuscated/z0;->i:I
 
-    return p0
+    return v0
 .end method
 
 .method public g()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->c:Ljava/lang/String;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/z0;->c:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public h()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lcom/my/tracker/obfuscated/z0;->h:I
+    iget v0, p0, Lcom/my/tracker/obfuscated/z0;->h:I
 
-    return p0
+    return v0
 .end method
 
 .method public i()Lcom/my/tracker/MyTrackerParams;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->a:Lcom/my/tracker/MyTrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/z0;->a:Lcom/my/tracker/MyTrackerParams;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public j()Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->n:Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/z0;->n:Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public k()Lcom/my/tracker/obfuscated/z0$a;
@@ -958,51 +958,51 @@
 .end method
 
 .method public l()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->p:Ljava/lang/String;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/z0;->p:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public m()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/z0;->l:Ljava/lang/String;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/z0;->l:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public n()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lcom/my/tracker/obfuscated/z0;->g:Z
+    iget-boolean v0, p0, Lcom/my/tracker/obfuscated/z0;->g:Z
 
-    return p0
+    return v0
 .end method
 
 .method public o()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lcom/my/tracker/obfuscated/z0;->d:Z
+    iget-boolean v0, p0, Lcom/my/tracker/obfuscated/z0;->d:Z
 
-    return p0
+    return v0
 .end method
 
 .method public p()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lcom/my/tracker/obfuscated/z0;->e:Z
+    iget-boolean v0, p0, Lcom/my/tracker/obfuscated/z0;->e:Z
 
-    return p0
+    return v0
 .end method
 
 .method public q()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lcom/my/tracker/obfuscated/z0;->f:Z
+    iget-boolean v0, p0, Lcom/my/tracker/obfuscated/z0;->f:Z
 
-    return p0
+    return v0
 .end method
 
 .method public t()V

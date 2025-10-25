@@ -1,176 +1,90 @@
 .class public final Ltq4;
-.super Ljava/lang/Object;
+.super Le4;
 .source "SourceFile"
 
 # interfaces
-.implements Ld8a;
-.implements Loq4;
+.implements Ljava/util/concurrent/ScheduledFuture;
 
 
 # instance fields
-.field public final a:Ld8a;
-
-.field public final b:Lpm3;
-
-.field public final c:Lc6;
-
-.field public o:Loq4;
+.field public final q0:Ljava/util/concurrent/ScheduledFuture;
 
 
 # direct methods
-.method public constructor <init>(Ld8a;Lpm3;Lc6;)V
-    .locals 0
+.method public constructor <init>(Lsq4;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltq4;->a:Ld8a;
+    new-instance v0, Lyxe;
 
-    iput-object p2, p0, Ltq4;->b:Lpm3;
+    const/16 v1, 0xb
 
-    iput-object p3, p0, Ltq4;->c:Lc6;
+    invoke-direct {v0, v1, p0}, Lyxe;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {p1, v0}, Lsq4;->b(Lyxe;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ltq4;->q0:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final c()V
+    .locals 3
 
-    iget-object v0, p0, Ltq4;->o:Loq4;
+    iget-object v0, p0, Ltq4;->q0:Ljava/util/concurrent/ScheduledFuture;
 
-    sget-object v1, Lsq4;->a:Lsq4;
+    iget-object v1, p0, Le4;->a:Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_0
+    instance-of v2, v1, Ly3;
 
-    iput-object v1, p0, Ltq4;->o:Loq4;
+    if-eqz v2, :cond_0
 
-    iget-object p0, p0, Ltq4;->a:Ld8a;
+    check-cast v1, Ly3;
 
-    invoke-interface {p0}, Ld8a;->b()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(Loq4;)V
-    .locals 2
-
-    iget-object v0, p0, Ltq4;->a:Ld8a;
-
-    :try_start_0
-    iget-object v1, p0, Ltq4;->b:Lpm3;
-
-    invoke-interface {v1, p1}, Lpm3;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v1, p0, Ltq4;->o:Loq4;
-
-    invoke-static {v1, p1}, Lsq4;->h(Loq4;Loq4;)Z
-
-    move-result v1
+    iget-boolean v1, v1, Ly3;->a:Z
 
     if-eqz v1, :cond_0
 
-    iput-object p1, p0, Ltq4;->o:Loq4;
-
-    invoke-interface {v0, p0}, Ld8a;->c(Loq4;)V
-
-    :cond_0
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    invoke-static {v1}, Lzyd;->F(Ljava/lang/Throwable;)V
-
-    invoke-interface {p1}, Loq4;->e()V
-
-    sget-object p1, Lsq4;->a:Lsq4;
-
-    iput-object p1, p0, Ltq4;->o:Loq4;
-
-    invoke-static {v1, v0}, Lk45;->b(Ljava/lang/Throwable;Ld8a;)V
-
-    return-void
-.end method
-
-.method public final e()V
-    .locals 2
-
-    iget-object v0, p0, Ltq4;->o:Loq4;
-
-    sget-object v1, Lsq4;->a:Lsq4;
-
-    if-eq v0, v1, :cond_0
-
-    iput-object v1, p0, Ltq4;->o:Loq4;
-
-    :try_start_0
-    iget-object p0, p0, Ltq4;->c:Lc6;
-
-    invoke-interface {p0}, Lc6;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v1, 0x1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p0}, Lzyd;->F(Ljava/lang/Throwable;)V
-
-    invoke-static {p0}, Ln4e;->D(Ljava/lang/Throwable;)V
+    :cond_0
+    const/4 v1, 0x0
 
     :goto_0
-    invoke-interface {v0}, Loq4;->e()V
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    :cond_0
     return-void
 .end method
 
-.method public final f()Z
-    .locals 0
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
 
-    iget-object p0, p0, Ltq4;->o:Loq4;
+    check-cast p1, Ljava/util/concurrent/Delayed;
 
-    invoke-interface {p0}, Loq4;->f()Z
+    iget-object v0, p0, Ltq4;->q0:Ljava/util/concurrent/ScheduledFuture;
 
-    move-result p0
+    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
-    return p0
+    move-result p1
+
+    return p1
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
     .locals 2
 
-    iget-object v0, p0, Ltq4;->o:Loq4;
+    iget-object v0, p0, Ltq4;->q0:Ljava/util/concurrent/ScheduledFuture;
 
-    sget-object v1, Lsq4;->a:Lsq4;
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
 
-    if-eq v0, v1, :cond_0
+    move-result-wide v0
 
-    iput-object v1, p0, Ltq4;->o:Loq4;
-
-    iget-object p0, p0, Ltq4;->a:Ld8a;
-
-    invoke-interface {p0, p1}, Ld8a;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Ln4e;->D(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final s(Ljava/lang/Object;)V
-    .locals 0
-
-    iget-object p0, p0, Ltq4;->a:Ld8a;
-
-    invoke-interface {p0, p1}, Ld8a;->s(Ljava/lang/Object;)V
-
-    return-void
+    return-wide v0
 .end method

@@ -32,18 +32,18 @@
 
 # virtual methods
 .method public consumeContent()V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/apache/http/entity/BasicHttpEntity;->content:Ljava/io/InputStream;
+    iget-object v0, p0, Lorg/apache/http/entity/BasicHttpEntity;->content:Ljava/io/InputStream;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     :cond_0
     return-void
@@ -72,22 +72,22 @@
     return-object v0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Content has been consumed"
+    const-string v1, "Content has been consumed"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Content has not been provided"
+    const-string v1, "Content has not been provided"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public getContentLength()J
@@ -99,11 +99,11 @@
 .end method
 
 .method public isRepeatable()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public isStreaming()Z
@@ -113,18 +113,18 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/entity/BasicHttpEntity;->content:Ljava/io/InputStream;
+    iget-object v0, p0, Lorg/apache/http/entity/BasicHttpEntity;->content:Ljava/io/InputStream;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public setContent(Ljava/io/InputStream;)V
@@ -148,7 +148,7 @@
 .end method
 
 .method public writeTo(Ljava/io/OutputStream;)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -159,24 +159,24 @@
 
     invoke-virtual {p0}, Lorg/apache/http/entity/BasicHttpEntity;->getContent()Ljava/io/InputStream;
 
-    move-result-object p0
+    move-result-object v0
 
-    const/16 v0, 0x800
+    const/16 v1, 0x800
 
-    new-array v0, v0, [B
+    new-array v1, v1, [B
 
     :goto_0
-    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
+    invoke-virtual {v0, v1}, Ljava/io/InputStream;->read([B)I
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, -0x1
+    const/4 v3, -0x1
 
-    if-eq v1, v2, :cond_0
+    if-eq v2, v3, :cond_0
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, v0, v2, v1}, Ljava/io/OutputStream;->write([BII)V
+    invoke-virtual {p1, v1, v3, v2}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
 
@@ -184,11 +184,11 @@
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Output stream may not be null"
+    const-string v0, "Output stream may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

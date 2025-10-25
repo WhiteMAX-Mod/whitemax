@@ -132,21 +132,21 @@
 
 # virtual methods
 .method public a(Lcom/my/tracker/MyTrackerConfig$InstalledPackagesProvider;Landroid/content/Context;)Lcom/my/tracker/obfuscated/e;
-    .locals 1
+    .locals 2
 
     if-nez p1, :cond_0
 
     .line 5
-    sget-object p0, Lcom/my/tracker/obfuscated/f;->a:Lcom/my/tracker/obfuscated/e;
+    sget-object p1, Lcom/my/tracker/obfuscated/f;->a:Lcom/my/tracker/obfuscated/e;
 
-    return-object p0
+    return-object p1
 
     .line 6
     :cond_0
     :try_start_0
     invoke-interface {p1}, Lcom/my/tracker/MyTrackerConfig$InstalledPackagesProvider;->getInstalledPackages()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -154,103 +154,103 @@
 
     .line 7
     :catchall_0
-    const-string p0, "MyTracker error: exception at InstalledPackagesProvider::getInstalledPackages()"
+    const-string p1, "MyTracker error: exception at InstalledPackagesProvider::getInstalledPackages()"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
     :goto_0
-    if-eqz p0, :cond_4
+    if-eqz p1, :cond_4
 
     .line 8
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
 
     goto :goto_1
 
     .line 9
     :cond_1
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/f;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/f;->b(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 10
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_2
+    if-eqz v0, :cond_2
 
     .line 11
-    sget-object p0, Lcom/my/tracker/obfuscated/f;->a:Lcom/my/tracker/obfuscated/e;
+    sget-object p1, Lcom/my/tracker/obfuscated/f;->a:Lcom/my/tracker/obfuscated/e;
 
-    return-object p0
+    return-object p1
 
     .line 12
     :cond_2
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/f;->a(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/f;->a(Ljava/util/List;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
     .line 13
     invoke-static {p2}, Lcom/my/tracker/obfuscated/p0;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/p0;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/p0;->f()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/my/tracker/obfuscated/p0;->f()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
     .line 14
-    invoke-static {p1}, Lcom/my/tracker/obfuscated/s;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/s;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
     .line 15
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
     .line 16
-    const-string p0, "AppsDataProvider: Apps hash did not changed"
+    const-string p1, "AppsDataProvider: Apps hash did not changed"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     .line 17
-    sget-object p0, Lcom/my/tracker/obfuscated/f;->a:Lcom/my/tracker/obfuscated/e;
+    sget-object p1, Lcom/my/tracker/obfuscated/f;->a:Lcom/my/tracker/obfuscated/e;
 
-    return-object p0
+    return-object p1
 
     .line 18
     :cond_3
-    const-string v0, "AppsDataProvider: Apps hash changed"
+    const-string v1, "AppsDataProvider: Apps hash changed"
 
-    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     .line 19
     invoke-static {p2}, Lcom/my/tracker/obfuscated/p0;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/p0;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcom/my/tracker/obfuscated/p0;->h(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lcom/my/tracker/obfuscated/p0;->h(Ljava/lang/String;)V
 
     .line 20
-    new-instance p1, Lcom/my/tracker/obfuscated/e;
+    new-instance p2, Lcom/my/tracker/obfuscated/e;
 
-    invoke-direct {p1, p0}, Lcom/my/tracker/obfuscated/e;-><init>(Ljava/util/List;)V
+    invoke-direct {p2, p1}, Lcom/my/tracker/obfuscated/e;-><init>(Ljava/util/List;)V
 
-    return-object p1
+    return-object p2
 
     .line 21
     :cond_4
     :goto_1
-    sget-object p0, Lcom/my/tracker/obfuscated/f;->a:Lcom/my/tracker/obfuscated/e;
+    sget-object p1, Lcom/my/tracker/obfuscated/f;->a:Lcom/my/tracker/obfuscated/e;
 
-    return-object p0
+    return-object p1
 .end method

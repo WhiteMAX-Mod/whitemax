@@ -55,7 +55,7 @@
 
 # virtual methods
 .method public getStatsMap()Ljava/util/Map;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -66,9 +66,9 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RTCStatsReport;->stats:Ljava/util/Map;
+    iget-object v0, p0, Lorg/webrtc/RTCStatsReport;->stats:Ljava/util/Map;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getTimestampUs()D
@@ -82,7 +82,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -98,52 +98,52 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lorg/webrtc/RTCStatsReport;->stats:Ljava/util/Map;
+    iget-object v1, p0, Lorg/webrtc/RTCStatsReport;->stats:Ljava/util/Map;
 
-    invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
+    invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Lorg/webrtc/RTCStats;
+    check-cast v3, Lorg/webrtc/RTCStats;
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
-    const-string v1, ",\n"
+    const-string v2, ",\n"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     goto :goto_0
 
     :cond_1
-    const-string p0, " ] }"
+    const-string v1, " ] }"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

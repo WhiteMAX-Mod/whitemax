@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a0(IILandroid/content/Intent;)V
+.method public abstract k(Ljava/lang/String;Landroidx/recyclerview/widget/b;)Lone/me/sdk/arch/Widget;
 .end method

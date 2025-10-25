@@ -3,6 +3,4 @@
     <external-path name="external_files" path="." />
     <cache-path name="cache" path="." />
     <cache-path name="copy_media" path="copy/media/" />
-    <files-path name="internal_contacts_files" path="contactsCache/" />
-    <cache-path name="internal_contacts_cache" path="contactsCache/" />
 </paths>

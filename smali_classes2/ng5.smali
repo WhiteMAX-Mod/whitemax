@@ -2,23 +2,20 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
+.field public final synthetic b:Lsg5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;I)V
+.method public synthetic constructor <init>(Lsg5;I)V
     .locals 0
 
     iput p2, p0, Lng5;->a:I
 
-    iput-object p1, p0, Lng5;->b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
+    iput-object p1, p0, Lng5;->b:Lsg5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,49 +24,38 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(J)V
     .locals 2
 
-    iget p1, p0, Lng5;->a:I
+    iget v0, p0, Lng5;->a:I
 
-    const/4 v0, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lng5;->b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
+    const-wide/16 v0, -0x1
 
-    packed-switch p1, :pswitch_data_0
+    cmp-long v0, p1, v0
 
-    sget-object p1, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->I0:[Lxi7;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
+    iget-object v0, p0, Lng5;->b:Lsg5;
 
+    invoke-virtual {v0, p1, p2}, Lsg5;->a(J)V
+
+    :cond_0
     return-void
 
     :pswitch_0
-    const/4 p1, 0x0
+    const-wide/16 v0, -0x1
 
-    iput-boolean p1, p0, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->H0:Z
+    cmp-long v0, p1, v0
 
-    sget-object p1, Ld47;->a:Ld47;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz4;
+    iget-object v0, p0, Lng5;->b:Lsg5;
 
-    move-result-object p1
+    invoke-virtual {v0, p1, p2}, Lsg5;->a(J)V
 
-    invoke-virtual {p1}, Lz4;->e()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lh47;
-
-    if-eqz p1, :cond_0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p1, v1}, Lh47;->b(I)V
-
-    :cond_0
-    invoke-virtual {p0, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
-
+    :cond_1
     return-void
 
     nop

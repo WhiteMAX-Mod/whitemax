@@ -1,48 +1,79 @@
 .class public final Lor9;
-.super Ljx3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Landroid/util/SparseArray;
 
-.field public final synthetic Y:Lyf7;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public b:Lbbg;
 
 
 # direct methods
-.method public constructor <init>(Lyf7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
 
-    iput-object p1, p0, Lor9;->Y:Lyf7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0, p1}, Landroid/util/SparseArray;-><init>(I)V
+
+    iput-object v0, p0, Lor9;->a:Landroid/util/SparseArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lbbg;II)V
+    .locals 4
 
-    iput-object p1, p0, Lor9;->o:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lbbg;->a(I)I
 
-    iget p1, p0, Lor9;->X:I
+    move-result v0
 
-    const/high16 v0, -0x80000000
+    iget-object v1, p0, Lor9;->a:Landroid/util/SparseArray;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lor9;->X:I
-
-    iget-object p1, p0, Lor9;->Y:Lyf7;
+    if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lyf7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p0
+    :cond_0
+    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v0
+
+    check-cast v0, Lor9;
+
+    :goto_0
+    const/4 v2, 0x1
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Lor9;
+
+    invoke-direct {v0, v2}, Lor9;-><init>(I)V
+
+    invoke-virtual {p1, p2}, Lbbg;->a(I)I
+
+    move-result v3
+
+    invoke-virtual {v1, v3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    :cond_1
+    if-le p3, p2, :cond_2
+
+    add-int/2addr p2, v2
+
+    invoke-virtual {v0, p1, p2, p3}, Lor9;->a(Lbbg;II)V
+
+    return-void
+
+    :cond_2
+    iput-object p1, v0, Lor9;->b:Lbbg;
+
+    return-void
 .end method

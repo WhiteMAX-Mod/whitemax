@@ -1,50 +1,64 @@
-.class public final Lq0g;
-.super Ljx3;
+.class public final synthetic Lq0g;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public Y:Lks5;
-
-.field public final synthetic Z:Lhc9;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lhc9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicInteger;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lq0g;->Z:Lhc9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lq0g;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iput-object p2, p0, Lq0g;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 4
 
-    iput-object p1, p0, Lq0g;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lq0g;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget p1, p0, Lq0g;->X:I
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    new-instance v1, Ljava/lang/Thread;
 
-    iput p1, p0, Lq0g;->X:I
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lq0g;->Z:Lhc9;
+    const-string v3, "tracer-io-"
 
-    const/4 v0, 0x0
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0, p0}, Lhc9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v3, p0, Lq0g;->b:Ljava/lang/String;
 
-    move-result-object p0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    const/16 v3, 0x2d
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    return-object v1
 .end method

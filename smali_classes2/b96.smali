@@ -1,95 +1,33 @@
-.class public final synthetic Lb96;
+.class public abstract synthetic Lb96;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lc96;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lc96;I)V
-    .locals 0
-
-    iput p2, p0, Lb96;->a:I
-
-    iput-object p1, p0, Lb96;->b:Lc96;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method static constructor <clinit>()V
     .locals 2
 
-    iget v0, p0, Lb96;->a:I
+    invoke-static {}, Lthg;->values()[Lthg;
 
-    iget-object p0, p0, Lb96;->b:Lc96;
+    move-result-object v0
 
-    packed-switch v0, :pswitch_data_0
+    array-length v0, v0
 
-    const/4 v0, 0x0
+    new-array v0, v0, [I
 
-    iput-boolean v0, p0, Lc96;->s0:Z
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lc96;->Y:Lorg/webrtc/ScreenCapturerAndroid;
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lc96;->Y:Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-virtual {v1}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
-
-    :cond_0
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lc96;->Y:Lorg/webrtc/ScreenCapturerAndroid;
-
-    iput-boolean v0, p0, Lc96;->t0:Z
-
-    iget-object v0, p0, Lc96;->X:Lorg/webrtc/SurfaceTextureHelper;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lc96;->X:Lorg/webrtc/SurfaceTextureHelper;
-
-    invoke-virtual {v0}, Lorg/webrtc/SurfaceTextureHelper;->dispose()V
-
-    :cond_1
-    iput-object v1, p0, Lc96;->X:Lorg/webrtc/SurfaceTextureHelper;
+    :catch_0
+    sput-object v0, Lb96;->$EnumSwitchMapping$0:[I
 
     return-void
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lc96;->s0:Z
-
-    iget-object v1, p0, Lc96;->Y:Lorg/webrtc/ScreenCapturerAndroid;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lc96;->Y:Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-virtual {v1}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
-
-    :cond_2
-    iput-boolean v0, p0, Lc96;->t0:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

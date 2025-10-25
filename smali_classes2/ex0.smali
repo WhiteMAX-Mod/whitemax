@@ -1,27 +1,85 @@
-.class public final Lex0;
+.class public abstract synthetic Lex0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ls15;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/util/ArrayList;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Ls15;Ljava/lang/String;Ljava/util/ArrayList;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lcx0;->values()[Lcx0;
 
-    iput-object p1, p0, Lex0;->a:Ls15;
+    move-result-object v0
 
-    iput-object p2, p0, Lex0;->b:Ljava/lang/String;
+    array-length v0, v0
 
-    iput-object p3, p0, Lex0;->c:Ljava/util/ArrayList;
+    new-array v0, v0, [I
+
+    const/4 v1, 0x5
+
+    const/4 v2, 0x1
+
+    :try_start_0
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v1, 0x2
+
+    :try_start_1
+    sget-object v3, Lcx0;->b:Lcx0;
+
+    aput v1, v0, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v3, 0x3
+
+    :try_start_2
+    sget-object v4, Lcx0;->b:Lcx0;
+
+    aput v3, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v1, 0x4
+
+    :try_start_3
+    sget-object v4, Lcx0;->b:Lcx0;
+
+    aput v1, v0, v3
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Lex0;->$EnumSwitchMapping$0:[I
+
+    invoke-static {v1}, Ldy1;->y(I)[I
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    :try_start_4
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v0, Lex0;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

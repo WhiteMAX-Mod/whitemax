@@ -1,76 +1,27 @@
-.class public final synthetic Lr10;
+.class public final Lr10;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnLongClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/lang/String;
 
+.field public b:Ljava/lang/String;
 
-# direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.field public c:I
 
-    .line 1
-    iput p1, p0, Lr10;->a:I
+.field public d:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public e:Z
 
-    return-void
-.end method
+.field public f:[B
 
-.method public synthetic constructor <init>(Lyh0;Ljk6;Lt82;)V
-    .locals 0
+.field public g:Ljava/lang/String;
 
-    .line 2
-    const/4 p1, 0x3
+.field public h:J
 
-    iput p1, p0, Lr10;->a:I
+.field public i:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public j:Ljava/lang/String;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 0
-
-    iget p0, p0, Lr10;->a:I
-
-    const/4 p1, 0x1
-
-    packed-switch p0, :pswitch_data_0
-
-    return p1
-
-    :pswitch_0
-    sget-object p0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->A0:Les3;
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :pswitch_1
-    sget p0, Lru/ok/messages/media/audio/AudioListenView;->B0:I
-
-    return p1
-
-    :pswitch_2
-    sget p0, Lru/ok/messages/media/attaches/AudioAttachView;->v0:I
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public k:Ljava/lang/String;

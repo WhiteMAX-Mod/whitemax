@@ -1,85 +1,136 @@
-.class public final enum Lju4;
-.super Ljava/lang/Enum;
+.class public final Lju4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
 
 # static fields
-.field public static final enum a:Lju4;
+.field public static final synthetic X:Lju4;
 
-.field public static final enum b:Lju4;
+.field public static volatile b:Lju4;
 
-.field public static final enum c:Lju4;
+.field public static final synthetic c:Lju4;
 
-.field public static final synthetic o:[Lju4;
+.field public static final synthetic o:Lju4;
+
+
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method static synthetic constructor <clinit>()V
+    .locals 2
 
     new-instance v0, Lju4;
 
-    const-string v1, "ALWAYS"
+    const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lju4;-><init>(I)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput-object v0, Lju4;->c:Lju4;
 
-    sput-object v0, Lju4;->a:Lju4;
+    new-instance v0, Lju4;
 
-    new-instance v1, Lju4;
+    const/4 v1, 0x2
 
-    const-string v2, "AUTO"
+    invoke-direct {v0, v1}, Lju4;-><init>(I)V
 
-    const/4 v3, 0x1
+    sput-object v0, Lju4;->o:Lju4;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v0, Lju4;
 
-    sput-object v1, Lju4;->b:Lju4;
+    const/4 v1, 0x6
 
-    new-instance v2, Lju4;
+    invoke-direct {v0, v1}, Lju4;-><init>(I)V
 
-    const-string v3, "NEVER"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lju4;->c:Lju4;
-
-    filled-new-array {v0, v1, v2}, [Lju4;
-
-    move-result-object v0
-
-    sput-object v0, Lju4;->o:[Lju4;
+    sput-object v0, Lju4;->X:Lju4;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lju4;
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    const-class v0, Lju4;
+    iput p1, p0, Lju4;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
-
-    check-cast p0, Lju4;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lju4;
-    .locals 1
 
-    sget-object v0, Lju4;->o:[Lju4;
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget v0, p0, Lju4;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, [Lju4;
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    return-object v0
+    return-void
+
+    :pswitch_0
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_1
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_2
+    new-instance v0, Ljava/lang/Thread;
+
+    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_4
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_5
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_6
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

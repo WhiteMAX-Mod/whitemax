@@ -1,118 +1,84 @@
-.class public abstract Lyg6;
-.super Loh7;
+.class public Lyg6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkff;
 
 
 # instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Lfi7;
+.field public final a:Landroid/database/sqlite/SQLiteProgram;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/database/sqlite/SQLiteProgram;)V
+    .locals 0
 
-    sget-object v0, Lnh7;->s0:Lnh7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, v0, Lnh7;->b:I
-
-    sget-object v0, Lnh7;->r0:Lnh7;
-
-    iget v0, v0, Lnh7;->b:I
-
-    sget-object v0, Lnh7;->u0:Lnh7;
-
-    iget v0, v0, Lnh7;->b:I
+    iput-object p1, p0, Lyg6;->a:Landroid/database/sqlite/SQLiteProgram;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final y0(Ljava/math/BigDecimal;)Ljava/lang/String;
-    .locals 3
+.method public final D(I[B)V
+    .locals 1
 
-    const/16 v0, 0x270f
+    iget-object v0, p0, Lyg6;->a:Landroid/database/sqlite/SQLiteProgram;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindBlob(I[B)V
 
-    move-result-object v1
-
-    sget-object v2, Lnh7;->t0:Lnh7;
-
-    iget p0, p0, Lyg6;->a:I
-
-    iget v2, v2, Lnh7;->b:I
-
-    and-int/2addr p0, v2
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->scale()I
-
-    move-result p0
-
-    const/16 v2, -0x270f
-
-    if-lt p0, v2, :cond_0
-
-    if-gt p0, v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toPlainString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    filled-new-array {p0, v1, v1}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "Attempt to write plain `java.math.BigDecimal` (see JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN) with illegal scale (%d): needs to be between [-%d, %d]"
-
-    invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Loh7;->i(Ljava/lang/String;)V
-
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public final z0(Lnh7;)Z
-    .locals 0
+.method public final S(I)V
+    .locals 1
 
-    iget p0, p0, Lyg6;->a:I
+    iget-object v0, p0, Lyg6;->a:Landroid/database/sqlite/SQLiteProgram;
 
-    iget p1, p1, Lnh7;->b:I
+    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteProgram;->bindNull(I)V
 
-    and-int/2addr p0, p1
+    return-void
+.end method
 
-    if-eqz p0, :cond_0
+.method public final close()V
+    .locals 1
 
-    const/4 p0, 0x1
+    iget-object v0, p0, Lyg6;->a:Landroid/database/sqlite/SQLiteProgram;
 
-    return p0
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
-    :cond_0
-    const/4 p0, 0x0
+    return-void
+.end method
 
-    return p0
+.method public final f(ILjava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lyg6;->a:Landroid/database/sqlite/SQLiteProgram;
+
+    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final g(ID)V
+    .locals 1
+
+    iget-object v0, p0, Lyg6;->a:Landroid/database/sqlite/SQLiteProgram;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindDouble(ID)V
+
+    return-void
+.end method
+
+.method public final k(IJ)V
+    .locals 1
+
+    iget-object v0, p0, Lyg6;->a:Landroid/database/sqlite/SQLiteProgram;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+
+    return-void
 .end method

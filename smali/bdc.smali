@@ -1,62 +1,207 @@
-.class public abstract Lbdc;
+.class public final Lbdc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static RecyclerView:[I = null
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static RecyclerView_android_clipToPadding:I = 0x1
+.field public final b:Ljava/lang/String;
 
-.field public static RecyclerView_android_descendantFocusability:I = 0x2
+.field public final c:Ljava/lang/String;
 
-.field public static RecyclerView_android_orientation:I = 0x0
+.field public final d:Ljava/lang/String;
 
-.field public static RecyclerView_fastScrollEnabled:I = 0x3
-
-.field public static RecyclerView_fastScrollHorizontalThumbDrawable:I = 0x4
-
-.field public static RecyclerView_fastScrollHorizontalTrackDrawable:I = 0x5
-
-.field public static RecyclerView_fastScrollVerticalThumbDrawable:I = 0x6
-
-.field public static RecyclerView_fastScrollVerticalTrackDrawable:I = 0x7
-
-.field public static RecyclerView_layoutManager:I = 0x8
-
-.field public static RecyclerView_reverseLayout:I = 0x9
-
-.field public static RecyclerView_spanCount:I = 0xa
-
-.field public static RecyclerView_stackFromEnd:I = 0xb
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    const/16 v0, 0xc
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    iput-object p1, p0, Lbdc;->a:Ljava/lang/String;
 
-    fill-array-data v0, :array_0
+    iput-object p2, p0, Lbdc;->b:Ljava/lang/String;
 
-    sput-object v0, Lbdc;->RecyclerView:[I
+    iput-object p3, p0, Lbdc;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lbdc;->d:Ljava/lang/String;
+
+    iput-object p5, p0, Lbdc;->e:Ljava/lang/String;
 
     return-void
+.end method
 
-    :array_0
-    .array-data 4
-        0x10100c4
-        0x10100eb
-        0x10100f1
-        0x7f0403b0
-        0x7f0403b1
-        0x7f0403b2
-        0x7f0403b3
-        0x7f0403b4
-        0x7f040597
-        0x7f04071e
-        0x7f040791
-        0x7f0407d6
-    .end array-data
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lbdc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lbdc;
+
+    iget-object v1, p0, Lbdc;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lbdc;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Llig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lbdc;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lbdc;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Llig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lbdc;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lbdc;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Llig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lbdc;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lbdc;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Llig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lbdc;->e:Ljava/lang/String;
+
+    iget-object p1, p1, Lbdc;->e:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Llig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lbdc;->a:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v0
+
+    :goto_0
+    const/16 v2, 0x20f
+
+    add-int/2addr v2, v1
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget-object v1, p0, Lbdc;->b:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v0
+
+    :goto_1
+    add-int/2addr v2, v1
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget-object v1, p0, Lbdc;->c:Ljava/lang/String;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    goto :goto_2
+
+    :cond_2
+    move v1, v0
+
+    :goto_2
+    add-int/2addr v2, v1
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget-object v1, p0, Lbdc;->d:Ljava/lang/String;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    goto :goto_3
+
+    :cond_3
+    move v1, v0
+
+    :goto_3
+    add-int/2addr v2, v1
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget-object v1, p0, Lbdc;->e:Ljava/lang/String;
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :cond_4
+    add-int/2addr v2, v0
+
+    return v2
 .end method

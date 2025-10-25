@@ -153,11 +153,11 @@
     iput-object p3, p0, Lorg/webrtc/SurfaceTextureHelper;->surfaceTexture:Landroid/graphics/SurfaceTexture;
 
     .line 16
-    new-instance p1, Lyd6;
+    new-instance p1, Lik6;
 
     const/4 p4, 0x2
 
-    invoke-direct {p1, p4, p0}, Lyd6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p4, p0}, Lik6;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p3, p1, p2}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;Landroid/os/Handler;)V
 
@@ -167,29 +167,29 @@
     move-exception p1
 
     .line 17
-    iget-object p0, p0, Lorg/webrtc/SurfaceTextureHelper;->eglBase:Lorg/webrtc/EglBase;
+    iget-object p3, p0, Lorg/webrtc/SurfaceTextureHelper;->eglBase:Lorg/webrtc/EglBase;
 
-    invoke-interface {p0}, Lorg/webrtc/EglBase;->release()V
+    invoke-interface {p3}, Lorg/webrtc/EglBase;->release()V
 
     .line 18
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-virtual {p0}, Landroid/os/Looper;->quit()V
+    invoke-virtual {p2}, Landroid/os/Looper;->quit()V
 
     .line 19
     throw p1
 
     .line 20
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "SurfaceTextureHelper must be created on the handler thread"
+    const-string p2, "SurfaceTextureHelper must be created on the handler thread"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public synthetic constructor <init>(Lorg/webrtc/EglBase$Context;Landroid/os/Handler;ZLorg/webrtc/YuvConverter;Lorg/webrtc/SurfaceTextureHelper$FrameRefMonitor;Lorg/webrtc/SurfaceTextureHelper$FrameGeometryAdjuster;I)V
@@ -346,74 +346,74 @@
 .end method
 
 .method private createFrameBuffer(IILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)Lorg/webrtc/VideoFrame$TextureBuffer;
-    .locals 11
+    .locals 12
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceTextureHelper;->geometryAdjuster:Lorg/webrtc/SurfaceTextureHelper$FrameGeometryAdjuster;
+    iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->geometryAdjuster:Lorg/webrtc/SurfaceTextureHelper$FrameGeometryAdjuster;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    move-object/from16 v5, p5
+    move-object/from16 v6, p5
 
-    invoke-interface {p0, v5, p1, p2}, Lorg/webrtc/SurfaceTextureHelper$FrameGeometryAdjuster;->adjustFrameGeometry(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
+    invoke-interface {v0, v6, p1, p2}, Lorg/webrtc/SurfaceTextureHelper$FrameGeometryAdjuster;->adjustFrameGeometry(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
 
-    move-result-object p0
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    move-object/from16 v5, p5
+    move-object/from16 v6, p5
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    new-instance v0, Lorg/webrtc/TextureBufferImpl;
+    new-instance v1, Lorg/webrtc/TextureBufferImpl;
 
-    iget v1, p0, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->width:I
+    iget v2, v0, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->width:I
 
-    iget v2, p0, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->height:I
+    iget v3, v0, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->height:I
 
-    iget v3, p0, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->scaledWidth:I
+    iget v4, v0, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->scaledWidth:I
 
-    iget v4, p0, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->scaledHeight:I
+    iget v5, v0, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->scaledHeight:I
 
-    iget-object v7, p0, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->transform:Landroid/graphics/Matrix;
+    iget-object v8, v0, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->transform:Landroid/graphics/Matrix;
 
-    move-object v5, p3
+    move-object v6, p3
 
-    move v6, p4
+    move/from16 v7, p4
 
-    move-object/from16 v8, p6
+    move-object/from16 v9, p6
 
-    move-object/from16 v9, p7
+    move-object/from16 v10, p7
 
-    move-object/from16 v10, p8
+    move-object/from16 v11, p8
 
-    invoke-direct/range {v0 .. v10}, Lorg/webrtc/TextureBufferImpl;-><init>(IIIILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
+    invoke-direct/range {v1 .. v11}, Lorg/webrtc/TextureBufferImpl;-><init>(IIIILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
 
-    return-object v0
+    return-object v1
 
     :cond_1
-    new-instance v0, Lorg/webrtc/TextureBufferImpl;
+    new-instance v1, Lorg/webrtc/TextureBufferImpl;
 
-    move v1, p1
+    move v2, p1
 
-    move v2, p2
+    move v3, p2
 
-    move-object v3, p3
+    move-object v4, p3
 
-    move v4, p4
+    move/from16 v5, p4
 
-    move-object/from16 v6, p6
+    move-object/from16 v7, p6
 
-    move-object/from16 v7, p7
+    move-object/from16 v8, p7
 
-    move-object/from16 v8, p8
+    move-object/from16 v9, p8
 
-    invoke-direct/range {v0 .. v8}, Lorg/webrtc/TextureBufferImpl;-><init>(IILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
+    invoke-direct/range {v1 .. v9}, Lorg/webrtc/TextureBufferImpl;-><init>(IILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
 
-    return-object v0
+    return-object v1
 .end method
 
 .method public static synthetic d(Lorg/webrtc/SurfaceTextureHelper;Landroid/graphics/SurfaceTexture;)V
@@ -680,32 +680,32 @@
 
     invoke-virtual {v0}, Landroid/os/Looper;->quit()V
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceTextureHelper;->timestampAligner:Lorg/webrtc/TimestampAligner;
+    iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->timestampAligner:Lorg/webrtc/TimestampAligner;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lorg/webrtc/TimestampAligner;->dispose()V
+    invoke-virtual {v0}, Lorg/webrtc/TimestampAligner;->dispose()V
 
     :cond_0
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Unexpected release."
+    const-string v1, "Unexpected release."
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Wrong thread."
+    const-string v1, "Wrong thread."
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method private returnTextureFrame()V
@@ -713,11 +713,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Ljre;
+    new-instance v1, Lhgf;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, p0, v2}, Ljre;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+    invoke-direct {v1, p0, v2}, Lhgf;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -745,34 +745,40 @@
 
     iget-boolean v0, p0, Lorg/webrtc/SurfaceTextureHelper;->isQuitting:Z
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_0
 
     iget-boolean v0, p0, Lorg/webrtc/SurfaceTextureHelper;->hasPendingTexture:Z
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_0
 
     iget-boolean v0, p0, Lorg/webrtc/SurfaceTextureHelper;->isTextureInUse:Z
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_0
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->listener:Lorg/webrtc/VideoSink;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
+
+    :cond_0
+    move-object v3, p0
 
     goto :goto_1
 
-    :cond_0
+    :cond_1
     iget v0, p0, Lorg/webrtc/SurfaceTextureHelper;->textureWidth:I
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_2
 
     iget v0, p0, Lorg/webrtc/SurfaceTextureHelper;->textureHeight:I
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
+
+    :cond_2
+    move-object v3, p0
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/webrtc/SurfaceTextureHelper;->isTextureInUse:Z
@@ -799,13 +805,13 @@
 
     iget-object v3, p0, Lorg/webrtc/SurfaceTextureHelper;->timestampAligner:Lorg/webrtc/TimestampAligner;
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_4
 
     invoke-virtual {v3, v1, v2}, Lorg/webrtc/TimestampAligner;->translateTimestamp(J)J
 
     move-result-wide v1
 
-    :cond_2
+    :cond_4
     iget v4, p0, Lorg/webrtc/SurfaceTextureHelper;->textureWidth:I
 
     iget v5, p0, Lorg/webrtc/SurfaceTextureHelper;->textureHeight:I
@@ -828,75 +834,75 @@
 
     invoke-direct/range {v3 .. v11}, Lorg/webrtc/SurfaceTextureHelper;->createFrameBuffer(IILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)Lorg/webrtc/VideoFrame$TextureBuffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget-object v0, v3, Lorg/webrtc/SurfaceTextureHelper;->frameRefMonitor:Lorg/webrtc/SurfaceTextureHelper$FrameRefMonitor;
+    iget-object v4, v3, Lorg/webrtc/SurfaceTextureHelper;->frameRefMonitor:Lorg/webrtc/SurfaceTextureHelper$FrameRefMonitor;
 
-    if-eqz v0, :cond_3
+    if-eqz v4, :cond_5
 
-    invoke-interface {v0, p0}, Lorg/webrtc/SurfaceTextureHelper$FrameRefMonitor;->onNewBuffer(Lorg/webrtc/VideoFrame$TextureBuffer;)V
+    invoke-interface {v4, v0}, Lorg/webrtc/SurfaceTextureHelper$FrameRefMonitor;->onNewBuffer(Lorg/webrtc/VideoFrame$TextureBuffer;)V
 
-    :cond_3
-    new-instance v0, Lorg/webrtc/VideoFrame;
+    :cond_5
+    new-instance v4, Lorg/webrtc/VideoFrame;
 
-    iget v4, v3, Lorg/webrtc/SurfaceTextureHelper;->frameRotation:I
+    iget v5, v3, Lorg/webrtc/SurfaceTextureHelper;->frameRotation:I
 
-    invoke-direct {v0, p0, v4, v1, v2}, Lorg/webrtc/VideoFrame;-><init>(Lorg/webrtc/VideoFrame$Buffer;IJ)V
+    invoke-direct {v4, v0, v5, v1, v2}, Lorg/webrtc/VideoFrame;-><init>(Lorg/webrtc/VideoFrame$Buffer;IJ)V
 
-    iget-object p0, v3, Lorg/webrtc/SurfaceTextureHelper;->listener:Lorg/webrtc/VideoSink;
+    iget-object v0, v3, Lorg/webrtc/SurfaceTextureHelper;->listener:Lorg/webrtc/VideoSink;
 
-    invoke-interface {p0, v0}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
+    invoke-interface {v0, v4}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
 
-    invoke-virtual {v0}, Lorg/webrtc/VideoFrame;->release()V
+    invoke-virtual {v4}, Lorg/webrtc/VideoFrame;->release()V
 
     return-void
 
-    :cond_4
     :goto_0
-    const-string p0, "SurfaceTextureHelper"
+    const-string v0, "SurfaceTextureHelper"
 
-    const-string v0, "Texture size has not been set."
+    const-string v1, "Texture size has not been set."
 
-    invoke-static {p0, v0}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_5
     :goto_1
     return-void
 
     :cond_6
-    new-instance p0, Ljava/lang/IllegalStateException;
+    move-object v3, p0
 
-    const-string v0, "Wrong thread."
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v1, "Wrong thread."
 
-    throw p0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 .method private updateTexImage()V
-    .locals 1
+    .locals 2
 
     sget-object v0, Lorg/webrtc/EglBase;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object p0, p0, Lorg/webrtc/SurfaceTextureHelper;->surfaceTexture:Landroid/graphics/SurfaceTexture;
+    iget-object v1, p0, Lorg/webrtc/SurfaceTextureHelper;->surfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    invoke-virtual {p0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
+    invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 
@@ -935,11 +941,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Ljre;
+    new-instance v1, Lhgf;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v2}, Ljre;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+    invoke-direct {v1, p0, v2}, Lhgf;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
 
     invoke-static {v0, v1}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
@@ -951,11 +957,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Ljre;
+    new-instance v1, Lhgf;
 
     const/4 v2, 0x3
 
-    invoke-direct {v1, p0, v2}, Ljre;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+    invoke-direct {v1, p0, v2}, Lhgf;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -963,27 +969,27 @@
 .end method
 
 .method public getHandler()Landroid/os/Handler;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
+    iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSurfaceTexture()Landroid/graphics/SurfaceTexture;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceTextureHelper;->surfaceTexture:Landroid/graphics/SurfaceTexture;
+    iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->surfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public isTextureInUse()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/webrtc/SurfaceTextureHelper;->isTextureInUse:Z
+    iget-boolean v0, p0, Lorg/webrtc/SurfaceTextureHelper;->isTextureInUse:Z
 
-    return p0
+    return v0
 .end method
 
 .method public setFrameRotation(I)V
@@ -991,11 +997,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Ly20;
+    new-instance v1, Lt30;
 
     const/16 v2, 0x11
 
-    invoke-direct {v1, p1, v2, p0}, Ly20;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v1, p0, p1, v2}, Lt30;-><init>(Ljava/lang/Object;II)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1015,41 +1021,41 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Ljt0;
+    new-instance v1, Lsu0;
 
-    const/4 v2, 0x5
+    const/4 v2, 0x6
 
-    invoke-direct {v1, p0, p1, p2, v2}, Ljt0;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v1, p0, p1, p2, v2}, Lsu0;-><init>(Ljava/lang/Object;III)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Texture height must be positive, but was "
+    const-string v0, "Texture height must be positive, but was "
 
-    invoke-static {p2, p1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Texture width must be positive, but was "
+    const-string v0, "Texture width must be positive, but was "
 
-    invoke-static {p1, p2}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p2
 .end method
 
 .method public startListening(Lorg/webrtc/VideoSink;)V
@@ -1067,20 +1073,20 @@
 
     iget-object p1, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceTextureHelper;->setListenerRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->setListenerRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "SurfaceTextureHelper listener has already been set."
+    const-string v0, "SurfaceTextureHelper listener has already been set."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public stopListening()V
@@ -1100,11 +1106,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Ljre;
+    new-instance v1, Lhgf;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Ljre;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+    invoke-direct {v1, p0, v2}, Lhgf;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
 
     invoke-static {v0, v1}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
@@ -1118,7 +1124,7 @@
 
     invoke-interface {p1}, Lorg/webrtc/VideoFrame$Buffer;->toI420()Lorg/webrtc/VideoFrame$I420Buffer;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

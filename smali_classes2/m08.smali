@@ -1,131 +1,130 @@
 .class public final Lm08;
-.super Ln08;
+.super Landroid/text/style/URLSpan;
 .source "SourceFile"
 
 
 # instance fields
-.field public final d:Lu2f;
+.field public a:Ln08;
 
-.field public final e:Lu2f;
+.field public b:I
+
+.field public final c:Z
+
+.field public final o:Lq7;
 
 
 # direct methods
-.method public constructor <init>(Lu2f;Lu2f;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;IZ)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0, p1}, Landroid/text/style/URLSpan;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, v0}, Ln08;-><init>(Lu2f;Ljava/lang/Throwable;)V
+    const/4 p1, 0x0
 
-    iput-object p1, p0, Lm08;->d:Lu2f;
+    iput-object p1, p0, Lm08;->a:Ln08;
 
-    iput-object p2, p0, Lm08;->e:Lu2f;
+    iput p2, p0, Lm08;->b:I
+
+    iput-boolean p3, p0, Lm08;->c:Z
+
+    new-instance p1, Lq7;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lm08;->o:Lq7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
 
-    const/4 v0, 0x1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    if-ne p0, p1, :cond_0
+    move-result-wide v0
 
-    return v0
+    iget-object v2, p0, Lm08;->o:Lq7;
 
-    :cond_0
-    instance-of v1, p1, Lm08;
+    iget-wide v3, v2, Lq7;->a:J
 
-    const/4 v2, 0x0
+    sub-long v3, v0, v3
 
-    if-nez v1, :cond_1
+    const-wide/16 v5, 0x12c
 
-    return v2
+    cmp-long v3, v3, v5
 
-    :cond_1
-    check-cast p1, Lm08;
+    if-lez v3, :cond_3
 
-    iget-object v1, p0, Lm08;->d:Lu2f;
+    iput-wide v0, v2, Lq7;->a:J
 
-    iget-object v3, p1, Lm08;->d:Lu2f;
+    instance-of v0, p1, Landroid/widget/TextView;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
-    move-result v1
+    move-object v0, p1
 
-    if-nez v1, :cond_2
+    check-cast v0, Landroid/widget/TextView;
 
-    return v2
-
-    :cond_2
-    iget-object p0, p0, Lm08;->e:Lu2f;
-
-    iget-object p1, p1, Lm08;->e:Lu2f;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lm08;->d:Lu2f;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLinksClickable()Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-nez v0, :cond_0
 
-    iget-object p0, p0, Lm08;->e:Lu2f;
+    goto :goto_1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    :cond_0
+    iget-object v0, p0, Lm08;->a:Ln08;
 
-    move-result p0
+    if-nez v0, :cond_2
 
-    add-int/2addr p0, v0
+    instance-of v0, p1, Ln08;
 
-    return p0
+    if-eqz v0, :cond_1
+
+    move-object v0, p1
+
+    check-cast v0, Ln08;
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :cond_2
+    :goto_0
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v1, Lr08;->a:Lr08;
+
+    invoke-interface {v0, p1, v1, p0}, Ln08;->b(Ljava/lang/String;Lr08;Landroid/text/style/ClickableSpan;)V
+
+    :cond_3
+    :goto_1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final updateDrawState(Landroid/text/TextPaint;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p1, Landroid/text/TextPaint;->bgColor:I
 
-    const-string v1, "SmsCountExceeded(title="
+    iget v1, p0, Lm08;->b:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eq v0, v1, :cond_0
 
-    iget-object v1, p0, Lm08;->d:Lu2f;
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    iget-boolean v0, p0, Lm08;->c:Z
 
-    const-string v1, ", description="
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lm08;->e:Lu2f;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

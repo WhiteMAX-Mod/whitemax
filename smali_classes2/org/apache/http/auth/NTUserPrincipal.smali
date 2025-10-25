@@ -85,13 +85,13 @@
     return-void
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "User name may not be null"
+    const-string p2, "User name may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -129,15 +129,15 @@
 
     if-eqz v2, :cond_2
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTUserPrincipal;->domain:Ljava/lang/String;
+    iget-object v2, p0, Lorg/apache/http/auth/NTUserPrincipal;->domain:Ljava/lang/String;
 
     iget-object p1, p1, Lorg/apache/http/auth/NTUserPrincipal;->domain:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Lorg/apache/http/util/LangUtils;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lorg/apache/http/util/LangUtils;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_2
 
     return v1
 
@@ -146,27 +146,27 @@
 .end method
 
 .method public getDomain()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTUserPrincipal;->domain:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/auth/NTUserPrincipal;->domain:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getName()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTUserPrincipal;->ntname:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/auth/NTUserPrincipal;->ntname:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getUsername()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTUserPrincipal;->username:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/auth/NTUserPrincipal;->username:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
@@ -180,19 +180,19 @@
 
     move-result v0
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTUserPrincipal;->domain:Ljava/lang/String;
+    iget-object v1, p0, Lorg/apache/http/auth/NTUserPrincipal;->domain:Ljava/lang/String;
 
-    invoke-static {v0, p0}, Lorg/apache/http/util/LangUtils;->hashCode(ILjava/lang/Object;)I
+    invoke-static {v0, v1}, Lorg/apache/http/util/LangUtils;->hashCode(ILjava/lang/Object;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTUserPrincipal;->ntname:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/auth/NTUserPrincipal;->ntname:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

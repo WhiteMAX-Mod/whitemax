@@ -32,20 +32,22 @@
 
     iget v0, p0, Lorg/webrtc/a;->a:I
 
-    iget-object p0, p0, Lorg/webrtc/a;->b:Ljava/lang/Object;
-
     packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lorg/webrtc/Camera2Session$CaptureSessionCallback;
+    iget-object v0, p0, Lorg/webrtc/a;->b:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Lorg/webrtc/Camera2Session$CaptureSessionCallback;->a(Lorg/webrtc/Camera2Session$CaptureSessionCallback;Lorg/webrtc/VideoFrame;)V
+    check-cast v0, Lorg/webrtc/Camera2Session$CaptureSessionCallback;
+
+    invoke-static {v0, p1}, Lorg/webrtc/Camera2Session$CaptureSessionCallback;->a(Lorg/webrtc/Camera2Session$CaptureSessionCallback;Lorg/webrtc/VideoFrame;)V
 
     return-void
 
     :pswitch_0
-    check-cast p0, Lorg/webrtc/Camera1Session;
+    iget-object v0, p0, Lorg/webrtc/a;->b:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Lorg/webrtc/Camera1Session;->a(Lorg/webrtc/Camera1Session;Lorg/webrtc/VideoFrame;)V
+    check-cast v0, Lorg/webrtc/Camera1Session;
+
+    invoke-static {v0, p1}, Lorg/webrtc/Camera1Session;->a(Lorg/webrtc/Camera1Session;Lorg/webrtc/VideoFrame;)V
 
     return-void
 

@@ -1,59 +1,127 @@
 .class public final Lb54;
-.super Lx4h;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Iterable;
+
+
+# instance fields
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Ljava/util/HashMap;
+
+.field public c:Ljava/util/Set;
+
+.field public o:Ljava/util/List;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lb54;->a:Ljava/lang/Object;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lb54;->b:Ljava/util/HashMap;
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
+
+    iput-object v0, p0, Lb54;->c:Ljava/util/Set;
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v0, p0, Lb54;->o:Ljava/util/List;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final m(Lqvd;FF)V
-    .locals 6
+.method public final a(Lf25;)I
+    .locals 2
 
-    mul-float p0, p3, p2
+    iget-object v0, p0, Lb54;->a:Ljava/lang/Object;
 
-    const/high16 v0, 0x43340000    # 180.0f
+    monitor-enter v0
 
-    const/4 v1, 0x0
+    :try_start_0
+    iget-object v1, p0, Lb54;->b:Ljava/util/HashMap;
 
-    const/high16 v2, 0x42b40000    # 90.0f
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, v1, p0, v0, v2}, Lqvd;->d(FFFF)V
+    move-result v1
 
-    float-to-double v2, v2
+    if-eqz v1, :cond_0
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
+    iget-object v1, p0, Lb54;->b:Ljava/util/HashMap;
 
-    move-result-wide v2
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
+    move-result-object p1
 
-    move-result-wide v2
+    check-cast p1, Ljava/lang/Integer;
 
-    float-to-double v4, p3
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    mul-double/2addr v2, v4
+    move-result p1
 
-    float-to-double p2, p2
+    goto :goto_0
 
-    mul-double/2addr v2, p2
+    :catchall_0
+    move-exception p1
 
-    double-to-float p0, v2
+    goto :goto_1
 
-    float-to-double v0, v1
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+    :goto_0
+    monitor-exit v0
 
-    move-result-wide v0
+    return p1
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-wide v0
+    throw p1
+.end method
 
-    mul-double/2addr v0, v4
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
 
-    mul-double/2addr v0, p2
+    iget-object v0, p0, Lb54;->a:Ljava/lang/Object;
 
-    double-to-float p2, v0
+    monitor-enter v0
 
-    invoke-virtual {p1, p0, p2}, Lqvd;->c(FF)V
+    :try_start_0
+    iget-object v1, p0, Lb54;->o:Ljava/util/List;
 
-    return-void
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

@@ -17,7 +17,7 @@
 
     move-result-object v2
 
-    sget-object v3, Ld3h;->a:Ljava/util/HashMap;
+    sget-object v3, Lcwh;->a:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -29,7 +29,7 @@
 
     if-eqz v5, :cond_1
 
-    sget-object v5, Ld3h;->b:Ljava/util/HashMap;
+    sget-object v5, Lcwh;->b:Ljava/util/HashMap;
 
     invoke-virtual {v5, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -91,7 +91,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p1, v1, v2, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lrk3;)V
+    invoke-direct {v0, p1, v1, v2, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lrp3;)V
 
     invoke-direct {p0, v0}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
 
@@ -100,11 +100,11 @@
     return-void
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "errorCode should not be 0."
+    const-string v0, "errorCode should not be 0."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

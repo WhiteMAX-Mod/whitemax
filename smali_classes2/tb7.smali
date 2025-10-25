@@ -1,58 +1,239 @@
 .class public final Ltb7;
-.super Lj2e;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:[B
+
+.field public b:I
+
+
 # virtual methods
-.method public final F(Lrb7;)V
-    .locals 2
+.method public final c(I)V
+    .locals 4
 
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+    iget-object v0, p0, Ltb7;->a:[B
 
-    check-cast p0, Lsb7;
+    array-length v1, v0
 
-    iget-object v0, p1, Lrb7;->b:Lp2f;
+    sub-int v1, p1, v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    if-lez v1, :cond_4
 
-    move-result-object v1
+    array-length v1, v0
 
-    invoke-virtual {v0, v1}, Lu2f;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    shl-int/lit8 v1, v1, 0x1
 
-    move-result-object v0
+    sub-int v2, v1, p1
 
-    if-nez v0, :cond_0
+    if-gez v2, :cond_0
 
-    const-string v0, ""
+    move v1, p1
 
     :cond_0
-    invoke-virtual {p0, v0}, Lsb7;->setText(Ljava/lang/CharSequence;)V
+    const v2, 0x7ffffff7
 
-    iget-object p1, p1, Lrb7;->c:Ljava/lang/Integer;
+    sub-int v3, v1, v2
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    if-lez v3, :cond_3
 
-    move-result p1
+    if-ltz p1, :cond_2
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    if-le p1, v2, :cond_1
 
-    move-result-object v0
+    const p1, 0x7fffffff
 
-    invoke-static {v0, p1}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    move v1, p1
+
+    goto :goto_0
+
+    :cond_1
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_2
+    new-instance p1, Ljava/lang/OutOfMemoryError;
+
+    invoke-direct {p1}, Ljava/lang/OutOfMemoryError;-><init>()V
+
+    throw p1
+
+    :cond_3
+    :goto_0
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lsb7;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    iput-object p1, p0, Ltb7;->a:[B
+
+    :cond_4
+    return-void
+.end method
+
+.method public final d(I)V
+    .locals 4
+
+    iget v0, p0, Ltb7;->b:I
+
+    add-int/lit8 v0, v0, 0x4
+
+    invoke-virtual {p0, v0}, Ltb7;->c(I)V
+
+    iget-object v0, p0, Ltb7;->a:[B
+
+    iget v1, p0, Ltb7;->b:I
+
+    ushr-int/lit8 v2, p1, 0x18
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
+
+    add-int/lit8 v2, v1, 0x1
+
+    ushr-int/lit8 v3, p1, 0x10
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v0, v2
+
+    add-int/lit8 v2, v1, 0x2
+
+    ushr-int/lit8 v3, p1, 0x8
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v0, v2
+
+    add-int/lit8 v2, v1, 0x3
+
+    int-to-byte p1, p1
+
+    aput-byte p1, v0, v2
+
+    add-int/lit8 v1, v1, 0x4
+
+    iput v1, p0, Ltb7;->b:I
 
     return-void
 .end method
 
-.method public final bridge synthetic y(Lts7;)V
-    .locals 0
+.method public final declared-synchronized write(I)V
+    .locals 2
 
-    check-cast p1, Lrb7;
+    monitor-enter p0
 
-    invoke-virtual {p0, p1}, Ltb7;->F(Lrb7;)V
+    .line 1
+    :try_start_0
+    iget v0, p0, Ltb7;->b:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {p0, v0}, Ltb7;->c(I)V
+
+    .line 2
+    iget-object v0, p0, Ltb7;->a:[B
+
+    iget v1, p0, Ltb7;->b:I
+
+    int-to-byte p1, p1
+
+    aput-byte p1, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    .line 3
+    iput v1, p0, Ltb7;->b:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    monitor-exit p0
 
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized write([BII)V
+    .locals 2
+
+    monitor-enter p0
+
+    if-ltz p2, :cond_0
+
+    .line 5
+    :try_start_0
+    array-length v0, p1
+
+    if-gt p2, v0, :cond_0
+
+    if-ltz p3, :cond_0
+
+    add-int v0, p2, p3
+
+    array-length v1, p1
+
+    sub-int/2addr v0, v1
+
+    if-gtz v0, :cond_0
+
+    .line 6
+    iget v0, p0, Ltb7;->b:I
+
+    add-int/2addr v0, p3
+
+    invoke-virtual {p0, v0}, Ltb7;->c(I)V
+
+    .line 7
+    iget-object v0, p0, Ltb7;->a:[B
+
+    iget v1, p0, Ltb7;->b:I
+
+    invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 8
+    iget p1, p0, Ltb7;->b:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Ltb7;->b:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 9
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    .line 10
+    :cond_0
+    :try_start_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+
+    :goto_0
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

@@ -18,7 +18,7 @@
         "()V",
         "Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;",
         "provider",
-        "Lylf;",
+        "Lccg;",
         "setApplicationNameProvider",
         "(Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;)V",
         "Lru/ok/android/externcalls/sdk/analytics/UploadConfigProvider;",
@@ -63,19 +63,19 @@
 
 # virtual methods
 .method public final getApplicationNameProvider()Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;->applicationNameProvider:Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;->applicationNameProvider:Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getUploadConfigProvider()Lru/ok/android/externcalls/sdk/analytics/UploadConfigProvider;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;->uploadConfigProvider:Lru/ok/android/externcalls/sdk/analytics/UploadConfigProvider;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;->uploadConfigProvider:Lru/ok/android/externcalls/sdk/analytics/UploadConfigProvider;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public setApplicationNameProvider(Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;)V

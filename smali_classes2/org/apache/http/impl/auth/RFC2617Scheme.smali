@@ -33,41 +33,41 @@
 
 # virtual methods
 .method public getParameter(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lorg/apache/http/impl/auth/RFC2617Scheme;->params:Ljava/util/Map;
+    iget-object v0, p0, Lorg/apache/http/impl/auth/RFC2617Scheme;->params:Ljava/util/Map;
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Ljava/lang/String;
+    check-cast p1, Ljava/lang/String;
 
-    return-object p0
+    return-object p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Parameter name may not be null"
+    const-string v0, "Parameter name may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public getParameters()Ljava/util/Map;
@@ -93,9 +93,9 @@
     iput-object v0, p0, Lorg/apache/http/impl/auth/RFC2617Scheme;->params:Ljava/util/Map;
 
     :cond_0
-    iget-object p0, p0, Lorg/apache/http/impl/auth/RFC2617Scheme;->params:Ljava/util/Map;
+    iget-object v0, p0, Lorg/apache/http/impl/auth/RFC2617Scheme;->params:Ljava/util/Map;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getRealm()Ljava/lang/String;
@@ -105,9 +105,9 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/http/impl/auth/RFC2617Scheme;->getParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public parseChallenge(Lorg/apache/http/util/CharArrayBuffer;II)V
@@ -173,11 +173,11 @@
     return-void
 
     :cond_1
-    new-instance p0, Lorg/apache/http/auth/MalformedChallengeException;
+    new-instance p1, Lorg/apache/http/auth/MalformedChallengeException;
 
-    const-string p1, "Authentication challenge is empty"
+    const-string p2, "Authentication challenge is empty"
 
-    invoke-direct {p0, p1}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

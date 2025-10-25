@@ -1,137 +1,164 @@
 .class public final Luv8;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Ldw8;
+.field public final b:Landroid/graphics/RectF;
 
-.field public final synthetic Z:Ls72;
+.field public final c:Landroid/graphics/Rect;
 
 
 # direct methods
-.method public constructor <init>(Ldw8;Ls72;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;)V
     .locals 0
 
-    iput-object p1, p0, Luv8;->Y:Ldw8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Luv8;->Z:Ls72;
+    iput-object p1, p0, Luv8;->a:Ljava/lang/String;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Luv8;->b:Landroid/graphics/RectF;
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Luv8;->c:Landroid/graphics/Rect;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ly04;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Luv8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Luv8;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Luv8;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Luv8;
-
-    iget-object v0, p0, Luv8;->Y:Ldw8;
-
-    iget-object p0, p0, Luv8;->Z:Ls72;
-
-    invoke-direct {p1, v0, p0, p2}, Luv8;-><init>(Ldw8;Ls72;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget v0, p0, Luv8;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    return-object p1
+    return v0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Luv8;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p0
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    check-cast p1, Luv8;
 
-    iget-object p1, p0, Luv8;->Y:Ldw8;
+    iget-object v1, p0, Luv8;->a:Ljava/lang/String;
 
-    iget-object p1, p1, Ldw8;->v0:Lcl7;
+    iget-object v3, p1, Luv8;->a:Ljava/lang/String;
 
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v1
 
-    move-object v2, p1
+    if-nez v1, :cond_2
 
-    check-cast v2, Ldj6;
-
-    iget-object p1, p0, Luv8;->Z:Ls72;
-
-    iget-object p1, p1, Ls72;->b:Lvb2;
-
-    iget-wide v3, p1, Lvb2;->a:J
-
-    iput v1, p0, Luv8;->X:I
-
-    sget-object v5, Lsl2;->b:Lsl2;
-
-    const-wide/16 v6, 0x0
-
-    const/4 v8, 0x0
-
-    move-object v9, p0
-
-    invoke-virtual/range {v2 .. v9}, Ldj6;->a(JLsl2;JLjava/lang/String;Ljx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
+    return v2
 
     :cond_2
-    return-object p0
+    iget-object v1, p0, Luv8;->b:Landroid/graphics/RectF;
+
+    iget-object v3, p1, Luv8;->b:Landroid/graphics/RectF;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Luv8;->c:Landroid/graphics/Rect;
+
+    iget-object p1, p1, Luv8;->c:Landroid/graphics/Rect;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Luv8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Luv8;->b:Landroid/graphics/RectF;
+
+    invoke-virtual {v1}, Landroid/graphics/RectF;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Luv8;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OnCropSuccess(path="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Luv8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", relativeCrop="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luv8;->b:Landroid/graphics/RectF;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", absoluteCrop="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luv8;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

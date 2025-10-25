@@ -2,63 +2,40 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgs8;
 
+# instance fields
+.field public a:J
 
-# static fields
-.field public static final a:Les8;
+.field public b:J
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Les8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide/high16 v0, -0x8000000000000000L
 
-    sput-object v0, Les8;->a:Les8;
+    iput-wide v0, p0, Les8;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Lis8;
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance v0, Lis8;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0, p0}, Lgs8;-><init>(Les8;)V
 
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Les8;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x3b9180b8
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Location"
-
-    return-object p0
+    return-object v0
 .end method

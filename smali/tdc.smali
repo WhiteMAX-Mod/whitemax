@@ -1,44 +1,29 @@
-.class public abstract Ltdc;
-.super Ljava/lang/Object;
+.class public final Ltdc;
+.super Lae6;
+.source "SourceFile"
 
 
-# static fields
-.field public static Fragment:[I = null
+# virtual methods
+.method public final f(ILovf;Z)Lovf;
+    .locals 0
 
-.field public static FragmentContainerView:[I = null
+    invoke-super {p0, p1, p2, p3}, Lae6;->f(ILovf;Z)Lovf;
 
-.field public static FragmentContainerView_android_name:I = 0x0
+    const/4 p1, 0x1
 
-.field public static FragmentContainerView_android_tag:I = 0x1
+    iput-boolean p1, p2, Lovf;->f:Z
 
-.field public static Fragment_android_id:I = 0x1
+    return-object p2
+.end method
 
-.field public static Fragment_android_name:I = 0x0
+.method public final m(ILrvf;J)Lrvf;
+    .locals 0
 
-.field public static Fragment_android_tag:I = 0x2
+    invoke-super {p0, p1, p2, p3, p4}, Lae6;->m(ILrvf;J)Lrvf;
 
+    const/4 p1, 0x1
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+    iput-boolean p1, p2, Lrvf;->k:Z
 
-    const v0, 0x1010003
-
-    const v1, 0x10100d0
-
-    const v2, 0x10100d1
-
-    filled-new-array {v0, v1, v2}, [I
-
-    move-result-object v1
-
-    sput-object v1, Ltdc;->Fragment:[I
-
-    filled-new-array {v0, v2}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ltdc;->FragmentContainerView:[I
-
-    return-void
+    return-object p2
 .end method

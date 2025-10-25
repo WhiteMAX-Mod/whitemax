@@ -1,41 +1,41 @@
 .class public final Luta;
-.super Ljava/lang/Object;
+.super Landroid/text/style/ReplacementSpan;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lkj4;
-
-
 # instance fields
-.field public final a:Lvta;
-
-.field public final b:I
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lkj4;
+    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
 
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Lkj4;-><init>(I)V
-
-    sput-object v0, Luta;->c:Lkj4;
+    iput p1, p0, Luta;->a:I
 
     return-void
 .end method
 
-.method public constructor <init>(Lvta;I)V
+
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    int-to-float p6, p7
 
-    iput-object p1, p0, Luta;->a:Lvta;
+    move-object p7, p9
 
-    iput p2, p0, Luta;->b:I
+    invoke-virtual/range {p1 .. p7}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
 
     return-void
+.end method
+
+.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+    .locals 0
+
+    iget p1, p0, Luta;->a:I
+
+    return p1
 .end method

@@ -1,15 +1,50 @@
-.class public abstract Ljhf;
-.super Lys9;
-.source "SourceFile"
+.class public final Ljhf;
+.super Ly14;
+
+
+# instance fields
+.field public X:I
+
+.field public Y:Lvy5;
+
+.field public final synthetic Z:Lkhf;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lkhf;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Lylf;->a:Lylf;
+    iput-object p1, p0, Ljhf;->Z:Lkhf;
 
-    invoke-direct {p0, v0}, Lys9;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ljhf;->o:Ljava/lang/Object;
+
+    iget p1, p0, Ljhf;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ljhf;->X:I
+
+    iget-object p1, p0, Ljhf;->Z:Lkhf;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lkhf;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,240 +1,202 @@
 .class public final Lpud;
-.super Lure;
+.super Lxzg;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final X:Li24;
 
-.field public final synthetic Y:Lone/me/settings/storage/ui/SettingsStorageScreen;
+.field public final Y:Ln0d;
+
+.field public final Z:Ln0d;
+
+.field public final b:J
+
+.field public final c:Lqe2;
+
+.field public final o:Lpp2;
+
+.field public final q0:Lxe5;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/storage/ui/SettingsStorageScreen;)V
-    .locals 0
+.method public constructor <init>(Lmud;JLqe2;Lpp2;)V
+    .locals 1
 
-    iput-object p2, p0, Lpud;->Y:Lone/me/settings/storage/ui/SettingsStorageScreen;
+    invoke-direct {p0}, Lxzg;-><init>()V
 
-    const/4 p2, 0x2
+    iput-wide p2, p0, Lpud;->b:J
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Lpud;->c:Lqe2;
+
+    iput-object p5, p0, Lpud;->o:Lpp2;
+
+    new-instance p2, Li24;
+
+    const/16 p3, 0xb
+
+    invoke-direct {p2, p3, p0}, Li24;-><init>(ILjava/lang/Object;)V
+
+    iput-object p2, p0, Lpud;->X:Li24;
+
+    iget-object p2, p5, Lpp2;->i:Ljava/lang/Object;
+
+    check-cast p2, Ln0d;
+
+    iput-object p2, p0, Lpud;->Y:Ln0d;
+
+    iget-object p2, p5, Lpp2;->j:Ljava/lang/Object;
+
+    check-cast p2, Ln0d;
+
+    iput-object p2, p0, Lpud;->Z:Ln0d;
+
+    new-instance p3, Lxe5;
+
+    const/4 p4, 0x0
+
+    invoke-direct {p3, p4}, Lxe5;-><init>(I)V
+
+    iput-object p3, p0, Lpud;->q0:Lxe5;
+
+    iget-object p1, p1, Lmud;->a:Lnje;
+
+    new-instance p3, Lm0d;
+
+    invoke-direct {p3, p1}, Lm0d;-><init>(Li1a;)V
+
+    new-instance p1, Lnud;
+
+    const/4 p4, 0x0
+
+    invoke-direct {p1, p0, p4}, Lnud;-><init>(Lpud;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p5, Lb16;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p5, p3, p1, v0}, Lb16;-><init>(Lty5;Lzi6;I)V
+
+    iget-object p1, p0, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p5, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
+
+    new-instance p1, Lx23;
+
+    const/16 p3, 0xa
+
+    invoke-direct {p1, p2, p3}, Lx23;-><init>(Lty5;I)V
+
+    new-instance p2, Loud;
+
+    invoke-direct {p2, p0, p4}, Loud;-><init>(Lpud;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p3, Lb16;
+
+    const/4 p4, 0x1
+
+    invoke-direct {p3, p1, p2, p4}, Lb16;-><init>(Lty5;Lzi6;I)V
+
+    iget-object p1, p0, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final r()V
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lpud;->X:Li24;
 
-    invoke-virtual {p0, p1, p2}, Lpud;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Lhma;->f(Z)V
 
-    check-cast p0, Lpud;
+    iget-object v0, p0, Lpud;->o:Lpp2;
 
-    sget-object p1, Lylf;->a:Lylf;
+    iget-object v1, v0, Lpp2;->a:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Lpud;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lpud;
-
-    iget-object p0, p0, Lpud;->Y:Lone/me/settings/storage/ui/SettingsStorageScreen;
-
-    invoke-direct {v0, p2, p0}, Lpud;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/storage/ui/SettingsStorageScreen;)V
-
-    iput-object p1, v0, Lpud;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpud;->X:Ljava/lang/Object;
-
-    check-cast p1, Lys9;
-
-    instance-of v0, p1, Lnud;
-
-    iget-object p0, p0, Lpud;->Y:Lone/me/settings/storage/ui/SettingsStorageScreen;
-
-    if-eqz v0, :cond_6
-
-    check-cast p1, Lnud;
-
-    sget-object v0, Lone/me/settings/storage/ui/SettingsStorageScreen;->Y:[Lxi7;
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:[Lxi7;
-
-    iget-object v0, p1, Lnud;->b:Lu2f;
-
-    const/4 v1, 0x4
+    check-cast v1, Lsp2;
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v2, v1}, Lhv8;->c(Lu2f;Landroid/os/Bundle;Ls6d;I)Llj3;
+    iput-object v2, v1, Lsp2;->g:Lpp2;
 
-    move-result-object v0
+    invoke-virtual {v1}, Lsp2;->a()V
 
-    iget-object v1, p1, Lnud;->d:Lu2f;
+    invoke-virtual {v1}, Lsp2;->a()V
 
-    if-eqz v1, :cond_0
+    iget-object v1, v0, Lpp2;->h:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Llj3;->f(Lu2f;)V
+    check-cast v1, Lx0f;
+
+    invoke-virtual {v1, v2}, Lx0f;->setValue(Ljava/lang/Object;)V
+
+    iget-object v0, v0, Lpp2;->g:Ljava/lang/Object;
+
+    check-cast v0, Lx0f;
+
+    sget-object v1, Lpvd;->a:Lpvd;
+
+    invoke-virtual {v0, v2, v1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final s(Z)V
+    .locals 5
+
+    iget-object v0, p0, Lpud;->X:Li24;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lhma;->f(Z)V
+
+    iget-object v0, p0, Lpud;->o:Lpp2;
+
+    iget-object v1, v0, Lpp2;->a:Ljava/lang/Object;
+
+    check-cast v1, Lsp2;
+
+    new-instance v2, Lqvd;
+
+    invoke-direct {v2, p1}, Lqvd;-><init>(Z)V
+
+    iget-object p1, v0, Lpp2;->g:Ljava/lang/Object;
+
+    check-cast p1, Lx0f;
+
+    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v3, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    return-void
 
     :cond_0
-    iget-object p1, p1, Lnud;->c:Ljava/util/List;
+    const/4 v3, 0x0
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p1, v3, v2}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    iget-object p1, v1, Lsp2;->e:Lkotlinx/coroutines/internal/ContextScope;
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v2, Lrp2;
 
-    move-result v1
+    invoke-direct {v2, v1, v3}, Lrp2;-><init>(Lsp2;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz v1, :cond_2
+    const/4 v4, 0x3
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {p1, v3, v3, v2, v4}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
-    move-result-object v1
+    iput-object v0, v1, Lsp2;->g:Lpp2;
 
-    check-cast v1, Lmud;
-
-    iget-boolean v3, v1, Lmud;->c:Z
-
-    iget-object v4, v1, Lmud;->b:Lp2f;
-
-    iget v1, v1, Lmud;->a:I
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v0, v1, v4}, Llj3;->b(ILu2f;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0, v1, v4}, Llj3;->d(ILu2f;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v0}, Llj3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v6
-
-    invoke-virtual {v6, p0}, Lxx3;->setTargetController(Lxx3;)V
-
-    invoke-virtual {v6, p0}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
-
-    move-object p1, p0
-
-    :goto_1
-    invoke-virtual {p1}, Lxx3;->getParentController()Lxx3;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p1}, Lxx3;->getParentController()Lxx3;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_3
-    instance-of v0, p1, Lxzc;
-
-    if-eqz v0, :cond_4
-
-    check-cast p1, Lxzc;
-
-    goto :goto_2
-
-    :cond_4
-    move-object p1, v2
-
-    :goto_2
-    if-eqz p1, :cond_5
-
-    invoke-interface {p1}, Lxzc;->d0()Lrzc;
-
-    move-result-object v2
-
-    :cond_5
-    invoke-virtual {v6, p0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->M0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz v2, :cond_7
-
-    new-instance v5, Luzc;
-
-    const/4 v10, 0x0
-
-    const/4 v11, -0x1
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v5 .. v11}, Luzc;-><init>(Lxx3;Ljava/lang/String;Lcy3;Lcy3;ZI)V
-
-    const/4 p0, 0x0
-
-    const/4 p1, 0x1
-
-    const-string v0, "BottomSheetWidget"
-
-    invoke-static {p0, v5, p1, v0}, Lsg0;->m(ZLuzc;ZLjava/lang/String;)V
-
-    invoke-virtual {v2, v5}, Lrzc;->H(Luzc;)V
-
-    goto :goto_3
-
-    :cond_6
-    instance-of v0, p1, Loud;
-
-    if-eqz v0, :cond_7
-
-    new-instance v0, Lqoa;
-
-    invoke-direct {v0, p0}, Lqoa;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    check-cast p1, Loud;
-
-    iget-object p0, p1, Loud;->b:Lr2f;
-
-    invoke-virtual {v0, p0}, Lqoa;->g(Lu2f;)V
-
-    new-instance p0, Lepa;
-
-    sget p1, La1d;->i:I
-
-    invoke-direct {p0, p1}, Lepa;-><init>(I)V
-
-    invoke-virtual {v0, p0}, Lqoa;->e(Ljpa;)V
-
-    invoke-virtual {v0}, Lqoa;->i()Lpoa;
-
-    :cond_7
-    :goto_3
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-void
 .end method

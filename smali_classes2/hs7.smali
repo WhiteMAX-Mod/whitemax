@@ -1,178 +1,124 @@
-.class public Lhs7;
+.class public final Lhs7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhs7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:J
+.field public final a:Ljava/io/Serializable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lra7;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x17
+    .line 5
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    invoke-direct {v0, v1}, Lra7;-><init>(I)V
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    sput-object v0, Lhs7;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object v0, p0, Lhs7;->a:Ljava/io/Serializable;
 
     return-void
 .end method
 
-.method public constructor <init>(JJJJ)V
+.method public constructor <init>(Lfs7;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iget-object p1, p1, Lfs7;->a:Ljava/util/ArrayList;
+
+    iput-object p1, p0, Lhs7;->a:Ljava/io/Serializable;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-wide p1, p0, Lhs7;->a:J
-
-    .line 3
-    iput-wide p3, p0, Lhs7;->b:J
-
-    .line 4
-    iput-wide p5, p0, Lhs7;->c:J
-
-    .line 5
-    iput-wide p7, p0, Lhs7;->o:J
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lhs7;->a:J
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lhs7;->b:J
-
-    .line 9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lhs7;->c:J
-
-    .line 10
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lhs7;->o:J
+    iput-object p1, p0, Lhs7;->a:Ljava/io/Serializable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DeepLinkData{chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lhs7;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageServerId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lhs7;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contactId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lhs7;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", stickerSetId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lhs7;->o:J
-
-    const/16 p0, 0x7d
-
-    invoke-static {v0, v1, v2, p0}, Lbg9;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    iget-wide v0, p0, Lhs7;->a:J
+    iget-object v0, p0, Lhs7;->a:Ljava/io/Serializable;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    check-cast v0, Ljava/util/LinkedHashMap;
 
-    iget-wide v0, p0, Lhs7;->b:J
+    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    move-result-object v1
 
-    iget-wide v0, p0, Lhs7;->c:J
+    check-cast v1, Ljava/util/List;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    if-nez v1, :cond_0
 
-    iget-wide v0, p0, Lhs7;->o:J
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
+.end method
+
+.method public b()I
+    .locals 3
+
+    iget-object v0, p0, Lhs7;->a:Ljava/io/Serializable;
+
+    check-cast v0, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    return v1
 .end method

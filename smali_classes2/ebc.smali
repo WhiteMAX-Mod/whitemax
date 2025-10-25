@@ -1,220 +1,584 @@
-.class public abstract Lebc;
-.super Ljava/lang/Object;
+.class public final Lebc;
+.super Lsgf;
+.source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static chat_screen__bot_cleared_history__subtitle:I = 0x7f13034e
 
-.field public static chat_screen__bot_cleared_history_state__title:I = 0x7f13034f
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static chat_screen__bot_empty_state__subtitle:I = 0x7f130350
+.field public final synthetic Y:Lone/me/profile/ProfileScreen;
 
-.field public static chat_screen__bot_empty_state__title:I = 0x7f130351
 
-.field public static chat_screen__bot_official_cleared_history_state__title:I = 0x7f130352
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/ProfileScreen;)V
+    .locals 0
 
-.field public static chat_screen__bot_official_empty_state__subtitle:I = 0x7f130353
+    iput-object p2, p0, Lebc;->Y:Lone/me/profile/ProfileScreen;
 
-.field public static chat_screen__bot_official_empty_state__title:I = 0x7f130354
+    const/4 p2, 0x2
 
-.field public static chat_screen_action_copy:I = 0x7f13035e
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static chat_screen_action_copy_photo:I = 0x7f13035f
+    return-void
+.end method
 
-.field public static chat_screen_action_copy_photo_failed:I = 0x7f130360
 
-.field public static chat_screen_action_copy_photo_success:I = 0x7f130361
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static chat_screen_action_delete:I = 0x7f130362
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static chat_screen_action_delete_for_all:I = 0x7f130363
+    invoke-virtual {p0, p1, p2}, Lebc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static chat_screen_action_delete_for_me:I = 0x7f130364
+    move-result-object p1
 
-.field public static chat_screen_action_edit:I = 0x7f130365
+    check-cast p1, Lebc;
 
-.field public static chat_screen_action_forward:I = 0x7f130366
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static chat_screen_action_mark_as_unread:I = 0x7f130367
+    invoke-virtual {p1, p2}, Lebc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static chat_screen_action_pin:I = 0x7f130368
+    return-object p2
+.end method
 
-.field public static chat_screen_action_reply:I = 0x7f130369
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static chat_screen_action_report:I = 0x7f13036a
+    new-instance v0, Lebc;
 
-.field public static chat_screen_action_save_to_gallery:I = 0x7f13036b
+    iget-object v1, p0, Lebc;->Y:Lone/me/profile/ProfileScreen;
 
-.field public static chat_screen_action_select:I = 0x7f13036c
+    invoke-direct {v0, p2, v1}, Lebc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/ProfileScreen;)V
 
-.field public static chat_screen_action_share_externally:I = 0x7f13036d
+    iput-object p1, v0, Lebc;->X:Ljava/lang/Object;
 
-.field public static chat_screen_action_share_post:I = 0x7f13036e
+    return-object v0
+.end method
 
-.field public static chat_screen_action_share_post_success_copied:I = 0x7f13036f
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
 
-.field public static chat_screen_action_unpin:I = 0x7f130370
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.field public static chat_screen_attach_file_deleted:I = 0x7f130371
+    iget-object p1, p0, Lebc;->X:Ljava/lang/Object;
 
-.field public static chat_screen_attach_file_downloading_status:I = 0x7f130372
+    check-cast p1, Lxbc;
 
-.field public static chat_screen_bot:I = 0x7f130373
+    instance-of v0, p1, Lrbc;
 
-.field public static chat_screen_bot_official:I = 0x7f130374
+    const/4 v1, 0x1
 
-.field public static chat_screen_confirmation_complain_body:I = 0x7f130376
+    const-string v2, "BottomSheetWidget"
 
-.field public static chat_screen_confirmation_complain_title:I = 0x7f130377
+    const/4 v3, 0x0
 
-.field public static chat_screen_confirmation_delete_for_all:I = 0x7f130378
+    const/4 v4, 0x0
 
-.field public static chat_screen_confirmation_delete_for_me:I = 0x7f130379
+    iget-object v5, p0, Lebc;->Y:Lone/me/profile/ProfileScreen;
 
-.field public static chat_screen_confirmation_pin_title:I = 0x7f13037a
+    if-eqz v0, :cond_3
 
-.field public static chat_screen_confirmation_pin_with_notify_button:I = 0x7f13037b
+    check-cast p1, Lrbc;
 
-.field public static chat_screen_confirmation_pin_without_notify_button:I = 0x7f13037c
+    sget-object v0, Lone/me/profile/ProfileScreen;->B0:[Ltr7;
 
-.field public static chat_screen_confirmation_replace_pin:I = 0x7f13037d
+    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:[Ltr7;
 
-.field public static chat_screen_confirmation_replace_pin_title:I = 0x7f13037e
+    iget-object v0, p1, Lrbc;->a:Ltrf;
 
-.field public static chat_screen_context_menu_toolbar_title:I = 0x7f13037f
+    iget-object v6, p1, Lrbc;->d:Landroid/os/Bundle;
 
-.field public static chat_screen_empty_dialog_state_subtitle:I = 0x7f130380
+    const/4 v7, 0x4
 
-.field public static chat_screen_empty_dialog_state_title:I = 0x7f130381
+    invoke-static {v0, v6, v4, v7}, Levi;->a(Ltrf;Landroid/os/Bundle;Lupd;I)Leo3;
 
-.field public static chat_screen_folder_link_error_caption:I = 0x7f130384
+    move-result-object v0
 
-.field public static chat_screen_folder_link_error_title:I = 0x7f130385
+    iget-object v6, p1, Lrbc;->b:Ltrf;
 
-.field public static chat_screen_group_link_call_empty_state_subtitle_1:I = 0x7f130386
+    invoke-virtual {v0, v6}, Leo3;->f(Ltrf;)V
 
-.field public static chat_screen_group_link_call_empty_state_subtitle_2:I = 0x7f130387
+    iget-object p1, p1, Lrbc;->c:Ljava/util/List;
 
-.field public static chat_screen_group_link_call_empty_state_subtitle_3:I = 0x7f130388
+    new-array v6, v3, [Lfo3;
 
-.field public static chat_screen_group_link_call_empty_state_title:I = 0x7f130389
+    invoke-interface {p1, v6}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-.field public static chat_screen_message_audio_sender_self:I = 0x7f13038d
+    move-result-object p1
 
-.field public static chat_screen_message_audio_title:I = 0x7f13038e
+    check-cast p1, [Lfo3;
 
-.field public static chat_screen_message_call_subtitle_audio:I = 0x7f13038f
+    array-length v6, p1
 
-.field public static chat_screen_message_call_subtitle_video:I = 0x7f130390
+    invoke-static {p1, v6}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-.field public static chat_screen_message_call_title_incoming:I = 0x7f130391
+    move-result-object p1
 
-.field public static chat_screen_message_call_title_missed:I = 0x7f130392
+    check-cast p1, [Lfo3;
 
-.field public static chat_screen_message_call_title_outgoing:I = 0x7f130393
+    invoke-virtual {v0, p1}, Leo3;->a([Lfo3;)V
 
-.field public static chat_screen_message_call_title_reject:I = 0x7f130394
+    invoke-virtual {v0}, Leo3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
-.field public static chat_screen_message_contact_subtitle_added:I = 0x7f130395
+    move-result-object v7
 
-.field public static chat_screen_message_contact_subtitle_new:I = 0x7f130396
+    invoke-virtual {v7, v5}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
 
-.field public static chat_screen_message_contact_subtitle_phone_book:I = 0x7f130397
+    move-object p1, v5
 
-.field public static chat_screen_message_contact_subtitle_you:I = 0x7f130398
+    :goto_0
+    invoke-virtual {p1}, Ll24;->getParentController()Ll24;
 
-.field public static chat_screen_message_geo_subtitle:I = 0x7f130399
+    move-result-object v0
 
-.field public static chat_screen_message_geo_title:I = 0x7f13039a
+    if-eqz v0, :cond_0
 
-.field public static chat_screen_message_group_call:I = 0x7f13039b
+    invoke-virtual {p1}, Ll24;->getParentController()Ll24;
 
-.field public static chat_screen_message_group_call_title:I = 0x7f13039c
+    move-result-object p1
 
-.field public static chat_screen_message_resend_media_permission_error:I = 0x7f13039d
+    goto :goto_0
 
-.field public static chat_screen_message_send_error_delete_action:I = 0x7f13039e
+    :cond_0
+    instance-of v0, p1, Lwid;
 
-.field public static chat_screen_message_send_error_resend_action_multi:I = 0x7f13039f
+    if-eqz v0, :cond_1
 
-.field public static chat_screen_message_send_error_resend_action_solo:I = 0x7f1303a0
+    check-cast p1, Lwid;
 
-.field public static chat_screen_message_send_error_title:I = 0x7f1303a1
+    goto :goto_1
 
-.field public static chat_screen_message_unpinned_snackbar:I = 0x7f1303a2
+    :cond_1
+    move-object p1, v4
 
-.field public static chat_screen_new_messages_decor_title:I = 0x7f1303a3
+    :goto_1
+    if-eqz p1, :cond_2
 
-.field public static chat_screen_read_participants_not_read_header:I = 0x7f1303a4
+    invoke-interface {p1}, Lwid;->f0()Lqid;
 
-.field public static chat_screen_read_participants_read_header:I = 0x7f1303a5
+    move-result-object v4
 
-.field public static chat_screen_save_to_gallery_completed_gif_title:I = 0x7f1303a7
+    :cond_2
+    invoke-virtual {v7, v5}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
 
-.field public static chat_screen_save_to_gallery_completed_photo_title:I = 0x7f1303a8
+    if-eqz v4, :cond_12
 
-.field public static chat_screen_save_to_gallery_completed_video_title:I = 0x7f1303a9
+    new-instance v6, Ltid;
 
-.field public static chat_screen_save_to_gallery_failed_title:I = 0x7f1303aa
+    const/4 v11, 0x0
 
-.field public static chat_screen_saved_messages_empty_state_subtitle:I = 0x7f1303ab
+    const/4 v12, -0x1
 
-.field public static chat_screen_saved_messages_empty_state_title:I = 0x7f1303ac
+    const/4 v8, 0x0
 
-.field public static chat_screen_service_notifications:I = 0x7f1303ae
+    const/4 v9, 0x0
 
-.field public static chat_screen_snackbar_report_success:I = 0x7f1303af
+    const/4 v10, 0x0
 
-.field public static chat_screen_toolbar_saved_messages_description:I = 0x7f1303b3
+    invoke-direct/range {v6 .. v12}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
 
-.field public static message_link_forwarded:I = 0x7f1306b8
+    invoke-static {v3, v6, v1, v2}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
 
-.field public static message_link_reply_audio:I = 0x7f1306b9
+    invoke-virtual {v4, v6}, Lqid;->G(Ltid;)V
 
-.field public static message_link_reply_audio_call:I = 0x7f1306ba
+    goto/16 :goto_4
 
-.field public static message_link_reply_contact:I = 0x7f1306bb
+    :cond_3
+    instance-of v0, p1, Lqbc;
 
-.field public static message_link_reply_location:I = 0x7f1306bc
+    if-eqz v0, :cond_5
 
-.field public static message_link_reply_video_call:I = 0x7f1306bd
+    move-object v0, p1
 
-.field public static messages_list_bot_button_request_contact_confirm_action:I = 0x7f1306c4
+    check-cast v0, Lqbc;
 
-.field public static messages_list_bot_button_request_contact_confirm_description:I = 0x7f1306c5
+    iget-object v0, v0, Lqbc;->a:Ltrf;
 
-.field public static messages_list_bot_button_request_contact_confirm_title:I = 0x7f1306c6
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-.field public static messages_list_bot_official_button_request_contact_confirm_description:I = 0x7f1306c7
+    move-result-object v1
 
-.field public static messages_list_channel_description_admin_subtitle:I = 0x7f1306c8
+    invoke-virtual {v0, v1}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-.field public static messages_list_channel_description_admin_title:I = 0x7f1306c9
+    move-result-object v0
 
-.field public static messages_list_channel_description_private_subscriber_subtitle:I = 0x7f1306ca
+    if-nez v0, :cond_4
 
-.field public static messages_list_channel_description_public_subscriber_subtitle:I = 0x7f1306cb
+    goto/16 :goto_4
 
-.field public static messages_list_chat_description_view_owner_subtitle:I = 0x7f1306cc
+    :cond_4
+    new-instance v1, Lc3b;
 
-.field public static messages_list_chat_description_view_owner_title:I = 0x7f1306cd
+    invoke-direct {v1, v5}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
 
-.field public static messages_list_chat_description_view_subtitle:I = 0x7f1306ce
+    sget-object v2, Lt3b;->a:Lt3b;
 
-.field public static messages_list_contact_removed:I = 0x7f1306cf
+    invoke-virtual {v1, v2}, Lc3b;->e(Lu3b;)V
 
-.field public static messages_list_date_status_edit:I = 0x7f1306d0
+    sget-object v2, Lv3b;->a:Lv3b;
 
-.field public static messages_list_message_content_level_chat_snackbar_text:I = 0x7f1306d2
+    invoke-virtual {v1, v2}, Lc3b;->f(La4b;)V
 
-.field public static messages_list_message_content_level_chat_stub_text:I = 0x7f1306d3
+    invoke-virtual {v1, v0}, Lc3b;->h(Ljava/lang/CharSequence;)V
 
-.field public static messages_list_message_copy_with_sender_name:I = 0x7f1306d4
+    new-instance v0, Lcqe;
 
-.field public static messages_list_message_error_open_channel_private:I = 0x7f1306d5
+    const/16 v2, 0x17
 
-.field public static messages_list_message_error_open_channel_removed:I = 0x7f1306d6
+    invoke-direct {v0, v2, p1}, Lcqe;-><init>(ILjava/lang/Object;)V
 
-.field public static messages_list_message_error_open_channel_unavailable:I = 0x7f1306d7
+    invoke-virtual {v1, v0}, Lc3b;->d(Ld3b;)V
 
-.field public static messages_list_message_error_post_not_founded:I = 0x7f1306d8
+    invoke-virtual {v1}, Lc3b;->i()Lb3b;
+
+    goto/16 :goto_4
+
+    :cond_5
+    instance-of v0, p1, Lsbc;
+
+    if-eqz v0, :cond_7
+
+    check-cast p1, Lsbc;
+
+    iget-object p1, p1, Lsbc;->a:Lorf;
+
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    if-nez p1, :cond_6
+
+    goto/16 :goto_4
+
+    :cond_6
+    new-instance v0, Lc3b;
+
+    invoke-direct {v0, v5}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    new-instance v1, Lq3b;
+
+    sget v2, Lzjd;->c1:I
+
+    invoke-direct {v1, v2}, Lq3b;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lc3b;->e(Lu3b;)V
+
+    invoke-virtual {v0, p1}, Lc3b;->h(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v0}, Lc3b;->i()Lb3b;
+
+    goto/16 :goto_4
+
+    :cond_7
+    instance-of v0, p1, Lwbc;
+
+    if-eqz v0, :cond_9
+
+    new-instance v0, Lc3b;
+
+    invoke-direct {v0, v5}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    check-cast p1, Lwbc;
+
+    iget-object v1, p1, Lwbc;->a:Ljava/lang/Integer;
+
+    if-eqz v1, :cond_8
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    new-instance v2, Lq3b;
+
+    invoke-direct {v2, v1}, Lq3b;-><init>(I)V
+
+    invoke-virtual {v0, v2}, Lc3b;->e(Lu3b;)V
+
+    :cond_8
+    iget-object p1, p1, Lwbc;->b:Ltrf;
+
+    invoke-virtual {v0, p1}, Lc3b;->g(Ltrf;)V
+
+    invoke-virtual {v0}, Lc3b;->i()Lb3b;
+
+    goto/16 :goto_4
+
+    :cond_9
+    instance-of v0, p1, Lnbc;
+
+    if-eqz v0, :cond_b
+
+    sget-object v0, Lyi7;->a:Ljava/lang/String;
+
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast p1, Lnbc;
+
+    iget-object p1, p1, Lnbc;->a:Lqrf;
+
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    if-nez p1, :cond_a
+
+    const-string p1, ""
+
+    :cond_a
+    invoke-static {v0, p1, v4}, Lyi7;->h(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/net/Uri;)V
+
+    goto/16 :goto_4
+
+    :cond_b
+    instance-of v0, p1, Lubc;
+
+    if-eqz v0, :cond_c
+
+    iget-object v0, v5, Lone/me/profile/ProfileScreen;->w0:Lh0d;
+
+    sget-object v2, Lone/me/profile/ProfileScreen;->B0:[Ltr7;
+
+    const/16 v3, 0x9
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v0, v5, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcde;
+
+    check-cast p1, Lubc;
+
+    iget-object p1, p1, Lubc;->a:Ljava/util/List;
+
+    invoke-static {v1}, Ldwi;->a(I)Lg14;
+
+    move-result-object v1
+
+    invoke-interface {v1, p1}, Lg14;->i(Ljava/util/Collection;)Lg14;
+
+    move-result-object p1
+
+    invoke-interface {p1, v0}, Lg14;->t(Landroid/view/View;)Lg14;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lg14;->build()Lh14;
+
+    move-result-object p1
+
+    invoke-interface {p1, v5}, Lh14;->v(Lone/me/sdk/arch/Widget;)V
+
+    goto/16 :goto_4
+
+    :cond_c
+    instance-of v0, p1, Ltbc;
+
+    if-nez v0, :cond_14
+
+    sget-object v0, Lobc;->a:Lobc;
+
+    invoke-static {p1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    sget-object p1, Lone/me/profile/ProfileScreen;->B0:[Ltr7;
+
+    iget-object p1, v5, Lone/me/profile/ProfileScreen;->y0:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lrib;
+
+    new-instance v0, Ljmh;
+
+    invoke-direct {v0, v5, v1}, Ljmh;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-virtual {p1, v0}, Lrib;->i(Ljmh;)V
+
+    goto/16 :goto_4
+
+    :cond_d
+    instance-of v0, p1, Lpbc;
+
+    if-eqz v0, :cond_e
+
+    :try_start_0
+    check-cast p1, Lpbc;
+
+    iget-object p1, p1, Lpbc;->a:Landroid/content/Intent;
+
+    const/16 v0, 0x14d
+
+    invoke-virtual {v5, p1, v0}, Ll24;->startActivityForResult(Landroid/content/Intent;I)V
+
+    iget-object p1, v5, Lone/me/profile/ProfileScreen;->z0:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Li5a;
+
+    sget-object v0, Lupd;->D0:Lupd;
+
+    invoke-static {p1, v0}, Li5a;->g(Li5a;Lupd;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_4
+
+    :catch_0
+    sget-object p1, Lone/me/profile/ProfileScreen;->B0:[Ltr7;
+
+    invoke-virtual {v5}, Lone/me/profile/ProfileScreen;->H0()Ladc;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ladc;->D()V
+
+    const-class p1, Lone/me/profile/ProfileScreen;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "failed open camera"
+
+    invoke-static {p1, v0, v4}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_4
+
+    :cond_e
+    instance-of p1, p1, Lvbc;
+
+    if-eqz p1, :cond_13
+
+    sget-object p1, Lone/me/profile/ProfileScreen;->B0:[Ltr7;
+
+    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:[Ltr7;
+
+    new-instance v7, Lone/me/profile/RknBottomSheet;
+
+    invoke-direct {v7}, Lone/me/profile/RknBottomSheet;-><init>()V
+
+    invoke-virtual {v7, v5}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
+
+    move-object p1, v5
+
+    :goto_2
+    invoke-virtual {p1}, Ll24;->getParentController()Ll24;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_f
+
+    invoke-virtual {p1}, Ll24;->getParentController()Ll24;
+
+    move-result-object p1
+
+    goto :goto_2
+
+    :cond_f
+    instance-of v0, p1, Lwid;
+
+    if-eqz v0, :cond_10
+
+    check-cast p1, Lwid;
+
+    goto :goto_3
+
+    :cond_10
+    move-object p1, v4
+
+    :goto_3
+    if-eqz p1, :cond_11
+
+    invoke-interface {p1}, Lwid;->f0()Lqid;
+
+    move-result-object v4
+
+    :cond_11
+    invoke-virtual {v7, v5}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v4, :cond_12
+
+    new-instance v6, Ltid;
+
+    const/4 v11, 0x0
+
+    const/4 v12, -0x1
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    invoke-direct/range {v6 .. v12}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+
+    invoke-static {v3, v6, v1, v2}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
+
+    invoke-virtual {v4, v6}, Lqid;->G(Ltid;)V
+
+    :cond_12
+    :goto_4
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :cond_13
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_14
+    check-cast p1, Ltbc;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/Long;
+
+    const-wide/16 v0, 0x0
+
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
+
+    new-instance v0, Ltcb;
+
+    const-string v1, "profile:participant_id_for_action"
+
+    invoke-direct {v0, v1, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v0}, [Ltcb;
+
+    move-result-object p1
+
+    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
+
+    sget-object p1, Lone/me/profile/ProfileScreen;->B0:[Ltr7;
+
+    invoke-virtual {v5}, Lone/me/profile/ProfileScreen;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    throw v4
+.end method

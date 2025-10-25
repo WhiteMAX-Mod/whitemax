@@ -10,7 +10,7 @@
 
 .field public static final LIBRARY_PACKAGE_NAME:Ljava/lang/String; = "ru.ok.android.externcalls.sdk.audio"
 
-.field public static final SDK_VERSION:Ljava/lang/String; = "3.1.15"
+.field public static final SDK_VERSION:Ljava/lang/String; = "3.1.17"
 
 .field public static final TRACER_TOKEN:Ljava/lang/String; = "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
 

@@ -1,41 +1,98 @@
-.class public final Lb3a;
-.super Lso;
+.class public final synthetic Lb3a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr6;
 
-# static fields
-.field public static final a:Lb3a;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lc3a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lc3a;I)V
+    .locals 0
 
-    new-instance v0, Lb3a;
+    iput p2, p0, Lb3a;->a:I
 
-    invoke-direct {v0}, Lso;-><init>()V
+    iput-object p1, p0, Lb3a;->b:Lc3a;
 
-    sput-object v0, Lb3a;->a:Lb3a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getExecutors()Lkha;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
+    iget v0, p0, Lb3a;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    const-class v0, Lkha;
+    iget-object v0, p0, Lb3a;->b:Lc3a;
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v0, v0, Lf3;->a:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v0, Ljava/util/Set;
 
-    check-cast p0, Lkha;
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    return-object p0
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lk2a;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lgk0;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lgk0;-><init>(I)V
+
+    iget-object v1, p0, Lb3a;->b:Lc3a;
+
+    invoke-virtual {v1, v0}, Lf3;->l(Lvr3;)V
+
+    return-void
+
+    :pswitch_1
+    new-instance v0, Lgk0;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Lgk0;-><init>(I)V
+
+    iget-object v1, p0, Lb3a;->b:Lc3a;
+
+    invoke-virtual {v1, v0}, Lf3;->l(Lvr3;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,78 +1,51 @@
-.class public final Lbs;
-.super Ltbb;
+.class public abstract synthetic Lbs;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lgo0;
-
-.field public final b:Lb7;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lgo0;Lb7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lbs;->a:Lgo0;
-
-    iput-object p2, p0, Lbs;->b:Lb7;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final c(IILandroid/graphics/Bitmap$Config;)Lf63;
-    .locals 5
-
-    invoke-static {p1, p2, p3}, Lqo0;->c(IILandroid/graphics/Bitmap$Config;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lbs;->a:Lgo0;
-
-    invoke-interface {v1, v0}, Lreb;->get(I)Ljava/lang/Object;
+    invoke-static {}, Lir;->values()[Lir;
 
     move-result-object v0
 
-    check-cast v0, Landroid/graphics/Bitmap;
+    array-length v0, v0
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
+    new-array v0, v0, [I
 
-    move-result v2
+    const/4 v1, 0x1
 
-    mul-int v3, p1, p2
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {p3}, Lqo0;->b(Landroid/graphics/Bitmap$Config;)I
+    :catch_0
+    const/4 v1, 0x2
 
-    move-result v4
+    :try_start_1
+    aput v1, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    mul-int/2addr v4, v3
+    :catch_1
+    const/4 v1, 0x0
 
-    if-lt v2, v4, :cond_0
+    const/4 v2, 0x3
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/graphics/Bitmap;->reconfigure(IILandroid/graphics/Bitmap$Config;)V
+    :try_start_2
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iget-object p0, p0, Lbs;->b:Lb7;
+    :catch_2
+    sput-object v0, Lbs;->$EnumSwitchMapping$0:[I
 
-    iget-object p0, p0, Lb7;->b:Ljava/lang/Object;
-
-    check-cast p0, Ly9e;
-
-    invoke-static {v0, v1, p0}, Lf63;->t0(Ljava/lang/Object;Lguc;Le63;)Lid4;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Check failed."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method

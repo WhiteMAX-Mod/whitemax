@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 2
 
     iget v0, p0, Lorg/webrtc/b;->a:I
 
@@ -42,11 +42,11 @@
 
     check-cast v0, Lorg/webrtc/TextureBufferImpl;
 
-    iget-object p0, p0, Lorg/webrtc/b;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lorg/webrtc/b;->c:Ljava/lang/Object;
 
-    check-cast p0, Lorg/webrtc/TextureBufferImpl$RefCountMonitor;
+    check-cast v1, Lorg/webrtc/TextureBufferImpl$RefCountMonitor;
 
-    invoke-static {v0, p0}, Lorg/webrtc/TextureBufferImpl;->b(Lorg/webrtc/TextureBufferImpl;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
+    invoke-static {v0, v1}, Lorg/webrtc/TextureBufferImpl;->b(Lorg/webrtc/TextureBufferImpl;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
 
     return-void
 
@@ -55,11 +55,11 @@
 
     check-cast v0, Lorg/webrtc/Camera1Session$3;
 
-    iget-object p0, p0, Lorg/webrtc/b;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lorg/webrtc/b;->c:Ljava/lang/Object;
 
-    check-cast p0, [B
+    check-cast v1, [B
 
-    invoke-static {v0, p0}, Lorg/webrtc/Camera1Session$3;->b(Lorg/webrtc/Camera1Session$3;[B)V
+    invoke-static {v0, v1}, Lorg/webrtc/Camera1Session$3;->b(Lorg/webrtc/Camera1Session$3;[B)V
 
     return-void
 
@@ -68,11 +68,11 @@
 
     check-cast v0, Lorg/webrtc/Camera1Session$3;
 
-    iget-object p0, p0, Lorg/webrtc/b;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lorg/webrtc/b;->c:Ljava/lang/Object;
 
-    check-cast p0, [B
+    check-cast v1, [B
 
-    invoke-static {v0, p0}, Lorg/webrtc/Camera1Session$3;->a(Lorg/webrtc/Camera1Session$3;[B)V
+    invoke-static {v0, v1}, Lorg/webrtc/Camera1Session$3;->a(Lorg/webrtc/Camera1Session$3;[B)V
 
     return-void
 

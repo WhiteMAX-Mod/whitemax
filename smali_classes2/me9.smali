@@ -1,23 +1,55 @@
 .class public final Lme9;
-.super Lx2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lme9;
+# instance fields
+.field public final a:Z
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(ZZZZZZZZZZ)V
+    .locals 0
 
-    new-instance v0, Lme9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x8
+    iput-boolean p1, p0, Lme9;->a:Z
 
-    invoke-direct {v0, v1}, Lx2;-><init>(I)V
+    iput-boolean p2, p0, Lme9;->b:Z
 
-    sput-object v0, Lme9;->c:Lme9;
+    iput-boolean p3, p0, Lme9;->c:Z
+
+    iput-boolean p4, p0, Lme9;->d:Z
+
+    iput-boolean p5, p0, Lme9;->e:Z
+
+    iput-boolean p6, p0, Lme9;->f:Z
+
+    iput-boolean p7, p0, Lme9;->g:Z
+
+    iput-boolean p8, p0, Lme9;->h:Z
+
+    iput-boolean p9, p0, Lme9;->i:Z
+
+    iput-boolean p10, p0, Lme9;->j:Z
 
     return-void
 .end method

@@ -164,39 +164,39 @@
 .end method
 
 .method private createBitrateAdjuster(Lorg/webrtc/VideoCodecMimeType;Ljava/lang/String;)Lorg/webrtc/BitrateAdjuster;
-    .locals 0
+    .locals 1
 
-    const-string p0, "OMX.Exynos."
+    const-string v0, "OMX.Exynos."
 
-    invoke-virtual {p2, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result p2
 
-    if-eqz p0, :cond_1
+    if-eqz p2, :cond_1
 
-    sget-object p0, Lorg/webrtc/VideoCodecMimeType;->VP8:Lorg/webrtc/VideoCodecMimeType;
+    sget-object p2, Lorg/webrtc/VideoCodecMimeType;->VP8:Lorg/webrtc/VideoCodecMimeType;
 
-    if-ne p1, p0, :cond_0
+    if-ne p1, p2, :cond_0
 
-    new-instance p0, Lorg/webrtc/DynamicBitrateAdjuster;
+    new-instance p1, Lorg/webrtc/DynamicBitrateAdjuster;
 
-    invoke-direct {p0}, Lorg/webrtc/DynamicBitrateAdjuster;-><init>()V
+    invoke-direct {p1}, Lorg/webrtc/DynamicBitrateAdjuster;-><init>()V
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    new-instance p0, Lorg/webrtc/FramerateBitrateAdjuster;
+    new-instance p1, Lorg/webrtc/FramerateBitrateAdjuster;
 
-    invoke-direct {p0}, Lorg/webrtc/FramerateBitrateAdjuster;-><init>()V
+    invoke-direct {p1}, Lorg/webrtc/FramerateBitrateAdjuster;-><init>()V
 
-    return-object p0
+    return-object p1
 
     :cond_1
-    new-instance p0, Lorg/webrtc/BaseBitrateAdjuster;
+    new-instance p1, Lorg/webrtc/BaseBitrateAdjuster;
 
-    invoke-direct {p0}, Lorg/webrtc/BaseBitrateAdjuster;-><init>()V
+    invoke-direct {p1}, Lorg/webrtc/BaseBitrateAdjuster;-><init>()V
 
-    return-object p0
+    return-object p1
 .end method
 
 .method private findCodecForType(Lorg/webrtc/VideoCodecMimeType;)Landroid/media/MediaCodecInfo;
@@ -262,129 +262,181 @@
 .end method
 
 .method private getForcedKeyFrameIntervalMs(Lorg/webrtc/VideoCodecMimeType;Ljava/lang/String;)I
-    .locals 0
+    .locals 1
 
-    sget-object p0, Lorg/webrtc/VideoCodecMimeType;->VP8:Lorg/webrtc/VideoCodecMimeType;
+    sget-object v0, Lorg/webrtc/VideoCodecMimeType;->VP8:Lorg/webrtc/VideoCodecMimeType;
 
-    if-ne p1, p0, :cond_0
+    if-ne p1, v0, :cond_0
 
-    const-string p0, "OMX.qcom."
+    const-string p1, "OMX.qcom."
 
-    invoke-virtual {p2, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    const/16 p0, 0x3a98
+    const/16 p1, 0x3a98
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method private isH264HighProfileSupported(Landroid/media/MediaCodecInfo;)Z
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method private isHardwareSupportedInCurrentSdk(Landroid/media/MediaCodecInfo;Lorg/webrtc/VideoCodecMimeType;)Z
-    .locals 0
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/media/MediaCodecInfo;->isHardwareAccelerated()Z
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result p0
+    const/16 v1, 0x1d
 
-    return p0
+    if-lt v0, v1, :cond_0
+
+    invoke-static {p1}, La15;->A(Landroid/media/MediaCodecInfo;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    sget-object v0, Lorg/webrtc/HardwareVideoEncoderFactory$1;->$SwitchMap$org$webrtc$VideoCodecMimeType:[I
+
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    aget p2, v0, p2
+
+    const/4 v0, 0x1
+
+    if-eq p2, v0, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq p2, v0, :cond_2
+
+    const/4 v0, 0x3
+
+    if-eq p2, v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    invoke-direct {p0, p1}, Lorg/webrtc/HardwareVideoEncoderFactory;->isHardwareSupportedInCurrentSdkH264(Landroid/media/MediaCodecInfo;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    invoke-direct {p0, p1}, Lorg/webrtc/HardwareVideoEncoderFactory;->isHardwareSupportedInCurrentSdkVp9(Landroid/media/MediaCodecInfo;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    invoke-direct {p0, p1}, Lorg/webrtc/HardwareVideoEncoderFactory;->isHardwareSupportedInCurrentSdkVp8(Landroid/media/MediaCodecInfo;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
 .method private isHardwareSupportedInCurrentSdkH264(Landroid/media/MediaCodecInfo;)Z
-    .locals 3
+    .locals 4
 
-    sget-object p0, Lorg/webrtc/HardwareVideoEncoderFactory;->H264_HW_EXCEPTION_MODELS:Ljava/util/List;
+    sget-object v0, Lorg/webrtc/HardwareVideoEncoderFactory;->H264_HW_EXCEPTION_MODELS:Ljava/util/List;
 
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    invoke-interface {p0, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    return v1
 
     :cond_0
     invoke-virtual {p1}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    move p1, v0
+    move v0, v1
 
     :goto_0
-    sget-object v1, Lorg/webrtc/HardwareVideoEncoderFactory;->odklSupportedH264HwCodecPrefixes:Ljava/util/ArrayList;
+    sget-object v2, Lorg/webrtc/HardwareVideoEncoderFactory;->odklSupportedH264HwCodecPrefixes:Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    if-ge p1, v1, :cond_2
+    if-ge v0, v2, :cond_2
 
-    sget-object v1, Lorg/webrtc/HardwareVideoEncoderFactory;->odklSupportedH264HwCodecPrefixes:Ljava/util/ArrayList;
+    sget-object v2, Lorg/webrtc/HardwareVideoEncoderFactory;->odklSupportedH264HwCodecPrefixes:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
-    return v2
+    return v3
 
     :cond_1
-    add-int/lit8 p1, p1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_2
-    const-string p1, "OMX.qcom."
+    const-string v0, "OMX.qcom."
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_3
+    if-eqz v0, :cond_3
 
     goto :goto_1
 
     :cond_3
-    const-string p1, "OMX.Exynos."
+    const-string v0, "OMX.Exynos."
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_4
+    if-eqz p1, :cond_4
 
     :goto_1
-    return v2
+    return v3
 
     :cond_4
-    return v0
+    return v1
 .end method
 
 .method private isHardwareSupportedInCurrentSdkVp8(Landroid/media/MediaCodecInfo;)Z
@@ -421,78 +473,78 @@
 
     if-eqz p1, :cond_1
 
-    iget-boolean p0, p0, Lorg/webrtc/HardwareVideoEncoderFactory;->enableIntelVp8Encoder:Z
+    iget-boolean p1, p0, Lorg/webrtc/HardwareVideoEncoderFactory;->enableIntelVp8Encoder:Z
 
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_2
     :goto_0
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method private isHardwareSupportedInCurrentSdkVp9(Landroid/media/MediaCodecInfo;)Z
-    .locals 0
+    .locals 1
 
     invoke-virtual {p1}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "OMX.qcom."
+    const-string v0, "OMX.qcom."
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "OMX.Exynos."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
 
-    if-nez p1, :cond_1
-
-    const-string p1, "OMX.Exynos."
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     :goto_0
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method private isMediaCodecAllowed(Landroid/media/MediaCodecInfo;)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/HardwareVideoEncoderFactory;->codecAllowedPredicate:Lorg/webrtc/Predicate;
+    iget-object v0, p0, Lorg/webrtc/HardwareVideoEncoderFactory;->codecAllowedPredicate:Lorg/webrtc/Predicate;
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    invoke-interface {p0, p1}, Lorg/webrtc/Predicate;->test(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Lorg/webrtc/Predicate;->test(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method private isSupportedCodec(Landroid/media/MediaCodecInfo;Lorg/webrtc/VideoCodecMimeType;)Z
@@ -536,13 +588,13 @@
 
     invoke-direct {p0, p1}, Lorg/webrtc/HardwareVideoEncoderFactory;->isMediaCodecAllowed(Landroid/media/MediaCodecInfo;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_2
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_2
     return v1
@@ -754,15 +806,15 @@
     :cond_2
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    move-result p0
+    move-result v1
 
-    new-array p0, p0, [Lorg/webrtc/VideoCodecInfo;
+    new-array v1, v1, [Lorg/webrtc/VideoCodecInfo;
 
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, [Lorg/webrtc/VideoCodecInfo;
+    check-cast v0, [Lorg/webrtc/VideoCodecInfo;
 
-    return-object p0
+    return-object v0
 .end method

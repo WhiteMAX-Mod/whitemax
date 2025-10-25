@@ -24,51 +24,51 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Landroidx/mediarouter/app/h;->a:Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;
+    iget-object v0, p0, Landroidx/mediarouter/app/h;->a:Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;
 
-    iget-boolean v0, p0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->u0:Z
+    iget-boolean v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->t0:Z
 
-    xor-int/lit8 v1, v0, 0x1
+    xor-int/lit8 v2, v1, 0x1
 
-    iput-boolean v1, p0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->u0:Z
+    iput-boolean v2, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->t0:Z
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->o:Landroid/graphics/drawable/AnimationDrawable;
+    iget-object v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->o:Landroid/graphics/drawable/AnimationDrawable;
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/AppCompatImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/AppCompatImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->o:Landroid/graphics/drawable/AnimationDrawable;
+    iget-object v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->o:Landroid/graphics/drawable/AnimationDrawable;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
+    invoke-virtual {v1}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->t0:Ljava/lang/String;
+    iget-object v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->s0:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->r0:Landroid/graphics/drawable/AnimationDrawable;
+    iget-object v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->q0:Landroid/graphics/drawable/AnimationDrawable;
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/AppCompatImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/AppCompatImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->r0:Landroid/graphics/drawable/AnimationDrawable;
+    iget-object v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->q0:Landroid/graphics/drawable/AnimationDrawable;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
+    invoke-virtual {v1}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->s0:Ljava/lang/String;
+    iget-object v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->r0:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :goto_0
-    iget-object p0, p0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->v0:Landroid/view/View$OnClickListener;
+    iget-object v0, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->u0:Landroid/view/View$OnClickListener;
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-interface {p0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
+    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
     :cond_1
     return-void

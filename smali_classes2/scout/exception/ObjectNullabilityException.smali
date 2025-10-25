@@ -26,11 +26,11 @@
 # instance fields
 .field public final a:Ljava/lang/Class;
 
-.field public final b:Ln6d;
+.field public final b:Lppd;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Class;Ln6d;)V
+.method public constructor <init>(Ljava/lang/Class;Lppd;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -39,7 +39,7 @@
 
     iput-object p1, p0, Lscout/exception/ObjectNullabilityException;->a:Ljava/lang/Class;
 
-    iput-object p2, p0, Lscout/exception/ObjectNullabilityException;->b:Ln6d;
+    iput-object p2, p0, Lscout/exception/ObjectNullabilityException;->b:Lppd;
 
     return-void
 .end method
@@ -47,11 +47,11 @@
 
 # virtual methods
 .method public final getCause()Ljava/lang/Throwable;
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getMessage()Ljava/lang/String;
@@ -91,17 +91,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lscout/exception/ObjectNullabilityException;->b:Ln6d;
+    iget-object v1, p0, Lscout/exception/ObjectNullabilityException;->b:Lppd;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, " defines null value"
+    const-string v1, " defines null value"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

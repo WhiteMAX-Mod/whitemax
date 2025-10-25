@@ -1,92 +1,115 @@
-.class public final synthetic Liv9;
-.super Ljava/lang/Object;
+.class public final Liv9;
+.super Lkv9;
 .source "SourceFile"
-
-# interfaces
-.implements Lgm;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Liv9;->a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    iput-wide p1, p0, Liv9;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f0(Lhm;I)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Liv9;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Liv9;
+
+    iget-wide v1, p0, Liv9;->a:J
+
+    iget-wide v3, p1, Liv9;->a:J
+
+    cmp-long p1, v1, v3
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lxi7;
+    iget-wide v0, p0, Liv9;->a:J
 
-    iget-object p0, p0, Liv9;->a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->y0()Lhm;
+    move-result v0
 
-    move-result-object p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p1}, Lhm;->getTotalScrollRange()I
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    move-result p1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    iget-object v0, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->w0:Lzg5;
+    move-result v1
 
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+    add-int/2addr v1, v0
 
-    move-result p2
+    return v1
+.end method
 
-    int-to-float p2, p2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    int-to-float p1, p1
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    div-float/2addr p2, p1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p2}, Lt28;->getInterpolation(F)F
+    const-string v2, "Defined(position="
 
-    move-result p1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p2, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->Z:Lcic;
+    iget-wide v2, p0, Liv9;->a:J
 
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lxi7;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x2
+    const-string v2, ", timeUnit="
 
-    aget-object v1, v0, v1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p2, p0, v1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    const-string v0, ")"
 
-    check-cast p2, Landroid/view/ViewGroup;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sub-float/2addr v1, p1
+    move-result-object v0
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->setAlpha(F)V
-
-    iget-object p2, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->s0:Lcic;
-
-    const/4 v1, 0x4
-
-    aget-object v0, v0, v1
-
-    invoke-interface {p2, p0, v0}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ldsa;
-
-    invoke-virtual {p0, p1}, Ldsa;->setTitleAlpha(F)V
-
-    return-void
+    return-object v0
 .end method

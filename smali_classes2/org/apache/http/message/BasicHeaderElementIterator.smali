@@ -66,23 +66,23 @@
 
     .line 7
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Parser may not be null"
+    const-string p2, "Parser may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     .line 8
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Header iterator may not be null"
+    const-string p2, "Header iterator may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method private bufferHeaderValue()V
@@ -135,9 +135,9 @@
 
     invoke-interface {v0}, Lorg/apache/http/FormattedHeader;->getValuePos()I
 
-    move-result p0
+    move-result v0
 
-    invoke-virtual {v3, p0}, Lorg/apache/http/message/ParserCursor;->updatePos(I)V
+    invoke-virtual {v3, v0}, Lorg/apache/http/message/ParserCursor;->updatePos(I)V
 
     return-void
 
@@ -288,22 +288,22 @@
     invoke-direct {p0}, Lorg/apache/http/message/BasicHeaderElementIterator;->parseNextElement()V
 
     :cond_0
-    iget-object p0, p0, Lorg/apache/http/message/BasicHeaderElementIterator;->currentElement:Lorg/apache/http/HeaderElement;
+    iget-object v0, p0, Lorg/apache/http/message/BasicHeaderElementIterator;->currentElement:Lorg/apache/http/HeaderElement;
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public final next()Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/util/NoSuchElementException;
@@ -312,9 +312,9 @@
 
     invoke-virtual {p0}, Lorg/apache/http/message/BasicHeaderElementIterator;->nextElement()Lorg/apache/http/HeaderElement;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public nextElement()Lorg/apache/http/HeaderElement;
@@ -343,28 +343,28 @@
     return-object v0
 
     :cond_1
-    new-instance p0, Ljava/util/NoSuchElementException;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    const-string v0, "No more header elements available"
+    const-string v1, "No more header elements available"
 
-    invoke-direct {p0, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public remove()V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/UnsupportedOperationException;
         }
     .end annotation
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Remove not supported"
+    const-string v1, "Remove not supported"
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method

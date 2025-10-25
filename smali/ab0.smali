@@ -1,99 +1,31 @@
 .class public final Lab0;
-.super Ljava/lang/Object;
+.super Lb6a;
 .source "SourceFile"
 
 
-# static fields
-.field public static final f:Landroid/util/Range;
-
-
 # instance fields
-.field public final a:Landroid/util/Size;
+.field public final a:La6a;
 
-.field public final b:Lgz4;
-
-.field public final c:Landroid/util/Range;
-
-.field public final d:Lzf3;
-
-.field public final e:Z
+.field public final b:Lz5a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Landroid/util/Range;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
-
-    sput-object v0, Lab0;->f:Landroid/util/Range;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/util/Size;Lgz4;Landroid/util/Range;Lzf3;Z)V
+.method public constructor <init>(La6a;Lz5a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lab0;->a:Landroid/util/Size;
+    iput-object p1, p0, Lab0;->a:La6a;
 
-    iput-object p2, p0, Lab0;->b:Lgz4;
-
-    iput-object p3, p0, Lab0;->c:Landroid/util/Range;
-
-    iput-object p4, p0, Lab0;->d:Lzf3;
-
-    iput-boolean p5, p0, Lab0;->e:Z
+    iput-object p2, p0, Lab0;->b:Lz5a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ltk4;
-    .locals 2
-
-    new-instance v0, Ltk4;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v1, p0, Lab0;->a:Landroid/util/Size;
-
-    iput-object v1, v0, Ltk4;->a:Ljava/lang/Object;
-
-    iget-object v1, p0, Lab0;->b:Lgz4;
-
-    iput-object v1, v0, Ltk4;->b:Ljava/lang/Object;
-
-    iget-object v1, p0, Lab0;->c:Landroid/util/Range;
-
-    iput-object v1, v0, Ltk4;->c:Ljava/lang/Object;
-
-    iget-object v1, p0, Lab0;->d:Lzf3;
-
-    iput-object v1, v0, Ltk4;->o:Ljava/lang/Object;
-
-    iget-boolean p0, p0, Lab0;->e:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    iput-object p0, v0, Ltk4;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -102,142 +34,112 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lab0;
+    instance-of v1, p1, Lb6a;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    check-cast p1, Lab0;
+    check-cast p1, Lb6a;
 
-    iget-object v1, p1, Lab0;->a:Landroid/util/Size;
-
-    iget-object v3, p1, Lab0;->d:Lzf3;
-
-    iget-object v4, p0, Lab0;->a:Landroid/util/Size;
-
-    invoke-virtual {v4, v1}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lab0;->b:Lgz4;
-
-    iget-object v4, p1, Lab0;->b:Lgz4;
-
-    invoke-virtual {v1, v4}, Lgz4;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lab0;->c:Landroid/util/Range;
-
-    iget-object v4, p1, Lab0;->c:Landroid/util/Range;
-
-    invoke-virtual {v1, v4}, Landroid/util/Range;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lab0;->d:Lzf3;
+    iget-object v1, p0, Lab0;->a:La6a;
 
     if-nez v1, :cond_1
 
-    if-nez v3, :cond_2
+    move-object v1, p1
+
+    check-cast v1, Lab0;
+
+    iget-object v1, v1, Lab0;->a:La6a;
+
+    if-nez v1, :cond_3
 
     goto :goto_0
 
     :cond_1
+    move-object v3, p1
+
+    check-cast v3, Lab0;
+
+    iget-object v3, v3, Lab0;->a:La6a;
+
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     :goto_0
-    iget-boolean p0, p0, Lab0;->e:Z
+    iget-object v1, p0, Lab0;->b:Lz5a;
 
-    iget-boolean p1, p1, Lab0;->e:Z
+    if-nez v1, :cond_2
 
-    if-ne p0, p1, :cond_2
+    check-cast p1, Lab0;
 
-    return v0
+    iget-object p1, p1, Lab0;->b:Lz5a;
+
+    if-nez p1, :cond_3
+
+    goto :goto_1
 
     :cond_2
+    check-cast p1, Lab0;
+
+    iget-object p1, p1, Lab0;->b:Lz5a;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    :goto_1
+    return v0
+
+    :cond_3
     return v2
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lab0;->a:Landroid/util/Size;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/util/Size;->hashCode()I
+    iget-object v1, p0, Lab0;->a:La6a;
 
-    move-result v0
+    if-nez v1, :cond_0
 
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lab0;->b:Lgz4;
-
-    invoke-virtual {v2}, Lgz4;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lab0;->c:Landroid/util/Range;
-
-    invoke-virtual {v2}, Landroid/util/Range;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lab0;->d:Lzf3;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
+    move v1, v0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     :goto_0
-    xor-int/2addr v0, v2
+    const v2, 0xf4243
 
-    mul-int/2addr v0, v1
+    xor-int/2addr v1, v2
 
-    iget-boolean p0, p0, Lab0;->e:Z
+    mul-int/2addr v1, v2
 
-    if-eqz p0, :cond_1
+    iget-object v2, p0, Lab0;->b:Lz5a;
 
-    const/16 p0, 0x4cf
+    if-nez v2, :cond_1
 
     goto :goto_1
 
     :cond_1
-    const/16 p0, 0x4d5
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     :goto_1
-    xor-int/2addr p0, v0
+    xor-int/2addr v0, v1
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -245,49 +147,29 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "StreamSpec{resolution="
+    const-string v1, "NetworkConnectionInfo{networkType="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lab0;->a:Landroid/util/Size;
+    iget-object v1, p0, Lab0;->a:La6a;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", dynamicRange="
+    const-string v1, ", mobileSubtype="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lab0;->b:Lgz4;
+    iget-object v1, p0, Lab0;->b:Lz5a;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", expectedFrameRateRange="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lab0;->c:Landroid/util/Range;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", implementationOptions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lab0;->d:Lzf3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", zslDisabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lab0;->e:Z
 
     const-string v1, "}"
 
-    invoke-static {v0, p0, v1}, Lmw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 .end method

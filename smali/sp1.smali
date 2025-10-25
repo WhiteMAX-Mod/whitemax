@@ -1,424 +1,164 @@
 .class public final Lsp1;
-.super Landroid/widget/FrameLayout;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public final synthetic Y:Ltj1;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Ltj1;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lsp1;->Y:Ltj1;
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/4 p2, 0x2
 
-    new-instance v0, Leg1;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Leg1;-><init>(I)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lsp1;->a:Ljava/lang/Object;
-
-    new-instance v0, Lrp1;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, p0, v2}, Lrp1;-><init>(Landroid/content/Context;Lsp1;I)V
-
-    invoke-static {v1, v0}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lsp1;->b:Ljava/lang/Object;
-
-    new-instance v0, Lrp1;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p1, p0, v2}, Lrp1;-><init>(Landroid/content/Context;Lsp1;I)V
-
-    invoke-static {v1, v0}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lsp1;->c:Ljava/lang/Object;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method private final getNewCallTopPanel()Lqp1;
-    .locals 0
-
-    iget-object p0, p0, Lsp1;->b:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lqp1;
-
-    return-object p0
-.end method
-
-.method private final getOldCallTopPanel()Lmp1;
-    .locals 0
-
-    iget-object p0, p0, Lsp1;->c:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lmp1;
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0}, Lsp1;->getNewCallTopPanel()Lqp1;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Lsp1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Lqp1;->I0:La9f;
+    move-result-object p1
 
-    if-eqz p0, :cond_0
+    check-cast p1, Lsp1;
 
-    invoke-virtual {p0}, La9f;->a()V
+    sget-object p2, Lccg;->a:Lccg;
 
-    :cond_0
-    return-void
+    invoke-virtual {p1, p2}, Lsp1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final b()Z
-    .locals 0
-
-    iget-object p0, p0, Lsp1;->a:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Boolean;
-
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final c(Z)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    invoke-virtual {p0}, Lsp1;->b()Z
+    new-instance v0, Lsp1;
 
-    move-result v0
+    iget-object v1, p0, Lsp1;->Y:Ltj1;
 
-    if-eqz v0, :cond_2
+    invoke-direct {v0, p2, v1}, Lsp1;-><init>(Lkotlin/coroutines/Continuation;Ltj1;)V
 
-    invoke-direct {p0}, Lsp1;->getNewCallTopPanel()Lqp1;
+    iput-object p1, v0, Lsp1;->X:Ljava/lang/Object;
 
-    move-result-object p0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lqp1;->G0:Ljava/lang/Boolean;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-object v1
+    iget-object p1, p0, Lsp1;->X:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast p1, Lmp1;
 
-    move-result v0
+    iget-object v0, p1, Lmp1;->c:Llp1;
 
-    if-eqz v0, :cond_0
+    instance-of v0, v0, Lip1;
 
-    goto :goto_1
+    const/4 v1, 0x0
 
-    :cond_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-nez v0, :cond_0
 
-    move-result-object v0
-
-    iput-object v0, p0, Lqp1;->G0:Ljava/lang/Boolean;
-
-    sget-object v0, Lyu4;->t0:Lbx9;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0, p0}, Lbx9;->q(Landroid/view/View;)Llia;
-
-    move-result-object p1
-
-    iget-object p1, p1, Llia;->c:Lera;
-
-    invoke-interface {p1}, Lera;->getIcon()Lqy6;
-
-    move-result-object p1
-
-    iget p1, p1, Lqy6;->f:I
+    move v0, v1
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {v0, p0}, Lbx9;->q(Landroid/view/View;)Llia;
-
-    move-result-object p1
-
-    iget-object p1, p1, Llia;->c:Lera;
-
-    invoke-interface {p1}, Lera;->c()Lide;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lide;->b:Ljde;
-
-    iget-object p1, p1, Ljde;->a:Lkde;
-
-    iget p1, p1, Lkde;->f:I
+    :cond_0
+    const/16 v0, 0x8
 
     :goto_0
-    iget-object p0, p0, Lqp1;->N0:Lbzc;
+    iget-object v2, p0, Lsp1;->Y:Ltj1;
 
-    invoke-virtual {p0, p1}, Lbzc;->setIconTint(I)V
+    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p1, Lmp1;->c:Llp1;
+
+    sget-object v3, Lip1;->a:Lip1;
+
+    invoke-static {v0, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    sget-object v3, Lkp1;->a:Lkp1;
+
+    invoke-static {v0, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object p1, p1, Lmp1;->b:Lhp1;
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p1, Lhp1;->b:Ltrf;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    invoke-virtual {v2, p1}, Ltj1;->setBody(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v2, v1}, Ltj1;->setLoading(Z)V
+
+    goto :goto_2
 
     :cond_2
-    :goto_1
-    return-void
-.end method
+    sget-object p1, Ljp1;->a:Ljp1;
 
-.method public final d(ZLw8f;)V
-    .locals 1
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lsp1;->b()Z
+    move-result p1
 
-    move-result v0
+    if-eqz p1, :cond_3
 
-    if-eqz v0, :cond_0
+    const/4 p1, 0x1
 
-    invoke-direct {p0}, Lsp1;->getNewCallTopPanel()Lqp1;
+    invoke-virtual {v2, p1}, Ltj1;->setLoading(Z)V
 
-    move-result-object p0
+    goto :goto_2
 
-    invoke-virtual {p0, p1, p2}, Lqp1;->x(ZLw8f;)V
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    :cond_0
-    return-void
-.end method
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-.method public final e(Z)V
-    .locals 12
+    throw p1
 
-    invoke-virtual {p0}, Lsp1;->b()Z
+    :cond_4
+    :goto_2
+    sget-object p1, Lccg;->a:Lccg;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lsp1;->getNewCallTopPanel()Lqp1;
-
-    move-result-object p0
-
-    iget-object v0, p0, Lqp1;->L0:Landroid/widget/TextView;
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x6
-
-    const-wide/16 v2, 0x0
-
-    move v1, p1
-
-    invoke-static/range {v0 .. v5}, Lkua;->j(Landroid/view/View;ZJLbc6;I)V
-
-    iget-object v6, p0, Lqp1;->M0:Landroid/widget/TextView;
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x6
-
-    const-wide/16 v8, 0x0
-
-    move v7, v1
-
-    invoke-static/range {v6 .. v11}, Lkua;->j(Landroid/view/View;ZJLbc6;I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setAddUserCount(I)V
-    .locals 1
-
-    invoke-virtual {p0}, Lsp1;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lsp1;->getNewCallTopPanel()Lqp1;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lqp1;->setAddUserCount(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setAddUserState(Z)V
-    .locals 1
-
-    invoke-virtual {p0}, Lsp1;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lsp1;->getNewCallTopPanel()Lqp1;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lqp1;->setAddUserState(Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setClickListener(Lpp1;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lsp1;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lsp1;->getNewCallTopPanel()Lqp1;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lqp1;->setClickListener(Lpp1;)V
-
-    return-void
-
-    :cond_0
-    invoke-direct {p0}, Lsp1;->getOldCallTopPanel()Lmp1;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lmp1;->setClickListener(Lpp1;)V
-
-    return-void
-.end method
-
-.method public final setMode(Lv7g;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lsp1;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-direct {p0}, Lsp1;->getOldCallTopPanel()Lmp1;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lmp1;->setMode(Lv7g;)V
-
-    return-void
-.end method
-
-.method public final setMoreState(Z)V
-    .locals 1
-
-    invoke-virtual {p0}, Lsp1;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lsp1;->getNewCallTopPanel()Lqp1;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lqp1;->setMoreButtonVisible(Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setStatus(Ljava/lang/CharSequence;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lsp1;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lsp1;->getNewCallTopPanel()Lqp1;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lqp1;->setStatus(Ljava/lang/CharSequence;)V
-
-    return-void
-
-    :cond_0
-    invoke-direct {p0}, Lsp1;->getOldCallTopPanel()Lmp1;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lmp1;->setCallTime(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final setTitle(Ljava/lang/CharSequence;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lsp1;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lsp1;->getNewCallTopPanel()Lqp1;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lqp1;->setTitle(Ljava/lang/CharSequence;)V
-
-    return-void
-
-    :cond_0
-    invoke-direct {p0}, Lsp1;->getOldCallTopPanel()Lmp1;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lmp1;->setTitle(Ljava/lang/CharSequence;)V
-
-    return-void
+    return-object p1
 .end method

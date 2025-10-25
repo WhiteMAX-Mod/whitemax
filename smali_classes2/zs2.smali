@@ -1,42 +1,48 @@
-.class public interface abstract Lzs2;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lzs2;
+.super Ly14;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lfo1;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lfo1;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lzs2;->Y:Lfo1;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract I()Loa3;
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract f(I)I
-.end method
+    iput-object p1, p0, Lzs2;->o:Ljava/lang/Object;
 
-.method public i(Z)Lms0;
-    .locals 0
+    iget p1, p0, Lzs2;->X:I
 
-    if-eqz p1, :cond_0
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p0}, Lzs2;->j()Lms0;
+    or-int/2addr p1, v0
 
-    move-result-object p0
+    iput p1, p0, Lzs2;->X:I
 
-    return-object p0
+    iget-object p1, p0, Lzs2;->Y:Lfo1;
 
-    :cond_0
-    invoke-interface {p0}, Lzs2;->t()Lms0;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    invoke-virtual {p1, v0, p0}, Lfo1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object p0
-.end method
+    move-result-object p1
 
-.method public abstract j()Lms0;
-.end method
-
-.method public abstract m()Ljxg;
-.end method
-
-.method public abstract t()Lms0;
-.end method
-
-.method public abstract y()Lj9f;
+    return-object p1
 .end method

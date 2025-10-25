@@ -14,114 +14,120 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Lk15;)[Ljava/lang/String;
+.method public static a(Ljava/lang/String;Lf75;)[Ljava/lang/String;
     .locals 3
 
     sget-boolean v0, Lcom/facebook/soloader/SoLoader;->a:Z
 
     if-eqz v0, :cond_0
 
-    const-string v0, "soloader.NativeDeps.getDependencies["
+    const-string v1, "soloader.NativeDeps.getDependencies["
 
-    const-string v1, "]"
+    const-string v2, "]"
 
-    invoke-static {v0, p0, v1}, Lcom/facebook/soloader/Api18TraceUtils;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0, v2}, Lcom/facebook/soloader/Api18TraceUtils;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :try_start_0
-    instance-of v0, p1, Ll15;
+    invoke-static {p1}, Lmli;->b(Lf75;)[Ljava/lang/String;
 
-    if-eqz v0, :cond_2
-
-    check-cast p1, Ll15;
+    move-result-object p0
     :try_end_0
-    .catch Lfg9; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Lgs9; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v0, 0x0
-
-    :goto_0
-    :try_start_1
-    invoke-static {p1}, Lte2;->n(Lk15;)[Ljava/lang/String;
-
-    move-result-object p0
-    :try_end_1
-    .catch Ljava/nio/channels/ClosedByInterruptException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lfg9; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v1
-
-    add-int/lit8 v0, v0, 0x1
-
-    const/4 v2, 0x4
-
-    if-gt v0, v2, :cond_1
-
-    :try_start_2
-    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
-
-    new-instance v1, Ljava/io/FileInputStream;
-
-    iget-object v2, p1, Ll15;->a:Ljava/io/File;
-
-    invoke-direct {v1, v2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    iput-object v1, p1, Ll15;->b:Ljava/io/FileInputStream;
-
-    invoke-virtual {v1}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
-
-    move-result-object v1
-
-    iput-object v1, p1, Ll15;->c:Ljava/nio/channels/FileChannel;
-
-    goto :goto_0
-
-    :cond_1
-    throw v1
-
-    :cond_2
-    invoke-static {p1}, Lte2;->n(Lk15;)[Ljava/lang/String;
-
-    move-result-object p0
-    :try_end_2
-    .catch Lfg9; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_1
-    sget-boolean p1, Lcom/facebook/soloader/SoLoader;->a:Z
-
-    if-eqz p1, :cond_3
+    if-eqz v0, :cond_1
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    :cond_3
+    :cond_1
     return-object p0
 
-    :catch_1
+    :catch_0
     move-exception p1
 
-    :try_start_3
-    invoke-static {p0, p1}, Lkua;->f(Ljava/lang/String;Ljava/lang/UnsatisfiedLinkError;)Lr6e;
+    :try_start_1
+    invoke-static {p0, p1}, Lq0j;->a(Ljava/lang/String;Ljava/lang/UnsatisfiedLinkError;)Lhue;
 
     move-result-object p0
 
     throw p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :catchall_0
     move-exception p0
 
     sget-boolean p1, Lcom/facebook/soloader/SoLoader;->a:Z
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_2
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    :cond_4
+    :cond_2
     throw p0
+.end method
+
+.method public static b(Ljava/lang/String;Lg75;ILandroid/os/StrictMode$ThreadPolicy;)V
+    .locals 4
+
+    invoke-static {p0, p1}, Lcom/facebook/soloader/d;->a(Ljava/lang/String;Lf75;)[Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Loading "
+
+    const-string v1, "\'s dependencies: "
+
+    invoke-static {v0, p0, v1}, Ldy1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "SoLoader"
+
+    invoke-static {v0, p0}, Lafi;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    array-length p0, p1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p0, :cond_1
+
+    aget-object v1, p1, v0
+
+    const-string v2, "/"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v2, 0x0
+
+    or-int/lit8 v3, p2, 0x1
+
+    invoke-static {v1, v2, v3, p3}, Lcom/facebook/soloader/SoLoader;->n(Ljava/lang/String;Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)Z
+
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method

@@ -1,156 +1,380 @@
-.class public abstract Lp74;
+.class public final synthetic Lp74;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
 
-# static fields
-.field public static final a:Lv2b;
+
+# instance fields
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public synthetic constructor <init>(Liu7;Liu7;Liu7;Liu7;Liu7;)V
+    .locals 1
 
-    new-instance v0, Lpxa;
+    .line 2
+    const/4 v0, 0x4
 
-    const/4 v1, 0x0
+    iput v0, p0, Lp74;->a:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    iput-object p1, p0, Lp74;->c:Ljava/lang/Object;
 
-    sget-object v2, Lita;->a:Lita;
+    iput-object p2, p0, Lp74;->o:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iput-object p3, p0, Lp74;->b:Ljava/lang/Object;
 
-    new-instance v1, Lpxa;
+    iput-object p4, p0, Lp74;->X:Ljava/lang/Object;
 
-    const/4 v2, 0x1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    sget-object v3, Lita;->b:Lita;
-
-    invoke-direct {v1, v2, v3}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v2, Lpxa;
-
-    const/4 v3, 0x2
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    sget-object v4, Lita;->c:Lita;
-
-    invoke-direct {v2, v3, v4}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v3, Lpxa;
-
-    const/4 v4, 0x3
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    sget-object v5, Lita;->o:Lita;
-
-    invoke-direct {v3, v4, v5}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v4, Lpxa;
-
-    const/4 v5, 0x4
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    sget-object v6, Lita;->X:Lita;
-
-    invoke-direct {v4, v5, v6}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v5, Lpxa;
-
-    const/4 v6, 0x5
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    sget-object v7, Lita;->Y:Lita;
-
-    invoke-direct {v5, v6, v7}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v6, Lpxa;
-
-    const/4 v7, 0x6
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    sget-object v8, Lita;->Z:Lita;
-
-    invoke-direct {v6, v7, v8}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v7, Lpxa;
-
-    const/4 v8, 0x7
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    sget-object v9, Lita;->r0:Lita;
-
-    invoke-direct {v7, v8, v9}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v8, Lpxa;
-
-    const/16 v9, 0x2710
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    sget-object v10, Lita;->s0:Lita;
-
-    invoke-direct {v8, v9, v10}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array/range {v0 .. v8}, [Lpxa;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljtg;->C([Lpxa;)Lv2b;
-
-    move-result-object v0
-
-    sput-object v0, Lp74;->a:Lv2b;
+    iput-object p5, p0, Lp74;->Y:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static a(I)Lita;
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    .locals 0
+
+    .line 3
+    iput p6, p0, Lp74;->a:I
+
+    iput-object p1, p0, Lp74;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lp74;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lp74;->o:Ljava/lang/Object;
+
+    iput-object p4, p0, Lp74;->X:Ljava/lang/Object;
+
+    iput-object p5, p0, Lp74;->Y:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ln84;Liu7;Lulf;Ll54;Liu7;)V
     .locals 1
 
-    sget-object v0, Lp74;->a:Lv2b;
+    .line 1
+    const/4 v0, 0x0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput v0, p0, Lp74;->a:I
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, p0}, Lv2b;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p1, p0, Lp74;->b:Ljava/lang/Object;
 
-    move-result-object p0
+    iput-object p2, p0, Lp74;->c:Ljava/lang/Object;
 
-    check-cast p0, Lita;
+    iput-object p3, p0, Lp74;->X:Ljava/lang/Object;
 
-    if-nez p0, :cond_0
+    iput-object p4, p0, Lp74;->Y:Ljava/lang/Object;
 
-    sget-object p0, Lita;->a:Lita;
+    iput-object p5, p0, Lp74;->o:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 13
+
+    iget v0, p0, Lp74;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lp74;->c:Ljava/lang/Object;
+
+    check-cast v0, Liu7;
+
+    iget-object v1, p0, Lp74;->o:Ljava/lang/Object;
+
+    check-cast v1, Liu7;
+
+    iget-object v2, p0, Lp74;->b:Ljava/lang/Object;
+
+    move-object v6, v2
+
+    check-cast v6, Liu7;
+
+    iget-object v2, p0, Lp74;->X:Ljava/lang/Object;
+
+    move-object v7, v2
+
+    check-cast v7, Liu7;
+
+    iget-object v2, p0, Lp74;->Y:Ljava/lang/Object;
+
+    move-object v8, v2
+
+    check-cast v8, Liu7;
+
+    new-instance v3, Lqk1;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v4, v0
+
+    check-cast v4, Landroid/content/Context;
+
+    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v5, v0
+
+    check-cast v5, Lj4e;
+
+    invoke-direct/range {v3 .. v8}, Lqk1;-><init>(Landroid/content/Context;Lj4e;Liu7;Liu7;Liu7;)V
+
+    return-object v3
+
+    :pswitch_0
+    iget-object v0, p0, Lp74;->b:Ljava/lang/Object;
+
+    check-cast v0, Lpad;
+
+    iget-object v1, p0, Lp74;->c:Ljava/lang/Object;
+
+    check-cast v1, Ly7d;
+
+    iget-object v2, p0, Lp74;->o:Ljava/lang/Object;
+
+    check-cast v2, Landroid/os/Handler;
+
+    iget-object v3, p0, Lp74;->X:Ljava/lang/Object;
+
+    check-cast v3, Lir4;
+
+    iget-object v4, p0, Lp74;->Y:Ljava/lang/Object;
+
+    check-cast v4, Lq7b;
+
+    new-instance v5, Lnad;
+
+    iget-object v6, v0, Lpad;->o:Lcqe;
+
+    const/4 v7, 0x0
+
+    if-nez v6, :cond_0
+
+    move-object v6, v7
 
     :cond_0
-    return-object p0
+    iget-object v8, v0, Lpad;->X:Lq4e;
+
+    if-nez v8, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move-object v7, v8
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v8
+
+    new-instance v9, Ls79;
+
+    const/4 v10, 0x1
+
+    invoke-direct {v9, v1, v10}, Ls79;-><init>(Ly7d;I)V
+
+    new-instance v10, Ltna;
+
+    const/16 v11, 0x17
+
+    invoke-direct {v10, v2, v11, v3}, Ltna;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v11, Lla;
+
+    const/16 v12, 0x1d
+
+    invoke-direct {v11, v2, v12, v3}, Lla;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-direct/range {v5 .. v11}, Lnad;-><init>(Lcqe;Lq4e;Landroid/os/Looper;Ls79;Ltna;Lla;)V
+
+    iget-object v6, v0, Lpad;->Y:Ljava/util/LinkedHashMap;
+
+    invoke-interface {v6, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, v0, Lpad;->Z:Ljava/util/LinkedHashSet;
+
+    iget-object v4, v5, Lnad;->h:Lhsb;
+
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, v5, Lnad;->h:Lhsb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v4, Lkpe;
+
+    invoke-direct {v4}, Lkpe;-><init>()V
+
+    iput-object v4, v0, Lhsb;->f:Lkpe;
+
+    new-instance v0, Lvxb;
+
+    const/16 v4, 0x11
+
+    invoke-direct {v0, v3, v4, v1}, Lvxb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    sget-object v0, Lccg;->a:Lccg;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lp74;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljn9;
+
+    iget-object v1, p0, Lp74;->c:Ljava/lang/Object;
+
+    move-object v5, v1
+
+    check-cast v5, Liu7;
+
+    iget-object v1, p0, Lp74;->o:Ljava/lang/Object;
+
+    move-object v6, v1
+
+    check-cast v6, Liu7;
+
+    iget-object v1, p0, Lp74;->X:Ljava/lang/Object;
+
+    move-object v7, v1
+
+    check-cast v7, Liu7;
+
+    iget-object v1, p0, Lp74;->Y:Ljava/lang/Object;
+
+    move-object v8, v1
+
+    check-cast v8, Liu7;
+
+    new-instance v2, Lag9;
+
+    iget-object v3, v0, Ljn9;->w1:Ln0d;
+
+    iget-object v4, v0, Ljn9;->Y:Lulf;
+
+    invoke-direct/range {v2 .. v8}, Lag9;-><init>(Ln0d;Lulf;Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v2
+
+    :pswitch_2
+    iget-object v0, p0, Lp74;->b:Ljava/lang/Object;
+
+    check-cast v0, Lsd6;
+
+    iget-object v1, p0, Lp74;->c:Ljava/lang/Object;
+
+    check-cast v1, La8b;
+
+    iget-object v2, p0, Lp74;->o:Ljava/lang/Object;
+
+    check-cast v2, Lx7b;
+
+    iget-object v3, p0, Lp74;->X:Ljava/lang/Object;
+
+    check-cast v3, Lh22;
+
+    iget-object v4, p0, Lp74;->Y:Ljava/lang/Object;
+
+    check-cast v4, Lh22;
+
+    iget-object v0, v0, Lsd6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ly7b;
+
+    invoke-interface {v5, v1, v2, v3, v4}, Ly7b;->q(La8b;Lx7b;Lh22;Lh22;)V
+
+    goto :goto_1
+
+    :cond_2
+    sget-object v0, Lccg;->a:Lccg;
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lp74;->b:Ljava/lang/Object;
+
+    check-cast v0, Ln84;
+
+    iget-object v1, p0, Lp74;->c:Ljava/lang/Object;
+
+    move-object v4, v1
+
+    check-cast v4, Liu7;
+
+    iget-object v1, p0, Lp74;->X:Ljava/lang/Object;
+
+    move-object v5, v1
+
+    check-cast v5, Lulf;
+
+    iget-object v1, p0, Lp74;->Y:Ljava/lang/Object;
+
+    move-object v6, v1
+
+    check-cast v6, Ll54;
+
+    iget-object v1, p0, Lp74;->o:Ljava/lang/Object;
+
+    move-object v7, v1
+
+    check-cast v7, Liu7;
+
+    new-instance v2, Lz46;
+
+    new-instance v3, Lcg7;
+
+    invoke-direct {v3, v0}, Lcg7;-><init>(Ljava/lang/Object;)V
+
+    invoke-direct/range {v2 .. v7}, Lz46;-><init>(Lcg7;Liu7;Lulf;Ll54;Liu7;)V
+
+    return-object v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

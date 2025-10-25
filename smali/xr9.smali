@@ -1,43 +1,58 @@
-.class public final Lxr9;
+.class public final synthetic Lxr9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Z
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:[I
-
-.field public final f:I
-
-.field public final g:F
+.field public final synthetic b:Lyr9;
 
 
 # direct methods
-.method public constructor <init>(IZII[IIIIF)V
+.method public synthetic constructor <init>(Lyr9;I)V
     .locals 0
+
+    iput p2, p0, Lxr9;->a:I
+
+    iput-object p1, p0, Lxr9;->b:Lyr9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lxr9;->a:I
+    return-void
+.end method
 
-    iput-boolean p2, p0, Lxr9;->b:Z
 
-    iput p3, p0, Lxr9;->c:I
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 1
 
-    iput p4, p0, Lxr9;->d:I
+    iget p1, p0, Lxr9;->a:I
 
-    iput-object p5, p0, Lxr9;->e:[I
+    packed-switch p1, :pswitch_data_0
 
-    iput p6, p0, Lxr9;->f:I
+    iget-object p1, p0, Lxr9;->b:Lyr9;
 
-    iput p9, p0, Lxr9;->g:F
+    iget-object v0, p1, Lyr9;->q0:Landroid/graphics/Path;
+
+    invoke-virtual {p1, v0}, Lyr9;->a(Landroid/graphics/Path;)V
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lxr9;->b:Lyr9;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

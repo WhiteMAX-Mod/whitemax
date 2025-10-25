@@ -21,7 +21,7 @@
         "()I",
         "getIntrinsicHeight",
         "alpha",
-        "Lylf;",
+        "Lccg;",
         "setAlpha",
         "(I)V",
         "Landroid/graphics/ColorFilter;",
@@ -49,7 +49,7 @@
         "(Landroid/graphics/Rect;)V",
         "Landroid/content/Context;",
         "context$delegate",
-        "Lcl7;",
+        "Liu7;",
         "getContext",
         "()Landroid/content/Context;",
         "context",
@@ -73,7 +73,7 @@
 # instance fields
 .field private final backgroundDrawable:Landroid/graphics/drawable/ShapeDrawable;
 
-.field private final context$delegate:Lcl7;
+.field private final context$delegate:Liu7;
 
 .field private iconDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -84,21 +84,21 @@
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    sget-object v0, Lek1;->a:Lcl7;
+    sget-object v0, Lrl1;->a:Liu7;
 
-    sget-object v0, Lfk1;->a:Lfk1;
+    sget-object v0, Lsl1;->a:Lsl1;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
     const-class v1, Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lz4;->d(Ljava/lang/Class;)Lzte;
+    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->context$delegate:Lcl7;
+    iput-object v0, p0, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->context$delegate:Liu7;
 
     new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
@@ -112,29 +112,29 @@
 
     move-result-object v1
 
-    sget-object v2, Lyu4;->t0:Lbx9;
+    sget-object v2, Ll05;->s0:Lk82;
 
     invoke-direct {p0}, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lbx9;->k(Landroid/content/Context;)Lyu4;
+    invoke-virtual {v2, v3}, Lk82;->e(Landroid/content/Context;)Ll05;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lyu4;->j()Lera;
+    invoke-virtual {v2}, Ll05;->l()Lv5b;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lera;->c()Lide;
+    invoke-interface {v2}, Lv5b;->c()Lj1f;
 
     move-result-object v2
 
-    iget-object v2, v2, Lide;->a:Lgde;
+    iget-object v2, v2, Lj1f;->a:Lh1f;
 
-    iget-object v2, v2, Lgde;->a:Lfde;
+    iget-object v2, v2, Lh1f;->a:Lg1f;
 
-    iget v2, v2, Lfde;->d:I
+    iget v2, v2, Lg1f;->e:I
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -144,17 +144,17 @@
 .end method
 
 .method private final getContext()Landroid/content/Context;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->context$delegate:Lcl7;
+    iget-object v0, p0, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->context$delegate:Liu7;
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Landroid/content/Context;
+    check-cast v0, Landroid/content/Context;
 
-    return-object p0
+    return-object v0
 .end method
 
 
@@ -213,18 +213,18 @@
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
     :try_start_0
-    iget-object p0, p0, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_1
 
@@ -237,86 +237,86 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    throw p0
+    throw v1
 
     :cond_1
     return-void
 .end method
 
 .method public getIntrinsicHeight()I
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getIntrinsicWidth()I
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getOpacity()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, -0x3
+    const/4 v0, -0x3
 
-    return p0
+    return v0
 .end method
 
 .method public inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
     .locals 0
 
-    sget p2, Lr4c;->ic_group_call_fill_16:I
+    sget p2, Limc;->ic_group_call_fill_16:I
 
-    sget-object p3, Lmuc;->a:Ljava/lang/ThreadLocal;
+    sget-object p3, Lgdd;->a:Ljava/lang/ThreadLocal;
 
     const/4 p3, 0x0
 
-    invoke-static {p1, p2, p3}, Lhuc;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2, p3}, Lbdd;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    sget-object p2, Lyu4;->t0:Lbx9;
+    sget-object p2, Ll05;->s0:Lk82;
 
     invoke-direct {p0}, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lbx9;->k(Landroid/content/Context;)Lyu4;
+    invoke-virtual {p2, p3}, Lk82;->e(Landroid/content/Context;)Ll05;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lyu4;->j()Lera;
+    invoke-virtual {p2}, Ll05;->l()Lv5b;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lera;->c()Lide;
+    invoke-interface {p2}, Lv5b;->c()Lj1f;
 
     move-result-object p2
 
-    iget-object p2, p2, Lide;->b:Ljde;
+    iget-object p2, p2, Lj1f;->b:Lk1f;
 
-    iget-object p2, p2, Ljde;->a:Lkde;
+    iget-object p2, p2, Lk1f;->a:Ll1f;
 
-    iget p2, p2, Lkde;->f:I
+    iget p2, p2, Ll1f;->f:I
 
-    invoke-static {p1, p2}, Li4h;->T(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {p1, p2}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
 
     iput-object p1, p0, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -342,13 +342,13 @@
 
     double-to-int p1, v0
 
-    iget-object p0, p0, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lone/me/calls/ui/drawable/SavedGroupCallIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v0, p1, p1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v0, v1, v1, p1, p1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     :cond_0
     return-void

@@ -27,11 +27,11 @@
 
 # virtual methods
 .method public isProxy()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/apache/http/impl/auth/AuthSchemeBase;->proxy:Z
+    iget-boolean v0, p0, Lorg/apache/http/impl/auth/AuthSchemeBase;->proxy:Z
 
-    return p0
+    return v0
 .end method
 
 .method public abstract parseChallenge(Lorg/apache/http/util/CharArrayBuffer;II)V
@@ -186,46 +186,46 @@
     return-void
 
     :cond_4
-    new-instance p0, Lorg/apache/http/auth/MalformedChallengeException;
+    new-instance p1, Lorg/apache/http/auth/MalformedChallengeException;
 
-    const-string p1, "Invalid scheme identifier: "
+    const-string v0, "Invalid scheme identifier: "
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-direct {p0, p1}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_5
-    new-instance p0, Lorg/apache/http/auth/MalformedChallengeException;
+    new-instance p1, Lorg/apache/http/auth/MalformedChallengeException;
 
-    const-string p1, "Header value is null"
+    const-string v0, "Header value is null"
 
-    invoke-direct {p0, p1}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_6
-    new-instance p0, Lorg/apache/http/auth/MalformedChallengeException;
+    new-instance p1, Lorg/apache/http/auth/MalformedChallengeException;
 
-    const-string p1, "Unexpected header name: "
+    const-string v1, "Unexpected header name: "
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-direct {p0, p1}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_7
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Header may not be null"
+    const-string v0, "Header may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

@@ -80,21 +80,21 @@
 
 # virtual methods
 .method public final component1()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final copy(Z)Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;
+    new-instance v0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;-><init>(Z)V
+    invoke-direct {v0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;-><init>(Z)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -118,11 +118,11 @@
     :cond_1
     check-cast p1, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
 
     iget-boolean p1, p1, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
 
-    if-eq p0, p1, :cond_2
+    if-eq v1, p1, :cond_2
 
     return v2
 
@@ -131,37 +131,37 @@
 .end method
 
 .method public final getReject()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
 
-    return p0
+    return v0
 .end method
 
 .method public hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;->reject:Z
 
-    const-string v0, "AcceptPromotionParams(reject="
+    const-string v1, "AcceptPromotionParams(reject="
 
-    const-string v1, ")"
+    const-string v2, ")"
 
-    invoke-static {v0, v1, p0}, Lz7e;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v1, v2, v0}, Lzdf;->s(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

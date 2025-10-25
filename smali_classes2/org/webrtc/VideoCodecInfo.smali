@@ -144,15 +144,15 @@
 
     if-eqz v2, :cond_3
 
-    iget-object p0, p0, Lorg/webrtc/VideoCodecInfo;->params:Ljava/util/Map;
+    iget-object v2, p0, Lorg/webrtc/VideoCodecInfo;->params:Ljava/util/Map;
 
     iget-object p1, p1, Lorg/webrtc/VideoCodecInfo;->params:Ljava/util/Map;
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v2, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_3
+    if-eqz p1, :cond_3
 
     return v1
 
@@ -161,23 +161,23 @@
 .end method
 
 .method public getName()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getParams()Ljava/util/Map;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/VideoCodecInfo;->params:Ljava/util/Map;
+    iget-object v0, p0, Lorg/webrtc/VideoCodecInfo;->params:Ljava/util/Map;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
@@ -191,47 +191,47 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lorg/webrtc/VideoCodecInfo;->params:Ljava/util/Map;
+    iget-object v1, p0, Lorg/webrtc/VideoCodecInfo;->params:Ljava/util/Map;
 
-    filled-new-array {v0, p0}, [Ljava/lang/Object;
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
 
-    iget-object p0, p0, Lorg/webrtc/VideoCodecInfo;->params:Ljava/util/Map;
+    iget-object v1, p0, Lorg/webrtc/VideoCodecInfo;->params:Ljava/util/Map;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v2, "VideoCodec{"
+    const-string v3, "VideoCodec{"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, " "
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, "}"
+    const-string v0, "}"
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

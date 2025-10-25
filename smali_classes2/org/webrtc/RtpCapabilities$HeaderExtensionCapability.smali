@@ -43,34 +43,34 @@
 
 # virtual methods
 .method public getPreferredEncrypted()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "HeaderExtensionCapability"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/RtpCapabilities$HeaderExtensionCapability;->preferredEncrypted:Z
+    iget-boolean v0, p0, Lorg/webrtc/RtpCapabilities$HeaderExtensionCapability;->preferredEncrypted:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getPreferredId()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "HeaderExtensionCapability"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/RtpCapabilities$HeaderExtensionCapability;->preferredId:I
+    iget v0, p0, Lorg/webrtc/RtpCapabilities$HeaderExtensionCapability;->preferredId:I
 
-    return p0
+    return v0
 .end method
 
 .method public getUri()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "HeaderExtensionCapability"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpCapabilities$HeaderExtensionCapability;->uri:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/RtpCapabilities$HeaderExtensionCapability;->uri:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

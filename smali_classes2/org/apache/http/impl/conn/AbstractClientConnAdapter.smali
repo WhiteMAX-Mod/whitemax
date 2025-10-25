@@ -98,44 +98,44 @@
 .end method
 
 .method public final assertNotAborted()V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/InterruptedIOException;
         }
     .end annotation
 
-    iget-boolean p0, p0, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->aborted:Z
+    iget-boolean v0, p0, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->aborted:Z
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/io/InterruptedIOException;
+    new-instance v0, Ljava/io/InterruptedIOException;
 
-    const-string v0, "Connection has been shut down."
+    const-string v1, "Connection has been shut down."
 
-    invoke-direct {p0, v0}, Ljava/io/InterruptedIOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/io/InterruptedIOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public final assertValid(Lorg/apache/http/conn/OperatedClientConnection;)V
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "No wrapped connection."
+    const-string v0, "No wrapped connection."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public detach()V
@@ -186,9 +186,9 @@
 
     invoke-interface {v0}, Lorg/apache/http/HttpInetConnection;->getLocalAddress()Ljava/net/InetAddress;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getLocalPort()I
@@ -202,17 +202,17 @@
 
     invoke-interface {v0}, Lorg/apache/http/HttpInetConnection;->getLocalPort()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getManager()Lorg/apache/http/conn/ClientConnectionManager;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->connManager:Lorg/apache/http/conn/ClientConnectionManager;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->connManager:Lorg/apache/http/conn/ClientConnectionManager;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getMetrics()Lorg/apache/http/HttpConnectionMetrics;
@@ -226,9 +226,9 @@
 
     invoke-interface {v0}, Lorg/apache/http/HttpConnection;->getMetrics()Lorg/apache/http/HttpConnectionMetrics;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getRemoteAddress()Ljava/net/InetAddress;
@@ -242,9 +242,9 @@
 
     invoke-interface {v0}, Lorg/apache/http/HttpInetConnection;->getRemoteAddress()Ljava/net/InetAddress;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getRemotePort()I
@@ -258,13 +258,13 @@
 
     invoke-interface {v0}, Lorg/apache/http/HttpInetConnection;->getRemotePort()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getSSLSession()Ljavax/net/ssl/SSLSession;
-    .locals 2
+    .locals 3
 
     invoke-virtual {p0}, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->getWrappedConnection()Lorg/apache/http/conn/OperatedClientConnection;
 
@@ -274,33 +274,33 @@
 
     invoke-virtual {p0}, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->isOpen()Z
 
-    move-result p0
+    move-result v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-nez p0, :cond_0
+    if-nez v1, :cond_0
 
-    return-object v1
+    return-object v2
 
     :cond_0
     invoke-interface {v0}, Lorg/apache/http/conn/OperatedClientConnection;->getSocket()Ljava/net/Socket;
 
-    move-result-object p0
+    move-result-object v0
 
-    instance-of v0, p0, Ljavax/net/ssl/SSLSocket;
+    instance-of v1, v0, Ljavax/net/ssl/SSLSocket;
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    check-cast p0, Ljavax/net/ssl/SSLSocket;
+    check-cast v0, Ljavax/net/ssl/SSLSocket;
 
-    invoke-virtual {p0}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_1
-    return-object v1
+    return-object v2
 .end method
 
 .method public getSocketTimeout()I
@@ -314,46 +314,46 @@
 
     invoke-interface {v0}, Lorg/apache/http/HttpConnection;->getSocketTimeout()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getWrappedConnection()Lorg/apache/http/conn/OperatedClientConnection;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->wrappedConnection:Lorg/apache/http/conn/OperatedClientConnection;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->wrappedConnection:Lorg/apache/http/conn/OperatedClientConnection;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public isMarkedReusable()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->markedReusable:Z
+    iget-boolean v0, p0, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->markedReusable:Z
 
-    return p0
+    return v0
 .end method
 
 .method public isOpen()Z
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->getWrappedConnection()Lorg/apache/http/conn/OperatedClientConnection;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 
     :cond_0
-    invoke-interface {p0}, Lorg/apache/http/HttpConnection;->isOpen()Z
+    invoke-interface {v0}, Lorg/apache/http/HttpConnection;->isOpen()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isResponseAvailable(I)Z
@@ -374,9 +374,9 @@
 
     invoke-interface {v0, p1}, Lorg/apache/http/HttpClientConnection;->isResponseAvailable(I)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public isSecure()Z
@@ -390,9 +390,9 @@
 
     invoke-interface {v0}, Lorg/apache/http/conn/OperatedClientConnection;->isSecure()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isStale()Z
@@ -409,18 +409,18 @@
     :cond_0
     invoke-virtual {p0}, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->getWrappedConnection()Lorg/apache/http/conn/OperatedClientConnection;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_1
+    if-nez v0, :cond_1
 
     return v1
 
     :cond_1
-    invoke-interface {p0}, Lorg/apache/http/HttpConnection;->isStale()Z
+    invoke-interface {v0}, Lorg/apache/http/HttpConnection;->isStale()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public markReusable()V
@@ -478,9 +478,9 @@
 
     invoke-interface {v0}, Lorg/apache/http/HttpClientConnection;->receiveResponseHeader()Lorg/apache/http/HttpResponse;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public releaseConnection()V

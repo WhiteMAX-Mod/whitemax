@@ -1,107 +1,213 @@
-.class public final Lkmd;
+.class public final synthetic Lkmd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic e:[Lxi7;
-
-.field public static final f:Ljava/lang/String;
+# interfaces
+.implements Lli6;
 
 
 # instance fields
-.field public final a:Lgr4;
+.field public final synthetic a:J
 
-.field public final b:Lgr4;
+.field public final synthetic b:J
 
-.field public final c:Lgr4;
-
-.field public final d:Lgr4;
+.field public final synthetic c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Lsxb;
-
-    const-class v1, Lkmd;
-
-    const-string v2, "exceptionHandler"
-
-    const-string v3, "getExceptionHandler()Lru/ok/tamtam/ExceptionHandler;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Ljpc;->a:Lkpc;
-
-    const-string v3, "sessionStateInfo"
-
-    const-string v5, "getSessionStateInfo()Lru/ok/tamtam/session/SessionStateInfo;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Lee5;->h(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lsxb;
-
-    move-result-object v2
-
-    new-instance v3, Lsxb;
-
-    const-string v5, "api"
-
-    const-string v6, "getApi()Lru/ok/tamtam/api/Api;"
-
-    invoke-direct {v3, v1, v5, v6, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    new-instance v5, Lsxb;
-
-    const-string v6, "tamSessionController"
-
-    const-string v7, "getTamSessionController()Lru/ok/tamtam/services/TamSessionController;"
-
-    invoke-direct {v5, v1, v6, v7, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 v6, 0x4
-
-    new-array v6, v6, [Lxi7;
-
-    aput-object v0, v6, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v6, v0
-
-    const/4 v0, 0x2
-
-    aput-object v3, v6, v0
-
-    const/4 v0, 0x3
-
-    aput-object v5, v6, v0
-
-    sput-object v6, Lkmd;->e:[Lxi7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lkmd;->f:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lgr4;Lgr4;Lgr4;Lgr4;)V
+.method public synthetic constructor <init>(JJZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkmd;->a:Lgr4;
+    iput-wide p1, p0, Lkmd;->a:J
 
-    iput-object p2, p0, Lkmd;->b:Lgr4;
+    iput-wide p3, p0, Lkmd;->b:J
 
-    iput-object p3, p0, Lkmd;->c:Lgr4;
-
-    iput-object p4, p0, Lkmd;->d:Lgr4;
+    iput-boolean p5, p0, Lkmd;->c:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
+
+    check-cast p1, Lf10;
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_1
+
+    iget-object v1, p1, Lf10;->a:La20;
+
+    sget-object v2, La20;->s0:La20;
+
+    if-eq v1, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Lf10;->b()Ln10;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v1, Ln10;->d:Le20;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Le20;->h()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v1, v0
+
+    :goto_1
+    iget-object v2, p1, Lf10;->d:Ld20;
+
+    if-eqz v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    if-nez v1, :cond_3
+
+    goto :goto_4
+
+    :cond_3
+    :goto_2
+    iget-boolean v2, p0, Lkmd;->c:Z
+
+    if-nez v2, :cond_7
+
+    iget-wide v2, p0, Lkmd;->b:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v6, v2, v4
+
+    if-nez v6, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    iget-wide v6, p0, Lkmd;->a:J
+
+    sub-long v8, v2, v6
+
+    const-wide/16 v10, 0xbb8
+
+    cmp-long v8, v8, v10
+
+    if-gtz v8, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move-wide v4, v6
+
+    :goto_3
+    if-eqz v1, :cond_6
+
+    invoke-virtual {p1}, Lf10;->b()Ln10;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ln10;->d:Le20;
+
+    iget-object v1, v1, Le20;->d:Ld20;
+
+    invoke-virtual {v1}, Ld20;->a()Lb20;
+
+    move-result-object v1
+
+    iput-wide v4, v1, Lb20;->j:J
+
+    long-to-int v2, v2
+
+    int-to-long v2, v2
+
+    iput-wide v2, v1, Lb20;->b:J
+
+    iput-boolean v0, v1, Lb20;->f:Z
+
+    new-instance v0, Ld20;
+
+    invoke-direct {v0, v1}, Ld20;-><init>(Lb20;)V
+
+    invoke-virtual {p1}, Lf10;->b()Ln10;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ln10;->d:Le20;
+
+    invoke-virtual {v1}, Le20;->i()Lf10;
+
+    move-result-object v1
+
+    iput-object v0, v1, Lf10;->d:Ld20;
+
+    invoke-virtual {v1}, Lf10;->a()Le20;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lf10;->b()Ln10;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ln10;->a()Lm10;
+
+    move-result-object v1
+
+    iput-object v0, v1, Lm10;->e:Ljava/lang/Object;
+
+    new-instance v0, Ln10;
+
+    invoke-direct {v0, v1}, Ln10;-><init>(Lm10;)V
+
+    iput-object v0, p1, Lf10;->r:Ln10;
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {p1}, Lf10;->c()Ld20;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld20;->a()Lb20;
+
+    move-result-object v1
+
+    iput-wide v4, v1, Lb20;->j:J
+
+    long-to-int v2, v2
+
+    int-to-long v2, v2
+
+    iput-wide v2, v1, Lb20;->b:J
+
+    iput-boolean v0, v1, Lb20;->f:Z
+
+    new-instance v0, Ld20;
+
+    invoke-direct {v0, v1}, Ld20;-><init>(Lb20;)V
+
+    iput-object v0, p1, Lf10;->d:Ld20;
+
+    :cond_7
+    :goto_4
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

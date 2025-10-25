@@ -2,222 +2,149 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
 
-# instance fields
-.field public final a:I
 
-.field public final b:D
+# static fields
+.field public static final a:Ls80;
 
-.field public final c:Ljava/lang/Throwable;
+.field public static final b:Lbr5;
+
+.field public static final c:Lbr5;
+
+.field public static final d:Lbr5;
+
+.field public static final e:Lbr5;
+
+.field public static final f:Lbr5;
+
+.field public static final g:Lbr5;
+
+.field public static final h:Lbr5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    new-instance v0, Ljava/util/HashSet;
+    new-instance v0, Ls80;
 
-    const/4 v1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sput-object v0, Ls80;->a:Ls80;
 
-    move-result-object v1
+    const-string v0, "requestTimeMs"
 
-    const/4 v2, 0x3
+    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v0
 
-    move-result-object v2
+    sput-object v0, Ls80;->b:Lbr5;
 
-    const/4 v3, 0x4
+    const-string v0, "requestUptimeMs"
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
 
-    move-result-object v3
+    move-result-object v0
 
-    filled-new-array {v1, v2, v3}, [Ljava/lang/Integer;
+    sput-object v0, Ls80;->c:Lbr5;
 
-    move-result-object v1
+    const-string v0, "clientInfo"
 
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    sput-object v0, Ls80;->d:Lbr5;
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    const-string v0, "logSource"
 
-    return-void
-.end method
+    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
 
-.method public constructor <init>(IDLjava/lang/Throwable;)V
-    .locals 0
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ls80;->e:Lbr5;
 
-    iput p1, p0, Ls80;->a:I
+    const-string v0, "logSourceName"
 
-    iput-wide p2, p0, Ls80;->b:D
+    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
 
-    iput-object p4, p0, Ls80;->c:Ljava/lang/Throwable;
+    move-result-object v0
+
+    sput-object v0, Ls80;->f:Lbr5;
+
+    const-string v0, "logEvent"
+
+    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+
+    move-result-object v0
+
+    sput-object v0, Ls80;->g:Lbr5;
+
+    const-string v0, "qosTier"
+
+    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+
+    move-result-object v0
+
+    sput-object v0, Ls80;->h:Lbr5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 8
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ls80;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
-
-    check-cast p1, Ls80;
-
-    iget v1, p1, Ls80;->a:I
-
-    iget-object v3, p1, Ls80;->c:Ljava/lang/Throwable;
-
-    iget v4, p0, Ls80;->a:I
-
-    if-ne v4, v1, :cond_2
-
-    iget-wide v4, p0, Ls80;->b:D
-
-    invoke-static {v4, v5}, Ljava/lang/Double;->doubleToLongBits(D)J
-
-    move-result-wide v4
-
-    iget-wide v6, p1, Ls80;->b:D
-
-    invoke-static {v6, v7}, Ljava/lang/Double;->doubleToLongBits(D)J
-
-    move-result-wide v6
-
-    cmp-long p1, v4, v6
-
-    if-nez p1, :cond_2
-
-    iget-object p0, p0, Ls80;->c:Ljava/lang/Throwable;
-
-    if-nez p0, :cond_1
-
-    if-nez v3, :cond_2
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    :goto_0
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 7
-
-    iget v0, p0, Ls80;->a:I
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Ls80;->b:D
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
-
-    move-result-wide v4
-
-    const/16 v6, 0x20
-
-    ushr-long/2addr v4, v6
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
-
-    move-result-wide v2
-
-    xor-long/2addr v2, v4
-
-    long-to-int v2, v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object p0, p0, Ls80;->c:Ljava/lang/Throwable;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    :goto_0
-    xor-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Le98;
 
-    const-string v1, "AudioStats{audioState="
+    check-cast p2, Luha;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lxa0;
 
-    iget v1, p0, Ls80;->a:I
+    iget-wide v0, p1, Lxa0;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget-object v2, Ls80;->b:Lbr5;
 
-    const-string v1, ", audioAmplitudeInternal="
+    invoke-interface {p2, v2, v0, v1}, Luha;->e(Lbr5;J)Luha;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v0, Ls80;->c:Lbr5;
 
-    iget-wide v1, p0, Ls80;->b:D
+    iget-wide v1, p1, Lxa0;->b:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-interface {p2, v0, v1, v2}, Luha;->e(Lbr5;J)Luha;
 
-    const-string v1, ", errorCause="
+    sget-object v0, Ls80;->d:Lbr5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p1, Lxa0;->c:Ly90;
 
-    iget-object p0, p0, Ls80;->c:Ljava/lang/Throwable;
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object v0, Ls80;->e:Lbr5;
 
-    const-string p0, "}"
+    iget-object v1, p1, Lxa0;->d:Ljava/lang/Integer;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v0, Ls80;->f:Lbr5;
 
-    move-result-object p0
+    iget-object v1, p1, Lxa0;->e:Ljava/lang/String;
 
-    return-object p0
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+
+    sget-object v0, Ls80;->g:Lbr5;
+
+    iget-object p1, p1, Lxa0;->f:Ljava/util/ArrayList;
+
+    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+
+    sget-object p1, Ls80;->h:Lbr5;
+
+    sget-object v0, Lfgc;->a:Lfgc;
+
+    invoke-interface {p2, p1, v0}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+
+    return-void
 .end method

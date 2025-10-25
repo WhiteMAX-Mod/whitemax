@@ -1,189 +1,246 @@
-.class public final synthetic Lf41;
-.super Ljava/lang/Object;
+.class public final Lf41;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lbc6;
 
 
 # instance fields
-.field public final synthetic X:Lst1;
-
-.field public final synthetic Y:Lvv0;
-
-.field public final synthetic Z:Ljava/lang/Object;
-
 .field public final synthetic a:I
 
-.field public final synthetic b:J
+.field public b:Ljava/lang/Object;
 
-.field public final synthetic c:Ltae;
+.field public c:Ljava/lang/Object;
 
-.field public final synthetic o:Lj41;
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JLtae;Lj41;Lst1;Lvv0;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 6
 
-    iput p8, p0, Lf41;->a:I
+    iput p2, p0, Lf41;->a:I
 
-    iput-object p1, p0, Lf41;->Z:Ljava/lang/Object;
+    packed-switch p2, :pswitch_data_0
 
-    iput-wide p2, p0, Lf41;->b:J
+    const/4 p2, 0x0
 
-    iput-object p4, p0, Lf41;->c:Ltae;
+    invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput-object p5, p0, Lf41;->o:Lj41;
+    new-instance v0, La41;
 
-    iput-object p6, p0, Lf41;->X:Lst1;
+    const/4 v1, 0x1
 
-    iput-object p7, p0, Lf41;->Y:Lvv0;
+    invoke-direct {v0, v1}, La41;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lf41;->b:Ljava/lang/Object;
+
+    sget v1, Lolc;->ic_call_speaker_24:I
+
+    invoke-static {p1, v1}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    new-instance v2, Landroid/graphics/PorterDuffColorFilter;
+
+    sget-object v3, Ll05;->s0:Lk82;
+
+    invoke-virtual {v3, p0}, Lk82;->q(Landroid/view/View;)Lewa;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lewa;->c:Lv5b;
+
+    sget-object v4, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    const/4 v5, -0x1
+
+    invoke-direct {v2, v5, v4}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    iput-object v1, p0, Lf41;->c:Ljava/lang/Object;
+
+    sget v1, Lpjd;->c0:I
+
+    invoke-static {p1, v1}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    new-instance v1, Landroid/graphics/PorterDuffColorFilter;
+
+    invoke-virtual {v3, p0}, Lk82;->q(Landroid/view/View;)Lewa;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lewa;->c:Lv5b;
+
+    invoke-direct {v1, v5, v4}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    iput-object p1, p0, Lf41;->o:Ljava/lang/Object;
+
+    new-instance p1, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v1, Landroid/graphics/drawable/shapes/RoundRectShape;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [F
+
+    invoke-direct {v1, v0, p2, p2}, Landroid/graphics/drawable/shapes/RoundRectShape;-><init>([FLandroid/graphics/RectF;[F)V
+
+    invoke-direct {p1, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object p2
+
+    invoke-virtual {v3, p0}, Lk82;->q(Landroid/view/View;)Lewa;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lewa;->c:Lv5b;
+
+    invoke-interface {v0}, Lv5b;->b()Lff0;
+
+    move-result-object v0
+
+    iget v0, v0, Lff0;->l:I
+
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public onDraw(Landroid/graphics/Canvas;)V
+    .locals 7
 
     iget v0, p0, Lf41;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lf41;->Z:Ljava/lang/Object;
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    check-cast v0, Ljava/lang/String;
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->setLink(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
-
-    move-result-object p1
-
-    iget-wide v0, p0, Lf41;->b:J
-
-    invoke-static {v0, v1}, Lrya;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lf41;->c:Ltae;
-
-    iget-boolean v0, v0, Ltae;->b:Z
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lf41;->o:Lj41;
-
-    iget-object v0, v0, Lj41;->b:Lcl7;
-
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwu1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lf41;->X:Lst1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lbc6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lf41;->Y:Lvv0;
-
-    invoke-virtual {p1, p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lbc6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->build()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;
-
-    return-object p0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lf41;->Z:Ljava/lang/Object;
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    check-cast v0, Lorg/json/JSONObject;
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    move-result v0
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
-    move-result-object v0
+    move-result v1
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->setPayload(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    move-result-object p1
+    move-result v2
 
-    iget-wide v0, p0, Lf41;->b:J
+    sub-int/2addr v1, v2
 
-    invoke-static {v0, v1}, Lrya;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    sub-int/2addr v1, v0
 
-    move-result-object v0
+    div-int/lit8 v1, v1, 0x2
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    iget-object v2, p0, Lf41;->c:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v2, Landroid/graphics/drawable/Drawable;
 
-    iget-object v0, p0, Lf41;->c:Ltae;
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    iget-boolean v0, v0, Ltae;->b:Z
+    move-result v3
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    move-result-object p1
+    move-result v4
 
-    iget-object v0, p0, Lf41;->o:Lj41;
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
-    iget-object v0, v0, Lj41;->b:Lcl7;
+    move-result v5
 
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
-    move-result-object v0
+    move-result v6
 
-    check-cast v0, Lwu1;
+    sub-int/2addr v5, v6
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
-    move-result-object p1
+    move-result v6
 
-    iget-object v0, p0, Lf41;->X:Lst1;
+    sub-int/2addr v6, v0
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lbc6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    sub-int/2addr v6, v1
 
-    move-result-object p1
+    invoke-virtual {v2, v3, v4, v5, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    iget-object p0, p0, Lf41;->Y:Lvv0;
+    invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    invoke-virtual {p1, p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lbc6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    iget-object v2, p0, Lf41;->o:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v2, Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->build()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    move-result-object p0
+    move-result v3
 
-    check-cast p0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    return-object p0
+    move-result v4
 
-    nop
+    add-int/2addr v4, v1
+
+    add-int/2addr v4, v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v5
+
+    sub-int/2addr v1, v5
+
+    invoke-virtual {v2, v3, v4, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0

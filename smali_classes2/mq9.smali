@@ -1,68 +1,122 @@
-.class public final synthetic Lmq9;
+.class public final Lmq9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lc6;
+.implements Lvf4;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lmq9;
 
-.field public final synthetic b:Lnq9;
+.field public static final b:Lnq9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnq9;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lmq9;->a:I
+    new-instance v0, Lmq9;
 
-    iput-object p1, p0, Lmq9;->b:Lnq9;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lmq9;->a:Lmq9;
+
+    sget-object v0, Lnq9;->b:Lnq9;
+
+    sput-object v0, Lmq9;->b:Lnq9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a()Ldg4;
+    .locals 1
 
-    iget v0, p0, Lmq9;->a:I
+    sget-object v0, Lmq9;->b:Lnq9;
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    new-instance v0, Lej0;
+.method public final b(Ljava/lang/String;Lyf4;Landroid/os/Bundle;)Lgg4;
+    .locals 10
 
-    const/16 v1, 0x15
+    sget-object v0, Lmq9;->b:Lnq9;
 
-    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+    iget-object v0, v0, Ldg4;->a:Ljava/util/LinkedHashSet;
 
-    iget-object p0, p0, Lmq9;->b:Lnq9;
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+    move-result v0
 
-    return-void
+    const/4 v1, 0x0
 
-    :pswitch_0
-    new-instance v0, Lej0;
+    if-nez v0, :cond_0
 
-    const/16 v1, 0x14
+    return-object v1
 
-    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+    :cond_0
+    sget-object v0, Lnq9;->b:Lnq9;
 
-    iget-object p0, p0, Lmq9;->b:Lnq9;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+    sget-object v0, Lnq9;->c:Lyf4;
 
-    return-void
+    invoke-virtual {p2, v0}, Lyf4;->equals(Ljava/lang/Object;)Z
 
-    nop
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eqz v0, :cond_1
+
+    new-instance v8, Lh;
+
+    const/16 v0, 0x16
+
+    invoke-direct {v8, v0}, Lh;-><init>(I)V
+
+    new-instance v2, Lgg4;
+
+    const/16 v9, 0x18
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    invoke-direct/range {v2 .. v9}, Lgg4;-><init>(Ljava/lang/String;Lyf4;Landroid/os/Bundle;ILeg4;Lfg4;I)V
+
+    return-object v2
+
+    :cond_1
+    move-object v4, p2
+
+    const-class p1, Lmq9;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "invalid route "
+
+    invoke-static {p2, v4}, Lrv8;->e(Ljava/lang/String;Lyf4;)Ljava/lang/String;
+
+    move-result-object p3
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p2, v4}, Lrv8;->e(Ljava/lang/String;Lyf4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1, p3, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v1
 .end method

@@ -1,54 +1,23 @@
-.class public final Lop;
+.class public abstract Lop;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcd;
-
-
-# static fields
-.field public static final a:Lop;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Ljava/lang/String;)Landroid/os/LocaleList;
+    .locals 0
 
-    new-instance v0, Lop;
+    invoke-static {p0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    sput-object v0, Lop;->a:Lop;
-
-    return-void
+    return-object p0
 .end method
 
-.method public static a(Ljava/lang/String;J[Lpxa;)V
-    .locals 1
+.method public static b(Landroid/widget/TextView;Landroid/os/LocaleList;)V
+    .locals 0
 
-    :try_start_0
-    sget-object v0, Lhbf;->a:Lhbf;
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextLocales(Landroid/os/LocaleList;)V
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide p1
-
-    array-length v0, p3
-
-    invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, [Lpxa;
-
-    invoke-static {p0, p1, p2, p3}, Lhbf;->a(Ljava/lang/String;J[Lpxa;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
     return-void
 .end method

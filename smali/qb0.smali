@@ -4,98 +4,158 @@
 
 
 # instance fields
-.field public a:Lnsb;
+.field public final a:J
 
-.field public b:Landroid/util/Range;
+.field public final b:J
 
-.field public c:Landroid/util/Range;
+.field public final c:Ljava/util/Set;
 
-.field public d:Ljava/lang/Integer;
+
+# direct methods
+.method public constructor <init>(JJLjava/util/Set;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lqb0;->a:J
+
+    iput-wide p3, p0, Lqb0;->b:J
+
+    iput-object p5, p0, Lqb0;->c:Ljava/util/Set;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Lrb0;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Lqb0;->a:Lnsb;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p1, p0, :cond_0
 
-    const-string v0, " qualitySelector"
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const-string v0, ""
+    instance-of v1, p1, Lqb0;
 
-    :goto_0
-    iget-object v1, p0, Lqb0;->b:Landroid/util/Range;
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lqb0;
+
+    iget-wide v3, p0, Lqb0;->a:J
+
+    iget-wide v5, p1, Lqb0;->a:J
+
+    cmp-long v1, v3, v5
 
     if-nez v1, :cond_1
 
-    const-string v1, " frameRate"
+    iget-wide v3, p0, Lqb0;->b:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iget-wide v5, p1, Lqb0;->b:J
 
-    move-result-object v0
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lqb0;->c:Ljava/util/Set;
+
+    iget-object p1, p1, Lqb0;->c:Ljava/util/Set;
+
+    invoke-interface {v1, p1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    return v0
 
     :cond_1
-    iget-object v1, p0, Lqb0;->c:Landroid/util/Range;
+    return v2
+.end method
 
-    if-nez v1, :cond_2
+.method public final hashCode()I
+    .locals 7
 
-    const-string v1, " bitrate"
+    iget-wide v0, p0, Lqb0;->a:J
 
-    invoke-static {v0, v1}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/16 v2, 0x20
 
-    move-result-object v0
+    ushr-long v3, v0, v2
 
-    :cond_2
-    iget-object v1, p0, Lqb0;->d:Ljava/lang/Integer;
+    xor-long/2addr v0, v3
 
-    if-nez v1, :cond_3
+    long-to-int v0, v0
 
-    const-string v1, " aspectRatio"
+    const v1, 0xf4243
 
-    invoke-static {v0, v1}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    xor-int/2addr v0, v1
 
-    move-result-object v0
+    mul-int/2addr v0, v1
 
-    :cond_3
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    iget-wide v3, p0, Lqb0;->b:J
+
+    ushr-long v5, v3, v2
+
+    xor-long v2, v5, v3
+
+    long-to-int v2, v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lqb0;->c:Ljava/util/Set;
+
+    invoke-interface {v1}, Ljava/util/Set;->hashCode()I
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    xor-int/2addr v0, v1
 
-    new-instance v0, Lrb0;
+    return v0
+.end method
 
-    iget-object v1, p0, Lqb0;->a:Lnsb;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v2, p0, Lqb0;->b:Landroid/util/Range;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lqb0;->c:Landroid/util/Range;
+    const-string v1, "ConfigValue{delta="
 
-    iget-object p0, p0, Lqb0;->d:Ljava/lang/Integer;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    iget-wide v1, p0, Lqb0;->a:J
 
-    move-result p0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1, v2, v3, p0}, Lrb0;-><init>(Lnsb;Landroid/util/Range;Landroid/util/Range;I)V
+    const-string v1, ", maxAllowedDelay="
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-wide v1, p0, Lqb0;->b:J
 
-    const-string v1, "Missing required properties:"
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string v1, ", flags="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqb0;->c:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-object v0
 .end method

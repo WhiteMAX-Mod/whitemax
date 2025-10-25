@@ -1,14 +1,14 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$1;
-.super Led6;
+.super Loj6;
 .source "SourceFile"
 
 # interfaces
-.implements Lbc6;
+.implements Lli6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Lqm3;)V
+    value = Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Ltr3;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Led6;",
-        "Lbc6;"
+        "Loj6;",
+        "Lli6;"
     }
 .end annotation
 
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x1
 
-    const-class v3, Lqm3;
+    const-class v3, Ltr3;
 
     const-string v5, "accept"
 
@@ -52,7 +52,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v0 .. v6}, Ldd6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lnj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -67,20 +67,20 @@
 
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$1;->invoke(Ljava/lang/Throwable;)V
 
-    sget-object p0, Lylf;->a:Lylf;
+    sget-object p1, Lccg;->a:Lccg;
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final invoke(Ljava/lang/Throwable;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lks1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lau1;->receiver:Ljava/lang/Object;
 
-    check-cast p0, Lqm3;
+    check-cast v0, Ltr3;
 
-    invoke-interface {p0, p1}, Lqm3;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method

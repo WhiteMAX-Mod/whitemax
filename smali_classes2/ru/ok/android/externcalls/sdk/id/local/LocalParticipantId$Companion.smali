@@ -47,7 +47,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lld4;)V
+.method public synthetic constructor <init>(Lki4;)V
     .locals 0
 
     .line 1
@@ -59,21 +59,21 @@
 
 # virtual methods
 .method public final nextId()Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
-    .locals 2
+    .locals 3
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
+    new-instance v0, Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
 
     invoke-static {}, Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;->access$getSequence$cp()Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    move-result v0
+    move-result v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {p0, v0, v1}, Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;-><init>(ILld4;)V
+    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;-><init>(ILki4;)V
 
-    return-object p0
+    return-object v0
 .end method

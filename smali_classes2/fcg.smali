@@ -1,96 +1,123 @@
-.class public final synthetic Lfcg;
-.super Ljava/lang/Object;
+.class public final Lfcg;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lmcg;
+.field public final synthetic Y:Lhcg;
+
+.field public final synthetic Z:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmcg;I)V
+.method public constructor <init>(Lhcg;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lfcg;->a:I
+    iput-object p1, p0, Lfcg;->Y:Lhcg;
 
-    iput-object p1, p0, Lfcg;->b:Lmcg;
+    iput-wide p2, p0, Lfcg;->Z:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lfcg;->a:I
+    check-cast p1, Lq54;
 
-    iget-object p0, p0, Lfcg;->b:Lmcg;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lmcg;->w0:Landroid/widget/TextView;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lfcg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Lfcg;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    sget-object p2, Lccg;->a:Lccg;
 
-    move-result p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lmcg;->u0:Li60;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lfcg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    return-object p1
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    move-result p1
+    new-instance p1, Lfcg;
 
-    invoke-virtual {p0, p1}, Li60;->setLinesColor(I)V
+    iget-object v0, p0, Lfcg;->Y:Lhcg;
 
-    return-void
+    iget-wide v1, p0, Lfcg;->Z:J
 
-    :pswitch_1
-    iget-object p0, p0, Lmcg;->w0:Landroid/widget/TextView;
+    invoke-direct {p1, v0, v1, v2, p2}, Lfcg;-><init>(Lhcg;JLkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lfcg;->X:I
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lfcg;->Y:Lhcg;
+
+    iget-object p1, p1, Lhcg;->e:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Las3;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    iput v2, p0, Lfcg;->X:I
 
-    move-result p1
+    iget-wide v2, p0, Lfcg;->Z:J
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {p1, v2, v3}, Las3;->a(J)V
 
-    return-void
+    sget-object p1, Lr54;->a:Lr54;
 
-    nop
+    if-ne v1, p1, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
+
+    :cond_2
+    return-object v1
 .end method

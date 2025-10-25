@@ -1,37 +1,38 @@
 .class public final Lucg;
-.super Lb72;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvcg;
 
-# static fields
-.field public static final c:Lucg;
+
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Lucg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v1, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, v1}, Lb72;-><init>(ILjava/lang/Long;)V
-
-    sput-object v0, Lucg;->c:Lucg;
+    iput-wide p1, p0, Lucg;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a()J
+    .locals 2
+
+    iget-wide v0, p0, Lucg;->a:J
+
+    return-wide v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -40,30 +41,55 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lucg;
+    instance-of v1, p1, Lucg;
 
-    if-nez p0, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p0, 0x0
+    if-nez v1, :cond_1
 
-    return p0
+    return v2
 
     :cond_1
+    check-cast p1, Lucg;
+
+    iget-wide v3, p0, Lucg;->a:J
+
+    iget-wide v5, p1, Lucg;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 2
 
-    const p0, 0x3cd4b16
+    iget-wide v0, p0, Lucg;->a:J
 
-    return p0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 4
 
-    const-string p0, "External"
+    const-string v0, "MarkAsUnreadEvent(mark="
 
-    return-object p0
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lucg;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

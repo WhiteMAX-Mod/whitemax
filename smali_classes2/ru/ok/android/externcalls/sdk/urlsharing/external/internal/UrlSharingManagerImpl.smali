@@ -25,15 +25,15 @@
         "",
         "url",
         "Lkotlin/Function0;",
-        "Lylf;",
+        "Lccg;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "start",
-        "(Ljava/lang/String;Lzb6;Lbc6;)V",
+        "(Ljava/lang/String;Lji6;Lli6;)V",
         "stop",
-        "(Lzb6;Lbc6;)V",
+        "(Lji6;Lli6;)V",
         "Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;",
         "listener",
         "addListener",
@@ -75,58 +75,58 @@
 
 # virtual methods
 .method public addListener(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/UrlSharingManagerImpl;->listenerManager:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManager;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/UrlSharingManagerImpl;->listenerManager:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManager;
 
-    invoke-interface {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManager;->addListener(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;)V
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManager;->addListener(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;)V
 
     return-void
 .end method
 
 .method public removeListener(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/UrlSharingManagerImpl;->listenerManager:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManager;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/UrlSharingManagerImpl;->listenerManager:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManager;
 
-    invoke-interface {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManager;->removeListener(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;)V
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManager;->removeListener(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;)V
 
     return-void
 .end method
 
-.method public start(Ljava/lang/String;Lzb6;Lbc6;)V
-    .locals 0
+.method public start(Ljava/lang/String;Lji6;Lli6;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lzb6;",
-            "Lbc6;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/UrlSharingManagerImpl;->commandsExecutor:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutor;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/UrlSharingManagerImpl;->commandsExecutor:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutor;
 
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutor;->start(Ljava/lang/String;Lzb6;Lbc6;)V
+    invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutor;->start(Ljava/lang/String;Lji6;Lli6;)V
 
     return-void
 .end method
 
-.method public stop(Lzb6;Lbc6;)V
-    .locals 0
+.method public stop(Lji6;Lli6;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lzb6;",
-            "Lbc6;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/UrlSharingManagerImpl;->commandsExecutor:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutor;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/UrlSharingManagerImpl;->commandsExecutor:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutor;
 
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutor;->stop(Lzb6;Lbc6;)V
+    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutor;->stop(Lji6;Lli6;)V
 
     return-void
 .end method

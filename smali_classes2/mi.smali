@@ -1,22 +1,19 @@
 .class public final Lmi;
-.super Ljava/lang/Object;
+.super Lli;
 .source "SourceFile"
-
-# interfaces
-.implements Loi;
 
 
 # instance fields
-.field public final a:Landroid/graphics/drawable/Drawable;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmi;->a:Landroid/graphics/drawable/Drawable;
+    iput p1, p0, Lmi;->a:I
 
     return-void
 .end method

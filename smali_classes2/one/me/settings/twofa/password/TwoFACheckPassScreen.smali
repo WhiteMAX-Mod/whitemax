@@ -3,7 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnj3;
+.implements Lgo3;
+.implements Lpag;
 
 
 # annotations
@@ -15,12 +16,13 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u0001\u0018\u00002\u00020\u00012\u00020\u0002B\u000f\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u0005\u0010\u0006B\'\u0008\u0016\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0007\u0012\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\n\u00a2\u0006\u0004\u0008\u0005\u0010\u000c\u00a8\u0006\r"
+        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u0001\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003B\u000f\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u0006\u0010\u0007B\'\u0008\u0016\u0012\u0006\u0010\t\u001a\u00020\u0008\u0012\u0008\u0008\u0002\u0010\n\u001a\u00020\u0008\u0012\n\u0008\u0002\u0010\u000c\u001a\u0004\u0018\u00010\u000b\u00a2\u0006\u0004\u0008\u0006\u0010\r\u00a8\u0006\u000e"
     }
     d2 = {
         "Lone/me/settings/twofa/password/TwoFACheckPassScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lnj3;",
+        "Lgo3;",
+        "Lpag;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -28,9 +30,9 @@
         "",
         "source",
         "trackId",
-        "Lta7;",
+        "Lpj7;",
         "navData",
-        "(Ljava/lang/String;Ljava/lang/String;Lta7;)V",
+        "(Ljava/lang/String;Ljava/lang/String;Lpj7;)V",
         "settings-twofa_playGoogleRelease"
     }
     k = 0x1
@@ -44,32 +46,34 @@
 
 
 # static fields
-.field public static final synthetic s0:[Lxi7;
+.field public static final synthetic s0:[Ltr7;
 
 
 # instance fields
 .field public final X:Ljava/lang/Object;
 
-.field public final Y:Lcic;
+.field public final Y:Lh0d;
 
-.field public final Z:Lcic;
+.field public final Z:Lh0d;
 
-.field public final a:Lj97;
+.field public final a:Lgi7;
 
 .field public final b:Ljava/lang/Object;
 
-.field public final c:Lzlb;
+.field public final c:Lw9c;
 
-.field public final o:Lcl7;
+.field public final o:Liu7;
 
-.field public final r0:Lcic;
+.field public final q0:Lh0d;
+
+.field public final r0:Lh0d;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 8
 
-    new-instance v0, Lsxb;
+    new-instance v0, Leec;
 
     const-class v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
@@ -79,29 +83,37 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Ljpc;->a:Lkpc;
+    sget-object v2, Lz7d;->a:La8d;
 
-    const-string v3, "continueButton"
+    const-string v3, "scrollContentView"
 
-    const-string v5, "getContinueButton()Lone/me/sdk/uikit/common/button/OneMeButton;"
+    const-string v5, "getScrollContentView()Landroid/widget/ScrollView;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lee5;->h(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lsxb;
+    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
 
     move-result-object v2
 
-    new-instance v3, Lsxb;
+    new-instance v3, Leec;
 
-    const-string v5, "bottomActionsWrapper"
+    const-string v5, "continueButton"
 
-    const-string v6, "getBottomActionsWrapper()Landroid/view/View;"
+    const-string v6, "getContinueButton()Lone/me/sdk/uikit/common/button/OneMeButton;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    const/4 v1, 0x3
+    new-instance v5, Leec;
 
-    new-array v1, v1, [Lxi7;
+    const-string v6, "bottomActionsWrapper"
+
+    const-string v7, "getBottomActionsWrapper()Landroid/view/View;"
+
+    invoke-direct {v5, v1, v6, v7, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/4 v1, 0x4
+
+    new-array v1, v1, [Ltr7;
 
     aput-object v0, v1, v4
 
@@ -113,7 +125,11 @@
 
     aput-object v3, v1, v0
 
-    sput-object v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Lxi7;
+    const/4 v0, 0x3
+
+    aput-object v5, v1, v0
+
+    sput-object v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Ltr7;
 
     return-void
 .end method
@@ -128,24 +144,24 @@
     const/4 v2, 0x0
 
     .line 7
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILld4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
 
     .line 8
-    sget-object v0, Lj97;->d:Lj97;
+    sget-object v0, Lgi7;->f:Lgi7;
 
-    iput-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->a:Lj97;
+    iput-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->a:Lgi7;
 
     .line 9
-    new-instance v0, Luh1;
+    new-instance v0, Lij1;
 
-    const/16 v1, 0xe
+    const/16 v1, 0xd
 
-    invoke-direct {v0, p1, v1}, Luh1;-><init>(Landroid/os/Bundle;I)V
+    invoke-direct {v0, p1, v1}, Lij1;-><init>(Landroid/os/Bundle;I)V
 
     const/4 v1, 0x3
 
     .line 10
-    invoke-static {v1, v0}, Lcb7;->G(ILzb6;)Lcl7;
+    invoke-static {v1, v0}, Lrci;->b(ILji6;)Liu7;
 
     move-result-object v0
 
@@ -153,54 +169,54 @@
     iput-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
 
     .line 12
-    new-instance v0, Lzlb;
+    new-instance v0, Lw9c;
 
     .line 13
-    new-instance v3, Llgf;
+    new-instance v3, Lg6g;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v4}, Llgf;-><init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
+    invoke-direct {v3, p0, v4}, Lg6g;-><init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
 
     const/4 v4, 0x6
 
     .line 14
-    invoke-direct {v0, v3, v2, v4}, Lzlb;-><init>(Lzb6;Lzb6;I)V
+    invoke-direct {v0, v3, v2, v4}, Lw9c;-><init>(Lji6;Lji6;I)V
 
-    iput-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->c:Lzlb;
+    iput-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->c:Lw9c;
 
     .line 15
-    new-instance v0, Lw7f;
+    new-instance v0, Lmbe;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, p0, v2, p1}, Lmbe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    .line 16
+    new-instance p1, Lguf;
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, p0, v2, p1}, Lw7f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p1, v2, v0}, Lguf;-><init>(ILjava/lang/Object;)V
 
-    .line 16
-    new-instance p1, Lerb;
+    const-class v0, La7g;
 
-    const/16 v2, 0x1b
-
-    invoke-direct {p1, v2, v0}, Lerb;-><init>(ILjava/lang/Object;)V
-
-    const-class v0, Lbhf;
-
-    invoke-virtual {p0, v0, p1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lzb6;)Lcl7;
+    invoke-virtual {p0, v0, p1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 17
-    iput-object p1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->o:Lcl7;
+    iput-object p1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->o:Liu7;
 
     .line 18
-    new-instance p1, Llgf;
+    new-instance p1, Lg6g;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Llgf;-><init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
+    invoke-direct {p1, p0, v0}, Lg6g;-><init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
 
     .line 19
-    invoke-static {v1, p1}, Lcb7;->G(ILzb6;)Lcl7;
+    invoke-static {v1, p1}, Lrci;->b(ILji6;)Liu7;
 
     move-result-object p1
 
@@ -208,104 +224,113 @@
     iput-object p1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->X:Ljava/lang/Object;
 
     .line 21
-    sget p1, Lp7c;->oneme_settings_twofa_onboarding_content:I
+    sget p1, Ljpc;->oneme_settings_twofa_onboarding_content:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lcic;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Y:Lcic;
+    iput-object p1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Y:Lh0d;
 
     .line 22
-    sget p1, Lp7c;->oneme_settings_twofa_action:I
+    sget p1, Ljpc;->oneme_settings_twofa_onboarding_scroll_content:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lcic;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Z:Lcic;
+    iput-object p1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Z:Lh0d;
 
     .line 23
-    sget p1, Lp7c;->oneme_settings_twofa_action_wrapper:I
+    sget p1, Ljpc;->oneme_settings_twofa_action:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lcic;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->r0:Lcic;
+    iput-object p1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->q0:Lh0d;
 
     .line 24
-    new-instance p1, Llgf;
+    sget p1, Ljpc;->oneme_settings_twofa_action_wrapper:I
+
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->r0:Lh0d;
+
+    .line 25
+    new-instance p1, Lg6g;
 
     const/4 v0, 0x2
 
-    invoke-direct {p1, p0, v0}, Llgf;-><init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
-
-    .line 25
-    new-instance v0, Llr0;
-
-    invoke-direct {v0, p0, p1}, Llr0;-><init>(Lxx3;Lzb6;)V
+    invoke-direct {p1, p0, v0}, Lg6g;-><init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
 
     .line 26
-    invoke-virtual {p0}, Lxx3;->getRouter()Lrzc;
+    new-instance v0, Lts0;
+
+    invoke-direct {v0, p0, p1}, Lts0;-><init>(Ll24;Lji6;)V
+
+    .line 27
+    invoke-virtual {p0}, Ll24;->getRouter()Lqid;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 27
-    invoke-virtual {p0}, Lxx3;->getRouter()Lrzc;
+    .line 28
+    invoke-virtual {p0}, Ll24;->getRouter()Lqid;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0, v0}, Lrzc;->a(Lby3;)V
+    invoke-virtual {p1, v0}, Lqid;->a(Lp24;)V
 
     return-void
 
-    .line 28
+    .line 29
     :cond_0
-    new-instance p1, Lm9;
+    new-instance p1, Lt9;
 
     const/16 v1, 0xf
 
-    invoke-direct {p1, p0, v1, v0}, Lm9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p1, p0, v1, v0}, Lt9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Lxx3;->addLifecycleListener(Lvx3;)V
+    invoke-virtual {p0, p1}, Ll24;->addLifecycleListener(Lj24;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lta7;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lpj7;)V
     .locals 2
 
     .line 1
-    new-instance v0, Lpxa;
+    new-instance v0, Ltcb;
 
     const-string v1, "twofa_check_password_source_key"
 
-    invoke-direct {v0, v1, p1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 2
-    new-instance p1, Lpxa;
+    new-instance p1, Ltcb;
 
     const-string v1, "twofa_check_password_track_id_key"
 
-    invoke-direct {p1, v1, p2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v1, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
-    new-instance p2, Lpxa;
+    new-instance p2, Ltcb;
 
     const-string v1, "twofa_check_password_nav_data_key"
 
-    invoke-direct {p2, v1, p3}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v1, p3}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 4
-    filled-new-array {v0, p1, p2}, [Lpxa;
+    filled-new-array {v0, p1, p2}, [Ltcb;
 
     move-result-object p1
 
     .line 5
-    invoke-static {p1}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
+    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -315,14 +340,14 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lta7;ILld4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lpj7;ILki4;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
 
     if-eqz p5, :cond_0
 
-    .line 29
+    .line 30
     const-string p2, ""
 
     :cond_0
@@ -332,127 +357,141 @@
 
     const/4 p3, 0x0
 
-    .line 30
+    .line 31
     :cond_1
-    invoke-direct {p0, p1, p2, p3}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lta7;)V
+    invoke-direct {p0, p1, p2, p3}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lpj7;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInsetsConfig()Lj97;
-    .locals 0
+.method public final C0()La7g;
+    .locals 1
 
-    iget-object p0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->a:Lj97;
+    iget-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->o:Liu7;
 
-    return-object p0
-.end method
-
-.method public final getScreenDelegate()Lx6d;
-    .locals 0
-
-    iget-object p0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->c:Lzlb;
-
-    return-object p0
-.end method
-
-.method public final handleBack()Z
-    .locals 2
-
-    iget-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lpa7;
+    check-cast v0, La7g;
 
-    sget-object v1, Lpa7;->a:Lpa7;
+    return-object v0
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public final g(ILandroid/os/Bundle;)V
+    .locals 3
 
-    sget-object p0, Lpif;->c:Lpif;
+    invoke-virtual {p0}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->C0()La7g;
 
-    invoke-virtual {p0}, Lx2;->F0()Lza4;
+    move-result-object p2
 
-    move-result-object p0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v0, ":login"
+    sget v0, Ljpc;->oneme_settings_twofa_delete_user_confirmation_skip:I
+
+    if-eq p1, v0, :cond_0
+
+    sget v0, Ljpc;->oneme_settings_twofa_delete_user_confirmation_action:I
+
+    if-ne p1, v0, :cond_0
+
+    iget-object p1, p2, La7g;->r0:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lulf;
+
+    check-cast p1, Lqta;
+
+    invoke-virtual {p1}, Lqta;->b()Lk54;
+
+    move-result-object p1
+
+    new-instance v0, Lq6g;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-direct {v0, p2, v1}, Lq6g;-><init>(La7g;Lkotlin/coroutines/Continuation;)V
 
-    const/4 p0, 0x1
+    iget-object v1, p2, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    return p0
+    sget-object v2, Lt54;->b:Lt54;
 
-    :cond_0
-    invoke-super {p0}, Lxx3;->handleBack()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final i(ILandroid/os/Bundle;)V
-    .locals 2
-
-    invoke-virtual {p0}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->y0()Lbhf;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget p2, Lp7c;->oneme_settings_twofa_delete_user_confirmation_skip:I
-
-    if-eq p1, p2, :cond_0
-
-    sget p2, Lp7c;->oneme_settings_twofa_delete_user_confirmation_action:I
-
-    if-ne p1, p2, :cond_0
-
-    iget-object p1, p0, Lbhf;->s0:Lcl7;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-static {v1, p1, v2, v0}, Ltki;->c(Lq54;Li54;Lt54;Lzi6;)Lcye;
 
     move-result-object p1
 
-    check-cast p1, Lxwe;
+    iget-object v0, p2, La7g;->B0:Lw0e;
 
-    check-cast p1, Laga;
+    sget-object v1, La7g;->D0:[Ltr7;
 
-    invoke-virtual {p1}, Laga;->b()Ls04;
+    const/4 v2, 0x1
 
-    move-result-object p1
+    aget-object v1, v1, v2
 
-    new-instance p2, Lsgf;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, p0, v0}, Lsgf;-><init>(Lbhf;Lkotlin/coroutines/Continuation;)V
-
-    iget-object v0, p0, Lx7g;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object v1, Lb14;->b:Lb14;
-
-    invoke-static {v0, p1, v1, p2}, Lvyg;->t(Ly04;Lq04;Lb14;Lpc6;)Lcae;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lbhf;->C0:Lncb;
-
-    sget-object v0, Lbhf;->D0:[Lxi7;
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {p2, p0, v0, p1}, Lncb;->h0(Ljava/lang/Object;Lxi7;Ljava/lang/Object;)V
+    invoke-virtual {v0, p2, v1, p1}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
 
     :cond_0
     return-void
+.end method
+
+.method public final getInsetsConfig()Lgi7;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->a:Lgi7;
+
+    return-object v0
+.end method
+
+.method public final getScreenDelegate()Lzpd;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->c:Lw9c;
+
+    return-object v0
+.end method
+
+.method public final handleBack()Z
+    .locals 3
+
+    iget-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmj7;
+
+    sget-object v1, Lmj7;->a:Lmj7;
+
+    if-ne v0, v1, :cond_0
+
+    sget-object v0, Lq8g;->c:Lq8g;
+
+    invoke-virtual {v0}, Lrdi;->q0()Lag4;
+
+    move-result-object v0
+
+    const-string v1, ":login"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    invoke-super {p0}, Ll24;->handleBack()Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
@@ -466,21 +505,21 @@
 
     invoke-direct {p1, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lp7c;->oneme_settings_twofa_onboarding_root:I
+    sget p3, Ljpc;->oneme_settings_twofa_onboarding_root:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setId(I)V
 
-    sget-object p3, Lyu4;->t0:Lbx9;
+    sget-object p3, Ll05;->s0:Lk82;
 
-    invoke-virtual {p3, p1}, Lbx9;->l(Landroid/view/View;)Lera;
-
-    move-result-object p3
-
-    invoke-interface {p3}, Lera;->b()Lie0;
+    invoke-virtual {p3, p1}, Lk82;->n(Landroid/view/View;)Lv5b;
 
     move-result-object p3
 
-    iget p3, p3, Lie0;->l:I
+    invoke-interface {p3}, Lv5b;->b()Lff0;
+
+    move-result-object p3
+
+    iget p3, p3, Lff0;->l:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -492,7 +531,7 @@
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setClipToOutline(Z)V
 
-    new-instance v0, Ldsa;
+    new-instance v0, Lu6b;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -500,15 +539,15 @@
 
     const/4 v2, 0x6
 
-    invoke-direct {v0, v1, v2}, Ldsa;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, v2}, Lu6b;-><init>(Landroid/content/Context;I)V
 
-    sget v1, Lp7c;->oneme_settings_twofa_onboarding_toolbar:I
+    sget v1, Ljpc;->oneme_settings_twofa_onboarding_toolbar:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    sget-object v1, Lvra;->a:Lvra;
+    sget-object v1, Lm6b;->a:Lm6b;
 
-    invoke-virtual {v0, v1}, Ldsa;->setForm(Lvra;)V
+    invoke-virtual {v0, v1}, Lu6b;->setForm(Lm6b;)V
 
     invoke-virtual {v0, p3}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -526,17 +565,17 @@
 
     invoke-virtual {v0, p3}, Landroid/view/View;->setTranslationZ(F)V
 
-    new-instance p3, Llra;
+    new-instance p3, Lc6b;
 
-    new-instance v3, Lheb;
+    new-instance v3, Lp5f;
 
-    const/16 v4, 0x19
+    const/4 v4, 0x2
 
-    invoke-direct {v3, v4, p0}, Lheb;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v4, p0}, Lp5f;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p3, v3}, Llra;-><init>(Lbc6;)V
+    invoke-direct {p3, v3}, Lc6b;-><init>(Lli6;)V
 
-    invoke-virtual {v0, p3}, Ldsa;->setLeftActions(Lrra;)V
+    invoke-virtual {v0, p3}, Lu6b;->setLeftActions(Li6b;)V
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -548,7 +587,7 @@
 
     invoke-direct {p3, p2}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
 
-    sget p2, Lp7c;->oneme_settings_twofa_onboarding_scroll_content:I
+    sget p2, Ljpc;->oneme_settings_twofa_onboarding_scroll_content:I
 
     invoke-virtual {p3, p2}, Landroid/view/View;->setId(I)V
 
@@ -564,11 +603,11 @@
 
     move-result-object p2
 
-    new-instance v3, Lqkf;
+    new-instance v3, Lrag;
 
-    invoke-direct {v3, p2}, Lqkf;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, p2}, Lrag;-><init>(Landroid/content/Context;)V
 
-    sget p2, Lp7c;->oneme_settings_twofa_onboarding_content:I
+    sget p2, Ljpc;->oneme_settings_twofa_onboarding_content:I
 
     invoke-virtual {v3, p2}, Landroid/view/View;->setId(I)V
 
@@ -576,7 +615,7 @@
 
     int-to-float p2, p2
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -588,7 +627,7 @@
 
     mul-float/2addr p2, v4
 
-    invoke-static {p2}, Lya6;->G(F)I
+    invoke-static {p2}, Lfhi;->b(F)I
 
     move-result p2
 
@@ -606,17 +645,19 @@
 
     invoke-virtual {v3, v4, p2, v5, v6}, Landroid/view/View;->setPadding(IIII)V
 
+    invoke-virtual {v3, p0}, Lrag;->setListener(Lpag;)V
+
     invoke-virtual {p3, v3}, Landroid/widget/ScrollView;->addView(Landroid/view/View;)V
 
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p2, Limb;
+    new-instance p2, Lj6g;
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {p2, v0, p3, v3}, Limb;-><init>(Ldsa;Landroid/widget/ScrollView;I)V
+    invoke-direct {p2, v0, p3, v3}, Lj6g;-><init>(Lu6b;Landroid/widget/ScrollView;I)V
 
-    invoke-static {v0, p2}, Lssa;->a(Landroid/view/View;Ljava/lang/Runnable;)Lssa;
+    invoke-static {v0, p2}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
 
     new-instance p2, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -634,7 +675,7 @@
 
     invoke-virtual {v3, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p2, Lp7c;->oneme_settings_twofa_action_wrapper:I
+    sget p2, Ljpc;->oneme_settings_twofa_action_wrapper:I
 
     invoke-virtual {v3, p2}, Landroid/view/View;->setId(I)V
 
@@ -652,23 +693,23 @@
 
     invoke-direct {p2, v0, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v0, Lp7c;->oneme_settings_twofa_action:I
+    sget v0, Ljpc;->oneme_settings_twofa_action:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setId(I)V
 
-    sget-object v0, Lada;->c:Lada;
+    sget-object v0, Lkqa;->c:Lkqa;
 
-    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lada;)V
+    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lkqa;)V
 
-    sget-object v0, Lzca;->a:Lzca;
+    sget-object v0, Ljqa;->a:Ljqa;
 
-    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lzca;)V
+    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ljqa;)V
 
-    sget-object v0, Lxca;->o:Lxca;
+    sget-object v0, Lhqa;->o:Lhqa;
 
-    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lxca;)V
+    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lhqa;)V
 
-    sget v0, Lxbc;->oneme_settings_twofa_creation_other_action:I
+    sget v0, Lxtc;->oneme_settings_twofa_creation_other_action:I
 
     invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
@@ -680,7 +721,7 @@
 
     int-to-float v5, v5
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -692,7 +733,7 @@
 
     mul-float/2addr v6, v5
 
-    invoke-static {v6}, Lya6;->G(F)I
+    invoke-static {v6}, Lfhi;->b(F)I
 
     move-result v6
 
@@ -704,13 +745,13 @@
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v0, Lmgf;
+    new-instance v0, Lh6g;
 
     const/4 v6, 0x0
 
-    invoke-direct {v0, p0, v6}, Lmgf;-><init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
+    invoke-direct {v0, p0, v6}, Lh6g;-><init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
 
-    invoke-static {p2, v0}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p2, v0}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {v3, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -722,31 +763,31 @@
 
     invoke-direct {p2, v0, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v0, Lp7c;->oneme_settings_twofa_forget_password_action:I
+    sget v0, Ljpc;->oneme_settings_twofa_forget_password_action:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setId(I)V
 
-    sget v0, Lxbc;->oneme_settings_twofa_forget_password_action:I
+    sget v0, Lxtc;->oneme_settings_twofa_forget_password_action:I
 
     invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    sget-object v0, Lzca;->o:Lzca;
+    sget-object v0, Ljqa;->o:Ljqa;
 
-    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lzca;)V
+    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ljqa;)V
 
-    sget-object v0, Lxca;->a:Lxca;
+    sget-object v0, Lhqa;->a:Lhqa;
 
-    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lxca;)V
+    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lhqa;)V
 
-    sget-object v0, Lada;->a:Lada;
+    sget-object v0, Lkqa;->a:Lkqa;
 
-    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lada;)V
+    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lkqa;)V
 
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v0, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -758,7 +799,7 @@
 
     mul-float/2addr v5, v1
 
-    invoke-static {v5}, Lya6;->G(F)I
+    invoke-static {v5}, Lfhi;->b(F)I
 
     move-result v1
 
@@ -770,23 +811,23 @@
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v0, Lmgf;
+    new-instance v0, Lh6g;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lmgf;-><init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
+    invoke-direct {v0, p0, v1}, Lh6g;-><init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
 
-    invoke-static {p2, v0}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p2, v0}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {v3, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p0, Ljmb;
+    new-instance p2, Li6g;
 
-    const/4 p2, 0x1
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v3, p3, p2}, Ljmb;-><init>(Landroid/widget/LinearLayout;Landroid/widget/ScrollView;I)V
+    invoke-direct {p2, v3, v0, p3}, Li6g;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v3, p0}, Lssa;->a(Landroid/view/View;Ljava/lang/Runnable;)Lssa;
+    invoke-static {v3, p2}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
 
     invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -796,151 +837,185 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 5
 
-    new-instance v0, Lc9b;
+    new-instance v0, Ldib;
 
-    const/16 v1, 0x15
+    const/16 v1, 0x19
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p0, v2, v1}, Lc9b;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+    invoke-direct {v0, p0, v2, v1}, Ldib;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v0, p1}, Ljs9;->t(Lrc6;Landroid/view/View;)V
+    invoke-static {v0, p1}, Lqdi;->d(Lbj6;Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->y0()Lbhf;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lbhf;->x0:Liic;
-
-    new-instance v0, Lzv2;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, p1, v1}, Lzv2;-><init>(Lis5;I)V
-
-    sget-object p1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Lxi7;
-
-    const/4 v1, 0x0
-
-    aget-object p1, p1, v1
-
-    iget-object v1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Y:Lcic;
-
-    invoke-interface {v1, p0, p1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->C0()La7g;
 
     move-result-object p1
 
-    check-cast p1, Lqkf;
+    iget-object p1, p1, La7g;->w0:Ln0d;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
+    new-instance v0, Lx23;
 
-    move-result-object v1
+    const/16 v1, 0xa
 
-    invoke-interface {v1}, Lzn7;->L()Lbo7;
+    invoke-direct {v0, p1, v1}, Lx23;-><init>(Lty5;I)V
 
-    move-result-object v1
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
-    sget-object v3, Lcn7;->o:Lcn7;
+    move-result-object p1
 
-    invoke-static {v0, v1, v3}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    invoke-interface {p1}, Lfx7;->x()Lhx7;
 
-    move-result-object v0
+    move-result-object p1
 
-    new-instance v1, Lngf;
+    sget-object v1, Lhw7;->o:Lhw7;
 
-    invoke-direct {v1, v2, p1}, Lngf;-><init>(Lkotlin/coroutines/Continuation;Lqkf;)V
+    invoke-static {v0, p1, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
-    new-instance p1, Lnu5;
+    move-result-object p1
+
+    new-instance v0, Lk6g;
+
+    invoke-direct {v0, v2, p0}, Lk6g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+
+    new-instance v3, Lb16;
 
     const/4 v4, 0x1
 
-    invoke-direct {p1, v0, v1, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    invoke-virtual {p0}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->y0()Lbhf;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lbhf;->z0:Lv85;
+    invoke-static {v3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lzn7;->L()Lbo7;
-
-    move-result-object v0
-
-    invoke-static {p1, v0, v3}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    invoke-virtual {p0}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->C0()La7g;
 
     move-result-object p1
 
-    new-instance v0, Logf;
+    iget-object p1, p1, La7g;->y0:Lxe5;
 
-    invoke-direct {v0, v2, p0}, Logf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
-
-    new-instance v1, Lnu5;
-
-    invoke-direct {v1, p1, v0, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    invoke-virtual {p0}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->y0()Lbhf;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lbhf;->y0:Lv85;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lzn7;->L()Lbo7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v3}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
-    new-instance v0, Lpgf;
+    new-instance v0, Ll6g;
 
-    invoke-direct {v0, v2, p0}, Lpgf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+    invoke-direct {v0, v2, p0}, Ll6g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
 
-    new-instance v1, Lnu5;
+    new-instance v3, Lb16;
+
+    invoke-direct {v3, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
+
+    invoke-virtual {p0}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->C0()La7g;
+
+    move-result-object p1
+
+    iget-object p1, p1, La7g;->x0:Lxe5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+
+    move-result-object p1
+
+    new-instance v0, Lm6g;
+
+    invoke-direct {v0, v2, p0}, Lm6g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+
+    new-instance v3, Lb16;
+
+    invoke-direct {v3, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
+
+    sget-object p1, Lus7;->f:Lx0f;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+
+    move-result-object p1
+
+    new-instance v0, Ln6g;
+
+    invoke-direct {v0, v2, p0}, Ln6g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+
+    new-instance v1, Lb16;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     return-void
 .end method
 
-.method public final y0()Lbhf;
-    .locals 0
+.method public final x()V
+    .locals 5
 
-    iget-object p0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->o:Lcl7;
+    invoke-virtual {p0}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->C0()La7g;
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p0, Lbhf;
+    new-instance v1, Ly6g;
 
-    return-object p0
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, v2}, Ly6g;-><init>(La7g;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v2, v1, v3}, Lxzg;->m(Lxzg;Li54;Lzi6;I)Lcye;
+
+    move-result-object v1
+
+    iget-object v2, v0, La7g;->C0:Lw0e;
+
+    sget-object v3, La7g;->D0:[Ltr7;
+
+    const/4 v4, 0x2
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v2, v0, v3, v1}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+
+    return-void
 .end method

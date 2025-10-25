@@ -1,167 +1,189 @@
-.class public final Lm2h;
-.super Lv2h;
+.class public abstract Lm2h;
+.super Luq3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lb7h;
+.field public t0:Z
 
-
-# direct methods
-.method public constructor <init>(Lb7h;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lv2h;-><init>(I)V
-
-    iput-object p1, p0, Lm2h;->b:Lb7h;
-
-    return-void
-.end method
+.field public u0:Z
 
 
 # virtual methods
-.method public final a(Lcom/google/android/gms/common/api/Status;)V
+.method public final f(Landroidx/constraintlayout/widget/ConstraintLayout;)V
     .locals 0
 
-    :try_start_0
-    iget-object p0, p0, Lm2h;->b:Lb7h;
+    invoke-virtual {p0, p1}, Luq3;->e(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
-    invoke-virtual {p0, p1}, Lb7h;->f0(Lcom/google/android/gms/common/api/Status;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
     return-void
 .end method
 
-.method public final b(Ljava/lang/Exception;)V
-    .locals 3
-
-    new-instance v0, Lcom/google/android/gms/common/api/Status;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v2, ": "
-
-    invoke-static {v1, v2, p1}, Lsq3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0xa
-
-    invoke-direct {v0, v2, p1, v1, v1}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lrk3;)V
-
-    :try_start_0
-    iget-object p0, p0, Lm2h;->b:Lb7h;
-
-    invoke-virtual {p0, v0}, Lb7h;->f0(Lcom/google/android/gms/common/api/Status;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    return-void
-.end method
-
-.method public final c(Lt1h;)V
+.method public h(Landroid/util/AttributeSet;)V
     .locals 5
 
-    :try_start_0
-    iget-object v0, p0, Lm2h;->b:Lb7h;
+    invoke-super {p0, p1}, Luq3;->h(Landroid/util/AttributeSet;)V
 
-    iget-object p1, p1, Lt1h;->d:Lqk;
+    if-eqz p1, :cond_3
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_2
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    const/16 v2, 0x8
+    sget-object v1, Lovc;->ConstraintLayout_Layout:[I
 
-    :try_start_1
-    invoke-virtual {v0, p1}, Lb7h;->e0(Lqk;)V
-    :try_end_1
-    .catch Landroid/os/DeadObjectException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_2
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    :try_start_2
-    new-instance v3, Lcom/google/android/gms/common/api/Status;
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
+    invoke-virtual {v0, p1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    invoke-direct {v3, v2, p1, v1, v1}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lrk3;)V
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
 
-    invoke-virtual {v0, v3}, Lb7h;->f0(Lcom/google/android/gms/common/api/Status;)V
+    move-result v0
 
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_2
+
+    invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getIndex(I)I
+
+    move-result v2
+
+    sget v3, Lovc;->ConstraintLayout_Layout_android_visibility:I
+
+    const/4 v4, 0x1
+
+    if-ne v2, v3, :cond_0
+
+    iput-boolean v4, p0, Lm2h;->t0:Z
+
+    goto :goto_1
+
+    :cond_0
+    sget v3, Lovc;->ConstraintLayout_Layout_android_elevation:I
+
+    if-ne v2, v3, :cond_1
+
+    iput-boolean v4, p0, Lm2h;->u0:Z
+
+    :cond_1
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    :cond_3
     return-void
+.end method
 
-    :catch_1
-    move-exception p1
+.method public abstract l(Luy5;II)V
+.end method
 
-    new-instance v3, Lcom/google/android/gms/common/api/Status;
+.method public final onAttachedToWindow()V
+    .locals 6
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
+    invoke-super {p0}, Luq3;->onAttachedToWindow()V
+
+    iget-boolean v0, p0, Lm2h;->t0:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lm2h;->u0:Z
+
+    if-eqz v0, :cond_3
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    if-eqz v1, :cond_3
+
+    check-cast v0, Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getElevation()F
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    :goto_0
+    iget v4, p0, Luq3;->b:I
+
+    if-ge v3, v4, :cond_3
+
+    iget-object v4, p0, Luq3;->a:[I
+
+    aget v4, v4, v3
+
+    iget-object v5, v0, Landroidx/constraintlayout/widget/ConstraintLayout;->a:Landroid/util/SparseArray;
+
+    invoke-virtual {v5, v4}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    invoke-direct {v3, v2, v4, v1, v1}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lrk3;)V
+    check-cast v4, Landroid/view/View;
 
-    invoke-virtual {v0, v3}, Lb7h;->f0(Lcom/google/android/gms/common/api/Status;)V
+    if-eqz v4, :cond_2
 
-    throw p1
-    :try_end_2
-    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_2
+    iget-boolean v5, p0, Lm2h;->t0:Z
 
-    :catch_2
-    move-exception p1
+    if-eqz v5, :cond_1
 
-    invoke-virtual {p0, p1}, Lm2h;->b(Ljava/lang/Exception;)V
+    invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_1
+    iget-boolean v5, p0, Lm2h;->u0:Z
+
+    if-eqz v5, :cond_2
+
+    const/4 v5, 0x0
+
+    cmpl-float v5, v2, v5
+
+    if-lez v5, :cond_2
+
+    invoke-virtual {v4}, Landroid/view/View;->getTranslationZ()F
+
+    move-result v5
+
+    add-float/2addr v5, v2
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->setTranslationZ(F)V
+
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    return-void
+.end method
+
+.method public setElevation(F)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/view/View;->setElevation(F)V
+
+    invoke-virtual {p0}, Luq3;->d()V
 
     return-void
 .end method
 
-.method public final d(Lnsb;Z)V
-    .locals 1
+.method public setVisibility(I)V
+    .locals 0
 
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    move-result-object p2
-
-    iget-object v0, p1, Lnsb;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Map;
-
-    iget-object p0, p0, Lm2h;->b:Lb7h;
-
-    invoke-interface {v0, p0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p2, Ln1h;
-
-    invoke-direct {p2, p1, p0}, Ln1h;-><init>(Lnsb;Lcom/google/android/gms/common/api/internal/BasePendingResult;)V
-
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->Z(Ln1h;)V
+    invoke-virtual {p0}, Luq3;->d()V
 
     return-void
 .end method

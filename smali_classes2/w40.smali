@@ -1,213 +1,75 @@
 .class public final Lw40;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Lbj6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Lf50;
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Ljava/lang/Object;Ljava/lang/Object;I)V
-    .locals 0
-
-    iput p4, p0, Lw40;->a:I
-
-    iput-object p1, p0, Lw40;->b:Landroid/view/View;
-
-    iput-object p2, p0, Lw40;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lw40;->d:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
+.field public synthetic Y:F
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget p1, p0, Lw40;->a:I
+    check-cast p1, Lf50;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Ljava/lang/Number;
 
-    return-void
+    invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
 
-    :pswitch_0
-    iget-object p1, p0, Lw40;->b:Landroid/view/View;
+    move-result p2
 
-    check-cast p1, Lx40;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x0
+    new-instance v0, Lw40;
 
-    iput-boolean v0, p1, Lx40;->z0:Z
+    const/4 v1, 0x3
 
-    iget-object p0, p0, Lw40;->d:Ljava/lang/Object;
+    invoke-direct {v0, v1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    check-cast p0, Lk;
+    iput-object p1, v0, Lw40;->X:Lf50;
 
-    invoke-virtual {p0}, Lk;->invoke()Ljava/lang/Object;
+    iput p2, v0, Lw40;->Y:F
 
-    return-void
+    sget-object p1, Lccg;->a:Lccg;
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, Lw40;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lw40;->b:Landroid/view/View;
-
-    check-cast p1, Lo8d;
-
-    iget-object p1, p1, Lo8d;->t0:Ljava/util/EnumMap;
-
-    iget-object p0, p0, Lw40;->c:Ljava/lang/Object;
-
-    check-cast p0, Lj8d;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, p0, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lw40;->b:Landroid/view/View;
-
-    check-cast p1, Lx40;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p1, Lx40;->z0:Z
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lx40;->x0:Landroid/animation/ObjectAnimator;
-
-    iget-object p0, p0, Lw40;->c:Ljava/lang/Object;
-
-    check-cast p0, Lk;
-
-    invoke-virtual {p0}, Lk;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p0, p0, Lw40;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, Lw40;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p0, p0, Lw40;->d:Ljava/lang/Object;
-
-    check-cast p0, Landroid/view/View;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
-
-    move-result p1
-
-    const/4 v0, 0x0
-
-    cmpg-float p1, p1, v0
-
-    if-nez p1, :cond_0
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    invoke-virtual {v0, p1}, Lw40;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    return-object p1
+.end method
 
-    move-result-object p1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const/high16 v0, 0x40800000    # 4.0f
+    iget-object p1, p0, Lw40;->X:Lf50;
 
-    mul-float/2addr p1, v0
+    iget v0, p0, Lw40;->Y:F
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationY(F)V
+    if-eqz p1, :cond_0
+
+    iget-object v1, p1, Lf50;->a:Ljava/lang/Long;
+
+    iget-object v2, p1, Lf50;->b:Ljava/lang/Long;
+
+    iget-object p1, p1, Lf50;->d:Lx20;
+
+    new-instance v3, Lf50;
+
+    invoke-direct {v3, v1, v2, v0, p1}, Lf50;-><init>(Ljava/lang/Long;Ljava/lang/Long;FLx20;)V
+
+    return-object v3
 
     :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lw40;->b:Landroid/view/View;
-
-    check-cast p0, Lx40;
-
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

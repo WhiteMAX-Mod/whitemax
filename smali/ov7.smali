@@ -1,8 +1,6 @@
-.class public interface abstract Lov7;
+.class public interface abstract annotation Lov7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract a()V
-.end method
+# interfaces
+.implements Ljava/lang/annotation/Annotation;

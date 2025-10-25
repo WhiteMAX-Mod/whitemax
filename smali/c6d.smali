@@ -1,47 +1,36 @@
-.class public abstract Lc6d;
+.class public final Lc6d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld6d;
 
-# static fields
-.field public static final a:Z
+
+# instance fields
+.field public final synthetic a:Lnb0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lnb0;)V
+    .locals 0
 
-    const-string v0, "rx3.purge-enabled"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x1
-
-    :try_start_0
-    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v2, "true"
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lzyd;->F(Ljava/lang/Throwable;)V
-
-    :goto_0
-    sput-boolean v1, Lc6d;->a:Z
+    iput-object p1, p0, Lc6d;->a:Lnb0;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lm90;Ljava/util/concurrent/Executor;)Lh60;
+    .locals 2
+
+    new-instance v0, Lh60;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, p2, v1}, Lh60;-><init>(Lm90;Ljava/util/concurrent/Executor;Landroid/content/Context;)V
+
+    return-object v0
 .end method

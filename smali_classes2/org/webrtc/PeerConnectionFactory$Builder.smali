@@ -185,9 +185,9 @@
     move-result-wide v20
 
     :goto_3
-    iget-object v0, v0, Lorg/webrtc/PeerConnectionFactory$Builder;->neteqFactoryFactory:Lorg/webrtc/NetEqFactoryFactory;
+    iget-object v1, v0, Lorg/webrtc/PeerConnectionFactory$Builder;->neteqFactoryFactory:Lorg/webrtc/NetEqFactoryFactory;
 
-    if-nez v0, :cond_5
+    if-nez v1, :cond_5
 
     :goto_4
     move-wide/from16 v22, v20
@@ -205,7 +205,7 @@
     goto :goto_5
 
     :cond_5
-    invoke-interface {v0}, Lorg/webrtc/NetEqFactoryFactory;->createNativeNetEqFactory()J
+    invoke-interface {v1}, Lorg/webrtc/NetEqFactoryFactory;->createNativeNetEqFactory()J
 
     move-result-wide v12
 
@@ -214,21 +214,21 @@
     :goto_5
     invoke-static/range {v2 .. v21}, Lorg/webrtc/PeerConnectionFactory;->b(Landroid/content/Context;Lorg/webrtc/PeerConnectionFactory$Options;JJJLorg/webrtc/VideoEncoderFactory;Lorg/webrtc/VideoDecoderFactory;JJJJJ)Lorg/webrtc/PeerConnectionFactory;
 
-    move-result-object v0
+    move-result-object v1
+
+    return-object v1
+.end method
+
+.method public getAudioDeviceModule()Lorg/webrtc/audio/AudioDeviceModule;
+    .locals 1
+
+    iget-object v0, p0, Lorg/webrtc/PeerConnectionFactory$Builder;->audioDeviceModule:Lorg/webrtc/audio/AudioDeviceModule;
 
     return-object v0
 .end method
 
-.method public getAudioDeviceModule()Lorg/webrtc/audio/AudioDeviceModule;
-    .locals 0
-
-    iget-object p0, p0, Lorg/webrtc/PeerConnectionFactory$Builder;->audioDeviceModule:Lorg/webrtc/audio/AudioDeviceModule;
-
-    return-object p0
-.end method
-
 .method public setAudioDecoderFactoryFactory(Lorg/webrtc/AudioDecoderFactoryFactory;)Lorg/webrtc/PeerConnectionFactory$Builder;
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
@@ -237,13 +237,13 @@
     return-object p0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "PeerConnectionFactory.Builder does not accept a null AudioDecoderFactoryFactory."
+    const-string v0, "PeerConnectionFactory.Builder does not accept a null AudioDecoderFactoryFactory."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setAudioDeviceModule(Lorg/webrtc/audio/AudioDeviceModule;)Lorg/webrtc/PeerConnectionFactory$Builder;
@@ -255,7 +255,7 @@
 .end method
 
 .method public setAudioEncoderFactoryFactory(Lorg/webrtc/AudioEncoderFactoryFactory;)Lorg/webrtc/PeerConnectionFactory$Builder;
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
@@ -264,17 +264,17 @@
     return-object p0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "PeerConnectionFactory.Builder does not accept a null AudioEncoderFactoryFactory."
+    const-string v0, "PeerConnectionFactory.Builder does not accept a null AudioEncoderFactoryFactory."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setAudioProcessingFactory(Lorg/webrtc/AudioProcessingFactory;)Lorg/webrtc/PeerConnectionFactory$Builder;
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
@@ -283,13 +283,13 @@
     return-object p0
 
     :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p1, "PeerConnectionFactory builder does not accept a null AudioProcessingFactory."
+    const-string v0, "PeerConnectionFactory builder does not accept a null AudioProcessingFactory."
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setFecControllerFactoryFactoryInterface(Lorg/webrtc/FecControllerFactoryFactoryInterface;)Lorg/webrtc/PeerConnectionFactory$Builder;

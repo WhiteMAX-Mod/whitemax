@@ -1,101 +1,817 @@
 .class public final Lyb3;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
+
+# static fields
+.field public static final h:Lyb3;
+
+.field public static final i:Lyb3;
+
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
+.field public static final l:Ljava/lang/String;
+
+.field public static final m:Ljava/lang/String;
+
+.field public static final n:Ljava/lang/String;
+
+.field public static final o:Ljava/lang/String;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic Y:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:[B
+
+.field public final e:I
+
+.field public final f:I
+
+.field public g:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p2, p0, Lyb3;->Y:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+    new-instance v0, Lyb3;
 
-    const/4 p2, 0x2
+    const/4 v1, 0x1
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x2
+
+    const/4 v3, 0x3
+
+    const/4 v4, -0x1
+
+    const/4 v6, 0x0
+
+    move v5, v4
+
+    invoke-direct/range {v0 .. v6}, Lyb3;-><init>(IIIII[B)V
+
+    sput-object v0, Lyb3;->h:Lyb3;
+
+    new-instance v1, Lyb3;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x2
+
+    const/4 v5, -0x1
+
+    const/4 v7, 0x0
+
+    move v6, v5
+
+    invoke-direct/range {v1 .. v7}, Lyb3;-><init>(IIIII[B)V
+
+    sput-object v1, Lyb3;->i:Lyb3;
+
+    sget-object v0, Lnig;->a:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lyb3;->j:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lyb3;->k:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lyb3;->l:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lyb3;->m:Ljava/lang/String;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lyb3;->n:Ljava/lang/String;
+
+    const/4 v0, 0x5
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lyb3;->o:Ljava/lang/String;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(IIIII[B)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1, p2}, Lyb3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput p1, p0, Lyb3;->a:I
 
-    move-result-object p0
+    iput p2, p0, Lyb3;->b:I
 
-    check-cast p0, Lyb3;
+    iput p3, p0, Lyb3;->c:I
 
-    sget-object p1, Lylf;->a:Lylf;
+    iput-object p6, p0, Lyb3;->d:[B
 
-    invoke-virtual {p0, p1}, Lyb3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iput p4, p0, Lyb3;->e:I
 
-    return-object p1
+    iput p5, p0, Lyb3;->f:I
+
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static b(I)Ljava/lang/String;
     .locals 1
 
-    new-instance v0, Lyb3;
+    const/4 v0, -0x1
 
-    iget-object p0, p0, Lyb3;->Y:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+    if-eq p0, v0, :cond_2
 
-    invoke-direct {v0, p2, p0}, Lyb3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
+    const/4 v0, 0x1
 
-    iput-object p1, v0, Lyb3;->X:Ljava/lang/Object;
+    if-eq p0, v0, :cond_1
 
-    return-object v0
-.end method
+    const/4 v0, 0x2
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    if-eq p0, v0, :cond_0
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const-string v0, "Undefined color range "
 
-    iget-object p1, p0, Lyb3;->X:Ljava/lang/Object;
-
-    check-cast p1, Lec3;
-
-    sget-object v0, Lec3;->a:Lec3;
-
-    invoke-static {p1, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lyb3;->Y:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
-
-    iget-object p0, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->o:Lzte;
-
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-static {p0, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
-
-    check-cast p0, Lqoa;
-
-    invoke-virtual {p0}, Lqoa;->i()Lpoa;
-
-    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 
     :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    const-string p0, "Limited range"
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    return-object p0
 
-    throw p0
+    :cond_1
+    const-string p0, "Full range"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "Unset color range"
+
+    return-object p0
+.end method
+
+.method public static c(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, -0x1
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x6
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_0
+
+    const-string v0, "Undefined color space "
+
+    invoke-static {p0, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "BT601"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "BT709"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "BT2020"
+
+    return-object p0
+
+    :cond_3
+    const-string p0, "Unset color space"
+
+    return-object p0
+.end method
+
+.method public static d(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, -0x1
+
+    if-eq p0, v0, :cond_6
+
+    const/16 v0, 0xa
+
+    if-eq p0, v0, :cond_5
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_4
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x6
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x7
+
+    if-eq p0, v0, :cond_0
+
+    const-string v0, "Undefined color transfer "
+
+    invoke-static {p0, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "HLG"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "ST2084 PQ"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "SDR SMPTE 170M"
+
+    return-object p0
+
+    :cond_3
+    const-string p0, "sRGB"
+
+    return-object p0
+
+    :cond_4
+    const-string p0, "Linear"
+
+    return-object p0
+
+    :cond_5
+    const-string p0, "Gamma 2.2"
+
+    return-object p0
+
+    :cond_6
+    const-string p0, "Unset color transfer"
+
+    return-object p0
+.end method
+
+.method public static f(Lyb3;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    :cond_0
+    iget v1, p0, Lyb3;->a:I
+
+    const/4 v2, 0x2
+
+    const/4 v3, -0x1
+
+    if-eq v1, v3, :cond_1
+
+    if-eq v1, v0, :cond_1
+
+    if-ne v1, v2, :cond_6
+
+    :cond_1
+    iget v1, p0, Lyb3;->b:I
+
+    if-eq v1, v3, :cond_2
+
+    if-ne v1, v2, :cond_6
+
+    :cond_2
+    iget v1, p0, Lyb3;->c:I
+
+    if-eq v1, v3, :cond_3
+
+    const/4 v2, 0x3
+
+    if-ne v1, v2, :cond_6
+
+    :cond_3
+    iget-object v1, p0, Lyb3;->d:[B
+
+    if-nez v1, :cond_6
+
+    iget v1, p0, Lyb3;->f:I
+
+    const/16 v2, 0x8
+
+    if-eq v1, v3, :cond_4
+
+    if-ne v1, v2, :cond_6
+
+    :cond_4
+    iget p0, p0, Lyb3;->e:I
+
+    if-eq p0, v3, :cond_5
+
+    if-ne p0, v2, :cond_6
+
+    :cond_5
+    return v0
+
+    :cond_6
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static g(Lyb3;)Z
+    .locals 1
+
+    if-eqz p0, :cond_1
+
+    iget p0, p0, Lyb3;->c:I
+
+    const/4 v0, 0x7
+
+    if-eq p0, v0, :cond_0
+
+    const/4 v0, 0x6
+
+    if-ne p0, v0, :cond_1
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static h(I)I
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/16 v0, 0x9
+
+    const/4 v1, 0x6
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_0
+
+    const/4 v0, 0x5
+
+    if-eq p0, v0, :cond_0
+
+    if-eq p0, v1, :cond_0
+
+    const/4 v0, 0x7
+
+    if-eq p0, v0, :cond_0
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x2
+
+    return p0
+
+    :cond_1
+    return v1
+
+    :cond_2
+    return v0
+.end method
+
+.method public static i(I)I
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_4
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_3
+
+    const/16 v0, 0xd
+
+    if-eq p0, v0, :cond_2
+
+    const/16 v0, 0x10
+
+    const/4 v1, 0x6
+
+    if-eq p0, v0, :cond_1
+
+    const/16 v0, 0x12
+
+    const/4 v2, 0x7
+
+    if-eq p0, v0, :cond_0
+
+    if-eq p0, v1, :cond_4
+
+    if-eq p0, v2, :cond_4
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :cond_0
+    return v2
+
+    :cond_1
+    return v1
+
+    :cond_2
+    const/4 p0, 0x2
+
+    return p0
+
+    :cond_3
+    const/16 p0, 0xa
+
+    return p0
+
+    :cond_4
+    const/4 p0, 0x3
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final a()Lwb3;
+    .locals 2
+
+    new-instance v0, Lwb3;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget v1, p0, Lyb3;->a:I
+
+    iput v1, v0, Lwb3;->a:I
+
+    iget v1, p0, Lyb3;->b:I
+
+    iput v1, v0, Lwb3;->b:I
+
+    iget v1, p0, Lyb3;->c:I
+
+    iput v1, v0, Lwb3;->c:I
+
+    iget-object v1, p0, Lyb3;->d:[B
+
+    iput-object v1, v0, Lwb3;->d:[B
+
+    iget v1, p0, Lyb3;->e:I
+
+    iput v1, v0, Lwb3;->e:I
+
+    iget v1, p0, Lyb3;->f:I
+
+    iput v1, v0, Lwb3;->f:I
+
+    return-object v0
+.end method
+
+.method public final e()Z
+    .locals 2
+
+    iget v0, p0, Lyb3;->a:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    iget v0, p0, Lyb3;->b:I
+
+    if-eq v0, v1, :cond_0
+
+    iget v0, p0, Lyb3;->c:I
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lyb3;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lyb3;
+
+    iget v2, p0, Lyb3;->a:I
+
+    iget v3, p1, Lyb3;->a:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lyb3;->b:I
+
+    iget v3, p1, Lyb3;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lyb3;->c:I
+
+    iget v3, p1, Lyb3;->c:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lyb3;->d:[B
+
+    iget-object v3, p1, Lyb3;->d:[B
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget v2, p0, Lyb3;->e:I
+
+    iget v3, p1, Lyb3;->e:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lyb3;->f:I
+
+    iget p1, p1, Lyb3;->f:I
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lyb3;->g:I
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0x20f
+
+    iget v1, p0, Lyb3;->a:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lyb3;->b:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lyb3;->c:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lyb3;->d:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget v0, p0, Lyb3;->e:I
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget v0, p0, Lyb3;->f:I
+
+    add-int/2addr v1, v0
+
+    iput v1, p0, Lyb3;->g:I
+
+    :cond_0
+    iget v0, p0, Lyb3;->g:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ColorInfo("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lyb3;->a:I
+
+    invoke-static {v1}, Lyb3;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lyb3;->b:I
+
+    invoke-static {v2}, Lyb3;->b(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lyb3;->c:I
+
+    invoke-static {v2}, Lyb3;->d(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lyb3;->d:[B
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "NA"
+
+    const/4 v3, -0x1
+
+    iget v4, p0, Lyb3;->e:I
+
+    if-eq v4, v3, :cond_1
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, "bit Luma"
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_1
+
+    :cond_1
+    move-object v4, v2
+
+    :goto_1
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lyb3;->f:I
+
+    if-eq v1, v3, :cond_2
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "bit Chroma"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_2
+    const-string v1, ")"
+
+    invoke-static {v0, v2, v1}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

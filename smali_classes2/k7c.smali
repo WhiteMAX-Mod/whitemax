@@ -1,28 +1,94 @@
-.class public abstract Lk7c;
-.super Ljava/lang/Object;
+.class public final Lk7c;
+.super Lm7c;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_stickers_sticker_first_frame:I = 0x7f0a08af
+# instance fields
+.field public final a:Ljava/util/List;
 
-.field public static oneme_stickers_sticker_lottie:I = 0x7f0a08b0
 
-.field public static oneme_stickers_sticker_set_header_button:I = 0x7f0a08b1
+# direct methods
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-.field public static oneme_stickers_sticker_set_header_subtitle:I = 0x7f0a08b2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_stickers_sticker_set_header_title:I = 0x7f0a08b3
+    iput-object p1, p0, Lk7c;->a:Ljava/util/List;
 
-.field public static oneme_stickers_sticker_set_list:I = 0x7f0a08b4
+    return-void
+.end method
 
-.field public static oneme_stickers_sticker_webm:I = 0x7f0a08b5
 
-.field public static oneme_stickers_view_type_sticker:I = 0x7f0a08b6
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static oneme_stickers_view_type_sticker_lottie:I = 0x7f0a08b7
+    const/4 v0, 0x1
 
-.field public static oneme_stickers_view_type_sticker_webm:I = 0x7f0a08b8
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_stickers_view_type_stickers_set:I = 0x7f0a08b9
+    return v0
 
-.field public static oneme_stickers_view_type_stickers_set_showcase:I = 0x7f0a08ba
+    :cond_0
+    instance-of v1, p1, Lk7c;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lk7c;
+
+    iget-object v1, p0, Lk7c;->a:Ljava/util/List;
+
+    iget-object p1, p1, Lk7c;->a:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lk7c;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowMoreActions(actions="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lk7c;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

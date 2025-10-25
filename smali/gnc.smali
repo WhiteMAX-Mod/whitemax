@@ -1,54 +1,72 @@
-.class public final synthetic Lgnc;
+.class public abstract Lgnc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static call_history_empty:I = 0x7f0a0151
 
-.field public final synthetic b:Lhnc;
+.field public static call_history_info_copy_link:I = 0x7f0a0152
 
+.field public static call_history_info_open_chat_call:I = 0x7f0a0153
 
-# direct methods
-.method public synthetic constructor <init>(Lhnc;I)V
-    .locals 0
+.field public static call_history_info_recreate:I = 0x7f0a0154
 
-    iput p2, p0, Lgnc;->a:I
+.field public static call_history_info_send_to_chat:I = 0x7f0a0155
 
-    iput-object p1, p0, Lgnc;->b:Lhnc;
+.field public static call_history_info_share_link:I = 0x7f0a0156
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static call_history_info_start_call:I = 0x7f0a0157
 
-    return-void
-.end method
+.field public static call_history_list:I = 0x7f0a0158
 
+.field public static call_history_page_empty:I = 0x7f0a0159
 
-# virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 0
+.field public static call_history_pager:I = 0x7f0a015a
 
-    iget p1, p0, Lgnc;->a:I
+.field public static call_history_screen_banner:I = 0x7f0a015b
 
-    iget-object p0, p0, Lgnc;->b:Lhnc;
+.field public static call_history_screen_contact_call:I = 0x7f0a015c
 
-    packed-switch p1, :pswitch_data_0
+.field public static call_history_screen_container:I = 0x7f0a015d
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+.field public static call_history_screen_group_call:I = 0x7f0a015e
 
-    return-void
+.field public static call_history_screen_toolbar:I = 0x7f0a015f
 
-    :pswitch_0
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+.field public static call_history_tabs:I = 0x7f0a0160
 
-    return-void
+.field public static call_info_action_list:I = 0x7f0a016c
 
-    nop
+.field public static call_info_action_vh:I = 0x7f0a016d
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static call_info_appbarlayout:I = 0x7f0a0170
+
+.field public static call_info_button:I = 0x7f0a0171
+
+.field public static call_info_collapsiblecontainerlinearlayout:I = 0x7f0a0172
+
+.field public static call_info_coordinator_layout:I = 0x7f0a0173
+
+.field public static call_info_description:I = 0x7f0a0174
+
+.field public static call_info_icon:I = 0x7f0a0175
+
+.field public static call_info_link_state:I = 0x7f0a0176
+
+.field public static call_info_onemetoolbar:I = 0x7f0a0177
+
+.field public static call_info_presettings_action_list:I = 0x7f0a0178
+
+.field public static call_info_presettings_change_name_vh:I = 0x7f0a0179
+
+.field public static call_info_presettings_item_vh:I = 0x7f0a017a
+
+.field public static call_info_presettings_toolbar:I = 0x7f0a017b
+
+.field public static call_info_title:I = 0x7f0a017c
+
+.field public static call_presettings_call_permissions_item:I = 0x7f0a01a4
+
+.field public static call_presettings_call_save_changes:I = 0x7f0a01a5
+
+.field public static oneme_calllist_fragment_container:I = 0x7f0a060f

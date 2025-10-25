@@ -1,59 +1,13 @@
 .class public final Ly7f;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public a:Ljava/util/List;
 
-.field public Y:Ljava/lang/Object;
+.field public b:Ljava/util/List;
 
-.field public Z:Ljavax/net/ssl/SSLEngine;
+.field public c:Ljava/util/List;
 
-.field public o:Ljava/lang/Object;
-
-.field public r0:Lz7f;
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Lz7f;
-
-.field public u0:I
-
-
-# direct methods
-.method public constructor <init>(Lz7f;Ljx3;)V
-    .locals 0
-
-    iput-object p1, p0, Ly7f;->t0:Lz7f;
-
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Ly7f;->s0:Ljava/lang/Object;
-
-    iget p1, p0, Ly7f;->u0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ly7f;->u0:I
-
-    iget-object p1, p0, Ly7f;->t0:Lz7f;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lz7f;->b(Ljava/lang/String;Ljx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public d:Lyme;

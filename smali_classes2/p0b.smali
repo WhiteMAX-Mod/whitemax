@@ -1,42 +1,68 @@
-.class public final synthetic Lp0b;
-.super Ljava/lang/Object;
+.class public final Lp0b;
+.super Lvo;
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/RtpReceiver$Observer;
+.implements Lwsf;
 
 
-# instance fields
-.field public final synthetic a:Ly0b;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ly0b;)V
+# virtual methods
+.method public final b(ZLv5b;)V
     .locals 0
 
-    iput-object p1, p0, Lp0b;->a:Ly0b;
+    if-eqz p1, :cond_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p2}, Lv5b;->getIcon()Ld77;
+
+    move-result-object p1
+
+    iget p1, p1, Ld77;->k:I
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p2}, Lv5b;->i()Lkbf;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lkbf;->b:Lpbf;
+
+    iget p1, p1, Lpbf;->b:I
+
+    :goto_0
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
 
+.method public final onThemeChanged(Lv5b;)V
+    .locals 1
 
-# virtual methods
-.method public onFirstPacketReceived(Lorg/webrtc/MediaStreamTrack$MediaType;)V
-    .locals 2
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
 
-    iget-object p0, p0, Lp0b;->a:Ly0b;
+    move-result v0
 
-    iget-object p1, p0, Ly0b;->r:Landroid/os/Handler;
+    invoke-virtual {p0, v0, p1}, Lp0b;->b(ZLv5b;)V
 
-    new-instance v0, Ln0b;
+    return-void
+.end method
 
-    const/4 v1, 0x5
+.method public setChecked(Z)V
+    .locals 1
 
-    invoke-direct {v0, p0, v1}, Ln0b;-><init>(Ly0b;I)V
+    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sget-object v0, Ll05;->s0:Lk82;
+
+    invoke-virtual {v0, p0}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lp0b;->b(ZLv5b;)V
 
     return-void
 .end method

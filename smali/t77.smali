@@ -1,72 +1,249 @@
-.class public Lt77;
-.super Ljava/lang/Object;
+.class public final Lt77;
+.super Lk0j;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Ljava/util/regex/Pattern;
+
+
 # instance fields
-.field public final a:Landroid/hardware/camera2/params/InputConfiguration;
+.field public final a:Ljava/nio/charset/CharsetDecoder;
+
+.field public final b:Ljava/nio/charset/CharsetDecoder;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "(.+?)=\'(.*?)\';"
+
+    const/16 v1, 0x20
+
+    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lt77;->c:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Landroid/hardware/camera2/params/InputConfiguration;
+    sget-object v0, Lia2;->c:Ljava/nio/charset/Charset;
 
-    iput-object p1, p0, Lt77;->a:Landroid/hardware/camera2/params/InputConfiguration;
+    invoke-virtual {v0}, Ljava/nio/charset/Charset;->newDecoder()Ljava/nio/charset/CharsetDecoder;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lt77;->a:Ljava/nio/charset/CharsetDecoder;
+
+    sget-object v0, Lia2;->b:Ljava/nio/charset/Charset;
+
+    invoke-virtual {v0}, Ljava/nio/charset/Charset;->newDecoder()Ljava/nio/charset/CharsetDecoder;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lt77;->b:Ljava/nio/charset/CharsetDecoder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final c(Lfr9;Ljava/nio/ByteBuffer;)Lar9;
+    .locals 7
 
-    instance-of v0, p1, Lt77;
+    iget-object p1, p0, Lt77;->b:Ljava/nio/charset/CharsetDecoder;
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lt77;->a:Ljava/nio/charset/CharsetDecoder;
 
-    const/4 p0, 0x0
+    const/4 v1, 0x0
 
-    return p0
+    :try_start_0
+    invoke-virtual {v0, p2}, Ljava/nio/charset/CharsetDecoder;->decode(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/nio/CharBuffer;->toString()Ljava/lang/String;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/nio/charset/CharacterCodingException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    throw p1
+
+    :catch_0
+    invoke-virtual {v0}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    :try_start_1
+    invoke-virtual {p1, p2}, Ljava/nio/charset/CharsetDecoder;->decode(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/nio/CharBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_1
+    .catch Ljava/nio/charset/CharacterCodingException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-virtual {p1}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    move-object p1, v0
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    invoke-virtual {p1}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    throw v0
+
+    :catch_1
+    invoke-virtual {p1}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    move-object p1, v1
+
+    :goto_0
+    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
+
+    move-result v0
+
+    new-array v0, v0, [B
+
+    invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    const/4 p2, 0x0
+
+    const/4 v2, 0x1
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Lar9;
+
+    new-instance v3, Lx77;
+
+    invoke-direct {v3, v1, v1, v0}, Lx77;-><init>(Ljava/lang/String;Ljava/lang/String;[B)V
+
+    new-array v0, v2, [Lyq9;
+
+    aput-object v3, v0, p2
+
+    invoke-direct {p1, v0}, Lar9;-><init>([Lyq9;)V
+
+    return-object p1
 
     :cond_0
-    check-cast p1, Lt77;
+    sget-object v3, Lt77;->c:Ljava/util/regex/Pattern;
 
-    iget-object p1, p1, Lt77;->a:Landroid/hardware/camera2/params/InputConfiguration;
+    invoke-virtual {v3, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    iget-object p0, p0, Lt77;->a:Landroid/hardware/camera2/params/InputConfiguration;
+    move-result-object p1
 
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move v4, p2
 
-    move-result p0
+    move-object v3, v1
 
-    return p0
-.end method
+    :goto_1
+    invoke-virtual {p1, v4}, Ljava/util/regex/Matcher;->find(I)Z
 
-.method public final hashCode()I
-    .locals 0
+    move-result v4
 
-    iget-object p0, p0, Lt77;->a:Landroid/hardware/camera2/params/InputConfiguration;
+    if-eqz v4, :cond_4
 
-    invoke-virtual {p0}, Landroid/hardware/camera2/params/InputConfiguration;->hashCode()I
+    invoke-virtual {p1, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    move-result p0
+    move-result-object v4
 
-    return p0
-.end method
+    const/4 v5, 0x2
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-virtual {p1, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    iget-object p0, p0, Lt77;->a:Landroid/hardware/camera2/params/InputConfiguration;
+    move-result-object v5
 
-    invoke-virtual {p0}, Landroid/hardware/camera2/params/InputConfiguration;->toString()Ljava/lang/String;
+    if-eqz v4, :cond_3
 
-    move-result-object p0
+    invoke-static {v4}, Lggi;->g(Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p0
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v6, "streamurl"
+
+    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_2
+
+    const-string v6, "streamtitle"
+
+    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    move-object v1, v5
+
+    goto :goto_2
+
+    :cond_2
+    move-object v3, v5
+
+    :cond_3
+    :goto_2
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v4
+
+    goto :goto_1
+
+    :cond_4
+    new-instance p1, Lar9;
+
+    new-instance v4, Lx77;
+
+    invoke-direct {v4, v1, v3, v0}, Lx77;-><init>(Ljava/lang/String;Ljava/lang/String;[B)V
+
+    new-array v0, v2, [Lyq9;
+
+    aput-object v4, v0, p2
+
+    invoke-direct {p1, v0}, Lar9;-><init>([Lyq9;)V
+
+    return-object p1
 .end method

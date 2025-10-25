@@ -1,23 +1,42 @@
 .class public final Lsfe;
-.super Ljava/lang/Object;
+.super Lvpe;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# virtual methods
+.method public final A(Ly18;)V
+    .locals 4
 
-.field public b:Ljava/lang/String;
+    instance-of v0, p1, Lgxd;
 
-.field public c:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-.field public d:J
+    return-void
 
-.field public e:J
+    :cond_0
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-.field public f:J
+    move-object v1, v0
 
-.field public g:Ljava/lang/String;
+    check-cast v1, Lcde;
 
-.field public h:Ljava/util/List;
+    move-object v2, p1
 
-.field public i:Z
+    check-cast v2, Lgxd;
+
+    iget-wide v2, v2, Lgxd;->o:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    check-cast v0, Lcde;
+
+    check-cast p1, Ltce;
+
+    invoke-virtual {v0, p1}, Lcde;->setModelItem(Ltce;)V
+
+    return-void
+.end method

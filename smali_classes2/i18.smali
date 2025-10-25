@@ -1,3 +1,3 @@
 .class public final Li18;
-.super Lpxe;
+.super Ln18;
 .source "SourceFile"

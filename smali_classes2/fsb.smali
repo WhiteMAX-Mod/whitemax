@@ -1,23 +1,22 @@
 .class public final Lfsb;
-.super Llsb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ld5c;
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
-
-.field public final b:Lp2f;
+.field public final a:Lorf;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;Lp2f;)V
+.method public constructor <init>(Lorf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfsb;->a:Ljava/lang/CharSequence;
-
-    iput-object p2, p0, Lfsb;->b:Lp2f;
+    iput-object p1, p0, Lfsb;->a:Lorf;
 
     return-void
 .end method
@@ -27,95 +26,139 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
+    const/4 v0, 0x1
+
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lfsb;
+    instance-of v1, p1, Lfsb;
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
     goto :goto_0
 
     :cond_1
     check-cast p1, Lfsb;
 
-    iget-object v0, p0, Lfsb;->a:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lfsb;->a:Lorf;
 
-    iget-object v1, p1, Lfsb;->a:Ljava/lang/CharSequence;
+    iget-object p1, p1, Lfsb;->a:Lorf;
 
-    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Lorf;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p0, p0, Lfsb;->b:Lp2f;
-
-    iget-object p1, p1, Lfsb;->b:Lp2f;
-
-    invoke-virtual {p0, p1}, Lp2f;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
+    if-nez p1, :cond_2
 
     :goto_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
+    :cond_2
+    return v0
 .end method
 
 .method public final getItemId()J
     .locals 2
 
-    const/high16 p0, 0x10000
+    const/high16 v0, 0x10000
 
-    int-to-long v0, p0
+    int-to-long v0, v0
 
     return-wide v0
 .end method
 
+.method public final h(Ly18;)Z
+    .locals 4
+
+    const/high16 v0, 0x10000
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Ly18;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lfsb;->a:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lfsb;->a:Lorf;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget v0, v0, Lorf;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object p0, p0, Lfsb;->b:Lp2f;
+    const/high16 v1, -0x7fff0000
 
-    iget p0, p0, Lp2f;->b:I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    move-result v1
 
-    move-result p0
+    add-int/2addr v1, v0
 
-    add-int/2addr p0, v0
+    return v1
+.end method
 
-    return p0
+.method public final k(Ly18;)Ljava/lang/Object;
+    .locals 1
+
+    instance-of v0, p1, Lyke;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lv5c;
+
+    check-cast p1, Lyke;
+
+    iget-object p1, p1, Lyke;->a:Lb0j;
+
+    invoke-direct {v0, p1}, Lv5c;-><init>(Lb0j;)V
+
+    return-object v0
 .end method
 
 .method public final m()I
+    .locals 1
+
+    const/high16 v0, -0x7fff0000
+
+    return v0
+.end method
+
+.method public final q(Ly18;)Z
     .locals 0
 
-    const/high16 p0, 0x10000
+    invoke-virtual {p0, p1}, Lfsb;->equals(Ljava/lang/Object;)Z
 
-    return p0
+    move-result p1
+
+    return p1
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -123,29 +166,21 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ContactDescription(text="
+    const-string v1, "PlaceholderItem(text="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lfsb;->a:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lfsb;->a:Lorf;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", title="
+    const-string v1, ", viewType=-2147418112)"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lfsb;->b:Lp2f;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

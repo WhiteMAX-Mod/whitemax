@@ -1,23 +1,19 @@
 .class public final Lgtd;
-.super Lx2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lgtd;
+# instance fields
+.field public final synthetic a:Lr5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lr5;)V
+    .locals 0
 
-    new-instance v0, Lgtd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lx2;-><init>(I)V
-
-    sput-object v0, Lgtd;->c:Lgtd;
+    iput-object p1, p0, Lgtd;->a:Lr5;
 
     return-void
 .end method

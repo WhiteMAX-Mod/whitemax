@@ -1,235 +1,293 @@
-.class public final synthetic Lwib;
+.class public abstract Lwib;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/Iterator;
+.implements Lir7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:[Lz4g;
 
-.field public final synthetic b:Lxib;
+.field public b:I
 
-.field public final synthetic c:Loa0;
+.field public c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxib;Loa0;I)V
-    .locals 0
-
-    iput p3, p0, Lwib;->a:I
-
-    iput-object p1, p0, Lwib;->b:Lxib;
-
-    iput-object p2, p0, Lwib;->c:Loa0;
+.method public constructor <init>(Ly4g;[Lz4g;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lwib;->a:[Lz4g;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwib;->c:Z
+
+    const/4 v0, 0x0
+
+    aget-object p2, p2, v0
+
+    iget-object v1, p1, Ly4g;->d:[Ljava/lang/Object;
+
+    iget p1, p1, Ly4g;->a:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->bitCount(I)I
+
+    move-result p1
+
+    mul-int/lit8 p1, p1, 0x2
+
+    invoke-virtual {p2, p1, v0, v1}, Lz4g;->a(II[Ljava/lang/Object;)V
+
+    iput v0, p0, Lwib;->b:I
+
+    invoke-virtual {p0}, Lwib;->a()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a()V
+    .locals 10
 
-    iget v0, p0, Lwib;->a:I
+    iget v0, p0, Lwib;->b:I
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lwib;->a:[Lz4g;
 
-    iget-object v0, p0, Lwib;->b:Lxib;
+    aget-object v2, v1, v0
 
-    iget-object p0, p0, Lwib;->c:Loa0;
+    iget v3, v2, Lz4g;->c:I
 
-    iget-object v1, p0, Loa0;->a:Lyib;
+    iget v2, v2, Lz4g;->b:I
 
-    :try_start_0
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ge v3, v2, :cond_0
 
-    invoke-virtual {v0, p0}, Lxib;->a(Loa0;)La27;
-
-    move-result-object p0
-
-    invoke-static {}, Ln4e;->A()Lxo6;
-
-    move-result-object v0
-
-    new-instance v2, Lep8;
-
-    const/16 v3, 0x1a
-
-    invoke-direct {v2, v1, v3, p0}, Lep8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Lxo6;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Landroidx/camera/core/ImageCaptureException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_3
-
-    :catch_0
-    move-exception p0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p0
-
-    goto :goto_1
-
-    :catch_2
-    move-exception p0
-
-    goto :goto_2
-
-    :goto_0
-    new-instance v0, Landroidx/camera/core/ImageCaptureException;
-
-    const-string v2, "Processing failed."
-
-    invoke-direct {v0, v2, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {}, Ln4e;->A()Lxo6;
-
-    move-result-object p0
-
-    new-instance v2, Lep8;
-
-    const/16 v3, 0x1c
-
-    invoke-direct {v2, v1, v3, v0}, Lep8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p0, v2}, Lxo6;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_3
-
-    :goto_1
-    new-instance v0, Landroidx/camera/core/ImageCaptureException;
-
-    const-string v2, "Processing failed due to low memory."
-
-    invoke-direct {v0, v2, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {}, Ln4e;->A()Lxo6;
-
-    move-result-object p0
-
-    new-instance v2, Lep8;
-
-    const/16 v3, 0x1c
-
-    invoke-direct {v2, v1, v3, v0}, Lep8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p0, v2}, Lxo6;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_3
-
-    :goto_2
-    invoke-static {}, Ln4e;->A()Lxo6;
-
-    move-result-object v0
-
-    new-instance v2, Lep8;
-
-    const/16 v3, 0x1c
-
-    invoke-direct {v2, v1, v3, p0}, Lep8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Lxo6;->execute(Ljava/lang/Runnable;)V
-
-    :goto_3
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lwib;->b:Lxib;
-
-    iget-object v1, v0, Lxib;->b:Lna0;
-
-    iget v1, v1, Lna0;->d:I
-
-    const/16 v2, 0x23
-
-    if-eq v1, v2, :cond_1
-
-    const/16 v2, 0x100
-
-    if-ne v1, v2, :cond_0
-
-    goto :goto_4
 
     :cond_0
     const/4 v2, 0x0
 
-    goto :goto_5
+    if-ltz v0, :cond_5
+
+    :goto_0
+    add-int/lit8 v3, v0, -0x1
+
+    invoke-virtual {p0, v0}, Lwib;->b(I)I
+
+    move-result v4
+
+    const/4 v5, -0x1
+
+    if-ne v4, v5, :cond_1
+
+    aget-object v6, v1, v0
+
+    iget v7, v6, Lz4g;->c:I
+
+    iget-object v8, v6, Lz4g;->a:[Ljava/lang/Object;
+
+    array-length v9, v8
+
+    if-ge v7, v9, :cond_1
+
+    array-length v4, v8
+
+    add-int/lit8 v7, v7, 0x1
+
+    iput v7, v6, Lz4g;->c:I
+
+    invoke-virtual {p0, v0}, Lwib;->b(I)I
+
+    move-result v4
 
     :cond_1
-    :goto_4
-    const/4 v2, 0x1
+    if-eq v4, v5, :cond_2
 
-    :goto_5
-    new-instance v3, Ljava/lang/StringBuilder;
+    iput v4, p0, Lwib;->b:I
 
-    const-string v4, "Postview only support YUV and JPEG output formats. Output format: "
+    return-void
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :cond_2
+    if-lez v0, :cond_3
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    add-int/lit8 v4, v0, -0x1
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    aget-object v4, v1, v4
 
-    move-result-object v1
+    iget v5, v4, Lz4g;->c:I
 
-    invoke-static {v1, v2}, Ln4e;->h(Ljava/lang/String;Z)V
+    iget-object v6, v4, Lz4g;->a:[Ljava/lang/Object;
 
-    iget-object p0, p0, Lwib;->c:Loa0;
+    array-length v6, v6
 
-    iget-object v1, p0, Loa0;->a:Lyib;
+    add-int/lit8 v5, v5, 0x1
 
-    :try_start_1
-    iget-object v2, v0, Lxib;->c:Lw9d;
+    iput v5, v4, Lz4g;->c:I
 
-    invoke-virtual {v2, p0}, Lw9d;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_3
+    aget-object v0, v1, v0
 
-    move-result-object v2
+    sget-object v4, Ly4g;->e:Ly4g;
 
-    check-cast v2, Lja0;
+    iget-object v4, v4, Ly4g;->d:[Ljava/lang/Object;
 
-    iget-object v0, v0, Lxib;->i:Lua6;
+    invoke-virtual {v0, v2, v2, v4}, Lz4g;->a(II[Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v2}, Lua6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    if-gez v3, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    move v0, v3
+
+    goto :goto_0
+
+    :cond_5
+    :goto_1
+    iput-boolean v2, p0, Lwib;->c:Z
+
+    return-void
+.end method
+
+.method public final b(I)I
+    .locals 4
+
+    iget-object v0, p0, Lwib;->a:[Lz4g;
+
+    aget-object v1, v0, p1
+
+    iget v2, v1, Lz4g;->c:I
+
+    iget v3, v1, Lz4g;->b:I
+
+    if-ge v2, v3, :cond_0
+
+    return p1
+
+    :cond_0
+    iget-object v1, v1, Lz4g;->a:[Ljava/lang/Object;
+
+    array-length v3, v1
+
+    if-ge v2, v3, :cond_3
+
+    array-length v3, v1
+
+    aget-object v1, v1, v2
+
+    if-eqz v1, :cond_2
+
+    check-cast v1, Ly4g;
+
+    const/4 v2, 0x6
+
+    const/4 v3, 0x0
+
+    if-ne p1, v2, :cond_1
+
+    add-int/lit8 v2, p1, 0x1
+
+    aget-object v0, v0, v2
+
+    iget-object v1, v1, Ly4g;->d:[Ljava/lang/Object;
+
+    array-length v2, v1
+
+    invoke-virtual {v0, v2, v3, v1}, Lz4g;->a(II[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_1
+    add-int/lit8 v2, p1, 0x1
+
+    aget-object v0, v0, v2
+
+    iget-object v2, v1, Ly4g;->d:[Ljava/lang/Object;
+
+    iget v1, v1, Ly4g;->a:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->bitCount(I)I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x2
+
+    invoke-virtual {v0, v1, v3, v2}, Lz4g;->a(II[Ljava/lang/Object;)V
+
+    :goto_0
+    add-int/lit8 p1, p1, 0x1
+
+    invoke-virtual {p0, p1}, Lwib;->b(I)I
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "null cannot be cast to non-null type kotlinx.collections.immutable.implementations.immutableMap.TrieNode<K of kotlinx.collections.immutable.implementations.immutableMap.TrieNodeBaseIterator, V of kotlinx.collections.immutable.implementations.immutableMap.TrieNodeBaseIterator>"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    const/4 p1, -0x1
+
+    return p1
+.end method
+
+.method public final hasNext()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lwib;->c:Z
+
+    return v0
+.end method
+
+.method public next()Ljava/lang/Object;
+    .locals 2
+
+    iget-boolean v0, p0, Lwib;->c:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lwib;->a:[Lz4g;
+
+    iget v1, p0, Lwib;->b:I
+
+    aget-object v0, v0, v1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/graphics/Bitmap;
+    invoke-virtual {p0}, Lwib;->a()V
 
-    invoke-static {}, Ln4e;->A()Lxo6;
+    return-object v0
 
-    move-result-object v2
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    new-instance v3, Lep8;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    const/16 v4, 0x1b
+    throw v0
+.end method
 
-    invoke-direct {v3, v1, v4, v0}, Lep8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public remove()V
+    .locals 2
 
-    invoke-virtual {v2, v3}, Lxo6;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    goto :goto_6
+    const-string v1, "Operation is not supported for read-only collection"
 
-    :catch_3
-    iget-object p0, p0, Loa0;->b:La27;
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
-
-    :goto_6
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

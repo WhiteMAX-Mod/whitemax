@@ -15,11 +15,11 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lrtf;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lrkg;Landroid/os/Bundle;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi22;-><init>(Landroid/content/Context;Ljava/lang/String;Lrtf;Landroid/os/Bundle;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi22;-><init>(Landroid/content/Context;Ljava/lang/String;Lrkg;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -35,71 +35,71 @@
 
 
 # virtual methods
-.method public final getCurrentControllerInfo()Lyo8;
-    .locals 4
+.method public final getCurrentControllerInfo()Lx09;
+    .locals 5
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionFwk:Landroid/media/session/MediaSession;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionFwk:Landroid/media/session/MediaSession;
 
-    invoke-virtual {p0}, Landroid/media/session/MediaSession;->getCurrentControllerInfo()Landroid/media/session/MediaSessionManager$RemoteUserInfo;
+    invoke-static {v0}, Lv4;->g(Landroid/media/session/MediaSession;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
 
-    move-result-object p0
+    move-result-object v0
 
-    new-instance v0, Lyo8;
+    new-instance v1, Lx09;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Lap8;
-
-    invoke-virtual {p0}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getPackageName()Ljava/lang/String;
+    invoke-static {v0}, Lv4;->q(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getPid()I
+    if-eqz v2, :cond_1
 
-    move-result v3
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {p0}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getUid()I
+    move-result v2
 
-    move-result p0
+    if-nez v2, :cond_0
 
-    invoke-direct {v1, v2, v3, p0}, Lap8;-><init>(Ljava/lang/String;II)V
+    new-instance v2, Lb19;
 
-    iput-object v1, v0, Lyo8;->a:Lap8;
+    invoke-static {v0}, Lv4;->q(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)Ljava/lang/String;
 
-    return-object v0
+    move-result-object v3
+
+    invoke-static {v0}, Lv4;->b(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)I
+
+    move-result v4
+
+    invoke-static {v0}, Lv4;->x(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)I
+
+    move-result v0
+
+    invoke-direct {v2, v3, v4, v0}, Lc19;-><init>(Ljava/lang/String;II)V
+
+    iput-object v2, v1, Lx09;->a:Lc19;
+
+    return-object v1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "packageName should be nonempty"
+    const-string v1, "packageName should be nonempty"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string v0, "package shouldn\'t be null"
+    const-string v1, "package shouldn\'t be null"
 
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
-.method public setCurrentControllerInfo(Lyo8;)V
+.method public setCurrentControllerInfo(Lx09;)V
     .locals 0
 
     return-void

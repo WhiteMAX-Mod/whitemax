@@ -1,64 +1,132 @@
 .class public final Lwja;
-.super Lure;
+.super Lg3;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
+
+# instance fields
+.field public final synthetic b:I
+
+.field public final c:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(Luka;Ljava/lang/Object;I)V
+    .locals 0
+
+    iput p3, p0, Lwja;->b:I
+
+    invoke-direct {p0, p1}, Lg3;-><init>(Luka;)V
+
+    iput-object p2, p0, Lwja;->c:Ljava/lang/Object;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final o(Lela;)V
+    .locals 4
 
-    check-cast p1, Ly04;
+    iget v0, p0, Lwja;->b:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x4
 
-    invoke-virtual {p0, p1, p2}, Lwja;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lwja;->c:Ljava/lang/Object;
 
-    move-result-object p0
+    iget-object v3, p0, Lg3;->a:Luka;
 
-    check-cast p0, Lwja;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p1, Lylf;->a:Lylf;
+    new-instance v0, Ldla;
 
-    invoke-virtual {p0, p1}, Lwja;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v2, Lkg5;
 
-    return-object p1
-.end method
+    invoke-direct {v0, p1, v2}, Ldla;-><init>(Lela;Lkg5;)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    invoke-interface {v3, v0}, Luka;->a(Lela;)V
 
-    new-instance p0, Lwja;
+    return-void
 
-    const/4 p1, 0x2
+    :pswitch_0
+    :try_start_0
+    check-cast v2, Lpj6;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {v2}, Lpj6;->get()Ljava/lang/Object;
 
-    return-object p0
-.end method
+    move-result-object v0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    sget-object v2, Luf5;->a:Ltf5;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    check-cast v0, Ljava/util/Collection;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget-object p0, Lef8;->a:Lef8;
+    new-instance v2, Lih3;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
+    invoke-direct {v2, p1, v1, v0}, Lih3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result-object p0
+    invoke-interface {v3, v2}, Luka;->a(Lela;)V
 
-    const-class p1, Lt1e;
+    goto :goto_0
 
-    invoke-virtual {p0, p1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :catchall_0
+    move-exception v0
 
-    move-result-object p0
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    check-cast p0, Lt1e;
+    invoke-static {v0, p1}, Lfa5;->c(Ljava/lang/Throwable;Lela;)V
 
-    sget-object p0, Lylf;->a:Lylf;
+    :goto_0
+    return-void
 
-    return-object p0
+    :pswitch_1
+    new-instance v0, Laia;
+
+    check-cast v2, Lipf;
+
+    invoke-direct {v0, p1, v2, v1}, Laia;-><init>(Ljava/lang/Object;Lexb;I)V
+
+    invoke-interface {v3, v0}, Luka;->a(Lela;)V
+
+    return-void
+
+    :pswitch_2
+    new-instance v0, Laia;
+
+    check-cast v2, Lfpf;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p1, v2, v1}, Laia;-><init>(Ljava/lang/Object;Lexb;I)V
+
+    invoke-interface {v3, v0}, Luka;->a(Lela;)V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, La53;
+
+    check-cast v2, Lxc2;
+
+    invoke-direct {v0, p1, v2}, La53;-><init>(Lela;Lxc2;)V
+
+    iget-object v1, v0, La53;->X:Ljava/lang/Object;
+
+    check-cast v1, Lq32;
+
+    invoke-interface {p1, v1}, Lela;->c(Lvv4;)V
+
+    invoke-interface {v3, v0}, Luka;->a(Lela;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

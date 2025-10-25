@@ -1,149 +1,347 @@
 .class public final Ld91;
-.super Lure;
+.super Lyoe;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:I
 
-.field public final synthetic Y:Le91;
+.field public final Y:Ljava/lang/Object;
 
-.field public final synthetic Z:Ljava/util/List;
+.field public final Z:Ljava/lang/Object;
+
+.field public final q0:Ljava/lang/Object;
+
+.field public final r0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Le91;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lj7;Ltvi;Ls81;Ls81;)V
+    .locals 1
 
-    iput-object p1, p0, Ld91;->Y:Le91;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Ld91;->Z:Ljava/util/List;
+    iput v0, p0, Ld91;->X:I
 
-    const/4 p1, 0x2
+    .line 6
+    sget-object v0, Lptd;->a:Lptd;
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Lptd;->i()Leva;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Leva;->a()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lyoe;-><init>(Ljava/util/concurrent/Executor;)V
+
+    .line 7
+    iput-object p1, p0, Ld91;->Y:Ljava/lang/Object;
+
+    .line 8
+    iput-object p2, p0, Ld91;->Z:Ljava/lang/Object;
+
+    .line 9
+    iput-object p3, p0, Ld91;->q0:Ljava/lang/Object;
+
+    .line 10
+    iput-object p4, p0, Ld91;->r0:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lwc8;Lo7f;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Ld91;->X:I
+
+    .line 1
+    invoke-direct {p0, p1}, Lyoe;-><init>(Ljava/util/concurrent/Executor;)V
+
+    .line 2
+    iput-object p1, p0, Ld91;->Y:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Ld91;->Z:Ljava/lang/Object;
+
+    .line 4
+    iput-object p3, p0, Ld91;->q0:Ljava/lang/Object;
+
+    .line 5
+    new-instance p1, Lcqe;
+
+    const/16 p2, 0x1d
+
+    invoke-direct {p1, p2, p0}, Lcqe;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Ld91;->r0:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ld91;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ld91;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Ld91;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public H(Lvpe;I)V
     .locals 1
-
-    new-instance p1, Ld91;
-
-    iget-object v0, p0, Ld91;->Y:Le91;
-
-    iget-object p0, p0, Ld91;->Z:Ljava/util/List;
-
-    invoke-direct {p1, v0, p0, p2}, Ld91;-><init>(Le91;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
 
     iget v0, p0, Ld91;->X:I
 
-    sget-object v1, Lylf;->a:Lylf;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x1
+    invoke-super {p0, p1, p2}, Lyoe;->H(Lvpe;I)V
 
-    if-eqz v0, :cond_1
+    return-void
 
-    if-ne v0, v2, :cond_0
+    :pswitch_0
+    check-cast p1, Lc91;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-virtual {p0, p2}, Lr18;->C(I)Ljava/lang/Object;
 
-    return-object v1
+    move-result-object p2
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    check-cast p2, Ly18;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    check-cast p2, Lm9b;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lc91;->D0:Lb91;
 
-    throw p0
+    invoke-virtual {p1, p2}, Lb91;->setOpponents(Lm9b;)V
 
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    return-void
 
-    iget-object p1, p0, Ld91;->Y:Le91;
+    nop
 
-    iget-object p1, p1, Le91;->c:Lbkd;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iput v2, p0, Ld91;->X:I
+.method public j()I
+    .locals 1
 
-    iget-object v0, p1, Lbkd;->c:Ljava/lang/Object;
+    iget v0, p0, Ld91;->X:I
 
-    check-cast v0, Lcl7;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-super {p0}, Lr18;->j()I
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Lxwe;
+    return v0
 
-    check-cast v0, Laga;
+    :pswitch_0
+    iget-object v0, p0, Lr18;->o:Lsv;
 
-    invoke-virtual {v0}, Laga;->b()Ls04;
+    iget-object v0, v0, Lsv;->f:Ljava/util/List;
 
-    move-result-object v0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    new-instance v2, Lvu1;
+    move-result v0
 
-    const/4 v3, 0x0
+    return v0
 
-    iget-object v4, p0, Ld91;->Z:Ljava/util/List;
+    nop
 
-    invoke-direct {v2, v4, p1, v3}, Lvu1;-><init>(Ljava/util/List;Lbkd;Lkotlin/coroutines/Continuation;)V
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-static {v0, v2, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public r(Lq7d;I)V
+    .locals 1
 
-    move-result-object p0
+    iget v0, p0, Ld91;->X:I
 
-    sget-object p1, Lz04;->a:Lz04;
+    packed-switch v0, :pswitch_data_0
 
-    if-ne p0, p1, :cond_2
+    invoke-super {p0, p1, p2}, Lyoe;->r(Lq7d;I)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Lc91;
+
+    invoke-virtual {p0, p2}, Lr18;->C(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ly18;
+
+    check-cast p2, Lm9b;
+
+    iget-object p1, p1, Lc91;->D0:Lb91;
+
+    invoke-virtual {p1, p2}, Lb91;->setOpponents(Lm9b;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public s(Lq7d;ILjava/util/List;)V
+    .locals 1
+
+    iget v0, p0, Ld91;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Lt6d;->s(Lq7d;ILjava/util/List;)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Lc91;
+
+    invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0, p2}, Lr18;->C(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ly18;
+
+    check-cast p2, Lm9b;
+
+    iget-object p1, p1, Lc91;->D0:Lb91;
+
+    invoke-virtual {p1, p2}, Lb91;->setOpponents(Lm9b;)V
 
     goto :goto_0
 
-    :cond_2
-    move-object p0, v1
+    :cond_0
+    iget-object v0, p0, Lr18;->o:Lsv;
+
+    iget-object v0, v0, Lsv;->f:Ljava/util/List;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lm9b;
+
+    invoke-virtual {p1, p2, p3}, Lc91;->G(Lm9b;Ljava/lang/Object;)V
 
     :goto_0
-    if-ne p0, p1, :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final t(Landroid/view/ViewGroup;I)Lq7d;
+    .locals 3
+
+    iget p2, p0, Ld91;->X:I
+
+    packed-switch p2, :pswitch_data_0
+
+    new-instance p2, Ll14;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ld91;->Z:Ljava/lang/Object;
+
+    check-cast v0, Lwc8;
+
+    iget-object v1, p0, Ld91;->Y:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/ExecutorService;
+
+    iget-object v2, p0, Ld91;->r0:Ljava/lang/Object;
+
+    check-cast v2, Lcqe;
+
+    invoke-direct {p2, p1, v0, v1, v2}, Ll14;-><init>(Landroid/content/Context;Lwc8;Ljava/util/concurrent/ExecutorService;Lj6f;)V
+
+    return-object p2
+
+    :pswitch_0
+    new-instance p2, Landroid/widget/FrameLayout;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {p2, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v0, Lb91;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lb91;-><init>(Landroid/content/Context;)V
+
+    sget p1, Ljnc;->call_opponents:I
+
+    invoke-virtual {v0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    iget-object p1, p0, Ld91;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lj7;
+
+    invoke-virtual {v0, p1}, Lb91;->setParentSizeProvider(Lr81;)V
+
+    iget-object p1, p0, Ld91;->q0:Ljava/lang/Object;
+
+    check-cast p1, Ls81;
+
+    invoke-virtual {v0, p1}, Lb91;->setVideoLayoutUpdatesControllerProvider(Lji6;)V
+
+    iget-object p1, p0, Ld91;->Z:Ljava/lang/Object;
+
+    check-cast p1, Ltvi;
+
+    invoke-virtual {v0, p1}, Lb91;->setListener(Ly81;)V
+
+    iget-object p1, p0, Ld91;->r0:Ljava/lang/Object;
+
+    check-cast p1, Ls81;
+
+    iget-object p1, p1, Ls81;->b:Lu81;
+
+    iget-object p1, p1, Lu81;->L0:Landroidx/recyclerview/widget/b;
+
+    invoke-virtual {v0, p1}, Lb91;->setOpponentsViewPool(Landroidx/recyclerview/widget/b;)V
+
+    invoke-virtual {p2, v0, v1, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
+
+    new-instance p1, Lc91;
+
+    invoke-direct {p1, p2}, Lc91;-><init>(Landroid/widget/FrameLayout;)V
 
     return-object p1
 
-    :cond_3
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

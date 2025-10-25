@@ -1,32 +1,97 @@
 .class public final Lhud;
-.super Lj2e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljud;
 
-# virtual methods
-.method public final E()V
+
+# instance fields
+.field public final a:Ltj0;
+
+
+# direct methods
+.method public constructor <init>(Ltj0;)V
     .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhud;->a:Ltj0;
 
     return-void
 .end method
 
-.method public final y(Lts7;)V
-    .locals 1
 
-    instance-of v0, p1, Ljdd;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    if-nez v0, :cond_0
+    const/4 v0, 0x1
 
-    return-void
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+    instance-of v1, p1, Lhud;
 
-    check-cast p0, Lsrd;
+    const/4 v2, 0x0
 
-    check-cast p1, Lird;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Lsrd;->setModelItem(Lird;)V
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Lhud;
+
+    iget-object v1, p0, Lhud;->a:Ltj0;
+
+    iget-object p1, p1, Lhud;->a:Ltj0;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lhud;->a:Ltj0;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SearchError(event="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lhud;->a:Ltj0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

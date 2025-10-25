@@ -1,69 +1,127 @@
 .class public final Ll95;
-.super Ljava/lang/Object;
+.super Lt75;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:[Lf95;
+.field public final synthetic a:I
 
-.field public final b:[J
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+.field public final b:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Lf95;)V
-    .locals 0
+.method public constructor <init>(Landroid/widget/EditText;)V
+    .locals 1
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Ll95;->a:I
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll95;->c:Ljava/lang/String;
+    .line 2
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    iput-object p2, p0, Ll95;->d:Ljava/lang/String;
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object p3, p0, Ll95;->b:[J
+    iput-object v0, p0, Ll95;->b:Ljava/lang/ref/WeakReference;
 
-    iput-object p4, p0, Ll95;->a:[Lf95;
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/appcompat/widget/SwitchCompat;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Ll95;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Ll95;->b:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 3
+.method public h(Ljava/lang/Throwable;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iget p1, p0, Ll95;->a:I
 
-    iget-object v1, p0, Ll95;->c:Ljava/lang/String;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {v0, v1}, Lsq3;->f(ILjava/lang/String;)I
+    return-void
 
-    move-result v0
+    :pswitch_0
+    iget-object p1, p0, Ll95;->b:Ljava/lang/ref/WeakReference;
 
-    iget-object p0, p0, Ll95;->d:Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Lsq3;->f(ILjava/lang/String;)I
+    move-result-object p1
 
-    move-result v0
+    check-cast p1, Landroidx/appcompat/widget/SwitchCompat;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_0
 
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/SwitchCompat;->d()V
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    return-void
 
-    const-string v0, "/"
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final i()V
+    .locals 2
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Ll95;->a:I
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v0, p0, Ll95;->b:Ljava/lang/ref/WeakReference;
 
-    return-object p0
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/SwitchCompat;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/SwitchCompat;->d()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ll95;->b:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/EditText;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Ln95;->a(Landroid/widget/EditText;I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,127 +1,154 @@
-.class public final Lyoe;
-.super Ljava/lang/Object;
+.class public abstract Lyoe;
+.super Lr18;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lxoe;
-
-.field public final b:Ljava/util/ArrayList;
-
-
 # direct methods
-.method public constructor <init>(Lxoe;Ljava/util/ArrayList;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/Executor;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lnd4;
 
-    iput-object p1, p0, Lyoe;->a:Lxoe;
+    const/16 v1, 0x9
 
-    iput-object p2, p0, Lyoe;->b:Ljava/util/ArrayList;
+    invoke-direct {v0, v1}, Lnd4;-><init>(I)V
+
+    new-instance v1, Leh8;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, p1, v2, v0}, Leh8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-direct {p0, v1}, Lr18;-><init>(Leh8;)V
+
+    const/4 p1, 0x1
+
+    invoke-super {p0, p1}, Lt6d;->A(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lyoe;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lyoe;
-
-    iget-object v0, p0, Lyoe;->a:Lxoe;
-
-    iget-object v1, p1, Lyoe;->a:Lxoe;
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p0, p0, Lyoe;->b:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lyoe;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public final G(I)Ly18;
     .locals 1
 
-    iget-object v0, p0, Lyoe;->a:Lxoe;
+    if-ltz p1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lr18;->o:Lsv;
+
+    iget-object v0, v0, Lsv;->f:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/Collection;->size()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-ge p1, v0, :cond_0
 
-    iget-object p0, p0, Lyoe;->b:Ljava/util/ArrayList;
+    invoke-virtual {p0, p1}, Lr18;->C(I)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    move-result-object p1
 
-    move-result p0
+    check-cast p1, Ly18;
 
-    add-int/2addr p0, v0
+    return-object p1
 
-    return p0
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public H(Lvpe;I)V
+    .locals 0
+
+    invoke-virtual {p0, p2}, Lr18;->C(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ly18;
+
+    invoke-virtual {p1, p2}, Lvpe;->A(Ly18;)V
+
+    return-void
+.end method
+
+.method public I(Lvpe;)V
+    .locals 0
+
+    invoke-virtual {p1}, Lvpe;->F()V
+
+    return-void
+.end method
+
+.method public k(I)J
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Lr18;->C(I)Ljava/lang/Object;
 
-    const-string v1, "SuggestionSearchResult(state="
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Ly18;
 
-    iget-object v1, p0, Lyoe;->a:Lxoe;
+    invoke-interface {p1}, Ly18;->getItemId()J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-wide v0
 
-    const-string v1, ", mentions="
+    return-wide v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public l(I)I
+    .locals 0
 
-    iget-object p0, p0, Lyoe;->b:Ljava/util/ArrayList;
+    invoke-virtual {p0, p1}, Lr18;->C(I)Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string p0, ")"
+    check-cast p1, Ly18;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Ly18;->m()I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result p1
 
-    move-result-object p0
+    return p1
+.end method
 
-    return-object p0
+.method public bridge synthetic r(Lq7d;I)V
+    .locals 0
+
+    check-cast p1, Lvpe;
+
+    invoke-virtual {p0, p1, p2}, Lyoe;->H(Lvpe;I)V
+
+    return-void
+.end method
+
+.method public final w(Lq7d;)V
+    .locals 0
+
+    check-cast p1, Lvpe;
+
+    invoke-virtual {p1}, Lvpe;->C()V
+
+    return-void
+.end method
+
+.method public final x(Lq7d;)V
+    .locals 0
+
+    check-cast p1, Lvpe;
+
+    invoke-virtual {p1}, Lvpe;->D()V
+
+    return-void
+.end method
+
+.method public bridge synthetic y(Lq7d;)V
+    .locals 0
+
+    check-cast p1, Lvpe;
+
+    invoke-virtual {p0, p1}, Lyoe;->I(Lvpe;)V
+
+    return-void
 .end method

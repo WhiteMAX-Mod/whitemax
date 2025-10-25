@@ -21,13 +21,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/NativeRunnable;->runnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lorg/webrtc/NativeRunnable;->runnable:Ljava/lang/Runnable;
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     return-void
 .end method

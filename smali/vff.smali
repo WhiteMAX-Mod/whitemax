@@ -1,311 +1,214 @@
 .class public final Lvff;
-.super Ljava/lang/Object;
+.super Lnp4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final o:Lju1;
 
-.field public final b:Ljava/lang/String;
+.field public p:Lgu1;
 
-.field public final c:I
+.field public q:Lnp4;
 
-.field public final d:I
-
-.field public e:I
-
-.field public f:Ljava/lang/String;
+.field public r:Lyff;
 
 
 # direct methods
-.method public constructor <init>(IIIB)V
+.method public constructor <init>(Landroid/util/Size;I)V
     .locals 0
 
-    iput p3, p0, Lvff;->a:I
+    invoke-direct {p0, p1, p2}, Lnp4;-><init>(Landroid/util/Size;I)V
 
-    packed-switch p3, :pswitch_data_0
+    new-instance p1, Lvcf;
 
-    const/high16 p3, -0x80000000
+    const/4 p2, 0x1
 
-    const/4 p4, 0x0
+    invoke-direct {p1, p2, p0}, Lvcf;-><init>(ILjava/lang/Object;)V
 
-    .line 1
-    invoke-direct {p0, p3, p1, p2, p4}, Lvff;-><init>(IIII)V
-
-    return-void
-
-    :pswitch_0
-    const/high16 p3, -0x80000000
-
-    const/4 p4, 0x1
-
-    .line 2
-    invoke-direct {p0, p3, p1, p2, p4}, Lvff;-><init>(IIII)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(IIII)V
-    .locals 3
-
-    iput p4, p0, Lvff;->a:I
-
-    packed-switch p4, :pswitch_data_0
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    const-string p4, ""
-
-    const/high16 v0, -0x80000000
-
-    if-eq p1, v0, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, "/"
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1}, Lomi;->a(Lhu1;)Lju1;
 
     move-result-object p1
 
-    goto :goto_0
-
-    :cond_0
-    move-object p1, p4
-
-    :goto_0
-    iput-object p1, p0, Lvff;->b:Ljava/lang/String;
-
-    .line 5
-    iput p2, p0, Lvff;->c:I
-
-    .line 6
-    iput p3, p0, Lvff;->d:I
-
-    .line 7
-    iput v0, p0, Lvff;->e:I
-
-    .line 8
-    iput-object p4, p0, Lvff;->f:Ljava/lang/String;
+    iput-object p1, p0, Lvff;->o:Lju1;
 
     return-void
-
-    .line 9
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 10
-    const-string p4, ""
-
-    const/high16 v0, -0x80000000
-
-    if-eq p1, v0, :cond_1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, "/"
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_1
-    move-object p1, p4
-
-    :goto_1
-    iput-object p1, p0, Lvff;->b:Ljava/lang/String;
-
-    .line 11
-    iput p2, p0, Lvff;->c:I
-
-    .line 12
-    iput p3, p0, Lvff;->d:I
-
-    .line 13
-    iput v0, p0, Lvff;->e:I
-
-    .line 14
-    iput-object p4, p0, Lvff;->f:Ljava/lang/String;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
 .method public final a()V
-    .locals 4
+    .locals 2
 
-    iget v0, p0, Lvff;->a:I
+    invoke-super {p0}, Lnp4;->a()V
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v0, Lsff;
 
-    iget v0, p0, Lvff;->e:I
+    const/4 v1, 0x2
 
-    const/high16 v1, -0x80000000
+    invoke-direct {v0, p0, v1}, Lsff;-><init>(Lvff;I)V
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v0}, Laud;->d(Ljava/lang/Runnable;)V
 
-    iget v0, p0, Lvff;->c:I
+    return-void
+.end method
+
+.method public final f()Ll28;
+    .locals 1
+
+    iget-object v0, p0, Lvff;->o:Lju1;
+
+    return-object v0
+.end method
+
+.method public final g(Lnp4;Ljava/lang/Runnable;)Z
+    .locals 10
+
+    const-string v0, ")"
+
+    const-string v1, ") must match the parent("
+
+    iget-object v2, p0, Lnp4;->h:Landroid/util/Size;
+
+    invoke-static {}, Laud;->a()V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v3, p1, Lnp4;->i:I
+
+    iget-object v4, p1, Lnp4;->h:Landroid/util/Size;
+
+    iget-object v5, p0, Lvff;->q:Lnp4;
+
+    const/4 v6, 0x0
+
+    if-ne v5, p1, :cond_0
+
+    return v6
+
+    :cond_0
+    const/4 v7, 0x1
+
+    if-nez v5, :cond_1
+
+    move v5, v7
 
     goto :goto_0
 
-    :cond_0
-    iget v1, p0, Lvff;->d:I
-
-    add-int/2addr v0, v1
+    :cond_1
+    move v5, v6
 
     :goto_0
-    iput v0, p0, Lvff;->e:I
+    const-string v8, "A different provider has been set. To change the provider, call SurfaceEdge#invalidate before calling SurfaceEdge#setProvider"
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v8, v5}, Ldvi;->f(Ljava/lang/String;Z)V
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v2, v4}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lvff;->b:Ljava/lang/String;
+    move-result v5
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lvff;->e:I
+    const-string v9, "The provider\'s size("
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Lvff;->f:Ljava/lang/String;
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget v0, p0, Lvff;->e:I
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/high16 v1, -0x80000000
+    move-result-object v2
 
-    if-ne v0, v1, :cond_1
+    invoke-static {v2, v5}, Ldvi;->a(Ljava/lang/String;Z)V
 
-    iget v0, p0, Lvff;->c:I
+    iget v2, p0, Lnp4;->i:I
 
-    goto :goto_1
+    if-ne v2, v3, :cond_2
 
-    :cond_1
-    iget v1, p0, Lvff;->d:I
+    move v6, v7
 
-    add-int/2addr v0, v1
+    :cond_2
+    const-string v4, "The provider\'s format("
 
-    :goto_1
-    iput v0, p0, Lvff;->e:I
-
-    const/16 v1, 0xb
-
-    iget-object v2, p0, Lvff;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lsq3;->f(ILjava/lang/String;)I
-
-    move-result v1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v4, v2, v1, v3, v0}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lvff;->f:Ljava/lang/String;
+    invoke-static {v0, v6}, Ldvi;->a(Ljava/lang/String;Z)V
 
-    return-void
+    iget-object v0, p0, Lnp4;->a:Ljava/lang/Object;
 
-    nop
+    monitor-enter v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    :try_start_0
+    iget-boolean v1, p0, Lnp4;->c:Z
 
-.method public final b()V
-    .locals 1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget v0, p0, Lvff;->a:I
+    xor-int/lit8 v0, v1, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "The parent is closed. Call SurfaceEdge#invalidate() before setting a new provider."
 
-    iget p0, p0, Lvff;->e:I
+    invoke-static {v1, v0}, Ldvi;->f(Ljava/lang/String;Z)V
 
-    const/high16 v0, -0x80000000
+    iput-object p1, p0, Lvff;->q:Lnp4;
 
-    if-eq p0, v0, :cond_0
+    invoke-virtual {p1}, Lnp4;->c()Ll28;
 
-    return-void
+    move-result-object v0
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-object v1, p0, Lvff;->p:Lgu1;
 
-    const-string v0, "generateNewId() must be called before retrieving ids."
+    invoke-static {v0, v1}, Lwag;->l(Ll28;Lgu1;)V
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Lnp4;->d()V
 
-    throw p0
+    iget-object v0, p0, Lnp4;->e:Lju1;
 
-    :pswitch_0
-    iget p0, p0, Lvff;->e:I
+    invoke-static {v0}, Lwag;->k(Ll28;)Ll28;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    if-eq p0, v0, :cond_1
+    new-instance v1, Ltff;
 
-    return-void
+    const/4 v2, 0x1
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-direct {v1, p1, v2}, Ltff;-><init>(Lnp4;I)V
 
-    const-string v0, "generateNewId() must be called before retrieving ids."
+    invoke-static {}, Lfni;->a()Lju4;
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    throw p0
+    invoke-interface {v0, v1, v2}, Ll28;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    nop
+    iget-object p1, p1, Lnp4;->g:Lju1;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {p1}, Lwag;->k(Ll28;)Ll28;
+
+    move-result-object p1
+
+    invoke-static {}, Lfni;->e()Law6;
+
+    move-result-object v0
+
+    invoke-interface {p1, p2, v0}, Ll28;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    return v7
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

@@ -1,90 +1,65 @@
 .class public final Ldg3;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lcl7;
+.field public final b:Liu7;
+
+.field public final c:Lwif;
+
+.field public final d:Liu7;
+
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ldg3;->Y:Lcl7;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ldg3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ldg3;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Ldg3;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public constructor <init>(Lulf;Ll54;Liu7;Liu7;Liu7;)V
     .locals 1
 
-    new-instance v0, Ldg3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p0, p0, Ldg3;->Y:Lcl7;
+    const-class v0, Ldg3;
 
-    invoke-direct {v0, p0, p2}, Ldg3;-><init>(Lcl7;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iput-object p1, v0, Ldg3;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    return-object v0
-.end method
+    iput-object v0, p0, Ldg3;->a:Ljava/lang/String;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iput-object p3, p0, Ldg3;->b:Liu7;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    new-instance p3, Luz;
 
-    iget-object p1, p0, Ldg3;->X:Ljava/lang/Object;
+    const/16 v0, 0xd
 
-    check-cast p1, Ljava/util/List;
+    invoke-direct {p3, p4, v0}, Luz;-><init>(Liu7;I)V
 
-    iget-object p0, p0, Ldg3;->Y:Lcl7;
+    new-instance p4, Lwif;
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-direct {p4, p3}, Lwif;-><init>(Lji6;)V
 
-    move-result-object p0
+    iput-object p4, p0, Ldg3;->c:Lwif;
 
-    check-cast p0, Lbd2;
+    iput-object p5, p0, Ldg3;->d:Liu7;
 
-    check-cast p0, Llea;
+    check-cast p1, Lqta;
 
-    iget-object p0, p0, Llea;->b:Lnxd;
+    invoke-virtual {p1}, Lqta;->b()Lk54;
 
-    invoke-virtual {p0, p1}, Lnxd;->h(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    sget-object p0, Lylf;->a:Lylf;
+    invoke-virtual {p1, p2}, Lp0;->plus(Li54;)Li54;
 
-    return-object p0
+    move-result-object p1
+
+    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ldg3;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    return-void
 .end method

@@ -1,48 +1,71 @@
-.class public final Lxxf;
-.super Ljx3;
+.class public final synthetic Lxxf;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Leia;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Landroidx/appcompat/widget/Toolbar;
 
 
 # direct methods
-.method public constructor <init>(Leia;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroidx/appcompat/widget/Toolbar;I)V
     .locals 0
 
-    iput-object p1, p0, Lxxf;->Y:Leia;
+    iput p2, p0, Lxxf;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxxf;->b:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
-    iput-object p1, p0, Lxxf;->o:Ljava/lang/Object;
+    iget v0, p0, Lxxf;->a:I
 
-    iget p1, p0, Lxxf;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lxxf;->b:Landroidx/appcompat/widget/Toolbar;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->n()V
 
-    iput p1, p0, Lxxf;->X:I
+    return-void
 
-    iget-object p1, p0, Lxxf;->Y:Leia;
+    :pswitch_0
+    iget-object v0, p0, Lxxf;->b:Landroidx/appcompat/widget/Toolbar;
+
+    iget-object v0, v0, Landroidx/appcompat/widget/Toolbar;->Y0:Layf;
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Leia;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p0
+    :cond_0
+    iget-object v0, v0, Layf;->b:Lx89;
 
-    return-object p0
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lx89;->collapseActionView()Z
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

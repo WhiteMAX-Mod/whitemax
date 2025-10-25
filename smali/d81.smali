@@ -1,162 +1,61 @@
-.class public final synthetic Ld81;
+.class public final Ld81;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Leb4;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-
-# direct methods
-.method public synthetic constructor <init>(JI)V
-    .locals 0
-
-    iput p3, p0, Ld81;->a:I
-
-    iput-wide p1, p0, Ld81;->b:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Lfwc;
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
+.method public final log(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
-    iget v0, p0, Ld81;->a:I
+    sget-object v0, Ltei;->a:Lmxa;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    new-instance v0, Lone/me/webapp/settings/WebAppSettingsScreen;
+    goto :goto_0
 
-    iget-wide v1, p0, Ld81;->b:J
+    :cond_0
+    sget-object v1, Lc98;->o:Lc98;
 
-    invoke-direct {v0, v1, v2}, Lone/me/webapp/settings/WebAppSettingsScreen;-><init>(J)V
+    invoke-virtual {v0, v1}, Lmxa;->b(Lc98;)Z
 
-    return-object v0
+    move-result v2
 
-    :pswitch_0
-    new-instance v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;
+    if-eqz v2, :cond_1
 
-    sget-object v1, Lohe;->o:Lohe;
+    const-string v2, "["
 
-    iget-wide v2, p0, Ld81;->b:J
+    const-string v3, "] "
 
-    invoke-direct {v0, v1, v2, v3}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lohe;J)V
+    invoke-static {v2, p1, v3, p2}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_1
-    new-instance v0, Lone/me/startconversation/channel/PickSubscribersScreen;
+    const/4 p2, 0x0
 
-    iget-wide v1, p0, Ld81;->b:J
+    const-string v2, "CallsSdk"
 
-    invoke-direct {v0, v1, v2}, Lone/me/startconversation/channel/PickSubscribersScreen;-><init>(J)V
+    invoke-virtual {v0, v1, v2, p1, p2}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object v0
+    :cond_1
+    :goto_0
+    return-void
+.end method
 
-    :pswitch_2
-    new-instance v0, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
+.method public final logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
 
-    iget-wide v1, p0, Ld81;->b:J
+    const-string v0, "[%s] %s"
 
-    invoke-direct {v0, v1, v2}, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;-><init>(J)V
+    filled-new-array {p1, p2}, [Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_3
-    new-instance v0, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;
+    const-string p2, "CallsSdk"
 
-    iget-wide v1, p0, Ld81;->b:J
+    invoke-static {p2, p3, v0, p1}, Ltei;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_4
-    new-instance v0, Lone/me/profile/screens/invite/ProfileInviteScreen;
-
-    iget-wide v1, p0, Ld81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/invite/ProfileInviteScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_5
-    new-instance v0, Lone/me/profile/screens/media/ChatMediaTabWidget;
-
-    iget-wide v1, p0, Ld81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/media/ChatMediaTabWidget;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_6
-    new-instance v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    iget-wide v1, p0, Ld81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;
-
-    iget-wide v1, p0, Ld81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/folders/pickerfolders/FoldersPickerScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_8
-    new-instance v0, Lone/me/folders/edit/FolderEditScreen;
-
-    iget-wide v1, p0, Ld81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/folders/edit/FolderEditScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_9
-    new-instance v0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;
-
-    iget-wide v1, p0, Ld81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/complaintbottomsheet/ComplaintBottomSheet;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_a
-    new-instance v0, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
-
-    iget-wide v1, p0, Ld81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;-><init>(J)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

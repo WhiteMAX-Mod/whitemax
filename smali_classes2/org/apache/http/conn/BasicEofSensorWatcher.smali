@@ -32,13 +32,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Connection may not be null."
+    const-string p2, "Connection may not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -73,18 +73,18 @@
 
     :cond_0
     :goto_0
-    iget-object p0, p0, Lorg/apache/http/conn/BasicEofSensorWatcher;->managedConn:Lorg/apache/http/conn/ManagedClientConnection;
+    iget-object p1, p0, Lorg/apache/http/conn/BasicEofSensorWatcher;->managedConn:Lorg/apache/http/conn/ManagedClientConnection;
 
-    invoke-interface {p0}, Lorg/apache/http/conn/ConnectionReleaseTrigger;->releaseConnection()V
+    invoke-interface {p1}, Lorg/apache/http/conn/ConnectionReleaseTrigger;->releaseConnection()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :goto_1
-    iget-object p0, p0, Lorg/apache/http/conn/BasicEofSensorWatcher;->managedConn:Lorg/apache/http/conn/ManagedClientConnection;
+    iget-object v0, p0, Lorg/apache/http/conn/BasicEofSensorWatcher;->managedConn:Lorg/apache/http/conn/ManagedClientConnection;
 
-    invoke-interface {p0}, Lorg/apache/http/conn/ConnectionReleaseTrigger;->releaseConnection()V
+    invoke-interface {v0}, Lorg/apache/http/conn/ConnectionReleaseTrigger;->releaseConnection()V
 
     throw p1
 .end method
@@ -97,13 +97,13 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/apache/http/conn/BasicEofSensorWatcher;->managedConn:Lorg/apache/http/conn/ManagedClientConnection;
+    iget-object p1, p0, Lorg/apache/http/conn/BasicEofSensorWatcher;->managedConn:Lorg/apache/http/conn/ManagedClientConnection;
 
-    invoke-interface {p0}, Lorg/apache/http/conn/ConnectionReleaseTrigger;->abortConnection()V
+    invoke-interface {p1}, Lorg/apache/http/conn/ConnectionReleaseTrigger;->abortConnection()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public streamClosed(Ljava/io/InputStream;)Z
@@ -136,18 +136,18 @@
 
     :cond_0
     :goto_0
-    iget-object p0, p0, Lorg/apache/http/conn/BasicEofSensorWatcher;->managedConn:Lorg/apache/http/conn/ManagedClientConnection;
+    iget-object p1, p0, Lorg/apache/http/conn/BasicEofSensorWatcher;->managedConn:Lorg/apache/http/conn/ManagedClientConnection;
 
-    invoke-interface {p0}, Lorg/apache/http/conn/ConnectionReleaseTrigger;->releaseConnection()V
+    invoke-interface {p1}, Lorg/apache/http/conn/ConnectionReleaseTrigger;->releaseConnection()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :goto_1
-    iget-object p0, p0, Lorg/apache/http/conn/BasicEofSensorWatcher;->managedConn:Lorg/apache/http/conn/ManagedClientConnection;
+    iget-object v0, p0, Lorg/apache/http/conn/BasicEofSensorWatcher;->managedConn:Lorg/apache/http/conn/ManagedClientConnection;
 
-    invoke-interface {p0}, Lorg/apache/http/conn/ConnectionReleaseTrigger;->releaseConnection()V
+    invoke-interface {v0}, Lorg/apache/http/conn/ConnectionReleaseTrigger;->releaseConnection()V
 
     throw p1
 .end method

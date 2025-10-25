@@ -37,15 +37,15 @@
 .method public onDestroy(Lorg/webrtc/TextureBufferImpl;)V
     .locals 0
 
-    iget-object p0, p0, Lorg/webrtc/TextureBufferImpl$2;->this$0:Lorg/webrtc/TextureBufferImpl;
+    iget-object p1, p0, Lorg/webrtc/TextureBufferImpl$2;->this$0:Lorg/webrtc/TextureBufferImpl;
 
-    invoke-virtual {p0}, Lorg/webrtc/TextureBufferImpl;->release()V
+    invoke-virtual {p1}, Lorg/webrtc/TextureBufferImpl;->release()V
 
     return-void
 .end method
 
 .method public onRelease(Lorg/webrtc/TextureBufferImpl;)V
-    .locals 0
+    .locals 1
 
     iget-object p1, p0, Lorg/webrtc/TextureBufferImpl$2;->this$0:Lorg/webrtc/TextureBufferImpl;
 
@@ -53,15 +53,15 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/webrtc/TextureBufferImpl$2;->this$0:Lorg/webrtc/TextureBufferImpl;
+    iget-object v0, p0, Lorg/webrtc/TextureBufferImpl$2;->this$0:Lorg/webrtc/TextureBufferImpl;
 
-    invoke-interface {p1, p0}, Lorg/webrtc/TextureBufferImpl$RefCountMonitor;->onRelease(Lorg/webrtc/TextureBufferImpl;)V
+    invoke-interface {p1, v0}, Lorg/webrtc/TextureBufferImpl$RefCountMonitor;->onRelease(Lorg/webrtc/TextureBufferImpl;)V
 
     return-void
 .end method
 
 .method public onRetain(Lorg/webrtc/TextureBufferImpl;)V
-    .locals 0
+    .locals 1
 
     iget-object p1, p0, Lorg/webrtc/TextureBufferImpl$2;->this$0:Lorg/webrtc/TextureBufferImpl;
 
@@ -69,9 +69,9 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/webrtc/TextureBufferImpl$2;->this$0:Lorg/webrtc/TextureBufferImpl;
+    iget-object v0, p0, Lorg/webrtc/TextureBufferImpl$2;->this$0:Lorg/webrtc/TextureBufferImpl;
 
-    invoke-interface {p1, p0}, Lorg/webrtc/TextureBufferImpl$RefCountMonitor;->onRetain(Lorg/webrtc/TextureBufferImpl;)V
+    invoke-interface {p1, v0}, Lorg/webrtc/TextureBufferImpl$RefCountMonitor;->onRetain(Lorg/webrtc/TextureBufferImpl;)V
 
     return-void
 .end method

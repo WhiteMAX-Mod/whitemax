@@ -1,112 +1,94 @@
 .class public final Lem1;
-.super Lure;
+.super Lqm1;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic X:Lgp1;
-
-.field public final synthetic Y:Lqm1;
+.field public final D:Lmi1;
 
 
 # direct methods
-.method public constructor <init>(Lgp1;Lqm1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lmi1;)V
     .locals 0
 
-    iput-object p1, p0, Lem1;->X:Lgp1;
+    invoke-direct {p0}, Lqm1;-><init>()V
 
-    iput-object p2, p0, Lem1;->Y:Lqm1;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lem1;->D:Lmi1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Ly04;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lem1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Lem1;
 
-    check-cast p0, Lem1;
+    const/4 v2, 0x0
 
-    sget-object p1, Lylf;->a:Lylf;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Lem1;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
-    move-result-object p0
+    :cond_1
+    check-cast p1, Lem1;
 
-    return-object p0
+    iget-object v1, p0, Lem1;->D:Lmi1;
+
+    iget-object p1, p1, Lem1;->D:Lmi1;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 1
 
-    new-instance p1, Lem1;
+    iget-object v0, p0, Lem1;->D:Lmi1;
 
-    iget-object v0, p0, Lem1;->X:Lgp1;
-
-    iget-object p0, p0, Lem1;->Y:Lqm1;
-
-    invoke-direct {p1, v0, p0, p2}, Lem1;-><init>(Lgp1;Lqm1;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lem1;->Y:Lqm1;
-
-    iget-object p1, p1, Lqm1;->S0:Ljava/lang/Object;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lip1;
-
-    iget-object p0, p0, Lem1;->X:Lgp1;
-
-    iput-object p0, p1, Lip1;->b:Lgp1;
-
-    iget-object p1, p1, Lip1;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Lmi1;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenRemoveUserConfirmation(participantId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lem1;->D:Lmi1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lhp1;
-
-    invoke-interface {v0, p0}, Lhp1;->D(Lgp1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-object p0
+    return-object v0
 .end method

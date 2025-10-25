@@ -1,31 +1,48 @@
-.class public abstract Lbea;
+.class public final Lbea;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# static fields
-.field public static final a:J
 
-.field public static final b:J
-
-.field public static final synthetic c:I
+# instance fields
+.field public final a:Lvv4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lvv4;)V
+    .locals 0
 
-    sget v0, Lt5c;->call_admin_settings_media_bottom_header:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-long v0, v0
-
-    sput-wide v0, Lbea;->a:J
-
-    sget v0, Lt5c;->call_admin_settings_media_header:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lbea;->b:J
+    iput-object p1, p0, Lbea;->a:Lvv4;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "NotificationLite.Disposable["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lbea;->a:Lvv4;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

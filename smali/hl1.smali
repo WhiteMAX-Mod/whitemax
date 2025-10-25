@@ -1,288 +1,90 @@
 .class public final Lhl1;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final g:Lhl1;
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Z
-
-.field public final c:Lxg1;
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
+.field public final synthetic Y:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lhl1;
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lhl1;-><init>(ZZLxg1;ZZZ)V
-
-    sput-object v0, Lhl1;->g:Lhl1;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZLxg1;ZZZ)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lhl1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-    iput-boolean p1, p0, Lhl1;->a:Z
+    const/4 p2, 0x2
 
-    iput-boolean p2, p0, Lhl1;->b:Z
-
-    iput-object p3, p0, Lhl1;->c:Lxg1;
-
-    iput-boolean p4, p0, Lhl1;->d:Z
-
-    iput-boolean p5, p0, Lhl1;->e:Z
-
-    iput-boolean p6, p0, Lhl1;->f:Z
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-boolean v0, p0, Lhl1;->a:Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, p1, p2}, Lhl1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-boolean p0, p0, Lhl1;->b:Z
+    move-result-object p1
 
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhl1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lhl1;
 
-    iget-boolean v1, p0, Lhl1;->a:Z
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-boolean v3, p1, Lhl1;->a:Z
+    invoke-virtual {p1, p2}, Lhl1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lhl1;->b:Z
-
-    iget-boolean v3, p1, Lhl1;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lhl1;->c:Lxg1;
-
-    iget-object v3, p1, Lhl1;->c:Lxg1;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lhl1;->d:Z
-
-    iget-boolean v3, p1, Lhl1;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lhl1;->e:Z
-
-    iget-boolean v3, p1, Lhl1;->e:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean p0, p0, Lhl1;->f:Z
-
-    iget-boolean p1, p1, Lhl1;->f:Z
-
-    if-eq p0, p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-boolean v0, p0, Lhl1;->a:Z
+    new-instance v0, Lhl1;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-object v1, p0, Lhl1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Lhl1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
 
-    const/16 v1, 0x1f
+    iput-object p1, v0, Lhl1;->X:Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lhl1;->b:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lhl1;->c:Lxg1;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Lxg1;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lhl1;->d:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lhl1;->e:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean p0, p0, Lhl1;->f:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, ", isSharingStateEnabled="
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, ", sharedScreenOpponentId="
+    iget-object p1, p0, Lhl1;->X:Ljava/lang/Object;
 
-    const-string v2, "CallScreenSharingState(isMe="
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-boolean v3, p0, Lhl1;->a:Z
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-boolean v4, p0, Lhl1;->b:Z
+    move-result p1
 
-    invoke-static {v2, v3, v0, v4, v1}, Lyv7;->n(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    xor-int/lit8 p1, p1, 0x1
+
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
+
+    iget-object v0, p0, Lhl1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->J0()Lo34;
 
     move-result-object v0
 
-    iget-object v1, p0, Lhl1;->c:Lxg1;
+    invoke-virtual {v0, p1}, Lo34;->c(Z)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object p1, Lccg;->a:Lccg;
 
-    const-string v1, ", isAdminDisableScreenSharing="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lhl1;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isMeAudioSharingEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lhl1;->e:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isMeAdmin="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lhl1;->f:Z
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

@@ -1,97 +1,40 @@
-.class public final Ldpc;
+.class public abstract Ldpc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lp04;
 
 
-# instance fields
-.field public final a:Lvo9;
+# static fields
+.field public static oneme_settings_avatar_select_screen:I = 0x7f0a0787
 
+.field public static oneme_settings_change_avatar_cancel:I = 0x7f0a0788
 
-# direct methods
-.method public constructor <init>(Lvo9;)V
-    .locals 0
+.field public static oneme_settings_change_avatar_remove_current:I = 0x7f0a0789
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f0a078a
 
-    iput-object p1, p0, Ldpc;->a:Lvo9;
+.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f0a078b
 
-    return-void
-.end method
+.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f0a078c
 
+.field public static oneme_settings_collapsingstoolbar:I = 0x7f0a078d
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.field public static oneme_settings_container:I = 0x7f0a078e
 
-    const/4 v0, 0x1
+.field public static oneme_settings_list_screen_appbar:I = 0x7f0a0796
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_settings_list_screen_pinned_toolbar:I = 0x7f0a0797
 
-    return v0
+.field public static oneme_settings_toolbar:I = 0x7f0a0831
 
-    :cond_0
-    instance-of v1, p1, Ldpc;
+.field public static oneme_settings_topbar:I = 0x7f0a0832
 
-    const/4 v2, 0x0
+.field public static oneme_settings_topbar_avatar:I = 0x7f0a0833
 
-    if-nez v1, :cond_1
+.field public static oneme_settings_topbar_container:I = 0x7f0a0834
 
-    return v2
+.field public static oneme_settings_topbar_dotdivider:I = 0x7f0a0835
 
-    :cond_1
-    check-cast p1, Ldpc;
+.field public static oneme_settings_topbar_name:I = 0x7f0a0836
 
-    iget-object p0, p0, Ldpc;->a:Lvo9;
+.field public static oneme_settings_topbar_nick:I = 0x7f0a0837
 
-    iget-object p1, p1, Ldpc;->a:Lvo9;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Ldpc;->a:Lvo9;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ReentrantMutexContextKey(mutex="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Ldpc;->a:Lvo9;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static oneme_settings_topbar_phone:I = 0x7f0a0838

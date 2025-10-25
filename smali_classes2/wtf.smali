@@ -1,51 +1,25 @@
-.class public final Lwtf;
+.class public abstract synthetic Lwtf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+# static fields
+.field public static final synthetic a:Lzd5;
 
-    const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    return v0
+    invoke-static {}, Ljava/lang/Thread$State;->values()[Ljava/lang/Thread$State;
 
-    :cond_0
-    instance-of p0, p1, Lwtf;
+    move-result-object v0
 
-    if-nez p0, :cond_1
+    new-instance v1, Lzd5;
 
-    const/4 p0, 0x0
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
 
-    return p0
+    sput-object v1, Lwtf;->a:Lzd5;
 
-    :cond_1
-    check-cast p1, Lwtf;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const/high16 p0, 0x1f000000
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "VfxButtonIconOverlayPlainElevation1Colors(color=520093696)"
-
-    return-object p0
+    return-void
 .end method

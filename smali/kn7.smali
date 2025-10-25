@@ -1,138 +1,137 @@
-.class public final Lkn7;
-.super Lure;
+.class public Lkn7;
+.super Llo7;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Ldh3;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lmn7;
-
-.field public final synthetic Z:Lin7;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lmn7;Lin7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lkn7;)V
+    .locals 4
 
-    iput-object p1, p0, Lkn7;->Y:Lmn7;
+    const/4 v0, 0x1
 
-    iput-object p2, p0, Lkn7;->Z:Lin7;
+    invoke-direct {p0, v0}, Llo7;-><init>(Z)V
 
-    const/4 p1, 0x2
+    invoke-virtual {p0, p1}, Llo7;->initParentJob(Ljn7;)V
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0}, Llo7;->getParentHandle$kotlinx_coroutines_core()Le53;
+
+    move-result-object p1
+
+    instance-of v1, p1, Lf53;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast p1, Lf53;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p1, v2
+
+    :goto_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_6
+
+    iget-object p1, p1, Lwn7;->a:Llo7;
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move-object p1, v2
+
+    :goto_1
+    if-nez p1, :cond_2
+
+    goto :goto_4
+
+    :cond_2
+    invoke-virtual {p1}, Llo7;->getHandlesException$kotlinx_coroutines_core()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    goto :goto_5
+
+    :cond_3
+    invoke-virtual {p1}, Llo7;->getParentHandle$kotlinx_coroutines_core()Le53;
+
+    move-result-object p1
+
+    instance-of v3, p1, Lf53;
+
+    if-eqz v3, :cond_4
+
+    check-cast p1, Lf53;
+
+    goto :goto_2
+
+    :cond_4
+    move-object p1, v2
+
+    :goto_2
+    if-eqz p1, :cond_6
+
+    iget-object p1, p1, Lwn7;->a:Llo7;
+
+    if-eqz p1, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move-object p1, v2
+
+    :goto_3
+    if-nez p1, :cond_2
+
+    :cond_6
+    :goto_4
+    move v0, v1
+
+    :goto_5
+    iput-boolean v0, p0, Lkn7;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lkn7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lkn7;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lkn7;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final D()Z
     .locals 1
 
-    new-instance p1, Lkn7;
+    sget-object v0, Lccg;->a:Lccg;
 
-    iget-object v0, p0, Lkn7;->Y:Lmn7;
+    invoke-virtual {p0, v0}, Llo7;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Lkn7;->Z:Lin7;
+    move-result v0
 
-    invoke-direct {p1, v0, p0, p2}, Lkn7;-><init>(Lmn7;Lin7;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final getHandlesException$kotlinx_coroutines_core()Z
+    .locals 1
 
-    iget v0, p0, Lkn7;->X:I
+    iget-boolean v0, p0, Lkn7;->a:Z
 
-    const/4 v1, 0x1
+    return v0
+.end method
 
-    if-eqz v0, :cond_1
+.method public final getOnCancelComplete$kotlinx_coroutines_core()Z
+    .locals 1
 
-    if-ne v0, v1, :cond_0
+    const/4 v0, 0x1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkn7;->Y:Lmn7;
-
-    check-cast p1, Lon7;
-
-    iget-object p1, p1, Lon7;->a:Lbo7;
-
-    iput v1, p0, Lkn7;->X:I
-
-    sget-object v0, Lfq4;->a:Lsh4;
-
-    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lt38;
-
-    invoke-virtual {v0}, Lt38;->getImmediate()Lt38;
-
-    move-result-object v0
-
-    new-instance v1, Lf0b;
-
-    const/4 v2, 0x0
-
-    sget-object v3, Lcn7;->c:Lcn7;
-
-    iget-object v4, p0, Lkn7;->Z:Lin7;
-
-    invoke-direct {v1, p1, v3, v4, v2}, Lf0b;-><init>(Lbo7;Lcn7;Lpc6;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v1, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return v0
 .end method

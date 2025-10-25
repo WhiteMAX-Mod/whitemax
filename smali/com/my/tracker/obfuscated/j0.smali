@@ -398,13 +398,13 @@
     invoke-virtual {p1, p3, p2}, Landroid/database/sqlite/SQLiteProgram;->bindBlob(I[B)V
 
     .line 30
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->c:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->c:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public a(JJ)J
@@ -425,15 +425,15 @@
     invoke-virtual {p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
     .line 57
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->p:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->p:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
 
-    move-result p0
+    move-result p1
 
-    int-to-long p0, p0
+    int-to-long p1, p1
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public a(Ljava/lang/String;J)J
@@ -454,17 +454,17 @@
     invoke-virtual {p1, v0, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
     .line 33
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->e:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->e:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public a(J[B)Lcom/my/tracker/obfuscated/j0$b;
-    .locals 1
+    .locals 2
 
     .line 22
     iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->b:Lcom/my/tracker/obfuscated/j0$f;
@@ -477,23 +477,23 @@
     .line 24
     new-instance p1, Lcom/my/tracker/obfuscated/j0$b;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object p2, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string p2, "SELECT id, type, major, body, ts_skipped FROM table_events WHERE type=?  AND body=?  LIMIT 1"
+    const-string p3, "SELECT id, type, major, body, ts_skipped FROM table_events WHERE type=?  AND body=?  LIMIT 1"
 
-    const/4 p3, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, p2, p3, p3}, Landroid/database/sqlite/SQLiteDatabase;->rawQueryWithFactory(Landroid/database/sqlite/SQLiteDatabase$CursorFactory;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {p2, v0, p3, v1, v1}, Landroid/database/sqlite/SQLiteDatabase;->rawQueryWithFactory(Landroid/database/sqlite/SQLiteDatabase$CursorFactory;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-direct {p1, p0}, Lcom/my/tracker/obfuscated/j0$b;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {p1, p2}, Lcom/my/tracker/obfuscated/j0$b;-><init>(Landroid/database/Cursor;)V
 
     return-object p1
 .end method
 
 .method public a(Ljava/lang/String;)Lcom/my/tracker/obfuscated/j0$d;
-    .locals 2
+    .locals 3
 
     .line 25
     iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
@@ -505,37 +505,37 @@
     .line 26
     new-instance p1, Lcom/my/tracker/obfuscated/j0$d;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string v1, "SELECT id, name, ts_start, ts_skipped FROM table_sessions WHERE name=?  LIMIT 1"
+    const-string v2, "SELECT id, name, ts_start, ts_skipped FROM table_sessions WHERE name=?  LIMIT 1"
 
-    invoke-virtual {p0, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v1, v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-direct {p1, p0}, Lcom/my/tracker/obfuscated/j0$d;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {p1, v0}, Lcom/my/tracker/obfuscated/j0$d;-><init>(Landroid/database/Cursor;)V
 
     return-object p1
 .end method
 
 .method public a()V
-    .locals 0
+    .locals 1
 
     .line 45
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->k:Landroid/database/sqlite/SQLiteStatement;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->k:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 .end method
 
 .method public a(J)V
-    .locals 0
+    .locals 1
 
     .line 59
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->s:Lcom/my/tracker/obfuscated/n0;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->s:Lcom/my/tracker/obfuscated/n0;
 
-    invoke-virtual {p0, p1, p2}, Lcom/my/tracker/obfuscated/n0;->a(J)V
+    invoke-virtual {v0, p1, p2}, Lcom/my/tracker/obfuscated/n0;->a(J)V
 
     return-void
 .end method
@@ -581,9 +581,9 @@
     invoke-virtual {p3, p4, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
     .line 44
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->i:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->i:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 .end method
@@ -624,9 +624,9 @@
 
     .line 38
     :goto_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->f:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->f:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 .end method
@@ -644,9 +644,9 @@
     invoke-virtual {p2, v0, p1}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
 
     .line 47
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->r:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->r:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 
@@ -695,26 +695,26 @@
     invoke-virtual {p2, v3, p1}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
 
     .line 54
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->j:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->j:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 .end method
 
 .method public a([B)V
-    .locals 0
+    .locals 1
 
     .line 58
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->s:Lcom/my/tracker/obfuscated/n0;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->s:Lcom/my/tracker/obfuscated/n0;
 
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/n0;->a([B)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/obfuscated/n0;->a([B)V
 
     return-void
 .end method
 
 .method public b(J)J
-    .locals 1
+    .locals 2
 
     .line 7
     iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
@@ -730,65 +730,65 @@
     .line 8
     iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
 
-    const-string v0, "SELECT COUNT(*) FROM table_events_timestamps WHERE eid=?"
+    const-string v1, "SELECT COUNT(*) FROM table_events_timestamps WHERE eid=?"
 
-    invoke-virtual {p1, v0, p0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {p1, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 9
     :try_start_0
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 10
-    invoke-interface {p0, p2}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {p1, p2}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide p1
+    move-result-wide v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 11
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    return-wide p1
+    return-wide v0
 
     :catchall_0
-    move-exception p1
+    move-exception p2
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    const-wide/16 p0, 0x0
+    const-wide/16 p1, 0x0
 
-    return-wide p0
+    return-wide p1
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
 
     .line 12
     :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_1
 
     :catchall_1
-    move-exception p0
+    move-exception p1
 
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_1
-    throw p1
+    throw p2
 .end method
 
 .method public b(JJ)J
@@ -809,19 +809,19 @@
     invoke-virtual {p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
     .line 16
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->q:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->q:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
 
-    move-result p0
+    move-result p1
 
-    int-to-long p0, p0
+    int-to-long p1, p1
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public b(Ljava/lang/String;)Ljava/lang/Long;
-    .locals 2
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
@@ -831,84 +831,84 @@
     aput-object p1, v0, v1
 
     .line 2
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string p1, "SELECT value FROM table_params WHERE key=?"
+    const-string v2, "SELECT value FROM table_params WHERE key=?"
 
-    invoke-virtual {p0, p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {p1, v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 3
     :try_start_0
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 4
-    invoke-interface {p0, v1}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {p1, v1}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 5
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    return-object p1
+    return-object v0
 
     :catchall_0
-    move-exception p1
+    move-exception v0
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
 
     .line 6
     :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_1
 
     :catchall_1
-    move-exception p0
+    move-exception p1
 
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_1
-    throw p1
+    throw v0
 .end method
 
 .method public b()V
-    .locals 0
+    .locals 1
 
     .line 13
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->l:Landroid/database/sqlite/SQLiteStatement;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->l:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 .end method
 
 .method public c(J)Lcom/my/tracker/obfuscated/j0$c;
-    .locals 1
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
@@ -926,26 +926,26 @@
 
     iget-object p2, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
 
-    const-string v0, "SELECT eid, ts FROM table_events_timestamps WHERE eid=?"
+    const-string v1, "SELECT eid, ts FROM table_events_timestamps WHERE eid=?"
 
-    invoke-virtual {p2, v0, p0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {p2, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-direct {p1, p0}, Lcom/my/tracker/obfuscated/j0$c;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {p1, p2}, Lcom/my/tracker/obfuscated/j0$c;-><init>(Landroid/database/Cursor;)V
 
     return-object p1
 .end method
 
 .method public c()V
-    .locals 0
+    .locals 1
 
     .line 6
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->m:Landroid/database/sqlite/SQLiteStatement;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->m:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 .end method
@@ -968,15 +968,15 @@
     invoke-virtual {p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
     .line 5
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->d:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->d:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 .end method
 
 .method public d(J)J
-    .locals 1
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
@@ -992,74 +992,74 @@
     .line 2
     iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
 
-    const-string v0, "SELECT COUNT(*) FROM table_sessions_timestamps WHERE sid=?"
+    const-string v1, "SELECT COUNT(*) FROM table_sessions_timestamps WHERE sid=?"
 
-    invoke-virtual {p1, v0, p0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {p1, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 3
     :try_start_0
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 4
-    invoke-interface {p0, p2}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {p1, p2}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide p1
+    move-result-wide v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 5
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    return-wide p1
+    return-wide v0
 
     :catchall_0
-    move-exception p1
+    move-exception p2
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    const-wide/16 p0, 0x0
+    const-wide/16 p1, 0x0
 
-    return-wide p0
+    return-wide p1
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
 
     .line 6
     :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_1
 
     :catchall_1
-    move-exception p0
+    move-exception p1
 
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_1
-    throw p1
+    throw p2
 .end method
 
 .method public d()V
-    .locals 0
+    .locals 1
 
     .line 10
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->n:Landroid/database/sqlite/SQLiteStatement;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->n:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 .end method
@@ -1082,15 +1082,15 @@
     invoke-virtual {p3, p4, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
     .line 9
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->h:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/j0;->h:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 .end method
 
 .method public e(J)Lcom/my/tracker/obfuscated/j0$e;
-    .locals 1
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
@@ -1108,134 +1108,134 @@
 
     iget-object p2, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->a:[Ljava/lang/String;
 
-    const-string v0, "SELECT sid, ts_start, ts_end FROM table_sessions_timestamps WHERE sid=?"
+    const-string v1, "SELECT sid, ts_start, ts_end FROM table_sessions_timestamps WHERE sid=?"
 
-    invoke-virtual {p2, v0, p0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {p2, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-direct {p1, p0}, Lcom/my/tracker/obfuscated/j0$e;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {p1, p2}, Lcom/my/tracker/obfuscated/j0$e;-><init>(Landroid/database/Cursor;)V
 
     return-object p1
 .end method
 
 .method public e()V
-    .locals 0
+    .locals 1
 
     .line 3
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->o:Landroid/database/sqlite/SQLiteStatement;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->o:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     return-void
 .end method
 
 .method public f()Lcom/my/tracker/obfuscated/b;
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->s:Lcom/my/tracker/obfuscated/n0;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->s:Lcom/my/tracker/obfuscated/n0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/n0;->a()Lcom/my/tracker/obfuscated/b;
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/n0;->a()Lcom/my/tracker/obfuscated/b;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public f(J)V
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->s:Lcom/my/tracker/obfuscated/n0;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->s:Lcom/my/tracker/obfuscated/n0;
 
-    invoke-virtual {p0, p1, p2}, Lcom/my/tracker/obfuscated/n0;->b(J)V
+    invoke-virtual {v0, p1, p2}, Lcom/my/tracker/obfuscated/n0;->b(J)V
 
     return-void
 .end method
 
 .method public g()Lcom/my/tracker/obfuscated/j0$b;
-    .locals 3
+    .locals 4
 
     new-instance v0, Lcom/my/tracker/obfuscated/j0$b;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string v1, "SELECT id, type, major, body, ts_skipped FROM table_events"
+    const-string v2, "SELECT id, type, major, body, ts_skipped FROM table_events"
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-virtual {p0, v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-direct {v0, p0}, Lcom/my/tracker/obfuscated/j0$b;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {v0, v1}, Lcom/my/tracker/obfuscated/j0$b;-><init>(Landroid/database/Cursor;)V
 
     return-object v0
 .end method
 
 .method public h()J
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string v0, "SELECT COUNT(*)  FROM table_events WHERE major=1"
+    const-string v1, "SELECT COUNT(*)  FROM table_events WHERE major=1"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-object p0
-
-    :try_start_0
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-interface {p0, v0}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v0
+    move-result-wide v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    return-wide v0
+    return-wide v1
 
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     const-wide/16 v0, 0x0
 
     return-wide v0
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
     :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_1
 
     :catchall_1
-    move-exception p0
+    move-exception v0
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_1
-    throw v0
+    throw v1
 .end method

@@ -30,17 +30,17 @@
 
 # virtual methods
 .method public final getRequest()Lorg/apache/http/impl/client/RequestWrapper;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/client/RoutedRequest;->request:Lorg/apache/http/impl/client/RequestWrapper;
+    iget-object v0, p0, Lorg/apache/http/impl/client/RoutedRequest;->request:Lorg/apache/http/impl/client/RequestWrapper;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getRoute()Lorg/apache/http/conn/routing/HttpRoute;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/client/RoutedRequest;->route:Lorg/apache/http/conn/routing/HttpRoute;
+    iget-object v0, p0, Lorg/apache/http/impl/client/RoutedRequest;->route:Lorg/apache/http/conn/routing/HttpRoute;
 
-    return-object p0
+    return-object v0
 .end method

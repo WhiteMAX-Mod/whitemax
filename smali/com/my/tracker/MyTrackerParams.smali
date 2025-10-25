@@ -60,7 +60,7 @@
 .end method
 
 .method private a(Lcom/my/tracker/obfuscated/b1;)V
-    .locals 2
+    .locals 3
 
     .line 13
     iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->a:Ljava/util/List;
@@ -69,32 +69,32 @@
 
     .line 14
     :try_start_0
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->a:Ljava/util/List;
+    iget-object v1, p0, Lcom/my/tracker/MyTrackerParams;->a:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    check-cast v1, Lcom/my/tracker/obfuscated/n;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/my/tracker/obfuscated/n;
 
     .line 15
-    invoke-interface {v1, p1}, Lcom/my/tracker/obfuscated/n;->a(Ljava/lang/Object;)V
+    invoke-interface {v2, p1}, Lcom/my/tracker/obfuscated/n;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
@@ -109,7 +109,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method private static a(Ljava/lang/String;)[Ljava/lang/String;
@@ -188,16 +188,16 @@
 
 # virtual methods
 .method public a()Lcom/my/tracker/MyTrackerParams$a;
-    .locals 2
+    .locals 3
 
     .line 17
     new-instance v0, Lcom/my/tracker/MyTrackerParams$a;
 
     iget-object v1, p0, Lcom/my/tracker/MyTrackerParams;->e:Ljava/lang/String;
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->d:Ljava/util/Map;
+    iget-object v2, p0, Lcom/my/tracker/MyTrackerParams;->d:Ljava/util/Map;
 
-    invoke-direct {v0, v1, p0}, Lcom/my/tracker/MyTrackerParams$a;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-direct {v0, v1, v2}, Lcom/my/tracker/MyTrackerParams$a;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
     return-object v0
 .end method
@@ -225,9 +225,9 @@
     invoke-interface {p1, v2}, Lcom/my/tracker/obfuscated/n;->a(Ljava/lang/Object;)V
 
     .line 8
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->a:Ljava/util/List;
+    iget-object p1, p0, Lcom/my/tracker/MyTrackerParams;->a:Ljava/util/List;
 
-    invoke-interface {p0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 9
     monitor-exit v1
@@ -243,12 +243,12 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
     :catchall_1
-    move-exception p0
+    move-exception p1
 
     .line 11
     :try_start_3
@@ -257,7 +257,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     :try_start_4
-    throw p0
+    throw p1
 
     .line 12
     :goto_0
@@ -265,251 +265,251 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public getAge()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget p0, p0, Lcom/my/tracker/obfuscated/b1;->a:I
+    iget v0, v0, Lcom/my/tracker/obfuscated/b1;->a:I
 
-    return p0
+    return v0
 .end method
 
 .method public getCustomParam(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->d:Ljava/util/Map;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->d:Ljava/util/Map;
 
-    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Ljava/lang/String;
+    check-cast p1, Ljava/lang/String;
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getCustomUserId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->g:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->g:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getCustomUserIds()[Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->g:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->g:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getEmail()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->e:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->e:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getEmails()[Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->e:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->e:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getGender()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget p0, p0, Lcom/my/tracker/obfuscated/b1;->b:I
+    iget v0, v0, Lcom/my/tracker/obfuscated/b1;->b:I
 
-    return p0
+    return v0
 .end method
 
 .method public getIcqId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->f:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->f:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getIcqIds()[Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->f:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->f:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getLang()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->e:Ljava/lang/String;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->e:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getOkId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->c:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->c:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getOkIds()[Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->c:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->c:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getPhone()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->h:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->h:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getPhones()[Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->h:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->h:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getVkConnectId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->i:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->i:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getVkConnectIds()[Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->i:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->i:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getVkId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->d:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->d:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->b([Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getVkIds()[Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/b1;->d:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/b1;->d:[Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTrackerParams;->a([Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public setAge(I)Lcom/my/tracker/MyTrackerParams;
@@ -573,7 +573,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_1
 
@@ -588,7 +588,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setCustomParam(Ljava/lang/String;Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -625,9 +625,9 @@
 
     invoke-virtual {p0, p1}, Lcom/my/tracker/MyTrackerParams;->setCustomUserIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public setCustomUserIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -697,7 +697,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_1
 
@@ -712,7 +712,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setEmail(Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -724,9 +724,9 @@
 
     invoke-virtual {p0, p1}, Lcom/my/tracker/MyTrackerParams;->setEmails([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public setEmails([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -796,7 +796,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_1
 
@@ -811,7 +811,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setGender(I)Lcom/my/tracker/MyTrackerParams;
@@ -875,7 +875,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_1
 
@@ -890,7 +890,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setIcqId(Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -902,9 +902,9 @@
 
     invoke-virtual {p0, p1}, Lcom/my/tracker/MyTrackerParams;->setIcqIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public setIcqIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -974,7 +974,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_1
 
@@ -989,7 +989,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setLang(Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -1009,9 +1009,9 @@
 
     invoke-virtual {p0, p1}, Lcom/my/tracker/MyTrackerParams;->setOkIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public setOkIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -1081,7 +1081,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_1
 
@@ -1096,7 +1096,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setPhone(Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -1108,9 +1108,9 @@
 
     invoke-virtual {p0, p1}, Lcom/my/tracker/MyTrackerParams;->setPhones([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public setPhones([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -1180,7 +1180,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_1
 
@@ -1195,7 +1195,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setVkConnectId(Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -1207,9 +1207,9 @@
 
     invoke-virtual {p0, p1}, Lcom/my/tracker/MyTrackerParams;->setVkConnectIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public setVkConnectIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -1279,7 +1279,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_1
 
@@ -1294,7 +1294,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setVkId(Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -1306,9 +1306,9 @@
 
     invoke-virtual {p0, p1}, Lcom/my/tracker/MyTrackerParams;->setVkIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public setVkIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
@@ -1378,7 +1378,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_1
 
@@ -1393,5 +1393,5 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method

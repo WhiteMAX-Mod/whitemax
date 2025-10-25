@@ -8,13 +8,13 @@
 
 .field public final b:Z
 
-.field public final c:Lke8;
+.field public final c:Lgp8;
 
 .field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLke8;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLgp8;Ljava/lang/String;)V
     .locals 0
 
     .line 5
@@ -27,7 +27,7 @@
     iput-boolean p4, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecRenderer$DecoderInitializationException;->b:Z
 
     .line 8
-    iput-object p5, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecRenderer$DecoderInitializationException;->c:Lke8;
+    iput-object p5, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecRenderer$DecoderInitializationException;->c:Lgp8;
 
     .line 9
     iput-object p6, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecRenderer$DecoderInitializationException;->o:Ljava/lang/String;
@@ -35,7 +35,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lx46;Landroidx/media3/exoplayer/mediacodec/MediaCodecUtil$DecoderQueryException;ZI)V
+.method public constructor <init>(Lmb6;Landroidx/media3/exoplayer/mediacodec/MediaCodecUtil$DecoderQueryException;ZI)V
     .locals 9
 
     .line 1
@@ -57,7 +57,7 @@
 
     move-result-object v3
 
-    iget-object v5, p1, Lx46;->n:Ljava/lang/String;
+    iget-object v5, p1, Lmb6;->n:Ljava/lang/String;
 
     if-gez p4, :cond_0
 
@@ -98,7 +98,7 @@
     move v6, p3
 
     .line 4
-    invoke-direct/range {v2 .. v8}, Landroidx/media3/exoplayer/mediacodec/MediaCodecRenderer$DecoderInitializationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLke8;Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v8}, Landroidx/media3/exoplayer/mediacodec/MediaCodecRenderer$DecoderInitializationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLgp8;Ljava/lang/String;)V
 
     return-void
 .end method

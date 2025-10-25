@@ -1,96 +1,48 @@
 .class public final Lrd8;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lqd8;
+.super Ly14;
 
 
 # instance fields
-.field public final a:Landroid/os/Messenger;
+.field public X:I
+
+.field public final synthetic Y:Ldb8;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Messenger;)V
+.method public constructor <init>(Ldb8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrd8;->Y:Ldb8;
 
-    iput-object p1, p0, Lrd8;->a:Landroid/os/Messenger;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Leo8;Landroid/os/Bundle;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    if-nez p2, :cond_0
+    iput-object p1, p0, Lrd8;->o:Ljava/lang/Object;
 
-    new-instance p2, Landroid/os/Bundle;
+    iget p1, p0, Lrd8;->X:I
 
-    invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    const-string v0, "extra_service_version"
+    or-int/2addr p1, v0
 
-    const/4 v1, 0x2
+    iput p1, p0, Lrd8;->X:I
 
-    invoke-virtual {p2, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    iget-object p1, p0, Lrd8;->Y:Ldb8;
 
-    new-instance v0, Landroid/os/Bundle;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    const-string v1, "data_media_item_id"
-
-    const-string v2, "androidx.media3.session.MediaLibraryService"
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Landroid/support/v4/media/session/MediaSessionCompat$Token;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p1, v1}, Lim7;->a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    invoke-virtual {p1, v0, p0}, Ldb8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string v1, "data_media_session_token"
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    const-string p1, "data_root_hints"
-
-    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1, v0}, Lrd8;->b(ILandroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public final b(ILandroid/os/Bundle;)V
-    .locals 1
-
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object v0
-
-    iput p1, v0, Landroid/os/Message;->what:I
-
-    const/4 p1, 0x2
-
-    iput p1, v0, Landroid/os/Message;->arg1:I
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {v0, p2}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    :cond_0
-    iget-object p0, p0, Lrd8;->a:Landroid/os/Messenger;
-
-    invoke-virtual {p0, v0}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
-
-    return-void
+    return-object p1
 .end method

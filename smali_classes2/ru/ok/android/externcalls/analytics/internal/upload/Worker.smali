@@ -152,18 +152,18 @@
 .end method
 
 .method private flush(Landroid/os/ConditionVariable;)V
-    .locals 1
+    .locals 2
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->handler:Landroid/os/Handler;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->handler:Landroid/os/Handler;
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    invoke-static {p0, v0, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
+    invoke-static {v0, v1, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
     .line 3
     invoke-virtual {p1}, Landroid/os/ConditionVariable;->block()V
@@ -196,9 +196,9 @@
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    return-wide p0
+    return-wide v0
 
     :cond_0
     iget-wide v2, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUploadAny:J
@@ -207,22 +207,22 @@
 
     if-gez p1, :cond_1
 
-    iget-wide p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUploadAny:J
+    iget-wide v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUploadAny:J
 
-    return-wide p0
+    return-wide v0
 
     :cond_1
-    sget-object p0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+    sget-object p1, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getMaxTimeToUploadMillis()J
+    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getMaxTimeToUploadMillis()J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    return-wide p0
+    return-wide v0
 .end method
 
 .method private handleAppend(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
@@ -292,7 +292,9 @@
 
     invoke-interface {p1, v4, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload()V
+    const-string p1, "file size"
+
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload(Ljava/lang/String;)V
 
     return-void
 
@@ -323,7 +325,9 @@
 
     invoke-interface {v0, v4, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload()V
+    const-string p1, "item count"
+
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload(Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -342,7 +346,9 @@
 
     invoke-interface {p1, v0, v1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload()V
+    const-string p1, "flush"
+
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -358,7 +364,9 @@
 
     invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload()V
+    const-string v0, "timeout"
+
+    invoke-direct {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -382,7 +390,7 @@
 
     const-string v4, "ms"
 
-    invoke-static {v0, v1, v3, v4}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v3, v4}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -390,19 +398,39 @@
 
     invoke-interface {v2, v1, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload()V
+    const-string v0, "silence timeout"
+
+    invoke-direct {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private startUpload()V
-    .locals 1
+.method private startUpload(Ljava/lang/String;)V
+    .locals 3
 
-    sget-object v0, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->apiMethod:Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->startUpload(Ljava/lang/String;)V
+    const-string v2, "upload requested. reason="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "CallAnalyticsWorker"
+
+    invoke-interface {v0, v1, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object p1, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;
+
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->apiMethod:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->startUpload(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -416,15 +444,15 @@
 
     iput-wide v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUploadAny:J
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUpload:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUpload:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
     return-void
 .end method
 
 .method public drop()V
-    .locals 3
+    .locals 4
 
     :try_start_0
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
@@ -438,13 +466,13 @@
     :catch_0
     move-exception v0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+    iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
-    const-string v1, "CallAnalyticsWorker"
+    const-string v2, "CallAnalyticsWorker"
 
-    const-string v2, "drop failed"
+    const-string v3, "drop failed"
 
-    invoke-interface {p0, v1, v2, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v2, v3, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -463,7 +491,7 @@
 .end method
 
 .method public grab(Ljavax/inject/Provider;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -484,9 +512,9 @@
     return-void
 
     :cond_0
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->grab(Ljavax/inject/Provider;)V
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->grab(Ljavax/inject/Provider;)V
 
     return-void
 .end method
@@ -526,11 +554,68 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->handler:Landroid/os/Handler;
+    iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->handler:Landroid/os/Handler;
 
-    invoke-virtual {p0, v2, v0, v1}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p1, v2, v0, v1}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     :cond_0
+    return-void
+.end method
+
+.method public setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;)V
+    .locals 4
+
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getSilenceToUploadMillis()J
+
+    move-result-wide v0
+
+    const-wide v2, 0x7fffffffffffffffL
+
+    cmp-long v2, v0, v2
+
+    if-ltz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;->isIdle()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->handler:Landroid/os/Handler;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {p1, v2}, Landroid/os/Handler;->hasMessages(I)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->handler:Landroid/os/Handler;
+
+    invoke-virtual {p1, v2, v0, v1}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+
+    const-string v0, "CallAnalyticsWorker"
+
+    const-string v1, "Schedule upload by timeout by leaving idle state"
+
+    invoke-interface {p1, v0, v1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
@@ -543,20 +628,20 @@
 
     if-gez v0, :cond_0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUpload:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUpload:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
 
-    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :cond_0
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUpload:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object p2, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUpload:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

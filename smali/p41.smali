@@ -1,159 +1,107 @@
 .class public final Lp41;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lq41;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Z
-
-.field public final c:Z
+.field public final synthetic Y:Lx41;
 
 
 # direct methods
-.method public constructor <init>(JZZ)V
+.method public constructor <init>(Lx41;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lp41;->Y:Lx41;
 
-    iput-wide p1, p0, Lp41;->a:J
+    const/4 p1, 0x2
 
-    iput-boolean p3, p0, Lp41;->b:Z
-
-    iput-boolean p4, p0, Lp41;->c:Z
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-boolean p0, p0, Lp41;->b:Z
+    check-cast p1, Lla2;
 
-    return p0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final b()Z
-    .locals 0
+    invoke-virtual {p0, p1, p2}, Lp41;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-boolean p0, p0, Lp41;->c:Z
+    move-result-object p1
 
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lp41;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lp41;
 
-    iget-wide v3, p0, Lp41;->a:J
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-wide v5, p1, Lp41;->a:J
+    invoke-virtual {p1, p2}, Lp41;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lp41;->b:Z
-
-    iget-boolean v3, p1, Lp41;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean p0, p0, Lp41;->c:Z
-
-    iget-boolean p1, p1, Lp41;->c:Z
-
-    if-eq p0, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-wide v0, p0, Lp41;->a:J
+    new-instance v0, Lp41;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v1, p0, Lp41;->Y:Lx41;
 
-    move-result v0
+    invoke-direct {v0, v1, p2}, Lp41;-><init>(Lx41;Lkotlin/coroutines/Continuation;)V
 
-    const/16 v1, 0x1f
+    iput-object p1, v0, Lp41;->X:Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lp41;->b:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean p0, p0, Lp41;->c:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    const-string v0, "User(userId="
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, ", isVideoEnabled="
+    iget-object p1, p0, Lp41;->X:Ljava/lang/Object;
 
-    iget-wide v2, p0, Lp41;->a:J
+    check-cast p1, Lla2;
 
-    iget-boolean v4, p0, Lp41;->b:Z
+    if-eqz p1, :cond_0
 
-    invoke-static {v2, v3, v0, v1, v4}, Lsg0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lp41;->Y:Lx41;
 
-    move-result-object v0
+    iget-object v1, v0, Lx41;->a:Lev1;
 
-    const-string v1, ", isAudioEnabled="
+    iget-object v2, v0, Lx41;->e:Liu7;
 
-    const-string v2, ")"
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
 
-    iget-boolean p0, p0, Lp41;->c:Z
+    move-result-object v2
 
-    invoke-static {v0, v1, p0, v2}, Lyv7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    check-cast v2, Lulf;
 
-    move-result-object p0
+    check-cast v2, Lqta;
 
-    return-object p0
+    invoke-virtual {v2}, Lqta;->a()Lk54;
+
+    move-result-object v2
+
+    new-instance v3, Lo41;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v0, p1, v4}, Lo41;-><init>(Lx41;Lla2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v1, v2, v4, v3, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

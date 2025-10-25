@@ -1,50 +1,123 @@
-.class public abstract Lg6c;
+.class public final synthetic Lg6c;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
-# static fields
-.field public static oneme_folders_chats_picker_toolbar:I = 0x7f0a06c7
+# instance fields
+.field public final synthetic a:I
 
-.field public static oneme_folders_delete_folder_bottom_sheet_cancel_button:I = 0x7f0a06c8
+.field public final synthetic b:Lqjh;
 
-.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f0a06c9
 
-.field public static oneme_folders_edit_bottom_sheet_cancel_button:I = 0x7f0a06ca
+# direct methods
+.method public synthetic constructor <init>(Lqjh;I)V
+    .locals 0
 
-.field public static oneme_folders_edit_bottom_sheet_delete_button:I = 0x7f0a06cb
+    iput p2, p0, Lg6c;->a:I
 
-.field public static oneme_folders_edit_create_button:I = 0x7f0a06cc
+    iput-object p1, p0, Lg6c;->b:Lqjh;
 
-.field public static oneme_folders_edit_delete_button:I = 0x7f0a06cd
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_folders_edit_folder_name_field:I = 0x7f0a06ce
+    return-void
+.end method
 
-.field public static oneme_folders_edit_members_add_button:I = 0x7f0a06cf
 
-.field public static oneme_folders_edit_members_list:I = 0x7f0a06d0
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-.field public static oneme_folders_edit_save_button:I = 0x7f0a06d1
+    iget v0, p0, Lg6c;->a:I
 
-.field public static oneme_folders_edit_screen:I = 0x7f0a06d2
+    packed-switch v0, :pswitch_data_0
 
-.field public static oneme_folders_edit_title_input:I = 0x7f0a06d3
+    iget-object v0, p0, Lg6c;->b:Lqjh;
 
-.field public static oneme_folders_edit_toolbar:I = 0x7f0a06d4
+    iget-object v0, v0, Lqjh;->Y:Ljava/lang/Object;
 
-.field public static oneme_folders_list_all_folder_view_type:I = 0x7f0a06d5
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
 
-.field public static oneme_folders_list_create_folder_view_type:I = 0x7f0a06d6
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lu6c;
 
-.field public static oneme_folders_list_menu_action_change:I = 0x7f0a06d7
+    move-result-object v0
 
-.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f0a06d8
+    iget-object v0, v0, Lu6c;->b:Lc65;
 
-.field public static oneme_folders_list_recommended_folder_view_type:I = 0x7f0a06d9
+    const/16 v1, 0x200
 
-.field public static oneme_folders_list_recycler_view:I = 0x7f0a06da
+    invoke-virtual {v0, v1}, Lc65;->a(I)V
 
-.field public static oneme_folders_list_screen:I = 0x7f0a06db
+    :goto_0
+    sget-object v0, Lccg;->a:Lccg;
 
-.field public static oneme_folders_list_toolbar:I = 0x7f0a06dc
+    return-object v0
 
-.field public static oneme_folders_list_user_folder_view_type:I = 0x7f0a06dd
+    :pswitch_0
+    iget-object v0, p0, Lg6c;->b:Lqjh;
+
+    iget-object v0, v0, Lqjh;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lu6c;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lu6c;->b:Lc65;
+
+    const/16 v1, 0x100
+
+    invoke-virtual {v0, v1}, Lc65;->a(I)V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, Lg6c;->b:Lqjh;
+
+    iget-object v0, v0, Lqjh;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lu6c;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lu6c;->b:Lc65;
+
+    const/16 v1, 0x80
+
+    invoke-virtual {v0, v1}, Lc65;->a(I)V
+
+    goto :goto_0
+
+    :pswitch_2
+    iget-object v0, p0, Lg6c;->b:Lqjh;
+
+    iget-object v0, v0, Lqjh;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lu6c;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lu6c;->b:Lc65;
+
+    const/16 v1, 0x40
+
+    invoke-virtual {v0, v1}, Lc65;->a(I)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

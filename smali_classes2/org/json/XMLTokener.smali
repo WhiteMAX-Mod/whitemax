@@ -255,18 +255,18 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_1
     const-string v0, "Unclosed CDATA"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object v0
 
-    throw p0
+    throw v0
 .end method
 
 .method public nextContent()Ljava/lang/Object;
@@ -290,18 +290,18 @@
 
     if-nez v0, :cond_1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 
     :cond_1
     const/16 v1, 0x3c
 
     if-ne v0, v1, :cond_2
 
-    sget-object p0, Lorg/json/XML;->LT:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->LT:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
@@ -313,13 +313,13 @@
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_3
     if-ne v0, v1, :cond_4
@@ -328,13 +328,13 @@
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_4
     const/16 v3, 0x26
@@ -396,13 +396,13 @@
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {p0}, Lorg/json/XMLTokener;->unescapeEntity(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lorg/json/XMLTokener;->unescapeEntity(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -419,9 +419,9 @@
 
     invoke-virtual {p0, p1}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object p1
 
-    throw p0
+    throw p1
 
     :cond_2
     :goto_1
@@ -484,9 +484,9 @@
 
     if-eqz v5, :cond_1
 
-    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    return-object p0
+    return-object v0
 
     :cond_1
     if-eqz v0, :cond_2
@@ -507,39 +507,39 @@
     :pswitch_0
     invoke-virtual {p0}, Lorg/json/JSONTokener;->back()V
 
-    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    return-object p0
+    return-object v0
 
     :pswitch_1
-    sget-object p0, Lorg/json/XML;->QUEST:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->QUEST:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :pswitch_2
-    sget-object p0, Lorg/json/XML;->GT:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->GT:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :pswitch_3
-    sget-object p0, Lorg/json/XML;->EQ:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->EQ:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :pswitch_4
-    sget-object p0, Lorg/json/XML;->LT:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->LT:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :cond_3
-    sget-object p0, Lorg/json/XML;->BANG:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->BANG:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :cond_4
-    sget-object p0, Lorg/json/XML;->SLASH:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->SLASH:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :cond_5
     invoke-virtual {p0}, Lorg/json/JSONTokener;->next()C
@@ -550,27 +550,27 @@
 
     if-ne v1, v0, :cond_5
 
-    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    return-object p0
+    return-object v0
 
     :cond_6
     const-string v0, "Unterminated string"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object v0
 
-    throw p0
+    throw v0
 
     :cond_7
     const-string v0, "Misshaped meta tag"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object v0
 
-    throw p0
+    throw v0
 
     nop
 
@@ -649,9 +649,9 @@
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_1
     if-eqz v0, :cond_4
@@ -682,9 +682,9 @@
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_3
     :pswitch_1
@@ -692,50 +692,50 @@
 
     invoke-virtual {p0, v0}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object v0
 
-    throw p0
+    throw v0
 
     :cond_4
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :pswitch_2
-    sget-object p0, Lorg/json/XML;->QUEST:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->QUEST:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :pswitch_3
-    sget-object p0, Lorg/json/XML;->GT:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->GT:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :pswitch_4
-    sget-object p0, Lorg/json/XML;->EQ:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->EQ:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :pswitch_5
     const-string v0, "Misplaced \'<\'"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object v0
 
-    throw p0
+    throw v0
 
     :cond_5
-    sget-object p0, Lorg/json/XML;->BANG:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->BANG:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :cond_6
-    sget-object p0, Lorg/json/XML;->SLASH:Ljava/lang/Character;
+    sget-object v0, Lorg/json/XML;->SLASH:Ljava/lang/Character;
 
-    return-object p0
+    return-object v0
 
     :cond_7
     new-instance v1, Ljava/lang/StringBuilder;
@@ -753,9 +753,9 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_8
     const/16 v3, 0x26
@@ -780,18 +780,18 @@
 
     invoke-virtual {p0, v0}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object v0
 
-    throw p0
+    throw v0
 
     :cond_b
     const-string v0, "Misshaped element"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object v0
 
-    throw p0
+    throw v0
 
     :pswitch_data_0
     .packed-switch 0x3c

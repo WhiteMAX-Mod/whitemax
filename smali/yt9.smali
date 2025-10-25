@@ -1,177 +1,130 @@
 .class public final Lyt9;
-.super Lem3;
+.super Lezh;
 .source "SourceFile"
 
 
-# instance fields
-.field public final f:Landroid/net/ConnectivityManager;
+# static fields
+.field public static final b:Ljava/lang/ThreadLocal;
 
-.field public final g:Lmk3;
+
+# instance fields
+.field public final a:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lay7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Lem3;-><init>(Landroid/content/Context;Lay7;)V
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    iget-object p1, p0, Lem3;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    check-cast p1, Landroid/content/Context;
+    sput-object v0, Lyt9;->b:Ljava/lang/ThreadLocal;
 
-    const-string p2, "connectivity"
+    return-void
+.end method
 
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+.method public constructor <init>()V
+    .locals 10
 
-    move-result-object p1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Landroid/net/ConnectivityManager;
+    invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
 
-    iput-object p1, p0, Lyt9;->f:Landroid/net/ConnectivityManager;
+    move-result-object v0
 
-    new-instance p1, Lmk3;
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    const/4 p2, 0x1
+    move-result-object v1
 
-    invoke-direct {p1, p2, p0}, Lmk3;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v1}, Ljava/lang/Runtime;->availableProcessors()I
 
-    iput-object p1, p0, Lyt9;->g:Lmk3;
+    move-result v3
+
+    new-instance v2, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v8, Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-direct {v8}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+
+    new-instance v9, Lp30;
+
+    invoke-direct {v9, v0}, Lp30;-><init>(Ljava/util/concurrent/ThreadFactory;)V
+
+    const-wide/16 v5, 0x3c
+
+    move v4, v3
+
+    invoke-direct/range {v2 .. v9}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    iput-object v2, p0, Lyt9;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i()Ljava/lang/Object;
-    .locals 0
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 3
 
-    iget-object p0, p0, Lyt9;->f:Landroid/net/ConnectivityManager;
+    sget-object v0, Lyt9;->b:Ljava/lang/ThreadLocal;
 
-    invoke-static {p0}, Lzt9;->a(Landroid/net/ConnectivityManager;)Lxt9;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
-.end method
+    check-cast v0, Ljava/util/Deque;
 
-.method public final r()V
-    .locals 4
+    if-eqz v0, :cond_2
 
-    const-string v0, "Received exception while registering network callback"
+    invoke-interface {v0}, Ljava/util/Deque;->size()I
 
-    :try_start_0
-    invoke-static {}, Lmq0;->w()Lmq0;
+    move-result v1
 
-    move-result-object v1
+    const/4 v2, 0x1
 
-    sget-object v2, Lzt9;->a:Ljava/lang/String;
+    if-gt v1, v2, :cond_2
 
-    const-string v3, "Registering network callback"
+    invoke-interface {v0, p1}, Ljava/util/Deque;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1, v2, v3}, Lmq0;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0}, Ljava/util/Deque;->size()I
 
-    iget-object v1, p0, Lyt9;->f:Landroid/net/ConnectivityManager;
+    move-result v1
 
-    iget-object p0, p0, Lyt9;->g:Lmk3;
+    if-gt v1, v2, :cond_1
 
-    invoke-static {v1, p0}, Lqt9;->a(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
+    invoke-interface {v0}, Ljava/util/Deque;->removeFirst()Ljava/lang/Object;
+
+    invoke-interface {v0}, Ljava/util/Deque;->peekFirst()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Runnable;
+
+    if-nez p1, :cond_0
+
+    :cond_1
     return-void
 
-    :catch_0
-    move-exception p0
+    :cond_2
+    new-instance v0, Lhld;
 
-    goto :goto_0
+    const/4 v1, 0x4
 
-    :catch_1
-    move-exception p0
+    invoke-direct {v0, p1, v1}, Lhld;-><init>(Ljava/lang/Runnable;I)V
 
-    goto :goto_1
+    iget-object p1, p0, Lyt9;->a:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    :goto_0
-    invoke-static {}, Lmq0;->w()Lmq0;
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
-    move-result-object v1
-
-    sget-object v2, Lzt9;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0, p0}, Lmq0;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :goto_1
-    invoke-static {}, Lmq0;->w()Lmq0;
-
-    move-result-object v1
-
-    sget-object v2, Lzt9;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0, p0}, Lmq0;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_2
-    return-void
-.end method
-
-.method public final s()V
-    .locals 4
-
-    const-string v0, "Received exception while unregistering network callback"
-
-    :try_start_0
-    invoke-static {}, Lmq0;->w()Lmq0;
-
-    move-result-object v1
-
-    sget-object v2, Lzt9;->a:Ljava/lang/String;
-
-    const-string v3, "Unregistering network callback"
-
-    invoke-virtual {v1, v2, v3}, Lmq0;->q(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lyt9;->f:Landroid/net/ConnectivityManager;
-
-    iget-object p0, p0, Lyt9;->g:Lmk3;
-
-    invoke-static {v1, p0}, Lot9;->c(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p0
-
-    goto :goto_1
-
-    :goto_0
-    invoke-static {}, Lmq0;->w()Lmq0;
-
-    move-result-object v1
-
-    sget-object v2, Lzt9;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0, p0}, Lmq0;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :goto_1
-    invoke-static {}, Lmq0;->w()Lmq0;
-
-    move-result-object v1
-
-    sget-object v2, Lzt9;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0, p0}, Lmq0;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_2
     return-void
 .end method

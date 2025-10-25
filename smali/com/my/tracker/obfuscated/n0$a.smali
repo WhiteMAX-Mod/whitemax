@@ -35,25 +35,25 @@
 
 # virtual methods
 .method public a()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/n0$a;->a:Landroid/database/Cursor;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/n0$a;->a:Landroid/database/Cursor;
 
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public c()J
     .locals 2
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/n0$a;->a:Landroid/database/Cursor;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/n0$a;->a:Landroid/database/Cursor;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-interface {p0, v0}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
 
@@ -61,25 +61,25 @@
 .end method
 
 .method public close()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/n0$a;->a:Landroid/database/Cursor;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/n0$a;->a:Landroid/database/Cursor;
 
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     return-void
 .end method
 
 .method public h()[B
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/n0$a;->a:Landroid/database/Cursor;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/n0$a;->a:Landroid/database/Cursor;
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    invoke-interface {p0, v0}, Landroid/database/Cursor;->getBlob(I)[B
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getBlob(I)[B
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

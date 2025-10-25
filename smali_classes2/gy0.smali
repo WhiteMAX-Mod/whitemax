@@ -1,97 +1,89 @@
-.class public final synthetic Lgy0;
+.class public final Lgy0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ls0e;
-
 
 # instance fields
-.field public final synthetic a:Lty0;
+.field public final a:Ljava/io/File;
 
-.field public final synthetic b:Z
+.field public final b:J
 
-.field public final synthetic c:Lsg1;
+.field public final c:J
 
-.field public final synthetic d:Lvmd;
+.field public final d:Lwy0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lty0;ZLsg1;Lvmd;)V
-    .locals 0
+.method public constructor <init>(Ljava/io/File;Lwy0;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgy0;->a:Lty0;
+    iput-object p1, p0, Lgy0;->a:Ljava/io/File;
 
-    iput-boolean p2, p0, Lgy0;->b:Z
+    invoke-virtual {p1}, Ljava/io/File;->length()J
 
-    iput-object p3, p0, Lgy0;->c:Lsg1;
+    move-result-wide v0
 
-    iput-object p4, p0, Lgy0;->d:Lvmd;
+    iput-wide v0, p0, Lgy0;->b:J
+
+    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lgy0;->c:J
+
+    iput-object p2, p0, Lgy0;->d:Lwy0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(Lorg/json/JSONObject;)V
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lgy0;->a:Lty0;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, "CacheEntry{file="
 
-    const-string v1, "error"
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lgy0;->a:Ljava/io/File;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+    const-string v1, ", length="
 
-    move-result p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_2
+    iget-wide v1, p0, Lgy0;->b:J
 
-    iget-boolean p1, p0, Lgy0;->b:Z
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lgy0;->c:Lsg1;
+    const-string v1, ", lastModified="
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v2, v1
+    iget-wide v1, p0, Lgy0;->c:J
 
-    goto :goto_0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 v2, 0x0
+    const-string v1, ", cacheType="
 
-    :goto_0
-    iget-object p0, p0, Lgy0;->d:Lvmd;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    instance-of v3, p0, Lumd;
+    iget-object v1, p0, Lgy0;->d:Lwy0;
 
-    if-eqz v3, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v3, v0, Lty0;->N0:Len1;
+    const/16 v1, 0x7d
 
-    xor-int/lit8 p1, p1, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    check-cast p0, Lumd;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3, p1, v1, p0}, Len1;->b(ZLsg1;Lumd;)V
+    move-result-object v0
 
-    goto :goto_1
-
-    :cond_1
-    iput-object v2, v0, Lty0;->x0:Lsg1;
-
-    :goto_1
-    sget-object p0, Lg61;->I0:Lg61;
-
-    invoke-virtual {v0, p0, v2}, Lty0;->k(Lg61;Ljava/lang/Object;)V
-
-    :cond_2
-    return-void
+    return-object v0
 .end method

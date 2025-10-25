@@ -1,123 +1,96 @@
-.class public abstract synthetic Lan7;
-.super Ljava/lang/Object;
+.class public final enum Lan7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Iterator;
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final enum a:Lan7;
+
+.field public static final synthetic b:[Lan7;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lbn7;->values()[Lbn7;
+    new-instance v0, Lan7;
+
+    const-string v1, "INSTANCE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lan7;->a:Lan7;
+
+    filled-new-array {v0}, [Lan7;
 
     move-result-object v0
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lbn7;->ON_CREATE:Lbn7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Lbn7;->ON_STOP:Lbn7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v1, Lbn7;->ON_START:Lbn7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v1, Lbn7;->ON_PAUSE:Lbn7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v1, Lbn7;->ON_RESUME:Lbn7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v1, Lbn7;->ON_DESTROY:Lbn7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v1, Lbn7;->ON_ANY:Lbn7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v0, Lan7;->$EnumSwitchMapping$0:[I
+    sput-object v0, Lan7;->b:[Lan7;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lan7;
+    .locals 1
+
+    const-class v0, Lan7;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lan7;
+
+    return-object p0
+.end method
+
+.method public static values()[Lan7;
+    .locals 1
+
+    sget-object v0, Lan7;->b:[Lan7;
+
+    invoke-virtual {v0}, [Lan7;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lan7;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final hasNext()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 1
+
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "no calls to next() since the last call to remove()"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

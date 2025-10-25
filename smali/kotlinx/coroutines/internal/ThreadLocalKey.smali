@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lp04;
+.implements Lh54;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lp04;"
+        "Lh54;"
     }
 .end annotation
 
@@ -20,7 +20,7 @@
     }
     d2 = {
         "Lkotlinx/coroutines/internal/ThreadLocalKey;",
-        "Lp04;",
+        "Lh54;",
         "Lkotlinx/coroutines/internal/ThreadLocalElement;",
         "Ljava/lang/ThreadLocal;",
         "threadLocal",
@@ -84,7 +84,7 @@
 .end method
 
 .method private final component1()Ljava/lang/ThreadLocal;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -93,9 +93,9 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ThreadLocalKey;->threadLocal:Ljava/lang/ThreadLocal;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ThreadLocalKey;->threadLocal:Ljava/lang/ThreadLocal;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public static synthetic copy$default(Lkotlinx/coroutines/internal/ThreadLocalKey;Ljava/lang/ThreadLocal;ILjava/lang/Object;)Lkotlinx/coroutines/internal/ThreadLocalKey;
@@ -118,7 +118,7 @@
 
 # virtual methods
 .method public final copy(Ljava/lang/ThreadLocal;)Lkotlinx/coroutines/internal/ThreadLocalKey;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -128,11 +128,11 @@
         }
     .end annotation
 
-    new-instance p0, Lkotlinx/coroutines/internal/ThreadLocalKey;
+    new-instance v0, Lkotlinx/coroutines/internal/ThreadLocalKey;
 
-    invoke-direct {p0, p1}, Lkotlinx/coroutines/internal/ThreadLocalKey;-><init>(Ljava/lang/ThreadLocal;)V
+    invoke-direct {v0, p1}, Lkotlinx/coroutines/internal/ThreadLocalKey;-><init>(Ljava/lang/ThreadLocal;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -156,15 +156,15 @@
     :cond_1
     check-cast p1, Lkotlinx/coroutines/internal/ThreadLocalKey;
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ThreadLocalKey;->threadLocal:Ljava/lang/ThreadLocal;
+    iget-object v1, p0, Lkotlinx/coroutines/internal/ThreadLocalKey;->threadLocal:Ljava/lang/ThreadLocal;
 
     iget-object p1, p1, Lkotlinx/coroutines/internal/ThreadLocalKey;->threadLocal:Ljava/lang/ThreadLocal;
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
@@ -173,15 +173,15 @@
 .end method
 
 .method public hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ThreadLocalKey;->threadLocal:Ljava/lang/ThreadLocal;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ThreadLocalKey;->threadLocal:Ljava/lang/ThreadLocal;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -193,17 +193,17 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ThreadLocalKey;->threadLocal:Ljava/lang/ThreadLocal;
+    iget-object v1, p0, Lkotlinx/coroutines/internal/ThreadLocalKey;->threadLocal:Ljava/lang/ThreadLocal;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 p0, 0x29
+    const/16 v1, 0x29
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,239 +1,233 @@
-.class public Lz07;
-.super Ljava/lang/Object;
+.class public final Lz07;
+.super Lb17;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lz07;
-
-
 # instance fields
-.field public final a:Landroid/graphics/Bitmap$Config;
+.field public final u0:Ljava/lang/String;
 
-.field public final b:Landroid/graphics/Bitmap$Config;
+.field public final v0:Lec7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 19
 
-    new-instance v0, Lm68;
+    .line 1
+    sget-object v0, Lec7;->b:Lv36;
 
-    const/16 v1, 0x16
+    .line 2
+    sget-object v18, Lz8d;->X:Lz8d;
 
-    invoke-direct {v0, v1}, Lm68;-><init>(I)V
+    const/4 v3, 0x0
 
-    new-instance v1, Lz07;
+    .line 3
+    const-string v4, ""
 
-    invoke-direct {v1, v0}, Lz07;-><init>(Lm68;)V
+    const-wide/16 v5, 0x0
 
-    sput-object v1, Lz07;->c:Lz07;
+    const/4 v7, -0x1
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v10, 0x0
+
+    const/16 v17, 0x0
+
+    move-object/from16 v1, p0
+
+    move-wide/from16 v13, p1
+
+    move-wide/from16 v15, p3
+
+    move-object/from16 v2, p5
+
+    move-object/from16 v11, p6
+
+    move-object/from16 v12, p7
+
+    invoke-direct/range {v1 .. v18}, Lz07;-><init>(Ljava/lang/String;Lz07;Ljava/lang/String;JIJLa25;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lm68;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Lz07;Ljava/lang/String;JIJLa25;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
+    .locals 16
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v0, p0
 
-    iget-object v0, p1, Lm68;->a:Ljava/lang/Object;
+    move-object/from16 v1, p1
 
-    check-cast v0, Landroid/graphics/Bitmap$Config;
+    move-object/from16 v2, p2
 
-    iput-object v0, p0, Lz07;->a:Landroid/graphics/Bitmap$Config;
+    move-wide/from16 v3, p4
 
-    iget-object p1, p1, Lm68;->b:Ljava/lang/Object;
+    move/from16 v5, p6
 
-    check-cast p1, Landroid/graphics/Bitmap$Config;
+    move-wide/from16 v6, p7
 
-    iput-object p1, p0, Lz07;->b:Landroid/graphics/Bitmap$Config;
+    move-object/from16 v8, p9
+
+    move-object/from16 v9, p10
+
+    move-object/from16 v10, p11
+
+    move-wide/from16 v11, p12
+
+    move-wide/from16 v13, p14
+
+    move/from16 v15, p16
+
+    .line 4
+    invoke-direct/range {v0 .. v15}, Lb17;-><init>(Ljava/lang/String;Lz07;JIJLa25;Ljava/lang/String;Ljava/lang/String;JJZ)V
+
+    move-object/from16 v1, p3
+
+    .line 5
+    iput-object v1, v0, Lz07;->u0:Ljava/lang/String;
+
+    .line 6
+    invoke-static/range {p17 .. p17}, Lec7;->k(Ljava/util/Collection;)Lec7;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lz07;->v0:Lec7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(IJ)Lz07;
+    .locals 24
 
-    const/4 v0, 0x1
+    move-object/from16 v0, p0
 
-    if-ne p0, p1, :cond_0
+    new-instance v1, Ljava/util/ArrayList;
 
-    return v0
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    :cond_0
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-eqz p1, :cond_4
+    move-wide/from16 v9, p2
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_0
+    iget-object v3, v0, Lz07;->v0:Lec7;
 
-    move-result-object v2
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v4
+
+    if-ge v2, v4, :cond_0
+
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    if-eq v2, v3, :cond_1
+    check-cast v3, Lv07;
 
-    goto :goto_0
+    new-instance v4, Lv07;
 
-    :cond_1
-    check-cast p1, Lz07;
+    move-object v5, v4
 
-    iget-object v2, p0, Lz07;->a:Landroid/graphics/Bitmap$Config;
+    iget-object v4, v3, Lb17;->a:Ljava/lang/String;
 
-    iget-object v3, p1, Lz07;->a:Landroid/graphics/Bitmap$Config;
+    move-object v6, v5
 
-    if-eq v2, v3, :cond_2
+    iget-object v5, v3, Lb17;->b:Lz07;
 
-    return v1
+    move-object v8, v6
 
-    :cond_2
-    iget-object p0, p0, Lz07;->b:Landroid/graphics/Bitmap$Config;
+    iget-wide v6, v3, Lb17;->c:J
 
-    iget-object p1, p1, Lz07;->b:Landroid/graphics/Bitmap$Config;
+    iget-object v11, v3, Lb17;->Y:La25;
 
-    if-eq p0, p1, :cond_3
+    iget-object v12, v3, Lb17;->Z:Ljava/lang/String;
 
-    return v1
+    iget-object v13, v3, Lb17;->q0:Ljava/lang/String;
 
-    :cond_3
-    return v0
+    iget-wide v14, v3, Lb17;->r0:J
 
-    :cond_4
-    :goto_0
-    return v1
-.end method
+    move-object/from16 v16, v4
 
-.method public final hashCode()I
-    .locals 2
+    move-object/from16 v17, v5
 
-    iget-object v0, p0, Lz07;->a:Landroid/graphics/Bitmap$Config;
+    iget-wide v4, v3, Lb17;->s0:J
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    move/from16 v21, v2
 
-    move-result v0
+    iget-boolean v2, v3, Lb17;->t0:Z
 
-    const v1, -0x20f0b425
+    move/from16 v18, v2
 
-    add-int/2addr v0, v1
+    iget-boolean v2, v3, Lv07;->u0:Z
 
-    mul-int/lit8 v0, v0, 0x1f
+    move/from16 v19, v2
 
-    iget-object p0, p0, Lz07;->b:Landroid/graphics/Bitmap$Config;
+    iget-boolean v2, v3, Lv07;->v0:Z
 
-    if-eqz p0, :cond_0
+    move/from16 v20, v2
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    move-object v2, v3
 
-    move-result p0
+    move-object v3, v8
+
+    move/from16 v8, p1
+
+    move-wide/from16 v22, v4
+
+    move-object/from16 v4, v16
+
+    move-object/from16 v5, v17
+
+    move-wide/from16 v16, v22
+
+    invoke-direct/range {v3 .. v20}, Lv07;-><init>(Ljava/lang/String;Lz07;JIJLa25;Ljava/lang/String;Ljava/lang/String;JJZZZ)V
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-wide v2, v2, Lb17;->c:J
+
+    add-long/2addr v9, v2
+
+    add-int/lit8 v2, v21, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    move-object/from16 v18, v1
 
-    :goto_0
-    add-int/2addr v0, p0
+    new-instance v1, Lz07;
 
-    mul-int/lit16 v0, v0, 0x745f
+    iget-wide v2, v0, Lb17;->s0:J
 
-    return v0
-.end method
+    iget-boolean v4, v0, Lb17;->t0:Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    move-wide v15, v2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v2, v0, Lb17;->a:Ljava/lang/String;
 
-    const-string v1, "ImageDecodeOptions{"
+    iget-object v3, v0, Lb17;->b:Lz07;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move/from16 v17, v4
 
-    invoke-static {p0}, Lkua;->L(Ljava/lang/Object;)Lpv7;
+    iget-object v4, v0, Lz07;->u0:Ljava/lang/String;
 
-    move-result-object v1
+    iget-wide v5, v0, Lb17;->c:J
 
-    const-string v2, "minDecodeIntervalMs"
+    iget-object v10, v0, Lb17;->Y:La25;
 
-    const/16 v3, 0x64
+    iget-object v11, v0, Lb17;->Z:Ljava/lang/String;
 
-    invoke-virtual {v1, v3, v2}, Lpv7;->e(ILjava/lang/String;)V
+    iget-object v12, v0, Lb17;->q0:Ljava/lang/String;
 
-    const-string v2, "maxDimensionPx"
+    iget-wide v13, v0, Lb17;->r0:J
 
-    const v3, 0x7fffffff
+    move/from16 v7, p1
 
-    invoke-virtual {v1, v3, v2}, Lpv7;->e(ILjava/lang/String;)V
+    move-wide/from16 v8, p2
 
-    const-string v2, "decodePreviewFrame"
+    invoke-direct/range {v1 .. v18}, Lz07;-><init>(Ljava/lang/String;Lz07;Ljava/lang/String;JIJLa25;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
 
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Lpv7;->f(Ljava/lang/String;Z)V
-
-    const-string v2, "useLastFrameForPreview"
-
-    invoke-virtual {v1, v2, v3}, Lpv7;->f(Ljava/lang/String;Z)V
-
-    const-string v2, "useEncodedImageForPreview"
-
-    invoke-virtual {v1, v2, v3}, Lpv7;->f(Ljava/lang/String;Z)V
-
-    const-string v2, "decodeAllFrames"
-
-    invoke-virtual {v1, v2, v3}, Lpv7;->f(Ljava/lang/String;Z)V
-
-    const-string v2, "forceStaticImage"
-
-    invoke-virtual {v1, v2, v3}, Lpv7;->f(Ljava/lang/String;Z)V
-
-    iget-object v2, p0, Lz07;->a:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "bitmapConfigName"
-
-    invoke-virtual {v1, v2, v3}, Lpv7;->g(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object p0, p0, Lz07;->b:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v2, "animatedBitmapConfigName"
-
-    invoke-virtual {v1, p0, v2}, Lpv7;->g(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 p0, 0x0
-
-    const-string v2, "customImageDecoder"
-
-    invoke-virtual {v1, p0, v2}, Lpv7;->g(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v2, "bitmapTransformation"
-
-    invoke-virtual {v1, p0, v2}, Lpv7;->g(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v2, "colorSpace"
-
-    invoke-virtual {v1, p0, v2}, Lpv7;->g(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lpv7;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, "}"
-
-    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v1
 .end method

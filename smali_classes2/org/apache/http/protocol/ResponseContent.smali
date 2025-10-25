@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public process(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)V
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/HttpException;,
@@ -33,174 +33,174 @@
 
     if-eqz p1, :cond_7
 
-    const-string p0, "Transfer-Encoding"
-
-    invoke-interface {p1, p0}, Lorg/apache/http/HttpMessage;->containsHeader(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_6
-
-    const-string p2, "Content-Length"
+    const-string p2, "Transfer-Encoding"
 
     invoke-interface {p1, p2}, Lorg/apache/http/HttpMessage;->containsHeader(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
+
+    const-string v0, "Content-Length"
+
+    invoke-interface {p1, v0}, Lorg/apache/http/HttpMessage;->containsHeader(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
 
     invoke-interface {p1}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v0}, Lorg/apache/http/StatusLine;->getProtocolVersion()Lorg/apache/http/ProtocolVersion;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
+    invoke-interface {v1}, Lorg/apache/http/StatusLine;->getProtocolVersion()Lorg/apache/http/ProtocolVersion;
 
     move-result-object v1
 
-    if-eqz v1, :cond_3
+    invoke-interface {p1}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
-    invoke-interface {v1}, Lorg/apache/http/HttpEntity;->getContentLength()J
+    move-result-object v2
 
-    move-result-wide v2
+    if-eqz v2, :cond_3
 
-    invoke-interface {v1}, Lorg/apache/http/HttpEntity;->isChunked()Z
+    invoke-interface {v2}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
-    move-result v4
+    move-result-wide v3
 
-    if-eqz v4, :cond_0
+    invoke-interface {v2}, Lorg/apache/http/HttpEntity;->isChunked()Z
 
-    sget-object v4, Lorg/apache/http/HttpVersion;->HTTP_1_0:Lorg/apache/http/HttpVersion;
+    move-result v5
 
-    invoke-virtual {v0, v4}, Lorg/apache/http/ProtocolVersion;->lessEquals(Lorg/apache/http/ProtocolVersion;)Z
+    if-eqz v5, :cond_0
 
-    move-result v0
+    sget-object v5, Lorg/apache/http/HttpVersion;->HTTP_1_0:Lorg/apache/http/HttpVersion;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v1, v5}, Lorg/apache/http/ProtocolVersion;->lessEquals(Lorg/apache/http/ProtocolVersion;)Z
 
-    const-string p2, "chunked"
+    move-result v1
 
-    invoke-interface {p1, p0, p2}, Lorg/apache/http/HttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v1, :cond_0
+
+    const-string v0, "chunked"
+
+    invoke-interface {p1, p2, v0}, Lorg/apache/http/HttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
-    const-wide/16 v4, 0x0
+    const-wide/16 v5, 0x0
 
-    cmp-long p0, v2, v4
+    cmp-long p2, v3, v5
 
-    if-ltz p0, :cond_1
+    if-ltz p2, :cond_1
 
-    invoke-interface {v1}, Lorg/apache/http/HttpEntity;->getContentLength()J
+    invoke-interface {v2}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-static {v3, v4}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-interface {p1, p2, p0}, Lorg/apache/http/HttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v0, p2}, Lorg/apache/http/HttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
-    invoke-interface {v1}, Lorg/apache/http/HttpEntity;->getContentType()Lorg/apache/http/Header;
+    invoke-interface {v2}, Lorg/apache/http/HttpEntity;->getContentType()Lorg/apache/http/Header;
 
-    move-result-object p0
+    move-result-object p2
 
-    if-eqz p0, :cond_2
+    if-eqz p2, :cond_2
 
-    const-string p0, "Content-Type"
+    const-string p2, "Content-Type"
 
-    invoke-interface {p1, p0}, Lorg/apache/http/HttpMessage;->containsHeader(Ljava/lang/String;)Z
+    invoke-interface {p1, p2}, Lorg/apache/http/HttpMessage;->containsHeader(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result p2
 
-    if-nez p0, :cond_2
+    if-nez p2, :cond_2
 
-    invoke-interface {v1}, Lorg/apache/http/HttpEntity;->getContentType()Lorg/apache/http/Header;
+    invoke-interface {v2}, Lorg/apache/http/HttpEntity;->getContentType()Lorg/apache/http/Header;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-interface {p1, p0}, Lorg/apache/http/HttpMessage;->addHeader(Lorg/apache/http/Header;)V
+    invoke-interface {p1, p2}, Lorg/apache/http/HttpMessage;->addHeader(Lorg/apache/http/Header;)V
 
     :cond_2
-    invoke-interface {v1}, Lorg/apache/http/HttpEntity;->getContentEncoding()Lorg/apache/http/Header;
+    invoke-interface {v2}, Lorg/apache/http/HttpEntity;->getContentEncoding()Lorg/apache/http/Header;
 
-    move-result-object p0
+    move-result-object p2
 
-    if-eqz p0, :cond_4
+    if-eqz p2, :cond_4
 
-    const-string p0, "Content-Encoding"
+    const-string p2, "Content-Encoding"
 
-    invoke-interface {p1, p0}, Lorg/apache/http/HttpMessage;->containsHeader(Ljava/lang/String;)Z
+    invoke-interface {p1, p2}, Lorg/apache/http/HttpMessage;->containsHeader(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result p2
 
-    if-nez p0, :cond_4
+    if-nez p2, :cond_4
 
-    invoke-interface {v1}, Lorg/apache/http/HttpEntity;->getContentEncoding()Lorg/apache/http/Header;
+    invoke-interface {v2}, Lorg/apache/http/HttpEntity;->getContentEncoding()Lorg/apache/http/Header;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-interface {p1, p0}, Lorg/apache/http/HttpMessage;->addHeader(Lorg/apache/http/Header;)V
+    invoke-interface {p1, p2}, Lorg/apache/http/HttpMessage;->addHeader(Lorg/apache/http/Header;)V
 
     return-void
 
     :cond_3
     invoke-interface {p1}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-interface {p0}, Lorg/apache/http/StatusLine;->getStatusCode()I
+    invoke-interface {p2}, Lorg/apache/http/StatusLine;->getStatusCode()I
 
-    move-result p0
+    move-result p2
 
-    const/16 v0, 0xcc
+    const/16 v1, 0xcc
 
-    if-eq p0, v0, :cond_4
+    if-eq p2, v1, :cond_4
 
-    const/16 v0, 0x130
+    const/16 v1, 0x130
 
-    if-eq p0, v0, :cond_4
+    if-eq p2, v1, :cond_4
 
-    const/16 v0, 0xcd
+    const/16 v1, 0xcd
 
-    if-eq p0, v0, :cond_4
+    if-eq p2, v1, :cond_4
 
-    const-string p0, "0"
+    const-string p2, "0"
 
-    invoke-interface {p1, p2, p0}, Lorg/apache/http/HttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v0, p2}, Lorg/apache/http/HttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     return-void
 
     :cond_5
-    new-instance p0, Lorg/apache/http/ProtocolException;
+    new-instance p1, Lorg/apache/http/ProtocolException;
 
-    const-string p1, "Content-Length header already present"
+    const-string p2, "Content-Length header already present"
 
-    invoke-direct {p0, p1}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_6
-    new-instance p0, Lorg/apache/http/ProtocolException;
+    new-instance p1, Lorg/apache/http/ProtocolException;
 
-    const-string p1, "Transfer-encoding header already present"
+    const-string p2, "Transfer-encoding header already present"
 
-    invoke-direct {p0, p1}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_7
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP request may not be null"
+    const-string p2, "HTTP request may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

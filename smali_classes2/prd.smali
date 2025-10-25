@@ -1,99 +1,116 @@
-.class public abstract synthetic Lprd;
+.class public final Lprd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public final synthetic a:Landroid/view/View;
+
+.field public final synthetic b:Ltrd;
+
+.field public final synthetic c:Lnrd;
+
+.field public final synthetic d:Ltrd;
+
+.field public final synthetic e:Ljrd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Landroid/view/View;Ltrd;Lnrd;Ltrd;Ljrd;)V
+    .locals 0
 
-    invoke-static {}, Lhrd;->values()[Lhrd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lprd;->a:Landroid/view/View;
 
-    array-length v0, v0
+    iput-object p2, p0, Lprd;->b:Ltrd;
 
-    new-array v0, v0, [I
+    iput-object p3, p0, Lprd;->c:Lnrd;
 
-    const/4 v1, 0x1
+    iput-object p4, p0, Lprd;->d:Ltrd;
 
-    const/4 v2, 0x3
+    iput-object p5, p0, Lprd;->e:Ljrd;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
+.end method
 
-    :catch_0
-    const/4 v3, 0x0
 
-    const/4 v4, 0x2
+# virtual methods
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 2
 
-    :try_start_1
-    aput v4, v0, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const/16 p1, 0x8
 
-    :catch_1
-    :try_start_2
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget-object v0, p0, Lprd;->a:Landroid/view/View;
 
-    :catch_2
-    const/4 v2, 0x4
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    :try_start_3
-    aput v2, v0, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    const/4 p1, 0x0
 
-    :catch_3
-    const/4 v2, 0x5
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    :try_start_4
-    aput v2, v0, v4
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    iget-object p1, p0, Lprd;->b:Ltrd;
 
-    :catch_4
-    const/4 v5, 0x6
+    iget-object p1, p1, Ltrd;->t0:Ljava/util/EnumMap;
 
-    :try_start_5
-    aput v5, v0, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    iget-object v0, p0, Lprd;->c:Lnrd;
 
-    :catch_5
-    sput-object v0, Lprd;->$EnumSwitchMapping$0:[I
+    const/4 v1, 0x0
 
-    invoke-static {}, Lnrd;->values()[Lnrd;
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    iget-object p1, p0, Lprd;->d:Ltrd;
 
-    array-length v0, v0
+    iget-object v0, p0, Lprd;->e:Ljrd;
 
-    new-array v0, v0, [I
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    :try_start_6
-    aput v1, v0, v3
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    return-void
+.end method
 
-    :catch_6
-    :try_start_7
-    aput v4, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    :catch_7
-    sput-object v0, Lprd;->$EnumSwitchMapping$1:[I
+    const/16 p1, 0x8
+
+    iget-object v0, p0, Lprd;->a:Landroid/view/View;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
+
+    iget-object p1, p0, Lprd;->b:Ltrd;
+
+    iget-object p1, p1, Ltrd;->t0:Ljava/util/EnumMap;
+
+    iget-object v0, p0, Lprd;->c:Lnrd;
+
+    const/4 v1, 0x0
+
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p1, p0, Lprd;->d:Ltrd;
+
+    iget-object v0, p0, Lprd;->e:Ljrd;
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

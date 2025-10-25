@@ -15,7 +15,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000B\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010$\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0002\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u001a\u0010\t\u001a\u00020\u00002\u0012\u0010\n\u001a\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00050\u000bJ\u000e\u0010\t\u001a\u00020\u00002\u0006\u0010\u0007\u001a\u00020\u0008J\u0006\u0010\u000c\u001a\u00020\rJ \u0010\u000e\u001a\u00020\u00002\u0006\u0010\u000f\u001a\u00020\u00032\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0011H\u0086\u0002\u00a2\u0006\u0002\u0010\u0012J \u0010\u000e\u001a\u00020\u00002\u0006\u0010\u000f\u001a\u00020\u00032\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0013H\u0086\u0002\u00a2\u0006\u0002\u0010\u0014J \u0010\u000e\u001a\u00020\u00002\u0006\u0010\u000f\u001a\u00020\u00032\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0015H\u0086\u0002\u00a2\u0006\u0002\u0010\u0016J\u001b\u0010\u000e\u001a\u00020\u00002\u0006\u0010\u000f\u001a\u00020\u00032\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0003H\u0086\u0002J\u0019\u0010\u000e\u001a\u00020\u00002\u0006\u0010\u000f\u001a\u00020\u00032\u0006\u0010\u0010\u001a\u00020\u0005H\u0086\u0002R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0017"
+        "\u0000B\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010$\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0002\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0002\u0010\u0006J\u001a\u0010\t\u001a\u00020\u00002\u0012\u0010\n\u001a\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00050\u000bJ\u000e\u0010\t\u001a\u00020\u00002\u0006\u0010\u0007\u001a\u00020\u0008J\u0006\u0010\u000c\u001a\u00020\rJ \u0010\u000e\u001a\u00020\u00002\u0006\u0010\u000f\u001a\u00020\u00032\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0011H\u0086\u0002\u00a2\u0006\u0002\u0010\u0012J \u0010\u000e\u001a\u00020\u00002\u0006\u0010\u000f\u001a\u00020\u00032\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0013H\u0086\u0002\u00a2\u0006\u0002\u0010\u0014J \u0010\u000e\u001a\u00020\u00002\u0006\u0010\u000f\u001a\u00020\u00032\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0015H\u0086\u0002\u00a2\u0006\u0002\u0010\u0016J\u001b\u0010\u000e\u001a\u00020\u00002\u0006\u0010\u000f\u001a\u00020\u00032\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0003H\u0086\u0002J\u0019\u0010\u000e\u001a\u00020\u00002\u0006\u0010\u000f\u001a\u00020\u00032\u0006\u0010\u0010\u001a\u00020\u0005H\u0086\u0002R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0017"
     }
     d2 = {
         "Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;",
@@ -63,7 +63,7 @@
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -77,25 +77,28 @@
 
     iput-object v0, p0, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;->map:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
-    const-string p0, "name"
+    const-string v1, "name"
 
-    invoke-virtual {v0, p0, p1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+    invoke-virtual {v0, v1, p1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
-    instance-of p0, p2, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;
+    if-eqz p2, :cond_1
 
-    if-eqz p0, :cond_0
+    instance-of p1, p2, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;
 
-    const-string p0, "string_value"
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p0, p2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+    const-string p1, "string_value"
+
+    invoke-virtual {v0, p1, p2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
     return-void
 
     :cond_0
-    const-string p0, "value"
+    const-string p1, "value"
 
-    invoke-virtual {v0, p0, p2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+    invoke-virtual {v0, p1, p2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
+    :cond_1
     return-void
 .end method
 
@@ -137,21 +140,21 @@
 .end method
 
 .method public final build()Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;->map:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+    iget-object v1, p0, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;->map:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->getItems()Ljava/util/Map;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->getItems()Ljava/util/Map;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-static {p0}, Li68;->N(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v1}, Lzg8;->n(Ljava/util/Map;)Ljava/util/Map;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;-><init>(Ljava/util/Map;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;-><init>(Ljava/util/Map;)V
 
     return-object v0
 .end method

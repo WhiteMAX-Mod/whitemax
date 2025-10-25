@@ -4,17 +4,5 @@
 
 
 # virtual methods
-.method public abstract d(Lms0;)V
-.end method
-
-.method public abstract m()V
-.end method
-
-.method public abstract setForwardClickListener(Lbc6;)V
-.end method
-
-.method public abstract setLink(Lv19;)V
-.end method
-
-.method public abstract setReplyClickListener(Lpc6;)V
+.method public abstract a(Landroid/media/MediaPlayer;Landroid/content/Context;)V
 .end method

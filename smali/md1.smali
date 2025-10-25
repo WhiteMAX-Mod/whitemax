@@ -3,184 +3,118 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnd1;
+.implements Lji6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/String;
+.field public final synthetic b:[Lty5;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
+.method public synthetic constructor <init>([Lty5;I)V
     .locals 0
 
+    iput p2, p0, Lmd1;->a:I
+
+    iput-object p1, p0, Lmd1;->b:[Lty5;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lmd1;->a:J
-
-    iput-object p3, p0, Lmd1;->b:Ljava/lang/String;
-
-    iput-boolean p5, p0, Lmd1;->c:Z
-
-    iput-object p4, p0, Lmd1;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lmd1;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lmd1;
+    iget-object v0, p0, Lmd1;->b:[Lty5;
 
-    if-nez v0, :cond_1
+    array-length v0, v0
 
-    goto :goto_0
+    new-array v0, v0, [Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lmd1;
+    return-object v0
 
-    iget-wide v0, p0, Lmd1;->a:J
+    :pswitch_0
+    iget-object v0, p0, Lmd1;->b:[Lty5;
 
-    iget-wide v2, p1, Lmd1;->a:J
+    array-length v0, v0
 
-    cmp-long v0, v0, v2
+    new-array v0, v0, [Llob;
 
-    if-eqz v0, :cond_2
+    return-object v0
 
-    goto :goto_0
+    :pswitch_1
+    iget-object v0, p0, Lmd1;->b:[Lty5;
 
-    :cond_2
-    iget-object v0, p0, Lmd1;->b:Ljava/lang/String;
+    array-length v0, v0
 
-    iget-object v1, p1, Lmd1;->b:Ljava/lang/String;
+    new-array v0, v0, [Lwva;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    return-object v0
 
-    move-result v0
+    :pswitch_2
+    iget-object v0, p0, Lmd1;->b:[Lty5;
 
-    if-nez v0, :cond_3
+    array-length v0, v0
 
-    goto :goto_0
+    new-array v0, v0, [Lwr3;
 
-    :cond_3
-    iget-boolean v0, p0, Lmd1;->c:Z
+    return-object v0
 
-    iget-boolean v1, p1, Lmd1;->c:Z
+    :pswitch_3
+    iget-object v0, p0, Lmd1;->b:[Lty5;
 
-    if-eq v0, v1, :cond_4
+    array-length v0, v0
 
-    goto :goto_0
+    new-array v0, v0, [Ljava/lang/Object;
 
-    :cond_4
-    iget-object p0, p0, Lmd1;->d:Ljava/lang/String;
+    return-object v0
 
-    iget-object p1, p1, Lmd1;->d:Ljava/lang/String;
+    :pswitch_4
+    iget-object v0, p0, Lmd1;->b:[Lty5;
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    array-length v0, v0
 
-    move-result p0
+    new-array v0, v0, [Ljava/util/List;
 
-    if-nez p0, :cond_5
+    return-object v0
 
-    :goto_0
-    const/4 p0, 0x0
+    :pswitch_5
+    iget-object v0, p0, Lmd1;->b:[Lty5;
 
-    return p0
+    array-length v0, v0
 
-    :cond_5
-    :goto_1
-    const/4 p0, 0x1
+    new-array v0, v0, [Li46;
 
-    return p0
-.end method
+    return-object v0
 
-.method public final hashCode()I
-    .locals 3
+    :pswitch_6
+    iget-object v0, p0, Lmd1;->b:[Lty5;
 
-    iget-wide v0, p0, Lmd1;->a:J
+    array-length v0, v0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    new-array v0, v0, [Lwr3;
 
-    move-result v0
+    return-object v0
 
-    const/16 v1, 0x1f
+    nop
 
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lmd1;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lmd1;->c:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-object p0, p0, Lmd1;->d:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "Exist(serverChatId="
-
-    const-string v1, ", link="
-
-    iget-wide v2, p0, Lmd1;->a:J
-
-    iget-object v4, p0, Lmd1;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lmhc;->i(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", isLinkCall="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lmd1;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lmd1;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

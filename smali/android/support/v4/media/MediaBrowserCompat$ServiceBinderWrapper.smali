@@ -59,9 +59,9 @@
 
     iput-object p3, v0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->mMessenger:Landroid/os/Messenger;
+    iget-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->mMessenger:Landroid/os/Messenger;
 
-    invoke-virtual {p0, v0}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+    invoke-virtual {p1, v0}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
 
     return-void
 .end method

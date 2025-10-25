@@ -353,39 +353,39 @@
 
     if-nez v1, :cond_4
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v1
+    move-result v3
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    move-result v3
+    move-result v4
 
-    add-int/2addr v3, v1
+    add-int/2addr v4, v3
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result v1
+    move-result v3
 
-    add-int/2addr v1, v3
+    add-int/2addr v3, v4
 
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
     goto :goto_2
 
@@ -396,133 +396,133 @@
 
     invoke-direct {p0}, Lorg/apache/http/impl/auth/DigestScheme;->getCnonce()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v3
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v4
+    move-result v5
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
+    move-result v6
+
+    add-int/2addr v6, v5
+
+    add-int/lit8 v6, v6, 0x8
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
     move-result v5
 
-    add-int/2addr v5, v4
-
-    add-int/lit8 v5, v5, 0x8
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    add-int/2addr v4, v5
+    add-int/2addr v5, v6
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v5
+    move-result v6
 
-    add-int/2addr v5, v4
+    add-int/2addr v6, v5
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result v4
+    move-result v5
 
-    add-int/2addr v4, v5
+    add-int/2addr v5, v6
 
-    add-int/lit8 v4, v4, 0x5
+    add-int/lit8 v5, v5, 0x5
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, ":00000001:"
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_2
-    invoke-static {p0}, Lorg/apache/http/util/EncodingUtils;->getAsciiBytes(Ljava/lang/String;)[B
-
-    move-result-object p0
-
-    invoke-virtual {v7, p0}, Ljava/security/MessageDigest;->digest([B)[B
-
-    move-result-object p0
-
-    invoke-static {p0}, Lorg/apache/http/impl/auth/DigestScheme;->encode([B)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_5
-    new-instance p0, Lorg/apache/http/auth/AuthenticationException;
-
-    const-string p1, "Unhandled algorithm "
-
-    const-string v0, " requested"
-
-    invoke-static {p1, v4, v0}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lorg/apache/http/auth/AuthenticationException;-><init>(Ljava/lang/String;)V
+    :goto_2
+    invoke-static {p1}, Lorg/apache/http/util/EncodingUtils;->getAsciiBytes(Ljava/lang/String;)[B
 
-    throw p0
+    move-result-object p1
+
+    invoke-virtual {v7, p1}, Ljava/security/MessageDigest;->digest([B)[B
+
+    move-result-object p1
+
+    invoke-static {p1}, Lorg/apache/http/impl/auth/DigestScheme;->encode([B)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_5
+    new-instance p1, Lorg/apache/http/auth/AuthenticationException;
+
+    const-string v0, "Unhandled algorithm "
+
+    const-string v1, " requested"
+
+    invoke-static {v0, v4, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Lorg/apache/http/auth/AuthenticationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_6
-    new-instance p0, Lorg/apache/http/auth/AuthenticationException;
+    new-instance p1, Lorg/apache/http/auth/AuthenticationException;
 
-    const-string p1, "Unsupported qop in HTTP Digest authentication"
+    const-string v0, "Unsupported qop in HTTP Digest authentication"
 
-    invoke-direct {p0, p1}, Lorg/apache/http/auth/AuthenticationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/http/auth/AuthenticationException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_7
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Nonce may not be null"
+    const-string v0, "Nonce may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_8
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Realm may not be null"
+    const-string v0, "Realm may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_9
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "URI may not be null"
+    const-string v0, "URI may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method private createDigestHeader(Lorg/apache/http/auth/Credentials;Ljava/lang/String;)Lorg/apache/http/Header;
@@ -675,105 +675,105 @@
 
     invoke-direct {v0}, Lorg/apache/http/impl/auth/DigestScheme;->getCnonce()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v6
 
-    invoke-direct {v2, v5, v0}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v5, v6}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v13, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
     if-eqz v11, :cond_2
 
-    new-instance v0, Lorg/apache/http/message/BasicNameValuePair;
+    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-direct {v0, v10, v11}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v10, v11}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v13, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v13, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2
     if-eqz v9, :cond_3
 
-    new-instance v0, Lorg/apache/http/message/BasicNameValuePair;
+    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-direct {v0, v8, v9}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v8, v9}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v13, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v13, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_3
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    move v2, v0
+    move v5, v2
 
     :goto_1
     invoke-virtual {v13}, Ljava/util/ArrayList;->size()I
 
-    move-result v5
+    move-result v6
 
-    if-ge v2, v5, :cond_7
+    if-ge v5, v6, :cond_7
 
-    invoke-virtual {v13, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v13, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v6
 
-    check-cast v5, Lorg/apache/http/message/BasicNameValuePair;
+    check-cast v6, Lorg/apache/http/message/BasicNameValuePair;
 
-    if-lez v2, :cond_4
+    if-lez v5, :cond_4
 
-    const-string v6, ", "
+    const-string v7, ", "
 
-    invoke-virtual {v1, v6}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {v1, v7}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
     :cond_4
-    invoke-virtual {v5}, Lorg/apache/http/message/BasicNameValuePair;->getName()Ljava/lang/String;
+    invoke-virtual {v6}, Lorg/apache/http/message/BasicNameValuePair;->getName()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v7
 
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
-    if-nez v6, :cond_6
+    if-nez v7, :cond_6
 
-    invoke-virtual {v5}, Lorg/apache/http/message/BasicNameValuePair;->getName()Ljava/lang/String;
+    invoke-virtual {v6}, Lorg/apache/http/message/BasicNameValuePair;->getName()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_5
+    if-eqz v7, :cond_5
 
     goto :goto_2
 
     :cond_5
-    move v6, v0
+    move v7, v2
 
     goto :goto_3
 
     :cond_6
     :goto_2
-    move v6, v7
+    move v7, v8
 
     :goto_3
-    sget-object v8, Lorg/apache/http/message/BasicHeaderValueFormatter;->DEFAULT:Lorg/apache/http/message/BasicHeaderValueFormatter;
+    sget-object v9, Lorg/apache/http/message/BasicHeaderValueFormatter;->DEFAULT:Lorg/apache/http/message/BasicHeaderValueFormatter;
 
-    xor-int/2addr v6, v7
+    xor-int/2addr v7, v8
 
-    invoke-virtual {v8, v1, v5, v6}, Lorg/apache/http/message/BasicHeaderValueFormatter;->formatNameValuePair(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/NameValuePair;Z)Lorg/apache/http/util/CharArrayBuffer;
+    invoke-virtual {v9, v1, v6, v7}, Lorg/apache/http/message/BasicHeaderValueFormatter;->formatNameValuePair(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/NameValuePair;Z)Lorg/apache/http/util/CharArrayBuffer;
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
     :cond_7
-    new-instance v0, Lorg/apache/http/message/BufferedHeader;
+    new-instance v2, Lorg/apache/http/message/BufferedHeader;
 
-    invoke-direct {v0, v1}, Lorg/apache/http/message/BufferedHeader;-><init>(Lorg/apache/http/util/CharArrayBuffer;)V
+    invoke-direct {v2, v1}, Lorg/apache/http/message/BufferedHeader;-><init>(Lorg/apache/http/util/CharArrayBuffer;)V
 
-    return-object v0
+    return-object v2
 .end method
 
 .method private static createMessageDigest(Ljava/lang/String;)Ljava/security/MessageDigest;
@@ -798,7 +798,7 @@
 
     const-string v1, "Unsupported algorithm in HTTP Digest authentication: "
 
-    invoke-static {v1, p0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -878,28 +878,28 @@
     iput-object v0, p0, Lorg/apache/http/impl/auth/DigestScheme;->cnonce:Ljava/lang/String;
 
     :cond_0
-    iget-object p0, p0, Lorg/apache/http/impl/auth/DigestScheme;->cnonce:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/impl/auth/DigestScheme;->cnonce:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private getQopVariantString()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    iget p0, p0, Lorg/apache/http/impl/auth/DigestScheme;->qopVariant:I
+    iget v0, p0, Lorg/apache/http/impl/auth/DigestScheme;->qopVariant:I
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    if-ne p0, v0, :cond_0
+    if-ne v0, v1, :cond_0
 
-    const-string p0, "auth-int"
+    const-string v0, "auth-int"
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    const-string p0, "auth"
+    const-string v0, "auth"
 
-    return-object p0
+    return-object v0
 .end method
 
 
@@ -977,35 +977,35 @@
 
     invoke-direct {p0, p1, p2}, Lorg/apache/http/impl/auth/DigestScheme;->createDigestHeader(Lorg/apache/http/auth/Credentials;Ljava/lang/String;)Lorg/apache/http/Header;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP request may not be null"
+    const-string p2, "HTTP request may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Credentials may not be null"
+    const-string p2, "Credentials may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public getSchemeName()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "digest"
+    const-string v0, "digest"
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public isComplete()Z
@@ -1025,32 +1025,32 @@
 
     if-eqz v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 
     :cond_0
-    iget-boolean p0, p0, Lorg/apache/http/impl/auth/DigestScheme;->complete:Z
+    iget-boolean v0, p0, Lorg/apache/http/impl/auth/DigestScheme;->complete:Z
 
-    return p0
+    return v0
 .end method
 
 .method public isConnectionBased()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public overrideParamter(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Lorg/apache/http/impl/auth/RFC2617Scheme;->getParameters()Ljava/util/Map;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -1157,13 +1157,13 @@
     goto :goto_2
 
     :cond_3
-    new-instance p0, Lorg/apache/http/auth/MalformedChallengeException;
+    new-instance p1, Lorg/apache/http/auth/MalformedChallengeException;
 
-    const-string p1, "None of the qop methods is supported"
+    const-string v0, "None of the qop methods is supported"
 
-    invoke-direct {p0, p1}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_4
     :goto_2
@@ -1176,20 +1176,20 @@
     return-void
 
     :cond_5
-    new-instance p0, Lorg/apache/http/auth/MalformedChallengeException;
+    new-instance p1, Lorg/apache/http/auth/MalformedChallengeException;
 
-    const-string p1, "missing nonce in challange"
+    const-string v0, "missing nonce in challange"
 
-    invoke-direct {p0, p1}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_6
-    new-instance p0, Lorg/apache/http/auth/MalformedChallengeException;
+    new-instance p1, Lorg/apache/http/auth/MalformedChallengeException;
 
-    const-string p1, "missing realm in challange"
+    const-string v0, "missing realm in challange"
 
-    invoke-direct {p0, p1}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/http/auth/MalformedChallengeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

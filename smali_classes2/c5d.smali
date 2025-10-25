@@ -1,101 +1,35 @@
-.class public final synthetic Lc5d;
+.class public interface abstract Lc5d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;I)V
-    .locals 0
-
-    iput p2, p0, Lc5d;->a:I
-
-    iput-object p1, p0, Lc5d;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public abstract a()I
+.end method
 
-    iget p1, p0, Lc5d;->a:I
+.method public abstract b()Z
+.end method
 
-    packed-switch p1, :pswitch_data_0
+.method public abstract d()V
+.end method
 
-    const-string p1, "ScheduledSendPickerDialogFragment"
+.method public abstract e()V
+.end method
 
-    const-string v0, "handle nav click"
+.method public abstract f(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.end method
 
-    invoke-static {p1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract g(Lb5d;)Ljava/lang/Object;
+.end method
 
-    new-instance p1, Ld5d;
+.method public abstract h()V
+.end method
 
-    iget-object p0, p0, Lc5d;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+.method public abstract i()Z
+.end method
 
-    iget-object v0, p0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->E1:Ljava/lang/Object;
+.method public abstract j()Ljava/lang/String;
+.end method
 
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Parcelable;
-
-    invoke-direct {p1, v0}, Ld5d;-><init>(Landroid/os/Parcelable;)V
-
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->c1(Lg5d;)V
-
-    invoke-virtual {p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->S0()V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lc5d;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-virtual {p0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->b1()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string p1, "ScheduledSendPickerViewModel"
-
-    const-string v0, "onSendClick"
-
-    invoke-static {p1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->h()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->m:Lyce;
-
-    new-instance p1, Lvs9;
-
-    invoke-direct {p1}, Lvs9;-><init>()V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, p1}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract k(Lg4d;)V
 .end method

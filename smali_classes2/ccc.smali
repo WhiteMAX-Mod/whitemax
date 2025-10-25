@@ -1,74 +1,105 @@
 .class public abstract Lccc;
-.super Ljava/lang/Object;
+.super Lvpe;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_stickers_settings_empty_favorite_title:I = 0x7f130a32
+# virtual methods
+.method public final G()V
+    .locals 5
 
-.field public static oneme_stickers_settings_empty_recent_subtitle:I = 0x7f130a33
+    const/16 v0, 0xc
 
-.field public static oneme_stickers_settings_empty_recent_title:I = 0x7f130a34
+    int-to-float v0, v0
 
-.field public static oneme_stickers_settings_favorite_title:I = 0x7f130a35
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-.field public static oneme_stickers_settings_favorite_toolbar_title:I = 0x7f130a36
+    move-result-object v1
 
-.field public static oneme_stickers_settings_menu_copy_link_title:I = 0x7f130a37
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static oneme_stickers_settings_menu_copy_set_link_snackbar_title:I = 0x7f130a38
+    move-result-object v1
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_action:I = 0x7f130a39
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_cancel:I = 0x7f130a3a
+    mul-float/2addr v1, v0
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_subtitle:I = 0x7f130a3b
+    invoke-static {v1}, Lfhi;->b(F)I
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_title:I = 0x7f130a3c
+    move-result v1
 
-.field public static oneme_stickers_settings_menu_delete_set_snackbar_title:I = 0x7f130a3d
+    const/16 v2, 0xe
 
-.field public static oneme_stickers_settings_menu_delete_set_title:I = 0x7f130a3e
+    int-to-float v2, v2
 
-.field public static oneme_stickers_settings_menu_forward_title:I = 0x7f130a3f
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-.field public static oneme_stickers_settings_menu_share_title:I = 0x7f130a40
+    move-result-object v3
 
-.field public static oneme_stickers_settings_recent_title:I = 0x7f130a41
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static oneme_stickers_settings_recent_toolbar_title:I = 0x7f130a42
+    move-result-object v3
 
-.field public static oneme_stickers_settings_sets_title:I = 0x7f130a43
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-.field public static oneme_stickers_settings_stickers_confirm_delete_sticker_title:I = 0x7f130a44
+    mul-float/2addr v3, v2
 
-.field public static oneme_stickers_settings_stickers_confirm_delete_stickers_title:I = 0x7f130a45
+    invoke-static {v3}, Lfhi;->b(F)I
 
-.field public static oneme_stickers_settings_stickers_confirm_delete_subtitle:I = 0x7f130a46
+    move-result v3
 
-.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_subtitle:I = 0x7f130a47
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_title:I = 0x7f130a48
+    move-result-object v4
 
-.field public static oneme_stickers_settings_stickers_favorite_delete_all_snackbar:I = 0x7f130a49
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static oneme_stickers_settings_stickers_favorite_snackbar_from:I = 0x7f130a4a
+    move-result-object v4
 
-.field public static oneme_stickers_settings_stickers_menu_change_title:I = 0x7f130a4b
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-.field public static oneme_stickers_settings_stickers_recent_confirm_clear_subtitle:I = 0x7f130a4c
+    mul-float/2addr v0, v4
 
-.field public static oneme_stickers_settings_stickers_recent_confirm_clear_title:I = 0x7f130a4d
+    invoke-static {v0}, Lfhi;->b(F)I
 
-.field public static oneme_stickers_settings_stickers_recent_delete_all_snackbar:I = 0x7f130a4e
+    move-result v0
 
-.field public static oneme_stickers_settings_stickers_recent_menu_clear_title:I = 0x7f130a4f
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-.field public static oneme_stickers_settings_stickers_recent_snackbar_from:I = 0x7f130a50
+    move-result-object v4
 
-.field public static oneme_stickers_settings_stickers_snackbar_delete_stickers_title:I = 0x7f130a51
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static oneme_stickers_settings_toolbar_title:I = 0x7f130a52
+    move-result-object v4
 
-.field public static oneme_strickers_settings_stickers_multiselect_empty_title:I = 0x7f130a54
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-.field public static oneme_strickers_settings_stickers_multiselect_title:I = 0x7f130a55
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lfhi;->b(F)I
+
+    move-result v2
+
+    iget-object v4, p0, Lq7d;->a:Landroid/view/View;
+
+    invoke-virtual {v4, v1, v3, v0, v2}, Landroid/view/View;->setPaddingRelative(IIII)V
+
+    return-void
+.end method
+
+.method public H(Lyxe;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public I(Landroid/view/View$OnClickListener;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public J(Landroid/view/View$OnLongClickListener;)V
+    .locals 0
+
+    return-void
+.end method

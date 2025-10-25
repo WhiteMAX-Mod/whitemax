@@ -1,23 +1,53 @@
-.class public abstract Lfle;
-.super Ljava/lang/Object;
+.class public final Lfle;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/String;
+# instance fields
+.field public X:Lla2;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lhle;
+
+.field public o:Lhle;
+
+.field public q0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lhle;Ly14;)V
+    .locals 0
 
-    const-string v0, "StorageNotLowTracker"
+    iput-object p1, p0, Lfle;->Z:Lhle;
 
-    invoke-static {v0}, Lmq0;->M(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lfle;->a:Ljava/lang/String;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lfle;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lfle;->q0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lfle;->q0:I
+
+    iget-object p1, p0, Lfle;->Z:Lhle;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lhle;->w(Lhle;Lla2;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

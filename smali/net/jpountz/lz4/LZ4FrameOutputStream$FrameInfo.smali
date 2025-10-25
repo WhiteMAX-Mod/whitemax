@@ -21,7 +21,7 @@
 
 .field private final flg:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;
 
-.field private final streamHash:Lvle;
+.field private final streamHash:Lkaf;
 
 
 # direct methods
@@ -38,32 +38,32 @@
 
     iput-object p2, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->bd:Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;
 
-    sget-object p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;->CONTENT_CHECKSUM:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;
+    sget-object p2, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;->CONTENT_CHECKSUM:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;
 
-    invoke-virtual {p1, p0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->isEnabled(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)Z
+    invoke-virtual {p1, p2}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->isEnabled(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_0
+    if-nez p1, :cond_0
 
     return-void
 
     :cond_0
-    invoke-static {}, Lpxg;->b()Lpxg;
+    invoke-static {}, Loqh;->b()Loqh;
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
 
 # virtual methods
 .method public currentStreamHash()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    throw p0
+    throw v0
 .end method
 
 .method public finish()V
@@ -77,45 +77,45 @@
 .end method
 
 .method public getBD()Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->bd:Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->bd:Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getFLG()Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->flg:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->flg:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public isEnabled(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->flg:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->flg:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;
 
-    invoke-virtual {p0, p1}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->isEnabled(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)Z
+    invoke-virtual {v0, p1}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->isEnabled(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public isFinished()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->finished:Z
+    iget-boolean v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->finished:Z
 
-    return p0
+    return v0
 .end method
 
 .method public updateStreamHash([BII)V
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method

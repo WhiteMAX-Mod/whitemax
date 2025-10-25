@@ -3,217 +3,82 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Lv1g;
 
 
 # instance fields
-.field public X:I
-
-.field public Y:Z
-
-.field public final a:Landroid/widget/EditText;
-
-.field public final b:Z
-
-.field public c:Lq35;
-
-.field public o:I
+.field public final a:[B
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/EditText;Z)V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x7fffffff
+    const/16 v0, 0x1000
 
-    iput v0, p0, Ls35;->o:I
+    new-array v0, v0, [B
 
-    const/4 v0, 0x0
+    iput-object v0, p0, Ls35;->a:[B
 
-    iput v0, p0, Ls35;->X:I
-
-    iput-object p1, p0, Ls35;->a:Landroid/widget/EditText;
-
-    iput-boolean p2, p0, Ls35;->b:Z
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Ls35;->Y:Z
-
-    return-void
-.end method
-
-.method public static a(Landroid/widget/EditText;I)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_2
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
-
-    move-result p1
-
-    invoke-static {p0}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
-
-    move-result v0
-
-    invoke-static {}, Lb25;->a()Lb25;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Lb25;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    if-ltz p1, :cond_0
-
-    if-ltz v0, :cond_0
-
-    invoke-static {p0, p1, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
-
-    return-void
-
-    :cond_0
-    if-ltz p1, :cond_1
-
-    invoke-static {p0, p1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    return-void
-
-    :cond_1
-    if-ltz v0, :cond_2
-
-    invoke-static {p0, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method public final a(Lxb4;IZ)I
+    .locals 2
 
-    return-void
-.end method
+    iget-object v0, p0, Ls35;->a:[B
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    array-length v1, v0
 
-    return-void
-.end method
+    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 7
+    move-result p2
 
-    iget-object v0, p0, Ls35;->a:Landroid/widget/EditText;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Landroid/view/View;->isInEditMode()Z
+    invoke-interface {p1, v0, v1, p2}, Lxb4;->read([BII)I
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_5
+    const/4 p2, -0x1
 
-    iget-boolean v1, p0, Ls35;->Y:Z
+    if-ne p1, p2, :cond_1
 
-    if-eqz v1, :cond_5
+    if-eqz p3, :cond_0
 
-    iget-boolean v1, p0, Ls35;->b:Z
-
-    if-nez v1, :cond_1
-
-    sget-object v1, Lb25;->m:Lb25;
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
+    return p2
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/io/EOFException;
+
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+
+    throw p1
 
     :cond_1
-    :goto_0
-    if-gt p3, p4, :cond_5
+    return p1
+.end method
 
-    instance-of p3, p1, Landroid/text/Spannable;
-
-    if-eqz p3, :cond_5
-
-    invoke-static {}, Lb25;->a()Lb25;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Lb25;->b()I
-
-    move-result p3
-
-    if-eqz p3, :cond_3
-
-    const/4 v1, 0x1
-
-    if-eq p3, v1, :cond_2
-
-    const/4 p1, 0x3
-
-    if-eq p3, p1, :cond_3
-
-    goto :goto_1
-
-    :cond_2
-    move-object v4, p1
-
-    check-cast v4, Landroid/text/Spannable;
-
-    invoke-static {}, Lb25;->a()Lb25;
-
-    move-result-object v1
-
-    add-int v3, p2, p4
-
-    iget v5, p0, Ls35;->o:I
-
-    iget v6, p0, Ls35;->X:I
-
-    move v2, p2
-
-    invoke-virtual/range {v1 .. v6}, Lb25;->f(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
+.method public final b(JIIILt1g;)V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_3
-    invoke-static {}, Lb25;->a()Lb25;
+.method public final c(ILdjg;)V
+    .locals 0
 
-    move-result-object p1
+    invoke-virtual {p2, p1}, Ldjg;->F(I)V
 
-    iget-object p2, p0, Ls35;->c:Lq35;
+    return-void
+.end method
 
-    if-nez p2, :cond_4
+.method public final d(Lkb6;)V
+    .locals 0
 
-    new-instance p2, Lq35;
-
-    invoke-direct {p2, v0}, Lq35;-><init>(Landroid/widget/EditText;)V
-
-    iput-object p2, p0, Ls35;->c:Lq35;
-
-    :cond_4
-    iget-object p0, p0, Ls35;->c:Lq35;
-
-    invoke-virtual {p1, p0}, Lb25;->h(Lz15;)V
-
-    :cond_5
-    :goto_1
     return-void
 .end method

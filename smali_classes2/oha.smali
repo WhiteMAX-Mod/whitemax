@@ -1,51 +1,32 @@
 .class public final Loha;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:Lyo9;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Laia;
-
-.field public o:Laia;
-
-.field public r0:I
+# interfaces
+.implements Lorg/webrtc/VideoDecoderFactory;
 
 
 # direct methods
-.method public constructor <init>(Laia;Ljx3;)V
-    .locals 0
+.method public constructor <init>(Lfwc;Ljava/lang/IllegalStateException;)V
+    .locals 2
 
-    iput-object p1, p0, Loha;->Z:Laia;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v0, "OKDefaultVideoDecoderFactory"
+
+    const-string v1, "Video decoder factory init failed"
+
+    invoke-interface {p1, v0, v1, p2}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
+    .locals 0
 
-    iput-object p1, p0, Loha;->Y:Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    iget p1, p0, Loha;->r0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Loha;->r0:I
-
-    iget-object p1, p0, Loha;->Z:Laia;
-
-    invoke-static {p1, p0}, Laia;->a(Laia;Ljx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

@@ -1,732 +1,327 @@
 .class public final Lwee;
-.super Ljava/lang/Object;
+.super Lz6d;
 .source "SourceFile"
 
 # interfaces
-.implements Loge;
+.implements Lwsf;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final a:Landroid/graphics/Rect;
 
-.field public final b:Ljava/util/concurrent/ConcurrentHashMap;
-
-.field public final c:Lgr4;
-
-.field public final d:Lqgb;
-
-.field public final e:Lgr4;
-
-.field public final f:Lgr4;
-
-.field public final g:Lv5d;
-
-.field public final h:Lv5d;
-
-.field public final i:Lgr4;
-
-.field public final j:Lgr4;
-
-.field public k:Lns1;
-
-.field public final l:Lnl0;
+.field public final b:Landroid/graphics/Paint;
 
 
 # direct methods
-.method public constructor <init>(Lgr4;Lqgb;Lgr4;Lgr4;Lv5d;Lv5d;Lgr4;Lgr4;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    new-instance v0, Landroid/graphics/Rect;
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lwee;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object v0, p0, Lwee;->a:Landroid/graphics/Rect;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    new-instance v0, Landroid/graphics/Paint;
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lwee;->b:Ljava/util/concurrent/ConcurrentHashMap;
+    sget-object v1, Ll05;->s0:Lk82;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-virtual {v1, p1}, Lk82;->e(Landroid/content/Context;)Ll05;
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    move-result-object p1
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-virtual {p1}, Ll05;->l()Lv5b;
 
-    invoke-static {v0}, Lnl0;->x(Ljava/lang/Object;)Lnl0;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-interface {p1}, Lv5b;->i()Lkbf;
 
-    iput-object v0, p0, Lwee;->l:Lnl0;
+    move-result-object p1
 
-    iput-object p1, p0, Lwee;->c:Lgr4;
+    iget-object p1, p1, Lkbf;->b:Lpbf;
 
-    iput-object p2, p0, Lwee;->d:Lqgb;
+    iget p1, p1, Lpbf;->b:I
 
-    iput-object p3, p0, Lwee;->e:Lgr4;
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    iput-object p4, p0, Lwee;->f:Lgr4;
-
-    iput-object p5, p0, Lwee;->g:Lv5d;
-
-    iput-object p6, p0, Lwee;->h:Lv5d;
-
-    iput-object p7, p0, Lwee;->i:Lgr4;
-
-    iput-object p8, p0, Lwee;->j:Lgr4;
+    iput-object v0, p0, Lwee;->b:Landroid/graphics/Paint;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lr5a;
+.method public final f(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Lm7d;)V
     .locals 3
 
-    iget-object v0, p0, Lwee;->j:Lgr4;
+    iget-object p3, p3, Landroidx/recyclerview/widget/RecyclerView;->y0:Lt6d;
 
-    invoke-virtual {v0}, Lgr4;->get()Ljava/lang/Object;
+    const-wide/16 v0, -0x1
 
-    move-result-object v0
+    if-eqz p3, :cond_1
 
-    check-cast v0, Lgkc;
+    iget-boolean p3, p3, Lt6d;->b:Z
 
-    invoke-virtual {v0}, Lgkc;->b()Lzjc;
+    if-nez p3, :cond_0
 
-    move-result-object v0
+    goto :goto_0
 
-    sget-object v1, Ldkc;->o:Ldkc;
+    :cond_0
+    invoke-static {p2}, Landroidx/recyclerview/widget/RecyclerView;->U(Landroid/view/View;)Lq7d;
 
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    move-result-object p2
 
-    move-result-object v1
+    if-eqz p2, :cond_1
 
-    invoke-virtual {v0, v1}, Lzjc;->a(Ljava/util/List;)Ly4a;
+    iget-wide p2, p2, Lq7d;->X:J
 
-    move-result-object v0
+    goto :goto_1
 
-    new-instance v1, Ltee;
+    :cond_1
+    :goto_0
+    move-wide p2, v0
 
-    const/4 v2, 0x0
+    :goto_1
+    cmp-long p4, p2, v0
 
-    invoke-direct {v1, p0, v2}, Ltee;-><init>(Lwee;I)V
+    if-nez p4, :cond_2
 
-    new-instance p0, Lr5a;
+    goto :goto_2
 
-    const/4 v2, 0x5
+    :cond_2
+    sget-wide v0, Ll2b;->i:J
 
-    invoke-direct {p0, v0, v1, v2}, Lr5a;-><init>(Ly4a;Lqc6;I)V
+    cmp-long p4, p2, v0
 
-    return-object p0
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    if-nez p4, :cond_3
+
+    iget p2, p1, Landroid/graphics/Rect;->bottom:I
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p3
+
+    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v0, p3, p2}, Lu15;->c(FFI)I
+
+    move-result p2
+
+    iput p2, p1, Landroid/graphics/Rect;->bottom:I
+
+    return-void
+
+    :cond_3
+    sget-wide v1, Ll2b;->n:J
+
+    cmp-long p2, p2, v1
+
+    if-nez p2, :cond_4
+
+    iget p2, p1, Landroid/graphics/Rect;->top:I
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p3
+
+    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v0, p3, p2}, Lu15;->c(FFI)I
+
+    move-result p2
+
+    iput p2, p1, Landroid/graphics/Rect;->top:I
+
+    :cond_4
+    :goto_2
+    return-void
 .end method
 
-.method public final b(Ljava/util/List;)Lu2e;
-    .locals 4
+.method public final h(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 11
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v1, 0x0
 
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "wee"
-
-    const-string v2, "getStickersByIds: ids count=%d"
-
-    invoke-static {v1, v2, v0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lwee;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ly4a;->g(Ljava/lang/Iterable;)Lxc3;
-
-    move-result-object v0
-
-    new-instance v1, Lha2;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v1, v2, p1}, Lha2;-><init>(ILjava/util/List;)V
-
-    new-instance v2, Lb5a;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v1, v3}, Lb5a;-><init>(Ly4a;Lggb;I)V
-
-    new-instance v0, Liae;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Liae;-><init>(I)V
-
-    new-instance v1, Lr5a;
-
-    const/4 v3, 0x5
-
-    invoke-direct {v1, v2, v0, v3}, Lr5a;-><init>(Ly4a;Lqc6;I)V
-
-    invoke-virtual {v1}, Ly4a;->t()Lc5a;
-
-    move-result-object v0
-
-    new-instance v1, Luee;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Luee;-><init>(Lwee;Ljava/util/List;I)V
-
-    new-instance p0, Lu2e;
-
-    invoke-direct {p0, v0, v1, v2}, Lu2e;-><init>(Lk2e;Lqc6;I)V
-
-    new-instance v0, Lip9;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lip9;-><init>(I)V
-
-    new-instance v2, Lj98;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, p0, v0, v3}, Lj98;-><init>(Ljava/lang/Object;Lqc6;I)V
-
-    new-instance p0, Liae;
-
-    invoke-direct {p0, v1}, Liae;-><init>(I)V
-
-    new-instance v0, Loye;
-
-    invoke-direct {v0, p1, p0}, Loye;-><init>(Ljava/util/List;Lqc6;)V
-
-    invoke-virtual {v2, v0}, Ly4a;->u(Ljava/util/Comparator;)Lu2e;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final c(Ljava/util/List;)Ljava/util/ArrayList;
-    .locals 3
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_0
     :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    if-ge v1, v0, :cond_5
 
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Long;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v2, p0, Lwee;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
-
-    check-cast v2, Llee;
 
     if-nez v2, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    goto/16 :goto_2
 
-    goto :goto_0
+    :cond_0
+    iget-object v3, p2, Landroidx/recyclerview/widget/RecyclerView;->y0:Lt6d;
 
-    :cond_1
-    return-object v0
-.end method
+    const-wide/16 v4, -0x1
 
-.method public final d(Ljava/util/List;)Ld3e;
-    .locals 4
+    if-eqz v3, :cond_2
 
-    const-string v0, "loadNetworkStickers: %s"
+    iget-boolean v3, v3, Lt6d;->b:Z
 
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "wee"
-
-    invoke-static {v2, v0, v1}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-static {p1}, Lxfc;->x(Ljava/util/List;)V
-
-    invoke-static {p1}, Lxfc;->H(Ljava/util/List;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ly4a;->g(Ljava/lang/Iterable;)Lxc3;
-
-    move-result-object p1
-
-    new-instance v0, Ltee;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Ltee;-><init>(Lwee;I)V
-
-    const/4 v2, 0x2
-
-    const-string v3, "bufferSize"
-
-    invoke-static {v2, v3}, Lo97;->a1(ILjava/lang/String;)V
-
-    new-instance v2, Lj98;
-
-    invoke-direct {v2, p1, v0, v1}, Lj98;-><init>(Ljava/lang/Object;Lqc6;I)V
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v0, Liae;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Liae;-><init>(I)V
-
-    new-instance v1, Lid6;
-
-    invoke-direct {v1, p1}, Lid6;-><init>(Ljava/lang/Object;)V
-
-    new-instance p1, Lf5a;
-
-    invoke-direct {p1, v2, v1, v0}, Lf5a;-><init>(Lj98;Lid6;Liae;)V
-
-    iget-object p0, p0, Lwee;->g:Lv5d;
-
-    invoke-virtual {p1, p0}, Lk2e;->m(Lv5d;)Ld3e;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final declared-synchronized e(Ljava/util/List;)V
-    .locals 5
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llee;
-
-    iget-object v2, p0, Lwee;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-wide v3, v1, Llee;->a:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
+    if-nez v3, :cond_1
 
     goto :goto_1
 
-    :cond_0
-    new-instance v0, Llz;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, p0, v1, p1}, Llz;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p1, Liae;
-
-    const/16 v1, 0xa
-
-    invoke-direct {p1, v1}, Liae;-><init>(I)V
-
-    iget-object v1, p0, Lwee;->h:Lv5d;
-
-    invoke-static {v0, p1, v1}, Ls1d;->a(Lc6;Lpm3;Lv5d;)Lns1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized f()V
-    .locals 2
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lwee;->e:Lgr4;
-
-    invoke-virtual {v0}, Lgr4;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnn5;
-
-    check-cast v0, Lcp5;
-
-    invoke-virtual {v0}, Lcp5;->q()Ljava/io/File;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lwee;->b:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-static {v0, v1}, Lsu0;->M(Ljava/io/File;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "wee"
-
-    const-string v1, "Failed to store initial showcase"
-
-    invoke-static {v0, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final g(Ljava/util/List;)V
-    .locals 5
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    iget-object v2, p0, Lwee;->b:Ljava/util/concurrent/ConcurrentHashMap;
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lpcd;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
     :cond_1
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v2}, Landroidx/recyclerview/widget/RecyclerView;->U(Landroid/view/View;)Lq7d;
 
     move-result-object v3
 
-    check-cast v3, Ljava/util/Map$Entry;
+    if-eqz v3, :cond_2
 
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    iget-object v4, v1, Lpcd;->b:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
-
-    goto :goto_0
+    iget-wide v4, v3, Lq7d;->X:J
 
     :cond_2
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_3
     :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    sget-wide v6, Ll2b;->i:J
 
-    move-result v0
+    cmp-long v3, v4, v6
 
-    if-eqz v0, :cond_5
+    iget-object v6, p0, Lwee;->b:Landroid/graphics/Paint;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/high16 v7, 0x3f000000    # 0.5f
+
+    iget-object v8, p0, Lwee;->a:Landroid/graphics/Rect;
+
+    if-nez v3, :cond_3
+
+    invoke-virtual {v2}, Landroid/view/View;->getLeft()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
+
+    move-result p2
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    check-cast v0, Lpcd;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget v1, v0, Lpcd;->a:I
+    move-result-object v0
 
-    iget-object v3, v0, Lpcd;->b:Ljava/lang/String;
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    const/4 v4, 0x3
+    invoke-static {v7, v0, p2}, Lu15;->c(FFI)I
 
-    if-ne v1, v4, :cond_4
+    move-result p2
 
-    move-object v1, v0
+    iput p2, v8, Landroid/graphics/Rect;->bottom:I
 
-    check-cast v1, Lnge;
+    invoke-virtual {v2}, Landroid/view/View;->getRight()I
 
-    iget-object v1, v1, Lnge;->c:Ljava/util/List;
+    move-result p2
 
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    iput p2, v8, Landroid/graphics/Rect;->right:I
 
-    move-result v1
+    invoke-virtual {p1, v8, v6}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    if-nez v1, :cond_3
+    return-void
 
-    invoke-virtual {v2, v3, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_3
+    sget-wide v9, Ll2b;->n:J
 
-    goto :goto_1
+    cmp-long v3, v4, v9
+
+    if-nez v3, :cond_4
+
+    invoke-virtual {v2}, Landroid/view/View;->getLeft()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getTop()I
+
+    move-result p2
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v7, v0, p2}, Lu15;->c(FFI)I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getTop()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getRight()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {p1, v8, v6}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    return-void
 
     :cond_4
-    const/4 v4, 0x2
+    :goto_2
+    add-int/lit8 v1, v1, 0x1
 
-    if-ne v1, v4, :cond_3
-
-    move-object v1, v0
-
-    check-cast v1, Lgie;
-
-    iget-object v1, v1, Lgie;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    invoke-virtual {v2, v3, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
+    goto/16 :goto_0
 
     :cond_5
-    iget-object p0, p0, Lwee;->l:Lnl0;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lnl0;->s(Ljava/lang/Object;)V
-
     return-void
 .end method
 
-.method public final h(Ljava/util/List;)V
-    .locals 5
+.method public final onThemeChanged(Lv5b;)V
+    .locals 1
 
-    const-string v0, "wee"
-
-    const-string v1, "Update recent section"
-
-    invoke-static {v0, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_1
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lpcd;
-
-    const-string v3, "RECENT"
-
-    iget-object v4, v2, Lpcd;->b:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    iget v3, v2, Lpcd;->a:I
-
-    const/4 v4, 0x4
-
-    if-ne v3, v4, :cond_0
-
-    iget-object p1, p0, Lwee;->k:Lns1;
-
-    invoke-static {p1}, Ls1d;->b(Loq4;)V
-
-    check-cast v2, Lhkc;
-
-    iget-object p1, p0, Lwee;->j:Lgr4;
-
-    invoke-virtual {p1}, Lgr4;->get()Ljava/lang/Object;
+    invoke-interface {p1}, Lv5b;->i()Lkbf;
 
     move-result-object p1
 
-    check-cast p1, Lgkc;
+    iget-object p1, p1, Lkbf;->b:Lpbf;
 
-    iget-object v1, v2, Lhkc;->c:Ljava/util/ArrayList;
+    iget p1, p1, Lpbf;->b:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lwee;->b:Landroid/graphics/Paint;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const-string v3, "gkc"
-
-    const-string v4, "Replace recents. New size = %d"
-
-    invoke-static {v3, v4, v2}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Lgkc;->b()Lzjc;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lzjc;->b()Lu2e;
-
-    move-result-object v2
-
-    new-instance v3, Lyjc;
-
-    invoke-direct {v3, p1, v1, v0}, Lyjc;-><init>(Lzjc;Ljava/util/ArrayList;I)V
-
-    new-instance p1, Lic3;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p1, v2, v1, v3}, Lic3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object v1, p0, Lwee;->h:Lv5d;
-
-    invoke-virtual {p1, v1}, Lhc3;->j(Lv5d;)Lqc3;
-
-    move-result-object p1
-
-    new-instance v1, Lre4;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v1, v2}, Lre4;-><init>(I)V
-
-    new-instance v2, Liae;
-
-    const/16 v3, 0xd
-
-    invoke-direct {v2, v3}, Liae;-><init>(I)V
-
-    new-instance v3, Lns1;
-
-    invoke-direct {v3, v2, v0, v1}, Lns1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v3}, Lhc3;->h(Lrc3;)V
-
-    iput-object v3, p0, Lwee;->k:Lns1;
-
-    return-void
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method

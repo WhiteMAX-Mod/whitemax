@@ -1,150 +1,90 @@
 .class public final Lqpg;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lxpg;
-
-.field public final synthetic r0:Lnpg;
-
-.field public final synthetic s0:Lapg;
+.field public final a:[B
 
 
 # direct methods
-.method public constructor <init>(Lapg;Lnpg;Lxpg;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>([B)V
     .locals 0
 
-    iput-object p3, p0, Lqpg;->Z:Lxpg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lqpg;->r0:Lnpg;
-
-    iput-object p1, p0, Lqpg;->s0:Lapg;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqpg;->a:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqpg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lqpg;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lqpg;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    new-instance v0, Lqpg;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lqpg;->r0:Lnpg;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lqpg;->s0:Lapg;
-
-    iget-object p0, p0, Lqpg;->Z:Lxpg;
-
-    invoke-direct {v0, v2, v1, p0, p2}, Lqpg;-><init>(Lapg;Lnpg;Lxpg;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lqpg;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget v0, p0, Lqpg;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lqpg;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p0
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    check-cast p1, Lqpg;
 
-    iget-object p1, p0, Lqpg;->Y:Ljava/lang/Object;
+    iget-object v1, p0, Lqpg;->a:[B
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object p1, p1, Lqpg;->a:[B
 
-    iget-object v0, p0, Lqpg;->Z:Lxpg;
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result p1
 
-    invoke-static {p1}, Lxpg;->f(Ljava/lang/Throwable;)Lzg7;
+    if-nez p1, :cond_2
 
-    move-result-object v4
-
-    invoke-virtual {v0}, Lxpg;->g()Lra3;
-
-    move-result-object v2
-
-    iget-object v3, v0, Lxpg;->e:Lcu0;
-
-    iget-object p1, p0, Lqpg;->s0:Lapg;
-
-    iget-object v6, p1, Lapg;->b:Ljava/lang/String;
-
-    iput v1, p0, Lqpg;->X:I
-
-    iget-object v5, p0, Lqpg;->r0:Lnpg;
-
-    move-object v7, p0
-
-    invoke-virtual/range {v2 .. v7}, Lra3;->a(Lt52;Lzg7;Lxjg;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
+    return v2
 
     :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    return v0
+.end method
 
-    return-object p0
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lqpg;->a:[B
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lqpg;->a:[B
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "FirstFrameReady(frameByteArray="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

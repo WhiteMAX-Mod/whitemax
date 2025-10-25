@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls0e;
+.implements Lone;
 
 
 # instance fields
@@ -23,12 +23,12 @@
 
 
 # virtual methods
-.method public final k(Lorg/json/JSONObject;)V
-    .locals 0
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/a;->a:Ljava/lang/Runnable;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/a;->a:Ljava/lang/Runnable;
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$2;->a(Ljava/lang/Runnable;Lorg/json/JSONObject;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$2;->a(Ljava/lang/Runnable;Lorg/json/JSONObject;)V
 
     return-void
 .end method

@@ -2,148 +2,97 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
 
-# instance fields
-.field public final a:Ljava/util/concurrent/Executor;
 
-.field public final b:Landroid/os/Handler;
+# static fields
+.field public static final a:Lz80;
+
+.field public static final b:Lbr5;
+
+.field public static final c:Lbr5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz80;
 
-    if-eqz p1, :cond_1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz80;->a:Ljava/util/concurrent/Executor;
+    sput-object v0, Lz80;->a:Lz80;
 
-    if-eqz p2, :cond_0
+    new-instance v0, Lsy;
 
-    iput-object p2, p0, Lz80;->b:Landroid/os/Handler;
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lsy;-><init>(I)V
+
+    const-class v1, Lmec;
+
+    invoke-static {v1, v0}, Ldy1;->o(Ljava/lang/Class;Lsy;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "logSource"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lz80;->b:Lbr5;
+
+    new-instance v0, Lsy;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lsy;-><init>(I)V
+
+    invoke-static {v1, v0}, Ldy1;->o(Ljava/lang/Class;Lsy;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "logEventDropped"
+
+    invoke-direct {v1, v2, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lz80;->c:Lbr5;
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Null schedulerHandler"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Null cameraExecutor"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lz80;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lz80;
-
-    iget-object v1, p0, Lz80;->a:Ljava/util/concurrent/Executor;
-
-    iget-object v3, p1, Lz80;->a:Ljava/util/concurrent/Executor;
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object p0, p0, Lz80;->b:Landroid/os/Handler;
-
-    iget-object p1, p1, Lz80;->b:Landroid/os/Handler;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Lz80;->a:Ljava/util/concurrent/Executor;
+    check-cast p1, Lf98;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    check-cast p2, Luha;
 
-    move-result v0
+    sget-object v0, Lz80;->b:Lbr5;
 
-    const v1, 0xf4243
+    iget-object v1, p1, Lf98;->a:Ljava/lang/String;
 
-    xor-int/2addr v0, v1
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    mul-int/2addr v0, v1
+    sget-object v0, Lz80;->c:Lbr5;
 
-    iget-object p0, p0, Lz80;->b:Landroid/os/Handler;
+    iget-object p1, p1, Lf98;->b:Ljava/util/List;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    move-result p0
-
-    xor-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CameraThreadConfig{cameraExecutor="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lz80;->a:Ljava/util/concurrent/Executor;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", schedulerHandler="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lz80;->b:Landroid/os/Handler;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

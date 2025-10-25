@@ -1,168 +1,50 @@
-.class public final Lk83;
-.super Lzoc;
+.class public interface abstract Lk83;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
-
-
-# static fields
-.field public static final G0:Landroid/view/animation/OvershootInterpolator;
-
-
-# instance fields
-.field public final E0:Lh83;
-
-.field public final F0:Landroid/view/GestureDetector;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Landroid/view/animation/OvershootInterpolator;
-
-    invoke-direct {v0}, Landroid/view/animation/OvershootInterpolator;-><init>()V
-
-    sput-object v0, Lk83;->G0:Landroid/view/animation/OvershootInterpolator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/widget/FrameLayout;Lh83;Li83;)V
-    .locals 3
-
-    invoke-direct {p0, p1}, Lzoc;-><init>(Landroid/view/View;)V
-
-    iput-object p2, p0, Lk83;->E0:Lh83;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    new-instance v0, Landroid/view/GestureDetector;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v1, Lj83;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p3, v2, p2}, Lj83;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
-
-    iput-object v0, p0, Lk83;->F0:Landroid/view/GestureDetector;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 5
+.method public a()V
+    .locals 0
 
-    iget-object p1, p0, Lk83;->F0:Landroid/view/GestureDetector;
+    return-void
+.end method
 
-    invoke-virtual {p1, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+.method public abstract b()Lcq3;
+.end method
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+.method public abstract c(Ljava/net/Socket;)V
+.end method
 
-    move-result p1
+.method public abstract close()V
+.end method
 
-    sget-object v0, Lk83;->G0:Landroid/view/animation/OvershootInterpolator;
+.method public abstract connect()Ljava/net/Socket;
+.end method
 
-    const-wide/16 v1, 0x7d
+.method public abstract d()I
+.end method
 
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+.method public abstract e()Z
+.end method
 
-    const/4 v3, 0x1
+.method public f()V
+    .locals 0
 
-    if-eqz p1, :cond_3
+    return-void
+.end method
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
+.method public abstract g(Z)V
+.end method
 
-    move-result p1
+.method public abstract h(I)J
+.end method
 
-    const/4 v4, 0x5
+.method public abstract i()Ljava/lang/String;
+.end method
 
-    if-ne p1, v4, :cond_0
+.method public abstract j()I
+.end method
 
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    const/4 v4, 0x3
-
-    if-eq p1, v4, :cond_2
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-eq p1, v3, :cond_2
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    move-result p1
-
-    const/4 p2, 0x6
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    return v3
-
-    :cond_2
-    :goto_0
-    invoke-virtual {p0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p0
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    return v3
-
-    :cond_3
-    :goto_1
-    invoke-virtual {p0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p0
-
-    const p1, 0x3f99999a    # 1.2f
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    return v3
+.method public abstract k()Loo3;
 .end method

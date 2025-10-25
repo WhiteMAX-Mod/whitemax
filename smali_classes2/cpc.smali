@@ -1,72 +1,28 @@
-.class public final Lcpc;
+.class public abstract Lcpc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lo04;
 
 
-# instance fields
-.field public final a:Ldpc;
+# static fields
+.field public static oneme_stickers_sticker_first_frame:I = 0x7f0a0897
 
+.field public static oneme_stickers_sticker_lottie:I = 0x7f0a0898
 
-# direct methods
-.method public constructor <init>(Ldpc;)V
-    .locals 0
+.field public static oneme_stickers_sticker_set_header_button:I = 0x7f0a0899
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_stickers_sticker_set_header_subtitle:I = 0x7f0a089a
 
-    iput-object p1, p0, Lcpc;->a:Ldpc;
+.field public static oneme_stickers_sticker_set_header_title:I = 0x7f0a089b
 
-    return-void
-.end method
+.field public static oneme_stickers_sticker_set_list:I = 0x7f0a089c
 
+.field public static oneme_stickers_sticker_webm:I = 0x7f0a089d
 
-# virtual methods
-.method public final fold(Ljava/lang/Object;Lpc6;)Ljava/lang/Object;
-    .locals 0
+.field public static oneme_stickers_view_type_sticker:I = 0x7f0a089e
 
-    invoke-interface {p2, p1, p0}, Lpc6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.field public static oneme_stickers_view_type_sticker_lottie:I = 0x7f0a089f
 
-    move-result-object p0
+.field public static oneme_stickers_view_type_sticker_webm:I = 0x7f0a08a0
 
-    return-object p0
-.end method
+.field public static oneme_stickers_view_type_stickers_set:I = 0x7f0a08a1
 
-.method public final get(Lp04;)Lo04;
-    .locals 0
-
-    invoke-static {p0, p1}, Lkp;->n(Lo04;Lp04;)Lo04;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getKey()Lp04;
-    .locals 0
-
-    iget-object p0, p0, Lcpc;->a:Ldpc;
-
-    return-object p0
-.end method
-
-.method public final minusKey(Lp04;)Lq04;
-    .locals 0
-
-    invoke-static {p0, p1}, Lkp;->z(Lo04;Lp04;)Lq04;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final plus(Lq04;)Lq04;
-    .locals 0
-
-    invoke-static {p0, p1}, Lw7;->B(Lq04;Lq04;)Lq04;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static oneme_stickers_view_type_stickers_set_showcase:I = 0x7f0a08a2

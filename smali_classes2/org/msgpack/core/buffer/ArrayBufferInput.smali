@@ -59,7 +59,7 @@
     .line 6
     const-string v0, "input array is null"
 
-    invoke-static {p1, v0}, Lz48;->i(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcvi;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, p2, p3}, Lorg/msgpack/core/buffer/MessageBuffer;->wrap([BII)Lorg/msgpack/core/buffer/MessageBuffer;
 
@@ -93,18 +93,18 @@
 
     if-eqz v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/msgpack/core/buffer/ArrayBufferInput;->isEmpty:Z
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ArrayBufferInput;->buffer:Lorg/msgpack/core/buffer/MessageBuffer;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/ArrayBufferInput;->buffer:Lorg/msgpack/core/buffer/MessageBuffer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public reset(Lorg/msgpack/core/buffer/MessageBuffer;)Lorg/msgpack/core/buffer/MessageBuffer;
@@ -140,7 +140,7 @@
     .line 5
     const-string v0, "input array is null"
 
-    invoke-static {p1, v0}, Lz48;->i(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcvi;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lorg/msgpack/core/buffer/MessageBuffer;->wrap([B)Lorg/msgpack/core/buffer/MessageBuffer;
 
@@ -157,7 +157,7 @@
     .line 6
     const-string v0, "input array is null"
 
-    invoke-static {p1, v0}, Lz48;->i(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcvi;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, p2, p3}, Lorg/msgpack/core/buffer/MessageBuffer;->wrap([BII)Lorg/msgpack/core/buffer/MessageBuffer;
 

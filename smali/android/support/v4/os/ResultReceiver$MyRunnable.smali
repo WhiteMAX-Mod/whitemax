@@ -43,15 +43,15 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$MyRunnable;->this$0:Landroid/support/v4/os/ResultReceiver;
 
     iget v1, p0, Landroid/support/v4/os/ResultReceiver$MyRunnable;->mResultCode:I
 
-    iget-object p0, p0, Landroid/support/v4/os/ResultReceiver$MyRunnable;->mResultData:Landroid/os/Bundle;
+    iget-object v2, p0, Landroid/support/v4/os/ResultReceiver$MyRunnable;->mResultData:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1, p0}, Landroid/support/v4/os/ResultReceiver;->onReceiveResult(ILandroid/os/Bundle;)V
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/os/ResultReceiver;->onReceiveResult(ILandroid/os/Bundle;)V
 
     return-void
 .end method

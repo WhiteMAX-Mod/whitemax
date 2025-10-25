@@ -1,67 +1,32 @@
-.class public final Lo4e;
-.super Lhv8;
+.class public abstract Lo4e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic l:I
-
-
 # direct methods
-.method public synthetic constructor <init>()V
+.method public static a(Landroid/app/Service;ILandroid/app/Notification;I)V
     .locals 1
 
-    const/4 v0, 0x1
+    if-eqz p3, :cond_1
 
-    iput v0, p0, Lo4e;->l:I
+    const/4 v0, -0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-ne p3, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const v0, 0x40000fff    # 2.0009763f
+
+    and-int/2addr p3, v0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
 
     return-void
-.end method
 
+    :cond_1
+    :goto_0
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
 
-# virtual methods
-.method public final b(Landroid/view/View;Landroid/view/ViewGroup;)F
-    .locals 0
-
-    iget p0, p0, Lo4e;->l:I
-
-    packed-switch p0, :pswitch_data_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
-
-    move-result p0
-
-    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    add-float/2addr p0, p1
-
-    return p0
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
-
-    move-result p0
-
-    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    sub-float/2addr p0, p1
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

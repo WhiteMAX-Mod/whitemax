@@ -1,178 +1,200 @@
 .class public final Lvf6;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
+
+# static fields
+.field public static final d:Lvf6;
 
 
 # instance fields
-.field public final synthetic X:Lqg6;
+.field public final a:Lqmg;
 
-.field public final synthetic Y:Z
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lqg6;ZLkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lvf6;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v1, v2}, Lvf6;-><init>(Lqmg;I)V
+
+    sput-object v0, Lvf6;->d:Lvf6;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lqmg;I)V
     .locals 0
 
-    iput-object p1, p0, Lvf6;->X:Lqg6;
+    and-int/lit8 p2, p2, 0x1
 
-    iput-boolean p2, p0, Lvf6;->Y:Z
+    if-eqz p2, :cond_0
 
-    const/4 p1, 0x2
+    const/4 p1, 0x0
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    :cond_0
+    const/4 p2, 0x0
+
+    .line 1
+    invoke-direct {p0, p1, p2, p2}, Lvf6;-><init>(Lqmg;II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lqmg;II)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Lvf6;->a:Lqmg;
+
+    .line 4
+    iput p2, p0, Lvf6;->b:I
+
+    .line 5
+    iput p3, p0, Lvf6;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ly04;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lvf6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lvf6;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lvf6;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lvf6;
-
-    iget-object v0, p0, Lvf6;->X:Lqg6;
-
-    iget-boolean p0, p0, Lvf6;->Y:Z
-
-    invoke-direct {p1, v0, p0, p2}, Lvf6;-><init>(Lqg6;ZLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvf6;->X:Lqg6;
-
-    iget-object v0, p1, Lqg6;->v0:Lyce;
-
-    invoke-virtual {v0}, Lyce;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    const/16 v2, 0xa
-
-    invoke-static {v0, v2}, Ls73;->O(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v3, v2
-
-    check-cast v3, Llf6;
-
-    iget v2, v3, Llf6;->h:I
-
-    if-eqz v2, :cond_0
-
-    const/4 v10, 0x0
-
-    const/16 v11, 0x7bf
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-static/range {v3 .. v11}, Llf6;->b(Llf6;La5b;Lxvf;Landroid/net/Uri;IZILandroid/net/Uri;I)Llf6;
-
-    move-result-object v3
+    return v0
 
     :cond_0
-    move-object v4, v3
+    instance-of v1, p1, Lvf6;
 
-    iget-boolean v2, p0, Lvf6;->Y:Z
+    const/4 v2, 0x0
 
-    if-eqz v2, :cond_1
+    if-nez v1, :cond_1
 
-    iget-object v2, v4, Llf6;->c:Lfx7;
-
-    iget-object v11, v2, Lfx7;->u0:Landroid/net/Uri;
-
-    const/4 v10, 0x0
-
-    const/16 v12, 0x3df
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-static/range {v4 .. v12}, Llf6;->b(Llf6;La5b;Lxvf;Landroid/net/Uri;IZILandroid/net/Uri;I)Llf6;
-
-    move-result-object v4
+    return v2
 
     :cond_1
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    check-cast p1, Lvf6;
+
+    iget-object v1, p0, Lvf6;->a:Lqmg;
+
+    iget-object v3, p1, Lvf6;->a:Lqmg;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lvf6;->b:I
+
+    iget v3, p1, Lvf6;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lvf6;->c:I
+
+    iget p1, p1, Lvf6;->c:I
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lvf6;->a:Lqmg;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
-    :cond_2
-    iget-object p0, p1, Lqg6;->v0:Lyce;
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    const/4 p1, 0x0
+    move-result v0
 
-    invoke-virtual {p0, p1, v1}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :goto_0
+    const/16 v1, 0x1f
 
-    sget-object p0, Lylf;->a:Lylf;
+    mul-int/2addr v0, v1
 
-    return-object p0
+    iget v2, p0, Lvf6;->b:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, Lvf6;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ExtractorData(videoContent="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lvf6;->a:Lqmg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameWidth="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lvf6;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameHeight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget v2, p0, Lvf6;->c:I
+
+    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

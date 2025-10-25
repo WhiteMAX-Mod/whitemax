@@ -1,263 +1,125 @@
-.class public final Llb2;
+.class public abstract synthetic Llb2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final h:Llb2;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-
-# instance fields
-.field public final a:J
-
-.field public final b:Ljava/util/List;
-
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:J
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 9
 
-    sget-object v0, Lib2;->b:Lib2;
+    const/4 v0, 0x7
 
-    sget-object v1, Lib2;->c:Lib2;
-
-    sget-object v2, Lib2;->a:Lib2;
-
-    filled-new-array {v2, v0, v1}, [Lib2;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    new-instance v1, Lkb2;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    const-wide/16 v2, 0x0
-
-    iput-wide v2, v1, Lkb2;->a:J
-
-    iput-wide v2, v1, Lkb2;->c:J
-
-    iput-wide v2, v1, Lkb2;->d:J
-
-    iput-object v0, v1, Lkb2;->b:Ljava/util/List;
-
-    iput-wide v2, v1, Lkb2;->f:J
-
-    iput-wide v2, v1, Lkb2;->g:J
-
-    new-instance v0, Llb2;
-
-    invoke-direct {v0, v1}, Llb2;-><init>(Lkb2;)V
-
-    sput-object v0, Llb2;->h:Llb2;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lkb2;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v0, p1, Lkb2;->a:J
-
-    iput-wide v0, p0, Llb2;->a:J
-
-    iget-object v0, p1, Lkb2;->b:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    :goto_0
-    iput-object v0, p0, Llb2;->b:Ljava/util/List;
-
-    iget-wide v0, p1, Lkb2;->c:J
-
-    iput-wide v0, p0, Llb2;->c:J
-
-    iget-wide v0, p1, Lkb2;->d:J
-
-    iput-wide v0, p0, Llb2;->d:J
-
-    iget-wide v0, p1, Lkb2;->e:J
-
-    iput-wide v0, p0, Llb2;->e:J
-
-    iget-wide v0, p1, Lkb2;->f:J
-
-    iput-wide v0, p0, Llb2;->f:J
-
-    iget-wide v0, p1, Lkb2;->g:J
-
-    iput-wide v0, p0, Llb2;->g:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lkb2;
-    .locals 3
-
-    new-instance v0, Lkb2;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v1, p0, Llb2;->a:J
-
-    iput-wide v1, v0, Lkb2;->a:J
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    iget-object v2, p0, Llb2;->b:Ljava/util/List;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object v1, v0, Lkb2;->b:Ljava/util/List;
-
-    iget-wide v1, p0, Llb2;->c:J
-
-    iput-wide v1, v0, Lkb2;->c:J
-
-    iget-wide v1, p0, Llb2;->d:J
-
-    iput-wide v1, v0, Lkb2;->d:J
-
-    iget-wide v1, p0, Llb2;->e:J
-
-    iput-wide v1, v0, Lkb2;->e:J
-
-    iget-wide v1, p0, Llb2;->f:J
-
-    iput-wide v1, v0, Lkb2;->f:J
-
-    iget-wide v1, p0, Llb2;->g:J
-
-    iput-wide v1, v0, Lkb2;->g:J
-
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 10
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChatSettings{dontDisturbUntil="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Llb2;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", options="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Llb2;->b:Ljava/util/List;
-
-    if-nez v2, :cond_0
-
-    const-string v1, "[]"
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v9, Lua7;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v9, v1}, Lua7;-><init>(I)V
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, ","
-
-    const-string v5, "["
-
-    const-string v6, "]"
-
-    const/4 v7, -0x1
-
-    const-string v8, "..."
-
-    invoke-static/range {v2 .. v9}, Lq73;->j0(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/String;Lbc6;)V
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Ldy1;->y(I)[I
 
     move-result-object v1
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    array-length v1, v1
 
-    const-string v1, ", lastNotifMark="
+    new-array v1, v1, [I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    iget-wide v1, p0, Llb2;->c:J
+    const/4 v3, 0x2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v1, ", lastNotifMessageId="
+    :catch_0
+    :try_start_1
+    aput v3, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catch_1
+    const/4 v4, 0x3
 
-    iget-wide v1, p0, Llb2;->d:J
+    :try_start_2
+    aput v4, v1, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :catch_2
+    const/4 v5, 0x4
 
-    const-string v1, ", favoriteIndex="
+    :try_start_3
+    aput v5, v1, v5
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catch_3
+    const/4 v6, 0x0
 
-    iget-wide v1, p0, Llb2;->e:J
+    const/4 v7, 0x5
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :try_start_4
+    aput v7, v1, v6
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    const-string v1, ", hideMyLiveLocationPanelBeforeTime="
+    :catch_4
+    const/4 v8, 0x6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_start_5
+    aput v8, v1, v7
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    iget-wide v1, p0, Llb2;->f:J
+    :catch_5
+    :try_start_6
+    aput v0, v1, v8
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :catch_6
+    sput-object v1, Llb2;->$EnumSwitchMapping$0:[I
 
-    const-string v1, ", hideLiveLocationPanelBeforeTime="
+    invoke-static {}, Lkb2;->values()[Lkb2;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-wide v1, p0, Llb2;->g:J
+    array-length v0, v0
 
-    const/16 p0, 0x7d
+    new-array v0, v0, [I
 
-    invoke-static {v0, v1, v2, p0}, Lbg9;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    :try_start_7
+    aput v2, v0, v6
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    move-result-object p0
+    :catch_7
+    :try_start_8
+    aput v3, v0, v3
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    return-object p0
+    :catch_8
+    :try_start_9
+    aput v4, v0, v4
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+
+    :catch_9
+    :try_start_a
+    aput v5, v0, v5
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
+
+    :catch_a
+    :try_start_b
+    aput v7, v0, v2
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
+
+    :catch_b
+    sput-object v0, Llb2;->$EnumSwitchMapping$1:[I
+
+    return-void
 .end method

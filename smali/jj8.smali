@@ -1,128 +1,76 @@
 .class public final Ljj8;
-.super Ljava/lang/Object;
+.super Landroidx/appcompat/widget/AppCompatTextView;
 .source "SourceFile"
 
 
-# instance fields
-.field public A:Ljava/lang/Integer;
-
-.field public B:Ljava/lang/Integer;
-
-.field public C:Ljava/lang/CharSequence;
-
-.field public D:Ljava/lang/CharSequence;
-
-.field public E:Ljava/lang/CharSequence;
-
-.field public F:Landroid/os/Bundle;
-
-.field public a:Ljava/lang/CharSequence;
-
-.field public b:Ljava/lang/CharSequence;
-
-.field public c:Ljava/lang/CharSequence;
-
-.field public d:Ljava/lang/CharSequence;
-
-.field public e:Ljava/lang/CharSequence;
-
-.field public f:Ljava/lang/CharSequence;
-
-.field public g:Ljava/lang/CharSequence;
-
-.field public h:Landroid/net/Uri;
-
-.field public i:Lifc;
-
-.field public j:Lifc;
-
-.field public k:[B
-
-.field public l:Ljava/lang/Integer;
-
-.field public m:Landroid/net/Uri;
-
-.field public n:Ljava/lang/Integer;
-
-.field public o:Ljava/lang/Integer;
-
-.field public p:Ljava/lang/Integer;
-
-.field public q:Ljava/lang/Boolean;
-
-.field public r:Ljava/lang/Integer;
-
-.field public s:Ljava/lang/Integer;
-
-.field public t:Ljava/lang/Integer;
-
-.field public u:Ljava/lang/Integer;
-
-.field public v:Ljava/lang/Integer;
-
-.field public w:Ljava/lang/Integer;
-
-.field public x:Ljava/lang/CharSequence;
-
-.field public y:Ljava/lang/CharSequence;
-
-.field public z:Ljava/lang/CharSequence;
-
-
 # virtual methods
-.method public final a(I[B)V
-    .locals 3
+.method public final setTextAppearance(Landroid/content/Context;I)V
+    .locals 5
 
-    const/4 v0, 0x3
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget v0, Lgkc;->textAppearanceLineHeightEnabled:I
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Ljj8;->k:[B
-
-    if-eqz v1, :cond_1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    sget v2, Llrf;->a:I
-
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Ljj8;->l:Ljava/lang/Integer;
-
-    invoke-static {v1, v0}, Llrf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1, v1}, Lxgi;->c(ILandroid/content/Context;Z)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p1
+
+    sget-object v0, Lfvc;->MaterialTextAppearance:[I
+
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    sget v0, Lfvc;->MaterialTextAppearance_android_lineHeight:I
+
+    sget v1, Lfvc;->MaterialTextAppearance_lineHeight:I
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    const/4 v2, 0x0
+
+    move v3, v1
+
+    :goto_0
+    const/4 v4, 0x2
+
+    if-ge v2, v4, :cond_0
+
+    if-gez v3, :cond_0
+
+    aget v3, v0, v2
+
+    invoke-static {p2, p1, v3, v1}, Lbhi;->g(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+
+    move-result v3
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    return-void
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    if-ltz v3, :cond_1
+
+    invoke-virtual {p0, v3}, Landroidx/appcompat/widget/AppCompatTextView;->setLineHeight(I)V
 
     :cond_1
-    :goto_0
-    invoke-virtual {p2}, [B->clone()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, [B
-
-    iput-object p2, p0, Ljj8;->k:[B
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljj8;->l:Ljava/lang/Integer;
-
     return-void
 .end method

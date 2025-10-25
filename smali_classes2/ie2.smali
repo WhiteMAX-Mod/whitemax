@@ -1,77 +1,55 @@
 .class public final Lie2;
-.super Lpvb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final y(Lts7;)V
-    .locals 5
+# instance fields
+.field public final a:J
 
-    check-cast p1, Lasb;
+.field public final b:Z
 
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+.field public final c:Z
 
-    check-cast p0, Lge2;
+.field public final d:Z
 
-    iget-object p1, p1, Lasb;->a:Lxd2;
+.field public final e:Ljava/lang/String;
 
-    iget-object v0, p1, Lxd2;->e:Ljava/lang/String;
+.field public final f:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lge2;->setLink(Ljava/lang/String;)V
+.field public final g:Z
 
-    iget-boolean v0, p1, Lxd2;->f:Z
+.field public final h:Z
 
-    invoke-virtual {p0, v0}, Lge2;->setLoading(Z)V
+.field public final i:I
 
-    iget-object v0, p1, Lxd2;->d:Ljava/lang/String;
+.field public final j:Lgv6;
 
-    invoke-virtual {p0, v0}, Lge2;->setChatTitle(Ljava/lang/String;)V
 
-    iget-wide v0, p1, Lxd2;->b:J
+# direct methods
+.method public constructor <init>(JZZZLjava/lang/String;Ljava/lang/String;ZZILgv6;)V
+    .locals 0
 
-    iget-object v2, p1, Lxd2;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v3, p1, Lxd2;->c:Ljava/lang/CharSequence;
+    iput-wide p1, p0, Lie2;->a:J
 
-    iget-object v4, p0, Lge2;->H0:Loba;
+    iput-boolean p3, p0, Lie2;->b:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-boolean p4, p0, Lie2;->c:Z
 
-    move-result-object v0
+    iput-boolean p5, p0, Lie2;->d:Z
 
-    invoke-static {v4, v2, v0, v3}, Loba;->n(Loba;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
+    iput-object p6, p0, Lie2;->e:Ljava/lang/String;
 
-    iget-boolean v0, p1, Lxd2;->g:Z
+    iput-object p7, p0, Lie2;->f:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    iput-boolean p8, p0, Lie2;->g:Z
 
-    if-eqz v0, :cond_0
+    iput-boolean p9, p0, Lie2;->h:Z
 
-    iget-boolean p1, p1, Lxd2;->h:Z
+    iput p10, p0, Lie2;->i:I
 
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move p1, v1
-
-    :goto_0
-    iget-object v0, p0, Lge2;->K0:Landroid/widget/ImageView;
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/16 v1, 0x8
-
-    :goto_1
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lge2;->v()V
+    iput-object p11, p0, Lie2;->j:Lgv6;
 
     return-void
 .end method

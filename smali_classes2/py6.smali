@@ -1,434 +1,286 @@
 .class public final Lpy6;
-.super Landroid/view/ViewGroup;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lx3f;
+.implements Lc2h;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/graphics/Rect;
 
-.field public final b:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public final synthetic b:Lv7d;
 
-.field public final c:Landroid/widget/TextView;
+.field public final synthetic c:Landroid/graphics/Path;
+
+.field public final synthetic d:Landroid/graphics/Path;
+
+.field public final synthetic e:Landroid/graphics/Rect;
+
+.field public final synthetic f:Landroid/graphics/Rect;
+
+.field public final synthetic g:Ljava/lang/Integer;
+
+.field public final synthetic h:Landroid/graphics/Rect;
+
+.field public final synthetic i:Landroid/graphics/RectF;
+
+.field public final synthetic j:Ljava/lang/Float;
+
+.field public final synthetic k:[F
+
+.field public final synthetic l:Landroid/graphics/RectF;
+
+.field public final synthetic m:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.method public constructor <init>(Lv7d;Landroid/graphics/Path;Landroid/graphics/Path;Landroid/graphics/Rect;Landroid/graphics/Rect;Ljava/lang/Integer;Landroid/graphics/Rect;Landroid/graphics/RectF;Ljava/lang/Float;[FLandroid/graphics/RectF;Landroid/view/View;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput-object p1, p0, Lpy6;->b:Lv7d;
 
-    const/16 v1, 0x8
+    iput-object p2, p0, Lpy6;->c:Landroid/graphics/Path;
 
-    int-to-float v1, v1
+    iput-object p3, p0, Lpy6;->d:Landroid/graphics/Path;
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    iput-object p4, p0, Lpy6;->e:Landroid/graphics/Rect;
 
-    move-result-object v2
+    iput-object p5, p0, Lpy6;->f:Landroid/graphics/Rect;
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iput-object p6, p0, Lpy6;->g:Ljava/lang/Integer;
 
-    move-result-object v2
+    iput-object p7, p0, Lpy6;->h:Landroid/graphics/Rect;
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    iput-object p8, p0, Lpy6;->i:Landroid/graphics/RectF;
 
-    mul-float/2addr v1, v2
+    iput-object p9, p0, Lpy6;->j:Ljava/lang/Float;
 
-    invoke-static {v1}, Lya6;->G(F)I
+    iput-object p10, p0, Lpy6;->k:[F
 
-    move-result v1
+    iput-object p11, p0, Lpy6;->l:Landroid/graphics/RectF;
 
-    iput v1, p0, Lpy6;->a:I
+    iput-object p12, p0, Lpy6;->m:Landroid/view/View;
 
-    new-instance v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    new-instance p1, Landroid/graphics/Rect;
 
-    invoke-direct {v1, p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    sget-object v2, Lada;->b:Lada;
-
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lada;)V
-
-    sget-object v2, Lzca;->b:Lzca;
-
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lzca;)V
-
-    sget-object v2, Lxca;->c:Lxca;
-
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lxca;)V
-
-    iput-object v1, p0, Lpy6;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    new-instance v2, Landroid/widget/TextView;
-
-    invoke-direct {v2, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    sget-object p1, Lyu4;->t0:Lbx9;
-
-    invoke-virtual {p1, v2}, Lbx9;->l(Landroid/view/View;)Lera;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lera;->getText()Lh1f;
-
-    const/4 v3, -0x1
-
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
-
-    const/16 v3, 0x11
-
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setGravity(I)V
-
-    sget-object v3, Lclf;->H:Lv2f;
-
-    invoke-static {v3, v2}, Lv2f;->d(Lv2f;Landroid/widget/TextView;)V
-
-    iput-object v2, p0, Lpy6;->c:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p1, p0}, Lbx9;->l(Landroid/view/View;)Lera;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lera;->c()Lide;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lide;->a:Lgde;
-
-    iget-object p1, p1, Lgde;->a:Lfde;
-
-    iget p1, p1, Lfde;->h:I
-
-    new-instance v1, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1, v0, v0}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    iput-object p1, p0, Lpy6;->a:Landroid/graphics/Rect;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLayout(ZIIII)V
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result p1
-
-    iget-object p2, p0, Lpy6;->c:Landroid/widget/TextView;
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p3
-
-    iget-object p4, p0, Lpy6;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {p4}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p5
-
-    if-le p3, p5, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
-
-    move-result p3
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p5
-
-    div-int/lit8 p5, p5, 0x2
-
-    invoke-virtual {p4}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x2
-
-    sub-int/2addr p5, v0
-
-    add-int/2addr p5, p3
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
-
-    move-result p5
-
-    :goto_0
-    invoke-virtual {p4}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p3
-
-    add-int/2addr p3, p5
-
-    invoke-virtual {p4}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, p1
-
-    invoke-virtual {p4, p5, p1, p3, v0}, Landroid/view/View;->layout(IIII)V
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p3
-
-    invoke-virtual {p4}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p5
-
-    if-le p3, p5, :cond_1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
-
-    move-result p3
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
-
-    move-result p3
-
-    invoke-virtual {p4}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p5
-
-    div-int/lit8 p5, p5, 0x2
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x2
-
-    sub-int/2addr p5, v0
-
-    add-int/2addr p3, p5
-
-    :goto_1
-    invoke-virtual {p4}, Landroid/view/View;->getBottom()I
-
-    move-result p4
-
-    add-int/2addr p4, p1
-
-    iget p0, p0, Lpy6;->a:I
-
-    add-int/2addr p4, p0
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p0
-
-    add-int/2addr p0, p3
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p1
-
-    add-int/2addr p1, p4
-
-    invoke-virtual {p2, p3, p4, p0, p1}, Landroid/view/View;->layout(IIII)V
-
-    return-void
-.end method
-
-.method public final onMeasure(II)V
-    .locals 5
-
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result v0
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result p2
-
-    const/high16 v1, -0x80000000
-
-    invoke-static {v0, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v2
-
-    invoke-static {p2, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v3
-
-    iget-object v4, p0, Lpy6;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {v4, v2, v3}, Landroid/view/View;->measure(II)V
-
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
-
-    move-result p1
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    if-ne p1, v2, :cond_0
-
-    invoke-static {v0, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v0, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p1
-
-    :goto_0
-    invoke-static {p2, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p2
-
-    iget-object v0, p0, Lpy6;->c:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p1
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p2
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
-
-    move-result p2
-
-    add-int/2addr p2, p1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingEnd()I
-
-    move-result p1
-
-    add-int/2addr p1, p2
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p2
-
-    iget v1, p0, Lpy6;->a:I
-
-    add-int/2addr p2, v1
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, p2
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result p2
-
-    add-int/2addr p2, v0
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v0
-
-    add-int/2addr v0, p2
-
-    invoke-virtual {p0, p1, v0}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    return-void
-.end method
-
-.method public final onThemeChanged(Lera;)V
+.method public final a()V
     .locals 2
 
-    iget-object v0, p0, Lpy6;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v0, p0, Lpy6;->c:Landroid/graphics/Path;
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->onThemeChanged(Lera;)V
+    invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    sget-object p1, Lyu4;->t0:Lbx9;
+    iget-object v0, p0, Lpy6;->d:Landroid/graphics/Path;
 
-    invoke-virtual {p1, p0}, Lbx9;->l(Landroid/view/View;)Lera;
+    invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    move-result-object v0
-
-    invoke-interface {v0}, Lera;->getText()Lh1f;
-
-    const/4 v0, -0x1
-
-    iget-object v1, p0, Lpy6;->c:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {p1, p0}, Lbx9;->l(Landroid/view/View;)Lera;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lera;->c()Lide;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lide;->a:Lgde;
-
-    iget-object p1, p1, Lgde;->a:Lfde;
-
-    iget p1, p1, Lfde;->h:I
-
-    new-instance v0, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
+    iget-object v0, p0, Lpy6;->b:Lv7d;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    iput-boolean v1, v0, Lv7d;->a:Z
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    iget-object v0, p0, Lpy6;->m:Landroid/view/View;
 
+    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_0
     return-void
 .end method
 
-.method public final setIcon(I)V
-    .locals 1
+.method public final c(Landroid/graphics/Rect;Landroid/view/View;)V
+    .locals 5
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lpy6;->a:Landroid/graphics/Rect;
+
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto/16 :goto_2
+
+    :cond_0
+    invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, p0, Lpy6;->b:Lv7d;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lv7d;->a:Z
+
+    iget-object v0, p0, Lpy6;->c:Landroid/graphics/Path;
+
+    invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
+
+    iget-object v1, p0, Lpy6;->d:Landroid/graphics/Path;
+
+    invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
+
+    iget-object v2, p0, Lpy6;->e:Landroid/graphics/Rect;
+
+    invoke-virtual {v2, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    sget-object p1, Lqy6;->b:Landroid/graphics/Rect;
+
+    iget-object v3, p0, Lpy6;->f:Landroid/graphics/Rect;
+
+    if-eq v3, p1, :cond_1
+
+    iget p1, v2, Landroid/graphics/Rect;->left:I
+
+    iget v4, v3, Landroid/graphics/Rect;->left:I
+
+    add-int/2addr p1, v4
+
+    iput p1, v2, Landroid/graphics/Rect;->left:I
+
+    iget p1, v2, Landroid/graphics/Rect;->top:I
+
+    iget v4, v3, Landroid/graphics/Rect;->top:I
+
+    add-int/2addr p1, v4
+
+    iput p1, v2, Landroid/graphics/Rect;->top:I
+
+    iget p1, v2, Landroid/graphics/Rect;->right:I
+
+    iget v4, v3, Landroid/graphics/Rect;->right:I
+
+    sub-int/2addr p1, v4
+
+    iput p1, v2, Landroid/graphics/Rect;->right:I
+
+    iget p1, v2, Landroid/graphics/Rect;->bottom:I
+
+    iget v3, v3, Landroid/graphics/Rect;->bottom:I
+
+    sub-int/2addr p1, v3
+
+    iput p1, v2, Landroid/graphics/Rect;->bottom:I
+
+    :cond_1
+    iget-object p1, p0, Lpy6;->g:Ljava/lang/Integer;
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
-    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->A0:[Lxi7;
+    check-cast p1, Landroid/view/View;
 
-    iget-object p0, p0, Lpy6;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    goto :goto_0
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->d(Ljava/lang/Integer;)V
+    :cond_2
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    return-void
-.end method
+    move-result p1
 
-.method public final setLabel(I)V
-    .locals 0
+    invoke-static {p2, p1}, Lvci;->e(Landroid/view/View;I)Landroid/view/View;
 
-    iget-object p0, p0, Lpy6;->c:Landroid/widget/TextView;
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(I)V
+    if-nez p1, :cond_3
 
+    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View;
+
+    :cond_3
+    :goto_0
+    iget-object p2, p0, Lpy6;->h:Landroid/graphics/Rect;
+
+    invoke-static {p2, p1}, Lr1h;->d(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    iget-object p1, p0, Lpy6;->i:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v2}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+
+    iget v3, v2, Landroid/graphics/Rect;->top:I
+
+    iget v4, p2, Landroid/graphics/Rect;->top:I
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iput v3, p1, Landroid/graphics/RectF;->top:F
+
+    iget v3, v2, Landroid/graphics/Rect;->bottom:I
+
+    iget p2, p2, Landroid/graphics/Rect;->top:I
+
+    invoke-static {v3, p2}, Ljava/lang/Math;->max(II)I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    iput p2, p1, Landroid/graphics/RectF;->bottom:F
+
+    iget-object p2, p0, Lpy6;->j:Ljava/lang/Float;
+
+    if-eqz p2, :cond_4
+
+    sget-object p2, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
+
+    invoke-virtual {v1, p1, p2}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
+
+    iget-object p1, p0, Lpy6;->l:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v2}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+
+    iget-object v2, p0, Lpy6;->k:[F
+
+    invoke-virtual {v0, p1, v2, p2}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
+
+    sget-object p1, Landroid/graphics/Path$Op;->INTERSECT:Landroid/graphics/Path$Op;
+
+    invoke-virtual {v0, v1, p1}, Landroid/graphics/Path;->op(Landroid/graphics/Path;Landroid/graphics/Path$Op;)Z
+
+    goto :goto_1
+
+    :cond_4
+    sget-object p2, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
+
+    invoke-virtual {v0, p1, p2}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
+
+    :goto_1
+    iget-object p1, p0, Lpy6;->m:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_5
+    :goto_2
     return-void
 .end method

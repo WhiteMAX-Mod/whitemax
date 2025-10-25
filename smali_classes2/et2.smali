@@ -1,86 +1,101 @@
 .class public final Let2;
-.super Luc0;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
-
-
-# direct methods
-.method public constructor <init>(J)V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    invoke-direct {p0, v0}, Luc0;-><init>(I)V
-
-    iput-wide p1, p0, Let2;->b:J
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final measureChildWithMargins(Landroid/view/View;IIII)V
+    .locals 7
 
-    const/4 v0, 0x1
+    if-eqz p1, :cond_2
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
-    return v0
+    move-result v0
 
-    :cond_0
-    instance-of v1, p1, Let2;
+    sget v1, Lnsa;->b:I
+
+    if-ne v0, v1, :cond_2
+
+    const/high16 v0, -0x80000000
+
+    invoke-static {p4, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v5
+
+    sget p4, Lnsa;->o:I
+
+    invoke-virtual {p0, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result p4
+
+    sget v0, Lnsa;->l:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    invoke-static {p0}, Lvci;->h(Landroid/view/View;)Ljava/lang/Integer;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    if-eqz v1, :cond_0
 
-    return v2
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    invoke-static {p0}, Lvci;->l(Landroid/view/View;)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
 
     :cond_1
-    check-cast p1, Let2;
+    add-int/2addr v1, v2
 
-    iget-wide v3, p0, Let2;->b:J
+    add-int/2addr p4, v0
 
-    iget-wide p0, p1, Let2;->b:J
+    add-int/2addr p4, v1
 
-    cmp-long p0, v3, p0
+    invoke-static {p5, p4}, Ljava/lang/Math;->max(II)I
 
-    if-eqz p0, :cond_2
+    move-result v6
 
-    return v2
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move v3, p2
+
+    move v4, p3
+
+    invoke-super/range {v1 .. v6}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
+
+    return-void
 
     :cond_2
-    return v0
-.end method
+    invoke-super/range {p0 .. p5}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Let2;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OpenChatAndUpdateBackstack(chatId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Let2;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

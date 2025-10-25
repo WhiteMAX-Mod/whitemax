@@ -1,24 +1,26 @@
 .class public final Lkfe;
-.super Lure;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lqfe;
+.field public X:I
+
+.field public final synthetic Y:Lqfe;
 
 
 # direct methods
 .method public constructor <init>(Lqfe;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lkfe;->X:Lqfe;
+    iput-object p1, p0, Lkfe;->Y:Lqfe;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,84 +30,131 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ly04;
+    check-cast p1, Lq54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lkfe;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lkfe;
+    check-cast p1, Lkfe;
 
-    sget-object p1, Lylf;->a:Lylf;
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p0, p1}, Lkfe;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lkfe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    .locals 1
 
     new-instance p1, Lkfe;
 
-    iget-object p0, p0, Lkfe;->X:Lqfe;
+    iget-object v0, p0, Lkfe;->Y:Lqfe;
 
-    invoke-direct {p1, p0, p2}, Lkfe;-><init>(Lqfe;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lkfe;-><init>(Lqfe;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    sget-object v0, Lylf;->a:Lylf;
+    iget v0, p0, Lkfe;->X:I
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const/4 v1, 0x1
 
-    iget-object p1, p0, Lkfe;->X:Lqfe;
+    if-eqz v0, :cond_1
 
-    iget-object p1, p1, Lqfe;->r0:Lcl7;
+    if-ne v0, v1, :cond_0
 
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-object p1
-
-    check-cast p1, Lyz2;
-
-    iget-object v1, p0, Lkfe;->X:Lqfe;
-
-    iget-wide v1, v1, Lqfe;->b:J
-
-    check-cast p1, Ly03;
-
-    invoke-virtual {p1, v1, v2}, Ly03;->N(J)Liic;
-
-    move-result-object p1
-
-    iget-object p1, p1, Liic;->a:Lrce;
-
-    invoke-interface {p1}, Lrce;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ls72;
-
-    if-nez p1, :cond_0
-
-    return-object v0
+    goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lkfe;->X:Lqfe;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p0, p0, Lqfe;->y0:Lyce;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {p1}, Ls72;->k0()V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p1, Ls72;->t0:Ljava/lang/CharSequence;
+    throw p1
 
-    invoke-virtual {p0, p1}, Lyce;->setValue(Ljava/lang/Object;)V
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkfe;->Y:Lqfe;
+
+    iget-object v0, p1, Lqfe;->x0:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ln5h;
+
+    invoke-virtual {p1}, Lqfe;->v()Ly83;
+
+    move-result-object p1
+
+    check-cast p1, Lntd;
+
+    invoke-virtual {p1}, Lntd;->s()J
+
+    move-result-wide v2
+
+    iput v1, p0, Lkfe;->X:I
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p1, "SELECT * FROM webapp_biometry WHERE user_id = ?"
+
+    invoke-static {v1, p1}, Lvgd;->c(ILjava/lang/String;)Lvgd;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1, v2, v3}, Lvgd;->k(IJ)V
+
+    new-instance v2, Landroid/os/CancellationSignal;
+
+    invoke-direct {v2}, Landroid/os/CancellationSignal;-><init>()V
+
+    iget-object v3, v0, Ln5h;->a:Lfgd;
+
+    new-instance v4, Ll5h;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v0, p1, v5}, Ll5h;-><init>(Ln5h;Lvgd;I)V
+
+    invoke-static {v3, v2, v4, p0}, Lexi;->a(Lfgd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ljava/util/Collection;
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    xor-int/2addr p1, v1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

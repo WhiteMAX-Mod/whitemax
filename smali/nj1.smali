@@ -2,69 +2,81 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/calls/ui/ui/call/CallScreen;
+.field public final a:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;I)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput p2, p0, Lnj1;->a:I
-
-    iput-object p1, p0, Lnj1;->b:Lone/me/calls/ui/ui/call/CallScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lnj1;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget p2, p0, Lnj1;->a:I
+    const/4 v0, 0x1
 
-    iget-object p3, p0, Lnj1;->b:Lone/me/calls/ui/ui/call/CallScreen;
+    if-ne p0, p1, :cond_0
 
-    packed-switch p2, :pswitch_data_0
+    return v0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    :cond_0
+    instance-of v1, p1, Lnj1;
 
-    sget-object p0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lad4;
+    const/4 v2, 0x0
 
-    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Ljab;
+    if-nez v1, :cond_1
 
-    move-result-object p0
+    return v2
 
-    invoke-virtual {p0}, Ljab;->c()V
+    :cond_1
+    check-cast p1, Lnj1;
 
-    return-void
+    iget-boolean v1, p0, Lnj1;->a:Z
 
-    :pswitch_0
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    iget-boolean p1, p1, Lnj1;->a:Z
 
-    sget-object p0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lad4;
+    if-eq v1, p1, :cond_2
 
-    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Ljab;
+    return v2
 
-    move-result-object p0
+    :cond_2
+    return v0
+.end method
 
-    invoke-virtual {p0}, Ljab;->c()V
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    iget-boolean v0, p0, Lnj1;->a:Z
 
-    nop
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "CallPresettingsState(isSaveButtonAvailable="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lnj1;->a:Z
+
+    invoke-static {v0, v1, v2}, Lzdf;->s(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

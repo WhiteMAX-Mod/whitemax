@@ -1,127 +1,113 @@
-.class public final Lhmg;
-.super Lure;
+.class public final enum Lhmg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
+
+# static fields
+.field public static final synthetic X:[Lhmg;
+
+.field public static final synthetic Y:Lzd5;
+
+.field public static final enum b:Lhmg;
+
+.field public static final enum c:Lhmg;
+
+.field public static final enum o:Lhmg;
 
 
 # instance fields
-.field public final synthetic X:Ltmg;
+.field public final a:Llhc;
 
 
 # direct methods
-.method public constructor <init>(Ltmg;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Lhmg;->X:Ltmg;
+    new-instance v0, Lhmg;
 
-    const/4 p1, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget-object v2, Llhc;->Z:Llhc;
+
+    const-string v3, "WITHOUT_COMPRESS"
+
+    invoke-direct {v0, v3, v1, v2}, Lhmg;-><init>(Ljava/lang/String;ILlhc;)V
+
+    sput-object v0, Lhmg;->b:Lhmg;
+
+    new-instance v1, Lhmg;
+
+    const/4 v2, 0x1
+
+    sget-object v3, Llhc;->q0:Llhc;
+
+    const-string v4, "OPTIMAL"
+
+    invoke-direct {v1, v4, v2, v3}, Lhmg;-><init>(Ljava/lang/String;ILlhc;)V
+
+    sput-object v1, Lhmg;->c:Lhmg;
+
+    new-instance v2, Lhmg;
+
+    const/4 v3, 0x2
+
+    sget-object v4, Llhc;->r0:Llhc;
+
+    const-string v5, "MAXIMUM"
+
+    invoke-direct {v2, v5, v3, v4}, Lhmg;-><init>(Ljava/lang/String;ILlhc;)V
+
+    sput-object v2, Lhmg;->o:Lhmg;
+
+    filled-new-array {v0, v1, v2}, [Lhmg;
+
+    move-result-object v0
+
+    sput-object v0, Lhmg;->X:[Lhmg;
+
+    new-instance v1, Lzd5;
+
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lhmg;->Y:Lzd5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILlhc;)V
     .locals 0
 
-    check-cast p1, Ly04;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lhmg;->a:Llhc;
 
-    invoke-virtual {p0, p1, p2}, Lhmg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lhmg;
+    .locals 1
+
+    const-class v0, Lhmg;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
     check-cast p0, Lhmg;
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lhmg;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+.method public static values()[Lhmg;
+    .locals 1
 
-    new-instance p1, Lhmg;
+    sget-object v0, Lhmg;->X:[Lhmg;
 
-    iget-object p0, p0, Lhmg;->X:Ltmg;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-direct {p1, p0, p2}, Lhmg;-><init>(Ltmg;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-object p1
-.end method
+    check-cast v0, [Lhmg;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lhmg;->X:Ltmg;
-
-    iget-object p1, p0, Ltmg;->V0:Liic;
-
-    iget-object p1, p1, Liic;->a:Lrce;
-
-    invoke-interface {p1}, Lrce;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lymg;
-
-    sget-object v0, Lylf;->a:Lylf;
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p1, Lymg;->d:Ljava/lang/String;
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, p1, v1}, Ltmg;->w(Ljava/lang/String;Z)V
-
-    iget-object p1, p0, Ltmg;->X0:Lv85;
-
-    sget-object v1, Lklg;->a:Lklg;
-
-    invoke-static {p1, v1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ltmg;->w0:Lcl7;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v1, p1
-
-    check-cast v1, Lwcg;
-
-    iget-object p0, p0, Ltmg;->F0:Lxcg;
-
-    if-eqz p0, :cond_1
-
-    iget-wide v3, p0, Lxcg;->a:J
-
-    iget-object v5, p0, Lxcg;->b:Ljava/lang/String;
-
-    iget-object v6, p0, Lxcg;->c:Lpcg;
-
-    iget-object v7, p0, Lxcg;->d:Lb72;
-
-    const/4 v2, 0x3
-
-    invoke-virtual/range {v1 .. v7}, Lwcg;->a(IJLjava/lang/String;Lpcg;Lb72;)V
-
-    :cond_1
-    :goto_0
     return-object v0
 .end method

@@ -1,91 +1,65 @@
-.class public final synthetic Lmjd;
+.class public final Lmjd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbd6;
-
 
 # instance fields
-.field public final synthetic a:Llv6;
+.field public a:I
 
+.field public b:I
 
-# direct methods
-.method public constructor <init>(Llv6;)V
-    .locals 0
+.field public c:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public d:I
 
-    iput-object p1, p0, Lmjd;->a:Llv6;
+.field public e:I
 
-    return-void
-.end method
+.field public f:I
+
+.field public g:Z
+
+.field public h:Z
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(II)V
+    .locals 2
 
-    instance-of v0, p1, Lmjd;
+    iput p1, p0, Lmjd;->c:I
 
-    if-eqz v0, :cond_0
+    iput p2, p0, Lmjd;->d:I
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x1
 
-    invoke-virtual {p0}, Lmjd;->getFunctionDelegate()Luc6;
+    iput-boolean v0, p0, Lmjd;->h:Z
 
-    move-result-object p0
+    iget-boolean v0, p0, Lmjd;->g:Z
 
-    check-cast p1, Lbd6;
+    const/high16 v1, -0x80000000
 
-    invoke-interface {p1}, Lbd6;->getFunctionDelegate()Luc6;
+    if-eqz v0, :cond_1
 
-    move-result-object p1
+    if-eq p2, v1, :cond_0
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
+    iput p2, p0, Lmjd;->a:I
 
     :cond_0
-    const/4 p0, 0x0
+    if-eq p1, v1, :cond_3
 
-    return p0
-.end method
+    iput p1, p0, Lmjd;->b:I
 
-.method public final getFunctionDelegate()Luc6;
-    .locals 7
+    return-void
 
-    new-instance v0, Ls8;
+    :cond_1
+    if-eq p1, v1, :cond_2
 
-    const-string v6, "onNewHost(Ljava/lang/String;)Lkotlinx/coroutines/Job;"
+    iput p1, p0, Lmjd;->a:I
 
-    const/16 v2, 0x8
+    :cond_2
+    if-eq p2, v1, :cond_3
 
-    const/4 v1, 0x1
+    iput p2, p0, Lmjd;->b:I
 
-    const-class v3, Llv6;
-
-    iget-object v4, p0, Lmjd;->a:Llv6;
-
-    const-string v5, "onNewHost"
-
-    invoke-direct/range {v0 .. v6}, Ls8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    invoke-virtual {p0}, Lmjd;->getFunctionDelegate()Luc6;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
+    :cond_3
+    return-void
 .end method

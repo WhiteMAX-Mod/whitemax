@@ -56,67 +56,67 @@
 
 # virtual methods
 .method public getId()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Init"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/DataChannel$Init;->id:I
+    iget v0, p0, Lorg/webrtc/DataChannel$Init;->id:I
 
-    return p0
+    return v0
 .end method
 
 .method public getMaxRetransmitTimeMs()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Init"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/DataChannel$Init;->maxRetransmitTimeMs:I
+    iget v0, p0, Lorg/webrtc/DataChannel$Init;->maxRetransmitTimeMs:I
 
-    return p0
+    return v0
 .end method
 
 .method public getMaxRetransmits()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Init"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/DataChannel$Init;->maxRetransmits:I
+    iget v0, p0, Lorg/webrtc/DataChannel$Init;->maxRetransmits:I
 
-    return p0
+    return v0
 .end method
 
 .method public getNegotiated()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Init"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/DataChannel$Init;->negotiated:Z
+    iget-boolean v0, p0, Lorg/webrtc/DataChannel$Init;->negotiated:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getOrdered()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Init"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/DataChannel$Init;->ordered:Z
+    iget-boolean v0, p0, Lorg/webrtc/DataChannel$Init;->ordered:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getProtocol()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Init"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/DataChannel$Init;->protocol:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/DataChannel$Init;->protocol:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

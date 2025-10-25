@@ -78,39 +78,39 @@
 
 # virtual methods
 .method public getBlockMaximumSize()I
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;->blockSizeValue:Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;->blockSizeValue:Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
 
-    invoke-virtual {p0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->getIndicator()I
+    invoke-virtual {v0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->getIndicator()I
 
-    move-result p0
+    move-result v0
 
-    mul-int/lit8 p0, p0, 0x2
+    mul-int/lit8 v0, v0, 0x2
 
-    add-int/lit8 p0, p0, 0x8
+    add-int/lit8 v0, v0, 0x8
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    shl-int p0, v0, p0
+    shl-int v0, v1, v0
 
-    return p0
+    return v0
 .end method
 
 .method public toByte()B
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;->blockSizeValue:Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;->blockSizeValue:Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
 
-    invoke-virtual {p0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->getIndicator()I
+    invoke-virtual {v0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->getIndicator()I
 
-    move-result p0
+    move-result v0
 
-    and-int/lit8 p0, p0, 0x7
+    and-int/lit8 v0, v0, 0x7
 
-    shl-int/lit8 p0, p0, 0x4
+    shl-int/lit8 v0, v0, 0x4
 
-    int-to-byte p0, p0
+    int-to-byte v0, v0
 
-    return p0
+    return v0
 .end method

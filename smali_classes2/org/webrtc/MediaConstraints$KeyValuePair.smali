@@ -74,15 +74,15 @@
 
     if-eqz v2, :cond_2
 
-    iget-object p0, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->value:Ljava/lang/String;
+    iget-object v2, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->value:Ljava/lang/String;
 
     iget-object p1, p1, Lorg/webrtc/MediaConstraints$KeyValuePair;->value:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_2
 
     return v0
 
@@ -92,29 +92,29 @@
 .end method
 
 .method public getKey()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "KeyValuePair"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->key:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->key:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getValue()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "KeyValuePair"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->value:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->value:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->key:Ljava/lang/String;
 
@@ -122,29 +122,29 @@
 
     move-result v0
 
-    iget-object p0, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->value:Ljava/lang/String;
+    iget-object v1, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->value:Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    move-result p0
+    move-result v1
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    return p0
+    return v1
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->key:Ljava/lang/String;
 
-    iget-object p0, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->value:Ljava/lang/String;
+    iget-object v1, p0, Lorg/webrtc/MediaConstraints$KeyValuePair;->value:Ljava/lang/String;
 
-    const-string v1, ": "
+    const-string v2, ": "
 
-    invoke-static {v0, v1, p0}, Lsq3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lu15;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

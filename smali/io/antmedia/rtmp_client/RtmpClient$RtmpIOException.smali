@@ -20,7 +20,7 @@
 
     const-string v0, "RTMP error: "
 
-    invoke-static {p1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

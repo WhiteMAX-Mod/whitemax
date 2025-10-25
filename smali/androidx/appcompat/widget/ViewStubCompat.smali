@@ -23,13 +23,13 @@
 
     iput v0, p0, Landroidx/appcompat/widget/ViewStubCompat;->a:I
 
-    sget-object v1, Lwdc;->ViewStubCompat:[I
+    sget-object v1, Lvvc;->ViewStubCompat:[I
 
     invoke-virtual {p1, p2, v1, v0, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lwdc;->ViewStubCompat_android_inflatedId:I
+    sget p2, Lvvc;->ViewStubCompat_android_inflatedId:I
 
     const/4 v1, -0x1
 
@@ -39,7 +39,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ViewStubCompat;->b:I
 
-    sget p2, Lwdc;->ViewStubCompat_android_layout:I
+    sget p2, Lvvc;->ViewStubCompat_android_layout:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -47,7 +47,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ViewStubCompat;->a:I
 
-    sget p2, Lwdc;->ViewStubCompat_android_id:I
+    sget p2, Lvvc;->ViewStubCompat_android_id:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -149,22 +149,22 @@
     return-object v1
 
     :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "ViewStub must have a valid layoutResource"
+    const-string v1, "ViewStub must have a valid layoutResource"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "ViewStub must have a non-null ViewGroup viewParent"
+    const-string v1, "ViewStub must have a non-null ViewGroup viewParent"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public final dispatchDraw(Landroid/graphics/Canvas;)V
@@ -180,27 +180,27 @@
 .end method
 
 .method public getInflatedId()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Landroidx/appcompat/widget/ViewStubCompat;->b:I
+    iget v0, p0, Landroidx/appcompat/widget/ViewStubCompat;->b:I
 
-    return p0
+    return v0
 .end method
 
 .method public getLayoutInflater()Landroid/view/LayoutInflater;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/appcompat/widget/ViewStubCompat;->o:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Landroidx/appcompat/widget/ViewStubCompat;->o:Landroid/view/LayoutInflater;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getLayoutResource()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Landroidx/appcompat/widget/ViewStubCompat;->a:I
+    iget v0, p0, Landroidx/appcompat/widget/ViewStubCompat;->a:I
 
-    return p0
+    return v0
 .end method
 
 .method public final onMeasure(II)V
@@ -237,7 +237,7 @@
     return-void
 .end method
 
-.method public setOnInflateListener(Lh9g;)V
+.method public setOnInflateListener(Lg1h;)V
     .locals 0
 
     return-void
@@ -252,24 +252,24 @@
 
     invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Landroid/view/View;
+    check-cast v0, Landroid/view/View;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "setVisibility called on un-referenced view"
+    const-string v0, "setVisibility called on un-referenced view"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
     invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V

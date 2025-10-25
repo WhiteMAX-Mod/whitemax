@@ -1,121 +1,279 @@
-.class public final enum Lsm1;
-.super Ljava/lang/Enum;
+.class public final Lsm1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Lsm1;
+.field public static final g:Lsm1;
 
-.field public static final synthetic Y:Ly75;
 
-.field public static final enum a:Lsm1;
+# instance fields
+.field public final a:Z
 
-.field public static final enum b:Lsm1;
+.field public final b:Z
 
-.field public static final enum c:Lsm1;
+.field public final c:Z
 
-.field public static final enum o:Lsm1;
+.field public final d:Lmi1;
+
+.field public final e:Z
+
+.field public final f:Ljava/lang/CharSequence;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 7
 
     new-instance v0, Lsm1;
 
-    const-string v1, "CALL"
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v3, 0x0
 
-    sput-object v0, Lsm1;->a:Lsm1;
+    const/4 v4, 0x0
 
-    new-instance v1, Lsm1;
+    invoke-direct/range {v0 .. v6}, Lsm1;-><init>(ZZZLmi1;ZLjava/lang/CharSequence;)V
 
-    const-string v2, "STOP"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lsm1;->b:Lsm1;
-
-    new-instance v2, Lsm1;
-
-    const-string v3, "UPDATE_ACTIVE_NOTIFICATION"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lsm1;
-
-    const-string v4, "RESTART_FOREGROUND"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lsm1;->c:Lsm1;
-
-    new-instance v4, Lsm1;
-
-    const-string v5, "UPDATE_INCOMING_NOTIFICATION"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Lsm1;
-
-    const-string v6, "RESTART_FOREGROUND_SCREENSHARING"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lsm1;->o:Lsm1;
-
-    filled-new-array/range {v0 .. v5}, [Lsm1;
-
-    move-result-object v0
-
-    sput-object v0, Lsm1;->X:[Lsm1;
-
-    new-instance v1, Ly75;
-
-    invoke-direct {v1, v0}, Ly75;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lsm1;->Y:Ly75;
+    sput-object v0, Lsm1;->g:Lsm1;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lsm1;
-    .locals 1
+.method public constructor <init>(ZZZLmi1;ZLjava/lang/CharSequence;)V
+    .locals 0
 
-    const-class v0, Lsm1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-boolean p1, p0, Lsm1;->a:Z
 
-    move-result-object p0
+    iput-boolean p2, p0, Lsm1;->b:Z
 
-    check-cast p0, Lsm1;
+    iput-boolean p3, p0, Lsm1;->c:Z
 
-    return-object p0
+    iput-object p4, p0, Lsm1;->d:Lmi1;
+
+    iput-boolean p5, p0, Lsm1;->e:Z
+
+    iput-object p6, p0, Lsm1;->f:Ljava/lang/CharSequence;
+
+    return-void
 .end method
 
-.method public static values()[Lsm1;
-    .locals 1
 
-    sget-object v0, Lsm1;->X:[Lsm1;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lsm1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lsm1;
+
+    iget-boolean v1, p0, Lsm1;->a:Z
+
+    iget-boolean v3, p1, Lsm1;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lsm1;->b:Z
+
+    iget-boolean v3, p1, Lsm1;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lsm1;->c:Z
+
+    iget-boolean v3, p1, Lsm1;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lsm1;->d:Lmi1;
+
+    iget-object v3, p1, Lsm1;->d:Lmi1;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lsm1;->e:Z
+
+    iget-boolean v3, p1, Lsm1;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lsm1;->f:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, Lsm1;->f:Ljava/lang/CharSequence;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-boolean v0, p0, Lsm1;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lsm1;->b:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lsm1;->c:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lsm1;->d:Lmi1;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Lmi1;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v3, p0, Lsm1;->e:Z
+
+    invoke-static {v0, v1, v3}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lsm1;->f:Ljava/lang/CharSequence;
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", meIsAdmin="
+
+    const-string v1, ", isRecordStateEnabled="
+
+    const-string v2, "CallScreenRecordState(isMe="
+
+    iget-boolean v3, p0, Lsm1;->a:Z
+
+    iget-boolean v4, p0, Lsm1;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Li57;->o(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, [Lsm1;
+    iget-boolean v1, p0, Lsm1;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", recordScreenOpponentId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsm1;->d:Lmi1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isAdminDisableScreenRecord="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lsm1;->e:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", userName="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsm1;->f:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

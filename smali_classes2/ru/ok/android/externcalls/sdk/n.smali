@@ -32,48 +32,58 @@
 
     iget v0, p0, Lru/ok/android/externcalls/sdk/n;->a:I
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/n;->b:Ljava/lang/Object;
-
     packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationImpl$1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/n;->b:Ljava/lang/Object;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl$1;->b(Lru/ok/android/externcalls/sdk/ConversationImpl$1;)V
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl$1;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl$1;->b(Lru/ok/android/externcalls/sdk/ConversationImpl$1;)V
 
     return-void
 
     :pswitch_0
-    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/n;->b:Ljava/lang/Object;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->z(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->H(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
 
     return-void
 
     :pswitch_1
-    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/n;->b:Ljava/lang/Object;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->t(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->C(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
 
     return-void
 
     :pswitch_2
-    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/n;->b:Ljava/lang/Object;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->g(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->x(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
 
     return-void
 
     :pswitch_3
-    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/n;->b:Ljava/lang/Object;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->N(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->N(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
 
     return-void
 
     :pswitch_4
-    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/n;->b:Ljava/lang/Object;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->u(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->i(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
 
     return-void
 

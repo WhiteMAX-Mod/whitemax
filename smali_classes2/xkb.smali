@@ -1,64 +1,89 @@
 .class public final Lxkb;
-.super Ljava/lang/Object;
+.super Loz;
 .source "SourceFile"
 
-# interfaces
-.implements Lykb;
 
+# instance fields
+.field public final c:Lwif;
 
-# static fields
-.field public static final a:Lxkb;
+.field public d:Lyx;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Le20;Lwif;)V
+    .locals 0
 
-    new-instance v0, Lxkb;
+    invoke-direct {p0, p1}, Loz;-><init>(Le20;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lxkb;->a:Lxkb;
+    iput-object p2, p0, Lxkb;->c:Lwif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final b()Lyha;
+    .locals 6
 
-    const/4 v0, 0x1
+    invoke-super {p0}, Loz;->b()Lyha;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v0
 
-    return v0
+    if-eqz v0, :cond_0
+
+    return-object v0
 
     :cond_0
-    instance-of p0, p1, Lxkb;
+    new-instance v0, Ly7d;
 
-    if-nez p0, :cond_1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p0, 0x0
+    iget-object v1, p0, Lxkb;->d:Lyx;
 
-    return p0
+    iput-object v1, v0, Ly7d;->a:Ljava/lang/Object;
+
+    if-eqz v1, :cond_1
+
+    return-object v1
 
     :cond_1
-    return v0
-.end method
+    new-instance v1, Lyx;
 
-.method public final hashCode()I
-    .locals 0
+    invoke-direct {v1}, Lyx;-><init>()V
 
-    const p0, 0x46d4f907
+    iput-object v1, p0, Lxkb;->d:Lyx;
 
-    return p0
-.end method
+    iput-object v1, v0, Ly7d;->a:Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    iget-object v1, p0, Lxkb;->c:Lwif;
 
-    const-string p0, "ShowProgress"
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v1
+
+    check-cast v1, Lha7;
+
+    iget-object v2, p0, Loz;->a:Le20;
+
+    iget-object v2, v2, Le20;->b:Ls10;
+
+    invoke-virtual {v2}, Ls10;->a()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Lu1f;
+
+    const/16 v4, 0x18
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, p0, v0, v5, v4}, Lu1f;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {v1, v2, v3}, Lha7;->a(Ljava/lang/String;Lga7;)V
+
+    iget-object v0, v0, Ly7d;->a:Ljava/lang/Object;
+
+    check-cast v0, Lyha;
+
+    return-object v0
 .end method

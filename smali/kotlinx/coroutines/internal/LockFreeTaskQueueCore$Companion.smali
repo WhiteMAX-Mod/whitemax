@@ -36,7 +36,7 @@
         "Lkotlin/Function2;",
         "block",
         "withState",
-        "(JLpc6;)Ljava/lang/Object;",
+        "(JLzi6;)Ljava/lang/Object;",
         "addFailReason",
         "(J)I",
         "INITIAL_CAPACITY",
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lld4;)V
+.method public synthetic constructor <init>(Lki4;)V
     .locals 0
 
     .line 1
@@ -97,22 +97,22 @@
 
     const-wide/high16 v0, 0x2000000000000000L
 
-    and-long p0, p1, v0
+    and-long/2addr p1, v0
 
     const-wide/16 v0, 0x0
 
-    cmp-long p0, p0, v0
+    cmp-long p1, p1, v0
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p0, 0x2
+    const/4 p1, 0x2
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public final updateHead(JI)J
@@ -122,13 +122,13 @@
 
     invoke-virtual {p0, p1, p2, v0, v1}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore$Companion;->wo(JJ)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    int-to-long p2, p3
+    int-to-long v0, p3
 
-    or-long/2addr p0, p2
+    or-long/2addr p1, v0
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public final updateTail(JI)J
@@ -138,27 +138,27 @@
 
     invoke-virtual {p0, p1, p2, v0, v1}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore$Companion;->wo(JJ)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    int-to-long p2, p3
+    int-to-long v0, p3
 
-    const/16 v0, 0x1e
+    const/16 p3, 0x1e
 
-    shl-long/2addr p2, v0
+    shl-long/2addr v0, p3
 
-    or-long/2addr p0, p2
+    or-long/2addr p1, v0
 
-    return-wide p0
+    return-wide p1
 .end method
 
-.method public final withState(JLpc6;)Ljava/lang/Object;
-    .locals 2
+.method public final withState(JLzi6;)Ljava/lang/Object;
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(J",
-            "Lpc6;",
+            "Lzi6;",
             ")TT;"
         }
     .end annotation
@@ -167,31 +167,31 @@
 
     and-long/2addr v0, p1
 
-    long-to-int p0, v0
+    long-to-int v0, v0
 
-    const-wide v0, 0xfffffffc0000000L
+    const-wide v1, 0xfffffffc0000000L
 
-    and-long/2addr p1, v0
+    and-long/2addr p1, v1
 
-    const/16 v0, 0x1e
+    const/16 v1, 0x1e
 
-    shr-long/2addr p1, v0
+    shr-long/2addr p1, v1
 
     long-to-int p1, p1
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p0
+    move-result-object p2
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {p3, p0, p1}, Lpc6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p2, p1}, Lzi6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final wo(JJ)J
@@ -199,7 +199,7 @@
 
     not-long p3, p3
 
-    and-long p0, p1, p3
+    and-long/2addr p1, p3
 
-    return-wide p0
+    return-wide p1
 .end method

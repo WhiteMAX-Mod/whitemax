@@ -1,152 +1,184 @@
-.class public final synthetic Lpng;
+.class public final Lpng;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxg6;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Lpng;
+.field public final b:I
 
-.field private static final descriptor:Lqid;
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(IIIII)V
+    .locals 0
 
-    new-instance v0, Lpng;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lpng;->a:I
 
-    sput-object v0, Lpng;->a:Lpng;
+    iput p2, p0, Lpng;->b:I
 
-    new-instance v1, Ljeb;
+    iput p3, p0, Lpng;->c:I
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.system.WebAppSetupClosingBehaviorRequest"
+    iput p4, p0, Lpng;->d:I
 
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Ljeb;-><init>(Ljava/lang/String;Lxg6;I)V
-
-    const-string v0, "needConfirmation"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Ljeb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lpng;->descriptor:Lqid;
+    iput p5, p0, Lpng;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu8;)Ljava/lang/Object;
-    .locals 7
-
-    sget-object p0, Lpng;->descriptor:Lqid;
-
-    invoke-virtual {p1, p0}, Lu8;->k(Lqid;)Lu8;
-
-    move-result-object p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    move v2, v0
-
-    move v3, v1
-
-    move v4, v3
-
-    :goto_0
-    if-eqz v2, :cond_2
-
-    invoke-virtual {p1, p0}, Lu8;->q(Lqid;)I
-
-    move-result v5
-
-    const/4 v6, -0x1
-
-    if-eq v5, v6, :cond_1
-
-    if-nez v5, :cond_0
-
-    invoke-virtual {p1, p0, v1}, Lu8;->p(Lqid;I)Z
-
-    move-result v4
-
-    move v3, v0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
+    instance-of v1, p1, Lpng;
 
-    invoke-direct {p0, v5}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    const/4 v2, 0x0
 
-    throw p0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    move v2, v1
+    check-cast p1, Lpng;
 
-    goto :goto_0
+    iget v1, p0, Lpng;->a:I
+
+    iget v3, p1, Lpng;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-virtual {p1, p0}, Lu8;->z(Lqid;)V
+    iget v1, p0, Lpng;->b:I
 
-    new-instance p0, Lrng;
+    iget v3, p1, Lpng;->b:I
 
-    invoke-direct {p0, v3, v4}, Lrng;-><init>(IZ)V
+    if-eq v1, v3, :cond_3
 
-    return-object p0
+    return v2
+
+    :cond_3
+    iget v1, p0, Lpng;->c:I
+
+    iget v3, p1, Lpng;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lpng;->d:I
+
+    iget v3, p1, Lpng;->d:I
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Lpng;->e:I
+
+    iget p1, p1, Lpng;->e:I
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
 .end method
 
-.method public final b(Lay3;Ljava/lang/Object;)V
-    .locals 1
-
-    check-cast p2, Lrng;
-
-    sget-object p0, Lpng;->descriptor:Lqid;
-
-    invoke-virtual {p1, p0}, Lay3;->b(Lqid;)Lay3;
-
-    move-result-object p1
-
-    iget-boolean p2, p2, Lrng;->a:Z
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p0, v0, p2}, Lay3;->e(Lqid;IZ)V
-
-    invoke-virtual {p1}, Lay3;->m()V
-
-    return-void
-.end method
-
-.method public final c()[Lyi7;
+.method public final hashCode()I
     .locals 2
 
-    const/4 p0, 0x1
+    iget v0, p0, Lpng;->a:I
 
-    new-array p0, p0, [Lyi7;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    sget-object v0, Lzp0;->a:Lzp0;
+    move-result v0
 
-    const/4 v1, 0x0
+    mul-int/lit8 v0, v0, 0x1f
 
-    aput-object v0, p0, v1
+    iget v1, p0, Lpng;->b:I
 
-    return-object p0
+    invoke-static {v1, v0}, Lcgi;->a(II)I
+
+    move-result v0
+
+    iget v1, p0, Lpng;->c:I
+
+    invoke-static {v1, v0}, Lcgi;->a(II)I
+
+    move-result v0
+
+    iget v1, p0, Lpng;->d:I
+
+    invoke-static {v1, v0}, Lcgi;->a(II)I
+
+    move-result v0
+
+    iget v1, p0, Lpng;->e:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final d()Lqid;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    sget-object p0, Lpng;->descriptor:Lqid;
+    const-string v0, ", landscapeHeight="
 
-    return-object p0
+    const-string v1, ", portraitWidth="
+
+    const-string v2, "VideoDimension(landscapeWidth="
+
+    iget v3, p0, Lpng;->a:I
+
+    iget v4, p0, Lpng;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", portraitHeight="
+
+    const-string v2, ", fps="
+
+    iget v3, p0, Lpng;->c:I
+
+    iget v4, p0, Lpng;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ")"
+
+    iget v2, p0, Lpng;->e:I
+
+    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

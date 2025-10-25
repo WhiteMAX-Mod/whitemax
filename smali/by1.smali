@@ -1,109 +1,89 @@
-.class public final enum Lby1;
-.super Ljava/lang/Enum;
+.class public final Lby1;
+.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lby1;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final synthetic Y:[Lby1;
+.field public b:Z
 
-.field public static final enum a:Lby1;
-
-.field public static final enum b:Lby1;
-
-.field public static final enum c:Lby1;
-
-.field public static final enum o:Lby1;
+.field public final synthetic c:Liy1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Liy1;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lby1;
+    iput-object p1, p0, Lby1;->c:Liy1;
 
-    const-string v1, "UNKNOWN"
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
 
-    const/4 v2, 0x0
+    const/4 p1, 0x1
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-boolean p1, p0, Lby1;->b:Z
 
-    sput-object v0, Lby1;->a:Lby1;
-
-    new-instance v1, Lby1;
-
-    const-string v2, "INACTIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lby1;->b:Lby1;
-
-    new-instance v2, Lby1;
-
-    const-string v3, "METERING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lby1;->c:Lby1;
-
-    new-instance v3, Lby1;
-
-    const-string v4, "CONVERGED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lby1;->o:Lby1;
-
-    new-instance v4, Lby1;
-
-    const-string v5, "LOCKED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lby1;->X:Lby1;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lby1;
-
-    move-result-object v0
-
-    sput-object v0, Lby1;->Y:[Lby1;
+    iput-object p2, p0, Lby1;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lby1;
+
+# virtual methods
+.method public final onCameraAvailable(Ljava/lang/String;)V
     .locals 1
 
-    const-class v0, Lby1;
+    iget-object v0, p0, Lby1;->a:Ljava/lang/String;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object p0
+    move-result p1
 
-    check-cast p0, Lby1;
+    if-nez p1, :cond_0
 
-    return-object p0
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lby1;->b:Z
+
+    iget-object p1, p0, Lby1;->c:Liy1;
+
+    iget p1, p1, Liy1;->Q0:I
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_1
+
+    iget-object p1, p0, Lby1;->c:Liy1;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Liy1;->J(Z)V
+
+    :cond_1
+    :goto_0
+    return-void
 .end method
 
-.method public static values()[Lby1;
+.method public final onCameraUnavailable(Ljava/lang/String;)V
     .locals 1
 
-    sget-object v0, Lby1;->Y:[Lby1;
+    iget-object v0, p0, Lby1;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, [Lby1;->clone()Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p1
 
-    check-cast v0, [Lby1;
+    if-nez p1, :cond_0
 
-    return-object v0
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lby1;->b:Z
+
+    return-void
 .end method

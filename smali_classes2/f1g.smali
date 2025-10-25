@@ -1,77 +1,65 @@
-.class public final Lf1g;
+.class public abstract Lf1g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/util/Range;
+# static fields
+.field public static final a:Lwif;
 
-.field public final b:Le0c;
-
-.field public final c:Lra0;
+.field public static final b:Lwif;
 
 
 # direct methods
-.method public constructor <init>(Landroid/util/Range;Le0c;Lra0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lo8;->s0:Lo8;
 
-    iput-object p1, p0, Lf1g;->a:Landroid/util/Range;
+    new-instance v1, Lwif;
 
-    iput-object p2, p0, Lf1g;->b:Le0c;
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
 
-    iput-object p3, p0, Lf1g;->c:Lra0;
+    sput-object v1, Lf1g;->a:Lwif;
+
+    sget-object v0, Lo8;->r0:Lo8;
+
+    new-instance v1, Lwif;
+
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
+
+    sput-object v1, Lf1g;->b:Lwif;
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/Runnable;)V
+    .locals 1
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    sget-object v0, Lf1g;->b:Lwif;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
-    const-string v1, "VideoMessageQuality(fps="
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    iget-object v1, p0, Lf1g;->a:Landroid/util/Range;
+    invoke-interface {v0, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, "|color="
+.method public static b(Ljava/lang/Runnable;)V
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v0, Lf1g;->a:Lwif;
 
-    sget-object v1, Lgz4;->d:Lgz4;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, "|encoder="
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    iget-object v1, p0, Lf1g;->b:Le0c;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "|video="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lf1g;->c:Lra0;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

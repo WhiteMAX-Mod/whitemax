@@ -1,88 +1,114 @@
-.class public interface abstract Ltu7;
+.class public final Ltu7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/util/TreeSet;
+
+.field public b:J
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/TreeSet;
+
+    new-instance v1, Lhz4;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v1, v2}, Lhz4;-><init>(I)V
+
+    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+
+    iput-object v0, p0, Ltu7;->a:Ljava/util/TreeSet;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(Lsu7;[Lpd5;)V
+.method public final a(Lyx0;J)V
+    .locals 4
+
+    :goto_0
+    iget-wide v0, p0, Ltu7;->b:J
+
+    add-long/2addr v0, p2
+
+    const-wide/32 v2, 0x6400000
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Ltu7;->a:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ltu7;->a:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lty0;
+
+    move-object v1, p1
+
+    check-cast v1, Lape;
+
+    monitor-enter v1
+
+    :try_start_0
+    invoke-virtual {v1, v0}, Lape;->j(Lty0;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :cond_0
+    return-void
 .end method
 
-.method public abstract b()Z
-.end method
+.method public final b(Lape;Ldpe;)V
+    .locals 4
 
-.method public c()Z
-    .locals 0
+    iget-object v0, p0, Ltu7;->a:Ljava/util/TreeSet;
 
-    const-string p0, "shouldContinuePreloading needs to be implemented when playlist preloading is enabled"
+    invoke-virtual {v0, p2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    invoke-static {p0}, Lxnd;->l0(Ljava/lang/String;)V
+    iget-wide v0, p0, Ltu7;->b:J
 
-    const/4 p0, 0x0
+    iget-wide v2, p2, Lty0;->c:J
 
-    return p0
-.end method
+    add-long/2addr v0, v2
 
-.method public d(J)Z
-    .locals 0
+    iput-wide v0, p0, Ltu7;->b:J
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-wide/16 v0, 0x0
 
-    const-string p1, "shouldContinueLoading not implemented"
+    invoke-virtual {p0, p1, v0, v1}, Ltu7;->a(Lyx0;J)V
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public abstract e(Lndb;)V
-.end method
-
-.method public abstract f(Lndb;)V
-.end method
-
-.method public g(JZ)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "shouldStartPlayback not implemented"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public abstract h()J
-.end method
-
-.method public abstract i(Lndb;)V
-.end method
-
-.method public j(Lsu7;)Z
-    .locals 2
-
-    iget-wide v0, p1, Lsu7;->b:J
-
-    invoke-interface {p0, v0, v1}, Ltu7;->d(J)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public abstract k()Lib4;
-.end method
-
-.method public l(Lsu7;)Z
-    .locals 2
-
-    iget-wide v0, p1, Lsu7;->b:J
-
-    iget-boolean p1, p1, Lsu7;->d:Z
-
-    invoke-interface {p0, v0, v1, p1}, Ltu7;->g(JZ)Z
-
-    move-result p0
-
-    return p0
+    return-void
 .end method

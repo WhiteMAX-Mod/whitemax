@@ -1,74 +1,105 @@
-.class public final synthetic La03;
-.super Ljava/lang/Object;
+.class public final La03;
+.super Lije;
 .source "SourceFile"
-
-# interfaces
-.implements Lzb6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lxwe;
+.field public v0:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxwe;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p2, p0, La03;->a:I
+    invoke-direct {p0}, Lije;-><init>()V
 
-    iput-object p1, p0, La03;->b:Lxwe;
+    const-string v0, ""
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, La03;->v0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lx3g;ZLq40;)V
+    .locals 3
 
-    iget v0, p0, La03;->a:I
+    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    new-instance v0, Lyk6;
+    sget v1, Llsa;->q:I
 
-    iget-object p0, p0, La03;->b:Lxwe;
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    check-cast p0, Laga;
+    move-result-object v0
 
-    invoke-virtual {p0}, Laga;->a()Ls04;
+    iput-object v0, p0, La03;->v0:Ljava/lang/String;
 
-    move-result-object p0
+    if-eqz p3, :cond_1
 
-    invoke-static {p0}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
+    if-nez p5, :cond_1
 
-    move-result-object p0
+    invoke-static {p3, v0}, Lc0i;->b(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
 
-    invoke-direct {v0, p0}, Lyk6;-><init>(Lkotlinx/coroutines/internal/ContextScope;)V
+    move-result-object v0
+
+    check-cast v0, Lu6b;
+
+    invoke-virtual {v0}, Lu6b;->getSearchView()Lf2b;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, v2}, Lf2b;->setExpandable(Z)V
+
+    :cond_0
+    invoke-virtual {v0}, Lu6b;->g()V
+
+    invoke-virtual {v0}, Lu6b;->getSearchView()Lf2b;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    sget v1, Lf2b;->G0:I
+
+    invoke-virtual {v0, v2}, Lf2b;->c(Z)V
+
+    :cond_1
+    invoke-super/range {p0 .. p6}, Lije;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lx3g;ZLq40;)V
+
+    return-void
+.end method
+
+.method public final o()V
+    .locals 2
+
+    iget-object v0, p0, La03;->v0:Ljava/lang/String;
+
+    iget-object v1, p0, Lije;->Z:Let;
+
+    invoke-virtual {v1, v0, v0}, Lzoe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final p(Landroid/view/View;Z)Lf4g;
+    .locals 2
+
+    new-instance v0, Lf4g;
+
+    invoke-direct {v0}, Lf4g;-><init>()V
+
+    new-instance v1, Lzz2;
+
+    invoke-direct {v1, p1, p0, p2}, Lzz2;-><init>(Landroid/view/View;La03;Z)V
+
+    invoke-virtual {v0, v1}, Lf4g;->R(Lw3g;)V
 
     return-object v0
-
-    :pswitch_0
-    iget-object p0, p0, La03;->b:Lxwe;
-
-    check-cast p0, Laga;
-
-    invoke-virtual {p0}, Laga;->b()Ls04;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

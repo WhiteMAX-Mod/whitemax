@@ -16,11 +16,28 @@
     <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-permission android:maxSdkVersion="29" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <queries>
         <intent>
             <action android:name="android.intent.action.SEND"/>
             <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="yandexmaps"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="yandexnavi"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="dgis"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="petalmaps"/>
         </intent>
         <intent>
             <action android:name="android.support.customtabs.action.CustomTabsService"/>
@@ -44,7 +61,6 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:maxSdkVersion="32" android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:maxSdkVersion="28" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
@@ -84,9 +100,10 @@
     <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
     <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
-    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:name="one.me.android.OneMeApplication" android:theme="@style/OneMe.Launch">
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:largeHeap="@bool/large_heap" android:name="one.me.android.OneMeApplication" android:requestLegacyExternalStorage="true" android:theme="@style/OneMe.Launch">
         <activity android:enabled="false" android:name="one.me.android.concurrent.SingleCoreActivity"/>
-        <activity android:configChanges="locale|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:launchMode="singleTask" android:name="one.me.android.MainActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:supportsPictureInPicture="true" android:taskAffinity="one.me.application" android:theme="@style/OneMe.Theme.Light">
+        <profileable android:enabled="false" android:shell="false"/>
+        <activity android:configChanges="locale|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:launchMode="singleTask" android:name="one.me.android.MainActivity" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:taskAffinity="one.me.application" android:theme="@style/OneMe.Launch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -103,7 +120,7 @@
             </intent-filter>
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
         </activity>
-        <activity android:configChanges="locale|uiMode" android:exported="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:launchMode="standard" android:name="one.me.android.deeplink.NewWidgetActivity" android:screenOrientation="portrait" android:taskAffinity="one.me.application" android:theme="@style/OneMe.Theme.Light"/>
+        <activity android:configChanges="locale|uiMode" android:exported="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:launchMode="standard" android:name="one.me.android.deeplink.NewWidgetActivity" android:taskAffinity="one.me.application" android:theme="@style/OneMe.Theme.Light"/>
         <activity android:configChanges="orientation" android:excludeFromRecents="true" android:exported="true" android:label="" android:launchMode="singleTop" android:name="one.me.android.deeplink.LinkInterceptorActivity" android:theme="@style/OneMe.Theme.Transparent" android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter android:autoVerify="true" android:label="max">
                 <action android:name="android.intent.action.VIEW"/>
@@ -136,10 +153,7 @@
         <receiver android:name="one.me.android.calls.CallNotifierBroadcastReceiver"/>
         <activity android:name="one.me.android.calls.CallNotifierFixActivity" android:showOnLockScreen="true" android:theme="@style/CallNotifierFixActivityTheme" android:turnScreenOn="true"/>
         <service android:name="ru.ok.tamtam.android.services.NotificationTamService"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="ru.ok.messages.media.attaches.ActAttachesView" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent.WhiteMenuOverflow"/>
-        <activity android:exported="false" android:name="ru.ok.messages.contacts.profile.ActContactAvatars" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="ru.ok.messages.media.mediabar.ActLocalMedias" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent.WhiteMenuOverflow.NoCaps" android:windowSoftInputMode="stateUnchanged|adjustResize"/>
-        <activity android:exported="false" android:name="ru.ok.messages.views.ActProfilePhoto" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent.WhiteMenuOverflow"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="ru.ok.messages.media.mediabar.ActLocalMedias" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent.WhiteMenuOverflow.NoCaps.Portrait" android:windowSoftInputMode="stateUnchanged|adjustResize"/>
         <activity android:exported="false" android:name="ru.ok.messages.views.ActAvatarCrop" android:screenOrientation="portrait" android:theme="@style/TamTamTheme.Base"/>
         <activity android:exported="false" android:name="ru.ok.messages.settings.ActSettings" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"/>
         <activity android:exported="false" android:launchMode="singleTop" android:name="ru.ok.messages.media.crop.ActTamCropImage" android:screenOrientation="portrait" android:theme="@style/TamTamTheme.Base"/>
@@ -179,6 +193,12 @@
         <service android:enabled="false" android:exported="false" android:name="androidx.camera.core.impl.MetadataHolderService">
             <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
         </service>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:authorities="ru.oneme.app.mlkitinitprovider" android:exported="false" android:initOrder="99" android:name="com.google.mlkit.common.internal.MlKitInitProvider"/>
         <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
         <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
@@ -203,11 +223,17 @@
         </service>
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="false" android:name="ru.ok.android.onelog.UploadService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="ru.ok.android.onelog.action.UPLOAD"/>
+            </intent-filter>
+        </service>
         <service android:exported="false" android:name="ru.ok.android.externcalls.analytics.internal.upload.UploadService" android:permission="android.permission.BIND_JOB_SERVICE">
             <intent-filter>
                 <action android:name="ru.ok.android.onelog.action.UPLOAD"/>
             </intent-filter>
         </service>
+        <meta-data android:name="ru.ok.tracer.startup.Initializer@ca60b3bb-9ba5-4307-8c3f-5218111e10c5" android:value="ru.ok.tracer.nativebridge.NativeBridgeInitializer"/>
         <meta-data android:name="ru.ok.tracer.startup.Initializer@b7b8ba75-c336-4dee-8e2a-64ef488e0218" android:value="ru.ok.tracer.crash.report.CrashReportInitializer"/>
         <meta-data android:name="ru.ok.tracer.startup.Initializer@06f2fae1-db2b-4f87-bc14-fc15c26da3b9" android:value="ru.ok.tracer.performance.metrics.PerformanceMetricsInitializer"/>
         <provider android:authorities="ru.oneme.app.tracer-startup" android:exported="false" android:name="ru.ok.tracer.startup.InitializationProvider"/>
@@ -258,11 +284,6 @@
                 <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
             </intent-filter>
         </receiver>
-        <service android:exported="false" android:name="ru.ok.android.onelog.UploadService" android:permission="android.permission.BIND_JOB_SERVICE">
-            <intent-filter>
-                <action android:name="ru.ok.android.onelog.action.UPLOAD"/>
-            </intent-filter>
-        </service>
         <uses-library android:name="androidx.window.extensions" android:required="false"/>
         <uses-library android:name="androidx.window.sidecar" android:required="false"/>
         <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>

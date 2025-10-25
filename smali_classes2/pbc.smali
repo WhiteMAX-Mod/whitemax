@@ -1,132 +1,94 @@
-.class public abstract Lpbc;
-.super Ljava/lang/Object;
+.class public final Lpbc;
+.super Lxbc;
+.source "SourceFile"
 
 
-# static fields
-.field public static permission_fsi_request:I = 0x7f130a71
+# instance fields
+.field public final a:Landroid/content/Intent;
 
-.field public static permission_fsi_request_rationale:I = 0x7f130a72
 
-.field public static permissions_allow_access:I = 0x7f130a73
+# direct methods
+.method public constructor <init>(Landroid/content/Intent;)V
+    .locals 0
 
-.field public static permissions_audio_denied_title:I = 0x7f130a74
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static permissions_audio_for_video_not_granted:I = 0x7f130a75
+    iput-object p1, p0, Lpbc;->a:Landroid/content/Intent;
 
-.field public static permissions_audio_for_video_request:I = 0x7f130a76
+    return-void
+.end method
 
-.field public static permissions_audio_for_video_request_denied:I = 0x7f130a77
 
-.field public static permissions_audio_not_granted:I = 0x7f130a78
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static permissions_audio_request:I = 0x7f130a79
+    const/4 v0, 0x1
 
-.field public static permissions_audio_request_denied:I = 0x7f130a7a
+    if-ne p0, p1, :cond_0
 
-.field public static permissions_audio_title:I = 0x7f130a7b
+    return v0
 
-.field public static permissions_background_location_denied:I = 0x7f130a7c
+    :cond_0
+    instance-of v1, p1, Lpbc;
 
-.field public static permissions_calls_audio:I = 0x7f130a7d
+    const/4 v2, 0x0
 
-.field public static permissions_calls_audio_denied:I = 0x7f130a7e
+    if-nez v1, :cond_1
 
-.field public static permissions_calls_audio_not_granted:I = 0x7f130a7f
+    return v2
 
-.field public static permissions_calls_audio_video_request:I = 0x7f130a80
+    :cond_1
+    check-cast p1, Lpbc;
 
-.field public static permissions_calls_audio_video_request_title:I = 0x7f130a81
+    iget-object v1, p0, Lpbc;->a:Landroid/content/Intent;
 
-.field public static permissions_calls_only_audio:I = 0x7f130a82
+    iget-object p1, p1, Lpbc;->a:Landroid/content/Intent;
 
-.field public static permissions_calls_only_calls:I = 0x7f130a83
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static permissions_calls_only_video:I = 0x7f130a84
+    move-result p1
 
-.field public static permissions_calls_only_video_bluetooth_connect:I = 0x7f130a85
+    if-nez p1, :cond_2
 
-.field public static permissions_calls_video:I = 0x7f130a86
+    return v2
 
-.field public static permissions_calls_video_bluetooth_connect:I = 0x7f130a87
+    :cond_2
+    return v0
+.end method
 
-.field public static permissions_calls_video_denied:I = 0x7f130a88
+.method public final hashCode()I
+    .locals 1
 
-.field public static permissions_calls_video_not_granted:I = 0x7f130a89
+    iget-object v0, p0, Lpbc;->a:Landroid/content/Intent;
 
-.field public static permissions_calls_video_preview_request:I = 0x7f130a8a
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-.field public static permissions_calls_video_request:I = 0x7f130a8b
+    move-result v0
 
-.field public static permissions_calls_video_request_denied:I = 0x7f130a8c
+    return v0
+.end method
 
-.field public static permissions_calls_video_request_not_granted:I = 0x7f130a8d
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static permissions_camera_and_storage_not_granted:I = 0x7f130a8e
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static permissions_camera_not_granted:I = 0x7f130a8f
+    const-string v1, "SelectPhotoFromCamera(intent="
 
-.field public static permissions_camera_request_photo:I = 0x7f130a90
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static permissions_camera_request_photo_denied:I = 0x7f130a91
+    iget-object v1, p0, Lpbc;->a:Landroid/content/Intent;
 
-.field public static permissions_camera_request_photo_with_storage:I = 0x7f130a92
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static permissions_camera_request_photo_with_storage_denied:I = 0x7f130a93
+    const-string v1, ")"
 
-.field public static permissions_camera_request_video:I = 0x7f130a94
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static permissions_camera_request_video_with_storage:I = 0x7f130a95
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static permissions_camera_request_video_with_storage_denied:I = 0x7f130a96
+    move-result-object v0
 
-.field public static permissions_contacts_not_granted:I = 0x7f130a97
-
-.field public static permissions_contacts_request:I = 0x7f130a98
-
-.field public static permissions_contacts_request_denied:I = 0x7f130a99
-
-.field public static permissions_contacts_request_rationale:I = 0x7f130a9a
-
-.field public static permissions_dialog_enable_access:I = 0x7f130a9b
-
-.field public static permissions_dialog_no:I = 0x7f130a9c
-
-.field public static permissions_dialog_open_setting:I = 0x7f130a9d
-
-.field public static permissions_dialog_yes:I = 0x7f130a9e
-
-.field public static permissions_files_request_denied:I = 0x7f130a9f
-
-.field public static permissions_fsi_request_positive_button:I = 0x7f130aa0
-
-.field public static permissions_location_denied:I = 0x7f130aa1
-
-.field public static permissions_location_not_granted:I = 0x7f130aa2
-
-.field public static permissions_location_rationale_live:I = 0x7f130aa4
-
-.field public static permissions_location_rationale_nearby:I = 0x7f130aa5
-
-.field public static permissions_location_rationale_send:I = 0x7f130aa7
-
-.field public static permissions_post_notification_request_positive_button:I = 0x7f130aa9
-
-.field public static permissions_post_notification_request_rationale:I = 0x7f130aaa
-
-.field public static permissions_post_notification_request_title:I = 0x7f130aab
-
-.field public static permissions_storage_not_granted:I = 0x7f130aac
-
-.field public static permissions_storage_request:I = 0x7f130aad
-
-.field public static permissions_storage_request_denied:I = 0x7f130aae
-
-.field public static permissions_storage_video_save_request_denied:I = 0x7f130aaf
-
-.field public static permissions_storage_video_share_request_denied:I = 0x7f130ab0
-
-.field public static permissions_video_message_request:I = 0x7f130ab1
-
-.field public static permissions_video_message_request_only_camera_title:I = 0x7f130ab2
-
-.field public static permissions_video_message_request_title:I = 0x7f130ab3
+    return-object v0
+.end method

@@ -57,13 +57,13 @@
 
     .line 6
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Target host may not be null."
+    const-string p2, "Target host may not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public constructor <init>(Lorg/apache/http/conn/routing/HttpRoute;)V
@@ -86,7 +86,7 @@
 
 # virtual methods
 .method public clone()Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/CloneNotSupportedException;
@@ -95,9 +95,9 @@
 
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final connectProxy(Lorg/apache/http/HttpHost;Z)V
@@ -124,22 +124,22 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Already connected."
+    const-string p2, "Already connected."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Proxy host may not be null."
+    const-string p2, "Proxy host may not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final connectTarget(Z)V
@@ -158,13 +158,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Already connected."
+    const-string v0, "Already connected."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
@@ -318,35 +318,35 @@
 .end method
 
 .method public final getHopCount()I
-    .locals 1
+    .locals 2
 
     iget-boolean v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->connected:Z
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->proxyChain:[Lorg/apache/http/HttpHost;
+    iget-object v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->proxyChain:[Lorg/apache/http/HttpHost;
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    array-length v0, v0
+
+    add-int/2addr v0, v1
 
     return v0
 
-    :cond_0
-    array-length p0, p0
-
-    add-int/2addr p0, v0
-
-    return p0
-
     :cond_1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public final getHopTarget(I)Lorg/apache/http/HttpHost;
-    .locals 4
+    .locals 5
 
     if-ltz p1, :cond_2
 
@@ -360,97 +360,97 @@
 
     if-ge p1, v0, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->proxyChain:[Lorg/apache/http/HttpHost;
+    iget-object v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->proxyChain:[Lorg/apache/http/HttpHost;
 
-    aget-object p0, p0, p1
+    aget-object p1, v0, p1
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->targetHost:Lorg/apache/http/HttpHost;
+    iget-object p1, p0, Lorg/apache/http/conn/routing/RouteTracker;->targetHost:Lorg/apache/http/HttpHost;
 
-    return-object p0
+    return-object p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, " exceeds tracked route length "
+    const-string v2, " exceeds tracked route length "
 
-    const-string v2, "."
+    const-string v3, "."
 
-    const-string v3, "Hop index "
+    const-string v4, "Hop index "
 
-    invoke-static {v3, p1, v1, v0, v2}, Lsg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, p1, v2, v0, v3}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Hop index must not be negative: "
+    const-string v1, "Hop index must not be negative: "
 
-    invoke-static {p1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public final getLayerType()Lorg/apache/http/conn/routing/RouteInfo$LayerType;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->layered:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
+    iget-object v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->layered:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getLocalAddress()Ljava/net/InetAddress;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->localAddress:Ljava/net/InetAddress;
+    iget-object v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->localAddress:Ljava/net/InetAddress;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getProxyHost()Lorg/apache/http/HttpHost;
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->proxyChain:[Lorg/apache/http/HttpHost;
+    iget-object v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->proxyChain:[Lorg/apache/http/HttpHost;
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
     const/4 v0, 0x0
 
-    aget-object p0, p0, v0
+    return-object v0
 
-    return-object p0
+    :cond_0
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    return-object v0
 .end method
 
 .method public final getTargetHost()Lorg/apache/http/HttpHost;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->targetHost:Lorg/apache/http/HttpHost;
+    iget-object v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->targetHost:Lorg/apache/http/HttpHost;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getTunnelType()Lorg/apache/http/conn/routing/RouteInfo$TunnelType;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->tunnelled:Lorg/apache/http/conn/routing/RouteInfo$TunnelType;
+    iget-object v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->tunnelled:Lorg/apache/http/conn/routing/RouteInfo$TunnelType;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final hashCode()I
@@ -529,69 +529,69 @@
 
     xor-int/2addr v0, v1
 
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->layered:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
+    iget-object v1, p0, Lorg/apache/http/conn/routing/RouteTracker;->layered:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result p0
+    move-result v1
 
-    xor-int/2addr p0, v0
+    xor-int/2addr v0, v1
 
-    return p0
+    return v0
 .end method
 
 .method public final isConnected()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->connected:Z
+    iget-boolean v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->connected:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final isLayered()Z
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->layered:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
+    iget-object v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->layered:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
 
-    sget-object v0, Lorg/apache/http/conn/routing/RouteInfo$LayerType;->LAYERED:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
+    sget-object v1, Lorg/apache/http/conn/routing/RouteInfo$LayerType;->LAYERED:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
 
-    if-ne p0, v0, :cond_0
+    if-ne v0, v1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public final isSecure()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->secure:Z
+    iget-boolean v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->secure:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final isTunnelled()Z
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->tunnelled:Lorg/apache/http/conn/routing/RouteInfo$TunnelType;
+    iget-object v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->tunnelled:Lorg/apache/http/conn/routing/RouteInfo$TunnelType;
 
-    sget-object v0, Lorg/apache/http/conn/routing/RouteInfo$TunnelType;->TUNNELLED:Lorg/apache/http/conn/routing/RouteInfo$TunnelType;
+    sget-object v1, Lorg/apache/http/conn/routing/RouteInfo$TunnelType;->TUNNELLED:Lorg/apache/http/conn/routing/RouteInfo$TunnelType;
 
-    if-ne p0, v0, :cond_0
+    if-ne v0, v1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public final layerProtocol(Z)V
@@ -610,44 +610,44 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "No layered protocol unless connected."
+    const-string v0, "No layered protocol unless connected."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final toRoute()Lorg/apache/http/conn/routing/HttpRoute;
-    .locals 7
+    .locals 8
 
     iget-boolean v0, p0, Lorg/apache/http/conn/routing/RouteTracker;->connected:Z
 
     if-nez v0, :cond_0
 
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Lorg/apache/http/conn/routing/HttpRoute;
-
-    iget-object v1, p0, Lorg/apache/http/conn/routing/RouteTracker;->targetHost:Lorg/apache/http/HttpHost;
-
-    iget-object v2, p0, Lorg/apache/http/conn/routing/RouteTracker;->localAddress:Ljava/net/InetAddress;
-
-    iget-object v3, p0, Lorg/apache/http/conn/routing/RouteTracker;->proxyChain:[Lorg/apache/http/HttpHost;
-
-    iget-boolean v4, p0, Lorg/apache/http/conn/routing/RouteTracker;->secure:Z
-
-    iget-object v5, p0, Lorg/apache/http/conn/routing/RouteTracker;->tunnelled:Lorg/apache/http/conn/routing/RouteInfo$TunnelType;
-
-    iget-object v6, p0, Lorg/apache/http/conn/routing/RouteTracker;->layered:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
-
-    invoke-direct/range {v0 .. v6}, Lorg/apache/http/conn/routing/HttpRoute;-><init>(Lorg/apache/http/HttpHost;Ljava/net/InetAddress;[Lorg/apache/http/HttpHost;ZLorg/apache/http/conn/routing/RouteInfo$TunnelType;Lorg/apache/http/conn/routing/RouteInfo$LayerType;)V
+    const/4 v0, 0x0
 
     return-object v0
+
+    :cond_0
+    new-instance v1, Lorg/apache/http/conn/routing/HttpRoute;
+
+    iget-object v2, p0, Lorg/apache/http/conn/routing/RouteTracker;->targetHost:Lorg/apache/http/HttpHost;
+
+    iget-object v3, p0, Lorg/apache/http/conn/routing/RouteTracker;->localAddress:Ljava/net/InetAddress;
+
+    iget-object v4, p0, Lorg/apache/http/conn/routing/RouteTracker;->proxyChain:[Lorg/apache/http/HttpHost;
+
+    iget-boolean v5, p0, Lorg/apache/http/conn/routing/RouteTracker;->secure:Z
+
+    iget-object v6, p0, Lorg/apache/http/conn/routing/RouteTracker;->tunnelled:Lorg/apache/http/conn/routing/RouteInfo$TunnelType;
+
+    iget-object v7, p0, Lorg/apache/http/conn/routing/RouteTracker;->layered:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
+
+    invoke-direct/range {v1 .. v7}, Lorg/apache/http/conn/routing/HttpRoute;-><init>(Lorg/apache/http/HttpHost;Ljava/net/InetAddress;[Lorg/apache/http/HttpHost;ZLorg/apache/http/conn/routing/RouteInfo$TunnelType;Lorg/apache/http/conn/routing/RouteInfo$LayerType;)V
+
+    return-object v1
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -752,19 +752,19 @@
     goto :goto_0
 
     :cond_5
-    iget-object p0, p0, Lorg/apache/http/conn/routing/RouteTracker;->targetHost:Lorg/apache/http/HttpHost;
+    iget-object v1, p0, Lorg/apache/http/conn/routing/RouteTracker;->targetHost:Lorg/apache/http/HttpHost;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 p0, 0x5d
+    const/16 v1, 0x5d
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final tunnelProxy(Lorg/apache/http/HttpHost;Z)V
@@ -801,31 +801,31 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "No proxy tunnel without proxy."
+    const-string p2, "No proxy tunnel without proxy."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "No tunnel unless connected."
+    const-string p2, "No tunnel unless connected."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Proxy host may not be null."
+    const-string p2, "Proxy host may not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final tunnelTarget(Z)V
@@ -848,20 +848,20 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "No tunnel without proxy."
+    const-string v0, "No tunnel without proxy."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "No tunnel unless connected."
+    const-string v0, "No tunnel unless connected."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

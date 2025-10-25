@@ -62,19 +62,19 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
+    iget-object p2, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public clear()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->clear()V
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
     return-void
 .end method
@@ -92,39 +92,39 @@
 .end method
 
 .method public getSize()I
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lorg/msgpack/core/buffer/MessageBuffer;
+    check-cast v2, Lorg/msgpack/core/buffer/MessageBuffer;
 
-    invoke-virtual {v1}, Lorg/msgpack/core/buffer/MessageBuffer;->size()I
+    invoke-virtual {v2}, Lorg/msgpack/core/buffer/MessageBuffer;->size()I
 
-    move-result v1
+    move-result v2
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v2
 
     goto :goto_0
 
     :cond_0
-    return v0
+    return v1
 .end method
 
 .method public next(I)Lorg/msgpack/core/buffer/MessageBuffer;
@@ -140,9 +140,9 @@
 
     if-le v0, p1, :cond_0
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->lastBuffer:Lorg/msgpack/core/buffer/MessageBuffer;
+    iget-object p1, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->lastBuffer:Lorg/msgpack/core/buffer/MessageBuffer;
 
-    return-object p0
+    return-object p1
 
     :cond_0
     iget v0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->bufferSize:I
@@ -161,7 +161,7 @@
 .end method
 
 .method public toBufferList()Ljava/util/List;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -173,15 +173,15 @@
 
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
+    iget-object v1, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
 
-    invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     return-object v0
 .end method
 
 .method public toByteArray()[B
-    .locals 5
+    .locals 6
 
     invoke-virtual {p0}, Lorg/msgpack/core/buffer/ArrayBufferOutput;->getSize()I
 
@@ -189,40 +189,40 @@
 
     new-array v0, v0, [B
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
+    iget-object v1, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    move v2, v1
+    move v3, v2
 
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lorg/msgpack/core/buffer/MessageBuffer;
-
-    invoke-virtual {v3}, Lorg/msgpack/core/buffer/MessageBuffer;->size()I
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
-    invoke-virtual {v3, v1, v0, v2, v4}, Lorg/msgpack/core/buffer/MessageBuffer;->getBytes(I[BII)V
+    if-eqz v4, :cond_0
 
-    invoke-virtual {v3}, Lorg/msgpack/core/buffer/MessageBuffer;->size()I
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result v3
+    move-result-object v4
 
-    add-int/2addr v2, v3
+    check-cast v4, Lorg/msgpack/core/buffer/MessageBuffer;
+
+    invoke-virtual {v4}, Lorg/msgpack/core/buffer/MessageBuffer;->size()I
+
+    move-result v5
+
+    invoke-virtual {v4, v2, v0, v3, v5}, Lorg/msgpack/core/buffer/MessageBuffer;->getBytes(I[BII)V
+
+    invoke-virtual {v4}, Lorg/msgpack/core/buffer/MessageBuffer;->size()I
+
+    move-result v4
+
+    add-int/2addr v3, v4
 
     goto :goto_0
 
@@ -245,15 +245,15 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
 
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lorg/msgpack/core/buffer/MessageBuffer;
+    check-cast v0, Lorg/msgpack/core/buffer/MessageBuffer;
 
-    return-object p0
+    return-object v0
 
     :cond_0
     iget-object v0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
@@ -266,20 +266,20 @@
 
     invoke-static {v2}, Lorg/msgpack/core/buffer/MessageBuffer;->allocate(I)Lorg/msgpack/core/buffer/MessageBuffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_1
     invoke-virtual {p0}, Lorg/msgpack/core/buffer/ArrayBufferOutput;->toByteArray()[B
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Lorg/msgpack/core/buffer/MessageBuffer;->wrap([B)Lorg/msgpack/core/buffer/MessageBuffer;
+    invoke-static {v0}, Lorg/msgpack/core/buffer/MessageBuffer;->wrap([B)Lorg/msgpack/core/buffer/MessageBuffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public write([BII)V
@@ -293,9 +293,9 @@
 
     invoke-virtual {v0, v1, p1, p2, p3}, Lorg/msgpack/core/buffer/MessageBuffer;->putBytes(I[BII)V
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
+    iget-object p1, p0, Lorg/msgpack/core/buffer/ArrayBufferOutput;->list:Ljava/util/List;
 
-    invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

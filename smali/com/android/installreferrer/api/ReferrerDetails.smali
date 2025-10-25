@@ -37,27 +37,27 @@
 
 # virtual methods
 .method public getGooglePlayInstantParam()Z
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
 
-    const-string v0, "google_play_instant"
+    const-string v1, "google_play_instant"
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getInstallBeginTimestampSeconds()J
     .locals 2
 
-    iget-object p0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
 
-    const-string v0, "install_begin_timestamp_seconds"
+    const-string v1, "install_begin_timestamp_seconds"
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
@@ -67,11 +67,11 @@
 .method public getInstallBeginTimestampServerSeconds()J
     .locals 2
 
-    iget-object p0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
 
-    const-string v0, "install_begin_timestamp_server_seconds"
+    const-string v1, "install_begin_timestamp_server_seconds"
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
@@ -79,41 +79,41 @@
 .end method
 
 .method public getInstallReferrer()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
 
-    const-string v0, "install_referrer"
+    const-string v1, "install_referrer"
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getInstallVersion()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
 
-    const-string v0, "install_version"
+    const-string v1, "install_version"
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getReferrerClickTimestampSeconds()J
     .locals 2
 
-    iget-object p0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
 
-    const-string v0, "referrer_click_timestamp_seconds"
+    const-string v1, "referrer_click_timestamp_seconds"
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
@@ -123,11 +123,11 @@
 .method public getReferrerClickTimestampServerSeconds()J
     .locals 2
 
-    iget-object p0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/android/installreferrer/api/ReferrerDetails;->mOriginalBundle:Landroid/os/Bundle;
 
-    const-string v0, "referrer_click_timestamp_server_seconds"
+    const-string v1, "referrer_click_timestamp_server_seconds"
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v0
 

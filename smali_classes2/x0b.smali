@@ -1,50 +1,43 @@
-.class public interface abstract Lx0b;
+.class public abstract Lx0b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Ly0b;Lorg/webrtc/SessionDescription;)V
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract b(Ly0b;)V
-.end method
+.field public static final b:I
 
-.method public abstract c(Ly0b;)V
-.end method
+.field public static final c:I
 
-.method public abstract e()V
-.end method
+.field public static final d:I
 
-.method public abstract f(Ljava/lang/String;)V
-.end method
+.field public static final e:I
 
-.method public abstract g()V
-.end method
 
-.method public abstract h(Ly0b;Ljava/lang/String;)V
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract i(Ly0b;[Lorg/webrtc/IceCandidate;)V
-.end method
+    sget v0, Ljlc;->size_border_radius_new_banner:I
 
-.method public abstract l(Ly0b;Lorg/webrtc/PeerConnection$SignalingState;)V
-.end method
+    sput v0, Lx0b;->a:I
 
-.method public abstract m(Ly0b;Lorg/webrtc/IceCandidate;)V
-.end method
+    sget v0, Ljlc;->spacing_size_2xl:I
 
-.method public abstract n(Ly0b;Lorg/webrtc/SessionDescription;)V
-.end method
+    sput v0, Lx0b;->b:I
 
-.method public abstract o(Ly0b;Lorg/webrtc/PeerConnection$IceConnectionState;)V
-.end method
+    sget v0, Ljlc;->spacing_size_2xs:I
 
-.method public p(Ly0b;J)V
-    .locals 0
+    sput v0, Lx0b;->c:I
+
+    sget v0, Ljlc;->spacing_size_m:I
+
+    sput v0, Lx0b;->d:I
+
+    sget v0, Ljlc;->spacing_size_xs:I
+
+    sput v0, Lx0b;->e:I
 
     return-void
-.end method
-
-.method public abstract r(Ly0b;)V
 .end method

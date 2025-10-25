@@ -2,88 +2,157 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
+
 
 # instance fields
-.field public final a:Ljava/io/File;
+.field public final X:Ljava/lang/String;
 
-.field public final b:J
+.field public final Y:Z
 
-.field public final c:J
+.field public final Z:J
 
-.field public final d:Lkx0;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lcx0;
+
+.field public final c:I
+
+.field public final o:Ljava/lang/String;
+
+.field public final q0:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Lkx0;)V
+.method public constructor <init>(Lrw0;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Luw0;->a:Ljava/io/File;
+    iget-object v0, p1, Lrw0;->a:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/io/File;->length()J
+    iput-object v0, p0, Luw0;->a:Ljava/lang/String;
 
-    move-result-wide v0
+    iget-object v0, p1, Lrw0;->b:Lcx0;
 
-    iput-wide v0, p0, Luw0;->b:J
+    iput-object v0, p0, Luw0;->b:Lcx0;
 
-    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
+    iget v0, p1, Lrw0;->c:I
 
-    move-result-wide v0
+    iput v0, p0, Luw0;->c:I
 
-    iput-wide v0, p0, Luw0;->c:J
+    iget-object v0, p1, Lrw0;->d:Ljava/lang/String;
 
-    iput-object p2, p0, Luw0;->d:Lkx0;
+    iput-object v0, p0, Luw0;->o:Ljava/lang/String;
+
+    iget-object v0, p1, Lrw0;->e:Ljava/lang/String;
+
+    iput-object v0, p0, Luw0;->X:Ljava/lang/String;
+
+    iget-boolean v0, p1, Lrw0;->f:Z
+
+    iput-boolean v0, p0, Luw0;->Y:Z
+
+    iget-boolean v0, p1, Lrw0;->g:Z
+
+    iput-boolean v0, p0, Luw0;->q0:Z
+
+    iget-wide v0, p1, Lrw0;->h:J
+
+    iput-wide v0, p0, Luw0;->Z:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    instance-of v0, p1, Luw0;
 
-    const-string v1, "CacheEntry{file="
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    iget-object v1, p0, Luw0;->a:Ljava/io/File;
+    :cond_0
+    check-cast p1, Luw0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Luw0;->a:Ljava/lang/String;
 
-    const-string v1, ", length="
+    iget-object v1, p1, Luw0;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Li79;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    iget-wide v1, p0, Luw0;->b:J
+    move-result v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    const-string v1, ", lastModified="
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    iget-object v0, p0, Luw0;->X:Ljava/lang/String;
 
-    iget-wide v1, p0, Luw0;->c:J
+    iget-object v1, p1, Luw0;->X:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Li79;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    const-string v1, ", cacheType="
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_2
 
-    iget-object p0, p0, Luw0;->d:Lkx0;
+    goto :goto_0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_2
+    iget-object v0, p0, Luw0;->b:Lcx0;
 
-    const/16 p0, 0x7d
+    iget-object v1, p1, Luw0;->b:Lcx0;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    if-eq v0, v1, :cond_3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object p0
+    :cond_3
+    iget-boolean v0, p0, Luw0;->Y:Z
 
-    return-object p0
+    iget-boolean v1, p1, Luw0;->Y:Z
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Luw0;->c:I
+
+    iget v1, p1, Luw0;->c:I
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-wide v0, p0, Luw0;->Z:J
+
+    iget-wide v2, p1, Luw0;->Z:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_6
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_6
+    iget-object v0, p0, Luw0;->o:Ljava/lang/String;
+
+    iget-object p1, p1, Luw0;->o:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Li79;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    return p1
 .end method

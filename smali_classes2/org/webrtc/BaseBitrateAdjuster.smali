@@ -24,11 +24,11 @@
 
 # virtual methods
 .method public getAdjustedBitrateBps()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/BaseBitrateAdjuster;->targetBitrateBps:I
+    iget v0, p0, Lorg/webrtc/BaseBitrateAdjuster;->targetBitrateBps:I
 
-    return p0
+    return v0
 .end method
 
 .method public getAdjustedFramerateFps()D

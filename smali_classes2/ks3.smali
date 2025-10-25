@@ -1,68 +1,48 @@
-.class public final synthetic Lks3;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lzb6;
+.class public final Lks3;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final synthetic Y:Lls3;
 
-.field public final synthetic c:Lls3;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lls3;I)V
+.method public constructor <init>(Lls3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lks3;->a:I
+    iput-object p1, p0, Lks3;->Y:Lls3;
 
-    iput-object p1, p0, Lks3;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Lks3;->c:Lls3;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lks3;->a:I
+    iput-object p1, p0, Lks3;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lks3;->X:I
 
-    iget-object v0, p0, Lks3;->b:Landroid/content/Context;
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Lks3;->c:Lls3;
+    or-int/2addr p1, v0
 
-    invoke-static {v0, p0}, Lls3;->b(Landroid/content/Context;Lls3;)Landroidx/appcompat/widget/AppCompatImageView;
+    iput p1, p0, Lks3;->X:I
 
-    move-result-object p0
+    iget-object p1, p0, Lks3;->Y:Lls3;
 
-    return-object p0
+    const/4 v0, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lks3;->b:Landroid/content/Context;
+    invoke-virtual {p1, v0, p0}, Lls3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object p0, p0, Lks3;->c:Lls3;
+    move-result-object p1
 
-    invoke-static {v0, p0}, Lls3;->a(Landroid/content/Context;Lls3;)Landroidx/appcompat/widget/AppCompatImageView;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

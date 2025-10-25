@@ -1,110 +1,82 @@
-.class public abstract Ll6c;
-.super Ljava/lang/Object;
+.class public final Ll6c;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static oneme_login_conductor:I = 0x7f0a06f9
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static oneme_login_confirm_description:I = 0x7f0a06fa
+.field public final synthetic Y:Lu6c;
 
-.field public static oneme_login_confirm_resend_code:I = 0x7f0a06fb
 
-.field public static oneme_login_confirm_sms_input:I = 0x7f0a06fc
+# direct methods
+.method public constructor <init>(Lu6c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_login_confirm_timer:I = 0x7f0a06fd
+    iput-object p1, p0, Ll6c;->Y:Lu6c;
 
-.field public static oneme_login_confirm_title:I = 0x7f0a06fe
+    const/4 p1, 0x2
 
-.field public static oneme_login_input_constraint_layout:I = 0x7f0a0700
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_login_input_continue_button:I = 0x7f0a0701
+    return-void
+.end method
 
-.field public static oneme_login_input_description:I = 0x7f0a0702
 
-.field public static oneme_login_input_gradient_bg:I = 0x7f0a0705
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_login_input_help_button:I = 0x7f0a0706
+    check-cast p1, Lh6c;
 
-.field public static oneme_login_input_logo:I = 0x7f0a0707
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_login_input_name:I = 0x7f0a0708
+    invoke-virtual {p0, p1, p2}, Ll6c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_login_input_name_btn_container:I = 0x7f0a0709
+    move-result-object p1
 
-.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f0a070a
+    check-cast p1, Ll6c;
 
-.field public static oneme_login_input_name_confirmation_return:I = 0x7f0a070b
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static oneme_login_input_name_continue_btn:I = 0x7f0a070c
+    invoke-virtual {p1, p2}, Ll6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_login_input_name_description:I = 0x7f0a070d
+    return-object p2
+.end method
 
-.field public static oneme_login_input_name_title:I = 0x7f0a070e
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static oneme_login_input_name_toolbar:I = 0x7f0a070f
+    new-instance v0, Ll6c;
 
-.field public static oneme_login_input_phone_number_input:I = 0x7f0a0710
+    iget-object v1, p0, Ll6c;->Y:Lu6c;
 
-.field public static oneme_login_input_surname:I = 0x7f0a0711
+    invoke-direct {v0, v1, p2}, Ll6c;-><init>(Lu6c;Lkotlin/coroutines/Continuation;)V
 
-.field public static oneme_login_input_title:I = 0x7f0a0712
+    iput-object p1, v0, Ll6c;->X:Ljava/lang/Object;
 
-.field public static oneme_login_input_toolbar:I = 0x7f0a0713
+    return-object v0
+.end method
 
-.field public static oneme_login_neuro_avatars_appbar:I = 0x7f0a0714
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static oneme_login_neuro_avatars_avatar:I = 0x7f0a0715
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.field public static oneme_login_neuro_avatars_button_background:I = 0x7f0a0716
+    iget-object p1, p0, Ll6c;->X:Ljava/lang/Object;
 
-.field public static oneme_login_neuro_avatars_cancel_action:I = 0x7f0a0717
+    check-cast p1, Lh6c;
 
-.field public static oneme_login_neuro_avatars_collapsible:I = 0x7f0a0718
+    iget-object v0, p0, Ll6c;->Y:Lu6c;
 
-.field public static oneme_login_neuro_avatars_continue_btn:I = 0x7f0a0719
+    iget-object v0, v0, Lu6c;->w0:Lxe5;
 
-.field public static oneme_login_neuro_avatars_continue_disabled_btn:I = 0x7f0a071a
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-.field public static oneme_login_neuro_avatars_continue_enabled_btn:I = 0x7f0a071b
+    sget-object p1, Lccg;->a:Lccg;
 
-.field public static oneme_login_neuro_avatars_description:I = 0x7f0a071c
-
-.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f0a071d
-
-.field public static oneme_login_neuro_avatars_pick_image_text:I = 0x7f0a071e
-
-.field public static oneme_login_neuro_avatars_pick_neuroavatar_button:I = 0x7f0a071f
-
-.field public static oneme_login_neuro_avatars_pick_neuroavatar_icon:I = 0x7f0a0720
-
-.field public static oneme_login_neuro_avatars_recycler_view:I = 0x7f0a0721
-
-.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f0a0722
-
-.field public static oneme_login_neuro_avatars_root_container:I = 0x7f0a0723
-
-.field public static oneme_login_neuro_avatars_tabs:I = 0x7f0a0724
-
-.field public static oneme_login_neuro_avatars_tabs_shimmer:I = 0x7f0a0725
-
-.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f0a0726
-
-.field public static oneme_login_neuro_avatars_title:I = 0x7f0a0727
-
-.field public static oneme_login_neuro_avatars_toolbar:I = 0x7f0a0728
-
-.field public static oneme_login_sms_code_exceeded_ok_btn:I = 0x7f0a072a
-
-.field public static oneme_login_welcome_continue_btn:I = 0x7f0a072b
-
-.field public static oneme_login_welcome_description:I = 0x7f0a072c
-
-.field public static oneme_login_welcome_placeholder:I = 0x7f0a072d
-
-.field public static oneme_login_welcome_switch_language_btn:I = 0x7f0a072e
-
-.field public static oneme_login_welcome_terms:I = 0x7f0a072f
-
-.field public static oneme_login_welcome_title:I = 0x7f0a0730
-
-.field public static oneme_login_welcome_toolbar:I = 0x7f0a0731
+    return-object p1
+.end method

@@ -1,29 +1,23 @@
 .class public final Loq9;
-.super Ljava/lang/Object;
+.super Lrdi;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Z
+# static fields
+.field public static final c:Loq9;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Loq9;
 
-    const/4 v0, 0x0
+    const/16 v1, 0xb
 
-    iput v0, p0, Loq9;->a:I
+    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
 
-    iput-boolean v0, p0, Loq9;->b:Z
-
-    iput-boolean v0, p0, Loq9;->c:Z
+    sput-object v0, Loq9;->c:Loq9;
 
     return-void
 .end method

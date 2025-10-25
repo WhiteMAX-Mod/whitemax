@@ -1,34 +1,70 @@
-.class public final Lk2f;
+.class public abstract Lk2f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
 
+# direct methods
+.method public static a([B)Lx88;
+    .locals 10
 
-# virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
+    :try_start_0
+    new-instance v0, Lru/ok/tamtam/nano/Protos$LogEvent;
 
-    new-instance p0, Ll2f;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$LogEvent;-><init>()V
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-static {v0, p0}, Lee9;->mergeFrom(Lee9;[B)Lee9;
 
-    move-result v0
+    move-result-object p0
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    check-cast p0, Lru/ok/tamtam/nano/Protos$LogEvent;
 
-    move-result p1
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->time:J
 
-    invoke-direct {p0, v0, p1}, Ll2f;-><init>(II)V
+    iget-object v7, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->type:Ljava/lang/String;
 
-    return-object p0
-.end method
+    iget-object v8, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->event:Ljava/lang/String;
 
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
+    iget-object v0, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->params:[B
 
-    new-array p0, p1, [Ll2f;
+    if-eqz v0, :cond_0
 
-    return-object p0
+    invoke-static {v0}, Lg0i;->b([B)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map;
+
+    :goto_0
+    move-object v9, v0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->userId:J
+
+    iget-wide v5, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->sessionId:J
+
+    new-instance v0, Lx88;
+
+    invoke-direct/range {v0 .. v9}, Lx88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

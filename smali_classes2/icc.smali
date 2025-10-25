@@ -1,100 +1,132 @@
-.class public abstract Licc;
-.super Ljava/lang/Object;
+.class public final Licc;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static app_gost_host_1:I = 0x7f130063
+# instance fields
+.field public X:I
 
-.field public static app_gost_host_2:I = 0x7f130064
+.field public final synthetic Y:Ladc;
 
-.field public static app_gost_host_3:I = 0x7f130065
 
-.field public static app_gost_host_4:I = 0x7f130066
+# direct methods
+.method public constructor <init>(Ladc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static app_host:I = 0x7f130067
+    iput-object p1, p0, Licc;->Y:Ladc;
 
-.field public static app_host_1:I = 0x7f130068
+    const/4 p1, 0x2
 
-.field public static app_host_2:I = 0x7f130069
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static app_host_3:I = 0x7f13006a
+    return-void
+.end method
 
-.field public static app_host_prod:I = 0x7f13006b
 
-.field public static app_host_prod_port:I = 0x7f13006c
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static app_id:I = 0x7f13006d
+    check-cast p1, Lq54;
 
-.field public static app_scheme:I = 0x7f130070
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static bot_start_command:I = 0x7f1300c3
+    invoke-virtual {p0, p1, p2}, Licc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static build_at:I = 0x7f1300cd
+    move-result-object p1
 
-.field public static channel_hint:I = 0x7f1302bf
+    check-cast p1, Licc;
 
-.field public static chat_hint:I = 0x7f130316
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static dev_prefs__server_address_value_api_oneme:I = 0x7f13044e
+    invoke-virtual {p1, p2}, Licc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static dev_prefs__server_address_value_api_test_oneme:I = 0x7f13044f
+    move-result-object p1
 
-.field public static duration_00:I = 0x7f13047c
+    return-object p1
+.end method
 
-.field public static feedback_pick_chat_dev:I = 0x7f1304ec
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public static folder_path:I = 0x7f130539
+    new-instance p1, Licc;
 
-.field public static git_branch:I = 0x7f130586
+    iget-object v0, p0, Licc;->Y:Ladc;
 
-.field public static git_last_commit_hash:I = 0x7f130587
+    invoke-direct {p1, v0, p2}, Licc;-><init>(Ladc;Lkotlin/coroutines/Continuation;)V
 
-.field public static hello_blank_fragment:I = 0x7f130596
+    return-object p1
+.end method
 
-.field public static hour_format_12:I = 0x7f130598
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-.field public static hour_format_24:I = 0x7f130599
+    iget v0, p0, Licc;->X:I
 
-.field public static link_call_join_path:I = 0x7f1305b3
+    iget-object v1, p0, Licc;->Y:Ladc;
 
-.field public static link_chat_join_path:I = 0x7f1305b4
+    const/4 v2, 0x1
 
-.field public static link_chat_path:I = 0x7f1305b5
+    if-eqz v0, :cond_1
 
-.field public static link_host_api:I = 0x7f1305bd
+    if-ne v0, v2, :cond_0
 
-.field public static link_private_channel_path:I = 0x7f1305c4
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.field public static link_private_contact_path:I = 0x7f1305c5
+    goto :goto_0
 
-.field public static link_startwebapp_path:I = 0x7f1305c8
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.field public static link_stickerset_path:I = 0x7f1305c9
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-.field public static menu_check_for_updates:I = 0x7f130690
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.field public static menu_dev_logs:I = 0x7f130696
+    throw p1
 
-.field public static menu_dev_settings:I = 0x7f130697
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.field public static menu_share_logs:I = 0x7f1306a3
+    iget-object p1, v1, Ladc;->Q0:Lk0c;
 
-.field public static notification_new_beta_app:I = 0x7f13076d
+    iput v2, p0, Licc;->X:I
 
-.field public static privacy_policy_link_en:I = 0x7f130b0e
+    invoke-virtual {p1, p0}, Lk0c;->a(Licc;)Lccg;
 
-.field public static privacy_policy_link_ru:I = 0x7f130b0f
+    move-result-object p1
 
-.field public static profile_hint:I = 0x7f130bc0
+    sget-object v0, Lr54;->a:Lr54;
 
-.field public static request_storage_permissions_beta:I = 0x7f130c5c
+    if-ne p1, v0, :cond_2
 
-.field public static shortcut_id_create_chat:I = 0x7f130cd8
+    return-object v0
 
-.field public static shortcut_id_open_chat:I = 0x7f130cd9
+    :cond_2
+    :goto_0
+    iget-object p1, v1, Ladc;->B0:Lxe5;
 
-.field public static tam_playback_speed_action_name:I = 0x7f130d0d
+    new-instance v0, Lqbc;
 
-.field public static tamtam:I = 0x7f130d0e
+    sget v2, Lxza;->D0:I
 
-.field public static web_scheme:I = 0x7f130e5c
+    new-instance v3, Lorf;
+
+    invoke-direct {v3, v2}, Lorf;-><init>(I)V
+
+    new-instance v2, Lanb;
+
+    const/16 v4, 0xb
+
+    invoke-direct {v2, v4, v1}, Lanb;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v0, v3, v2}, Lqbc;-><init>(Ltrf;Lli6;)V
+
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method

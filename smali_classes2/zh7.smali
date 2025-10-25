@@ -1,50 +1,48 @@
-.class public interface abstract Lzh7;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lzh7;
+.super Ly14;
 
-# interfaces
-.implements Ljava/io/Closeable;
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lo31;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lo31;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lzh7;->Y:Lo31;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract B()V
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract E()I
-.end method
+    iput-object p1, p0, Lzh7;->o:Ljava/lang/Object;
 
-.method public abstract H()Ljava/lang/String;
-.end method
+    iget p1, p0, Lzh7;->X:I
 
-.method public abstract Y()Ljava/lang/String;
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract e0()Z
-.end method
+    or-int/2addr p1, v0
 
-.method public abstract hasNext()Z
-.end method
+    iput p1, p0, Lzh7;->X:I
 
-.method public abstract j0()Ljava/lang/String;
-.end method
+    iget-object p1, p0, Lzh7;->Y:Lo31;
 
-.method public abstract name()Ljava/lang/String;
-.end method
+    const/4 v0, 0x0
 
-.method public abstract peek()I
-.end method
+    invoke-virtual {p1, v0, p0}, Lo31;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public abstract q()V
-.end method
+    move-result-object p1
 
-.method public abstract s()V
-.end method
-
-.method public abstract t()V
-.end method
-
-.method public abstract u()V
-.end method
-
-.method public abstract y()J
+    return-object p1
 .end method

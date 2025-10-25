@@ -4,20 +4,52 @@
 
 
 # instance fields
-.field public final a:Lwl6;
+.field public final a:I
 
-.field public final b:Lyl6;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:Lucd;
+
+.field public final g:Lucd;
 
 
 # direct methods
-.method public constructor <init>(Lwl6;Lyl6;)V
+.method public constructor <init>(IIIIILucd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxl6;->a:Lwl6;
+    iput p1, p0, Lxl6;->a:I
 
-    iput-object p2, p0, Lxl6;->b:Lyl6;
+    iput p2, p0, Lxl6;->b:I
+
+    iput p3, p0, Lxl6;->c:I
+
+    iput p4, p0, Lxl6;->d:I
+
+    iput p5, p0, Lxl6;->e:I
+
+    iput-object p6, p0, Lxl6;->f:Lucd;
+
+    if-gtz p5, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lucd;
+
+    invoke-direct {p1, p5, p5}, Lucd;-><init>(II)V
+
+    :goto_0
+    iput-object p1, p0, Lxl6;->g:Lucd;
 
     return-void
 .end method
@@ -25,7 +57,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -36,96 +68,181 @@
     :cond_0
     instance-of v1, p1, Lxl6;
 
-    const/4 v2, 0x0
-
     if-nez v1, :cond_1
 
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lxl6;
 
-    iget-object v1, p0, Lxl6;->a:Lwl6;
+    iget v1, p0, Lxl6;->a:I
 
-    iget-object v3, p1, Lxl6;->a:Lwl6;
+    iget v2, p1, Lxl6;->a:I
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v1, v2, :cond_2
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
+    goto :goto_0
 
     :cond_2
-    iget-object p0, p0, Lxl6;->b:Lyl6;
+    iget v1, p0, Lxl6;->b:I
 
-    iget-object p1, p1, Lxl6;->b:Lyl6;
+    iget v2, p1, Lxl6;->b:I
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v1, v2, :cond_3
 
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
+    goto :goto_0
 
     :cond_3
+    iget v1, p0, Lxl6;->c:I
+
+    iget v2, p1, Lxl6;->c:I
+
+    if-eq v1, v2, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v1, p0, Lxl6;->d:I
+
+    iget v2, p1, Lxl6;->d:I
+
+    if-eq v1, v2, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v1, p0, Lxl6;->e:I
+
+    iget v2, p1, Lxl6;->e:I
+
+    if-eq v1, v2, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v1, p0, Lxl6;->f:Lucd;
+
+    iget-object p1, p1, Lxl6;->f:Lucd;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_7
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 3
 
-    iget-object v0, p0, Lxl6;->a:Lwl6;
+    iget v0, p0, Lxl6;->a:I
 
-    invoke-virtual {v0}, Lwl6;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-object p0, p0, Lxl6;->b:Lyl6;
+    mul-int/2addr v0, v1
 
-    iget-object p0, p0, Lyl6;->a:[I
+    iget v2, p0, Lxl6;->b:I
 
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([I)I
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
-    move-result p0
+    move-result v0
 
-    add-int/2addr p0, v0
+    iget v2, p0, Lxl6;->c:I
 
-    return p0
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lxl6;->d:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lxl6;->e:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget-object v2, p0, Lxl6;->f:Lucd;
+
+    invoke-virtual {v2}, Lucd;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, ", threshold="
 
-    const-string v1, "GradientsBannerDKColors(background="
+    const-string v1, ", spanCount="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "GalleryUiOptions(cellSize="
 
-    iget-object v1, p0, Lxl6;->a:Lwl6;
+    iget v3, p0, Lxl6;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v4, p0, Lxl6;->b:I
 
-    const-string v1, ", stroke="
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", spanSpacing="
+
+    const-string v2, ", thumbnailSize="
+
+    iget v3, p0, Lxl6;->c:I
+
+    iget v4, p0, Lxl6;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    iget v1, p0, Lxl6;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", albumsCoverResizeOptions="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lxl6;->b:Lyl6;
+    iget-object v1, p0, Lxl6;->f:Lucd;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, ")"
+    const-string v1, ", isItemAnimatorEnabled=false)"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

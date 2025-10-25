@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/my/tracker/campaign/CampaignService;Ljava/lang/String;Liw1;)V
+.method public static synthetic a(Lcom/my/tracker/campaign/CampaignService;Ljava/lang/String;Lzx1;)V
     .locals 0
 
     .line 1
@@ -35,31 +35,31 @@
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public onCreate()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    const-string p0, "CampaignService: onCreate"
+    const-string v0, "CampaignService: onCreate"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public onDestroy()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    const-string p0, "CampaignService: onDestroy"
+    const-string v0, "CampaignService: onDestroy"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -67,11 +67,11 @@
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 3
 
-    new-instance v0, Liw1;
+    new-instance v0, Lzx1;
 
     const/16 v1, 0x8
 
-    invoke-direct {v0, v1, p0}, Liw1;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lzx1;-><init>(ILjava/lang/Object;)V
 
     if-eqz p1, :cond_0
 
@@ -87,11 +87,11 @@
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lj5;
+    new-instance v1, Lgj;
 
-    const/16 v2, 0xc
+    const/16 v2, 0x10
 
-    invoke-direct {v1, p0, p1, v0, v2}, Lj5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v1, p0, p1, v0, v2}, Lgj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-static {v1}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 
@@ -99,14 +99,14 @@
 
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     :cond_0
     invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 
-    const/4 p0, 0x2
+    const/4 p1, 0x2
 
-    return p0
+    return p1
 .end method

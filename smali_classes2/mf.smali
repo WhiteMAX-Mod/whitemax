@@ -1,507 +1,381 @@
 .class public final Lmf;
-.super Landroid/widget/FrameLayout;
+.super Lu92;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public final synthetic c:I
 
-.field public b:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public d:Ljava/lang/Object;
 
-.field public c:Z
-
-.field public o:Landroid/animation/ValueAnimator;
-
-.field public r0:Lq8e;
+.field public final synthetic e:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Lot8;)V
+    .locals 1
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    const/4 v0, 0x1
+
+    iput v0, p0, Lmf;->c:I
+
+    iput-object p1, p0, Lmf;->d:Ljava/lang/Object;
+
+    iput-object p2, p0, Lmf;->e:Ljava/lang/Object;
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClipToOutline(Z)V
+    .line 2
+    invoke-direct {p0, p1}, Lu92;-><init>(I)V
 
     return-void
 .end method
 
-.method public static final a(Lmf;Lone/me/sdk/uikit/common/button/OneMeButton;)V
-    .locals 4
-
-    sget v0, Lr0d;->k:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    new-instance v1, Lq8e;
-
-    sget-object v2, Lq8e;->q:Laz4;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v0, v2, v3}, Lq8e;-><init>(Ljava/lang/Object;Lqe5;F)V
-
-    new-instance v0, Lr8e;
-
-    invoke-direct {v0, v3}, Lr8e;-><init>(F)V
-
-    const/high16 v2, 0x43480000    # 200.0f
-
-    invoke-virtual {v0, v2}, Lr8e;->b(F)V
-
-    const/high16 v2, 0x3f000000    # 0.5f
-
-    invoke-virtual {v0, v2}, Lr8e;->a(F)V
-
-    iput-object v0, v1, Lq8e;->m:Lr8e;
-
-    const/high16 v0, 0x43fa0000    # 500.0f
-
-    iput v0, v1, Lq8e;->a:F
-
-    new-instance v0, Ljf;
-
-    invoke-direct {v0, p0, p1}, Ljf;-><init>(Lmf;Lone/me/sdk/uikit/common/button/OneMeButton;)V
-
-    iget-object p1, v1, Lq8e;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    invoke-virtual {v1}, Lq8e;->g()V
-
-    iput-object v1, p0, Lmf;->r0:Lq8e;
-
-    return-void
-.end method
-
-.method private final setupViewsPosition(Z)V
-    .locals 2
+.method public constructor <init>(Lnf;)V
+    .locals 1
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_1
+    iput v0, p0, Lmf;->c:I
 
-    iget-object p1, p0, Lmf;->a:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iput-object p1, p0, Lmf;->e:Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    const/4 p1, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
+    .line 1
+    invoke-direct {p0, p1}, Lu92;-><init>(I)V
 
-    :cond_0
-    iget-object p1, p0, Lmf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p0
-
-    int-to-float p0, p0
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setTranslationY(F)V
-
-    return-void
-
-    :cond_1
-    iget-object p1, p0, Lmf;->a:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    neg-float v1, v1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationY(F)V
-
-    :cond_2
-    iget-object p0, p0, Lmf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-eqz p0, :cond_3
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setTranslationY(F)V
-
-    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public b(Ljnh;)V
     .locals 2
 
-    iget-object v0, p0, Lmf;->o:Landroid/animation/ValueAnimator;
+    iget v0, p0, Lmf;->c:I
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lmf;->o:Landroid/animation/ValueAnimator;
-
-    iget-object v1, p0, Lmf;->r0:Lq8e;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lq8e;->b()V
-
-    :cond_1
-    iput-object v0, p0, Lmf;->r0:Lq8e;
+    packed-switch v0, :pswitch_data_0
 
     return-void
-.end method
 
-.method public final onDetachedFromWindow()V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lmf;->e:Ljava/lang/Object;
 
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+    check-cast v0, Lnf;
 
-    invoke-virtual {p0}, Lmf;->b()V
+    iget-boolean v1, v0, Lq1f;->g:Z
 
-    return-void
-.end method
-
-.method public final onMeasure(II)V
-    .locals 2
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->measureChildren(II)V
-
-    iget-object p2, p0, Lmf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/4 v0, 0x0
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p2
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move p2, v0
+    iget v1, v0, Lnf;->k:I
 
-    :goto_0
-    iget-object v1, p0, Lmf;->a:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object p1, p1, Ljnh;->a:Linh;
 
-    if-eqz v1, :cond_1
+    invoke-virtual {p1}, Linh;->c()I
 
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
+    move-result p1
 
-    move-result v1
+    if-ne v1, p1, :cond_1
 
-    goto :goto_1
+    const/4 p1, -0x1
+
+    iput p1, v0, Lnf;->k:I
+
+    invoke-virtual {v0}, Lnf;->i()V
+
+    iget-object p1, v0, Lq1f;->e:Lxnh;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v0, p1}, Lnf;->c(Lxnh;)V
 
     :cond_1
-    move v1, v0
+    :goto_0
+    return-void
 
-    :goto_1
-    invoke-static {p2, v1}, Ljava/lang/Math;->max(II)I
+    nop
 
-    move-result p2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
+.method public final c(Ljnh;)V
+    .locals 6
 
-    iget-object p1, p0, Lmf;->a:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget v0, p0, Lmf;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmf;->e:Ljava/lang/Object;
+
+    check-cast v0, Lot8;
+
+    iget-object v1, v0, Lot8;->b:Landroid/view/View;
+
+    iget-object p1, p1, Ljnh;->a:Linh;
+
+    invoke-virtual {p1}, Linh;->c()I
+
+    move-result p1
+
+    and-int/lit8 p1, p1, 0x8
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    iget-object p1, v0, Lot8;->c:Landroid/view/View;
 
-    :cond_2
-    iget-object p1, p0, Lmf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_3
-    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
-
-    move-result p1
-
-    invoke-direct {p0, p1}, Lmf;->setupViewsPosition(Z)V
-
-    return-void
-.end method
-
-.method public final setActiveButtonClickListener(Lzb6;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lzb6;",
-            ")V"
-        }
-    .end annotation
-
-    iget-object p0, p0, Lmf;->a:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-eqz p0, :cond_0
-
-    new-instance v0, Lj6;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p1}, Lj6;-><init>(ILzb6;)V
-
-    invoke-static {p0, v0}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setActiveButtonLoaderState(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmf;->a:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setEnabled(Z)V
-    .locals 7
-
-    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
+    invoke-virtual {v0}, Lot8;->c()I
 
     move-result v0
 
-    if-ne v0, p1, :cond_0
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    return-void
+    move-result-object v2
+
+    instance-of v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    goto :goto_0
 
     :cond_0
-    if-eqz p1, :cond_5
+    move-object v2, v4
 
-    iget-boolean v0, p0, Lmf;->c:Z
+    :goto_0
+    if-eqz v2, :cond_1
 
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lmf;->a:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-nez v0, :cond_1
+    iget v2, v2, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     goto :goto_1
 
     :cond_1
-    iget-object v1, p0, Lmf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-nez v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v2, p0, Lmf;->o:Landroid/animation/ValueAnimator;
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->isRunning()Z
-
-    move-result v2
-
-    if-ne v2, v3, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v2, p0, Lmf;->r0:Lq8e;
-
-    if-eqz v2, :cond_4
-
-    iget-boolean v2, v2, Lq8e;->f:Z
-
-    if-ne v2, v3, :cond_4
-
-    :goto_0
-    invoke-virtual {p0}, Lmf;->b()V
-
-    :cond_4
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    const/4 v4, 0x2
-
-    new-array v4, v4, [F
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    aput v5, v4, v6
-
-    aput v2, v4, v3
-
-    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object v3
-
-    const-wide/16 v4, 0xc8
-
-    invoke-virtual {v3, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance v4, Lhf;
-
-    invoke-direct {v4, v1, v0, v2, v6}, Lhf;-><init>(Ljava/lang/Object;Ljava/lang/Object;FI)V
-
-    invoke-virtual {v3, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance v1, Llf;
-
-    invoke-direct {v1, v6, v0}, Llf;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v3, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    new-instance v1, Lkf;
-
-    invoke-direct {v1, p0, v6, v0}, Lkf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v3, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    invoke-virtual {v3}, Landroid/animation/ValueAnimator;->start()V
-
-    iput-object v3, p0, Lmf;->o:Landroid/animation/ValueAnimator;
-
-    goto :goto_1
-
-    :cond_5
-    invoke-virtual {p0}, Lmf;->b()V
-
-    invoke-direct {p0, p1}, Lmf;->setupViewsPosition(Z)V
-
-    :goto_1
-    invoke-super {p0, p1}, Landroid/view/View;->setEnabled(Z)V
-
-    return-void
-.end method
-
-.method public final setupActiveButton(Lbc6;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lbc6;",
-            ")V"
-        }
-    .end annotation
-
-    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    :goto_1
+    add-int/2addr v0, v2
 
-    invoke-interface {p1, v0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+    move-result v2
 
-    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
 
-    move-result p1
+    move-result v3
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v5
+
+    invoke-virtual {p1, v2, v3, v5, v0}, Landroid/view/View;->setPadding(IIII)V
 
     const/4 p1, 0x0
 
-    goto :goto_0
+    invoke-virtual {v1, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    :cond_0
-    const/16 p1, 0x8
+    iget-object p1, p0, Lmf;->d:Ljava/lang/Object;
 
-    :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    check-cast p1, Landroid/view/View;
 
-    iput-object v0, p0, Lmf;->a:Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-static {p1, v4}, Lhzg;->p(Landroid/view/View;Lu92;)V
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
+    :cond_2
     return-void
+
+    :pswitch_0
+    iget-object p1, p1, Ljnh;->a:Linh;
+
+    iget-object v0, p0, Lmf;->e:Ljava/lang/Object;
+
+    check-cast v0, Lnf;
+
+    iget-boolean v1, v0, Lq1f;->g:Z
+
+    if-eqz v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    iget v1, v0, Lnf;->k:I
+
+    const/4 v2, -0x1
+
+    if-ne v1, v2, :cond_4
+
+    invoke-virtual {p1}, Linh;->c()I
+
+    move-result v1
+
+    iget v2, v0, Lnf;->j:I
+
+    and-int/2addr v1, v2
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {p1}, Linh;->c()I
+
+    move-result p1
+
+    iput p1, v0, Lnf;->k:I
+
+    iget-object p1, v0, Lq1f;->e:Lxnh;
+
+    iput-object p1, p0, Lmf;->d:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lnf;->j()V
+
+    :cond_4
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final setupDisabledButton(Lbc6;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lbc6;",
-            ")V"
-        }
-    .end annotation
+.method public final d(Lxnh;Ljava/util/List;)Lxnh;
+    .locals 4
 
-    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget v0, p0, Lmf;->c:I
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    packed-switch v0, :pswitch_data_0
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lmf;->e:Ljava/lang/Object;
+
+    check-cast v0, Lnf;
+
+    iget-boolean v1, v0, Lq1f;->g:Z
+
+    if-eqz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :cond_1
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    move-object v2, v1
 
-    invoke-direct {v0, v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    check-cast v2, Ljnh;
 
-    invoke-interface {p1, v0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, v2, Ljnh;->a:Linh;
 
-    invoke-virtual {v0}, Landroid/view/View;->getOutlineProvider()Landroid/view/ViewOutlineProvider;
+    invoke-virtual {v2}, Linh;->c()I
+
+    move-result v2
+
+    iget v3, v0, Lnf;->k:I
+
+    if-ne v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_0
+    check-cast v1, Ljnh;
+
+    if-eqz v1, :cond_3
+
+    invoke-static {v0, p1}, Lnf;->f(Lnf;Lxnh;)Lxnh;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+    invoke-virtual {v0, p1}, Lnf;->h(Lxnh;)Lxnh;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+    move-result-object p1
 
-    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
+    :cond_3
+    :goto_1
+    return-object p1
 
-    move-result p1
+    nop
 
-    if-nez p1, :cond_0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const/4 p1, 0x0
+.method public e(Ljnh;Lcxe;)Lcxe;
+    .locals 3
+
+    iget v0, p0, Lmf;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-object p2
+
+    :pswitch_0
+    iget-object v0, p0, Lmf;->e:Ljava/lang/Object;
+
+    check-cast v0, Lnf;
+
+    iget-boolean v1, v0, Lq1f;->g:Z
+
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/16 p1, 0x8
+    iget-object v1, p0, Lmf;->d:Ljava/lang/Object;
 
+    check-cast v1, Lxnh;
+
+    if-eqz v1, :cond_1
+
+    iget v2, v0, Lnf;->k:I
+
+    iget-object p1, p1, Ljnh;->a:Linh;
+
+    invoke-virtual {p1}, Linh;->c()I
+
+    move-result p1
+
+    if-ne v2, p1, :cond_1
+
+    invoke-static {v0, v1}, Lnf;->f(Lnf;Lxnh;)Lxnh;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1, p2}, Lnf;->g(Lxnh;Lcxe;)V
+
+    invoke-virtual {v0, p1}, Lnf;->h(Lxnh;)Lxnh;
+
+    :cond_1
     :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    return-object p2
 
-    iput-object v0, p0, Lmf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

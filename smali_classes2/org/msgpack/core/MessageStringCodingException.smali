@@ -5,13 +5,13 @@
 
 # virtual methods
 .method public final getCause()Ljava/lang/Throwable;
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Ljava/nio/charset/CharacterCodingException;
+    check-cast v0, Ljava/nio/charset/CharacterCodingException;
 
-    return-object p0
+    return-object v0
 .end method

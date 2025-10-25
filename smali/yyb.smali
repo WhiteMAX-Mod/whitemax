@@ -1,123 +1,85 @@
-.class public final synthetic Lyyb;
-.super Ljava/lang/Object;
+.class public final enum Lyyb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lu9a;
-.implements Lzpe;
 
+# static fields
+.field public static final enum a:Lyyb;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lyyb;
 
-.field public final synthetic b:Landroid/content/Context;
+.field public static final enum c:Lyyb;
 
-.field public final synthetic c:Z
+.field public static final synthetic o:[Lyyb;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILandroid/content/Context;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p1, p0, Lyyb;->a:I
+    new-instance v0, Lyyb;
 
-    iput-object p2, p0, Lyyb;->b:Landroid/content/Context;
+    const-string v1, "DEFAULT"
 
-    iput-boolean p3, p0, Lyyb;->c:Z
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lyyb;->a:Lyyb;
+
+    new-instance v1, Lyyb;
+
+    const-string v2, "VERY_LOW"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lyyb;->b:Lyyb;
+
+    new-instance v2, Lyyb;
+
+    const-string v3, "HIGHEST"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lyyb;->c:Lyyb;
+
+    filled-new-array {v0, v1, v2}, [Lyyb;
+
+    move-result-object v0
+
+    sput-object v0, Lyyb;->o:[Lyyb;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Ljava/lang/Object;)V
+.method public static valueOf(Ljava/lang/String;)Lyyb;
     .locals 1
 
-    check-cast p1, Ljava/lang/Void;
+    const-class v0, Lyyb;
 
-    iget-object p1, p0, Lyyb;->b:Landroid/content/Context;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-static {p1}, Luyg;->r(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    move-result-object p0
 
-    move-result-object p1
+    check-cast p0, Lyyb;
 
-    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p1
-
-    const-string v0, "proxy_retention"
-
-    iget-boolean p0, p0, Lyyb;->c:Z
-
-    invoke-interface {p1, v0, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    return-void
+    return-object p0
 .end method
 
-.method public get()Ljava/lang/Object;
-    .locals 2
+.method public static values()[Lyyb;
+    .locals 1
 
-    iget v0, p0, Lyyb;->a:I
+    sget-object v0, Lyyb;->o:[Lyyb;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, [Lyyb;->clone()Ljava/lang/Object;
 
-    iget-object v0, p0, Lyyb;->b:Landroid/content/Context;
+    move-result-object v0
 
-    iget-boolean p0, p0, Lyyb;->c:Z
+    check-cast v0, [Lyyb;
 
-    invoke-static {v0, p0}, Lo3f;->q(Landroid/content/Context;Z)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget-boolean v0, p0, Lyyb;->c:Z
-
-    const/4 v1, 0x1
-
-    iget-object p0, p0, Lyyb;->b:Landroid/content/Context;
-
-    invoke-static {p0, v1, v0}, Lo3f;->o(Landroid/content/Context;ZZ)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    iget-boolean v0, p0, Lyyb;->c:Z
-
-    const/4 v1, 0x0
-
-    iget-object p0, p0, Lyyb;->b:Landroid/content/Context;
-
-    invoke-static {p0, v1, v0}, Lo3f;->o(Landroid/content/Context;ZZ)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    iget-boolean v0, p0, Lyyb;->c:Z
-
-    const/4 v1, 0x1
-
-    iget-object p0, p0, Lyyb;->b:Landroid/content/Context;
-
-    invoke-static {p0, v0, v1}, Lo3f;->g(Landroid/content/Context;ZZ)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

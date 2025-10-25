@@ -17,13 +17,13 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;",
         "",
-        "Ld71;",
+        "Lh81;",
         "feature",
         "Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;",
         "listener",
-        "Lylf;",
+        "Lccg;",
         "addFeatureListener",
-        "(Ld71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V",
+        "(Lh81;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V",
         "removeFeatureListener",
         "Lkotlin/Function0;",
         "onComplete",
@@ -31,18 +31,18 @@
         "",
         "onError",
         "enableFeatureForAll",
-        "(Ld71;Lzb6;Lbc6;)V",
+        "(Lh81;Lji6;Lli6;)V",
         "",
-        "Lvg1;",
+        "Lki1;",
         "roles",
         "enableFeatureForRoles",
-        "(Ld71;Ljava/util/Set;Lzb6;Lbc6;)V",
+        "(Lh81;Ljava/util/Set;Lji6;Lli6;)V",
         "",
         "isFeatureEnabled",
-        "(Ld71;)Z",
+        "(Lh81;)Z",
         "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
         "getFeatureRoles",
-        "(Ld71;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
+        "(Lh81;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
         "FeatureListener",
         "calls-sdk_release"
     }
@@ -57,7 +57,7 @@
 
 
 # direct methods
-.method public static synthetic enableFeatureForAll$default(Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;Ld71;Lzb6;Lbc6;ILjava/lang/Object;)V
+.method public static synthetic enableFeatureForAll$default(Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;Lh81;Lji6;Lli6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p5, :cond_2
@@ -78,7 +78,7 @@
     move-object p3, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;->enableFeatureForAll(Ld71;Lzb6;Lbc6;)V
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;->enableFeatureForAll(Lh81;Lji6;Lli6;)V
 
     return-void
 
@@ -92,7 +92,7 @@
     throw p0
 .end method
 
-.method public static synthetic enableFeatureForRoles$default(Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;Ld71;Ljava/util/Set;Lzb6;Lbc6;ILjava/lang/Object;)V
+.method public static synthetic enableFeatureForRoles$default(Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;Lh81;Ljava/util/Set;Lji6;Lli6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p6, :cond_2
@@ -113,7 +113,7 @@
     move-object p4, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;->enableFeatureForRoles(Ld71;Ljava/util/Set;Lzb6;Lbc6;)V
+    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;->enableFeatureForRoles(Lh81;Ljava/util/Set;Lji6;Lli6;)V
 
     return-void
 
@@ -129,42 +129,42 @@
 
 
 # virtual methods
-.method public abstract addFeatureListener(Ld71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
+.method public abstract addFeatureListener(Lh81;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
 .end method
 
-.method public abstract enableFeatureForAll(Ld71;Lzb6;Lbc6;)V
+.method public abstract enableFeatureForAll(Lh81;Lji6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld71;",
-            "Lzb6;",
-            "Lbc6;",
+            "Lh81;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract enableFeatureForRoles(Ld71;Ljava/util/Set;Lzb6;Lbc6;)V
+.method public abstract enableFeatureForRoles(Lh81;Ljava/util/Set;Lji6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld71;",
+            "Lh81;",
             "Ljava/util/Set<",
             "+",
-            "Lvg1;",
+            "Lki1;",
             ">;",
-            "Lzb6;",
-            "Lbc6;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract getFeatureRoles(Ld71;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
+.method public abstract getFeatureRoles(Lh81;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
 .end method
 
-.method public abstract isFeatureEnabled(Ld71;)Z
+.method public abstract isFeatureEnabled(Lh81;)Z
 .end method
 
-.method public abstract removeFeatureListener(Ld71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
+.method public abstract removeFeatureListener(Lh81;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
 .end method

@@ -69,9 +69,9 @@
 
     if-ne p0, p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
     instance-of v0, p1, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;
@@ -103,15 +103,15 @@
     return v1
 
     :cond_3
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->participantsIds:Ljava/util/List;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->participantsIds:Ljava/util/List;
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->participantsIds:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public hashCode()I
@@ -131,9 +131,9 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->hasRemoved:Z
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->hasRemoved:Z
 
-    add-int/2addr v0, p0
+    add-int/2addr v0, v1
 
     return v0
 .end method

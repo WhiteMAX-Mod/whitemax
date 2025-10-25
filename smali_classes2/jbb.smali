@@ -1,147 +1,253 @@
 .class public final Ljbb;
-.super Ljava/lang/Object;
+.super Landroid/widget/EdgeEffect;
 .source "SourceFile"
-
-# interfaces
-.implements Llbb;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public a:Lnwe;
 
-.field public final b:J
+.field public final synthetic b:I
 
-.field public final c:I
+.field public final synthetic c:Lkbb;
+
+.field public final synthetic d:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;I)V
+.method public constructor <init>(ILkbb;Landroidx/recyclerview/widget/RecyclerView;Landroid/content/Context;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Ljbb;->b:I
 
-    iput-object p3, p0, Ljbb;->a:Ljava/lang/String;
+    iput-object p2, p0, Ljbb;->c:Lkbb;
 
-    iput-wide p1, p0, Ljbb;->b:J
+    iput-object p3, p0, Ljbb;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    iput p4, p0, Ljbb;->c:I
+    invoke-direct {p0, p4}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()Lnwe;
+    .locals 4
 
-    const/4 v0, 0x1
+    new-instance v0, Lnwe;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Ljbb;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    return v0
+    sget-object v2, Lnwe;->q:Lp45;
 
-    :cond_0
-    instance-of v1, p1, Ljbb;
+    invoke-direct {v0, v1, v2}, Lnwe;-><init>(Ljava/lang/Object;Ln2j;)V
+
+    new-instance v1, Lowe;
+
+    invoke-direct {v1}, Lowe;-><init>()V
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    float-to-double v2, v2
 
-    return v2
+    iput-wide v2, v1, Lowe;->i:D
 
-    :cond_1
-    check-cast p1, Ljbb;
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    iget-object v1, p0, Ljbb;->a:Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lowe;->a(F)V
 
-    iget-object v3, p1, Ljbb;->a:Ljava/lang/String;
+    const/high16 v2, 0x43480000    # 200.0f
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Lowe;->b(F)V
+
+    iput-object v1, v0, Lnwe;->m:Lowe;
+
+    return-object v0
+.end method
+
+.method public final b(F)V
+    .locals 3
+
+    iget v0, p0, Ljbb;->b:I
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    iget-object v1, p0, Ljbb;->c:Lkbb;
+
+    iget v2, v1, Lkbb;->a:I
+
+    mul-int/2addr v0, v2
+
+    int-to-float v0, v0
+
+    mul-float/2addr v0, p1
+
+    iget p1, v1, Lkbb;->b:F
+
+    mul-float/2addr v0, p1
+
+    iget-object p1, p0, Ljbb;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
     move-result v1
 
-    if-nez v1, :cond_2
+    add-float/2addr v1, v0
 
-    return v2
+    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    :cond_2
-    iget-wide v3, p0, Ljbb;->b:J
+    iget-object p1, p0, Ljbb;->a:Lnwe;
 
-    iget-wide v5, p1, Ljbb;->b:J
+    if-eqz p1, :cond_1
 
-    cmp-long v1, v3, v5
+    invoke-virtual {p1}, Lnwe;->b()V
 
-    if-eqz v1, :cond_3
+    :cond_1
+    return-void
+.end method
 
-    return v2
+.method public final draw(Landroid/graphics/Canvas;)Z
+    .locals 0
 
-    :cond_3
-    iget p0, p0, Ljbb;->c:I
+    const/4 p1, 0x0
 
-    iget p1, p1, Ljbb;->c:I
+    return p1
+.end method
 
-    if-eq p0, p1, :cond_4
+.method public final isFinished()Z
+    .locals 1
 
-    return v2
+    iget-object v0, p0, Ljbb;->a:Lnwe;
 
-    :cond_4
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, v0, Lnwe;->f:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final onAbsorb(I)V
+    .locals 2
 
-    iget-object v0, p0, Ljbb;->a:Ljava/lang/String;
+    invoke-super {p0, p1}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget v0, p0, Ljbb;->b:I
 
-    move-result v0
+    const/4 v1, 0x3
 
-    const/16 v1, 0x1f
+    if-ne v0, v1, :cond_0
 
-    mul-int/2addr v0, v1
+    const/4 v0, -0x1
 
-    iget-wide v2, p0, Ljbb;->b:J
+    goto :goto_0
 
-    invoke-static {v0, v1, v2, v3}, Lwsf;->d(IIJ)I
+    :cond_0
+    const/4 v0, 0x1
 
-    move-result v0
+    :goto_0
+    mul-int/2addr v0, p1
 
-    iget p0, p0, Ljbb;->c:I
+    int-to-float p1, v0
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v0, p0, Ljbb;->c:Lkbb;
 
-    move-result p0
+    iget v0, v0, Lkbb;->c:F
 
-    add-int/2addr p0, v0
+    mul-float/2addr p1, v0
 
-    return p0
-.end method
+    iget-object v0, p0, Ljbb;->a:Lnwe;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    if-eqz v0, :cond_1
 
-    const-string v0, "NeuroAvatar(url="
+    invoke-virtual {v0}, Lnwe;->b()V
 
-    const-string v1, ", photoId="
-
-    iget-wide v2, p0, Ljbb;->b:J
-
-    iget-object v4, p0, Ljbb;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v1}, Lz7e;->t(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    invoke-virtual {p0}, Ljbb;->a()Lnwe;
 
     move-result-object v0
 
-    const-string v1, ", categoryId="
+    iput p1, v0, Lnwe;->a:F
 
-    const-string v2, ")"
+    invoke-virtual {v0}, Lnwe;->g()V
 
-    iget p0, p0, Ljbb;->c:I
+    iput-object v0, p0, Ljbb;->a:Lnwe;
 
-    invoke-static {v0, v1, p0, v2}, Lsq3;->i(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object p0
+.method public final onPull(F)V
+    .locals 0
 
-    return-object p0
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/EdgeEffect;->onPull(F)V
+
+    .line 2
+    invoke-virtual {p0, p1}, Ljbb;->b(F)V
+
+    return-void
+.end method
+
+.method public final onPull(FF)V
+    .locals 0
+
+    .line 3
+    invoke-super {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
+
+    .line 4
+    invoke-virtual {p0, p1}, Ljbb;->b(F)V
+
+    return-void
+.end method
+
+.method public final onRelease()V
+    .locals 2
+
+    invoke-super {p0}, Landroid/widget/EdgeEffect;->onRelease()V
+
+    iget-object v0, p0, Ljbb;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    cmpg-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Ljbb;->a()Lnwe;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lnwe;->g()V
+
+    iput-object v0, p0, Ljbb;->a:Lnwe;
+
+    return-void
 .end method

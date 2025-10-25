@@ -1,19 +1,19 @@
 .class public final Lnng;
-.super Ljava/lang/Object;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:Lmng;
+
+
 # virtual methods
-.method public final serializer()Lyi7;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lyi7;"
-        }
-    .end annotation
+.method public final setPlayer(La8b;)V
+    .locals 1
 
-    sget-object p0, Lmng;->a:Lmng;
+    iget-object v0, p0, Lnng;->a:Lmng;
 
-    return-object p0
+    invoke-virtual {v0, p1}, Lmng;->setPlayer(La8b;)V
+
+    return-void
 .end method

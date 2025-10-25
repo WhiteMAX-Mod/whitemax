@@ -64,14 +64,14 @@
 
     if-nez v1, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/HardwareVideoEncoder$BusyCount;->countLock:Ljava/lang/Object;
+    iget-object v1, p0, Lorg/webrtc/HardwareVideoEncoder$BusyCount;->countLock:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_1
 
@@ -86,7 +86,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method public increment()V
@@ -108,13 +108,13 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method public waitForZero()V
@@ -145,7 +145,7 @@
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_1
 
@@ -172,9 +172,9 @@
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
     :cond_1
     return-void
@@ -185,5 +185,5 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    throw p0
+    throw v1
 .end method

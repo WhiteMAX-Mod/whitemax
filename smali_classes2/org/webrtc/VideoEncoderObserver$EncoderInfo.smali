@@ -47,33 +47,33 @@
 
 # virtual methods
 .method public getEncoderType()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/VideoEncoderObserver$EncoderInfo;->encoderType:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/VideoEncoderObserver$EncoderInfo;->encoderType:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getImplementationName()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/VideoEncoderObserver$EncoderInfo;->implementationName:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/VideoEncoderObserver$EncoderInfo;->implementationName:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public isHardwareAccelerated()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/webrtc/VideoEncoderObserver$EncoderInfo;->isHardwareAccelerated:Z
+    iget-boolean v0, p0, Lorg/webrtc/VideoEncoderObserver$EncoderInfo;->isHardwareAccelerated:Z
 
-    return p0
+    return v0
 .end method
 
 .method public isSuspended()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/webrtc/VideoEncoderObserver$EncoderInfo;->isSuspended:Z
+    iget-boolean v0, p0, Lorg/webrtc/VideoEncoderObserver$EncoderInfo;->isSuspended:Z
 
-    return p0
+    return v0
 .end method

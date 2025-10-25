@@ -1,53 +1,42 @@
-.class public abstract synthetic Lxfb;
+.class public final synthetic Lxfb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lorg/webrtc/RtpReceiver$Observer;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Legb;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Legb;)V
+    .locals 0
+
+    iput-object p1, p0, Lxfb;->a:Legb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onFirstPacketReceived(Lorg/webrtc/MediaStreamTrack$MediaType;)V
     .locals 3
 
-    invoke-static {}, Lel4;->values()[Lel4;
+    iget-object p1, p0, Lxfb;->a:Legb;
 
-    move-result-object v0
+    iget-object v0, p1, Legb;->u:Landroid/os/Handler;
 
-    array-length v0, v0
+    new-instance v1, Lofb;
 
-    new-array v0, v0, [I
+    const/4 v2, 0x6
 
-    :try_start_0
-    sget-object v1, Lel4;->X:Lel4;
+    invoke-direct {v1, p1, v2}, Lofb;-><init>(Legb;I)V
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Lel4;->Y:Lel4;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Lxfb;->$EnumSwitchMapping$0:[I
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

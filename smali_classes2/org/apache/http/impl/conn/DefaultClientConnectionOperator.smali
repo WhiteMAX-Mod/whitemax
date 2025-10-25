@@ -33,7 +33,7 @@
 .end method
 
 .method public constructor <init>(Lorg/apache/http/conn/scheme/SchemeRegistry;)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,25 +44,25 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Scheme registry must not be null."
+    const-string v0, "Scheme registry must not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
 # virtual methods
 .method public createConnection()Lorg/apache/http/conn/OperatedClientConnection;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/conn/DefaultClientConnection;
+    new-instance v0, Lorg/apache/http/impl/conn/DefaultClientConnection;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/conn/DefaultClientConnection;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/conn/DefaultClientConnection;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public openConnection(Lorg/apache/http/conn/OperatedClientConnection;Lorg/apache/http/HttpHost;Ljava/net/InetAddress;Lorg/apache/http/protocol/HttpContext;Lorg/apache/http/params/HttpParams;)V
@@ -340,33 +340,33 @@
 
     if-ne v7, v5, :cond_6
 
-    instance-of v1, v0, Ljava/net/ConnectException;
+    instance-of v2, v0, Ljava/net/ConnectException;
 
-    if-eqz v1, :cond_5
+    if-eqz v2, :cond_5
 
     check-cast v0, Ljava/net/ConnectException;
 
     goto :goto_9
 
     :cond_5
-    new-instance v1, Ljava/net/ConnectException;
+    new-instance v2, Ljava/net/ConnectException;
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-direct {v1, v2}, Ljava/net/ConnectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v4}, Ljava/net/ConnectException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v2, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    move-object v0, v1
+    move-object v0, v2
 
     :goto_9
-    new-instance v1, Lorg/apache/http/conn/HttpHostConnectException;
+    new-instance v2, Lorg/apache/http/conn/HttpHostConnectException;
 
-    invoke-direct {v1, v3, v0}, Lorg/apache/http/conn/HttpHostConnectException;-><init>(Lorg/apache/http/HttpHost;Ljava/net/ConnectException;)V
+    invoke-direct {v2, v3, v0}, Lorg/apache/http/conn/HttpHostConnectException;-><init>(Lorg/apache/http/HttpHost;Ljava/net/ConnectException;)V
 
-    throw v1
+    throw v2
 
     :cond_6
     :goto_a
@@ -381,36 +381,36 @@
     :cond_8
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Connection must not be open."
+    const-string v2, "Connection must not be open."
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_9
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Parameters must not be null."
+    const-string v2, "Parameters must not be null."
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_a
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Target host must not be null."
+    const-string v2, "Target host must not be null."
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_b
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Connection must not be null."
+    const-string v2, "Connection must not be null."
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -425,33 +425,33 @@
 
     invoke-static {p3}, Lorg/apache/http/params/HttpConnectionParams;->getTcpNoDelay(Lorg/apache/http/params/HttpParams;)Z
 
-    move-result p0
+    move-result p2
 
-    invoke-virtual {p1, p0}, Ljava/net/Socket;->setTcpNoDelay(Z)V
+    invoke-virtual {p1, p2}, Ljava/net/Socket;->setTcpNoDelay(Z)V
 
     invoke-static {p3}, Lorg/apache/http/params/HttpConnectionParams;->getSoTimeout(Lorg/apache/http/params/HttpParams;)I
 
-    move-result p0
+    move-result p2
 
-    invoke-virtual {p1, p0}, Ljava/net/Socket;->setSoTimeout(I)V
+    invoke-virtual {p1, p2}, Ljava/net/Socket;->setSoTimeout(I)V
 
     invoke-static {p3}, Lorg/apache/http/params/HttpConnectionParams;->getLinger(Lorg/apache/http/params/HttpParams;)I
 
-    move-result p0
+    move-result p2
 
-    if-ltz p0, :cond_1
+    if-ltz p2, :cond_1
 
-    if-lez p0, :cond_0
+    if-lez p2, :cond_0
 
-    const/4 p2, 0x1
+    const/4 p3, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 p2, 0x0
+    const/4 p3, 0x0
 
     :goto_0
-    invoke-virtual {p1, p2, p0}, Ljava/net/Socket;->setSoLinger(ZI)V
+    invoke-virtual {p1, p3, p2}, Ljava/net/Socket;->setSoLinger(ZI)V
 
     :cond_1
     return-void
@@ -530,81 +530,81 @@
 
     invoke-interface {v1, v0}, Lorg/apache/http/conn/scheme/SocketFactory;->isSecure(Ljava/net/Socket;)Z
 
-    move-result p0
+    move-result p3
 
-    invoke-interface {p1, v0, p2, p0, p4}, Lorg/apache/http/conn/OperatedClientConnection;->update(Ljava/net/Socket;Lorg/apache/http/HttpHost;ZLorg/apache/http/params/HttpParams;)V
+    invoke-interface {p1, v0, p2, p3, p4}, Lorg/apache/http/conn/OperatedClientConnection;->update(Ljava/net/Socket;Lorg/apache/http/HttpHost;ZLorg/apache/http/params/HttpParams;)V
 
     return-void
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    new-instance p1, Lorg/apache/http/conn/HttpHostConnectException;
+    new-instance p3, Lorg/apache/http/conn/HttpHostConnectException;
 
-    invoke-direct {p1, p2, p0}, Lorg/apache/http/conn/HttpHostConnectException;-><init>(Lorg/apache/http/HttpHost;Ljava/net/ConnectException;)V
+    invoke-direct {p3, p2, p1}, Lorg/apache/http/conn/HttpHostConnectException;-><init>(Lorg/apache/http/HttpHost;Ljava/net/ConnectException;)V
 
-    throw p1
+    throw p3
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    const-string p2, "Target scheme ("
+    const-string p3, "Target scheme ("
 
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lorg/apache/http/conn/scheme/Scheme;->getName()Ljava/lang/String;
 
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p3, ") must have layered socket factory."
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const-string p2, ") must have layered socket factory."
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Connection must be open."
+    const-string p2, "Connection must be open."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Parameters must not be null."
+    const-string p2, "Parameters must not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Target host must not be null."
+    const-string p2, "Target host must not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_4
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Connection must not be null."
+    const-string p2, "Connection must not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

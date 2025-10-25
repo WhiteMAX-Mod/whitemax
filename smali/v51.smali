@@ -1,87 +1,98 @@
-.class public final Lv51;
+.class public final synthetic Lv51;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld61;
+.implements Lfg4;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lv51;->a:I
 
-    iput-wide p1, p0, Lv51;->a:J
+    iput-object p1, p0, Lv51;->b:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    const/4 v0, 0x1
+    iget v0, p0, Lv51;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    :cond_0
-    instance-of v1, p1, Lv51;
+    new-instance v2, Lpj7;
 
-    const/4 v2, 0x0
+    const/4 v7, 0x0
 
-    if-nez v1, :cond_1
+    const/16 v8, 0x1d
 
-    return v2
+    const/4 v3, 0x0
 
-    :cond_1
-    check-cast p1, Lv51;
+    iget-object v4, p0, Lv51;->b:Ljava/lang/String;
 
-    iget-wide v3, p0, Lv51;->a:J
+    const/4 v5, 0x0
 
-    iget-wide p0, p1, Lv51;->a:J
+    const/4 v6, 0x0
 
-    cmp-long p0, v3, p0
+    invoke-direct/range {v2 .. v8}, Lpj7;-><init>(Ljava/lang/String;Ljava/lang/String;Loj7;Ljava/lang/String;Lc7g;I)V
 
-    if-eqz p0, :cond_2
+    const/4 v5, 0x2
 
-    return v2
+    move-object v4, v2
 
-    :cond_2
-    return v0
-.end method
+    const-string v2, "SETTINGS"
 
-.method public final hashCode()I
-    .locals 2
+    invoke-direct/range {v1 .. v6}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lpj7;ILki4;)V
 
-    iget-wide v0, p0, Lv51;->a:J
+    return-object v1
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    :pswitch_0
+    new-instance v0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-    move-result p0
+    iget-object v1, p0, Lv51;->b:Ljava/lang/String;
 
-    return p0
-.end method
+    invoke-direct {v0, v1}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;-><init>(Ljava/lang/String;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    return-object v0
 
-    const-string v0, "Error(requestId="
+    :pswitch_1
+    new-instance v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
-    const-string v1, ")"
+    iget-object v1, p0, Lv51;->b:Ljava/lang/String;
 
-    iget-wide v2, p0, Lv51;->a:J
+    invoke-direct {v0, v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return-object v0
 
-    move-result-object p0
+    :pswitch_2
+    new-instance v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    return-object p0
+    iget-object v1, p0, Lv51;->b:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

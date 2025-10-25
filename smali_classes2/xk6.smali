@@ -1,142 +1,75 @@
 .class public final Lxk6;
-.super Lure;
+.super Lal6;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
 
+# static fields
+.field public static final a:Lxk6;
 
-# instance fields
-.field public final synthetic X:Landroid/text/Layout;
+.field public static final b:Lqk6;
 
-.field public final synthetic Y:Lyk6;
+.field public static final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/Layout;Lyk6;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lxk6;->X:Landroid/text/Layout;
+    new-instance v0, Lxk6;
 
-    iput-object p2, p0, Lxk6;->Y:Lyk6;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    sput-object v0, Lxk6;->a:Lxk6;
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Lqk6;
+
+    sget v1, Lk1b;->a:I
+
+    invoke-direct {v0, v1}, Lqk6;-><init>(I)V
+
+    sput-object v0, Lxk6;->b:Lqk6;
+
+    sget-object v0, Ltk6;->e:Ltk6;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lxk6;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lxk6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lxk6;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lxk6;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final b()Ljava/lang/String;
     .locals 1
 
-    new-instance p1, Lxk6;
+    const-string v0, "ru.ok.tamtam.ALL_PHOTO"
 
-    iget-object v0, p0, Lxk6;->X:Landroid/text/Layout;
-
-    iget-object p0, p0, Lxk6;->Y:Lyk6;
-
-    invoke-direct {p1, v0, p0, p2}, Lxk6;-><init>(Landroid/text/Layout;Lyk6;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final c()Lf4;
+    .locals 1
 
-    iget-object v0, p0, Lxk6;->X:Landroid/text/Layout;
+    sget-object v0, Lxk6;->b:Lqk6;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    return-object v0
+.end method
 
-    sget-object p1, Lyk6;->c:Lbfb;
+.method public final d()Ljava/util/List;
+    .locals 1
 
-    invoke-virtual {p1}, Lbfb;->e()Ljava/lang/Object;
+    sget-object v0, Lxk6;->c:Ljava/util/List;
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    check-cast v1, Landroid/graphics/Picture;
+.method public final f()Lqk6;
+    .locals 1
 
-    if-nez v1, :cond_0
+    sget-object v0, Lxk6;->b:Lqk6;
 
-    new-instance v1, Landroid/graphics/Picture;
-
-    invoke-direct {v1}, Landroid/graphics/Picture;-><init>()V
-
-    :cond_0
-    :try_start_0
-    invoke-virtual {v0}, Landroid/text/Layout;->getWidth()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/text/Layout;->getHeight()I
-
-    move-result v3
-
-    invoke-virtual {v1, v2, v3}, Landroid/graphics/Picture;->beginRecording(II)Landroid/graphics/Canvas;
-
-    move-result-object v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-virtual {v0, v2}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v1}, Landroid/graphics/Picture;->endRecording()V
-
-    invoke-virtual {p1, v1}, Lbfb;->d(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception p1
-
-    invoke-virtual {v1}, Landroid/graphics/Picture;->endRecording()V
-
-    throw p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_0
-    iget-object p0, p0, Lxk6;->Y:Lyk6;
-
-    iget-object p0, p0, Lyk6;->b:Ljava/lang/String;
-
-    const-string v0, "fail to warm layout"
-
-    invoke-static {p0, v0, p1}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_1
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-object v0
 .end method

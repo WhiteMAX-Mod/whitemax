@@ -1,53 +1,46 @@
-.class public final Lqgf;
-.super Ljx3;
+.class public interface abstract Lqgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/Object;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lbhf;
-
-.field public o:Lbhf;
-
-.field public r0:I
-
-
-# direct methods
-.method public constructor <init>(Lbhf;Ljx3;)V
-    .locals 0
-
-    iput-object p1, p0, Lqgf;->Z:Lbhf;
-
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
+# virtual methods
+.method public abstract a(FJJLy14;)Ljava/lang/Object;
 .end method
 
+.method public b(Ly14;)Ljava/lang/Object;
+    .locals 0
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    sget-object p1, Lccg;->a:Lccg;
 
-    iput-object p1, p0, Lqgf;->Y:Ljava/lang/Object;
+    return-object p1
+.end method
 
-    iget p1, p0, Lqgf;->r0:I
+.method public c(Ly14;)Ljava/lang/Object;
+    .locals 0
 
-    const/high16 v0, -0x80000000
+    sget-object p1, Lccg;->a:Lccg;
 
-    or-int/2addr p1, v0
+    return-object p1
+.end method
 
-    iput p1, p0, Lqgf;->r0:I
+.method public d(Ly14;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object p1, p0, Lqgf;->Z:Lbhf;
+    sget-object p1, Lccg;->a:Lccg;
 
-    const/4 v0, 0x0
+    return-object p1
+.end method
 
-    invoke-static {p1, v0, v0, p0}, Lbhf;->q(Lbhf;Ljava/lang/CharSequence;Ljava/lang/String;Ljx3;)Ljava/lang/Object;
+.method public abstract e(Ljava/io/File;Ly14;)Ljava/lang/Object;
+.end method
 
-    move-result-object p0
+.method public f(ZZLy14;)Ljava/lang/Object;
+    .locals 0
 
-    return-object p0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method
+
+.method public abstract getDownloadContext()Ljava/lang/String;
 .end method

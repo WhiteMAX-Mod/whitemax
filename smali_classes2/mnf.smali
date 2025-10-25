@@ -4,8 +4,16 @@
 
 
 # instance fields
-.field public a:Lumd;
+.field public final a:Liu7;
 
-.field public b:Ljava/util/List;
 
-.field public c:Ljava/util/List;
+# direct methods
+.method public constructor <init>(Liu7;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmnf;->a:Liu7;
+
+    return-void
+.end method

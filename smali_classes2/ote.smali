@@ -1,199 +1,73 @@
-.class public final Lote;
+.class public final synthetic Lote;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lli6;
+
 
 # instance fields
-.field public final a:Landroid/graphics/drawable/GradientDrawable;
+.field public final synthetic a:I
 
-.field public final b:Landroid/graphics/drawable/GradientDrawable;
+.field public final synthetic b:Lvte;
 
-.field public final c:Landroid/graphics/drawable/GradientDrawable;
-
-.field public final d:Landroid/graphics/drawable/GradientDrawable;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;)V
+.method public synthetic constructor <init>(Lvte;II)V
     .locals 0
 
+    iput p3, p0, Lote;->a:I
+
+    iput-object p1, p0, Lote;->b:Lvte;
+
+    iput p2, p0, Lote;->c:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lote;->a:Landroid/graphics/drawable/GradientDrawable;
-
-    iput-object p2, p0, Lote;->b:Landroid/graphics/drawable/GradientDrawable;
-
-    iput-object p3, p0, Lote;->c:Landroid/graphics/drawable/GradientDrawable;
-
-    iput-object p4, p0, Lote;->d:Landroid/graphics/drawable/GradientDrawable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lote;->a:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Ltg7;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Lote;
+    iget-object v0, p0, Lote;->b:Lvte;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez v1, :cond_1
+    iget v0, p0, Lote;->c:I
 
-    return v2
+    invoke-static {p1, v0}, Lvte;->a(Ltg7;I)V
 
-    :cond_1
-    check-cast p1, Lote;
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
 
-    iget-object v1, p0, Lote;->a:Landroid/graphics/drawable/GradientDrawable;
+    return-object p1
 
-    iget-object v3, p1, Lote;->a:Landroid/graphics/drawable/GradientDrawable;
+    :pswitch_0
+    iget-object v0, p0, Lote;->b:Lvte;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v1
+    iget v0, p0, Lote;->c:I
 
-    if-nez v1, :cond_2
+    invoke-static {p1, v0}, Lvte;->a(Ltg7;I)V
 
-    return v2
+    goto :goto_0
 
-    :cond_2
-    iget-object v1, p0, Lote;->b:Landroid/graphics/drawable/GradientDrawable;
+    nop
 
-    iget-object v3, p1, Lote;->b:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lote;->c:Landroid/graphics/drawable/GradientDrawable;
-
-    iget-object v3, p1, Lote;->c:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object p0, p0, Lote;->d:Landroid/graphics/drawable/GradientDrawable;
-
-    iget-object p1, p1, Lote;->d:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lote;->a:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lote;->b:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lote;->c:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lote;->d:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StateDrawable(enabledChecked="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lote;->a:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", enabledUnchecked="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lote;->b:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", disabledChecked="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lote;->c:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", disabledUnchecked="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lote;->d:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

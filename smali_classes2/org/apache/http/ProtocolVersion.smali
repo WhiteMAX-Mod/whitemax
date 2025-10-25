@@ -45,37 +45,37 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Protocol minor version number may not be negative"
+    const-string p2, "Protocol minor version number may not be negative"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Protocol major version number must not be negative."
+    const-string p2, "Protocol major version number must not be negative."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Protocol name must not be null."
+    const-string p2, "Protocol name must not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
 # virtual methods
 .method public clone()Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/CloneNotSupportedException;
@@ -84,9 +84,9 @@
 
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public compareToVersion(Lorg/apache/http/ProtocolVersion;)I
@@ -118,15 +118,13 @@
 
     invoke-virtual {p0}, Lorg/apache/http/ProtocolVersion;->getMinor()I
 
-    move-result p0
+    move-result v0
 
     invoke-virtual {p1}, Lorg/apache/http/ProtocolVersion;->getMinor()I
 
     move-result p1
 
-    sub-int/2addr p0, p1
-
-    return p0
+    sub-int/2addr v0, p1
 
     :cond_0
     return v0
@@ -142,28 +140,28 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, " "
+    const-string v2, " "
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Protocol version must not be null."
+    const-string v0, "Protocol version must not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
@@ -203,11 +201,11 @@
 
     if-ne v1, v3, :cond_2
 
-    iget p0, p0, Lorg/apache/http/ProtocolVersion;->minor:I
+    iget v1, p0, Lorg/apache/http/ProtocolVersion;->minor:I
 
     iget p1, p1, Lorg/apache/http/ProtocolVersion;->minor:I
 
-    if-ne p0, p1, :cond_2
+    if-ne v1, p1, :cond_2
 
     return v0
 
@@ -216,7 +214,7 @@
 .end method
 
 .method public forVersion(II)Lorg/apache/http/ProtocolVersion;
-    .locals 1
+    .locals 2
 
     iget v0, p0, Lorg/apache/http/ProtocolVersion;->major:I
 
@@ -231,35 +229,35 @@
     :cond_0
     new-instance v0, Lorg/apache/http/ProtocolVersion;
 
-    iget-object p0, p0, Lorg/apache/http/ProtocolVersion;->protocol:Ljava/lang/String;
+    iget-object v1, p0, Lorg/apache/http/ProtocolVersion;->protocol:Ljava/lang/String;
 
-    invoke-direct {v0, p0, p1, p2}, Lorg/apache/http/ProtocolVersion;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v1, p1, p2}, Lorg/apache/http/ProtocolVersion;-><init>(Ljava/lang/String;II)V
 
     return-object v0
 .end method
 
 .method public final getMajor()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/http/ProtocolVersion;->major:I
+    iget v0, p0, Lorg/apache/http/ProtocolVersion;->major:I
 
-    return p0
+    return v0
 .end method
 
 .method public final getMinor()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/http/ProtocolVersion;->minor:I
+    iget v0, p0, Lorg/apache/http/ProtocolVersion;->minor:I
 
-    return p0
+    return v0
 .end method
 
 .method public final getProtocol()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/ProtocolVersion;->protocol:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/ProtocolVersion;->protocol:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final greaterEquals(Lorg/apache/http/ProtocolVersion;)Z
@@ -273,18 +271,18 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/http/ProtocolVersion;->compareToVersion(Lorg/apache/http/ProtocolVersion;)I
 
-    move-result p0
+    move-result p1
 
-    if-ltz p0, :cond_0
+    if-ltz p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public final hashCode()I
@@ -304,36 +302,36 @@
 
     xor-int/2addr v0, v1
 
-    iget p0, p0, Lorg/apache/http/ProtocolVersion;->minor:I
+    iget v1, p0, Lorg/apache/http/ProtocolVersion;->minor:I
 
-    xor-int/2addr p0, v0
+    xor-int/2addr v0, v1
 
-    return p0
+    return v0
 .end method
 
 .method public isComparable(Lorg/apache/http/ProtocolVersion;)Z
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/ProtocolVersion;->protocol:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/ProtocolVersion;->protocol:Ljava/lang/String;
 
     iget-object p1, p1, Lorg/apache/http/ProtocolVersion;->protocol:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public final lessEquals(Lorg/apache/http/ProtocolVersion;)Z
@@ -347,18 +345,18 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/http/ProtocolVersion;->compareToVersion(Lorg/apache/http/ProtocolVersion;)I
 
-    move-result p0
+    move-result p1
 
-    if-gtz p0, :cond_0
+    if-gtz p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -390,17 +388,17 @@
 
     invoke-virtual {v0, v1}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
 
-    iget p0, p0, Lorg/apache/http/ProtocolVersion;->minor:I
+    iget v1, p0, Lorg/apache/http/ProtocolVersion;->minor:I
 
-    invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lorg/apache/http/util/CharArrayBuffer;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

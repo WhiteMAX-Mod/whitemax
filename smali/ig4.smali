@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public a:Lzoc;
+.field public final a:Z
 
-.field public b:Lzoc;
+.field public final b:I
 
 .field public c:I
 
@@ -14,66 +14,143 @@
 
 .field public e:I
 
-.field public f:I
+.field public f:[Lcd;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lig4;->a:Z
+
+    const/high16 v0, 0x10000
+
+    iput v0, p0, Lig4;->b:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lig4;->e:I
+
+    const/16 v0, 0x64
+
+    new-array v0, v0, [Lcd;
+
+    iput-object v0, p0, Lig4;->f:[Lcd;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final declared-synchronized a(I)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    monitor-enter p0
 
-    const-string v1, "ChangeInfo{oldHolder="
+    :try_start_0
+    iget v0, p0, Lig4;->c:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ge p1, v0, :cond_0
 
-    iget-object v1, p0, Lig4;->a:Lzoc;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string v1, ", newHolder="
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    iput p1, p0, Lig4;->c:I
 
-    iget-object v1, p0, Lig4;->b:Lzoc;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lig4;->b()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string v1, ", fromX="
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catchall_0
+    move-exception p1
 
-    iget v1, p0, Lig4;->c:I
+    goto :goto_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :cond_1
+    :goto_1
+    monitor-exit p0
 
-    const-string v1, ", fromY="
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_2
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized b()V
+    .locals 4
+
+    monitor-enter p0
+
+    :try_start_0
+    iget v0, p0, Lig4;->c:I
+
+    iget v1, p0, Lig4;->b:I
+
+    invoke-static {v0, v1}, Llig;->f(II)I
+
+    move-result v0
 
     iget v1, p0, Lig4;->d:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sub-int/2addr v0, v1
 
-    const-string v1, ", toX="
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
 
     iget v1, p0, Lig4;->e:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-lt v0, v1, :cond_0
 
-    const-string v1, ", toY="
+    monitor-exit p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    iget p0, p0, Lig4;->f:I
+    :cond_0
+    :try_start_1
+    iget-object v2, p0, Lig4;->f:[Lcd;
 
-    const/16 v1, 0x7d
+    const/4 v3, 0x0
 
-    invoke-static {v0, p0, v1}, Lmw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v2, v0, v1, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
 
-    move-result-object p0
+    iput v0, p0, Lig4;->e:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-object p0
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
 .end method

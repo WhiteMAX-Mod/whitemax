@@ -25,15 +25,15 @@
 
     invoke-static {p1, p2}, Lorg/webrtc/LibvpxVp9Encoder;->nativeCreate(J)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public isHardwareEncoder()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method

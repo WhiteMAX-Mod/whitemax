@@ -226,7 +226,7 @@
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -665,11 +665,11 @@
 .end method
 
 .method public getLevel()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/commons/logging/impl/SimpleLog;->currentLogLevel:I
+    iget v0, p0, Lorg/apache/commons/logging/impl/SimpleLog;->currentLogLevel:I
 
-    return p0
+    return v0
 .end method
 
 .method public final info(Ljava/lang/Object;)V
@@ -719,9 +719,9 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/commons/logging/impl/SimpleLog;->isLevelEnabled(I)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final isErrorEnabled()Z
@@ -731,9 +731,9 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/commons/logging/impl/SimpleLog;->isLevelEnabled(I)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final isFatalEnabled()Z
@@ -743,9 +743,9 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/commons/logging/impl/SimpleLog;->isLevelEnabled(I)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final isInfoEnabled()Z
@@ -755,26 +755,26 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/commons/logging/impl/SimpleLog;->isLevelEnabled(I)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isLevelEnabled(I)Z
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/commons/logging/impl/SimpleLog;->currentLogLevel:I
+    iget v0, p0, Lorg/apache/commons/logging/impl/SimpleLog;->currentLogLevel:I
 
-    if-lt p1, p0, :cond_0
+    if-lt p1, v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public final isTraceEnabled()Z
@@ -784,9 +784,9 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/commons/logging/impl/SimpleLog;->isLevelEnabled(I)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final isWarnEnabled()Z
@@ -796,9 +796,9 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/commons/logging/impl/SimpleLog;->isLevelEnabled(I)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public log(ILjava/lang/Object;Ljava/lang/Throwable;)V
@@ -1093,15 +1093,15 @@
 .end method
 
 .method public write(Ljava/lang/StringBuffer;)V
-    .locals 0
+    .locals 1
 
-    sget-object p0, Ljava/lang/System;->err:Ljava/io/PrintStream;
+    sget-object v0, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     invoke-virtual {p1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     return-void
 .end method

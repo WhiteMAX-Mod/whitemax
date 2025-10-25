@@ -25,20 +25,20 @@
 
     const-wide/16 v2, 0x0
 
-    cmp-long p0, v0, v2
+    cmp-long v0, v0, v2
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "TurnCustomizer has been disposed."
+    const-string v1, "TurnCustomizer has been disposed."
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method private static native nativeFreeTurnCustomizer(J)V

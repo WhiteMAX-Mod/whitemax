@@ -159,17 +159,36 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     iget-object v3, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
     :try_start_3
-    invoke-virtual {v0}, Landroid/content/pm/PackageInfo;->getLongVersionCode()J
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v5, 0x1c
+
+    if-ge v4, v5, :cond_1
+
+    iget v0, v0, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    int-to-long v4, v0
+
+    goto :goto_2
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_1
+    invoke-static {v0}, Lgqd;->e(Landroid/content/pm/PackageInfo;)J
 
     move-result-wide v4
 
+    :goto_2
     invoke-static {v4, v5}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v0
@@ -178,45 +197,40 @@
 
     move-object v9, v0
 
-    :goto_2
+    :goto_3
     move-object v10, v3
 
-    goto :goto_4
-
-    :catchall_2
-    move-exception v0
-
-    goto :goto_3
+    goto :goto_5
 
     :catchall_3
     move-exception v0
 
     move-object v3, v2
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_1
+    :cond_2
     move-object v9, v2
 
     move-object v10, v9
 
-    goto :goto_4
+    goto :goto_5
 
-    :goto_3
+    :goto_4
     const-string v4, "DeviceParamsDataProvider: collecting app package info exception: "
 
     invoke-static {v4, v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     move-object v9, v2
 
-    goto :goto_2
+    goto :goto_3
 
-    :goto_4
+    :goto_5
     invoke-static/range {p1 .. p1}, Lcom/my/tracker/obfuscated/r;->b(Landroid/content/Context;)Landroid/graphics/Point;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget v4, v0, Landroid/graphics/Point;->x:I
 
@@ -226,14 +240,14 @@
 
     move/from16 v16, v4
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_2
+    :cond_3
     const/16 v16, -0x1
 
     const/16 v17, -0x1
 
-    :goto_5
+    :goto_6
     const/high16 v4, 0x7fc00000    # Float.NaN
 
     :try_start_4
@@ -245,7 +259,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     iget v5, v0, Landroid/util/DisplayMetrics;->densityDpi:I
     :try_end_4
@@ -266,26 +280,26 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
-    :goto_6
+    :goto_7
     move/from16 v21, v4
 
     move/from16 v19, v13
 
     move/from16 v20, v15
 
-    goto :goto_8
+    goto :goto_9
 
     :catchall_4
     move-exception v0
 
-    goto :goto_7
+    goto :goto_8
 
     :catchall_5
     move-exception v0
 
     move v15, v4
 
-    goto :goto_7
+    goto :goto_8
 
     :catchall_6
     move-exception v0
@@ -294,7 +308,7 @@
 
     move v15, v13
 
-    goto :goto_7
+    goto :goto_8
 
     :catchall_7
     move-exception v0
@@ -305,9 +319,9 @@
 
     const/4 v5, -0x1
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_3
+    :cond_4
     move/from16 v19, v4
 
     move/from16 v20, v19
@@ -316,16 +330,16 @@
 
     const/4 v5, -0x1
 
-    goto :goto_8
+    goto :goto_9
 
-    :goto_7
+    :goto_8
     const-string v3, "DeviceParamsDataProvider: collecting display metrics exception: "
 
     invoke-static {v3, v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_6
+    goto :goto_7
 
-    :goto_8
+    :goto_9
     :try_start_8
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
@@ -361,7 +375,7 @@
 
     move-object v15, v0
 
-    goto :goto_9
+    goto :goto_a
 
     :catchall_8
     move-exception v0
@@ -372,7 +386,7 @@
 
     move-object v15, v2
 
-    :goto_9
+    :goto_a
     :try_start_9
     sget v0, Lcom/my/tracker/obfuscated/r$a;->a:I
     :try_end_9
@@ -380,7 +394,7 @@
 
     move/from16 v22, v0
 
-    goto :goto_a
+    goto :goto_b
 
     :catchall_9
     move-exception v0
@@ -391,7 +405,7 @@
 
     const/16 v22, -0x1
 
-    :goto_a
+    :goto_b
     const-wide/16 v3, -0x1
 
     :try_start_a
@@ -399,7 +413,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     invoke-virtual {v0}, Ljava/io/File;->getTotalSpace()J
 
@@ -414,38 +428,38 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_a
 
-    :goto_b
+    :goto_c
     move-wide/from16 v25, v3
 
-    goto :goto_d
+    goto :goto_e
 
     :catchall_a
     move-exception v0
 
-    goto :goto_c
+    goto :goto_d
 
     :catchall_b
     move-exception v0
 
     move-wide/from16 v23, v3
 
-    goto :goto_c
+    goto :goto_d
 
-    :cond_4
+    :cond_5
     move-wide/from16 v23, v3
 
     move-wide/from16 v25, v23
 
-    goto :goto_d
+    goto :goto_e
 
-    :goto_c
+    :goto_d
     const-string v13, "DeviceParamsDataProvider: collecting disk info exception: "
 
     invoke-static {v13, v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_b
+    goto :goto_c
 
-    :goto_d
+    :goto_e
     :try_start_c
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -457,10 +471,10 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_c
 
-    :goto_e
+    :goto_f
     move-object v13, v2
 
-    goto :goto_f
+    goto :goto_10
 
     :catchall_c
     move-exception v0
@@ -469,9 +483,9 @@
 
     invoke-static {v3, v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_e
+    goto :goto_f
 
-    :goto_f
+    :goto_10
     :try_start_d
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -487,7 +501,7 @@
 
     move/from16 v27, v0
 
-    goto :goto_10
+    goto :goto_11
 
     :catchall_d
     move-exception v0
@@ -498,7 +512,7 @@
 
     const/16 v27, -0x1
 
-    :goto_10
+    :goto_11
     :try_start_e
     const-string v0, "uimode"
     :try_end_e
@@ -521,26 +535,26 @@
 
     move/from16 v28, v3
 
-    goto :goto_12
+    goto :goto_13
 
     :catchall_e
     move-exception v0
 
-    goto :goto_11
+    goto :goto_12
 
     :catchall_f
     move-exception v0
 
     move-object/from16 v2, p1
 
-    :goto_11
+    :goto_12
     const-string v3, "DeviceParamsDataProvider: collecting ui mode info exception: "
 
     invoke-static {v3, v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/16 v28, -0x1
 
-    :goto_12
+    :goto_13
     invoke-static {v2}, Lcom/my/tracker/obfuscated/c1;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0

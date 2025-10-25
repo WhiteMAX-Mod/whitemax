@@ -1,64 +1,57 @@
 .class public final Lrp6;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public c:Lir7;
+.field public final a:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Liu7;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrp6;->a:Ljava/lang/String;
-
-    iput p2, p0, Lrp6;->b:I
+    iput-object p1, p0, Lrp6;->a:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a(Lsgf;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lrp6;->c:Lir7;
+    new-instance v0, Lo32;
 
-    if-eqz v0, :cond_0
+    invoke-static {p1}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, v0, Lir7;->a:Lnr7;
+    move-result-object p1
 
-    iget-object v0, v0, Lir7;->b:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    sget-object v2, Lor7;->b:Lor7;
+    invoke-direct {v0, v1, p1}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    check-cast v0, Landroid/text/style/ClickableSpan;
+    invoke-virtual {v0}, Lo32;->o()V
 
-    iget-object p0, p0, Lrp6;->a:Ljava/lang/String;
+    iget-object p1, p0, Lrp6;->a:Liu7;
 
-    invoke-virtual {v1, p1, p0, v2, v0}, Lnr7;->b(Landroid/view/View;Ljava/lang/String;Lor7;Landroid/text/style/ClickableSpan;)V
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object p1
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 0
+    check-cast p1, Lf88;
 
-    iget p0, p0, Lrp6;->b:I
+    new-instance v1, Lqp6;
 
-    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-direct {v1, v0}, Lqp6;-><init>(Lo32;)V
 
-    const/4 p0, 0x1
+    invoke-virtual {p1, v1}, Lf88;->a(Lc88;)V
 
-    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    invoke-virtual {v0}, Lo32;->n()Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

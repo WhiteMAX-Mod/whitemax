@@ -1,213 +1,245 @@
-.class public abstract Lpt3;
-.super Ljava/lang/Object;
+.class public final Lpt3;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Leu3;
 
 
 # direct methods
-.method public static a([B)Lqt3;
-    .locals 12
+.method public constructor <init>(Leu3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;
+    iput-object p1, p0, Lpt3;->Y:Leu3;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ContactUpdate;-><init>()V
+    const/4 p1, 0x2
 
-    :try_start_0
-    invoke-static {v0, p0}, Lj29;->mergeFrom(Lj29;[B)Lj29;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance v0, Lqt3;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-wide v2, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->requestId:J
+    check-cast p1, Lq54;
 
-    iget-wide v4, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->contactId:J
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->action:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lpt3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    check-cast p1, Lpt3;
 
-    move-result v6
+    sget-object p2, Lccg;->a:Lccg;
 
-    const/4 v7, 0x4
+    invoke-virtual {p1, p2}, Lpt3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v8, 0x3
+    move-result-object p1
 
-    const/4 v9, 0x2
+    return-object p1
+.end method
 
-    const/4 v10, 0x1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    const/4 v11, -0x1
+    new-instance p1, Lpt3;
 
-    sparse-switch v6, :sswitch_data_0
+    iget-object v0, p0, Lpt3;->Y:Leu3;
 
-    goto :goto_0
+    invoke-direct {p1, v0, p2}, Lpt3;-><init>(Leu3;Lkotlin/coroutines/Continuation;)V
 
-    :sswitch_0
-    const-string v6, "UNBLOCK"
+    return-object p1
+.end method
 
-    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 14
 
-    move-result v6
+    iget-object v0, p0, Lpt3;->Y:Leu3;
 
-    if-nez v6, :cond_0
+    iget-object v1, v0, Lc65;->d:Lnje;
 
-    goto :goto_0
+    iget-wide v2, v0, Leu3;->n:J
+
+    iget v4, p0, Lpt3;->X:I
+
+    sget-object v5, Lccg;->a:Lccg;
+
+    const/4 v6, 0x4
+
+    const/4 v7, 0x3
+
+    const/4 v8, 0x2
+
+    const/4 v9, 0x1
+
+    sget-object v10, Lr54;->a:Lr54;
+
+    if-eqz v4, :cond_4
+
+    if-eq v4, v9, :cond_3
+
+    if-eq v4, v8, :cond_2
+
+    if-eq v4, v7, :cond_1
+
+    if-ne v4, v6, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    return-object v5
 
     :cond_0
-    move v11, v7
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    goto :goto_0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :sswitch_1
-    const-string v6, "BLOCK"
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_1
-
-    goto :goto_0
+    throw p1
 
     :cond_1
-    move v11, v8
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    goto :goto_0
-
-    :sswitch_2
-    const-string v6, "ADD"
-
-    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_2
-
-    goto :goto_0
+    goto :goto_2
 
     :cond_2
-    move v11, v9
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    goto :goto_0
-
-    :sswitch_3
-    const-string v6, "UPDATE"
-
-    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_3
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_3
-    move v11, v10
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v6, "REMOVE"
-
-    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_4
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_4
-    const/4 v11, 0x0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
+    iget-object p1, v0, Leu3;->w:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lyx3;
+
+    iput v9, p0, Lpt3;->X:I
+
+    invoke-virtual {p1, v2, v3}, Lyx3;->a(J)V
+
+    if-ne v5, v10, :cond_5
+
+    goto :goto_3
+
+    :cond_5
     :goto_0
-    packed-switch v11, :pswitch_data_0
+    const/16 p1, 0x30
 
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    int-to-float p1, p1
 
-    const-string v0, "No such value "
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    const-string v2, " for ContactUpdateAction"
+    move-result-object v4
 
-    invoke-static {v0, v1, v2}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v0
+    move-result-object v4
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-    throw p0
+    mul-float/2addr p1, v4
 
-    :pswitch_0
-    move v1, v9
+    invoke-static {p1}, Lfhi;->b(F)I
 
-    goto :goto_2
+    move-result p1
 
-    :pswitch_1
-    move v1, v10
+    iget-object v4, v0, Lc65;->e:Lnje;
 
-    goto :goto_2
+    new-instance v9, Lh6c;
 
+    sget v11, Luza;->A0:I
+
+    new-instance v12, Lorf;
+
+    invoke-direct {v12, v11}, Lorf;-><init>(I)V
+
+    new-instance v11, Lj42;
+
+    const/16 v13, 0x14
+
+    invoke-direct {v11, v13, v0}, Lj42;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v9, v12, p1, v11}, Lh6c;-><init>(Lorf;ILj42;)V
+
+    iput v8, p0, Lpt3;->X:I
+
+    invoke-virtual {v4, v9, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v10, :cond_6
+
+    goto :goto_3
+
+    :cond_6
     :goto_1
-    :pswitch_2
-    move v1, v7
+    iget-object p1, v0, Leu3;->p:Liu7;
 
-    goto :goto_2
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
-    :pswitch_3
-    const/4 v7, 0x5
+    move-result-object p1
 
-    goto :goto_1
+    check-cast p1, Ld33;
 
-    :pswitch_4
-    move v1, v8
+    check-cast p1, Ld43;
 
+    invoke-virtual {p1, v2, v3}, Ld43;->R(J)Lla2;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_7
+
+    iget-wide v2, p1, Lla2;->a:J
+
+    new-instance p1, Ll5c;
+
+    invoke-direct {p1, v2, v3}, Ll5c;-><init>(J)V
+
+    iput v7, p0, Lpt3;->X:I
+
+    invoke-virtual {v1, p1, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v10, :cond_7
+
+    goto :goto_3
+
+    :cond_7
     :goto_2
-    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->oldName:Ljava/lang/String;
+    sget-object p1, Ls93;->b:Ls93;
 
-    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->oldLastName:Ljava/lang/String;
+    iput v6, p0, Lpt3;->X:I
 
-    iget-object v8, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->newName:Ljava/lang/String;
+    invoke-virtual {v1, p1, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v9, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->lastName:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-direct/range {v0 .. v9}, Lqt3;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    if-ne p1, v10, :cond_8
 
-    return-object v0
+    :goto_3
+    return-object v10
 
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7022137c -> :sswitch_4
-        -0x6a6cd337 -> :sswitch_3
-        0xfc81 -> :sswitch_2
-        0x3c5cc6d -> :sswitch_1
-        0x19517974 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_8
+    return-object v5
 .end method

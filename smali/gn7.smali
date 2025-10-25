@@ -3,145 +3,265 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvn7;
+.implements Ljava/lang/reflect/InvocationHandler;
 
 
 # instance fields
-.field public final a:Liy5;
+.field public a:Z
 
-.field public final b:Lzn7;
+.field public b:Ljava/lang/String;
+
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lzn7;Liy5;)V
+.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgn7;->b:Lzn7;
-
-    iput-object p2, p0, Lgn7;->a:Liy5;
+    iput-object p1, p0, Lgn7;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onDestroy(Lzn7;)V
-    .locals 4
-    .annotation runtime Lo9a;
-        value = .enum Lbn7;->ON_DESTROY:Lbn7;
-    .end annotation
+.method public final invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object p0, p0, Lgn7;->a:Liy5;
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Liy5;->a:Ljava/lang/Object;
+    if-eqz p3, :cond_0
 
-    monitor-enter v0
+    goto :goto_0
 
-    :try_start_0
-    invoke-virtual {p0, p1}, Liy5;->l(Lzn7;)Lgn7;
+    :cond_0
+    new-array p3, p1, [Ljava/lang/Object;
+
+    :goto_0
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
 
     move-result-object v1
 
-    if-nez v1, :cond_0
+    const-string v2, "supports"
 
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p0, p1}, Liy5;->u(Lzn7;)V
-
-    iget-object p1, p0, Liy5;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/HashMap;
-
-    invoke-virtual {p1, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    move-result-object v2
+    invoke-static {v2, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast v2, Laa0;
+    move-result v2
 
-    iget-object v3, p0, Liy5;->b:Ljava/lang/Object;
+    if-eqz v2, :cond_1
 
-    check-cast v3, Ljava/util/HashMap;
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-virtual {v3, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
+    return-object p1
 
     :cond_1
-    iget-object p0, p0, Liy5;->c:Ljava/lang/Object;
+    const-string v2, "unsupported"
 
-    check-cast p0, Ljava/util/HashMap;
+    invoke-static {v0, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v2
 
-    iget-object p0, v1, Lgn7;->b:Lzn7;
+    const/4 v3, 0x0
 
-    invoke-interface {p0}, Lzn7;->L()Lbo7;
+    const/4 v4, 0x1
 
-    move-result-object p0
+    if-eqz v2, :cond_2
 
-    invoke-virtual {p0, v1}, Lbo7;->f(Lvn7;)V
+    sget-object v2, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
-    monitor-exit v0
+    invoke-static {v2, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iput-boolean v4, p0, Lgn7;->a:Z
+
+    return-object v3
+
+    :cond_2
+    const-string v2, "protocols"
+
+    invoke-static {v0, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    iget-object v5, p0, Lgn7;->c:Ljava/util/ArrayList;
+
+    if-eqz v2, :cond_3
+
+    array-length v2, p3
+
+    if-nez v2, :cond_3
+
+    return-object v5
+
+    :cond_3
+    const-string v2, "selectProtocol"
+
+    invoke-static {v0, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const-string v6, "null cannot be cast to non-null type kotlin.String"
+
+    if-nez v2, :cond_4
+
+    const-string v2, "select"
+
+    invoke-static {v0, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    :cond_4
+    const-class v2, Ljava/lang/String;
+
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    array-length v1, p3
+
+    if-ne v1, v4, :cond_9
+
+    aget-object v1, p3, p1
+
+    instance-of v2, v1, Ljava/util/List;
+
+    if-eqz v2, :cond_9
+
+    if-eqz v1, :cond_8
+
+    check-cast v1, Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    if-ltz p2, :cond_7
+
+    move p3, p1
 
     :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {v1, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    throw p0
-.end method
+    move-result-object v0
 
-.method public onStart(Lzn7;)V
-    .locals 0
-    .annotation runtime Lo9a;
-        value = .enum Lbn7;->ON_START:Lbn7;
-    .end annotation
+    if-eqz v0, :cond_6
 
-    iget-object p0, p0, Lgn7;->a:Liy5;
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Liy5;->t(Lzn7;)V
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    return-void
-.end method
+    move-result v2
 
-.method public onStop(Lzn7;)V
-    .locals 0
-    .annotation runtime Lo9a;
-        value = .enum Lbn7;->ON_STOP:Lbn7;
-    .end annotation
+    if-eqz v2, :cond_5
 
-    iget-object p0, p0, Lgn7;->a:Liy5;
+    iput-object v0, p0, Lgn7;->b:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Liy5;->u(Lzn7;)V
+    return-object v0
 
-    return-void
+    :cond_5
+    if-eq p3, p2, :cond_7
+
+    add-int/lit8 p3, p3, 0x1
+
+    goto :goto_1
+
+    :cond_6
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v6}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    iput-object p1, p0, Lgn7;->b:Ljava/lang/String;
+
+    return-object p1
+
+    :cond_8
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.collections.List<*>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_9
+    const-string v1, "protocolSelected"
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_a
+
+    const-string v1, "selected"
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    :cond_a
+    array-length v0, p3
+
+    if-ne v0, v4, :cond_c
+
+    aget-object p1, p3, p1
+
+    if-eqz p1, :cond_b
+
+    check-cast p1, Ljava/lang/String;
+
+    iput-object p1, p0, Lgn7;->b:Ljava/lang/String;
+
+    return-object v3
+
+    :cond_b
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v6}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_c
+    array-length p1, p3
+
+    invoke-static {p3, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,185 +1,83 @@
 .class public final Lq5a;
-.super Lvk0;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
 
-# instance fields
-.field public final Y:Ljava/util/Collection;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lq5a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final Z:Lqc6;
+
+# instance fields
+.field public a:I
 
 
 # direct methods
-.method public constructor <init>(Ld8a;Lqc6;Ljava/util/Collection;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lvk0;-><init>(Ld8a;)V
+    new-instance v0, Lvk8;
 
-    iput-object p2, p0, Lq5a;->Z:Lqc6;
+    const/16 v1, 0xe
 
-    iput-object p3, p0, Lq5a;->Y:Ljava/util/Collection;
+    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
+
+    sput-object v0, Lq5a;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
-
-    iget-boolean v0, p0, Lvk0;->o:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lvk0;->o:Z
-
-    iget-object v0, p0, Lq5a;->Y:Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
-
-    iget-object p0, p0, Lvk0;->a:Ld8a;
-
-    invoke-interface {p0}, Ld8a;->b()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    iget-object v0, p0, Lq5a;->Y:Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
-
-    invoke-super {p0}, Lvk0;->clear()V
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lvk0;->o:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Ln4e;->D(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lvk0;->o:Z
-
-    iget-object v0, p0, Lq5a;->Y:Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
-
-    iget-object p0, p0, Lvk0;->a:Ld8a;
-
-    invoke-interface {p0, p1}, Ld8a;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final poll()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    :cond_0
-    iget-object v0, p0, Lvk0;->c:Lr0c;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Lf2e;->poll()Ljava/lang/Object;
+    const-string v1, "HorizontalScrollView.SavedState{"
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Lq5a;->Z:Lqc6;
-
-    invoke-interface {v1, v0}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "The keySelector returned a null key"
-
-    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    iget-object v2, p0, Lq5a;->Y:Ljava/util/Collection;
-
-    invoke-interface {v2, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    :cond_1
-    return-object v0
-.end method
+    move-result-object v1
 
-.method public final s(Ljava/lang/Object;)V
-    .locals 3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Lvk0;->o:Z
+    const-string v1, " scrollPosition="
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    iget v1, p0, Lq5a;->a:I
 
-    :cond_0
-    iget v0, p0, Lvk0;->X:I
+    const-string v2, "}"
 
-    iget-object v1, p0, Lvk0;->a:Ld8a;
-
-    if-nez v0, :cond_2
-
-    :try_start_0
-    iget-object v0, p0, Lq5a;->Z:Lqc6;
-
-    invoke-interface {v0, p1}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "The keySelector returned a null key"
+    return-object v0
+.end method
 
-    invoke-static {v0, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object v2, p0, Lq5a;->Y:Ljava/util/Collection;
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    invoke-interface {v2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    iget p2, p0, Lq5a;->a:I
 
-    move-result p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {v1, p1}, Ld8a;->s(Ljava/lang/Object;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lzyd;->F(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lvk0;->b:Loq4;
-
-    invoke-interface {v0}, Loq4;->e()V
-
-    invoke-virtual {p0, p1}, Lq5a;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    const/4 p0, 0x0
-
-    invoke-interface {v1, p0}, Ld8a;->s(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

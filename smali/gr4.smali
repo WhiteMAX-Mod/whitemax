@@ -2,122 +2,217 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljavax/inject/Provider;
-
-
-# static fields
-.field public static final c:Ljava/lang/Object;
-
 
 # instance fields
-.field public volatile a:Lu35;
+.field public final a:Lkhc;
 
-.field public volatile b:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(IILjava/lang/Class;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Object;
+    .line 1
+    invoke-static {p3}, Lkhc;->a(Ljava/lang/Class;)Lkhc;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p3
 
-    sput-object v0, Lgr4;->c:Ljava/lang/Object;
+    invoke-direct {p0, p3, p1, p2}, Lgr4;-><init>(Lkhc;II)V
 
     return-void
 .end method
 
+.method public constructor <init>(Lkhc;II)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Lgr4;->a:Lkhc;
+
+    .line 4
+    iput p2, p0, Lgr4;->b:I
+
+    .line 5
+    iput p3, p0, Lgr4;->c:I
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/Class;)Lgr4;
+    .locals 3
+
+    new-instance v0, Lgr4;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, p0}, Lgr4;-><init>(IILjava/lang/Class;)V
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object v0, p0, Lgr4;->b:Ljava/lang/Object;
+    instance-of v0, p1, Lgr4;
 
-    sget-object v1, Lgr4;->c:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    if-ne v0, v1, :cond_3
+    check-cast p1, Lgr4;
 
-    monitor-enter p0
+    iget-object v0, p0, Lgr4;->a:Lkhc;
 
-    :try_start_0
-    iget-object v0, p0, Lgr4;->b:Ljava/lang/Object;
+    iget-object v1, p1, Lgr4;->a:Lkhc;
 
-    if-ne v0, v1, :cond_2
+    invoke-virtual {v0, v1}, Lkhc;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lgr4;->a:Lu35;
+    move-result v0
 
-    invoke-virtual {v0}, Lu35;->get()Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    iget v0, p0, Lgr4;->b:I
 
-    iget-object v2, p0, Lgr4;->b:Ljava/lang/Object;
+    iget v1, p1, Lgr4;->b:I
 
-    if-eq v2, v1, :cond_1
+    if-ne v0, v1, :cond_0
 
-    if-ne v2, v0, :cond_0
+    iget v0, p0, Lgr4;->c:I
+
+    iget p1, p1, Lgr4;->c:I
+
+    if-ne v0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lgr4;->a:Lkhc;
+
+    invoke-virtual {v0}, Lkhc;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lgr4;->b:I
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Lgr4;->c:I
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Dependency{anInterface="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lgr4;->a:Lkhc;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgr4;->b:I
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    const-string v1, "required"
 
     goto :goto_0
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    if-nez v1, :cond_1
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v1, "optional"
 
-    const-string v4, "Scoped provider was invoked recursively returning different results: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " & "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ". This is likely due to a circular dependency."
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    goto :goto_0
 
     :cond_1
+    const-string v1, "set"
+
     :goto_0
-    iput-object v0, p0, Lgr4;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v1, ", injection="
 
-    iput-object v1, p0, Lgr4;->a:Lu35;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgr4;->c:I
+
+    if-eqz v1, :cond_4
+
+    if-eq v1, v2, :cond_3
+
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_2
+
+    const-string v1, "deferred"
 
     goto :goto_1
 
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
     :cond_2
-    :goto_1
-    monitor-exit p0
+    new-instance v0, Ljava/lang/AssertionError;
 
-    return-object v0
+    const-string v2, "Unsupported injection: "
 
-    :goto_2
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v1, v2}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
     throw v0
 
     :cond_3
+    const-string v1, "provider"
+
+    goto :goto_1
+
+    :cond_4
+    const-string v1, "direct"
+
+    :goto_1
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
 .end method

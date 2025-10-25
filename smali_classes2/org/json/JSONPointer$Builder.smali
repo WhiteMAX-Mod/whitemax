@@ -72,23 +72,23 @@
 
     .line 2
     :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p1, "token cannot be null"
+    const-string v0, "token cannot be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public build()Lorg/json/JSONPointer;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lorg/json/JSONPointer;
 
-    iget-object p0, p0, Lorg/json/JSONPointer$Builder;->refTokens:Ljava/util/List;
+    iget-object v1, p0, Lorg/json/JSONPointer$Builder;->refTokens:Ljava/util/List;
 
-    invoke-direct {v0, p0}, Lorg/json/JSONPointer;-><init>(Ljava/util/List;)V
+    invoke-direct {v0, v1}, Lorg/json/JSONPointer;-><init>(Ljava/util/List;)V
 
     return-object v0
 .end method

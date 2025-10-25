@@ -42,29 +42,29 @@
 .end method
 
 .method private logD(Ljava/lang/String;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p0, ": "
+    const-string v0, ": "
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "SurfaceEglRenderer"
+    const-string v0, "SurfaceEglRenderer"
 
-    invoke-static {p1, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -88,7 +88,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto/16 :goto_0
 
@@ -236,7 +236,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -262,14 +262,14 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method public init(Lorg/webrtc/EglBase$Context;Lorg/webrtc/RendererCommon$RendererEvents;[ILorg/webrtc/RendererCommon$GlDrawer;)V
@@ -312,7 +312,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     .line 10
     :try_start_1
@@ -320,7 +320,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public init(Lorg/webrtc/EglBase$Context;[ILorg/webrtc/RendererCommon$GlDrawer;)V
@@ -365,14 +365,14 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method public setFpsReduction(F)V
@@ -408,14 +408,14 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public surfaceChanged(Landroid/view/SurfaceHolder;III)V
@@ -477,11 +477,11 @@
 
     invoke-direct {p1, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    new-instance v0, Lsle;
+    new-instance v0, Lzje;
 
-    const/4 v1, 0x1
+    const/16 v1, 0x9
 
-    invoke-direct {v0, v1, p1}, Lsle;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lzje;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p0, v0}, Lorg/webrtc/EglRenderer;->releaseEglSurface(Ljava/lang/Runnable;)V
 

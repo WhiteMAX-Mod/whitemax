@@ -17,7 +17,7 @@
 
 # direct methods
 .method public constructor <init>(Lorg/apache/http/protocol/HttpContext;)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,19 +28,19 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP context may not be null"
+    const-string v0, "HTTP context may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
 # virtual methods
 .method public setAuthSchemePref(Ljava/util/List;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -50,59 +50,59 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/apache/http/client/protocol/ClientContextConfigurer;->context:Lorg/apache/http/protocol/HttpContext;
+    iget-object v0, p0, Lorg/apache/http/client/protocol/ClientContextConfigurer;->context:Lorg/apache/http/protocol/HttpContext;
 
-    const-string v0, "http.auth.scheme-pref"
+    const-string v1, "http.auth.scheme-pref"
 
-    invoke-interface {p0, v0, p1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public setAuthSchemeRegistry(Lorg/apache/http/auth/AuthSchemeRegistry;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/apache/http/client/protocol/ClientContextConfigurer;->context:Lorg/apache/http/protocol/HttpContext;
+    iget-object v0, p0, Lorg/apache/http/client/protocol/ClientContextConfigurer;->context:Lorg/apache/http/protocol/HttpContext;
 
-    const-string v0, "http.authscheme-registry"
+    const-string v1, "http.authscheme-registry"
 
-    invoke-interface {p0, v0, p1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public setCookieSpecRegistry(Lorg/apache/http/cookie/CookieSpecRegistry;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/apache/http/client/protocol/ClientContextConfigurer;->context:Lorg/apache/http/protocol/HttpContext;
+    iget-object v0, p0, Lorg/apache/http/client/protocol/ClientContextConfigurer;->context:Lorg/apache/http/protocol/HttpContext;
 
-    const-string v0, "http.cookiespec-registry"
+    const-string v1, "http.cookiespec-registry"
 
-    invoke-interface {p0, v0, p1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public setCookieStore(Lorg/apache/http/client/CookieStore;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/apache/http/client/protocol/ClientContextConfigurer;->context:Lorg/apache/http/protocol/HttpContext;
+    iget-object v0, p0, Lorg/apache/http/client/protocol/ClientContextConfigurer;->context:Lorg/apache/http/protocol/HttpContext;
 
-    const-string v0, "http.cookie-store"
+    const-string v1, "http.cookie-store"
 
-    invoke-interface {p0, v0, p1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public setCredentialsProvider(Lorg/apache/http/client/CredentialsProvider;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/apache/http/client/protocol/ClientContextConfigurer;->context:Lorg/apache/http/protocol/HttpContext;
+    iget-object v0, p0, Lorg/apache/http/client/protocol/ClientContextConfigurer;->context:Lorg/apache/http/protocol/HttpContext;
 
-    const-string v0, "http.auth.credentials-provider"
+    const-string v1, "http.auth.credentials-provider"
 
-    invoke-interface {p0, v0, p1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method

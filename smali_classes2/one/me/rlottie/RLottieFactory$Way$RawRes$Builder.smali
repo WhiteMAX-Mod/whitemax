@@ -43,7 +43,7 @@
         "()Lone/me/rlottie/RLottieFactory$Way$RawRes;",
         "<set-?>",
         "rawResId$delegate",
-        "Leic;",
+        "Lj0d;",
         "getRawResId",
         "()I",
         "(I)V",
@@ -61,11 +61,11 @@
 
 
 # static fields
-.field static final synthetic $$delegatedProperties:[Lxi7;
+.field static final synthetic $$delegatedProperties:[Ltr7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
-            "Lxi7;"
+            "Ltr7;"
         }
     .end annotation
 .end field
@@ -74,14 +74,14 @@
 # instance fields
 .field private cacheName:Ljava/lang/String;
 
-.field private final rawResId$delegate:Leic;
+.field private final rawResId$delegate:Lj0d;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 4
 
-    new-instance v0, Lmo9;
+    new-instance v0, Le1a;
 
     const-string v1, "rawResId"
 
@@ -89,37 +89,35 @@
 
     const-class v3, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;
 
-    invoke-direct {v0, v3, v1, v2}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v3, v1, v2}, Le1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v1, Ljpc;->a:Lkpc;
+    sget-object v1, Lz7d;->a:La8d;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Lxi7;
+    new-array v1, v1, [Ltr7;
 
     const/4 v2, 0x0
 
     aput-object v0, v1, v2
 
-    sput-object v1, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->$$delegatedProperties:[Lxi7;
+    sput-object v1, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->$$delegatedProperties:[Ltr7;
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 2
+    .locals 1
 
     invoke-direct {p0}, Lone/me/rlottie/RLottieFactory$Way$Builder;-><init>()V
 
-    new-instance v0, Lne4;
+    new-instance v0, Le5;
 
-    const/4 v1, 0x1
+    invoke-direct {v0}, Le5;-><init>()V
 
-    invoke-direct {v0, v1}, Lne4;-><init>(I)V
-
-    iput-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->rawResId$delegate:Leic;
+    iput-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->rawResId$delegate:Lj0d;
 
     return-void
 .end method
@@ -127,34 +125,34 @@
 .method private final getRawResId()I
     .locals 3
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->rawResId$delegate:Leic;
+    iget-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->rawResId$delegate:Lj0d;
 
-    sget-object v1, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->$$delegatedProperties:[Lxi7;
+    sget-object v1, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->$$delegatedProperties:[Ltr7;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0, p0, v1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+    invoke-interface {v0, p0, v1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Ljava/lang/Number;
+    check-cast v0, Ljava/lang/Number;
 
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method private final setRawResId(I)V
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->rawResId$delegate:Leic;
+    iget-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->rawResId$delegate:Lj0d;
 
-    sget-object v1, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->$$delegatedProperties:[Lxi7;
+    sget-object v1, Lone/me/rlottie/RLottieFactory$Way$RawRes$Builder;->$$delegatedProperties:[Ltr7;
 
     const/4 v2, 0x0
 
@@ -164,7 +162,7 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p0, v1, p1}, Leic;->h0(Ljava/lang/Object;Lxi7;Ljava/lang/Object;)V
+    invoke-interface {v0, p0, v1, p1}, Lj0d;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
 
     return-void
 .end method

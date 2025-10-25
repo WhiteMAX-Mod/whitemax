@@ -1,21 +1,69 @@
-.class public interface abstract Llu1;
-.super Ljava/lang/Object;
+.class public final Llu1;
+.super Ljava/util/concurrent/AbstractExecutorService;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Llu1;
+
+
 # direct methods
-.method public static a(Llu1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Llu1;
+
+    invoke-direct {v0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
+
+    sput-object v0, Llu1;->a:Llu1;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
     .locals 0
 
-    check-cast p0, Lb71;
+    const/4 p1, 0x1
 
-    iget-object p0, p0, Lb71;->b:Lzte;
+    return p1
+.end method
 
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
 
-    move-result-object p0
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationFactory;
+    return-void
+.end method
 
-    return-object p0
+.method public final isShutdown()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final isTerminated()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final shutdown()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final shutdownNow()Ljava/util/List;
+    .locals 1
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    return-object v0
 .end method

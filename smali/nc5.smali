@@ -1,111 +1,181 @@
-.class public final Lnc5;
+.class public abstract Lnc5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/SurfaceHolder$Callback;
-.implements Landroid/view/TextureView$SurfaceTextureListener;
-
 
 # instance fields
-.field public final synthetic a:Ltc5;
+.field public final a:Lcom/google/android/material/textfield/TextInputLayout;
+
+.field public final b:Lmc5;
+
+.field public final c:Landroid/content/Context;
+
+.field public final d:Lcom/google/android/material/internal/CheckableImageButton;
 
 
 # direct methods
-.method public constructor <init>(Ltc5;)V
-    .locals 0
+.method public constructor <init>(Lmc5;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnc5;->a:Ltc5;
+    iget-object v0, p1, Lmc5;->a:Lcom/google/android/material/textfield/TextInputLayout;
+
+    iput-object v0, p0, Lnc5;->a:Lcom/google/android/material/textfield/TextInputLayout;
+
+    iput-object p1, p0, Lnc5;->b:Lmc5;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnc5;->c:Landroid/content/Context;
+
+    iget-object p1, p1, Lmc5;->s0:Lcom/google/android/material/internal/CheckableImageButton;
+
+    iput-object p1, p0, Lnc5;->d:Lcom/google/android/material/internal/CheckableImageButton;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
+.method public a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public c()I
     .locals 1
 
-    new-instance v0, Landroid/view/Surface;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+    return v0
+.end method
 
-    iget-object p0, p0, Lnc5;->a:Ltc5;
+.method public d()I
+    .locals 1
 
-    invoke-virtual {p0, v0}, Ltc5;->B1(Landroid/view/Surface;)V
+    const/4 v0, 0x0
 
-    iput-object v0, p0, Ltc5;->b1:Landroid/view/Surface;
+    return v0
+.end method
 
-    invoke-virtual {p0, p2, p3}, Ltc5;->p1(II)V
+.method public e()Landroid/view/View$OnFocusChangeListener;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public f()Landroid/view/View$OnClickListener;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public g()Landroid/view/View$OnFocusChangeListener;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public h()Le44;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public i(I)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public j()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public k()Z
+    .locals 1
+
+    instance-of v0, p0, Lf35;
+
+    return v0
+.end method
+
+.method public l()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public m(Landroid/widget/EditText;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    iget-object p0, p0, Lnc5;->a:Ltc5;
-
-    invoke-virtual {p0, p1}, Ltc5;->B1(Landroid/view/Surface;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1, p1}, Ltc5;->p1(II)V
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
-    .locals 0
-
-    iget-object p0, p0, Lnc5;->a:Ltc5;
-
-    invoke-virtual {p0, p2, p3}, Ltc5;->p1(II)V
-
-    return-void
-.end method
-
-.method public final onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
+.method public n(Lg5;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final surfaceChanged(Landroid/view/SurfaceHolder;III)V
+.method public o(Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 0
-
-    iget-object p0, p0, Lnc5;->a:Ltc5;
-
-    invoke-virtual {p0, p3, p4}, Ltc5;->p1(II)V
 
     return-void
 .end method
 
-.method public final surfaceCreated(Landroid/view/SurfaceHolder;)V
+.method public p(Z)V
     .locals 0
-
-    iget-object p0, p0, Lnc5;->a:Ltc5;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
 
-.method public final surfaceDestroyed(Landroid/view/SurfaceHolder;)V
+.method public final q()V
+    .locals 2
+
+    iget-object v0, p0, Lnc5;->b:Lmc5;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lmc5;->f(Z)V
+
+    return-void
+.end method
+
+.method public r()V
     .locals 0
 
-    iget-object p0, p0, Lnc5;->a:Ltc5;
+    return-void
+.end method
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1, p1}, Ltc5;->p1(II)V
+.method public s()V
+    .locals 0
 
     return-void
 .end method

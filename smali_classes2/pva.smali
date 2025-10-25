@@ -1,48 +1,55 @@
 .class public final Lpva;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:J
+.field public X:Ljava/lang/Object;
 
-.field public b:Ljava/lang/String;
+.field public Y:Ln1a;
 
-.field public c:Lsy;
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public d:Lsva;
+.field public o:Luva;
 
-.field public e:Z
+.field public final synthetic q0:Luva;
 
-.field public f:Z
+.field public r0:I
 
-.field public g:Ljava/util/List;
 
-.field public h:Lfl4;
+# direct methods
+.method public constructor <init>(Luva;Ly14;)V
+    .locals 0
+
+    iput-object p1, p0, Lpva;->q0:Luva;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Lqva;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lpva;->d:Lsva;
+    iput-object p1, p0, Lpva;->Z:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iget p1, p0, Lpva;->r0:I
 
-    iget v0, v0, Lsva;->a:I
+    const/high16 v0, -0x80000000
 
-    const/4 v1, 0x3
+    or-int/2addr p1, v0
 
-    if-ne v0, v1, :cond_0
+    iput p1, p0, Lpva;->r0:I
+
+    iget-object p1, p0, Lpva;->q0:Luva;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lpva;->b:Ljava/lang/String;
+    invoke-virtual {p1, v0, p0}, Luva;->g(Lli6;Ly14;)Ljava/lang/Object;
 
-    :cond_0
-    new-instance v0, Lqva;
+    move-result-object p1
 
-    invoke-direct {v0, p0}, Lqva;-><init>(Lpva;)V
-
-    return-object v0
+    return-object p1
 .end method

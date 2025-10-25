@@ -1,27 +1,27 @@
 .class public final Lqq8;
-.super Ljava/lang/Object;
+.super Lx1;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lcj0;
+.field public final q0:Landroid/os/Handler;
 
-.field public final b:Lkq8;
+.field public r0:Lhq8;
 
-.field public final c:Lbkd;
+.field public s0:Z
 
 
 # direct methods
-.method public constructor <init>(Lcj0;Lkq8;Lbkd;)V
-    .locals 0
+.method public constructor <init>(Landroid/os/Looper;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqq8;->a:Lcj0;
+    new-instance v0, Landroid/os/Handler;
 
-    iput-object p2, p0, Lqq8;->b:Lkq8;
+    invoke-direct {v0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iput-object p3, p0, Lqq8;->c:Lbkd;
+    iput-object v0, p0, Lqq8;->q0:Landroid/os/Handler;
 
     return-void
 .end method

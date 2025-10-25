@@ -51,9 +51,9 @@
 .end method
 
 .method private getReferenced()Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/commons/logging/impl/WeakHashtable$WeakKey;->referenced:Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;
+    iget-object v0, p0, Lorg/apache/commons/logging/impl/WeakHashtable$WeakKey;->referenced:Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;
 
-    return-object p0
+    return-object v0
 .end method

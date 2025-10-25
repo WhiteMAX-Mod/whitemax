@@ -1,24 +1,24 @@
-.class public final synthetic Lln1;
+.class public final Lln1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lty5;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lnn1;
+.field public final synthetic b:Ln0d;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnn1;I)V
+.method public synthetic constructor <init>(Ln0d;I)V
     .locals 0
 
     iput p2, p0, Lln1;->a:I
 
-    iput-object p1, p0, Lln1;->b:Lnn1;
+    iput-object p1, p0, Lln1;->b:Ln0d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,70 +27,238 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
-    iget p1, p0, Lln1;->a:I
+    iget v0, p0, Lln1;->a:I
 
-    iget-object p0, p0, Lln1;->b:Lnn1;
+    packed-switch v0, :pswitch_data_0
 
-    packed-switch p1, :pswitch_data_0
+    new-instance v0, Ljpg;
 
-    iget-object p1, p0, Lnn1;->F0:Lmn1;
+    const/4 v1, 0x6
 
-    if-eqz p1, :cond_0
+    invoke-direct {v0, p1, v1}, Ljpg;-><init>(Lvy5;I)V
 
-    iget-boolean p0, p0, Lnn1;->G0:Z
+    iget-object p1, p0, Lln1;->b:Ln0d;
 
-    xor-int/lit8 p0, p0, 0x1
+    iget-object p1, p1, Ln0d;->a:Lq0f;
 
-    check-cast p1, Lzj1;
-
-    iget-object p1, p1, Lzj1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lad4;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lqm1;
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object p1, p1, Lqm1;->c:Lot1;
+    sget-object p2, Lr54;->a:Lr54;
 
-    iget-object p1, p1, Lot1;->h:Lt6d;
+    if-ne p1, p2, :cond_0
 
-    invoke-virtual {p1, p0}, Lt6d;->a(Z)V
+    goto :goto_0
 
     :cond_0
-    return-void
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_0
+    return-object p1
 
     :pswitch_0
-    iget-object p0, p0, Lnn1;->F0:Lmn1;
+    new-instance v0, Ls3a;
 
-    if-eqz p0, :cond_1
+    const/4 v1, 0x2
 
-    check-cast p0, Lzj1;
+    invoke-direct {v0, p1, v1}, Ls3a;-><init>(Lvy5;I)V
 
-    iget-object p0, p0, Lzj1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    iget-object p1, p0, Lln1;->b:Ln0d;
 
-    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lad4;
+    iget-object p1, p1, Ln0d;->a:Lq0f;
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lqm1;
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    const/4 p1, 0x0
+    sget-object p2, Lr54;->a:Lr54;
 
-    const/4 v0, 0x0
+    if-ne p1, p2, :cond_1
 
-    invoke-virtual {p0, v0, p1}, Lqm1;->x(ZLandroid/content/Intent;)V
+    goto :goto_1
 
     :cond_1
-    return-void
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_1
+    return-object p1
+
+    :pswitch_1
+    new-instance v0, Ldb8;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, p1, v1}, Ldb8;-><init>(Lvy5;I)V
+
+    iget-object p1, p0, Lln1;->b:Ln0d;
+
+    iget-object p1, p1, Ln0d;->a:Lq0f;
+
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_2
+    return-object p1
+
+    :pswitch_2
+    new-instance v0, Lv23;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, p1, v1}, Lv23;-><init>(Lvy5;I)V
+
+    iget-object p1, p0, Lln1;->b:Ln0d;
+
+    iget-object p1, p1, Ln0d;->a:Lq0f;
+
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_3
+    return-object p1
+
+    :pswitch_3
+    new-instance v0, Lv23;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, p1, v1}, Lv23;-><init>(Lvy5;I)V
+
+    iget-object p1, p0, Lln1;->b:Ln0d;
+
+    iget-object p1, p1, Ln0d;->a:Lq0f;
+
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_4
+    return-object p1
+
+    :pswitch_4
+    new-instance v0, Lqg0;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, p1, v1}, Lqg0;-><init>(Lvy5;I)V
+
+    iget-object p1, p0, Lln1;->b:Ln0d;
+
+    iget-object p1, p1, Ln0d;->a:Lq0f;
+
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_5
+    return-object p1
+
+    :pswitch_5
+    new-instance v0, Lqg0;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, p1, v1}, Lqg0;-><init>(Lvy5;I)V
+
+    iget-object p1, p0, Lln1;->b:Ln0d;
+
+    iget-object p1, p1, Ln0d;->a:Lq0f;
+
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_6
+
+    goto :goto_6
+
+    :cond_6
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_6
+    return-object p1
+
+    :pswitch_6
+    new-instance v0, Lqg0;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, p1, v1}, Lqg0;-><init>(Lvy5;I)V
+
+    iget-object p1, p0, Lln1;->b:Ln0d;
+
+    iget-object p1, p1, Ln0d;->a:Lq0f;
+
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_7
+
+    goto :goto_7
+
+    :cond_7
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_7
+    return-object p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

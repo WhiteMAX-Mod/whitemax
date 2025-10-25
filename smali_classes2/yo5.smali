@@ -1,105 +1,191 @@
-.class public final Lyo5;
-.super Lmk0;
+.class public final synthetic Lyo5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lsr3;
+.implements Laj6;
 
 
 # instance fields
-.field public final a:Lrk;
+.field public final synthetic a:I
 
-.field public final b:Lv5d;
-
-.field public final c:Lpye;
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:J
+.field public final synthetic b:Lap5;
 
 
 # direct methods
-.method public constructor <init>(Lrk;Lv5d;Lpye;JJJ)V
+.method public synthetic constructor <init>(Lap5;I)V
     .locals 0
 
+    iput p2, p0, Lyo5;->a:I
+
+    iput-object p1, p0, Lyo5;->b:Lap5;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lyo5;->a:Lrk;
-
-    iput-object p2, p0, Lyo5;->b:Lv5d;
-
-    iput-object p3, p0, Lyo5;->c:Lpye;
-
-    iput-wide p4, p0, Lyo5;->d:J
-
-    iput-wide p6, p0, Lyo5;->e:J
-
-    iput-wide p8, p0, Lyo5;->f:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lk2e;
-    .locals 7
+.method public accept(Ljava/lang/Object;)V
+    .locals 5
 
-    new-instance v0, Lbc2;
+    iget v0, p0, Lyo5;->a:I
 
-    iget-wide v3, p0, Lyo5;->e:J
+    const-string v1, "ap5"
 
-    iget-wide v5, p0, Lyo5;->f:J
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v1, p0, Lyo5;->d:J
+    iget-object v0, p0, Lyo5;->b:Lap5;
 
-    invoke-direct/range {v0 .. v6}, Lbc2;-><init>(JJJ)V
+    check-cast p1, Luo5;
 
-    iget-object v1, p0, Lyo5;->b:Lv5d;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v2, p0, Lyo5;->a:Lrk;
+    iget-wide v1, p1, Luo5;->b:J
 
-    check-cast v2, Lgaa;
+    const-wide/16 v3, 0x0
 
-    invoke-virtual {v2, v0, v1}, Lgaa;->I(Lpxe;Lv5d;)Ld3e;
+    cmp-long p1, v1, v3
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0, v1, v2}, Lap5;->x(J)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lyo5;->b:Lap5;
+
+    check-cast p1, Ljava/util/List;
+
+    const-string v2, "publishFavoritesIds: %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v1, v2, v3}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lap5;->q0:Lni3;
+
+    iget-boolean v1, v1, Lni3;->b:Z
+
+    if-nez v1, :cond_1
+
+    iget-object v0, v0, Lap5;->r0:Lrm0;
+
+    invoke-virtual {v0, p1}, Lrm0;->d(Ljava/lang/Object;)V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lyo5;->b:Lap5;
+
+    check-cast p1, Ljava/util/List;
+
+    const-string v2, "on next favorite sticker ids from obs: %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v1, v2, v3}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Lap5;->H(Ljava/util/List;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lyo5;->b:Lap5;
+
+    check-cast p1, Ljava/util/List;
+
+    const-string v2, "onNotifUpdated: updated ids: %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v1, v2, v3}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Lap5;->H(Ljava/util/List;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lyo5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Lyo5;->b:Lap5;
+
+    iget-object v0, v0, Lap5;->a:Lpw4;
+
+    invoke-virtual {v0}, Lpw4;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    check-cast v0, Lwn5;
 
-    move-result-wide v1
+    invoke-virtual {v0}, Lwn5;->a()Lhqe;
 
-    iget-object p0, p0, Lyo5;->c:Lpye;
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v1, Lbd2;
 
-    new-instance v3, Lyz;
+    const/4 v2, 0x7
 
-    const/16 v4, 0x19
+    invoke-direct {v1, v2, p1}, Lbd2;-><init>(ILjava/util/List;)V
 
-    invoke-direct {v3, v1, v2, v4}, Lyz;-><init>(JI)V
-
-    new-instance v1, Lu2e;
+    new-instance p1, Lxg3;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, v0, v3, v2}, Lu2e;-><init>(Lk2e;Lqc6;I)V
+    invoke-direct {p1, v0, v2, v1}, Lxg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    new-instance v0, Lnye;
+    return-object p1
 
-    const/4 v2, 0x0
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
 
-    const/4 v3, 0x1
+    iget-object v0, p0, Lyo5;->b:Lap5;
 
-    invoke-direct {v0, p0, v3, v2}, Lnye;-><init>(Lpye;II)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1, v0}, Lk2e;->j(Lnye;)Lxw5;
+    new-instance v1, Lg44;
 
-    move-result-object p0
+    const/4 v2, 0x3
 
-    sget-object v0, Lua6;->Y:Lua6;
+    invoke-direct {v1, v0, v2, p1}, Lg44;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p0, v0}, Lk2e;->h(Lqc6;)Lu2e;
+    new-instance p1, Lzg3;
 
-    move-result-object p0
+    const/4 v0, 0x1
 
-    return-object p0
+    invoke-direct {p1, v0, v1}, Lzg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x3
+        :pswitch_0
+    .end packed-switch
 .end method

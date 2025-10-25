@@ -21,23 +21,23 @@
 
 # virtual methods
 .method public logToInjectable(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)V
-    .locals 1
+    .locals 2
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/JNILogging;->loggable:Lorg/webrtc/Loggable;
+    iget-object v0, p0, Lorg/webrtc/JNILogging;->loggable:Lorg/webrtc/Loggable;
 
     invoke-static {}, Lorg/webrtc/Logging$Severity;->values()[Lorg/webrtc/Logging$Severity;
 
-    move-result-object v0
+    move-result-object v1
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
 
-    aget-object p2, v0, p2
+    aget-object p2, v1, p2
 
-    invoke-interface {p0, p1, p2, p3}, Lorg/webrtc/Loggable;->onLogMessage(Ljava/lang/String;Lorg/webrtc/Logging$Severity;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2, p3}, Lorg/webrtc/Loggable;->onLogMessage(Ljava/lang/String;Lorg/webrtc/Logging$Severity;Ljava/lang/String;)V
 
     return-void
 .end method

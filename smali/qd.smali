@@ -1,79 +1,142 @@
-.class public final synthetic Lqd;
+.class public final Lqd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/media/ImageReader$OnImageAvailableListener;
-
-
-# instance fields
-.field public final synthetic a:Lrd;
-
-.field public final synthetic b:Ljava/util/concurrent/Executor;
-
-.field public final synthetic c:Lb27;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lrd;Ljava/util/concurrent/Executor;Lb27;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqd;->a:Lrd;
-
-    iput-object p2, p0, Lqd;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p3, p0, Lqd;->c:Lb27;
-
-    return-void
-.end method
+.implements Ljue;
 
 
 # virtual methods
-.method public final onImageAvailable(Landroid/media/ImageReader;)V
-    .locals 4
+.method public final a(Ljavax/net/ssl/SSLSocket;)Z
+    .locals 0
 
-    iget-object p1, p0, Lqd;->a:Lrd;
+    invoke-static {p1}, Lw4;->x(Ljavax/net/ssl/SSLSocket;)Z
 
-    iget-object v0, p0, Lqd;->b:Ljava/util/concurrent/Executor;
+    move-result p1
 
-    iget-object p0, p0, Lqd;->c:Lb27;
+    return p1
+.end method
 
-    iget-object v1, p1, Lrd;->o:Ljava/lang/Object;
+.method public final b()Z
+    .locals 2
 
-    monitor-enter v1
+    sget-object v0, Lksb;->a:Lksb;
 
-    :try_start_0
-    iget-boolean v2, p1, Lrd;->b:Z
+    invoke-static {}, Lnri;->f()Z
 
-    if-nez v2, :cond_0
+    move-result v0
 
-    new-instance v2, Lc;
+    if-eqz v0, :cond_0
 
-    const/4 v3, 0x2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v2, p1, v3, p0}, Lc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const/16 v1, 0x1d
 
-    invoke-interface {v0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p1}, La15;->l(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     goto :goto_1
 
-    :cond_0
+    :cond_1
+    const-string v0, ""
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
     :goto_0
-    monitor-exit v1
+    const/4 p1, 0x0
+
+    :cond_2
+    :goto_1
+    return-object p1
+.end method
+
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
+
+    :try_start_0
+    invoke-static {p1}, Lw4;->q(Ljavax/net/ssl/SSLSocket;)V
+
+    invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSSLParameters()Ljavax/net/ssl/SSLParameters;
+
+    move-result-object p2
+
+    sget-object v0, Lksb;->a:Lksb;
+
+    invoke-static {p3}, Lnri;->d(Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object p3
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_0
+
+    check-cast p3, [Ljava/lang/String;
+
+    invoke-static {p2, p3}, La15;->t(Ljavax/net/ssl/SSLParameters;[Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljavax/net/ssl/SSLSocket;->setSSLParameters(Ljavax/net/ssl/SSLParameters;)V
 
     return-void
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :catch_0
+    move-exception p1
 
-    throw p0
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance p2, Ljava/io/IOException;
+
+    const-string p3, "Android internal error"
+
+    invoke-direct {p2, p3, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method

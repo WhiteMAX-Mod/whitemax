@@ -4,1109 +4,579 @@
 
 
 # instance fields
-.field public final a:Landroidx/recyclerview/widget/RecyclerView;
-
-.field public final b:Lpc9;
-
-.field public final c:Lt8d;
-
-.field public final d:La89;
-
-.field public final e:Lv89;
-
-.field public final f:Ljava/lang/String;
+.field public final a:Lpw4;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lpc9;Lt8d;La89;Lv89;)V
+.method public constructor <init>(Lpw4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lge9;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    iput-object p2, p0, Lge9;->b:Lpc9;
-
-    iput-object p3, p0, Lge9;->c:Lt8d;
-
-    iput-object p4, p0, Lge9;->d:La89;
-
-    iput-object p5, p0, Lge9;->e:Lv89;
-
-    const-class p1, Lge9;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lge9;->f:Ljava/lang/String;
+    iput-object p1, p0, Lge9;->a:Lpw4;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(J)Z
+.method public static a(Lla2;Z)Z
     .locals 5
 
-    iget-object v0, p0, Lge9;->a:Landroidx/recyclerview/widget/RecyclerView;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lsu0;->q(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
+    if-eqz p0, :cond_6
 
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
+    invoke-virtual {p0}, Lla2;->h0()Z
 
     move-result v1
 
-    iget-object p0, p0, Lge9;->d:La89;
+    if-nez v1, :cond_0
 
-    invoke-virtual {p0, v1}, La89;->M(I)Lone/me/messages/list/loader/MessageModel;
+    goto :goto_2
 
-    move-result-object v1
+    :cond_0
+    invoke-virtual {p0}, Lla2;->z()Z
 
-    const/4 v2, 0x0
+    move-result v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x1
 
-    iget-wide v3, v1, Lone/me/messages/list/loader/MessageModel;->c:J
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->W0()I
+    if-nez p1, :cond_4
+
+    :cond_1
+    invoke-virtual {p0}, Lla2;->g0()Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    iget-wide v3, p0, Lla2;->Y:J
+
+    invoke-virtual {p0, v3, v4}, Lla2;->f(J)I
+
+    move-result v1
+
+    const/16 v3, 0x400
+
+    invoke-static {v1, v3}, Ltdi;->d(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    move p1, v0
+
+    goto :goto_1
+
+    :cond_4
+    :goto_0
+    move p1, v2
+
+    :goto_1
+    invoke-virtual {p0}, Lla2;->K()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {p0}, Lla2;->y()Z
+
+    move-result p0
+
+    if-nez p0, :cond_5
+
+    if-eqz p1, :cond_6
+
+    :cond_5
+    return v2
+
+    :cond_6
+    :goto_2
+    return v0
+.end method
+
+.method public static c(Lla2;Lpb9;)Z
+    .locals 4
+
+    invoke-virtual {p1}, Lpb9;->A()Z
 
     move-result v0
 
-    invoke-virtual {p0, v0}, La89;->M(I)Lone/me/messages/list/loader/MessageModel;
+    const/4 v1, 0x0
 
-    move-result-object p0
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Lpb9;->s()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p1, Lpb9;->Z:Ljava/lang/String;
+
+    invoke-static {v0}, Li79;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p1, Lpb9;->w0:Lh78;
+
+    if-eqz v0, :cond_1
+
+    iget-object v2, v0, Lh78;->b:Ljava/lang/Object;
+
+    check-cast v2, Lgg7;
+
+    if-eqz v2, :cond_1
+
+    return v1
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    iget-object v0, v0, Lh78;->c:Ljava/lang/Object;
+
+    check-cast v0, Lebd;
+
+    if-eqz v0, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-object p0, p0, Lla2;->b:Lne2;
+
+    invoke-virtual {p0}, Lne2;->f()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_3
+
+    iget-wide p0, p1, Lpb9;->b:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p0, p0, v2
+
+    if-eqz p0, :cond_3
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_3
+    :goto_0
+    return v1
+.end method
+
+.method public static d(Lla2;Lca9;)Z
+    .locals 2
+
+    invoke-virtual {p0}, Lla2;->W()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lla2;->b:Lne2;
+
+    invoke-virtual {p0}, Lne2;->f()Z
+
+    move-result p0
 
     if-eqz p0, :cond_0
 
-    iget-wide v0, p0, Lone/me/messages/list/loader/MessageModel;->c:J
+    iget-object p0, p1, Lca9;->a:Lpb9;
 
-    cmp-long p0, v3, p1
+    iget-wide p0, p0, Lpb9;->b:J
 
-    if-gtz p0, :cond_0
+    const-wide/16 v0, 0x0
 
-    cmp-long p0, p1, v0
+    cmp-long p0, p0, v0
 
-    if-gtz p0, :cond_0
+    if-eqz p0, :cond_0
 
     const/4 p0, 0x1
 
     return p0
 
     :cond_0
-    return v2
+    const/4 p0, 0x0
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Only linear layout is supported"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return p0
 .end method
 
-.method public final b()Z
-    .locals 23
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public final b(Lla2;Lca9;)Z
+    .locals 13
 
-    sget-object v1, Lqz7;->o:Lqz7;
+    iget-object v0, p2, Lca9;->a:Lpb9;
 
-    sget-object v2, Lqz7;->Y:Lqz7;
+    invoke-virtual {v0}, Lpb9;->A()Z
 
-    iget-object v3, v0, Lge9;->c:Lt8d;
+    move-result v1
 
-    iget-object v3, v3, Lt8d;->b:Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    check-cast v3, Lyce;
+    if-nez v1, :cond_10
 
-    invoke-virtual {v3}, Lyce;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lpb9;->B()Z
 
-    move-result-object v3
+    move-result v1
 
-    check-cast v3, Lq8d;
+    iget-wide v3, v0, Lpb9;->X:J
 
-    if-eqz v3, :cond_0
+    iget-object v5, v0, Lpb9;->w0:Lh78;
 
-    iget-wide v6, v3, Lq8d;->a:J
+    if-nez v1, :cond_10
 
-    goto :goto_0
+    invoke-virtual {v0}, Lpb9;->I()Z
+
+    move-result v1
+
+    if-nez v1, :cond_10
+
+    invoke-virtual {v0}, Lpb9;->D()Z
+
+    move-result v1
+
+    if-nez v1, :cond_10
+
+    invoke-virtual {v0}, Lpb9;->z()Z
+
+    move-result v1
+
+    if-nez v1, :cond_10
+
+    invoke-virtual {v0}, Lpb9;->s()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v1, La20;->r0:La20;
+
+    invoke-virtual {v5, v1}, Lh78;->w(La20;)Le20;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    return v2
 
     :cond_0
-    const-wide/16 v6, 0x0
+    invoke-virtual {v0}, Lpb9;->u()Z
 
-    :goto_0
-    iget-object v3, v0, Lge9;->c:Lt8d;
+    move-result v1
 
-    iget-object v3, v3, Lt8d;->b:Ljava/lang/Object;
+    if-nez v1, :cond_10
 
-    check-cast v3, Lyce;
+    invoke-virtual {v0}, Lpb9;->G()Z
 
-    invoke-virtual {v3}, Lyce;->getValue()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v3
+    if-nez v1, :cond_10
 
-    check-cast v3, Lq8d;
+    invoke-virtual {v0}, Lpb9;->y()Z
 
-    const/4 v9, 0x1
+    move-result v1
 
-    if-eqz v3, :cond_1
+    if-eqz v1, :cond_1
 
-    iget-boolean v3, v3, Lq8d;->d:Z
+    goto/16 :goto_7
 
-    if-ne v3, v9, :cond_1
+    :cond_1
+    invoke-virtual {p1}, Lla2;->W()Z
 
-    move v3, v9
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto/16 :goto_7
+
+    :cond_2
+    invoke-virtual {v0}, Lpb9;->s()Z
+
+    move-result v1
+
+    const/4 v6, 0x1
+
+    if-eqz v1, :cond_7
+
+    iget-object v1, v5, Lh78;->a:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/List;
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    move v7, v2
 
     goto :goto_1
 
-    :cond_1
-    const/4 v3, 0x0
+    :cond_3
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
+    move-result-object v1
+
+    move v7, v2
+
+    :cond_4
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_6
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v8
+
+    :try_start_0
+    check-cast v8, Le20;
+
+    iget-object v8, v8, Le20;->a:La20;
+
+    sget-object v9, La20;->c:La20;
+
+    if-eq v8, v9, :cond_5
+
+    sget-object v9, La20;->o:La20;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-ne v8, v9, :cond_4
+
+    :cond_5
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :cond_6
     :goto_1
-    iget-object v10, v0, Lge9;->c:Lt8d;
+    invoke-virtual {v5}, Lh78;->u()I
 
-    iget-object v10, v10, Lt8d;->b:Ljava/lang/Object;
+    move-result v1
 
-    check-cast v10, Lyce;
+    if-ne v7, v1, :cond_7
 
-    invoke-virtual {v10}, Lyce;->getValue()Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Lq8d;
-
-    if-eqz v10, :cond_2
-
-    iget-wide v10, v10, Lq8d;->g:J
+    move v1, v6
 
     goto :goto_2
 
-    :cond_2
-    const-wide/16 v10, -0x1
+    :cond_7
+    move v1, v2
 
     :goto_2
-    iget-object v12, v0, Lge9;->c:Lt8d;
+    iget-object v5, v0, Lpb9;->Z:Ljava/lang/String;
 
-    iget-object v12, v12, Lt8d;->b:Ljava/lang/Object;
+    invoke-static {v5}, Li79;->b(Ljava/lang/CharSequence;)Z
 
-    check-cast v12, Lyce;
+    move-result v5
 
-    invoke-virtual {v12}, Lyce;->getValue()Ljava/lang/Object;
+    if-eqz v5, :cond_8
 
-    move-result-object v12
+    if-nez v1, :cond_8
 
-    check-cast v12, Lq8d;
+    goto/16 :goto_7
 
-    if-eqz v12, :cond_3
+    :cond_8
+    invoke-virtual {p1}, Lla2;->K()Z
 
-    iget v12, v12, Lq8d;->f:I
+    move-result v1
+
+    if-eqz v1, :cond_c
+
+    invoke-virtual {p1}, Lla2;->z()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    iget-object p2, p2, Lca9;->b:Lwr3;
+
+    iget-boolean p2, p2, Lwr3;->Y:Z
+
+    if-eqz p2, :cond_9
+
+    move p2, v6
 
     goto :goto_3
 
-    :cond_3
-    const/4 v12, -0x1
+    :cond_9
+    move p2, v2
 
     :goto_3
-    iget-object v14, v0, Lge9;->d:La89;
+    invoke-virtual {p1}, Lla2;->g0()Z
 
-    invoke-virtual {v14, v6, v7}, La89;->g(J)I
+    move-result v0
 
-    move-result v14
+    if-nez v0, :cond_b
 
-    if-eqz v3, :cond_8
+    iget-wide v0, p1, Lla2;->Y:J
 
-    const-wide/16 v16, 0x0
+    invoke-virtual {p1, v0, v1}, Lla2;->f(J)I
 
-    iget-object v4, v0, Lge9;->d:La89;
+    move-result v0
 
-    add-int/lit8 v5, v14, 0x1
+    const/16 v1, 0x200
 
-    invoke-virtual {v4, v5}, La89;->M(I)Lone/me/messages/list/loader/MessageModel;
+    invoke-static {v0, v1}, Ltdi;->d(II)Z
 
-    move-result-object v4
+    move-result v0
 
-    move/from16 v19, v9
-
-    const/16 v18, 0x0
-
-    if-eqz v4, :cond_9
-
-    iget-wide v8, v4, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    cmp-long v4, v8, v6
-
-    if-nez v4, :cond_9
-
-    iget-object v4, v0, Lge9;->d:La89;
-
-    invoke-virtual {v4}, Lls7;->j()I
-
-    move-result v4
-
-    invoke-static {v5, v4}, Lkp;->M(II)Lw97;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lu97;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    move/from16 v5, v18
-
-    const/4 v8, 0x0
-
-    :goto_4
-    move-object v9, v4
-
-    check-cast v9, Lv97;
-
-    iget-boolean v13, v9, Lv97;->c:Z
-
-    if-eqz v13, :cond_5
-
-    invoke-virtual {v9}, Lv97;->next()Ljava/lang/Object;
-
-    move-result-object v9
-
-    move-object v13, v9
-
-    check-cast v13, Ljava/lang/Number;
-
-    invoke-virtual {v13}, Ljava/lang/Number;->intValue()I
-
-    move-result v13
-
-    iget-object v15, v0, Lge9;->d:La89;
-
-    invoke-virtual {v15, v13}, La89;->M(I)Lone/me/messages/list/loader/MessageModel;
-
-    move-result-object v13
-
-    move-object v15, v4
-
-    move/from16 v21, v5
-
-    if-eqz v13, :cond_4
-
-    iget-wide v4, v13, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    cmp-long v4, v4, v6
-
-    if-nez v4, :cond_4
-
-    move-object v8, v9
-
-    move-object v4, v15
-
-    move/from16 v5, v19
+    if-eqz v0, :cond_a
 
     goto :goto_4
 
-    :cond_4
-    move-object v4, v15
-
-    move/from16 v5, v21
-
-    goto :goto_4
-
-    :cond_5
-    move/from16 v21, v5
-
-    if-eqz v21, :cond_7
-
-    check-cast v8, Ljava/lang/Number;
-
-    invoke-virtual {v8}, Ljava/lang/Number;->intValue()I
-
-    move-result v4
-
-    if-eq v4, v14, :cond_6
-
-    move/from16 v5, v19
+    :cond_a
+    move v0, v2
 
     goto :goto_5
 
-    :cond_6
-    move/from16 v5, v18
+    :cond_b
+    :goto_4
+    move v0, v6
 
     :goto_5
-    move v14, v4
+    invoke-virtual {p1}, Lla2;->y()Z
+
+    move-result p1
+
+    if-nez p1, :cond_f
+
+    if-nez p2, :cond_f
+
+    if-eqz v0, :cond_10
 
     goto :goto_6
 
-    :cond_7
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    const-string v1, "Collection contains no element matching the predicate."
-
-    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_8
-    move/from16 v19, v9
-
-    const-wide/16 v16, 0x0
-
-    const/16 v18, 0x0
-
-    :cond_9
-    move/from16 v5, v18
-
-    :goto_6
-    const-string v4, "Scroll: Got non-existing pos="
-
-    if-gez v14, :cond_d
-
-    iget-object v8, v0, Lge9;->f:Ljava/lang/String;
-
-    sget-object v9, Ljtg;->g:Loja;
-
-    if-nez v9, :cond_a
-
-    goto :goto_7
-
-    :cond_a
-    invoke-virtual {v9, v2}, Loja;->a(Lqz7;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_b
-
-    const-string v13, ". Try scroll to lastMessage if need"
-
-    invoke-static {v14, v4, v13}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v13
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v9, v2, v8, v13, v15}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_b
-    :goto_7
-    iget-object v8, v0, Lge9;->d:La89;
-
-    invoke-virtual {v8}, La89;->L()Lone/me/messages/list/loader/MessageModel;
-
-    move-result-object v8
-
-    if-eqz v3, :cond_d
-
-    cmp-long v9, v10, v16
-
-    if-lez v9, :cond_d
-
-    if-eqz v8, :cond_d
-
-    iget-wide v8, v8, Lone/me/messages/list/loader/MessageModel;->a:J
-
-    cmp-long v8, v8, v10
-
-    if-nez v8, :cond_d
-
-    iget-object v8, v0, Lge9;->d:La89;
-
-    iget-object v8, v8, Lls7;->o:Lfu;
-
-    iget-object v8, v8, Lfu;->f:Ljava/util/List;
-
-    invoke-static {v8}, Lr73;->H(Ljava/util/List;)I
-
-    move-result v14
-
-    iget-object v8, v0, Lge9;->f:Ljava/lang/String;
-
-    sget-object v9, Ljtg;->g:Loja;
-
-    if-nez v9, :cond_c
-
-    goto :goto_8
-
     :cond_c
-    invoke-virtual {v9, v2}, Loja;->a(Lqz7;)Z
+    invoke-virtual {v0}, Lpb9;->t()Z
 
-    move-result v13
+    move-result p2
 
-    if-eqz v13, :cond_d
+    if-eqz p2, :cond_d
 
-    const-string v13, "Scroll: Try scroll by lasIndex: "
-
-    invoke-static {v14, v13}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v13
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v9, v2, v8, v13, v15}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_6
 
     :cond_d
-    :goto_8
-    if-ltz v14, :cond_2e
+    iget-wide v7, v0, Lpb9;->b:J
 
-    if-nez v14, :cond_f
+    const-wide/16 v9, 0x0
 
-    iget-object v8, v0, Lge9;->c:Lt8d;
+    cmp-long p2, v7, v9
 
-    iget-object v8, v8, Lt8d;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lge9;->a:Lpw4;
 
-    check-cast v8, Lyce;
+    if-eqz p2, :cond_e
 
-    invoke-virtual {v8}, Lyce;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lpw4;->get()Ljava/lang/Object;
 
-    move-result-object v8
+    move-result-object p2
 
-    check-cast v8, Lq8d;
+    check-cast p2, Lpxb;
 
-    if-eqz v8, :cond_e
+    check-cast p2, Lrxb;
 
-    iget v13, v8, Lq8d;->f:I
+    iget-object v5, p2, Lrxb;->a:Ld78;
 
-    goto :goto_9
+    invoke-virtual {v5}, Lntd;->j()J
+
+    move-result-wide v7
+
+    iget-wide v11, v0, Lpb9;->c:J
+
+    sub-long/2addr v7, v11
+
+    const-wide/16 v11, 0x3e8
+
+    div-long/2addr v7, v11
+
+    iget-object p2, p2, Lrxb;->b:Lgvb;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->edit-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const v5, 0x15180
+
+    int-to-long v11, v5
+
+    invoke-virtual {p2, v0, v11, v12}, Lwtd;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v11
+
+    long-to-int p2, v11
+
+    int-to-long v11, p2
+
+    cmp-long p2, v7, v11
+
+    if-gez p2, :cond_10
 
     :cond_e
-    const/4 v13, -0x1
+    invoke-virtual {v1}, Lpw4;->get()Ljava/lang/Object;
 
-    :goto_9
-    if-lez v13, :cond_f
+    move-result-object p2
 
-    goto/16 :goto_16
+    check-cast p2, Lpxb;
+
+    check-cast p2, Lrxb;
+
+    iget-object p2, p2, Lrxb;->a:Ld78;
+
+    invoke-virtual {p2}, Lntd;->s()J
+
+    move-result-wide v0
+
+    cmp-long p2, v3, v0
+
+    if-eqz p2, :cond_f
+
+    invoke-virtual {p1}, Lla2;->H()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_10
+
+    cmp-long p1, v3, v9
+
+    if-nez p1, :cond_10
 
     :cond_f
-    iget-object v4, v0, Lge9;->d:La89;
-
-    iget-object v8, v4, Lls7;->o:Lfu;
-
-    iget-object v8, v8, Lfu;->f:Ljava/util/List;
-
-    invoke-interface {v8}, Ljava/util/List;->size()I
-
-    move-result v8
-
-    iget-object v4, v4, La89;->w0:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    sub-int/2addr v8, v4
-
-    invoke-static {v8}, Ljava/lang/Math;->abs(I)I
-
-    move-result v4
-
-    add-int/2addr v4, v12
-
-    if-eqz v3, :cond_15
-
-    cmp-long v8, v10, v16
-
-    if-lez v8, :cond_15
-
-    if-lez v4, :cond_15
-
-    if-eq v14, v4, :cond_15
-
-    iget-object v4, v0, Lge9;->d:La89;
-
-    iget-object v8, v4, Lls7;->o:Lfu;
-
-    iget-object v8, v8, Lfu;->f:Ljava/util/List;
-
-    invoke-interface {v8}, Ljava/util/List;->size()I
-
-    move-result v8
-
-    iget-object v4, v4, La89;->w0:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    sub-int/2addr v8, v4
-
-    invoke-static {v8}, Ljava/lang/Math;->abs(I)I
-
-    move-result v4
-
-    add-int/2addr v4, v12
-
-    iget-object v8, v0, Lge9;->f:Ljava/lang/String;
-
-    sget-object v9, Ljtg;->g:Loja;
-
-    const-string v13, ", msgId:"
-
-    if-nez v9, :cond_11
+    :goto_6
+    return v6
 
     :cond_10
-    move/from16 v20, v5
-
-    move-wide/from16 v21, v6
-
-    goto :goto_a
-
-    :cond_11
-    invoke-virtual {v9, v2}, Loja;->a(Lqz7;)Z
-
-    move-result v15
-
-    if-eqz v15, :cond_10
-
-    const-string v15, ", apP:"
-
-    move/from16 v20, v5
-
-    const-string v5, ", apPD:"
-
-    move-wide/from16 v21, v6
-
-    const-string v6, "Scroll: founded pos not equals to approximate, try find pos by approximateIndex. \n                    |pos:"
-
-    invoke-static {v6, v14, v15, v12, v5}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lkme;->Q(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v9, v2, v8, v5, v15}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_a
-    iget-object v5, v0, Lge9;->d:La89;
-
-    invoke-virtual {v5, v4}, La89;->M(I)Lone/me/messages/list/loader/MessageModel;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_14
-
-    iget-wide v6, v5, Lone/me/messages/list/loader/MessageModel;->a:J
-
-    cmp-long v6, v6, v10
-
-    if-nez v6, :cond_14
-
-    iget-object v6, v0, Lge9;->f:Ljava/lang/String;
-
-    sget-object v7, Ljtg;->g:Loja;
-
-    if-nez v7, :cond_12
-
-    goto :goto_b
-
-    :cond_12
-    invoke-virtual {v7, v2}, Loja;->a(Lqz7;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_13
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    const-string v9, "Scroll: found pos by approximateIndex. \n                        |apPD:"
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v8}, Lkme;->Q(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v7, v2, v6, v8, v15}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_13
-    :goto_b
-    iget-wide v6, v5, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    move v14, v4
-
-    goto :goto_c
-
-    :cond_14
-    move-wide/from16 v6, v21
-
-    goto :goto_c
-
-    :cond_15
-    move/from16 v20, v5
-
-    move-wide/from16 v21, v6
-
-    move-wide/from16 v6, v21
-
-    const/4 v5, 0x0
-
-    :goto_c
-    if-eqz v5, :cond_16
-
-    iget-wide v8, v5, Lone/me/messages/list/loader/MessageModel;->a:J
-
-    goto :goto_d
-
-    :cond_16
-    iget-object v4, v0, Lge9;->d:La89;
-
-    invoke-virtual {v4, v14}, La89;->M(I)Lone/me/messages/list/loader/MessageModel;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_17
-
-    iget-wide v8, v4, Lone/me/messages/list/loader/MessageModel;->a:J
-
-    goto :goto_d
-
-    :cond_17
-    move-wide/from16 v8, v16
-
-    :goto_d
-    cmp-long v4, v10, v16
-
-    if-lez v4, :cond_19
-
-    cmp-long v4, v8, v16
-
-    if-lez v4, :cond_19
-
-    cmp-long v4, v10, v8
-
-    if-eqz v4, :cond_19
-
-    iget-object v0, v0, Lge9;->f:Ljava/lang/String;
-
-    sget-object v1, Ljtg;->g:Loja;
-
-    if-nez v1, :cond_18
-
-    goto/16 :goto_17
-
-    :cond_18
-    invoke-virtual {v1, v2}, Loja;->a(Lqz7;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_30
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Scroll: Got wrong message msgId="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, " by pos:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, ", correct msgId:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v15}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return v18
-
-    :cond_19
-    iget-object v2, v0, Lge9;->c:Lt8d;
-
-    iget-object v2, v2, Lt8d;->b:Ljava/lang/Object;
-
-    check-cast v2, Lyce;
-
-    invoke-virtual {v2}, Lyce;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lq8d;
-
-    if-eqz v4, :cond_1a
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v2, v15}, Lyce;->setValue(Ljava/lang/Object;)V
-
-    goto :goto_e
-
-    :cond_1a
-    const/4 v4, 0x0
-
-    :goto_e
-    iget-object v2, v0, Lge9;->f:Ljava/lang/String;
-
-    sget-object v8, Ljtg;->g:Loja;
-
-    if-nez v8, :cond_1b
-
-    goto :goto_f
-
-    :cond_1b
-    invoke-virtual {v8, v1}, Loja;->a(Lqz7;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_1c
-
-    iget-object v9, v0, Lge9;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v9, v14}, Landroidx/recyclerview/widget/RecyclerView;->M(I)Lzoc;
-
-    move-result-object v9
-
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    const-string v11, "Scroll: vh for pos #"
-
-    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v11, "="
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v9, ", event="
-
-    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v8, v1, v2, v9, v15}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1c
-    :goto_f
-    if-nez v4, :cond_1d
-
-    iget-object v0, v0, Lge9;->f:Ljava/lang/String;
-
-    const-string v1, "Scroll: No events for scrolling, skip event"
-
-    invoke-static {v0, v1}, Ljtg;->S(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v19
-
-    :cond_1d
-    iget-object v2, v0, Lge9;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-static {v2}, Lsu0;->q(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    move-result-object v2
-
-    instance-of v8, v2, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    if-eqz v8, :cond_1e
-
-    check-cast v2, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    goto :goto_10
-
-    :cond_1e
-    const/4 v2, 0x0
-
-    :goto_10
-    if-eqz v2, :cond_1f
-
-    iput-boolean v3, v2, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->G:Z
-
-    :cond_1f
-    iget-boolean v2, v4, Lq8d;->e:Z
-
-    if-eqz v2, :cond_26
-
-    iget-object v2, v0, Lge9;->b:Lpc9;
-
-    iget-wide v8, v2, Lpc9;->c:J
-
-    cmp-long v3, v8, v16
-
-    if-nez v3, :cond_20
-
-    iget-wide v8, v2, Lpc9;->b:J
-
-    cmp-long v3, v8, v16
-
-    if-lez v3, :cond_26
-
-    :cond_20
-    iget-object v3, v2, Lpc9;->d:Ljava/util/List;
-
-    invoke-interface {v3}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_21
-
-    iget-boolean v2, v2, Lpc9;->e:Z
-
-    if-eqz v2, :cond_26
-
-    :cond_21
-    iget-object v2, v0, Lge9;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2}, Landroid/view/View;->isLaidOut()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_25
-
-    invoke-virtual {v2}, Landroid/view/View;->isLayoutRequested()Z
-
-    move-result v3
-
-    if-nez v3, :cond_25
-
-    iget-object v2, v0, Lge9;->f:Ljava/lang/String;
-
-    sget-object v3, Ljtg;->g:Loja;
-
-    if-nez v3, :cond_22
-
-    goto :goto_11
-
-    :cond_22
-    invoke-virtual {v3, v1}, Loja;->a(Lqz7;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_23
-
-    iget-object v8, v0, Lge9;->b:Lpc9;
-
-    iget-wide v8, v8, Lpc9;->c:J
-
-    const-string v10, "Scroll: Highlighted from args message with id="
-
-    invoke-static {v8, v9, v10}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v3, v1, v2, v8, v15}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_23
-    :goto_11
-    iget-object v2, v0, Lge9;->e:Lv89;
-
-    iget-object v3, v0, Lge9;->b:Lpc9;
-
-    iget-wide v8, v3, Lpc9;->c:J
-
-    iget-object v3, v3, Lpc9;->d:Ljava/util/List;
-
-    iget-object v10, v2, Lv89;->o:Lyce;
-
-    :cond_24
-    invoke-virtual {v10}, Lyce;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v11, v2
-
-    check-cast v11, Lir6;
-
-    new-instance v11, Lir6;
-
-    invoke-direct {v11, v8, v9, v3}, Lir6;-><init>(JLjava/util/List;)V
-
-    invoke-virtual {v10, v2, v11}, Lyce;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_24
-
-    goto :goto_12
-
-    :cond_25
-    new-instance v3, Lsq0;
-
-    const/16 v8, 0x8
-
-    invoke-direct {v3, v8, v0}, Lsq0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    :cond_26
-    :goto_12
-    invoke-virtual {v0, v6, v7}, Lge9;->a(J)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_28
-
-    if-nez v20, :cond_28
-
-    iget-object v0, v0, Lge9;->f:Ljava/lang/String;
-
-    sget-object v2, Ljtg;->g:Loja;
-
-    if-nez v2, :cond_27
-
-    goto :goto_15
-
-    :cond_27
-    invoke-virtual {v2, v1}, Loja;->a(Lqz7;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2d
-
-    const-string v3, "Scroll: vh is already visible on screen, skip event"
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v2, v1, v0, v3, v15}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return v19
-
-    :cond_28
-    iget-boolean v2, v4, Lq8d;->c:Z
-
-    if-eqz v2, :cond_29
-
-    iget-object v2, v0, Lge9;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2, v14}, Landroidx/recyclerview/widget/RecyclerView;->A0(I)V
-
-    goto :goto_13
-
-    :cond_29
-    iget-object v2, v0, Lge9;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2, v14}, Landroidx/recyclerview/widget/RecyclerView;->w0(I)V
-
-    :goto_13
-    iget-object v2, v0, Lge9;->f:Ljava/lang/String;
-
-    sget-object v3, Ljtg;->g:Loja;
-
-    if-nez v3, :cond_2a
-
-    goto :goto_15
-
-    :cond_2a
-    invoke-virtual {v3, v1}, Loja;->a(Lqz7;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2d
-
-    if-eqz v5, :cond_2b
-
-    invoke-virtual {v5}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_14
-
-    :cond_2b
-    iget-object v0, v0, Lge9;->d:La89;
-
-    invoke-virtual {v0, v14}, La89;->M(I)Lone/me/messages/list/loader/MessageModel;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2c
-
-    invoke-virtual {v0}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_14
-
-    :cond_2c
-    const/4 v0, 0x0
-
-    :goto_14
-    const-string v4, "Scroll: Scrolled to message="
-
-    invoke-static {v4, v0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v3, v1, v2, v0, v15}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2d
-    :goto_15
-    return v19
-
-    :cond_2e
-    :goto_16
-    iget-object v0, v0, Lge9;->f:Ljava/lang/String;
-
-    sget-object v1, Ljtg;->g:Loja;
-
-    if-nez v1, :cond_2f
-
-    goto :goto_17
-
-    :cond_2f
-    invoke-virtual {v1, v2}, Loja;->a(Lqz7;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_30
-
-    invoke-static {v14, v4}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v15}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_30
-    :goto_17
-    return v18
+    :goto_7
+    return v2
 .end method

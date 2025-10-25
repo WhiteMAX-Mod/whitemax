@@ -1,147 +1,81 @@
-.class public final Lmn3;
-.super Lure;
+.class public final synthetic Lmn3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lji6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lxn3;
+.field public final synthetic b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
 
 # direct methods
-.method public constructor <init>(Lxn3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lmn3;->Z:Lxn3;
+    iput p2, p0, Lmn3;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lmn3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p1, Lgob;
+    iget v0, p0, Lmn3;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lmn3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
-    invoke-virtual {p0, p1, p2}, Lmn3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Ltr7;
 
-    check-cast p0, Lmn3;
+    new-instance v0, Ltn3;
 
-    sget-object p1, Lylf;->a:Lylf;
+    iget-object v2, v1, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->a:Lqs;
 
-    invoke-virtual {p0, p1}, Lmn3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v3, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Ltr7;
 
-    move-result-object p0
+    const/4 v4, 0x0
 
-    return-object p0
-.end method
+    aget-object v3, v3, v4
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {v2, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    new-instance v0, Lmn3;
+    move-result-object v1
 
-    iget-object p0, p0, Lmn3;->Z:Lxn3;
+    check-cast v1, Ljava/lang/String;
 
-    invoke-direct {v0, p0, p2}, Lmn3;-><init>(Lxn3;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lmn3;->Y:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ltn3;-><init>(Ljava/lang/String;)V
 
     return-object v0
-.end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    :pswitch_0
+    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Ltr7;
 
-    iget v0, p0, Lmn3;->X:I
+    invoke-virtual {v1}, Ll24;->getOnBackPressedDispatcher()Lpma;
 
-    sget-object v1, Lylf;->a:Lylf;
+    move-result-object v0
 
-    const/4 v2, 0x1
+    if-eqz v0, :cond_0
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    return-object v1
+    invoke-virtual {v0}, Lpma;->d()V
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    sget-object v0, Lccg;->a:Lccg;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    return-object v0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lmn3;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lgob;
-
-    instance-of v0, p1, Ldob;
-
-    if-eqz v0, :cond_3
-
-    check-cast p1, Ldob;
-
-    iget-object p1, p1, Ldob;->a:Ljava/lang/Long;
-
-    iget-object v0, p0, Lmn3;->Z:Lxn3;
-
-    iget-object v3, v0, Lxn3;->p:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v3
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    cmp-long p1, v5, v3
-
-    if-eqz p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p1, v0, Lo42;->e:Lnxd;
-
-    sget-object v0, Lw53;->b:Lw53;
-
-    iput v2, p0, Lmn3;->X:I
-
-    invoke-virtual {p1, v0, p0}, Lnxd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_3
-
-    return-object p1
-
-    :cond_3
-    :goto_0
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnj3;
+.implements Lgo3;
 
 
 # annotations
@@ -14,15 +14,15 @@
     d2 = {
         "Lone/me/pinbars/PinBarsWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lnj3;",
+        "Lgo3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lo6d;",
+        "Lqpd;",
         "scopeId",
-        "(Ljava/lang/String;Lld4;)V",
-        "a9b",
+        "(Ljava/lang/String;Lki4;)V",
+        "tpb",
         "pinbars_release"
     }
     k = 0x1
@@ -36,25 +36,25 @@
 
 
 # static fields
-.field public static final synthetic s0:I
+.field public static final synthetic r0:I
 
 
 # instance fields
-.field public X:Lyg9;
+.field public X:Lzs9;
 
-.field public Y:Ljla;
+.field public Y:Lnza;
 
-.field public Z:Lemf;
+.field public Z:Licg;
 
-.field public a:La9f;
+.field public a:Lsyf;
 
-.field public final b:Lcl7;
+.field public final b:Liu7;
 
-.field public final c:Lcl7;
+.field public final c:Liu7;
 
 .field public final o:Ljava/lang/Object;
 
-.field public r0:Lzn6;
+.field public q0:Ldv6;
 
 
 # direct methods
@@ -66,7 +66,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lone/me/pinbars/PinBarsWidget;-><init>(Landroid/os/Bundle;ILld4;)V
+    invoke-direct {p0, v0, v1, v0}, Lone/me/pinbars/PinBarsWidget;-><init>(Landroid/os/Bundle;ILki4;)V
 
     return-void
 .end method
@@ -81,7 +81,7 @@
     const/4 v2, 0x0
 
     .line 7
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILld4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
 
     if-eqz p1, :cond_1
 
@@ -92,12 +92,12 @@
 
     move-result-object p1
 
-    check-cast p1, Lo6d;
+    check-cast p1, Lqpd;
 
     if-eqz p1, :cond_0
 
     .line 9
-    iget-object v2, p1, Lo6d;->a:Ljava/lang/String;
+    iget-object v2, p1, Lqpd;->a:Ljava/lang/String;
 
     :cond_0
     if-nez v2, :cond_2
@@ -107,55 +107,55 @@
     const-string v2, ""
 
     :cond_2
-    new-instance p1, Lksa;
+    new-instance p1, Lcnb;
 
-    const/16 v0, 0xd
+    const/4 v0, 0x4
 
-    invoke-direct {p1, v0}, Lksa;-><init>(I)V
+    invoke-direct {p1, v0}, Lcnb;-><init>(I)V
 
     .line 11
-    const-class v0, Lw8b;
+    const-class v0, Lppb;
 
     .line 12
-    invoke-virtual {p0, v2, v0, p1}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lzb6;)Lcl7;
+    invoke-virtual {p0, v2, v0, p1}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 13
-    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->b:Lcl7;
+    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->b:Liu7;
 
     .line 14
-    new-instance p1, Ly8b;
+    new-instance p1, Lrpb;
 
     const/4 v0, 0x2
 
-    invoke-direct {p1, p0, v0}, Ly8b;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lrpb;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
 
     .line 15
-    new-instance v0, Lcd8;
+    new-instance v0, Lyn8;
 
-    const/16 v1, 0x18
+    const/16 v1, 0x1a
 
-    invoke-direct {v0, v1, p1}, Lcd8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lyn8;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lx8b;
+    const-class p1, Lqpb;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lzb6;)Lcl7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 16
-    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->c:Lcl7;
+    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->c:Liu7;
 
     .line 17
-    new-instance p1, Ly8b;
+    new-instance p1, Lrpb;
 
     const/4 v0, 0x3
 
-    invoke-direct {p1, p0, v0}, Ly8b;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lrpb;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
 
     .line 18
-    invoke-static {v0, p1}, Lcb7;->G(ILzb6;)Lcl7;
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
 
     move-result-object p1
 
@@ -165,7 +165,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/os/Bundle;ILld4;)V
+.method public synthetic constructor <init>(Landroid/os/Bundle;ILki4;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -181,28 +181,28 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lld4;)V
+.method public constructor <init>(Ljava/lang/String;Lki4;)V
     .locals 1
 
     .line 2
-    new-instance p2, Lo6d;
+    new-instance p2, Lqpd;
 
-    invoke-direct {p2, p1}, Lo6d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Lqpd;-><init>(Ljava/lang/String;)V
 
     .line 3
-    new-instance p1, Lpxa;
+    new-instance p1, Ltcb;
 
     const-string v0, "arg_key_scope_id"
 
-    invoke-direct {p1, v0, p2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 4
-    filled-new-array {p1}, [Lpxa;
+    filled-new-array {p1}, [Ltcb;
 
     move-result-object p1
 
     .line 5
-    invoke-static {p1}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
+    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -214,139 +214,153 @@
 
 
 # virtual methods
-.method public final i(ILandroid/os/Bundle;)V
+.method public final C0()Lqpb;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/pinbars/PinBarsWidget;->c:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lqpb;
+
+    return-object v0
+.end method
+
+.method public final g(ILandroid/os/Bundle;)V
     .locals 0
 
-    iget-object p0, p0, Lone/me/pinbars/PinBarsWidget;->o:Ljava/lang/Object;
+    iget-object p2, p0, Lone/me/pinbars/PinBarsWidget;->o:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Liu7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p2
 
-    check-cast p0, Lih1;
+    check-cast p2, Lwi1;
 
-    invoke-virtual {p0, p1}, Lih1;->g(I)Z
+    invoke-virtual {p2, p1}, Lwi1;->g(I)Z
 
     return-void
 .end method
 
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 2
+    .locals 4
 
-    new-instance p0, Landroid/widget/LinearLayout;
+    new-instance p2, Landroid/widget/LinearLayout;
 
     invoke-virtual {p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
+    invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    sget p1, Lgla;->i:I
+    sget p1, Lkza;->i:I
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setId(I)V
+    invoke-virtual {p2, p1}, Landroid/view/View;->setId(I)V
 
     const/4 p1, 0x7
 
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setShowDividers(I)V
+    invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->setShowDividers(I)V
 
     new-instance p1, Landroid/graphics/drawable/ShapeDrawable;
 
-    new-instance p2, Landroid/graphics/drawable/shapes/RectShape;
+    new-instance p3, Landroid/graphics/drawable/shapes/RectShape;
 
-    invoke-direct {p2}, Landroid/graphics/drawable/shapes/RectShape;-><init>()V
+    invoke-direct {p3}, Landroid/graphics/drawable/shapes/RectShape;-><init>()V
 
-    invoke-direct {p1, p2}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+    invoke-direct {p1, p3}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    new-instance p2, Lc9b;
-
-    const/4 p3, 0x0
+    new-instance p3, Ldib;
 
     const/4 v0, 0x0
 
-    invoke-direct {p2, p1, p3, v0}, Lc9b;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+    const/4 v1, 0x4
 
-    invoke-static {p2, p0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
+    invoke-direct {p3, p1, v0, v1}, Ldib;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    invoke-static {p3, p2}, Lqdi;->d(Lbj6;Landroid/view/View;)V
 
-    move-result-object p2
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    move-result-object p3
 
-    move-result-object p2
+    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+    move-result-object p3
 
-    float-to-double p2, p2
+    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
 
-    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
+    float-to-double v0, p3
 
-    mul-double/2addr p2, v0
+    const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
 
-    invoke-static {p2, p3}, Lya6;->F(D)I
+    mul-double/2addr v0, v2
 
-    move-result p2
+    invoke-static {v0, v1}, Lfhi;->a(D)I
 
-    invoke-virtual {p1, p2}, Landroid/graphics/drawable/ShapeDrawable;->setIntrinsicHeight(I)V
+    move-result p3
 
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setDividerDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, p3}, Landroid/graphics/drawable/ShapeDrawable;->setIntrinsicHeight(I)V
 
-    return-object p0
+    invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->setDividerDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-object p2
 .end method
 
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 1
 
-    invoke-super {p0, p1}, Lxx3;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Ll24;->onDestroyView(Landroid/view/View;)V
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->X:Lyg9;
+    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->X:Lzs9;
 
-    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->Z:Lemf;
+    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->Z:Licg;
 
-    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->Y:Ljla;
+    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->Y:Lnza;
 
-    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->r0:Lzn6;
+    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->q0:Ldv6;
 
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
 
     move-result-object v0
 
-    iget-object v0, v0, Lx8b;->Y:Lx30;
+    iget-object v0, v0, Lqpb;->Z:Lq40;
 
-    invoke-virtual {v0}, Lx30;->g()V
+    invoke-virtual {v0}, Lq40;->g()V
 
-    iget-object v0, p0, Lone/me/pinbars/PinBarsWidget;->a:La9f;
+    iget-object v0, p0, Lone/me/pinbars/PinBarsWidget;->a:Lsyf;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, La9f;->dismiss()V
+    invoke-virtual {v0}, Lsyf;->dismiss()V
 
     :cond_0
-    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->a:La9f;
+    iput-object p1, p0, Lone/me/pinbars/PinBarsWidget;->a:Lsyf;
 
     return-void
 .end method
 
 .method public final onRequestPermissionsResult(I[Ljava/lang/String;[I)V
-    .locals 0
+    .locals 1
 
-    invoke-super {p0, p1, p2, p3}, Lxx3;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    invoke-super {p0, p1, p2, p3}, Ll24;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
-    iget-object p0, p0, Lone/me/pinbars/PinBarsWidget;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lone/me/pinbars/PinBarsWidget;->o:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lih1;
+    check-cast v0, Lwi1;
 
-    invoke-virtual {p0, p1, p2, p3}, Lih1;->b(I[Ljava/lang/String;[I)Z
+    invoke-virtual {v0, p1, p2, p3}, Lwi1;->b(I[Ljava/lang/String;[I)Z
 
     return-void
 .end method
@@ -360,251 +374,237 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
 
     move-result-object v0
 
-    iget-object v0, v0, Lx8b;->Z:Liic;
+    iget-object v0, v0, Lqpb;->q0:Ln0d;
 
-    new-instance v1, Lh9b;
+    new-instance v1, Lzpb;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v2, p0}, Lh9b;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+    invoke-direct {v1, p1, v2, p0}, Lzpb;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    new-instance v3, Lnu5;
+    new-instance v3, Lb16;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, v0, v1, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v3, v0, v1, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object v0
 
-    iget-object v0, v0, Lx8b;->w0:Liic;
+    invoke-static {v3, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    new-instance v1, Li9b;
-
-    invoke-direct {v1, p1, v2, p0}, Li9b;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
-
-    new-instance v3, Lnu5;
-
-    invoke-direct {v3, v0, v1, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+    iget-object v0, v0, Lqpb;->w0:Ln0d;
 
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    new-instance v1, Laqb;
 
-    move-result-object v0
+    invoke-direct {v1, p1, v2, p0}, Laqb;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    iget-object v0, v0, Lx8b;->x0:Liic;
+    new-instance v3, Lb16;
 
-    new-instance v1, Lap3;
+    invoke-direct {v3, v0, v1, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    const/16 v3, 0x1b
-
-    invoke-direct {v1, v0, v3, p0}, Lap3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v0, Lj9b;
-
-    invoke-direct {v0, v2, p0}, Lj9b;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
-
-    new-instance v3, Lnu5;
-
-    invoke-direct {v3, v1, v0, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+    invoke-static {v3, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
 
     move-result-object v0
 
-    iget-object v0, v0, Lx8b;->t0:Liic;
+    iget-object v0, v0, Lqpb;->x0:Ln0d;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
+    new-instance v1, Lwt3;
+
+    const/16 v3, 0x1c
+
+    invoke-direct {v1, v0, v3, p0}, Lwt3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v0, Lbqb;
+
+    invoke-direct {v0, v2, p0}, Lbqb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+
+    new-instance v3, Lb16;
+
+    invoke-direct {v3, v1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
+
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lqpb;->t0:Ln0d;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lzn7;->L()Lbo7;
+    invoke-interface {v1}, Lfx7;->x()Lhx7;
 
     move-result-object v1
 
-    sget-object v3, Lcn7;->o:Lcn7;
+    sget-object v3, Lhw7;->o:Lhw7;
 
-    invoke-static {v0, v1, v3}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    invoke-static {v0, v1, v3}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object v0
 
-    new-instance v1, Ld9b;
+    new-instance v1, Lvpb;
 
-    invoke-direct {v1, p1, v2, p0}, Ld9b;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+    invoke-direct {v1, p1, v2, p0}, Lvpb;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    new-instance v4, Lnu5;
+    new-instance v4, Lb16;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v0, v1, v5}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v4, v0, v1, v5}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object v0
-
-    invoke-static {v4, v0}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object v0
 
-    iget-object v0, v0, Lx8b;->u0:Lhic;
+    invoke-static {v4, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lqpb;->u0:Lm0d;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lzn7;->L()Lbo7;
+    invoke-interface {v1}, Lfx7;->x()Lhx7;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v3}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    invoke-static {v0, v1, v3}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object v0
 
-    new-instance v1, Le9b;
+    new-instance v1, Lwpb;
 
-    invoke-direct {v1, v2, p0}, Le9b;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+    invoke-direct {v1, v2, p0}, Lwpb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    new-instance v4, Lnu5;
+    new-instance v4, Lb16;
 
-    invoke-direct {v4, v0, v1, v5}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v4, v0, v1, v5}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object v0
-
-    invoke-static {v4, v0}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object v0
 
-    iget-object v0, v0, Lx8b;->w0:Liic;
+    invoke-static {v4, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lqpb;->w0:Ln0d;
+
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
 
     move-result-object v1
 
-    iget-object v1, v1, Lx8b;->Z:Liic;
+    iget-object v1, v1, Lqpb;->q0:Ln0d;
 
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
 
     move-result-object v4
 
-    iget-object v4, v4, Lx8b;->r0:Ljava/lang/Object;
+    iget-object v4, v4, Lqpb;->r0:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
 
     move-result-object v5
 
-    iget-object v5, v5, Lx8b;->t0:Liic;
+    iget-object v5, v5, Lqpb;->t0:Ln0d;
 
-    new-instance v6, Lk9b;
+    new-instance v6, Lcqb;
 
-    invoke-direct {v6, p0, p1, v2}, Lk9b;-><init>(Lone/me/pinbars/PinBarsWidget;Landroid/view/View;Ljv5;)V
+    invoke-direct {v6, p0, p1, v2}, Lcqb;-><init>(Lone/me/pinbars/PinBarsWidget;Landroid/view/View;Ly16;)V
 
-    invoke-static {v0, v1, v4, v5, v6}, Lo97;->s(Lis5;Lis5;Lis5;Lis5;Lvc6;)Lkv5;
+    invoke-static {v0, v1, v4, v5, v6}, Ltq;->i(Lty5;Lty5;Lty5;Lty5;Lfj6;)Lz16;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+    invoke-static {p1, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
 
     move-result-object p1
 
-    iget-object p1, p1, Lx8b;->y0:Lv85;
+    iget-object p1, p1, Lqpb;->y0:Lxe5;
 
-    new-instance v0, Ll9b;
+    new-instance v0, Ldqb;
 
-    invoke-direct {v0, v2, p0}, Ll9b;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+    invoke-direct {v0, v2, p0}, Ldqb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    new-instance v1, Lnu5;
+    new-instance v1, Lb16;
 
     const/4 v4, 0x1
 
-    invoke-direct {v1, p1, v0, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v1, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->y0()Lx8b;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lx8b;->s0:Lhic;
+    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
+    invoke-virtual {p0}, Lone/me/pinbars/PinBarsWidget;->C0()Lqpb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lqpb;->s0:Lm0d;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lzn7;->L()Lbo7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v3}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    invoke-static {p1, v0, v3}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
-    new-instance v0, Lf9b;
+    new-instance v0, Lxpb;
 
-    invoke-direct {v0, v2, p0}, Lf9b;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+    invoke-direct {v0, v2, p0}, Lxpb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    new-instance v1, Lnu5;
+    new-instance v1, Lb16;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     return-void
-.end method
-
-.method public final y0()Lx8b;
-    .locals 0
-
-    iget-object p0, p0, Lone/me/pinbars/PinBarsWidget;->c:Lcl7;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lx8b;
-
-    return-object p0
 .end method

@@ -166,62 +166,62 @@
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_4
-    iget-boolean p0, p0, Lorg/webrtc/EglBase$ConfigBuilder;->isRecordable:Z
+    iget-boolean v2, p0, Lorg/webrtc/EglBase$ConfigBuilder;->isRecordable:Z
 
-    if-eqz p0, :cond_5
+    if-eqz v2, :cond_5
 
-    const/16 p0, 0x3142
+    const/16 v2, 0x3142
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_5
-    const/16 p0, 0x3038
+    const/16 v0, 0x3038
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    move-result p0
+    move-result v0
 
-    new-array p0, p0, [I
+    new-array v0, v0, [I
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    move-result v2
+    move-result v3
 
-    if-ge v0, v2, :cond_6
+    if-ge v2, v3, :cond_6
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Ljava/lang/Integer;
+    check-cast v3, Ljava/lang/Integer;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v3
 
-    aput v2, p0, v0
+    aput v3, v0, v2
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     :cond_6
-    return-object p0
+    return-object v0
 .end method
 
 .method public setHasAlphaChannel(Z)Lorg/webrtc/EglBase$ConfigBuilder;
@@ -241,7 +241,7 @@
 .end method
 
 .method public setOpenGlesVersion(I)Lorg/webrtc/EglBase$ConfigBuilder;
-    .locals 2
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -256,19 +256,19 @@
     return-object p0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "OpenGL ES version "
+    const-string v1, "OpenGL ES version "
 
-    const-string v1, " not supported"
+    const-string v2, " not supported"
 
-    invoke-static {p1, v0, v1}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1, v2}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public setSupportsPixelBuffer(Z)Lorg/webrtc/EglBase$ConfigBuilder;

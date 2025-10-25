@@ -1,171 +1,115 @@
 .class public final Lpx3;
-.super Ljava/lang/Object;
+.super Lpmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public volatile a:Z
+.field public c:Ljava/util/Map;
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
-
-.field public final d:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 8
-    new-instance v0, Lx9d;
-
-    .line 9
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 10
-    iput-object v0, p0, Lpx3;->b:Ljava/lang/Object;
-
-    .line 11
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v0, p0, Lpx3;->c:Ljava/lang/Object;
-
-    .line 12
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    iput-object v0, p0, Lpx3;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 2
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/util/concurrent/CountDownLatch;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    iput-object v0, p0, Lpx3;->d:Ljava/lang/Object;
-
-    .line 3
-    new-instance v0, Landroid/os/HandlerThread;
-
-    invoke-direct {v0, p1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Lpx3;->c:Ljava/lang/Object;
-
-    .line 4
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    .line 5
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object p1, p0, Lpx3;->b:Ljava/lang/Object;
-
-    .line 6
-    iput-boolean v1, p0, Lpx3;->a:Z
-
-    return-void
-.end method
-
-.method public static b(Ljava/lang/AutoCloseable;)V
-    .locals 1
-
-    if-eqz p0, :cond_0
-
-    :try_start_0
-    invoke-static {p0}, Lwsf;->j(Ljava/lang/AutoCloseable;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
+.field public o:J
 
 
 # virtual methods
-.method public a(Ljava/lang/Runnable;)V
-    .locals 3
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 4
 
-    iget-boolean v0, p0, Lpx3;->a:Z
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez v0, :cond_0
+    const-string v0, "presence"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "time"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lpf9;->y()V
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lpx3;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Lpf9;->r0()J
 
-    check-cast v0, Landroid/os/Handler;
+    move-result-wide p1
 
-    const/4 v1, 0x0
+    iput-wide p1, p0, Lpx3;->o:J
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    return-void
 
-    iget-object v0, p0, Lpx3;->b:Ljava/lang/Object;
+    :cond_1
+    new-instance p2, Ljava/util/HashMap;
 
-    check-cast v0, Landroid/os/Handler;
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
 
-    new-instance v1, Law1;
+    iput-object p2, p0, Lpx3;->c:Ljava/util/Map;
 
-    const/16 v2, 0x11
+    invoke-static {p1}, Lg0i;->n(Lpf9;)I
 
-    invoke-direct {v1, p0, v2, p1}, Law1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result p2
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lpx3;->c:Ljava/lang/Object;
+    :goto_0
+    if-ge v0, p2, :cond_2
 
-    check-cast p1, Landroid/os/HandlerThread;
+    iget-object v1, p0, Lpx3;->c:Ljava/util/Map;
 
-    invoke-virtual {p1}, Landroid/os/HandlerThread;->quitSafely()Z
+    invoke-virtual {p1}, Lpf9;->r0()J
 
-    const/4 p1, 0x0
+    move-result-wide v2
 
-    iput-boolean p1, p0, Lpx3;->a:Z
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
+    move-result-object v2
+
+    invoke-static {p1}, Luxb;->a(Lpf9;)Luxb;
+
+    move-result-object v3
+
+    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
     return-void
 .end method
 
-.method public c(Ljava/lang/Runnable;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object p0, p0, Lpx3;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lpx3;->c:Ljava/util/Map;
 
-    check-cast p0, Landroid/os/Handler;
+    invoke-static {v0}, Lhuh;->d(Ljava/util/Map;)I
 
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result v0
 
-    return-void
+    iget-wide v1, p0, Lpx3;->o:J
+
+    const-string v3, "{presence="
+
+    const-string v4, ", time="
+
+    invoke-static {v0, v1, v2, v3, v4}, Lu15;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

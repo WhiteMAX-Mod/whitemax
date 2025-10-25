@@ -1,61 +1,72 @@
 .class public final Lfn5;
-.super Lhn5;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Lfn5;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lfn5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lfn5;->a:Lfn5;
-
-    return-void
-.end method
+# interfaces
+.implements Lzi6;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lfn5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lfn5;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lfn5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance p1, Lfn5;
 
-    if-ne p0, p1, :cond_0
+    const/4 v0, 0x2
 
-    return v0
+    invoke-direct {p1, v0, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    instance-of p0, p1, Lfn5;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const p0, 0x443b70c7
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    return p0
-.end method
+    sget-object p1, Likh;->a:Likh;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
-    const-string p0, "Failed"
+    move-result-object p1
 
-    return-object p0
+    const-class v0, Ljoa;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljoa;
+
+    invoke-virtual {p1}, Ljoa;->d()Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

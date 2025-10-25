@@ -247,9 +247,9 @@
 
     invoke-virtual {v0, p0}, Lorg/webrtc/YuvConverter;->convert(Lorg/webrtc/VideoFrame$TextureBuffer;)Lorg/webrtc/VideoFrame$I420Buffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 
@@ -272,9 +272,9 @@
     .line 2
     invoke-direct/range {v0 .. v5}, Lorg/webrtc/TextureBufferImpl;->applyTransformMatrix(Landroid/graphics/Matrix;IIII)Lorg/webrtc/TextureBufferImpl;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public bridge synthetic applyTransformMatrix(Landroid/graphics/Matrix;II)Lorg/webrtc/VideoFrame$TextureBuffer;
@@ -283,49 +283,49 @@
     .line 1
     invoke-virtual {p0, p1, p2, p3}, Lorg/webrtc/TextureBufferImpl;->applyTransformMatrix(Landroid/graphics/Matrix;II)Lorg/webrtc/TextureBufferImpl;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public cropAndScale(IIIIII)Lorg/webrtc/VideoFrame$Buffer;
     .locals 3
 
-    move v0, p1
+    move v0, p2
 
-    new-instance p1, Landroid/graphics/Matrix;
+    new-instance p2, Landroid/graphics/Matrix;
 
-    invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
+    invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
     iget v1, p0, Lorg/webrtc/TextureBufferImpl;->height:I
 
-    add-int/2addr p2, p4
+    add-int/2addr v0, p4
 
-    sub-int p2, v1, p2
+    sub-int v0, v1, v0
 
-    int-to-float v0, v0
+    int-to-float p1, p1
 
     iget v2, p0, Lorg/webrtc/TextureBufferImpl;->width:I
 
     int-to-float v2, v2
 
-    div-float/2addr v0, v2
+    div-float/2addr p1, v2
 
-    int-to-float p2, p2
+    int-to-float v0, v0
 
     int-to-float v1, v1
 
-    div-float/2addr p2, v1
+    div-float/2addr v0, v1
 
-    invoke-virtual {p1, v0, p2}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+    invoke-virtual {p2, p1, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    int-to-float p2, p3
+    int-to-float p1, p3
 
     iget v0, p0, Lorg/webrtc/TextureBufferImpl;->width:I
 
     int-to-float v0, v0
 
-    div-float/2addr p2, v0
+    div-float/2addr p1, v0
 
     int-to-float v0, p4
 
@@ -335,121 +335,119 @@
 
     div-float/2addr v0, v1
 
-    invoke-virtual {p1, p2, v0}, Landroid/graphics/Matrix;->preScale(FF)Z
+    invoke-virtual {p2, p1, v0}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    iget p2, p0, Lorg/webrtc/TextureBufferImpl;->unscaledWidth:I
+    iget p1, p0, Lorg/webrtc/TextureBufferImpl;->unscaledWidth:I
 
-    mul-int/2addr p2, p3
+    mul-int/2addr p1, p3
 
-    int-to-float p2, p2
+    int-to-float p1, p1
 
     iget p3, p0, Lorg/webrtc/TextureBufferImpl;->width:I
 
     int-to-float p3, p3
 
-    div-float/2addr p2, p3
+    div-float/2addr p1, p3
 
-    invoke-static {p2}, Ljava/lang/Math;->round(F)I
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
-    move-result p2
+    move-result p3
 
-    iget p3, p0, Lorg/webrtc/TextureBufferImpl;->unscaledHeight:I
+    iget p1, p0, Lorg/webrtc/TextureBufferImpl;->unscaledHeight:I
 
-    mul-int/2addr p3, p4
+    mul-int/2addr p1, p4
 
-    int-to-float p3, p3
+    int-to-float p1, p1
 
     iget p4, p0, Lorg/webrtc/TextureBufferImpl;->height:I
 
     int-to-float p4, p4
 
-    div-float/2addr p3, p4
+    div-float/2addr p1, p4
 
-    invoke-static {p3}, Ljava/lang/Math;->round(F)I
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
-    move-result p3
+    move-result p4
 
-    move p4, p5
+    move-object p1, p0
 
-    move p5, p6
+    invoke-direct/range {p1 .. p6}, Lorg/webrtc/TextureBufferImpl;->applyTransformMatrix(Landroid/graphics/Matrix;IIII)Lorg/webrtc/TextureBufferImpl;
 
-    invoke-direct/range {p0 .. p5}, Lorg/webrtc/TextureBufferImpl;->applyTransformMatrix(Landroid/graphics/Matrix;IIII)Lorg/webrtc/TextureBufferImpl;
+    move-result-object p2
 
-    move-result-object p0
-
-    return-object p0
+    return-object p2
 .end method
 
 .method public getHeight()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/TextureBufferImpl;->height:I
+    iget v0, p0, Lorg/webrtc/TextureBufferImpl;->height:I
 
-    return p0
+    return v0
 .end method
 
 .method public getTextureId()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/TextureBufferImpl;->id:I
+    iget v0, p0, Lorg/webrtc/TextureBufferImpl;->id:I
 
-    return p0
+    return v0
 .end method
 
 .method public getToI420Handler()Landroid/os/Handler;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/TextureBufferImpl;->toI420Handler:Landroid/os/Handler;
+    iget-object v0, p0, Lorg/webrtc/TextureBufferImpl;->toI420Handler:Landroid/os/Handler;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getTransformMatrix()Landroid/graphics/Matrix;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/TextureBufferImpl;->transformMatrix:Landroid/graphics/Matrix;
+    iget-object v0, p0, Lorg/webrtc/TextureBufferImpl;->transformMatrix:Landroid/graphics/Matrix;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getType()Lorg/webrtc/VideoFrame$TextureBuffer$Type;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/TextureBufferImpl;->type:Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+    iget-object v0, p0, Lorg/webrtc/TextureBufferImpl;->type:Lorg/webrtc/VideoFrame$TextureBuffer$Type;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getUnscaledHeight()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/TextureBufferImpl;->unscaledHeight:I
+    iget v0, p0, Lorg/webrtc/TextureBufferImpl;->unscaledHeight:I
 
-    return p0
+    return v0
 .end method
 
 .method public getUnscaledWidth()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/TextureBufferImpl;->unscaledWidth:I
+    iget v0, p0, Lorg/webrtc/TextureBufferImpl;->unscaledWidth:I
 
-    return p0
+    return v0
 .end method
 
 .method public getWidth()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/TextureBufferImpl;->width:I
+    iget v0, p0, Lorg/webrtc/TextureBufferImpl;->width:I
 
-    return p0
+    return v0
 .end method
 
 .method public getYuvConverter()Lorg/webrtc/YuvConverter;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/TextureBufferImpl;->yuvConverter:Lorg/webrtc/YuvConverter;
+    iget-object v0, p0, Lorg/webrtc/TextureBufferImpl;->yuvConverter:Lorg/webrtc/YuvConverter;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public release()V
@@ -459,9 +457,9 @@
 
     invoke-interface {v0, p0}, Lorg/webrtc/TextureBufferImpl$RefCountMonitor;->onRelease(Lorg/webrtc/TextureBufferImpl;)V
 
-    iget-object p0, p0, Lorg/webrtc/TextureBufferImpl;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
+    iget-object v0, p0, Lorg/webrtc/TextureBufferImpl;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    invoke-virtual {p0}, Lorg/webrtc/RefCountDelegate;->release()V
+    invoke-virtual {v0}, Lorg/webrtc/RefCountDelegate;->release()V
 
     return-void
 .end method
@@ -473,9 +471,9 @@
 
     invoke-interface {v0, p0}, Lorg/webrtc/TextureBufferImpl$RefCountMonitor;->onRetain(Lorg/webrtc/TextureBufferImpl;)V
 
-    iget-object p0, p0, Lorg/webrtc/TextureBufferImpl;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
+    iget-object v0, p0, Lorg/webrtc/TextureBufferImpl;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    invoke-virtual {p0}, Lorg/webrtc/RefCountDelegate;->retain()V
+    invoke-virtual {v0}, Lorg/webrtc/RefCountDelegate;->retain()V
 
     return-void
 .end method
@@ -485,17 +483,17 @@
 
     iget-object v0, p0, Lorg/webrtc/TextureBufferImpl;->toI420Handler:Landroid/os/Handler;
 
-    new-instance v1, Lo5;
+    new-instance v1, Lc6;
 
     const/16 v2, 0x10
 
-    invoke-direct {v1, v2, p0}, Lo5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lc6;-><init>(ILjava/lang/Object;)V
 
     invoke-static {v0, v1}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lorg/webrtc/VideoFrame$I420Buffer;
+    check-cast v0, Lorg/webrtc/VideoFrame$I420Buffer;
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,120 +1,110 @@
-.class public abstract Lal9;
+.class public final synthetic Lal9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljn9;
+
 
 # direct methods
-.method public static a([B)Lbl9;
-    .locals 17
+.method public synthetic constructor <init>(Ljn9;I)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgReact;
+    iput p2, p0, Lal9;->a:I
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgReact;-><init>()V
+    iput-object p1, p0, Lal9;->b:Ljn9;
 
-    move-object/from16 v1, p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    invoke-static {v0, v1}, Lj29;->mergeFrom(Lj29;[B)Lj29;
+    return-void
+.end method
 
-    move-result-object v0
 
-    check-cast v0, Lru/ok/tamtam/nano/Tasks$MsgReact;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 14
 
-    new-instance v1, Lbl9;
+    iget v0, p0, Lal9;->a:I
 
-    iget-wide v2, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->requestId:J
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->chatId:J
+    new-instance v1, Lhq9;
 
-    iget-wide v6, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->messageId:J
+    iget-object v4, p0, Lal9;->b:Ljn9;
 
-    iget-wide v8, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->chatServerId:J
+    iget-object v0, v4, Ljn9;->b:Lso9;
 
-    iget-wide v10, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->messageServerId:J
+    iget-object v10, v4, Ljn9;->B0:Lk54;
 
-    new-instance v12, Lu29;
+    iget-object v11, v4, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget v13, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->reactionType:I
+    iget-object v12, v4, Ljn9;->w1:Ln0d;
 
-    sget-object v14, Lz29;->o:Ly75;
+    iget-object v13, v4, Ljn9;->y1:Ln0d;
 
-    invoke-virtual {v14}, Lz1;->iterator()Ljava/util/Iterator;
+    new-instance v2, Lvl9;
 
-    move-result-object v14
+    const/4 v8, 0x0
 
-    :goto_0
-    move-object v15, v14
+    const/4 v9, 0x1
 
-    check-cast v15, Lw1;
+    const/4 v3, 0x2
 
-    invoke-virtual {v15}, Lw1;->hasNext()Z
+    const-class v5, Ljn9;
 
-    move-result v16
+    const-string v6, "processReactionEffect"
 
-    if-eqz v16, :cond_1
+    const-string v7, "processReactionEffect(Ljava/util/Set;J)V"
 
-    invoke-virtual {v15}, Lw1;->next()Ljava/lang/Object;
+    invoke-direct/range {v2 .. v9}, Lvl9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    move-result-object v15
+    new-instance v8, Ljs7;
 
-    move-object/from16 p0, v1
+    const/16 v3, 0xf
 
-    move-object v1, v15
+    invoke-direct {v8, v3, v4}, Ljs7;-><init>(ILjava/lang/Object;)V
 
-    check-cast v1, Lz29;
+    move-object v7, v2
 
-    iget v1, v1, Lz29;->a:I
+    move-object v3, v10
 
-    if-ne v1, v13, :cond_0
+    move-object v4, v11
 
-    goto :goto_1
+    move-object v5, v12
 
-    :cond_0
-    move-object/from16 v1, p0
+    move-object v6, v13
 
-    goto :goto_0
+    move-object v2, v0
 
-    :cond_1
-    move-object/from16 p0, v1
-
-    const/4 v15, 0x0
-
-    :goto_1
-    check-cast v15, Lz29;
-
-    if-eqz v15, :cond_2
-
-    iget-object v0, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->reaction:Ljava/lang/String;
-
-    invoke-direct {v12, v15, v0}, Lu29;-><init>(Lz29;Ljava/lang/String;)V
-
-    move-object/from16 v1, p0
-
-    invoke-direct/range {v1 .. v12}, Lbl9;-><init>(JJJJJLu29;)V
+    invoke-direct/range {v1 .. v8}, Lhq9;-><init>(Lso9;Lk54;Lkotlinx/coroutines/internal/ContextScope;Ln0d;Ln0d;Lvl9;Ljs7;)V
 
     return-object v1
 
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    :pswitch_0
+    new-instance v0, Lxcg;
 
-    const-string v1, "Unknown reactionType = "
+    iget-object v1, p0, Lal9;->b:Ljn9;
 
-    invoke-static {v13, v1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    iget-object v2, v1, Ljn9;->w1:Ln0d;
 
-    move-result-object v1
+    iget-object v3, v1, Ljn9;->y1:Ln0d;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object v4, v1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    throw v0
+    iget-object v1, v1, Ljn9;->Y:Lulf;
 
-    :catch_0
-    move-exception v0
+    invoke-direct {v0, v2, v3, v4, v1}, Lxcg;-><init>(Ln0d;Ln0d;Lkotlinx/coroutines/internal/ContextScope;Lulf;)V
 
-    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
+    return-object v0
 
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

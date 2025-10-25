@@ -3,178 +3,117 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Lli6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ljava/util/Set;
+
+.field public final synthetic Y:Ljava/util/Set;
+
+.field public final synthetic a:Lyf2;
+
+.field public final synthetic b:Ljava/util/Set;
+
+.field public final synthetic c:Ljava/util/Set;
+
+.field public final synthetic o:Ljava/util/Map;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lyf2;Ljava/util/Set;Ljava/util/Set;Ljava/util/Map;Ljava/util/Set;Ljava/util/Set;)V
     .locals 0
 
-    iput p1, p0, Luf2;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Luf2;->a:Lyf2;
+
+    iput-object p2, p0, Luf2;->b:Ljava/util/Set;
+
+    iput-object p3, p0, Luf2;->c:Ljava/util/Set;
+
+    iput-object p4, p0, Luf2;->o:Ljava/util/Map;
+
+    iput-object p5, p0, Luf2;->X:Ljava/util/Set;
+
+    iput-object p6, p0, Luf2;->Y:Ljava/util/Set;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget p0, p0, Luf2;->a:I
+    check-cast p1, Lla2;
 
-    const/4 v0, 0x0
+    iget-object v0, p1, Lla2;->b:Lne2;
 
-    packed-switch p0, :pswitch_data_0
+    iget-wide v1, v0, Lne2;->a:J
 
-    check-cast p1, Ltld;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-eqz p1, :cond_0
+    move-result-object v1
 
-    const/4 p0, 0x1
+    iget-object v2, p0, Luf2;->b:Ljava/util/Set;
 
-    invoke-virtual {p1, p0}, Ltld;->f(Z)V
+    invoke-interface {v2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    iget-object v2, p0, Luf2;->a:Lyf2;
+
+    iget-object v3, p0, Luf2;->o:Ljava/util/Map;
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Luf2;->c:Ljava/util/Set;
+
+    invoke-virtual {v2, v1, v3, p1}, Lyf2;->f(Ljava/util/Set;Ljava/util/Map;Lla2;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
 
     :cond_0
-    return-object v0
+    iget-wide v0, v0, Lne2;->a:J
 
-    :pswitch_0
-    check-cast p1, Laie;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    new-instance p0, Laie;
+    move-result-object v0
 
-    const/4 p1, 0x3
+    iget-object v1, p0, Luf2;->X:Ljava/util/Set;
 
-    invoke-direct {p0, v0, p1}, Laie;-><init>(Ljava/lang/String;I)V
+    invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    return-object p0
+    move-result v0
 
-    :pswitch_1
-    check-cast p1, Ljava/util/Set;
+    if-nez v0, :cond_2
 
-    sget-object p0, Lz45;->a:Lz45;
+    iget-object v0, p0, Luf2;->Y:Ljava/util/Set;
 
-    return-object p0
+    invoke-virtual {v2, v0, v3, p1}, Lyf2;->f(Ljava/util/Set;Ljava/util/Map;Lla2;)Z
 
-    :pswitch_2
-    check-cast p1, Ljava/lang/String;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_3
-    check-cast p1, Lsd9;
-
-    return-object v0
-
-    :pswitch_4
-    check-cast p1, Lsd9;
-
-    sget-object p0, Lfe9;->q:[Lxi7;
-
-    return-object v0
-
-    :pswitch_5
-    check-cast p1, Lao9;
-
-    invoke-static {}, Lq28;->a()Lao9;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_6
-    check-cast p1, Ljava/util/Set;
-
-    new-instance p0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {p0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    return-object p0
-
-    :pswitch_7
-    check-cast p1, Lao9;
-
-    invoke-static {}, Lq28;->a()Lao9;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_8
-    check-cast p1, Ljava/util/Set;
-
-    new-instance p0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {p0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    return-object p0
-
-    :pswitch_9
-    check-cast p1, Ljava/util/Set;
-
-    new-instance p0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {p0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    return-object p0
-
-    :pswitch_a
-    check-cast p1, Lsf2;
+    move-result p1
 
     if-eqz p1, :cond_1
 
-    iget-wide v2, p1, Lsf2;->a:J
-
-    iget-wide v4, p1, Lsf2;->b:J
-
-    iget-object v6, p1, Lsf2;->c:Ljava/lang/String;
-
-    iget-object v7, p1, Lsf2;->d:Lhs4;
-
-    new-instance v1, Lsf2;
-
-    const/4 v8, 0x1
-
-    invoke-direct/range {v1 .. v8}, Lsf2;-><init>(JJLjava/lang/String;Lhs4;Z)V
-
-    move-object v0, v1
+    goto :goto_0
 
     :cond_1
-    return-object v0
+    const/4 p1, 0x1
 
-    :pswitch_b
-    check-cast p1, Lsf2;
+    goto :goto_1
 
-    return-object v0
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
 
-    nop
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,320 +1,60 @@
-.class public final Lxpc;
+.class public abstract Lxpc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxpc;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static back:I = 0x7f0a00ec
 
+.field public static copy:I = 0x7f0a02db
 
-# instance fields
-.field public final X:Ljava/lang/Long;
+.field public static cut:I = 0x7f0a02e5
 
-.field public final a:Ljava/lang/String;
+.field public static edit_menu_item:I = 0x7f0a0322
 
-.field public final b:Ljava/lang/String;
+.field public static extendedMenu:I = 0x7f0a0369
 
-.field public final c:Ljava/lang/String;
+.field public static markdown_badge_count_view:I = 0x7f0a0467
 
-.field public final o:Ljava/lang/String;
+.field public static markdown_bold:I = 0x7f0a0468
 
+.field public static markdown_group:I = 0x7f0a0469
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public static markdown_heading:I = 0x7f0a046a
 
-    new-instance v0, Lgpa;
+.field public static markdown_italic:I = 0x7f0a046b
 
-    const/16 v1, 0x19
+.field public static markdown_link:I = 0x7f0a046c
 
-    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
+.field public static markdown_menu_container:I = 0x7f0a046d
 
-    sput-object v0, Lxpc;->CREATOR:Landroid/os/Parcelable$Creator;
+.field public static markdown_message_bubble_view:I = 0x7f0a046e
 
-    return-void
-.end method
+.field public static markdown_mono:I = 0x7f0a046f
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
-    .locals 0
+.field public static markdown_original:I = 0x7f0a0470
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static markdown_preview_send_as_scheduled_button:I = 0x7f0a0471
 
-    iput-object p1, p0, Lxpc;->a:Ljava/lang/String;
+.field public static markdown_preview_send_button:I = 0x7f0a0472
 
-    iput-object p2, p0, Lxpc;->b:Ljava/lang/String;
+.field public static markdown_preview_send_button_guideline:I = 0x7f0a0473
 
-    iput-object p3, p0, Lxpc;->c:Ljava/lang/String;
+.field public static markdown_quote:I = 0x7f0a0474
 
-    iput-object p4, p0, Lxpc;->o:Ljava/lang/String;
+.field public static markdown_regular:I = 0x7f0a0475
 
-    iput-object p5, p0, Lxpc;->X:Ljava/lang/Long;
+.field public static markdown_strikethrough:I = 0x7f0a0476
 
-    return-void
-.end method
+.field public static markdown_underline:I = 0x7f0a0477
 
-.method public static a(Lxpc;Ljava/lang/Long;)Lxpc;
-    .locals 6
+.field public static menu:I = 0x7f0a04d2
 
-    iget-object v1, p0, Lxpc;->a:Ljava/lang/String;
+.field public static menu_list:I = 0x7f0a0500
 
-    iget-object v2, p0, Lxpc;->b:Ljava/lang/String;
+.field public static paste:I = 0x7f0a08db
 
-    iget-object v3, p0, Lxpc;->c:Ljava/lang/String;
+.field public static rect:I = 0x7f0a09fa
 
-    iget-object v4, p0, Lxpc;->o:Ljava/lang/String;
+.field public static root:I = 0x7f0a0a0d
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lxpc;
-
-    move-object v5, p1
-
-    invoke-direct/range {v0 .. v5}, Lxpc;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxpc;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lxpc;
-
-    iget-object v1, p0, Lxpc;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lxpc;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lxpc;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lxpc;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lxpc;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lxpc;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lxpc;->o:Ljava/lang/String;
-
-    iget-object v3, p1, Lxpc;->o:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object p0, p0, Lxpc;->X:Ljava/lang/Long;
-
-    iget-object p1, p1, Lxpc;->X:Ljava/lang/Long;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lxpc;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lxpc;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lxpc;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lxpc;->o:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object p0, p0, Lxpc;->X:Ljava/lang/Long;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    :goto_0
-    add-int/2addr v0, p0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", phone="
-
-    const-string v1, ", name="
-
-    const-string v2, "RegistrationData(token="
-
-    iget-object v3, p0, Lxpc;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lxpc;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lz7e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", surname="
-
-    const-string v2, ", photoId="
-
-    iget-object v3, p0, Lxpc;->c:Ljava/lang/String;
-
-    iget-object v4, p0, Lxpc;->o:Ljava/lang/String;
-
-    invoke-static {v0, v3, v1, v4, v2}, Lee5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, p0, Lxpc;->X:Ljava/lang/Long;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    iget-object p2, p0, Lxpc;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lxpc;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lxpc;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lxpc;->o:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lxpc;->X:Ljava/lang/Long;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
-
-    :cond_0
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    return-void
-.end method
+.field public static select_all:I = 0x7f0a0b2c

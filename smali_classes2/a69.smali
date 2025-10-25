@@ -1,94 +1,122 @@
 .class public final La69;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lnje;
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-    .locals 0
+.method public constructor <init>(Lpw0;Lulf;)V
+    .locals 2
 
-    iput-object p2, p0, La69;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Loje;->b(III)Lnje;
+
+    move-result-object v0
+
+    iput-object v0, p0, La69;->a:Lnje;
+
+    check-cast p2, Lqta;
+
+    invoke-virtual {p2}, Lqta;->a()Lk54;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, La69;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lpw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onChatMembersUpdateEvent(Lep2;)V
+    .locals 5
+    .annotation runtime Lzbf;
+    .end annotation
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p1, Lep2;->b:Ljava/util/List;
 
-    invoke-virtual {p0, p1, p2}, La69;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p1, Lep2;->c:Lro2;
 
-    move-result-object p0
+    iget-wide v2, p1, Lep2;->o:J
 
-    check-cast p0, La69;
+    iget p1, p1, Lep2;->X:I
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, La69;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, La69;
-
-    iget-object p0, p0, La69;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {v0, p2, p0}, La69;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    iput-object p1, v0, La69;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, La69;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/CharSequence;
-
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:[Lxi7;
-
-    iget-object p0, p0, La69;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lk19;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
-
-    move-result-object p0
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    invoke-static {p1}, Ldy1;->v(I)I
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lk19;->h(I)V
+    if-eqz p1, :cond_1
 
-    sget-object p0, Lylf;->a:Lylf;
+    const/4 v4, 0x1
 
-    return-object p0
+    if-ne p1, v4, :cond_0
+
+    new-instance p1, Lu59;
+
+    invoke-direct {p1, v2, v3, v1, v0}, Lu59;-><init>(JLro2;Ljava/util/Collection;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ls59;
+
+    invoke-direct {p1, v2, v3, v1, v0}, Ls59;-><init>(JLro2;Ljava/util/Collection;)V
+
+    :goto_0
+    new-instance v0, Lx59;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lx59;-><init>(La69;Lv59;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, La69;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    return-void
+.end method
+
+.method public final onEvent(Le04;)V
+    .locals 3
+    .annotation runtime Lzbf;
+    .end annotation
+
+    new-instance v0, Ly59;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Ly59;-><init>(La69;Le04;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, La69;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    return-void
 .end method

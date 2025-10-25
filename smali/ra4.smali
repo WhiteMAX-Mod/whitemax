@@ -1,62 +1,55 @@
-.class public final synthetic Lra4;
-.super Led6;
+.class public final Lra4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbc6;
 
+# instance fields
+.field public final a:Lmb6;
 
-# static fields
-.field public static final a:Lra4;
+.field public final b:Lec7;
+
+.field public final c:Ltyd;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/util/ArrayList;
+
+.field public final f:Ljava/util/ArrayList;
+
+.field public final g:J
+
+.field public final h:Ljava/util/List;
+
+.field public final i:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lra4;
-
-    const-string v4, "isNotEmpty(Ljava/lang/CharSequence;)Z"
-
-    const/4 v5, 0x1
-
-    const/4 v1, 0x1
-
-    const-class v2, Ljme;
-
-    const-string v3, "isNotEmpty"
-
-    invoke-direct/range {v0 .. v5}, Led6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lra4;->a:Lra4;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lmb6;Ljava/util/List;Ltyd;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/List;Ljava/util/List;J)V
     .locals 0
 
-    check-cast p1, Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    iput-object p1, p0, Lra4;->a:Lmb6;
 
-    move-result p0
+    invoke-static {p2}, Lec7;->k(Ljava/util/Collection;)Lec7;
 
-    if-lez p0, :cond_0
+    move-result-object p1
 
-    const/4 p0, 0x1
+    iput-object p1, p0, Lra4;->b:Lec7;
 
-    goto :goto_0
+    iput-object p3, p0, Lra4;->c:Ltyd;
 
-    :cond_0
-    const/4 p0, 0x0
+    iput-object p4, p0, Lra4;->d:Ljava/lang/String;
 
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iput-object p5, p0, Lra4;->e:Ljava/util/ArrayList;
 
-    move-result-object p0
+    iput-object p6, p0, Lra4;->f:Ljava/util/ArrayList;
 
-    return-object p0
+    iput-object p7, p0, Lra4;->h:Ljava/util/List;
+
+    iput-object p8, p0, Lra4;->i:Ljava/util/List;
+
+    iput-wide p9, p0, Lra4;->g:J
+
+    return-void
 .end method

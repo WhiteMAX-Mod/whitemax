@@ -1,136 +1,146 @@
 .class public final Li0g;
-.super Lure;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lji6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lis5;
-
-.field public final synthetic r0:Ll0g;
+.field public final synthetic b:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Lis5;Lkotlin/coroutines/Continuation;Ll0g;)V
+.method public synthetic constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    iput-object p1, p0, Li0g;->Z:Lis5;
+    iput p2, p0, Li0g;->a:I
 
-    iput-object p3, p0, Li0g;->r0:Ll0g;
+    iput-object p1, p0, Li0g;->b:Landroid/content/Context;
 
-    const/4 p1, 0x2
+    const/4 p1, 0x0
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Lst7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    check-cast p1, Lks5;
+    iget v0, p0, Li0g;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Li0g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lv0g;
 
-    move-result-object p0
+    iget-object v1, p0, Li0g;->b:Landroid/content/Context;
 
-    check-cast p0, Li0g;
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    sget-object p1, Lylf;->a:Lylf;
+    move-result-object v1
 
-    invoke-virtual {p0, p1}, Li0g;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v2, Lt0g;
 
-    move-result-object p0
+    invoke-direct {v2}, Lt0g;-><init>()V
 
-    return-object p0
-.end method
+    new-instance v3, Lnpe;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    const-string v4, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
 
-    new-instance v0, Li0g;
+    invoke-direct {v3, v4}, Lnpe;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Li0g;->Z:Lis5;
+    iput-object v3, v2, Lt0g;->b:Lnpe;
 
-    iget-object p0, p0, Li0g;->r0:Ll0g;
+    new-instance v3, Lvxe;
 
-    invoke-direct {v0, v1, p2, p0}, Li0g;-><init>(Lis5;Lkotlin/coroutines/Continuation;Ll0g;)V
+    invoke-direct {v3, v2}, Lvxe;-><init>(Lt0g;)V
 
-    iput-object p1, v0, Li0g;->Y:Ljava/lang/Object;
+    const-string v2, "ru.ok.android.externcalls"
+
+    invoke-direct {v0, v1, v2, v3}, Lv0g;-><init>(Landroid/content/Context;Ljava/lang/String;Lvxe;)V
+
+    const-string v1, "calls-sdk-version"
+
+    const-string v2, "125.1.0.70.6"
+
+    invoke-virtual {v0, v1, v2}, Lv0g;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
-.end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    :pswitch_0
+    invoke-static {}, Lgvi;->b()Ljava/lang/String;
 
-    iget v0, p0, Li0g;->X:I
+    move-result-object v0
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Li0g;->b:Landroid/content/Context;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v2
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v0, "tracer"
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v3, "tracer-"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    const/16 v3, 0x2d
 
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const/4 v4, 0x0
 
-    iget-object p1, p0, Li0g;->Y:Ljava/lang/Object;
+    const/16 v5, 0x3a
 
-    check-cast p1, Lks5;
+    invoke-static {v0, v5, v3, v4}, Lhbf;->u(Ljava/lang/String;CCZ)Ljava/lang/String;
 
-    new-instance v0, Lepc;
+    move-result-object v0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
-    new-instance v2, Ln30;
+    move-result-object v0
 
-    iget-object v3, p0, Li0g;->r0:Ll0g;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v4, 0xa
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {v2, v0, p1, v3, v4}, Ln30;-><init>(Lepc;Lks5;Ljava/lang/Object;I)V
+    move-result-object v0
 
-    iput v1, p0, Li0g;->X:I
-
-    iget-object p1, p0, Li0g;->Z:Lis5;
-
-    invoke-interface {p1, v2, p0}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
     :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    new-instance v2, Ljava/io/File;
 
-    return-object p0
+    invoke-virtual {v1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-direct {v2, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-static {v2}, Ls1j;->b(Ljava/io/File;)V
+
+    const-string v0, "settings.data"
+
+    invoke-static {v2, v0}, Ljv5;->g(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

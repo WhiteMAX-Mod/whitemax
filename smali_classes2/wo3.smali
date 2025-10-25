@@ -1,136 +1,626 @@
 .class public final Lwo3;
-.super Lure;
+.super Leic;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
 .field public X:I
 
-.field public final synthetic Y:Lip3;
+.field public a:J
+
+.field public b:J
+
+.field public c:[B
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lip3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lwo3;->Y:Lip3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lwo3;->c:[B
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lwo3;->o:I
+
+    const/16 v0, 0x1c
+
+    iput v0, p0, Lwo3;->X:I
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lwo3;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lcic;Lfic;Lfj;)V
+    .locals 6
 
-    check-cast p1, Ly04;
+    invoke-virtual {p2}, Lfic;->l()Lic5;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p2
 
-    invoke-virtual {p0, p1, p2}, Lwo3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget p3, p1, Lcic;->z0:I
 
-    move-result-object p0
+    invoke-static {p3}, Laab;->a(I)Z
 
-    check-cast p0, Lwo3;
+    move-result p3
 
-    sget-object p1, Lylf;->a:Lylf;
+    if-nez p3, :cond_b
 
-    invoke-virtual {p0, p1}, Lwo3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance p3, Lns0;
 
-    move-result-object p0
+    invoke-virtual {p0}, Lwo3;->h()Z
 
-    return-object p0
-.end method
+    move-result v0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    const/4 v1, 0x0
 
-    new-instance p1, Lwo3;
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lwo3;->Y:Lip3;
+    iget-wide v2, p0, Lwo3;->a:J
 
-    invoke-direct {p1, p0, p2}, Lwo3;-><init>(Lip3;Lkotlin/coroutines/Continuation;)V
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lwo3;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    move-object v0, v1
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-virtual {p0}, Lwo3;->g()Z
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v2
 
-    throw p0
+    if-eqz v2, :cond_1
+
+    iget-wide v2, p0, Lwo3;->a:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    move-object v2, v1
 
-    iget-object p1, p0, Lwo3;->Y:Lip3;
+    :goto_1
+    const/4 v3, 0x2
 
-    iget-object v0, p1, Lip3;->t:Lcl7;
+    const/4 v4, 0x1
 
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-direct {p3, v3, v4, v0, v2}, Lns0;-><init>(IZLjava/lang/Long;Ljava/lang/Long;)V
 
-    move-result-object v0
+    invoke-virtual {p1, p3}, Lcic;->d(Lns0;)V
 
-    check-cast v0, Laba;
+    invoke-virtual {p0}, Lwo3;->h()Z
 
-    invoke-virtual {v0, v1}, Laba;->g(Z)V
+    move-result p3
 
-    invoke-virtual {p1}, Lip3;->q()Lxwe;
+    if-nez p3, :cond_2
 
-    move-result-object v0
+    invoke-virtual {p0}, Lwo3;->g()Z
 
-    check-cast v0, Laga;
+    move-result p3
 
-    invoke-virtual {v0}, Laga;->c()Lt38;
-
-    move-result-object v0
-
-    new-instance v2, Lvo3;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3}, Lvo3;-><init>(Lip3;Lkotlin/coroutines/Continuation;)V
-
-    iput v1, p0, Lwo3;->X:I
-
-    invoke-static {v0, v2, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
+    if-eqz p3, :cond_a
 
     :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    iget p3, p1, Lcic;->z0:I
 
-    return-object p0
+    if-ne p3, v3, :cond_a
+
+    invoke-virtual {p0}, Lwo3;->h()Z
+
+    move-result p3
+
+    const-string v0, "UTF-8"
+
+    const-string v2, ": "
+
+    const-string v3, ""
+
+    if-eqz p3, :cond_7
+
+    iget p3, p0, Lwo3;->o:I
+
+    const/4 v4, -0x1
+
+    if-eq p3, v4, :cond_5
+
+    if-eq p3, v4, :cond_4
+
+    int-to-long v4, p3
+
+    iget-object p3, p0, Lwo3;->c:[B
+
+    if-eqz p3, :cond_3
+
+    :try_start_0
+    new-instance v3, Ljava/lang/String;
+
+    invoke-direct {v3, p3, v0}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v1, v3
+
+    :catch_0
+    invoke-static {v2, v1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_3
+    const-string p3, "TLS error "
+
+    :goto_2
+    invoke-static {v4, v5, p3, v3}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    goto :goto_3
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "Close does not have a TLS error"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    iget-wide v4, p0, Lwo3;->a:J
+
+    iget-object p3, p0, Lwo3;->c:[B
+
+    if-eqz p3, :cond_6
+
+    :try_start_1
+    new-instance v3, Ljava/lang/String;
+
+    invoke-direct {v3, p3, v0}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+    :try_end_1
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-object v1, v3
+
+    :catch_1
+    invoke-static {v2, v1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_6
+    const-string p3, "transport error "
+
+    goto :goto_2
+
+    :cond_7
+    invoke-virtual {p0}, Lwo3;->g()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_9
+
+    iget-wide v4, p0, Lwo3;->a:J
+
+    iget-object p3, p0, Lwo3;->c:[B
+
+    if-eqz p3, :cond_8
+
+    :try_start_2
+    new-instance v3, Ljava/lang/String;
+
+    invoke-direct {v3, p3, v0}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+    :try_end_2
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_2 .. :try_end_2} :catch_2
+
+    move-object v1, v3
+
+    :catch_2
+    invoke-static {v2, v1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_8
+    const-string p3, "application protocol error "
+
+    goto :goto_2
+
+    :cond_9
+    :goto_3
+    const-string p3, "Server closed connection: "
+
+    invoke-static {p3, v3}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    iput-object p3, p1, Lcic;->c1:Ljava/lang/String;
+
+    :cond_a
+    iget-object p3, p1, Lcic;->K0:Lc2e;
+
+    invoke-virtual {p3}, Lc2e;->j()V
+
+    iget-object p3, p1, Lcic;->N0:Lv9f;
+
+    invoke-virtual {p3}, Lv9f;->a()V
+
+    new-instance p3, Lwo3;
+
+    iget-object v0, p1, Lcic;->a:Le8e;
+
+    iget-object v0, v0, Le8e;->b:Ljava/lang/Object;
+
+    invoke-direct {p3}, Lwo3;-><init>()V
+
+    sget-object v0, Lc2e;->A:Lb93;
+
+    iget-object v1, p1, Lcic;->K0:Lc2e;
+
+    invoke-virtual {v1, p3, p2, v0}, Lc2e;->f(Leic;Lic5;Ljava/util/function/Consumer;)V
+
+    const/4 p2, 0x5
+
+    iput p2, p1, Lcic;->z0:I
+
+    iget-object p2, p1, Lcic;->K0:Lc2e;
+
+    invoke-virtual {p2}, Lc2e;->d()I
+
+    move-result p2
+
+    new-instance p3, Lxhc;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p3, p1, v0}, Lxhc;-><init>(Lcic;I)V
+
+    mul-int/lit8 p2, p2, 0x3
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    :try_start_3
+    iget-object p1, p1, Lcic;->C0:Ljava/util/concurrent/ScheduledExecutorService;
+
+    int-to-long v1, p2
+
+    invoke-interface {p1, p3, v1, v2, v0}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    :try_end_3
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :cond_b
+    return-void
+.end method
+
+.method public final c()I
+    .locals 3
+
+    iget-wide v0, p0, Lwo3;->a:J
+
+    invoke-static {v0, v1}, Lubi;->a(J)I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    iget v1, p0, Lwo3;->X:I
+
+    const/16 v2, 0x1c
+
+    if-ne v1, v2, :cond_0
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Lubi;->a(J)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    iget-object v1, p0, Lwo3;->c:[B
+
+    array-length v1, v1
+
+    int-to-long v1, v1
+
+    invoke-static {v1, v2}, Lubi;->a(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    iget-object v0, p0, Lwo3;->c:[B
+
+    array-length v0, v0
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final f(Ljava/nio/ByteBuffer;)V
+    .locals 2
+
+    iget v0, p0, Lwo3;->X:I
+
+    const/16 v1, 0x1c
+
+    if-ne v0, v1, :cond_0
+
+    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget-wide v0, p0, Lwo3;->a:J
+
+    invoke-static {v0, v1, p1}, Lubi;->g(JLjava/nio/ByteBuffer;)I
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, p1}, Lubi;->f(ILjava/nio/ByteBuffer;)I
+
+    iget-object v0, p0, Lwo3;->c:[B
+
+    array-length v0, v0
+
+    invoke-static {v0, p1}, Lubi;->f(ILjava/nio/ByteBuffer;)I
+
+    iget-object v0, p0, Lwo3;->c:[B
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :cond_0
+    const/16 v0, 0x1d
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget-wide v0, p0, Lwo3;->a:J
+
+    invoke-static {v0, v1, p1}, Lubi;->g(JLjava/nio/ByteBuffer;)I
+
+    iget-object v0, p0, Lwo3;->c:[B
+
+    array-length v0, v0
+
+    invoke-static {v0, p1}, Lubi;->f(ILjava/nio/ByteBuffer;)I
+
+    iget-object v0, p0, Lwo3;->c:[B
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    return-void
+.end method
+
+.method public final g()Z
+    .locals 4
+
+    iget v0, p0, Lwo3;->X:I
+
+    const/16 v1, 0x1d
+
+    if-ne v0, v1, :cond_0
+
+    iget-wide v0, p0, Lwo3;->a:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final h()Z
+    .locals 4
+
+    iget v0, p0, Lwo3;->X:I
+
+    const/16 v1, 0x1c
+
+    if-ne v0, v1, :cond_0
+
+    iget-wide v0, p0, Lwo3;->a:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final i(Ljava/nio/ByteBuffer;)V
+    .locals 6
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result v0
+
+    and-int/lit16 v0, v0, 0xff
+
+    iput v0, p0, Lwo3;->X:I
+
+    const/16 v1, 0x1c
+
+    if-eq v0, v1, :cond_1
+
+    const/16 v2, 0x1d
+
+    if-ne v0, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    invoke-static {p1}, Lubi;->p(Ljava/nio/ByteBuffer;)J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lwo3;->a:J
+
+    iget v0, p0, Lwo3;->X:I
+
+    if-ne v0, v1, :cond_2
+
+    invoke-static {p1}, Lubi;->p(Ljava/nio/ByteBuffer;)J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lwo3;->b:J
+
+    :cond_2
+    invoke-static {p1}, Lubi;->n(Ljava/nio/ByteBuffer;)I
+
+    move-result v0
+
+    if-lez v0, :cond_3
+
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lwo3;->c:[B
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    :cond_3
+    iget p1, p0, Lwo3;->X:I
+
+    if-ne p1, v1, :cond_4
+
+    iget-wide v0, p0, Lwo3;->a:J
+
+    const-wide/16 v2, 0x100
+
+    cmp-long p1, v0, v2
+
+    if-ltz p1, :cond_4
+
+    const-wide/16 v4, 0x200
+
+    cmp-long p1, v0, v4
+
+    if-gez p1, :cond_4
+
+    sub-long/2addr v0, v2
+
+    long-to-int p1, v0
+
+    iput p1, p0, Lwo3;->o:I
+
+    :cond_4
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget v0, p0, Lwo3;->o:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    const-string v1, "TLS "
+
+    invoke-static {v0, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-wide v0, p0, Lwo3;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lwo3;->b:J
+
+    iget-object v3, p0, Lwo3;->c:[B
+
+    if-eqz v3, :cond_1
+
+    new-instance v4, Ljava/lang/String;
+
+    invoke-direct {v4, v3}, Ljava/lang/String;-><init>([B)V
+
+    goto :goto_1
+
+    :cond_1
+    const-string v4, "-"
+
+    :goto_1
+    const-string v3, "ConnectionCloseFrame["
+
+    const-string v5, "|"
+
+    invoke-static {v3, v1, v2, v0, v5}, Lzdf;->u(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "]"
+
+    invoke-static {v0, v5, v4, v1}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

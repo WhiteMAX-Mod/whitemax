@@ -65,11 +65,11 @@
 
 # virtual methods
 .method public final createRenderer(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;
+    new-instance v0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;-><init>(Ljava/lang/String;)V
 
-    return-object p0
+    return-object v0
 .end method

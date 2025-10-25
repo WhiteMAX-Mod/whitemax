@@ -1,23 +1,40 @@
-.class public abstract Lprf;
+.class public final Lprf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
-# static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
+# virtual methods
+.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 3
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+    new-instance v0, Lqrf;
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    const/4 v1, 0x1
+    move-result v1
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    const-class v2, Ljava/lang/Object;
 
-    sput-object v0, Lprf;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    return-void
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->readArrayList(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Lqrf;-><init>(ILjava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public final newArray(I)[Ljava/lang/Object;
+    .locals 0
+
+    new-array p1, p1, [Lqrf;
+
+    return-object p1
 .end method

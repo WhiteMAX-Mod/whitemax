@@ -1,161 +1,107 @@
-.class public abstract Lpf3;
-.super Ljava/lang/Object;
+.class public final Lpf3;
+.super Lrf3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Laa5;
-
-.field public static final b:Ljava/lang/Object;
-
-.field public static final c:Lzte;
-
-.field public static final d:Lzte;
-
-.field public static final e:Laa5;
-
-.field public static final f:Lzte;
-
-.field public static final g:Lzte;
-
-.field public static final h:Lzte;
-
-.field public static final i:Lzte;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public static g(I)Lrf3;
+    .locals 0
 
-    new-instance v0, Laa5;
+    if-gez p0, :cond_0
 
-    const/4 v6, 0x1
+    sget-object p0, Lrf3;->b:Lqf3;
 
-    const/16 v7, 0x40
+    return-object p0
 
-    const-string v1, "common"
+    :cond_0
+    if-lez p0, :cond_1
 
-    const/4 v2, 0x1
+    sget-object p0, Lrf3;->c:Lqf3;
 
-    const-wide/16 v3, 0x1388
+    return-object p0
 
-    const/4 v5, 0x1
+    :cond_1
+    sget-object p0, Lrf3;->a:Lpf3;
 
-    invoke-direct/range {v0 .. v7}, Laa5;-><init>(Ljava/lang/String;IJZZI)V
+    return-object p0
+.end method
 
-    sput-object v0, Lpf3;->a:Laa5;
 
-    new-instance v0, Lxb3;
+# virtual methods
+.method public final a(II)Lrf3;
+    .locals 0
 
-    const/4 v1, 0x3
+    invoke-static {p1, p2}, Ljava/lang/Integer;->compare(II)I
 
-    invoke-direct {v0, v1}, Lxb3;-><init>(I)V
+    move-result p1
 
-    const/4 v1, 0x2
+    invoke-static {p1}, Lpf3;->g(I)Lrf3;
 
-    invoke-static {v1, v0}, Lcb7;->G(ILzb6;)Lcl7;
+    move-result-object p1
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    sput-object v0, Lpf3;->b:Ljava/lang/Object;
+.method public final b(JJ)Lrf3;
+    .locals 0
 
-    new-instance v0, Lxb3;
+    invoke-static {p1, p2, p3, p4}, Ljava/lang/Long;->compare(JJ)I
 
-    const/4 v2, 0x6
+    move-result p1
 
-    invoke-direct {v0, v2}, Lxb3;-><init>(I)V
+    invoke-static {p1}, Lpf3;->g(I)Lrf3;
 
-    new-instance v2, Lzte;
+    move-result-object p1
 
-    invoke-direct {v2, v0}, Lzte;-><init>(Lzb6;)V
+    return-object p1
+.end method
 
-    sput-object v2, Lpf3;->c:Lzte;
+.method public final c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lrf3;
+    .locals 0
 
-    new-instance v0, Lxb3;
+    invoke-interface {p3, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
-    const/4 v2, 0x7
+    move-result p1
 
-    invoke-direct {v0, v2}, Lxb3;-><init>(I)V
+    invoke-static {p1}, Lpf3;->g(I)Lrf3;
 
-    new-instance v2, Lzte;
+    move-result-object p1
 
-    invoke-direct {v2, v0}, Lzte;-><init>(Lzb6;)V
+    return-object p1
+.end method
 
-    sput-object v2, Lpf3;->d:Lzte;
+.method public final d(ZZ)Lrf3;
+    .locals 0
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    invoke-static {p1, p2}, Ljava/lang/Boolean;->compare(ZZ)I
 
-    move-result-object v0
+    move-result p1
 
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
+    invoke-static {p1}, Lpf3;->g(I)Lrf3;
 
-    move-result v0
+    move-result-object p1
 
-    mul-int/2addr v0, v1
+    return-object p1
+.end method
 
-    add-int/lit8 v3, v0, -0x1
+.method public final e(ZZ)Lrf3;
+    .locals 0
 
-    new-instance v1, Laa5;
+    invoke-static {p2, p1}, Ljava/lang/Boolean;->compare(ZZ)I
 
-    const/4 v7, 0x0
+    move-result p1
 
-    const/16 v8, 0x60
+    invoke-static {p1}, Lpf3;->g(I)Lrf3;
 
-    const-string v2, "computation"
+    move-result-object p1
 
-    const-wide/16 v4, 0x1388
+    return-object p1
+.end method
 
-    invoke-direct/range {v1 .. v8}, Laa5;-><init>(Ljava/lang/String;IJZZI)V
+.method public final f()I
+    .locals 1
 
-    sput-object v1, Lpf3;->e:Laa5;
+    const/4 v0, 0x0
 
-    new-instance v0, Lxb3;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lxb3;-><init>(I)V
-
-    new-instance v1, Lzte;
-
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
-
-    sput-object v1, Lpf3;->f:Lzte;
-
-    new-instance v0, Lxb3;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lxb3;-><init>(I)V
-
-    new-instance v1, Lzte;
-
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
-
-    sput-object v1, Lpf3;->g:Lzte;
-
-    new-instance v0, Lxb3;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Lxb3;-><init>(I)V
-
-    new-instance v1, Lzte;
-
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
-
-    sput-object v1, Lpf3;->h:Lzte;
-
-    new-instance v0, Lxb3;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lxb3;-><init>(I)V
-
-    new-instance v1, Lzte;
-
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
-
-    sput-object v1, Lpf3;->i:Lzte;
-
-    return-void
+    return v0
 .end method

@@ -1,73 +1,25 @@
-.class public abstract Lhna;
+.class public final Lhna;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final a:Lhna;
 
-.field public static final b:I
+.field public static b:Ljava/lang/String; = "unknown"
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public static c:Ljava/util/concurrent/Executor;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lpbc;->permissions_allow_access:I
+    new-instance v0, Lhna;
 
-    sput v0, Lhna;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lpbc;->permissions_audio_denied_title:I
-
-    sput v0, Lhna;->b:I
-
-    sget v0, Lpbc;->permissions_audio_request_denied:I
-
-    sput v0, Lhna;->c:I
-
-    sget v0, Lpbc;->permissions_audio_title:I
-
-    sput v0, Lhna;->d:I
-
-    sget v0, Lpbc;->permissions_dialog_no:I
-
-    sput v0, Lhna;->e:I
-
-    sget v0, Lpbc;->permissions_dialog_open_setting:I
-
-    sput v0, Lhna;->f:I
-
-    sget v0, Lpbc;->permissions_dialog_yes:I
-
-    sput v0, Lhna;->g:I
-
-    sget v0, Lpbc;->permissions_video_message_request:I
-
-    sput v0, Lhna;->h:I
-
-    sget v0, Lpbc;->permissions_video_message_request_only_camera_title:I
-
-    sput v0, Lhna;->i:I
-
-    sget v0, Lpbc;->permissions_video_message_request_title:I
-
-    sput v0, Lhna;->j:I
+    sput-object v0, Lhna;->a:Lhna;
 
     return-void
 .end method

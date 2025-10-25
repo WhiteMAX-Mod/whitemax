@@ -24,21 +24,21 @@
 
 # virtual methods
 .method public a()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     .line 1
-    const-string p0, "application/octet-stream"
+    const-string v0, "application/octet-stream"
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public a(Ljava/io/OutputStream;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/m;->a:Lcom/my/tracker/obfuscated/l;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/m;->a:Lcom/my/tracker/obfuscated/l;
 
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/l;->a(Ljava/io/OutputStream;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/obfuscated/l;->a(Ljava/io/OutputStream;)V
 
     return-void
 .end method

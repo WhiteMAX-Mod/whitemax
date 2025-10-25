@@ -1,97 +1,56 @@
-.class public final synthetic Lj38;
-.super Lrxb;
+.class public final Lj38;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfla;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final b:Lxha;
+
+.field public final c:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public synthetic constructor <init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lxha;)V
+    .locals 2
 
-    iput p2, p0, Lj38;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object p2, p3
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-object p3, p5
+    const/4 v1, 0x1
 
-    move p5, p1
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    move-object p1, p4
+    iput-object v0, p0, Lj38;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-object p4, p6
+    iput-object p1, p0, Lj38;->c:Ljava/util/concurrent/Executor;
 
-    invoke-direct/range {p0 .. p5}, Ltxb;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    iput-object p2, p0, Lj38;->b:Lxha;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    iget v0, p0, Lj38;->a:I
+    check-cast p1, Lk38;
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v0, Lqv5;
 
-    iget-object p0, p0, Lks1;->receiver:Ljava/lang/Object;
+    const/16 v1, 0x15
 
-    check-cast p0, Lzgc;
+    invoke-direct {v0, p0, v1, p1}, Lqv5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object p0, p0, Lzgc;->c:Lwie;
+    iget-object p1, p0, Lj38;->c:Ljava/util/concurrent/Executor;
 
-    invoke-virtual {p0}, Lls7;->j()I
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    move-result p0
-
-    const/16 v0, 0x8
-
-    if-le p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lks1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lsaa;
-
-    iget-object p0, p0, Lsaa;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    return-object p0
-
-    :pswitch_1
-    iget-object p0, p0, Lks1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lone/me/android/MainActivity;
-
-    sget v0, Lone/me/android/MainActivity;->b1:I
-
-    invoke-virtual {p0}, Lone/me/android/MainActivity;->X()Lxzc;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

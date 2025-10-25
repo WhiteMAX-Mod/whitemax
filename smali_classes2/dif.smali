@@ -1,48 +1,76 @@
-.class public final Ldif;
-.super Ljx3;
+.class public final synthetic Ldif;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Leia;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Leif;
 
 
 # direct methods
-.method public constructor <init>(Leia;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Leif;I)V
     .locals 0
 
-    iput-object p1, p0, Ldif;->Y:Leia;
+    iput p2, p0, Ldif;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ldif;->b:Leif;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    iput-object p1, p0, Ldif;->o:Ljava/lang/Object;
+    iget v0, p0, Ldif;->a:I
 
-    iget p1, p0, Ldif;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    move-result-object p1
 
-    iput p1, p0, Ldif;->X:I
+    check-cast p1, Ljava/lang/Float;
 
-    iget-object p1, p0, Ldif;->Y:Leia;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    const/4 v0, 0x0
+    move-result p1
 
-    invoke-virtual {p1, v0, p0}, Leia;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v0, p0, Ldif;->b:Leif;
 
-    move-result-object p0
+    invoke-virtual {v0, p1}, Leif;->d(F)V
 
-    return-object p0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iget-object v0, p0, Ldif;->b:Leif;
+
+    invoke-virtual {v0, p1}, Leif;->d(F)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

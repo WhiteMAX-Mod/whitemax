@@ -2,22 +2,43 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Comparable;
+
 
 # instance fields
-.field public a:Landroid/content/Context;
+.field public final a:J
 
-.field public b:Ljava/lang/String;
+.field public final b:Lmc4;
 
-.field public c:[Landroid/content/Intent;
 
-.field public d:Ljava/lang/String;
+# direct methods
+.method public constructor <init>(JLmc4;)V
+    .locals 0
 
-.field public e:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Landroidx/core/graphics/drawable/IconCompat;
+    iput-wide p1, p0, Lxyd;->a:J
 
-.field public g:Lwr;
+    iput-object p3, p0, Lxyd;->b:Lmc4;
 
-.field public h:Ldz7;
+    return-void
+.end method
 
-.field public i:Z
+
+# virtual methods
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
+
+    check-cast p1, Lxyd;
+
+    iget-wide v0, p0, Lxyd;->a:J
+
+    iget-wide v2, p1, Lxyd;->a:J
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
+
+    move-result p1
+
+    return p1
+.end method

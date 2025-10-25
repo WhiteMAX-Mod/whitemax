@@ -21,16 +21,16 @@
     invoke-direct {p0}, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;-><init>()V
 
     .line 2
-    new-instance v0, Lsq0;
+    new-instance v0, Las0;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lsq0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Las0;-><init>(ILjava/lang/Object;)V
 
     .line 3
-    new-instance p0, Landroid/graphics/Rect;
+    new-instance v0, Landroid/graphics/Rect;
 
-    invoke-direct {p0}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     return-void
 .end method
@@ -42,16 +42,16 @@
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 5
-    new-instance p1, Lsq0;
+    new-instance p1, Las0;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p2, p0}, Lsq0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Las0;-><init>(ILjava/lang/Object;)V
 
     .line 6
-    new-instance p0, Landroid/graphics/Rect;
+    new-instance p1, Landroid/graphics/Rect;
 
-    invoke-direct {p0}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     return-void
 .end method
@@ -61,19 +61,19 @@
 .method public final l(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
     .locals 0
 
-    new-instance p0, Ljava/lang/ClassCastException;
+    new-instance p1, Ljava/lang/ClassCastException;
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final u(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
     .locals 0
 
-    new-instance p0, Ljava/lang/ClassCastException;
+    new-instance p1, Ljava/lang/ClassCastException;
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
 
-    throw p0
+    throw p1
 .end method

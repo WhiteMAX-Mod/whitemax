@@ -135,11 +135,11 @@
     invoke-direct {v1, v0}, Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;-><init>(Landroid/os/Looper;)V
 
     .line 5
-    new-instance v0, Lh74;
+    new-instance v0, Lf44;
 
-    const/4 v2, 0x2
+    const/4 v2, 0x3
 
-    invoke-direct {v0, p1, v2, p2}, Lh74;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v2, p2}, Lf44;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-static {v1, v0}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
@@ -156,11 +156,11 @@
 
     .line 7
     :cond_0
-    new-instance p0, Lqj4;
+    new-instance p0, Lzg4;
 
-    const/4 v0, 0x6
+    const/16 v0, 0x1b
 
-    invoke-direct {p0, v0}, Lqj4;-><init>(I)V
+    invoke-direct {p0, v0}, Lzg4;-><init>(I)V
 
     :goto_0
     invoke-direct {p2, p0, v1, p1, p3}, Lorg/webrtc/EglThread;-><init>(Lorg/webrtc/EglThread$ReleaseMonitor;Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;Lorg/webrtc/EglBase$EglConnection;Lorg/webrtc/RenderSynchronizer;)V
@@ -251,9 +251,9 @@
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->clear()V
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
     return-void
 .end method
@@ -261,33 +261,33 @@
 
 # virtual methods
 .method public addExceptionCallback(Ljava/lang/Runnable;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
+    iget-object v0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;->addExceptionCallback(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;->addExceptionCallback(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
 .method public createEglBaseWithSharedConnection()Lorg/webrtc/EglBase;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglThread;->eglConnection:Lorg/webrtc/EglBase$EglConnection;
+    iget-object v0, p0, Lorg/webrtc/EglThread;->eglConnection:Lorg/webrtc/EglBase$EglConnection;
 
-    invoke-static {p0}, Lorg/webrtc/EglBase;->create(Lorg/webrtc/EglBase$EglConnection;)Lorg/webrtc/EglBase;
+    invoke-static {v0}, Lorg/webrtc/EglBase;->create(Lorg/webrtc/EglBase$EglConnection;)Lorg/webrtc/EglBase;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getHandler()Landroid/os/Handler;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
+    iget-object v0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public onRenderWindowClose()V
@@ -295,11 +295,11 @@
 
     iget-object v0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-    new-instance v1, Le15;
+    new-instance v1, Lz65;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v2}, Le15;-><init>(Lorg/webrtc/EglThread;I)V
+    invoke-direct {v1, p0, v2}, Lz65;-><init>(Lorg/webrtc/EglThread;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -311,11 +311,11 @@
 
     iget-object v0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-    new-instance v1, Le15;
+    new-instance v1, Lz65;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Le15;-><init>(Lorg/webrtc/EglThread;I)V
+    invoke-direct {v1, p0, v2}, Lz65;-><init>(Lorg/webrtc/EglThread;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -349,31 +349,31 @@
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lje4;
+    new-instance v2, Lgj4;
 
-    const/16 v3, 0xf
+    const/16 v3, 0x12
 
-    invoke-direct {v2, v3, v1}, Lje4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lgj4;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object p0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
+    iget-object v0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/os/Looper;->quitSafely()V
+    invoke-virtual {v0}, Landroid/os/Looper;->quitSafely()V
 
     return-void
 .end method
 
 .method public removeExceptionCallback(Ljava/lang/Runnable;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
+    iget-object v0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;->removeExceptionCallback(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;->removeExceptionCallback(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -385,16 +385,16 @@
 
     if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    invoke-interface {p1, p0}, Lorg/webrtc/EglThread$RenderUpdate;->update(Z)V
+    invoke-interface {p1, v0}, Lorg/webrtc/EglThread$RenderUpdate;->update(Z)V
 
     return-void
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

@@ -1,40 +1,129 @@
-.class public abstract Ll7c;
-.super Ljava/lang/Object;
+.class public final Ll7c;
+.super Lm7c;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_avatar_select_screen:I = 0x7f0a07a9
+# instance fields
+.field public final a:Lorf;
 
-.field public static oneme_settings_change_avatar_cancel:I = 0x7f0a07aa
+.field public final b:I
 
-.field public static oneme_settings_change_avatar_remove_current:I = 0x7f0a07ab
 
-.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f0a07ac
+# direct methods
+.method public constructor <init>(ILorf;)V
+    .locals 0
 
-.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f0a07ad
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f0a07ae
+    iput-object p2, p0, Ll7c;->a:Lorf;
 
-.field public static oneme_settings_collapsingstoolbar:I = 0x7f0a07af
+    iput p1, p0, Ll7c;->b:I
 
-.field public static oneme_settings_container:I = 0x7f0a07b0
+    return-void
+.end method
 
-.field public static oneme_settings_list_screen_appbar:I = 0x7f0a07b7
 
-.field public static oneme_settings_list_screen_pinned_toolbar:I = 0x7f0a07b8
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-.field public static oneme_settings_toolbar:I = 0x7f0a0849
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_topbar:I = 0x7f0a084a
+    goto :goto_1
 
-.field public static oneme_settings_topbar_avatar:I = 0x7f0a084b
+    :cond_0
+    instance-of v0, p1, Ll7c;
 
-.field public static oneme_settings_topbar_container:I = 0x7f0a084c
+    if-nez v0, :cond_1
 
-.field public static oneme_settings_topbar_dotdivider:I = 0x7f0a084d
+    goto :goto_0
 
-.field public static oneme_settings_topbar_name:I = 0x7f0a084e
+    :cond_1
+    check-cast p1, Ll7c;
 
-.field public static oneme_settings_topbar_nick:I = 0x7f0a084f
+    iget-object v0, p0, Ll7c;->a:Lorf;
 
-.field public static oneme_settings_topbar_phone:I = 0x7f0a0850
+    iget-object v1, p1, Ll7c;->a:Lorf;
+
+    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Ll7c;->b:I
+
+    iget p1, p1, Ll7c;->b:I
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ll7c;->a:Lorf;
+
+    iget v0, v0, Lorf;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Ll7c;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSuccessSnackbar(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ll7c;->a:Lorf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ll7c;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

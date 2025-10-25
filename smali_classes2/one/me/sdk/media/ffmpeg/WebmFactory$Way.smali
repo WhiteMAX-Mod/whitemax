@@ -84,7 +84,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIZLld4;)V
+.method public synthetic constructor <init>(IIZLki4;)V
     .locals 0
 
     .line 1
@@ -96,25 +96,25 @@
 
 # virtual methods
 .method public final getHeight$media_ffmpeg_release()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way;->height:I
+    iget v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way;->height:I
 
-    return p0
+    return v0
 .end method
 
 .method public final getLimitFps$media_ffmpeg_release()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way;->limitFps:Z
+    iget-boolean v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way;->limitFps:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getWidth$media_ffmpeg_release()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way;->width:I
+    iget v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way;->width:I
 
-    return p0
+    return v0
 .end method

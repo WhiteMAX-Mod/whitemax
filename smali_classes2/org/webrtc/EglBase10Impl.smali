@@ -116,24 +116,24 @@
 .end method
 
 .method private checkIsNotReleased()V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/webrtc/EglBase10Impl;->eglConnection:Lorg/webrtc/EglBase10Impl$EglConnection;
+    iget-object v0, p0, Lorg/webrtc/EglBase10Impl;->eglConnection:Lorg/webrtc/EglBase10Impl$EglConnection;
 
-    sget-object v0, Lorg/webrtc/EglBase10Impl;->EGL_NO_CONNECTION:Lorg/webrtc/EglBase10Impl$EglConnection;
+    sget-object v1, Lorg/webrtc/EglBase10Impl;->EGL_NO_CONNECTION:Lorg/webrtc/EglBase10Impl$EglConnection;
 
-    if-eq p0, v0, :cond_0
+    if-eq v0, v1, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "This object has been released"
+    const-string v1, "This object has been released"
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method private static createEglContext(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLContext;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;I)Ljavax/microedition/khronos/egl/EGLContext;
@@ -207,7 +207,7 @@
 
     const-string p3, "Failed to create EGL context: 0x"
 
-    invoke-static {p3, p0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -240,13 +240,13 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Input must be either a SurfaceHolder or SurfaceTexture"
+    const-string v0, "Input must be either a SurfaceHolder or SurfaceTexture"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
     :goto_0
@@ -293,11 +293,11 @@
     return-void
 
     :cond_2
-    new-instance p0, Landroid/opengl/GLException;
+    new-instance p1, Landroid/opengl/GLException;
 
     invoke-interface {v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetError()I
 
-    move-result p1
+    move-result v1
 
     invoke-interface {v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetError()I
 
@@ -307,24 +307,24 @@
 
     move-result-object v0
 
-    const-string v1, "Failed to create window surface: 0x"
+    const-string v2, "Failed to create window surface: 0x"
 
-    invoke-static {v1, v0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, p1, v0}, Landroid/opengl/GLException;-><init>(ILjava/lang/String;)V
+    invoke-direct {p1, v1, v0}, Landroid/opengl/GLException;-><init>(ILjava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_3
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string p1, "Already has an EGLSurface"
+    const-string v0, "Already has an EGLSurface"
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public static bridge synthetic d()J
@@ -407,7 +407,7 @@
 
     const-string v0, "eglChooseConfig failed: 0x"
 
-    invoke-static {v0, p2}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -458,7 +458,7 @@
 
     const-string v2, "Unable to initialize EGL10: 0x"
 
-    invoke-static {v2, p0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -483,7 +483,7 @@
 
     const-string v2, "Unable to get EGL10 display: 0x"
 
-    invoke-static {v2, p0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -508,7 +508,7 @@
 .end method
 
 .method public createPbufferSurface(II)V
-    .locals 5
+    .locals 6
 
     invoke-direct {p0}, Lorg/webrtc/EglBase10Impl;->checkIsNotReleased()V
 
@@ -557,11 +557,11 @@
     return-void
 
     :cond_0
-    new-instance p0, Landroid/opengl/GLException;
+    new-instance v1, Landroid/opengl/GLException;
 
     invoke-interface {v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetError()I
 
-    move-result v1
+    move-result v2
 
     invoke-interface {v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetError()I
 
@@ -571,13 +571,13 @@
 
     move-result-object v0
 
-    const-string v2, "x"
+    const-string v3, "x"
 
-    const-string v3, ": 0x"
+    const-string v4, ": 0x"
 
-    const-string v4, "Failed to create pixel buffer surface with size "
+    const-string v5, "Failed to create pixel buffer surface with size "
 
-    invoke-static {v4, p1, v2, p2, v3}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, p1, v3, p2, v4}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -587,18 +587,18 @@
 
     move-result-object p1
 
-    invoke-direct {p0, v1, p1}, Landroid/opengl/GLException;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, v2, p1}, Landroid/opengl/GLException;-><init>(ILjava/lang/String;)V
 
-    throw p0
+    throw v1
 
     :cond_1
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string p1, "Already has an EGLSurface"
+    const-string p2, "Already has an EGLSurface"
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public createSurface(Landroid/graphics/SurfaceTexture;)V
@@ -624,17 +624,17 @@
 .end method
 
 .method public detachCurrent()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglBase10Impl;->eglConnection:Lorg/webrtc/EglBase10Impl$EglConnection;
+    iget-object v0, p0, Lorg/webrtc/EglBase10Impl;->eglConnection:Lorg/webrtc/EglBase10Impl$EglConnection;
 
-    invoke-virtual {p0}, Lorg/webrtc/EglBase10Impl$EglConnection;->detachCurrent()V
+    invoke-virtual {v0}, Lorg/webrtc/EglBase10Impl$EglConnection;->detachCurrent()V
 
     return-void
 .end method
 
 .method public getEglBaseContext()Lorg/webrtc/EglBase$Context;
-    .locals 3
+    .locals 4
 
     new-instance v0, Lorg/webrtc/EglBase10Impl$Context;
 
@@ -650,34 +650,34 @@
 
     move-result-object v2
 
-    iget-object p0, p0, Lorg/webrtc/EglBase10Impl;->eglConnection:Lorg/webrtc/EglBase10Impl$EglConnection;
+    iget-object v3, p0, Lorg/webrtc/EglBase10Impl;->eglConnection:Lorg/webrtc/EglBase10Impl$EglConnection;
 
-    invoke-virtual {p0}, Lorg/webrtc/EglBase10Impl$EglConnection;->getConfig()Ljavax/microedition/khronos/egl/EGLConfig;
+    invoke-virtual {v3}, Lorg/webrtc/EglBase10Impl$EglConnection;->getConfig()Ljavax/microedition/khronos/egl/EGLConfig;
 
-    move-result-object p0
+    move-result-object v3
 
-    invoke-direct {v0, v1, v2, p0}, Lorg/webrtc/EglBase10Impl$Context;-><init>(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLContext;Ljavax/microedition/khronos/egl/EGLConfig;)V
+    invoke-direct {v0, v1, v2, v3}, Lorg/webrtc/EglBase10Impl$Context;-><init>(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLContext;Ljavax/microedition/khronos/egl/EGLConfig;)V
 
     return-object v0
 .end method
 
 .method public hasSurface()Z
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/webrtc/EglBase10Impl;->eglSurface:Ljavax/microedition/khronos/egl/EGLSurface;
+    iget-object v0, p0, Lorg/webrtc/EglBase10Impl;->eglSurface:Ljavax/microedition/khronos/egl/EGLSurface;
 
-    sget-object v0, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_SURFACE:Ljavax/microedition/khronos/egl/EGLSurface;
+    sget-object v1, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_SURFACE:Ljavax/microedition/khronos/egl/EGLSurface;
 
-    if-eq p0, v0, :cond_0
+    if-eq v0, v1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public makeCurrent()V
@@ -691,20 +691,20 @@
 
     if-eq v0, v1, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/EglBase10Impl;->eglConnection:Lorg/webrtc/EglBase10Impl$EglConnection;
+    iget-object v1, p0, Lorg/webrtc/EglBase10Impl;->eglConnection:Lorg/webrtc/EglBase10Impl$EglConnection;
 
-    invoke-virtual {p0, v0}, Lorg/webrtc/EglBase10Impl$EglConnection;->makeCurrent(Ljavax/microedition/khronos/egl/EGLSurface;)V
+    invoke-virtual {v1, v0}, Lorg/webrtc/EglBase10Impl$EglConnection;->makeCurrent(Ljavax/microedition/khronos/egl/EGLSurface;)V
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "No EGLSurface - can\'t make current"
+    const-string v1, "No EGLSurface - can\'t make current"
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public release()V
@@ -757,7 +757,7 @@
 .end method
 
 .method public surfaceHeight()I
-    .locals 4
+    .locals 5
 
     const/4 v0, 0x1
 
@@ -775,21 +775,21 @@
 
     move-result-object v2
 
-    iget-object p0, p0, Lorg/webrtc/EglBase10Impl;->eglSurface:Ljavax/microedition/khronos/egl/EGLSurface;
+    iget-object v3, p0, Lorg/webrtc/EglBase10Impl;->eglSurface:Ljavax/microedition/khronos/egl/EGLSurface;
 
-    const/16 v3, 0x3056
+    const/16 v4, 0x3056
 
-    invoke-interface {v1, v2, p0, v3, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglQuerySurface(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;I[I)Z
+    invoke-interface {v1, v2, v3, v4, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglQuerySurface(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;I[I)Z
 
-    const/4 p0, 0x0
+    const/4 v1, 0x0
 
-    aget p0, v0, p0
+    aget v0, v0, v1
 
-    return p0
+    return v0
 .end method
 
 .method public surfaceWidth()I
-    .locals 4
+    .locals 5
 
     const/4 v0, 0x1
 
@@ -807,21 +807,21 @@
 
     move-result-object v2
 
-    iget-object p0, p0, Lorg/webrtc/EglBase10Impl;->eglSurface:Ljavax/microedition/khronos/egl/EGLSurface;
+    iget-object v3, p0, Lorg/webrtc/EglBase10Impl;->eglSurface:Ljavax/microedition/khronos/egl/EGLSurface;
 
-    const/16 v3, 0x3057
+    const/16 v4, 0x3057
 
-    invoke-interface {v1, v2, p0, v3, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglQuerySurface(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;I[I)Z
+    invoke-interface {v1, v2, v3, v4, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglQuerySurface(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;I[I)Z
 
-    const/4 p0, 0x0
+    const/4 v1, 0x0
 
-    aget p0, v0, p0
+    aget v0, v0, v1
 
-    return p0
+    return v0
 .end method
 
 .method public swapBuffers()V
-    .locals 3
+    .locals 4
 
     .line 1
     invoke-direct {p0}, Lorg/webrtc/EglBase10Impl;->checkIsNotReleased()V
@@ -852,9 +852,9 @@
 
     move-result-object v2
 
-    iget-object p0, p0, Lorg/webrtc/EglBase10Impl;->eglSurface:Ljavax/microedition/khronos/egl/EGLSurface;
+    iget-object v3, p0, Lorg/webrtc/EglBase10Impl;->eglSurface:Ljavax/microedition/khronos/egl/EGLSurface;
 
-    invoke-interface {v1, v2, p0}, Ljavax/microedition/khronos/egl/EGL10;->eglSwapBuffers(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;)Z
+    invoke-interface {v1, v2, v3}, Ljavax/microedition/khronos/egl/EGL10;->eglSwapBuffers(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;)Z
 
     .line 5
     monitor-exit v0
@@ -862,23 +862,23 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 
     .line 6
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "No EGLSurface - can\'t swap buffers"
+    const-string v1, "No EGLSurface - can\'t swap buffers"
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public swapBuffers(J)V

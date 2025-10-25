@@ -1,99 +1,201 @@
-.class public final Lqvc;
+.class public abstract Lqvc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lwpe;
 
 
-# instance fields
-.field public final a:Ljava/util/Set;
+# static fields
+.field public static Capability:[I = null
 
-.field public b:Lwpe;
+.field public static Capability_queryPatterns:I = 0x0
+
+.field public static Capability_shortcutMatchRequired:I = 0x1
+
+.field public static ColorStateListItem:[I = null
+
+.field public static ColorStateListItem_alpha:I = 0x3
+
+.field public static ColorStateListItem_android_alpha:I = 0x1
+
+.field public static ColorStateListItem_android_color:I = 0x0
+
+.field public static ColorStateListItem_android_lStar:I = 0x2
+
+.field public static ColorStateListItem_lStar:I = 0x4
+
+.field public static FontFamily:[I = null
+
+.field public static FontFamilyFont:[I = null
+
+.field public static FontFamilyFont_android_font:I = 0x0
+
+.field public static FontFamilyFont_android_fontStyle:I = 0x2
+
+.field public static FontFamilyFont_android_fontVariationSettings:I = 0x4
+
+.field public static FontFamilyFont_android_fontWeight:I = 0x1
+
+.field public static FontFamilyFont_android_ttcIndex:I = 0x3
+
+.field public static FontFamilyFont_font:I = 0x5
+
+.field public static FontFamilyFont_fontStyle:I = 0x6
+
+.field public static FontFamilyFont_fontVariationSettings:I = 0x7
+
+.field public static FontFamilyFont_fontWeight:I = 0x8
+
+.field public static FontFamilyFont_ttcIndex:I = 0x9
+
+.field public static FontFamily_fontProviderAuthority:I = 0x0
+
+.field public static FontFamily_fontProviderCerts:I = 0x1
+
+.field public static FontFamily_fontProviderFetchStrategy:I = 0x2
+
+.field public static FontFamily_fontProviderFetchTimeout:I = 0x3
+
+.field public static FontFamily_fontProviderPackage:I = 0x4
+
+.field public static FontFamily_fontProviderQuery:I = 0x5
+
+.field public static FontFamily_fontProviderSystemFontFamily:I = 0x6
+
+.field public static GradientColor:[I = null
+
+.field public static GradientColorItem:[I = null
+
+.field public static GradientColorItem_android_color:I = 0x0
+
+.field public static GradientColorItem_android_offset:I = 0x1
+
+.field public static GradientColor_android_centerColor:I = 0x7
+
+.field public static GradientColor_android_centerX:I = 0x3
+
+.field public static GradientColor_android_centerY:I = 0x4
+
+.field public static GradientColor_android_endColor:I = 0x1
+
+.field public static GradientColor_android_endX:I = 0xa
+
+.field public static GradientColor_android_endY:I = 0xb
+
+.field public static GradientColor_android_gradientRadius:I = 0x5
+
+.field public static GradientColor_android_startColor:I = 0x0
+
+.field public static GradientColor_android_startX:I = 0x8
+
+.field public static GradientColor_android_startY:I = 0x9
+
+.field public static GradientColor_android_tileMode:I = 0x6
+
+.field public static GradientColor_android_type:I = 0x2
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const v0, 0x7f04070a
 
-    new-instance v0, Ljava/util/WeakHashMap;
+    const v1, 0x7f04075c
 
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+    filled-new-array {v0, v1}, [I
 
     move-result-object v0
 
-    iput-object v0, p0, Lqvc;->a:Ljava/util/Set;
+    sput-object v0, Lqvc;->Capability:[I
 
-    const/4 v0, 0x0
+    const v0, 0x7f04003c
 
-    iput-object v0, p0, Lqvc;->b:Lwpe;
+    const v1, 0x7f040589
 
-    return-void
-.end method
+    const v2, 0x10101a5
 
+    const v3, 0x101031f
 
-# virtual methods
-.method public final a(Lwpe;)V
-    .locals 2
+    const v4, 0x1010647
 
-    iput-object p1, p0, Lqvc;->b:Lwpe;
-
-    iget-object p0, p0, Lqvc;->a:Ljava/util/Set;
-
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    filled-new-array {v2, v3, v4, v0, v1}, [I
 
     move-result-object v0
 
-    check-cast v0, Lpvc;
+    sput-object v0, Lqvc;->ColorStateListItem:[I
 
-    invoke-virtual {v0}, Lh0;->g()Z
+    const/4 v0, 0x7
 
-    move-result v1
+    new-array v0, v0, [I
 
-    if-nez v1, :cond_0
+    fill-array-data v0, :array_0
 
-    invoke-virtual {v0, p1}, Lpvc;->p(Lwpe;)V
+    sput-object v0, Lqvc;->FontFamily:[I
 
-    goto :goto_0
+    const/16 v0, 0xa
 
-    :cond_1
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lqvc;->FontFamilyFont:[I
+
+    const/16 v0, 0xc
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_2
+
+    sput-object v0, Lqvc;->GradientColor:[I
+
+    const v0, 0x1010514
+
+    filled-new-array {v2, v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lqvc;->GradientColorItem:[I
+
     return-void
-.end method
 
-.method public final get()Ljava/lang/Object;
-    .locals 2
+    nop
 
-    new-instance v0, Lpvc;
+    :array_0
+    .array-data 4
+        0x7f0403e2
+        0x7f0403e3
+        0x7f0403e4
+        0x7f0403e5
+        0x7f0403e6
+        0x7f0403e7
+        0x7f0403e8
+    .end array-data
 
-    invoke-direct {v0}, Lh0;-><init>()V
+    :array_1
+    .array-data 4
+        0x1010532
+        0x1010533
+        0x101053f
+        0x101056f
+        0x1010570
+        0x7f0403e0
+        0x7f0403e9
+        0x7f0403ea
+        0x7f0403eb
+        0x7f0408c0
+    .end array-data
 
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lpvc;->h:Lh0;
-
-    iget-object v1, p0, Lqvc;->b:Lwpe;
-
-    invoke-virtual {v0, v1}, Lpvc;->p(Lwpe;)V
-
-    iget-object p0, p0, Lqvc;->a:Ljava/util/Set;
-
-    invoke-interface {p0, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    return-object v0
+    :array_2
+    .array-data 4
+        0x101019d
+        0x101019e
+        0x10101a1
+        0x10101a2
+        0x10101a3
+        0x10101a4
+        0x1010201
+        0x101020b
+        0x1010510
+        0x1010511
+        0x1010512
+        0x1010513
+    .end array-data
 .end method

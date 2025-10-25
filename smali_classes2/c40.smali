@@ -1,80 +1,126 @@
-.class public final synthetic Lc40;
+.class public final Lc40;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lpr8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lg40;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic c:Lb40;
+.field public final c:Ljava/lang/String;
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lg40;Lb40;I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput p3, p0, Lc40;->a:I
-
-    iput-object p1, p0, Lc40;->b:Lg40;
-
-    iput-object p2, p0, Lc40;->c:Lb40;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lc40;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lc40;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lc40;->c:Ljava/lang/String;
+
+    iput p4, p0, Lc40;->d:I
+
+    iput p5, p0, Lc40;->e:I
+
+    iput p6, p0, Lc40;->f:I
+
+    iput-object p7, p0, Lc40;->g:Ljava/lang/String;
+
+    iput-object p8, p0, Lc40;->h:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    iget p1, p0, Lc40;->a:I
+    iget-object v0, p0, Lc40;->b:Ljava/lang/String;
 
-    packed-switch p1, :pswitch_data_0
+    return-object v0
+.end method
 
-    iget-object p1, p0, Lc40;->b:Lg40;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object p1, p1, Lg40;->a:Lbc6;
+    const-string v0, ", sampleMimeType: "
 
-    new-instance v0, Lr69;
+    const-string v1, ", codecs: "
 
-    iget-object p0, p0, Lc40;->c:Lb40;
+    const-string v2, "AudioFormat(id: "
 
-    iget-wide v1, p0, Lb40;->b:J
+    iget-object v3, p0, Lc40;->a:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, p0}, Lr69;-><init>(JLb40;)V
+    iget-object v4, p0, Lc40;->b:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget-object p1, p0, Lc40;->b:Lg40;
+    iget-object v1, p0, Lc40;->c:Ljava/lang/String;
 
-    iget-object p1, p1, Lg40;->a:Lbc6;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Lr69;
+    const-string v1, ", bitrate: "
 
-    iget-object p0, p0, Lc40;->c:Lb40;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lb40;->b:J
+    iget v1, p0, Lc40;->d:I
 
-    invoke-direct {v0, v1, v2, p0}, Lr69;-><init>(JLb40;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1, v0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, ", sampleRate: "
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    nop
+    const-string v1, ", channelCount: "
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v2, ", label: "
+
+    iget v3, p0, Lc40;->e:I
+
+    iget v4, p0, Lc40;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    iget-object v1, p0, Lc40;->g:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", language: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc40;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

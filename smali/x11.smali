@@ -1,222 +1,476 @@
 .class public final Lx11;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltc6;
+.implements La21;
 
 
 # instance fields
-.field public synthetic X:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+.field public final X:Lsce;
 
-.field public synthetic Y:Lab1;
+.field public final Y:Ltrf;
 
-.field public synthetic Z:Z
+.field public final Z:Loce;
 
-.field public final synthetic r0:Lm21;
+.field public final a:I
 
-.field public final synthetic s0:Lcl7;
+.field public final b:Lorf;
+
+.field public final c:I
+
+.field public final o:J
+
+.field public final q0:Lqu7;
+
+.field public final r0:Z
+
+.field public final s0:I
 
 
 # direct methods
-.method public constructor <init>(Lm21;Lcl7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(ILorf;IJLorf;Loce;Ljava/lang/Integer;I)V
+    .locals 2
 
-    iput-object p1, p0, Lx11;->r0:Lm21;
+    and-int/lit8 p9, p9, 0x20
 
-    iput-object p2, p0, Lx11;->s0:Lcl7;
+    if-eqz p9, :cond_0
 
-    const/4 p1, 0x4
+    const/4 p6, 0x0
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    :cond_0
+    invoke-virtual {p8}, Ljava/lang/Number;->intValue()I
+
+    move-result p8
+
+    new-instance p9, Lqu7;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x6
+
+    invoke-direct {p9, p8, v0, v1}, Lqu7;-><init>(III)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lx11;->a:I
+
+    iput-object p2, p0, Lx11;->b:Lorf;
+
+    iput p3, p0, Lx11;->c:I
+
+    iput-wide p4, p0, Lx11;->o:J
+
+    sget-object p1, Lsce;->b:Lsce;
+
+    iput-object p1, p0, Lx11;->X:Lsce;
+
+    iput-object p6, p0, Lx11;->Y:Ltrf;
+
+    iput-object p7, p0, Lx11;->Z:Loce;
+
+    iput-object p9, p0, Lx11;->q0:Lqu7;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lx11;->r0:Z
+
+    sget p1, Lkra;->g:I
+
+    iput p1, p0, Lx11;->s0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a()Ltrf;
+    .locals 1
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    iget-object v0, p0, Lx11;->Y:Ltrf;
 
-    check-cast p2, Lab1;
-
-    check-cast p3, Ljava/lang/Boolean;
-
-    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p3
-
-    check-cast p4, Lkotlin/coroutines/Continuation;
-
-    new-instance v0, Lx11;
-
-    iget-object v1, p0, Lx11;->r0:Lm21;
-
-    iget-object p0, p0, Lx11;->s0:Lcl7;
-
-    invoke-direct {v0, v1, p0, p4}, Lx11;-><init>(Lm21;Lcl7;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lx11;->X:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    iput-object p2, v0, Lx11;->Y:Lab1;
-
-    iput-boolean p3, v0, Lx11;->Z:Z
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    invoke-virtual {v0, p0}, Lx11;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
+.method public final d()Lqce;
+    .locals 1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget-object v0, p0, Lx11;->Z:Loce;
 
-    iget-object p1, p0, Lx11;->X:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lx11;->Y:Lab1;
+.method public final e()Lsu7;
+    .locals 1
 
-    iget-boolean v1, p0, Lx11;->Z:Z
+    iget-object v0, p0, Lx11;->q0:Lqu7;
 
-    iget-object v2, p0, Lx11;->r0:Lm21;
+    return-object v0
+.end method
 
-    iget-object v3, v2, Lm21;->s0:Lyce;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {v3}, Lyce;->getValue()Ljava/lang/Object;
+    instance-of v0, p1, Lx11;
 
-    move-result-object v4
-
-    move-object v5, v4
-
-    check-cast v5, Lbr0;
-
-    iget-object v7, v0, Lab1;->r:Lfa8;
-
-    iget-object v8, v0, Lab1;->q:Lfa8;
-
-    iget-boolean v6, v0, Lab1;->g:Z
-
-    sget-object v9, Lfa8;->b:Lfa8;
-
-    sget-object v10, Lfa8;->o:Lfa8;
-
-    iget-object v11, p0, Lx11;->s0:Lcl7;
-
-    if-eqz v6, :cond_2
-
-    iget-object v6, v0, Lab1;->e:Lme5;
-
-    instance-of v6, v6, Lle5;
-
-    if-eqz v6, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-interface {v11}, Lcl7;->getValue()Ljava/lang/Object;
+    check-cast p1, Lx11;
 
-    move-result-object v6
+    iget v0, p0, Lx11;->a:I
 
-    check-cast v6, Lrj5;
+    iget v1, p1, Lx11;->a:I
 
-    check-cast v6, Ltj5;
+    if-eq v0, v1, :cond_2
 
-    invoke-virtual {v6}, Ltj5;->s()Z
-
-    move-result v6
-
-    if-nez v6, :cond_3
+    goto :goto_0
 
     :cond_2
-    :goto_0
-    move-object v6, v10
+    iget-object v0, p0, Lx11;->b:Lorf;
 
-    goto :goto_1
+    iget-object v1, p1, Lx11;->b:Lorf;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
 
     :cond_3
-    if-eqz v1, :cond_4
+    iget v0, p0, Lx11;->c:I
 
-    move-object v6, v9
+    iget v1, p1, Lx11;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-wide v0, p0, Lx11;->o:J
+
+    iget-wide v2, p1, Lx11;->o:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lx11;->X:Lsce;
+
+    iget-object v1, p1, Lx11;->X:Lsce;
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v0, p0, Lx11;->Y:Ltrf;
+
+    iget-object v1, p1, Lx11;->Y:Ltrf;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-object v0, p0, Lx11;->Z:Loce;
+
+    iget-object v1, p1, Lx11;->Z:Loce;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget-object v0, p0, Lx11;->q0:Lqu7;
+
+    iget-object v1, p1, Lx11;->q0:Lqu7;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget-boolean v0, p0, Lx11;->r0:Z
+
+    iget-boolean p1, p1, Lx11;->r0:Z
+
+    if-eq v0, p1, :cond_a
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_a
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Lx11;->a:I
+
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lx11;->o:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Ltrf;
+    .locals 1
+
+    iget-object v0, p0, Lx11;->b:Lorf;
+
+    return-object v0
+.end method
+
+.method public final getType()Lsce;
+    .locals 1
+
+    iget-object v0, p0, Lx11;->X:Lsce;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lx11;->a:I
+
+    invoke-static {v0}, Ldy1;->v(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lx11;->b:Lorf;
+
+    iget v2, v2, Lorf;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lx11;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lx11;->o:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lx11;->X:Lsce;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    const/4 v0, 0x0
+
+    iget-object v3, p0, Lx11;->Y:Ltrf;
+
+    if-nez v3, :cond_0
+
+    move v3, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v2, v3
+
+    mul-int/2addr v2, v1
+
+    iget-object v3, p0, Lx11;->Z:Loce;
+
+    if-nez v3, :cond_1
+
+    move v3, v0
 
     goto :goto_1
 
-    :cond_4
-    sget-object v6, Lfa8;->a:Lfa8;
+    :cond_1
+    invoke-virtual {v3}, Loce;->hashCode()I
+
+    move-result v3
 
     :goto_1
-    invoke-interface {v11}, Lcl7;->getValue()Ljava/lang/Object;
+    add-int/2addr v2, v3
 
-    move-result-object v11
+    mul-int/2addr v2, v1
 
-    check-cast v11, Lrj5;
+    iget-object v3, p0, Lx11;->q0:Lqu7;
 
-    check-cast v11, Ltj5;
-
-    invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v12, Lru/ok/tamtam/android/prefs/PmsKey;->group-call-chat-support:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v11, v12, v13}, Lnad;->l(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v11
-
-    if-nez v11, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    iget-object v11, v0, Lab1;->f:Lu31;
-
-    if-eqz v11, :cond_6
-
-    iget-object v11, v11, Lu31;->a:Ljava/lang/Long;
+    if-nez v3, :cond_2
 
     goto :goto_2
 
-    :cond_6
-    const/4 v11, 0x0
+    :cond_2
+    invoke-virtual {v3}, Lqu7;->hashCode()I
+
+    move-result v0
 
     :goto_2
-    if-nez v11, :cond_7
+    add-int/2addr v2, v0
 
-    goto :goto_3
+    mul-int/2addr v2, v1
 
-    :cond_7
-    move-object v10, v9
+    iget-boolean v0, p0, Lx11;->r0:Z
 
-    :goto_3
-    iget-object v9, v2, Lm21;->c:Lqm1;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-virtual {v9}, Lqm1;->v()Z
+    move-result v0
 
-    move-result v9
+    add-int/2addr v0, v2
 
-    invoke-static {p1, v9}, La68;->b(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Z)Lk51;
+    return v0
+.end method
 
-    move-result-object v11
+.method public final m()I
+    .locals 1
 
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lx11;->s0:I
 
-    move-object v9, v6
+    return v0
+.end method
 
-    new-instance v6, Lbr0;
+.method public final t()I
+    .locals 1
 
-    invoke-direct/range {v6 .. v11}, Lbr0;-><init>(Lfa8;Lfa8;Lfa8;Lfa8;Lk51;)V
+    iget v0, p0, Lx11;->c:I
 
-    invoke-virtual {v3, v4, v6}, Lyce;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return v0
+.end method
 
-    move-result v4
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    if-eqz v4, :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object p0, Lylf;->a:Lylf;
+    const-string v1, "CallAdminSettingsItem(sectionItemType="
 
-    return-object p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lx11;->a:I
+
+    invoke-static {v1}, Labd;->j(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lx11;->b:Lorf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sectionId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lx11;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", itemId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lx11;->o:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lx11;->X:Lsce;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", descriptionRes="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lx11;->Y:Ltrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", endView="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lx11;->Z:Loce;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", leadingElementProperties="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lx11;->q0:Lqu7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", clickable="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lx11;->r0:Z
+
+    invoke-static {v0, v1, v3, v2}, Li57;->k(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

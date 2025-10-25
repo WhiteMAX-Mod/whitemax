@@ -1,192 +1,106 @@
-.class public final synthetic Ltv1;
-.super Ljava/lang/Object;
+.class public final Ltv1;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lvv1;
-
-.field public final synthetic c:Lqs1;
+.field public final synthetic X:Luv1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvv1;Lqs1;I)V
+.method public constructor <init>(Luv1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Ltv1;->a:I
+    iput-object p1, p0, Ltv1;->X:Luv1;
 
-    iput-object p1, p0, Ltv1;->b:Lvv1;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Ltv1;->c:Lqs1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ltv1;->a:I
+    check-cast p1, Lmdb;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
+    invoke-virtual {p0, p1, p2}, Ltv1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Ltv1;->b:Lvv1;
+    move-result-object p1
 
-    iput-boolean v0, v1, Lvv1;->b:Z
+    check-cast p1, Ltv1;
 
-    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+    sget-object p2, Lccg;->a:Lccg;
 
-    const-string v2, "Camera2CameraControl was updated with new options."
+    invoke-virtual {p1, p2}, Ltv1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    return-object p2
+.end method
 
-    iget-object v2, v1, Lvv1;->g:Ljava/lang/Object;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    check-cast v2, Lqs1;
+    new-instance p1, Ltv1;
 
-    if-eqz v2, :cond_0
+    iget-object v0, p0, Ltv1;->X:Luv1;
 
-    invoke-virtual {v2, v0}, Lqs1;->d(Ljava/lang/Throwable;)Z
+    invoke-direct {p1, v0, p2}, Ltv1;-><init>(Luv1;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v0, 0x0
+    return-object p1
+.end method
 
-    iput-object v0, v1, Lvv1;->g:Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    :cond_0
-    iget-object p0, p0, Ltv1;->c:Lqs1;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iput-object p0, v1, Lvv1;->g:Ljava/lang/Object;
+    sget-object p1, Luv1;->R:[Ltr7;
 
-    iget-boolean p0, v1, Lvv1;->a:Z
+    iget-object p1, p0, Ltv1;->X:Luv1;
 
-    if-eqz p0, :cond_1
+    invoke-virtual {p1}, Luv1;->p()Lcx1;
 
-    iget-object p0, v1, Lvv1;->c:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p0, Lew1;
+    invoke-virtual {p1}, Luv1;->l()Le94;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    new-instance v0, Lqzc;
+    iget-object v2, v1, Le94;->c:Ljava/lang/String;
 
-    const/16 v2, 0x19
+    invoke-virtual {p1}, Luv1;->l()Le94;
 
-    invoke-direct {v0, v2, p0}, Lqzc;-><init>(ILjava/lang/Object;)V
+    move-result-object p1
 
-    invoke-static {v0}, Lf54;->l(Lrs1;)Lts1;
+    iget-boolean v7, p1, Le94;->i:Z
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0}, Lf4h;->B(Lgt7;)Lgt7;
+    const/4 v8, 0x0
 
-    move-result-object p0
+    const/16 v9, 0x178
 
-    new-instance v0, Lb;
+    const-string v1, "BAD_CONNECTION_ALERT"
 
-    const/16 v2, 0x1d
+    const-string v3, "BAD_NETWORK"
 
-    invoke-direct {v0, v2, v1}, Lb;-><init>(ILjava/lang/Object;)V
+    const/4 v4, 0x0
 
-    iget-object v2, v1, Lvv1;->d:Ljava/lang/Object;
+    const/4 v5, 0x0
 
-    check-cast v2, Lpid;
+    const/4 v6, 0x0
 
-    invoke-interface {p0, v0, v2}, Lgt7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-static/range {v0 .. v9}, Lcx1;->d(Lcx1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZLyw1;I)V
 
-    const/4 p0, 0x0
+    sget-object p1, Lccg;->a:Lccg;
 
-    iput-boolean p0, v1, Lvv1;->b:Z
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Ltv1;->b:Lvv1;
-
-    iput-boolean v0, v1, Lvv1;->b:Z
-
-    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
-
-    const-string v2, "Camera2CameraControl was updated with new options."
-
-    invoke-direct {v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, v1, Lvv1;->g:Ljava/lang/Object;
-
-    check-cast v2, Lqs1;
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2, v0}, Lqs1;->d(Ljava/lang/Throwable;)Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, v1, Lvv1;->g:Ljava/lang/Object;
-
-    :cond_2
-    iget-object p0, p0, Ltv1;->c:Lqs1;
-
-    iput-object p0, v1, Lvv1;->g:Ljava/lang/Object;
-
-    iget-boolean p0, v1, Lvv1;->a:Z
-
-    if-eqz p0, :cond_3
-
-    iget-object p0, v1, Lvv1;->c:Ljava/lang/Object;
-
-    check-cast p0, Lew1;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lqzc;
-
-    const/16 v2, 0x19
-
-    invoke-direct {v0, v2, p0}, Lqzc;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0}, Lf54;->l(Lrs1;)Lts1;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf4h;->B(Lgt7;)Lgt7;
-
-    move-result-object p0
-
-    new-instance v0, Lb;
-
-    const/16 v2, 0x1d
-
-    invoke-direct {v0, v2, v1}, Lb;-><init>(ILjava/lang/Object;)V
-
-    iget-object v2, v1, Lvv1;->d:Ljava/lang/Object;
-
-    check-cast v2, Lpid;
-
-    invoke-interface {p0, v0, v2}, Lgt7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    const/4 p0, 0x0
-
-    iput-boolean p0, v1, Lvv1;->b:Z
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

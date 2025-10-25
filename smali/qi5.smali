@@ -1,51 +1,111 @@
 .class public final Lqi5;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/SurfaceHolder$Callback;
+.implements Landroid/view/TextureView$SurfaceTextureListener;
 
 
 # instance fields
-.field public X:Lww9;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lri5;
-
-.field public o:Lri5;
-
-.field public r0:I
+.field public final synthetic a:Lwi5;
 
 
 # direct methods
-.method public constructor <init>(Lri5;Ljx3;)V
+.method public constructor <init>(Lwi5;)V
     .locals 0
 
-    iput-object p1, p0, Lqi5;->Z:Lri5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqi5;->a:Lwi5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 1
 
-    iput-object p1, p0, Lqi5;->Y:Ljava/lang/Object;
+    new-instance v0, Landroid/view/Surface;
 
-    iget p1, p0, Lqi5;->r0:I
+    invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Lqi5;->a:Lwi5;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1, v0}, Lwi5;->e1(Landroid/view/Surface;)V
 
-    iput p1, p0, Lqi5;->r0:I
+    iput-object v0, p1, Lwi5;->W0:Landroid/view/Surface;
 
-    iget-object p1, p0, Lqi5;->Z:Lri5;
+    invoke-virtual {p1, p2, p3}, Lwi5;->b1(II)V
 
-    invoke-virtual {p1, p0}, Lri5;->a(Ljx3;)Ljava/io/Serializable;
+    return-void
+.end method
 
-    move-result-object p0
+.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
+    .locals 1
 
-    return-object p0
+    const/4 p1, 0x0
+
+    iget-object v0, p0, Lqi5;->a:Lwi5;
+
+    invoke-virtual {v0, p1}, Lwi5;->e1(Landroid/view/Surface;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1, p1}, Lwi5;->b1(II)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
+    .locals 0
+
+    iget-object p1, p0, Lqi5;->a:Lwi5;
+
+    invoke-virtual {p1, p2, p3}, Lwi5;->b1(II)V
+
+    return-void
+.end method
+
+.method public final onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final surfaceChanged(Landroid/view/SurfaceHolder;III)V
+    .locals 0
+
+    iget-object p1, p0, Lqi5;->a:Lwi5;
+
+    invoke-virtual {p1, p3, p4}, Lwi5;->b1(II)V
+
+    return-void
+.end method
+
+.method public final surfaceCreated(Landroid/view/SurfaceHolder;)V
+    .locals 0
+
+    iget-object p1, p0, Lqi5;->a:Lwi5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public final surfaceDestroyed(Landroid/view/SurfaceHolder;)V
+    .locals 1
+
+    iget-object p1, p0, Lqi5;->a:Lwi5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0}, Lwi5;->b1(II)V
+
+    return-void
 .end method

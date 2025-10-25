@@ -102,7 +102,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -119,7 +119,7 @@
 .method public static final equals-impl0(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -149,53 +149,53 @@
 
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->value:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->value:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->equals-impl(Ljava/lang/String;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->equals-impl(Ljava/lang/String;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final getValue()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->value:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->value:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->value:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->value:Ljava/lang/String;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->hashCode-impl(Ljava/lang/String;)I
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->hashCode-impl(Ljava/lang/String;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->value:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->value:Ljava/lang/String;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->toString-impl(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->toString-impl(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final synthetic unbox-impl()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->value:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->value:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

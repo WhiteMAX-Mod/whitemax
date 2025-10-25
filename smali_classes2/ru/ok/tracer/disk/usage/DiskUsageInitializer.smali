@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li77;
+.implements Ldg7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Li77;"
+        "Ldg7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/disk/usage/DiskUsageInitializer;",
-        "Li77;",
-        "Lyz4;",
+        "Ldg7;",
+        "Lwyi;",
         "<init>",
         "()V",
         "tracer-disk-usage_release"
@@ -48,45 +48,45 @@
 
 # virtual methods
 .method public final a()Ljava/util/List;
-    .locals 0
+    .locals 1
 
-    const-class p0, Lru/ok/tracer/TracerInitializer;
+    const-class v0, Lru/ok/tracer/TracerInitializer;
 
-    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 2
+    .locals 3
 
-    sget-object p0, Lkbf;->a:Lzte;
+    sget-object v0, Lf1g;->a:Lwif;
 
-    new-instance p0, Lpm;
+    new-instance v0, Lwn;
 
-    const/4 v0, 0x2
+    const/4 v1, 0x2
 
-    invoke-direct {p0, p1, v0}, Lpm;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p1, v1}, Lwn;-><init>(Landroid/content/Context;I)V
 
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p1, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    new-instance v0, Lt20;
+    new-instance v1, Lo30;
 
-    const/4 v1, 0x6
+    const/4 v2, 0x6
 
-    invoke-direct {v0, p0, v1}, Lt20;-><init>(Ljava/lang/Runnable;I)V
+    invoke-direct {v1, v0, v2}, Lo30;-><init>(Ljava/lang/Runnable;I)V
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sget-object p0, Lyz4;->r0:Lyz4;
+    sget-object p1, Lwyi;->o:Lwyi;
 
-    return-object p0
+    return-object p1
 .end method

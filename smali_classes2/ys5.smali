@@ -1,214 +1,156 @@
-.class public final Lys5;
-.super Lure;
+.class public final synthetic Lys5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lji6;
 
 
 # instance fields
-.field public X:J
+.field public final synthetic a:I
 
-.field public Y:I
+.field public final synthetic b:Landroid/content/Context;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public final synthetic c:Lat5;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;)V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/content/Context;Lat5;I)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iput p3, p0, Lys5;->a:I
 
-    const/4 v0, 0x2
+    iput-object p1, p0, Lys5;->b:Landroid/content/Context;
 
-    invoke-direct {p0, v0, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lys5;->c:Lat5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p1, Lks5;
+    iget v0, p0, Lys5;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lys5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lslg;
 
-    move-result-object p0
+    iget-object v1, p0, Lys5;->b:Landroid/content/Context;
 
-    check-cast p0, Lys5;
+    invoke-direct {v0, v1}, Lslg;-><init>(Landroid/content/Context;)V
 
-    sget-object p1, Lylf;->a:Lylf;
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1}, Lys5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lslg;->setBackgroundEnabled(Z)V
 
-    sget-object p0, Lz04;->a:Lz04;
+    iget-object v1, p0, Lys5;->c:Lat5;
 
-    return-object p0
-.end method
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    return-object v0
 
-    new-instance p0, Lys5;
+    :pswitch_0
+    new-instance v0, Li97;
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iget-object v1, p0, Lys5;->b:Landroid/content/Context;
 
-    invoke-direct {p0, p2}, Lys5;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Li97;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lys5;->Z:Ljava/lang/Object;
+    iget-object v1, p0, Lys5;->c:Lat5;
 
-    return-object p0
-.end method
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+    return-object v0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    :pswitch_1
+    new-instance v0, Landroid/widget/ImageView;
 
-    iget v1, p0, Lys5;->Y:I
+    iget-object v1, p0, Lys5;->b:Landroid/content/Context;
 
-    const-wide/16 v2, 0x0
+    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const/4 v4, 0x3
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
 
-    const/4 v5, 0x2
+    const/16 v2, 0x2c
 
-    const/4 v6, 0x1
+    int-to-float v2, v2
 
-    sget-object v7, Lz04;->a:Lz04;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    if-eqz v1, :cond_4
+    move-result-object v3
 
-    if-eq v1, v6, :cond_3
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    if-eq v1, v5, :cond_2
+    move-result-object v3
 
-    if-ne v1, v4, :cond_1
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    iget-wide v1, p0, Lys5;->X:J
+    mul-float/2addr v3, v2
 
-    iget-object v3, p0, Lys5;->Z:Ljava/lang/Object;
+    invoke-static {v3}, Lfhi;->b(F)I
 
-    check-cast v3, Lks5;
+    move-result v3
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    :cond_0
-    move-wide v10, v1
+    move-result-object v4
 
-    move-object v1, v3
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-wide v2, v10
+    move-result-object v4
 
-    goto :goto_0
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    mul-float/2addr v2, v4
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-static {v2}, Lfhi;->b(F)I
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v2
 
-    throw p0
+    invoke-direct {v1, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    :cond_2
-    iget-wide v1, p0, Lys5;->X:J
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v3, p0, Lys5;->Z:Ljava/lang/Object;
+    iget-object v1, p0, Lys5;->c:Lat5;
 
-    check-cast v3, Lks5;
+    iget-object v2, v1, Lat5;->J0:Landroid/graphics/drawable/ShapeDrawable;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_1
+    sget-object v2, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
-    :cond_3
-    iget-object v1, p0, Lys5;->Z:Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    check-cast v1, Lks5;
+    const v2, 0x7f7fffff    # Float.MAX_VALUE
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setTranslationZ(F)V
 
-    goto :goto_0
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    :cond_4
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    return-object v0
 
-    iget-object p1, p0, Lys5;->Z:Ljava/lang/Object;
+    :pswitch_2
+    new-instance v0, Lis5;
 
-    move-object v1, p1
+    iget-object v1, p0, Lys5;->b:Landroid/content/Context;
 
-    check-cast v1, Lks5;
+    invoke-direct {v0, v1}, Lis5;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    iget-object v1, p0, Lys5;->c:Lat5;
 
-    move-result-wide v8
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    iput-object v1, p0, Lys5;->Z:Ljava/lang/Object;
+    return-object v0
 
-    iput v6, p0, Lys5;->Y:I
-
-    invoke-static {v8, v9, p0}, Ln2e;->h(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    :goto_0
-    const-wide/16 v8, 0x1
-
-    add-long/2addr v8, v2
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v2, v3}, Ljava/lang/Long;-><init>(J)V
-
-    iput-object v1, p0, Lys5;->Z:Ljava/lang/Object;
-
-    iput-wide v8, p0, Lys5;->X:J
-
-    iput v5, p0, Lys5;->Y:I
-
-    invoke-interface {v1, p1, p0}, Lks5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    move-object v3, v1
-
-    move-wide v1, v8
-
-    :goto_1
-    const-wide/16 v8, 0x64
-
-    invoke-virtual {v0, v8, v9}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v8
-
-    iput-object v3, p0, Lys5;->Z:Ljava/lang/Object;
-
-    iput-wide v1, p0, Lys5;->X:J
-
-    iput v4, p0, Lys5;->Y:I
-
-    invoke-static {v8, v9, p0}, Ln2e;->h(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_0
-
-    :goto_2
-    return-object v7
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

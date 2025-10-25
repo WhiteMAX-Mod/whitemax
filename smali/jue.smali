@@ -1,13 +1,17 @@
-.class public abstract Ljue;
+.class public interface abstract Ljue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/app/Service;ILandroid/app/Notification;I)V
-    .locals 0
+# virtual methods
+.method public abstract a(Ljavax/net/ssl/SSLSocket;)Z
+.end method
 
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
+.method public abstract b()Z
+.end method
 
-    return-void
+.method public abstract c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+.end method
+
+.method public abstract d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
 .end method

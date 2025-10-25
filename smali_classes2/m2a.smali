@@ -1,140 +1,102 @@
-.class public final Lm2a;
-.super Lure;
+.class public final synthetic Lm2a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Laj6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Lp2a;
 
-.field public final synthetic Y:Ln2a;
+.field public final synthetic b:Lrh8;
+
+.field public final synthetic c:D
+
+.field public final synthetic o:D
 
 
 # direct methods
-.method public constructor <init>(Ln2a;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lp2a;Lrh8;DD)V
     .locals 0
 
-    iput-object p1, p0, Lm2a;->Y:Ln2a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lm2a;->a:Lp2a;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lm2a;->b:Lrh8;
+
+    iput-wide p3, p0, Lm2a;->c:D
+
+    iput-wide p5, p0, Lm2a;->o:D
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    check-cast p1, Ly04;
+    check-cast p1, Ljava/lang/String;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lm2a;->b:Lrh8;
 
-    invoke-virtual {p0, p1, p2}, Lm2a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-wide v1, v0, Lrh8;->c:J
 
-    move-result-object p0
+    const-wide/16 v3, 0x0
 
-    check-cast p0, Lm2a;
+    cmp-long v1, v1, v3
 
-    sget-object p1, Lylf;->a:Lylf;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0, p1}, Lm2a;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lm2a;->a:Lp2a;
 
-    move-result-object p0
+    iget-object v2, v1, Lp2a;->B0:Lq78;
 
-    return-object p0
-.end method
+    invoke-virtual {v2}, Lq78;->a()Z
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    move-result v2
 
-    new-instance p1, Lm2a;
+    if-eqz v2, :cond_0
 
-    iget-object p0, p0, Lm2a;->Y:Ln2a;
+    iget-object v3, v1, Lp2a;->Z:Lcmf;
 
-    invoke-direct {p1, p0, p2}, Lm2a;-><init>(Ln2a;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, v1, Lp2a;->B0:Lq78;
 
-    return-object p1
-.end method
+    iget-wide v8, v1, Lq78;->a:D
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    iget-wide v10, v1, Lq78;->b:D
 
-    iget v0, p0, Lm2a;->X:I
+    iget-wide v4, p0, Lm2a;->c:D
 
-    const/4 v1, 0x1
+    iget-wide v6, p0, Lm2a;->o:D
 
-    if-eqz v0, :cond_1
+    invoke-interface/range {v3 .. v11}, Lcmf;->a(DDDD)F
 
-    if-ne v0, v1, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v1
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const/high16 v1, -0x40800000    # -1.0f
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-virtual {v0}, Lrh8;->a()Lqh8;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw p0
+    iput-object p1, v0, Lqh8;->f:Ljava/lang/String;
 
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iput v1, v0, Lqh8;->g:F
 
-    iget-object p1, p0, Lm2a;->Y:Ln2a;
+    const/4 p1, 0x0
 
-    :try_start_1
-    iput v1, p0, Lm2a;->X:I
+    iput-boolean p1, v0, Lqh8;->i:Z
 
-    iget-object v0, p1, Ln2a;->a:Lexc;
+    new-instance p1, Lrh8;
 
-    new-instance v1, Lue4;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v2, p1}, Lue4;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v1, p0}, Lmu0;->i(Lexc;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
+    invoke-direct {p1, v0}, Lrh8;-><init>(Lqh8;)V
 
     return-object p1
-
-    :catchall_0
-    move-exception p0
-
-    const-string p1, "NotificationsDao"
-
-    const-string v0, "fail to clear on logout"
-
-    invoke-static {p1, v0, p0}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    throw p0
 .end method

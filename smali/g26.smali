@@ -1,213 +1,154 @@
 .class public final Lg26;
-.super Lv44;
+.super Lup4;
 .source "SourceFile"
 
-
-# static fields
-.field public static final z0:Lss3;
+# interfaces
+.implements Lq36;
 
 
 # instance fields
-.field public final v0:Lxx3;
+.field public X:Lgcf;
 
-.field public final w0:Landroidx/recyclerview/widget/b;
+.field public Y:Z
 
-.field public final x0:Lf26;
+.field public final c:Ltm0;
 
-.field public y0:Ljava/util/List;
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lss3;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lg26;->z0:Lss3;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lxx3;Landroidx/recyclerview/widget/b;Lf26;)V
+.method public constructor <init>(Lecf;Ljava/lang/Object;Ltm0;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lv44;-><init>(Lxx3;)V
+    invoke-direct {p0, p1}, Lup4;-><init>(Lecf;)V
 
-    iput-object p1, p0, Lg26;->v0:Lxx3;
+    iput-object p3, p0, Lg26;->c:Ltm0;
 
-    iput-object p2, p0, Lg26;->w0:Landroidx/recyclerview/widget/b;
-
-    iput-object p3, p0, Lg26;->x0:Lf26;
-
-    sget-object p1, Lp45;->a:Lp45;
-
-    iput-object p1, p0, Lg26;->y0:Ljava/util/List;
+    iput-object p2, p0, Lg26;->o:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final E(Lrzc;I)V
-    .locals 9
+.method public final b()V
+    .locals 1
 
-    invoke-virtual {p1}, Lrzc;->n()Z
-
-    move-result v0
+    iget-boolean v0, p0, Lg26;->Y:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lg26;->y0:Ljava/util/List;
+    const/4 v0, 0x1
 
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iput-boolean v0, p0, Lg26;->Y:Z
 
-    move-result-object p2
+    iget-object v0, p0, Lg26;->o:Ljava/lang/Object;
 
-    check-cast p2, Lf06;
-
-    iget-object p2, p2, Lf06;->a:Ljava/lang/String;
-
-    iget-object v0, p0, Lg26;->x0:Lf26;
-
-    iget-object v1, p0, Lg26;->w0:Landroidx/recyclerview/widget/b;
-
-    invoke-interface {v0, p2, v1}, Lf26;->d(Ljava/lang/String;Landroidx/recyclerview/widget/b;)Lone/me/sdk/arch/Widget;
-
-    move-result-object v3
-
-    iget-object p0, p0, Lg26;->v0:Lxx3;
-
-    invoke-virtual {v3, p0}, Lxx3;->setTargetController(Lxx3;)V
-
-    sget-object p0, Lwx3;->b:Lwx3;
-
-    invoke-virtual {v3, p0}, Lxx3;->setRetainViewMode(Lwx3;)V
-
-    new-instance v2, Luzc;
-
-    const/4 v7, 0x0
-
-    const/4 v8, -0x1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v2 .. v8}, Luzc;-><init>(Lxx3;Ljava/lang/String;Lcy3;Lcy3;ZI)V
-
-    invoke-virtual {p1, v2}, Lrzc;->S(Luzc;)V
+    invoke-virtual {p0, v0}, Lup4;->g(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final M(Ljava/util/List;)V
-    .locals 3
+.method public final cancel()V
+    .locals 1
 
-    iget-object v0, p0, Lg26;->y0:Ljava/util/List;
+    const/4 v0, 0x4
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iput-object p1, p0, Lg26;->y0:Ljava/util/List;
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
     const/4 v0, 0x0
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    iput-object v0, p0, Lup4;->b:Ljava/lang/Object;
 
-    move-result p1
+    iget-object v0, p0, Lg26;->X:Lgcf;
 
-    invoke-virtual {p0, v0, p1}, Lcoc;->p(II)V
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ll81;
-
-    iget-object v1, p0, Lg26;->y0:Ljava/util/List;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v2, v1, p1}, Ll81;-><init>(ILjava/util/List;Ljava/util/List;)V
-
-    invoke-static {v0}, Lw48;->e(Lf4h;)Lmo4;
-
-    move-result-object v0
-
-    iput-object p1, p0, Lg26;->y0:Ljava/util/List;
-
-    new-instance p1, Lnyc;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p1, v1, p0}, Lnyc;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p1}, Lmo4;->a(Lct7;)V
+    invoke-interface {v0}, Lgcf;->cancel()V
 
     return-void
 .end method
 
-.method public final j()I
-    .locals 0
+.method public final d(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object p0, p0, Lg26;->y0:Ljava/util/List;
+    iget-boolean v0, p0, Lg26;->Y:Z
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    if-eqz v0, :cond_0
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public final k(I)J
-    .locals 0
-
-    iget-object p0, p0, Lg26;->y0:Ljava/util/List;
-
-    invoke-static {p1, p0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lf06;
-
-    if-eqz p0, :cond_0
-
-    iget-object p0, p0, Lf06;->a:Ljava/lang/String;
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/4 p0, 0x0
+    :try_start_0
+    iget-object v0, p0, Lg26;->c:Ltm0;
 
-    :goto_0
-    if-eqz p0, :cond_1
+    iget-object v1, p0, Lg26;->o:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {v0, v1, p1}, Ltm0;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result p0
+    return-void
 
-    goto :goto_1
+    :catchall_0
+    move-exception p1
 
-    :cond_1
-    const/4 p0, 0x0
+    invoke-static {p1}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    :goto_1
-    int-to-long p0, p0
+    iget-object v0, p0, Lg26;->X:Lgcf;
 
-    return-wide p0
+    invoke-interface {v0}, Lgcf;->cancel()V
+
+    invoke-virtual {p0, p1}, Lg26;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final e(Lgcf;)V
+    .locals 2
+
+    iget-object v0, p0, Lg26;->X:Lgcf;
+
+    invoke-static {v0, p1}, Ljcf;->f(Lgcf;Lgcf;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lg26;->X:Lgcf;
+
+    iget-object v0, p0, Lup4;->a:Lecf;
+
+    invoke-interface {v0, p0}, Lecf;->e(Lgcf;)V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Lgcf;->i(J)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lg26;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lg26;->Y:Z
+
+    iget-object v0, p0, Lup4;->a:Lecf;
+
+    invoke-interface {v0, p1}, Lecf;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

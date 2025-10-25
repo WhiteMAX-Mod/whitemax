@@ -53,9 +53,9 @@
 
     invoke-virtual {p0, p1}, Lorg/webrtc/CameraEnumerationAndroid$2;->diff(Lorg/webrtc/Size;)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public diff(Lorg/webrtc/Size;)I
@@ -72,17 +72,17 @@
 
     move-result v0
 
-    iget p0, p0, Lorg/webrtc/CameraEnumerationAndroid$2;->val$requestedHeight:I
+    iget v1, p0, Lorg/webrtc/CameraEnumerationAndroid$2;->val$requestedHeight:I
 
     iget p1, p1, Lorg/webrtc/Size;->height:I
 
-    sub-int/2addr p0, p1
+    sub-int/2addr v1, p1
 
-    invoke-static {p0}, Ljava/lang/Math;->abs(I)I
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
-    move-result p0
+    move-result p1
 
-    add-int/2addr p0, v0
+    add-int/2addr p1, v0
 
-    return p0
+    return p1
 .end method

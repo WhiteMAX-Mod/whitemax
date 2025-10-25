@@ -1,23 +1,27 @@
 .class public final Lqh2;
-.super Lwh2;
+.super Lpmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final X:Ljava/lang/Boolean;
 
 .field public final c:J
 
+.field public final o:I
+
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>(JILjava/lang/Boolean;)V
     .locals 0
 
-    invoke-direct {p0}, Lwh2;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lqh2;->b:J
+    iput-wide p1, p0, Lqh2;->c:J
 
-    iput-wide p3, p0, Lqh2;->c:J
+    iput p3, p0, Lqh2;->o:I
+
+    iput-object p4, p0, Lqh2;->X:Ljava/lang/Boolean;
 
     return-void
 .end method
@@ -45,9 +49,9 @@
     :cond_1
     check-cast p1, Lqh2;
 
-    iget-wide v3, p0, Lqh2;->b:J
+    iget-wide v3, p0, Lqh2;->c:J
 
-    iget-wide v5, p1, Lqh2;->b:J
+    iget-wide v5, p1, Lqh2;->c:J
 
     cmp-long v1, v3, v5
 
@@ -56,62 +60,105 @@
     return v2
 
     :cond_2
-    iget-wide v3, p0, Lqh2;->c:J
+    iget v1, p0, Lqh2;->o:I
 
-    iget-wide p0, p1, Lqh2;->c:J
+    iget v3, p1, Lqh2;->o:I
 
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_3
+    if-eq v1, v3, :cond_3
 
     return v2
 
     :cond_3
+    iget-object v1, p0, Lqh2;->X:Ljava/lang/Boolean;
+
+    iget-object p1, p1, Lqh2;->X:Ljava/lang/Boolean;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget-wide v0, p0, Lqh2;->b:J
+    iget-wide v0, p0, Lqh2;->c:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-wide v1, p0, Lqh2;->c:J
+    mul-int/2addr v0, v1
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    iget v2, p0, Lqh2;->o:I
 
-    move-result p0
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
-    add-int/2addr p0, v0
+    move-result v0
 
-    return p0
+    iget-object v1, p0, Lqh2;->X:Ljava/lang/Boolean;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
-    const-string v0, "OpenMessage(chatId="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ", messageId="
+    const-string v1, "Response(mark="
 
-    iget-wide v2, p0, Lqh2;->b:J
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2, v3, v0, v1}, Lmw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v1, p0, Lqh2;->c:J
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", unread="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lqh2;->o:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", success="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqh2;->X:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Lqh2;->c:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v3, v1}, Lyv7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

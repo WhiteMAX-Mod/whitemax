@@ -37,9 +37,9 @@
 .method public getNativeEglContext()J
     .locals 2
 
-    iget-object p0, p0, Lorg/webrtc/EglBase14Impl$Context;->egl14Context:Landroid/opengl/EGLContext;
+    iget-object v0, p0, Lorg/webrtc/EglBase14Impl$Context;->egl14Context:Landroid/opengl/EGLContext;
 
-    invoke-virtual {p0}, Landroid/opengl/EGLObjectHandle;->getNativeHandle()J
+    invoke-virtual {v0}, Landroid/opengl/EGLObjectHandle;->getNativeHandle()J
 
     move-result-wide v0
 
@@ -47,9 +47,9 @@
 .end method
 
 .method public getRawContext()Landroid/opengl/EGLContext;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglBase14Impl$Context;->egl14Context:Landroid/opengl/EGLContext;
+    iget-object v0, p0, Lorg/webrtc/EglBase14Impl$Context;->egl14Context:Landroid/opengl/EGLContext;
 
-    return-object p0
+    return-object v0
 .end method

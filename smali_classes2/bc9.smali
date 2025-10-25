@@ -1,119 +1,205 @@
-.class public final Lbc9;
-.super Lure;
+.class public final enum Lbc9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
 
+# static fields
+.field public static final enum X:Lbc9;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final enum Y:Lbc9;
 
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+.field public static final enum Z:Lbc9;
+
+.field public static final enum a:Lbc9;
+
+.field public static final enum b:Lbc9;
+
+.field public static final enum c:Lbc9;
+
+.field public static final enum o:Lbc9;
+
+.field public static final enum q0:Lbc9;
+
+.field public static final enum r0:Lbc9;
+
+.field public static final enum s0:Lbc9;
+
+.field public static final enum t0:Lbc9;
+
+.field public static final enum u0:Lbc9;
+
+.field public static final enum v0:Lbc9;
+
+.field public static final synthetic w0:[Lbc9;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 15
 
-    iput-object p2, p0, Lbc9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    new-instance v0, Lbc9;
 
-    const/4 p2, 0x2
+    const-string v1, "UNKNOWN"
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lbc9;->a:Lbc9;
+
+    new-instance v1, Lbc9;
+
+    const-string v2, "USER_MENTION"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lbc9;->b:Lbc9;
+
+    new-instance v2, Lbc9;
+
+    const-string v3, "GROUP_MENTION"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lbc9;->c:Lbc9;
+
+    new-instance v3, Lbc9;
+
+    const-string v4, "MONOSPACED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lbc9;->o:Lbc9;
+
+    new-instance v4, Lbc9;
+
+    const-string v5, "STRONG"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lbc9;->X:Lbc9;
+
+    new-instance v5, Lbc9;
+
+    const-string v6, "EMPHASIZED"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lbc9;->Y:Lbc9;
+
+    new-instance v6, Lbc9;
+
+    const-string v7, "LINK"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lbc9;->Z:Lbc9;
+
+    new-instance v7, Lbc9;
+
+    const-string v8, "STRIKETHROUGH"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lbc9;->q0:Lbc9;
+
+    new-instance v8, Lbc9;
+
+    const-string v9, "UNDERLINE"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lbc9;->r0:Lbc9;
+
+    new-instance v9, Lbc9;
+
+    const-string v10, "HEADING"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v9, Lbc9;->s0:Lbc9;
+
+    new-instance v10, Lbc9;
+
+    const-string v11, "CODE"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v10, Lbc9;->t0:Lbc9;
+
+    new-instance v11, Lbc9;
+
+    const-string v12, "ANIMOJI"
+
+    const/16 v13, 0xb
+
+    invoke-direct {v11, v12, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v11, Lbc9;->u0:Lbc9;
+
+    new-instance v12, Lbc9;
+
+    const-string v13, "QUOTE"
+
+    const/16 v14, 0xc
+
+    invoke-direct {v12, v13, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v12, Lbc9;->v0:Lbc9;
+
+    filled-new-array/range {v0 .. v12}, [Lbc9;
+
+    move-result-object v0
+
+    sput-object v0, Lbc9;->w0:[Lbc9;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lbc9;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lbc9;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lbc9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
     check-cast p0, Lbc9;
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lbc9;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static values()[Lbc9;
     .locals 1
 
-    new-instance v0, Lbc9;
+    sget-object v0, Lbc9;->w0:[Lbc9;
 
-    iget-object p0, p0, Lbc9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-direct {v0, p2, p0}, Lbc9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-
-    iput-object p1, v0, Lbc9;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lbc9;->X:Ljava/lang/Object;
-
-    check-cast p1, Lxgc;
-
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->Z0:[Lxi7;
-
-    iget-object p0, p0, Lbc9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    if-eqz p1, :cond_2
-
-    iget-boolean v0, p1, Lxgc;->e:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->F0()Lge9;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-wide v1, p1, Lxgc;->c:J
+    check-cast v0, [Lbc9;
 
-    invoke-virtual {v0, v1, v2}, Lge9;->a(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    iget-object p0, p0, Lone/me/messages/list/ui/MessagesListWidget;->Y0:Lfhc;
-
-    if-eqz p0, :cond_1
-
-    iget-wide v0, p1, Lxgc;->b:J
-
-    iget-object v2, p1, Lxgc;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lxgc;->a:Lagc;
-
-    invoke-virtual {p0, v0, v1, p1, v2}, Lfhc;->d(JLagc;Ljava/lang/String;)V
-
-    :cond_1
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-
-    :cond_2
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    return-object v0
 .end method

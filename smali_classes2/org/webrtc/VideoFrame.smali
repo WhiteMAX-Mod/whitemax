@@ -77,43 +77,43 @@
 
     .line 8
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "rotation must be a multiple of 90"
+    const-string p2, "rotation must be a multiple of 90"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     .line 9
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "buffer not allowed to be null"
+    const-string p2, "buffer not allowed to be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
 # virtual methods
 .method public getBuffer()Lorg/webrtc/VideoFrame$Buffer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
+    iget-object v0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getCompactParticipantId()Ljava/lang/Long;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/VideoFrame;->compactParticipantId:Ljava/lang/Long;
+    iget-object v0, p0, Lorg/webrtc/VideoFrame;->compactParticipantId:Ljava/lang/Long;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getRotatedHeight()I
@@ -125,22 +125,22 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
+    iget-object v0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
 
-    invoke-interface {p0}, Lorg/webrtc/VideoFrame$Buffer;->getHeight()I
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$Buffer;->getHeight()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
+    iget-object v0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
 
-    invoke-interface {p0}, Lorg/webrtc/VideoFrame$Buffer;->getWidth()I
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$Buffer;->getWidth()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getRotatedWidth()I
@@ -152,32 +152,32 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
+    iget-object v0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
 
-    invoke-interface {p0}, Lorg/webrtc/VideoFrame$Buffer;->getWidth()I
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$Buffer;->getWidth()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
+    iget-object v0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
 
-    invoke-interface {p0}, Lorg/webrtc/VideoFrame$Buffer;->getHeight()I
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$Buffer;->getHeight()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getRotation()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/VideoFrame;->rotation:I
+    iget v0, p0, Lorg/webrtc/VideoFrame;->rotation:I
 
-    return p0
+    return v0
 .end method
 
 .method public getTimestampNs()J
@@ -191,23 +191,23 @@
 .end method
 
 .method public release()V
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
+    iget-object v0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
 
-    invoke-interface {p0}, Lorg/webrtc/VideoFrame$Buffer;->release()V
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$Buffer;->release()V
 
     return-void
 .end method
 
 .method public retain()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
+    iget-object v0, p0, Lorg/webrtc/VideoFrame;->buffer:Lorg/webrtc/VideoFrame$Buffer;
 
-    invoke-interface {p0}, Lorg/webrtc/VideoFrame$Buffer;->retain()V
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$Buffer;->retain()V
 
     return-void
 .end method

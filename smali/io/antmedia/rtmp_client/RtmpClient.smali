@@ -86,29 +86,31 @@
 
     invoke-direct/range {v0 .. v6}, Lio/antmedia/rtmp_client/RtmpClient;->nativeOpen(Ljava/lang/String;ZJII)I
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_0
+    if-nez p1, :cond_0
 
     return-void
 
     :cond_0
     iput-wide v7, v0, Lio/antmedia/rtmp_client/RtmpClient;->a:J
 
-    new-instance p1, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;
+    new-instance v1, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;
 
-    invoke-direct {p1, p0}, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;-><init>(I)V
+    invoke-direct {v1, p1}, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;-><init>(I)V
 
-    throw p1
+    throw v1
 
     :cond_1
-    new-instance p0, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;
+    move-object v0, p0
 
-    const/4 p1, -0x2
+    new-instance p1, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;
 
-    invoke-direct {p0, p1}, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;-><init>(I)V
+    const/4 v1, -0x2
 
-    throw p0
+    invoke-direct {p1, v1}, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;-><init>(I)V
+
+    throw p1
 .end method
 
 .method public final c([BII)I
@@ -126,24 +128,24 @@
 
     invoke-direct/range {v0 .. v5}, Lio/antmedia/rtmp_client/RtmpClient;->nativeRead([BIIJ)I
 
-    move-result p0
+    move-result p1
 
-    if-gez p0, :cond_1
+    if-gez p1, :cond_1
 
-    const/4 p1, -0x1
+    const/4 p2, -0x1
 
-    if-ne p0, p1, :cond_0
+    if-ne p1, p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;
+    new-instance p2, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;
 
-    invoke-direct {p1, p0}, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;-><init>(I)V
+    invoke-direct {p2, p1}, Lio/antmedia/rtmp_client/RtmpClient$RtmpIOException;-><init>(I)V
 
-    throw p1
+    throw p2
 
     :cond_1
     :goto_0
-    return p0
+    return p1
 .end method

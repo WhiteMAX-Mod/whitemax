@@ -1,48 +1,45 @@
-.class public final La2b;
-.super Ljx3;
+.class public final synthetic La2b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Leia;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Landroidx/appcompat/widget/AppCompatEditText;
 
 
 # direct methods
-.method public constructor <init>(Leia;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroidx/appcompat/widget/AppCompatEditText;)V
     .locals 0
 
-    iput-object p1, p0, La2b;->Y:Leia;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, La2b;->a:Landroidx/appcompat/widget/AppCompatEditText;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 0
 
-    iput-object p1, p0, La2b;->o:Ljava/lang/Object;
+    const/4 p1, 0x3
 
-    iget p1, p0, La2b;->X:I
+    if-ne p2, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, La2b;->a:Landroidx/appcompat/widget/AppCompatEditText;
 
-    or-int/2addr p1, v0
+    invoke-static {p1}, Lici;->d(Landroid/view/View;)V
 
-    iput p1, p0, La2b;->X:I
+    const/4 p1, 0x1
 
-    iget-object p1, p0, La2b;->Y:Leia;
+    return p1
 
-    const/4 v0, 0x0
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v0, p0}, Leia;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return p1
 .end method

@@ -1,22 +1,26 @@
-.class public final synthetic Lvre;
-.super Ljava/lang/Object;
+.class public final Lvre;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lwre;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lwre;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lvre;->a:I
+    iput-object p1, p0, Lvre;->Y:Lwre;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -26,61 +30,51 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget p0, p0, Lvre;->a:I
+    check-cast p1, Le00;
 
-    packed-switch p0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lr4f;
+    invoke-virtual {p0, p1, p2}, Lvre;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p2, Lo04;
+    move-result-object p1
 
-    invoke-static {p1, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->a(Lr4f;Lo04;)Lr4f;
+    check-cast p1, Lvre;
 
-    move-result-object p0
+    sget-object p2, Lccg;->a:Lccg;
 
-    return-object p0
+    invoke-virtual {p1, p2}, Lvre;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    check-cast p2, Lo04;
+    return-object p2
+.end method
 
-    invoke-static {p1, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->b(Ljava/lang/Object;Lo04;)Ljava/lang/Object;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object p0
+    new-instance v0, Lvre;
 
-    return-object p0
+    iget-object v1, p0, Lvre;->Y:Lwre;
 
-    :pswitch_1
-    check-cast p1, Lvnf;
+    invoke-direct {v0, v1, p2}, Lvre;-><init>(Lwre;Lkotlin/coroutines/Continuation;)V
 
-    check-cast p2, Lvnf;
+    iput-object p1, v0, Lvre;->X:Ljava/lang/Object;
 
-    iget p0, p2, Lvnf;->e:F
+    return-object v0
+.end method
 
-    iget p1, p1, Lvnf;->e:F
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    cmpg-float p0, p0, p1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    if-gtz p0, :cond_0
+    iget-object p1, p0, Lvre;->X:Ljava/lang/Object;
 
-    const/4 p0, 0x1
+    check-cast p1, Le00;
 
-    goto :goto_0
+    iget-object v0, p0, Lvre;->Y:Lwre;
 
-    :cond_0
-    const/4 p0, 0x0
+    invoke-static {v0, p1}, Lwre;->A(Lwre;Le00;)V
 
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    sget-object p1, Lccg;->a:Lccg;
 
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

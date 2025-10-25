@@ -1,62 +1,171 @@
-.class public abstract Ll3c;
+.class public final Ll3c;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ln3c;
 
 
-# static fields
-.field public static activity_horizontal_margin:I = 0x7f070051
+# instance fields
+.field public final a:Ltrf;
 
-.field public static activity_vertical_margin:I = 0x7f070052
+.field public final b:Ltrf;
 
-.field public static avatar_large:I = 0x7f070057
+.field public final c:Ljava/util/List;
 
-.field public static avatar_medium:I = 0x7f070058
 
-.field public static avatar_small:I = 0x7f070059
+# direct methods
+.method public constructor <init>(Ltrf;Lqrf;Ljava/util/List;)V
+    .locals 0
 
-.field public static folder_filter_item_height:I = 0x7f0700fd
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static font_large:I = 0x7f0700ff
+    iput-object p1, p0, Ll3c;->a:Ltrf;
 
-.field public static font_larger:I = 0x7f070100
+    iput-object p2, p0, Ll3c;->b:Ltrf;
 
-.field public static font_medium:I = 0x7f070101
+    iput-object p3, p0, Ll3c;->c:Ljava/util/List;
 
-.field public static font_normal:I = 0x7f070102
+    return-void
+.end method
 
-.field public static font_normal_subtitle:I = 0x7f070103
 
-.field public static font_only_emoji:I = 0x7f070104
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-.field public static font_small:I = 0x7f070105
+    const/4 v0, 0x1
 
-.field public static font_smaller:I = 0x7f070106
+    if-ne p0, p1, :cond_0
 
-.field public static font_subtitle:I = 0x7f070107
+    return v0
 
-.field public static font_toolbar_subtitle:I = 0x7f070108
+    :cond_0
+    instance-of v1, p1, Ll3c;
 
-.field public static font_toolbar_title:I = 0x7f070109
+    const/4 v2, 0x0
 
-.field public static font_very_small:I = 0x7f07010a
+    if-nez v1, :cond_1
 
-.field public static huge_horizontal_margin:I = 0x7f07011f
+    return v2
 
-.field public static match_parent:I = 0x7f0702aa
+    :cond_1
+    check-cast p1, Ll3c;
 
-.field public static progress_bar_medium:I = 0x7f0703ee
+    iget-object v1, p0, Ll3c;->a:Ltrf;
 
-.field public static progress_bar_small:I = 0x7f0703ef
+    iget-object v3, p1, Ll3c;->a:Ltrf;
 
-.field public static rounded_button_margin:I = 0x7f0703f6
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static small_vertical_margin:I = 0x7f070400
+    move-result v1
 
-.field public static spacing_normal:I = 0x7f070401
+    if-nez v1, :cond_2
 
-.field public static spacing_small:I = 0x7f07040b
+    return v2
 
-.field public static spacing_tiny:I = 0x7f07040c
+    :cond_2
+    iget-object v1, p0, Ll3c;->b:Ltrf;
 
-.field public static tiny_vertical_margin:I = 0x7f07041e
+    iget-object v3, p1, Ll3c;->b:Ltrf;
 
-.field public static wrap_content:I = 0x7f070429
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Ll3c;->c:Ljava/util/List;
+
+    iget-object p1, p1, Ll3c;->c:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ll3c;->a:Ltrf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ll3c;->b:Ltrf;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ll3c;->c:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowConfirmation(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ll3c;->a:Ltrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll3c;->b:Ltrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Ll3c;->c:Ljava/util/List;
+
+    invoke-static {v0, v2, v1}, Ldy1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

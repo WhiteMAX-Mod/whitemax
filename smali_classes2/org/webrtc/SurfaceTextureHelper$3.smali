@@ -83,9 +83,9 @@
 
     invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->o(Lorg/webrtc/SurfaceTextureHelper;)V
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceTextureHelper$3;->this$0:Lorg/webrtc/SurfaceTextureHelper;
+    iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper$3;->this$0:Lorg/webrtc/SurfaceTextureHelper;
 
-    invoke-static {p0}, Lorg/webrtc/SurfaceTextureHelper;->k(Lorg/webrtc/SurfaceTextureHelper;)V
+    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->k(Lorg/webrtc/SurfaceTextureHelper;)V
 
     :cond_0
     return-void

@@ -1,3 +1,3 @@
-.class public final Liyg;
-.super Le54;
+.class public interface abstract Liyg;
+.super Ljava/lang/Object;
 .source "SourceFile"

@@ -1,90 +1,64 @@
-.class public final Lwed;
-.super Lj1d;
+.class public abstract Lwed;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
 
-# instance fields
-.field public final r0:Lved;
 
-.field public final s0:Ltw0;
-
-.field public final t0:Lued;
-
-.field public final u0:[B
-
-.field public final v0:Lnx0;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lwed;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lved;Ltw0;Lued;[B)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Lj1d;-><init>()V
+    new-instance v0, Lnwh;
 
-    iput-object p1, p0, Lwed;->r0:Lved;
+    const/16 v1, 0x16
 
-    iput-object p2, p0, Lwed;->s0:Ltw0;
+    invoke-direct {v0, v1}, Lnwh;-><init>(I)V
 
-    iput-object p3, p0, Lwed;->t0:Lued;
-
-    iput-object p4, p0, Lwed;->u0:[B
-
-    new-instance v0, Lnx0;
-
-    iget-object p1, p1, Lved;->b:Ln74;
-
-    invoke-direct {v0, p2, p1, p4, p3}, Lnx0;-><init>(Ltw0;Ln74;[BLmx0;)V
-
-    iput-object v0, p0, Lwed;->v0:Lnx0;
+    sput-object v0, Lwed;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public final describeContents()I
     .locals 1
 
-    iget-object p0, p0, Lwed;->v0:Lnx0;
+    const/4 v0, 0x0
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lnx0;->j:Z
-
-    return-void
+    return v0
 .end method
 
-.method public final c()Ljava/lang/Object;
-    .locals 7
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    iget-object v0, p0, Lwed;->v0:Lnx0;
+    move-object p2, p0
 
-    invoke-virtual {v0}, Lnx0;->a()V
+    check-cast p2, Ldwh;
 
-    iget-object p0, p0, Lwed;->t0:Lued;
+    iget-object v0, p2, Ldwh;->a:Landroid/app/PendingIntent;
 
-    if-eqz p0, :cond_0
+    const/4 v1, 0x0
 
-    iget v0, p0, Lued;->X:I
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    add-int/lit8 v0, v0, 0x1
+    iget-boolean p2, p2, Ldwh;->b:Z
 
-    iput v0, p0, Lued;->X:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v1, p0, Lued;->a:Lau4;
-
-    iget-wide v3, p0, Lued;->b:J
-
-    iget-wide v5, p0, Lued;->o:J
-
-    invoke-virtual {p0}, Lued;->b()F
-
-    move-result v2
-
-    invoke-virtual/range {v1 .. v6}, Lau4;->b(FJJ)V
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method

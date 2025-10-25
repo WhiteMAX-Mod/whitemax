@@ -42,11 +42,11 @@
 .method public onDestroy(Lorg/webrtc/TextureBufferImpl;)V
     .locals 0
 
-    iget-object p0, p0, Lorg/webrtc/TextureBufferImpl$1;->val$releaseCallback:Ljava/lang/Runnable;
+    iget-object p1, p0, Lorg/webrtc/TextureBufferImpl$1;->val$releaseCallback:Ljava/lang/Runnable;
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_0
     return-void

@@ -48,11 +48,11 @@
 .end method
 
 .method private getContentValues(Landroid/content/ComponentName;IZ)Landroid/content/ContentValues;
-    .locals 1
+    .locals 2
 
-    new-instance p0, Landroid/content/ContentValues;
+    new-instance v0, Landroid/content/ContentValues;
 
-    invoke-direct {p0}, Landroid/content/ContentValues;-><init>()V
+    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     if-eqz p3, :cond_0
 
@@ -60,9 +60,9 @@
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {p0, p3, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p3, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p3, "class"
 
@@ -70,7 +70,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     const-string p1, "badgecount"
@@ -79,9 +79,9 @@
 
     move-result-object p2
 
-    invoke-virtual {p0, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v0, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 
@@ -104,9 +104,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lme/leolin/shortcutbadger/impl/SamsungHomeBadger;->defaultBadger:Lme/leolin/shortcutbadger/impl/DefaultBadger;
+    iget-object v0, p0, Lme/leolin/shortcutbadger/impl/SamsungHomeBadger;->defaultBadger:Lme/leolin/shortcutbadger/impl/DefaultBadger;
 
-    invoke-virtual {p0, p1, p2, p3}, Lme/leolin/shortcutbadger/impl/DefaultBadger;->executeBadge(Landroid/content/Context;Landroid/content/ComponentName;I)V
+    invoke-virtual {v0, p1, p2, p3}, Lme/leolin/shortcutbadger/impl/DefaultBadger;->executeBadge(Landroid/content/Context;Landroid/content/ComponentName;I)V
 
     return-void
 
@@ -205,7 +205,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p2, v0
 
     goto :goto_1
 
@@ -214,9 +214,9 @@
 
     invoke-direct {p0, p2, p3, v6}, Lme/leolin/shortcutbadger/impl/SamsungHomeBadger;->getContentValues(Landroid/content/ComponentName;IZ)Landroid/content/ContentValues;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-virtual {v1, v2, p0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
+    invoke-virtual {v1, v2, p2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -228,11 +228,11 @@
     :goto_1
     invoke-static {p1}, Lme/leolin/shortcutbadger/util/CloseHelper;->close(Landroid/database/Cursor;)V
 
-    throw p0
+    throw p2
 .end method
 
 .method public getSupportLaunchers()Ljava/util/List;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -242,17 +242,17 @@
         }
     .end annotation
 
-    const-string p0, "com.sec.android.app.launcher"
+    const-string v0, "com.sec.android.app.launcher"
 
-    const-string v0, "com.sec.android.app.twlauncher"
+    const-string v1, "com.sec.android.app.twlauncher"
 
-    filled-new-array {p0, v0}, [Ljava/lang/String;
+    filled-new-array {v0, v1}, [Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,95 +1,60 @@
-.class public final Lnmf;
+.class public interface abstract Lnmf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lomf;
 
+# static fields
+.field public static final a0:Ljava/util/List;
 
-# instance fields
-.field public final a:J
+.field public static final b0:Lgbi;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v9, "login.flood"
 
-    iput-wide p1, p0, Lnmf;->a:J
+    const-string v10, "login.blocked"
+
+    const-string v0, "session.state"
+
+    const-string v1, "proto.state"
+
+    const-string v2, "proto.payload"
+
+    const-string v3, "internal"
+
+    const-string v4, "service.unavailable"
+
+    const-string v5, "service.timeout"
+
+    const-string v6, "proto.ver"
+
+    const-string v7, "error.call.history.inconsistency"
+
+    const-string v8, "errors.event.unavailable"
+
+    filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lnmf;->a0:Ljava/util/List;
+
+    new-instance v0, Lgbi;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lnmf;->b0:Lgbi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
-
-    iget-wide v0, p0, Lnmf;->a:J
-
-    return-wide v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lnmf;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lnmf;
-
-    iget-wide v3, p0, Lnmf;->a:J
-
-    iget-wide p0, p1, Lnmf;->a:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lnmf;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "MarkAsUnreadEvent(mark="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lnmf;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract b(IJF)J
 .end method

@@ -1,112 +1,102 @@
 .class public final Lv4d;
-.super Lpa5;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/ScheduledExecutorService;
+.implements Lzi6;
 
 
 # instance fields
-.field public final u0:Ljava/util/concurrent/ScheduledExecutorService;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lo4h;
+
+.field public final synthetic Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;Ljha;Lh42;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lo4h;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lpa5;-><init>(Ljava/util/concurrent/ExecutorService;Ljha;Lbc6;)V
+    iput-object p2, p0, Lv4d;->Y:Lo4h;
 
-    iput-object p1, p0, Lv4d;->u0:Ljava/util/concurrent/ScheduledExecutorService;
+    iput-object p3, p0, Lv4d;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    .line 1
-    invoke-virtual {p0}, Lpa5;->b()Lvbg;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
-
-    .line 2
-    iget-object v1, p0, Lv4d;->u0:Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-virtual {p0, p1, v0}, Lpa5;->i(Ljava/lang/Runnable;Lvbg;)Loa5;
-
-    move-result-object p0
-
-    invoke-interface {v1, p0, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 2
-
-    .line 3
-    invoke-virtual {p0}, Lpa5;->b()Lvbg;
-
-    move-result-object v0
-
-    .line 4
-    iget-object v1, p0, Lv4d;->u0:Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-virtual {p0, p1, v0}, Lpa5;->h(Ljava/util/concurrent/Callable;Lvbg;)Lna5;
-
-    move-result-object p0
-
-    invoke-interface {v1, p0, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 2
-
-    invoke-virtual {p0}, Lpa5;->b()Lvbg;
-
-    move-result-object v0
-
-    move-object v1, p0
-
-    iget-object p0, v1, Lv4d;->u0:Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-virtual {v1, p1, v0}, Lpa5;->i(Ljava/lang/Runnable;Lvbg;)Loa5;
+    invoke-virtual {p0, p1, p2}, Lv4d;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-interface/range {p0 .. p6}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    check-cast p1, Lv4d;
 
-    move-result-object p0
+    sget-object p2, Lccg;->a:Lccg;
 
-    return-object p0
+    invoke-virtual {p1, p2}, Lv4d;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Lv4d;
+
+    iget-object v1, p0, Lv4d;->Y:Lo4h;
+
+    iget-object v2, p0, Lv4d;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    invoke-direct {v0, p2, v1, v2}, Lv4d;-><init>(Lkotlin/coroutines/Continuation;Lo4h;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+
+    iput-object p1, v0, Lv4d;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    invoke-virtual {p0}, Lpa5;->b()Lvbg;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lv4d;->X:Ljava/lang/Object;
+
+    check-cast p1, Lj28;
+
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
+
+    iget-object v0, p0, Lv4d;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Lg4d;
 
     move-result-object v0
 
-    move-object v1, p0
+    iget-object v0, v0, Lg4d;->x0:Ln0d;
 
-    iget-object p0, v1, Lv4d;->u0:Ljava/util/concurrent/ScheduledExecutorService;
+    iget-object v0, v0, Ln0d;->a:Lq0f;
 
-    invoke-virtual {v1, p1, v0}, Lpa5;->i(Ljava/lang/Runnable;Lvbg;)Loa5;
+    invoke-interface {v0}, Lq0f;->getValue()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-interface/range {p0 .. p6}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    check-cast v0, Ljava/lang/Long;
 
-    move-result-object p0
+    iget-object v1, p0, Lv4d;->Y:Lo4h;
 
-    return-object p0
+    invoke-virtual {v1, v0, p1}, Lo4h;->d(Ljava/lang/Long;Lj28;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

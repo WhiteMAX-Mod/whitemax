@@ -1,97 +1,270 @@
-.class public final enum La0e;
-.super Ljava/lang/Enum;
+.class public final La0e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld5c;
 
-# static fields
-.field public static final synthetic X:[La0e;
 
-.field public static final enum a:La0e;
+# instance fields
+.field public final X:I
 
-.field public static final enum b:La0e;
+.field public final a:I
 
-.field public static final enum c:La0e;
+.field public final b:Z
 
-.field public static final enum o:La0e;
+.field public final c:Lorf;
+
+.field public final o:Lorf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(IZLorf;Lorf;I)V
+    .locals 0
 
-    new-instance v0, La0e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "LOADING"
+    iput p1, p0, La0e;->a:I
 
-    const/4 v2, 0x0
+    iput-boolean p2, p0, La0e;->b:Z
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, La0e;->c:Lorf;
 
-    sput-object v0, La0e;->a:La0e;
+    iput-object p4, p0, La0e;->o:Lorf;
 
-    new-instance v1, La0e;
-
-    const-string v2, "CONTENT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, La0e;->b:La0e;
-
-    new-instance v2, La0e;
-
-    const-string v3, "CONTENT_SEARCH"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, La0e;->c:La0e;
-
-    new-instance v3, La0e;
-
-    const-string v4, "EMPTY_SEARCH"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, La0e;->o:La0e;
-
-    filled-new-array {v0, v1, v2, v3}, [La0e;
-
-    move-result-object v0
-
-    sput-object v0, La0e;->X:[La0e;
+    iput p5, p0, La0e;->X:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)La0e;
-    .locals 1
 
-    const-class v0, La0e;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    goto :goto_1
 
-    check-cast p0, La0e;
+    :cond_0
+    instance-of v0, p1, La0e;
 
-    return-object p0
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, La0e;
+
+    iget v0, p0, La0e;->a:I
+
+    iget v1, p1, La0e;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean v0, p0, La0e;->b:Z
+
+    iget-boolean v1, p1, La0e;->b:Z
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, La0e;->c:Lorf;
+
+    iget-object v1, p1, La0e;->c:Lorf;
+
+    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, La0e;->o:Lorf;
+
+    iget-object v1, p1, La0e;->o:Lorf;
+
+    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, La0e;->X:I
+
+    iget p1, p1, La0e;->X:I
+
+    if-eq v0, p1, :cond_6
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_6
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public static values()[La0e;
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x2000
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Ly18;)Z
+    .locals 4
+
+    const/16 v0, 0x2000
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Ly18;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, La0e;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, La0e;->b:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v2, p0, La0e;->c:Lorf;
+
+    iget v2, v2, Lorf;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget-object v2, p0, La0e;->o:Lorf;
+
+    iget v2, v2, Lorf;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, La0e;->X:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
     .locals 1
 
-    sget-object v0, La0e;->X:[La0e;
+    iget v0, p0, La0e;->X:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    return v0
+.end method
+
+.method public final q(Ly18;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, La0e;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SelectableItem(valueId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, La0e;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isSelected="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, La0e;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, La0e;->c:Lorf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", subtitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, La0e;->o:Lorf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", viewType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget v2, p0, La0e;->X:I
+
+    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [La0e;
 
     return-object v0
 .end method

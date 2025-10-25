@@ -72,7 +72,7 @@
 
 # virtual methods
 .method public createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lorg/webrtc/DefaultVideoDecoderFactory;->softwareVideoDecoderFactory:Lorg/webrtc/VideoDecoderFactory;
 
@@ -88,11 +88,11 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/DefaultVideoDecoderFactory;->platformSoftwareVideoDecoderFactory:Lorg/webrtc/VideoDecoderFactory;
+    iget-object v2, p0, Lorg/webrtc/DefaultVideoDecoderFactory;->platformSoftwareVideoDecoderFactory:Lorg/webrtc/VideoDecoderFactory;
 
-    if-eqz p0, :cond_0
+    if-eqz v2, :cond_0
 
-    invoke-interface {p0, p1}, Lorg/webrtc/VideoDecoderFactory;->createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
+    invoke-interface {v2, p1}, Lorg/webrtc/VideoDecoderFactory;->createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
 
     move-result-object v0
 
@@ -101,11 +101,11 @@
 
     if-eqz v0, :cond_1
 
-    new-instance p0, Lorg/webrtc/VideoDecoderFallback;
+    new-instance p1, Lorg/webrtc/VideoDecoderFallback;
 
-    invoke-direct {p0, v0, v1}, Lorg/webrtc/VideoDecoderFallback;-><init>(Lorg/webrtc/VideoDecoder;Lorg/webrtc/VideoDecoder;)V
+    invoke-direct {p1, v0, v1}, Lorg/webrtc/VideoDecoderFallback;-><init>(Lorg/webrtc/VideoDecoder;Lorg/webrtc/VideoDecoder;)V
 
-    return-object p0
+    return-object p1
 
     :cond_1
     if-eqz v1, :cond_2
@@ -147,32 +147,32 @@
 
     invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
-    iget-object p0, p0, Lorg/webrtc/DefaultVideoDecoderFactory;->platformSoftwareVideoDecoderFactory:Lorg/webrtc/VideoDecoderFactory;
+    iget-object v1, p0, Lorg/webrtc/DefaultVideoDecoderFactory;->platformSoftwareVideoDecoderFactory:Lorg/webrtc/VideoDecoderFactory;
 
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-interface {p0}, Lorg/webrtc/VideoDecoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+    invoke-interface {v1}, Lorg/webrtc/VideoDecoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
     :cond_0
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
-    move-result p0
+    move-result v1
 
-    new-array p0, p0, [Lorg/webrtc/VideoCodecInfo;
+    new-array v1, v1, [Lorg/webrtc/VideoCodecInfo;
 
-    invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, [Lorg/webrtc/VideoCodecInfo;
+    check-cast v0, [Lorg/webrtc/VideoCodecInfo;
 
-    return-object p0
+    return-object v0
 .end method

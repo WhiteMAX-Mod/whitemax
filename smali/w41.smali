@@ -1,176 +1,61 @@
 .class public final Lw41;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Leb4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ljava/lang/String;
 
-.field public final synthetic b:J
+.field public Y:Ljava/lang/String;
 
-.field public final synthetic c:Z
+.field public Z:Ljava/lang/CharSequence;
 
-.field public final synthetic o:Z
+.field public o:Lx41;
+
+.field public q0:Ljava/lang/Long;
+
+.field public r0:I
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lx41;
+
+.field public u0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(JZZI)V
+.method public constructor <init>(Lx41;Ly14;)V
     .locals 0
 
-    iput p5, p0, Lw41;->a:I
+    iput-object p1, p0, Lw41;->t0:Lx41;
 
-    iput-wide p1, p0, Lw41;->b:J
-
-    iput-boolean p3, p0, Lw41;->c:Z
-
-    iput-boolean p4, p0, Lw41;->o:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lw41;->a:I
+    iput-object p1, p0, Lw41;->s0:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lw41;->u0:I
 
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lad4;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    or-int/2addr p1, v0
 
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
+    iput p1, p0, Lw41;->u0:I
 
-    new-instance v1, Lpxa;
+    iget-object p1, p0, Lw41;->t0:Lx41;
 
-    const-string v2, "type"
+    const/4 v0, 0x0
 
-    const-string v3, "CHAT"
+    invoke-static {p1, v0, p0}, Lx41;->a(Lx41;Lhy7;Ly14;)Ljava/lang/Object;
 
-    invoke-direct {v1, v2, v3}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object p1
 
-    iget-wide v2, p0, Lw41;->b:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    new-instance v3, Lpxa;
-
-    const-string v4, "chat_id"
-
-    invoke-direct {v3, v4, v2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v2, p0, Lw41;->c:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    new-instance v4, Lpxa;
-
-    const-string v5, "video_enabled"
-
-    invoke-direct {v4, v5, v2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean p0, p0, Lw41;->o:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    new-instance v2, Lpxa;
-
-    const-string v5, "microphone_enabled"
-
-    invoke-direct {v2, v5, p0}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, v3, v4, v2}, [Lpxa;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lad4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
-
-    new-instance v1, Lpxa;
-
-    const-string v2, "type"
-
-    const-string v3, "ONE_TO_ONE"
-
-    invoke-direct {v1, v2, v3}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-wide v2, p0, Lw41;->b:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    new-instance v3, Lpxa;
-
-    const-string v4, "opponent_id"
-
-    invoke-direct {v3, v4, v2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v2, p0, Lw41;->c:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    new-instance v4, Lpxa;
-
-    const-string v5, "video_enabled"
-
-    invoke-direct {v4, v5, v2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean p0, p0, Lw41;->o:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    new-instance v2, Lpxa;
-
-    const-string v5, "microphone_enabled"
-
-    invoke-direct {v2, v5, p0}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, v3, v4, v2}, [Lpxa;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

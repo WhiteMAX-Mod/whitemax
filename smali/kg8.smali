@@ -1,198 +1,182 @@
-.class public final synthetic Lkg8;
-.super Ljava/lang/Object;
+.class public final Lkg8;
+.super Lf4;
 .source "SourceFile"
 
-# interfaces
-.implements Lmg8;
-.implements Lko8;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lkg8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:Lpcb;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpcb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lkg8;->a:Lpcb;
+    new-instance v0, Lgti;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lgti;-><init>(I)V
+
+    sput-object v0, Lkg8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const-string v0, "json must not be null"
+
+    invoke-static {p1, v0}, Lzui;->j(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lkg8;->a:Ljava/lang/String;
+
     return-void
+.end method
+
+.method public static b(Landroid/content/Context;I)Lkg8;
+    .locals 6
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+
+    move-result-object p0
+
+    :try_start_0
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    const/16 v1, 0x400
+
+    new-array v2, v1, [B
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    const/4 v3, 0x0
+
+    :try_start_1
+    invoke-virtual {p0, v2, v3, v1}, Ljava/io/InputStream;->read([BII)I
+
+    move-result v4
+
+    const/4 v5, -0x1
+
+    if-eq v4, v5, :cond_0
+
+    invoke-virtual {v0, v2, v3, v4}, Ljava/io/OutputStream;->write([BII)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :try_start_2
+    invoke-static {p0}, Lnzh;->a(Ljava/io/Closeable;)V
+
+    invoke-static {v0}, Lnzh;->a(Ljava/io/Closeable;)V
+
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object p0
+
+    new-instance v0, Ljava/lang/String;
+
+    const-string v1, "UTF-8"
+
+    invoke-direct {v0, p0, v1}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+
+    new-instance p0, Lkg8;
+
+    invoke-direct {p0, v0}, Lkg8;-><init>(Ljava/lang/String;)V
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    goto :goto_2
+
+    :goto_1
+    invoke-static {p0}, Lnzh;->a(Ljava/io/Closeable;)V
+
+    invoke-static {v0}, Lnzh;->a(Ljava/io/Closeable;)V
+
+    throw v1
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_2
+    new-instance v0, Landroid/content/res/Resources$NotFoundException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Failed to read resource "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ": "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public a(Lsn8;I)V
-    .locals 0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    iget-object p0, p0, Lkg8;->a:Lpcb;
+    const/16 p2, 0x4f45
 
-    invoke-interface {p1, p2, p0}, Lsn8;->g(ILpcb;)V
+    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    return-void
-.end method
+    move-result p2
 
-.method public d(Ldg8;)V
-    .locals 9
+    const/4 v0, 0x2
 
-    iget-object v0, p1, Ldg8;->a:Ljf8;
+    iget-object v1, p0, Lkg8;->a:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ldg8;->isConnected()Z
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    move-result v1
+    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
 
-    if-nez v1, :cond_0
-
-    goto/16 :goto_2
-
-    :cond_0
-    iget-object v1, p1, Ldg8;->v:Lpcb;
-
-    iget-object p0, p0, Lkg8;->a:Lpcb;
-
-    invoke-static {v1, p0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto/16 :goto_2
-
-    :cond_1
-    iput-object p0, p1, Ldg8;->v:Lpcb;
-
-    iget-object v1, p1, Ldg8;->w:Lpcb;
-
-    iget-object v2, p1, Ldg8;->u:Lpcb;
-
-    invoke-static {v2, p0}, Ldg8;->f(Lpcb;Lpcb;)Lpcb;
-
-    move-result-object p0
-
-    iput-object p0, p1, Ldg8;->w:Lpcb;
-
-    invoke-virtual {p0, v1}, Lpcb;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-nez p0, :cond_2
-
-    iget-object p0, p1, Ldg8;->r:Llqc;
-
-    iget-object v3, p1, Ldg8;->s:Llqc;
-
-    iget-object v4, p1, Ldg8;->q:Ll37;
-
-    iget-object v5, p1, Ldg8;->p:Ll37;
-
-    iget-object v6, p1, Ldg8;->t:Lvld;
-
-    iget-object v7, p1, Ldg8;->w:Lpcb;
-
-    iget-object v8, p1, Ldg8;->D:Landroid/os/Bundle;
-
-    invoke-static {v4, v5, v6, v7, v8}, Ldg8;->E(Ljava/util/List;Ljava/util/List;Lvld;Lpcb;Landroid/os/Bundle;)Llqc;
-
-    move-result-object v4
-
-    iput-object v4, p1, Ldg8;->r:Llqc;
-
-    iget-object v5, p1, Ldg8;->p:Ll37;
-
-    iget-object v6, p1, Ldg8;->D:Landroid/os/Bundle;
-
-    iget-object v7, p1, Ldg8;->t:Lvld;
-
-    iget-object v8, p1, Ldg8;->w:Lpcb;
-
-    invoke-static {v4, v5, v6, v7, v8}, Ldg8;->D(Llqc;Ljava/util/List;Landroid/os/Bundle;Lvld;Lpcb;)Llqc;
-
-    move-result-object v4
-
-    iput-object v4, p1, Ldg8;->s:Llqc;
-
-    iget-object v4, p1, Ldg8;->r:Llqc;
-
-    invoke-virtual {v4, p0}, Ll37;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    xor-int/2addr p0, v1
-
-    iget-object v4, p1, Ldg8;->s:Llqc;
-
-    invoke-virtual {v4, v3}, Ll37;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    xor-int/2addr v3, v1
-
-    iget-object v4, p1, Ldg8;->h:Lut7;
-
-    new-instance v5, Lsf8;
-
-    const/4 v6, 0x4
-
-    invoke-direct {v5, p1, v6}, Lsf8;-><init>(Ldg8;I)V
-
-    const/16 v6, 0xd
-
-    invoke-virtual {v4, v6, v5}, Lut7;->f(ILpt7;)V
-
-    goto :goto_0
-
-    :cond_2
-    move p0, v2
-
-    move v3, p0
-
-    :goto_0
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v3
-
-    iget-object v4, v0, Ljf8;->X:Landroid/os/Handler;
-
-    invoke-virtual {v4}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
-    move-result-object v4
-
-    if-ne v3, v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move v1, v2
-
-    :goto_1
-    invoke-static {v1}, Lmq0;->h(Z)V
-
-    iget-object v1, v0, Ljf8;->o:Lhf8;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_4
-    if-eqz p0, :cond_5
-
-    new-instance p0, Lxr7;
-
-    const/16 v1, 0x17
-
-    invoke-direct {p0, v1, p1}, Lxr7;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p0}, Ljf8;->o(Lom3;)V
-
-    :cond_5
-    :goto_2
     return-void
 .end method

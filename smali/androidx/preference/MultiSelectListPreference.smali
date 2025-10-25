@@ -5,93 +5,93 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 2
+    .locals 3
 
-    sget v0, Lq2c;->dialogPreferenceStyle:I
+    sget v0, Lekc;->dialogPreferenceStyle:I
 
     const v1, 0x1010091
 
-    invoke-static {v0, v1, p1}, Ln2e;->k(IILandroid/content/Context;)I
+    invoke-static {v0, v1, p1}, Lt0i;->d(IILandroid/content/Context;)I
 
     move-result v0
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/DialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance p0, Ljava/util/HashSet;
+    new-instance v1, Ljava/util/HashSet;
 
-    invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    sget-object p0, Ladc;->MultiSelectListPreference:[I
+    sget-object v1, Lzuc;->MultiSelectListPreference:[I
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p2, p0, v0, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object p0
-
-    sget p1, Ladc;->MultiSelectListPreference_entries:I
-
-    sget p2, Ladc;->MultiSelectListPreference_android_entries:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2, v1, v0, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    if-nez p1, :cond_0
+    sget p2, Lzuc;->MultiSelectListPreference_entries:I
 
-    invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
+    sget v0, Lzuc;->MultiSelectListPreference_android_entries:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
     :cond_0
-    sget p1, Ladc;->MultiSelectListPreference_entryValues:I
+    sget p2, Lzuc;->MultiSelectListPreference_entryValues:I
 
-    sget p2, Ladc;->MultiSelectListPreference_android_entryValues:I
+    sget v0, Lzuc;->MultiSelectListPreference_android_entryValues:I
 
-    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
-    move-result-object p1
+    move-result-object p2
 
-    if-nez p1, :cond_1
+    if-nez p2, :cond_1
 
-    invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
+    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
     :cond_1
-    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
-    .locals 2
+.method public final d(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
+    .locals 3
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
-    move-result-object p0
+    move-result-object p1
 
-    new-instance p1, Ljava/util/HashSet;
+    new-instance p2, Ljava/util/HashSet;
 
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {p2}, Ljava/util/HashSet;-><init>()V
 
-    array-length p2, p0
+    array-length v0, p1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-ge v0, p2, :cond_0
+    if-ge v1, v0, :cond_0
 
-    aget-object v1, p0, v0
+    aget-object v2, p1, v1
 
-    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {p1, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    return-object p1
+    return-object p2
 .end method

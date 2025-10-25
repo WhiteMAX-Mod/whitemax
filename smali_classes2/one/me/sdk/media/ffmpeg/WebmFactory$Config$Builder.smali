@@ -98,7 +98,7 @@
 
 # virtual methods
 .method public final build()Lone/me/sdk/media/ffmpeg/WebmFactory$Config;
-    .locals 4
+    .locals 5
 
     new-instance v0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;
 
@@ -113,9 +113,9 @@
 
     iget-boolean v3, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->autoRepeat:Z
 
-    iget-boolean p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->autoStart:Z
+    iget-boolean v4, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->autoStart:Z
 
-    invoke-direct {v0, v1, v2, v3, p0}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;-><init>(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;ZZZ)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;-><init>(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;ZZZ)V
 
     return-object v0
 .end method

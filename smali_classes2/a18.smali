@@ -1,23 +1,31 @@
 .class public final La18;
-.super Lx2;
+.super Lccc;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:La18;
+# virtual methods
+.method public final A(Ly18;)V
+    .locals 1
 
+    check-cast p1, Lu8c;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    new-instance v0, La18;
+    check-cast v0, Lz08;
 
-    const/16 v1, 0x8
+    iget-object p1, p1, Lu8c;->a:Ljava/lang/CharSequence;
 
-    invoke-direct {v0, v1}, Lx2;-><init>(I)V
+    invoke-virtual {v0, p1}, Lz08;->setLink(Ljava/lang/CharSequence;)V
 
-    sput-object v0, La18;->c:La18;
+    return-void
+.end method
+
+.method public final I(Landroid/view/View$OnClickListener;)V
+    .locals 1
+
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
+
+    invoke-static {v0, p1}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method

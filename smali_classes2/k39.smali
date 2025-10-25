@@ -1,125 +1,45 @@
-.class public final enum Lk39;
-.super Ljava/lang/Enum;
+.class public abstract Lk39;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lk39;
+# instance fields
+.field public final a:J
 
-.field public static final a:Ljava/util/HashMap;
+.field public final b:J
 
-.field public static final enum b:Lk39;
+.field public final c:Ld39;
 
-.field public static final enum c:Lk39;
+.field public final d:Ll39;
 
-.field public static final enum o:Lk39;
+.field public final e:Landroid/net/Uri;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(JJLd39;Ll39;)V
+    .locals 0
 
-    new-instance v0, Lk39;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
+    iput-wide p1, p0, Lk39;->a:J
 
-    const/4 v2, 0x0
+    iput-wide p3, p0, Lk39;->b:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p5, p0, Lk39;->c:Ld39;
 
-    sput-object v0, Lk39;->b:Lk39;
+    iput-object p6, p0, Lk39;->d:Ll39;
 
-    new-instance v1, Lk39;
+    new-instance p1, Ljava/io/File;
 
-    const-string v3, "EDITED"
+    iget-object p2, p5, Ld39;->c:Ljava/lang/String;
 
-    const/4 v4, 0x1
+    invoke-direct {p1, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {p1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
-    new-instance v3, Lk39;
+    move-result-object p1
 
-    const-string v4, "REMOVED"
-
-    const/4 v5, 0x2
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lk39;->c:Lk39;
-
-    new-instance v4, Lk39;
-
-    const-string v5, "DELAYED_FIRE_ERROR"
-
-    const/4 v6, 0x3
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lk39;->o:Lk39;
-
-    filled-new-array {v0, v1, v3, v4}, [Lk39;
-
-    move-result-object v0
-
-    sput-object v0, Lk39;->X:[Lk39;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
-
-    invoke-static {}, Lk39;->values()[Lk39;
-
-    move-result-object v1
-
-    array-length v3, v1
-
-    :goto_0
-    if-ge v2, v3, :cond_0
-
-    aget-object v4, v1, v2
-
-    invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    sput-object v0, Lk39;->a:Ljava/util/HashMap;
+    iput-object p1, p0, Lk39;->e:Landroid/net/Uri;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lk39;
-    .locals 1
-
-    const-class v0, Lk39;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lk39;
-
-    return-object p0
-.end method
-
-.method public static values()[Lk39;
-    .locals 1
-
-    sget-object v0, Lk39;->X:[Lk39;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lk39;
-
-    return-object v0
 .end method

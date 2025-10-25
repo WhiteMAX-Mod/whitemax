@@ -19,19 +19,19 @@
         "",
         "Ljava/util/UUID;",
         "id",
-        "Lfwg;",
+        "Lhph;",
         "workSpec",
         "",
         "",
         "tags",
         "<init>",
-        "(Ljava/util/UUID;Lfwg;Ljava/util/Set;)V",
+        "(Ljava/util/UUID;Lhph;Ljava/util/Set;)V",
         "Ljava/util/UUID;",
         "getId",
         "()Ljava/util/UUID;",
-        "Lfwg;",
+        "Lhph;",
         "getWorkSpec",
-        "()Lfwg;",
+        "()Lhph;",
         "Ljava/util/Set;",
         "getTags",
         "()Ljava/util/Set;",
@@ -40,7 +40,7 @@
         "stringId",
         "Companion",
         "Builder",
-        "bwg",
+        "dph",
         "work-runtime_release"
     }
     k = 0x1
@@ -54,7 +54,7 @@
 
 
 # static fields
-.field public static final Companion:Lbwg;
+.field public static final Companion:Ldph;
 
 .field public static final DEFAULT_BACKOFF_DELAY_MILLIS:J = 0x7530L
 
@@ -88,29 +88,29 @@
     .end annotation
 .end field
 
-.field private final workSpec:Lfwg;
+.field private final workSpec:Lhph;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lbwg;
+    new-instance v0, Ldph;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Landroidx/work/WorkRequest;->Companion:Lbwg;
+    sput-object v0, Landroidx/work/WorkRequest;->Companion:Ldph;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/UUID;Lfwg;Ljava/util/Set;)V
+.method public constructor <init>(Ljava/util/UUID;Lhph;Ljava/util/Set;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/UUID;",
-            "Lfwg;",
+            "Lhph;",
             "Ljava/util/Set<",
             "Ljava/lang/String;",
             ">;)V"
@@ -121,7 +121,7 @@
 
     iput-object p1, p0, Landroidx/work/WorkRequest;->id:Ljava/util/UUID;
 
-    iput-object p2, p0, Landroidx/work/WorkRequest;->workSpec:Lfwg;
+    iput-object p2, p0, Landroidx/work/WorkRequest;->workSpec:Lhph;
 
     iput-object p3, p0, Landroidx/work/WorkRequest;->tags:Ljava/util/Set;
 
@@ -131,29 +131,29 @@
 
 # virtual methods
 .method public getId()Ljava/util/UUID;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/work/WorkRequest;->id:Ljava/util/UUID;
+    iget-object v0, p0, Landroidx/work/WorkRequest;->id:Ljava/util/UUID;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getStringId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getTags()Ljava/util/Set;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -163,15 +163,15 @@
         }
     .end annotation
 
-    iget-object p0, p0, Landroidx/work/WorkRequest;->tags:Ljava/util/Set;
+    iget-object v0, p0, Landroidx/work/WorkRequest;->tags:Ljava/util/Set;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final getWorkSpec()Lfwg;
-    .locals 0
+.method public final getWorkSpec()Lhph;
+    .locals 1
 
-    iget-object p0, p0, Landroidx/work/WorkRequest;->workSpec:Lfwg;
+    iget-object v0, p0, Landroidx/work/WorkRequest;->workSpec:Lhph;
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,49 +1,63 @@
 .class public final Lzde;
-.super Ljava/lang/Object;
+.super Lpd0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lexc;
-
-.field public final b:Luh;
-
-.field public final c:Lwwc;
-
-.field public final d:Lwwc;
+# static fields
+.field public static final b:Lzde;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzde;
 
-    iput-object p1, p0, Lzde;->a:Lexc;
+    const/16 v1, 0x11
 
-    new-instance v0, Luh;
+    invoke-direct {v0, v1}, Lpd0;-><init>(I)V
 
-    const/16 v1, 0x17
-
-    invoke-direct {v0, p1, v1}, Luh;-><init>(Lexc;I)V
-
-    iput-object v0, p0, Lzde;->b:Luh;
-
-    new-instance v0, Lwwc;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, p1, v1}, Lwwc;-><init>(Lexc;I)V
-
-    iput-object v0, p0, Lzde;->c:Lwwc;
-
-    new-instance v0, Lwwc;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, p1, v1}, Lwwc;-><init>(Lexc;I)V
-
-    iput-object v0, p0, Lzde;->d:Lwwc;
+    sput-object v0, Lzde;->b:Lzde;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lzde;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x48cff30e
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OpenCachingScreen"
+
+    return-object v0
 .end method

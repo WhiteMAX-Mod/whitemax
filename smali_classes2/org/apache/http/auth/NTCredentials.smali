@@ -123,13 +123,13 @@
 
     .line 13
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Username:password string may not be null"
+    const-string v0, "Username:password string may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -173,13 +173,13 @@
 
     .line 19
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "User name may not be null"
+    const-string p2, "User name may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -217,15 +217,15 @@
 
     if-eqz v2, :cond_2
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTCredentials;->workstation:Ljava/lang/String;
+    iget-object v2, p0, Lorg/apache/http/auth/NTCredentials;->workstation:Ljava/lang/String;
 
     iget-object p1, p1, Lorg/apache/http/auth/NTCredentials;->workstation:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Lorg/apache/http/util/LangUtils;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lorg/apache/http/util/LangUtils;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_2
 
     return v1
 
@@ -234,51 +234,51 @@
 .end method
 
 .method public getDomain()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTCredentials;->principal:Lorg/apache/http/auth/NTUserPrincipal;
+    iget-object v0, p0, Lorg/apache/http/auth/NTCredentials;->principal:Lorg/apache/http/auth/NTUserPrincipal;
 
-    invoke-virtual {p0}, Lorg/apache/http/auth/NTUserPrincipal;->getDomain()Ljava/lang/String;
+    invoke-virtual {v0}, Lorg/apache/http/auth/NTUserPrincipal;->getDomain()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getPassword()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTCredentials;->password:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/auth/NTCredentials;->password:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getUserName()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTCredentials;->principal:Lorg/apache/http/auth/NTUserPrincipal;
+    iget-object v0, p0, Lorg/apache/http/auth/NTCredentials;->principal:Lorg/apache/http/auth/NTUserPrincipal;
 
-    invoke-virtual {p0}, Lorg/apache/http/auth/NTUserPrincipal;->getUsername()Ljava/lang/String;
+    invoke-virtual {v0}, Lorg/apache/http/auth/NTUserPrincipal;->getUsername()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getUserPrincipal()Ljava/security/Principal;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTCredentials;->principal:Lorg/apache/http/auth/NTUserPrincipal;
+    iget-object v0, p0, Lorg/apache/http/auth/NTCredentials;->principal:Lorg/apache/http/auth/NTUserPrincipal;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getWorkstation()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTCredentials;->workstation:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/auth/NTCredentials;->workstation:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
@@ -292,17 +292,17 @@
 
     move-result v0
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTCredentials;->workstation:Ljava/lang/String;
+    iget-object v1, p0, Lorg/apache/http/auth/NTCredentials;->workstation:Ljava/lang/String;
 
-    invoke-static {v0, p0}, Lorg/apache/http/util/LangUtils;->hashCode(ILjava/lang/Object;)I
+    invoke-static {v0, v1}, Lorg/apache/http/util/LangUtils;->hashCode(ILjava/lang/Object;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -318,13 +318,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lorg/apache/http/auth/NTCredentials;->workstation:Ljava/lang/String;
+    iget-object v1, p0, Lorg/apache/http/auth/NTCredentials;->workstation:Ljava/lang/String;
 
-    const-string v1, "]"
+    const-string v2, "]"
 
-    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

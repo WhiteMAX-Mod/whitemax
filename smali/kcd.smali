@@ -1,109 +1,82 @@
-.class public final Lkcd;
-.super Ly;
+.class public final synthetic Lkcd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lkcd;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public c:Z
+.field public final synthetic a:I
+
+.field public final synthetic b:Llcd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lx;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Lx;-><init>(I)V
-
-    sput-object v0, Lkcd;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method public synthetic constructor <init>(Llcd;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ly;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    iput p2, p0, Lkcd;->a:I
 
-    const/4 p2, 0x0
+    iput-object p1, p0, Lkcd;->b:Llcd;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lkcd;->c:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lkcd;->a:I
 
-    const-string v1, "SearchView.SavedState{"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lkcd;->b:Llcd;
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    iget-object v0, v0, Llcd;->c:Lgb0;
 
-    move-result v1
+    iget-object v1, v0, Lgb0;->g:Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    check-cast v1, Llcd;
 
-    move-result-object v1
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v1, v0, Lgb0;->a:I
 
-    const-string v1, " isIconified="
+    and-int/lit8 v1, v1, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_0
 
-    iget-boolean p0, p0, Lkcd;->c:Z
+    goto :goto_0
 
-    const-string v1, "}"
+    :cond_0
+    invoke-virtual {v0}, Lgb0;->b()V
 
-    invoke-static {v0, p0, v1}, Lmw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Ly;->writeToParcel(Landroid/os/Parcel;I)V
-
-    iget-boolean p0, p0, Lkcd;->c:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
-
+    :cond_1
+    :goto_0
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lkcd;->b:Llcd;
+
+    iget-object v0, v0, Llcd;->c:Lgb0;
+
+    iget-object v1, v0, Lgb0;->g:Ljava/lang/Object;
+
+    check-cast v1, Llcd;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0}, Lgb0;->b()V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

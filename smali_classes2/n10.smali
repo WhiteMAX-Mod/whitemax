@@ -1,86 +1,103 @@
 .class public final Ln10;
-.super Lux;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final f:Ln10;
+
+
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final a:J
 
-.field public final Y:Ljava/lang/Long;
+.field public final b:J
 
-.field public final Z:[B
+.field public final c:Ljava/lang/String;
 
-.field public final o:Ljava/lang/Long;
+.field public final d:Le20;
 
-.field public final r0:Ljava/lang/String;
-
-.field public final s0:Ljava/lang/String;
-
-.field public final t0:I
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;J[BZLjava/lang/String;Ljava/lang/String;ZI)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget-object v0, Lxz;->Y:Lxz;
+    new-instance v0, Lm10;
 
-    invoke-direct {p0, v0, p7, p10}, Lux;-><init>(Lxz;ZZ)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance v1, Ln10;
 
-    move-result-object p4
+    invoke-direct {v1, v0}, Ln10;-><init>(Lm10;)V
 
-    iput-object p4, p0, Ln10;->Y:Ljava/lang/Long;
+    sput-object v1, Ln10;->f:Ln10;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return-void
+.end method
 
-    move-result-object p1
+.method public constructor <init>(Lm10;)V
+    .locals 2
 
-    iput-object p1, p0, Ln10;->o:Ljava/lang/Long;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ln10;->X:Ljava/lang/String;
+    iget-wide v0, p1, Lm10;->a:J
 
-    iput-object p6, p0, Ln10;->Z:[B
+    iput-wide v0, p0, Ln10;->a:J
 
-    iput-object p8, p0, Ln10;->r0:Ljava/lang/String;
+    iget-wide v0, p1, Lm10;->b:J
 
-    iput-object p9, p0, Ln10;->s0:Ljava/lang/String;
+    iput-wide v0, p0, Ln10;->b:J
 
-    iput p11, p0, Ln10;->t0:I
+    iget-object v0, p1, Lm10;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Ln10;->c:Ljava/lang/String;
+
+    iget-object v0, p1, Lm10;->e:Ljava/lang/Object;
+
+    check-cast v0, Le20;
+
+    iput-object v0, p0, Ln10;->d:Le20;
+
+    iget-object p1, p1, Lm10;->d:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    iput-object p1, p0, Ln10;->e:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
+.method public final a()Lm10;
     .locals 3
 
-    invoke-super {p0}, Lux;->a()Ljava/util/HashMap;
+    new-instance v0, Lm10;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Ln10;->r0:Ljava/lang/String;
+    iget-wide v1, p0, Ln10;->a:J
 
-    invoke-static {v1}, Lm7g;->m(Ljava/lang/CharSequence;)Z
+    iput-wide v1, v0, Lm10;->a:J
 
-    move-result v2
+    iget-wide v1, p0, Ln10;->b:J
 
-    if-nez v2, :cond_0
+    iput-wide v1, v0, Lm10;->b:J
 
-    const-string p0, "token"
+    iget-object v1, p0, Ln10;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v1, v0, Lm10;->c:Ljava/lang/Object;
 
-    return-object v0
+    iget-object v1, p0, Ln10;->d:Le20;
 
-    :cond_0
-    const-string v1, "audioId"
+    iput-object v1, v0, Lm10;->e:Ljava/lang/Object;
 
-    iget-object p0, p0, Ln10;->o:Ljava/lang/Long;
+    iget-object v1, p0, Ln10;->e:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v1, v0, Lm10;->d:Ljava/lang/Object;
 
     return-object v0
 .end method

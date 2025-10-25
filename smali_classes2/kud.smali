@@ -1,120 +1,124 @@
 .class public final Lkud;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lua4;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lcl7;
+.field public X:I
 
-.field public final b:Llud;
+.field public final synthetic Y:Lmud;
+
+.field public final synthetic Z:Ltp2;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;)V
+.method public constructor <init>(Lmud;Ltp2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkud;->Y:Lmud;
 
-    iput-object p1, p0, Lkud;->a:Lcl7;
+    iput-object p2, p0, Lkud;->Z:Ltp2;
 
-    sget-object p1, Llud;->b:Llud;
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Lkud;->b:Llud;
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcb4;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-object p0, p0, Lkud;->b:Llud;
+    check-cast p1, Lq54;
 
-    return-object p0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final b(Ljava/lang/String;Lxa4;Landroid/os/Bundle;)Lfb4;
-    .locals 10
-
-    iget-object v0, p0, Lkud;->b:Llud;
-
-    iget-object v0, v0, Lcb4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    sget-object v0, Llud;->b:Llud;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Llud;->c:Lxa4;
-
-    invoke-virtual {p2, v0}, Lxa4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v8, Lfu3;
-
-    const/4 v0, 0x1
-
-    invoke-direct {v8, v0, p0}, Lfu3;-><init>(ILjava/lang/Object;)V
-
-    new-instance v2, Lfb4;
-
-    const/16 v9, 0x18
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v2 .. v9}, Lfb4;-><init>(Ljava/lang/String;Lxa4;Landroid/os/Bundle;ILdb4;Leb4;I)V
-
-    return-object v2
-
-    :cond_1
-    move-object v4, p2
-
-    const-class p0, Lkud;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p1, "invalid route "
-
-    invoke-static {p1, v4}, Lyv7;->g(Ljava/lang/String;Lxa4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    new-instance p3, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p1, v4}, Lyv7;->g(Ljava/lang/String;Lxa4;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lkud;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lkud;
 
-    invoke-static {p0, p2, p3}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    sget-object p2, Lccg;->a:Lccg;
 
-    return-object v1
+    invoke-virtual {p1, p2}, Lkud;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lkud;
+
+    iget-object v0, p0, Lkud;->Y:Lmud;
+
+    iget-object v1, p0, Lkud;->Z:Ltp2;
+
+    invoke-direct {p1, v0, v1, p2}, Lkud;-><init>(Lmud;Ltp2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lkud;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkud;->Y:Lmud;
+
+    iget-object p1, p1, Lmud;->a:Lnje;
+
+    new-instance v0, Liud;
+
+    iget-object v2, p0, Lkud;->Z:Ltp2;
+
+    invoke-direct {v0, v2}, Liud;-><init>(Ltp2;)V
+
+    iput v1, p0, Lkud;->X:I
+
+    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

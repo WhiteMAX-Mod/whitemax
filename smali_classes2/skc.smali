@@ -1,64 +1,18 @@
-.class public final Lskc;
+.class public abstract Lskc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ltkc;
 
 
 # static fields
-.field public static final a:Lskc;
+.field public static led_1:I = 0x7f0600bf
 
+.field public static led_2:I = 0x7f0600c0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static led_3:I = 0x7f0600c1
 
-    new-instance v0, Lskc;
+.field public static led_4:I = 0x7f0600c2
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static led_5:I = 0x7f0600c3
 
-    sput-object v0, Lskc;->a:Lskc;
+.field public static led_6:I = 0x7f0600c4
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lskc;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, 0x18d35279
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Stop"
-
-    return-object p0
-.end method
+.field public static led_7:I = 0x7f0600c5

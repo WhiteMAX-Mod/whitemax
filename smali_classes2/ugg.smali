@@ -1,66 +1,69 @@
-.class public final synthetic Lugg;
+.class public final Lugg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Leb4;
-
 
 # instance fields
-.field public final synthetic X:Z
+.field public final a:Lfgd;
 
-.field public final synthetic Y:I
+.field public final b:Lei;
 
-.field public final synthetic a:J
+.field public final c:Lxfd;
 
-.field public final synthetic b:Lpcg;
+.field public final d:Lxfd;
 
-.field public final synthetic c:Ljava/lang/Long;
+.field public final e:Lxfd;
 
-.field public final synthetic o:Ljava/lang/String;
+.field public final f:Lxfd;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLpcg;Ljava/lang/Long;Ljava/lang/String;ZI)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lugg;->a:J
+    iput-object p1, p0, Lugg;->a:Lfgd;
 
-    iput-object p3, p0, Lugg;->b:Lpcg;
+    new-instance v0, Lei;
 
-    iput-object p4, p0, Lugg;->c:Ljava/lang/Long;
+    const/16 v1, 0x1d
 
-    iput-object p5, p0, Lugg;->o:Ljava/lang/String;
+    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
 
-    iput-boolean p6, p0, Lugg;->X:Z
+    iput-object v0, p0, Lugg;->b:Lei;
 
-    iput p7, p0, Lugg;->Y:I
+    new-instance v0, Lxfd;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lugg;->c:Lxfd;
+
+    new-instance v0, Lxfd;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lugg;->d:Lxfd;
+
+    new-instance v0, Lxfd;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lugg;->e:Lxfd;
+
+    new-instance v0, Lxfd;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lugg;->f:Lxfd;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 8
-
-    new-instance v0, Lone/me/webapp/rootscreen/WebAppRootScreen;
-
-    iget-wide v1, p0, Lugg;->a:J
-
-    iget-object v3, p0, Lugg;->b:Lpcg;
-
-    iget-object v4, p0, Lugg;->c:Ljava/lang/Long;
-
-    iget-object v5, p0, Lugg;->o:Ljava/lang/String;
-
-    iget-boolean v6, p0, Lugg;->X:Z
-
-    iget v7, p0, Lugg;->Y:I
-
-    invoke-direct/range {v0 .. v7}, Lone/me/webapp/rootscreen/WebAppRootScreen;-><init>(JLpcg;Ljava/lang/Long;Ljava/lang/String;ZI)V
-
-    return-object v0
 .end method

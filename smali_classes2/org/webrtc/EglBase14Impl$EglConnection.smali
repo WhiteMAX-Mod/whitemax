@@ -59,11 +59,11 @@
     .line 15
     new-instance v0, Lorg/webrtc/RefCountDelegate;
 
-    new-instance v1, Ljc;
+    new-instance v1, Lqc;
 
-    const/16 v2, 0x9
+    const/16 v2, 0x8
 
-    invoke-direct {v1, v2}, Ljc;-><init>(I)V
+    invoke-direct {v1, v2}, Lqc;-><init>(I)V
 
     invoke-direct {v0, v1}, Lorg/webrtc/RefCountDelegate;-><init>(Ljava/lang/Runnable;)V
 
@@ -138,11 +138,11 @@
     .line 9
     new-instance p1, Lorg/webrtc/RefCountDelegate;
 
-    new-instance p2, Lje4;
+    new-instance p2, Lgj4;
 
-    const/16 v0, 0xd
+    const/16 v0, 0x10
 
-    invoke-direct {p2, v0, p0}, Lje4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Lgj4;-><init>(ILjava/lang/Object;)V
 
     invoke-direct {p1, p2}, Lorg/webrtc/RefCountDelegate;-><init>(Ljava/lang/Runnable;)V
 
@@ -206,14 +206,14 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method private static synthetic lambda$new$1()V
@@ -257,32 +257,32 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
 
-    move-result v2
+    move-result v3
 
-    invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v2
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
     goto :goto_1
 
@@ -304,35 +304,35 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw v0
 .end method
 
 .method public getConfig()Landroid/opengl/EGLConfig;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglBase14Impl$EglConnection;->eglConfig:Landroid/opengl/EGLConfig;
+    iget-object v0, p0, Lorg/webrtc/EglBase14Impl$EglConnection;->eglConfig:Landroid/opengl/EGLConfig;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getContext()Landroid/opengl/EGLContext;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglBase14Impl$EglConnection;->eglContext:Landroid/opengl/EGLContext;
+    iget-object v0, p0, Lorg/webrtc/EglBase14Impl$EglConnection;->eglContext:Landroid/opengl/EGLContext;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getDisplay()Landroid/opengl/EGLDisplay;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglBase14Impl$EglConnection;->eglDisplay:Landroid/opengl/EGLDisplay;
+    iget-object v0, p0, Lorg/webrtc/EglBase14Impl$EglConnection;->eglDisplay:Landroid/opengl/EGLDisplay;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public makeCurrent(Landroid/opengl/EGLSurface;)V
-    .locals 4
+    .locals 5
 
     const-string v0, "eglMakeCurrent failed: 0x"
 
@@ -375,64 +375,64 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
     :cond_1
     :try_start_1
-    new-instance p0, Landroid/opengl/GLException;
-
-    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
-
-    move-result p1
+    new-instance p1, Landroid/opengl/GLException;
 
     invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
 
     move-result v2
 
-    invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
 
-    move-result-object v2
+    move-result v3
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v3
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, p1, v0}, Landroid/opengl/GLException;-><init>(ILjava/lang/String;)V
+    invoke-direct {p1, v2, v0}, Landroid/opengl/GLException;-><init>(ILjava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :goto_0
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public release()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglBase14Impl$EglConnection;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
+    iget-object v0, p0, Lorg/webrtc/EglBase14Impl$EglConnection;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    invoke-virtual {p0}, Lorg/webrtc/RefCountDelegate;->release()V
+    invoke-virtual {v0}, Lorg/webrtc/RefCountDelegate;->release()V
 
     return-void
 .end method
 
 .method public retain()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglBase14Impl$EglConnection;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
+    iget-object v0, p0, Lorg/webrtc/EglBase14Impl$EglConnection;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    invoke-virtual {p0}, Lorg/webrtc/RefCountDelegate;->retain()V
+    invoke-virtual {v0}, Lorg/webrtc/RefCountDelegate;->retain()V
 
     return-void
 .end method

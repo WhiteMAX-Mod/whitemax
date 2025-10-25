@@ -16,18 +16,18 @@
 
 
 # virtual methods
-.method public final c(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
-    .locals 0
+.method public final d(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, p2, p0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    move-result p0
+    move-result p1
 
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

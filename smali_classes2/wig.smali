@@ -1,117 +1,150 @@
-.class public final enum Lwig;
-.super Ljava/lang/Enum;
+.class public final Lwig;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Lwig;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field public final a:Lzz6;
 
-
-# static fields
-.field public static final Companion:Lvig;
-
-.field public static final synthetic X:[Lwig;
-
-.field public static final a:Ljava/lang/Object;
-
-.field public static final enum b:Lwig;
-
-.field public static final enum c:Lwig;
-
-.field public static final enum o:Lwig;
+.field public final b:Ldq4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lzz6;Ldq4;)V
+    .locals 0
 
-    new-instance v0, Lwig;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "IMPACT_OCCURED"
+    iput-object p1, p0, Lwig;->a:Lzz6;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lwig;->b:Lwig;
-
-    new-instance v1, Lwig;
-
-    const-string v2, "NOTIFICATION_OCCURED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lwig;->c:Lwig;
-
-    new-instance v2, Lwig;
-
-    const-string v3, "SELECTION_CHANGED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lwig;->o:Lwig;
-
-    filled-new-array {v0, v1, v2}, [Lwig;
-
-    move-result-object v0
-
-    sput-object v0, Lwig;->X:[Lwig;
-
-    new-instance v0, Lvig;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lwig;->Companion:Lvig;
-
-    new-instance v0, Lfsf;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Lfsf;-><init>(I)V
-
-    invoke-static {v4, v0}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object v0
-
-    sput-object v0, Lwig;->a:Ljava/lang/Object;
+    iput-object p2, p0, Lwig;->b:Ldq4;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lwig;
-    .locals 1
 
-    const-class v0, Lwig;
+# virtual methods
+.method public final a(Ljava/util/List;Lli6;Lli6;Ldqf;Lur3;Lgx;)Ljava/util/List;
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lwig;->a:Lzz6;
 
-    move-result-object p0
+    invoke-interface {v0}, Lzz6;->a()Z
 
-    check-cast p0, Lwig;
+    move-result v1
 
-    return-object p0
-.end method
+    if-nez v1, :cond_0
 
-.method public static values()[Lwig;
-    .locals 1
+    return-object p1
 
-    sget-object v0, Lwig;->X:[Lwig;
+    :cond_0
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v0
+    new-instance v2, Ljava/util/ArrayList;
 
-    check-cast v0, [Lwig;
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    return-object v0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_1
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-interface {p2, v3}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Number;
+
+    invoke-virtual {v4}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v4
+
+    invoke-interface {v0, v4, v5}, Lzz6;->l(J)Z
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    if-eqz p4, :cond_2
+
+    iget-object v5, p0, Lwig;->b:Ldq4;
+
+    invoke-virtual {v5}, Ldq4;->a()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    move-object v5, v3
+
+    check-cast v5, Lpb9;
+
+    iget-object v5, v5, Lpb9;->s0:Lef9;
+
+    sget-object v6, Lef9;->X:Lef9;
+
+    if-eq v5, v6, :cond_2
+
+    invoke-interface {p3, v3}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    if-eqz p6, :cond_3
+
+    invoke-virtual {p6, v3}, Lgx;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string p3, "items for delete not empty, count = "
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "wig"
+
+    invoke-static {p2, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {p5, v1}, Lur3;->accept(Ljava/lang/Object;)V
+
+    :cond_5
+    return-object v2
 .end method

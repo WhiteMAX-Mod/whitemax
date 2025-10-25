@@ -1,150 +1,121 @@
-.class public final Lwwa;
+.class public abstract Lwwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Handler$Callback;
-
 
 # static fields
-.field public static final X:Ljava/lang/ThreadLocal;
+.field public static final a:I
 
-.field public static final o:Ljava/util/concurrent/ExecutorService;
+.field public static final b:I
 
+.field public static final c:I
 
-# instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public static final d:I
 
-.field public final b:Landroid/os/Handler;
+.field public static final e:I
 
-.field public final c:Liec;
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+    sget v0, Lznc;->oneme_media_keyboard_bottom_panel:I
 
-    move-result-object v0
+    sput v0, Lwwa;->a:I
 
-    sput-object v0, Lwwa;->o:Ljava/util/concurrent/ExecutorService;
+    sget v0, Lznc;->oneme_media_keyboard_emoji_container:I
 
-    new-instance v1, Ljava/lang/ThreadLocal;
+    sput v0, Lwwa;->b:I
 
-    invoke-direct {v1}, Ljava/lang/ThreadLocal;-><init>()V
+    sget v0, Lznc;->oneme_media_keyboard_emoji_list:I
 
-    sput-object v1, Lwwa;->X:Ljava/lang/ThreadLocal;
+    sput v0, Lwwa;->c:I
 
-    new-instance v1, Ljc;
+    sget v0, Lznc;->oneme_media_keyboard_emoji_tabs:I
 
-    const/16 v2, 0xb
+    sput v0, Lwwa;->d:I
 
-    invoke-direct {v1, v2}, Ljc;-><init>(I)V
+    sget v0, Lznc;->oneme_media_keyboard_fake_search_view:I
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    sput v0, Lwwa;->e:I
+
+    sget v0, Lznc;->oneme_media_keyboard_pager:I
+
+    sput v0, Lwwa;->f:I
+
+    sget v0, Lznc;->oneme_media_keyboard_recent_clear_confirmation_action:I
+
+    sput v0, Lwwa;->g:I
+
+    sget v0, Lznc;->oneme_media_keyboard_recent_clear_confirmation_cancel:I
+
+    sput v0, Lwwa;->h:I
+
+    sget v0, Lznc;->oneme_media_keyboard_remove_action:I
+
+    sput v0, Lwwa;->i:I
+
+    sget v0, Lznc;->oneme_media_keyboard_settings_action:I
+
+    sput v0, Lwwa;->j:I
+
+    sget v0, Lznc;->oneme_media_keyboard_showcase_action:I
+
+    sput v0, Lwwa;->k:I
+
+    sget v0, Lznc;->oneme_media_keyboard_stickers_container:I
+
+    sput v0, Lwwa;->l:I
+
+    sget v0, Lznc;->oneme_media_keyboard_stickers_header_title:I
+
+    sput v0, Lwwa;->m:I
+
+    sget v0, Lznc;->oneme_media_keyboard_stickers_list:I
+
+    sput v0, Lwwa;->n:I
+
+    sget v0, Lznc;->oneme_media_keyboard_stickers_tabs:I
+
+    sput v0, Lwwa;->o:I
+
+    sget v0, Lznc;->oneme_media_keyboard_tabs:I
+
+    sput v0, Lwwa;->p:I
+
+    sget v0, Lznc;->oneme_media_keyboard_view_type_category_emoji:I
+
+    sput v0, Lwwa;->q:I
+
+    sget v0, Lznc;->oneme_media_keyboard_view_type_fake_search:I
+
+    sput v0, Lwwa;->r:I
 
     return-void
-.end method
-
-.method public constructor <init>(Liec;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lwwa;->c:Liec;
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lwwa;->b:Landroid/os/Handler;
-
-    sget-object p1, Lwwa;->o:Ljava/util/concurrent/ExecutorService;
-
-    iput-object p1, p0, Lwwa;->a:Ljava/util/concurrent/ExecutorService;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 5
-
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Lu0h;
-
-    iget-boolean v0, p1, Lu0h;->c:Z
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget v0, p1, Lu0h;->o:I
-
-    add-int/2addr v0, v1
-
-    iput v0, p1, Lu0h;->o:I
-
-    iget-object v0, p0, Lwwa;->c:Liec;
-
-    sget-object v2, Lmce;->u0:Lmce;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "rtc.long.executor.task."
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v4, p1, Lu0h;->o:I
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p1, Lu0h;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3, v4}, Liec;->log(Lmce;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v0, p1, Lu0h;->o:I
-
-    const/4 v2, 0x4
-
-    if-lt v0, v2, :cond_1
-
-    :goto_0
-    return v1
-
-    :cond_1
-    iget-object v0, p0, Lwwa;->b:Landroid/os/Handler;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
-
-    move-result-object v0
-
-    iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object p0, p0, Lwwa;->b:Landroid/os/Handler;
-
-    const-wide/16 v2, 0x1388
-
-    invoke-virtual {p0, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    return v1
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "No task duration check thread"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method

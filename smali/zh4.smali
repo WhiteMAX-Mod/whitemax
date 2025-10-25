@@ -1,94 +1,69 @@
-.class public final Lzh4;
+.class public abstract Lzh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
 
-
-# instance fields
-.field public final synthetic a:Ly7e;
-
-.field public final synthetic b:Landroid/view/ViewGroup;
-
-.field public final synthetic c:Landroid/view/View;
-
-.field public final synthetic d:Lai4;
+# static fields
+.field public static final a:Landroid/util/SparseIntArray;
 
 
 # direct methods
-.method public constructor <init>(Ly7e;Landroid/view/ViewGroup;Landroid/view/View;Lai4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/util/SparseIntArray;
 
-    iput-object p1, p0, Lzh4;->a:Ly7e;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lzh4;->b:Landroid/view/ViewGroup;
+    invoke-direct {v0, v1}, Landroid/util/SparseIntArray;-><init>(I)V
 
-    iput-object p3, p0, Lzh4;->c:Landroid/view/View;
-
-    iput-object p4, p0, Lzh4;->d:Lai4;
+    sput-object v0, Lzh4;->a:Landroid/util/SparseIntArray;
 
     return-void
 .end method
 
+.method public static final a()Lqvb;
+    .locals 5
 
-# virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 4
+    new-instance v0, Lqvb;
 
-    new-instance p1, Lj5;
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    const/16 v0, 0x11
+    move-result-object v1
 
-    iget-object v1, p0, Lzh4;->b:Landroid/view/ViewGroup;
+    invoke-virtual {v1}, Ljava/lang/Runtime;->maxMemory()J
 
-    iget-object v2, p0, Lzh4;->c:Landroid/view/View;
+    move-result-wide v1
 
-    iget-object v3, p0, Lzh4;->d:Lai4;
+    const-wide/32 v3, 0x7fffffff
 
-    invoke-direct {p1, v1, v2, v3, v0}, Lj5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    move-result-wide v1
 
-    const/4 p1, 0x2
+    long-to-int v1, v1
 
-    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+    const/high16 v2, 0x1000000
 
-    move-result p1
+    if-le v1, v2, :cond_0
 
-    if-eqz p1, :cond_0
+    div-int/lit8 v1, v1, 0x4
 
-    iget-object p0, p0, Lzh4;->a:Ly7e;
+    mul-int/lit8 v1, v1, 0x3
 
-    invoke-static {p0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    div-int/lit8 v1, v1, 0x2
 
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
+    :goto_0
+    sget-object v2, Lzh4;->a:Landroid/util/SparseIntArray;
 
-    return-void
-.end method
+    const/4 v3, -0x1
 
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
+    const/4 v4, 0x0
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v4, v1, v2, v3}, Lqvb;-><init>(IILandroid/util/SparseIntArray;I)V
 
-    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lzh4;->a:Ly7e;
-
-    invoke-static {p0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

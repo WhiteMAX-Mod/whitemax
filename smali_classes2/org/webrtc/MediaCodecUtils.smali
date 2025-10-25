@@ -216,11 +216,26 @@
 .end method
 
 .method public static isHardwareAccelerated(Landroid/media/MediaCodecInfo;)Z
-    .locals 0
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_0
 
     invoke-static {p0}, Lorg/webrtc/MediaCodecUtils;->isHardwareAcceleratedQOrHigher(Landroid/media/MediaCodecInfo;)Z
 
     move-result p0
+
+    return p0
+
+    :cond_0
+    invoke-static {p0}, Lorg/webrtc/MediaCodecUtils;->isSoftwareOnly(Landroid/media/MediaCodecInfo;)Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
 
     return p0
 .end method
@@ -231,7 +246,7 @@
         value = 0x1d
     .end annotation
 
-    invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->isHardwareAccelerated()Z
+    invoke-static {p0}, La15;->A(Landroid/media/MediaCodecInfo;)Z
 
     move-result p0
 
@@ -239,13 +254,55 @@
 .end method
 
 .method public static isSoftwareOnly(Landroid/media/MediaCodecInfo;)Z
-    .locals 0
+    .locals 5
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_0
 
     invoke-static {p0}, Lorg/webrtc/MediaCodecUtils;->isSoftwareOnlyQOrHigher(Landroid/media/MediaCodecInfo;)Z
 
     move-result p0
 
     return p0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    sget-object v0, Lorg/webrtc/MediaCodecUtils;->SOFTWARE_IMPLEMENTATION_PREFIXES:[Ljava/lang/String;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v1, :cond_2
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {p0, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return v2
 .end method
 
 .method private static isSoftwareOnlyQOrHigher(Landroid/media/MediaCodecInfo;)Z
@@ -254,7 +311,7 @@
         value = 0x1d
     .end annotation
 
-    invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->isSoftwareOnly()Z
+    invoke-static {p0}, La15;->v(Landroid/media/MediaCodecInfo;)Z
 
     move-result p0
 

@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/gms/maps/model/LatLng;
-.super Lr3;
+.super Lf4;
 .source "SourceFile"
 
 # interfaces
@@ -28,11 +28,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lp3h;
+    new-instance v0, Lp0i;
 
-    const/16 v1, 0x17
+    const/16 v1, 0x1d
 
-    invoke-direct {v0, v1}, Lp3h;-><init>(I)V
+    invoke-direct {v0, v1}, Lp0i;-><init>(I)V
 
     sput-object v0, Lcom/google/android/gms/maps/model/LatLng;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -138,15 +138,15 @@
 
     move-result-wide v3
 
-    iget-wide p0, p1, Lcom/google/android/gms/maps/model/LatLng;->b:D
+    iget-wide v5, p1, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
-    invoke-static {p0, p1}, Ljava/lang/Double;->doubleToLongBits(D)J
+    invoke-static {v5, v6}, Ljava/lang/Double;->doubleToLongBits(D)J
 
-    move-result-wide p0
+    move-result-wide v5
 
-    cmp-long p0, v3, p0
+    cmp-long p1, v3, v5
 
-    if-nez p0, :cond_2
+    if-nez p1, :cond_2
 
     return v0
 
@@ -179,17 +179,17 @@
 
     xor-long v2, v3, v5
 
-    long-to-int p0, v0
+    long-to-int v0, v0
 
-    add-int/lit8 p0, p0, 0x1f
+    add-int/lit8 v0, v0, 0x1f
 
-    mul-int/lit8 p0, p0, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    long-to-int v0, v2
+    long-to-int v1, v2
 
-    add-int/2addr p0, v0
+    add-int/2addr v0, v1
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -213,15 +213,15 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    const-string p0, ")"
+    const-string v1, ")"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
@@ -229,7 +229,7 @@
 
     const/16 p2, 0x4f45
 
-    invoke-static {p1, p2}, Ljs9;->U(Landroid/os/Parcel;I)I
+    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
 
     move-result p2
 
@@ -237,7 +237,7 @@
 
     const/16 v1, 0x8
 
-    invoke-static {p1, v0, v1}, Ljs9;->W(Landroid/os/Parcel;II)V
+    invoke-static {p1, v0, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
     iget-wide v2, p0, Lcom/google/android/gms/maps/model/LatLng;->a:D
 
@@ -245,13 +245,13 @@
 
     const/4 v0, 0x3
 
-    invoke-static {p1, v0, v1}, Ljs9;->W(Landroid/os/Parcel;II)V
+    invoke-static {p1, v0, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
     iget-wide v0, p0, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    invoke-static {p1, p2}, Ljs9;->V(Landroid/os/Parcel;I)V
+    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
 
     return-void
 .end method

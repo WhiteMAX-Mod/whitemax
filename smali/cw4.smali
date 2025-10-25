@@ -1,201 +1,131 @@
 .class public final Lcw4;
-.super Landroid/transition/Transition;
+.super Lwn7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lxfc;
+.field public final synthetic b:I
 
-.field public final b:Lxfc;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lxfc;Lxfc;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/transition/Transition;-><init>()V
+    iput p1, p0, Lcw4;->b:I
 
-    iput-object p1, p0, Lcw4;->a:Lxfc;
+    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
 
-    iput-object p2, p0, Lcw4;->b:Lxfc;
+    iput-object p2, p0, Lcw4;->c:Ljava/lang/Object;
 
     return-void
-.end method
-
-.method public static a(Landroid/transition/TransitionValues;)V
-    .locals 4
-
-    iget-object v0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
-
-    instance-of v0, v0, Leh6;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
-
-    new-instance v1, Landroid/graphics/Rect;
-
-    iget-object v2, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
-
-    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    iget-object p0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result p0
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v3, v3, v2, p0}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    const-string p0, "draweeTransition:bounds"
-
-    invoke-interface {v0, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
-.end method
-
-.method public static b(Lxfc;Lxfc;)Landroid/transition/TransitionSet;
-    .locals 2
-
-    new-instance v0, Landroid/transition/TransitionSet;
-
-    invoke-direct {v0}, Landroid/transition/TransitionSet;-><init>()V
-
-    new-instance v1, Landroid/transition/ChangeBounds;
-
-    invoke-direct {v1}, Landroid/transition/ChangeBounds;-><init>()V
-
-    invoke-virtual {v0, v1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
-
-    new-instance v1, Lcw4;
-
-    invoke-direct {v1, p0, p1}, Lcw4;-><init>(Lxfc;Lxfc;)V
-
-    invoke-virtual {v0, v1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final captureEndValues(Landroid/transition/TransitionValues;)V
-    .locals 0
+.method public final c()Z
+    .locals 1
 
-    invoke-static {p1}, Lcw4;->a(Landroid/transition/TransitionValues;)V
+    iget v0, p0, Lcw4;->b:I
 
-    return-void
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_1
+    const/4 v0, 0x0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final captureStartValues(Landroid/transition/TransitionValues;)V
-    .locals 0
+.method public final d(Ljava/lang/Throwable;)V
+    .locals 2
 
-    invoke-static {p1}, Lcw4;->a(Landroid/transition/TransitionValues;)V
+    iget v0, p0, Lcw4;->b:I
 
-    return-void
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
-    .locals 3
+    iget-object p1, p0, Lcw4;->c:Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    check-cast p1, Ldo7;
 
-    if-eqz p2, :cond_3
+    iget-object v0, p0, Lwn7;->a:Llo7;
 
-    if-nez p3, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p2, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
+    const/4 v0, 0x0
 
-    const-string v1, "draweeTransition:bounds"
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    invoke-virtual {v0}, Llo7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/graphics/Rect;
+    instance-of v1, v0, Lqh3;
 
-    iget-object p3, p3, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
+    if-eqz v1, :cond_1
 
-    invoke-interface {p3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v0, Lqh3;
 
-    move-result-object p3
+    iget-object v0, v0, Lqh3;->a:Ljava/lang/Throwable;
 
-    check-cast p3, Landroid/graphics/Rect;
+    new-instance v1, Lbed;
 
-    if-eqz v0, :cond_3
+    invoke-direct {v1, v0}, Lbed;-><init>(Ljava/lang/Throwable;)V
 
-    if-nez p3, :cond_1
+    invoke-virtual {p1, v1}, Lo32;->resumeWith(Ljava/lang/Object;)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
-    iget-object v1, p0, Lcw4;->a:Lxfc;
+    invoke-static {v0}, Lmo7;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lcw4;->b:Lxfc;
+    move-result-object v0
 
-    if-ne v1, v2, :cond_2
+    invoke-virtual {p1, v0}, Lo32;->resumeWith(Ljava/lang/Object;)V
 
-    return-object p1
+    :goto_1
+    return-void
 
-    :cond_2
-    iget-object p1, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+    :pswitch_0
+    iget-object v0, p0, Lcw4;->c:Ljava/lang/Object;
 
-    check-cast p1, Leh6;
+    check-cast v0, Lli6;
 
-    new-instance p2, Li4d;
+    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p2, v1, v2, v0, p3}, Li4d;-><init>(Lxfc;Lxfc;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    return-void
 
-    invoke-virtual {p1}, Ldw4;->getHierarchy()Law4;
+    :pswitch_1
+    iget-object p1, p0, Lcw4;->c:Ljava/lang/Object;
 
-    move-result-object p3
+    check-cast p1, Lyv4;
 
-    check-cast p3, Lch6;
+    invoke-interface {p1}, Lyv4;->dispose()V
 
-    invoke-virtual {p3, p2}, Lch6;->h(Lj4d;)V
+    return-void
 
-    const/4 p3, 0x2
-
-    new-array p3, p3, [F
-
-    fill-array-data p3, :array_0
-
-    invoke-static {p3}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object p3
-
-    new-instance v0, Lvj0;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p2}, Lvj0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p3, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance p2, Lgh;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, p0, p1, v0, v1}, Lgh;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    invoke-virtual {p3, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    return-object p3
-
-    :cond_3
-    :goto_0
-    return-object p1
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,40 +1,86 @@
-.class public abstract Labc;
+.class public final synthetic Labc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
-# static fields
-.field public static oneme_media_keyboard_emoji_animals_and_plants:I = 0x7f13088c
+# instance fields
+.field public final synthetic a:I
 
-.field public static oneme_media_keyboard_emoji_classic:I = 0x7f13088d
+.field public final synthetic b:Lone/me/profile/ProfileScreen;
 
-.field public static oneme_media_keyboard_emoji_flags:I = 0x7f13088e
 
-.field public static oneme_media_keyboard_emoji_food_and_drink:I = 0x7f13088f
+# direct methods
+.method public synthetic constructor <init>(Lone/me/profile/ProfileScreen;I)V
+    .locals 0
 
-.field public static oneme_media_keyboard_emoji_gestures_and_people:I = 0x7f130890
+    iput p2, p0, Labc;->a:I
 
-.field public static oneme_media_keyboard_emoji_objects:I = 0x7f130891
+    iput-object p1, p0, Labc;->b:Lone/me/profile/ProfileScreen;
 
-.field public static oneme_media_keyboard_emoji_sport_and_activity:I = 0x7f130892
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_media_keyboard_emoji_symbols:I = 0x7f130893
+    return-void
+.end method
 
-.field public static oneme_media_keyboard_emoji_travels_and_transport:I = 0x7f130894
 
-.field public static oneme_media_keyboard_favorite:I = 0x7f130895
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-.field public static oneme_media_keyboard_popular:I = 0x7f130896
+    iget v0, p0, Labc;->a:I
 
-.field public static oneme_media_keyboard_recent:I = 0x7f130897
+    iget-object v1, p0, Labc;->b:Lone/me/profile/ProfileScreen;
 
-.field public static oneme_media_keyboard_recent_clear_action:I = 0x7f130898
+    packed-switch v0, :pswitch_data_0
 
-.field public static oneme_media_keyboard_recent_clear_cancel:I = 0x7f130899
+    sget-object v0, Lone/me/profile/ProfileScreen;->B0:[Ltr7;
 
-.field public static oneme_media_keyboard_recent_clear_title:I = 0x7f13089a
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-.field public static oneme_media_keyboard_tab_emoji:I = 0x7f13089b
+    move-result-object v0
 
-.field public static oneme_media_keyboard_tab_gifs:I = 0x7f13089c
+    return-object v0
 
-.field public static oneme_media_keyboard_tab_stickers:I = 0x7f13089d
+    :pswitch_0
+    sget-object v0, Lone/me/profile/ProfileScreen;->B0:[Ltr7;
+
+    invoke-virtual {v1}, Ll24;->getRouter()Lqid;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lone/me/profile/ProfileScreen;->B0:[Ltr7;
+
+    new-instance v0, Lwi1;
+
+    new-instance v2, Labc;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v1, v3}, Labc;-><init>(Lone/me/profile/ProfileScreen;I)V
+
+    new-instance v3, Lwif;
+
+    invoke-direct {v3, v2}, Lwif;-><init>(Lji6;)V
+
+    new-instance v2, Ljmh;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v1, v4}, Ljmh;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-direct {v0, v3, v2}, Lwi1;-><init>(Lwif;Ljmh;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

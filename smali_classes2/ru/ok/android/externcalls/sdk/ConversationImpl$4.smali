@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;
+.implements Lg01;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/ConversationImpl;->createIdMappingResolver()Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;
+    value = Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,42 +34,66 @@
 
 
 # virtual methods
-.method public resolveExternalsByInternalsIds(Ljava/util/List;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lsg1;",
-            ">;",
-            "Ljava/lang/Runnable;",
-            "Ljava/lang/Runnable;",
-            ")V"
-        }
-    .end annotation
+.method public onIceRestart()V
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$4;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$4;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->x0(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/util/List;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->a0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lru/ok/android/externcalls/sdk/stat/ConversationStats;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->iceRestartStat:Lru/ok/android/externcalls/sdk/stat/icerestart/IceRestartStat;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/stat/icerestart/IceRestartStat;->onIceRestart()V
 
     return-void
 .end method
 
-.method public withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lqm3;Ljava/lang/Runnable;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lqm3;",
-            "Ljava/lang/Runnable;",
-            ")V"
-        }
-    .end annotation
+.method public onNegotiationError(Lm5a;)V
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$4;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$4;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->z0(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lqm3;Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->a0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lru/ok/android/externcalls/sdk/stat/ConversationStats;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->negotiationErrorStat:Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;
+
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;->onError(Lm5a;)V
+
+    return-void
+.end method
+
+.method public onPeerConnectionStateChanged(Lorg/webrtc/PeerConnection$PeerConnectionState;)V
+    .locals 1
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$4;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->a0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lru/ok/android/externcalls/sdk/stat/ConversationStats;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->peerConnectionStateChangedStat:Lru/ok/android/externcalls/sdk/stat/connection/PeerConnectionChangedStat;
+
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/stat/connection/PeerConnectionChangedStat;->onStateChanged(Lorg/webrtc/PeerConnection$PeerConnectionState;)V
+
+    return-void
+.end method
+
+.method public onSelectedCandidatePairChanged(Lorg/webrtc/CandidatePairChangeEvent;)V
+    .locals 1
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$4;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->a0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lru/ok/android/externcalls/sdk/stat/ConversationStats;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->iceCandidatePairChangedStat:Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;
+
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->onSelectedCandidatePairChanged(Lorg/webrtc/CandidatePairChangeEvent;)V
 
     return-void
 .end method

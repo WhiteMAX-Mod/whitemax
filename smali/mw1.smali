@@ -1,544 +1,1381 @@
-.class public abstract synthetic Lmw1;
+.class public final Lmw1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
+.implements Lmq1;
+.implements Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener;
 
-# static fields
-.field public static final synthetic a:[I
+
+# instance fields
+.field public final a:Lwif;
+
+.field public final b:Lwif;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    const/16 v0, 0x1e
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    new-instance v0, Lvk1;
 
-    fill-array-data v0, :array_0
+    const/16 v1, 0x11
 
-    sput-object v0, Lmw1;->a:[I
+    invoke-direct {v0, v1}, Lvk1;-><init>(I)V
 
-    return-void
+    new-instance v1, Lwif;
 
-    :array_0
-    .array-data 4
-        0x1
-        0x2
-        0x3
-        0x4
-        0x5
-        0x6
-        0x7
-        0x8
-        0x9
-        0xa
-        0xb
-        0xc
-        0xd
-        0xe
-        0xf
-        0x10
-        0x11
-        0x12
-        0x13
-        0x14
-        0x15
-        0x16
-        0x17
-        0x18
-        0x19
-        0x1a
-        0x1b
-        0x1c
-        0x1d
-        0x1e
-    .end array-data
-.end method
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
 
-.method public static synthetic a(I)Ljava/lang/Integer;
-    .locals 0
+    iput-object v1, p0, Lmw1;->a:Lwif;
 
-    if-nez p0, :cond_0
+    new-instance v0, Lvk1;
 
-    const/4 p0, 0x0
+    const/16 v1, 0x12
 
-    return-object p0
+    invoke-direct {v0, v1}, Lvk1;-><init>(I)V
 
-    :cond_0
-    add-int/lit8 p0, p0, -0x1
+    new-instance v1, Lwif;
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic b(II)I
-    .locals 0
-
-    if-eqz p0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    sub-int/2addr p0, p1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public static synthetic c(II)Z
-    .locals 0
-
-    if-eqz p0, :cond_1
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public static synthetic d(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const/4 p0, 0x0
-
-    throw p0
-
-    :pswitch_0
-    const-string p0, "REACTION"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "ANIMOJI_SET"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "ANIMOJI"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "BACKGROUND"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "RECENT"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "FAVORITE_STICKER_SET"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "FAVORITE_STICKER"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "STICKER_SET"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "STICKER"
-
-    return-object p0
-
-    :pswitch_9
-    const-string p0, "UNKNOWN"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic e(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "USER_AVATAR"
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "PRESET_AVATAR"
-
-    return-object p0
-.end method
-
-.method public static f(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-    .locals 0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Ljava/lang/ClassCastException;
-
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
-
-    return-object p0
-.end method
-
-.method public static g(Ljava/lang/String;Lxa4;)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-object v0
-.end method
-
-.method public static m(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-object v0
-.end method
-
-.method public static n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-object v0
-.end method
-
-.method public static o(Ljava/lang/Class;Lix;)Ljava/util/HashMap;
-    .locals 1
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public static p(Ljava/util/HashMap;)Ljava/util/Map;
-    .locals 1
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0, p0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static q(FFLl8a;)V
-    .locals 0
-
-    mul-float/2addr p0, p1
-
-    invoke-static {p0}, Lya6;->G(F)I
-
-    move-result p0
-
-    invoke-virtual {p2, p0}, Ll8a;->e(I)V
+    iput-object v1, p0, Lmw1;->b:Lwif;
 
     return-void
 .end method
 
-.method public static r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-    .locals 0
 
-    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-    .locals 0
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static synthetic t(I)I
-    .locals 0
-
-    if-eqz p0, :cond_0
-
-    add-int/lit8 p0, p0, -0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public static synthetic u(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "REACTION"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "ANIMOJI_SET"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "ANIMOJI"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "BACKGROUND"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "RECENT"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "FAVORITE_STICKER_SET"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "FAVORITE_STICKER"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "STICKER_SET"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "STICKER"
-
-    return-object p0
-
-    :pswitch_9
-    const-string p0, "UNKNOWN"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic v(I)Ljava/lang/String;
+# virtual methods
+.method public final a()Ljava/util/concurrent/CopyOnWriteArraySet;
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lmw1;->a:Lwif;
 
-    if-eq p0, v0, :cond_1
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
-    const/4 v0, 0x2
+    move-result-object v0
 
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "MediaGallery"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "Camera"
-
-    return-object p0
-.end method
-
-.method public static synthetic w(I)[I
-    .locals 3
-
-    new-array v0, p0, [I
-
-    sget-object v1, Lmw1;->a:[I
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2, v0, v2, p0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-object v0
+.end method
+
+.method public final b(Ljava/lang/String;)V
+    .locals 2
+
+    iget-object v0, p0, Lmw1;->b:Lwif;
+
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lmq1;
+
+    invoke-interface {v1, p1}, Lmq1;->b(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c(Lqq1;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ljava/util/Collection;->remove(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final d(Lqq1;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final onAnonJoinForbiddenChanged(Z)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onAnonJoinForbiddenChanged(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCallAccepted()V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCallAccepted()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCallAcceptedForAll()V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCallAcceptedForAll()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCallEnded(Lru/ok/android/externcalls/sdk/events/end/ConversationEndInfo;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCallEnded(Lru/ok/android/externcalls/sdk/events/end/ConversationEndInfo;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCallIsUnfeasibleError(Lru/ok/android/webrtc/SignalingErrors$CallIsUnfeasibleError;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCallIsUnfeasibleError(Lru/ok/android/webrtc/SignalingErrors$CallIsUnfeasibleError;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCallParticipantsNetworkStatusChanged(Ljava/util/List;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCallParticipantsNetworkStatusChanged(Ljava/util/List;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCallSignalingConnected()V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCallSignalingConnected()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCallStartResolutionFailed(Ljava/util/List;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCallStartResolutionFailed(Ljava/util/List;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCameraBusy()V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCameraBusy()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCameraChanged()V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCameraChanged()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCustomData(Lorg/json/JSONObject;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCustomData(Lorg/json/JSONObject;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onDestroyed()V
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    .line 3
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onDestroyed()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onDestroyed(Ljava/lang/String;)V
+    .locals 2
+
+    .line 4
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    .line 5
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    .line 6
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onDestroyed(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onDestroyed(Lru/ok/android/externcalls/sdk/events/destroy/ConversationDestroyedInfo;)V
+    .locals 2
+
+    .line 7
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    .line 8
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    .line 9
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onDestroyed(Lru/ok/android/externcalls/sdk/events/destroy/ConversationDestroyedInfo;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onJoinLinkUpdated(Ljava/lang/String;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onJoinLinkUpdated(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onLocalMediaChanged()V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onLocalMediaChanged()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMeInWaitingRoomChanged(Z)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onMeInWaitingRoomChanged(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMediaConnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lqq1;->onMediaConnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMediaDisconnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lqq1;->onMediaDisconnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMicChanged(Z)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onMicChanged(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMicrophoneForciblyMuted()V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onMicrophoneForciblyMuted()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMigratedToServerTopology()V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onMigratedToServerTopology()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMuteChanged(Ll1a;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onMuteChanged(Ll1a;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMuteStateInitialized(Ll1a;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onMuteStateInitialized(Ll1a;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onOpponentFingerprintChanged(J)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1, p2}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onOpponentFingerprintChanged(J)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onOpponentMediaChanged()V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onOpponentMediaChanged()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onOpponentRegistered()V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onOpponentRegistered()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onParticipantsAdded(Ljava/util/List;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onParticipantsAdded(Ljava/util/List;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onParticipantsChanged(Ljava/util/List;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onParticipantsChanged(Ljava/util/List;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onParticipantsDeAnonymized(Ljava/util/List;Ljava/util/Map;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1, p2}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onParticipantsDeAnonymized(Ljava/util/List;Ljava/util/Map;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onParticipantsRemoved(Ljava/util/List;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onParticipantsRemoved(Ljava/util/List;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onParticipantsUpdated(Ljava/util/Collection;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onParticipantsUpdated(Ljava/util/Collection;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onPinChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Z)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1, p2}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onPinChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onRateCall(Lru/ok/android/externcalls/sdk/rate/RateCallData;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onRateCall(Lru/ok/android/externcalls/sdk/rate/RateCallData;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onRecurringChanged(Z)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onRecurringChanged(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onRolesChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onRolesChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lji1;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1, p2}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lji1;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onWaitingRoomEnabledChanged(Z)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onWaitingRoomEnabledChanged(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onWaitingRoomParticipantsChanged(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lmw1;->a()Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqq1;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onWaitingRoomParticipantsChanged(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

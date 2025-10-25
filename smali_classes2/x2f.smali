@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lexb;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+.field public final synthetic b:Ljava/lang/Long;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+.method public synthetic constructor <init>(Ljava/lang/Long;I)V
     .locals 0
 
     iput p2, p0, Lx2f;->a:I
 
-    iput-object p1, p0, Lx2f;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    iput-object p1, p0, Lx2f;->b:Ljava/lang/Long;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,44 +27,66 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final test(Ljava/lang/Object;)Z
+    .locals 4
 
     iget v0, p0, Lx2f;->a:I
 
-    iget-object p0, p0, Lx2f;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
     packed-switch v0, :pswitch_data_0
 
-    const-string v0, "circleR"
+    check-cast p1, Lb4f;
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    iget-wide v0, p1, Lb4f;->a:J
 
-    move-result-object p0
+    iget-object p1, p0, Lx2f;->b:Ljava/lang/Long;
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
 
     :pswitch_0
-    const-string v0, "circleM"
+    check-cast p1, Lo2f;
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    iget-wide v0, p1, Lo2f;->a:J
 
-    move-result-object p0
+    iget-object p1, p0, Lx2f;->b:Ljava/lang/Long;
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    :pswitch_1
-    const-string v0, "circleL"
+    move-result-wide v2
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    cmp-long p1, v0, v2
 
-    move-result-object p0
+    if-nez p1, :cond_1
 
-    return-object p0
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

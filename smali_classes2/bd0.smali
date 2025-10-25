@@ -1,90 +1,120 @@
 .class public final Lbd0;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Ldd0;
 
 
 # instance fields
-.field public final synthetic X:Lbc6;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Landroid/graphics/Bitmap;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lbc6;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lbd0;->X:Lbc6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lbd0;->Y:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lbd0;->a:Ljava/lang/String;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lbd0;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ly04;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lbd0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Lbd0;
 
-    check-cast p0, Lbd0;
+    const/4 v2, 0x0
 
-    sget-object p1, Lylf;->a:Lylf;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Lbd0;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
-    move-result-object p0
+    :cond_1
+    check-cast p1, Lbd0;
 
-    return-object p0
-.end method
+    iget-object v1, p0, Lbd0;->a:Ljava/lang/String;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object v3, p1, Lbd0;->a:Ljava/lang/String;
 
-    new-instance p1, Lbd0;
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lbd0;->X:Lbc6;
+    move-result v1
 
-    iget-object p0, p0, Lbd0;->Y:Landroid/graphics/Bitmap;
+    if-nez v1, :cond_2
 
-    invoke-direct {p1, v0, p0, p2}, Lbd0;-><init>(Lbc6;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
+    return v2
 
-    return-object p1
-.end method
+    :cond_2
+    iget-object v1, p0, Lbd0;->b:Ljava/lang/String;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-object p1, p1, Lbd0;->b:Ljava/lang/String;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lbd0;->Y:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    new-instance v0, Ljava/lang/Integer;
+    if-nez p1, :cond_3
 
-    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
+    return v2
 
-    iget-object p0, p0, Lbd0;->X:Lbc6;
+    :cond_3
+    return v0
+.end method
 
-    invoke-interface {p0, v0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 2
 
-    move-result-object p0
+    iget-object v0, p0, Lbd0;->a:Ljava/lang/String;
 
-    return-object p0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lbd0;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", path="
+
+    const-string v1, ")"
+
+    const-string v2, "CropAvatar(uriAsString="
+
+    iget-object v3, p0, Lbd0;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lbd0;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

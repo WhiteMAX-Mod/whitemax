@@ -33,9 +33,9 @@
 .method private getBitrateAdjustmentScale()D
     .locals 4
 
-    iget p0, p0, Lorg/webrtc/DynamicBitrateAdjuster;->bitrateAdjustmentScaleExp:I
+    iget v0, p0, Lorg/webrtc/DynamicBitrateAdjuster;->bitrateAdjustmentScaleExp:I
 
-    int-to-double v0, p0
+    int-to-double v0, v0
 
     const-wide/high16 v2, 0x4034000000000000L    # 20.0
 
@@ -65,9 +65,9 @@
 
     mul-double/2addr v0, v2
 
-    double-to-int p0, v0
+    double-to-int v0, v0
 
-    return p0
+    return v0
 .end method
 
 .method public reportEncodedFrame(I)V

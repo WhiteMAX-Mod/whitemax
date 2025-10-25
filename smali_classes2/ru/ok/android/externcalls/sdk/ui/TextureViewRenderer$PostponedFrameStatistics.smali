@@ -15,15 +15,18 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0006\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0006\n\u0002\u0010\t\n\u0002\u0008\u0008\u0008\u0002\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0003J\u0017\u0010\u0008\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u0006H\u0002\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u0015\u0010\u000c\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\n\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\r\u0010\u000e\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u000e\u0010\u0003J\r\u0010\u000f\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u000f\u0010\u0003J\r\u0010\u0010\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u0010\u0010\u0003R\u0016\u0010\u0012\u001a\u00020\u00118\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0012\u0010\u0013R\u0016\u0010\u0014\u001a\u00020\u00118\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0014\u0010\u0013R\u0016\u0010\u0015\u001a\u00020\u00118\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0015\u0010\u0013R\u0016\u0010\u0016\u001a\u00020\u00118\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0016\u0010\u0013R\u0016\u0010\u0017\u001a\u00020\u00118\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0017\u0010\u0013R\u0016\u0010\u0018\u001a\u00020\u00118\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0018\u0010\u0013\u00a8\u0006\u0019"
+        "\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0006\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\t\n\u0002\u0010\t\n\u0002\u0008\u0008\u0008\u0002\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J\u000f\u0010\u0007\u001a\u00020\u0006H\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u0017\u0010\u000b\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\tH\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ\u0015\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\r\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\r\u0010\u0011\u001a\u00020\u0006\u00a2\u0006\u0004\u0008\u0011\u0010\u0008J\r\u0010\u0012\u001a\u00020\u0006\u00a2\u0006\u0004\u0008\u0012\u0010\u0008J\r\u0010\u0013\u001a\u00020\u0006\u00a2\u0006\u0004\u0008\u0013\u0010\u0008R\u0017\u0010\u0003\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010\u0014\u001a\u0004\u0008\u0015\u0010\u0016R\u0016\u0010\u0018\u001a\u00020\u00178\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0018\u0010\u0019R\u0016\u0010\u001a\u001a\u00020\u00178\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001a\u0010\u0019R\u0016\u0010\u001b\u001a\u00020\u00178\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001b\u0010\u0019R\u0016\u0010\u001c\u001a\u00020\u00178\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001c\u0010\u0019R\u0016\u0010\u001d\u001a\u00020\u00178\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001d\u0010\u0019R\u0016\u0010\u001e\u001a\u00020\u00178\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001e\u0010\u0019\u00a8\u0006\u001f"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$PostponedFrameStatistics;",
         "",
+        "",
+        "name",
         "<init>",
-        "()V",
-        "Lylf;",
+        "(Ljava/lang/String;)V",
+        "Lccg;",
         "logStatisticsIfNeeded",
+        "()V",
         "",
         "value",
         "toPercent",
@@ -35,6 +38,9 @@
         "delivered",
         "dropped",
         "rejected",
+        "Ljava/lang/String;",
+        "getName",
+        "()Ljava/lang/String;",
         "",
         "postponedCount",
         "J",
@@ -62,6 +68,8 @@
 
 .field private lastLogTime:J
 
+.field private final name:Ljava/lang/String;
+
 .field private postponedCount:J
 
 .field private rejectedCount:J
@@ -70,16 +78,18 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$PostponedFrameStatistics;->name:Ljava/lang/String;
 
     return-void
 .end method
 
 .method private final logStatisticsIfNeeded()V
-    .locals 20
+    .locals 21
 
     move-object/from16 v0, p0
 
@@ -171,6 +181,14 @@
     move-result-wide v8
 
     :cond_3
+    iget-object v7, v0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$PostponedFrameStatistics;->name:Ljava/lang/String;
+
+    const-string v12, "TextureViewRenderer_pfs_"
+
+    invoke-static {v12, v7}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
     iget-wide v12, v0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$PostponedFrameStatistics;->postponedCount:J
 
     iget-wide v14, v0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$PostponedFrameStatistics;->repostponedCount:J
@@ -185,11 +203,13 @@
 
     iget-wide v10, v0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$PostponedFrameStatistics;->rejectedCount:J
 
-    const-string v7, "postponed: "
+    const-string v0, "postponed: "
 
-    const-string v0, ", re-postponed: "
+    move-object/from16 v20, v7
 
-    invoke-static {v12, v13, v7, v0}, Lmw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v7, ", re-postponed: "
+
+    invoke-static {v12, v13, v0, v7}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -199,19 +219,19 @@
 
     const-string v12, " ("
 
-    invoke-static {v5, v6, v7, v12, v0}, Lmw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v5, v6, v7, v12, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     invoke-virtual {v0, v8, v9}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     const-string v5, "%), delivered: "
 
-    invoke-static {v1, v2, v5, v12, v0}, Lmw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v2, v5, v12, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     const-string v1, "%), rejected: "
 
-    invoke-static {v10, v11, v1, v12, v0}, Lmw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v10, v11, v1, v12, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     move-wide/from16 v8, v18
 
@@ -225,7 +245,7 @@
 
     move-result-object v0
 
-    const-string v1, "TextureViewRenderer_pfs"
+    move-object/from16 v1, v20
 
     invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -253,23 +273,23 @@
 .method private final toPercent(D)D
     .locals 2
 
-    const/16 p0, 0x2710
+    const/16 v0, 0x2710
 
-    int-to-double v0, p0
+    int-to-double v0, v0
 
     mul-double/2addr p1, v0
 
-    invoke-static {p1, p2}, Lya6;->H(D)J
+    invoke-static {p1, p2}, Lfhi;->c(D)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    long-to-double p0, p0
+    long-to-double p1, p1
 
     const-wide/high16 v0, 0x4059000000000000L    # 100.0
 
-    div-double/2addr p0, v0
+    div-double/2addr p1, v0
 
-    return-wide p0
+    return-wide p1
 .end method
 
 
@@ -304,6 +324,14 @@
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$PostponedFrameStatistics;->logStatisticsIfNeeded()V
 
     return-void
+.end method
+
+.method public final getName()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$PostponedFrameStatistics;->name:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public final postponed(Z)V

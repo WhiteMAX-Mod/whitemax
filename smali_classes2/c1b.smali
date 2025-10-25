@@ -1,178 +1,163 @@
-.class public final Lc1b;
+.class public abstract Lc1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static final a:I
 
-.field public final b:Z
+.field public static final b:I
 
-.field public final c:Ljava/lang/String;
+.field public static final c:I
 
-.field public final d:Ljava/lang/String;
+.field public static final d:I
 
-.field public final e:Ljava/lang/Integer;
+.field public static final e:I
 
-.field public final f:Z
+.field public static final f:I
 
-.field public final g:Z
+.field public static final g:I
 
-.field public final h:Z
+.field public static final h:I
 
-.field public final i:Z
+.field public static final i:I
 
-.field public final j:Lb1b;
+.field public static final j:I
 
-.field public final k:Z
+.field public static final k:I
 
-.field public final l:Z
+.field public static final l:I
 
-.field public final m:Ljava/lang/String;
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
 
 
 # direct methods
-.method public constructor <init>(ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZZZZLb1b;ZZLjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lc1b;->a:Z
-
-    iput-boolean p2, p0, Lc1b;->b:Z
-
-    iput-object p3, p0, Lc1b;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lc1b;->d:Ljava/lang/String;
-
-    iput-object p5, p0, Lc1b;->e:Ljava/lang/Integer;
-
-    iput-boolean p6, p0, Lc1b;->f:Z
-
-    iput-boolean p7, p0, Lc1b;->g:Z
-
-    iput-boolean p8, p0, Lc1b;->h:Z
-
-    iput-boolean p9, p0, Lc1b;->i:Z
-
-    iput-object p10, p0, Lc1b;->j:Lb1b;
-
-    iput-boolean p11, p0, Lc1b;->k:Z
-
-    iput-boolean p12, p0, Lc1b;->l:Z
-
-    iput-object p13, p0, Lc1b;->m:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static a(Z)Ljava/lang/String;
+.method static constructor <clinit>()V
     .locals 1
 
-    if-nez p0, :cond_0
+    sget v0, Lamc;->emoji_sprite_0:I
 
-    const-string p0, "CallsSDK-Audio-OpusNOLACE/Enabled/"
+    sput v0, Lc1b;->a:I
 
-    goto :goto_0
+    sget v0, Lamc;->emoji_sprite_1:I
 
-    :cond_0
-    const-string p0, ""
+    sput v0, Lc1b;->b:I
 
-    :goto_0
-    const-string v0, "WebRTC-AdjustOpusBandwidth/Enabled/"
+    sget v0, Lamc;->emoji_sprite_10:I
 
-    invoke-static {p0, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sput v0, Lc1b;->c:I
 
-    move-result-object p0
+    sget v0, Lamc;->emoji_sprite_11:I
 
-    const-string v0, "CallsSDK-DREDLowBitrate/Enabled/"
+    sput v0, Lc1b;->d:I
 
-    invoke-static {p0, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sget v0, Lamc;->emoji_sprite_12:I
 
-    move-result-object p0
+    sput v0, Lc1b;->e:I
 
-    const-string v0, "WebRTC-Audio-StableTargetAdaptation/Enabled/"
+    sget v0, Lamc;->emoji_sprite_13:I
 
-    invoke-static {p0, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sput v0, Lc1b;->f:I
 
-    move-result-object p0
+    sget v0, Lamc;->emoji_sprite_14:I
 
-    return-object p0
-.end method
+    sput v0, Lc1b;->g:I
 
+    sget v0, Lamc;->emoji_sprite_15:I
 
-# virtual methods
-.method public final b()La1b;
-    .locals 4
+    sput v0, Lc1b;->h:I
 
-    iget-object p0, p0, Lc1b;->j:Lb1b;
+    sget v0, Lamc;->emoji_sprite_16:I
 
-    iget-object v0, p0, Lb1b;->e:Ljava/lang/Integer;
+    sput v0, Lc1b;->i:I
 
-    iget-boolean v1, p0, Lb1b;->a:Z
+    sget v0, Lamc;->emoji_sprite_17:I
 
-    const/4 v2, 0x0
+    sput v0, Lc1b;->j:I
 
-    if-eqz v1, :cond_0
+    sget v0, Lamc;->emoji_sprite_18:I
 
-    iget-object p0, p0, Lb1b;->f:Ljava/lang/Integer;
+    sput v0, Lc1b;->k:I
 
-    if-eqz p0, :cond_0
+    sget v0, Lamc;->emoji_sprite_19:I
 
-    if-eqz v0, :cond_0
+    sput v0, Lc1b;->l:I
 
-    new-instance p0, La1b;
+    sget v0, Lamc;->emoji_sprite_2:I
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    sput v0, Lc1b;->m:I
 
-    move-result v1
+    sget v0, Lamc;->emoji_sprite_20:I
 
-    int-to-float v1, v1
+    sput v0, Lc1b;->n:I
 
-    const/high16 v3, 0x447a0000    # 1000.0f
+    sget v0, Lamc;->emoji_sprite_21:I
 
-    div-float/2addr v1, v3
+    sput v0, Lc1b;->o:I
 
-    invoke-static {v1}, Lya6;->G(F)I
+    sget v0, Lamc;->emoji_sprite_22:I
 
-    move-result v1
+    sput v0, Lc1b;->p:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget v0, Lamc;->emoji_sprite_23:I
 
-    move-result-object v1
+    sput v0, Lc1b;->q:I
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    sget v0, Lamc;->emoji_sprite_24:I
 
-    move-result v0
+    sput v0, Lc1b;->r:I
 
-    int-to-float v0, v0
+    sget v0, Lamc;->emoji_sprite_3:I
 
-    div-float/2addr v0, v3
+    sput v0, Lc1b;->s:I
 
-    invoke-static {v0}, Lya6;->G(F)I
+    sget v0, Lamc;->emoji_sprite_4:I
 
-    move-result v0
+    sput v0, Lc1b;->t:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget v0, Lamc;->emoji_sprite_5:I
 
-    move-result-object v0
+    sput v0, Lc1b;->u:I
 
-    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    sget v0, Lamc;->emoji_sprite_6:I
 
-    invoke-direct {p0, v1, v0, v3}, La1b;-><init>(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Boolean;)V
+    sput v0, Lc1b;->v:I
 
-    goto :goto_0
+    sget v0, Lamc;->emoji_sprite_7:I
 
-    :cond_0
-    move-object p0, v2
+    sput v0, Lc1b;->w:I
 
-    :goto_0
-    if-nez p0, :cond_1
+    sget v0, Lamc;->emoji_sprite_8:I
 
-    new-instance p0, La1b;
+    sput v0, Lc1b;->x:I
 
-    invoke-direct {p0, v2, v2, v2}, La1b;-><init>(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Boolean;)V
+    sget v0, Lamc;->emoji_sprite_9:I
 
-    :cond_1
-    return-object p0
+    sput v0, Lc1b;->y:I
+
+    return-void
 .end method

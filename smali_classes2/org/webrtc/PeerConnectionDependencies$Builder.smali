@@ -45,17 +45,17 @@
 
 # virtual methods
 .method public createPeerConnectionDependencies()Lorg/webrtc/PeerConnectionDependencies;
-    .locals 3
+    .locals 4
 
     new-instance v0, Lorg/webrtc/PeerConnectionDependencies;
 
     iget-object v1, p0, Lorg/webrtc/PeerConnectionDependencies$Builder;->observer:Lorg/webrtc/PeerConnection$Observer;
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnectionDependencies$Builder;->sslCertificateVerifier:Lorg/webrtc/SSLCertificateVerifier;
+    iget-object v2, p0, Lorg/webrtc/PeerConnectionDependencies$Builder;->sslCertificateVerifier:Lorg/webrtc/SSLCertificateVerifier;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v1, p0, v2}, Lorg/webrtc/PeerConnectionDependencies;-><init>(Lorg/webrtc/PeerConnection$Observer;Lorg/webrtc/SSLCertificateVerifier;I)V
+    invoke-direct {v0, v1, v2, v3}, Lorg/webrtc/PeerConnectionDependencies;-><init>(Lorg/webrtc/PeerConnection$Observer;Lorg/webrtc/SSLCertificateVerifier;I)V
 
     return-object v0
 .end method

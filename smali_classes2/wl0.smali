@@ -1,53 +1,79 @@
 .class public final Lwl0;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Landroid/net/Uri;
 
-.field public final synthetic Y:Lzl0;
+.field public b:Ltm;
 
-.field public Z:I
-
-.field public o:Ljava/lang/Object;
+.field public final c:Lnm;
 
 
 # direct methods
-.method public constructor <init>(Lzl0;Ljx3;)V
+.method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
-    iput-object p1, p0, Lwl0;->Y:Lzl0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lwl0;->a:Landroid/net/Uri;
+
+    sget-object p1, Ltm;->o:Ltm;
+
+    iput-object p1, p0, Lwl0;->b:Ltm;
+
+    new-instance p1, Lnm;
+
+    invoke-direct {p1}, Lnm;-><init>()V
+
+    iput-object p1, p0, Lwl0;->c:Lnm;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final a(Lpq7;)Lxl0;
+    .locals 4
 
-    iput-object p1, p0, Lwl0;->X:Ljava/lang/Object;
+    new-instance v0, Lxl0;
 
-    iget p1, p0, Lwl0;->Z:I
+    iget-object v1, p0, Lwl0;->b:Ltm;
 
-    const/high16 v0, -0x80000000
+    iget-object v2, p0, Lwl0;->c:Lnm;
 
-    or-int/2addr p1, v0
+    iget-object v3, p0, Lwl0;->a:Landroid/net/Uri;
 
-    iput p1, p0, Lwl0;->Z:I
+    invoke-direct {v0, v3, v1, v2, p1}, Lxl0;-><init>(Landroid/net/Uri;Ltm;Lnm;Lpq7;)V
 
-    const/4 p1, 0x0
+    return-object v0
+.end method
 
-    const-wide/16 v0, 0x0
+.method public final b(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    iget-object v2, p0, Lwl0;->Y:Lzl0;
+    new-instance v0, Lraf;
 
-    invoke-static {v2, p1, v0, v1, p0}, Lzl0;->f(Lzl0;Ljava/lang/String;JLjx3;)Ljava/io/Serializable;
+    invoke-direct {v0, p1, p2}, Lxaf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p0
+    iget-object p1, p0, Lwl0;->c:Lnm;
 
-    return-object p0
+    invoke-virtual {p1, v0}, Lnm;->a(Lmm;)V
+
+    return-void
+.end method
+
+.method public final c(Ljava/lang/String;Z)V
+    .locals 1
+
+    new-instance v0, Lhr0;
+
+    invoke-direct {v0, p1, p2}, Lhr0;-><init>(Ljava/lang/String;Z)V
+
+    iget-object p1, p0, Lwl0;->c:Lnm;
+
+    invoke-virtual {p1, v0}, Lnm;->a(Lmm;)V
+
+    return-void
 .end method

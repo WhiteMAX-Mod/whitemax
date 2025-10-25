@@ -1,214 +1,414 @@
 .class public final Lfl7;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/SharedPreferences;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lzte;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lym5;Lzm5;Ltgd;)V
-    .locals 8
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+    .locals 0
 
-    const-string v0, "file_prefs"
+    iput-object p2, p0, Lfl7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    const/4 v1, 0x0
+    const/4 p2, 0x2
 
-    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
-
-    move-result-object v3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v2, Lap;
-
-    const/4 v7, 0x3
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    move-object v6, p4
-
-    invoke-direct/range {v2 .. v7}, Lap;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance p1, Lzte;
-
-    invoke-direct {p1, v2}, Lzte;-><init>(Lzb6;)V
-
-    iput-object p1, p0, Lfl7;->a:Lzte;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lxm5;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-object p0, p0, Lfl7;->a:Lzte;
+    check-cast p1, Lzk7;
 
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Lfl7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lxm5;
+    move-result-object p1
 
-    return-object p0
+    check-cast p1, Lfl7;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lfl7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final contains(Ljava/lang/String;)Z
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    new-instance v0, Lfl7;
 
-    move-result-object p0
+    iget-object v1, p0, Lfl7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    iget-object p0, p0, Lxm5;->c:Loo9;
+    invoke-direct {v0, p2, v1}, Lfl7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
 
-    invoke-virtual {p0, p1}, Loo9;->b(Ljava/lang/Object;)Z
+    iput-object p1, v0, Lfl7;->X:Ljava/lang/Object;
 
-    move-result p0
-
-    return p0
+    return-object v0
 .end method
 
-.method public final edit()Landroid/content/SharedPreferences$Editor;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 17
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    move-object/from16 v0, p0
 
-    move-result-object p0
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lxm5;->edit()Landroid/content/SharedPreferences$Editor;
+    iget-object v1, v0, Lfl7;->X:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v1, Lzk7;
 
-    return-object p0
-.end method
+    sget-object v2, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->z0:[Ltr7;
 
-.method public final getAll()Ljava/util/Map;
-    .locals 0
+    iget-object v2, v0, Lfl7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    invoke-virtual {v2}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->D0()Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    move-result-object p0
+    move-result-object v3
 
-    invoke-virtual {p0}, Lxm5;->getAll()Ljava/util/Map;
+    const/4 v4, 0x0
 
-    move-result-object p0
+    invoke-virtual {v3, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
 
-    return-object p0
-.end method
+    const/4 v5, 0x1
 
-.method public final getBoolean(Ljava/lang/String;Z)Z
-    .locals 0
+    invoke-virtual {v3, v5}, Landroid/view/View;->setClickable(Z)V
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    instance-of v3, v1, Lvk7;
 
-    move-result-object p0
+    if-eqz v3, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lxm5;->getBoolean(Ljava/lang/String;Z)Z
+    check-cast v1, Lvk7;
 
-    move-result p0
+    iget-object v1, v1, Lvk7;->a:Ltrf;
 
-    return p0
-.end method
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-.method public final getFloat(Ljava/lang/String;F)F
-    .locals 0
+    move-result-object v3
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    invoke-virtual {v1, v3}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p0, p1, p2}, Lxm5;->getFloat(Ljava/lang/String;F)F
+    invoke-static {v2, v1}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->C0(Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;Ljava/lang/CharSequence;)V
 
-    move-result p0
+    goto/16 :goto_5
 
-    return p0
-.end method
+    :cond_0
+    instance-of v3, v1, Lwk7;
 
-.method public final getInt(Ljava/lang/String;I)I
-    .locals 0
+    if-eqz v3, :cond_3
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    check-cast v1, Lwk7;
 
-    move-result-object p0
+    iget-object v3, v1, Lwk7;->a:Lorf;
 
-    invoke-virtual {p0, p1, p2}, Lxm5;->getInt(Ljava/lang/String;I)I
+    iget-object v1, v1, Lwk7;->b:Lorf;
 
-    move-result p0
+    iget-object v6, v2, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->a:Lm9a;
 
-    return p0
-.end method
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final getLong(Ljava/lang/String;J)J
-    .locals 0
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    move-result-object v6
 
-    move-result-object p0
+    invoke-virtual {v3, v6}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    invoke-virtual {p0, p1, p2, p3}, Lxm5;->getLong(Ljava/lang/String;J)J
+    move-result-object v3
 
-    move-result-wide p0
+    if-nez v3, :cond_1
 
-    return-wide p0
-.end method
+    goto/16 :goto_5
 
-.method public final getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
+    :cond_1
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    move-result-object v6
 
-    move-result-object p0
+    invoke-virtual {v1, v6}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    invoke-virtual {p0, p1, p2}, Lxm5;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object p0
+    new-instance v6, Lc3b;
 
-    return-object p0
-.end method
+    invoke-direct {v6, v2}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
 
-.method public final getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
-    .locals 0
+    invoke-virtual {v6, v3}, Lc3b;->h(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    invoke-virtual {v6, v1}, Lc3b;->b(Ljava/lang/CharSequence;)V
 
-    move-result-object p0
+    new-instance v1, Lk3b;
 
-    invoke-virtual {p0, p1, p2}, Lxm5;->getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
+    invoke-virtual {v2}, Ll24;->getView()Landroid/view/View;
 
-    move-result-object p0
+    move-result-object v2
 
-    return-object p0
-.end method
+    if-eqz v2, :cond_2
 
-.method public final registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-    .locals 0
+    invoke-static {v2}, Lvci;->l(Landroid/view/View;)Ljava/lang/Integer;
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    move-result-object v2
 
-    move-result-object p0
+    if-eqz v2, :cond_2
 
-    invoke-virtual {p0, p1}, Lxm5;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    return-void
-.end method
+    move-result v2
 
-.method public final unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-    .locals 0
+    goto :goto_0
 
-    invoke-virtual {p0}, Lfl7;->a()Lxm5;
+    :cond_2
+    move v2, v4
 
-    move-result-object p0
+    :goto_0
+    const/4 v3, 0x4
 
-    invoke-virtual {p0, p1}, Lxm5;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+    invoke-direct {v1, v5, v2, v4, v3}, Lk3b;-><init>(IIII)V
 
-    return-void
+    invoke-virtual {v6, v1}, Lc3b;->c(Lk3b;)V
+
+    invoke-virtual {v6}, Lc3b;->i()Lb3b;
+
+    goto/16 :goto_5
+
+    :cond_3
+    instance-of v3, v1, Lxk7;
+
+    const-string v6, "BottomSheetWidget"
+
+    const/4 v7, 0x6
+
+    const/4 v8, 0x0
+
+    if-eqz v3, :cond_7
+
+    sget-object v1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:[Ltr7;
+
+    sget v1, Luwa;->c:I
+
+    invoke-static {v1, v8, v8, v7}, Ldy1;->e(ILandroid/os/Bundle;Lupd;I)Leo3;
+
+    move-result-object v1
+
+    sget v3, Luwa;->b:I
+
+    new-instance v7, Lorf;
+
+    invoke-direct {v7, v3}, Lorf;-><init>(I)V
+
+    invoke-virtual {v1, v7}, Leo3;->f(Ltrf;)V
+
+    sget v3, Lswa;->b:I
+
+    sget v7, Lrjd;->v0:I
+
+    new-instance v9, Lorf;
+
+    invoke-direct {v9, v7}, Lorf;-><init>(I)V
+
+    invoke-virtual {v1, v3, v9}, Leo3;->d(ILtrf;)V
+
+    sget v3, Lswa;->a:I
+
+    sget v7, Luwa;->a:I
+
+    new-instance v9, Lorf;
+
+    invoke-direct {v9, v7}, Lorf;-><init>(I)V
+
+    invoke-virtual {v1, v3, v9}, Leo3;->d(ILtrf;)V
+
+    invoke-virtual {v1}, Leo3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v2}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
+
+    move-object v1, v2
+
+    :goto_1
+    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_4
+
+    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
+
+    move-result-object v1
+
+    goto :goto_1
+
+    :cond_4
+    instance-of v3, v1, Lwid;
+
+    if-eqz v3, :cond_5
+
+    check-cast v1, Lwid;
+
+    goto :goto_2
+
+    :cond_5
+    move-object v1, v8
+
+    :goto_2
+    if-eqz v1, :cond_6
+
+    invoke-interface {v1}, Lwid;->f0()Lqid;
+
+    move-result-object v8
+
+    :cond_6
+    invoke-virtual {v11, v2}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v8, :cond_c
+
+    new-instance v10, Ltid;
+
+    const/4 v15, 0x0
+
+    const/16 v16, -0x1
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    invoke-direct/range {v10 .. v16}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+
+    invoke-static {v4, v10, v5, v6}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
+
+    invoke-virtual {v8, v10}, Lqid;->G(Ltid;)V
+
+    goto :goto_5
+
+    :cond_7
+    instance-of v3, v1, Lyk7;
+
+    if-eqz v3, :cond_b
+
+    sget-object v1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:[Ltr7;
+
+    sget v1, Lv0b;->c:I
+
+    invoke-static {v1, v8, v8, v7}, Ldy1;->e(ILandroid/os/Bundle;Lupd;I)Leo3;
+
+    move-result-object v1
+
+    sget v3, Lv0b;->b:I
+
+    new-instance v7, Lorf;
+
+    invoke-direct {v7, v3}, Lorf;-><init>(I)V
+
+    invoke-virtual {v1, v7}, Leo3;->f(Ltrf;)V
+
+    sget v3, Lu0b;->d:I
+
+    sget v7, Lv0b;->a:I
+
+    new-instance v9, Lorf;
+
+    invoke-direct {v9, v7}, Lorf;-><init>(I)V
+
+    invoke-virtual {v1, v3, v9}, Leo3;->d(ILtrf;)V
+
+    invoke-virtual {v1}, Leo3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v2}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
+
+    move-object v1, v2
+
+    :goto_3
+    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_8
+
+    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
+
+    move-result-object v1
+
+    goto :goto_3
+
+    :cond_8
+    instance-of v3, v1, Lwid;
+
+    if-eqz v3, :cond_9
+
+    check-cast v1, Lwid;
+
+    goto :goto_4
+
+    :cond_9
+    move-object v1, v8
+
+    :goto_4
+    if-eqz v1, :cond_a
+
+    invoke-interface {v1}, Lwid;->f0()Lqid;
+
+    move-result-object v8
+
+    :cond_a
+    invoke-virtual {v11, v2}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v8, :cond_c
+
+    new-instance v10, Ltid;
+
+    const/4 v15, 0x0
+
+    const/16 v16, -0x1
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    invoke-direct/range {v10 .. v16}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+
+    invoke-static {v4, v10, v5, v6}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
+
+    invoke-virtual {v8, v10}, Lqid;->G(Ltid;)V
+
+    goto :goto_5
+
+    :cond_b
+    if-nez v1, :cond_d
+
+    invoke-static {v2, v8}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->C0(Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;Ljava/lang/CharSequence;)V
+
+    :cond_c
+    :goto_5
+    sget-object v1, Lccg;->a:Lccg;
+
+    return-object v1
+
+    :cond_d
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v1
 .end method

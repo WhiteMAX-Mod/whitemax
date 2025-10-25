@@ -30,7 +30,7 @@
         "()V",
         "",
         "i",
-        "Lylf;",
+        "Lccg;",
         "siftUpFrom",
         "(I)V",
         "siftDownFrom",
@@ -44,7 +44,7 @@
         "",
         "predicate",
         "find",
-        "(Lbc6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;",
+        "(Lli6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;",
         "peek",
         "()Lkotlinx/coroutines/internal/ThreadSafeHeapNode;",
         "removeFirstOrNull",
@@ -54,7 +54,7 @@
         "(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;)V",
         "cond",
         "addLastIf",
-        "(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;Lbc6;)Z",
+        "(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;Lli6;)Z",
         "remove",
         "(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;)Z",
         "firstImpl",
@@ -127,11 +127,11 @@
 .end method
 
 .method private final synthetic get_size$volatile()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lkotlinx/coroutines/internal/ThreadSafeHeap;->_size$volatile:I
+    iget v0, p0, Lkotlinx/coroutines/internal/ThreadSafeHeap;->_size$volatile:I
 
-    return p0
+    return v0
 .end method
 
 .method private static final synthetic get_size$volatile$FU()Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
@@ -316,21 +316,21 @@
 .end method
 
 .method private final swap(II)V
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ThreadSafeHeap;->a:[Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ThreadSafeHeap;->a:[Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
 
-    aget-object v0, p0, p2
+    aget-object v1, v0, p2
 
-    aget-object v1, p0, p1
+    aget-object v2, v0, p1
 
-    aput-object v0, p0, p1
+    aput-object v1, v0, p1
 
-    aput-object v1, p0, p2
+    aput-object v2, v0, p2
 
-    invoke-interface {v0, p1}, Lkotlinx/coroutines/internal/ThreadSafeHeapNode;->setIndex(I)V
+    invoke-interface {v1, p1}, Lkotlinx/coroutines/internal/ThreadSafeHeapNode;->setIndex(I)V
 
-    invoke-interface {v1, p2}, Lkotlinx/coroutines/internal/ThreadSafeHeapNode;->setIndex(I)V
+    invoke-interface {v2, p2}, Lkotlinx/coroutines/internal/ThreadSafeHeapNode;->setIndex(I)V
 
     return-void
 .end method
@@ -395,12 +395,12 @@
     throw p1
 .end method
 
-.method public final addLastIf(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;Lbc6;)Z
+.method public final addLastIf(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;Lli6;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
-            "Lbc6;",
+            "Lli6;",
             ")Z"
         }
     .end annotation
@@ -412,7 +412,7 @@
 
     move-result-object v0
 
-    invoke-interface {p2, v0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -451,12 +451,12 @@
     throw p1
 .end method
 
-.method public final find(Lbc6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
+.method public final find(Lli6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbc6;",
+            "Lli6;",
             ")TT;"
         }
     .end annotation
@@ -490,7 +490,7 @@
 
     :cond_0
     :goto_1
-    invoke-interface {p1, v2}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -524,27 +524,27 @@
 .end method
 
 .method public final firstImpl()Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
         }
     .end annotation
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ThreadSafeHeap;->a:[Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ThreadSafeHeap;->a:[Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    aget-object p0, p0, v0
+    aget-object v0, v0, v1
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getSize()I
@@ -556,28 +556,28 @@
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final isEmpty()Z
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->getSize()I
 
-    move-result p0
+    move-result v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public final peek()Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
@@ -729,19 +729,19 @@
 
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->getSize()I
 
-    move-result p0
+    move-result v2
 
-    aput-object v1, v0, p0
+    aput-object v1, v0, v2
 
     return-object p1
 .end method
 
-.method public final removeFirstIf(Lbc6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
+.method public final removeFirstIf(Lli6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbc6;",
+            "Lli6;",
             ")TT;"
         }
     .end annotation
@@ -765,7 +765,7 @@
 
     :cond_0
     :try_start_1
-    invoke-interface {p1, v0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

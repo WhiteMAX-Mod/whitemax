@@ -80,38 +80,38 @@
     return-object p0
 
     :cond_0
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    if-ne p1, p0, :cond_2
+    if-ne p1, v0, :cond_2
 
     if-nez p2, :cond_1
 
-    sget-object p0, Lorg/apache/http/HttpVersion;->HTTP_1_0:Lorg/apache/http/HttpVersion;
+    sget-object p1, Lorg/apache/http/HttpVersion;->HTTP_1_0:Lorg/apache/http/HttpVersion;
 
-    return-object p0
+    return-object p1
 
     :cond_1
-    if-ne p2, p0, :cond_2
+    if-ne p2, v0, :cond_2
 
-    sget-object p0, Lorg/apache/http/HttpVersion;->HTTP_1_1:Lorg/apache/http/HttpVersion;
+    sget-object p1, Lorg/apache/http/HttpVersion;->HTTP_1_1:Lorg/apache/http/HttpVersion;
 
-    return-object p0
+    return-object p1
 
     :cond_2
     if-nez p1, :cond_3
 
-    const/16 p0, 0x9
+    const/16 v0, 0x9
 
-    if-ne p2, p0, :cond_3
+    if-ne p2, v0, :cond_3
 
-    sget-object p0, Lorg/apache/http/HttpVersion;->HTTP_0_9:Lorg/apache/http/HttpVersion;
+    sget-object p1, Lorg/apache/http/HttpVersion;->HTTP_0_9:Lorg/apache/http/HttpVersion;
 
-    return-object p0
+    return-object p1
 
     :cond_3
-    new-instance p0, Lorg/apache/http/HttpVersion;
+    new-instance v0, Lorg/apache/http/HttpVersion;
 
-    invoke-direct {p0, p1, p2}, Lorg/apache/http/HttpVersion;-><init>(II)V
+    invoke-direct {v0, p1, p2}, Lorg/apache/http/HttpVersion;-><init>(II)V
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,60 +1,25 @@
-.class public final synthetic Lv3f;
+.class public final Lv3f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+.field public b:Ljava/lang/String;
 
+.field public c:Ljava/lang/String;
 
-# direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;I)V
-    .locals 0
+.field public d:J
 
-    iput p2, p0, Lv3f;->a:I
+.field public e:J
 
-    iput-object p1, p0, Lv3f;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+.field public f:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public g:Ljava/util/ArrayList;
 
-    return-void
-.end method
+.field public h:Ljava/lang/String;
 
+.field public i:Z
 
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    iget v0, p0, Lv3f;->a:I
-
-    iget-object p0, p0, Lv3f;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->b(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->d(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->e(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public j:I

@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lld4;)V
+.method public synthetic constructor <init>(Lki4;)V
     .locals 0
 
     .line 1
@@ -65,11 +65,11 @@
 
 # virtual methods
 .method public final getNO_DEVICE()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;->access$getNO_DEVICE$cp()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

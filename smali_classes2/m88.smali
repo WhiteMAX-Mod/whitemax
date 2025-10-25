@@ -1,162 +1,70 @@
 .class public final Lm88;
-.super Ljava/lang/Object;
+.super Lpmf;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:F
+.field public c:Lda9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;FI)V
+.method public constructor <init>(Lpf9;)V
     .locals 0
 
-    iput p3, p0, Lm88;->a:I
-
-    iput-object p1, p0, Lm88;->b:Landroid/view/View;
-
-    iput p2, p0, Lm88;->c:F
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final h(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final i(Landroid/animation/Animator;)V
-    .locals 0
+    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 1
 
-    iget p1, p0, Lm88;->a:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    packed-switch p1, :pswitch_data_0
+    const-string v0, "message"
 
-    :pswitch_0
-    return-void
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :pswitch_1
-    iget-object p1, p0, Lm88;->b:Landroid/view/View;
+    move-result p2
 
-    iget p0, p0, Lm88;->c:F
+    if-nez p2, :cond_0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {p1}, Lpf9;->y()V
 
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    :cond_0
+    invoke-static {p1}, Lfki;->c(Lpf9;)Lda9;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object p1
 
-    iget p1, p0, Lm88;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lm88;->b:Landroid/view/View;
-
-    iget p0, p0, Lm88;->c:F
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setTranslationX(F)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lm88;->b:Landroid/view/View;
-
-    iget p0, p0, Lm88;->c:F
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setAlpha(F)V
-
-    :pswitch_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p0, p0, Lm88;->a:I
+    iput-object p1, p0, Lm88;->c:Lda9;
 
     return-void
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget p0, p0, Lm88;->a:I
+    iget-object v0, p0, Lm88;->c:Lda9;
 
-    return-void
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{message="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

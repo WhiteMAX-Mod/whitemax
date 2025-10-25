@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpm3;
+.implements Lsr3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->executeOnIoThread(Lzb6;Lqm3;Ljava/lang/Runnable;)Loq4;
+    value = Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->executeOnIoThread(Lji6;Ltr3;Ljava/lang/Runnable;)Lvv4;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lpm3;"
+        "Lsr3;"
     }
 .end annotation
 
@@ -35,7 +35,7 @@
         "T",
         "",
         "it",
-        "Lylf;",
+        "Lccg;",
         "accept",
         "(Ljava/lang/Throwable;)V",
         "<anonymous>"
@@ -81,11 +81,11 @@
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$3;->$onError:Ljava/lang/Runnable;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$3;->$onError:Ljava/lang/Runnable;
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_0
     return-void

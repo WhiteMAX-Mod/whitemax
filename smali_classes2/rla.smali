@@ -3,47 +3,101 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
+# instance fields
+.field public final a:Lnbb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lnbb;)V
+    .locals 0
 
-    sget v0, Lt9c;->profile_channel_members_list_toolbar_subtitle:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lrla;->a:I
-
-    sget v0, Lt9c;->profile_chat_members_list_toolbar_subtitle:I
-
-    sput v0, Lrla;->b:I
-
-    sget v0, Lt9c;->profile_members_list_delete_from_channel_snackbar:I
-
-    sput v0, Lrla;->c:I
-
-    sget v0, Lt9c;->profile_members_list_delete_from_chat_snackbar:I
-
-    sput v0, Lrla;->d:I
-
-    sget v0, Lt9c;->profile_members_list_restore_in_channel_snackbar:I
-
-    sput v0, Lrla;->e:I
-
-    sget v0, Lt9c;->profile_members_list_restore_in_chat_snackbar:I
-
-    sput v0, Lrla;->f:I
+    iput-object p1, p0, Lrla;->a:Lnbb;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lnbb;)V
+    .locals 2
+
+    iget-object v0, p0, Lrla;->a:Lnbb;
+
+    iget-object v1, v0, Lnbb;->a:Ljava/lang/Object;
+
+    check-cast v1, Lnm3;
+
+    iput-object v1, p1, Lnbb;->a:Ljava/lang/Object;
+
+    iget-object v1, v0, Lnbb;->o:Ljava/lang/Object;
+
+    check-cast v1, Lqm;
+
+    iput-object v1, p1, Lnbb;->o:Ljava/lang/Object;
+
+    iget-object v1, v0, Lnbb;->b:Ljava/lang/Object;
+
+    check-cast v1, Lvxf;
+
+    iput-object v1, p1, Lnbb;->b:Ljava/lang/Object;
+
+    iget-object v1, v0, Lnbb;->c:Ljava/lang/Object;
+
+    check-cast v1, Lpid;
+
+    iput-object v1, p1, Lnbb;->c:Ljava/lang/Object;
+
+    iget-object v1, v0, Lnbb;->Z:Ljava/lang/Object;
+
+    check-cast v1, Lxm;
+
+    iput-object v1, p1, Lnbb;->Z:Ljava/lang/Object;
+
+    iget-object v1, v0, Lnbb;->Y:Ljava/lang/Object;
+
+    check-cast v1, Lbn;
+
+    iput-object v1, p1, Lnbb;->Y:Ljava/lang/Object;
+
+    iget-object v1, v0, Lnbb;->X:Ljava/lang/Object;
+
+    check-cast v1, Lv48;
+
+    iput-object v1, p1, Lnbb;->X:Ljava/lang/Object;
+
+    iget-object v0, v0, Lnbb;->q0:Ljava/lang/Object;
+
+    iput-object v0, p1, Lnbb;->q0:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public abstract b()Lsl;
+.end method
+
+.method public c()Lrl;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public d()Ldm;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract e()Lsla;
+.end method
+
+.method public abstract f()Lkkd;
+.end method
+
+.method public abstract g()Lnbb;
 .end method

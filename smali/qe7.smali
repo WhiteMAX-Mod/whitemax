@@ -1,41 +1,19 @@
-.class public interface abstract Lqe7;
+.class public final Lqe7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lo04;
+
+# instance fields
+.field public final a:Lpe7;
 
 
-# virtual methods
-.method public abstract attachChild(La23;)Lx13;
-.end method
+# direct methods
+.method public constructor <init>(Lpe7;)V
+    .locals 0
 
-.method public abstract cancel(Ljava/util/concurrent/CancellationException;)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract getCancellationException()Ljava/util/concurrent/CancellationException;
-.end method
+    iput-object p1, p0, Lqe7;->a:Lpe7;
 
-.method public abstract getChildren()Lbid;
-.end method
-
-.method public abstract invokeOnCompletion(Lbc6;)Lrq4;
-.end method
-
-.method public abstract invokeOnCompletion(ZZLbc6;)Lrq4;
-.end method
-
-.method public abstract isActive()Z
-.end method
-
-.method public abstract isCancelled()Z
-.end method
-
-.method public abstract isCompleted()Z
-.end method
-
-.method public abstract join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
-
-.method public abstract start()Z
+    return-void
 .end method

@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt24;
-.implements Lmwa;
+.implements Lm74;
+.implements Libb;
 
 
 # annotations
@@ -15,11 +15,11 @@
     d2 = {
         "Lone/me/image/crop/view/ImageCropView;",
         "Landroid/widget/FrameLayout;",
-        "Lt24;",
-        "Lmwa;",
+        "Lm74;",
+        "Libb;",
         "",
         "freestyleCropModeEnable",
-        "Lylf;",
+        "Lccg;",
         "setFreestyleCropMode",
         "(I)V",
         "",
@@ -32,9 +32,9 @@
         "(F)V",
         "size",
         "setMinImageSize",
-        "Lu24;",
+        "Ln74;",
         "getCropState",
-        "()Lu24;",
+        "()Ln74;",
         "getMinOverlaySize",
         "()F",
         "getMaxBitmapSize",
@@ -52,9 +52,9 @@
 
 
 # instance fields
-.field public final a:Llh6;
+.field public final a:Lyn6;
 
-.field public final b:Llwa;
+.field public final b:Lhbb;
 
 
 # direct methods
@@ -73,21 +73,21 @@
 
     invoke-virtual {p0, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p2, Llh6;
+    new-instance p2, Lyn6;
 
-    invoke-direct {p2, p1}, Lga7;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Ldj7;-><init>(Landroid/content/Context;)V
 
     const/4 v1, 0x1
 
-    iput-boolean v1, p2, Llh6;->T0:Z
+    iput-boolean v1, p2, Lyn6;->S0:Z
 
-    iput-boolean v1, p2, Llh6;->U0:Z
+    iput-boolean v1, p2, Lyn6;->T0:Z
 
     const/4 v1, 0x5
 
-    iput v1, p2, Llh6;->V0:I
+    iput v1, p2, Lyn6;->U0:I
 
-    iput-object p2, p0, Lone/me/image/crop/view/ImageCropView;->a:Llh6;
+    iput-object p2, p0, Lone/me/image/crop/view/ImageCropView;->a:Lyn6;
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -95,11 +95,11 @@
 
     invoke-virtual {p0, p2, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v1, Llwa;
+    new-instance v1, Lhbb;
 
-    invoke-direct {v1, p1}, Llwa;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lhbb;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lone/me/image/crop/view/ImageCropView;->b:Llwa;
+    iput-object v1, p0, Lone/me/image/crop/view/ImageCropView;->b:Lhbb;
 
     new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -107,9 +107,9 @@
 
     invoke-virtual {p0, v1, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p2, p0}, Lga7;->setCropBoundsChangeListener(Lt24;)V
+    invoke-virtual {p2, p0}, Ldj7;->setCropBoundsChangeListener(Lm74;)V
 
-    invoke-virtual {v1, p0}, Llwa;->setOverlayViewChangeListener(Lmwa;)V
+    invoke-virtual {v1, p0}, Lhbb;->setOverlayViewChangeListener(Libb;)V
 
     return-void
 .end method
@@ -117,308 +117,308 @@
 
 # virtual methods
 .method public final a()V
-    .locals 8
+    .locals 9
 
-    iget-object p0, p0, Lone/me/image/crop/view/ImageCropView;->a:Llh6;
+    iget-object v0, p0, Lone/me/image/crop/view/ImageCropView;->a:Lyn6;
 
-    iget-object v0, p0, Lga7;->B0:Landroid/graphics/RectF;
+    iget-object v1, v0, Ldj7;->A0:Landroid/graphics/RectF;
 
-    invoke-virtual {p0}, Lkdf;->getCurrentScale()F
-
-    move-result v1
-
-    invoke-virtual {p0}, Lga7;->getMinScale()F
+    invoke-virtual {v0}, Lg3g;->getCurrentScale()F
 
     move-result v2
 
-    cmpg-float v3, v1, v2
+    invoke-virtual {v0}, Ldj7;->getMinScale()F
 
-    if-gez v3, :cond_0
+    move-result v3
 
-    new-instance v3, Landroid/graphics/Matrix;
+    cmpg-float v4, v2, v3
 
-    invoke-virtual {p0}, Lkdf;->getCurrentImageMatrix()Landroid/graphics/Matrix;
+    if-gez v4, :cond_0
 
-    move-result-object v4
+    new-instance v4, Landroid/graphics/Matrix;
 
-    invoke-direct {v3, v4}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+    invoke-virtual {v0}, Lg3g;->getCurrentImageMatrix()Landroid/graphics/Matrix;
 
-    div-float/2addr v2, v1
+    move-result-object v5
 
-    iget v4, p0, Llh6;->R0:F
+    invoke-direct {v4, v5}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
 
-    iget v5, p0, Llh6;->S0:F
+    div-float/2addr v3, v2
 
-    invoke-virtual {v3, v2, v2, v4, v5}, Landroid/graphics/Matrix;->postScale(FFFF)Z
+    iget v5, v0, Lyn6;->Q0:F
+
+    iget v6, v0, Lyn6;->R0:F
+
+    invoke-virtual {v4, v3, v3, v5, v6}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
     goto :goto_0
 
     :cond_0
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     :goto_0
-    invoke-virtual {p0}, Lga7;->getMaxScale()F
+    invoke-virtual {v0}, Ldj7;->getMaxScale()F
+
+    move-result v3
+
+    cmpl-float v5, v2, v3
+
+    if-lez v5, :cond_1
+
+    new-instance v4, Landroid/graphics/Matrix;
+
+    invoke-virtual {v0}, Lg3g;->getCurrentImageMatrix()Landroid/graphics/Matrix;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+
+    div-float/2addr v3, v2
+
+    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
 
     move-result v2
 
-    cmpl-float v4, v1, v2
+    const/high16 v5, 0x40000000    # 2.0f
 
-    if-lez v4, :cond_1
+    div-float/2addr v2, v5
 
-    new-instance v3, Landroid/graphics/Matrix;
+    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
 
-    invoke-virtual {p0}, Lkdf;->getCurrentImageMatrix()Landroid/graphics/Matrix;
+    move-result v6
 
-    move-result-object v4
+    div-float/2addr v6, v5
 
-    invoke-direct {v3, v4}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+    invoke-virtual {v4, v3, v3, v2, v6}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    div-float/2addr v2, v1
+    :cond_1
+    new-instance v2, Landroid/graphics/RectF;
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    move-result v1
+    move-result-object v3
 
-    const/high16 v4, 0x40000000    # 2.0f
+    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    div-float/2addr v1, v4
+    move-result v3
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
+    int-to-float v3, v3
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v5
 
-    div-float/2addr v5, v4
+    int-to-float v5, v5
 
-    invoke-virtual {v3, v2, v2, v1, v5}, Landroid/graphics/Matrix;->postScale(FFFF)Z
+    const/4 v6, 0x0
 
-    :cond_1
-    new-instance v1, Landroid/graphics/RectF;
+    invoke-direct {v2, v6, v6, v3, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-static {v2}, Lfxi;->a(Landroid/graphics/RectF;)[F
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    if-eqz v4, :cond_2
 
-    move-result v2
-
-    int-to-float v2, v2
-
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    const/4 v5, 0x0
-
-    invoke-direct {v1, v5, v5, v2, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    invoke-static {v1}, Lmu0;->m(Landroid/graphics/RectF;)[F
-
-    move-result-object v1
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v3, v1}, Landroid/graphics/Matrix;->mapPoints([F)V
+    invoke-virtual {v4, v2}, Landroid/graphics/Matrix;->mapPoints([F)V
 
     :cond_2
-    if-eqz v3, :cond_3
+    if-eqz v4, :cond_3
 
-    move-object v1, v3
+    move-object v2, v4
 
     goto :goto_1
 
     :cond_3
-    invoke-virtual {p0}, Lkdf;->getCurrentImageMatrix()Landroid/graphics/Matrix;
+    invoke-virtual {v0}, Lg3g;->getCurrentImageMatrix()Landroid/graphics/Matrix;
 
-    move-result-object v1
+    move-result-object v2
 
     :goto_1
-    iget-object v2, p0, Lkdf;->u0:[F
+    iget-object v3, v0, Lg3g;->t0:[F
 
-    array-length v4, v2
+    array-length v5, v3
 
-    new-array v4, v4, [F
+    new-array v5, v5, [F
 
-    invoke-virtual {v1, v4, v2}, Landroid/graphics/Matrix;->mapPoints([F[F)V
+    invoke-virtual {v2, v5, v3}, Landroid/graphics/Matrix;->mapPoints([F[F)V
 
-    invoke-static {v4}, Lmu0;->C([F)Landroid/graphics/RectF;
+    invoke-static {v5}, Lfxi;->c([F)Landroid/graphics/RectF;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget v2, v1, Landroid/graphics/RectF;->right:F
+    iget v3, v2, Landroid/graphics/RectF;->right:F
 
-    iget v4, v0, Landroid/graphics/RectF;->right:F
+    iget v5, v1, Landroid/graphics/RectF;->right:F
 
-    cmpg-float v6, v2, v4
+    cmpg-float v7, v3, v5
 
-    if-gez v6, :cond_4
+    if-gez v7, :cond_4
 
     :goto_2
-    sub-float/2addr v4, v2
+    sub-float/2addr v5, v3
 
     goto :goto_3
 
     :cond_4
-    iget v2, v1, Landroid/graphics/RectF;->left:F
+    iget v3, v2, Landroid/graphics/RectF;->left:F
 
-    iget v4, v0, Landroid/graphics/RectF;->left:F
+    iget v5, v1, Landroid/graphics/RectF;->left:F
 
-    cmpl-float v6, v2, v4
+    cmpl-float v7, v3, v5
 
-    if-lez v6, :cond_5
+    if-lez v7, :cond_5
 
     goto :goto_2
 
     :cond_5
-    move v4, v5
+    move v5, v6
 
     :goto_3
-    iget v2, v1, Landroid/graphics/RectF;->bottom:F
+    iget v3, v2, Landroid/graphics/RectF;->bottom:F
 
-    iget v6, v0, Landroid/graphics/RectF;->bottom:F
+    iget v7, v1, Landroid/graphics/RectF;->bottom:F
 
-    cmpg-float v7, v2, v6
+    cmpg-float v8, v3, v7
 
-    if-gez v7, :cond_6
+    if-gez v8, :cond_6
 
-    sub-float/2addr v6, v2
+    sub-float/2addr v7, v3
 
     goto :goto_4
 
     :cond_6
+    iget v2, v2, Landroid/graphics/RectF;->top:F
+
     iget v1, v1, Landroid/graphics/RectF;->top:F
 
-    iget v0, v0, Landroid/graphics/RectF;->top:F
+    cmpl-float v3, v2, v1
 
-    cmpl-float v2, v1, v0
+    if-lez v3, :cond_7
 
-    if-lez v2, :cond_7
-
-    sub-float v6, v0, v1
+    sub-float v7, v1, v2
 
     goto :goto_4
 
     :cond_7
-    move v6, v5
+    move v7, v6
 
     :goto_4
-    cmpl-float v0, v4, v5
+    cmpl-float v1, v5, v6
 
-    if-nez v0, :cond_8
+    if-nez v1, :cond_8
 
-    cmpl-float v0, v6, v5
+    cmpl-float v1, v7, v6
 
-    if-eqz v0, :cond_a
+    if-eqz v1, :cond_a
 
     :cond_8
-    if-nez v3, :cond_9
+    if-nez v4, :cond_9
 
-    new-instance v3, Landroid/graphics/Matrix;
+    new-instance v4, Landroid/graphics/Matrix;
 
-    invoke-virtual {p0}, Lkdf;->getCurrentImageMatrix()Landroid/graphics/Matrix;
+    invoke-virtual {v0}, Lg3g;->getCurrentImageMatrix()Landroid/graphics/Matrix;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-direct {v3, v0}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+    invoke-direct {v4, v1}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
 
     :cond_9
-    invoke-virtual {v3, v4, v6}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+    invoke-virtual {v4, v5, v7}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     :cond_a
-    if-eqz v3, :cond_b
+    if-eqz v4, :cond_b
 
-    invoke-virtual {p0, v3}, Lkdf;->setImageMatrix(Landroid/graphics/Matrix;)V
+    invoke-virtual {v0, v4}, Lg3g;->setImageMatrix(Landroid/graphics/Matrix;)V
 
     :cond_b
     return-void
 .end method
 
-.method public final getCropState()Lu24;
-    .locals 0
+.method public final getCropState()Ln74;
+    .locals 1
 
-    iget-object p0, p0, Lone/me/image/crop/view/ImageCropView;->a:Llh6;
+    iget-object v0, p0, Lone/me/image/crop/view/ImageCropView;->a:Lyn6;
 
-    invoke-virtual {p0}, Lga7;->getCropState()Lu24;
+    invoke-virtual {v0}, Ldj7;->getCropState()Ln74;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getMaxBitmapSize()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/image/crop/view/ImageCropView;->a:Llh6;
+    iget-object v0, p0, Lone/me/image/crop/view/ImageCropView;->a:Lyn6;
 
-    invoke-virtual {p0}, Lkdf;->getMaxBitmapSize()I
+    invoke-virtual {v0}, Lg3g;->getMaxBitmapSize()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getMinOverlaySize()F
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/image/crop/view/ImageCropView;->a:Llh6;
+    iget-object v0, p0, Lone/me/image/crop/view/ImageCropView;->a:Lyn6;
 
-    invoke-virtual {p0}, Lkdf;->getMinOverlaySize()F
+    invoke-virtual {v0}, Lg3g;->getMinOverlaySize()F
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final setFreestyleCropMode(I)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/image/crop/view/ImageCropView;->b:Llwa;
+    iget-object v0, p0, Lone/me/image/crop/view/ImageCropView;->b:Lhbb;
 
-    invoke-virtual {p0, p1}, Llwa;->setFreestyleCropMode(I)V
+    invoke-virtual {v0, p1}, Lhbb;->setFreestyleCropMode(I)V
 
     return-void
 .end method
 
 .method public final setMaxScaleMultiplier(F)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/image/crop/view/ImageCropView;->a:Llh6;
+    iget-object v0, p0, Lone/me/image/crop/view/ImageCropView;->a:Lyn6;
 
-    invoke-virtual {p0, p1}, Lga7;->setMaxScaleMultiplier(F)V
+    invoke-virtual {v0, p1}, Ldj7;->setMaxScaleMultiplier(F)V
 
     return-void
 .end method
 
 .method public final setMinImageSize(F)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/image/crop/view/ImageCropView;->a:Llh6;
+    iget-object v0, p0, Lone/me/image/crop/view/ImageCropView;->a:Lyn6;
 
-    invoke-virtual {p0, p1}, Lkdf;->setMinImageSize(F)V
+    invoke-virtual {v0, p1}, Lg3g;->setMinImageSize(F)V
 
     return-void
 .end method
 
 .method public final setRotateEnabled(Z)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/image/crop/view/ImageCropView;->a:Llh6;
+    iget-object v0, p0, Lone/me/image/crop/view/ImageCropView;->a:Lyn6;
 
-    iput-boolean p1, p0, Llh6;->T0:Z
+    iput-boolean p1, v0, Lyn6;->S0:Z
 
     return-void
 .end method
 
 .method public final shouldDelayChildPressedState()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method

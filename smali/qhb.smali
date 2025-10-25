@@ -1,87 +1,211 @@
-.class public final enum Lqhb;
-.super Ljava/lang/Enum;
+.class public final Lqhb;
+.super Landroidx/work/WorkRequest$Builder;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum b:Lqhb;
-
-.field public static final enum c:Lqhb;
-
-.field public static final synthetic o:[Lqhb;
-
-
-# instance fields
-.field public final a:I
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/Class;JLjava/util/concurrent/TimeUnit;)V
+    .locals 16
+
+    invoke-direct/range {p0 .. p1}, Landroidx/work/WorkRequest$Builder;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual/range {p0 .. p0}, Landroidx/work/WorkRequest$Builder;->getWorkSpec$work_runtime_release()Lhph;
+
+    move-result-object v0
+
+    move-wide/from16 v1, p2
+
+    move-object/from16 v3, p4
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v3, Lhph;->u:Ljava/lang/String;
+
+    const-wide/32 v4, 0xdbba0
+
+    cmp-long v6, v1, v4
+
+    const-string v7, "Interval duration lesser than minimum allowed value; Changed to 900000"
+
+    if-gez v6, :cond_0
+
+    invoke-static {}, Lxyh;->e()Lxyh;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v3, v7}, Lxyh;->o(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    if-gez v6, :cond_1
+
+    move-wide v8, v4
+
+    goto :goto_0
+
+    :cond_1
+    move-wide v8, v1
+
+    :goto_0
+    if-gez v6, :cond_2
+
+    move-wide v10, v4
+
+    goto :goto_1
+
+    :cond_2
+    move-wide v10, v1
+
+    :goto_1
+    cmp-long v1, v8, v4
+
+    if-gez v1, :cond_3
+
+    invoke-static {}, Lxyh;->e()Lxyh;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v3, v7}, Lxyh;->o(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    if-gez v1, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move-wide v4, v8
+
+    :goto_2
+    iput-wide v4, v0, Lhph;->h:J
+
+    const-wide/32 v1, 0x493e0
+
+    cmp-long v1, v10, v1
+
+    if-gez v1, :cond_5
+
+    invoke-static {}, Lxyh;->e()Lxyh;
+
+    move-result-object v1
+
+    const-string v2, "Flex duration lesser than minimum allowed value; Changed to 300000"
+
+    invoke-virtual {v1, v3, v2}, Lxyh;->o(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_5
+    iget-wide v1, v0, Lhph;->h:J
+
+    cmp-long v1, v10, v1
+
+    if-lez v1, :cond_6
+
+    invoke-static {}, Lxyh;->e()Lxyh;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v4, "Flex duration greater than interval duration; Changed to "
+
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v3, v2}, Lxyh;->o(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_6
+    const-wide/32 v12, 0x493e0
+
+    iget-wide v14, v0, Lhph;->h:J
+
+    invoke-static/range {v10 .. v15}, Llwi;->e(JJJ)J
+
+    move-result-wide v1
+
+    iput-wide v1, v0, Lhph;->i:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final buildInternal$work_runtime_release()Landroidx/work/WorkRequest;
     .locals 4
 
-    new-instance v0, Lqhb;
+    invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getBackoffCriteriaSet$work_runtime_release()Z
 
-    const-string v1, "PERFORMANCE"
+    move-result v0
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0, v1, v2, v2}, Lqhb;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lqhb;->b:Lqhb;
-
-    new-instance v1, Lqhb;
-
-    const-string v2, "COMPATIBLE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Lqhb;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lqhb;->c:Lqhb;
-
-    filled-new-array {v0, v1}, [Lqhb;
+    invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getWorkSpec$work_runtime_release()Lhph;
 
     move-result-object v0
 
-    sput-object v0, Lqhb;->o:[Lqhb;
+    iget-object v0, v0, Lhph;->j:Lnr3;
 
-    return-void
-.end method
+    iget-boolean v0, v0, Lnr3;->c:Z
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+    if-nez v0, :cond_0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    goto :goto_0
 
-    iput p3, p0, Lqhb;->a:I
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    return-void
-.end method
+    const-string v1, "Cannot set backoff criteria on an idle mode job"
 
-.method public static valueOf(Ljava/lang/String;)Lqhb;
-    .locals 1
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const-class v0, Lqhb;
+    throw v0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lqhb;
-
-    return-object p0
-.end method
-
-.method public static values()[Lqhb;
-    .locals 1
-
-    sget-object v0, Lqhb;->o:[Lqhb;
-
-    invoke-virtual {v0}, [Lqhb;->clone()Ljava/lang/Object;
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getWorkSpec$work_runtime_release()Lhph;
 
     move-result-object v0
 
-    check-cast v0, [Lqhb;
+    iget-boolean v0, v0, Lhph;->q:Z
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lrhb;
+
+    invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getId$work_runtime_release()Ljava/util/UUID;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getWorkSpec$work_runtime_release()Lhph;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getTags$work_runtime_release()Ljava/util/Set;
+
+    move-result-object v3
+
+    invoke-direct {v0, v1, v2, v3}, Landroidx/work/WorkRequest;-><init>(Ljava/util/UUID;Lhph;Ljava/util/Set;)V
 
     return-object v0
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "PeriodicWorkRequests cannot be expedited"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
+    .locals 0
+
+    return-object p0
 .end method

@@ -1,257 +1,278 @@
-.class public final synthetic Lhn1;
-.super Ljava/lang/Object;
+.class public final Lhn1;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Leb4;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Landroid/os/Bundle;
+.field public final synthetic Y:Lio1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/os/Bundle;I)V
+.method public constructor <init>(Lio1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lhn1;->a:I
+    iput-object p1, p0, Lhn1;->Y:Lio1;
 
-    iput-object p1, p0, Lhn1;->b:Landroid/os/Bundle;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lhn1;->a:I
+    check-cast p1, Lob;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lone/me/stickersshowcase/StickersShowcaseScreen;
+    invoke-virtual {p0, p1, p2}, Lhn1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    move-result-object p1
 
-    invoke-direct {v0, p0}, Lone/me/stickersshowcase/StickersShowcaseScreen;-><init>(Landroid/os/Bundle;)V
+    check-cast p1, Lhn1;
 
-    return-object v0
+    sget-object p2, Lccg;->a:Lccg;
 
-    :pswitch_0
-    new-instance v0, Lone/me/stickerssearch/StickersSearchScreen;
+    invoke-virtual {p1, p2}, Lhn1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    return-object p2
+.end method
 
-    invoke-direct {v0, p0}, Lone/me/stickerssearch/StickersSearchScreen;-><init>(Landroid/os/Bundle;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    return-object v0
+    new-instance v0, Lhn1;
 
-    :pswitch_1
-    new-instance v0, Lone/me/sharedata/ShareDataPickerScreen;
+    iget-object v1, p0, Lhn1;->Y:Lio1;
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    invoke-direct {v0, v1, p2}, Lhn1;-><init>(Lio1;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, p0}, Lone/me/sharedata/ShareDataPickerScreen;-><init>(Landroid/os/Bundle;)V
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Lone/me/sharedata/ShareDataPickerScreen;
-
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
-
-    invoke-direct {v0, p0}, Lone/me/sharedata/ShareDataPickerScreen;-><init>(Landroid/os/Bundle;)V
+    iput-object p1, v0, Lhn1;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_3
-    new-instance v0, Lone/me/mediapicker/crop/AvatarEditScreen;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-string v1, "image_uri"
+    iget-object v0, p0, Lhn1;->Y:Lio1;
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    iget-object v0, v0, Lio1;->J0:Lxe5;
 
-    invoke-static {v1, p0}, Lkua;->B(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-object v1
+    iget-object p1, p0, Lhn1;->X:Ljava/lang/Object;
 
-    const-string v2, "file_path"
+    check-cast p1, Lob;
 
-    invoke-static {v2, p0}, Lkua;->B(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    instance-of v1, p1, Leb;
 
-    move-result-object p0
+    if-eqz v1, :cond_0
 
-    invoke-direct {v0, v1, p0}, Lone/me/mediapicker/crop/AvatarEditScreen;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    sget-object p1, Lqm1;->b:Lom1;
 
-    return-object v0
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    :pswitch_4
-    new-instance v0, Lone/me/android/deeplink/LinkInterceptorWidget;
-
-    const-string v1, "link"
-
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
-
-    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    check-cast p0, Landroid/net/Uri;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, p0, v1, v2, v1}, Lone/me/android/deeplink/LinkInterceptorWidget;-><init>(Landroid/net/Uri;Ldq7;ILld4;)V
-
-    return-object v0
+    goto/16 :goto_1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    instance-of v1, p1, Lcb;
 
-    const-string v0, "Required value was null."
+    if-eqz v1, :cond_1
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    sget-object p1, Lqm1;->c:Lom1;
 
-    throw p0
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    :pswitch_5
-    new-instance v1, Lone/me/android/join/JoinChatWidget;
+    goto/16 :goto_1
 
-    const-string v0, "id"
+    :cond_1
+    instance-of v1, p1, Lbb;
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    if-eqz v1, :cond_2
 
-    invoke-static {v0, p0}, Lkua;->z(Ljava/lang/String;Landroid/os/Bundle;)J
+    sget-object p1, Lqm1;->d:Lom1;
 
-    move-result-wide v2
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    const-string v0, "link"
+    goto/16 :goto_1
 
-    invoke-static {v0, p0}, Lkua;->B(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    :cond_2
+    instance-of v1, p1, Lib;
 
-    move-result-object v4
+    if-eqz v1, :cond_3
 
-    const-string v0, "title"
+    sget-object p1, Lqm1;->e:Lom1;
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    move-result-object v5
+    goto/16 :goto_1
 
-    const-string v0, "channel"
+    :cond_3
+    instance-of v1, p1, Lab;
 
-    invoke-static {v0, p0}, Lkua;->y(Ljava/lang/String;Landroid/os/Bundle;)Z
+    if-eqz v1, :cond_4
 
-    move-result v6
+    sget-object p1, Lqm1;->f:Lom1;
 
-    invoke-direct/range {v1 .. v6}, Lone/me/android/join/JoinChatWidget;-><init>(JLjava/lang/String;Ljava/lang/String;Z)V
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    return-object v1
+    goto/16 :goto_1
 
-    :pswitch_6
-    new-instance v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    :cond_4
+    instance-of v1, p1, Lxa;
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    if-eqz v1, :cond_5
 
-    invoke-direct {v0, p0}, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;-><init>(Landroid/os/Bundle;)V
+    sget-object p1, Lqm1;->g:Lom1;
 
-    return-object v0
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    :pswitch_7
-    new-instance v0, Lone/me/folders/edit/FolderEditScreen;
+    goto/16 :goto_1
 
-    const-string v1, "id"
+    :cond_5
+    instance-of v1, p1, Lwa;
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    if-eqz v1, :cond_6
 
-    invoke-static {v1, p0}, Lkua;->B(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    sget-object p1, Lqm1;->h:Lom1;
 
-    move-result-object p0
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    invoke-direct {v0, p0}, Lone/me/folders/edit/FolderEditScreen;-><init>(Ljava/lang/String;)V
+    goto/16 :goto_1
 
-    return-object v0
+    :cond_6
+    instance-of v1, p1, Lfb;
 
-    :pswitch_8
-    new-instance v0, Lone/me/folders/edit/FolderEditScreen;
+    if-eqz v1, :cond_7
 
-    const-string v1, "id"
+    sget-object p1, Lqm1;->i:Lom1;
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    invoke-static {v1, p0}, Lkua;->B(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    goto/16 :goto_1
 
-    move-result-object p0
+    :cond_7
+    instance-of v1, p1, Ldb;
 
-    invoke-direct {v0, p0}, Lone/me/folders/edit/FolderEditScreen;-><init>(Ljava/lang/String;)V
+    if-eqz v1, :cond_8
 
-    return-object v0
+    sget-object p1, Lqm1;->j:Lom1;
 
-    :pswitch_9
-    new-instance v0, Lone/me/android/externalcallback/ExternalCallbackWidget;
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    const-string v1, "params"
+    goto :goto_1
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    :cond_8
+    instance-of v1, p1, Ljb;
 
-    invoke-static {v1, p0}, Lkua;->B(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    if-eqz v1, :cond_9
 
-    move-result-object p0
+    sget-object p1, Lqm1;->k:Lom1;
 
-    invoke-direct {v0, p0}, Lone/me/android/externalcallback/ExternalCallbackWidget;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    return-object v0
+    goto :goto_1
 
-    :pswitch_a
-    new-instance v0, Lone/me/chatscreen/ChatScreen;
+    :cond_9
+    instance-of v1, p1, Lkb;
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    if-eqz v1, :cond_a
 
-    invoke-direct {v0, p0}, Lone/me/chatscreen/ChatScreen;-><init>(Landroid/os/Bundle;)V
+    sget-object p1, Lqm1;->l:Lom1;
 
-    return-object v0
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    :pswitch_b
-    new-instance v0, Lone/me/chatscreen/ChatScreen;
+    goto :goto_1
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    :cond_a
+    instance-of v1, p1, Lnb;
 
-    invoke-direct {v0, p0}, Lone/me/chatscreen/ChatScreen;-><init>(Landroid/os/Bundle;)V
+    if-eqz v1, :cond_b
 
-    return-object v0
+    sget-object p1, Lqm1;->m:Lom1;
 
-    :pswitch_c
-    new-instance v0, Lone/me/calls/share/CallSharePickerScreen;
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lhn1;->b:Landroid/os/Bundle;
+    goto :goto_1
 
-    invoke-direct {v0, p0}, Lone/me/calls/share/CallSharePickerScreen;-><init>(Landroid/os/Bundle;)V
+    :cond_b
+    instance-of v1, p1, Lgb;
 
-    return-object v0
+    if-eqz v1, :cond_c
 
-    nop
+    sget-object p1, Lqm1;->n:Lom1;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_c
+    instance-of v1, p1, Llb;
+
+    if-eqz v1, :cond_d
+
+    sget-object p1, Lqm1;->o:Lom1;
+
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_d
+    instance-of v1, p1, Lya;
+
+    if-eqz v1, :cond_e
+
+    sget-object p1, Lqm1;->p:Lom1;
+
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_e
+    instance-of v1, p1, Lza;
+
+    if-eqz v1, :cond_f
+
+    sget-object p1, Lqm1;->A:Lom1;
+
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_f
+    instance-of v1, p1, Lmb;
+
+    if-eqz v1, :cond_11
+
+    check-cast p1, Lmb;
+
+    iget-boolean p1, p1, Lmb;->a:Z
+
+    if-eqz p1, :cond_10
+
+    sget-object p1, Lqm1;->B:Lom1;
+
+    goto :goto_0
+
+    :cond_10
+    sget-object p1, Lqm1;->C:Lom1;
+
+    :goto_0
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    :cond_11
+    :goto_1
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

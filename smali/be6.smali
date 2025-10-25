@@ -1,85 +1,115 @@
-.class public final enum Lbe6;
-.super Ljava/lang/Enum;
+.class public final Lbe6;
+.super Lvvf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lbe6;
-
-.field public static final enum b:Lbe6;
-
-.field public static final enum c:Lbe6;
-
-.field public static final synthetic o:[Lbe6;
+# instance fields
+.field public e:Lvvf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lvvf;)V
+    .locals 0
 
-    new-instance v0, Lbe6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lbe6;->a:Lbe6;
-
-    new-instance v1, Lbe6;
-
-    const-string v2, "DEFAULT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lbe6;->b:Lbe6;
-
-    new-instance v2, Lbe6;
-
-    const-string v3, "YUV"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lbe6;->c:Lbe6;
-
-    filled-new-array {v0, v1, v2}, [Lbe6;
-
-    move-result-object v0
-
-    sput-object v0, Lbe6;->o:[Lbe6;
+    iput-object p1, p0, Lbe6;->e:Lvvf;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lbe6;
+
+# virtual methods
+.method public final a()Lvvf;
     .locals 1
 
-    const-class v0, Lbe6;
+    iget-object v0, p0, Lbe6;->e:Lvvf;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lbe6;
-
-    return-object p0
-.end method
-
-.method public static values()[Lbe6;
-    .locals 1
-
-    sget-object v0, Lbe6;->o:[Lbe6;
-
-    invoke-virtual {v0}, [Lbe6;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Lvvf;->a()Lvvf;
 
     move-result-object v0
 
-    check-cast v0, [Lbe6;
+    return-object v0
+.end method
+
+.method public final b()Lvvf;
+    .locals 1
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0}, Lvvf;->b()Lvvf;
+
+    move-result-object v0
 
     return-object v0
+.end method
+
+.method public final c()J
+    .locals 2
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0}, Lvvf;->c()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final d(J)Lvvf;
+    .locals 1
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0, p1, p2}, Lvvf;->d(J)Lvvf;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0}, Lvvf;->e()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final f()V
+    .locals 1
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0}, Lvvf;->f()V
+
+    return-void
+.end method
+
+.method public final g(JLjava/util/concurrent/TimeUnit;)Lvvf;
+    .locals 1
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0, p1, p2, p3}, Lvvf;->g(JLjava/util/concurrent/TimeUnit;)Lvvf;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final h()J
+    .locals 2
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0}, Lvvf;->h()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

@@ -1,26 +1,26 @@
-.class public final Lbwb;
-.super Lure;
+.class public final synthetic Lbwb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lzi6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lnwb;
+.field public final synthetic b:Liwb;
 
 
 # direct methods
-.method public constructor <init>(Lnwb;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Liwb;I)V
     .locals 0
 
-    iput-object p1, p0, Lbwb;->Y:Lnwb;
+    iput p2, p0, Lbwb;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lbwb;->b:Liwb;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -28,94 +28,56 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
-    check-cast p1, Ly04;
+    iget v0, p0, Lbwb;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Ljava/lang/Float;
 
-    invoke-virtual {p0, p1, p2}, Lbwb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    move-result-object p0
+    move-result p1
 
-    check-cast p0, Lbwb;
+    check-cast p2, Ljava/lang/Float;
 
-    sget-object p1, Lylf;->a:Lylf;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1}, Lbwb;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    iget-object p2, p0, Lbwb;->b:Liwb;
 
-    return-object p0
-.end method
+    invoke-static {p2, p1}, Liwb;->a(Liwb;F)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lbwb;
-
-    iget-object p0, p0, Lbwb;->Y:Lnwb;
-
-    invoke-direct {p1, p0, p2}, Lbwb;-><init>(Lnwb;Lkotlin/coroutines/Continuation;)V
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
-.end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    :pswitch_0
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
-    iget v0, p0, Lbwb;->X:I
+    move-result p2
 
-    iget-object v1, p0, Lbwb;->Y:Lnwb;
+    iget-object v0, p0, Lbwb;->b:Liwb;
 
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-static {v0, p1, p2}, Liwb;->c(Liwb;FF)V
 
     goto :goto_0
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :pswitch_1
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object p2, p0, Lbwb;->b:Liwb;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {p2, p1}, Liwb;->b(Liwb;F)V
 
-    throw p0
+    goto :goto_0
 
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    nop
 
-    iget-object p1, v1, Lnwb;->Q0:Lojb;
-
-    iput v2, p0, Lbwb;->X:I
-
-    invoke-virtual {p1, p0}, Lojb;->t(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p0, Lz04;->a:Lz04;
-
-    if-ne p1, p0, :cond_2
-
-    return-object p0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Ljvb;
-
-    if-eqz p1, :cond_3
-
-    iget-object p0, v1, Lnwb;->B0:Lv85;
-
-    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    :cond_3
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

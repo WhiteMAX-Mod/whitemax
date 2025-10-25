@@ -974,42 +974,42 @@
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p2
 
     goto :goto_1
 
     .line 147
     :cond_0
     :goto_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/q0;->a:Lcom/my/tracker/obfuscated/l;
+    iget-object p2, p0, Lcom/my/tracker/obfuscated/q0;->a:Lcom/my/tracker/obfuscated/l;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/l;->c()[B
+    invoke-virtual {p2}, Lcom/my/tracker/obfuscated/l;->c()[B
 
-    move-result-object p0
+    move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p0
+    return-object p1
 
     .line 148
     :goto_1
-    new-instance p2, Ljava/lang/StringBuilder;
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    const-string p3, "Event serialization failed, type: "
+    const-string p4, "Event serialization failed, type: "
 
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p3, p4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1, p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, p2}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public static b()Lcom/my/tracker/obfuscated/l0;
@@ -1300,9 +1300,9 @@
 
     monitor-exit p0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :goto_0
     :try_start_2
@@ -1316,9 +1316,9 @@
     :goto_1
     monitor-exit p0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public declared-synchronized a(JLjava/lang/String;Lcom/my/tracker/obfuscated/o0$a;)[B
@@ -1442,9 +1442,9 @@
 
     monitor-exit p0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :catchall_1
     move-exception p1
@@ -1501,9 +1501,9 @@
 
     monitor-exit p0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :catchall_1
     move-exception p1
@@ -1581,9 +1581,9 @@
 
     monitor-exit p0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :catchall_1
     move-exception p1
@@ -1675,9 +1675,9 @@
 
     monitor-exit p0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :catchall_1
     move-exception p1
@@ -1797,9 +1797,9 @@
 
     monitor-exit p0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :catchall_1
     move-exception p1
@@ -1833,25 +1833,25 @@
     :try_start_0
     invoke-direct/range {v1 .. v6}, Lcom/my/tracker/obfuscated/l0;->a(IZLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)[B
 
-    move-result-object p0
+    move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit v1
+    monitor-exit p0
 
-    return-object p0
+    return-object p1
 
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     :try_start_1
-    monitor-exit v1
+    monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public declared-synchronized b(Ljava/lang/String;Ljava/lang/String;)[B
@@ -1919,9 +1919,9 @@
 
     monitor-exit p0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :catchall_1
     move-exception p1
@@ -2013,9 +2013,9 @@
 
     monitor-exit p0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :catchall_1
     move-exception p1
@@ -2049,23 +2049,23 @@
     :try_start_0
     invoke-direct/range {v1 .. v6}, Lcom/my/tracker/obfuscated/l0;->a(IZLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)[B
 
-    move-result-object p0
+    move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit v1
+    monitor-exit p0
 
-    return-object p0
+    return-object p1
 
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     :try_start_1
-    monitor-exit v1
+    monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method

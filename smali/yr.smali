@@ -1,198 +1,91 @@
-.class public final Lyr;
+.class public final synthetic Lyr;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Iterable;
-.implements Lmi7;
+.implements Llj6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
+.field public final synthetic a:Lgs;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lgs;)V
     .locals 0
 
-    iput p1, p0, Lyr;->a:I
-
-    iput-object p2, p0, Lyr;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyr;->a:Lgs;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Z
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p0, p0, Lyr;->b:Ljava/lang/Object;
+    instance-of v0, p1, Lyr;
 
-    check-cast p0, [Lcx6;
+    if-eqz v0, :cond_0
 
-    array-length v0, p0
+    if-eqz p1, :cond_0
 
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Lyr;->getFunctionDelegate()Lej6;
 
-    move v2, v1
+    move-result-object v0
 
-    :goto_0
-    if-ge v2, v0, :cond_1
+    check-cast p1, Llj6;
 
-    aget-object v3, p0, v2
+    invoke-interface {p1}, Llj6;->getFunctionDelegate()Lej6;
 
-    iget-object v3, v3, Lcx6;->a:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-virtual {v3, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result p1
 
-    if-eqz v3, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    return p1
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    const/4 p1, 0x0
 
-    goto :goto_0
-
-    :cond_1
-    return v1
+    return p1
 .end method
 
-.method public final iterator()Ljava/util/Iterator;
-    .locals 2
+.method public final getFunctionDelegate()Lej6;
+    .locals 7
 
-    iget v0, p0, Lyr;->a:I
+    new-instance v0, Loj6;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v6, "selectTheme(Lone/me/appearancesettings/multitheme/model/ThemeItem;)V"
 
-    new-instance v0, Lw1;
+    const/4 v2, 0x0
 
-    iget-object p0, p0, Lyr;->b:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p0, Lw75;
+    const-class v3, Lgs;
 
-    invoke-direct {v0, p0}, Lw1;-><init>(Lw75;)V
+    iget-object v4, p0, Lyr;->a:Lgs;
 
-    return-object v0
+    const-string v5, "selectTheme"
 
-    :pswitch_0
-    iget-object p0, p0, Lyr;->b:Ljava/lang/Object;
-
-    check-cast p0, Lbid;
-
-    invoke-interface {p0}, Lbid;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    new-instance v0, Lmx4;
-
-    iget-object p0, p0, Lyr;->b:Ljava/lang/Object;
-
-    check-cast p0, Lfe;
-
-    invoke-virtual {p0}, Lfe;->invoke()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/Iterator;
-
-    invoke-direct {v0, p0}, Lmx4;-><init>(Ljava/util/Iterator;)V
+    invoke-direct/range {v0 .. v6}, Lnj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
-
-    :pswitch_2
-    iget-object p0, p0, Lyr;->b:Ljava/lang/Object;
-
-    check-cast p0, [Lcx6;
-
-    new-instance v0, Lw1;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p0}, Lw1;-><init>(ILjava/lang/Object;)V
-
-    return-object v0
-
-    :pswitch_3
-    iget-object p0, p0, Lyr;->b:Ljava/lang/Object;
-
-    check-cast p0, [Ljava/lang/Object;
-
-    new-instance v0, Lw1;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p0}, Lw1;-><init>(ILjava/lang/Object;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 3
+.method public final hashCode()I
+    .locals 1
 
-    iget v0, p0, Lyr;->a:I
+    invoke-virtual {p0}, Lyr;->getFunctionDelegate()Lej6;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object p0
+    move-result v0
 
-    return-object p0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lyr;->b:Ljava/lang/Object;
-
-    check-cast p0, [Lcx6;
-
-    const-string v1, ", "
-
-    const/16 v2, 0x3e
-
-    invoke-static {p0, v1, v2}, Lxr;->U([Ljava/lang/Object;Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x5d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

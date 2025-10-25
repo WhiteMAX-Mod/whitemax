@@ -1,72 +1,85 @@
 .class public final Lna9;
-.super Lure;
+.super Lrdi;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic X:Lfb9;
+.field public final synthetic c:I
+
+.field public final synthetic o:Loa9;
 
 
 # direct methods
-.method public constructor <init>(Lfb9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Loa9;I)V
     .locals 0
 
-    iput-object p1, p0, Lna9;->X:Lfb9;
+    iput p3, p0, Lna9;->c:I
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lna9;->o:Loa9;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/16 p2, 0xc
+
+    invoke-direct {p0, p2, p1}, Lrdi;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    check-cast p1, Ly04;
+    iget v0, p0, Lna9;->c:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lna9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p0
+    move-result v0
 
-    check-cast p0, Lna9;
+    if-nez v0, :cond_0
 
-    sget-object p1, Lylf;->a:Lylf;
+    check-cast p2, [I
 
-    invoke-virtual {p0, p1}, Lna9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, [I
 
-    return-object p1
-.end method
+    iget-object p1, p0, Lna9;->o:Loa9;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    new-instance p1, Lna9;
+    move-result-object v0
 
-    iget-object p0, p0, Lna9;->X:Lfb9;
+    invoke-virtual {p1, p2, v0}, Loa9;->e([ILandroid/graphics/Rect;)V
 
-    invoke-direct {p1, p0, p2}, Lna9;-><init>(Lfb9;Lkotlin/coroutines/Continuation;)V
+    :cond_0
+    return-void
 
-    return-object p1
-.end method
+    :pswitch_0
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    move-result v0
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    if-nez v0, :cond_1
 
-    iget-object p0, p0, Lna9;->X:Lfb9;
+    check-cast p2, [I
 
-    invoke-static {p0}, Lfb9;->u(Lfb9;)V
+    check-cast p1, [I
 
-    sget-object p0, Lylf;->a:Lylf;
+    iget-object p1, p0, Lna9;->o:Loa9;
 
-    return-object p0
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {p1, p2, v0}, Loa9;->d([ILandroid/graphics/Rect;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

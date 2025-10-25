@@ -62,7 +62,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/watch_together/exceptions/WatchTogetherException;-><init>(Lru/ok/android/externcalls/sdk/watch_together/WatchTogetherError;Ljava/lang/String;Ljava/lang/Throwable;ILld4;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/watch_together/exceptions/WatchTogetherException;-><init>(Lru/ok/android/externcalls/sdk/watch_together/WatchTogetherError;Ljava/lang/String;Ljava/lang/Throwable;ILki4;)V
 
     return-void
 .end method
@@ -83,7 +83,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/watch_together/exceptions/WatchTogetherException;-><init>(Lru/ok/android/externcalls/sdk/watch_together/WatchTogetherError;Ljava/lang/String;Ljava/lang/Throwable;ILld4;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/watch_together/exceptions/WatchTogetherException;-><init>(Lru/ok/android/externcalls/sdk/watch_together/WatchTogetherError;Ljava/lang/String;Ljava/lang/Throwable;ILki4;)V
 
     return-void
 .end method
@@ -106,7 +106,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/watch_together/WatchTogetherError;Ljava/lang/String;Ljava/lang/Throwable;ILld4;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/watch_together/WatchTogetherError;Ljava/lang/String;Ljava/lang/Throwable;ILki4;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -134,25 +134,25 @@
 
 # virtual methods
 .method public getCause()Ljava/lang/Throwable;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/exceptions/WatchTogetherException;->cause:Ljava/lang/Throwable;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/exceptions/WatchTogetherException;->cause:Ljava/lang/Throwable;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getMessage()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/exceptions/WatchTogetherException;->message:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/exceptions/WatchTogetherException;->message:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getReason()Lru/ok/android/externcalls/sdk/watch_together/WatchTogetherError;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/watch_together/exceptions/WatchTogetherException;->reason:Lru/ok/android/externcalls/sdk/watch_together/WatchTogetherError;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/exceptions/WatchTogetherException;->reason:Lru/ok/android/externcalls/sdk/watch_together/WatchTogetherError;
 
-    return-object p0
+    return-object v0
 .end method

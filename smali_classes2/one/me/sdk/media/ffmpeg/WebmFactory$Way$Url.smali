@@ -66,7 +66,7 @@
     const/4 v0, 0x0
 
     .line 6
-    invoke-direct {p0, p3, p4, p5, v0}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way;-><init>(IIZLld4;)V
+    invoke-direct {p0, p3, p4, p5, v0}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way;-><init>(IIZLki4;)V
 
     .line 7
     iput-object p1, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url;->url:Ljava/lang/String;
@@ -77,7 +77,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ZIIZILld4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;ZIIZILki4;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x2
@@ -149,17 +149,17 @@
 
 # virtual methods
 .method public final getNetworkFetchEnabled$media_ffmpeg_release()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url;->networkFetchEnabled:Z
+    iget-boolean v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url;->networkFetchEnabled:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getUrl$media_ffmpeg_release()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url;->url:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url;->url:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

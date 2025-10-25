@@ -1,114 +1,64 @@
-.class public final synthetic Lkc1;
+.class public final Lkc1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyyc;
+.implements Lpc1;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+# static fields
+.field public static final a:Lkc1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lkc1;->a:I
+    new-instance v0, Lkc1;
 
-    iput-object p1, p0, Lkc1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lkc1;->a:Lkc1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lkc1;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    sget-object v2, Lfa8;->b:Lfa8;
-
-    const/4 v3, 0x1
-
-    iget-object p0, p0, Lkc1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lxi7;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lic1;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lic1;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lic1;->w0:Lyce;
-
-    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lbc1;
-
-    iget-object p0, p0, Lbc1;->c:Lfa8;
-
-    if-ne p0, v2, :cond_0
-
-    move v1, v3
+    return v0
 
     :cond_0
-    xor-int/lit8 p0, v1, 0x1
+    instance-of p1, p1, Lkc1;
 
-    invoke-virtual {v0, p0}, Lic1;->s(Z)V
+    if-nez p1, :cond_1
 
-    return-void
+    const/4 p1, 0x0
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lxi7;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lic1;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lic1;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lic1;->w0:Lyce;
-
-    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lbc1;
-
-    iget-object p0, p0, Lbc1;->b:Lfa8;
-
-    if-ne p0, v2, :cond_1
-
-    move v1, v3
+    return p1
 
     :cond_1
-    xor-int/lit8 p0, v1, 0x1
+    return v0
+.end method
 
-    invoke-virtual {v0, p0}, Lic1;->r(Z)V
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    const v0, 0x63ca063b
 
-    nop
+    return v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "JoinLinkCall"
+
+    return-object v0
 .end method

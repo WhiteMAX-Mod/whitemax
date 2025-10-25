@@ -61,13 +61,13 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/Camera1Session$3;->this$0:Lorg/webrtc/Camera1Session;
+    iget-object v0, p0, Lorg/webrtc/Camera1Session$3;->this$0:Lorg/webrtc/Camera1Session;
 
-    invoke-static {p0}, Lorg/webrtc/Camera1Session;->b(Lorg/webrtc/Camera1Session;)Landroid/hardware/Camera;
+    invoke-static {v0}, Lorg/webrtc/Camera1Session;->b(Lorg/webrtc/Camera1Session;)Landroid/hardware/Camera;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Landroid/hardware/Camera;->addCallbackBuffer([B)V
+    invoke-virtual {v0, p1}, Landroid/hardware/Camera;->addCallbackBuffer([B)V
 
     :cond_0
     return-void
@@ -112,9 +112,9 @@
 
     if-eq p2, v0, :cond_0
 
-    const-string p0, "Callback from a different camera. This should never happen."
+    const-string p1, "Callback from a different camera. This should never happen."
 
-    invoke-static {v1, p0}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -129,9 +129,9 @@
 
     if-eq p2, v0, :cond_1
 
-    const-string p0, "Bytebuffer frame captured but camera is no longer running."
+    const-string p1, "Bytebuffer frame captured but camera is no longer running."
 
-    invoke-static {v1, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -227,9 +227,9 @@
 
     move-result-object p2
 
-    iget-object p0, p0, Lorg/webrtc/Camera1Session$3;->this$0:Lorg/webrtc/Camera1Session;
+    iget-object v0, p0, Lorg/webrtc/Camera1Session$3;->this$0:Lorg/webrtc/Camera1Session;
 
-    invoke-interface {p2, p0, p1}, Lorg/webrtc/CameraSession$Events;->onFrameCaptured(Lorg/webrtc/CameraSession;Lorg/webrtc/VideoFrame;)V
+    invoke-interface {p2, v0, p1}, Lorg/webrtc/CameraSession$Events;->onFrameCaptured(Lorg/webrtc/CameraSession;Lorg/webrtc/VideoFrame;)V
 
     invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->release()V
 

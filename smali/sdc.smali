@@ -1,36 +1,29 @@
-.class public abstract Lsdc;
-.super Ljava/lang/Object;
+.class public final Lsdc;
+.super Lzd6;
+.source "SourceFile"
 
 
-# static fields
-.field public static EmojiEditText:[I
+# virtual methods
+.method public final f(ILnvf;Z)Lnvf;
+    .locals 0
 
-.field public static EmojiEditText_maxEmojiCount:I
+    invoke-super {p0, p1, p2, p3}, Lzd6;->f(ILnvf;Z)Lnvf;
 
-.field public static EmojiExtractTextLayout:[I
+    const/4 p1, 0x1
 
-.field public static EmojiExtractTextLayout_emojiReplaceStrategy:I
+    iput-boolean p1, p2, Lnvf;->Y:Z
 
+    return-object p2
+.end method
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public final m(ILqvf;J)Lqvf;
+    .locals 0
 
-    const v0, 0x7f040645
+    invoke-super {p0, p1, p2, p3, p4}, Lzd6;->m(ILqvf;J)Lqvf;
 
-    filled-new-array {v0}, [I
+    const/4 p1, 0x1
 
-    move-result-object v0
+    iput-boolean p1, p2, Lqvf;->u0:Z
 
-    sput-object v0, Lsdc;->EmojiEditText:[I
-
-    const v0, 0x7f040374
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lsdc;->EmojiExtractTextLayout:[I
-
-    return-void
+    return-object p2
 .end method

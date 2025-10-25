@@ -1,93 +1,121 @@
 .class public final Lc49;
-.super Ljava/lang/Object;
+.super Lxzg;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljma;
+.field public final X:Lx0f;
+
+.field public final Y:Lxe5;
+
+.field public final Z:Liu7;
+
+.field public final b:La49;
+
+.field public final c:J
+
+.field public final o:Landroid/content/Context;
+
+.field public final q0:Liu7;
+
+.field public final r0:Liu7;
+
+.field public final s0:Liu7;
 
 
-# virtual methods
-.method public final a()Lh98;
-    .locals 3
+# direct methods
+.method public constructor <init>(La49;J)V
+    .locals 6
 
-    invoke-virtual {p0}, Lc49;->b()Lu2e;
+    sget-object v0, Ldt2;->a:Ldt2;
 
-    move-result-object p0
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    new-instance v0, Ljp8;
+    move-result-object v1
 
-    const/16 v1, 0xe
+    const-class v2, Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Ljp8;-><init>(I)V
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    new-instance v1, Lh98;
+    move-result-object v1
 
-    const/4 v2, 0x2
+    check-cast v1, Landroid/content/Context;
 
-    invoke-direct {v1, p0, v2, v0}, Lh98;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    sget-object v2, Lct2;->a:Liu7;
 
-    new-instance p0, Lip9;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    const/4 v0, 0x2
+    move-result-object v2
 
-    invoke-direct {p0, v0}, Lip9;-><init>(I)V
+    const-class v3, Lj4e;
 
-    new-instance v0, Lj98;
+    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    invoke-direct {v0, v1, p0, v2}, Lj98;-><init>(Ljava/lang/Object;Lqc6;I)V
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    new-instance p0, Ljp8;
+    move-result-object v3
 
-    const/16 v1, 0xf
+    const-class v4, Ld33;
 
-    invoke-direct {p0, v1}, Ljp8;-><init>(I)V
+    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    new-instance v1, Lr5a;
+    move-result-object v3
 
-    const/4 v2, 0x5
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-direct {v1, v0, p0, v2}, Lr5a;-><init>(Ly4a;Lqc6;I)V
+    move-result-object v4
 
-    invoke-virtual {v1}, Ly4a;->t()Lc5a;
+    const-class v5, Lulf;
 
-    move-result-object p0
+    invoke-virtual {v4, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    new-instance v0, Ljp8;
+    move-result-object v4
 
-    const/16 v1, 0x10
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-direct {v0, v1}, Ljp8;-><init>(I)V
+    move-result-object v0
 
-    new-instance v1, Lh98;
+    const-class v5, Ldq5;
 
-    const/4 v2, 0x2
+    invoke-virtual {v0, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-direct {v1, p0, v2, v0}, Lh98;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object v0
 
-    return-object v1
-.end method
+    invoke-direct {p0}, Lxzg;-><init>()V
 
-.method public final b()Lu2e;
-    .locals 2
+    iput-object p1, p0, Lc49;->b:La49;
 
-    iget-object p0, p0, Lc49;->a:Ljma;
+    iput-wide p2, p0, Lc49;->c:J
 
-    invoke-virtual {p0}, Lfxc;->n()Ls7a;
+    iput-object v1, p0, Lc49;->o:Landroid/content/Context;
 
-    move-result-object p0
+    new-instance p1, Lj49;
 
-    new-instance v0, Ljp8;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x13
+    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
 
-    invoke-direct {v0, v1}, Ljp8;-><init>(I)V
+    move-result-object p1
 
-    invoke-virtual {p0, v0}, Lk2e;->h(Lqc6;)Lu2e;
+    iput-object p1, p0, Lc49;->X:Lx0f;
 
-    move-result-object p0
+    new-instance p1, Lxe5;
 
-    return-object p0
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Lxe5;-><init>(I)V
+
+    iput-object p1, p0, Lc49;->Y:Lxe5;
+
+    iput-object v2, p0, Lc49;->Z:Liu7;
+
+    iput-object v3, p0, Lc49;->q0:Liu7;
+
+    iput-object v4, p0, Lc49;->r0:Liu7;
+
+    iput-object v0, p0, Lc49;->s0:Liu7;
+
+    return-void
 .end method

@@ -1,80 +1,50 @@
-.class public final synthetic Lu06;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lbc6;
+.class public final Lu06;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lv06;
+.field public final synthetic Y:Lwt3;
+
+.field public Z:Ls3;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lv06;I)V
+.method public constructor <init>(Lwt3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lu06;->a:I
+    iput-object p1, p0, Lu06;->Y:Lwt3;
 
-    iput-object p1, p0, Lu06;->b:Lv06;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lu06;->a:I
+    iput-object p1, p0, Lu06;->o:Ljava/lang/Object;
 
-    check-cast p1, Lc16;
+    iget p1, p0, Lu06;->X:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Lu06;->b:Lv06;
+    or-int/2addr p1, v0
 
-    iget-object p0, p0, Lv06;->Y:Ljava/lang/Object;
+    iput p1, p0, Lu06;->X:I
 
-    check-cast p0, Lg16;
+    iget-object p1, p0, Lu06;->Y:Lwt3;
 
-    if-eqz p0, :cond_0
+    const/4 v0, 0x0
 
-    check-cast p0, Lbx1;
+    invoke-virtual {p1, v0, p0}, Lwt3;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Lbx1;->e(Lc16;)V
+    move-result-object p1
 
-    :cond_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lu06;->b:Lv06;
-
-    iget-object p0, p0, Lv06;->Y:Ljava/lang/Object;
-
-    check-cast p0, Lg16;
-
-    if-eqz p0, :cond_1
-
-    check-cast p0, Lbx1;
-
-    invoke-virtual {p0, p1}, Lbx1;->e(Lc16;)V
-
-    :cond_1
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

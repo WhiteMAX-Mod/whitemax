@@ -1,46 +1,19 @@
 .class public final Lgk9;
-.super Lsxe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Ly29;
+.field public final synthetic a:Lr5;
 
 
-# virtual methods
-.method public final c(Lt39;Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "reactionInfo"
-
-    invoke-static {p2, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-static {p1}, Ly30;->C(Lt39;)Ly29;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgk9;->c:Ly29;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lt39;->B()V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
+# direct methods
+.method public constructor <init>(Lr5;)V
     .locals 0
 
-    iget-object p0, p0, Lgk9;->c:Ly29;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    iput-object p1, p0, Lgk9;->a:Lr5;
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

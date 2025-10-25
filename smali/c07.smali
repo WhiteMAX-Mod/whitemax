@@ -1,106 +1,95 @@
 .class public final Lc07;
-.super Ljava/lang/Object;
+.super Lbk0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lh07;
+# instance fields
+.field public final X:Ljava/util/List;
+
+.field public final Y:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 7
 
-    new-instance v0, Landroid/util/Size;
+    invoke-interface {p3}, Ljava/util/List;->size()I
 
-    const/16 v1, 0x280
+    move-result v0
 
-    const/16 v2, 0x1e0
+    add-int/lit8 v0, v0, -0x1
 
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
-
-    sget-object v1, Lxq5;->c:Lxq5;
-
-    new-instance v2, Lbuc;
-
-    sget-object v3, Ll4e;->c:Landroid/util/Size;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    iput-object v3, v2, Lbuc;->a:Landroid/util/Size;
-
-    const/4 v3, 0x1
-
-    iput v3, v2, Lbuc;->b:I
-
-    new-instance v4, Lauc;
-
-    invoke-direct {v4, v1, v2}, Lauc;-><init>(Lxq5;Lbuc;)V
-
-    new-instance v1, Lb07;
+    int-to-long v5, v0
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Lb07;-><init>(I)V
+    const-wide/16 v3, 0x0
 
-    sget-object v2, Lt17;->D:Ld90;
+    move-object v1, p0
 
-    iget-object v1, v1, Lb07;->b:Lko9;
+    invoke-direct/range {v1 .. v6}, Lbk0;-><init>(IJJ)V
 
-    invoke-virtual {v1, v2, v0}, Lko9;->m(Ld90;Ljava/lang/Object;)V
+    iput-wide p1, v1, Lc07;->Y:J
 
-    sget-object v0, Loqf;->j0:Ld90;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v0, v2}, Lko9;->m(Ld90;Ljava/lang/Object;)V
-
-    sget-object v0, Lt17;->y:Ld90;
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v0, v2}, Lko9;->m(Ld90;Ljava/lang/Object;)V
-
-    sget-object v0, Lt17;->G:Ld90;
-
-    invoke-virtual {v1, v0, v4}, Lko9;->m(Ld90;Ljava/lang/Object;)V
-
-    sget-object v0, Lgz4;->d:Lgz4;
-
-    invoke-virtual {v0, v0}, Lgz4;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    sget-object v2, Lj17;->x:Ld90;
-
-    invoke-virtual {v1, v2, v0}, Lko9;->m(Ld90;Ljava/lang/Object;)V
-
-    new-instance v0, Lh07;
-
-    invoke-static {v1}, Lcva;->a(Lzf3;)Lcva;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lh07;-><init>(Lcva;)V
-
-    sput-object v0, Lc07;->a:Lh07;
+    iput-object p3, v1, Lc07;->X:Ljava/util/List;
 
     return-void
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "ImageAnalysis currently only supports SDR"
+# virtual methods
+.method public final b()J
+    .locals 4
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0}, Lbk0;->a()V
 
-    throw v0
+    iget-wide v0, p0, Lbk0;->o:J
+
+    long-to-int v0, v0
+
+    iget-object v1, p0, Lc07;->X:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, La17;
+
+    iget-wide v0, v0, La17;->X:J
+
+    iget-wide v2, p0, Lc07;->Y:J
+
+    add-long/2addr v2, v0
+
+    return-wide v2
+.end method
+
+.method public final c()J
+    .locals 5
+
+    invoke-virtual {p0}, Lbk0;->a()V
+
+    iget-wide v0, p0, Lbk0;->o:J
+
+    long-to-int v0, v0
+
+    iget-object v1, p0, Lc07;->X:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, La17;
+
+    iget-wide v1, p0, Lc07;->Y:J
+
+    iget-wide v3, v0, La17;->X:J
+
+    add-long/2addr v1, v3
+
+    iget-wide v3, v0, La17;->c:J
+
+    add-long/2addr v1, v3
+
+    return-wide v1
 .end method

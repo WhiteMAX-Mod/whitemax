@@ -3,30 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:F
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lgf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;FI)V
+.method public synthetic constructor <init>(Lgf;I)V
     .locals 0
 
-    iput p4, p0, Lhf;->a:I
+    iput p2, p0, Lhf;->a:I
 
-    iput-object p1, p0, Lhf;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lhf;->o:Ljava/lang/Object;
-
-    iput p3, p0, Lhf;->b:F
+    iput-object p1, p0, Lhf;->b:Lgf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,110 +27,59 @@
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public final run()V
+    .locals 3
 
     iget v0, p0, Lhf;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lhf;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lhf;->b:Lgf;
 
-    check-cast v0, Ljte;
+    iget-object v0, v0, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v1, p0, Lhf;->o:Ljava/lang/Object;
+    iget-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s1:Lhf;
 
-    check-cast v1, Lpc6;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-static {}, Lfq0;->c()V
 
-    move-result-object v2
+    const/4 v1, 0x0
 
-    check-cast v2, Ljava/lang/Integer;
+    iput-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s1:Lhf;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    :cond_0
+    const/4 v1, 0x0
 
-    move-result v2
+    iput-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r1:Z
 
-    invoke-interface {v0}, Ljte;->g()I
+    invoke-static {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->a(Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;)V
 
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    invoke-interface {v0}, Ljte;->l()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->offsetTopAndBottom(I)V
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    iget p0, p0, Lhf;->b:F
-
-    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p0
-
-    invoke-interface {v1, p1, p0}, Lpc6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->e()V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lhf;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lhf;->b:Lgf;
 
-    check-cast v0, Llfb;
+    iget-object v1, v0, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v1, p0, Lhf;->o:Ljava/lang/Object;
+    iget-object v1, v1, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o1:Lfq0;
 
-    check-cast v1, Lpc6;
+    invoke-virtual {v1}, Lfq0;->b()V
 
-    iget p0, p0, Lhf;->b:F
+    new-instance v1, Lhf;
 
-    invoke-static {v0, v1, p0, p1}, Llfb;->d(Llfb;Lpc6;FLandroid/animation/ValueAnimator;)V
+    const/4 v2, 0x1
 
-    return-void
+    invoke-direct {v1, v0, v2}, Lhf;-><init>(Lgf;I)V
 
-    :pswitch_1
-    iget-object v0, p0, Lhf;->c:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    iget-object v1, p0, Lhf;->o:Ljava/lang/Object;
-
-    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
-
-    iget p0, p0, Lhf;->b:F
-
-    neg-float p0, p0
-
-    add-float/2addr p0, p1
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->setTranslationY(F)V
+    invoke-static {v1}, Lne;->d(Ljava/lang/Runnable;)V
 
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

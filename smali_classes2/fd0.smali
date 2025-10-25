@@ -1,219 +1,567 @@
-.class public final Lfd0;
-.super Lure;
+.class public abstract synthetic Lfd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
-
-
-# instance fields
-.field public X:Lyo9;
-
-.field public Y:Lgd0;
-
-.field public Z:I
-
-.field public final synthetic r0:Lgd0;
 
 
 # direct methods
-.method public constructor <init>(Lgd0;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static synthetic a(I)C
+    .locals 1
 
-    iput-object p1, p0, Lfd0;->r0:Lgd0;
+    const/4 v0, 0x1
 
-    const/4 p1, 0x2
+    if-eq p0, v0, :cond_1
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x2
 
-    return-void
+    if-ne p0, v0, :cond_0
+
+    const/16 p0, 0x67
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const/16 p0, 0x75
+
+    return p0
 .end method
 
+.method public static synthetic b(I)Ljava/lang/String;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "USER_AVATAR"
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-string p0, "PRESET_AVATAR"
+
+    return-object p0
+.end method
+
+.method public static c(IILtrf;)I
     .locals 0
 
-    check-cast p1, Ly04;
+    invoke-virtual {p2}, Ljava/lang/Object;->hashCode()I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lfd0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    add-int/2addr p2, p0
 
-    move-result-object p0
+    mul-int/2addr p2, p1
 
-    check-cast p0, Lfd0;
+    return p2
+.end method
 
-    sget-object p1, Lylf;->a:Lylf;
+.method public static d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lfd0;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+.method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    new-instance p1, Lfd0;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lfd0;->r0:Lgd0;
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, p0, p2}, Lfd0;-><init>(Lgd0;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public static f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+    .locals 0
 
-    sget-object v0, Lylf;->a:Lylf;
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lz04;->a:Lz04;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lfd0;->Z:I
+    invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x1
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_1
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-ne v2, v3, :cond_0
+    move-result-object p0
 
-    iget-object v1, p0, Lfd0;->Y:Lgd0;
+    return-object p0
+.end method
 
-    iget-object p0, p0, Lfd0;->X:Lyo9;
+.method public static g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    return-object v0
+.end method
+
+.method public static synthetic k(Landroid/media/MediaMetadataRetriever;)V
+    .locals 5
+
+    instance-of v0, p0, Ljava/lang/AutoCloseable;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Ljava/lang/AutoCloseable;
+
+    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
+
+    return-void
+
+    :cond_0
+    instance-of v0, p0, Ljava/util/concurrent/ExecutorService;
+
+    if-eqz v0, :cond_5
+
+    check-cast p0, Ljava/util/concurrent/ExecutorService;
+
+    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+
+    move-result-object v0
+
+    if-ne p0, v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
+
+    const/4 v1, 0x0
+
+    :cond_2
+    :goto_0
+    if-nez v0, :cond_3
+
+    :try_start_0
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v3, 0x1
+
+    invoke-interface {p0, v3, v4, v2}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    :catch_0
+    if-nez v1, :cond_2
+
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz v1, :cond_4
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_4
+    :goto_1
+    return-void
+
+    :cond_5
+    invoke-virtual {p0}, Landroid/media/MediaMetadataRetriever;->release()V
+
+    return-void
+.end method
+
+.method public static l(Ljava/lang/String;Lxe5;)V
+    .locals 1
+
+    new-instance v0, Lwf4;
+
+    invoke-direct {v0, p0}, Lwf4;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static synthetic m(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "GROUP"
+
+    return-object p0
+
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 p0, 0x0
 
     throw p0
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const-string p0, "USER"
 
-    iget-object p1, p0, Lfd0;->r0:Lgd0;
+    return-object p0
+.end method
 
-    iget-object v2, p1, Lgd0;->u0:Lyo9;
+.method public static synthetic n(I)Ljava/lang/String;
+    .locals 0
 
-    iput-object v2, p0, Lfd0;->X:Lyo9;
+    packed-switch p0, :pswitch_data_0
 
-    iput-object p1, p0, Lfd0;->Y:Lgd0;
+    const/4 p0, 0x0
 
-    iput v3, p0, Lfd0;->Z:I
+    throw p0
 
-    invoke-virtual {v2, p0}, Lyo9;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :pswitch_0
+    const-string p0, "CONFIGURED"
 
-    move-result-object p0
+    return-object p0
 
-    if-ne p0, v1, :cond_2
+    :pswitch_1
+    const-string p0, "OPENED"
 
-    return-object v1
+    return-object p0
+
+    :pswitch_2
+    const-string p0, "OPENING"
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "REOPENING"
+
+    return-object p0
+
+    :pswitch_4
+    const-string p0, "REOPENING_QUIRK"
+
+    return-object p0
+
+    :pswitch_5
+    const-string p0, "CLOSING"
+
+    return-object p0
+
+    :pswitch_6
+    const-string p0, "PENDING_OPEN"
+
+    return-object p0
+
+    :pswitch_7
+    const-string p0, "INITIALIZED"
+
+    return-object p0
+
+    :pswitch_8
+    const-string p0, "RELEASING"
+
+    return-object p0
+
+    :pswitch_9
+    const-string p0, "RELEASED"
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static synthetic o(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "MediaGallery"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "Camera"
+
+    return-object p0
+.end method
+
+.method public static synthetic p(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "DROP_LATEST"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "DROP_OLDEST"
+
+    return-object p0
 
     :cond_2
-    move-object v1, p1
+    const-string p0, "SUSPEND"
 
-    move-object p0, v2
+    return-object p0
+.end method
 
-    :goto_0
-    const/4 p1, 0x0
+.method public static synthetic q(I)Ljava/lang/String;
+    .locals 1
 
-    :try_start_0
-    iget-wide v4, v1, Lgd0;->X:J
+    const/4 v0, 0x1
 
-    const/16 v2, 0x20
+    if-eq p0, v0, :cond_2
 
-    shr-long v6, v4, v2
+    const/4 v0, 0x2
 
-    long-to-int v2, v6
+    if-eq p0, v0, :cond_1
 
-    invoke-static {v2}, Ljava/lang/Float;->intBitsToFloat(I)F
+    const/4 v0, 0x3
 
-    move-result v6
+    if-eq p0, v0, :cond_0
 
-    const/high16 v7, -0x40800000    # -1.0f
+    const-string p0, "null"
 
-    cmpg-float v6, v6, v7
+    return-object p0
 
-    if-nez v6, :cond_3
+    :cond_0
+    const-string p0, "VIDEO"
 
-    goto :goto_1
+    return-object p0
 
-    :cond_3
-    const-wide v8, 0xffffffffL
+    :cond_1
+    const-string p0, "AUDIO"
 
-    and-long/2addr v4, v8
+    return-object p0
 
-    long-to-int v4, v4
+    :cond_2
+    const-string p0, "UNKNOWN"
 
-    invoke-static {v4}, Ljava/lang/Float;->intBitsToFloat(I)F
+    return-object p0
+.end method
 
-    move-result v5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public static synthetic r(I)Ljava/lang/String;
+    .locals 0
 
-    cmpg-float v5, v5, v7
+    packed-switch p0, :pswitch_data_0
 
-    if-nez v5, :cond_4
+    const-string p0, "null"
 
-    :goto_1
-    invoke-virtual {p0, p1}, Lyo9;->f(Ljava/lang/Object;)V
+    return-object p0
 
-    return-object v0
+    :pswitch_0
+    const-string p0, "CONFIGURED"
 
-    :cond_4
-    :try_start_1
-    iget-object v5, v1, Lgd0;->Y:Landroid/graphics/Matrix;
+    return-object p0
 
-    invoke-static {v2}, Ljava/lang/Float;->intBitsToFloat(I)F
+    :pswitch_1
+    const-string p0, "OPENED"
 
-    move-result v2
+    return-object p0
 
-    const/4 v6, 0x2
+    :pswitch_2
+    const-string p0, "OPENING"
 
-    int-to-float v6, v6
+    return-object p0
 
-    div-float/2addr v2, v6
+    :pswitch_3
+    const-string p0, "REOPENING"
 
-    invoke-static {v4}, Ljava/lang/Float;->intBitsToFloat(I)F
+    return-object p0
 
-    move-result v4
+    :pswitch_4
+    const-string p0, "REOPENING_QUIRK"
 
-    div-float/2addr v4, v6
+    return-object p0
 
-    const/high16 v6, 0x42b40000    # 90.0f
+    :pswitch_5
+    const-string p0, "CLOSING"
 
-    invoke-virtual {v5, v6, v2, v4}, Landroid/graphics/Matrix;->postRotate(FFF)Z
+    return-object p0
 
-    move-result v2
+    :pswitch_6
+    const-string p0, "PENDING_OPEN"
 
-    if-eqz v2, :cond_5
+    return-object p0
 
-    iget-boolean v2, v1, Lgd0;->s0:Z
+    :pswitch_7
+    const-string p0, "INITIALIZED"
 
-    xor-int/2addr v2, v3
+    return-object p0
 
-    iput-boolean v2, v1, Lgd0;->s0:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :pswitch_8
+    const-string p0, "RELEASING"
 
-    :cond_5
-    invoke-virtual {p0, p1}, Lyo9;->f(Ljava/lang/Object;)V
+    return-object p0
 
-    return-object v0
+    :pswitch_9
+    const-string p0, "RELEASED"
 
-    :catchall_0
-    move-exception v0
+    return-object p0
 
-    invoke-virtual {p0, p1}, Lyo9;->f(Ljava/lang/Object;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,80 +1,39 @@
-.class public interface abstract Lj17;
+.class public final Lj17;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfic;
 
+# instance fields
+.field public final a:Landroid/net/Uri;
 
-# static fields
-.field public static final w:Ld90;
+.field public final b:Lkb6;
 
-.field public static final x:Ld90;
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/net/Uri;Lkb6;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Ld90;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "camerax.core.imageInput.inputFormat"
+    iput-object p1, p0, Lj17;->a:Landroid/net/Uri;
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    iput-object p2, p0, Lj17;->b:Lkb6;
 
-    const/4 v3, 0x0
+    iput-object p3, p0, Lj17;->c:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Ld90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    iput-object p4, p0, Lj17;->d:Ljava/lang/String;
 
-    sput-object v0, Lj17;->w:Ld90;
+    iput-object p5, p0, Lj17;->e:Ljava/lang/String;
 
-    new-instance v0, Ld90;
-
-    const-string v1, "camerax.core.imageInput.inputDynamicRange"
-
-    const-class v2, Lgz4;
-
-    invoke-direct {v0, v1, v2, v3}, Ld90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lj17;->x:Ld90;
+    iput-object p6, p0, Lj17;->f:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public getInputFormat()I
-    .locals 1
-
-    sget-object v0, Lj17;->w:Ld90;
-
-    invoke-interface {p0, v0}, Lfic;->e(Ld90;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public o()Lgz4;
-    .locals 2
-
-    sget-object v0, Lj17;->x:Ld90;
-
-    sget-object v1, Lgz4;->c:Lgz4;
-
-    invoke-interface {p0, v0, v1}, Lfic;->c(Ld90;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lgz4;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-object p0
 .end method

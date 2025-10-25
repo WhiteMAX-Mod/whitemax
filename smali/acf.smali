@@ -1,27 +1,51 @@
-.class public interface abstract Lacf;
-.super Ljava/lang/Object;
+.class public final Lacf;
+.super Ly14;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Lx64;IZ)I
-.end method
+# instance fields
+.field public X:Lwkd;
 
-.method public abstract b(JIIILybf;)V
-.end method
+.field public synthetic Y:Ljava/lang/Object;
 
-.method public abstract c(ILcsf;)V
-.end method
+.field public final synthetic Z:Lbcf;
 
-.method public abstract d(Lv46;)V
-.end method
+.field public o:Lbcf;
 
-.method public e(Lx64;IZ)I
+.field public q0:I
+
+
+# direct methods
+.method public constructor <init>(Lbcf;Ly14;)V
     .locals 0
 
-    invoke-interface {p0, p1, p2, p3}, Lacf;->a(Lx64;IZ)I
+    iput-object p1, p0, Lacf;->Z:Lbcf;
 
-    move-result p0
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    return p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lacf;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lacf;->q0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lacf;->q0:I
+
+    iget-object p1, p0, Lacf;->Z:Lbcf;
+
+    invoke-virtual {p1, p0}, Lbcf;->b(Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

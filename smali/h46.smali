@@ -2,152 +2,143 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Comparator;
+
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/graphics/Rect;
 
-.field public final b:I
+.field public final b:Landroid/graphics/Rect;
 
-.field public final c:Landroid/app/Notification;
+.field public final c:Z
+
+.field public final o:Lfpd;
 
 
 # direct methods
-.method public constructor <init>(ILandroid/app/Notification;I)V
-    .locals 0
+.method public constructor <init>(ZLfpd;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lh46;->a:I
+    new-instance v0, Landroid/graphics/Rect;
 
-    iput-object p2, p0, Lh46;->c:Landroid/app/Notification;
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput p3, p0, Lh46;->b:I
+    iput-object v0, p0, Lh46;->a:Landroid/graphics/Rect;
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lh46;->b:Landroid/graphics/Rect;
+
+    iput-boolean p1, p0, Lh46;->c:Z
+
+    iput-object p2, p0, Lh46;->o:Lfpd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lh46;->o:Lfpd;
 
-    const/4 p0, 0x1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return p0
+    check-cast p1, Lg5;
 
-    :cond_0
-    const/4 v0, 0x0
+    iget-object v0, p0, Lh46;->a:Landroid/graphics/Rect;
 
-    if-eqz p1, :cond_4
+    invoke-virtual {p1, v0}, Lg5;->f(Landroid/graphics/Rect;)V
 
-    const-class v1, Lh46;
+    check-cast p2, Lg5;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p0, Lh46;->b:Landroid/graphics/Rect;
 
-    move-result-object v2
+    invoke-virtual {p2, p1}, Lg5;->f(Landroid/graphics/Rect;)V
 
-    if-eq v1, v2, :cond_1
+    iget p2, v0, Landroid/graphics/Rect;->top:I
+
+    iget v1, p1, Landroid/graphics/Rect;->top:I
+
+    if-ge p2, v1, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    if-le p2, v1, :cond_1
+
+    goto :goto_1
+
     :cond_1
-    check-cast p1, Lh46;
+    iget p2, v0, Landroid/graphics/Rect;->left:I
 
-    iget v1, p0, Lh46;->a:I
+    iget v1, p1, Landroid/graphics/Rect;->left:I
 
-    iget v2, p1, Lh46;->a:I
+    iget-boolean v2, p0, Lh46;->c:Z
 
-    if-eq v1, v2, :cond_2
+    if-ge p2, v1, :cond_2
 
-    return v0
+    if-eqz v2, :cond_7
+
+    goto :goto_1
 
     :cond_2
-    iget v1, p0, Lh46;->b:I
+    if-le p2, v1, :cond_3
 
-    iget v2, p1, Lh46;->b:I
+    if-eqz v2, :cond_8
 
-    if-eq v1, v2, :cond_3
-
-    return v0
+    goto :goto_0
 
     :cond_3
-    iget-object p0, p0, Lh46;->c:Landroid/app/Notification;
+    iget p2, v0, Landroid/graphics/Rect;->bottom:I
 
-    iget-object p1, p1, Lh46;->c:Landroid/app/Notification;
+    iget v1, p1, Landroid/graphics/Rect;->bottom:I
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-ge p2, v1, :cond_4
 
-    move-result p0
-
-    return p0
+    goto :goto_0
 
     :cond_4
+    if-le p2, v1, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    iget p2, v0, Landroid/graphics/Rect;->right:I
+
+    iget p1, p1, Landroid/graphics/Rect;->right:I
+
+    if-ge p2, p1, :cond_6
+
+    if-eqz v2, :cond_7
+
+    goto :goto_1
+
+    :cond_6
+    if-le p2, p1, :cond_9
+
+    if-eqz v2, :cond_8
+
+    :cond_7
     :goto_0
-    return v0
-.end method
+    const/4 p1, -0x1
 
-.method public final hashCode()I
-    .locals 2
+    return p1
 
-    iget v0, p0, Lh46;->a:I
+    :cond_8
+    :goto_1
+    const/4 p1, 0x1
 
-    mul-int/lit8 v0, v0, 0x1f
+    return p1
 
-    iget v1, p0, Lh46;->b:I
+    :cond_9
+    const/4 p1, 0x0
 
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lh46;->c:Landroid/app/Notification;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ForegroundInfo{mNotificationId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lh46;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mForegroundServiceType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lh46;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mNotification="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lh46;->c:Landroid/app/Notification;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return p1
 .end method

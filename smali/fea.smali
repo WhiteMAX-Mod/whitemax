@@ -1,47 +1,48 @@
-.class public final Lfea;
+.class public abstract Lfea;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lcl7;
-
-.field public final b:Lzte;
-
-.field public final c:Lzte;
-
-
 # direct methods
-.method public constructor <init>(Lcl7;)V
-    .locals 1
+.method public static a(Landroid/app/NotificationManager;)Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/app/NotificationManager;",
+            ")",
+            "Ljava/util/List<",
+            "Landroid/service/notification/StatusBarNotification;",
+            ">;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/app/NotificationManager;->getActiveNotifications()[Landroid/service/notification/StatusBarNotification;
 
-    iput-object p1, p0, Lfea;->a:Lcl7;
+    move-result-object p0
 
-    new-instance p1, Lmaa;
+    if-nez p0, :cond_0
 
-    const/16 v0, 0x16
+    new-instance p0, Ljava/util/ArrayList;
 
-    invoke-direct {p1, v0}, Lmaa;-><init>(I)V
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v0, Lzte;
+    return-object p0
 
-    invoke-direct {v0, p1}, Lzte;-><init>(Lzb6;)V
+    :cond_0
+    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    iput-object v0, p0, Lfea;->b:Lzte;
+    move-result-object p0
 
-    new-instance p1, Lq47;
+    return-object p0
+.end method
 
-    const/16 v0, 0x16
+.method public static b(Landroid/app/NotificationManager;)I
+    .locals 0
 
-    invoke-direct {p1, v0, p0}, Lq47;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {p0}, Landroid/app/NotificationManager;->getCurrentInterruptionFilter()I
 
-    new-instance v0, Lzte;
+    move-result p0
 
-    invoke-direct {v0, p1}, Lzte;-><init>(Lzb6;)V
-
-    iput-object v0, p0, Lfea;->c:Lzte;
-
-    return-void
+    return p0
 .end method

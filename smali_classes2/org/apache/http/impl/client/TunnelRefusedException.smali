@@ -30,9 +30,9 @@
 
 # virtual methods
 .method public getResponse()Lorg/apache/http/HttpResponse;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/client/TunnelRefusedException;->response:Lorg/apache/http/HttpResponse;
+    iget-object v0, p0, Lorg/apache/http/impl/client/TunnelRefusedException;->response:Lorg/apache/http/HttpResponse;
 
-    return-object p0
+    return-object v0
 .end method

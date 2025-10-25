@@ -1,282 +1,176 @@
-.class public abstract Lou4;
+.class public final Lou4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Liu7;
+
+
 # direct methods
-.method public static a([BLq95;)Lxga;
-    .locals 13
+.method public constructor <init>(Liu7;)V
+    .locals 0
 
-    array-length v0, p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lou4;->a:Liu7;
 
-    if-nez v0, :cond_0
-
-    goto/16 :goto_6
-
-    :cond_0
-    :try_start_0
-    new-instance v0, Loyb;
-
-    invoke-direct {v0}, Loyb;-><init>()V
-
-    invoke-static {v0, p0}, Lj29;->mergeFrom(Lj29;[B)Lj29;
-
-    move-result-object p0
-
-    check-cast p0, Loyb;
-
-    iget-object v0, p0, Loyb;->b:Ljava/lang/String;
-
-    iget-object v2, p0, Loyb;->i:Lru/ok/tamtam/nano/Protos$MessageElements;
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, v2, Lru/ok/tamtam/nano/Protos$MessageElements;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
-
-    if-eqz v2, :cond_2
-
-    array-length v3, v2
-
-    if-nez v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v2}, Lg09;->a([Lru/ok/tamtam/nano/Protos$MessageElement;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_5
-
-    :cond_2
-    :goto_0
-    move-object v2, v1
-
-    :goto_1
-    new-instance v6, Lrk7;
-
-    invoke-direct {v6, v0, v2}, Lrk7;-><init>(Ljava/lang/String;Ljava/util/List;)V
-
-    new-instance v3, Lxga;
-
-    iget-wide v4, p0, Loyb;->k:J
-
-    iget-wide v7, p0, Loyb;->d:J
-
-    const-wide/16 v9, 0x0
-
-    cmp-long v0, v7, v9
-
-    if-nez v0, :cond_3
-
-    move-object v7, v1
-
-    goto :goto_2
-
-    :cond_3
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    move-object v7, v0
-
-    :goto_2
-    iget-wide v11, p0, Loyb;->c:J
-
-    cmp-long v0, v11, v9
-
-    if-nez v0, :cond_4
-
-    move-object v8, v1
-
-    goto :goto_3
-
-    :cond_4
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    move-object v8, v0
-
-    :goto_3
-    iget-wide v11, p0, Loyb;->h:J
-
-    cmp-long v0, v11, v9
-
-    if-nez v0, :cond_5
-
-    move-object v9, v1
-
-    goto :goto_4
-
-    :cond_5
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    move-object v9, v0
-
-    :goto_4
-    iget-boolean v10, p0, Loyb;->j:Z
-
-    const/16 v11, 0x40
-
-    invoke-direct/range {v3 .. v11}, Lxga;-><init>(JLrk7;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;ZI)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v3
-
-    :goto_5
-    const-class v0, Lou4;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "Can\'t parse draft"
-
-    invoke-static {v0, v2, p0}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    if-eqz p1, :cond_6
-
-    new-instance p0, Lru/ok/tamtam/util/HandledException;
-
-    invoke-direct {p0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    check-cast p1, Leha;
-
-    invoke-virtual {p1, p0}, Leha;->c(Ljava/lang/Throwable;)V
-
-    :cond_6
-    :goto_6
-    return-object v1
+    return-void
 .end method
 
-.method public static b(Lxga;)[B
-    .locals 6
 
-    sget-object v0, Lxnd;->m:[B
+# virtual methods
+.method public final a(JLjava/lang/Long;Ljava/lang/Long;)V
+    .locals 7
 
-    instance-of v1, p0, Lxga;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v1, :cond_0
+    const-string v1, "execute: chatId="
 
-    goto :goto_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    invoke-virtual {p0}, Lxga;->d()Z
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    const-string v1, ", contactId="
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    return-object v0
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    new-instance v0, Loyb;
+    const-string v1, ", serverTime="
 
-    invoke-direct {v0}, Loyb;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lxga;->a:J
+    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iput-wide v1, v0, Loyb;->k:J
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v1, p0, Lxga;->b:Lrk7;
+    move-result-object v0
 
-    invoke-static {v1}, Lm7g;->o(Lrk7;)Z
+    const-string v1, "ou4"
 
-    move-result v2
+    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-nez v2, :cond_3
-
-    iget-object v2, v1, Lrk7;->a:Ljava/lang/String;
-
-    iput-object v2, v0, Loyb;->b:Ljava/lang/String;
-
-    iget-object v1, v1, Lrk7;->b:Ljava/util/List;
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {v1}, Lg09;->c(Ljava/util/List;)Lru/ok/tamtam/nano/Protos$MessageElements;
-
-    move-result-object v1
-
-    iput-object v1, v0, Loyb;->i:Lru/ok/tamtam/nano/Protos$MessageElements;
-
-    :cond_3
-    :goto_1
-    iget-object v1, p0, Lxga;->d:Ljava/lang/Long;
+    iget-object v0, p0, Lou4;->a:Liu7;
 
     const-wide/16 v2, 0x0
 
-    if-eqz v1, :cond_4
+    const/4 v4, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    if-eqz p3, :cond_0
 
-    move-result-wide v4
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
 
-    goto :goto_2
+    move-result-wide v5
 
-    :cond_4
-    move-wide v4, v2
+    cmp-long v5, v5, v2
 
-    :goto_2
-    iput-wide v4, v0, Loyb;->c:J
+    if-eqz v5, :cond_0
 
-    iget-object v1, p0, Lxga;->c:Ljava/lang/Long;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    if-eqz v1, :cond_5
+    move-result-object p4
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    check-cast p4, Lsd2;
 
-    move-result-wide v4
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
 
-    goto :goto_3
+    move-result-wide v5
 
-    :cond_5
-    move-wide v4, v2
+    invoke-virtual {p4, v5, v6}, Lsd2;->z(J)Lla2;
 
-    :goto_3
-    iput-wide v4, v0, Loyb;->d:J
+    move-result-object p3
 
-    iget-object v1, p0, Lxga;->e:Ljava/lang/Long;
+    goto :goto_0
 
-    if-eqz v1, :cond_6
+    :cond_0
+    if-eqz p4, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    cmp-long p3, v5, v2
+
+    if-eqz p3, :cond_1
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lsd2;
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-virtual {p3, v5, v6}, Lsd2;->F(J)Lla2;
+
+    move-result-object p3
+
+    goto :goto_0
+
+    :cond_1
+    move-object p3, v4
+
+    :goto_0
+    if-nez p3, :cond_2
+
+    const-string p1, "Chat is null. Ignore"
+
+    invoke-static {v1, p1}, Ltei;->r(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_2
+    iget-object p4, p3, Lla2;->b:Lne2;
+
+    iget-object p4, p4, Lne2;->c0:Lpua;
+
+    if-nez p4, :cond_3
+
+    const-string p1, "draft is null, ignore"
+
+    invoke-static {v1, p1, v4}, Ltei;->i(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p4}, Lpua;->b()Ljava/lang/Long;
+
+    move-result-object p4
+
+    if-eqz p4, :cond_4
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v2
 
-    :cond_6
-    iput-wide v2, v0, Loyb;->h:J
+    :cond_4
+    cmp-long p1, v2, p1
 
-    iget-boolean p0, p0, Lxga;->f:Z
+    if-lez p1, :cond_5
 
-    iput-boolean p0, v0, Loyb;->j:Z
+    const-string p1, "try to rewrite draft by old, ignore it!"
 
-    invoke-static {v0}, Lj29;->toByteArray(Lj29;)[B
+    invoke-static {v1, p1}, Ltei;->r(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p0
+    return-void
 
-    return-object p0
+    :cond_5
+    const-string p1, "Discard server draft"
+
+    invoke-static {v1, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lsd2;
+
+    iget-wide p2, p3, Lla2;->a:J
+
+    invoke-virtual {p1, p2, p3}, Lsd2;->p(J)V
+
+    return-void
 .end method

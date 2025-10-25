@@ -1,198 +1,125 @@
-.class public final Lkj8;
+.class public abstract Lkj8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public A:Ljava/lang/CharSequence;
+# static fields
+.field public static final a:[I
 
-.field public B:Ljava/lang/Integer;
-
-.field public C:Ljava/lang/Integer;
-
-.field public D:Ljava/lang/CharSequence;
-
-.field public E:Ljava/lang/CharSequence;
-
-.field public F:Ljava/lang/CharSequence;
-
-.field public G:Ljava/lang/Integer;
-
-.field public H:Landroid/os/Bundle;
-
-.field public I:Ll37;
-
-.field public a:Ljava/lang/CharSequence;
-
-.field public b:Ljava/lang/CharSequence;
-
-.field public c:Ljava/lang/CharSequence;
-
-.field public d:Ljava/lang/CharSequence;
-
-.field public e:Ljava/lang/CharSequence;
-
-.field public f:Ljava/lang/CharSequence;
-
-.field public g:Ljava/lang/CharSequence;
-
-.field public h:Ljava/lang/Long;
-
-.field public i:Ljfc;
-
-.field public j:Ljfc;
-
-.field public k:[B
-
-.field public l:Ljava/lang/Integer;
-
-.field public m:Landroid/net/Uri;
-
-.field public n:Ljava/lang/Integer;
-
-.field public o:Ljava/lang/Integer;
-
-.field public p:Ljava/lang/Integer;
-
-.field public q:Ljava/lang/Boolean;
-
-.field public r:Ljava/lang/Boolean;
-
-.field public s:Ljava/lang/Integer;
-
-.field public t:Ljava/lang/Integer;
-
-.field public u:Ljava/lang/Integer;
-
-.field public v:Ljava/lang/Integer;
-
-.field public w:Ljava/lang/Integer;
-
-.field public x:Ljava/lang/Integer;
-
-.field public y:Ljava/lang/CharSequence;
-
-.field public z:Ljava/lang/CharSequence;
+.field public static final b:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Ll37;->b:Lgx5;
-
-    sget-object v0, Llqc;->X:Llqc;
-
-    iput-object v0, p0, Lkj8;->I:Ll37;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(I[B)V
+.method static constructor <clinit>()V
     .locals 2
 
-    iget-object v0, p0, Lkj8;->k:[B
+    const/high16 v0, 0x1010000
 
-    if-eqz v0, :cond_1
+    sget v1, Lgkc;->theme:I
 
-    const/4 v0, 0x3
-
-    if-eq p1, v0, :cond_1
-
-    iget-object v1, p0, Lkj8;->l:Ljava/lang/Integer;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    filled-new-array {v0, v1}, [I
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput-object v0, Lkj8;->a:[I
 
-    move-result v0
+    sget v0, Lgkc;->materialThemeOverlay:I
 
-    if-nez v0, :cond_0
+    filled-new-array {v0}, [I
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
+    sput-object v0, Lkj8;->b:[I
+
     return-void
+.end method
 
-    :cond_1
-    :goto_0
-    invoke-virtual {p2}, [B->clone()Ljava/lang/Object;
+.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    .locals 2
+
+    sget-object v0, Lkj8;->b:[I
+
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    check-cast p2, [B
+    const/4 p3, 0x0
 
-    iput-object p2, p0, Lkj8;->k:[B
+    invoke-virtual {p2, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v0
 
-    move-result-object p1
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    iput-object p1, p0, Lkj8;->l:Ljava/lang/Integer;
+    instance-of p2, p0, Lu14;
 
-    return-void
-.end method
+    const/4 v1, 0x1
 
-.method public final b([BLjava/lang/Integer;)V
-    .locals 0
+    if-eqz p2, :cond_0
 
-    if-nez p1, :cond_0
+    move-object p2, p0
 
-    const/4 p1, 0x0
+    check-cast p2, Lu14;
+
+    iget p2, p2, Lu14;->a:I
+
+    if-ne p2, v0, :cond_0
+
+    move p2, v1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, [B->clone()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [B
+    move p2, p3
 
     :goto_0
-    iput-object p1, p0, Lkj8;->k:[B
+    if-eqz v0, :cond_4
 
-    iput-object p2, p0, Lkj8;->l:Ljava/lang/Integer;
+    if-eqz p2, :cond_1
 
-    return-void
-.end method
+    goto :goto_2
 
-.method public final c(Ljava/lang/Long;)V
-    .locals 4
+    :cond_1
+    new-instance p2, Lu14;
 
-    if-eqz p1, :cond_1
+    invoke-direct {p2, p0, v0}, Lu14;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    sget-object v0, Lkj8;->a:[I
 
-    move-result-wide v0
+    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    const-wide/16 v2, 0x0
+    move-result-object p0
 
-    cmp-long v0, v0, v2
+    invoke-virtual {p0, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    if-ltz v0, :cond_0
+    move-result p1
 
-    goto :goto_0
+    invoke-virtual {p0, v1, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result p3
+
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+
+    if-eqz p1, :cond_2
 
     goto :goto_1
 
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    :cond_2
+    move p1, p3
 
     :goto_1
-    invoke-static {v0}, Lmq0;->c(Z)V
+    if-eqz p1, :cond_3
 
-    iput-object p1, p0, Lkj8;->h:Ljava/lang/Long;
+    invoke-virtual {p2}, Lu14;->getTheme()Landroid/content/res/Resources$Theme;
 
-    return-void
+    move-result-object p0
+
+    invoke-virtual {p0, p1, v1}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+
+    :cond_3
+    return-object p2
+
+    :cond_4
+    :goto_2
+    return-object p0
 .end method

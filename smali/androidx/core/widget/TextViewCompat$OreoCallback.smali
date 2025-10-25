@@ -49,29 +49,29 @@
 .end method
 
 .method private createProcessTextIntent()Landroid/content/Intent;
-    .locals 1
+    .locals 2
 
-    new-instance p0, Landroid/content/Intent;
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-direct {p0}, Landroid/content/Intent;-><init>()V
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    const-string v0, "android.intent.action.PROCESS_TEXT"
+    const-string v1, "android.intent.action.PROCESS_TEXT"
 
-    invoke-virtual {p0, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "text/plain"
+    const-string v1, "text/plain"
 
-    invoke-virtual {p0, v0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private createProcessTextIntentForResolveInfo(Landroid/content/pm/ResolveInfo;Landroid/widget/TextView;)Landroid/content/Intent;
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Landroidx/core/widget/TextViewCompat$OreoCallback;->createProcessTextIntent()Landroid/content/Intent;
 
@@ -79,27 +79,27 @@
 
     invoke-direct {p0, p2}, Landroidx/core/widget/TextViewCompat$OreoCallback;->isEditable(Landroid/widget/TextView;)Z
 
-    move-result p0
+    move-result p2
 
-    xor-int/lit8 p0, p0, 0x1
+    xor-int/lit8 p2, p2, 0x1
 
-    const-string p2, "android.intent.extra.PROCESS_TEXT_READONLY"
+    const-string v1, "android.intent.extra.PROCESS_TEXT_READONLY"
 
-    invoke-virtual {v0, p2, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    move-result-object p0
+    move-result-object p2
 
     iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-object p2, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    iget-object v0, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     iget-object p1, p1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    invoke-virtual {p0, p2, p1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {p2, v0, p1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method private getSupportedActivities(Landroid/content/Context;Landroid/content/pm/PackageManager;)Ljava/util/List;
@@ -171,85 +171,85 @@
 .end method
 
 .method private isEditable(Landroid/widget/TextView;)Z
-    .locals 0
+    .locals 1
 
-    instance-of p0, p1, Landroid/text/Editable;
+    instance-of v0, p1, Landroid/text/Editable;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     invoke-virtual {p1}, Landroid/widget/TextView;->onCheckIsTextEditor()Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     invoke-virtual {p1}, Landroid/view/View;->isEnabled()Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method private isSupportedActivity(Landroid/content/pm/ResolveInfo;Landroid/content/Context;)Z
-    .locals 2
+    .locals 3
 
     invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget-object v0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    iget-object v1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    iget-object v1, v1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v0
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    if-eqz p0, :cond_0
-
-    return v0
-
-    :cond_0
-    iget-object p0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-boolean p1, p0, Landroid/content/pm/ActivityInfo;->exported:Z
-
-    const/4 v1, 0x0
-
-    if-nez p1, :cond_1
+    if-eqz v0, :cond_0
 
     return v1
 
+    :cond_0
+    iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-boolean v0, p1, Landroid/content/pm/ActivityInfo;->exported:Z
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_1
+
+    return v2
+
     :cond_1
-    iget-object p0, p0, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
+    iget-object p1, p1, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
 
-    if-eqz p0, :cond_3
+    if-eqz p1, :cond_3
 
-    invoke-virtual {p2, p0}, Landroid/content/Context;->checkSelfPermission(Ljava/lang/String;)I
+    invoke-virtual {p2, p1}, Landroid/content/Context;->checkSelfPermission(Ljava/lang/String;)I
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_2
+    if-nez p1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    return v1
+    return v2
 
     :cond_3
     :goto_0
-    return v0
+    return v1
 .end method
 
 .method private recomputeProcessTextMenuItems(Landroid/view/Menu;)V
@@ -455,57 +455,57 @@
 
 # virtual methods
 .method public getWrappedCallback()Landroid/view/ActionMode$Callback;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCallback:Landroid/view/ActionMode$Callback;
+    iget-object v0, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCallback:Landroid/view/ActionMode$Callback;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCallback:Landroid/view/ActionMode$Callback;
+    iget-object v0, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCallback:Landroid/view/ActionMode$Callback;
 
-    invoke-interface {p0, p1, p2}, Landroid/view/ActionMode$Callback;->onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
+    invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCallback:Landroid/view/ActionMode$Callback;
+    iget-object v0, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCallback:Landroid/view/ActionMode$Callback;
 
-    invoke-interface {p0, p1, p2}, Landroid/view/ActionMode$Callback;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+    invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public onDestroyActionMode(Landroid/view/ActionMode;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCallback:Landroid/view/ActionMode$Callback;
+    iget-object v0, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCallback:Landroid/view/ActionMode$Callback;
 
-    invoke-interface {p0, p1}, Landroid/view/ActionMode$Callback;->onDestroyActionMode(Landroid/view/ActionMode;)V
+    invoke-interface {v0, p1}, Landroid/view/ActionMode$Callback;->onDestroyActionMode(Landroid/view/ActionMode;)V
 
     return-void
 .end method
 
 .method public onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
-    .locals 0
+    .locals 1
 
     invoke-direct {p0, p2}, Landroidx/core/widget/TextViewCompat$OreoCallback;->recomputeProcessTextMenuItems(Landroid/view/Menu;)V
 
-    iget-object p0, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCallback:Landroid/view/ActionMode$Callback;
+    iget-object v0, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCallback:Landroid/view/ActionMode$Callback;
 
-    invoke-interface {p0, p1, p2}, Landroid/view/ActionMode$Callback;->onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+    invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method

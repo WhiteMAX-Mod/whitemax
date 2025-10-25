@@ -6,7 +6,6 @@
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent">@color/blue</color>
-    <color name="accent_highlighted">#ff6988e0</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
     <color name="androidx_core_ripple_material_light">#1f000000</color>
@@ -17,7 +16,6 @@
     <color name="background_material_light">@color/material_grey_50</color>
     <color name="black">#ff000000</color>
     <color name="black_50">#88000000</color>
-    <color name="black_70">#af000000</color>
     <color name="blue">#ff697cff</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -38,7 +36,6 @@
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
     <color name="common_bg_dark">#ff111117</color>
-    <color name="control_bg">#4d333344</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#ff121212</color>
     <color name="design_dark_default_color_error">#ffcf6679</color>
@@ -89,6 +86,7 @@
     <color name="gray_separator">#fff0f0f0</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
+    <color name="launch_background">@color/white</color>
     <color name="led_1">#fff0f0f0</color>
     <color name="led_2">#ffffff00</color>
     <color name="led_3">#ff00ff00</color>
@@ -351,8 +349,6 @@
     <color name="mtrl_textinput_hovered_box_stroke_color">#de000000</color>
     <color name="notification_action_color_filter">@color/androidx_core_secondary_text_default_material_light</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
-    <color name="pip_trash_gradient_end">#ff000000</color>
-    <color name="pip_trash_gradient_start">#00000000</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -362,7 +358,6 @@
     <color name="primary_text_disabled_material_dark">#4dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
     <color name="range_seek_bar_border_shadow_color">#40000000</color>
-    <color name="red">#ffff3d00</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -382,6 +377,5 @@
     <color name="tooltip_background_light">#e6ffffff</color>
     <color name="transparent">#00000000</color>
     <color name="white">#ffffffff</color>
-    <color name="white_30">#4dffffff</color>
     <color name="white_50">#80ffffff</color>
 </resources>

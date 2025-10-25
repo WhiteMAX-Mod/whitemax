@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#ff0d0d0d" android:pathData="M12,7.5C11.172,7.5 10.5,6.829 10.5,6C10.5,5.172 11.172,4.501 12,4.501C12.828,4.501 13.5,5.172 13.5,6C13.5,6.829 12.828,7.5 12,7.5Z" />
-    <path android:fillColor="#ff0d0d0d" android:pathData="M12,19.5C11.172,19.5 10.5,18.828 10.5,18C10.5,17.172 11.172,16.5 12,16.5C12.828,16.5 13.5,17.172 13.5,18C13.5,18.828 12.828,19.5 12,19.5Z" />
-    <path android:fillColor="#ff0d0d0d" android:pathData="M10.5,12C10.5,12.829 11.172,13.5 12,13.5C12.828,13.5 13.5,12.829 13.5,12C13.5,11.172 12.828,10.5 12,10.5C11.172,10.5 10.5,11.172 10.5,12Z" />
+    <path android:fillColor="#ff0d0d0d" android:pathData="M12 7.5c-0.828 0-1.5-0.671-1.5-1.5 0-0.828 0.672-1.499 1.5-1.499S13.5 5.172 13.5 6c0 0.829-0.672 1.5-1.5 1.5zm0 12c-0.828 0-1.5-0.672-1.5-1.5s0.672-1.5 1.5-1.5 1.5 0.672 1.5 1.5-0.672 1.5-1.5 1.5zM10.5 12c0 0.829 0.672 1.5 1.5 1.5s1.5-0.671 1.5-1.5c0-0.828-0.672-1.5-1.5-1.5s-1.5 0.672-1.5 1.5z" />
 </vector>

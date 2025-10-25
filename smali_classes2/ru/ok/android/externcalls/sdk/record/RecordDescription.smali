@@ -14,7 +14,7 @@
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "initiator",
-        "Lknc;",
+        "Lu5d;",
         "type",
         "",
         "start",
@@ -23,13 +23,13 @@
         "externalMovieId",
         "externalOwnerId",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lknc;JJLjava/lang/String;Ljava/lang/String;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lu5d;JJLjava/lang/String;Ljava/lang/String;)V",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "getInitiator",
         "()Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-        "Lknc;",
+        "Lu5d;",
         "getType",
-        "()Lknc;",
+        "()Lu5d;",
         "J",
         "getStart",
         "()J",
@@ -61,18 +61,18 @@
 
 .field private final start:J
 
-.field private final type:Lknc;
+.field private final type:Lu5d;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lknc;JJLjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lu5d;JJLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->initiator:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->type:Lknc;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->type:Lu5d;
 
     iput-wide p3, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->start:J
 
@@ -88,27 +88,27 @@
 
 # virtual methods
 .method public final getExternalMovieId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->externalMovieId:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->externalMovieId:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getExternalOwnerId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->externalOwnerId:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->externalOwnerId:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getInitiator()Lru/ok/android/externcalls/sdk/id/ParticipantId;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->initiator:Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->initiator:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getMovieId()J
@@ -127,10 +127,10 @@
     return-wide v0
 .end method
 
-.method public final getType()Lknc;
-    .locals 0
+.method public final getType()Lu5d;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->type:Lknc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->type:Lu5d;
 
-    return-object p0
+    return-object v0
 .end method

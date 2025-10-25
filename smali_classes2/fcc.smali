@@ -1,62 +1,96 @@
-.class public abstract Lfcc;
-.super Ljava/lang/Object;
+.class public final Lfcc;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static web_app_root_biometry_open_settings_dialog_accept:I = 0x7f130e3f
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static web_app_root_biometry_open_settings_dialog_title:I = 0x7f130e40
+.field public final synthetic Y:Ladc;
 
-.field public static web_app_root_biometry_request_dialog_accept:I = 0x7f130e41
 
-.field public static web_app_root_biometry_request_dialog_decline:I = 0x7f130e42
+# direct methods
+.method public constructor <init>(Ladc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static web_app_root_biometry_request_dialog_default_reason:I = 0x7f130e43
+    iput-object p1, p0, Lfcc;->Y:Ladc;
 
-.field public static web_app_root_biometry_request_dialog_title:I = 0x7f130e44
+    const/4 p1, 0x2
 
-.field public static web_app_root_biometry_setting:I = 0x7f130e45
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static web_app_root_biometry_setting_description:I = 0x7f130e46
+    return-void
+.end method
 
-.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f130e47
 
-.field public static web_app_root_choose_media_bottomsheet_title:I = 0x7f130e48
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static web_app_root_close_dialog_accept:I = 0x7f130e49
+    check-cast p1, Lh0c;
 
-.field public static web_app_root_close_dialog_subtitle:I = 0x7f130e4a
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static web_app_root_close_dialog_title:I = 0x7f130e4b
+    invoke-virtual {p0, p1, p2}, Lfcc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static web_app_root_dots_menu_refresh:I = 0x7f130e4c
+    move-result-object p1
 
-.field public static web_app_root_download_file_bottomsheet_accept:I = 0x7f130e4d
+    check-cast p1, Lfcc;
 
-.field public static web_app_root_download_file_bottomsheet_subtitle:I = 0x7f130e4e
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static web_app_root_download_file_bottomsheet_title:I = 0x7f130e4f
+    invoke-virtual {p1, p2}, Lfcc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static web_app_root_error_retry_button:I = 0x7f130e50
+    return-object p2
+.end method
 
-.field public static web_app_root_error_subtitle:I = 0x7f130e51
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static web_app_root_error_title:I = 0x7f130e52
+    new-instance v0, Lfcc;
 
-.field public static web_app_root_max_share_quote_title:I = 0x7f130e53
+    iget-object v1, p0, Lfcc;->Y:Ladc;
 
-.field public static web_app_root_phone_request_dialog_accept:I = 0x7f130e54
+    invoke-direct {v0, v1, p2}, Lfcc;-><init>(Ladc;Lkotlin/coroutines/Continuation;)V
 
-.field public static web_app_root_phone_request_dialog_decline:I = 0x7f130e55
+    iput-object p1, v0, Lfcc;->X:Ljava/lang/Object;
 
-.field public static web_app_root_phone_request_dialog_subtitle:I = 0x7f130e56
+    return-object v0
+.end method
 
-.field public static web_app_root_phone_request_dialog_title:I = 0x7f130e57
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-.field public static web_app_root_setting_open_webapp:I = 0x7f130e58
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.field public static web_app_root_settings_header_subtitle:I = 0x7f130e59
+    iget-object p1, p0, Lfcc;->X:Ljava/lang/Object;
 
-.field public static web_app_root_settings_header_title:I = 0x7f130e5a
+    check-cast p1, Lh0c;
 
-.field public static web_app_root_settings_webapps:I = 0x7f130e5b
+    iget-object v0, p0, Lfcc;->Y:Ladc;
+
+    iget-object v1, v0, Ladc;->O0:Lx0f;
+
+    iget-object v2, p1, Lh0c;->a:Ln0c;
+
+    invoke-virtual {v1, v2}, Lx0f;->setValue(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Ladc;->K0:Lx0f;
+
+    iget-object v2, p1, Lh0c;->b:Ljava/util/List;
+
+    invoke-virtual {v1, v2}, Lx0f;->setValue(Ljava/lang/Object;)V
+
+    iget-object v0, v0, Ladc;->M0:Lx0f;
+
+    iget-object p1, p1, Lh0c;->c:Ljava/util/List;
+
+    invoke-virtual {v0, p1}, Lx0f;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method

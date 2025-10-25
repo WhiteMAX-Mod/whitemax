@@ -1,108 +1,120 @@
 .class public final Lcf7;
-.super Ljava/lang/Object;
+.super Landroid/view/View$AccessibilityDelegate;
 .source "SourceFile"
-
-# interfaces
-.implements Lgt7;
 
 
 # instance fields
-.field public final a:Lznd;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lre7;)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lznd;
+    iput p1, p0, Lcf7;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcf7;->b:Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lcf7;->a:Lznd;
-
-    new-instance v0, Lb0;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p0}, Lb0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Lsf7;->invokeOnCompletion(Lbc6;)Lrq4;
+    invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel(Z)Z
-    .locals 0
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .locals 1
 
-    iget-object p0, p0, Lcf7;->a:Lznd;
+    iget v0, p0, Lcf7;->a:I
 
-    invoke-virtual {p0, p1}, Lo1;->cancel(Z)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-    .locals 0
-
-    iget-object p0, p0, Lcf7;->a:Lznd;
-
-    invoke-virtual {p0, p1, p2}, Lo1;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     return-void
+
+    :pswitch_0
+    invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    iget-object p1, p0, Lcf7;->b:Ljava/lang/Object;
+
+    check-cast p1, Ldf7;
+
+    iget-object p1, p1, Ldf7;->h:Lcom/google/android/material/textfield/TextInputLayout;
+
+    invoke-virtual {p1}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLabeledBy(Landroid/view/View;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final get()Ljava/lang/Object;
-    .locals 0
+.method public sendAccessibilityEvent(Landroid/view/View;I)V
+    .locals 2
 
-    .line 1
-    iget-object p0, p0, Lcf7;->a:Lznd;
+    iget v0, p0, Lcf7;->a:I
 
-    invoke-virtual {p0}, Lo1;->get()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->sendAccessibilityEvent(Landroid/view/View;I)V
 
-    return-object p0
-.end method
+    return-void
 
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 0
+    :pswitch_0
+    const/16 p1, 0x2000
 
-    .line 2
-    iget-object p0, p0, Lcf7;->a:Lznd;
+    if-ne p2, p1, :cond_1
 
-    invoke-virtual {p0, p1, p2, p3}, Lo1;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    iget-object p1, p0, Lcf7;->b:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast p1, Lgd9;
 
-    return-object p0
-.end method
+    iget-object p2, p1, Lgd9;->K0:Lx0f;
 
-.method public final isCancelled()Z
-    .locals 0
+    :cond_0
+    invoke-virtual {p2}, Lx0f;->getValue()Ljava/lang/Object;
 
-    iget-object p0, p0, Lcf7;->a:Lznd;
+    move-result-object v0
 
-    iget-object p0, p0, Lo1;->a:Ljava/lang/Object;
+    move-object v1, v0
 
-    instance-of p0, p0, Ls0;
+    check-cast v1, Ljava/lang/Number;
 
-    return p0
-.end method
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
-.method public final isDone()Z
-    .locals 0
+    iget-object v1, p1, Lgd9;->o:Ldd9;
 
-    iget-object p0, p0, Lcf7;->a:Lznd;
+    invoke-virtual {v1}, Landroid/widget/TextView;->getSelectionEnd()I
 
-    invoke-virtual {p0}, Lo1;->isDone()Z
+    move-result v1
 
-    move-result p0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return p0
+    move-result-object v1
+
+    invoke-virtual {p2, v0, v1}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :cond_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

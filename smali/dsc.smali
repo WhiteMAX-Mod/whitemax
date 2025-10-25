@@ -1,118 +1,104 @@
-.class public final Ldsc;
-.super Lure;
-.source "SourceFile"
-
-# interfaces
-.implements Lpc6;
+.class public abstract Ldsc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static call_history_call_contact_action:I = 0x7f130126
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public static call_history_call_create_banner_permission_denied_subtitle:I = 0x7f130127
 
-.field public final synthetic Z:Lpc6;
+.field public static call_history_call_create_banner_permission_denied_title:I = 0x7f130128
 
+.field public static call_history_call_create_banner_subtitle:I = 0x7f130129
 
-# direct methods
-.method public constructor <init>(Lpc6;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public static call_history_call_create_banner_title:I = 0x7f13012a
 
-    iput-object p1, p0, Ldsc;->Z:Lpc6;
+.field public static call_history_call_create_group_call_by_link:I = 0x7f13012b
 
-    const/4 p1, 0x2
+.field public static call_history_call_create_link_error:I = 0x7f13012c
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static call_history_call_history_empty_favorite_call:I = 0x7f13012d
 
-    return-void
-.end method
+.field public static call_history_call_history_empty_subtitle:I = 0x7f13012e
 
+.field public static call_history_call_history_empty_title:I = 0x7f13012f
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static call_history_call_tab_all:I = 0x7f130130
 
-    check-cast p1, Ly04;
+.field public static call_history_call_tab_missing:I = 0x7f130131
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static call_history_call_title:I = 0x7f130132
 
-    invoke-virtual {p0, p1, p2}, Ldsc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static call_history_empty_state_subtitle:I = 0x7f130142
 
-    move-result-object p0
+.field public static call_history_empty_state_title:I = 0x7f130143
 
-    check-cast p0, Ldsc;
+.field public static call_history_info_copy_link:I = 0x7f130147
 
-    sget-object p1, Lylf;->a:Lylf;
+.field public static call_history_info_create_failed:I = 0x7f130148
 
-    invoke-virtual {p0, p1}, Ldsc;->o(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static call_history_info_creating:I = 0x7f130149
 
-    move-result-object p0
+.field public static call_history_info_join_call:I = 0x7f13014a
 
-    return-object p0
-.end method
+.field public static call_history_info_open_call_chat_title:I = 0x7f13014b
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.field public static call_history_info_recreate:I = 0x7f13014c
 
-    new-instance v0, Ldsc;
+.field public static call_history_info_share:I = 0x7f13014d
 
-    iget-object p0, p0, Ldsc;->Z:Lpc6;
+.field public static call_history_info_start_call:I = 0x7f13014e
 
-    invoke-direct {v0, p0, p2}, Ldsc;-><init>(Lpc6;Lkotlin/coroutines/Continuation;)V
+.field public static call_history_info_title:I = 0x7f13014f
 
-    iput-object p1, v0, Ldsc;->Y:Ljava/lang/Object;
+.field public static call_history_info_try_load_link_again:I = 0x7f130150
 
-    return-object v0
-.end method
+.field public static call_history_item_call_audio_button_accessibility:I = 0x7f130151
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.field public static call_history_item_call_call_title_with_count_calls:I = 0x7f130152
 
-    iget v0, p0, Ldsc;->X:I
+.field public static call_history_item_call_context_action_remove:I = 0x7f130153
 
-    const/4 v1, 0x1
+.field public static call_history_item_call_context_action_select:I = 0x7f130154
 
-    if-eqz v0, :cond_1
+.field public static call_history_item_call_count_no_users:I = 0x7f130155
 
-    if-ne v0, v1, :cond_0
+.field public static call_history_item_call_group_call_title:I = 0x7f130156
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+.field public static call_history_item_call_incoming:I = 0x7f130157
 
-    goto :goto_0
+.field public static call_history_item_call_link_call_description:I = 0x7f130158
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+.field public static call_history_item_call_missed:I = 0x7f130159
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+.field public static call_history_item_call_outgoing:I = 0x7f13015a
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+.field public static call_history_item_call_reject:I = 0x7f13015b
 
-    throw p0
+.field public static call_history_item_call_time_unit_min:I = 0x7f13015c
 
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+.field public static call_history_item_call_time_unit_sec:I = 0x7f13015d
 
-    iget-object p1, p0, Ldsc;->Y:Ljava/lang/Object;
+.field public static call_history_item_call_toolbar_action_remove:I = 0x7f13015e
 
-    check-cast p1, Ly04;
+.field public static call_history_item_call_unknown_call_title:I = 0x7f13015f
 
-    iput v1, p0, Ldsc;->X:I
+.field public static call_history_item_call_video_button_accessibility:I = 0x7f130160
 
-    iget-object v0, p0, Ldsc;->Z:Lpc6;
+.field public static call_history_link_action_error:I = 0x7f130161
 
-    invoke-interface {v0, p1, p0}, Lpc6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.field public static call_history_link_coped:I = 0x7f130162
 
-    move-result-object p0
+.field public static call_history_link_send_title:I = 0x7f130164
 
-    sget-object p1, Lz04;->a:Lz04;
+.field public static call_history_missed_calls_empty_state_title:I = 0x7f130166
 
-    if-ne p0, p1, :cond_2
+.field public static call_history_open_last_message_error:I = 0x7f13016a
 
-    return-object p1
+.field public static call_presettings_call_permissions_item:I = 0x7f1301d1
 
-    :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+.field public static call_presettings_call_save_changes:I = 0x7f1301d2
 
-    return-object p0
-.end method
+.field public static call_presettings_change_call_name_empty_error:I = 0x7f1301d3
+
+.field public static call_presettings_change_call_name_title:I = 0x7f1301d4

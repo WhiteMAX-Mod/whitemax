@@ -1,48 +1,102 @@
-.class public final Llv;
-.super Ljx3;
+.class public final synthetic Llv;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lsr3;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lmv;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Luj2;
 
 
 # direct methods
-.method public constructor <init>(Lmv;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Luj2;I)V
     .locals 0
 
-    iput-object p1, p0, Llv;->Y:Lmv;
+    iput p2, p0, Llv;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llv;->b:Luj2;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    iput-object p1, p0, Llv;->o:Ljava/lang/Object;
+    iget v0, p0, Llv;->a:I
 
-    iget p1, p0, Llv;->X:I
+    check-cast p1, Ljava/lang/Throwable;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    iget-object v0, p0, Llv;->b:Luj2;
 
-    iput p1, p0, Llv;->X:I
+    iget-object v1, v0, Luj2;->a:Ljava/lang/String;
 
-    iget-object p1, p0, Llv;->Y:Lmv;
+    const-string v2, "load: exception"
 
-    const/4 v0, 0x0
+    invoke-static {v1, v2, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p1, v0, p0}, Lmv;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v0, v0, Luj2;->Y:Lsf5;
 
-    move-result-object p0
+    new-instance v1, Lru/ok/tamtam/util/HandledException;
 
-    return-object p0
+    invoke-direct {v1, p1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v1}, Lsf5;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Llv;->b:Luj2;
+
+    iget-object p1, p1, Luj2;->q0:Lov;
+
+    invoke-virtual {p1}, Lov;->b()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Llv;->b:Luj2;
+
+    iget-object v1, v0, Luj2;->a:Ljava/lang/String;
+
+    const-string v2, "loadPrev: exception"
+
+    invoke-static {v1, v2, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, v0, Luj2;->Y:Lsf5;
+
+    new-instance v1, Lru/ok/tamtam/util/HandledException;
+
+    invoke-direct {v1, p1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v1}, Lsf5;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Llv;->b:Luj2;
+
+    iget-object p1, p1, Luj2;->r0:Lov;
+
+    invoke-virtual {p1}, Lov;->b()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,303 +1,133 @@
 .class public final Lp97;
-.super Ljava/lang/Object;
+.super Loy1;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
-.implements Loq4;
 
 
 # static fields
-.field public static final Y:Ljava/util/concurrent/FutureTask;
-
-
-# instance fields
-.field public X:Ljava/lang/Thread;
-
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final o:Ljava/util/concurrent/ExecutorService;
+.field public static final b:Lp97;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Ljava/util/concurrent/FutureTask;
+    new-instance v0, Lp97;
 
-    sget-object v1, Lvyg;->b:Lf2h;
+    new-instance v1, Llga;
 
-    const/4 v2, 0x0
+    const/16 v2, 0xa
 
-    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+    invoke-direct {v1, v2}, Llga;-><init>(I)V
 
-    sput-object v0, Lp97;->Y:Ljava/util/concurrent/FutureTask;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/ScheduledExecutorService;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    iput-object p1, p0, Lp97;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lp97;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lp97;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iput-object p2, p0, Lp97;->o:Ljava/util/concurrent/ExecutorService;
+    sput-object v0, Lp97;->b:Lp97;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/concurrent/Future;)V
+.method public final a(Lmhg;Le40;)V
     .locals 3
 
-    :goto_0
-    iget-object v0, p0, Lp97;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-super {p0, p1, p2}, Loy1;->a(Lmhg;Le40;)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    instance-of v0, p1, Lo97;
 
-    move-result-object v1
+    if-eqz v0, :cond_4
 
-    check-cast v1, Ljava/util/concurrent/Future;
+    check-cast p1, Lo97;
 
-    sget-object v2, Lp97;->Y:Ljava/util/concurrent/FutureTask;
-
-    if-ne v1, v2, :cond_1
-
-    iget-object p0, p0, Lp97;->X:Ljava/lang/Thread;
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-static {}, Lc1a;->c()Lc1a;
 
     move-result-object v0
 
-    if-eq p0, v0, :cond_0
+    sget-object v1, Lo97;->b:Lz90;
 
-    const/4 p0, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_1
-    invoke-interface {p1, p0}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    return-void
-
-    :cond_1
-    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {p1, v1}, Lk0d;->l(Lz90;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
-    return-void
+    invoke-interface {p1, v1}, Lk0d;->g(Lz90;)Ljava/lang/Object;
 
-    :cond_2
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v2
+    check-cast p1, Ljava/lang/Integer;
 
-    if-eq v2, v1, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    goto :goto_0
-.end method
+    move-result p1
 
-.method public final call()Ljava/lang/Object;
-    .locals 5
+    const-class v1, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    sget-object v2, Lws4;->a:Lp95;
 
-    move-result-object v0
-
-    iput-object v0, p0, Lp97;->X:Ljava/lang/Thread;
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iget-object v1, p0, Lp97;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
-
-    iput-object v0, p0, Lp97;->X:Ljava/lang/Thread;
-
-    iget-object v1, p0, Lp97;->o:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v1, p0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    invoke-virtual {v2, v1}, Lp95;->C(Ljava/lang/Class;)Lgjc;
 
     move-result-object v1
 
-    iget-object v2, p0, Lp97;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast v1, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
 
-    :goto_0
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/concurrent/Future;
-
-    sget-object v4, Lp97;->Y:Ljava/util/concurrent/FutureTask;
-
-    if-ne v3, v4, :cond_1
-
-    iget-object v2, p0, Lp97;->X:Ljava/lang/Thread;
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_1
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    return-object v0
-
-    :cond_1
-    invoke-virtual {v2, v3, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    return-object v0
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eq v4, v3, :cond_1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    iput-object v0, p0, Lp97;->X:Ljava/lang/Thread;
-
-    invoke-static {v1}, Ln4e;->D(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public final e()V
-    .locals 6
-
-    iget-object v0, p0, Lp97;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v1, Lp97;->Y:Ljava/util/concurrent/FutureTask;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/concurrent/Future;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-eq v0, v1, :cond_1
-
-    iget-object v4, p0, Lp97;->X:Ljava/lang/Thread;
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v5
-
-    if-eq v4, v5, :cond_0
-
-    move v4, v3
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v4, v2
+    if-eqz p1, :cond_2
 
-    :goto_0
-    invoke-interface {v0, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    const/4 v1, 0x1
+
+    if-eq p1, v1, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lp97;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    move-result-object v0
+    invoke-static {p1}, Ljz1;->U(Landroid/hardware/camera2/CaptureRequest$Key;)Lz90;
 
-    check-cast v0, Ljava/util/concurrent/Future;
+    move-result-object p1
 
-    if-eqz v0, :cond_3
+    invoke-virtual {v0, p1, v1}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    if-eq v0, v1, :cond_3
-
-    iget-object p0, p0, Lp97;->X:Ljava/lang/Thread;
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    if-eq p0, v1, :cond_2
-
-    move v2, v3
+    goto :goto_0
 
     :cond_2
-    invoke-interface {v0, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {p1}, Ljz1;->U(Landroid/hardware/camera2/CaptureRequest$Key;)Lz90;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1, v1}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
     :cond_3
+    :goto_0
+    new-instance p1, Ljz1;
+
+    invoke-static {v0}, Ls9b;->a(Lpk3;)Ls9b;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Lor6;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {p2, p1}, Le40;->c(Lpk3;)V
+
     return-void
-.end method
 
-.method public final f()Z
-    .locals 1
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    iget-object p0, p0, Lp97;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    const-string p2, "config is not ImageCaptureConfig"
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
-
-    sget-object v0, Lp97;->Y:Ljava/util/concurrent/FutureTask;
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    throw p1
 .end method

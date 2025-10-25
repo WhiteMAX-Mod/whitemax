@@ -1,108 +1,50 @@
-.class public final Lko7;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public final synthetic Lko7;
+.super Loj6;
 .source "SourceFile"
 
+# interfaces
+.implements Lbj6;
 
-# instance fields
-.field public final synthetic a:I
 
-.field public final synthetic b:Llo7;
+# static fields
+.field public static final a:Lko7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llo7;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Lko7;->a:I
+    new-instance v0, Lko7;
 
-    iput-object p1, p0, Lko7;->b:Llo7;
+    const-string v4, "registerSelectForOnJoin(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    const/4 v5, 0x0
+
+    const/4 v1, 0x3
+
+    const-class v2, Llo7;
+
+    const-string v3, "registerSelectForOnJoin"
+
+    invoke-direct/range {v0 .. v5}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lko7;->a:Lko7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lko7;->a:I
+    check-cast p1, Llo7;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lxzd;
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    invoke-static {p1, p2, p3}, Llo7;->access$registerSelectForOnJoin(Llo7;Lxzd;Ljava/lang/Object;)V
 
-    return-void
+    sget-object p1, Lccg;->a:Lccg;
 
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
-
-    iget-object p0, p0, Lko7;->b:Llo7;
-
-    invoke-virtual {p0}, Llo7;->x()V
-
-    iget-object p1, p0, Llo7;->u0:Lie;
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lpxe;->b:Ljava/lang/Object;
-
-    check-cast p0, Lf67;
-
-    invoke-virtual {p1, p0}, Lie;->a(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget v0, p0, Lko7;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
-
-    iget-object p0, p0, Lko7;->b:Llo7;
-
-    iget p1, p0, Llo7;->r0:I
-
-    const/4 v0, 0x1
-
-    add-int/2addr p1, v0
-
-    iget-object v1, p0, Llo7;->Z:Lso7;
-
-    iget-object v1, v1, Lrj0;->c:[I
-
-    array-length v1, v1
-
-    rem-int/2addr p1, v1
-
-    iput p1, p0, Llo7;->r0:I
-
-    iput-boolean v0, p0, Llo7;->s0:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

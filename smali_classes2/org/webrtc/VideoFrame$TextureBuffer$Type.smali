@@ -131,9 +131,9 @@
 
 # virtual methods
 .method public getGlTarget()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/VideoFrame$TextureBuffer$Type;->glTarget:I
+    iget v0, p0, Lorg/webrtc/VideoFrame$TextureBuffer$Type;->glTarget:I
 
-    return p0
+    return v0
 .end method

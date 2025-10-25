@@ -89,7 +89,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;ZLjava/lang/Long;ILld4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;ZLjava/lang/Long;ILki4;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x40
@@ -132,57 +132,57 @@
 
 # virtual methods
 .method public final getChatId()Ljava/lang/Long;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->chatId:Ljava/lang/Long;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->chatId:Ljava/lang/Long;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getClientType()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->clientType:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->clientType:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getDomainId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->domainId:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->domainId:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getPayload()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->payload:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->payload:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final isMultipleDevicesEnabled()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->isMultipleDevicesEnabled:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->isMultipleDevicesEnabled:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final isVideo()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->isVideo:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->isVideo:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final isWatchTogetherEnabledForAll()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->isWatchTogetherEnabledForAll:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->isWatchTogetherEnabledForAll:Z
 
-    return p0
+    return v0
 .end method

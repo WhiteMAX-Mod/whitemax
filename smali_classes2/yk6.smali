@@ -1,47 +1,75 @@
 .class public final Lyk6;
-.super Ljava/lang/Object;
+.super Lal6;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lbfb;
+.field public static final a:Lyk6;
 
+.field public static final b:Ljava/util/List;
 
-# instance fields
-.field public final a:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final b:Ljava/lang/String;
+.field public static final c:Lqk6;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lbfb;
+    new-instance v0, Lyk6;
 
-    const/16 v1, 0x1e
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lbfb;-><init>(I)V
+    sput-object v0, Lyk6;->a:Lyk6;
 
-    sput-object v0, Lyk6;->c:Lbfb;
+    sget-object v0, Lsk6;->e:Lsk6;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lyk6;->b:Ljava/util/List;
+
+    new-instance v0, Lqk6;
+
+    sget v1, Lk1b;->c:I
+
+    invoke-direct {v0, v1}, Lqk6;-><init>(I)V
+
+    sput-object v0, Lyk6;->c:Lqk6;
 
     return-void
 .end method
 
-.method public constructor <init>(Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, Lyk6;->a:Lkotlinx/coroutines/internal/ContextScope;
+    const-string v0, "ru.ok.tamtam.ALL_MEDIA"
 
-    const-class p1, Lyk6;
+    return-object v0
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+.method public final c()Lf4;
+    .locals 1
 
-    move-result-object p1
+    sget-object v0, Lyk6;->c:Lqk6;
 
-    iput-object p1, p0, Lyk6;->b:Ljava/lang/String;
+    return-object v0
+.end method
 
-    return-void
+.method public final d()Ljava/util/List;
+    .locals 1
+
+    sget-object v0, Lyk6;->b:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final f()Lqk6;
+    .locals 1
+
+    sget-object v0, Lyk6;->c:Lqk6;
+
+    return-object v0
 .end method

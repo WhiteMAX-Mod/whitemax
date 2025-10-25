@@ -2,58 +2,50 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr32;
+
 
 # instance fields
-.field public final a:Lhm3;
-
-.field public b:Lhm3;
-
-.field public c:Lhm3;
-
-.field public d:Lhm3;
-
-.field public e:Lhm3;
-
-.field public f:Lhm3;
-
-.field public g:Lhm3;
-
-.field public h:Ljava/util/ArrayList;
-
-.field public i:I
-
-.field public j:I
-
-.field public k:F
-
-.field public final l:I
-
-.field public final m:Z
-
-.field public n:Z
-
-.field public o:Z
-
-.field public p:Z
-
-.field public q:Z
+.field public final a:Lty5;
 
 
 # direct methods
-.method public constructor <init>(Lhm3;IZ)V
-    .locals 1
+.method public constructor <init>(Lty5;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lt32;->k:F
-
-    iput-object p1, p0, Lt32;->a:Lhm3;
-
-    iput p2, p0, Lt32;->l:I
-
-    iput-boolean p3, p0, Lt32;->m:Z
+    iput-object p1, p0, Lt32;->a:Lty5;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
+
+    new-instance v0, Lfo1;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, p1, v1}, Lfo1;-><init>(Lvy5;I)V
+
+    iget-object p1, p0, Lt32;->a:Lty5;
+
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

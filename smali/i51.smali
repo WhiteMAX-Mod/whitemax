@@ -1,177 +1,121 @@
-.class public final Li51;
+.class public final synthetic Li51;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lk51;
+.implements Lli6;
 
 
 # instance fields
-.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+.field public final synthetic X:Lfx0;
 
-.field public final b:I
+.field public final synthetic a:Lhl;
 
-.field public final c:I
+.field public final synthetic b:J
 
-.field public final d:I
+.field public final synthetic c:Lk51;
 
-.field public final e:Lp2f;
-
-.field public final f:Lp2f;
+.field public final synthetic o:Lgv1;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
-    .locals 1
+.method public synthetic constructor <init>(Lhl;JLk51;Lgv1;Lfx0;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Li51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    iput-object p1, p0, Li51;->a:Lhl;
 
-    sget p1, Laea;->L:I
+    iput-wide p2, p0, Li51;->b:J
 
-    iput p1, p0, Li51;->b:I
+    iput-object p4, p0, Li51;->c:Lk51;
 
-    sget p1, Lzda;->x0:I
+    iput-object p5, p0, Li51;->o:Lgv1;
 
-    iput p1, p0, Li51;->c:I
-
-    sget p1, Lzda;->K0:I
-
-    iput p1, p0, Li51;->d:I
-
-    sget p1, Ldea;->x2:I
-
-    new-instance v0, Lp2f;
-
-    invoke-direct {v0, p1}, Lp2f;-><init>(I)V
-
-    iput-object v0, p0, Li51;->e:Lp2f;
-
-    iput-object v0, p0, Li51;->f:Lp2f;
+    iput-object p6, p0, Li51;->X:Lfx0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 0
-
-    iget p0, p0, Li51;->c:I
-
-    return p0
-.end method
-
-.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-    .locals 0
-
-    iget-object p0, p0, Li51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    return-object p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    const/4 v0, 0x1
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Li51;->a:Lhl;
 
-    return v0
+    iget-wide v1, v0, Lhl;->a:J
+
+    invoke-static {v1, v2}, Ltdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setOpponentId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+
+    move-result-object p1
+
+    iget-object v1, v0, Lhl;->c:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationParams(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
     :cond_0
-    instance-of v1, p1, Li51;
+    iget-object v0, v0, Lhl;->b:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationId(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    if-nez v1, :cond_1
+    move-result-object p1
 
-    return v2
+    iget-wide v0, p0, Li51;->b:J
 
-    :cond_1
-    check-cast p1, Li51;
+    invoke-static {v0, v1}, Ltdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-object p0, p0, Li51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    move-result-object v0
 
-    iget-object p1, p1, Li51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p0
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    if-nez p0, :cond_2
+    iget-object v0, p0, Li51;->c:Lk51;
 
-    return v2
+    iget-object v0, v0, Lk51;->b:Liu7;
 
-    :cond_2
-    return v0
-.end method
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-.method public final getContentDescription()Lu2f;
-    .locals 0
+    move-result-object v0
 
-    iget-object p0, p0, Li51;->f:Lp2f;
+    check-cast v0, Lmw1;
 
-    return-object p0
-.end method
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
-.method public final getIcon()I
-    .locals 0
+    move-result-object p1
 
-    iget p0, p0, Li51;->d:I
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    return p0
-.end method
+    iget-object v0, p0, Li51;->o:Lgv1;
 
-.method public final getId()I
-    .locals 0
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lli6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
-    iget p0, p0, Li51;->b:I
+    move-result-object p1
 
-    return p0
-.end method
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-.method public final getTitle()Lu2f;
-    .locals 0
+    iget-object v0, p0, Li51;->X:Lfx0;
 
-    iget-object p0, p0, Li51;->e:Lp2f;
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lli6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
-    return-object p0
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 0
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    iget-object p0, p0, Li51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
+    move-result-object p1
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Unknown(device="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Li51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

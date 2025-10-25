@@ -1,205 +1,231 @@
-.class public abstract Lew0;
-.super Ljava/lang/Object;
+.class public final Lew0;
+.super Landroid/os/Binder;
 .source "SourceFile"
+
+
+# static fields
+.field public static final d:I
+
+
+# instance fields
+.field public final c:Lec7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lcw0;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v0}, Ljava/io/OutputStream;-><init>()V
+    const/16 v1, 0x1e
+
+    if-lt v0, v1, :cond_0
+
+    invoke-static {}, Lz4;->a()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v0, 0x10000
+
+    :goto_0
+    sput v0, Lew0;->d:I
 
     return-void
 .end method
 
-.method public static a(Ljava/util/ArrayDeque;I)[B
-    .locals 6
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/util/ArrayDeque;->isEmpty()Z
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    move-result v0
+    invoke-static {p1}, Lec7;->k(Ljava/util/Collection;)Lec7;
 
-    const/4 v1, 0x0
+    move-result-object p1
+
+    iput-object p1, p0, Lew0;->c:Lec7;
+
+    return-void
+.end method
+
+.method public static a(Landroid/os/IBinder;)Lec7;
+    .locals 7
+
+    instance-of v0, p0, Lew0;
 
     if-eqz v0, :cond_0
 
-    new-array p0, v1, [B
+    check-cast p0, Lew0;
+
+    iget-object p0, p0, Lew0;->c:Lec7;
 
     return-object p0
 
     :cond_0
-    invoke-virtual {p0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
+    invoke-static {}, Lec7;->j()Lbc7;
 
     move-result-object v0
-
-    check-cast v0, [B
-
-    array-length v2, v0
-
-    if-ne v2, p1, :cond_1
-
-    return-object v0
-
-    :cond_1
-    array-length v2, v0
-
-    sub-int v2, p1, v2
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object v0
-
-    :goto_0
-    if-lez v2, :cond_2
-
-    invoke-virtual {p0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, [B
-
-    array-length v4, v3
-
-    invoke-static {v2, v4}, Ljava/lang/Math;->min(II)I
-
-    move-result v4
-
-    sub-int v5, p1, v2
-
-    invoke-static {v3, v1, v0, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    sub-int/2addr v2, v4
-
-    goto :goto_0
-
-    :cond_2
-    return-object v0
-.end method
-
-.method public static b(Ljava/io/InputStream;)[B
-    .locals 10
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayDeque;-><init>(I)V
 
     const/4 v1, 0x0
 
-    invoke-static {v1}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    move-result v2
-
-    const/4 v3, 0x2
-
-    mul-int/2addr v2, v3
-
-    const/16 v4, 0x80
-
-    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    const/16 v4, 0x2000
-
-    invoke-static {v4, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
+    const/4 v2, 0x1
 
     move v4, v1
 
+    move v3, v2
+
     :goto_0
-    const/4 v5, -0x1
+    if-eqz v3, :cond_2
 
-    const v6, 0x7ffffff7
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    if-ge v4, v6, :cond_3
+    move-result-object v3
 
-    sub-int/2addr v6, v4
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    invoke-static {v2, v6}, Ljava/lang/Math;->min(II)I
+    move-result-object v5
+
+    :try_start_0
+    invoke-virtual {v3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-interface {p0, v2, v3, v5, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_1
+    :try_start_2
+    invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    new-array v7, v6, [B
+    if-ne v6, v2, :cond_1
 
-    invoke-virtual {v0, v7}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v5}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
-    move v8, v1
+    move-result-object v6
 
-    :goto_1
-    if-ge v8, v6, :cond_1
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sub-int v9, v6, v8
+    invoke-virtual {v0, v6}, Lub7;->a(Ljava/lang/Object;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    invoke-virtual {p0, v7, v8, v9}, Ljava/io/InputStream;->read([BII)I
-
-    move-result v9
-
-    if-ne v9, v5, :cond_0
-
-    invoke-static {v0, v4}, Lew0;->a(Ljava/util/ArrayDeque;I)[B
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    add-int/2addr v8, v9
-
-    add-int/2addr v4, v9
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    :cond_1
-    const/16 v5, 0x1000
-
-    if-ge v2, v5, :cond_2
-
-    const/4 v5, 0x4
+    :catchall_0
+    move-exception p0
 
     goto :goto_2
 
-    :cond_2
-    move v5, v3
+    :cond_1
+    invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
 
-    :goto_2
-    int-to-long v6, v2
+    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
-    int-to-long v8, v5
-
-    mul-long/2addr v6, v8
-
-    invoke-static {v6, v7}, Li4h;->R(J)I
-
-    move-result v2
+    move v3, v6
 
     goto :goto_0
 
-    :cond_3
-    invoke-virtual {p0}, Ljava/io/InputStream;->read()I
+    :catch_0
+    move-exception p0
 
-    move-result p0
+    :try_start_3
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    if-ne p0, v5, :cond_4
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-static {v0, v6}, Lew0;->a(Ljava/util/ArrayDeque;I)[B
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_2
+    invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+
+    :cond_2
+    invoke-virtual {v0}, Lbc7;->i()Lz8d;
 
     move-result-object p0
 
     return-object p0
+.end method
 
-    :cond_4
-    new-instance p0, Ljava/lang/OutOfMemoryError;
 
-    const-string v0, "input is too large to fit in a byte array"
+# virtual methods
+.method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 4
 
-    invoke-direct {p0, v0}, Ljava/lang/OutOfMemoryError;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    throw p0
+    if-eq p1, v0, :cond_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    if-nez p3, :cond_1
+
+    return p1
+
+    :cond_1
+    iget-object p4, p0, Lew0;->c:Lec7;
+
+    invoke-virtual {p4}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v1
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p2
+
+    :goto_0
+    if-ge p2, v1, :cond_2
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->dataSize()I
+
+    move-result v2
+
+    sget v3, Lew0;->d:I
+
+    if-ge v2, v3, :cond_2
+
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-interface {p4, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/os/Bundle;
+
+    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    if-ge p2, v1, :cond_3
+
+    const/4 p1, 0x2
+
+    :cond_3
+    invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    return v0
 .end method

@@ -1,76 +1,48 @@
-.class public final synthetic Lipb;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public final Lipb;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lone/me/profileedit/ProfileEditScreen;
+.field public final synthetic Y:Lkw8;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profileedit/ProfileEditScreen;I)V
+.method public constructor <init>(Lkw8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lipb;->a:I
+    iput-object p1, p0, Lipb;->Y:Lkw8;
 
-    iput-object p1, p0, Lipb;->b:Lone/me/profileedit/ProfileEditScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p1, p0, Lipb;->a:I
+    iput-object p1, p0, Lipb;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lipb;->b:Lone/me/profileedit/ProfileEditScreen;
+    iget p1, p0, Lipb;->X:I
 
-    packed-switch p1, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->x0:[Lxi7;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p0}, Lone/me/profileedit/ProfileEditScreen;->z0()Leqb;
+    iput p1, p0, Lipb;->X:I
 
-    move-result-object p0
+    iget-object p1, p0, Lipb;->Y:Lkw8;
 
-    invoke-virtual {p0}, Leqb;->w()V
+    const/4 v0, 0x0
 
-    return-void
+    invoke-virtual {p1, v0, p0}, Lkw8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :pswitch_0
-    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->x0:[Lxi7;
+    move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/profileedit/ProfileEditScreen;->z0()Leqb;
-
-    move-result-object p0
-
-    iget-object p0, p0, Leqb;->b:Lj05;
-
-    invoke-virtual {p0}, Lj05;->d()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lj05;->k()V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

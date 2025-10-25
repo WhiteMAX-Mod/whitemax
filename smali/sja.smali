@@ -1,76 +1,84 @@
-.class public final synthetic Lsja;
-.super Ljava/lang/Object;
+.class public final Lsja;
+.super Lyha;
 .source "SourceFile"
-
-# interfaces
-.implements Lzb6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lxod;
 
-.field public final synthetic b:Luja;
+.field public final b:J
+
+.field public final c:J
+
+.field public final o:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luja;I)V
+.method public constructor <init>(JJLjava/util/concurrent/TimeUnit;Lxod;)V
     .locals 0
 
-    iput p2, p0, Lsja;->a:I
-
-    iput-object p1, p0, Lsja;->b:Luja;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lsja;->b:J
+
+    iput-wide p3, p0, Lsja;->c:J
+
+    iput-object p5, p0, Lsja;->o:Ljava/util/concurrent/TimeUnit;
+
+    iput-object p6, p0, Lsja;->a:Lxod;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final o(Lela;)V
+    .locals 7
 
-    iget v0, p0, Lsja;->a:I
+    new-instance v1, Lrja;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v1, p1}, Lrja;-><init>(Lela;)V
 
-    new-instance v0, Lm3d;
+    invoke-interface {p1, v1}, Lela;->c(Lvv4;)V
 
-    iget-object p0, p0, Lsja;->b:Luja;
+    iget-object v0, p0, Lsja;->a:Lxod;
 
-    iget-object v1, p0, Luja;->i:Lq6d;
+    instance-of p1, v0, Lv2g;
 
-    iget-object p0, p0, Luja;->j:Lxwe;
+    if-eqz p1, :cond_0
 
-    check-cast p0, Laga;
+    check-cast v0, Lv2g;
 
-    invoke-virtual {p0}, Laga;->b()Ls04;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    new-instance v0, Lu2g;
 
-    invoke-direct {v0, v1, p0}, Lm3d;-><init>(Lq6d;Ls04;)V
+    invoke-direct {v0}, Lu2g;-><init>()V
 
-    return-object v0
+    invoke-static {v1, v0}, Lzv4;->f(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
 
-    :pswitch_0
-    iget-object p0, p0, Lsja;->b:Luja;
+    iget-wide v4, p0, Lsja;->c:J
 
-    iget-object p0, p0, Luja;->j:Lxwe;
+    iget-object v6, p0, Lsja;->o:Ljava/util/concurrent/TimeUnit;
 
-    check-cast p0, Laga;
+    iget-wide v2, p0, Lsja;->b:J
 
-    invoke-virtual {p0}, Laga;->b()Ls04;
+    invoke-virtual/range {v0 .. v6}, Lvod;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lvv4;
 
-    move-result-object p0
+    return-void
 
-    invoke-static {p0}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
+    :cond_0
+    iget-wide v4, p0, Lsja;->c:J
 
-    move-result-object p0
+    iget-object v6, p0, Lsja;->o:Ljava/util/concurrent/TimeUnit;
 
-    return-object p0
+    iget-wide v2, p0, Lsja;->b:J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual/range {v0 .. v6}, Lxod;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lvv4;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lzv4;->f(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
+
+    return-void
 .end method

@@ -22,7 +22,7 @@
         "()V",
         "Lone/me/rlottie/RLottie$Config;",
         "config",
-        "Lylf;",
+        "Lccg;",
         "init",
         "(Lone/me/rlottie/RLottie$Config;)V",
         "checkNativeLibraryLoad$rlottie_release",
@@ -32,9 +32,9 @@
         "()Lone/me/rlottie/RLottie$Config;",
         "setConfig",
         "getConfig$annotations",
-        "Lns9;",
+        "Lt4a;",
         "getLogger",
-        "()Lns9;",
+        "()Lt4a;",
         "getLogger$annotations",
         "logger",
         "WorkQueue",
@@ -99,14 +99,14 @@
     return-void
 .end method
 
-.method public static final getLogger()Lns9;
+.method public static final getLogger()Lt4a;
     .locals 1
 
     invoke-static {}, Lone/me/rlottie/RLottie;->getConfig()Lone/me/rlottie/RLottie$Config;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lone/me/rlottie/RLottie$Config;->getLogger()Lns9;
+    invoke-virtual {v0}, Lone/me/rlottie/RLottie$Config;->getLogger()Lt4a;
 
     move-result-object v0
 
@@ -144,7 +144,7 @@
 
 # virtual methods
 .method public final checkNativeLibraryLoad$rlottie_release()V
-    .locals 0
+    .locals 1
 
     :try_start_0
     invoke-static {}, Lone/me/rlottie/RLottieDrawable;->foo()I
@@ -154,13 +154,13 @@
     return-void
 
     :catch_0
-    sget-object p0, Lone/me/rlottie/NativeLibraryLoader;->Companion:Lone/me/rlottie/NativeLibraryLoader$Companion;
+    sget-object v0, Lone/me/rlottie/NativeLibraryLoader;->Companion:Lone/me/rlottie/NativeLibraryLoader$Companion;
 
-    invoke-virtual {p0}, Lone/me/rlottie/NativeLibraryLoader$Companion;->getDefault()Lone/me/rlottie/NativeLibraryLoader;
+    invoke-virtual {v0}, Lone/me/rlottie/NativeLibraryLoader$Companion;->getDefault()Lone/me/rlottie/NativeLibraryLoader;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0}, Lone/me/rlottie/NativeLibraryLoader;->load()V
+    invoke-interface {v0}, Lone/me/rlottie/NativeLibraryLoader;->load()V
 
     return-void
 .end method

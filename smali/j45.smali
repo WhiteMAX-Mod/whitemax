@@ -2,68 +2,54 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lq04;
-.implements Ljava/io/Serializable;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Lj45;
+.field public final b:Z
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:Landroid/util/SparseArray;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(IZIIIIIIILandroid/util/SparseArray;)V
+    .locals 0
 
-    new-instance v0, Lj45;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lj45;->a:I
 
-    sput-object v0, Lj45;->a:Lj45;
+    iput-boolean p2, p0, Lj45;->b:Z
+
+    iput p3, p0, Lj45;->c:I
+
+    iput p4, p0, Lj45;->d:I
+
+    iput p5, p0, Lj45;->e:I
+
+    iput p6, p0, Lj45;->f:I
+
+    iput p7, p0, Lj45;->g:I
+
+    iput p8, p0, Lj45;->h:I
+
+    iput p9, p0, Lj45;->i:I
+
+    iput-object p10, p0, Lj45;->j:Landroid/util/SparseArray;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final fold(Ljava/lang/Object;Lpc6;)Ljava/lang/Object;
-    .locals 0
-
-    return-object p1
-.end method
-
-.method public final get(Lp04;)Lo04;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final minusKey(Lp04;)Lq04;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final plus(Lq04;)Lq04;
-    .locals 0
-
-    return-object p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "EmptyCoroutineContext"
-
-    return-object p0
 .end method

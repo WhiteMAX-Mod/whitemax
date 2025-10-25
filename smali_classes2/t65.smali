@@ -1,315 +1,785 @@
-.class public final synthetic Lt65;
-.super Ljava/lang/Object;
+.class public final Lt65;
+.super Landroid/view/View;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ln65;
+.implements Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/util/ArrayList;
 
-.field public final synthetic b:I
+.field public b:Landroid/view/ScaleGestureDetector;
 
-.field public final synthetic c:Lu65;
+.field public c:Ls65;
 
-.field public final synthetic o:Lc75;
+.field public o:Landroid/graphics/Matrix;
+
+.field public q0:Landroid/graphics/Matrix;
+
+.field public r0:Ljava/lang/Float;
+
+.field public s0:Ljava/lang/Float;
+
+.field public t0:[F
+
+.field public u0:F
+
+.field public v0:Landroid/graphics/Rect;
+
+.field public w0:Z
+
+.field public x0:Lr65;
 
 
 # direct methods
-.method public synthetic constructor <init>(IILu65;Lc75;)V
-    .locals 0
+.method private getCorrectionMatrix()Landroid/graphics/Matrix;
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lt65;->o:Landroid/graphics/Matrix;
 
-    iput p1, p0, Lt65;->a:I
+    iget-object v1, p0, Lt65;->t0:[F
 
-    iput p2, p0, Lt65;->b:I
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->getValues([F)V
 
-    iput-object p3, p0, Lt65;->c:Lu65;
+    const/4 v2, 0x0
 
-    iput-object p4, p0, Lt65;->o:Lc75;
+    aget v1, v1, v2
 
-    return-void
-.end method
+    const/high16 v2, 0x3f800000    # 1.0f
 
+    cmpg-float v3, v1, v2
 
-# virtual methods
-.method public final run()V
-    .locals 12
+    if-gez v3, :cond_0
 
-    iget-object v0, p0, Lt65;->c:Lu65;
+    new-instance v0, Landroid/graphics/Matrix;
 
-    iget-object v1, v0, Lu65;->c:Ljava/lang/Object;
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    check-cast v1, Lw65;
+    const/high16 v1, 0x3f000000    # 0.5f
 
-    iget v2, p0, Lt65;->a:I
+    invoke-virtual {v0, v2, v2, v1, v1}, Landroid/graphics/Matrix;->setScale(FFFF)V
 
-    if-nez v2, :cond_0
-
-    iget v2, p0, Lt65;->b:I
+    return-object v0
 
     :cond_0
-    iget-object p0, p0, Lt65;->o:Lc75;
+    iget v2, p0, Lt65;->u0:F
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    cmpl-float v2, v1, v2
 
-    move-result-object v2
+    if-lez v2, :cond_1
 
-    instance-of v3, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+    new-instance v2, Landroid/graphics/Matrix;
 
-    const/4 v4, -0x1
+    invoke-direct {v2, v0}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
 
-    const/4 v5, 0x0
+    iget v3, p0, Lt65;->u0:F
 
-    const/4 v6, 0x1
+    div-float/2addr v3, v1
 
-    if-eqz v3, :cond_3
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
-    check-cast v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+    move-result v1
 
-    iget v3, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
+    div-int/lit8 v1, v1, 0x2
 
-    new-array v7, v3, [I
+    int-to-float v1, v1
 
-    move v8, v5
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
-    :goto_0
-    iget v9, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
+    move-result v4
 
-    if-ge v8, v9, :cond_2
+    div-int/lit8 v4, v4, 0x2
 
-    iget-object v9, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->q:[Lx9e;
+    int-to-float v4, v4
 
-    aget-object v9, v9, v8
-
-    iget-object v10, v9, Lx9e;->e:Ljava/lang/Object;
-
-    check-cast v10, Ljava/util/ArrayList;
-
-    iget-object v11, v9, Lx9e;->f:Ljava/lang/Object;
-
-    check-cast v11, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
-
-    iget-boolean v11, v11, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
-
-    if-eqz v11, :cond_1
-
-    invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
-
-    move-result v10
-
-    invoke-virtual {v9, v5, v10, v6, v5}, Lx9e;->g(IIZZ)I
-
-    move-result v9
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
-
-    move-result v10
-
-    sub-int/2addr v10, v6
-
-    invoke-virtual {v9, v10, v4, v6, v5}, Lx9e;->g(IIZZ)I
-
-    move-result v9
-
-    :goto_1
-    aput v9, v7, v8
-
-    add-int/lit8 v8, v8, 0x1
+    invoke-virtual {v2, v3, v3, v1, v4}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
     goto :goto_0
 
-    :cond_2
-    sub-int/2addr v3, v6
+    :cond_1
+    const/4 v2, 0x0
 
-    aget v2, v7, v3
+    :goto_0
+    new-instance v1, Landroid/graphics/RectF;
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const/4 v5, 0x0
+
+    invoke-direct {v1, v5, v5, v3, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2, v1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
+
+    :goto_1
+    iget v3, v1, Landroid/graphics/RectF;->right:F
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    cmpg-float v3, v3, v4
+
+    if-gez v3, :cond_3
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iget v4, v1, Landroid/graphics/RectF;->right:F
+
+    sub-float/2addr v3, v4
 
     goto :goto_2
 
     :cond_3
-    instance-of v3, v2, Landroidx/recyclerview/widget/LinearLayoutManager;
+    iget v3, v1, Landroid/graphics/RectF;->left:F
 
-    if-eqz v3, :cond_4
+    cmpl-float v4, v3, v5
 
-    check-cast v2, Landroidx/recyclerview/widget/LinearLayoutManager;
+    if-lez v4, :cond_4
 
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
-
-    move-result v2
+    neg-float v3, v3
 
     goto :goto_2
 
     :cond_4
-    move v2, v5
+    move v3, v5
 
     :goto_2
-    invoke-virtual {p0}, Lc75;->getAdapter()Lcoc;
+    iget v4, v1, Landroid/graphics/RectF;->bottom:F
 
-    move-result-object v3
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
-    if-eqz v3, :cond_e
+    move-result v6
 
-    invoke-virtual {v3}, Lcoc;->j()I
+    int-to-float v6, v6
 
-    move-result v3
+    cmpg-float v4, v4, v6
 
-    sub-int/2addr v3, v2
+    if-gez v4, :cond_5
 
-    iget v2, v0, Lu65;->b:I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
-    if-gt v3, v2, :cond_7
+    move-result v4
 
-    invoke-virtual {p0}, Lc75;->getIgnoreRefreshingFlagsForScrollEvent()Z
+    int-to-float v4, v4
 
-    move-result v2
+    iget v1, v1, Landroid/graphics/RectF;->bottom:F
 
-    if-nez v2, :cond_5
-
-    iget-boolean v2, p0, Lc75;->c2:Z
-
-    if-nez v2, :cond_7
-
-    :cond_5
-    invoke-interface {v1}, Lw65;->m()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    iget-object v2, p0, Lc75;->f2:Ljava/lang/Integer;
-
-    if-eqz v2, :cond_6
-
-    invoke-virtual {p0}, Lc75;->getRefreshingNextDelegate()Llpc;
-
-    invoke-virtual {p0, v6}, Lc75;->setRefreshingNext(Z)V
-
-    :cond_6
-    invoke-interface {v1}, Lw65;->l()V
-
-    :cond_7
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v2
-
-    instance-of v3, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
-
-    if-eqz v3, :cond_a
-
-    check-cast v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
-
-    iget v3, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
-
-    new-array v7, v3, [I
-
-    move v8, v5
-
-    :goto_3
-    iget v9, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
-
-    if-ge v8, v9, :cond_9
-
-    iget-object v9, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->q:[Lx9e;
-
-    aget-object v9, v9, v8
-
-    iget-object v10, v9, Lx9e;->e:Ljava/lang/Object;
-
-    check-cast v10, Ljava/util/ArrayList;
-
-    iget-object v11, v9, Lx9e;->f:Ljava/lang/Object;
-
-    check-cast v11, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
-
-    iget-boolean v11, v11, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
-
-    if-eqz v11, :cond_8
-
-    invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
-
-    move-result v10
-
-    sub-int/2addr v10, v6
-
-    invoke-virtual {v9, v10, v4, v6, v5}, Lx9e;->g(IIZZ)I
-
-    move-result v9
-
-    goto :goto_4
-
-    :cond_8
-    invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
-
-    move-result v10
-
-    invoke-virtual {v9, v5, v10, v6, v5}, Lx9e;->g(IIZZ)I
-
-    move-result v9
-
-    :goto_4
-    aput v9, v7, v8
-
-    add-int/lit8 v8, v8, 0x1
+    sub-float/2addr v4, v1
 
     goto :goto_3
 
+    :cond_5
+    iget v1, v1, Landroid/graphics/RectF;->top:F
+
+    cmpl-float v4, v1, v5
+
+    if-lez v4, :cond_6
+
+    neg-float v4, v1
+
+    goto :goto_3
+
+    :cond_6
+    move v4, v5
+
+    :goto_3
+    cmpl-float v1, v3, v5
+
+    if-nez v1, :cond_8
+
+    cmpl-float v1, v4, v5
+
+    if-eqz v1, :cond_7
+
+    goto :goto_4
+
+    :cond_7
+    return-object v2
+
+    :cond_8
+    :goto_4
+    if-nez v2, :cond_9
+
+    new-instance v2, Landroid/graphics/Matrix;
+
+    invoke-direct {v2, v0}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+
     :cond_9
-    sub-int/2addr v3, v6
+    invoke-virtual {v2, v3, v4}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    aget v5, v7, v3
+    return-object v2
+.end method
 
-    goto :goto_5
 
-    :cond_a
-    instance-of v3, v2, Landroidx/recyclerview/widget/LinearLayoutManager;
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 2
 
-    if-eqz v3, :cond_b
+    invoke-super {p0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    check-cast v2, Landroidx/recyclerview/widget/LinearLayoutManager;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
+    iget-object v0, p0, Lt65;->o:Landroid/graphics/Matrix;
 
-    move-result v5
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
-    :cond_b
-    :goto_5
-    if-ltz v5, :cond_e
+    iget-object v0, p0, Lt65;->v0:Landroid/graphics/Rect;
 
-    iget v0, v0, Lu65;->b:I
+    if-eqz v0, :cond_0
 
-    if-gt v5, v0, :cond_e
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;)Z
 
-    invoke-virtual {p0}, Lc75;->getIgnoreRefreshingFlagsForScrollEvent()Z
+    :cond_0
+    iget-object v0, p0, Lt65;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll65;
+
+    invoke-interface {v1, p1}, Ll65;->draw(Landroid/graphics/Canvas;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    return-void
+.end method
+
+.method public getBounds()Landroid/graphics/Rect;
+    .locals 4
+
+    iget-object v0, p0, Lt65;->v0:Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    return-object v0
+.end method
+
+.method public getLayers()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ll65;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lt65;->a:Ljava/util/ArrayList;
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getResultBounds()Landroid/graphics/Rect;
+    .locals 6
+
+    iget-object v0, p0, Lt65;->v0:Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    :goto_0
+    iget-boolean v1, p0, Lt65;->w0:Z
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lt65;->x0:Lr65;
+
+    if-eqz v1, :cond_2
+
+    check-cast v1, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v2, v0, Landroid/graphics/Rect;->right:I
+
+    iget v3, v0, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v2, v3
+
+    iget v4, v0, Landroid/graphics/Rect;->bottom:I
+
+    iget v5, v0, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v4, v5
+
+    if-lt v4, v2, :cond_1
+
+    iget-object v2, v1, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->a:Landroid/view/View;
+
+    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
+
+    move-result v2
+
+    add-int/2addr v2, v5
+
+    iput v2, v0, Landroid/graphics/Rect;->top:I
+
+    iget v2, v0, Landroid/graphics/Rect;->bottom:I
+
+    iget-object v1, v1, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->b:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    sub-int/2addr v2, v1
+
+    iput v2, v0, Landroid/graphics/Rect;->bottom:I
+
+    return-object v0
+
+    :cond_1
+    iget-object v2, v1, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->a:Landroid/view/View;
+
+    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
+
+    move-result v2
+
+    add-int/2addr v2, v3
+
+    iput v2, v0, Landroid/graphics/Rect;->left:I
+
+    iget v2, v0, Landroid/graphics/Rect;->right:I
+
+    iget-object v1, v1, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->b:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    sub-int/2addr v2, v1
+
+    iput v2, v0, Landroid/graphics/Rect;->right:I
+
+    :cond_2
+    return-object v0
+.end method
+
+.method public final onScale(Landroid/view/ScaleGestureDetector;)Z
+    .locals 4
+
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
     move-result v0
 
-    if-nez v0, :cond_c
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusX()F
 
-    iget-boolean v0, p0, Lc75;->d2:Z
+    move-result v1
 
-    if-nez v0, :cond_e
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusY()F
 
-    :cond_c
-    invoke-interface {v1}, Lw65;->g()Z
+    move-result p1
+
+    iget-object v2, p0, Lt65;->o:Landroid/graphics/Matrix;
+
+    invoke-virtual {v2, v0, v0, v1, p1}, Landroid/graphics/Matrix;->postScale(FFFF)Z
+
+    iget-object v0, p0, Lt65;->r0:Ljava/lang/Float;
+
+    if-eqz v0, :cond_0
+
+    iget-object v3, p0, Lt65;->s0:Ljava/lang/Float;
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    sub-float v0, v1, v0
 
-    iget-object v0, p0, Lc75;->f2:Ljava/lang/Integer;
+    iget-object v3, p0, Lt65;->s0:Ljava/lang/Float;
 
-    if-eqz v0, :cond_d
+    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {p0, v6}, Lc75;->setRefreshingPrev(Z)V
+    move-result v3
 
-    :cond_d
-    invoke-interface {v1}, Lw65;->i()V
+    sub-float v3, p1, v3
 
-    :cond_e
+    invoke-virtual {v2, v0, v3}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    :cond_0
+    iget-object v0, p0, Lt65;->q0:Landroid/graphics/Matrix;
+
+    invoke-virtual {v2, v0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lt65;->r0:Ljava/lang/Float;
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lt65;->s0:Ljava/lang/Float;
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final onScaleBegin(Landroid/view/ScaleGestureDetector;)Z
+    .locals 2
+
+    iget-object p1, p0, Lt65;->c:Ls65;
+
+    if-eqz p1, :cond_1
+
+    check-cast p1, Lp65;
+
+    iget-object v0, p1, Lp65;->c:Lir4;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lir4;->p()Lx9;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lp65;->a:Lt65;
+
+    invoke-virtual {v0, v1}, Lx9;->a(Ln65;)V
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Lp65;->c:Lir4;
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final onScaleEnd(Landroid/view/ScaleGestureDetector;)V
+    .locals 6
+
+    iget-object v3, p0, Lt65;->t0:[F
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lt65;->r0:Ljava/lang/Float;
+
+    iput-object p1, p0, Lt65;->s0:Ljava/lang/Float;
+
+    invoke-direct {p0}, Lt65;->getCorrectionMatrix()Landroid/graphics/Matrix;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lt65;->o:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v3}, Landroid/graphics/Matrix;->getValues([F)V
+
+    const/16 v0, 0x9
+
+    new-array v4, v0, [F
+
+    invoke-virtual {p1, v4}, Landroid/graphics/Matrix;->getValues([F)V
+
+    const/4 p1, 0x2
+
+    new-array p1, p1, [F
+
+    fill-array-data p1, :array_0
+
+    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    new-array v2, v0, [F
+
+    new-instance v0, Lq65;
+
+    const/4 v5, 0x0
+
+    move-object v1, p0
+
+    invoke-direct/range {v0 .. v5}, Lq65;-><init>(Landroid/view/View;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance v0, Loh;
+
+    const/4 v2, 0x3
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, p0, v4, v3, v2}, Loh;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {p1, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    const-wide/16 v2, 0x96
+
+    invoke-virtual {p1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
+
+    return-void
+
+    :cond_0
+    move-object v1, p0
+
+    return-void
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 6
+
+    iget-boolean v0, p0, Lt65;->w0:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lt65;->x0:Lr65;
+
+    if-eqz v0, :cond_3
+
+    check-cast v0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v2
+
+    float-to-int v2, v2
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v3
+
+    float-to-int v3, v3
+
+    iget-object v4, v0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->a:Landroid/view/View;
+
+    iget-object v5, v0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->q0:Landroid/graphics/Rect;
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
+
+    iget-object v4, v0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->b:Landroid/view/View;
+
+    iget-object v0, v0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->r0:Landroid/graphics/Rect;
+
+    invoke-virtual {v4, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v5, v2, v3}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-virtual {v0, v2, v3}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    const/4 v2, 0x3
+
+    if-ne v0, v2, :cond_2
+
+    :cond_1
+    iget-object v0, p0, Lt65;->c:Ls65;
+
+    if-eqz v0, :cond_2
+
+    check-cast v0, Lp65;
+
+    invoke-virtual {v0, p1}, Lp65;->c(Landroid/view/MotionEvent;)V
+
+    :cond_2
+    return v1
+
+    :cond_3
+    :goto_0
+    iget-object v0, p0, Lt65;->b:Landroid/view/ScaleGestureDetector;
+
+    invoke-virtual {v0, p1}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    iget-object v0, p0, Lt65;->c:Ls65;
+
+    if-eqz v0, :cond_4
+
+    if-eqz p1, :cond_4
+
+    iget-object v0, p0, Lt65;->b:Landroid/view/ScaleGestureDetector;
+
+    invoke-virtual {v0}, Landroid/view/ScaleGestureDetector;->isInProgress()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-object v0, p0, Lt65;->q0:Landroid/graphics/Matrix;
+
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->transform(Landroid/graphics/Matrix;)V
+
+    iget-object v0, p0, Lt65;->c:Ls65;
+
+    check-cast v0, Lp65;
+
+    invoke-virtual {v0, p1}, Lp65;->c(Landroid/view/MotionEvent;)V
+
+    :cond_4
+    return v1
+.end method
+
+.method public setBoundingListener(Lr65;)V
+    .locals 0
+
+    iput-object p1, p0, Lt65;->x0:Lr65;
+
+    return-void
+.end method
+
+.method public setBounds(Landroid/graphics/Rect;)V
+    .locals 0
+
+    iput-object p1, p0, Lt65;->v0:Landroid/graphics/Rect;
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+.method public setDrawStickerEnabled(Z)V
+    .locals 1
+
+    iget-boolean v0, p0, Lt65;->w0:Z
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput-boolean p1, p0, Lt65;->w0:Z
+
+    iget-object v0, p0, Lt65;->x0:Lr65;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1}, Lr65;->setDrawStickerEnabled(Z)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public setListener(Ls65;)V
+    .locals 0
+
+    iput-object p1, p0, Lt65;->c:Ls65;
+
+    return-void
+.end method
+
+.method public setMaxZoom(F)V
+    .locals 0
+
+    iput p1, p0, Lt65;->u0:F
+
     return-void
 .end method

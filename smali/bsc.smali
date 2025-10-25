@@ -1,50 +1,44 @@
-.class public final Lbsc;
+.class public abstract Lbsc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
+# static fields
+.field public static oneme_appearance_settings_background_title:I = 0x7f1307ac
 
-.field public b:J
+.field public static oneme_appearance_settings_dark_mode:I = 0x7f1307ad
 
+.field public static oneme_appearance_settings_font_size_reset:I = 0x7f1307ae
 
-# direct methods
-.method public constructor <init>()V
-    .locals 2
+.field public static oneme_appearance_settings_font_size_title:I = 0x7f1307af
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_appearance_settings_light_mode:I = 0x7f1307b0
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+.field public static oneme_appearance_settings_message_incoming:I = 0x7f1307b1
 
-    iput-wide v0, p0, Lbsc;->b:J
+.field public static oneme_appearance_settings_message_incoming_first:I = 0x7f1307b2
 
-    new-instance v0, Ljava/util/ArrayList;
+.field public static oneme_appearance_settings_message_incoming_second:I = 0x7f1307b3
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+.field public static oneme_appearance_settings_message_outgoing:I = 0x7f1307b4
 
-    iput-object v0, p0, Lbsc;->a:Ljava/util/ArrayList;
+.field public static oneme_appearance_settings_message_outgoing_new:I = 0x7f1307b5
 
-    return-void
-.end method
+.field public static oneme_appearance_settings_mode_title:I = 0x7f1307b6
 
+.field public static oneme_appearance_settings_system_mode:I = 0x7f1307b7
 
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 2
+.field public static oneme_appearance_settings_toolbar_title:I = 0x7f1307b8
 
-    check-cast p1, Lbsc;
+.field public static oneme_appearance_theme_lebedev_name:I = 0x7f1307b9
 
-    iget-wide v0, p0, Lbsc;->b:J
+.field public static oneme_appearance_theme_moscow_name:I = 0x7f1307ba
 
-    iget-wide p0, p1, Lbsc;->b:J
+.field public static oneme_appearance_theme_nature_name:I = 0x7f1307bb
 
-    invoke-static {v0, v1, p0, p1}, Ljava/lang/Long;->compare(JJ)I
+.field public static oneme_appearance_theme_neon_name:I = 0x7f1307bc
 
-    move-result p0
+.field public static oneme_appearance_theme_simple_name:I = 0x7f1307bd
 
-    return p0
-.end method
+.field public static oneme_appearance_theme_space_name:I = 0x7f1307be
+
+.field public static oneme_appearance_theme_unknown_name:I = 0x7f1307bf

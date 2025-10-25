@@ -4,156 +4,391 @@
 
 
 # instance fields
-.field public a:Lyvg;
+.field public final a:Lq98;
 
-.field public b:Lq2e;
+.field public volatile b:J
 
-.field public final c:Ljava/util/ArrayList;
+.field public volatile c:J
 
-.field public final d:Ljava/util/ArrayList;
+.field public final d:Lc2e;
 
-.field public e:Lua6;
+.field public e:J
 
-.field public f:Z
-
-.field public g:Lax9;
-
-.field public h:Z
-
-.field public i:Z
-
-.field public j:Lw9d;
-
-.field public k:Lei6;
-
-.field public l:Ljava/net/ProxySelector;
-
-.field public m:Lax9;
-
-.field public n:Ljavax/net/SocketFactory;
-
-.field public o:Ljavax/net/ssl/SSLSocketFactory;
-
-.field public p:Ljavax/net/ssl/X509TrustManager;
-
-.field public q:Ljava/util/List;
-
-.field public r:Ljava/util/List;
-
-.field public s:Ls8a;
-
-.field public t:Ls32;
-
-.field public u:Lxfc;
-
-.field public v:I
-
-.field public w:I
-
-.field public x:I
-
-.field public y:J
-
-.field public z:Lncb;
+.field public f:Ljava/time/Instant;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lq98;Lc2e;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lyvg;
+    iput-object p1, p0, Lt8a;->a:Lq98;
 
-    const/4 v1, 0x7
+    iput-object p2, p0, Lt8a;->d:Lc2e;
 
-    invoke-direct {v0, v1}, Lyvg;-><init>(I)V
+    const-wide/16 p1, 0x2ee0
 
-    iput-object v0, p0, Lt8a;->a:Lyvg;
+    iput-wide p1, p0, Lt8a;->c:J
 
-    new-instance v0, Lq2e;
+    const-wide p1, 0x7fffffffffffffffL
 
-    const/16 v1, 0xa
+    iput-wide p1, p0, Lt8a;->e:J
 
-    invoke-direct {v0, v1}, Lq2e;-><init>(I)V
+    sget-object p1, Ljava/time/Instant;->MIN:Ljava/time/Instant;
 
-    iput-object v0, p0, Lt8a;->b:Lq2e;
+    iput-object p1, p0, Lt8a;->f:Ljava/time/Instant;
 
-    new-instance v0, Ljava/util/ArrayList;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lt8a;->c:Ljava/util/ArrayList;
+# virtual methods
+.method public final a()V
+    .locals 4
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-wide v0, p0, Lt8a;->b:J
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const-wide/16 v2, 0x0
 
-    iput-object v0, p0, Lt8a;->d:Ljava/util/ArrayList;
+    cmp-long v0, v0, v2
 
-    new-instance v0, Lua6;
+    if-gez v0, :cond_0
 
-    const/16 v1, 0x13
+    iget-object v0, p0, Lt8a;->a:Lq98;
 
-    invoke-direct {v0, v1}, Lua6;-><init>(I)V
+    const-string v1, "Inconsistency error in congestion controller; attempt to set bytes in-flight below 0"
 
-    iput-object v0, p0, Lt8a;->e:Lua6;
+    invoke-interface {v0, v1}, Lq98;->error(Ljava/lang/String;)V
 
-    const/4 v0, 0x1
+    iput-wide v2, p0, Lt8a;->b:J
 
-    iput-boolean v0, p0, Lt8a;->f:Z
+    iget-object v0, p0, Lt8a;->d:Lc2e;
 
-    sget-object v1, Lax9;->c:Lax9;
+    invoke-virtual {v0}, Lc2e;->k()V
 
-    iput-object v1, p0, Lt8a;->g:Lax9;
+    :cond_0
+    return-void
+.end method
 
-    iput-boolean v0, p0, Lt8a;->h:Z
+.method public final declared-synchronized b(Ljava/util/List;)V
+    .locals 7
 
-    iput-boolean v0, p0, Lt8a;->i:Z
+    const-string v0, "Bytes in flight decreased with "
 
-    sget-object v0, Lw9d;->o:Lw9d;
+    monitor-enter p0
 
-    iput-object v0, p0, Lt8a;->j:Lw9d;
+    :try_start_0
+    invoke-interface {p1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
-    sget-object v0, Lei6;->r0:Lei6;
+    move-result-object v1
 
-    iput-object v0, p0, Lt8a;->k:Lei6;
+    new-instance v2, Lm0;
 
-    iput-object v1, p0, Lt8a;->m:Lax9;
+    const/4 v3, 0x0
 
-    invoke-static {}, Ljavax/net/SocketFactory;->getDefault()Ljavax/net/SocketFactory;
+    invoke-direct {v2, v3}, Lm0;-><init>(I)V
+
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    new-instance v2, Ln0;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3}, Ln0;-><init>(I)V
+
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
+
+    move-result v1
+
+    int-to-long v1, v1
+
+    iget-wide v3, p0, Lt8a;->b:J
+
+    sub-long/2addr v3, v1
+
+    iput-wide v3, p0, Lt8a;->b:J
+
+    iget-object v3, p0, Lt8a;->d:Lc2e;
+
+    invoke-virtual {v3}, Lc2e;->k()V
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v3, v1, v3
+
+    if-lez v3, :cond_0
+
+    invoke-virtual {p0}, Lt8a;->a()V
+
+    iget-object v3, p0, Lt8a;->a:Lq98;
+
+    iget-wide v4, p0, Lt8a;->b:J
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, " to "
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, " ("
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " packets RESET)"
+
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-interface {v3, p1}, Lq98;->debug(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized c(Ljava/util/List;)V
+    .locals 6
+
+    const-string v0, "Bytes in flight decreased to "
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-interface {p1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    new-instance v2, Lm0;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v3}, Lm0;-><init>(I)V
+
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    new-instance v2, Ln0;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v3}, Ln0;-><init>(I)V
+
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    iget-wide v2, p0, Lt8a;->b:J
+
+    int-to-long v4, v1
+
+    sub-long/2addr v2, v4
+
+    iput-wide v2, p0, Lt8a;->b:J
+
+    iget-object v1, p0, Lt8a;->d:Lc2e;
+
+    invoke-virtual {v1}, Lc2e;->k()V
+
+    invoke-virtual {p0}, Lt8a;->a()V
+
+    iget-object v1, p0, Lt8a;->a:Lq98;
+
+    iget-wide v2, p0, Lt8a;->b:J
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, " ("
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " packets acked)"
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-interface {v1, p1}, Lq98;->debug(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized d(Lfic;)V
+    .locals 6
+
+    const-string v0, "Bytes in flight exceeds congestion window: "
+
+    const-string v1, "Bytes in flight increased to "
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p1}, Lfic;->q()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iget-wide v2, p0, Lt8a;->b:J
+
+    invoke-virtual {p1}, Lfic;->o()I
+
+    move-result p1
+
+    int-to-long v4, p1
+
+    add-long/2addr v2, v4
+
+    iput-wide v2, p0, Lt8a;->b:J
+
+    iget-object p1, p0, Lt8a;->a:Lq98;
+
+    iget-wide v2, p0, Lt8a;->b:J
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Lq98;->debug(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lt8a;->b:J
+
+    iget-wide v3, p0, Lt8a;->c:J
+
+    cmp-long p1, v1, v3
+
+    if-lez p1, :cond_0
+
+    iget-object p1, p0, Lt8a;->a:Lq98;
+
+    iget-wide v1, p0, Lt8a;->b:J
+
+    iget-wide v3, p0, Lt8a;->c:J
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, " > "
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lt8a;->n:Ljavax/net/SocketFactory;
+    invoke-interface {p1, v0}, Lq98;->cc(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget-object v0, Lu8a;->L0:Ljava/util/List;
+    goto :goto_0
 
-    iput-object v0, p0, Lt8a;->q:Ljava/util/List;
+    :catchall_0
+    move-exception p1
 
-    sget-object v0, Lu8a;->K0:Ljava/util/List;
+    goto :goto_1
 
-    iput-object v0, p0, Lt8a;->r:Ljava/util/List;
-
-    sget-object v0, Ls8a;->a:Ls8a;
-
-    iput-object v0, p0, Lt8a;->s:Ls8a;
-
-    sget-object v0, Ls32;->c:Ls32;
-
-    iput-object v0, p0, Lt8a;->t:Ls32;
-
-    const/16 v0, 0x2710
-
-    iput v0, p0, Lt8a;->v:I
-
-    iput v0, p0, Lt8a;->w:I
-
-    iput v0, p0, Lt8a;->x:I
-
-    const-wide/16 v0, 0x400
-
-    iput-wide v0, p0, Lt8a;->y:J
+    :cond_0
+    :goto_0
+    monitor-exit p0
 
     return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

@@ -1,52 +1,77 @@
 .class public final Lsvg;
-.super Landroid/content/ContextWrapper;
+.super Luj0;
 .source "SourceFile"
-
-# interfaces
-.implements Lkh3;
 
 
 # instance fields
-.field public final synthetic a:Luvg;
+.field public final X:Ljava/lang/String;
+
+.field public final b:Ljava/util/Map;
+
+.field public final c:J
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Luvg;Landroid/content/Context;)V
+.method public constructor <init>(JJJLjava/lang/String;Ljava/util/Map;)V
     .locals 0
 
-    iput-object p1, p0, Lsvg;->a:Luvg;
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
 
-    invoke-direct {p0, p2}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+    iput-object p8, p0, Lsvg;->b:Ljava/util/Map;
+
+    iput-wide p3, p0, Lsvg;->c:J
+
+    iput-wide p5, p0, Lsvg;->o:J
+
+    iput-object p7, p0, Lsvg;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lmh3;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object p0, p0, Lsvg;->a:Luvg;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Luvg;->a:Landroid/content/Context;
+    const-string v1, "VideoPlayEvent{urls="
 
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
+    iget-object v1, p0, Lsvg;->b:Ljava/util/Map;
 
-    check-cast p0, Lkh3;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0}, Lkh3;->a()Lmh3;
+    const-string v1, ", videoId="
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
-.end method
+    iget-wide v1, p0, Lsvg;->c:J
 
-.method public final isDeviceProtectedStorage()Z
-    .locals 0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x0
+    const-string v1, ", messageId="
 
-    return p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lsvg;->o:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", attachLocalId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsvg;->X:Ljava/lang/String;
+
+    const-string v2, "\'}"
+
+    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

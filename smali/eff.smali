@@ -1,76 +1,156 @@
-.class public abstract Leff;
+.class public final Leff;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lmi7;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+
+
+# static fields
+.field public static final d:[Ljava/lang/Class;
 
 
 # instance fields
-.field public a:[Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public b:I
+.field public b:Ljava/lang/Object;
 
-.field public c:I
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
+
+    const-class v0, Landroid/view/MenuItem;
+
+    filled-new-array {v0}, [Ljava/lang/Class;
+
+    move-result-object v0
+
+    sput-object v0, Leff;->d:[Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Leff;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Ldff;->e:Ldff;
+    return-void
+.end method
 
-    iget-object v0, v0, Ldff;->d:[Ljava/lang/Object;
+.method public constructor <init>(Lb99;Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    .locals 1
 
-    iput-object v0, p0, Leff;->a:[Ljava/lang/Object;
+    const/4 v0, 0x1
+
+    iput v0, p0, Leff;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Leff;->c:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Leff;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II[Ljava/lang/Object;)V
-    .locals 0
+.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 4
 
-    iput-object p3, p0, Leff;->a:[Ljava/lang/Object;
+    iget v0, p0, Leff;->a:I
 
-    iput p1, p0, Leff;->b:I
+    packed-switch v0, :pswitch_data_0
 
-    iput p2, p0, Leff;->c:I
+    iget-object v0, p0, Leff;->b:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v0, Landroid/view/MenuItem$OnMenuItemClickListener;
 
-.method public final hasNext()Z
-    .locals 1
+    iget-object v1, p0, Leff;->c:Ljava/lang/Object;
 
-    iget v0, p0, Leff;->c:I
+    check-cast v1, Lb99;
 
-    iget p0, p0, Leff;->b:I
+    invoke-virtual {v1, p1}, Lmmf;->O(Landroid/view/MenuItem;)Landroid/view/MenuItem;
 
-    if-ge v0, p0, :cond_0
+    move-result-object p1
 
-    const/4 p0, 0x1
+    invoke-interface {v0, p1}, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
 
-    return p0
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Leff;->b:Ljava/lang/Object;
+
+    iget-object v1, p0, Leff;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/reflect/Method;
+
+    :try_start_0
+    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
+
+    move-result-object v2
+
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    if-ne v2, v3, :cond_0
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v1, v0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_0
-    const/4 p0, 0x0
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    return p0
-.end method
+    move-result-object p1
 
-.method public final remove()V
-    .locals 1
+    invoke-virtual {v1, v0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    const/4 p1, 0x1
 
-    const-string v0, "Operation is not supported for read-only collection"
+    :goto_0
+    return p1
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    :goto_1
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    throw p0
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

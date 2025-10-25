@@ -1,27 +1,43 @@
-.class public final Lwza;
-.super Lpxe;
+.class public abstract Lwza;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final o:Lwza;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    new-instance v0, Lwza;
+    sget v0, Lmrc;->profile_chat_members_list_toolbar_subtitle:I
 
-    sget-object v1, Landroid/graphics/Paint$Cap;->BUTT:Landroid/graphics/Paint$Cap;
+    sput v0, Lwza;->a:I
 
-    const/16 v2, 0xa
+    sget v0, Lmrc;->profile_members_list_delete_from_channel_snackbar:I
 
-    const-string v3, "strokeLineCap"
+    sput v0, Lwza;->b:I
 
-    invoke-direct {v0, v3, v2, v1}, Lpxe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    sget v0, Lmrc;->profile_members_list_delete_from_chat_snackbar:I
 
-    sput-object v0, Lwza;->o:Lwza;
+    sput v0, Lwza;->c:I
+
+    sget v0, Lmrc;->profile_members_list_restore_in_channel_snackbar:I
+
+    sput v0, Lwza;->d:I
+
+    sget v0, Lmrc;->profile_members_list_restore_in_chat_snackbar:I
+
+    sput v0, Lwza;->e:I
 
     return-void
 .end method

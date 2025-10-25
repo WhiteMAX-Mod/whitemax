@@ -1,363 +1,205 @@
 .class public final Lp45;
-.super Ljava/lang/Object;
+.super Ln2j;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/List;
-.implements Ljava/io/Serializable;
-.implements Ljava/util/RandomAccess;
-.implements Lmi7;
 
-
-# static fields
-.field public static final a:Lp45;
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lp45;
+    iput p1, p0, Lp45;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lp45;->a:Lp45;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic add(ILjava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final bridge synthetic add(Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 2
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final addAll(ILjava/util/Collection;)Z
-    .locals 0
-
-    .line 1
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    .line 2
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final clear()V
+.method public final b(Ljava/lang/Object;)F
     .locals 1
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    iget v0, p0, Lp45;->a:I
 
-    const-string v0, "Operation is not supported for read-only collection"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Landroid/view/View;
 
-    throw p0
+    invoke-virtual {p1}, Landroid/view/View;->getRotationY()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getRotationX()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getRotation()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_2
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getScaleY()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_3
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_4
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_5
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_6
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_7
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getY()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final bridge contains(Ljava/lang/Object;)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 0
-
-    instance-of p0, p1, Ljava/util/List;
-
-    if-eqz p0, :cond_0
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 2
-
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Empty list doesn\'t contain element at index "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/16 p1, 0x2e
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final bridge indexOf(Ljava/lang/Object;)I
-    .locals 0
-
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 0
-
-    sget-object p0, Lo45;->a:Lo45;
-
-    return-object p0
-.end method
-
-.method public final bridge lastIndexOf(Ljava/lang/Object;)I
-    .locals 0
-
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method public final listIterator()Ljava/util/ListIterator;
-    .locals 0
-
-    .line 1
-    sget-object p0, Lo45;->a:Lo45;
-
-    return-object p0
-.end method
-
-.method public final listIterator(I)Ljava/util/ListIterator;
+.method public final c(Ljava/lang/Object;F)V
     .locals 1
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lp45;->a:I
 
-    .line 2
-    sget-object p0, Lo45;->a:Lo45;
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
+    check-cast p1, Landroid/view/View;
 
-    .line 3
-    :cond_0
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationY(F)V
 
-    const-string v0, "Index: "
+    return-void
 
-    .line 4
-    invoke-static {p1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationX(F)V
 
-    .line 5
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    return-void
 
-    throw p0
-.end method
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
 
-.method public final bridge synthetic remove(I)Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {p1, p2}, Landroid/view/View;->setRotation(F)V
 
-    .line 1
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    return-void
 
-    const-string p1, "Operation is not supported for read-only collection"
+    :pswitch_2
+    check-cast p1, Landroid/view/View;
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleY(F)V
 
-    throw p0
-.end method
+    return-void
 
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 0
+    :pswitch_3
+    check-cast p1, Landroid/view/View;
 
-    .line 2
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleX(F)V
 
-    const-string p1, "Operation is not supported for read-only collection"
+    return-void
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    :pswitch_4
+    check-cast p1, Landroid/view/View;
 
-    throw p0
-.end method
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
 
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 0
+    return-void
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    :pswitch_5
+    check-cast p1, Landroid/view/View;
 
-    const-string p1, "Operation is not supported for read-only collection"
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    return-void
 
-    throw p0
-.end method
+    :pswitch_6
+    check-cast p1, Landroid/view/View;
 
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 0
+    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    return-void
 
-    const-string p1, "Operation is not supported for read-only collection"
+    :pswitch_7
+    check-cast p1, Landroid/view/View;
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Landroid/view/View;->setY(F)V
 
-    throw p0
-.end method
+    return-void
 
-.method public final bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    nop
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final bridge size()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final subList(II)Ljava/util/List;
-    .locals 2
-
-    if-nez p1, :cond_0
-
-    if-nez p2, :cond_0
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v0, "fromIndex: "
-
-    const-string v1, ", toIndex: "
-
-    invoke-static {v0, p1, p2, v1}, Lyv7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    invoke-static {p0}, Lqe5;->W(Ljava/util/Collection;)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 0
-
-    .line 2
-    invoke-static {p0, p1}, Lqe5;->X(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "[]"
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

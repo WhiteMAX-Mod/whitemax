@@ -1,309 +1,259 @@
 .class public final Lqs5;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
+
+# static fields
+.field public static final synthetic f:[Ltr7;
+
+.field public static final g:Ljava/lang/String;
 
 
 # instance fields
-.field public X:Loc3;
+.field public final a:Landroid/content/Context;
 
-.field public Y:Lbjc;
+.field public final b:Lpw4;
 
-.field public Z:I
+.field public final c:Lpw4;
 
-.field public r0:J
+.field public final d:Lpw4;
 
-.field public s0:I
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lis5;
-
-.field public final synthetic v0:J
+.field public final e:Lwif;
 
 
 # direct methods
-.method public constructor <init>(JLis5;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 8
+
+    new-instance v0, Leec;
+
+    const-class v1, Lqs5;
+
+    const-string v2, "fileSystem"
+
+    const-string v3, "getFileSystem()Lru/ok/tamtam/FileSystem;"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v2, Lz7d;->a:La8d;
+
+    const-string v3, "exceptionHandler"
+
+    const-string v5, "getExceptionHandler()Lru/ok/tamtam/ExceptionHandler;"
+
+    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
+
+    move-result-object v2
+
+    new-instance v3, Leec;
+
+    const-string v5, "dispatcher"
+
+    const-string v6, "getDispatcher()Lru/ok/tamtam/coroutines/IoDispatcher;"
+
+    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v5, Leec;
+
+    const-string v6, "serverPrefs"
+
+    const-string v7, "getServerPrefs()Lru/ok/tamtam/prefs/ServerPrefs;"
+
+    invoke-direct {v5, v1, v6, v7, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/4 v6, 0x4
+
+    new-array v6, v6, [Ltr7;
+
+    aput-object v0, v6, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v6, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v6, v0
+
+    const/4 v0, 0x3
+
+    aput-object v5, v6, v0
+
+    sput-object v6, Lqs5;->f:[Ltr7;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lqs5;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lpw4;Lpw4;Lpw4;)V
     .locals 0
 
-    iput-object p3, p0, Lqs5;->u0:Lis5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lqs5;->v0:J
+    iput-object p1, p0, Lqs5;->a:Landroid/content/Context;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lqs5;->b:Lpw4;
 
-    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lqs5;->c:Lpw4;
+
+    iput-object p4, p0, Lqs5;->d:Lpw4;
+
+    new-instance p1, Lbn5;
+
+    const/4 p2, 0x4
+
+    invoke-direct {p1, p2}, Lbn5;-><init>(I)V
+
+    new-instance p2, Lwif;
+
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
+
+    iput-object p2, p0, Lqs5;->e:Lwif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/io/File;Z)V
+    .locals 5
 
-    check-cast p1, Lijb;
+    if-nez p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object p1, Lqs5;->g:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lqs5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string p2, "file is null!"
 
-    move-result-object p0
+    invoke-static {p1, p2}, Ltei;->r(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast p0, Lqs5;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lqs5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Lqs5;
-
-    iget-object v1, p0, Lqs5;->u0:Lis5;
-
-    iget-wide v2, p0, Lqs5;->v0:J
-
-    invoke-direct {v0, v2, v3, v1, p2}, Lqs5;-><init>(JLis5;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lqs5;->t0:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 21
-
-    move-object/from16 v0, p0
-
-    iget v1, v0, Lqs5;->s0:I
-
-    const/4 v2, 0x1
-
-    const/4 v7, 0x0
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    iget-wide v3, v0, Lqs5;->r0:J
-
-    iget v1, v0, Lqs5;->Z:I
-
-    iget-object v5, v0, Lqs5;->Y:Lbjc;
-
-    iget-object v6, v0, Lqs5;->X:Loc3;
-
-    iget-object v8, v0, Lqs5;->t0:Ljava/lang/Object;
-
-    check-cast v8, Lijb;
-
-    invoke-static/range {p1 .. p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    move-wide v9, v3
-
-    move-object v4, v5
-
-    move-object/from16 v3, p1
-
-    move v5, v1
-
-    move-object v1, v6
-
-    move-object v6, v8
-
-    goto/16 :goto_1
+    return-void
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lqs5;->e:Lwif;
 
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw v0
+    check-cast v0, Lq54;
 
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lqe5;->V(Ljava/lang/Object;)V
+    sget-object v1, Lqs5;->f:[Ltr7;
 
-    iget-object v1, v0, Lqs5;->t0:Ljava/lang/Object;
+    const/4 v2, 0x2
 
-    check-cast v1, Lijb;
+    aget-object v1, v1, v2
 
-    invoke-static {}, Lmu0;->a()Lre7;
+    iget-object v1, p0, Lqs5;->c:Lpw4;
 
-    move-result-object v3
+    invoke-virtual {v1}, Lpw4;->get()Ljava/lang/Object;
 
-    new-instance v4, Lps5;
+    move-result-object v1
 
-    iget-object v5, v0, Lqs5;->u0:Lis5;
+    check-cast v1, Lfm7;
 
-    invoke-direct {v4, v5, v3, v7}, Lps5;-><init>(Lis5;Lre7;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, v1, Lfm7;->a:Lk54;
 
-    const/4 v5, 0x4
+    sget-object v3, Lu9a;->a:Lu9a;
 
-    const v6, 0x7fffffff
+    invoke-virtual {v1, v3}, Lp0;->plus(Li54;)Li54;
 
-    invoke-static {v6, v2, v5}, Lvkf;->a(III)Lcu0;
+    move-result-object v1
 
-    move-result-object v5
+    new-instance v3, Lps5;
 
-    sget-object v8, Lj45;->a:Lj45;
+    const/4 v4, 0x0
 
-    invoke-static {v1, v8}, Les;->q(Ly04;Lq04;)Lq04;
+    invoke-direct {v3, p1, p0, p2, v4}, Lps5;-><init>(Ljava/io/File;Lqs5;ZLkotlin/coroutines/Continuation;)V
 
-    move-result-object v8
+    invoke-static {v0, v1, v4, v3, v2}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
-    new-instance v9, Lfjb;
+    return-void
+.end method
 
-    invoke-direct {v9, v8, v5}, Lfjb;-><init>(Lq04;Lcu0;)V
+.method public final b(Ljava/io/File;)V
+    .locals 9
 
-    sget-object v5, Lb14;->a:Lb14;
+    :try_start_0
+    iget-object v0, p0, Lqs5;->d:Lpw4;
 
-    invoke-virtual {v9, v5, v9, v4}, Le0;->start(Lb14;Ljava/lang/Object;Lpc6;)V
+    sget-object v1, Lqs5;->f:[Ltr7;
 
-    iget-wide v4, v0, Lqs5;->v0:J
+    const/4 v2, 0x3
 
-    move-wide/from16 v19, v4
+    aget-object v1, v1, v2
 
-    move-object v4, v9
+    invoke-virtual {v0}, Lpw4;->get()Ljava/lang/Object;
 
-    move-wide/from16 v9, v19
+    move-result-object v0
 
-    move v5, v6
+    check-cast v0, Lj4e;
 
-    move-object v6, v1
+    check-cast v0, Lwtd;
 
-    move-object v1, v3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_2
-    new-instance v12, Lvfd;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-downloaded-size-for-notify-kb:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    iget-object v3, v0, Ljx3;->b:Lq04;
+    const/16 v2, 0x400
 
-    invoke-direct {v12, v3}, Lvfd;-><init>(Lq04;)V
+    int-to-long v2, v2
 
-    move-object v3, v1
+    invoke-virtual {v0, v1, v2, v3}, Lwtd;->m(Ljava/lang/Enum;J)J
 
-    check-cast v3, Lsf7;
+    move-result-wide v0
 
-    invoke-virtual {v3}, Lsf7;->getOnJoin()Lqfd;
+    long-to-int v0, v0
 
-    move-result-object v11
+    int-to-long v0, v0
 
-    new-instance v17, Lns5;
+    invoke-virtual {p1}, Ljava/io/File;->length()J
 
-    const/4 v8, 0x0
+    move-result-wide v4
 
-    move-object/from16 v3, v17
+    const-wide/16 v6, 0x0
 
-    invoke-direct/range {v3 .. v8}, Lns5;-><init>(Lbjc;ILijb;Lkotlin/coroutines/Continuation;I)V
+    cmp-long v8, v4, v6
 
-    move-object v3, v11
+    if-gez v8, :cond_0
 
-    new-instance v11, Ltfd;
+    move-wide v4, v6
 
-    check-cast v3, Lpv7;
+    :cond_0
+    div-long/2addr v4, v2
 
-    iget-object v8, v3, Lpv7;->b:Ljava/lang/Object;
+    cmp-long v0, v0, v4
 
-    move-object v13, v8
+    if-gez v0, :cond_1
 
-    check-cast v13, Lsf7;
-
-    iget-object v8, v3, Lpv7;->c:Ljava/lang/Object;
-
-    move-object v14, v8
-
-    check-cast v14, Lrc6;
-
-    iget-object v3, v3, Lpv7;->o:Ljava/lang/Object;
-
-    move-object v15, v3
-
-    check-cast v15, Lxfd;
-
-    sget-object v16, Lyfd;->e:Lkotlinx/coroutines/internal/Symbol;
-
-    const/16 v18, 0x0
-
-    invoke-direct/range {v11 .. v18}, Ltfd;-><init>(Lvfd;Ljava/lang/Object;Lrc6;Lrc6;Ljava/lang/Object;Lure;Lrc6;)V
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v12, v11, v3}, Lvfd;->f(Ltfd;Z)V
-
-    new-instance v3, Lns5;
-
-    const/4 v8, 0x1
-
-    invoke-direct/range {v3 .. v8}, Lns5;-><init>(Lbjc;ILijb;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v9, v10}, Ln2e;->B(J)J
-
-    move-result-wide v13
-
-    invoke-static {v12, v13, v14, v3}, Lrde;->C(Lvfd;JLbc6;)V
-
-    iput-object v6, v0, Lqs5;->t0:Ljava/lang/Object;
-
-    iput-object v1, v0, Lqs5;->X:Loc3;
-
-    iput-object v4, v0, Lqs5;->Y:Lbjc;
-
-    iput v5, v0, Lqs5;->Z:I
-
-    iput-wide v9, v0, Lqs5;->r0:J
-
-    iput v2, v0, Lqs5;->s0:I
-
-    sget-object v3, Lvfd;->Y:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v3, v12}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    instance-of v3, v3, Ltfd;
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v12, v0}, Lvfd;->c(Ljx3;)Ljava/lang/Object;
-
-    move-result-object v3
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_3
-    invoke-virtual {v12, v0}, Lvfd;->d(Ljx3;)Ljava/lang/Object;
-
-    move-result-object v3
+    :cond_1
+    const/4 v0, 0x0
 
     :goto_0
-    sget-object v8, Lz04;->a:Lz04;
+    invoke-virtual {p0, p1, v0}, Lqs5;->a(Ljava/io/File;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-ne v3, v8, :cond_4
+    return-void
 
-    return-object v8
+    :catchall_0
+    move-exception p1
 
-    :cond_4
-    :goto_1
-    check-cast v3, Ljava/lang/Boolean;
+    sget-object v0, Lqs5;->g:Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+    const-string v1, "notifyWithForegroundCheckAndSize fail!"
 
-    move-result v3
+    invoke-static {v0, v1, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    if-nez v3, :cond_2
-
-    sget-object v0, Lylf;->a:Lylf;
-
-    return-object v0
+    return-void
 .end method

@@ -1,113 +1,70 @@
-.class public final Ls81;
-.super Lure;
+.class public final synthetic Ls81;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lji6;
 
 
 # instance fields
-.field public synthetic X:Z
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+.field public final synthetic b:Lu81;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lu81;I)V
     .locals 0
 
-    iput-object p1, p0, Ls81;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    iput p2, p0, Ls81;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ls81;->b:Lu81;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget v0, p0, Ls81;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Ls81;->b:Lu81;
 
-    invoke-virtual {p0, p1, p2}, Ls81;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ls81;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Ls81;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Ls81;
-
-    iget-object p0, p0, Ls81;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-    invoke-direct {v0, p0, p2}, Ls81;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    iput-boolean p0, v0, Ls81;->X:Z
+    iget-object v0, v0, Lu81;->L0:Landroidx/recyclerview/widget/b;
 
     return-object v0
-.end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Ls81;->b:Lu81;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget-object v0, v0, Lu81;->N0:Llpg;
 
-    iget-boolean p1, p0, Ls81;->X:Z
+    return-object v0
 
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lr52;
+    :pswitch_1
+    new-instance v0, Lnu6;
 
-    iget-object p0, p0, Ls81;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    iget-object v1, p0, Ls81;->b:Lu81;
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->A0()Le91;
+    iget-object v2, v1, Lu81;->H0:Landroidx/viewpager2/widget/ViewPager2;
 
-    move-result-object p0
+    iget-object v1, v1, Lu81;->I0:Lru6;
 
-    iget-object p0, p0, Le91;->u0:Lyce;
+    invoke-direct {v0, v2, v1}, Lnu6;-><init>(Landroidx/viewpager2/widget/ViewPager2;Lru6;)V
 
-    :cond_0
-    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
+    return-object v0
 
-    move-result-object v0
+    nop
 
-    move-object v1, v0
-
-    check-cast v1, Ljava/lang/Boolean;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Lyce;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

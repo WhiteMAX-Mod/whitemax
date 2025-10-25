@@ -1,57 +1,110 @@
 .class public final Lkd0;
-.super Ljava/lang/Object;
+.super Laj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/text/TextPaint;
+.field public final synthetic a:Llia;
 
-.field public final b:Ly88;
+.field public final synthetic b:Lld0;
+
+.field public final synthetic c:Landroid/content/Context;
+
+.field public final synthetic d:Lr0;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Llia;Lld0;Landroid/content/Context;Lr0;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/text/TextPaint;
+    iput-object p1, p0, Lkd0;->a:Llia;
 
-    const/4 v1, 0x1
+    iput-object p2, p0, Lkd0;->b:Lld0;
 
-    invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
+    iput-object p3, p0, Lkd0;->c:Landroid/content/Context;
 
-    iput-object v0, p0, Lkd0;->a:Landroid/text/TextPaint;
+    iput-object p4, p0, Lkd0;->d:Lr0;
 
-    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    const-string v1, "sans-serif-medium"
+# virtual methods
+.method public final e(Lr0;)V
+    .locals 2
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lkd0;->b:Lld0;
 
-    invoke-static {v1, v2}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
+    iget-object v1, p0, Lkd0;->c:Landroid/content/Context;
+
+    invoke-virtual {v0, v1}, Lld0;->c(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lkd0;->a:Llia;
+
+    invoke-virtual {v1, v0}, Llia;->d(Ljava/lang/Object;)V
+
+    invoke-virtual {v1}, Llia;->b()V
+
+    invoke-virtual {p1}, Lr0;->a()Z
+
+    return-void
+.end method
+
+.method public final g(Landroid/graphics/Bitmap;)V
+    .locals 4
+
+    iget-object v0, p0, Lkd0;->d:Lr0;
+
+    iget-object v1, p0, Lkd0;->c:Landroid/content/Context;
+
+    iget-object v2, p0, Lkd0;->a:Llia;
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lkd0;->b:Lld0;
+
+    invoke-virtual {p1, v1}, Lld0;->c(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Llia;->d(Ljava/lang/Object;)V
+
+    invoke-virtual {v2}, Llia;->b()V
+
+    invoke-virtual {v0}, Lr0;->a()Z
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    invoke-static {p1}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
+    new-instance v3, Lgid;
 
-    const/4 v1, -0x1
+    invoke-direct {v3, v1, p1}, Lgid;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+    const/4 p1, 0x1
 
-    new-instance v0, Ly88;
+    iget-object v1, v3, Lgid;->d:Landroid/graphics/Paint;
 
-    const/16 v1, 0x64
+    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    invoke-direct {v0, v1, v2}, Ly88;-><init>(II)V
+    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    iput-object v0, p0, Lkd0;->b:Ly88;
+    invoke-virtual {v2, v3}, Llia;->d(Ljava/lang/Object;)V
+
+    invoke-virtual {v2}, Llia;->b()V
+
+    invoke-virtual {v0}, Lr0;->a()Z
 
     return-void
 .end method

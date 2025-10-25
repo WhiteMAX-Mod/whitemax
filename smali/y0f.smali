@@ -1,90 +1,48 @@
-.class public final Ly0f;
+.class public abstract Ly0f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpk;
-
 
 # static fields
-.field public static final b:Ly0f;
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final b:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ly0f;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    const/4 v1, 0x0
+    const-string v1, "NONE"
 
-    invoke-direct {v0, v1}, Ly0f;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Ly0f;->b:Ly0f;
+    sput-object v0, Ly0f;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    return-void
-.end method
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-.method public synthetic constructor <init>(Ljava/lang/String;)V
-    .locals 0
+    const-string v1, "PENDING"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Ly0f;->a:Ljava/lang/String;
+    sput-object v0, Ly0f;->b:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static final a(Ljava/lang/Object;)Lx0f;
     .locals 1
 
-    if-ne p1, p0, :cond_0
+    new-instance v0, Lx0f;
 
-    const/4 p0, 0x1
+    if-nez p0, :cond_0
 
-    return p0
+    sget-object p0, Lgha;->a:Lkotlinx/coroutines/internal/Symbol;
 
     :cond_0
-    instance-of v0, p1, Ly0f;
+    invoke-direct {v0, p0}, Lx0f;-><init>(Ljava/lang/Object;)V
 
-    if-nez v0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    check-cast p1, Ly0f;
-
-    iget-object p0, p0, Ly0f;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Ly0f;->a:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lhv8;->l(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Ly0f;->a:Ljava/lang/String;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
+    return-object v0
 .end method

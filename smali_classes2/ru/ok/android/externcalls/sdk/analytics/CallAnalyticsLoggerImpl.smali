@@ -15,14 +15,14 @@
         "Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;",
         "Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;",
         "Lkotlin/Function0;",
-        "Lfec;",
+        "Lfwc;",
         "loggerProvider",
         "<init>",
-        "(Lzb6;)V",
+        "(Lji6;)V",
         "",
         "tag",
         "message",
-        "Lylf;",
+        "Lccg;",
         "d",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "i",
@@ -33,9 +33,9 @@
         "e",
         "v",
         "report",
-        "Lzb6;",
+        "Lji6;",
         "getLogger",
-        "()Lfec;",
+        "()Lfwc;",
         "logger",
         "calls-sdk_release"
     }
@@ -50,145 +50,145 @@
 
 
 # instance fields
-.field private final loggerProvider:Lzb6;
+.field private final loggerProvider:Lji6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lzb6;"
+            "Lji6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lzb6;)V
+.method public constructor <init>(Lji6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lzb6;",
+            "Lji6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->loggerProvider:Lzb6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->loggerProvider:Lji6;
 
     return-void
 .end method
 
-.method private final getLogger()Lfec;
-    .locals 0
+.method private final getLogger()Lfwc;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->loggerProvider:Lzb6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->loggerProvider:Lji6;
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lfec;
+    check-cast v0, Lfwc;
 
-    return-object p0
+    return-object v0
 .end method
 
 
 # virtual methods
 .method public d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfec;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfwc;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0, p1, p2}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .line 1
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfec;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfwc;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0, p1, p2}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfec;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfwc;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0, p1, p2, p3}, Lfec;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public i(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfec;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfwc;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0, p1, p2}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public report(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfec;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfwc;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0, p1, p2, p3}, Lfec;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public v(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfec;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfwc;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0, p1, p2}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public w(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .line 1
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfec;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfwc;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0, p1, p2}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfec;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;->getLogger()Lfwc;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0, p1, p2, p3}, Lfec;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -1,139 +1,113 @@
-.class public abstract Ly;
-.super Ljava/lang/Object;
+.class public final Ly;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ly;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final b:Lw;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Landroid/os/Parcelable;
+.field public final synthetic X:Lb0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lw;
-
-    invoke-direct {v0}, Ly;-><init>()V
-
-    sput-object v0, Ly;->b:Lw;
-
-    new-instance v0, Lx;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lx;-><init>(I)V
-
-    sput-object v0, Ly;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 2
-    iput-object v0, p0, Ly;->a:Landroid/os/Parcelable;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method public constructor <init>(Lb0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ly;->X:Lb0;
 
-    .line 7
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+    const/4 p1, 0x2
 
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    .line 8
-    :cond_0
-    sget-object p1, Ly;->b:Lw;
-
-    :goto_0
-    iput-object p1, p0, Ly;->a:Landroid/os/Parcelable;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcelable;)V
-    .locals 1
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    if-eqz p1, :cond_1
-
-    .line 4
-    sget-object v0, Ly;->b:Lw;
-
-    if-eq p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-object p1, p0, Ly;->a:Landroid/os/Parcelable;
-
-    return-void
-
-    .line 5
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "superState must not be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x0
+    check-cast p1, Lq54;
 
-    return p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ly;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ly;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Ly;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object p0, p0, Ly;->a:Landroid/os/Parcelable;
+    new-instance p1, Ly;
 
-    invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    iget-object v0, p0, Ly;->X:Lb0;
 
-    return-void
+    invoke-direct {p1, v0, p2}, Ly;-><init>(Lb0;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ly;->X:Lb0;
+
+    iget-object v0, p1, Lb0;->c:Ld33;
+
+    iget-object v1, p1, Lb0;->b:Lj4e;
+
+    check-cast v1, Lwtd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->user-debug-report:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-wide/16 v3, 0x0
+
+    invoke-virtual {v1, v2, v3, v4}, Lwtd;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v1
+
+    check-cast v0, Ld43;
+
+    invoke-virtual {v0, v1, v2}, Ld43;->R(J)Lla2;
+
+    move-result-object v0
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lla2;->E()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lb0;->Y:Lxe5;
+
+    new-instance v0, Lv;
+
+    invoke-direct {v0, v1}, Le5a;-><init>(Ljava/lang/Object;)V
+
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    invoke-virtual {p1}, Lb0;->s()V
+
+    return-object v1
 .end method

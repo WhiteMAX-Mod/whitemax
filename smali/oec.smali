@@ -1,225 +1,246 @@
 .class public final Loec;
-.super Landroid/graphics/drawable/LayerDrawable;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/graphics/drawable/Animatable;
+.implements Lcjg;
 
 
 # instance fields
-.field public final a:Lrf;
+.field public final synthetic a:I
+
+.field public b:Z
+
+.field public c:Z
+
+.field public d:Lbr5;
+
+.field public final e:Luha;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.method public synthetic constructor <init>(Luha;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Loec;->a:I
 
-    new-array v0, v0, [Landroid/graphics/drawable/Drawable;
+    const/4 p2, 0x0
 
-    invoke-direct {p0, v0}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+    iput-boolean p2, p0, Loec;->b:Z
 
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
+    iput-boolean p2, p0, Loec;->c:Z
 
-    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
+    iput-object p1, p0, Loec;->e:Luha;
 
-    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v1
-
-    sget-object v2, Lyu4;->t0:Lbx9;
-
-    invoke-virtual {v2, p1}, Lbx9;->m(Landroid/content/Context;)Llia;
-
-    move-result-object v2
-
-    iget-object v2, v2, Llia;->c:Lera;
-
-    invoke-interface {v2}, Lera;->b()Lie0;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lie0;->a:Lhe0;
-
-    iget v2, v2, Lhe0;->n:I
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
-
-    move-result v0
-
-    sget v1, Lz3c;->ic_animated_handup:I
-
-    invoke-static {p1, v1}, Lrf;->a(Landroid/content/Context;I)Lrf;
-
-    move-result-object p1
-
-    iput-object p1, p0, Loec;->a:Lrf;
-
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
-
-    move-result p1
-
-    const/16 v1, 0x30
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lya6;->G(F)I
-
-    move-result v2
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v3
-
-    invoke-static {v1}, Lya6;->G(F)I
-
-    move-result v1
-
-    invoke-virtual {p0, v0, v2, v1}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    const/16 v1, 0x11
-
-    invoke-virtual {p0, v0, v1}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
-
-    const/16 v0, 0x1c
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v0
-
-    invoke-static {v2}, Lya6;->G(F)I
-
-    move-result v2
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v3
-
-    invoke-static {v0}, Lya6;->G(F)I
-
-    move-result v0
-
-    invoke-virtual {p0, p1, v2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    invoke-virtual {p0, p1, v1}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final isRunning()Z
-    .locals 2
+.method public final b(Ljava/lang/String;)Lcjg;
+    .locals 3
 
-    const/4 v0, 0x0
+    iget v0, p0, Loec;->a:I
 
-    iget-object p0, p0, Loec;->a:Lrf;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz p0, :cond_0
+    iget-boolean v0, p0, Loec;->b:Z
 
-    invoke-virtual {p0}, Lrf;->isRunning()Z
+    if-nez v0, :cond_0
 
-    move-result p0
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    iput-boolean v0, p0, Loec;->b:Z
 
-    if-ne p0, v1, :cond_0
+    iget-object v0, p0, Loec;->e:Luha;
 
-    return v1
+    check-cast v0, Lq9i;
 
-    :cond_0
-    return v0
-.end method
+    iget-object v1, p0, Loec;->d:Lbr5;
 
-.method public final onBoundsChange(Landroid/graphics/Rect;)V
-    .locals 1
+    iget-boolean v2, p0, Loec;->c:Z
 
-    invoke-super {p0, p1}, Landroid/graphics/drawable/LayerDrawable;->onBoundsChange(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v1, p1, v2}, Lq9i;->b(Lbr5;Ljava/lang/Object;Z)V
 
-    invoke-virtual {p1}, Landroid/graphics/Rect;->centerX()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->centerY()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, v0, p1}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
-
-    return-void
-.end method
-
-.method public final start()V
-    .locals 0
-
-    iget-object p0, p0, Loec;->a:Lrf;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lrf;->start()V
+    return-object p0
 
     :cond_0
-    return-void
+    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
+
+    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    iget-boolean v0, p0, Loec;->b:Z
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Loec;->b:Z
+
+    iget-object v0, p0, Loec;->e:Luha;
+
+    check-cast v0, Lwxh;
+
+    iget-object v1, p0, Loec;->d:Lbr5;
+
+    iget-boolean v2, p0, Loec;->c:Z
+
+    invoke-virtual {v0, v1, p1, v2}, Lwxh;->b(Lbr5;Ljava/lang/Object;Z)V
+
+    return-object p0
+
+    :cond_1
+    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
+
+    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_1
+    iget-boolean v0, p0, Loec;->b:Z
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Loec;->b:Z
+
+    iget-object v0, p0, Loec;->e:Luha;
+
+    check-cast v0, Lnec;
+
+    iget-object v1, p0, Loec;->d:Lbr5;
+
+    iget-boolean v2, p0, Loec;->c:Z
+
+    invoke-virtual {v0, v1, p1, v2}, Lnec;->c(Lbr5;Ljava/lang/Object;Z)V
+
+    return-object p0
+
+    :cond_2
+    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
+
+    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final stop()V
-    .locals 0
+.method public final c(Z)Lcjg;
+    .locals 3
 
-    iget-object p0, p0, Loec;->a:Lrf;
+    iget v0, p0, Loec;->a:I
 
-    if-eqz p0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Lrf;->stop()V
+    iget-boolean v0, p0, Loec;->b:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Loec;->b:Z
+
+    iget-object v0, p0, Loec;->e:Luha;
+
+    check-cast v0, Lq9i;
+
+    iget-object v1, p0, Loec;->d:Lbr5;
+
+    iget-boolean v2, p0, Loec;->c:Z
+
+    invoke-virtual {v0, v1, p1, v2}, Lq9i;->c(Lbr5;IZ)V
+
+    return-object p0
 
     :cond_0
-    return-void
+    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
+
+    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    iget-boolean v0, p0, Loec;->b:Z
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Loec;->b:Z
+
+    iget-object v0, p0, Loec;->e:Luha;
+
+    check-cast v0, Lwxh;
+
+    iget-object v1, p0, Loec;->d:Lbr5;
+
+    iget-boolean v2, p0, Loec;->c:Z
+
+    invoke-virtual {v0, v1, p1, v2}, Lwxh;->c(Lbr5;IZ)V
+
+    return-object p0
+
+    :cond_1
+    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
+
+    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_1
+    iget-boolean v0, p0, Loec;->b:Z
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Loec;->b:Z
+
+    iget-object v0, p0, Loec;->e:Luha;
+
+    check-cast v0, Lnec;
+
+    iget-object v1, p0, Loec;->d:Lbr5;
+
+    iget-boolean v2, p0, Loec;->c:Z
+
+    invoke-virtual {v0, v1, p1, v2}, Lnec;->b(Lbr5;IZ)V
+
+    return-object p0
+
+    :cond_2
+    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
+
+    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

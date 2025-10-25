@@ -134,13 +134,13 @@
 
     .line 17
     :cond_4
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "errors is empty"
+    const-string v0, "errors is empty"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public varargs constructor <init>([Ljava/lang/Throwable;)V
@@ -157,14 +157,14 @@
     return-void
 .end method
 
-.method public static a(Lcb7;Ljava/lang/Throwable;Ljava/lang/String;)V
+.method public static a(Loi3;Ljava/lang/Throwable;Ljava/lang/String;)V
     .locals 5
 
-    invoke-virtual {p0, p2}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {p0, p2}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {p2, p1}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     move-result-object p2
 
@@ -174,7 +174,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {p2, v0}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
@@ -191,15 +191,15 @@
 
     const-string v4, "\t\tat "
 
-    invoke-virtual {p0, v4}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {p0, v4}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     move-result-object v4
 
-    invoke-virtual {v4, v3}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {v4, v3}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     move-result-object v3
 
-    invoke-virtual {v3, v0}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {v3, v0}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     add-int/lit8 v2, v2, 0x1
 
@@ -214,7 +214,7 @@
 
     const-string p2, "\tCaused by: "
 
-    invoke-virtual {p0, p2}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {p0, p2}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -222,7 +222,7 @@
 
     const-string p2, ""
 
-    invoke-static {p0, p1, p2}, Lio/reactivex/rxjava3/exceptions/CompositeException;->a(Lcb7;Ljava/lang/Throwable;Ljava/lang/String;)V
+    invoke-static {p0, p1, p2}, Lio/reactivex/rxjava3/exceptions/CompositeException;->a(Loi3;Ljava/lang/Throwable;Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -230,16 +230,16 @@
 
 
 # virtual methods
-.method public final b(Lcb7;)V
-    .locals 6
+.method public final b(Loi3;)V
+    .locals 7
 
-    invoke-virtual {p1, p0}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {p1, p0}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     move-result-object v0
 
     const-string v1, "\n"
 
-    invoke-virtual {v0, v1}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {v0, v1}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
@@ -256,72 +256,72 @@
 
     const-string v5, "\tat "
 
-    invoke-virtual {p1, v5}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {p1, v5}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     move-result-object v5
 
-    invoke-virtual {v5, v4}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {v5, v4}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     move-result-object v4
 
-    invoke-virtual {v4, v1}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {v4, v1}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lio/reactivex/rxjava3/exceptions/CompositeException;->a:Ljava/util/List;
+    iget-object v0, p0, Lio/reactivex/rxjava3/exceptions/CompositeException;->a:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v0
 
-    const/4 v0, 0x1
+    const/4 v2, 0x1
 
-    move v2, v0
+    move v3, v2
 
     :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_1
+    if-eqz v4, :cond_1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Throwable;
-
-    const-string v4, "  ComposedException "
-
-    invoke-virtual {p1, v4}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast v4, Ljava/lang/Throwable;
+
+    const-string v5, "  ComposedException "
+
+    invoke-virtual {p1, v5}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v4
+    move-result-object v6
 
-    const-string v5, " :\n"
+    invoke-virtual {v5, v6}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
-    invoke-virtual {v4, v5}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    move-result-object v5
 
-    const-string v4, "\t"
+    const-string v6, " :\n"
 
-    invoke-static {p1, v3, v4}, Lio/reactivex/rxjava3/exceptions/CompositeException;->a(Lcb7;Ljava/lang/Throwable;Ljava/lang/String;)V
+    invoke-virtual {v5, v6}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
-    add-int/2addr v2, v0
+    const-string v5, "\t"
+
+    invoke-static {p1, v4, v5}, Lio/reactivex/rxjava3/exceptions/CompositeException;->a(Loi3;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    add-int/2addr v3, v2
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {p1, v1}, Lcb7;->c(Ljava/io/Serializable;)Lcb7;
+    invoke-virtual {p1, v1}, Loi3;->a(Ljava/io/Serializable;)Loi3;
 
     return-void
 .end method
@@ -606,7 +606,7 @@
     goto/16 :goto_0
 
     :cond_9
-    new-instance v0, Lyd3;
+    new-instance v0, Lb81;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -616,9 +616,9 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lyd3;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lb81;-><init>(Ljava/lang/String;I)V
 
     iput-object v0, p0, Lio/reactivex/rxjava3/exceptions/CompositeException;->c:Ljava/lang/Throwable;
 
@@ -655,11 +655,11 @@
 .end method
 
 .method public final getMessage()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lio/reactivex/rxjava3/exceptions/CompositeException;->b:Ljava/lang/String;
+    iget-object v0, p0, Lio/reactivex/rxjava3/exceptions/CompositeException;->b:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final printStackTrace()V
@@ -677,13 +677,13 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lzd3;
+    new-instance v0, Loi3;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p1}, Lzd3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Loi3;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p0, v0}, Lio/reactivex/rxjava3/exceptions/CompositeException;->b(Lcb7;)V
+    invoke-virtual {p0, v0}, Lio/reactivex/rxjava3/exceptions/CompositeException;->b(Loi3;)V
 
     return-void
 .end method
@@ -692,13 +692,13 @@
     .locals 2
 
     .line 3
-    new-instance v0, Lzd3;
+    new-instance v0, Loi3;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p1}, Lzd3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Loi3;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p0, v0}, Lio/reactivex/rxjava3/exceptions/CompositeException;->b(Lcb7;)V
+    invoke-virtual {p0, v0}, Lio/reactivex/rxjava3/exceptions/CompositeException;->b(Loi3;)V
 
     return-void
 .end method

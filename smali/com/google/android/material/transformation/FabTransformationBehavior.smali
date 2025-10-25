@@ -10,25 +10,25 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Lcom/google/android/material/transformation/ExpandableTransformationBehavior;-><init>()V
 
     .line 2
-    new-instance p0, Landroid/graphics/Rect;
+    new-instance v0, Landroid/graphics/Rect;
 
-    invoke-direct {p0}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     .line 3
-    new-instance p0, Landroid/graphics/RectF;
+    new-instance v0, Landroid/graphics/RectF;
 
-    invoke-direct {p0}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     .line 4
-    new-instance p0, Landroid/graphics/RectF;
+    new-instance v0, Landroid/graphics/RectF;
 
-    invoke-direct {p0}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     return-void
 .end method
@@ -40,19 +40,19 @@
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/transformation/ExpandableTransformationBehavior;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 6
-    new-instance p0, Landroid/graphics/Rect;
+    new-instance p1, Landroid/graphics/Rect;
 
-    invoke-direct {p0}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     .line 7
-    new-instance p0, Landroid/graphics/RectF;
+    new-instance p1, Landroid/graphics/RectF;
 
-    invoke-direct {p0}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
     .line 8
-    new-instance p0, Landroid/graphics/RectF;
+    new-instance p1, Landroid/graphics/RectF;
 
-    invoke-direct {p0}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
     return-void
 .end method
@@ -64,36 +64,36 @@
 
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
-    move-result p0
+    move-result p1
 
-    const/16 p1, 0x8
+    const/16 p2, 0x8
 
-    if-eq p0, p1, :cond_0
+    if-eq p1, p2, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "This behavior cannot be attached to a GONE view. Set the view to INVISIBLE instead."
+    const-string p2, "This behavior cannot be attached to a GONE view. Set the view to INVISIBLE instead."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
-.method public final g(Lwz3;)V
-    .locals 0
+.method public final g(Lo44;)V
+    .locals 1
 
-    iget p0, p1, Lwz3;->h:I
+    iget v0, p1, Lo44;->h:I
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    const/16 p0, 0x50
+    const/16 v0, 0x50
 
-    iput p0, p1, Lwz3;->h:I
+    iput v0, p1, Lo44;->h:I
 
     :cond_0
     return-void

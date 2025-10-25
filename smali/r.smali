@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lji6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lzb6;
+.field public final synthetic b:Lji6;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILzb6;)V
+.method public synthetic constructor <init>(ILji6;)V
     .locals 0
 
     iput p1, p0, Lr;->a:I
 
-    iput-object p2, p0, Lr;->b:Lzb6;
+    iput-object p2, p0, Lr;->b:Lji6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,7 +28,7 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 2
+    .locals 3
 
     iget v0, p0, Lr;->a:I
 
@@ -36,390 +36,390 @@
 
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lb3;
+    check-cast v1, Li3;
 
-    const/16 v1, 0x1d
+    const/16 v2, 0x1d
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_0
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lws1;
+    check-cast v1, Lnb2;
 
-    const/16 v1, 0x1c
+    const/16 v2, 0x1c
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_1
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, La82;
+    check-cast v1, Lta2;
 
-    const/16 v1, 0x1b
+    const/16 v2, 0x1b
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_2
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, La82;
+    check-cast v1, Lta2;
 
-    const/16 v1, 0x1a
+    const/16 v2, 0x1a
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_3
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lws1;
+    check-cast v1, Lvk1;
 
-    const/16 v1, 0x19
+    const/16 v2, 0x19
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_4
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lzb1;
+    check-cast v1, Ljj1;
 
-    const/16 v1, 0x18
+    const/16 v2, 0x18
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_5
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Leg1;
+    check-cast v1, Lvk1;
 
-    const/16 v1, 0x17
+    const/16 v2, 0x17
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_6
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lzb1;
+    check-cast v1, Ljj1;
 
-    const/16 v1, 0x16
+    const/16 v2, 0x16
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_7
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lhj1;
+    check-cast v1, Lwk1;
 
-    const/16 v1, 0x15
+    const/16 v2, 0x15
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_8
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lzb1;
+    check-cast v1, Ljj1;
 
-    const/16 v1, 0x14
+    const/16 v2, 0x14
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_9
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Luh1;
+    check-cast v1, Lij1;
 
-    const/16 v1, 0x13
+    const/16 v2, 0x13
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_a
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Ll11;
+    check-cast v1, La41;
 
-    const/16 v1, 0x12
+    const/16 v2, 0x12
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_b
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lb3;
+    check-cast v1, Li3;
 
-    const/16 v1, 0x11
+    const/16 v2, 0x11
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_c
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lb3;
+    check-cast v1, Li3;
 
-    const/16 v1, 0x10
+    const/16 v2, 0x10
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_d
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lb3;
+    check-cast v1, Li3;
 
-    const/16 v1, 0xf
+    const/16 v2, 0xf
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_e
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lka1;
+    check-cast v1, Lpb1;
 
-    const/16 v1, 0xe
+    const/16 v2, 0xe
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_f
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lb3;
+    check-cast v1, Li3;
 
-    const/16 v1, 0xd
+    const/16 v2, 0xd
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_10
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Ly81;
+    check-cast v1, Lca1;
 
-    const/16 v1, 0xc
+    const/16 v2, 0xc
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_11
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lq81;
+    check-cast v1, Lu91;
 
-    const/16 v1, 0xb
+    const/16 v2, 0xb
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_12
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Ll11;
+    check-cast v1, La41;
 
-    const/16 v1, 0xa
+    const/16 v2, 0xa
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_13
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lk;
+    check-cast v1, Ll6;
 
-    const/16 v1, 0x9
+    const/16 v2, 0x9
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_14
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lm;
+    check-cast v1, Lm;
 
-    const/16 v1, 0x8
+    const/16 v2, 0x8
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_15
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lm;
+    check-cast v1, Lm;
 
-    const/4 v1, 0x7
+    const/4 v2, 0x7
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_16
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lm;
+    check-cast v1, Lm;
 
-    const/4 v1, 0x6
+    const/4 v2, 0x6
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_17
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lk;
+    check-cast v1, Ll6;
 
-    const/4 v1, 0x5
+    const/4 v2, 0x5
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_18
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lm;
+    check-cast v1, Lm;
 
-    const/4 v1, 0x4
+    const/4 v2, 0x4
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_19
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lk;
+    check-cast v1, Ll6;
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_1a
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lk;
+    check-cast v1, Ll6;
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_1b
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lb3;
+    check-cast v1, Li3;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 
     :pswitch_1c
     new-instance v0, Lq;
 
-    iget-object p0, p0, Lr;->b:Lzb6;
+    iget-object v1, p0, Lr;->b:Lji6;
 
-    check-cast p0, Lm;
+    check-cast v1, Lm;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1, p0}, Lq;-><init>(ILzb6;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILji6;)V
 
     return-object v0
 

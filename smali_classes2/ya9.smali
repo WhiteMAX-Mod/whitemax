@@ -1,57 +1,136 @@
 .class public final Lya9;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ln08;
 
 
 # instance fields
-.field public X:Luz8;
+.field public final synthetic a:I
 
-.field public Y:Ld10;
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public Z:Ls72;
-
-.field public o:Lfb9;
-
-.field public synthetic r0:Ljava/lang/Object;
-
-.field public final synthetic s0:Lfb9;
-
-.field public t0:I
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lfb9;Ljx3;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lya9;->s0:Lfb9;
+    iput p2, p0, Lya9;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lya9;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lya9;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lzb9;)V
+    .locals 3
 
-    iput-object p1, p0, Lya9;->r0:Ljava/lang/Object;
+    iget v0, p0, Lya9;->a:I
 
-    iget p1, p0, Lya9;->t0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lya9;->b:Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lfk9;
 
-    iput p1, p0, Lya9;->t0:I
+    iget-object v0, v0, Lfk9;->X:Lzn9;
 
-    iget-object p1, p0, Lya9;->s0:Lfb9;
+    iget-object v1, p0, Lya9;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    check-cast v1, Lone/me/messages/list/loader/MessageModel;
 
-    invoke-static {p1, v0, p0}, Lfb9;->t(Lfb9;Luz8;Ljx3;)Ljava/lang/Object;
+    iget-wide v1, v1, Lone/me/messages/list/loader/MessageModel;->a:J
 
-    move-result-object p0
+    iget-object v0, v0, Lzn9;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    return-object p0
+    invoke-static {v0, p1, v1, v2}, Lone/me/messages/list/ui/MessagesListWidget;->D0(Lone/me/messages/list/ui/MessagesListWidget;Lzb9;J)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lya9;->b:Ljava/lang/Object;
+
+    check-cast v0, Lqa9;
+
+    iget-object v1, p0, Lya9;->c:Ljava/lang/Object;
+
+    check-cast v1, Lza9;
+
+    iget-wide v1, v1, Lza9;->H0:J
+
+    check-cast v0, Lzn9;
+
+    iget-object v0, v0, Lzn9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-static {v0, p1, v1, v2}, Lone/me/messages/list/ui/MessagesListWidget;->D0(Lone/me/messages/list/ui/MessagesListWidget;Lzb9;J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(Ljava/lang/String;Lr08;Landroid/text/style/ClickableSpan;)V
+    .locals 2
+
+    iget p3, p0, Lya9;->a:I
+
+    packed-switch p3, :pswitch_data_0
+
+    iget-object p3, p0, Lya9;->b:Ljava/lang/Object;
+
+    check-cast p3, Lfk9;
+
+    iget-object p3, p3, Lfk9;->X:Lzn9;
+
+    iget-object v0, p0, Lya9;->c:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/messages/list/loader/MessageModel;
+
+    iget-wide v0, v0, Lone/me/messages/list/loader/MessageModel;->a:J
+
+    iget-object p3, p3, Lzn9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->C0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lr08;J)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p3, p0, Lya9;->b:Ljava/lang/Object;
+
+    check-cast p3, Lqa9;
+
+    iget-object v0, p0, Lya9;->c:Ljava/lang/Object;
+
+    check-cast v0, Lza9;
+
+    iget-wide v0, v0, Lza9;->H0:J
+
+    check-cast p3, Lzn9;
+
+    iget-object p3, p3, Lzn9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->C0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lr08;J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

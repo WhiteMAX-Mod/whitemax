@@ -109,51 +109,51 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
-    move-result p0
+    move-result v2
 
-    sub-int/2addr v1, p0
+    sub-int/2addr v1, v2
 
-    const/4 p0, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, p0}, Landroid/text/Layout;->getLineBottom(I)I
+    invoke-virtual {v0, v2}, Landroid/text/Layout;->getLineBottom(I)I
 
-    move-result p0
+    move-result v0
 
-    div-int/2addr v1, p0
+    div-int/2addr v1, v0
 
     return v1
 .end method
 
 .method private getLinesCount()I
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->getFullyVisibleLinesCount()I
 
-    move-result p0
+    move-result v0
 
-    const/4 v0, -0x1
+    const/4 v1, -0x1
 
-    if-ne p0, v0, :cond_0
+    if-ne v0, v1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
     :cond_0
-    return p0
+    return v0
 .end method
 
 
 # virtual methods
 .method public getMaxLines()I
-    .locals 0
+    .locals 1
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "Override"
         }
     .end annotation
 
-    iget p0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:I
+    iget v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:I
 
-    return p0
+    return v0
 .end method
 
 .method public final k(Ljava/lang/CharSequence;)Landroid/text/StaticLayout;

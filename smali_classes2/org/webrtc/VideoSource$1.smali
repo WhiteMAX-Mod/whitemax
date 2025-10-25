@@ -66,18 +66,18 @@
 
     if-eqz v1, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/VideoSource$1;->this$0:Lorg/webrtc/VideoSource;
+    iget-object v1, p0, Lorg/webrtc/VideoSource$1;->this$0:Lorg/webrtc/VideoSource;
 
-    invoke-static {p0}, Lorg/webrtc/VideoSource;->e(Lorg/webrtc/VideoSource;)Lorg/webrtc/VideoProcessor;
+    invoke-static {v1}, Lorg/webrtc/VideoSource;->e(Lorg/webrtc/VideoSource;)Lorg/webrtc/VideoProcessor;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-interface {p0, p1}, Lorg/webrtc/CapturerObserver;->onCapturerStarted(Z)V
+    invoke-interface {v1, p1}, Lorg/webrtc/CapturerObserver;->onCapturerStarted(Z)V
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
@@ -92,7 +92,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public onCapturerStopped()V
@@ -129,18 +129,18 @@
 
     if-eqz v1, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/VideoSource$1;->this$0:Lorg/webrtc/VideoSource;
+    iget-object v1, p0, Lorg/webrtc/VideoSource$1;->this$0:Lorg/webrtc/VideoSource;
 
-    invoke-static {p0}, Lorg/webrtc/VideoSource;->e(Lorg/webrtc/VideoSource;)Lorg/webrtc/VideoProcessor;
+    invoke-static {v1}, Lorg/webrtc/VideoSource;->e(Lorg/webrtc/VideoSource;)Lorg/webrtc/VideoProcessor;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-interface {p0}, Lorg/webrtc/CapturerObserver;->onCapturerStopped()V
+    invoke-interface {v1}, Lorg/webrtc/CapturerObserver;->onCapturerStopped()V
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_1
 
@@ -155,7 +155,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method public onFrameCaptured(Lorg/webrtc/VideoFrame;)V
@@ -188,20 +188,20 @@
 
     if-eqz v2, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/VideoSource$1;->this$0:Lorg/webrtc/VideoSource;
+    iget-object v2, p0, Lorg/webrtc/VideoSource$1;->this$0:Lorg/webrtc/VideoSource;
 
-    invoke-static {p0}, Lorg/webrtc/VideoSource;->e(Lorg/webrtc/VideoSource;)Lorg/webrtc/VideoProcessor;
+    invoke-static {v2}, Lorg/webrtc/VideoSource;->e(Lorg/webrtc/VideoSource;)Lorg/webrtc/VideoProcessor;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-interface {p0, p1, v0}, Lorg/webrtc/VideoProcessor;->onFrameCaptured(Lorg/webrtc/VideoFrame;Lorg/webrtc/VideoProcessor$FrameAdaptationParameters;)V
+    invoke-interface {v2, p1, v0}, Lorg/webrtc/VideoProcessor;->onFrameCaptured(Lorg/webrtc/VideoFrame;Lorg/webrtc/VideoProcessor$FrameAdaptationParameters;)V
 
     monitor-exit v1
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
@@ -216,13 +216,13 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lorg/webrtc/VideoSource$1;->this$0:Lorg/webrtc/VideoSource;
+    iget-object v0, p0, Lorg/webrtc/VideoSource$1;->this$0:Lorg/webrtc/VideoSource;
 
-    invoke-static {p0}, Lorg/webrtc/VideoSource;->d(Lorg/webrtc/VideoSource;)Lorg/webrtc/NativeAndroidVideoTrackSource;
+    invoke-static {v0}, Lorg/webrtc/VideoSource;->d(Lorg/webrtc/VideoSource;)Lorg/webrtc/NativeAndroidVideoTrackSource;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/NativeAndroidVideoTrackSource;->onFrameCaptured(Lorg/webrtc/VideoFrame;)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/NativeAndroidVideoTrackSource;->onFrameCaptured(Lorg/webrtc/VideoFrame;)V
 
     invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->release()V
 
@@ -235,5 +235,5 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method

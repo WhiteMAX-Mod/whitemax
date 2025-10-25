@@ -1,90 +1,51 @@
 .class public final Laca;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lz4;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Leca;
+
+.field public Z:I
+
+.field public o:Lma7;
 
 
 # direct methods
-.method public constructor <init>(Lz4;)V
+.method public constructor <init>(Leca;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Laca;->Y:Leca;
 
-    iput-object p1, p0, Laca;->a:Lz4;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)I
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-class v0, Landroid/content/Context;
+    iput-object p1, p0, Laca;->X:Ljava/lang/Object;
 
-    iget-object p0, p0, Laca;->a:Lz4;
+    iget p1, p0, Laca;->Z:I
 
-    sget-object v1, Lyu4;->t0:Lbx9;
+    const/high16 v0, -0x80000000
 
-    if-eqz p1, :cond_0
+    or-int/2addr p1, v0
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iput p1, p0, Laca;->Z:I
 
-    move-result-object p0
+    iget-object p1, p0, Laca;->Y:Leca;
 
-    check-cast p0, Landroid/content/Context;
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, p0}, Lbx9;->k(Landroid/content/Context;)Lyu4;
+    invoke-virtual {p1, v0, v0, p0}, Leca;->e(Lma7;Lab7;Ly14;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Lyu4;->j()Lera;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lera;->a()Lzs2;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lzs2;->j()Lms0;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lms0;->d:Lps0;
-
-    iget p0, p0, Lps0;->b:I
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/content/Context;
-
-    invoke-virtual {v1, p0}, Lbx9;->k(Landroid/content/Context;)Lyu4;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lyu4;->j()Lera;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lera;->a()Lzs2;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lzs2;->t()Lms0;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lms0;->d:Lps0;
-
-    iget p0, p0, Lps0;->b:I
-
-    return p0
+    return-object p1
 .end method

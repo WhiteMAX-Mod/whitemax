@@ -1,120 +1,140 @@
-.class public final Lod2;
-.super Lure;
+.class public final synthetic Lod2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lsr3;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final synthetic Y:Lpd2;
+.field public final synthetic Y:Z
 
-.field public final synthetic Z:Lnd2;
+.field public final synthetic a:Lsd2;
+
+.field public final synthetic b:J
+
+.field public final synthetic c:J
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lpd2;Lnd2;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lsd2;JJILjava/util/concurrent/atomic/AtomicBoolean;Z)V
     .locals 0
 
-    iput-object p1, p0, Lod2;->Y:Lpd2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lod2;->Z:Lnd2;
+    iput-object p1, p0, Lod2;->a:Lsd2;
 
-    const/4 p1, 0x2
+    iput-wide p2, p0, Lod2;->b:J
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p4, p0, Lod2;->c:J
+
+    iput p6, p0, Lod2;->o:I
+
+    iput-object p7, p0, Lod2;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iput-boolean p8, p0, Lod2;->Y:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 10
 
-    check-cast p1, Ly04;
+    check-cast p1, Lxd2;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lod2;->a:Lsd2;
 
-    invoke-virtual {p0, p1, p2}, Lod2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    invoke-virtual {p1}, Lxd2;->c()Ljava/util/Map;
 
-    check-cast p0, Lod2;
+    move-result-object v1
 
-    sget-object p1, Lylf;->a:Lylf;
+    iget-wide v2, p0, Lod2;->b:J
 
-    invoke-virtual {p0, p1}, Lod2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p0
+    move-result-object v4
 
-    return-object p0
-.end method
+    invoke-interface {v1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    move-result-object v4
 
-    new-instance p1, Lod2;
+    check-cast v4, Ljava/lang/Long;
 
-    iget-object v0, p0, Lod2;->Y:Lpd2;
+    if-nez v4, :cond_0
 
-    iget-object p0, p0, Lod2;->Z:Lnd2;
+    return-void
 
-    invoke-direct {p1, v0, p0, p2}, Lod2;-><init>(Lpd2;Lnd2;Lkotlin/coroutines/Continuation;)V
+    :cond_0
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
 
-    return-object p1
-.end method
+    move-result-wide v4
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    iget-wide v6, p0, Lod2;->c:J
 
-    iget v0, p0, Lod2;->X:I
+    cmp-long v4, v4, v6
 
-    const/4 v1, 0x1
+    const/4 v5, 0x0
 
-    if-eqz v0, :cond_1
+    const/4 v8, 0x1
 
-    if-ne v0, v1, :cond_0
+    if-eqz v4, :cond_1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    move v4, v8
 
     goto :goto_0
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    move v4, v5
 
-    iget-object p1, p0, Lod2;->Y:Lpd2;
+    :goto_0
+    if-eqz v4, :cond_2
 
-    iget-object p1, p1, Lpd2;->a:Lnxd;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iput v1, p0, Lod2;->X:I
+    move-result-object v9
 
-    iget-object v0, p0, Lod2;->Z:Lnd2;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p1, v0, p0}, Lnxd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v6
 
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
+    invoke-interface {v1, v9, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    iget v1, p0, Lod2;->o:I
 
-    return-object p0
+    if-ltz v1, :cond_3
+
+    iput v1, p1, Lxd2;->m:I
+
+    :cond_3
+    iget-boolean p1, p0, Lod2;->Y:Z
+
+    if-eqz p1, :cond_4
+
+    if-eqz v4, :cond_4
+
+    invoke-virtual {v0}, Lsd2;->J()J
+
+    move-result-wide v0
+
+    cmp-long p1, v2, v0
+
+    if-nez p1, :cond_4
+
+    move v5, v8
+
+    :cond_4
+    iget-object p1, p0, Lod2;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p1, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    return-void
 .end method

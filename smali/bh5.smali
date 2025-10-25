@@ -2,283 +2,850 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
+
+# static fields
+.field public static final c:[Lnh5;
+
+.field public static final d:[[Lnh5;
+
+.field public static final e:Ljava/util/HashSet;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/ArrayList;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Ljava/nio/ByteOrder;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 58
 
-    iput p1, p0, Lbh5;->a:I
+    new-instance v0, Lnh5;
 
-    iput-object p2, p0, Lbh5;->b:Ljava/lang/Object;
+    const/16 v1, 0x100
+
+    const-string v2, "ImageWidth"
+
+    const/4 v14, 0x3
+
+    const/4 v15, 0x4
+
+    invoke-direct {v0, v1, v2, v14, v15}, Lnh5;-><init>(ILjava/lang/String;II)V
+
+    new-instance v1, Lnh5;
+
+    const-string v2, "ImageLength"
+
+    const/16 v3, 0x101
+
+    invoke-direct {v1, v3, v2, v14, v15}, Lnh5;-><init>(ILjava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v3, "Make"
+
+    const/16 v4, 0x10f
+
+    const/4 v5, 0x2
+
+    invoke-direct {v2, v3, v4, v5}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v3, Lnh5;
+
+    const-string v4, "Model"
+
+    const/16 v6, 0x110
+
+    invoke-direct {v3, v4, v6, v5}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lnh5;
+
+    const-string v6, "Orientation"
+
+    const/16 v7, 0x112
+
+    invoke-direct {v4, v6, v7, v14}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v6, Lnh5;
+
+    const-string v7, "XResolution"
+
+    const/16 v8, 0x11a
+
+    const/4 v9, 0x5
+
+    invoke-direct {v6, v7, v8, v9}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    move-object v7, v6
+
+    new-instance v6, Lnh5;
+
+    const-string v8, "YResolution"
+
+    const/16 v10, 0x11b
+
+    invoke-direct {v6, v8, v10, v9}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    move-object v8, v7
+
+    new-instance v7, Lnh5;
+
+    const-string v10, "ResolutionUnit"
+
+    const/16 v11, 0x128
+
+    invoke-direct {v7, v10, v11, v14}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    move-object v10, v8
+
+    new-instance v8, Lnh5;
+
+    const-string v11, "Software"
+
+    const/16 v12, 0x131
+
+    invoke-direct {v8, v11, v12, v5}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    move v11, v9
+
+    new-instance v9, Lnh5;
+
+    const-string v12, "DateTime"
+
+    const/16 v13, 0x132
+
+    invoke-direct {v9, v12, v13, v5}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    move v12, v5
+
+    move-object v5, v10
+
+    new-instance v10, Lnh5;
+
+    const-string v13, "YCbCrPositioning"
+
+    const/16 v11, 0x213
+
+    invoke-direct {v10, v13, v11, v14}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v11, Lnh5;
+
+    const-string v13, "SubIFDPointer"
+
+    const/16 v14, 0x14a
+
+    invoke-direct {v11, v13, v14, v15}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    move/from16 v16, v12
+
+    new-instance v12, Lnh5;
+
+    const-string v14, "ExifIFDPointer"
+
+    move-object/from16 v17, v0
+
+    const v0, 0x8769
+
+    invoke-direct {v12, v14, v0, v15}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    move-object/from16 v18, v13
+
+    new-instance v13, Lnh5;
+
+    move-object/from16 v19, v14
+
+    const-string v14, "GPSInfoIFDPointer"
+
+    const v0, 0x8825
+
+    invoke-direct {v13, v14, v0, v15}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v20, v18
+
+    const/4 v15, 0x5
+
+    filled-new-array/range {v0 .. v13}, [Lnh5;
+
+    move-result-object v0
+
+    new-instance v1, Lnh5;
+
+    const v2, 0x829a
+
+    const-string v3, "ExposureTime"
+
+    invoke-direct {v1, v3, v2, v15}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const v4, 0x829d
+
+    const-string v5, "FNumber"
+
+    invoke-direct {v2, v5, v4, v15}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lnh5;
+
+    const-string v6, "ExposureProgram"
+
+    const v7, 0x8822
+
+    const/4 v8, 0x3
+
+    invoke-direct {v4, v6, v7, v8}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v6, Lnh5;
+
+    const-string v7, "PhotographicSensitivity"
+
+    const v9, 0x8827
+
+    invoke-direct {v6, v7, v9, v8}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v7, Lnh5;
+
+    const-string v9, "SensitivityType"
+
+    const v10, 0x8830
+
+    invoke-direct {v7, v9, v10, v8}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v8, Lnh5;
+
+    const-string v9, "ExifVersion"
+
+    const v10, 0x9000
+
+    const/4 v12, 0x2
+
+    invoke-direct {v8, v9, v10, v12}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v9, Lnh5;
+
+    const-string v10, "DateTimeOriginal"
+
+    const v11, 0x9003
+
+    invoke-direct {v9, v10, v11, v12}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v10, Lnh5;
+
+    const-string v11, "DateTimeDigitized"
+
+    const v13, 0x9004
+
+    invoke-direct {v10, v11, v13, v12}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v11, Lnh5;
+
+    const-string v12, "ComponentsConfiguration"
+
+    const v13, 0x9101
+
+    const/4 v15, 0x7
+
+    invoke-direct {v11, v12, v13, v15}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v12, Lnh5;
+
+    const-string v13, "ShutterSpeedValue"
+
+    const v15, 0x9201
+
+    move-object/from16 v21, v1
+
+    const/16 v1, 0xa
+
+    invoke-direct {v12, v13, v15, v1}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v13, Lnh5;
+
+    const-string v15, "ApertureValue"
+
+    const v1, 0x9202
+
+    move-object/from16 v22, v2
+
+    const/4 v2, 0x5
+
+    invoke-direct {v13, v15, v1, v2}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lnh5;
+
+    const-string v2, "BrightnessValue"
+
+    const v15, 0x9203
+
+    move-object/from16 v23, v4
+
+    const/16 v4, 0xa
+
+    invoke-direct {v1, v2, v15, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v15, "ExposureBiasValue"
+
+    move-object/from16 v32, v1
+
+    const v1, 0x9204
+
+    invoke-direct {v2, v15, v1, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lnh5;
+
+    const-string v4, "MaxApertureValue"
+
+    const v15, 0x9205
+
+    move-object/from16 v33, v2
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v4, v15, v2}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v4, "MeteringMode"
+
+    const v15, 0x9207
+
+    move-object/from16 v34, v1
+
+    const/4 v1, 0x3
+
+    invoke-direct {v2, v4, v15, v1}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lnh5;
+
+    const-string v15, "LightSource"
+
+    move-object/from16 v35, v2
+
+    const v2, 0x9208
+
+    invoke-direct {v4, v15, v2, v1}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v15, "Flash"
+
+    move-object/from16 v36, v4
+
+    const v4, 0x9209
+
+    invoke-direct {v2, v15, v4, v1}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lnh5;
+
+    const-string v4, "FocalLength"
+
+    const v15, 0x920a
+
+    move-object/from16 v37, v2
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v4, v15, v2}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v4, "SubSecTime"
+
+    const v15, 0x9290
+
+    move-object/from16 v38, v1
+
+    const/4 v1, 0x2
+
+    invoke-direct {v2, v4, v15, v1}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lnh5;
+
+    const-string v15, "SubSecTimeOriginal"
+
+    move-object/from16 v39, v2
+
+    const v2, 0x9291
+
+    invoke-direct {v4, v15, v2, v1}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v15, "SubSecTimeDigitized"
+
+    move-object/from16 v40, v4
+
+    const v4, 0x9292
+
+    invoke-direct {v2, v15, v4, v1}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lnh5;
+
+    const-string v4, "FlashpixVersion"
+
+    const v15, 0xa000
+
+    move-object/from16 v41, v2
+
+    const/4 v2, 0x7
+
+    invoke-direct {v1, v4, v15, v2}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v4, "ColorSpace"
+
+    const v15, 0xa001
+
+    move-object/from16 v42, v1
+
+    const/4 v1, 0x3
+
+    invoke-direct {v2, v4, v15, v1}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lnh5;
+
+    const-string v15, "PixelXDimension"
+
+    move-object/from16 v43, v2
+
+    const v2, 0xa002
+
+    move-object/from16 v24, v6
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v2, v15, v1, v6}, Lnh5;-><init>(ILjava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v15, "PixelYDimension"
+
+    move-object/from16 v44, v4
+
+    const v4, 0xa003
+
+    invoke-direct {v2, v4, v15, v1, v6}, Lnh5;-><init>(ILjava/lang/String;II)V
+
+    new-instance v4, Lnh5;
+
+    const-string v15, "InteroperabilityIFDPointer"
+
+    const v1, 0xa005
+
+    invoke-direct {v4, v15, v1, v6}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v6, Lnh5;
+
+    const-string v1, "FocalPlaneResolutionUnit"
+
+    move-object/from16 v45, v2
+
+    const v2, 0xa210
+
+    move-object/from16 v46, v4
+
+    const/4 v4, 0x3
+
+    invoke-direct {v6, v1, v2, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lnh5;
+
+    const-string v2, "SensingMethod"
+
+    move-object/from16 v47, v6
+
+    const v6, 0xa217
+
+    invoke-direct {v1, v2, v6, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v4, "FileSource"
+
+    const v6, 0xa300
+
+    move-object/from16 v48, v1
+
+    const/4 v1, 0x7
+
+    invoke-direct {v2, v4, v6, v1}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lnh5;
+
+    const-string v6, "SceneType"
+
+    move-object/from16 v49, v2
+
+    const v2, 0xa301
+
+    invoke-direct {v4, v6, v2, v1}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lnh5;
+
+    const-string v2, "CustomRendered"
+
+    const v6, 0xa401
+
+    move-object/from16 v50, v4
+
+    const/4 v4, 0x3
+
+    invoke-direct {v1, v2, v6, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v6, "ExposureMode"
+
+    move-object/from16 v51, v1
+
+    const v1, 0xa402
+
+    invoke-direct {v2, v6, v1, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lnh5;
+
+    const-string v6, "WhiteBalance"
+
+    move-object/from16 v52, v2
+
+    const v2, 0xa403
+
+    invoke-direct {v1, v6, v2, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v6, "SceneCaptureType"
+
+    move-object/from16 v53, v1
+
+    const v1, 0xa406
+
+    invoke-direct {v2, v6, v1, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lnh5;
+
+    const-string v6, "Contrast"
+
+    move-object/from16 v54, v2
+
+    const v2, 0xa408
+
+    invoke-direct {v1, v6, v2, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v6, "Saturation"
+
+    move-object/from16 v55, v1
+
+    const v1, 0xa409
+
+    invoke-direct {v2, v6, v1, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lnh5;
+
+    const-string v6, "Sharpness"
+
+    move-object/from16 v56, v2
+
+    const v2, 0xa40a
+
+    invoke-direct {v1, v6, v2, v4}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    move-object/from16 v57, v1
+
+    move-object/from16 v25, v7
+
+    move-object/from16 v26, v8
+
+    move-object/from16 v27, v9
+
+    move-object/from16 v28, v10
+
+    move-object/from16 v29, v11
+
+    move-object/from16 v30, v12
+
+    move-object/from16 v31, v13
+
+    filled-new-array/range {v21 .. v57}, [Lnh5;
+
+    move-result-object v1
+
+    new-instance v2, Lnh5;
+
+    const-string v4, "GPSVersionID"
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x1
+
+    invoke-direct {v2, v4, v6, v7}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lnh5;
+
+    const-string v6, "GPSLatitudeRef"
+
+    const/4 v12, 0x2
+
+    invoke-direct {v4, v6, v7, v12}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v6, Lnh5;
+
+    const-string v8, "GPSLatitude"
+
+    const/16 v9, 0xa
+
+    const/4 v11, 0x5
+
+    invoke-direct {v6, v12, v8, v11, v9}, Lnh5;-><init>(ILjava/lang/String;II)V
+
+    new-instance v8, Lnh5;
+
+    const-string v10, "GPSLongitudeRef"
+
+    const/4 v13, 0x3
+
+    invoke-direct {v8, v10, v13, v12}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v10, Lnh5;
+
+    const-string v12, "GPSLongitude"
+
+    const/4 v13, 0x4
+
+    invoke-direct {v10, v13, v12, v11, v9}, Lnh5;-><init>(ILjava/lang/String;II)V
+
+    new-instance v9, Lnh5;
+
+    const-string v12, "GPSAltitudeRef"
+
+    invoke-direct {v9, v12, v11, v7}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v12, Lnh5;
+
+    const-string v13, "GPSAltitude"
+
+    const/4 v7, 0x6
+
+    invoke-direct {v12, v13, v7, v11}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v7, Lnh5;
+
+    const-string v13, "GPSTimeStamp"
+
+    move-object/from16 v21, v2
+
+    const/4 v2, 0x7
+
+    invoke-direct {v7, v13, v2, v11}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v11, "GPSSpeedRef"
+
+    move-object/from16 v22, v4
+
+    const/16 v4, 0xc
+
+    move-object/from16 v23, v6
+
+    const/4 v6, 0x2
+
+    invoke-direct {v2, v11, v4, v6}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lnh5;
+
+    const-string v11, "GPSTrackRef"
+
+    move-object/from16 v29, v2
+
+    const/16 v2, 0xe
+
+    invoke-direct {v4, v11, v2, v6}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v11, "GPSImgDirectionRef"
+
+    move-object/from16 v30, v4
+
+    const/16 v4, 0x10
+
+    invoke-direct {v2, v11, v4, v6}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lnh5;
+
+    const-string v11, "GPSDestBearingRef"
+
+    move-object/from16 v31, v2
+
+    const/16 v2, 0x17
+
+    invoke-direct {v4, v11, v2, v6}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lnh5;
+
+    const-string v11, "GPSDestDistanceRef"
+
+    move-object/from16 v32, v4
+
+    const/16 v4, 0x19
+
+    invoke-direct {v2, v11, v4, v6}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    move-object/from16 v33, v2
+
+    move-object/from16 v28, v7
+
+    move-object/from16 v24, v8
+
+    move-object/from16 v26, v9
+
+    move-object/from16 v25, v10
+
+    move-object/from16 v27, v12
+
+    filled-new-array/range {v21 .. v33}, [Lnh5;
+
+    move-result-object v2
+
+    new-instance v4, Lnh5;
+
+    move-object/from16 v7, v20
+
+    const/4 v6, 0x4
+
+    const/16 v8, 0x14a
+
+    invoke-direct {v4, v7, v8, v6}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v7, Lnh5;
+
+    move-object/from16 v8, v19
+
+    const v9, 0x8769
+
+    invoke-direct {v7, v8, v9, v6}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v8, Lnh5;
+
+    const v9, 0x8825
+
+    invoke-direct {v8, v14, v9, v6}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v9, Lnh5;
+
+    const v10, 0xa005
+
+    invoke-direct {v9, v15, v10, v6}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v4, v7, v8, v9}, [Lnh5;
+
+    move-result-object v4
+
+    sput-object v4, Lbh5;->c:[Lnh5;
+
+    new-instance v4, Lnh5;
+
+    const-string v6, "InteroperabilityIndex"
+
+    const/4 v7, 0x1
+
+    const/4 v12, 0x2
+
+    invoke-direct {v4, v6, v7, v12}, Lnh5;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v4}, [Lnh5;
+
+    move-result-object v4
+
+    filled-new-array {v0, v1, v2, v4}, [[Lnh5;
+
+    move-result-object v0
+
+    sput-object v0, Lbh5;->d:[[Lnh5;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    filled-new-array {v5, v3, v13}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    sput-object v0, Lbh5;->e:Ljava/util/HashSet;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/nio/ByteOrder;Ljava/util/ArrayList;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    const-string v1, "Malformed attributes list. Number of IFDs mismatch."
+
+    invoke-static {v1, v0}, Ldvi;->f(Ljava/lang/String;Z)V
+
+    iput-object p1, p0, Lbh5;->b:Ljava/nio/ByteOrder;
+
+    iput-object p2, p0, Lbh5;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 6
+.method public final a(I)Ljava/util/Map;
+    .locals 3
 
-    iget v0, p0, Lbh5;->a:I
+    const-string v0, "Invalid IFD index: "
 
-    const/4 v1, 0x1
+    const-string v1, ". Index should be between [0, EXIF_TAGS.length] "
 
-    const/4 v2, 0x0
-
-    iget-object p0, p0, Lbh5;->b:Ljava/lang/Object;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Landroid/widget/Checkable;
-
-    invoke-interface {p1}, Landroid/widget/Checkable;->isChecked()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    check-cast p0, Landroid/view/GestureDetector;
-
-    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result v2
-
-    :cond_0
-    return v2
-
-    :pswitch_0
-    check-cast p0, Lbt7;
-
-    iget-object p1, p0, Lbt7;->B0:Lzs7;
-
-    iget-object v0, p0, Lbt7;->F0:Landroid/os/Handler;
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v3
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v4
-
-    float-to-int v4, v4
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
-
-    move-result p2
-
-    float-to-int p2, p2
-
-    if-nez v3, :cond_1
-
-    iget-object v5, p0, Lbt7;->J0:Lln;
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v5}, Landroid/widget/PopupWindow;->isShowing()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    if-ltz v4, :cond_1
-
-    iget-object v5, p0, Lbt7;->J0:Lln;
-
-    invoke-virtual {v5}, Landroid/widget/PopupWindow;->getWidth()I
-
-    move-result v5
-
-    if-ge v4, v5, :cond_1
-
-    if-ltz p2, :cond_1
-
-    iget-object p0, p0, Lbt7;->J0:Lln;
-
-    invoke-virtual {p0}, Landroid/widget/PopupWindow;->getHeight()I
-
-    move-result p0
-
-    if-ge p2, p0, :cond_1
-
-    const-wide/16 v3, 0xfa
-
-    invoke-virtual {v0, p1, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_0
-
-    :cond_1
-    if-ne v3, v1, :cond_2
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    :cond_2
-    :goto_0
-    return v2
-
-    :pswitch_1
-    check-cast p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-ne p1, v1, :cond_4
-
-    iput-boolean v2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->y0:Z
-
-    goto :goto_4
-
-    :cond_4
-    move v1, v2
-
-    goto :goto_4
-
-    :cond_5
-    :goto_1
-    sget p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->A0:I
-
-    iput-boolean v1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->y0:Z
-
-    invoke-virtual {p0}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
-
-    move-result p1
-
-    iget-object p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
-
-    invoke-virtual {p2}, Landroid/view/View;->getY()F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    filled-new-array {v2, v0}, [I
+    invoke-static {p1, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    const/4 v1, 0x0
 
-    move-result-object p2
+    const/4 v2, 0x4
 
-    check-cast p2, Landroid/view/View;
+    invoke-static {p1, v0, v1, v2}, Ldvi;->c(ILjava/lang/String;II)V
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->getLocationInWindow([I)V
+    iget-object v0, p0, Lbh5;->a:Ljava/util/ArrayList;
 
-    aget p2, v0, v1
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    int-to-float p2, p2
+    move-result-object p1
 
-    sub-float/2addr p1, p2
+    check-cast p1, Ljava/util/Map;
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result p2
-
-    iget-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    :goto_2
-    sub-int/2addr p2, v0
-
-    int-to-float p2, p2
-
-    div-float/2addr p1, p2
-
-    goto :goto_3
-
-    :cond_6
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
-
-    move-result p1
-
-    iget-object p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
-
-    invoke-virtual {p2}, Landroid/view/View;->getX()F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    filled-new-array {v0, v2}, [I
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/view/View;
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->getLocationInWindow([I)V
-
-    aget p2, v0, v2
-
-    int-to-float p2, p2
-
-    sub-float/2addr p1, p2
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p2
-
-    iget-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    goto :goto_2
-
-    :goto_3
-    invoke-virtual {p0, p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->setScrollerPosition(F)V
-
-    invoke-static {p0, p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->a(Lcom/futuremind/recyclerviewfastscroll/FastScroller;F)V
-
-    :goto_4
-    return v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

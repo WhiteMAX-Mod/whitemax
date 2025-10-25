@@ -1,84 +1,66 @@
-.class public final Lvie;
-.super Lj2e;
+.class public final synthetic Lvie;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzcd;
+.implements Lfg4;
 
 
 # instance fields
-.field public E0:Lxcd;
+.field public final synthetic X:Ljava/lang/Integer;
+
+.field public final synthetic Y:Ljava/lang/Boolean;
+
+.field public final synthetic a:J
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public synthetic constructor <init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
+    .locals 0
 
-    new-instance v0, Lsrd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-wide p1, p0, Lvie;->a:J
 
-    invoke-direct {v0, p1, v1}, Lsrd;-><init>(Landroid/content/Context;I)V
+    iput-wide p3, p0, Lvie;->b:J
 
-    invoke-direct {p0, v0}, Lzoc;-><init>(Landroid/view/View;)V
+    iput-object p5, p0, Lvie;->c:Ljava/lang/String;
+
+    iput p6, p0, Lvie;->o:I
+
+    iput-object p7, p0, Lvie;->X:Ljava/lang/Integer;
+
+    iput-object p8, p0, Lvie;->Y:Ljava/lang/Boolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lzie;)V
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    iget-object v0, p0, Lzoc;->a:Landroid/view/View;
+    new-instance v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    if-eqz p1, :cond_0
+    iget-wide v1, p0, Lvie;->a:J
 
-    new-instance v1, Lsfd;
+    iget-wide v3, p0, Lvie;->b:J
 
-    const/16 v2, 0xf
+    iget-object v5, p0, Lvie;->c:Ljava/lang/String;
 
-    invoke-direct {v1, p0, v2, p1}, Lsfd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget v6, p0, Lvie;->o:I
 
-    invoke-static {v0, v1}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    iget-object v7, p0, Lvie;->X:Ljava/lang/Integer;
 
-    return-void
+    iget-object v8, p0, Lvie;->Y:Ljava/lang/Boolean;
 
-    :cond_0
-    check-cast v0, Lsrd;
+    invoke-direct/range {v0 .. v8}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;-><init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
 
-    const/4 p0, 0x0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
-.method public final y(Lts7;)V
-    .locals 1
-
-    instance-of v0, p1, Lwcd;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    move-object v0, p1
-
-    check-cast v0, Lxcd;
-
-    iput-object v0, p0, Lvie;->E0:Lxcd;
-
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
-
-    check-cast p0, Lsrd;
-
-    check-cast p1, Lwcd;
-
-    iget-object p1, p1, Lwcd;->a:Ltrd;
-
-    invoke-virtual {p0, p1}, Lsrd;->setModelItem(Lird;)V
-
-    return-void
+    return-object v0
 .end method

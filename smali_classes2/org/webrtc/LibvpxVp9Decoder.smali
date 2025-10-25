@@ -25,7 +25,7 @@
 
     invoke-static {}, Lorg/webrtc/LibvpxVp9Decoder;->nativeCreateDecoder()J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    return-wide p0
+    return-wide p1
 .end method

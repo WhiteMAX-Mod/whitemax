@@ -1,90 +1,86 @@
 .class public final Ln20;
-.super Lure;
+.super Lez;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic X:Lr20;
+.field public final X:Ljava/lang/String;
 
-.field public final synthetic Y:J
+.field public final Y:Ljava/lang/Long;
+
+.field public final Z:[B
+
+.field public final o:Ljava/lang/Long;
+
+.field public final q0:Ljava/lang/String;
+
+.field public final r0:Ljava/lang/String;
+
+.field public final s0:I
 
 
 # direct methods
-.method public constructor <init>(Lr20;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;J[BZLjava/lang/String;Ljava/lang/String;ZI)V
+    .locals 1
 
-    iput-object p1, p0, Ln20;->X:Lr20;
+    sget-object v0, La10;->Y:La10;
 
-    iput-wide p2, p0, Ln20;->Y:J
+    invoke-direct {p0, v0, p7, p10}, Lez;-><init>(La10;ZZ)V
 
-    const/4 p1, 0x2
+    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object p4
+
+    iput-object p4, p0, Ln20;->Y:Ljava/lang/Long;
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ln20;->o:Ljava/lang/Long;
+
+    iput-object p3, p0, Ln20;->X:Ljava/lang/String;
+
+    iput-object p6, p0, Ln20;->Z:[B
+
+    iput-object p8, p0, Ln20;->q0:Ljava/lang/String;
+
+    iput-object p9, p0, Ln20;->r0:Ljava/lang/String;
+
+    iput p11, p0, Ln20;->s0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ln20;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ln20;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Ln20;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Ljava/util/HashMap;
     .locals 3
 
-    new-instance p1, Ln20;
+    invoke-super {p0}, Lez;->a()Ljava/util/HashMap;
 
-    iget-object v0, p0, Ln20;->X:Lr20;
+    move-result-object v0
 
-    iget-wide v1, p0, Ln20;->Y:J
+    iget-object v1, p0, Ln20;->q0:Ljava/lang/String;
 
-    invoke-direct {p1, v0, v1, v2, p2}, Ln20;-><init>(Lr20;JLkotlin/coroutines/Continuation;)V
+    invoke-static {v1}, Li79;->b(Ljava/lang/CharSequence;)Z
 
-    return-object p1
-.end method
+    move-result v2
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    if-nez v2, :cond_0
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const-string v2, "token"
 
-    iget-object p1, p0, Ln20;->X:Lr20;
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p1, Lr20;->Y:Lcl7;
+    return-object v0
 
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+    :cond_0
+    const-string v1, "audioId"
 
-    move-result-object p1
+    iget-object v2, p0, Ln20;->o:Ljava/lang/Long;
 
-    check-cast p1, Lsz8;
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v0, p0, Ln20;->Y:J
-
-    invoke-virtual {p1, v0, v1}, Lsz8;->q(J)Luz8;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

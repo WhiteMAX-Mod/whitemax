@@ -1,113 +1,94 @@
 .class public final Lv58;
-.super Ljava/lang/Object;
+.super Lxf6;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ls72;
+.field public final f:Lrm0;
 
-.field public b:I
+.field public g:Ltt7;
 
-.field public c:Luz8;
+.field public final h:Landroid/media/MediaMetadataRetriever;
 
-.field public d:Lone/me/messages/list/loader/MessageModel;
+.field public final i:I
 
-.field public e:Lzfb;
-
-.field public f:Ljava/util/List;
+.field public volatile j:J
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lqmf;Lsf5;Lqs4;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lxf6;-><init>(Lqmf;Lsf5;)V
 
-    sget-object v0, Lp45;->a:Lp45;
+    new-instance p1, Lrm0;
 
-    iput-object v0, p0, Lv58;->f:Ljava/util/List;
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Lrm0;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lv58;->f:Lrm0;
+
+    new-instance p1, Landroid/media/MediaMetadataRetriever;
+
+    invoke-direct {p1}, Landroid/media/MediaMetadataRetriever;-><init>()V
+
+    iput-object p1, p0, Lv58;->h:Landroid/media/MediaMetadataRetriever;
+
+    invoke-virtual {p3}, Los4;->b()Lss4;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const/4 p3, 0x1
+
+    if-eq p2, p3, :cond_1
+
+    const/4 p3, 0x2
+
+    if-ne p2, p3, :cond_0
+
+    const/16 p1, 0x14
+
+    iput p1, p0, Lv58;->i:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lbc6;)Lw58;
-    .locals 3
-
-    invoke-interface {p1, p0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p1, p0, Lv58;->a:Ls72;
-
-    const-string v0, "Required value was null."
-
-    if-eqz p1, :cond_3
-
-    iget v1, p0, Lv58;->b:I
-
-    iget-object v2, p0, Lv58;->e:Lzfb;
-
-    if-eqz v2, :cond_2
-
-    new-instance v0, Lw58;
-
-    invoke-direct {v0, p1, v2, v1}, Lw58;-><init>(Ls72;Lzfb;I)V
-
-    iget-object p1, p0, Lv58;->c:Luz8;
-
-    if-eqz p1, :cond_0
-
-    sget-object v1, Lw58;->h:[Lxi7;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    iget-object v1, v0, Lw58;->d:Lne4;
-
-    iput-object p1, v1, Lne4;->b:Ljava/lang/Object;
 
     :cond_0
-    iget-object p1, p0, Lv58;->d:Lone/me/messages/list/loader/MessageModel;
+    new-instance p2, Ljava/lang/IllegalStateException;
 
-    if-eqz p1, :cond_1
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    sget-object v1, Lw58;->h:[Lxi7;
+    const-string v0, "unknown performance class "
 
-    const/4 v2, 0x1
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aget-object v1, v1, v2
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Lw58;->e:Lne4;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput-object p1, v1, Lne4;->b:Ljava/lang/Object;
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 
     :cond_1
-    iget-object p0, p0, Lv58;->f:Ljava/util/List;
+    const/16 p1, 0xa
 
-    sget-object p1, Lw58;->h:[Lxi7;
+    iput p1, p0, Lv58;->i:I
 
-    const/4 v1, 0x3
-
-    aget-object p1, p1, v1
-
-    iget-object p1, v0, Lw58;->g:Lne4;
-
-    iput-object p0, p1, Lne4;->b:Ljava/lang/Object;
-
-    return-object v0
+    return-void
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    const/4 p1, 0x5
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iput p1, p0, Lv58;->i:I
 
-    throw p0
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method

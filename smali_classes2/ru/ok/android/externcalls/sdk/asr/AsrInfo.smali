@@ -55,17 +55,17 @@
 
 # virtual methods
 .method public final getInitiator()Lru/ok/android/externcalls/sdk/ConversationParticipant;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/asr/AsrInfo;->initiator:Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/AsrInfo;->initiator:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getMovieId()Ljava/lang/Long;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/asr/AsrInfo;->movieId:Ljava/lang/Long;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/AsrInfo;->movieId:Ljava/lang/Long;
 
-    return-object p0
+    return-object v0
 .end method

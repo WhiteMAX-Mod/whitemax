@@ -49,7 +49,7 @@
 
 # virtual methods
 .method public bridge synthetic call()Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -59,20 +59,20 @@
     .line 1
     invoke-virtual {p0}, Lorg/webrtc/ThreadUtils$4;->call()Ljava/lang/Void;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public call()Ljava/lang/Void;
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lorg/webrtc/ThreadUtils$4;->val$runner:Ljava/lang/Runnable;
+    iget-object v0, p0, Lorg/webrtc/ThreadUtils$4;->val$runner:Ljava/lang/Runnable;
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method

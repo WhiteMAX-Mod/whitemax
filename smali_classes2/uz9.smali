@@ -2,54 +2,117 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsz9;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Landroid/net/Uri;
-
-.field public final f:Z
-
-.field public final g:[J
-
-.field public final h:Z
-
-.field public final i:I
-
-.field public final j:Z
+.field public final synthetic a:Loz9;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZZLandroid/net/Uri;Z[JZIZ)V
+.method public constructor <init>(Loz9;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Luz9;->a:Ljava/lang/String;
+    iput-object p1, p0, Luz9;->a:Loz9;
 
-    iput-object p2, p0, Luz9;->b:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-boolean p3, p0, Luz9;->c:Z
 
-    iput-boolean p4, p0, Luz9;->d:Z
+# virtual methods
+.method public final a(JLbt8;)V
+    .locals 0
 
-    iput-object p5, p0, Luz9;->e:Landroid/net/Uri;
+    return-void
+.end method
 
-    iput-boolean p6, p0, Luz9;->f:Z
+.method public final b(JLbt8;)V
+    .locals 0
 
-    iput-object p7, p0, Luz9;->g:[J
+    iget-object p1, p0, Luz9;->a:Loz9;
 
-    iput-boolean p8, p0, Luz9;->h:Z
+    invoke-interface {p1}, Loz9;->w()V
 
-    iput p9, p0, Luz9;->i:I
+    return-void
+.end method
 
-    iput-boolean p10, p0, Luz9;->j:Z
+.method public final c(JLbt8;JLbt8;)V
+    .locals 0
+
+    iget-object p1, p0, Luz9;->a:Loz9;
+
+    invoke-interface {p1}, Loz9;->G()V
+
+    return-void
+.end method
+
+.method public final d(JLbt8;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final e(JLbt8;J)V
+    .locals 0
+
+    iget-object p1, p0, Luz9;->a:Loz9;
+
+    invoke-interface {p1}, Loz9;->d()V
+
+    return-void
+.end method
+
+.method public final f(JLbt8;)V
+    .locals 0
+
+    iget-object p3, p0, Luz9;->a:Loz9;
+
+    invoke-interface {p3, p1, p2}, Loz9;->x(J)V
+
+    return-void
+.end method
+
+.method public final g(JLbt8;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final h(JLbt8;)V
+    .locals 0
+
+    iget-object p1, p0, Luz9;->a:Loz9;
+
+    invoke-interface {p1}, Loz9;->I()V
+
+    return-void
+.end method
+
+.method public final i(JLbt8;)V
+    .locals 0
+
+    iget-object p1, p0, Luz9;->a:Loz9;
+
+    invoke-interface {p1}, Loz9;->m()V
+
+    return-void
+.end method
+
+.method public final j(JLbt8;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final p()V
+    .locals 1
+
+    iget-object v0, p0, Luz9;->a:Loz9;
+
+    invoke-interface {v0}, Loz9;->p()V
 
     return-void
 .end method

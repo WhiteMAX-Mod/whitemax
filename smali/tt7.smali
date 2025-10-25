@@ -1,118 +1,214 @@
 .class public final Ltt7;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Lela;
+.implements Lvv4;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Lsr3;
 
-.field public b:Llr5;
+.field public final b:Lsr3;
 
-.field public c:Z
+.field public final c:Lr6;
 
-.field public d:Z
+.field public final o:Lxo6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 1
+.method public constructor <init>(Lsr3;Lsr3;Lr6;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-object p1, p0, Ltt7;->a:Ljava/lang/Object;
+    iput-object p1, p0, Ltt7;->a:Lsr3;
 
-    new-instance p1, Llr5;
+    iput-object p2, p0, Ltt7;->b:Lsr3;
 
-    const/4 v0, 0x1
+    iput-object p3, p0, Ltt7;->c:Lr6;
 
-    invoke-direct {p1, v0}, Llr5;-><init>(I)V
+    sget-object p1, Louf;->d:Lxo6;
 
-    iput-object p1, p0, Ltt7;->b:Llr5;
+    iput-object p1, p0, Ltt7;->o:Lxo6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lrt7;)V
+.method public final b()V
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Ltt7;->h()Z
 
-    iput-boolean v0, p0, Ltt7;->d:Z
+    move-result v0
 
-    iget-boolean v0, p0, Ltt7;->c:Z
+    if-nez v0, :cond_0
 
-    if-eqz v0, :cond_0
+    sget-object v0, Lzv4;->a:Lzv4;
 
-    const/4 v0, 0x0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    iput-boolean v0, p0, Ltt7;->c:Z
+    :try_start_0
+    iget-object v0, p0, Ltt7;->c:Lr6;
 
-    iget-object v0, p0, Ltt7;->b:Llr5;
+    invoke-interface {v0}, Lr6;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0}, Llr5;->e()Lnr5;
+    return-void
 
-    move-result-object v0
+    :catchall_0
+    move-exception v0
 
-    iget-object p0, p0, Ltt7;->a:Ljava/lang/Object;
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    invoke-interface {p1, p0, v0}, Lrt7;->e(Ljava/lang/Object;Lnr5;)V
+    invoke-static {v0}, Liyi;->a(Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final c(Lvv4;)V
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    invoke-static {p0, p1}, Lzv4;->f(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
 
-    const/4 p0, 0x1
+    move-result v0
 
-    return p0
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Ltt7;->o:Lxo6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-interface {p1}, Lvv4;->g()V
+
+    invoke-virtual {p0, v0}, Ltt7;->onError(Ljava/lang/Throwable;)V
 
     :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Ltt7;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ltt7;
-
-    iget-object p1, p1, Ltt7;->a:Ljava/lang/Object;
-
-    iget-object p0, p0, Ltt7;->a:Ljava/lang/Object;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
+
+    invoke-virtual {p0}, Ltt7;->h()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Ltt7;->a:Lsr3;
+
+    invoke-interface {v0, p1}, Lsr3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvv4;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    invoke-virtual {p0, p1}, Ltt7;->onError(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final g()V
     .locals 0
 
-    iget-object p0, p0, Ltt7;->a:Ljava/lang/Object;
+    invoke-static {p0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    return-void
+.end method
 
-    move-result p0
+.method public final h()Z
+    .locals 2
 
-    return p0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lzv4;->a:Lzv4;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    invoke-virtual {p0}, Ltt7;->h()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lzv4;->a:Lzv4;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object v0, p0, Ltt7;->b:Lsr3;
+
+    invoke-interface {v0, p1}, Lsr3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    invoke-static {v1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

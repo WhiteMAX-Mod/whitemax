@@ -43,29 +43,29 @@
 
 # virtual methods
 .method public createAuthSchemeRegistry()Lorg/apache/http/auth/AuthSchemeRegistry;
-    .locals 2
+    .locals 3
 
-    new-instance p0, Lorg/apache/http/auth/AuthSchemeRegistry;
+    new-instance v0, Lorg/apache/http/auth/AuthSchemeRegistry;
 
-    invoke-direct {p0}, Lorg/apache/http/auth/AuthSchemeRegistry;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/auth/AuthSchemeRegistry;-><init>()V
 
-    new-instance v0, Lorg/apache/http/impl/auth/BasicSchemeFactory;
+    new-instance v1, Lorg/apache/http/impl/auth/BasicSchemeFactory;
 
-    invoke-direct {v0}, Lorg/apache/http/impl/auth/BasicSchemeFactory;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/impl/auth/BasicSchemeFactory;-><init>()V
 
-    const-string v1, "Basic"
+    const-string v2, "Basic"
 
-    invoke-virtual {p0, v1, v0}, Lorg/apache/http/auth/AuthSchemeRegistry;->register(Ljava/lang/String;Lorg/apache/http/auth/AuthSchemeFactory;)V
+    invoke-virtual {v0, v2, v1}, Lorg/apache/http/auth/AuthSchemeRegistry;->register(Ljava/lang/String;Lorg/apache/http/auth/AuthSchemeFactory;)V
 
-    new-instance v0, Lorg/apache/http/impl/auth/DigestSchemeFactory;
+    new-instance v1, Lorg/apache/http/impl/auth/DigestSchemeFactory;
 
-    invoke-direct {v0}, Lorg/apache/http/impl/auth/DigestSchemeFactory;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/impl/auth/DigestSchemeFactory;-><init>()V
 
-    const-string v1, "Digest"
+    const-string v2, "Digest"
 
-    invoke-virtual {p0, v1, v0}, Lorg/apache/http/auth/AuthSchemeRegistry;->register(Ljava/lang/String;Lorg/apache/http/auth/AuthSchemeFactory;)V
+    invoke-virtual {v0, v2, v1}, Lorg/apache/http/auth/AuthSchemeRegistry;->register(Ljava/lang/String;Lorg/apache/http/auth/AuthSchemeFactory;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createClientConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
@@ -142,157 +142,163 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_2
 
     :catch_0
-    move-exception p0
+    move-exception v0
 
-    new-instance v0, Ljava/lang/InstantiationError;
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/InstantiationError;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    goto :goto_0
 
     :catch_1
-    move-exception p0
+    move-exception v0
 
-    new-instance v0, Ljava/lang/IllegalAccessError;
+    goto :goto_1
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    :goto_0
+    new-instance v1, Ljava/lang/InstantiationError;
 
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalAccessError;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_2
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Invalid class name: "
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Ljava/lang/InstantiationError;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v1
+
+    :goto_1
+    new-instance v1, Ljava/lang/IllegalAccessError;
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalAccessError;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :catch_2
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Invalid class name: "
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_0
-    :goto_0
+    :goto_2
     if-eqz v2, :cond_1
 
     invoke-interface {v2, v1, v0}, Lorg/apache/http/conn/ClientConnectionManagerFactory;->newInstance(Lorg/apache/http/params/HttpParams;Lorg/apache/http/conn/scheme/SchemeRegistry;)Lorg/apache/http/conn/ClientConnectionManager;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_1
     new-instance v1, Lorg/apache/http/impl/conn/SingleClientConnManager;
 
     invoke-virtual {p0}, Lorg/apache/http/impl/client/AbstractHttpClient;->getParams()Lorg/apache/http/params/HttpParams;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-direct {v1, p0, v0}, Lorg/apache/http/impl/conn/SingleClientConnManager;-><init>(Lorg/apache/http/params/HttpParams;Lorg/apache/http/conn/scheme/SchemeRegistry;)V
+    invoke-direct {v1, v2, v0}, Lorg/apache/http/impl/conn/SingleClientConnManager;-><init>(Lorg/apache/http/params/HttpParams;Lorg/apache/http/conn/scheme/SchemeRegistry;)V
 
     return-object v1
 .end method
 
 .method public createConnectionKeepAliveStrategy()Lorg/apache/http/conn/ConnectionKeepAliveStrategy;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/client/DefaultConnectionKeepAliveStrategy;
+    new-instance v0, Lorg/apache/http/impl/client/DefaultConnectionKeepAliveStrategy;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/client/DefaultConnectionKeepAliveStrategy;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/client/DefaultConnectionKeepAliveStrategy;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createConnectionReuseStrategy()Lorg/apache/http/ConnectionReuseStrategy;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/DefaultConnectionReuseStrategy;
+    new-instance v0, Lorg/apache/http/impl/DefaultConnectionReuseStrategy;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/DefaultConnectionReuseStrategy;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/DefaultConnectionReuseStrategy;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createCookieSpecRegistry()Lorg/apache/http/cookie/CookieSpecRegistry;
-    .locals 2
+    .locals 3
 
-    new-instance p0, Lorg/apache/http/cookie/CookieSpecRegistry;
+    new-instance v0, Lorg/apache/http/cookie/CookieSpecRegistry;
 
-    invoke-direct {p0}, Lorg/apache/http/cookie/CookieSpecRegistry;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/cookie/CookieSpecRegistry;-><init>()V
 
-    new-instance v0, Lorg/apache/http/impl/cookie/BestMatchSpecFactory;
+    new-instance v1, Lorg/apache/http/impl/cookie/BestMatchSpecFactory;
 
-    invoke-direct {v0}, Lorg/apache/http/impl/cookie/BestMatchSpecFactory;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/impl/cookie/BestMatchSpecFactory;-><init>()V
 
-    const-string v1, "best-match"
+    const-string v2, "best-match"
 
-    invoke-virtual {p0, v1, v0}, Lorg/apache/http/cookie/CookieSpecRegistry;->register(Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;)V
+    invoke-virtual {v0, v2, v1}, Lorg/apache/http/cookie/CookieSpecRegistry;->register(Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;)V
 
-    new-instance v0, Lorg/apache/http/impl/cookie/BrowserCompatSpecFactory;
+    new-instance v1, Lorg/apache/http/impl/cookie/BrowserCompatSpecFactory;
 
-    invoke-direct {v0}, Lorg/apache/http/impl/cookie/BrowserCompatSpecFactory;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/impl/cookie/BrowserCompatSpecFactory;-><init>()V
 
-    const-string v1, "compatibility"
+    const-string v2, "compatibility"
 
-    invoke-virtual {p0, v1, v0}, Lorg/apache/http/cookie/CookieSpecRegistry;->register(Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;)V
+    invoke-virtual {v0, v2, v1}, Lorg/apache/http/cookie/CookieSpecRegistry;->register(Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;)V
 
-    new-instance v0, Lorg/apache/http/impl/cookie/NetscapeDraftSpecFactory;
+    new-instance v1, Lorg/apache/http/impl/cookie/NetscapeDraftSpecFactory;
 
-    invoke-direct {v0}, Lorg/apache/http/impl/cookie/NetscapeDraftSpecFactory;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/impl/cookie/NetscapeDraftSpecFactory;-><init>()V
 
-    const-string v1, "netscape"
+    const-string v2, "netscape"
 
-    invoke-virtual {p0, v1, v0}, Lorg/apache/http/cookie/CookieSpecRegistry;->register(Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;)V
+    invoke-virtual {v0, v2, v1}, Lorg/apache/http/cookie/CookieSpecRegistry;->register(Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;)V
 
-    new-instance v0, Lorg/apache/http/impl/cookie/RFC2109SpecFactory;
+    new-instance v1, Lorg/apache/http/impl/cookie/RFC2109SpecFactory;
 
-    invoke-direct {v0}, Lorg/apache/http/impl/cookie/RFC2109SpecFactory;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/impl/cookie/RFC2109SpecFactory;-><init>()V
 
-    const-string v1, "rfc2109"
+    const-string v2, "rfc2109"
 
-    invoke-virtual {p0, v1, v0}, Lorg/apache/http/cookie/CookieSpecRegistry;->register(Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;)V
+    invoke-virtual {v0, v2, v1}, Lorg/apache/http/cookie/CookieSpecRegistry;->register(Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;)V
 
-    new-instance v0, Lorg/apache/http/impl/cookie/RFC2965SpecFactory;
+    new-instance v1, Lorg/apache/http/impl/cookie/RFC2965SpecFactory;
 
-    invoke-direct {v0}, Lorg/apache/http/impl/cookie/RFC2965SpecFactory;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/impl/cookie/RFC2965SpecFactory;-><init>()V
 
-    const-string v1, "rfc2965"
+    const-string v2, "rfc2965"
 
-    invoke-virtual {p0, v1, v0}, Lorg/apache/http/cookie/CookieSpecRegistry;->register(Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;)V
+    invoke-virtual {v0, v2, v1}, Lorg/apache/http/cookie/CookieSpecRegistry;->register(Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createCookieStore()Lorg/apache/http/client/CookieStore;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/client/BasicCookieStore;
+    new-instance v0, Lorg/apache/http/impl/client/BasicCookieStore;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/client/BasicCookieStore;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/client/BasicCookieStore;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createCredentialsProvider()Lorg/apache/http/client/CredentialsProvider;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/client/BasicCredentialsProvider;
+    new-instance v0, Lorg/apache/http/impl/client/BasicCredentialsProvider;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/client/BasicCredentialsProvider;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/client/BasicCredentialsProvider;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createHttpContext()Lorg/apache/http/protocol/HttpContext;
@@ -330,15 +336,15 @@
 
     invoke-virtual {p0}, Lorg/apache/http/impl/client/AbstractHttpClient;->getCredentialsProvider()Lorg/apache/http/client/CredentialsProvider;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-interface {v0, v1, p0}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, v2}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-object v0
 .end method
 
 .method public createHttpParams()Lorg/apache/http/params/HttpParams;
-    .locals 3
+    .locals 4
 
     new-instance v0, Lorg/apache/http/params/BasicHttpParams;
 
@@ -358,197 +364,197 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "org.apache.http.client"
+    const-string v2, "org.apache.http.client"
 
-    invoke-static {v1, p0}, Lorg/apache/http/util/VersionInfo;->loadVersionInfo(Ljava/lang/String;Ljava/lang/ClassLoader;)Lorg/apache/http/util/VersionInfo;
+    invoke-static {v2, v1}, Lorg/apache/http/util/VersionInfo;->loadVersionInfo(Ljava/lang/String;Ljava/lang/ClassLoader;)Lorg/apache/http/util/VersionInfo;
 
-    move-result-object p0
+    move-result-object v1
 
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lorg/apache/http/util/VersionInfo;->getRelease()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/apache/http/util/VersionInfo;->getRelease()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
     goto :goto_0
 
     :cond_0
-    const-string p0, "UNAVAILABLE"
+    const-string v1, "UNAVAILABLE"
 
     :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v2, "Apache-HttpClient/"
+    const-string v3, "Apache-HttpClient/"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p0, " (java 1.4)"
+    const-string v1, " (java 1.4)"
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-static {v0, p0}, Lorg/apache/http/params/HttpProtocolParams;->setUserAgent(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lorg/apache/http/params/HttpProtocolParams;->setUserAgent(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
 .method public createHttpProcessor()Lorg/apache/http/protocol/BasicHttpProcessor;
-    .locals 1
+    .locals 2
 
-    new-instance p0, Lorg/apache/http/protocol/BasicHttpProcessor;
+    new-instance v0, Lorg/apache/http/protocol/BasicHttpProcessor;
 
-    invoke-direct {p0}, Lorg/apache/http/protocol/BasicHttpProcessor;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/protocol/BasicHttpProcessor;-><init>()V
 
-    new-instance v0, Lorg/apache/http/client/protocol/RequestDefaultHeaders;
+    new-instance v1, Lorg/apache/http/client/protocol/RequestDefaultHeaders;
 
-    invoke-direct {v0}, Lorg/apache/http/client/protocol/RequestDefaultHeaders;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/client/protocol/RequestDefaultHeaders;-><init>()V
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
 
-    new-instance v0, Lorg/apache/http/protocol/RequestContent;
+    new-instance v1, Lorg/apache/http/protocol/RequestContent;
 
-    invoke-direct {v0}, Lorg/apache/http/protocol/RequestContent;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/protocol/RequestContent;-><init>()V
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
 
-    new-instance v0, Lorg/apache/http/protocol/RequestTargetHost;
+    new-instance v1, Lorg/apache/http/protocol/RequestTargetHost;
 
-    invoke-direct {v0}, Lorg/apache/http/protocol/RequestTargetHost;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/protocol/RequestTargetHost;-><init>()V
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
 
-    new-instance v0, Lorg/apache/http/protocol/RequestConnControl;
+    new-instance v1, Lorg/apache/http/protocol/RequestConnControl;
 
-    invoke-direct {v0}, Lorg/apache/http/protocol/RequestConnControl;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/protocol/RequestConnControl;-><init>()V
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
 
-    new-instance v0, Lorg/apache/http/protocol/RequestUserAgent;
+    new-instance v1, Lorg/apache/http/protocol/RequestUserAgent;
 
-    invoke-direct {v0}, Lorg/apache/http/protocol/RequestUserAgent;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/protocol/RequestUserAgent;-><init>()V
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
 
-    new-instance v0, Lorg/apache/http/protocol/RequestExpectContinue;
+    new-instance v1, Lorg/apache/http/protocol/RequestExpectContinue;
 
-    invoke-direct {v0}, Lorg/apache/http/protocol/RequestExpectContinue;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/protocol/RequestExpectContinue;-><init>()V
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
 
-    new-instance v0, Lorg/apache/http/client/protocol/RequestAddCookies;
+    new-instance v1, Lorg/apache/http/client/protocol/RequestAddCookies;
 
-    invoke-direct {v0}, Lorg/apache/http/client/protocol/RequestAddCookies;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/client/protocol/RequestAddCookies;-><init>()V
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
 
-    new-instance v0, Lorg/apache/http/client/protocol/ResponseProcessCookies;
+    new-instance v1, Lorg/apache/http/client/protocol/ResponseProcessCookies;
 
-    invoke-direct {v0}, Lorg/apache/http/client/protocol/ResponseProcessCookies;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/client/protocol/ResponseProcessCookies;-><init>()V
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpResponseInterceptor;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpResponseInterceptor;)V
 
-    new-instance v0, Lorg/apache/http/client/protocol/RequestTargetAuthentication;
+    new-instance v1, Lorg/apache/http/client/protocol/RequestTargetAuthentication;
 
-    invoke-direct {v0}, Lorg/apache/http/client/protocol/RequestTargetAuthentication;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/client/protocol/RequestTargetAuthentication;-><init>()V
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
 
-    new-instance v0, Lorg/apache/http/client/protocol/RequestProxyAuthentication;
+    new-instance v1, Lorg/apache/http/client/protocol/RequestProxyAuthentication;
 
-    invoke-direct {v0}, Lorg/apache/http/client/protocol/RequestProxyAuthentication;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/client/protocol/RequestProxyAuthentication;-><init>()V
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
+    invoke-virtual {v0, v1}, Lorg/apache/http/protocol/BasicHttpProcessor;->addInterceptor(Lorg/apache/http/HttpRequestInterceptor;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createHttpRequestRetryHandler()Lorg/apache/http/client/HttpRequestRetryHandler;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/client/DefaultHttpRequestRetryHandler;
+    new-instance v0, Lorg/apache/http/impl/client/DefaultHttpRequestRetryHandler;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/client/DefaultHttpRequestRetryHandler;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/client/DefaultHttpRequestRetryHandler;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createHttpRoutePlanner()Lorg/apache/http/conn/routing/HttpRoutePlanner;
-    .locals 2
+    .locals 3
 
     new-instance v0, Lorg/apache/http/impl/conn/ProxySelectorRoutePlanner;
 
     invoke-virtual {p0}, Lorg/apache/http/impl/client/AbstractHttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-interface {p0}, Lorg/apache/http/conn/ClientConnectionManager;->getSchemeRegistry()Lorg/apache/http/conn/scheme/SchemeRegistry;
+    invoke-interface {v1}, Lorg/apache/http/conn/ClientConnectionManager;->getSchemeRegistry()Lorg/apache/http/conn/scheme/SchemeRegistry;
 
-    move-result-object p0
+    move-result-object v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {v0, p0, v1}, Lorg/apache/http/impl/conn/ProxySelectorRoutePlanner;-><init>(Lorg/apache/http/conn/scheme/SchemeRegistry;Ljava/net/ProxySelector;)V
+    invoke-direct {v0, v1, v2}, Lorg/apache/http/impl/conn/ProxySelectorRoutePlanner;-><init>(Lorg/apache/http/conn/scheme/SchemeRegistry;Ljava/net/ProxySelector;)V
 
     return-object v0
 .end method
 
 .method public createProxyAuthenticationHandler()Lorg/apache/http/client/AuthenticationHandler;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/client/DefaultProxyAuthenticationHandler;
+    new-instance v0, Lorg/apache/http/impl/client/DefaultProxyAuthenticationHandler;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/client/DefaultProxyAuthenticationHandler;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/client/DefaultProxyAuthenticationHandler;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createRedirectHandler()Lorg/apache/http/client/RedirectHandler;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/client/DefaultRedirectHandler;
+    new-instance v0, Lorg/apache/http/impl/client/DefaultRedirectHandler;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/client/DefaultRedirectHandler;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/client/DefaultRedirectHandler;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createRequestExecutor()Lorg/apache/http/protocol/HttpRequestExecutor;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/protocol/HttpRequestExecutor;
+    new-instance v0, Lorg/apache/http/protocol/HttpRequestExecutor;
 
-    invoke-direct {p0}, Lorg/apache/http/protocol/HttpRequestExecutor;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/protocol/HttpRequestExecutor;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createTargetAuthenticationHandler()Lorg/apache/http/client/AuthenticationHandler;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/client/DefaultTargetAuthenticationHandler;
+    new-instance v0, Lorg/apache/http/impl/client/DefaultTargetAuthenticationHandler;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/client/DefaultTargetAuthenticationHandler;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/client/DefaultTargetAuthenticationHandler;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createUserTokenHandler()Lorg/apache/http/client/UserTokenHandler;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/client/DefaultUserTokenHandler;
+    new-instance v0, Lorg/apache/http/impl/client/DefaultUserTokenHandler;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/client/DefaultUserTokenHandler;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/client/DefaultUserTokenHandler;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method

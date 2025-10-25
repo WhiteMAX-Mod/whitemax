@@ -1,147 +1,141 @@
-.class public final Lvb5;
+.class public final synthetic Lvb5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic a:I
 
-.field public final b:Lfue;
+.field public final synthetic b:Lxb5;
 
-.field public final c:Lug4;
-
-.field public final d:Lx20;
-
-.field public e:Lxpe;
-
-.field public f:Lxpe;
-
-.field public final g:Lx20;
-
-.field public final h:Landroid/os/Looper;
-
-.field public final i:Lw10;
-
-.field public final j:I
-
-.field public final k:Z
-
-.field public final l:Ludd;
-
-.field public final m:Log4;
-
-.field public final n:J
-
-.field public o:Z
+.field public final synthetic c:Lgu1;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lbkd;)V
-    .locals 6
+.method public synthetic constructor <init>(Lxb5;Lgu1;I)V
+    .locals 0
 
-    new-instance v0, Lug4;
+    iput p3, p0, Lvb5;->a:I
 
-    const/4 v1, 0x5
+    iput-object p1, p0, Lvb5;->b:Lxb5;
 
-    invoke-direct {v0, v1, p2}, Lug4;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lx20;
-
-    const/4 v1, 0x4
-
-    invoke-direct {p2, p1, v1}, Lx20;-><init>(Landroid/content/Context;I)V
-
-    new-instance v1, Lx20;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v1, p1, v2}, Lx20;-><init>(Landroid/content/Context;I)V
-
-    new-instance v2, Lg74;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v3}, Lg74;-><init>(I)V
-
-    new-instance v3, Lx20;
-
-    const/16 v4, 0x8
-
-    invoke-direct {v3, p1, v4}, Lx20;-><init>(Landroid/content/Context;I)V
+    iput-object p2, p0, Lvb5;->c:Lgu1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvb5;->a:Landroid/content/Context;
+    return-void
+.end method
 
-    iput-object v0, p0, Lvb5;->c:Lug4;
 
-    iput-object p2, p0, Lvb5;->d:Lx20;
+# virtual methods
+.method public final run()V
+    .locals 6
 
-    iput-object v1, p0, Lvb5;->e:Lxpe;
+    iget v0, p0, Lvb5;->a:I
 
-    iput-object v2, p0, Lvb5;->f:Lxpe;
+    packed-switch v0, :pswitch_data_0
 
-    iput-object v3, p0, Lvb5;->g:Lx20;
+    iget-object v0, p0, Lvb5;->b:Lxb5;
 
-    sget p1, Llrf;->a:I
+    iget-object v1, v0, Lxb5;->o:Lcc5;
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    iget-object v2, v0, Lxb5;->b:Lav0;
 
-    move-result-object p1
+    sget-object v3, Lav0;->a:Lav0;
 
-    if-eqz p1, :cond_0
+    iget-object v4, p0, Lvb5;->c:Lgu1;
+
+    if-ne v2, v3, :cond_0
+
+    invoke-virtual {v1}, Lcc5;->a()Ll28;
+
+    move-result-object v2
+
+    invoke-static {v2, v4}, Lwag;->l(Ll28;Lgu1;)V
+
+    new-instance v3, Lwb5;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, v0, v2, v5}, Lwb5;-><init>(Lxb5;Ll28;I)V
+
+    invoke-static {}, Lfni;->a()Lju4;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v3, v5}, Lgu1;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    iget-object v3, v0, Lxb5;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v3, Lwb5;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v0, v2, v4}, Lwb5;-><init>(Lxb5;Ll28;I)V
+
+    iget-object v0, v1, Lcc5;->h:La3e;
+
+    invoke-interface {v2, v3, v0}, Ll28;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    sget-object v1, Lav0;->b:Lav0;
 
-    move-result-object p1
+    if-ne v2, v1, :cond_1
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "BufferProvider is not active."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Unknown state: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, v0, Lxb5;->b:Lav0;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Lgu1;->d(Ljava/lang/Throwable;)Z
 
     :goto_0
-    iput-object p1, p0, Lvb5;->h:Landroid/os/Looper;
+    return-void
 
-    sget-object p1, Lw10;->Z:Lw10;
+    :pswitch_0
+    iget-object v0, p0, Lvb5;->c:Lgu1;
 
-    iput-object p1, p0, Lvb5;->i:Lw10;
+    iget-object v1, p0, Lvb5;->b:Lxb5;
 
-    const/4 p1, 0x1
+    iget-object v1, v1, Lxb5;->b:Lav0;
 
-    iput p1, p0, Lvb5;->j:I
-
-    iput-boolean p1, p0, Lvb5;->k:Z
-
-    sget-object p1, Ludd;->c:Ludd;
-
-    iput-object p1, p0, Lvb5;->l:Ludd;
-
-    const-wide/16 p1, 0x14
-
-    invoke-static {p1, p2}, Llrf;->B(J)J
-
-    move-result-wide v2
-
-    const-wide/16 p1, 0x1f4
-
-    invoke-static {p1, p2}, Llrf;->B(J)J
-
-    move-result-wide v4
-
-    new-instance v0, Log4;
-
-    const/4 v1, 0x0
-
-    invoke-direct/range {v0 .. v5}, Log4;-><init>(IJJ)V
-
-    iput-object v0, p0, Lvb5;->m:Log4;
-
-    sget-object p1, Lfue;->a:Lfue;
-
-    iput-object p1, p0, Lvb5;->b:Lfue;
-
-    const-wide/16 p1, 0x7d0
-
-    iput-wide p1, p0, Lvb5;->n:J
+    invoke-virtual {v0, v1}, Lgu1;->b(Ljava/lang/Object;)Z
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

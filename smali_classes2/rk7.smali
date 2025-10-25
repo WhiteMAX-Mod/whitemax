@@ -1,137 +1,588 @@
-.class public final Lrk7;
+.class public final synthetic Lrk7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/util/List;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lrk7;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrk7;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lrk7;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 10
 
-    const/4 v0, 0x1
+    iget v0, p0, Lrk7;->a:I
 
-    if-ne p0, p1, :cond_0
+    const-class v1, Lj4e;
 
-    return v0
+    const-class v2, Lhd;
 
-    :cond_0
-    instance-of v1, p1, Lrk7;
+    const-class v3, Lulf;
 
-    const/4 v2, 0x0
+    const-class v4, Lioa;
 
-    if-nez v1, :cond_1
+    const/4 v5, 0x1
 
-    return v2
+    const/4 v6, 0x0
 
-    :cond_1
-    check-cast p1, Lrk7;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lrk7;->a:Ljava/lang/String;
+    sget-object v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Z:[Ltr7;
 
-    iget-object v3, p1, Lrk7;->a:Ljava/lang/String;
+    new-instance v0, Lyl8;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0}, Lyl8;-><init>()V
 
-    move-result v1
+    return-object v0
 
-    if-nez v1, :cond_2
+    :pswitch_0
+    sget-object v0, Ljl8;->I0:[Ltr7;
 
-    return v2
+    sget-object v0, Lccg;->a:Lccg;
 
-    :cond_2
-    iget-object p0, p0, Lrk7;->b:Ljava/util/List;
+    return-object v0
 
-    iget-object p1, p1, Lrk7;->b:Ljava/util/List;
+    :pswitch_1
+    new-instance v1, Laqa;
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v2, Lzsc;->oneme_main_profile_title:I
 
-    move-result p0
+    new-instance v3, Lxpa;
 
-    if-nez p0, :cond_3
+    new-instance v0, Leh7;
 
-    return v2
+    const/16 v4, 0xc
 
-    :cond_3
-    return v0
-.end method
+    invoke-direct {v0, v4}, Leh7;-><init>(I)V
 
-.method public final hashCode()I
-    .locals 1
+    new-instance v4, Lue8;
 
-    iget-object v0, p0, Lrk7;->a:Ljava/lang/String;
+    const/4 v5, 0x2
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-direct {v4, v5}, Lue8;-><init>(I)V
 
-    move-result v0
+    invoke-direct {v3, v4, v0}, Lxpa;-><init>(Lbj6;Lli6;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    sget v4, Loxa;->j:I
 
-    iget-object p0, p0, Lrk7;->b:Ljava/util/List;
+    const-string v5, ":settings"
 
-    if-nez p0, :cond_0
+    sget v6, Loxa;->i:I
 
-    const/4 p0, 0x0
+    invoke-direct/range {v1 .. v6}, Laqa;-><init>(ILzpa;ILjava/lang/String;I)V
 
-    goto :goto_0
+    return-object v1
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    :pswitch_2
+    new-instance v2, Laqa;
 
-    move-result p0
+    sget v3, Lzsc;->oneme_main_settings_title:I
 
-    :goto_0
-    add-int/2addr v0, p0
+    new-instance v4, Lxpa;
 
-    return v0
-.end method
+    new-instance v0, Leh7;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    const/16 v1, 0xb
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Leh7;-><init>(I)V
 
-    const-string v1, "LastInputText(text="
+    new-instance v1, Lue8;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v5}, Lue8;-><init>(I)V
 
-    iget-object v1, p0, Lrk7;->a:Ljava/lang/String;
+    invoke-direct {v4, v1, v0}, Lxpa;-><init>(Lbj6;Lli6;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v5, Loxa;->j:I
 
-    const-string v1, ", messageElementsData="
+    const-string v6, ":settings"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v7, Loxa;->i:I
 
-    iget-object p0, p0, Lrk7;->b:Ljava/util/List;
+    invoke-direct/range {v2 .. v7}, Laqa;-><init>(ILzpa;ILjava/lang/String;I)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object v2
 
-    const-string p0, ")"
+    :pswitch_3
+    sget-object v0, Lone/me/devmenu/logsviewer/LogsViewerScreen;->Y:[Ltr7;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Lac8;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v1, Lhb8;->a:Lhb8;
 
-    move-result-object p0
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
 
-    return-object p0
+    move-result-object v2
+
+    const-class v4, Lmxa;
+
+    invoke-virtual {v2, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lmxa;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lulf;
+
+    invoke-direct {v0, v2, v1}, Lac8;-><init>(Lmxa;Lulf;)V
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Ljm5;
+
+    invoke-direct {v0, v6}, Ljm5;-><init>(I)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Ljm5;
+
+    invoke-direct {v0, v6}, Ljm5;-><init>(I)V
+
+    return-object v0
+
+    :pswitch_6
+    sget-object v0, Lone/me/login/LoginScreen;->c:[Ltr7;
+
+    new-instance v0, Lwa8;
+
+    sget-object v1, Lw98;->a:Lw98;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const-class v2, Lrib;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lwa8;-><init>(Liu7;)V
+
+    return-object v0
+
+    :pswitch_7
+    new-instance v0, Lt70;
+
+    sget-object v1, Lw98;->a:Lw98;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lt70;-><init>(Liu7;)V
+
+    return-object v0
+
+    :pswitch_8
+    new-instance v0, Lc80;
+
+    sget-object v1, Lw98;->a:Lw98;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lc80;-><init>(Liu7;Liu7;)V
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Lf80;
+
+    sget-object v1, Lw98;->a:Lw98;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lf80;-><init>(Liu7;Liu7;)V
+
+    return-object v0
+
+    :pswitch_a
+    new-instance v0, Landroid/media/MediaMetadataRetriever;
+
+    invoke-direct {v0}, Landroid/media/MediaMetadataRetriever;-><init>()V
+
+    return-object v0
+
+    :pswitch_b
+    sget-object v0, Landroid/util/Patterns;->WEB_URL:Ljava/util/regex/Pattern;
+
+    return-object v0
+
+    :pswitch_c
+    sget-object v0, Landroid/util/Patterns;->WEB_URL:Ljava/util/regex/Pattern;
+
+    return-object v0
+
+    :pswitch_d
+    sget v0, Lone/me/android/deeplink/LinkInterceptorWidget;->o:I
+
+    sget-object v0, Lssa;->a:Lssa;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Ld08;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld08;
+
+    return-object v0
+
+    :pswitch_e
+    sget-object v0, Lfkg;->a:Lfkg;
+
+    invoke-virtual {v0}, Lfkg;->b()Ls64;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_f
+    sget-object v0, Lptd;->a:Lptd;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Lpc4;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpc4;
+
+    check-cast v0, Lwb4;
+
+    iget-object v0, v0, Lwb4;->g:Lygd;
+
+    return-object v0
+
+    :pswitch_10
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x41200000    # 10.0f
+
+    mul-float/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    invoke-virtual {v0, v6}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
+
+    return-object v0
+
+    :pswitch_11
+    sget-object v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->r0:[Ltr7;
+
+    new-instance v0, Lbne;
+
+    sget-object v1, Lis7;->a:Lis7;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const-class v3, Ly2f;
+
+    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const-class v3, Lp6f;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lbne;-><init>(Liu7;Liu7;)V
+
+    return-object v0
+
+    :pswitch_12
+    sget-object v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->q0:[Ltr7;
+
+    new-instance v4, Lx95;
+
+    sget-object v0, Lis7;->a:Lis7;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const-class v2, Lak;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const-class v2, Lzi;
+
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v6, v1
+
+    check-cast v6, Lzi;
+
+    new-instance v7, Ls9d;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const-class v2, Lz95;
+
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz95;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v7, v2, v1}, Ls9d;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v8, v1
+
+    check-cast v8, Lulf;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Lp2d;
+
+    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v9, v0
+
+    check-cast v9, Lp2d;
+
+    invoke-direct/range {v4 .. v9}, Lx95;-><init>(Liu7;Lzi;Ls9d;Lulf;Lp2d;)V
+
+    return-object v4
+
+    :pswitch_13
+    new-instance v0, Lskg;
+
+    invoke-direct {v0, v6}, Lskg;-><init>(I)V
+
+    return-object v0
+
+    :pswitch_14
+    new-instance v0, Lskg;
+
+    invoke-direct {v0, v6}, Lskg;-><init>(I)V
+
+    return-object v0
+
+    :pswitch_15
+    new-instance v0, Lmm7;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    return-object v0
+
+    :pswitch_16
+    sget-object v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->M0:[Ltr7;
+
+    new-instance v0, Lxu3;
+
+    sget-object v2, Lqk7;->a:Lqk7;
+
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lxu3;-><init>(Liu7;)V
+
+    return-object v0
+
+    :pswitch_17
+    sget-object v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->z0:[Ltr7;
+
+    new-instance v0, Lxu3;
+
+    sget-object v2, Lqk7;->a:Lqk7;
+
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lxu3;-><init>(Liu7;)V
+
+    return-object v0
+
+    :pswitch_18
+    sget-object v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->z0:[Ltr7;
+
+    new-instance v0, Lpl7;
+
+    invoke-direct {v0}, Lpl7;-><init>()V
+
+    return-object v0
+
+    :pswitch_19
+    sget-object v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->z0:[Ltr7;
+
+    sget-object v0, Lupd;->t0:Lupd;
+
+    return-object v0
+
+    :pswitch_1a
+    new-instance v0, Lupe;
+
+    invoke-direct {v0, v5}, Lupe;-><init>(Z)V
+
+    return-object v0
+
+    :pswitch_1b
+    new-instance v0, Lupe;
+
+    invoke-direct {v0, v6}, Lupe;-><init>(Z)V
+
+    return-object v0
+
+    :pswitch_1c
+    new-instance v0, Lupe;
+
+    invoke-direct {v0, v5}, Lupe;-><init>(Z)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

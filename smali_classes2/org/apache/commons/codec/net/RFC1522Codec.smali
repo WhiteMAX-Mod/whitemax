@@ -30,9 +30,9 @@
 
     if-nez p1, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :cond_0
     const-string v0, "=?"
@@ -125,64 +125,64 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/commons/codec/net/RFC1522Codec;->doDecoding([B)[B
 
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/String;
-
-    invoke-direct {p1, p0, v1}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
-
-    return-object p1
-
-    :cond_1
-    new-instance p0, Lorg/apache/commons/codec/DecoderException;
-
-    const-string p1, "This codec cannot decode "
-
-    const-string v1, " encoded content"
-
-    invoke-static {p1, v0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
+    new-instance v0, Ljava/lang/String;
 
-    throw p0
+    invoke-direct {v0, p1, v1}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+
+    return-object v0
+
+    :cond_1
+    new-instance p1, Lorg/apache/commons/codec/DecoderException;
+
+    const-string v1, "This codec cannot decode "
+
+    const-string v2, " encoded content"
+
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_2
-    new-instance p0, Lorg/apache/commons/codec/DecoderException;
+    new-instance p1, Lorg/apache/commons/codec/DecoderException;
 
-    const-string p1, "RFC 1522 violation: encoding token not found"
+    const-string v0, "RFC 1522 violation: encoding token not found"
 
-    invoke-direct {p0, p1}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_3
-    new-instance p0, Lorg/apache/commons/codec/DecoderException;
+    new-instance p1, Lorg/apache/commons/codec/DecoderException;
 
-    const-string p1, "RFC 1522 violation: charset not specified"
+    const-string v0, "RFC 1522 violation: charset not specified"
 
-    invoke-direct {p0, p1}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_4
-    new-instance p0, Lorg/apache/commons/codec/DecoderException;
+    new-instance p1, Lorg/apache/commons/codec/DecoderException;
 
-    const-string p1, "RFC 1522 violation: charset token not found"
+    const-string v0, "RFC 1522 violation: charset token not found"
 
-    invoke-direct {p0, p1}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_5
-    new-instance p0, Lorg/apache/commons/codec/DecoderException;
+    new-instance p1, Lorg/apache/commons/codec/DecoderException;
 
-    const-string p1, "RFC 1522 violation: malformed encoded content"
+    const-string v0, "RFC 1522 violation: malformed encoded content"
 
-    invoke-direct {p0, p1}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public abstract doDecoding([B)[B
@@ -212,9 +212,9 @@
 
     if-nez p1, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
@@ -243,25 +243,25 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/commons/codec/net/RFC1522Codec;->doEncoding([B)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    new-instance p1, Ljava/lang/String;
+    new-instance p2, Ljava/lang/String;
 
-    const-string p2, "US-ASCII"
+    const-string v1, "US-ASCII"
 
-    invoke-direct {p1, p0, p2}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+    invoke-direct {p2, p1, v1}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string p1, "?="
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    const-string p0, "?="
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public abstract getEncoding()Ljava/lang/String;

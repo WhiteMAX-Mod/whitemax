@@ -122,11 +122,11 @@
 
 # virtual methods
 .method public describeContents()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
@@ -148,9 +148,9 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p0, p0, Landroid/support/v4/media/session/ParcelableVolumeInfo;->audioStream:I
+    iget p2, p0, Landroid/support/v4/media/session/ParcelableVolumeInfo;->audioStream:I
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

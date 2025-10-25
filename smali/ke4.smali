@@ -1,52 +1,42 @@
-.class public final Lke4;
+.class public interface abstract annotation Lke4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lww4;
+.implements Ljava/lang/annotation/Annotation;
 
 
-# instance fields
-.field public final a:Lrw4;
+# annotations
+.annotation system Ldalvik/annotation/AnnotationDefault;
+    value = .subannotation Lke4;
+        c = ""
+        f = ""
+        i = {}
+        l = {}
+        m = ""
+        n = {}
+        s = {}
+        v = 0x1
+    .end subannotation
+.end annotation
 
-.field public b:Lnw4;
-
-.field public c:Z
-
-.field public final synthetic o:Lme4;
-
-
-# direct methods
-.method public constructor <init>(Lme4;Lrw4;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lke4;->o:Lme4;
-
-    iput-object p2, p0, Lke4;->a:Lrw4;
-
-    return-void
-.end method
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
 
 # virtual methods
-.method public final release()V
-    .locals 3
+.method public abstract c()Ljava/lang/String;
+.end method
 
-    iget-object v0, p0, Lke4;->o:Lme4;
+.method public abstract f()Ljava/lang/String;
+.end method
 
-    iget-object v0, v0, Lme4;->u:Landroid/os/Handler;
+.method public abstract l()[I
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public abstract m()Ljava/lang/String;
+.end method
 
-    new-instance v1, Lje4;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2, p0}, Lje4;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v1}, Lnrf;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    return-void
+.method public abstract v()I
 .end method

@@ -1,138 +1,209 @@
-.class public abstract Lwcc;
-.super Ljava/lang/Object;
+.class public final Lwcc;
+.super Lsgf;
+.source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static ActionBarTheme:I = 0x7f140000
 
-.field public static AttachButton:I = 0x7f14000c
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static AttachButton_QuickCamera:I = 0x7f14000d
+.field public final synthetic Y:Ladc;
 
-.field public static AttachButton_SmallQuickCameraButton:I = 0x7f14000e
 
-.field public static ComposeMessage:I = 0x7f14017e
+# direct methods
+.method public constructor <init>(Ladc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static ContactLastSeen:I = 0x7f14017f
+    iput-object p1, p0, Lwcc;->Y:Ladc;
 
-.field public static ContactName:I = 0x7f140180
+    const/4 p1, 0x2
 
-.field public static DrawerArrowStyle:I = 0x7f140182
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static ExtraActionButton:I = 0x7f1401a4
+    return-void
+.end method
 
-.field public static ExtraActionButton_Down:I = 0x7f1401a5
 
-.field public static ExtraActionButton_Up:I = 0x7f1401a6
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static LandscapeAttachButton:I = 0x7f1401ef
+    check-cast p1, Lq54;
 
-.field public static LandscapeAttachButton_LandscapeQuickCamera:I = 0x7f1401f0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static LandscapeAttachButton_LandscapeSmallQuickCameraButton:I = 0x7f1401f1
+    invoke-virtual {p0, p1, p2}, Lwcc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static LayoutPadding:I = 0x7f1401f2
+    move-result-object p1
 
-.field public static MediaTabText:I = 0x7f140208
+    check-cast p1, Lwcc;
 
-.field public static MenuActionButtonNoCaps:I = 0x7f140209
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static MenuOverflow:I = 0x7f14020a
+    invoke-virtual {p1, p2}, Lwcc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static MenuOverflowWhite:I = 0x7f14020b
+    return-object p2
+.end method
 
-.field public static MessageActionButton:I = 0x7f14020c
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static MessagesProgressBar:I = 0x7f14020d
+    new-instance v0, Lwcc;
 
-.field public static NavigationDrawerTheme:I = 0x7f14020e
+    iget-object v1, p0, Lwcc;->Y:Ladc;
 
-.field public static ProgressBarOrange:I = 0x7f140244
+    invoke-direct {v0, v1, p2}, Lwcc;-><init>(Ladc;Lkotlin/coroutines/Continuation;)V
 
-.field public static ProgressBarWhite:I = 0x7f140245
+    iput-object p1, v0, Lwcc;->X:Ljava/lang/Object;
 
-.field public static RoundedButton24:I = 0x7f140246
+    return-object v0
+.end method
 
-.field public static RoundedButton24_Blue:I = 0x7f140247
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-.field public static RoundedButton24_Blue_DisabledDark:I = 0x7f140248
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.field public static RoundedButton24_Orange:I = 0x7f140249
+    iget-object p1, p0, Lwcc;->X:Ljava/lang/Object;
 
-.field public static RoundedButton24_Serif:I = 0x7f14024a
+    check-cast p1, Lq54;
 
-.field public static RoundedButton24_Transparent:I = 0x7f14024b
+    iget-object v0, p0, Lwcc;->Y:Ladc;
 
-.field public static RoundedButton24_Transparent_WhiteText:I = 0x7f14024c
+    :try_start_0
+    iget-object v1, v0, Ladc;->R0:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static RoundedButton24_White:I = 0x7f14024d
+    new-instance v2, Lqi2;
 
-.field public static RowPadding:I = 0x7f14024e
+    const/16 v3, 0xa
 
-.field public static SearchTabText:I = 0x7f140269
+    invoke-direct {v2, v3}, Lqi2;-><init>(I)V
 
-.field public static SmallProgressBar:I = 0x7f1402a8
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
 
-.field public static SpinnerDropDown:I = 0x7f1402a9
+    move-result-object v1
 
-.field public static SubtitleCollapsed:I = 0x7f1402aa
+    check-cast v1, Ljava/lang/String;
 
-.field public static SubtitleExpanded:I = 0x7f1402ab
+    invoke-virtual {v0}, Ladc;->w()Liv5;
 
-.field public static TabText:I = 0x7f1402af
+    move-result-object v2
 
-.field public static TamTamFab:I = 0x7f1402b0
+    invoke-virtual {v2, v1}, Liv5;->p(Ljava/lang/String;)Ljava/io/File;
 
-.field public static TamTamTheme:I = 0x7f1402b1
+    move-result-object v1
 
-.field public static TamTamTheme_Base:I = 0x7f1402b2
+    invoke-static {v1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
-.field public static TamTamTheme_Base_Dark:I = 0x7f1402b3
+    move-result-object v1
 
-.field public static TamTamTheme_Base_PopupNotification:I = 0x7f1402b4
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-.field public static TamTamTheme_CloseMode:I = 0x7f1402b5
+    move-result-object v2
 
-.field public static Text:I = 0x7f1402b7
+    const-string v3, "content://"
 
-.field public static TextInputLayoutHint:I = 0x7f140345
+    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-.field public static Text_Attach:I = 0x7f1402b8
+    move-result v2
 
-.field public static Text_Large:I = 0x7f1402b9
+    if-eqz v2, :cond_0
 
-.field public static Text_Largest:I = 0x7f1402ba
+    goto :goto_0
 
-.field public static Text_LocalMediaCount:I = 0x7f1402bb
+    :cond_0
+    invoke-virtual {v0}, Ladc;->w()Liv5;
 
-.field public static Text_LocalMediaCount_FullScreen:I = 0x7f1402bc
+    move-result-object v2
 
-.field public static Text_Normal:I = 0x7f1402bd
+    iget-object v3, v0, Ladc;->S0:Liu7;
 
-.field public static Text_Small:I = 0x7f1402be
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
 
-.field public static Theme_Transparent:I = 0x7f1403b7
+    move-result-object v3
 
-.field public static Theme_Transparent_DarkMenuOverflow:I = 0x7f1403b8
+    check-cast v3, Landroid/content/Context;
 
-.field public static Theme_Transparent_WhiteMenuOverflow:I = 0x7f1403b9
+    invoke-static {v1}, Laai;->g(Landroid/net/Uri;)Ljava/io/File;
 
-.field public static Theme_Transparent_WhiteMenuOverflow_NoCaps:I = 0x7f1403ba
+    move-result-object v1
 
-.field public static TimePicker:I = 0x7f140431
+    invoke-virtual {v2, v3, v1}, Liv5;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
 
-.field public static TimePickerShape:I = 0x7f140434
+    move-result-object v1
 
-.field public static TimePicker_Day:I = 0x7f140432
+    :goto_0
+    new-instance v2, Landroid/content/Intent;
 
-.field public static TimePicker_Night:I = 0x7f140433
+    const-string v3, "android.media.action.IMAGE_CAPTURE"
 
-.field public static TitleCollapsed:I = 0x7f140435
+    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-.field public static TitleExpanded:I = 0x7f140436
+    const-string v3, "output"
 
-.field public static TitleExpandedSmall:I = 0x7f140437
+    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-.field public static frg_auth_native_ok__common:I = 0x7f140681
+    const-string v1, "outputFormat"
 
-.field public static frg_auth_native_ok__et_login:I = 0x7f140682
+    sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v1
+
+    new-instance v2, Lbed;
+
+    invoke-direct {v2, v1}, Lbed;-><init>(Ljava/lang/Throwable;)V
+
+    :goto_1
+    invoke-static {v2}, Lded;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v3, "capturePhoto: failed to capture photo"
+
+    invoke-static {p1, v3, v1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0}, Ladc;->D()V
+
+    :cond_1
+    instance-of p1, v2, Lbed;
+
+    if-nez p1, :cond_2
+
+    check-cast v2, Landroid/content/Intent;
+
+    iget-object p1, v0, Ladc;->B0:Lxe5;
+
+    new-instance v0, Lpbc;
+
+    invoke-direct {v0, v2}, Lpbc;-><init>(Landroid/content/Intent;)V
+
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    :cond_2
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method

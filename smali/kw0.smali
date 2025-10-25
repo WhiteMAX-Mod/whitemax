@@ -3,208 +3,130 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lj55;
-
-
-# static fields
-.field public static final c:Ljava/lang/String;
-
-.field public static final d:Ljava/util/Set;
-
-.field public static final e:Lkw0;
-
-.field public static final f:Lkw0;
+.implements Lw1g;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lmb6;
+
+.field public final c:Lpu4;
+
+.field public d:Lmb6;
+
+.field public e:Lw1g;
+
+.field public f:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    const-string v0, "hts/frbslgiggolai.o/0clgbthfra=snpoo"
-
-    const-string v1, "tp:/ieaeogn.ogepscmvc/o/ac?omtjo_rt3"
-
-    invoke-static {v0, v1}, Lyu0;->y(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lkw0;->c:Ljava/lang/String;
-
-    const-string v1, "hts/frbslgigp.ogepscmv/ieo/eaybtho"
-
-    const-string v2, "tp:/ieaeogn-agolai.o/1frlglgc/aclg"
-
-    invoke-static {v1, v2}, Lyu0;->y(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "AzSCki82AwsLzKd5O8zo"
-
-    const-string v3, "IayckHiZRO1EFl1aGoK"
-
-    invoke-static {v2, v3}, Lyu0;->y(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/util/HashSet;
-
-    new-instance v4, Ll65;
-
-    const-string v5, "proto"
-
-    invoke-direct {v4, v5}, Ll65;-><init>(Ljava/lang/String;)V
-
-    new-instance v5, Ll65;
-
-    const-string v6, "json"
-
-    invoke-direct {v5, v6}, Ll65;-><init>(Ljava/lang/String;)V
-
-    filled-new-array {v4, v5}, [Ll65;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {v3}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v3
-
-    sput-object v3, Lkw0;->d:Ljava/util/Set;
-
-    new-instance v3, Lkw0;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v0, v4}, Lkw0;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v3, Lkw0;->e:Lkw0;
-
-    new-instance v0, Lkw0;
-
-    invoke-direct {v0, v1, v2}, Lkw0;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v0, Lkw0;->f:Lkw0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(IILmb6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkw0;->a:Ljava/lang/String;
+    iput p2, p0, Lkw0;->a:I
 
-    iput-object p2, p0, Lkw0;->b:Ljava/lang/String;
+    iput-object p3, p0, Lkw0;->b:Lmb6;
+
+    new-instance p1, Lpu4;
+
+    invoke-direct {p1}, Lpu4;-><init>()V
+
+    iput-object p1, p0, Lkw0;->c:Lpu4;
 
     return-void
 .end method
 
-.method public static a([B)Lkw0;
-    .locals 3
 
-    new-instance v0, Ljava/lang/String;
+# virtual methods
+.method public final a(JIIILu1g;)V
+    .locals 8
 
-    const-string v1, "UTF-8"
+    iget-wide v0, p0, Lkw0;->f:J
 
-    invoke-static {v1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-
-    const-string p0, "1$"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    const/4 p0, 0x2
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "\\"
-
-    invoke-static {v1}, Ljava/util/regex/Pattern;->quote(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, p0}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
-
-    move-result-object v0
-
-    array-length v1, v0
-
-    if-ne v1, p0, :cond_2
-
-    const/4 p0, 0x0
-
-    aget-object p0, v0, p0
-
-    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
-    new-instance v1, Lkw0;
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v2
+    cmp-long v2, v0, v2
 
     if-eqz v2, :cond_0
 
-    const/4 v0, 0x0
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    iget-object v0, p0, Lkw0;->c:Lpu4;
+
+    iput-object v0, p0, Lkw0;->e:Lw1g;
 
     :cond_0
-    invoke-direct {v1, p0, v0}, Lkw0;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, p0, Lkw0;->e:Lw1g;
 
-    return-object v1
+    sget-object v0, Lnig;->a:Ljava/lang/String;
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    move-wide v2, p1
 
-    const-string v0, "Missing endpoint in CCTDestination extras"
+    move v4, p3
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move v5, p4
 
-    throw p0
+    move v6, p5
 
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    move-object v7, p6
 
-    const-string v0, "Extra is not a valid encoded LegacyFlgDestination"
+    invoke-interface/range {v1 .. v7}, Lw1g;->a(JIIILu1g;)V
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    throw p0
+.method public final b(Ledb;II)V
+    .locals 1
 
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iget-object p3, p0, Lkw0;->e:Lw1g;
 
-    const-string v0, "Version marker missing from extras"
+    sget-object v0, Lnig;->a:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    throw p0
+    invoke-interface {p3, p1, p2, v0}, Lw1g;->b(Ledb;II)V
+
+    return-void
+.end method
+
+.method public final c(Lyb4;IZ)I
+    .locals 2
+
+    iget-object v0, p0, Lkw0;->e:Lw1g;
+
+    sget-object v1, Lnig;->a:Ljava/lang/String;
+
+    invoke-interface {v0, p1, p2, p3}, Lw1g;->c(Lyb4;IZ)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final d(Lmb6;)V
+    .locals 2
+
+    iget-object v0, p0, Lkw0;->b:Lmb6;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1, v0}, Lmb6;->e(Lmb6;)Lmb6;
+
+    move-result-object p1
+
+    :cond_0
+    iput-object p1, p0, Lkw0;->d:Lmb6;
+
+    iget-object v0, p0, Lkw0;->e:Lw1g;
+
+    sget-object v1, Lnig;->a:Ljava/lang/String;
+
+    invoke-interface {v0, p1}, Lw1g;->d(Lmb6;)V
+
+    return-void
 .end method

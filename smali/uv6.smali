@@ -1,101 +1,90 @@
 .class public final Luv6;
-.super Lqv6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public o:Z
+.field public a:J
+
+.field public b:Z
+
+.field public c:I
+
+.field public d:J
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Z
+
+.field public j:J
+
+.field public k:J
+
+.field public l:Z
+
+.field public final m:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
+    .locals 0
+
+    iput-object p1, p0, Luv6;->m:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(Let0;J)J
-    .locals 3
+.method public a(I)V
+    .locals 9
 
-    const-wide/16 v0, 0x0
+    iget-wide v1, p0, Luv6;->k:J
 
-    cmp-long v0, p2, v0
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
-    if-ltz v0, :cond_3
+    cmp-long v0, v1, v3
 
-    iget-boolean v0, p0, Lqv6;->b:Z
+    if-eqz v0, :cond_1
 
-    if-nez v0, :cond_2
+    iget-wide v3, p0, Luv6;->a:J
 
-    iget-boolean v0, p0, Luv6;->o:Z
+    iget-wide v5, p0, Luv6;->j:J
 
-    const-wide/16 v1, -0x1
+    cmp-long v0, v3, v5
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    return-wide v1
-
-    :cond_0
-    invoke-super {p0, p1, p2, p3}, Lqv6;->b(Let0;J)J
-
-    move-result-wide p1
-
-    cmp-long p3, p1, v1
-
-    if-nez p3, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Luv6;->o:Z
-
-    invoke-virtual {p0}, Lqv6;->m()V
-
-    return-wide v1
-
-    :cond_1
-    return-wide p1
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "closed"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_3
-    const-string p0, "byteCount < 0: "
-
-    invoke-static {p2, p3, p0}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-boolean v0, p0, Lqv6;->b:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    iget-boolean v0, p0, Luv6;->o:Z
+    move-wide v7, v3
 
-    if-nez v0, :cond_1
+    iget-boolean v3, p0, Luv6;->l:Z
 
-    invoke-virtual {p0}, Lqv6;->m()V
+    sub-long v4, v7, v5
+
+    long-to-int v4, v4
+
+    iget-object v0, p0, Luv6;->m:Ljava/lang/Object;
+
+    check-cast v0, Lw1g;
+
+    const/4 v6, 0x0
+
+    move v5, p1
+
+    invoke-interface/range {v0 .. v6}, Lw1g;->a(JIIILu1g;)V
 
     :cond_1
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lqv6;->b:Z
-
+    :goto_0
     return-void
 .end method

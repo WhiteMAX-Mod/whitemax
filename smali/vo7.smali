@@ -1,108 +1,74 @@
 .class public final Lvo7;
-.super Ljava/lang/Object;
+.super Lrdi;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Iterator;
-.implements Lmi7;
 
-
-# instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Z
-
-.field public final synthetic c:Lzr;
+# static fields
+.field public static final c:Lvo7;
 
 
 # direct methods
-.method public constructor <init>(Lzr;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvo7;
 
-    iput-object p1, p0, Lvo7;->c:Lzr;
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
+
+    sput-object v0, Lvo7;->c:Lvo7;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final hasNext()Z
+.method public static S0(JLjava/lang/String;Ljava/lang/String;Z)Landroid/net/Uri;
     .locals 2
 
-    iget-object v0, p0, Lvo7;->a:Ljava/lang/String;
+    new-instance v0, Lzf4;
 
-    const/4 v1, 0x1
+    invoke-direct {v0}, Lzf4;-><init>()V
 
-    if-nez v0, :cond_0
+    const-string v1, ":join"
 
-    iget-boolean v0, p0, Lvo7;->b:Z
+    iput-object v1, v0, Lzf4;->a:Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    const-string v1, "id"
 
-    iget-object v0, p0, Lvo7;->c:Lzr;
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v0, v0, Lzr;->b:Ljava/lang/Object;
+    move-result-object p0
 
-    check-cast v0, Ljava/io/BufferedReader;
+    invoke-virtual {v0, p0, v1}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+    const-string p0, "link"
 
-    move-result-object v0
+    invoke-virtual {v0, p3, p0}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lvo7;->a:Ljava/lang/String;
+    const-string p0, "channel"
 
-    if-nez v0, :cond_0
+    invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iput-boolean v1, p0, Lvo7;->b:Z
+    move-result-object p1
 
-    :cond_0
-    iget-object p0, p0, Lvo7;->a:Ljava/lang/String;
+    invoke-virtual {v0, p1, p0}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-eqz p0, :cond_1
+    const-string p0, "no_anim"
 
-    return v1
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    :cond_1
-    const/4 p0, 0x0
+    invoke-virtual {v0, p1, p0}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return p0
-.end method
+    if-eqz p2, :cond_0
 
-.method public final next()Ljava/lang/Object;
-    .locals 2
+    const-string p0, "title"
 
-    invoke-virtual {p0}, Lvo7;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lvo7;->a:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lvo7;->a:Ljava/lang/String;
-
-    return-object v0
+    invoke-virtual {v0, p2, p0}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
-    new-instance p0, Ljava/util/NoSuchElementException;
+    invoke-virtual {v0}, Lzf4;->a()Landroid/net/Uri;
 
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+    move-result-object p0
 
-    throw p0
-.end method
-
-.method public final remove()V
-    .locals 1
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-object p0
 .end method

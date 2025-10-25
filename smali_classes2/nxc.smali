@@ -1,57 +1,29 @@
 .class public final Lnxc;
-.super Ljx3;
+.super Landroidx/constraintlayout/widget/ConstraintLayout;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public E0:I
 
-.field public Y:Ltz8;
-
-.field public Z:Ltz8;
-
-.field public o:Ljava/lang/Object;
-
-.field public synthetic r0:Ljava/lang/Object;
-
-.field public final synthetic s0:Ltxc;
-
-.field public t0:I
-
-
-# direct methods
-.method public constructor <init>(Ltxc;Ljx3;)V
-    .locals 0
-
-    iput-object p1, p0, Lnxc;->s0:Ltxc;
-
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public F0:Lmxc;
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final getSelected()I
     .locals 1
 
-    iput-object p1, p0, Lnxc;->r0:Ljava/lang/Object;
+    iget v0, p0, Lnxc;->E0:I
 
-    iget p1, p0, Lnxc;->t0:I
+    add-int/lit8 v0, v0, 0x1
 
-    const/high16 v0, -0x80000000
+    return v0
+.end method
 
-    or-int/2addr p1, v0
+.method public final setOnSelectListener(Lmxc;)V
+    .locals 0
 
-    iput p1, p0, Lnxc;->t0:I
+    iput-object p1, p0, Lnxc;->F0:Lmxc;
 
-    iget-object p1, p0, Lnxc;->s0:Ltxc;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ltxc;->h(Lj09;Ljx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

@@ -3,57 +3,187 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Lpf0;
-
-
 # instance fields
-.field public final a:Lvx0;
+.field public final A:I
 
-.field public final b:Ltsc;
+.field public final B:I
 
-.field public final c:Lof0;
+.field public final C:I
 
-.field public final d:Lnf0;
+.field public final D:I
+
+.field public final E:I
+
+.field public final F:I
+
+.field public final G:I
+
+.field public final H:I
+
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:I
+
+.field public final k:I
+
+.field public final l:I
+
+.field public final m:I
+
+.field public final n:I
+
+.field public final o:I
+
+.field public final p:I
+
+.field public final q:I
+
+.field public final r:I
+
+.field public final s:I
+
+.field public final t:I
+
+.field public final u:I
+
+.field public final v:I
+
+.field public final w:I
+
+.field public final x:I
+
+.field public final y:I
+
+.field public final z:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lpf0;
-
-    new-instance v1, Lof0;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2, v2}, Lof0;-><init>(ZZ)V
-
-    new-instance v3, Lnf0;
-
-    invoke-direct {v3, v2, v2}, Lnf0;-><init>(ZZ)V
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, v2, v1, v3}, Lpf0;-><init>(Lvx0;Ltsc;Lof0;Lnf0;)V
-
-    sput-object v0, Lpf0;->e:Lpf0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lvx0;Ltsc;Lof0;Lnf0;)V
+.method public constructor <init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpf0;->a:Lvx0;
+    iput p1, p0, Lpf0;->a:I
 
-    iput-object p2, p0, Lpf0;->b:Ltsc;
+    iput p2, p0, Lpf0;->b:I
 
-    iput-object p3, p0, Lpf0;->c:Lof0;
+    iput p3, p0, Lpf0;->c:I
 
-    iput-object p4, p0, Lpf0;->d:Lnf0;
+    iput p4, p0, Lpf0;->d:I
+
+    iput p5, p0, Lpf0;->e:I
+
+    iput p6, p0, Lpf0;->f:I
+
+    iput p7, p0, Lpf0;->g:I
+
+    iput p8, p0, Lpf0;->h:I
+
+    iput p9, p0, Lpf0;->i:I
+
+    iput p10, p0, Lpf0;->j:I
+
+    iput p11, p0, Lpf0;->k:I
+
+    iput p12, p0, Lpf0;->l:I
+
+    iput p13, p0, Lpf0;->m:I
+
+    iput p14, p0, Lpf0;->n:I
+
+    iput p15, p0, Lpf0;->o:I
+
+    move/from16 p1, p16
+
+    iput p1, p0, Lpf0;->p:I
+
+    move/from16 p1, p17
+
+    iput p1, p0, Lpf0;->q:I
+
+    move/from16 p1, p18
+
+    iput p1, p0, Lpf0;->r:I
+
+    move/from16 p1, p19
+
+    iput p1, p0, Lpf0;->s:I
+
+    move/from16 p1, p20
+
+    iput p1, p0, Lpf0;->t:I
+
+    move/from16 p1, p21
+
+    iput p1, p0, Lpf0;->u:I
+
+    move/from16 p1, p22
+
+    iput p1, p0, Lpf0;->v:I
+
+    move/from16 p1, p23
+
+    iput p1, p0, Lpf0;->w:I
+
+    move/from16 p1, p24
+
+    iput p1, p0, Lpf0;->x:I
+
+    move/from16 p1, p25
+
+    iput p1, p0, Lpf0;->y:I
+
+    move/from16 p1, p26
+
+    iput p1, p0, Lpf0;->z:I
+
+    move/from16 p1, p27
+
+    iput p1, p0, Lpf0;->A:I
+
+    move/from16 p1, p28
+
+    iput p1, p0, Lpf0;->B:I
+
+    move/from16 p1, p29
+
+    iput p1, p0, Lpf0;->C:I
+
+    move/from16 p1, p30
+
+    iput p1, p0, Lpf0;->D:I
+
+    move/from16 p1, p31
+
+    iput p1, p0, Lpf0;->E:I
+
+    move/from16 p1, p32
+
+    iput p1, p0, Lpf0;->F:I
+
+    move/from16 p1, p33
+
+    iput p1, p0, Lpf0;->G:I
+
+    move/from16 p1, p34
+
+    iput p1, p0, Lpf0;->H:I
 
     return-void
 .end method
@@ -61,183 +191,751 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto/16 :goto_1
 
     :cond_0
-    instance-of v1, p1, Lpf0;
+    instance-of v0, p1, Lpf0;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto/16 :goto_0
 
     :cond_1
     check-cast p1, Lpf0;
 
-    iget-object v1, p0, Lpf0;->a:Lvx0;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v3, p1, Lpf0;->a:Lvx0;
+    iget v0, p0, Lpf0;->a:I
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget v1, p1, Lpf0;->a:I
 
-    move-result v1
+    if-eq v0, v1, :cond_2
 
-    if-nez v1, :cond_2
-
-    return v2
+    goto/16 :goto_0
 
     :cond_2
-    iget-object v1, p0, Lpf0;->b:Ltsc;
+    iget v0, p0, Lpf0;->b:I
 
-    iget-object v3, p1, Lpf0;->b:Ltsc;
+    iget v1, p1, Lpf0;->b:I
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v0, v1, :cond_3
 
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
+    goto/16 :goto_0
 
     :cond_3
-    iget-object v1, p0, Lpf0;->c:Lof0;
+    iget v0, p0, Lpf0;->c:I
 
-    iget-object v3, p1, Lpf0;->c:Lof0;
+    iget v1, p1, Lpf0;->c:I
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v0, v1, :cond_4
 
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
+    goto/16 :goto_0
 
     :cond_4
-    iget-object p0, p0, Lpf0;->d:Lnf0;
+    iget v0, p0, Lpf0;->d:I
 
-    iget-object p1, p1, Lpf0;->d:Lnf0;
+    iget v1, p1, Lpf0;->d:I
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v0, v1, :cond_5
 
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    return v2
+    goto/16 :goto_0
 
     :cond_5
-    return v0
+    iget v0, p0, Lpf0;->e:I
+
+    iget v1, p1, Lpf0;->e:I
+
+    if-eq v0, v1, :cond_6
+
+    goto/16 :goto_0
+
+    :cond_6
+    iget v0, p0, Lpf0;->f:I
+
+    iget v1, p1, Lpf0;->f:I
+
+    if-eq v0, v1, :cond_7
+
+    goto/16 :goto_0
+
+    :cond_7
+    iget v0, p0, Lpf0;->g:I
+
+    iget v1, p1, Lpf0;->g:I
+
+    if-eq v0, v1, :cond_8
+
+    goto/16 :goto_0
+
+    :cond_8
+    iget v0, p0, Lpf0;->h:I
+
+    iget v1, p1, Lpf0;->h:I
+
+    if-eq v0, v1, :cond_9
+
+    goto/16 :goto_0
+
+    :cond_9
+    iget v0, p0, Lpf0;->i:I
+
+    iget v1, p1, Lpf0;->i:I
+
+    if-eq v0, v1, :cond_a
+
+    goto/16 :goto_0
+
+    :cond_a
+    iget v0, p0, Lpf0;->j:I
+
+    iget v1, p1, Lpf0;->j:I
+
+    if-eq v0, v1, :cond_b
+
+    goto/16 :goto_0
+
+    :cond_b
+    iget v0, p0, Lpf0;->k:I
+
+    iget v1, p1, Lpf0;->k:I
+
+    if-eq v0, v1, :cond_c
+
+    goto/16 :goto_0
+
+    :cond_c
+    iget v0, p0, Lpf0;->l:I
+
+    iget v1, p1, Lpf0;->l:I
+
+    if-eq v0, v1, :cond_d
+
+    goto/16 :goto_0
+
+    :cond_d
+    iget v0, p0, Lpf0;->m:I
+
+    iget v1, p1, Lpf0;->m:I
+
+    if-eq v0, v1, :cond_e
+
+    goto/16 :goto_0
+
+    :cond_e
+    iget v0, p0, Lpf0;->n:I
+
+    iget v1, p1, Lpf0;->n:I
+
+    if-eq v0, v1, :cond_f
+
+    goto/16 :goto_0
+
+    :cond_f
+    iget v0, p0, Lpf0;->o:I
+
+    iget v1, p1, Lpf0;->o:I
+
+    if-eq v0, v1, :cond_10
+
+    goto/16 :goto_0
+
+    :cond_10
+    iget v0, p0, Lpf0;->p:I
+
+    iget v1, p1, Lpf0;->p:I
+
+    if-eq v0, v1, :cond_11
+
+    goto/16 :goto_0
+
+    :cond_11
+    iget v0, p0, Lpf0;->q:I
+
+    iget v1, p1, Lpf0;->q:I
+
+    if-eq v0, v1, :cond_12
+
+    goto/16 :goto_0
+
+    :cond_12
+    iget v0, p0, Lpf0;->r:I
+
+    iget v1, p1, Lpf0;->r:I
+
+    if-eq v0, v1, :cond_13
+
+    goto/16 :goto_0
+
+    :cond_13
+    iget v0, p0, Lpf0;->s:I
+
+    iget v1, p1, Lpf0;->s:I
+
+    if-eq v0, v1, :cond_14
+
+    goto/16 :goto_0
+
+    :cond_14
+    iget v0, p0, Lpf0;->t:I
+
+    iget v1, p1, Lpf0;->t:I
+
+    if-eq v0, v1, :cond_15
+
+    goto/16 :goto_0
+
+    :cond_15
+    iget v0, p0, Lpf0;->u:I
+
+    iget v1, p1, Lpf0;->u:I
+
+    if-eq v0, v1, :cond_16
+
+    goto/16 :goto_0
+
+    :cond_16
+    iget v0, p0, Lpf0;->v:I
+
+    iget v1, p1, Lpf0;->v:I
+
+    if-eq v0, v1, :cond_17
+
+    goto :goto_0
+
+    :cond_17
+    iget v0, p0, Lpf0;->w:I
+
+    iget v1, p1, Lpf0;->w:I
+
+    if-eq v0, v1, :cond_18
+
+    goto :goto_0
+
+    :cond_18
+    iget v0, p0, Lpf0;->x:I
+
+    iget v1, p1, Lpf0;->x:I
+
+    if-eq v0, v1, :cond_19
+
+    goto :goto_0
+
+    :cond_19
+    iget v0, p0, Lpf0;->y:I
+
+    iget v1, p1, Lpf0;->y:I
+
+    if-eq v0, v1, :cond_1a
+
+    goto :goto_0
+
+    :cond_1a
+    iget v0, p0, Lpf0;->z:I
+
+    iget v1, p1, Lpf0;->z:I
+
+    if-eq v0, v1, :cond_1b
+
+    goto :goto_0
+
+    :cond_1b
+    iget v0, p0, Lpf0;->A:I
+
+    iget v1, p1, Lpf0;->A:I
+
+    if-eq v0, v1, :cond_1c
+
+    goto :goto_0
+
+    :cond_1c
+    iget v0, p0, Lpf0;->B:I
+
+    iget v1, p1, Lpf0;->B:I
+
+    if-eq v0, v1, :cond_1d
+
+    goto :goto_0
+
+    :cond_1d
+    iget v0, p0, Lpf0;->C:I
+
+    iget v1, p1, Lpf0;->C:I
+
+    if-eq v0, v1, :cond_1e
+
+    goto :goto_0
+
+    :cond_1e
+    iget v0, p0, Lpf0;->D:I
+
+    iget v1, p1, Lpf0;->D:I
+
+    if-eq v0, v1, :cond_1f
+
+    goto :goto_0
+
+    :cond_1f
+    iget v0, p0, Lpf0;->E:I
+
+    iget v1, p1, Lpf0;->E:I
+
+    if-eq v0, v1, :cond_20
+
+    goto :goto_0
+
+    :cond_20
+    iget v0, p0, Lpf0;->F:I
+
+    iget v1, p1, Lpf0;->F:I
+
+    if-eq v0, v1, :cond_21
+
+    goto :goto_0
+
+    :cond_21
+    iget v0, p0, Lpf0;->G:I
+
+    iget v1, p1, Lpf0;->G:I
+
+    if-eq v0, v1, :cond_22
+
+    goto :goto_0
+
+    :cond_22
+    iget v0, p0, Lpf0;->H:I
+
+    iget p1, p1, Lpf0;->H:I
+
+    if-eq v0, p1, :cond_23
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_23
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    const/4 v0, 0x0
+    const v0, -0x63d850
 
-    iget-object v1, p0, Lpf0;->a:Lvx0;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    if-nez v1, :cond_0
+    move-result v0
 
-    move v1, v0
+    const/16 v1, 0x1f
 
-    goto :goto_0
+    mul-int/2addr v0, v1
 
-    :cond_0
-    invoke-virtual {v1}, Lvx0;->hashCode()I
+    iget v2, p0, Lpf0;->a:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->b:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->d:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    const v2, -0xef86c1
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->e:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->f:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->g:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->h:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->i:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->j:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->k:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->l:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->m:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->n:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->o:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->p:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->q:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->r:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->s:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->t:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->u:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->v:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->w:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    const v2, -0xe4a142
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->x:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->y:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->z:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->A:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->B:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->C:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->D:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->E:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->F:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpf0;->G:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, Lpf0;->H:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lpf0;->b:Ltsc;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ltsc;->hashCode()I
-
-    move-result v0
-
-    :goto_1
     add-int/2addr v1, v0
 
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lpf0;->c:Lof0;
-
-    invoke-virtual {v0}, Lof0;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lpf0;->d:Lnf0;
-
-    invoke-virtual {p0}, Lnf0;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, ", archiveElement="
 
-    const-string v1, "BadNetworkIndicatorConfig(calcNetworkStatusConfig="
+    const-string v1, ", archiveIcon="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "BackgroundLocalFileTypeColors(archiveBadge=-6543440, archiveBkg="
 
-    iget-object v1, p0, Lpf0;->a:Lvx0;
+    iget v3, p0, Lpf0;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v4, p0, Lpf0;->b:I
 
-    const-string v1, ", reportNetworkStatusConfig="
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-object v1, p0, Lpf0;->b:Ltsc;
+    const-string v1, ", background="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, ", dataBadge=-15697601, dataBkg="
 
-    const-string v1, ", signalingConfig="
+    iget v3, p0, Lpf0;->c:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v4, p0, Lpf0;->d:I
 
-    iget-object v1, p0, Lpf0;->c:Lof0;
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, ", dataElement="
 
-    const-string v1, ", debugLoggingConfig="
+    const-string v2, ", dataIcon="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v3, p0, Lpf0;->e:I
 
-    iget-object p0, p0, Lpf0;->d:Lnf0;
+    iget v4, p0, Lpf0;->f:I
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    const-string p0, ")"
+    const-string v1, ", imageBadge="
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, ", imageBkg="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v3, p0, Lpf0;->g:I
 
-    move-result-object p0
+    iget v4, p0, Lpf0;->h:I
 
-    return-object p0
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", imageElement="
+
+    const-string v2, ", imageIcon="
+
+    iget v3, p0, Lpf0;->i:I
+
+    iget v4, p0, Lpf0;->j:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", musicBadge="
+
+    const-string v2, ", musicBkg="
+
+    iget v3, p0, Lpf0;->k:I
+
+    iget v4, p0, Lpf0;->l:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", musicElement="
+
+    const-string v2, ", musicIcon="
+
+    iget v3, p0, Lpf0;->m:I
+
+    iget v4, p0, Lpf0;->n:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", presentationBadge="
+
+    const-string v2, ", presentationBkg="
+
+    iget v3, p0, Lpf0;->o:I
+
+    iget v4, p0, Lpf0;->p:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", presentationElement="
+
+    const-string v2, ", presentationIcon="
+
+    iget v3, p0, Lpf0;->q:I
+
+    iget v4, p0, Lpf0;->r:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", programBadge="
+
+    const-string v2, ", programBkg="
+
+    iget v3, p0, Lpf0;->s:I
+
+    iget v4, p0, Lpf0;->t:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", programElement="
+
+    const-string v2, ", programIcon="
+
+    iget v3, p0, Lpf0;->u:I
+
+    iget v4, p0, Lpf0;->v:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", textBadge=-14983490, textBkg="
+
+    const-string v2, ", textElement="
+
+    iget v3, p0, Lpf0;->w:I
+
+    iget v4, p0, Lpf0;->x:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", textIcon="
+
+    const-string v2, ", unknownBadge="
+
+    iget v3, p0, Lpf0;->y:I
+
+    iget v4, p0, Lpf0;->z:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", unknownBkg="
+
+    const-string v2, ", unknownElement="
+
+    iget v3, p0, Lpf0;->A:I
+
+    iget v4, p0, Lpf0;->B:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", unknownIcon="
+
+    const-string v2, ", videoBadge="
+
+    iget v3, p0, Lpf0;->C:I
+
+    iget v4, p0, Lpf0;->D:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", videoBkg="
+
+    const-string v2, ", videoElement="
+
+    iget v3, p0, Lpf0;->E:I
+
+    iget v4, p0, Lpf0;->F:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", videoIcon="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lpf0;->G:I
+
+    iget v4, p0, Lpf0;->H:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lfd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,55 +1,81 @@
-.class public final Lpyf;
-.super Ljx3;
+.class public final synthetic Lpyf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public X:Ldyf;
+.field public final synthetic a:I
 
-.field public Y:J
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lwyf;
-
-.field public final synthetic r0:Lwyf;
-
-.field public s0:I
+.field public final synthetic b:Lji6;
 
 
 # direct methods
-.method public constructor <init>(Lwyf;Ljx3;)V
+.method public synthetic constructor <init>(ILji6;)V
     .locals 0
 
-    iput-object p1, p0, Lpyf;->r0:Lwyf;
+    iput p1, p0, Lpyf;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lpyf;->b:Lji6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lpyf;->Z:Ljava/lang/Object;
+    iget v0, p0, Lpyf;->a:I
 
-    iget p1, p0, Lpyf;->s0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lpyf;->b:Lji6;
 
-    or-int/2addr p1, v0
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
-    iput p1, p0, Lpyf;->s0:I
+    move-result-object v0
 
-    iget-object p1, p0, Lpyf;->r0:Lwyf;
+    check-cast v0, Lv5b;
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Lv5b;->getIcon()Ld77;
 
-    invoke-virtual {p1, v0, v0, v0, p0}, Lwyf;->a(Ls72;Ldyf;Ljava/lang/Float;Ljx3;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
+    iget v0, v0, Ld77;->f:I
 
-    return-object p0
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lpyf;->b:Lji6;
+
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lv5b;
+
+    invoke-interface {v0}, Lv5b;->b()Lff0;
+
+    move-result-object v0
+
+    iget v0, v0, Lff0;->e:I
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

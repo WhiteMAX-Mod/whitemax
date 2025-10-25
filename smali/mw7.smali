@@ -2,85 +2,75 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lm5f;
-
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+.field public final a:Lhx7;
 
-.field public final b:Lmgb;
+.field public final b:Lhw7;
 
-.field public final c:Landroid/content/ContentResolver;
+.field public final c:Lgv4;
+
+.field public final d:Lyh3;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;)V
-    .locals 0
+.method public constructor <init>(Lhx7;Lhw7;Lgv4;Ljn7;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmw7;->a:Ljava/util/concurrent/Executor;
+    iput-object p1, p0, Lmw7;->a:Lhx7;
 
-    iput-object p2, p0, Lmw7;->b:Lmgb;
+    iput-object p2, p0, Lmw7;->b:Lhw7;
 
-    iput-object p3, p0, Lmw7;->c:Landroid/content/ContentResolver;
+    iput-object p3, p0, Lmw7;->c:Lgv4;
+
+    new-instance p2, Lyh3;
+
+    const/4 p3, 0x1
+
+    invoke-direct {p2, p0, p3, p4}, Lyh3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iput-object p2, p0, Lmw7;->d:Lyh3;
+
+    iget-object p3, p1, Lhx7;->d:Lhw7;
+
+    sget-object v0, Lhw7;->a:Lhw7;
+
+    if-ne p3, v0, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-interface {p4, p1}, Ljn7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    invoke-virtual {p0}, Lmw7;->a()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1, p2}, Lhx7;->a(Lbx7;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ldi0;Lejb;)V
-    .locals 7
+.method public final a()V
+    .locals 2
 
-    move-object v0, p2
+    iget-object v0, p0, Lmw7;->a:Lhx7;
 
-    check-cast v0, Lmj0;
+    iget-object v1, p0, Lmw7;->d:Lyh3;
 
-    iget-object v4, v0, Lmj0;->c:Lhjb;
+    invoke-virtual {v0, v1}, Lhx7;->f(Lbx7;)V
 
-    iget-object v6, v0, Lmj0;->a:Li27;
+    const/4 v0, 0x1
 
-    const-string v1, "local"
+    iget-object v1, p0, Lmw7;->c:Lgv4;
 
-    const-string v2, "exif"
+    iput-boolean v0, v1, Lgv4;->b:Z
 
-    invoke-virtual {v0, v1, v2}, Lmj0;->h(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v1, Llw7;
-
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v5, p2
-
-    invoke-direct/range {v1 .. v6}, Llw7;-><init>(Lmw7;Ldi0;Lhjb;Lejb;Li27;)V
-
-    new-instance p0, Lz94;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, v1}, Lz94;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p0}, Lmj0;->a(Lnj0;)V
-
-    iget-object p0, v2, Lmw7;->a:Ljava/util/concurrent/Executor;
-
-    invoke-interface {p0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v1}, Lgv4;->a()V
 
     return-void
-.end method
-
-.method public final b(Lztc;)Z
-    .locals 0
-
-    const/16 p0, 0x200
-
-    invoke-static {p0, p0, p1}, Lb0b;->s(IILztc;)Z
-
-    move-result p0
-
-    return p0
 .end method

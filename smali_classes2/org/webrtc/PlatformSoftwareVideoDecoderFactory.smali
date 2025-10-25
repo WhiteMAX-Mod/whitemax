@@ -45,27 +45,27 @@
 
     invoke-super {p0, p1}, Lorg/webrtc/MediaCodecVideoDecoderFactory;->createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public bridge synthetic getControl()Lorg/webrtc/DecoderSsrcControl;
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Lorg/webrtc/MediaCodecVideoDecoderFactory;->getControl()Lorg/webrtc/DecoderSsrcControl;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public bridge synthetic getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Lorg/webrtc/MediaCodecVideoDecoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

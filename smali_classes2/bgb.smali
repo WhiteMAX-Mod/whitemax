@@ -1,120 +1,127 @@
 .class public final Lbgb;
-.super Ljava/lang/Object;
+.super Lzyi;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final synthetic a:I
 
-.field public final b:[Ljava/lang/String;
+.field public final synthetic b:Legb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;[Ljava/lang/String;)V
+.method public synthetic constructor <init>(Legb;I)V
     .locals 0
 
+    iput p2, p0, Lbgb;->a:I
+
+    iput-object p1, p0, Lbgb;->b:Legb;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lbgb;->a:Ljava/lang/CharSequence;
-
-    iput-object p2, p0, Lbgb;->b:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static a()Lbgb;
-    .locals 3
-
-    new-instance v0, Lbgb;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const-string v2, ""
-
-    invoke-direct {v0, v2, v1}, Lbgb;-><init>(Ljava/lang/CharSequence;[Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onCreateFailure(Ljava/lang/String;)V
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lbgb;->a:I
 
-    const/4 p0, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    return p0
+    iget-object v0, p0, Lbgb;->b:Legb;
+
+    iget-object v1, v0, Legb;->D:Lei1;
+
+    iget-boolean v1, v1, Lei1;->B:Z
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Lm5a;
+
+    sget-object v2, Ll5a;->b:Ll5a;
+
+    iget-object v3, v0, Legb;->N:Lorg/webrtc/PeerConnection;
+
+    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getRemoteDescription()Lorg/webrtc/SessionDescription;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v2, p1, v4, v3}, Lm5a;-><init>(Ll5a;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
+
+    invoke-virtual {v0, v1}, Legb;->h(Lm5a;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lbgb;
+    invoke-virtual {v0, p1}, Legb;->i(Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    :goto_0
+    return-void
 
-    if-nez v0, :cond_1
+    :pswitch_0
+    iget-object v0, p0, Lbgb;->b:Legb;
 
-    return v1
+    iget-object v1, v0, Legb;->D:Lei1;
+
+    iget-boolean v1, v1, Lei1;->B:Z
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Lm5a;
+
+    sget-object v2, Ll5a;->a:Ll5a;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, p1, v3, v3}, Lm5a;-><init>(Ll5a;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
+
+    invoke-virtual {v0, v1}, Legb;->h(Lm5a;)V
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Lbgb;
+    invoke-virtual {v0, p1}, Legb;->i(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lbgb;->a:Ljava/lang/CharSequence;
+    :goto_1
+    return-void
 
-    iget-object v2, p1, Lbgb;->a:Ljava/lang/CharSequence;
+    nop
 
-    invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    return v1
-
-    :cond_2
-    iget-object p0, p0, Lbgb;->b:[Ljava/lang/String;
-
-    iget-object p1, p1, Lbgb;->b:[Ljava/lang/String;
-
-    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final onCreateSuccess(Lorg/webrtc/SessionDescription;)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lbgb;->a:I
 
-    const-string v1, "PreProcessedText{text="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lbgb;->b:Legb;
 
-    iget-object v1, p0, Lbgb;->a:Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Legb;->n(Lorg/webrtc/SessionDescription;)V
 
-    invoke-static {v1}, Ljtg;->w(Ljava/lang/CharSequence;)Ljava/lang/String;
+    return-void
 
-    move-result-object v1
+    :pswitch_0
+    iget-object v0, p0, Lbgb;->b:Legb;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Legb;->n(Lorg/webrtc/SessionDescription;)V
 
-    const-string v1, ", tokens="
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    nop
 
-    iget-object p0, p0, Lbgb;->b:[Ljava/lang/String;
-
-    array-length p0, p0
-
-    const/16 v1, 0x7d
-
-    invoke-static {v0, p0, v1}, Lmw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,24 +1,10 @@
-.class public final Lhpc;
+.class public abstract Lhpc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static fragment_container_view_tag:I = 0x7f0a039e
 
+.field public static special_effects_controller_view_tag:I = 0x7f0a0bbf
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    iget-wide v0, p0, Lhpc;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static visible_removing_fragment_view_tag:I = 0x7f0a0d3c

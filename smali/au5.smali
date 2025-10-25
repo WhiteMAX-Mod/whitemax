@@ -1,56 +1,74 @@
 .class public final Lau5;
-.super Ljx3;
+.super Lzt5;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public b:Z
 
-.field public final synthetic Y:Lus5;
+.field public c:[Ljava/io/File;
 
-.field public Z:Lus5;
+.field public d:I
 
-.field public synthetic o:Ljava/lang/Object;
-
-.field public r0:Lks5;
-
-.field public s0:Ljava/lang/Throwable;
-
-.field public t0:J
-
-
-# direct methods
-.method public constructor <init>(Lus5;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lau5;->Y:Lus5;
-
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public e:Z
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Ljava/io/File;
+    .locals 5
 
-    iput-object p1, p0, Lau5;->o:Ljava/lang/Object;
+    iget-boolean v0, p0, Lau5;->e:Z
 
-    iget p1, p0, Lau5;->X:I
+    const/4 v1, 0x1
 
-    const/high16 v0, -0x80000000
+    iget-object v2, p0, Leu5;->a:Ljava/io/File;
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_0
 
-    iput p1, p0, Lau5;->X:I
+    iget-object v0, p0, Lau5;->c:[Ljava/io/File;
 
-    iget-object p1, p0, Lau5;->Y:Lus5;
+    if-nez v0, :cond_0
 
+    invoke-virtual {v2}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lau5;->c:[Ljava/io/File;
+
+    if-nez v0, :cond_0
+
+    iput-boolean v1, p0, Lau5;->e:Z
+
+    :cond_0
+    iget-object v0, p0, Lau5;->c:[Ljava/io/File;
+
+    if-eqz v0, :cond_1
+
+    iget v3, p0, Lau5;->d:I
+
+    array-length v4, v0
+
+    if-ge v3, v4, :cond_1
+
+    add-int/lit8 v1, v3, 0x1
+
+    iput v1, p0, Lau5;->d:I
+
+    aget-object v0, v0, v3
+
+    return-object v0
+
+    :cond_1
+    iget-boolean v0, p0, Lau5;->b:Z
+
+    if-nez v0, :cond_2
+
+    iput-boolean v1, p0, Lau5;->b:Z
+
+    return-object v2
+
+    :cond_2
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lus5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

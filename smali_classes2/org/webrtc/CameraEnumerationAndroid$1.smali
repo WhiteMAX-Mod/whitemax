@@ -84,9 +84,9 @@
 
     invoke-virtual {p0, p1}, Lorg/webrtc/CameraEnumerationAndroid$1;->diff(Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat$FramerateRange;)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public diff(Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat$FramerateRange;)I
@@ -124,9 +124,9 @@
 
     invoke-direct {p0, p1, v1, v3, v2}, Lorg/webrtc/CameraEnumerationAndroid$1;->progressivePenalty(IIII)I
 
-    move-result p0
+    move-result p1
 
-    add-int/2addr v0, p0
+    add-int/2addr v0, p1
 
     return v0
 .end method

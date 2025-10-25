@@ -1,61 +1,68 @@
 .class public final La71;
-.super Ljava/lang/Object;
+.super Lv2h;
 .source "SourceFile"
 
 # interfaces
-.implements Lfec;
+.implements Lc71;
 
 
-# virtual methods
-.method public final log(Ljava/lang/String;Ljava/lang/String;)V
+# static fields
+.field public static final c:La71;
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 3
 
-    sget-object p0, Ljtg;->g:Loja;
+    new-instance v0, La71;
 
-    if-nez p0, :cond_0
+    sget v1, Lisc;->call_main_speaker_phone_disabled:I
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    :cond_0
-    sget-object v0, Lqz7;->o:Lqz7;
+    invoke-direct {v0, v2, v1}, Lv2h;-><init>(Ljava/lang/Long;I)V
 
-    invoke-virtual {p0, v0}, Loja;->a(Lqz7;)Z
+    sput-object v0, La71;->c:La71;
 
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "["
-
-    const-string v2, "] "
-
-    invoke-static {v1, p1, v2, p2}, Lee5;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    const-string v1, "CallsSdk"
-
-    invoke-virtual {p0, v0, v1, p1, p2}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
-.method public final logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
 
-    const-string p0, "[%s] %s"
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    if-ne p0, p1, :cond_0
 
-    const-string p2, "CallsSdk"
+    return v0
 
-    invoke-static {p2, p3, p0, p1}, Ljtg;->o(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    :cond_0
+    instance-of p1, p1, La71;
 
-    return-void
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x6535960a
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Muted"
+
+    return-object v0
 .end method

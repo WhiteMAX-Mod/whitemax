@@ -1,25 +1,11 @@
-.class public abstract Ls1a;
+.class public interface abstract Ls1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/app/NotificationManager;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->areNotificationsEnabled()Z
-
-    move-result p0
-
-    return p0
+# virtual methods
+.method public abstract a(I)Lz8d;
 .end method
 
-.method public static b(Landroid/app/NotificationManager;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getImportance()I
-
-    move-result p0
-
-    return p0
+.method public abstract l(Ljava/lang/String;)Lv1a;
 .end method

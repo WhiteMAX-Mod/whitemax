@@ -44,15 +44,15 @@
 
 # virtual methods
 .method public run()Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/DirectBufferAccess$2;->val$direct:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/DirectBufferAccess$2;->val$direct:Ljava/nio/ByteBuffer;
 
-    sget-object v0, Lorg/msgpack/core/buffer/DirectBufferAccess;->mCleaner:Ljava/lang/reflect/Method;
+    sget-object v1, Lorg/msgpack/core/buffer/DirectBufferAccess;->mCleaner:Ljava/lang/reflect/Method;
 
-    invoke-static {p0, v0}, Lorg/msgpack/core/buffer/DirectBufferAccess;->access$100(Ljava/nio/ByteBuffer;Ljava/lang/reflect/Method;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lorg/msgpack/core/buffer/DirectBufferAccess;->access$100(Ljava/nio/ByteBuffer;Ljava/lang/reflect/Method;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

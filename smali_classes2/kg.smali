@@ -1,54 +1,45 @@
-.class public final synthetic Lkg;
-.super Ljava/lang/Object;
+.class public final Lkg;
+.super Landroid/util/FloatProperty;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljs9;
+.field public a:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljs9;I)V
+.method public constructor <init>(Ljava/lang/String;F)V
     .locals 0
 
-    iput p2, p0, Lkg;->a:I
+    invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lkg;->b:Ljs9;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lkg;->a:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lkg;->a:I
+    check-cast p1, Landroid/graphics/drawable/ShapeDrawable;
 
-    iget-object p0, p0, Lkg;->b:Ljs9;
+    iget p1, p0, Lkg;->a:F
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-virtual {p0}, Ljs9;->q()V
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final setValue(Ljava/lang/Object;F)V
+    .locals 0
+
+    check-cast p1, Landroid/graphics/drawable/ShapeDrawable;
+
+    iput p2, p0, Lkg;->a:F
 
     return-void
-
-    :pswitch_0
-    invoke-virtual {p0}, Ljs9;->s()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,80 +1,128 @@
 .class public final Lnjd;
-.super Lure;
+.super Loj0;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
+
+# static fields
+.field public static final synthetic Z:I
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Lio/antmedia/rtmp_client/RtmpClient;
 
-.field public final synthetic Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+.field public Y:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p2, p0, Lnjd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+    const-string v0, "media3.datasource.rtmp"
 
-    const/4 p2, 0x2
+    invoke-static {v0}, Lut8;->a(Ljava/lang/String;)V
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Loj0;-><init>(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final H(Lmc4;)J
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1}, Loj0;->e(Lmc4;)V
 
-    invoke-virtual {p0, p1, p2}, Lnjd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lio/antmedia/rtmp_client/RtmpClient;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Lnjd;
+    const-wide/16 v1, 0x0
 
-    sget-object p1, Lylf;->a:Lylf;
+    iput-wide v1, v0, Lio/antmedia/rtmp_client/RtmpClient;->a:J
 
-    invoke-virtual {p0, p1}, Lnjd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v0, p0, Lnjd;->X:Lio/antmedia/rtmp_client/RtmpClient;
 
-    return-object p1
+    iget-object v1, p1, Lmc4;->a:Landroid/net/Uri;
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lio/antmedia/rtmp_client/RtmpClient;->b(Ljava/lang/String;)V
+
+    iget-object v0, p1, Lmc4;->a:Landroid/net/Uri;
+
+    iput-object v0, p0, Lnjd;->Y:Landroid/net/Uri;
+
+    invoke-virtual {p0, p1}, Loj0;->f(Lmc4;)V
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final close()V
+    .locals 2
+
+    iget-object v0, p0, Lnjd;->Y:Landroid/net/Uri;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    iput-object v1, p0, Lnjd;->Y:Landroid/net/Uri;
+
+    invoke-virtual {p0}, Loj0;->c()V
+
+    :cond_0
+    iget-object v0, p0, Lnjd;->X:Lio/antmedia/rtmp_client/RtmpClient;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lio/antmedia/rtmp_client/RtmpClient;->a()V
+
+    iput-object v1, p0, Lnjd;->X:Lio/antmedia/rtmp_client/RtmpClient;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final getUri()Landroid/net/Uri;
     .locals 1
 
-    new-instance v0, Lnjd;
-
-    iget-object p0, p0, Lnjd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
-
-    invoke-direct {v0, p2, p0}, Lnjd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;)V
-
-    iput-object p1, v0, Lnjd;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lnjd;->Y:Landroid/net/Uri;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final read([BII)I
+    .locals 2
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget-object v0, p0, Lnjd;->X:Lio/antmedia/rtmp_client/RtmpClient;
 
-    iget-object p1, p0, Lnjd;->X:Ljava/lang/Object;
+    sget-object v1, Lnig;->a:Ljava/lang/String;
 
-    check-cast p1, Ljava/util/List;
+    invoke-virtual {v0, p1, p2, p3}, Lio/antmedia/rtmp_client/RtmpClient;->c([BII)I
 
-    iget-object p0, p0, Lnjd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+    move-result p1
 
-    iget-object p0, p0, Lone/me/devmenu/server/ServerHostBottomSheet;->B0:Lv06;
+    const/4 p2, -0x1
 
-    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
+    if-ne p1, p2, :cond_0
 
-    sget-object p0, Lylf;->a:Lylf;
+    return p2
 
-    return-object p0
+    :cond_0
+    invoke-virtual {p0, p1}, Loj0;->b(I)V
+
+    return p1
 .end method

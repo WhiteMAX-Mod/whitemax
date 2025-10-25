@@ -1,32 +1,28 @@
 .class public final Lqod;
-.super Lure;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Landroid/graphics/RectF;
+.field public final synthetic X:Lsmd;
 
-.field public final synthetic Y:Lyod;
-
-.field public final synthetic Z:Ljava/lang/String;
+.field public final synthetic Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/RectF;Lyod;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lsmd;Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lqod;->X:Landroid/graphics/RectF;
+    iput-object p1, p0, Lqod;->X:Lsmd;
 
-    iput-object p2, p0, Lqod;->Y:Lyod;
-
-    iput-object p3, p0, Lqod;->Z:Ljava/lang/String;
+    iput-object p2, p0, Lqod;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -36,21 +32,21 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ly04;
+    check-cast p1, Lq54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lqod;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lqod;
+    check-cast p1, Lqod;
 
-    sget-object p1, Lylf;->a:Lylf;
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p0, p1}, Lqod;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lqod;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -58,71 +54,323 @@
 
     new-instance p1, Lqod;
 
-    iget-object v0, p0, Lqod;->Y:Lyod;
+    iget-object v0, p0, Lqod;->X:Lsmd;
 
-    iget-object v1, p0, Lqod;->Z:Ljava/lang/String;
+    iget-object v1, p0, Lqod;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    iget-object p0, p0, Lqod;->X:Landroid/graphics/RectF;
-
-    invoke-direct {p1, p0, v0, v1, p2}, Lqod;-><init>(Landroid/graphics/RectF;Lyod;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, v1, p2}, Lqod;-><init>(Lsmd;Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 16
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    move-object/from16 v0, p0
 
-    iget-object p1, p0, Lqod;->X:Landroid/graphics/RectF;
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Laec;->m(Landroid/graphics/RectF;)Lu00;
+    const-string v1, "ScheduledSendPickerViewModel:delayed_attrs"
 
-    move-result-object p1
+    iget-object v2, v0, Lqod;->X:Lsmd;
 
-    iget-object v0, p0, Lqod;->Y:Lyod;
+    iget-object v3, v2, Lsmd;->a:Ljava/util/LinkedHashMap;
 
-    iget-object v1, v0, Lyod;->F0:Ljava/util/concurrent/atomic/AtomicLong;
+    const/4 v4, 0x0
 
-    iget-object v2, v0, Lyod;->t0:Lcl7;
+    :try_start_0
+    invoke-virtual {v3, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v2}, Lcl7;->getValue()Ljava/lang/Object;
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v2
+    goto :goto_0
 
-    check-cast v2, Lrk;
+    :catch_0
+    invoke-interface {v3, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p0, p0, Lqod;->Z:Ljava/lang/String;
+    iget-object v3, v2, Lsmd;->c:Ljava/util/LinkedHashMap;
 
-    check-cast v2, Lgaa;
+    invoke-interface {v3, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v2, p0, p1}, Lgaa;->E(Ljava/lang/String;Lu00;)J
+    move-result-object v3
 
-    move-result-wide p0
+    if-nez v3, :cond_b
 
-    invoke-virtual {v1, p0, p1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+    iget-object v2, v2, Lsmd;->d:Ljava/util/LinkedHashMap;
 
-    iget-object p0, v0, Lyod;->y0:Lv85;
+    invoke-interface {v2, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Lzsd;
+    move-object v1, v4
 
-    sget v0, Lgoa;->p:I
+    :goto_0
+    instance-of v2, v1, Leq4;
 
-    new-instance v1, Lp2f;
+    if-eqz v2, :cond_0
 
-    invoke-direct {v1, v0}, Lp2f;-><init>(I)V
+    check-cast v1, Leq4;
 
-    sget v0, Lq0d;->m:I
+    goto :goto_1
 
-    new-instance v2, Ljava/lang/Integer;
+    :cond_0
+    move-object v1, v4
 
-    invoke-direct {v2, v0}, Ljava/lang/Integer;-><init>(I)V
+    :goto_1
+    iget-object v2, v0, Lqod;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    invoke-direct {p1, v1, v2}, Lzsd;-><init>(Lu2f;Ljava/lang/Integer;)V
+    if-eqz v1, :cond_a
 
-    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
-    sget-object p0, Lylf;->a:Lylf;
+    move-result-object v3
 
-    return-object p0
+    iget-wide v5, v1, Leq4;->a:J
+
+    invoke-virtual {v3, v5, v6}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    const/4 v1, 0x5
+
+    invoke-virtual {v3, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v1
+
+    const/4 v5, 0x2
+
+    invoke-virtual {v3, v5}, Ljava/util/Calendar;->get(I)I
+
+    move-result v5
+
+    const/4 v6, 0x1
+
+    invoke-virtual {v3, v6}, Ljava/util/Calendar;->get(I)I
+
+    move-result v6
+
+    const/16 v7, 0xb
+
+    invoke-virtual {v3, v7}, Ljava/util/Calendar;->get(I)I
+
+    move-result v7
+
+    const/16 v8, 0xc
+
+    invoke-virtual {v3, v8}, Ljava/util/Calendar;->get(I)I
+
+    move-result v3
+
+    invoke-static {v2}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Lcod;
+
+    move-result-object v8
+
+    iget-object v10, v8, Lcod;->a:Ljava/util/List;
+
+    invoke-static {v2}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Lcod;
+
+    move-result-object v8
+
+    iget-object v11, v8, Lcod;->b:Ljava/util/List;
+
+    invoke-static {v2}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Lcod;
+
+    move-result-object v8
+
+    iget-object v12, v8, Lcod;->c:Ljava/util/List;
+
+    invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    const/4 v13, 0x0
+
+    :goto_2
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v14
+
+    const/4 v15, -0x1
+
+    if-eqz v14, :cond_2
+
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v14
+
+    check-cast v14, Lmd4;
+
+    iget v9, v14, Lmd4;->o:I
+
+    if-ne v9, v6, :cond_1
+
+    iget v9, v14, Lmd4;->c:I
+
+    if-ne v9, v5, :cond_1
+
+    iget v9, v14, Lmd4;->b:I
+
+    if-ne v9, v1, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    add-int/lit8 v13, v13, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    move v13, v15
+
+    :goto_3
+    if-gez v13, :cond_3
+
+    const/4 v13, 0x0
+
+    :cond_3
+    invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    const/4 v5, 0x0
+
+    :goto_4
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lvuf;
+
+    iget v6, v6, Lvuf;->a:I
+
+    if-ne v6, v7, :cond_4
+
+    goto :goto_5
+
+    :cond_4
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_4
+
+    :cond_5
+    move v5, v15
+
+    :goto_5
+    if-gez v5, :cond_6
+
+    const/4 v14, 0x0
+
+    goto :goto_6
+
+    :cond_6
+    move v14, v5
+
+    :goto_6
+    invoke-interface {v12}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    const/4 v5, 0x0
+
+    :goto_7
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_8
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lvuf;
+
+    iget v6, v6, Lvuf;->a:I
+
+    if-ne v6, v3, :cond_7
+
+    move v15, v5
+
+    goto :goto_8
+
+    :cond_7
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_7
+
+    :cond_8
+    :goto_8
+    if-gez v15, :cond_9
+
+    const/4 v15, 0x0
+
+    :cond_9
+    new-instance v9, Lcod;
+
+    invoke-direct/range {v9 .. v15}, Lcod;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;III)V
+
+    goto :goto_9
+
+    :cond_a
+    invoke-static {v2}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Lcod;
+
+    move-result-object v9
+
+    :goto_9
+    iget-object v1, v2, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e:Lx0f;
+
+    new-instance v3, Lad4;
+
+    iget-object v5, v9, Lcod;->a:Ljava/util/List;
+
+    iget v6, v9, Lcod;->d:I
+
+    invoke-interface {v5, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lmd4;
+
+    iget-object v6, v9, Lcod;->b:Ljava/util/List;
+
+    iget v7, v9, Lcod;->e:I
+
+    invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lvuf;
+
+    iget-object v7, v9, Lcod;->c:Ljava/util/List;
+
+    iget v8, v9, Lcod;->f:I
+
+    invoke-interface {v7, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lvuf;
+
+    invoke-direct {v3, v5, v6, v7}, Lad4;-><init>(Lmd4;Lvuf;Lvuf;)V
+
+    invoke-virtual {v1, v4, v3}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    iget-object v1, v2, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->c:Lx0f;
+
+    invoke-virtual {v1, v4, v9}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    return-object v1
+
+    :cond_b
+    new-instance v1, Ljava/lang/ClassCastException;
+
+    invoke-direct {v1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v1
 .end method

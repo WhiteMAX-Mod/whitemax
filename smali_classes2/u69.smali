@@ -1,40 +1,51 @@
 .class public final Lu69;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Ld79;
 
 
 # instance fields
-.field public final a:Lkz;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:J
+.field public final synthetic Y:Ly69;
 
-.field public final c:Ljava/lang/String;
+.field public Z:I
+
+.field public o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lkz;JLjava/lang/String;)V
+.method public constructor <init>(Ly69;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lu69;->Y:Ly69;
 
-    iput-object p1, p0, Lu69;->a:Lkz;
-
-    iput-wide p2, p0, Lu69;->b:J
-
-    iput-object p4, p0, Lu69;->c:Ljava/lang/String;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j()J
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v0, p0, Lu69;->b:J
+    iput-object p1, p0, Lu69;->X:Ljava/lang/Object;
 
-    return-wide v0
+    iget p1, p0, Lu69;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lu69;->Z:I
+
+    iget-object p1, p0, Lu69;->Y:Ly69;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, p0}, Ly69;->r(Ly69;Ljava/util/List;Lv59;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

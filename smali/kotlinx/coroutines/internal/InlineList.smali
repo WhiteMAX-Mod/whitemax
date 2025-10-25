@@ -29,10 +29,10 @@
         "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
         "plus",
         "Lkotlin/Function1;",
-        "Lylf;",
+        "Lccg;",
         "action",
         "forEachReversed-impl",
-        "(Ljava/lang/Object;Lbc6;)V",
+        "(Ljava/lang/Object;Lli6;)V",
         "forEachReversed",
         "",
         "toString",
@@ -98,7 +98,7 @@
     return-object p0
 .end method
 
-.method public static synthetic constructor-impl$default(Ljava/lang/Object;ILld4;)Ljava/lang/Object;
+.method public static synthetic constructor-impl$default(Ljava/lang/Object;ILki4;)Ljava/lang/Object;
     .locals 0
 
     and-int/lit8 p1, p1, 0x1
@@ -133,7 +133,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -150,20 +150,20 @@
 .method public static final equals-impl0(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static final forEachReversed-impl(Ljava/lang/Object;Lbc6;)V
+.method public static final forEachReversed-impl(Ljava/lang/Object;Lli6;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Object;",
-            "Lbc6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
@@ -177,7 +177,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-interface {p1, p0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
@@ -199,7 +199,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v0, v0, -0x1
 
@@ -306,45 +306,45 @@
 
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Lkotlinx/coroutines/internal/InlineList;->equals-impl(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/InlineList;->equals-impl(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
 
-    invoke-static {p0}, Lkotlinx/coroutines/internal/InlineList;->hashCode-impl(Ljava/lang/Object;)I
+    invoke-static {v0}, Lkotlinx/coroutines/internal/InlineList;->hashCode-impl(Ljava/lang/Object;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
 
-    invoke-static {p0}, Lkotlinx/coroutines/internal/InlineList;->toString-impl(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Lkotlinx/coroutines/internal/InlineList;->toString-impl(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final synthetic unbox-impl()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
 
-    return-object p0
+    return-object v0
 .end method

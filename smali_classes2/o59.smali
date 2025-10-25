@@ -1,213 +1,147 @@
-.class public final synthetic Lo59;
+.class public final Lo59;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzb6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final b:J
+
+.field public final c:Lpw0;
+
+.field public final d:Lnje;
+
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+.method public constructor <init>(JJLpw0;Lulf;)V
     .locals 0
 
-    iput p2, p0, Lo59;->a:I
-
-    iput-object p1, p0, Lo59;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lo59;->a:J
+
+    iput-wide p3, p0, Lo59;->b:J
+
+    iput-object p5, p0, Lo59;->c:Lpw0;
+
+    const/4 p1, 0x0
+
+    const/4 p2, 0x7
+
+    invoke-static {p1, p1, p2}, Loje;->b(III)Lnje;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lo59;->d:Lnje;
+
+    check-cast p6, Lqta;
+
+    invoke-virtual {p6}, Lqta;->a()Lk54;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lo59;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p5, p0}, Lpw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final onEvent(Ldeg;)V
+    .locals 4
+    .annotation runtime Lzbf;
+    .end annotation
 
-    iget v0, p0, Lo59;->a:I
+    .line 1
+    iget-wide v0, p1, Ldeg;->b:J
 
-    const/4 v1, 0x0
+    .line 2
+    iget-wide v2, p0, Lo59;->b:J
 
-    sget-object v2, Lyu4;->t0:Lbx9;
+    cmp-long v0, v0, v2
 
-    iget-object p0, p0, Lo59;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    if-nez v0, :cond_1
 
-    packed-switch v0, :pswitch_data_0
+    .line 3
+    iget-wide v0, p1, Ldeg;->c:J
 
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:[Lxi7;
+    .line 4
+    iget-wide v2, p0, Lo59;->a:J
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    cmp-long v0, v0, v2
 
-    move-result-object p0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v2, p0}, Lbx9;->m(Landroid/content/Context;)Llia;
+    .line 5
+    iget-boolean p1, p1, Ldeg;->X:Z
 
-    move-result-object p0
-
-    iget-object p0, p0, Llia;->c:Lera;
-
-    return-object p0
-
-    :pswitch_0
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:[Lxi7;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-virtual {v2, p0}, Lbx9;->m(Landroid/content/Context;)Llia;
-
-    move-result-object p0
-
-    iget-object p0, p0, Llia;->c:Lera;
-
-    return-object p0
-
-    :pswitch_1
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:[Lxi7;
-
-    new-instance v0, Lb2c;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Lb2c;-><init>(Landroid/content/Context;)V
-
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/16 v3, 0x34
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v4
-
-    invoke-static {v3}, Lya6;->G(F)I
-
-    move-result v3
-
-    const/4 v4, -0x1
-
-    invoke-direct {v2, v4, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget v2, Lq0d;->v:I
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-static {v3, v2}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lb2c;->setEndIconDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    new-instance v2, Lp59;
-
-    invoke-direct {v2, p0, v1}, Lp59;-><init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-
-    invoke-virtual {v0, v2}, Lb2c;->setEndIconClickListener(Landroid/view/View$OnClickListener;)V
-
-    new-instance v1, Lgq;
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x7
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, v2, v4, v3}, Lgq;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v1, v0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->isLayoutRequested()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Lb2c;->getTitleView()Landroid/widget/TextView;
-
-    move-result-object p0
-
-    invoke-static {p0}, Le3f;->c(Landroid/widget/TextView;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    const/4 p0, 0x1
-
-    invoke-static {v0, p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0(Lb2c;Z)V
+    if-nez p1, :cond_0
 
     goto :goto_0
 
+    .line 6
     :cond_0
-    new-instance v1, Lsq0;
+    new-instance p1, Ln59;
 
-    invoke-direct {v1, v0, p0}, Lsq0;-><init>(Lb2c;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    invoke-direct {p1, p0, v0}, Ln59;-><init>(Lo59;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lo59;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
     :cond_1
     :goto_0
-    return-object v0
+    return-void
+.end method
 
-    :pswitch_2
-    iget-object p0, p0, Lone/me/sdk/messagewrite/MessageWriteWidget;->Y:Lcl7;
+.method public final onEvent(Lr43;)V
+    .locals 3
+    .annotation runtime Lzbf;
+    .end annotation
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    .line 7
+    iget-object p1, p1, Lr43;->b:Ljava/util/Collection;
 
-    move-result-object p0
+    iget-wide v0, p0, Lo59;->b:J
 
-    check-cast p0, Lhp;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    check-cast p0, Ljp;
+    move-result-object v0
 
-    const-string v0, "app.messages.send.by.enter"
+    invoke-interface {p1, v0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Li3;->g:Lfl7;
+    move-result p1
 
-    invoke-virtual {p0, v0, v1}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
+    if-nez p1, :cond_0
 
-    move-result p0
+    return-void
 
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 8
+    :cond_0
+    new-instance p1, Lm59;
 
-    move-result-object p0
+    const/4 v0, 0x0
 
-    return-object p0
+    invoke-direct {p1, p0, v0}, Lm59;-><init>(Lo59;Lkotlin/coroutines/Continuation;)V
 
-    nop
+    const/4 v1, 0x3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-object v2, p0, Lo59;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    return-void
 .end method

@@ -1,8 +1,3 @@
-.class public interface abstract Lmr6;
-.super Ljava/lang/Object;
+.class public final Lmr6;
+.super Lq7d;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract f(Ljava/util/List;Lpc6;)V
-.end method

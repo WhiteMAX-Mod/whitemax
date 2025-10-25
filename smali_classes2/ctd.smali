@@ -1,39 +1,47 @@
 .class public final Lctd;
-.super Lso;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lctd;
+# instance fields
+.field public final a:Liu7;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lr5;)V
     .locals 1
 
-    new-instance v0, Lctd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lso;-><init>()V
+    const-class v0, Ly83;
 
-    sput-object v0, Lctd;->a:Lctd;
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lctd;->a:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lcl7;
-    .locals 1
+.method public final a()J
+    .locals 2
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
+    iget-object v0, p0, Lctd;->a:Liu7;
 
-    move-result-object p0
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    const-class v0, Lxwe;
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Lz4;->d(Ljava/lang/Class;)Lzte;
+    check-cast v0, Ly83;
 
-    move-result-object p0
+    check-cast v0, Lntd;
 
-    return-object p0
+    invoke-virtual {v0}, Lntd;->s()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

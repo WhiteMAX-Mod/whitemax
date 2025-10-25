@@ -1,106 +1,51 @@
-.class public final Liq4;
-.super Ljava/lang/Object;
+.class public abstract Liq4;
+.super Ljj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/view/DisplayCutout;
+.field public final b:Ljj0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/DisplayCutout;)V
+.method public constructor <init>(Ljj0;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljj0;-><init>()V
 
-    iput-object p1, p0, Liq4;->a:Landroid/view/DisplayCutout;
+    iput-object p1, p0, Liq4;->b:Ljj0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public d()V
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Liq4;->b:Ljj0;
 
-    const/4 p0, 0x1
+    invoke-virtual {v0}, Ljj0;->c()V
 
-    return p0
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Liq4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Liq4;
-
-    iget-object p0, p0, Liq4;->a:Landroid/view/DisplayCutout;
-
-    iget-object p1, p1, Liq4;->a:Landroid/view/DisplayCutout;
-
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public f(Ljava/lang/Throwable;)V
+    .locals 1
 
-    iget-object p0, p0, Liq4;->a:Landroid/view/DisplayCutout;
+    iget-object v0, p0, Liq4;->b:Ljj0;
 
-    if-nez p0, :cond_0
+    invoke-virtual {v0, p1}, Ljj0;->e(Ljava/lang/Throwable;)V
 
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->hashCode()I
-
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public j(F)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Liq4;->b:Ljj0;
 
-    const-string v1, "DisplayCutoutCompat{"
+    invoke-virtual {v0, p1}, Ljj0;->i(F)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Liq4;->a:Landroid/view/DisplayCutout;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

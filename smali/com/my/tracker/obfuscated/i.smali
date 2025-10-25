@@ -91,9 +91,9 @@
     if-eqz v1, :cond_0
 
     .line 3
-    const-string p0, "AttributionHandler: referrer is empty"
+    const-string p1, "AttributionHandler: referrer is empty"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -106,9 +106,9 @@
     if-eqz v1, :cond_1
 
     .line 5
-    const-string p0, "AttributionHandler: attribution has already been received"
+    const-string p1, "AttributionHandler: attribution has already been received"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -150,11 +150,16 @@
     if-eqz v0, :cond_2
 
     .line 9
-    const-string p0, "AttributionHandler: deeplink is empty"
+    const-string p1, "AttributionHandler: deeplink is empty"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
 
     .line 10
     :cond_2
@@ -174,13 +179,11 @@
 
     return-void
 
-    :catchall_0
-    move-exception p0
-
     .line 11
-    const-string p1, "AttributionHandler error: handling referrer failed with error: "
+    :goto_0
+    const-string v0, "AttributionHandler error: handling referrer failed with error: "
 
-    invoke-static {p1, p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -203,9 +206,9 @@
     if-eqz v1, :cond_0
 
     .line 16
-    const-string p0, "AttributionHandler: deeplink is empty"
+    const-string p1, "AttributionHandler: deeplink is empty"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -275,16 +278,16 @@
 
     .line 24
     :cond_3
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/i;->b:Lcom/my/tracker/obfuscated/z0;
+    iget-object v1, p0, Lcom/my/tracker/obfuscated/i;->b:Lcom/my/tracker/obfuscated/z0;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/z0;->b()Landroid/os/Handler;
+    invoke-virtual {v1}, Lcom/my/tracker/obfuscated/z0;->b()Landroid/os/Handler;
 
-    move-result-object p0
+    move-result-object v1
 
-    if-nez p0, :cond_4
+    if-nez v1, :cond_4
 
     .line 25
-    sget-object p0, Lcom/my/tracker/obfuscated/h;->b:Landroid/os/Handler;
+    sget-object v1, Lcom/my/tracker/obfuscated/h;->b:Landroid/os/Handler;
 
     .line 26
     :cond_4
@@ -294,25 +297,25 @@
 
     .line 27
     :try_start_0
-    new-instance v1, Lrvg;
+    new-instance v2, Ltlg;
 
-    const/16 v2, 0xb
+    const/16 v3, 0x18
 
-    invoke-direct {v1, p1, v2, v0}, Lrvg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p1, v3, v0}, Ltlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     .line 28
-    const-string p1, "AttributionHandler error: exception occurred while post runnable"
+    const-string v0, "AttributionHandler error: exception occurred while post runnable"
 
-    invoke-static {p1, p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -335,23 +338,23 @@
 
     .line 13
     :cond_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/i;->c:Landroid/content/Context;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/i;->c:Landroid/content/Context;
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/p0;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/p0;
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/p0;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/p0;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/p0;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/p0;->g()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result p0
+    move-result v0
 
-    xor-int/2addr p0, v1
+    xor-int/2addr v0, v1
 
-    return p0
+    return v0
 .end method
 
 .method public b(Ljava/lang/String;)V
@@ -369,9 +372,9 @@
     if-eqz v2, :cond_0
 
     .line 3
-    const-string p0, "AttributionHandler: attribution has already been received"
+    const-string p1, "AttributionHandler: attribution has already been received"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -392,11 +395,16 @@
     if-nez p1, :cond_1
 
     .line 6
-    const-string p0, "AttributionHandler: empty attribution object has been returned"
+    const-string p1, "AttributionHandler: empty attribution object has been returned"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
 
     .line 7
     :cond_1
@@ -409,20 +417,20 @@
     .line 8
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
-    move-result p0
+    move-result p1
 
     .line 9
-    new-instance p1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -434,13 +442,11 @@
 
     return-void
 
-    :catchall_0
-    move-exception p0
-
     .line 11
-    const-string p1, "AttributionHandler error: handling server attribution failed with error: "
+    :goto_0
+    const-string v0, "AttributionHandler error: handling server attribution failed with error: "
 
-    invoke-static {p1, p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

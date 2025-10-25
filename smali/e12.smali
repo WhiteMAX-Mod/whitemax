@@ -1,26 +1,39 @@
-.class public interface abstract Le12;
-.super Ljava/lang/Object;
+.class public final Le12;
+.super Ld12;
 .source "SourceFile"
-
-# interfaces
-.implements Lkotlin/coroutines/Continuation;
 
 
 # virtual methods
-.method public abstract d(Ls04;)V
-.end method
+.method public final g0(Lv6e;)V
+    .locals 1
 
-.method public abstract e(Lbc6;)V
-.end method
+    iget-object p1, p1, Lv6e;->a:Lu6e;
 
-.method public abstract f(Ljava/lang/Object;Lrc6;)V
-.end method
+    invoke-interface {p1}, Lu6e;->a()Ljava/lang/Object;
 
-.method public abstract isCancelled()Z
-.end method
+    move-result-object p1
 
-.method public abstract k(Ljava/lang/Object;Lrc6;)Lkotlinx/coroutines/internal/Symbol;
-.end method
+    check-cast p1, Landroid/hardware/camera2/params/SessionConfiguration;
 
-.method public abstract n(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_0
+    iget-object v0, p0, Lmmf;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/hardware/camera2/CameraDevice;
+
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/CameraDevice;->createCaptureSession(Landroid/hardware/camera2/params/SessionConfiguration;)V
+    :try_end_0
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
+
+    invoke-direct {v0, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
+
+    throw v0
 .end method

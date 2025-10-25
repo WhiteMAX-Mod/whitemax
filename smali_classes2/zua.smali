@@ -1,110 +1,75 @@
 .class public final Lzua;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/LinkedTransferQueue;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lzua;
-
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lzua;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lzua;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
-
-    sput-object v0, Lzua;->b:Lzua;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzua;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final bridge contains(Ljava/lang/Object;)Z
     .locals 1
 
-    instance-of v0, p1, Lzua;
+    if-nez p1, :cond_0
 
-    if-eqz v0, :cond_1
+    const/4 v0, 0x1
 
-    check-cast p1, Lzua;
-
-    if-eq p1, p0, :cond_0
-
-    if-eqz p1, :cond_1
-
-    iget-object p0, p0, Lzua;->a:Ljava/lang/Object;
-
-    iget-object p1, p1, Lzua;->a:Ljava/lang/Object;
-
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
+    goto :goto_0
 
     :cond_0
-    const/4 p0, 0x1
+    instance-of v0, p1, Ljava/lang/Runnable;
 
-    return p0
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    const/4 p0, 0x0
+    check-cast p1, Ljava/lang/Runnable;
 
-    return p0
+    invoke-super {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final hashCode()I
+.method public final offer(Ljava/lang/Object;)Z
     .locals 0
 
-    iget-object p0, p0, Lzua;->a:Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Runnable;
 
-    invoke-static {p0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->tryTransfer(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final bridge remove(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object p0, p0, Lzua;->a:Ljava/lang/Object;
+    if-nez p1, :cond_0
 
-    if-eqz p0, :cond_0
+    const/4 v0, 0x1
 
-    const-string v0, "Optional[%s]"
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    goto :goto_0
 
     :cond_0
-    const-string p0, "Optional.empty"
+    instance-of v0, p1, Ljava/lang/Runnable;
 
-    return-object p0
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-super {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

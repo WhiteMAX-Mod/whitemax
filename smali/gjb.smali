@@ -1,143 +1,157 @@
 .class public final Lgjb;
-.super Ljava/lang/Object;
+.super Lh3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/ContentResolver;
+.field public final a:[Ljava/lang/Object;
 
-.field public final b:Landroid/content/res/Resources;
+.field public final b:[Ljava/lang/Object;
 
-.field public final c:Landroid/content/res/AssetManager;
+.field public final c:I
 
-.field public final d:Lah6;
-
-.field public final e:Lb17;
-
-.field public final f:Lq02;
-
-.field public final g:Lju4;
-
-.field public final h:Z
-
-.field public final i:Lra5;
-
-.field public final j:Lmgb;
-
-.field public final k:Lwpe;
-
-.field public final l:Lew8;
-
-.field public final m:Lew8;
-
-.field public final n:Lad4;
-
-.field public final o:Ltbb;
-
-.field public final p:Lb7;
-
-.field public final q:I
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lah6;Lag4;Lq02;Lju4;ZLra5;Lmgb;Lim4;Lim4;Lwpe;Lad4;Ltbb;ILb7;)V
-    .locals 1
+.method public constructor <init>([Ljava/lang/Object;[Ljava/lang/Object;II)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    iput-object p1, p0, Lgjb;->a:[Ljava/lang/Object;
 
-    move-result-object v0
+    iput-object p2, p0, Lgjb;->b:[Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    iput p3, p0, Lgjb;->c:I
 
-    move-result-object v0
+    iput p4, p0, Lgjb;->o:I
 
-    iput-object v0, p0, Lgjb;->a:Landroid/content/ContentResolver;
+    const/16 p1, 0x20
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lgjb;->b:Landroid/content/res/Resources;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgjb;->c:Landroid/content/res/AssetManager;
-
-    iput-object p2, p0, Lgjb;->d:Lah6;
-
-    iput-object p3, p0, Lgjb;->e:Lb17;
-
-    iput-object p4, p0, Lgjb;->f:Lq02;
-
-    iput-object p5, p0, Lgjb;->g:Lju4;
-
-    iput-boolean p6, p0, Lgjb;->h:Z
-
-    iput-object p7, p0, Lgjb;->i:Lra5;
-
-    iput-object p8, p0, Lgjb;->j:Lmgb;
-
-    iput-object p9, p0, Lgjb;->m:Lew8;
-
-    iput-object p10, p0, Lgjb;->l:Lew8;
-
-    iput-object p11, p0, Lgjb;->k:Lwpe;
-
-    iput-object p12, p0, Lgjb;->n:Lad4;
-
-    iput-object p13, p0, Lgjb;->o:Ltbb;
-
-    new-instance p1, Lp3a;
-
-    invoke-direct {p1}, Lp3a;-><init>()V
-
-    new-instance p1, Lp3a;
-
-    invoke-direct {p1}, Lp3a;-><init>()V
-
-    iput p14, p0, Lgjb;->q:I
-
-    move-object/from16 p1, p15
-
-    iput-object p1, p0, Lgjb;->p:Lb7;
+    if-le p3, p1, :cond_0
 
     return-void
+
+    :cond_0
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string p3, "Trie-based persistent vector should have at least 33 elements, got "
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 .end method
 
 
 # virtual methods
-.method public final a(Ldjb;ZLl27;)Lytc;
-    .locals 6
+.method public final get(I)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v0, Lytc;
+    iget v0, p0, Lgjb;->c:I
 
-    iget-object v1, p0, Lgjb;->i:Lra5;
+    invoke-static {p1, v0}, Ltdi;->a(II)V
 
-    invoke-interface {v1}, Lra5;->g()Ljava/util/concurrent/ExecutorService;
+    add-int/lit8 v0, v0, -0x1
 
-    move-result-object v1
+    and-int/lit8 v0, v0, -0x20
 
-    iget-object v2, p0, Lgjb;->j:Lmgb;
+    if-gt v0, p1, :cond_0
 
-    move-object v3, p1
+    iget-object v0, p0, Lgjb;->b:[Ljava/lang/Object;
 
-    move v4, p2
+    goto :goto_1
 
-    move-object v5, p3
+    :cond_0
+    iget-object v0, p0, Lgjb;->a:[Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v5}, Lytc;-><init>(Ljava/util/concurrent/Executor;Lmgb;Ldjb;ZLl27;)V
+    iget v1, p0, Lgjb;->o:I
 
-    return-object v0
+    :goto_0
+    if-lez v1, :cond_2
+
+    invoke-static {p1, v1}, Lnbi;->b(II)I
+
+    move-result v2
+
+    aget-object v0, v0, v2
+
+    if-eqz v0, :cond_1
+
+    check-cast v0, [Ljava/lang/Object;
+
+    add-int/lit8 v1, v1, -0x5
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "null cannot be cast to non-null type kotlin.Array<kotlin.Any?>"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    :goto_1
+    and-int/lit8 p1, p1, 0x1f
+
+    aget-object p1, v0, p1
+
+    return-object p1
+.end method
+
+.method public final getSize()I
+    .locals 1
+
+    iget v0, p0, Lgjb;->c:I
+
+    return v0
+.end method
+
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 7
+
+    iget v0, p0, Lgjb;->c:I
+
+    invoke-static {p1, v0}, Ltdi;->b(II)V
+
+    new-instance v1, Lijb;
+
+    iget v0, p0, Lgjb;->o:I
+
+    div-int/lit8 v0, v0, 0x5
+
+    add-int/lit8 v4, v0, 0x1
+
+    iget v3, p0, Lgjb;->c:I
+
+    iget-object v5, p0, Lgjb;->a:[Ljava/lang/Object;
+
+    iget-object v6, p0, Lgjb;->b:[Ljava/lang/Object;
+
+    move v2, p1
+
+    invoke-direct/range {v1 .. v6}, Lijb;-><init>(III[Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    return-object v1
 .end method

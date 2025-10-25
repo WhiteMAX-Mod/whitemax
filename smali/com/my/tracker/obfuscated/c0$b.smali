@@ -44,17 +44,17 @@
 
 # virtual methods
 .method public a()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/c0$b;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/c0$b;->b:Ljava/lang/Object;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public b()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lcom/my/tracker/obfuscated/c0$b;->a:Z
+    iget-boolean v0, p0, Lcom/my/tracker/obfuscated/c0$b;->a:Z
 
-    return p0
+    return v0
 .end method

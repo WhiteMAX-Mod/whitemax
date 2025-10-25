@@ -1,118 +1,219 @@
-.class public final Lfca;
+.class public abstract Lfca;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln18;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lz4;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lz4;I)V
+.method public static a(Landroid/app/NotificationChannel;)Z
     .locals 0
 
-    iput p2, p0, Lfca;->a:I
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canBypassDnd()Z
 
-    iput-object p1, p0, Lfca;->b:Lz4;
+    move-result p0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return p0
+.end method
+
+.method public static b(Landroid/app/NotificationChannel;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canShowBadge()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static c(Ljava/lang/String;Ljava/lang/CharSequence;I)Landroid/app/NotificationChannel;
+    .locals 1
+
+    new-instance v0, Landroid/app/NotificationChannel;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
+
+    return-object v0
+.end method
+
+.method public static d(Landroid/app/NotificationChannel;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->enableLights(Z)V
 
     return-void
 .end method
 
+.method public static e(Landroid/app/NotificationChannel;Z)V
+    .locals 0
 
-# virtual methods
-.method public final f()V
-    .locals 2
-
-    iget v0, p0, Lfca;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lfca;->b:Lz4;
-
-    const-class v0, Lz43;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lz43;
-
-    invoke-interface {p0}, Lz43;->b()V
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->enableVibration(Z)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object p0, p0, Lfca;->b:Lz4;
+.method public static f(Landroid/app/NotificationChannel;)Landroid/media/AudioAttributes;
+    .locals 0
 
-    const-class v0, Landroid/content/Context;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/content/Context;
-
-    sget-object v0, Lyu4;->t0:Lbx9;
-
-    invoke-virtual {v0, p0}, Lbx9;->k(Landroid/content/Context;)Lyu4;
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getAudioAttributes()Landroid/media/AudioAttributes;
 
     move-result-object p0
 
-    iget-object p0, p0, Lyu4;->Y:Ljava/lang/Object;
+    return-object p0
+.end method
 
-    check-cast p0, Lv94;
+.method public static g(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    iget-object v0, p0, Lv94;->a:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getDescription()Ljava/lang/String;
 
-    check-cast v0, Lzte;
+    move-result-object p0
 
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+    return-object p0
+.end method
 
-    move-result-object v0
+.method public static h(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    check-cast v0, Landroid/content/SharedPreferences;
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getGroup()Ljava/lang/String;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    move-result-object p0
 
-    move-result-object v0
+    return-object p0
+.end method
 
-    sget-object v1, Lqw9;->a:Lm48;
+.method public static i(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
 
-    sget-object v1, Lpw9;->b:Lpw9;
+    move-result-object p0
 
-    iput-object v1, p0, Lv94;->c:Ljava/lang/Object;
+    return-object p0
+.end method
 
-    const-string p0, "nightmode"
+.method public static j(Landroid/app/NotificationChannel;)I
+    .locals 0
 
-    invoke-static {v1}, Lm48;->l(Lqw9;)Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getImportance()I
 
-    move-result-object v1
+    move-result p0
 
-    invoke-interface {v0, p0, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    return p0
+.end method
 
-    sget-object p0, Llia;->d:Llia;
+.method public static k(Landroid/app/NotificationChannel;)I
+    .locals 0
 
-    iget-object p0, p0, Llia;->a:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getLightColor()I
 
-    const-string v1, "themename"
+    move-result p0
 
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    return p0
+.end method
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+.method public static l(Landroid/app/NotificationChannel;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getLockscreenVisibility()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static m(Landroid/app/NotificationChannel;)Ljava/lang/CharSequence;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getName()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static n(Landroid/app/NotificationChannel;)Landroid/net/Uri;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getSound()Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static o(Landroid/app/NotificationChannel;)[J
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getVibrationPattern()[J
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static p(Landroid/app/NotificationChannel;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setDescription(Ljava/lang/String;)V
 
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public static q(Landroid/app/NotificationChannel;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setGroup(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static r(Landroid/app/NotificationChannel;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setLightColor(I)V
+
+    return-void
+.end method
+
+.method public static s(Landroid/app/NotificationChannel;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setShowBadge(Z)V
+
+    return-void
+.end method
+
+.method public static t(Landroid/app/NotificationChannel;Landroid/net/Uri;Landroid/media/AudioAttributes;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationChannel;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)V
+
+    return-void
+.end method
+
+.method public static u(Landroid/app/NotificationChannel;[J)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setVibrationPattern([J)V
+
+    return-void
+.end method
+
+.method public static v(Landroid/app/NotificationChannel;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->shouldShowLights()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static w(Landroid/app/NotificationChannel;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->shouldVibrate()Z
+
+    move-result p0
+
+    return p0
 .end method

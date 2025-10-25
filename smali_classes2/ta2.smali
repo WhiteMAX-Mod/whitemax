@@ -3,300 +3,150 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpm3;
+.implements Lji6;
 
 
 # instance fields
-.field public final synthetic X:J
+.field public final synthetic a:I
 
-.field public final synthetic Y:I
-
-.field public final synthetic Z:J
-
-.field public final synthetic a:Lza2;
-
-.field public final synthetic b:Ljava/util/Set;
-
-.field public final synthetic c:Lif2;
-
-.field public final synthetic o:I
-
-.field public final synthetic r0:J
+.field public final synthetic b:Lone/me/profile/screens/members/ChatAdminsScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lza2;Ljava/util/Set;Lif2;IJIJJ)V
+.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatAdminsScreen;I)V
     .locals 0
 
+    iput p2, p0, Lta2;->a:I
+
+    iput-object p1, p0, Lta2;->b:Lone/me/profile/screens/members/ChatAdminsScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lta2;->a:Lza2;
-
-    iput-object p2, p0, Lta2;->b:Ljava/util/Set;
-
-    iput-object p3, p0, Lta2;->c:Lif2;
-
-    iput p4, p0, Lta2;->o:I
-
-    iput-wide p5, p0, Lta2;->X:J
-
-    iput p7, p0, Lta2;->Y:I
-
-    iput-wide p8, p0, Lta2;->Z:J
-
-    iput-wide p10, p0, Lta2;->r0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 23
+.method public final invoke()Ljava/lang/Object;
+    .locals 13
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lta2;->a:I
 
-    move-object/from16 v1, p1
+    iget-object v1, p0, Lta2;->b:Lone/me/profile/screens/members/ChatAdminsScreen;
 
-    check-cast v1, Leb2;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, v0, Lta2;->a:Lza2;
+    sget-object v0, Lone/me/profile/screens/members/ChatAdminsScreen;->t0:[Ltr7;
 
-    iget-object v3, v2, Lza2;->s:Lgr4;
+    new-instance v2, Lfx0;
 
-    iget-object v9, v0, Lta2;->b:Ljava/util/Set;
-
-    invoke-static {v1, v9}, Lza2;->H(Leb2;Ljava/util/Set;)Lhb2;
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->C0()Ldb2;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lhb2;->a()Lgb2;
+    const/4 v8, 0x0
+
+    const/4 v9, 0x4
+
+    const/4 v3, 0x1
+
+    const-class v5, Ldb2;
+
+    const-string v6, "getContextMenuActions"
+
+    const-string v7, "getContextMenuActions(J)Ljava/util/List;"
+
+    invoke-direct/range {v2 .. v9}, Lfx0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v3, La91;
+
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->C0()Ldb2;
+
+    move-result-object v5
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x8
+
+    const/4 v4, 0x0
+
+    const-class v6, Ldb2;
+
+    const-string v7, "getButtonActions"
+
+    const-string v8, "getButtonActions()Lkotlinx/coroutines/flow/Flow;"
+
+    invoke-direct/range {v3 .. v10}, La91;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v4, Lsa2;
+
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->D0()J
+
+    move-result-wide v5
+
+    sget-object v0, Lq2c;->a:Lq2c;
+
+    invoke-virtual {v0}, Lq2c;->b()Liu7;
+
+    move-result-object v7
+
+    invoke-virtual {v0}, Lq2c;->d()Liu7;
+
+    move-result-object v8
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const-class v9, Lxxb;
+
+    invoke-virtual {v1, v9}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v9
+
+    invoke-virtual {v0}, Lq2c;->c()Liu7;
+
+    move-result-object v10
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const-class v11, Layb;
+
+    invoke-virtual {v1, v11}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v11
+
+    invoke-virtual {v0}, Lq2c;->f()Liu7;
 
     move-result-object v12
 
-    iget-object v4, v0, Lta2;->c:Lif2;
+    invoke-direct/range {v4 .. v12}, Lsa2;-><init>(JLiu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
 
-    iget v5, v4, Lif2;->X:I
+    new-instance v0, Lp69;
 
-    iput v5, v12, Lgb2;->a:I
+    invoke-direct {v0, v2, v4, v3}, Lp69;-><init>(Lli6;Lxl4;Lji6;)V
 
-    invoke-virtual {v4}, Lif2;->d()Ljava/util/List;
+    return-object v0
 
-    move-result-object v5
+    :pswitch_0
+    sget-object v0, Lone/me/profile/screens/members/ChatAdminsScreen;->t0:[Ltr7;
 
-    invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
+    new-instance v0, Ldb2;
 
-    move-result v5
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->D0()J
 
-    iget v6, v0, Lta2;->o:I
+    move-result-wide v1
 
-    iget v7, v0, Lta2;->Y:I
+    invoke-direct {v0, v1, v2}, Ldb2;-><init>(J)V
 
-    iget-wide v10, v0, Lta2;->r0:J
+    return-object v0
 
-    if-eqz v5, :cond_1
+    nop
 
-    iget-wide v13, v0, Lta2;->X:J
-
-    if-lez v6, :cond_0
-
-    iput-wide v13, v12, Lgb2;->b:J
-
-    :cond_0
-    if-lez v7, :cond_5
-
-    iput-wide v13, v12, Lgb2;->c:J
-
-    goto/16 :goto_1
-
-    :cond_1
-    iget-object v5, v12, Lgb2;->X:Ljava/lang/Object;
-
-    move-object v13, v5
-
-    check-cast v13, Ljava/util/List;
-
-    invoke-virtual {v4}, Lif2;->d()Ljava/util/List;
-
-    move-result-object v14
-
-    const-wide/16 v18, 0x0
-
-    const-wide/16 v21, 0x0
-
-    move/from16 v17, v6
-
-    iget-wide v5, v0, Lta2;->Z:J
-
-    move-wide v15, v5
-
-    move/from16 v20, v7
-
-    invoke-static/range {v13 .. v22}, Lxnd;->w(Ljava/util/List;Ljava/util/List;JIJIJ)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    move/from16 v5, v17
-
-    move/from16 v6, v20
-
-    iput-object v0, v12, Lgb2;->X:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    const/4 v7, 0x0
-
-    const-string v8, "za2"
-
-    if-lez v5, :cond_3
-
-    invoke-virtual {v4}, Lif2;->d()Ljava/util/List;
-
-    move-result-object v13
-
-    invoke-interface {v13}, Ljava/util/List;->size()I
-
-    move-result v13
-
-    if-ge v13, v5, :cond_3
-
-    const-string v5, "onChatMediaNew firstMessageUpdate"
-
-    invoke-static {v8, v5}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Lgr4;->get()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lsz8;
-
-    invoke-virtual {v4}, Lif2;->d()Ljava/util/List;
-
-    move-result-object v13
-
-    invoke-interface {v13, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v13
-
-    check-cast v13, Lyx8;
-
-    iget-wide v13, v13, Lyx8;->a:J
-
-    invoke-virtual {v5, v10, v11, v13, v14}, Lsz8;->j(JJ)Luz8;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_2
-
-    iget-wide v13, v5, Lli0;->a:J
-
-    iput-wide v13, v12, Lgb2;->b:J
-
-    goto :goto_0
-
-    :cond_2
-    new-array v5, v7, [Ljava/lang/Object;
-
-    invoke-static {v5, v7}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v5
-
-    const-string v13, "onChatMediaNew can\'t find message to update firstMessage"
-
-    invoke-static {v8, v0, v13, v5}, Ljtg;->P(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_3
-    :goto_0
-    if-lez v6, :cond_5
-
-    invoke-virtual {v4}, Lif2;->d()Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Ljava/util/List;->size()I
-
-    move-result v5
-
-    if-ge v5, v6, :cond_5
-
-    const-string v5, "onChatMediaNew lastMessageUpdate"
-
-    invoke-static {v8, v5}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Lgr4;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lsz8;
-
-    invoke-virtual {v4}, Lif2;->d()Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-virtual {v4}, Lif2;->d()Ljava/util/List;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/util/List;->size()I
-
-    move-result v6
-
-    add-int/lit8 v6, v6, -0x1
-
-    invoke-interface {v5, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lyx8;
-
-    iget-wide v5, v5, Lyx8;->a:J
-
-    invoke-virtual {v3, v10, v11, v5, v6}, Lsz8;->j(JJ)Luz8;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_4
-
-    iget-wide v5, v3, Lli0;->a:J
-
-    iput-wide v5, v12, Lgb2;->c:J
-
-    goto :goto_1
-
-    :cond_4
-    new-array v3, v7, [Ljava/lang/Object;
-
-    invoke-static {v3, v7}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v3
-
-    const-string v5, "onChatMediaNew can\'t find message to update lastMessage"
-
-    invoke-static {v8, v0, v5, v3}, Ljtg;->P(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_5
-    :goto_1
-    invoke-virtual {v2, v10, v11}, Lza2;->J(J)Lro9;
-
-    move-result-object v0
-
-    new-instance v2, Lfj8;
-
-    iget-wide v5, v4, Lif2;->Z:J
-
-    iget-wide v7, v4, Lif2;->Y:J
-
-    move-object v4, v2
-
-    invoke-direct/range {v4 .. v11}, Lfj8;-><init>(JJLjava/util/Set;J)V
-
-    invoke-interface {v0, v4}, Lro9;->setValue(Ljava/lang/Object;)V
-
-    invoke-virtual {v12}, Lgb2;->a()Lhb2;
-
-    move-result-object v0
-
-    invoke-static {v1, v9, v0}, Lza2;->a0(Leb2;Ljava/util/Set;Lhb2;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

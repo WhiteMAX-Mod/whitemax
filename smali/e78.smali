@@ -1,348 +1,295 @@
 .class public final Le78;
-.super Ljava/lang/Object;
+.super Lf1f;
 .source "SourceFile"
-
-# interfaces
-.implements Lek8;
-.implements Lck8;
 
 
 # instance fields
-.field public X:Lek8;
+.field public final synthetic Y:Ld0c;
 
-.field public Y:Lck8;
+.field public final synthetic Z:La0c;
 
-.field public Z:J
+.field public final synthetic q0:Lab7;
 
-.field public final a:Lyp8;
+.field public final synthetic r0:Landroid/os/CancellationSignal;
 
-.field public final b:J
-
-.field public final c:Lib4;
-
-.field public o:Ldj0;
+.field public final synthetic s0:Lf78;
 
 
 # direct methods
-.method public constructor <init>(Lyp8;Lib4;J)V
+.method public constructor <init>(Lf78;Ljj0;Ld0c;La0c;Ld0c;La0c;Lab7;Landroid/os/CancellationSignal;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Le78;->s0:Lf78;
 
-    iput-object p1, p0, Le78;->a:Lyp8;
+    iput-object p5, p0, Le78;->Y:Ld0c;
 
-    iput-object p2, p0, Le78;->c:Lib4;
+    iput-object p6, p0, Le78;->Z:La0c;
 
-    iput-wide p3, p0, Le78;->b:J
+    iput-object p7, p0, Le78;->q0:Lab7;
 
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+    iput-object p8, p0, Le78;->r0:Landroid/os/CancellationSignal;
 
-    iput-wide p1, p0, Le78;->Z:J
+    const-string p1, "LocalThumbnailBitmapSdk29Producer"
+
+    invoke-direct {p0, p2, p3, p4, p1}, Lf1f;-><init>(Ljj0;Ld0c;La0c;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lek8;)V
-    .locals 1
+.method public final b(Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object p1, p0, Le78;->Y:Lck8;
+    check-cast p1, Lda3;
 
-    sget v0, Lnrf;->a:I
-
-    invoke-interface {p1, p0}, Lck8;->a(Lek8;)V
+    invoke-static {p1}, Lda3;->P(Lda3;)V
 
     return-void
 .end method
 
-.method public final b(Lyp8;)V
-    .locals 4
+.method public final c(Ljava/lang/Object;)Ljava/util/Map;
+    .locals 1
 
-    iget-wide v0, p0, Le78;->Z:J
+    check-cast p1, Lda3;
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+    if-eqz p1, :cond_0
 
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_0
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-wide v0, p0, Le78;->b:J
+    const/4 p1, 0x0
 
     :goto_0
-    iget-object v2, p0, Le78;->o:Ldj0;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v3, p0, Le78;->c:Lib4;
-
-    invoke-virtual {v2, p1, v3, v0, v1}, Ldj0;->c(Lyp8;Lib4;J)Lek8;
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Le78;->X:Lek8;
+    const-string v0, "createdThumbnail"
 
-    iget-object v2, p0, Le78;->Y:Lck8;
+    invoke-static {v0, p1}, Ljc7;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
-    if-eqz v2, :cond_1
+    move-result-object p1
 
-    invoke-interface {p1, p0, v0, v1}, Lek8;->s(Lck8;J)V
-
-    :cond_1
-    return-void
+    return-object p1
 .end method
 
-.method public final c()J
-    .locals 2
+.method public final d()Ljava/lang/Object;
+    .locals 9
 
-    iget-object p0, p0, Le78;->X:Lek8;
+    iget-object v0, p0, Le78;->s0:Lf78;
 
-    sget v0, Lnrf;->a:I
+    iget-object v0, v0, Lf78;->c:Landroid/content/ContentResolver;
 
-    invoke-interface {p0}, Liid;->c()J
+    new-instance v1, Landroid/util/Size;
 
-    move-result-wide v0
+    iget-object v2, p0, Le78;->q0:Lab7;
 
-    return-wide v0
-.end method
+    iget-object v3, v2, Lab7;->h:Lucd;
 
-.method public final d(JLvdd;)J
-    .locals 1
+    const/16 v4, 0x800
 
-    iget-object p0, p0, Le78;->X:Lek8;
+    if-eqz v3, :cond_0
 
-    sget v0, Lnrf;->a:I
-
-    invoke-interface {p0, p1, p2, p3}, Lek8;->d(JLvdd;)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final e(Liid;)V
-    .locals 1
-
-    check-cast p1, Lek8;
-
-    iget-object p1, p0, Le78;->Y:Lck8;
-
-    sget v0, Lnrf;->a:I
-
-    invoke-interface {p1, p0}, Lgid;->e(Liid;)V
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget-object v0, p0, Le78;->X:Lek8;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lek8;->f()V
-
-    return-void
-
-    :cond_0
-    iget-object p0, p0, Le78;->o:Ldj0;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Ldj0;->k()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final g(J)J
-    .locals 1
-
-    iget-object p0, p0, Le78;->X:Lek8;
-
-    sget v0, Lnrf;->a:I
-
-    invoke-interface {p0, p1, p2}, Lek8;->g(J)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final i()Z
-    .locals 0
-
-    iget-object p0, p0, Le78;->X:Lek8;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Liid;->i()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final j()J
-    .locals 2
-
-    iget-object p0, p0, Le78;->X:Lek8;
-
-    sget v0, Lnrf;->a:I
-
-    invoke-interface {p0}, Lek8;->j()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final k()Lwbf;
-    .locals 1
-
-    iget-object p0, p0, Le78;->X:Lek8;
-
-    sget v0, Lnrf;->a:I
-
-    invoke-interface {p0}, Lek8;->k()Lwbf;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final l()J
-    .locals 2
-
-    iget-object p0, p0, Le78;->X:Lek8;
-
-    sget v0, Lnrf;->a:I
-
-    invoke-interface {p0}, Liid;->l()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final m(J)V
-    .locals 1
-
-    iget-object p0, p0, Le78;->X:Lek8;
-
-    sget v0, Lnrf;->a:I
-
-    invoke-interface {p0, p1, p2}, Liid;->m(J)V
-
-    return-void
-.end method
-
-.method public final n([Lpd5;[Z[Lz2d;[ZJ)J
-    .locals 6
-
-    iget-wide v0, p0, Le78;->Z:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_0
-
-    iget-wide v4, p0, Le78;->b:J
-
-    cmp-long v4, p5, v4
-
-    if-nez v4, :cond_0
-
-    move-wide p5, v0
-
-    :cond_0
-    iput-wide v2, p0, Le78;->Z:J
-
-    iget-object p0, p0, Le78;->X:Lek8;
-
-    sget v0, Lnrf;->a:I
-
-    invoke-interface/range {p0 .. p6}, Lek8;->n([Lpd5;[Z[Lz2d;[ZJ)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final s(Lck8;J)V
-    .locals 2
-
-    iput-object p1, p0, Le78;->Y:Lck8;
-
-    iget-object p1, p0, Le78;->X:Lek8;
-
-    if-eqz p1, :cond_1
-
-    iget-wide p2, p0, Le78;->Z:J
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, p2, v0
-
-    if-eqz v0, :cond_0
+    iget v5, v3, Lucd;->a:I
 
     goto :goto_0
 
     :cond_0
-    iget-wide p2, p0, Le78;->b:J
+    move v5, v4
 
     :goto_0
-    invoke-interface {p1, p0, p2, p3}, Lek8;->s(Lck8;J)V
+    iget-object v2, v2, Lab7;->b:Landroid/net/Uri;
+
+    if-eqz v3, :cond_1
+
+    iget v4, v3, Lucd;->b:I
 
     :cond_1
+    invoke-direct {v1, v5, v4}, Landroid/util/Size;-><init>(II)V
+
+    const/4 v3, 0x0
+
+    :try_start_0
+    invoke-static {v0, v2}, Lbhg;->a(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v4
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-object v4, v3
+
+    :goto_1
+    const/4 v5, 0x0
+
+    iget-object v6, p0, Le78;->r0:Landroid/os/CancellationSignal;
+
+    if-eqz v4, :cond_4
+
+    invoke-static {v4}, Lv49;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_2
+
+    const-string v8, "video/"
+
+    invoke-static {v7, v8, v5}, Lhbf;->w(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v7
+
+    goto :goto_2
+
+    :cond_2
+    move v7, v5
+
+    :goto_2
+    if-eqz v7, :cond_3
+
+    new-instance v7, Ljava/io/File;
+
+    invoke-direct {v7, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v7, v1, v6}, La15;->d(Ljava/io/File;Landroid/util/Size;Landroid/os/CancellationSignal;)Landroid/graphics/Bitmap;
+
+    move-result-object v4
+
+    goto :goto_3
+
+    :cond_3
+    new-instance v7, Ljava/io/File;
+
+    invoke-direct {v7, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v7, v1, v6}, La15;->x(Ljava/io/File;Landroid/util/Size;Landroid/os/CancellationSignal;)Landroid/graphics/Bitmap;
+
+    move-result-object v4
+
+    goto :goto_3
+
+    :cond_4
+    move-object v4, v3
+
+    :goto_3
+    if-nez v4, :cond_5
+
+    invoke-static {v0, v2, v1, v6}, La15;->c(Landroid/content/ContentResolver;Landroid/net/Uri;Landroid/util/Size;Landroid/os/CancellationSignal;)Landroid/graphics/Bitmap;
+
+    move-result-object v4
+
+    :cond_5
+    if-nez v4, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    invoke-static {}, Ljh6;->l()Ljh6;
+
+    move-result-object v0
+
+    sget-object v1, Lnc7;->d:Lnc7;
+
+    invoke-static {v4, v0, v1, v5}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->of(Landroid/graphics/Bitmap;Ladd;Lohc;I)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+
+    move-result-object v0
+
+    iget-object v1, p0, Le78;->Z:La0c;
+
+    check-cast v1, Lqk0;
+
+    const-string v2, "image_format"
+
+    const-string v3, "thumbnail"
+
+    invoke-virtual {v1, v2, v3}, Lqk0;->putExtra(Ljava/lang/String;Ljava/lang/Object;)V
+
+    iget-object v1, v1, Lqk0;->Y:Ljava/util/HashMap;
+
+    invoke-interface {v0, v1}, Lcom/facebook/fresco/middleware/HasExtraData;->putExtras(Ljava/util/Map;)V
+
+    invoke-static {v0}, Lda3;->j0(Ljava/io/Closeable;)Lhi4;
+
+    move-result-object v3
+
+    :goto_4
+    return-object v3
+.end method
+
+.method public final e()V
+    .locals 1
+
+    invoke-super {p0}, Lf1f;->e()V
+
+    iget-object v0, p0, Le78;->r0:Landroid/os/CancellationSignal;
+
+    invoke-virtual {v0}, Landroid/os/CancellationSignal;->cancel()V
+
     return-void
 .end method
 
-.method public final t(Lwv7;)Z
-    .locals 0
+.method public final f(Ljava/lang/Exception;)V
+    .locals 3
 
-    iget-object p0, p0, Le78;->X:Lek8;
+    invoke-super {p0, p1}, Lf1f;->f(Ljava/lang/Exception;)V
 
-    if-eqz p0, :cond_0
+    const-string p1, "LocalThumbnailBitmapSdk29Producer"
 
-    invoke-interface {p0, p1}, Liid;->t(Lwv7;)Z
+    const/4 v0, 0x0
 
-    move-result p0
+    iget-object v1, p0, Le78;->Y:Ld0c;
 
-    if-eqz p0, :cond_0
+    iget-object v2, p0, Le78;->Z:La0c;
 
-    const/4 p0, 0x1
+    invoke-interface {v1, v2, p1, v0}, Ld0c;->e(La0c;Ljava/lang/String;Z)V
 
-    return p0
+    const-string p1, "thumbnail_bitmap"
 
-    :cond_0
-    const/4 p0, 0x0
+    check-cast v2, Lqk0;
 
-    return p0
+    const-string v0, "local"
+
+    invoke-virtual {v2, v0, p1}, Lqk0;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public final u(JZ)V
-    .locals 1
+.method public final g(Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object p0, p0, Le78;->X:Lek8;
+    check-cast p1, Lda3;
 
-    sget v0, Lnrf;->a:I
+    invoke-super {p0, p1}, Lf1f;->g(Ljava/lang/Object;)V
 
-    invoke-interface {p0, p1, p2, p3}, Lek8;->u(JZ)V
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iget-object v0, p0, Le78;->Y:Ld0c;
+
+    iget-object v1, p0, Le78;->Z:La0c;
+
+    const-string v2, "LocalThumbnailBitmapSdk29Producer"
+
+    invoke-interface {v0, v1, v2, p1}, Ld0c;->e(La0c;Ljava/lang/String;Z)V
+
+    const-string p1, "thumbnail_bitmap"
+
+    check-cast v1, Lqk0;
+
+    const-string v0, "local"
+
+    invoke-virtual {v1, v0, p1}, Lqk0;->h(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

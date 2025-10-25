@@ -172,17 +172,17 @@
 
 # virtual methods
 .method public canonicalForm()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

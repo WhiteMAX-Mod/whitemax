@@ -1,71 +1,120 @@
-.class public final Lno5;
-.super Ljx3;
+.class public final synthetic Lno5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public X:Lz7f;
+.field public final synthetic a:I
 
-.field public Y:Lwnf;
+.field public final synthetic b:J
 
-.field public Z:Ljava/nio/channels/AsynchronousFileChannel;
-
-.field public o:Lpo5;
-
-.field public r0:Lpc6;
-
-.field public s0:I
-
-.field public t0:I
-
-.field public synthetic u0:Ljava/lang/Object;
-
-.field public final synthetic v0:Lpo5;
-
-.field public w0:I
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lpo5;Ljx3;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
     .locals 0
 
-    iput-object p1, p0, Lno5;->v0:Lpo5;
+    iput p4, p0, Lno5;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lno5;->c:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lno5;->b:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final call()Ljava/lang/Object;
+    .locals 7
 
-    iput-object p1, p0, Lno5;->u0:Ljava/lang/Object;
+    iget v0, p0, Lno5;->a:I
 
-    iget p1, p0, Lno5;->w0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lno5;->c:Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lap5;
 
-    iput p1, p0, Lno5;->w0:I
+    iget-object v0, v0, Lap5;->b:Lpw4;
+
+    invoke-virtual {v0}, Lpw4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ly2f;
+
+    iget-wide v1, p0, Lno5;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ly2f;->d(Ljava/util/List;)Lrqe;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lno5;->c:Ljava/lang/Object;
+
+    check-cast v0, Lso5;
+
+    iget-object v0, v0, Lso5;->a:Lll;
+
+    check-cast v0, Lmna;
+
+    new-instance v1, Llu;
+
+    invoke-virtual {v0}, Lmna;->x()Lpxb;
+
+    move-result-object v2
+
+    check-cast v2, Lrxb;
+
+    iget-object v2, v2, Lrxb;->a:Ld78;
+
+    invoke-virtual {v2}, Lntd;->k()J
+
+    move-result-wide v3
+
+    const/4 v2, 0x5
+
+    iget-wide v5, p0, Lno5;->b:J
+
+    invoke-direct/range {v1 .. v6}, Llu;-><init>(IJJ)V
+
+    invoke-virtual {v0}, Lmna;->y()Lunf;
+
+    move-result-object v0
+
+    const/16 v2, 0xc
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    invoke-static {v0, v1, v3, v2}, Lunf;->d(Lunf;Lym;ZI)J
 
-    iget-object v0, p0, Lno5;->v0:Lpo5;
+    move-result-wide v0
 
-    const/4 v1, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    move-object v5, p0
+    return-object v0
 
-    invoke-virtual/range {v0 .. v5}, Lpo5;->e(Lz7f;Lwnf;Ljava/nio/channels/AsynchronousFileChannel;Lpc6;Ljx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,11 +1,8 @@
-.class public final Lq4a;
+.class public interface abstract Lq4a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/lang/ref/SoftReference;
-
-.field public b:Ljava/lang/ref/SoftReference;
-
-.field public c:Ljava/lang/ref/SoftReference;
+# virtual methods
+.method public abstract b(Ljava/lang/String;)Z
+.end method

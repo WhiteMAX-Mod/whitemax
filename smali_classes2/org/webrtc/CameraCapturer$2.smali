@@ -66,29 +66,29 @@
 
     if-eqz p1, :cond_0
 
-    const-string p0, "CameraCapturer"
+    const-string p1, "CameraCapturer"
 
-    const-string p1, "onCameraClosed from another session."
+    const-string v1, "onCameraClosed from another session."
 
-    invoke-static {p0, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
+    iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p0}, Lorg/webrtc/CameraCapturer;->i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-interface {p0}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraClosed()V
+    invoke-interface {p1}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraClosed()V
 
     monitor-exit v0
 
@@ -99,7 +99,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public onCameraDisconnected(Lorg/webrtc/CameraSession;)V
@@ -126,18 +126,18 @@
 
     if-eq p1, v1, :cond_0
 
-    const-string p0, "CameraCapturer"
+    const-string p1, "CameraCapturer"
 
-    const-string p1, "onCameraDisconnected from another session."
+    const-string v1, "onCameraDisconnected from another session."
 
-    invoke-static {p0, p1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
@@ -150,9 +150,9 @@
 
     invoke-interface {p1}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraDisconnected()V
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
+    iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-virtual {p0}, Lorg/webrtc/CameraCapturer;->stopCapture()V
+    invoke-virtual {p1}, Lorg/webrtc/CameraCapturer;->stopCapture()V
 
     monitor-exit v0
 
@@ -163,7 +163,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public onCameraError(Lorg/webrtc/CameraSession;Ljava/lang/String;)V
@@ -192,26 +192,26 @@
 
     if-eq p1, v2, :cond_0
 
-    const-string p0, "CameraCapturer"
+    const-string p1, "CameraCapturer"
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-static {p0, p1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v1
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
@@ -224,9 +224,9 @@
 
     invoke-interface {p1, p2}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraError(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
+    iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-virtual {p0}, Lorg/webrtc/CameraCapturer;->stopCapture()V
+    invoke-virtual {p1}, Lorg/webrtc/CameraCapturer;->stopCapture()V
 
     monitor-exit v1
 
@@ -237,11 +237,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public onCameraOpening()V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
@@ -264,18 +264,18 @@
 
     if-eqz v1, :cond_0
 
-    const-string p0, "CameraCapturer"
+    const-string v1, "CameraCapturer"
 
-    const-string v1, "onCameraOpening while session was open."
+    const-string v2, "onCameraOpening while session was open."
 
-    invoke-static {p0, v1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_0
 
@@ -286,13 +286,13 @@
 
     move-result-object v1
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
+    iget-object v2, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p0}, Lorg/webrtc/CameraCapturer;->c(Lorg/webrtc/CameraCapturer;)Ljava/lang/String;
+    invoke-static {v2}, Lorg/webrtc/CameraCapturer;->c(Lorg/webrtc/CameraCapturer;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-interface {v1, p0}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraOpening(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraOpening(Ljava/lang/String;)V
 
     monitor-exit v0
 
@@ -303,7 +303,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method public onFrameCaptured(Lorg/webrtc/CameraSession;Lorg/webrtc/VideoFrame;)V
@@ -330,18 +330,18 @@
 
     if-eq p1, v1, :cond_0
 
-    const-string p0, "CameraCapturer"
+    const-string p1, "CameraCapturer"
 
-    const-string p1, "onFrameCaptured from another session."
+    const-string p2, "onFrameCaptured from another session."
 
-    invoke-static {p0, p1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
@@ -377,13 +377,13 @@
 
     invoke-virtual {p1}, Lorg/webrtc/CameraVideoCapturer$CameraStatistics;->addFrame()V
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
+    iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p0}, Lorg/webrtc/CameraCapturer;->f(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CapturerObserver;
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->f(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CapturerObserver;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-interface {p0, p2}, Lorg/webrtc/CapturerObserver;->onFrameCaptured(Lorg/webrtc/VideoFrame;)V
+    invoke-interface {p1, p2}, Lorg/webrtc/CapturerObserver;->onFrameCaptured(Lorg/webrtc/VideoFrame;)V
 
     monitor-exit v0
 
@@ -394,5 +394,5 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method

@@ -4,18 +4,28 @@
 
 
 # instance fields
-.field public a:Z
+.field public final a:Ljava/util/ArrayList;
 
-.field public final synthetic b:Lcom/google/android/material/tabs/TabLayout;
+.field public final b:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/tabs/TabLayout;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqve;->b:Lcom/google/android/material/tabs/TabLayout;
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lqve;->a:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lqve;->b:Ljava/util/ArrayList;
 
     return-void
 .end method

@@ -1,247 +1,123 @@
-.class public abstract Ljfc;
+.class public final synthetic Ljfc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbna;
+.implements Lzef;
 
-# static fields
-.field public static final a:Ljava/lang/String;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(ILandroid/content/Context;Z)V
+    .locals 0
 
-    sget v0, Lnrf;->a:I
+    iput p1, p0, Ljfc;->a:I
 
-    const/16 v0, 0x24
+    iput-object p2, p0, Ljfc;->b:Landroid/content/Context;
 
-    const/4 v1, 0x0
+    iput-boolean p3, p0, Ljfc;->c:Z
 
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ljfc;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/os/Bundle;)Ljfc;
-    .locals 7
 
-    sget-object v0, Ljfc;->a:Ljava/lang/String;
+# virtual methods
+.method public a(Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v1, -0x1
+    check-cast p1, Ljava/lang/Void;
 
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    iget-object p1, p0, Ljfc;->b:Landroid/content/Context;
 
-    move-result v2
+    invoke-static {p1}, Ldwi;->b(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    const/4 v3, 0x0
+    move-result-object p1
 
-    const/4 v4, 0x1
+    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    if-eqz v2, :cond_9
+    move-result-object p1
 
-    const/high16 v5, -0x40800000    # -1.0f
+    const-string v0, "proxy_retention"
 
-    if-eq v2, v4, :cond_6
+    iget-boolean v1, p0, Ljfc;->c:Z
 
-    const/4 v6, 0x2
+    invoke-interface {p1, v0, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    if-eq v2, v6, :cond_3
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    const/4 v5, 0x3
+    return-void
+.end method
 
-    if-ne v2, v5, :cond_2
+.method public get()Ljava/lang/Object;
+    .locals 3
 
-    sget-object v2, Lk5f;->d:Ljava/lang/String;
+    iget v0, p0, Ljfc;->a:I
 
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Ljfc;->b:Landroid/content/Context;
 
-    if-ne v0, v5, :cond_0
+    iget-boolean v1, p0, Ljfc;->c:Z
 
-    goto :goto_0
-
-    :cond_0
-    move v4, v3
-
-    :goto_0
-    invoke-static {v4}, Lmq0;->c(Z)V
-
-    sget-object v0, Lk5f;->d:Ljava/lang/String;
-
-    invoke-virtual {p0, v0, v3}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lk5f;
-
-    sget-object v1, Lk5f;->e:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v3}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result p0
-
-    invoke-direct {v0, p0}, Lk5f;-><init>(Z)V
-
-    return-object v0
-
-    :cond_1
-    new-instance p0, Lk5f;
-
-    invoke-direct {p0}, Lk5f;-><init>()V
-
-    return-object p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Unknown RatingType: "
-
-    invoke-static {v2, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lnsf;->r(Landroid/content/Context;Z)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return-object v0
 
-    throw p0
+    :pswitch_0
+    iget-boolean v0, p0, Ljfc;->c:Z
 
-    :cond_3
-    sget-object v2, Lhae;->d:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    iget-object v2, p0, Ljfc;->b:Landroid/content/Context;
 
-    move-result v0
+    invoke-static {v2, v1, v0}, Lnsf;->o(Landroid/content/Context;ZZ)Ljava/lang/String;
 
-    if-ne v0, v6, :cond_4
-
-    move v3, v4
-
-    :cond_4
-    invoke-static {v3}, Lmq0;->c(Z)V
-
-    sget-object v0, Lhae;->d:Ljava/lang/String;
-
-    const/4 v1, 0x5
-
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    sget-object v1, Lhae;->e:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v5}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;F)F
-
-    move-result p0
-
-    cmpl-float v1, p0, v5
-
-    if-nez v1, :cond_5
-
-    new-instance p0, Lhae;
-
-    invoke-direct {p0, v0}, Lhae;-><init>(I)V
-
-    return-object p0
-
-    :cond_5
-    new-instance v1, Lhae;
-
-    invoke-direct {v1, v0, p0}, Lhae;-><init>(IF)V
-
-    return-object v1
-
-    :cond_6
-    sget-object v2, Li1b;->c:Ljava/lang/String;
-
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-ne v0, v4, :cond_7
-
-    move v3, v4
-
-    :cond_7
-    invoke-static {v3}, Lmq0;->c(Z)V
-
-    sget-object v0, Li1b;->c:Ljava/lang/String;
-
-    invoke-virtual {p0, v0, v5}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;F)F
-
-    move-result p0
-
-    cmpl-float v0, p0, v5
-
-    if-nez v0, :cond_8
-
-    new-instance p0, Li1b;
-
-    invoke-direct {p0}, Li1b;-><init>()V
-
-    return-object p0
-
-    :cond_8
-    new-instance v0, Li1b;
-
-    invoke-direct {v0, p0}, Li1b;-><init>(F)V
+    move-result-object v0
 
     return-object v0
 
-    :cond_9
-    sget-object v2, Loq6;->d:Ljava/lang/String;
+    :pswitch_1
+    iget-boolean v0, p0, Ljfc;->c:Z
 
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    const/4 v1, 0x0
 
-    move-result v0
+    iget-object v2, p0, Ljfc;->b:Landroid/content/Context;
 
-    if-nez v0, :cond_a
+    invoke-static {v2, v1, v0}, Lnsf;->o(Landroid/content/Context;ZZ)Ljava/lang/String;
 
-    goto :goto_1
-
-    :cond_a
-    move v4, v3
-
-    :goto_1
-    invoke-static {v4}, Lmq0;->c(Z)V
-
-    sget-object v0, Loq6;->d:Ljava/lang/String;
-
-    invoke-virtual {p0, v0, v3}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    new-instance v0, Loq6;
-
-    sget-object v1, Loq6;->e:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v3}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result p0
-
-    invoke-direct {v0, p0}, Loq6;-><init>(Z)V
+    move-result-object v0
 
     return-object v0
 
-    :cond_b
-    new-instance p0, Loq6;
+    :pswitch_2
+    iget-boolean v0, p0, Ljfc;->c:Z
 
-    invoke-direct {p0}, Loq6;-><init>()V
+    const/4 v1, 0x1
 
-    return-object p0
-.end method
+    iget-object v2, p0, Ljfc;->b:Landroid/content/Context;
 
+    invoke-static {v2, v0, v1}, Lnsf;->g(Landroid/content/Context;ZZ)Ljava/lang/String;
 
-# virtual methods
-.method public abstract b()Z
-.end method
+    move-result-object v0
 
-.method public abstract c()Landroid/os/Bundle;
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

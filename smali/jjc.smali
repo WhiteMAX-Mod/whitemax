@@ -1,84 +1,53 @@
 .class public final Ljjc;
-.super Lj2e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final F(Lhjc;)V
-    .locals 5
+# static fields
+.field public static final b:Lhjc;
 
-    iget-boolean v0, p1, Lhjc;->Z:Z
+.field public static final c:Ljjc;
 
-    iget-object v1, p0, Lzoc;->a:Landroid/view/View;
 
-    if-eqz v0, :cond_0
+# instance fields
+.field public final a:Lky;
 
-    move-object v0, v1
 
-    check-cast v0, Lijc;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    sget-object v2, Lhba;->a:Lhba;
+    new-instance v0, Lhjc;
 
-    invoke-virtual {v0, v2}, Lijc;->setAvatarShape(Liba;)V
+    const/4 v1, 0x1
 
-    :cond_0
-    iget-object v0, p1, Lhjc;->c:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-object v2, v1
+    invoke-direct {v0, v1, v2, v2}, Lhjc;-><init>(ZLjava/util/HashSet;Ljava/util/HashSet;)V
 
-    check-cast v2, Lijc;
+    sput-object v0, Ljjc;->b:Lhjc;
 
-    invoke-virtual {v2, v0}, Lijc;->setAvatar(Ljava/lang/String;)V
+    new-instance v0, Ljjc;
 
-    iget-object v0, p1, Lhjc;->o:Ljava/lang/CharSequence;
+    invoke-direct {v0}, Ljjc;-><init>()V
 
-    move-object v2, v1
-
-    check-cast v2, Lijc;
-
-    iget-wide v3, p0, Lzoc;->X:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    invoke-static {v0, p0}, Ljk7;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lyb0;
-
-    move-result-object p0
-
-    invoke-virtual {v2, p0}, Lijc;->setAbbreviation(Lyb0;)V
-
-    iget-object p0, p1, Lhjc;->b:Ljava/lang/CharSequence;
-
-    move-object v0, v1
-
-    check-cast v0, Lijc;
-
-    invoke-virtual {v0, p0}, Lijc;->setName(Ljava/lang/CharSequence;)V
-
-    iget-boolean p0, p1, Lhjc;->Y:Z
-
-    move-object v0, v1
-
-    check-cast v0, Lijc;
-
-    invoke-virtual {v0, p0}, Lijc;->setVerified(Z)V
-
-    iget-boolean p0, p1, Lhjc;->X:Z
-
-    check-cast v1, Lijc;
-
-    invoke-virtual {v1, p0}, Lijc;->setOnline(Z)V
+    sput-object v0, Ljjc;->c:Ljjc;
 
     return-void
 .end method
 
-.method public final bridge synthetic y(Lts7;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    check-cast p1, Lhjc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Ljjc;->F(Lhjc;)V
+    new-instance v0, Lky;
+
+    sget-object v1, Ljjc;->b:Lhjc;
+
+    invoke-direct {v0, v1}, Lky;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Ljjc;->a:Lky;
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpm3;
+.implements Lsr3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;->invoke()Lk2e;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;->invoke()Lwpe;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lpm3;"
+        "Lsr3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
         "params",
-        "Lylf;",
+        "Lccg;",
         "accept",
         "(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V",
         "<anonymous>"
@@ -76,33 +76,33 @@
 .end method
 
 .method public final accept(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
-    .locals 1
+    .locals 2
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1$1;->this$0:Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1$1;->this$0:Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;
 
     .line 3
-    iget-object v0, p1, Lru/ok/android/externcalls/sdk/api/ConversationParams;->id:Ljava/lang/String;
+    iget-object v1, p1, Lru/ok/android/externcalls/sdk/api/ConversationParams;->id:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     .line 4
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->access$getCidProvider$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lkz3;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->access$getCidProvider$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Ly34;
 
-    move-result-object p0
+    move-result-object v0
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/api/ConversationParams;->id:Ljava/lang/String;
 
     .line 5
-    instance-of v0, p0, Llz3;
+    instance-of v1, v0, Lz34;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     .line 6
-    check-cast p0, Llz3;
+    check-cast v0, Lz34;
 
     .line 7
-    iput-object p1, p0, Llz3;->a:Ljava/lang/String;
+    iput-object p1, v0, Lz34;->a:Ljava/lang/String;
 
     :cond_0
     return-void

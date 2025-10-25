@@ -1,182 +1,64 @@
 .class public final Llr0;
-.super Ljava/lang/Object;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
-
-# interfaces
-.implements Lby3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:I
 
-.field public final c:Ljava/lang/Object;
+.field public c:Ll08;
 
 
 # direct methods
-.method public constructor <init>(Lrzc;Lone/me/sdk/bottomsheet/BottomSheetWidget;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Llr0;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Llr0;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Llr0;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lxx3;Lzb6;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Llr0;->a:I
-
-    .line 1
-    invoke-virtual {p1}, Lxx3;->getInstanceId()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llr0;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Llr0;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method private final c(Lxx3;Lxx3;Z)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
+
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+
+    iput-object p1, p0, Llr0;->a:Ljava/lang/String;
+
+    iput p2, p0, Llr0;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lxx3;Lxx3;Z)V
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    iget p1, p0, Llr0;->a:I
+    iget-object v0, p0, Llr0;->c:Ll08;
 
-    packed-switch p1, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    if-eqz p2, :cond_0
+    iget-object v1, v0, Ll08;->a:Lq08;
 
-    invoke-virtual {p2}, Lxx3;->getInstanceId()Ljava/lang/String;
+    iget-object v0, v0, Ll08;->b:Ljava/lang/Object;
 
-    move-result-object p1
+    sget-object v2, Lr08;->c:Lr08;
 
-    goto :goto_0
+    check-cast v0, Landroid/text/style/ClickableSpan;
+
+    iget-object v3, p0, Llr0;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v3, v2, v0}, Lq08;->b(Landroid/view/View;Ljava/lang/String;Lr08;Landroid/text/style/ClickableSpan;)V
 
     :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iget-object p2, p0, Llr0;->b:Ljava/lang/Object;
-
-    check-cast p2, Ljava/lang/String;
-
-    invoke-static {p1, p2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    if-nez p3, :cond_1
-
-    iget-object p0, p0, Llr0;->c:Ljava/lang/Object;
-
-    check-cast p0, Lzb6;
-
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
-
-    :cond_1
     return-void
-
-    :pswitch_0
-    if-nez p2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-object p1, p0, Llr0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lrzc;
-
-    invoke-virtual {p1, p0}, Lrzc;->L(Lby3;)V
-
-    iget-object p0, p0, Llr0;->c:Ljava/lang/Object;
-
-    check-cast p0, Lone/me/sdk/bottomsheet/BottomSheetWidget;
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
-
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final b(Lxx3;Lxx3;Z)V
+.method public final updateDrawState(Landroid/text/TextPaint;)V
     .locals 1
 
-    iget p1, p0, Llr0;->a:I
+    iget v0, p0, Llr0;->b:I
 
-    packed-switch p1, :pswitch_data_0
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    if-eqz p2, :cond_0
+    const/4 v0, 0x1
 
-    invoke-virtual {p2}, Lxx3;->getInstanceId()Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iget-object v0, p0, Llr0;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {p1, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    if-nez p3, :cond_1
-
-    invoke-virtual {p2}, Lxx3;->getRouter()Lrzc;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Lrzc;->L(Lby3;)V
-
-    :cond_1
-    :pswitch_0
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

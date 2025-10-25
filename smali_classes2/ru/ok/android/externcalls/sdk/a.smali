@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lji6;
 
 
 # instance fields
@@ -32,69 +32,86 @@
 
     iget v0, p0, Lru/ok/android/externcalls/sdk/a;->a:I
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/a;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
-
     packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->isDestroyed()Z
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/a;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    move-result p0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->o(Lru/ok/android/externcalls/sdk/ConversationImpl;)Ljava/lang/Boolean;
 
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result-object v0
 
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 
     :pswitch_0
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->m(Lru/ok/android/externcalls/sdk/ConversationImpl;)Ljava/lang/Boolean;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/a;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    move-result-object p0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->Q(Lru/ok/android/externcalls/sdk/ConversationImpl;)Ljava/lang/Boolean;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_1
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->T(Lru/ok/android/externcalls/sdk/ConversationImpl;)Ljava/lang/Boolean;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/a;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    move-result-object p0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->b(Lru/ok/android/externcalls/sdk/ConversationImpl;)Ljava/lang/Boolean;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_2
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->b(Lru/ok/android/externcalls/sdk/ConversationImpl;)Ljava/lang/Boolean;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/a;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    move-result-object p0
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->isDestroyed()Z
 
-    return-object p0
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_3
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->P(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lty0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/a;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    move-result-object p0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->P(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lh01;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_4
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->r(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lty0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/a;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    move-result-object p0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->u(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lh01;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_5
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->s(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lty0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/a;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    move-result-object p0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->w(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lh01;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_6
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->isMeCreatorOrAdmin()Z
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/a;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    move-result p0
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->isMeCreatorOrAdmin()Z
 
-    goto :goto_0
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 
     nop
 

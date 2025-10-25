@@ -1,47 +1,32 @@
 .class public final Lai6;
-.super Ljx3;
+.super Lqib;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lci6;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lci6;Ljx3;)V
-    .locals 0
-
-    iput-object p1, p0, Lai6;->X:Lci6;
-
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final j()Loib;
     .locals 1
 
-    iput-object p1, p0, Lai6;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lqib;->b:Liu7;
 
-    iget p1, p0, Lai6;->Y:I
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    check-cast v0, Lrib;
 
-    iput p1, p0, Lai6;->Y:I
+    invoke-virtual {v0}, Lrib;->b()Z
 
-    iget-object p1, p0, Lai6;->X:Lci6;
+    move-result v0
 
-    invoke-virtual {p1, p0}, Lci6;->c(Ljx3;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
+    sget-object v0, Loib;->a:Loib;
 
-    return-object p0
+    return-object v0
+
+    :cond_0
+    sget-object v0, Loib;->b:Loib;
+
+    return-object v0
 .end method

@@ -1,52 +1,59 @@
-.class public final synthetic Lip8;
+.class public final Lip8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lom3;
+
+# static fields
+.field public static final e:Lip8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:I
+.field public final b:J
 
-.field public final synthetic c:I
+.field public final c:J
+
+.field public final d:Lkvf;
 
 
 # direct methods
-.method public synthetic constructor <init>(III)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lip8;
 
-    iput p1, p0, Lip8;->a:I
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
-    iput p2, p0, Lip8;->b:I
+    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
 
-    iput p3, p0, Lip8;->c:I
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct/range {v0 .. v6}, Lip8;-><init>(JJJ)V
+
+    sput-object v0, Lip8;->e:Lip8;
 
     return-void
 .end method
 
+.method public constructor <init>(JJJ)V
+    .locals 0
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lbeb;
+    iput-wide p1, p0, Lip8;->a:J
 
-    invoke-virtual {p1}, Lbeb;->p0()V
+    iput-wide p3, p0, Lip8;->b:J
 
-    iget-object p1, p1, Lbeb;->a:Ltc5;
+    iput-wide p5, p0, Lip8;->c:J
 
-    iget v0, p0, Lip8;->a:I
+    new-instance p1, Lkvf;
 
-    iget v1, p0, Lip8;->b:I
+    const/4 p2, 0x1
 
-    iget p0, p0, Lip8;->c:I
+    invoke-direct {p1, p2}, Lkvf;-><init>(I)V
 
-    invoke-virtual {p1, v0, v1, p0}, Ltc5;->q1(III)V
+    iput-object p1, p0, Lip8;->d:Lkvf;
 
     return-void
 .end method

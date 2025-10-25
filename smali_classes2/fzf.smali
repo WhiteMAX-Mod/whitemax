@@ -1,65 +1,96 @@
 .class public final Lfzf;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ld10;
-
-.field public Y:Lnvf;
-
-.field public Z:J
-
-.field public o:Llzf;
-
-.field public synthetic r0:Ljava/lang/Object;
-
-.field public final synthetic s0:Llzf;
-
-.field public t0:I
+.field public final a:Lgzf;
 
 
 # direct methods
-.method public constructor <init>(Llzf;Ljx3;)V
+.method public constructor <init>(Lgzf;)V
     .locals 0
 
-    iput-object p1, p0, Lfzf;->s0:Llzf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfzf;->a:Lgzf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iput-object p1, p0, Lfzf;->r0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lfzf;->t0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lfzf;
 
-    iput p1, p0, Lfzf;->t0:I
+    const/4 v2, 0x0
 
-    const/4 v5, 0x0
+    if-nez v1, :cond_1
 
-    const/4 v6, 0x0
+    return v2
 
-    iget-object v0, p0, Lfzf;->s0:Llzf;
+    :cond_1
+    check-cast p1, Lfzf;
 
-    const-wide/16 v1, 0x0
+    iget-object v1, p0, Lfzf;->a:Lgzf;
 
-    const-wide/16 v3, 0x0
+    iget-object p1, p1, Lfzf;->a:Lgzf;
 
-    move-object v7, p0
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-static/range {v0 .. v7}, Llzf;->a(Llzf;JJLd10;Lnvf;Ljx3;)Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p0
+    if-nez p1, :cond_2
 
-    return-object p0
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lfzf;->a:Lgzf;
+
+    iget-object v0, v0, Lgzf;->a:Lhzf;
+
+    invoke-virtual {v0}, Lhzf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "TopbarStrokeColors(separator="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lfzf;->a:Lgzf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

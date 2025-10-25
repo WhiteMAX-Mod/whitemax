@@ -1,112 +1,169 @@
-.class public abstract Lbbc;
-.super Ljava/lang/Object;
+.class public final Lbbc;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static oneme_login_confirm_description:I = 0x7f130855
+# instance fields
+.field public final synthetic X:Lone/me/profile/ProfileScreen;
 
-.field public static oneme_login_confirm_info_loading_1:I = 0x7f130856
 
-.field public static oneme_login_confirm_info_loading_2:I = 0x7f130857
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/ProfileScreen;)V
+    .locals 0
 
-.field public static oneme_login_confirm_info_loading_3:I = 0x7f130858
+    iput-object p2, p0, Lbbc;->X:Lone/me/profile/ProfileScreen;
 
-.field public static oneme_login_confirm_resend:I = 0x7f130859
+    const/4 p2, 0x2
 
-.field public static oneme_login_confirm_timer:I = 0x7f13085a
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_login_confirm_title:I = 0x7f13085b
+    return-void
+.end method
 
-.field public static oneme_login_error_connection_description:I = 0x7f13085c
 
-.field public static oneme_login_error_connection_title:I = 0x7f13085d
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_login_input_continue:I = 0x7f13085e
+    check-cast p1, Lq54;
 
-.field public static oneme_login_input_default_phone_hint:I = 0x7f13085f
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_login_input_description:I = 0x7f130860
+    invoke-virtual {p0, p1, p2}, Lbbc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_login_input_is_not_valid_phone_error:I = 0x7f130861
+    move-result-object p1
 
-.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f130862
+    check-cast p1, Lbbc;
 
-.field public static oneme_login_input_name_confirmation_description:I = 0x7f130863
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static oneme_login_input_name_confirmation_return:I = 0x7f130864
+    invoke-virtual {p1, p2}, Lbbc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_login_input_name_confirmation_title:I = 0x7f130865
+    return-object p2
+.end method
 
-.field public static oneme_login_input_name_contact_permission_description:I = 0x7f130866
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public static oneme_login_input_name_contact_permission_title:I = 0x7f130867
+    new-instance p1, Lbbc;
 
-.field public static oneme_login_input_name_continue_button_active:I = 0x7f130868
+    iget-object v0, p0, Lbbc;->X:Lone/me/profile/ProfileScreen;
 
-.field public static oneme_login_input_name_continue_button_disabled:I = 0x7f130869
+    invoke-direct {p1, p2, v0}, Lbbc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/ProfileScreen;)V
 
-.field public static oneme_login_input_name_description:I = 0x7f13086a
+    return-object p1
+.end method
 
-.field public static oneme_login_input_name_hint_name:I = 0x7f13086b
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-.field public static oneme_login_input_name_hint_surname:I = 0x7f13086c
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.field public static oneme_login_input_name_hint_surname_short:I = 0x7f13086d
+    iget-object p1, p0, Lbbc;->X:Lone/me/profile/ProfileScreen;
 
-.field public static oneme_login_input_name_surname_placeholder:I = 0x7f13086e
+    invoke-virtual {p1}, Ll24;->getView()Landroid/view/View;
 
-.field public static oneme_login_input_name_title:I = 0x7f13086f
+    move-result-object v0
 
-.field public static oneme_login_input_need_help:I = 0x7f130870
+    sget-object v1, Lccg;->a:Lccg;
 
-.field public static oneme_login_input_need_help_email_title:I = 0x7f130871
+    if-eqz v0, :cond_1
 
-.field public static oneme_login_input_title:I = 0x7f130872
+    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->H0()Ladc;
 
-.field public static oneme_login_neuro_avatars_bottomsheet_title:I = 0x7f130873
+    move-result-object v0
 
-.field public static oneme_login_neuro_avatars_continue_button:I = 0x7f130874
+    iget-object v0, v0, Ladc;->Q0:Lk0c;
 
-.field public static oneme_login_neuro_avatars_continue_without_avatar_button:I = 0x7f130875
+    invoke-virtual {v0}, Lk0c;->r()Z
 
-.field public static oneme_login_neuro_avatars_description:I = 0x7f130876
+    move-result v0
 
-.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f130877
+    if-nez v0, :cond_1
 
-.field public static oneme_login_neuro_avatars_profile_description:I = 0x7f130878
+    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->H0()Ladc;
 
-.field public static oneme_login_neuro_avatars_profile_title:I = 0x7f130879
+    move-result-object v0
 
-.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f13087a
+    iget-object v0, v0, Ladc;->Q0:Lk0c;
 
-.field public static oneme_login_neuro_avatars_save_button:I = 0x7f13087b
+    invoke-virtual {v0}, Lk0c;->p()Z
 
-.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f13087c
+    move-result v0
 
-.field public static oneme_login_neuro_avatars_title:I = 0x7f13087d
+    if-eqz v0, :cond_0
 
-.field public static oneme_login_sms_count_exceeded_description:I = 0x7f13087e
+    goto :goto_0
 
-.field public static oneme_login_sms_count_exceeded_title:I = 0x7f13087f
+    :cond_0
+    iget-object v0, p1, Lone/me/profile/ProfileScreen;->x0:Lh0d;
 
-.field public static oneme_login_welcome_continue_btn:I = 0x7f130880
+    sget-object v2, Lone/me/profile/ProfileScreen;->B0:[Ltr7;
 
-.field public static oneme_login_welcome_description:I = 0x7f130881
+    const/16 v3, 0xb
 
-.field public static oneme_login_welcome_privacy_policy_clickable_part:I = 0x7f130882
+    aget-object v2, v2, v3
 
-.field public static oneme_login_welcome_switch_btn:I = 0x7f130883
+    invoke-interface {v0, p1, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
-.field public static oneme_login_welcome_terms:I = 0x7f130884
+    move-result-object v0
 
-.field public static oneme_login_welcome_title:I = 0x7f130885
+    check-cast v0, Lj53;
 
-.field public static oneme_login_welcome_user_agreement_clickable_part:I = 0x7f130886
+    iget-object v2, v0, Lj53;->a:Lqid;
 
-.field public static oneme_registration_neuro_avatars_change_photo:I = 0x7f13093b
+    invoke-virtual {v0}, Lj53;->c()Ljava/lang/String;
 
-.field public static oneme_registration_neuro_avatars_choose_avatar:I = 0x7f13093c
+    move-result-object v0
 
-.field public static oneme_registration_neuro_avatars_choose_photo:I = 0x7f13093d
+    const-string v3, "profile_members_list_widget"
 
-.field public static oneme_registration_neuro_avatars_or:I = 0x7f13093e
+    invoke-static {v0, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v2, v0}, Lqid;->Q(Z)V
+
+    new-instance v5, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
+
+    invoke-virtual {p1}, Ll24;->getArgs()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    const-string v0, "profile:id"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
+
+    move-result-wide v6
+
+    invoke-direct {v5, v6, v7}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;-><init>(J)V
+
+    new-instance v4, Ltid;
+
+    const/4 v9, 0x0
+
+    const/4 v10, -0x1
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v4 .. v10}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+
+    invoke-virtual {v4, v3}, Ltid;->d(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v4}, Lqid;->R(Ltid;)V
+
+    :cond_1
+    :goto_0
+    return-object v1
+.end method

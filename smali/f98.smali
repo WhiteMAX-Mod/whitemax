@@ -1,58 +1,39 @@
 .class public final Lf98;
-.super La98;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic c:I
+
+
 # instance fields
-.field public final a:Lw98;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lw98;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p1, p0, Lf98;->a:Lw98;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
 
-# virtual methods
-.method public final g(Lt98;)V
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Le98;
+    iput-object p1, p0, Lf98;->a:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    iput-object p2, p0, Lf98;->b:Ljava/util/List;
 
-    invoke-direct {v0, v1, p1}, Le98;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {p1, v0}, Lt98;->c(Loq4;)V
-
-    :try_start_0
-    iget-object p0, p0, Lf98;->a:Lw98;
-
-    invoke-interface {p0, v0}, Lw98;->f(Le98;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p0}, Lzyd;->F(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0, p0}, Le98;->d(Ljava/lang/Throwable;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    invoke-static {p0}, Ln4e;->D(Ljava/lang/Throwable;)V
-
-    :cond_0
     return-void
 .end method

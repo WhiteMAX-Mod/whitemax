@@ -24,108 +24,108 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcec;)Ltef;
+.method public static synthetic a(Lcwc;)Lm4g;
     .locals 0
 
-    invoke-static {p0}, Lcom/google/firebase/datatransport/TransportRegistrar;->lambda$getComponents$2(Lqd3;)Ltef;
+    invoke-static {p0}, Lcom/google/firebase/datatransport/TransportRegistrar;->lambda$getComponents$2(Lfi3;)Lm4g;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic b(Lcec;)Ltef;
+.method public static synthetic b(Lcwc;)Lm4g;
     .locals 0
 
-    invoke-static {p0}, Lcom/google/firebase/datatransport/TransportRegistrar;->lambda$getComponents$1(Lqd3;)Ltef;
+    invoke-static {p0}, Lcom/google/firebase/datatransport/TransportRegistrar;->lambda$getComponents$1(Lfi3;)Lm4g;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic c(Lcec;)Ltef;
+.method public static synthetic c(Lcwc;)Lm4g;
     .locals 0
 
-    invoke-static {p0}, Lcom/google/firebase/datatransport/TransportRegistrar;->lambda$getComponents$0(Lqd3;)Ltef;
+    invoke-static {p0}, Lcom/google/firebase/datatransport/TransportRegistrar;->lambda$getComponents$0(Lfi3;)Lm4g;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$getComponents$0(Lqd3;)Ltef;
+.method private static synthetic lambda$getComponents$0(Lfi3;)Lm4g;
     .locals 1
 
     const-class v0, Landroid/content/Context;
 
-    invoke-interface {p0, v0}, Lqd3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lfi3;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/content/Context;
 
-    invoke-static {p0}, Lvef;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lq4g;->b(Landroid/content/Context;)V
 
-    invoke-static {}, Lvef;->a()Lvef;
-
-    move-result-object p0
-
-    sget-object v0, Lkw0;->f:Lkw0;
-
-    invoke-virtual {p0, v0}, Lvef;->c(Lj55;)Luef;
+    invoke-static {}, Lq4g;->a()Lq4g;
 
     move-result-object p0
 
-    return-object p0
-.end method
+    sget-object v0, Lwx0;->f:Lwx0;
 
-.method private static synthetic lambda$getComponents$1(Lqd3;)Ltef;
-    .locals 1
-
-    const-class v0, Landroid/content/Context;
-
-    invoke-interface {p0, v0}, Lqd3;->a(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/content/Context;
-
-    invoke-static {p0}, Lvef;->b(Landroid/content/Context;)V
-
-    invoke-static {}, Lvef;->a()Lvef;
-
-    move-result-object p0
-
-    sget-object v0, Lkw0;->f:Lkw0;
-
-    invoke-virtual {p0, v0}, Lvef;->c(Lj55;)Luef;
+    invoke-virtual {p0, v0}, Lq4g;->c(Leb5;)Ln4g;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$getComponents$2(Lqd3;)Ltef;
+.method private static synthetic lambda$getComponents$1(Lfi3;)Lm4g;
     .locals 1
 
     const-class v0, Landroid/content/Context;
 
-    invoke-interface {p0, v0}, Lqd3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lfi3;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/content/Context;
 
-    invoke-static {p0}, Lvef;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lq4g;->b(Landroid/content/Context;)V
 
-    invoke-static {}, Lvef;->a()Lvef;
+    invoke-static {}, Lq4g;->a()Lq4g;
 
     move-result-object p0
 
-    sget-object v0, Lkw0;->e:Lkw0;
+    sget-object v0, Lwx0;->f:Lwx0;
 
-    invoke-virtual {p0, v0}, Lvef;->c(Lj55;)Luef;
+    invoke-virtual {p0, v0}, Lq4g;->c(Leb5;)Ln4g;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private static synthetic lambda$getComponents$2(Lfi3;)Lm4g;
+    .locals 1
+
+    const-class v0, Landroid/content/Context;
+
+    invoke-interface {p0, v0}, Lfi3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/content/Context;
+
+    invoke-static {p0}, Lq4g;->b(Landroid/content/Context;)V
+
+    invoke-static {}, Lq4g;->a()Lq4g;
+
+    move-result-object p0
+
+    sget-object v0, Lwx0;->e:Lwx0;
+
+    invoke-virtual {p0, v0}, Lq4g;->c(Leb5;)Ln4g;
 
     move-result-object p0
 
@@ -135,182 +135,115 @@
 
 # virtual methods
 .method public getComponents()Ljava/util/List;
-    .locals 11
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/List<",
-            "Led3;",
+            "Lth3;",
             ">;"
         }
     .end annotation
 
-    const/4 p0, 0x0
+    const-class v0, Lm4g;
 
-    new-array p0, p0, [Ljava/lang/Class;
+    invoke-static {v0}, Lth3;->b(Ljava/lang/Class;)Lsh3;
 
-    new-instance v0, Ljava/util/HashSet;
+    move-result-object v1
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    const-string v2, "fire-transport"
 
-    new-instance v1, Ljava/util/HashSet;
+    iput-object v2, v1, Lsh3;->a:Ljava/lang/String;
 
-    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+    const-class v3, Landroid/content/Context;
 
-    new-instance v9, Ljava/util/HashSet;
-
-    invoke-direct {v9}, Ljava/util/HashSet;-><init>()V
-
-    const-class v10, Ltef;
-
-    invoke-static {v10}, Ld0c;->a(Ljava/lang/Class;)Ld0c;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    array-length v2, p0
-
-    const/4 v6, 0x0
-
-    move v3, v6
-
-    :goto_0
-    if-ge v3, v2, :cond_0
-
-    aget-object v4, p0, v3
-
-    const-string v5, "Null interface"
-
-    invoke-static {v4, v5}, Lw48;->f(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {v4}, Ld0c;->a(Ljava/lang/Class;)Ld0c;
+    invoke-static {v3}, Lgr4;->a(Ljava/lang/Class;)Lgr4;
 
     move-result-object v4
 
-    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Lsh3;->a(Lgr4;)V
 
-    add-int/lit8 v3, v3, 0x1
+    new-instance v4, Ln2g;
 
-    goto :goto_0
+    const/16 v5, 0xa
 
-    :cond_0
-    const-class p0, Landroid/content/Context;
+    invoke-direct {v4, v5}, Ln2g;-><init>(I)V
 
-    invoke-static {p0}, Lgm4;->a(Ljava/lang/Class;)Lgm4;
+    iput-object v4, v1, Lsh3;->g:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Lsh3;->b()Lth3;
+
+    move-result-object v1
+
+    new-instance v4, Lkhc;
+
+    const-class v5, Lov7;
+
+    invoke-direct {v4, v5, v0}, Lkhc;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
+
+    invoke-static {v4}, Lth3;->a(Lkhc;)Lsh3;
+
+    move-result-object v4
+
+    invoke-static {v3}, Lgr4;->a(Ljava/lang/Class;)Lgr4;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Lsh3;->a(Lgr4;)V
+
+    new-instance v5, Ln2g;
+
+    const/16 v6, 0xb
+
+    invoke-direct {v5, v6}, Ln2g;-><init>(I)V
+
+    iput-object v5, v4, Lsh3;->g:Ljava/lang/Object;
+
+    invoke-virtual {v4}, Lsh3;->b()Lth3;
+
+    move-result-object v4
+
+    new-instance v5, Lkhc;
+
+    const-class v6, Lk4g;
+
+    invoke-direct {v5, v6, v0}, Lkhc;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
+
+    invoke-static {v5}, Lth3;->a(Lkhc;)Lsh3;
+
+    move-result-object v0
+
+    invoke-static {v3}, Lgr4;->a(Ljava/lang/Class;)Lgr4;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Lsh3;->a(Lgr4;)V
+
+    new-instance v3, Ln2g;
+
+    const/16 v5, 0xc
+
+    invoke-direct {v3, v5}, Ln2g;-><init>(I)V
+
+    iput-object v3, v0, Lsh3;->g:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lsh3;->b()Lth3;
+
+    move-result-object v0
+
+    const-string v3, "18.2.0"
+
+    invoke-static {v2, v3}, Lzci;->d(Ljava/lang/String;Ljava/lang/String;)Lth3;
 
     move-result-object v2
 
-    iget-object v3, v2, Lgm4;->a:Ld0c;
-
-    invoke-virtual {v0, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    invoke-virtual {v1, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    new-instance v8, Leef;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v8, v2}, Leef;-><init>(I)V
-
-    new-instance v2, Led3;
-
-    new-instance v4, Ljava/util/HashSet;
-
-    invoke-direct {v4, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v5, Ljava/util/HashSet;
-
-    invoke-direct {v5, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    const-string v3, "fire-transport"
-
-    move v7, v6
-
-    invoke-direct/range {v2 .. v9}, Led3;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILtd3;Ljava/util/Set;)V
-
-    new-instance v0, Ld0c;
-
-    const-class v1, Lkm7;
-
-    invoke-direct {v0, v1, v10}, Ld0c;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
-
-    invoke-static {v0}, Led3;->a(Ld0c;)Ldd3;
+    filled-new-array {v1, v4, v0, v2}, [Lth3;
 
     move-result-object v0
 
-    invoke-static {p0}, Lgm4;->a(Ljava/lang/Class;)Lgm4;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ldd3;->a(Lgm4;)V
-
-    new-instance v1, Leef;
-
-    const/4 v4, 0x7
-
-    invoke-direct {v1, v4}, Leef;-><init>(I)V
-
-    iput-object v1, v0, Ldd3;->g:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ldd3;->b()Led3;
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    new-instance v1, Ld0c;
-
-    const-class v4, Lref;
-
-    invoke-direct {v1, v4, v10}, Ld0c;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
-
-    invoke-static {v1}, Led3;->a(Ld0c;)Ldd3;
-
-    move-result-object v1
-
-    invoke-static {p0}, Lgm4;->a(Ljava/lang/Class;)Lgm4;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ldd3;->a(Lgm4;)V
-
-    new-instance p0, Leef;
-
-    const/16 v4, 0x8
-
-    invoke-direct {p0, v4}, Leef;-><init>(I)V
-
-    iput-object p0, v1, Ldd3;->g:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ldd3;->b()Led3;
-
-    move-result-object p0
-
-    const-string v1, "18.2.0"
-
-    invoke-static {v3, v1}, Lz48;->l(Ljava/lang/String;Ljava/lang/String;)Led3;
-
-    move-result-object v1
-
-    filled-new-array {v2, v0, p0, v1}, [Led3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Components are not allowed to depend on interfaces they themselves provide."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-object v0
 .end method

@@ -35,7 +35,7 @@
         "Landroid/os/Parcel;",
         "dest",
         "flags",
-        "Lylf;",
+        "Lccg;",
         "writeToParcel",
         "(Landroid/os/Parcel;I)V",
         "describeContents",
@@ -47,7 +47,7 @@
         "isSingleMedia",
         "()Z",
         "Companion",
-        "wvd",
+        "she",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -71,7 +71,7 @@
     .end annotation
 .end field
 
-.field public static final Companion:Lwvd;
+.field public static final Companion:Lshe;
 
 .field public static final FILES:I = 0x4
 
@@ -138,17 +138,17 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lwvd;
+    new-instance v0, Lshe;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lru/ok/tamtam/android/util/share/ShareData;->Companion:Lwvd;
+    sput-object v0, Lru/ok/tamtam/android/util/share/ShareData;->Companion:Lshe;
 
-    new-instance v0, Le5d;
+    new-instance v0, Lo0e;
 
-    const/16 v1, 0xa
+    const/16 v1, 0x9
 
-    invoke-direct {v0, v1}, Le5d;-><init>(I)V
+    invoke-direct {v0, v1}, Lo0e;-><init>(I)V
 
     sput-object v0, Lru/ok/tamtam/android/util/share/ShareData;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -179,7 +179,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v9}, Lru/ok/tamtam/android/util/share/ShareData;-><init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILld4;)V
+    invoke-direct/range {v0 .. v9}, Lru/ok/tamtam/android/util/share/ShareData;-><init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILki4;)V
 
     return-void
 .end method
@@ -234,7 +234,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILld4;)V
+.method public synthetic constructor <init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILki4;)V
     .locals 1
 
     and-int/lit8 p9, p8, 0x1
@@ -330,11 +330,11 @@
 
 # virtual methods
 .method public final describeContents()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public final isSingleMedia()Z
@@ -413,21 +413,21 @@
     :goto_3
     add-int/2addr v0, v3
 
-    iget-object p0, p0, Lru/ok/tamtam/android/util/share/ShareData;->shares:Ljava/util/List;
+    iget-object v3, p0, Lru/ok/tamtam/android/util/share/ShareData;->shares:Ljava/util/List;
 
-    if-eqz p0, :cond_5
+    if-eqz v3, :cond_5
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    move-result p0
+    move-result v3
 
     goto :goto_4
 
     :cond_5
-    move p0, v1
+    move v3, v1
 
     :goto_4
-    add-int/2addr v0, p0
+    add-int/2addr v0, v3
 
     if-ne v0, v2, :cond_6
 
@@ -438,7 +438,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 8
+    .locals 9
 
     iget v0, p0, Lru/ok/tamtam/android/util/share/ShareData;->type:I
 
@@ -452,57 +452,57 @@
 
     iget-object v5, p0, Lru/ok/tamtam/android/util/share/ShareData;->files:Ljava/util/List;
 
-    iget-object p0, p0, Lru/ok/tamtam/android/util/share/ShareData;->vcard:Ljava/lang/String;
+    iget-object v6, p0, Lru/ok/tamtam/android/util/share/ShareData;->vcard:Ljava/lang/String;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    const-string v7, "ShareData{type="
+    const-string v8, "ShareData{type="
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v0, ", images="
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", videos="
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", text=\'"
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, "\', shares="
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", files="
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", vcard=\'"
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, "\'}"
 
-    invoke-static {v6, p0, v0}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7, v6, v0}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
@@ -680,9 +680,9 @@
 
     :cond_7
     :goto_7
-    iget-object p0, p0, Lru/ok/tamtam/android/util/share/ShareData;->vcard:Ljava/lang/String;
+    iget-object p2, p0, Lru/ok/tamtam/android/util/share/ShareData;->vcard:Ljava/lang/String;
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return-void
 .end method

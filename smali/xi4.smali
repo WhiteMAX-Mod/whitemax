@@ -2,77 +2,67 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
-
 
 # instance fields
-.field public final a:Z
+.field public final a:Ljava/lang/String;
 
-.field public final b:Z
+.field public final b:Lrr5;
+
+.field public c:J
+
+.field public d:J
 
 
 # direct methods
-.method public constructor <init>(ILx46;)V
-    .locals 2
+.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p2, p2, Lx46;->e:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v0, 0x1
+    iput-object p2, p0, Lxi4;->a:Ljava/lang/String;
 
-    and-int/2addr p2, v0
+    new-instance p2, Lrr5;
 
-    const/4 v1, 0x0
+    invoke-direct {p2, p1}, Lrr5;-><init>(Ljava/io/File;)V
 
-    if-eqz p2, :cond_0
+    iput-object p2, p0, Lxi4;->b:Lrr5;
 
-    goto :goto_0
+    const-wide/16 p1, -0x1
 
-    :cond_0
-    move v0, v1
+    iput-wide p1, p0, Lxi4;->c:J
 
-    :goto_0
-    iput-boolean v0, p0, Lxi4;->a:Z
-
-    invoke-static {p1, v1}, Ltj0;->j(IZ)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lxi4;->b:Z
+    iput-wide p1, p0, Lxi4;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 3
+.method public final a()J
+    .locals 4
 
-    check-cast p1, Lxi4;
+    iget-wide v0, p0, Lxi4;->d:J
 
-    iget-boolean v0, p0, Lxi4;->b:Z
+    const-wide/16 v2, 0x0
 
-    iget-boolean v1, p1, Lxi4;->b:Z
+    cmp-long v0, v0, v2
 
-    sget-object v2, Ltb3;->a:Lrb3;
+    if-gez v0, :cond_0
 
-    invoke-virtual {v2, v0, v1}, Lrb3;->d(ZZ)Ltb3;
+    iget-object v0, p0, Lxi4;->b:Lrr5;
 
-    move-result-object v0
+    iget-object v0, v0, Lrr5;->a:Ljava/io/File;
 
-    iget-boolean p0, p0, Lxi4;->a:Z
+    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
 
-    iget-boolean p1, p1, Lxi4;->a:Z
+    move-result-wide v0
 
-    invoke-virtual {v0, p0, p1}, Ltb3;->d(ZZ)Ltb3;
+    iput-wide v0, p0, Lxi4;->d:J
 
-    move-result-object p0
+    :cond_0
+    iget-wide v0, p0, Lxi4;->d:J
 
-    invoke-virtual {p0}, Ltb3;->f()I
-
-    move-result p0
-
-    return p0
+    return-wide v0
 .end method

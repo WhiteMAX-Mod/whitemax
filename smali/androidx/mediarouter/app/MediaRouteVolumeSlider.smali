@@ -1,5 +1,5 @@
 .class Landroidx/mediarouter/app/MediaRouteVolumeSlider;
-.super Lpn;
+.super Lyo;
 .source "SourceFile"
 
 
@@ -10,20 +10,20 @@
 
 .field public o:Landroid/graphics/drawable/Drawable;
 
-.field public r0:I
+.field public q0:I
 
-.field public s0:I
+.field public r0:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lu2c;->seekBarStyle:I
+    sget v0, Likc;->seekBarStyle:I
 
-    invoke-direct {p0, p1, p2, v0}, Lpn;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lyo;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-static {p1}, Lqn8;->c(Landroid/content/Context;)F
+    invoke-static {p1}, Lnz8;->c(Landroid/content/Context;)F
 
     move-result p1
 
@@ -35,11 +35,13 @@
 
 # virtual methods
 .method public final a(II)V
-    .locals 2
+    .locals 4
 
-    iget v0, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->r0:I
+    iget v0, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->q0:I
 
-    const/16 v1, 0xff
+    const-string v1, "MediaRouteVolumeSlider"
+
+    const/16 v2, 0xff
 
     if-eq v0, p1, :cond_1
 
@@ -47,15 +49,31 @@
 
     move-result v0
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v2, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v3, "Volume slider progress and thumb color cannot be translucent: #"
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_0
-    iput p1, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->r0:I
+    iput p1, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->q0:I
 
     :cond_1
-    iget p1, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->s0:I
+    iget p1, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->r0:I
 
     if-eq p1, p2, :cond_3
 
@@ -63,12 +81,28 @@
 
     move-result p1
 
-    if-eq p1, v1, :cond_2
+    if-eq p1, v2, :cond_2
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Volume slider background color cannot be translucent: #"
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-static {p2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_2
-    iput p2, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->s0:I
+    iput p2, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->r0:I
 
     :cond_3
     return-void
@@ -104,7 +138,7 @@
 .method public final drawableStateChanged()V
     .locals 5
 
-    invoke-super {p0}, Lpn;->drawableStateChanged()V
+    invoke-super {p0}, Lyo;->drawableStateChanged()V
 
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
@@ -128,7 +162,7 @@
     :goto_0
     iget-object v1, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->o:Landroid/graphics/drawable/Drawable;
 
-    iget v2, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->r0:I
+    iget v2, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->q0:I
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
@@ -164,16 +198,16 @@
 
     move-result-object v1
 
-    iget v4, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->s0:I
+    iget v4, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->r0:I
 
     invoke-virtual {v1, v4, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     move-object v1, v2
 
     :cond_1
-    iget p0, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->r0:I
+    iget v2, p0, Landroidx/mediarouter/app/MediaRouteVolumeSlider;->q0:I
 
-    invoke-virtual {v1, p0, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+    invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 

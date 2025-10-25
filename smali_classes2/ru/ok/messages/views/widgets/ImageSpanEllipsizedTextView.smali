@@ -35,133 +35,135 @@
 
 # virtual methods
 .method public final onLayout(ZIIII)V
-    .locals 2
+    .locals 3
 
     invoke-super/range {p0 .. p5}, Landroidx/appcompat/widget/AppCompatTextView;->onLayout(ZIIII)V
 
+    move-object p1, p0
+
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatTextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p2
-
-    iget-object p3, p0, Lru/ok/messages/views/widgets/ImageSpanEllipsizedTextView;->w0:Landroid/graphics/Rect;
-
-    const/4 p4, 0x0
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
     move-result-object p2
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result-object p5
+    move-result p3
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    iget-object p4, p1, Lru/ok/messages/views/widgets/ImageSpanEllipsizedTextView;->w0:Landroid/graphics/Rect;
 
-    move-result p1
+    const/4 p5, 0x0
 
-    invoke-virtual {p2, p5, p4, p1, p3}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
+    if-nez p3, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object p3
+
+    invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+
+    move-result p2
+
+    invoke-virtual {p3, v0, p5, p2, p4}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p3}, Landroid/graphics/Rect;->setEmpty()V
+    invoke-virtual {p4}, Landroid/graphics/Rect;->setEmpty()V
 
     :goto_0
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
-    move-result p1
+    move-result p2
 
     invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    move-result p2
+    move-result p3
 
     invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
-    move-result p5
+    move-result v0
 
-    add-int/2addr p5, p2
+    add-int/2addr v0, p3
 
-    sub-int/2addr p1, p5
+    sub-int/2addr p2, v0
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawablesRelative()[Landroid/graphics/drawable/Drawable;
 
-    move-result-object p2
+    move-result-object p3
 
-    const/4 p5, 0x2
+    const/4 v0, 0x2
 
-    aget-object v0, p2, p5
+    aget-object v1, p3, v0
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lru/ok/messages/views/widgets/ImageSpanEllipsizedTextView;->x0:Landroid/graphics/Rect;
+    iget-object v2, p1, Lru/ok/messages/views/widgets/ImageSpanEllipsizedTextView;->x0:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->copyBounds(Landroid/graphics/Rect;)V
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->copyBounds(Landroid/graphics/Rect;)V
 
-    aget-object v0, p2, p4
+    aget-object v1, p3, p5
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    move-result-object p4
+    move-result-object p5
 
-    iget p4, p4, Landroid/graphics/Rect;->right:I
+    iget p5, p5, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawablePadding()I
 
-    move-result v0
+    move-result v1
 
-    add-int/2addr p4, v0
+    add-int/2addr p5, v1
 
     :cond_1
-    iget p3, p3, Landroid/graphics/Rect;->right:I
+    iget p4, p4, Landroid/graphics/Rect;->right:I
 
-    sub-int/2addr p3, p1
+    sub-int/2addr p4, p2
 
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
-    move-result p1
+    move-result p2
 
-    add-int/2addr p1, p3
+    add-int/2addr p2, p4
 
-    add-int/2addr p1, p4
+    add-int/2addr p2, p5
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawablePadding()I
 
-    move-result p3
+    move-result p4
 
-    add-int/2addr p3, p1
+    add-int/2addr p4, p2
 
-    invoke-static {p0}, Ljk7;->S(Landroid/view/View;)Z
+    invoke-static {p0}, Ldyi;->d(Landroid/view/View;)Z
 
-    move-result p0
+    move-result p2
 
-    if-eqz p0, :cond_2
+    if-eqz p2, :cond_2
 
-    neg-int p3, p3
+    neg-int p4, p4
 
     :cond_2
-    iget p0, v1, Landroid/graphics/Rect;->top:I
+    iget p2, v2, Landroid/graphics/Rect;->top:I
 
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
-    move-result p1
+    move-result p5
 
-    add-int/2addr p1, p3
+    add-int/2addr p5, p4
 
-    iget p4, v1, Landroid/graphics/Rect;->bottom:I
+    iget v1, v2, Landroid/graphics/Rect;->bottom:I
 
-    invoke-virtual {v1, p3, p0, p1, p4}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v2, p4, p2, p5, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    aget-object p0, p2, p5
+    aget-object p2, p3, v0
 
-    invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    invoke-virtual {p2, v2}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
     :cond_3
     return-void

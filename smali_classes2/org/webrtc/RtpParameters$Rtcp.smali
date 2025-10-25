@@ -39,23 +39,23 @@
 
 # virtual methods
 .method public getCname()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Rtcp"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters$Rtcp;->cname:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters$Rtcp;->cname:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getReducedSize()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Rtcp"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/RtpParameters$Rtcp;->reducedSize:Z
+    iget-boolean v0, p0, Lorg/webrtc/RtpParameters$Rtcp;->reducedSize:Z
 
-    return p0
+    return v0
 .end method

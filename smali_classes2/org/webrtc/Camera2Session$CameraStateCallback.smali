@@ -40,60 +40,60 @@
 .end method
 
 .method private getErrorDescription(I)Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    if-eq p1, p0, :cond_4
+    if-eq p1, v0, :cond_4
 
-    const/4 p0, 0x2
+    const/4 v0, 0x2
 
-    if-eq p1, p0, :cond_3
+    if-eq p1, v0, :cond_3
 
-    const/4 p0, 0x3
+    const/4 v0, 0x3
 
-    if-eq p1, p0, :cond_2
+    if-eq p1, v0, :cond_2
 
-    const/4 p0, 0x4
+    const/4 v0, 0x4
 
-    if-eq p1, p0, :cond_1
+    if-eq p1, v0, :cond_1
 
-    const/4 p0, 0x5
+    const/4 v0, 0x5
 
-    if-eq p1, p0, :cond_0
+    if-eq p1, v0, :cond_0
 
-    const-string p0, "Unknown camera error: "
+    const-string v0, "Unknown camera error: "
 
-    invoke-static {p1, p0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    const-string p0, "Camera service has encountered a fatal error."
+    const-string p1, "Camera service has encountered a fatal error."
 
-    return-object p0
+    return-object p1
 
     :cond_1
-    const-string p0, "Camera device has encountered a fatal error."
+    const-string p1, "Camera device has encountered a fatal error."
 
-    return-object p0
+    return-object p1
 
     :cond_2
-    const-string p0, "Camera device could not be opened due to a device policy."
+    const-string p1, "Camera device could not be opened due to a device policy."
 
-    return-object p0
+    return-object p1
 
     :cond_3
-    const-string p0, "Camera device could not be opened because there are too many other open camera devices."
+    const-string p1, "Camera device could not be opened because there are too many other open camera devices."
 
-    return-object p0
+    return-object p1
 
     :cond_4
-    const-string p0, "Camera device is in use already."
+    const-string p1, "Camera device is in use already."
 
-    return-object p0
+    return-object p1
 .end method
 
 
@@ -117,9 +117,9 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
+    iget-object v0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-interface {p1, p0}, Lorg/webrtc/CameraSession$Events;->onCameraClosed(Lorg/webrtc/CameraSession;)V
+    invoke-interface {p1, v0}, Lorg/webrtc/CameraSession$Events;->onCameraClosed(Lorg/webrtc/CameraSession;)V
 
     return-void
 .end method
@@ -169,17 +169,17 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
+    iget-object p1, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {p0}, Lorg/webrtc/Camera2Session;->a(Lorg/webrtc/Camera2Session;)Lorg/webrtc/CameraSession$CreateSessionCallback;
+    invoke-static {p1}, Lorg/webrtc/Camera2Session;->a(Lorg/webrtc/Camera2Session;)Lorg/webrtc/CameraSession$CreateSessionCallback;
 
-    move-result-object p0
+    move-result-object p1
 
-    sget-object p1, Lorg/webrtc/CameraSession$FailureType;->DISCONNECTED:Lorg/webrtc/CameraSession$FailureType;
+    sget-object v0, Lorg/webrtc/CameraSession$FailureType;->DISCONNECTED:Lorg/webrtc/CameraSession$FailureType;
 
-    const-string v0, "Camera disconnected / evicted."
+    const-string v1, "Camera disconnected / evicted."
 
-    invoke-interface {p0, p1, v0}, Lorg/webrtc/CameraSession$CreateSessionCallback;->onFailure(Lorg/webrtc/CameraSession$FailureType;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lorg/webrtc/CameraSession$CreateSessionCallback;->onFailure(Lorg/webrtc/CameraSession$FailureType;Ljava/lang/String;)V
 
     return-void
 
@@ -190,9 +190,9 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
+    iget-object v0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-interface {p1, p0}, Lorg/webrtc/CameraSession$Events;->onCameraDisconnected(Lorg/webrtc/CameraSession;)V
+    invoke-interface {p1, v0}, Lorg/webrtc/CameraSession$Events;->onCameraDisconnected(Lorg/webrtc/CameraSession;)V
 
     return-void
 .end method
@@ -208,9 +208,9 @@
 
     invoke-direct {p0, p2}, Lorg/webrtc/Camera2Session$CameraStateCallback;->getErrorDescription(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-static {p1, p0}, Lorg/webrtc/Camera2Session;->w(Lorg/webrtc/Camera2Session;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lorg/webrtc/Camera2Session;->w(Lorg/webrtc/Camera2Session;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -312,21 +312,21 @@
     :catch_0
     move-exception p1
 
-    iget-object p0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
+    iget-object v0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "Failed to create capture session. "
+    const-string v2, "Failed to create capture session. "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lorg/webrtc/Camera2Session;->w(Lorg/webrtc/Camera2Session;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lorg/webrtc/Camera2Session;->w(Lorg/webrtc/Camera2Session;Ljava/lang/String;)V
 
     return-void
 .end method

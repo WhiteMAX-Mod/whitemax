@@ -35,11 +35,11 @@
 
 # virtual methods
 .method public create(Lorg/webrtc/NetworkChangeDetector$Observer;Landroid/content/Context;)Lorg/webrtc/NetworkChangeDetector;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/webrtc/NetworkMonitorAutoDetect;
+    new-instance v0, Lorg/webrtc/NetworkMonitorAutoDetect;
 
-    invoke-direct {p0, p1, p2}, Lorg/webrtc/NetworkMonitorAutoDetect;-><init>(Lorg/webrtc/NetworkChangeDetector$Observer;Landroid/content/Context;)V
+    invoke-direct {v0, p1, p2}, Lorg/webrtc/NetworkMonitorAutoDetect;-><init>(Lorg/webrtc/NetworkChangeDetector$Observer;Landroid/content/Context;)V
 
-    return-object p0
+    return-object v0
 .end method

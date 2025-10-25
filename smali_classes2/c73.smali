@@ -1,72 +1,187 @@
 .class public final Lc73;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/graphics/Paint;
 
-.field public final synthetic b:Ld73;
-
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
-
-.field public final synthetic o:Ljava/lang/Runnable;
+.field public b:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld73;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    iput p4, p0, Lc73;->a:I
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    iput-object p1, p0, Lc73;->b:Ld73;
+    new-instance v0, Landroid/graphics/Paint;
 
-    iput-object p2, p0, Lc73;->c:Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p3, p0, Lc73;->o:Ljava/lang/Runnable;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    mul-float/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
+
+    sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
+
+    iput-object v0, p0, Lc73;->a:Landroid/graphics/Paint;
+
+    const/high16 v0, 0x43b40000    # 360.0f
+
+    iput v0, p0, Lc73;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 10
 
-    iget v0, p0, Lc73;->a:I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lc73;->c:Landroid/graphics/drawable/Drawable;
+    iget v0, v0, Landroid/graphics/Rect;->left:I
 
-    iget-object v1, p0, Lc73;->o:Ljava/lang/Runnable;
+    int-to-float v2, v0
 
-    iget-object p0, p0, Lc73;->b:Ld73;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    invoke-static {p0, v0, v1}, Ld73;->z(Ld73;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    move-result-object v0
+
+    iget v0, v0, Landroid/graphics/Rect;->top:I
+
+    int-to-float v3, v0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/graphics/Rect;->right:I
+
+    int-to-float v4, v0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    int-to-float v5, v0
+
+    iget v7, p0, Lc73;->b:F
+
+    const/4 v8, 0x0
+
+    iget-object v9, p0, Lc73;->a:Landroid/graphics/Paint;
+
+    const/high16 v6, -0x3d4c0000    # -90.0f
+
+    move-object v1, p1
+
+    invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lc73;->c:Landroid/graphics/drawable/Drawable;
+.method public final getOpacity()I
+    .locals 1
 
-    iget-object v1, p0, Lc73;->o:Ljava/lang/Runnable;
+    const/4 v0, -0x3
 
-    iget-object p0, p0, Lc73;->b:Ld73;
+    return v0
+.end method
 
-    invoke-static {p0, v0, v1}, Ld73;->z(Ld73;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 3
+
+    const/4 v0, 0x2
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v0
+
+    invoke-static {v1}, Lfhi;->b(F)I
+
+    move-result v1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v2
+
+    invoke-static {v0}, Lfhi;->b(F)I
+
+    move-result v0
+
+    invoke-virtual {p1, v1, v0}, Landroid/graphics/Rect;->inset(II)V
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
     return-void
+.end method
 
-    nop
+.method public final setAlpha(I)V
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lc73;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
+
+    iget-object v0, p0, Lc73;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+
+    return-void
 .end method

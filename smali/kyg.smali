@@ -1,198 +1,167 @@
 .class public final Lkyg;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljy8;
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public e:F
-
-.field public f:F
-
-.field public g:Z
-
-.field public h:F
-
-.field public i:F
-
-.field public j:F
-
-.field public k:I
-
-.field public final l:Landroid/view/GestureDetector;
-
-.field public m:Z
+.field public final synthetic Y:Lone/me/chatmedia/viewer/video/VideoViewerWidget;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljy8;)V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/video/VideoViewerWidget;)V
+    .locals 0
 
-    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+    iput-object p2, p0, Lkyg;->Y:Lone/me/chatmedia/viewer/video/VideoViewerWidget;
 
-    move-result-object v0
+    const/4 p2, 0x2
 
-    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lkyg;->a:I
-
-    iput-object p2, p0, Lkyg;->b:Ljy8;
-
-    const/4 p2, 0x1
-
-    iput-boolean p2, p0, Lkyg;->c:Z
-
-    iput-boolean p2, p0, Lkyg;->d:Z
-
-    new-instance p2, Landroid/view/GestureDetector;
-
-    new-instance v0, Lmz;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1, p0}, Lmz;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {p2, p1, v0}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
-
-    iput-object p2, p0, Lkyg;->l:Landroid/view/GestureDetector;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()F
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Lkyg;->b()Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    invoke-virtual {p0, p1, p2}, Lkyg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    move-result-object p1
 
-    if-eqz v0, :cond_5
+    check-cast p1, Lkyg;
 
-    iget-boolean v0, p0, Lkyg;->m:Z
+    sget-object p2, Lccg;->a:Lccg;
 
-    const/4 v2, 0x1
+    invoke-virtual {p1, p2}, Lkyg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    return-object p2
+.end method
 
-    iget v3, p0, Lkyg;->e:F
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v4, p0, Lkyg;->f:F
+    new-instance v0, Lkyg;
 
-    cmpg-float v3, v3, v4
+    iget-object v1, p0, Lkyg;->Y:Lone/me/chatmedia/viewer/video/VideoViewerWidget;
 
-    if-ltz v3, :cond_1
+    invoke-direct {v0, p2, v1}, Lkyg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/video/VideoViewerWidget;)V
 
-    :cond_0
-    if-nez v0, :cond_2
+    iput-object p1, v0, Lkyg;->X:Ljava/lang/Object;
 
-    iget v0, p0, Lkyg;->e:F
+    return-object v0
+.end method
 
-    iget v3, p0, Lkyg;->f:F
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    cmpl-float v0, v0, v3
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    if-lez v0, :cond_2
+    iget-object p1, p0, Lkyg;->X:Ljava/lang/Object;
 
-    :cond_1
-    move v0, v2
+    check-cast p1, Lhn2;
+
+    sget-object v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->t0:[Ltr7;
+
+    iget v0, p1, Lhn2;->a:I
+
+    iget p1, p1, Lhn2;->b:F
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lkyg;->Y:Lone/me/chatmedia/viewer/video/VideoViewerWidget;
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->G0()Lfyg;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setRotation(F)V
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->G0()Lfyg;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->F0()Ldwg;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setRotation(F)V
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->H0()Lpo2;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->D0()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->C0()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v1, v2, v3}, Lpo2;->D(JLjava/lang/String;)Lzs8;
+
+    move-result-object p1
+
+    instance-of v1, p1, Lxs8;
+
+    if-eqz v1, :cond_0
+
+    check-cast p1, Lxs8;
 
     goto :goto_0
 
-    :cond_2
-    const/4 v0, 0x0
+    :cond_0
+    const/4 p1, 0x0
 
     :goto_0
-    int-to-float v2, v2
+    if-nez p1, :cond_1
 
-    iget v3, p0, Lkyg;->e:F
+    goto :goto_1
 
-    iget v4, p0, Lkyg;->f:F
+    :cond_1
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->F0()Ldwg;
 
-    div-float/2addr v3, v4
+    move-result-object v1
 
-    sub-float/2addr v2, v3
+    iget-object p1, p1, Lxs8;->o:Lclg;
 
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->H0()Lpo2;
 
-    move-result v2
+    move-result-object v2
 
-    const/high16 v3, 0x3f000000    # 0.5f
+    iget-object v2, v2, Lpo2;->Y0:Ln0d;
 
-    mul-float/2addr v2, v3
+    iget-object v2, v2, Ln0d;->a:Lq0f;
 
-    iget v3, p0, Lkyg;->f:F
+    invoke-interface {v2}, Lq0f;->getValue()Ljava/lang/Object;
 
-    iget p0, p0, Lkyg;->a:I
+    move-result-object v2
 
-    int-to-float p0, p0
+    check-cast v2, Lhn2;
 
-    cmpg-float p0, v3, p0
+    iget v2, v2, Lhn2;->b:F
 
-    if-gtz p0, :cond_3
+    invoke-virtual {v1, p1, v2}, Ldwg;->j(Lclg;F)V
 
-    return v1
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->F0()Ldwg;
 
-    :cond_3
-    if-eqz v0, :cond_4
+    move-result-object p1
 
-    add-float/2addr v2, v1
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
-    return v2
+    :cond_2
+    :goto_1
+    sget-object p1, Lccg;->a:Lccg;
 
-    :cond_4
-    sub-float/2addr v1, v2
-
-    return v1
-
-    :cond_5
-    iget v0, p0, Lkyg;->f:F
-
-    const/4 v2, 0x0
-
-    cmpl-float v2, v0, v2
-
-    if-lez v2, :cond_6
-
-    iget p0, p0, Lkyg;->e:F
-
-    div-float/2addr p0, v0
-
-    return p0
-
-    :cond_6
-    return v1
-.end method
-
-.method public final b()Z
-    .locals 0
-
-    iget p0, p0, Lkyg;->k:I
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-object p1
 .end method

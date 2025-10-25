@@ -1,168 +1,97 @@
-.class public final Lwme;
-.super Ljava/lang/Object;
+.class public final enum Lwme;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lvme;
+# static fields
+.field public static final synthetic X:[Lwme;
 
-.field public final b:Lxme;
+.field public static final enum a:Lwme;
 
-.field public final c:Lyme;
+.field public static final enum b:Lwme;
+
+.field public static final enum c:Lwme;
+
+.field public static final enum o:Lwme;
 
 
 # direct methods
-.method public constructor <init>(Lvme;Lxme;Lyme;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwme;
 
-    iput-object p1, p0, Lwme;->a:Lvme;
+    const-string v1, "LOADING"
 
-    iput-object p2, p0, Lwme;->b:Lxme;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lwme;->c:Lyme;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lwme;->a:Lwme;
+
+    new-instance v1, Lwme;
+
+    const-string v2, "CONTENT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lwme;->b:Lwme;
+
+    new-instance v2, Lwme;
+
+    const-string v3, "CONTENT_SEARCH"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lwme;->c:Lwme;
+
+    new-instance v3, Lwme;
+
+    const-string v4, "EMPTY_SEARCH"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lwme;->o:Lwme;
+
+    filled-new-array {v0, v1, v2, v3}, [Lwme;
+
+    move-result-object v0
+
+    sput-object v0, Lwme;->X:[Lwme;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lwme;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const-class v0, Lwme;
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lwme;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lwme;
-
-    iget-object v1, p0, Lwme;->a:Lvme;
-
-    iget-object v3, p1, Lwme;->a:Lvme;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lwme;->b:Lxme;
-
-    iget-object v3, p1, Lwme;->b:Lxme;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object p0, p0, Lwme;->c:Lyme;
-
-    iget-object p1, p1, Lwme;->c:Lyme;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lwme;->a:Lvme;
-
-    iget v0, v0, Lvme;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lwme;->b:Lxme;
-
-    iget v2, v2, Lxme;->a:I
-
-    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
-
-    move-result v0
-
-    iget-object p0, p0, Lwme;->c:Lyme;
-
-    iget p0, p0, Lyme;->a:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StrokeLocalColors(carver="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lwme;->a:Lvme;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", tabBar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwme;->b:Lxme;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", topBar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lwme;->c:Lyme;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lwme;
+
     return-object p0
+.end method
+
+.method public static values()[Lwme;
+    .locals 1
+
+    sget-object v0, Lwme;->X:[Lwme;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lwme;
+
+    return-object v0
 .end method

@@ -93,9 +93,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public a(I)V
@@ -123,144 +123,142 @@
 .end method
 
 .method public a(Ljava/lang/String;J)V
-    .locals 0
+    .locals 1
 
     .line 12
     :try_start_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
-    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p0
+    move-result-object v0
 
     .line 13
-    invoke-interface {p0, p1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 14
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     .line 15
-    const-string p1, "PrefsCache error: "
+    const-string p2, "PrefsCache error: "
 
-    invoke-static {p1, p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p2, p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .line 16
     :try_start_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
-    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p0
+    move-result-object v0
 
     .line 17
-    invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 18
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     .line 19
-    const-string p1, "PrefsCache error: "
+    const-string p2, "PrefsCache error: "
 
-    invoke-static {p1, p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p2, p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public a(Ljava/lang/String;Z)V
-    .locals 0
+    .locals 1
 
     .line 20
     :try_start_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
-    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p0
+    move-result-object v0
 
     .line 21
-    invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 22
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     .line 23
-    const-string p1, "PrefsCache error: "
+    const-string p2, "PrefsCache error: "
 
-    invoke-static {p1, p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p2, p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public a(Ljava/lang/String;)Z
-    .locals 1
+    .locals 2
 
     const/4 v0, 0x0
 
     .line 11
     :try_start_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
-    invoke-interface {p0, p1, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v1, p1, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result p0
+    move-result p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return p0
+    return p1
 
     :catchall_0
     return v0
 .end method
 
 .method public b(Ljava/lang/String;)J
-    .locals 2
+    .locals 3
 
     const-wide/16 v0, 0x0
 
     .line 3
     :try_start_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
-    invoke-interface {p0, p1, v0, v1}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+    invoke-interface {v2, p1, v0, v1}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
-    move-result-wide p0
+    move-result-wide v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-wide p0
 
     :catchall_0
     return-wide v0
@@ -274,9 +272,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public b(J)V
@@ -298,27 +296,27 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public c(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     const-string v0, ""
 
     .line 3
     :try_start_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
-    invoke-interface {p0, p1, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1, p1, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p0
+    return-object p1
 
     :catchall_0
     return-object v0
@@ -345,9 +343,9 @@
 
     move-result-wide v0
 
-    long-to-int p0, v0
+    long-to-int v0, v0
 
-    return p0
+    return v0
 .end method
 
 .method public d(Ljava/lang/String;)V
@@ -369,9 +367,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public e(Ljava/lang/String;)V
@@ -393,9 +391,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public f(Ljava/lang/String;)V
@@ -417,9 +415,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public g(Ljava/lang/String;)V
@@ -441,9 +439,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public h(Ljava/lang/String;)V
@@ -489,9 +487,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public j(Ljava/lang/String;)V
@@ -537,9 +535,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public l(Ljava/lang/String;)V
@@ -576,9 +574,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public o()Z
@@ -588,9 +586,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public p()Z
@@ -600,9 +598,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public q()Z
@@ -612,9 +610,9 @@
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public r()V

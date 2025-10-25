@@ -47,11 +47,11 @@
     .locals 0
 
     .line 10
-    invoke-static {}, Lpxg;->b()Lpxg;
+    invoke-static {}, Loqh;->b()Loqh;
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
 .method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4FastDecompressor;Ljava/util/zip/Checksum;)V
@@ -111,15 +111,15 @@
     .line 11
     invoke-static {}, Lnet/jpountz/lz4/LZ4Factory;->fastestInstance()Lnet/jpountz/lz4/LZ4Factory;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Lnet/jpountz/lz4/LZ4Factory;->fastDecompressor()Lnet/jpountz/lz4/LZ4FastDecompressor;
+    invoke-virtual {p1}, Lnet/jpountz/lz4/LZ4Factory;->fastDecompressor()Lnet/jpountz/lz4/LZ4FastDecompressor;
 
-    invoke-static {}, Lpxg;->b()Lpxg;
+    invoke-static {}, Loqh;->b()Loqh;
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
 .method private readFully([BI)V
@@ -132,20 +132,20 @@
 
     invoke-direct {p0, p1, p2}, Lnet/jpountz/lz4/LZ4BlockInputStream;->tryReadFully([BI)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/io/EOFException;
+    new-instance p1, Ljava/io/EOFException;
 
-    const-string p1, "Stream ended prematurely"
+    const-string p2, "Stream ended prematurely"
 
-    invoke-direct {p0, p1}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method private refill()V
@@ -177,13 +177,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/io/EOFException;
+    new-instance v0, Ljava/io/EOFException;
 
-    const-string v0, "Stream ended prematurely"
+    const-string v1, "Stream ended prematurely"
 
-    invoke-direct {p0, v0}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_1
     const/4 v0, 0x0
@@ -212,11 +212,11 @@
     goto :goto_0
 
     :cond_2
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/io/IOException;
 
-    invoke-direct {p0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_3
     iget-object v2, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->compressedBuffer:[B
@@ -240,17 +240,17 @@
     goto :goto_1
 
     :cond_4
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/io/IOException;
 
-    invoke-direct {p0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_5
     :goto_1
     add-int/lit8 v9, v3, 0x1
 
-    invoke-static {v9, v2}, Lo2d;->d(I[B)I
+    invoke-static {v9, v2}, Lmld;->e(I[B)I
 
     move-result v2
 
@@ -258,7 +258,7 @@
 
     add-int/lit8 v10, v3, 0x5
 
-    invoke-static {v10, v9}, Lo2d;->d(I[B)I
+    invoke-static {v10, v9}, Lmld;->e(I[B)I
 
     move-result v9
 
@@ -268,7 +268,7 @@
 
     add-int/lit8 v3, v3, 0x9
 
-    invoke-static {v3, v9}, Lo2d;->d(I[B)I
+    invoke-static {v3, v9}, Lmld;->e(I[B)I
 
     move-result v3
 
@@ -317,11 +317,11 @@
     return-void
 
     :cond_a
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/io/IOException;
 
-    invoke-direct {p0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_b
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->buffer:[B
@@ -396,31 +396,29 @@
     goto :goto_2
 
     :cond_e
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/io/IOException;
 
-    invoke-direct {p0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
     :try_end_0
     .catch Lnet/jpountz/lz4/LZ4Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
     move-exception v0
 
-    move-object p0, v0
+    new-instance v1, Ljava/io/IOException;
 
-    new-instance v0, Ljava/io/IOException;
+    invoke-direct {v1, v4, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-direct {v0, v4, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
+    throw v1
 
     :cond_f
-    new-instance p0, Ljava/lang/AssertionError;
+    new-instance v0, Ljava/lang/AssertionError;
 
-    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
+    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
-    throw p0
+    throw v0
 
     :cond_10
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->buffer:[B
@@ -457,18 +455,18 @@
     return-void
 
     :cond_11
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/io/IOException;
 
-    invoke-direct {p0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_12
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/io/IOException;
 
-    invoke-direct {p0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method private tryReadFully([BI)Z
@@ -504,15 +502,15 @@
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 
 # virtual methods
 .method public available()I
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -521,9 +519,9 @@
 
     iget v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->originalLen:I
 
-    iget p0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->o:I
+    iget v1, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->o:I
 
-    sub-int/2addr v0, p0
+    sub-int/2addr v0, v1
 
     return v0
 .end method
@@ -535,11 +533,11 @@
 .end method
 
 .method public markSupported()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public read()I
@@ -588,11 +586,11 @@
 
     iput v2, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->o:I
 
-    aget-byte p0, v0, v1
+    aget-byte v0, v0, v1
 
-    and-int/lit16 p0, p0, 0xff
+    and-int/lit16 v0, v0, 0xff
 
-    return p0
+    return v0
 .end method
 
 .method public read([B)I
@@ -610,9 +608,9 @@
 
     invoke-virtual {p0, p1, v0, v1}, Lnet/jpountz/lz4/LZ4BlockInputStream;->read([BII)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public read([BII)I
@@ -624,7 +622,7 @@
     .end annotation
 
     .line 6
-    invoke-static {p2, p1, p3}, Lo2d;->b(I[BI)V
+    invoke-static {p2, p1, p3}, Lmld;->c(I[BI)V
 
     .line 7
     iget-boolean v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->finished:Z
@@ -684,20 +682,20 @@
 .end method
 
 .method public reset()V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/io/IOException;
 
-    const-string v0, "mark/reset not supported"
+    const-string v1, "mark/reset not supported"
 
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public skip(J)J
@@ -757,9 +755,9 @@
 
     iput p2, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->o:I
 
-    int-to-long p0, p1
+    int-to-long p1, p1
 
-    return-wide p0
+    return-wide p1
 
     :cond_3
     :goto_0
@@ -803,17 +801,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->checksum:Ljava/util/zip/Checksum;
+    iget-object v1, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->checksum:Ljava/util/zip/Checksum;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, ")"
+    const-string v1, ")"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

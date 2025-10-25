@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/IllegalStateException;Lje8;)V
+.method public constructor <init>(Ljava/lang/IllegalStateException;Lfp8;)V
     .locals 2
 
     if-nez p2, :cond_0
@@ -14,7 +14,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object p2, p2, Lje8;->a:Ljava/lang/String;
+    iget-object p2, p2, Lfp8;->a:Ljava/lang/String;
 
     :goto_0
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -43,15 +43,15 @@
     :goto_1
     invoke-direct {p0, p2, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget p0, Llrf;->a:I
+    sget p2, Llig;->a:I
 
-    const/16 p2, 0x15
+    const/16 v0, 0x15
 
-    if-lt p0, p2, :cond_2
+    if-lt p2, v0, :cond_2
 
-    instance-of p0, p1, Landroid/media/MediaCodec$CodecException;
+    instance-of p2, p1, Landroid/media/MediaCodec$CodecException;
 
-    if-eqz p0, :cond_2
+    if-eqz p2, :cond_2
 
     check-cast p1, Landroid/media/MediaCodec$CodecException;
 

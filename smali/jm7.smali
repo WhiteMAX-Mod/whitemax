@@ -1,16 +1,21 @@
 .class public final Ljm7;
-.super Ljava/lang/Object;
+.super Lw8a;
 .source "SourceFile"
 
-# interfaces
-.implements Lz3d;
+
+# instance fields
+.field public c:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lw8a;-><init>(Ljava/util/concurrent/ThreadFactory;)V
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Ljm7;->c:J
 
     return-void
 .end method

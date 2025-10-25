@@ -1,59 +1,97 @@
 .class public final Lce2;
-.super Loi0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
+# static fields
+.field public static final l:Lce2;
 
-.field public final c:Ljava/lang/Long;
+
+# instance fields
+.field public final a:Z
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
+
+.field public final k:Z
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/Long;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 12
 
-    invoke-direct {p0}, Loi0;-><init>()V
+    new-instance v0, Lce2;
 
-    iput-wide p1, p0, Lce2;->b:J
+    const/4 v10, 0x0
 
-    iput-object p3, p0, Lce2;->c:Ljava/lang/Long;
+    const/4 v11, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-direct/range {v0 .. v11}, Lce2;-><init>(ZZZZZZZZZZZ)V
+
+    sput-object v0, Lce2;->l:Lce2;
 
     return-void
 .end method
 
+.method public constructor <init>(ZZZZZZZZZZZ)V
+    .locals 0
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-super {p0}, Loi0;->toString()Ljava/lang/String;
+    iput-boolean p1, p0, Lce2;->a:Z
 
-    move-result-object v0
+    iput-boolean p2, p0, Lce2;->b:Z
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iput-boolean p3, p0, Lce2;->c:Z
 
-    const-string v2, "ChatLastReactionUpdatedEvent{chatId="
+    iput-boolean p4, p0, Lce2;->d:Z
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-boolean p5, p0, Lce2;->e:Z
 
-    iget-wide v2, p0, Lce2;->b:J
+    iput-boolean p6, p0, Lce2;->f:Z
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iput-boolean p7, p0, Lce2;->g:Z
 
-    const-string v2, "\'lastReactionMessageId="
+    iput-boolean p8, p0, Lce2;->h:Z
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-boolean p9, p0, Lce2;->i:Z
 
-    iget-object p0, p0, Lce2;->c:Ljava/lang/Long;
+    iput-boolean p10, p0, Lce2;->j:Z
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-boolean p11, p0, Lce2;->k:Z
 
-    const-string p0, "\', lastReaction=null}"
-
-    invoke-static {v1, p0, v0}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

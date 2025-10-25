@@ -1,48 +1,136 @@
 .class public final Lgc8;
-.super Ljx3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Iterator;
+.implements Lir7;
 
 
 # instance fields
-.field public X:I
+.field public final a:J
 
-.field public final synthetic Y:Lwb;
+.field public final b:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public c:Z
+
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Lwb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(JJJ)V
+    .locals 2
 
-    iput-object p1, p0, Lgc8;->Y:Lwb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p5, p0, Lgc8;->a:J
+
+    iput-wide p3, p0, Lgc8;->b:J
+
+    const-wide/16 v0, 0x0
+
+    cmp-long p5, p5, v0
+
+    const/4 p6, 0x0
+
+    const/4 v0, 0x1
+
+    if-lez p5, :cond_0
+
+    cmp-long p5, p1, p3
+
+    if-gtz p5, :cond_1
+
+    :goto_0
+    move p6, v0
+
+    goto :goto_1
+
+    :cond_0
+    cmp-long p5, p1, p3
+
+    if-ltz p5, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    iput-boolean p6, p0, Lgc8;->c:Z
+
+    if-eqz p6, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move-wide p1, p3
+
+    :goto_2
+    iput-wide p1, p0, Lgc8;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hasNext()Z
     .locals 1
 
-    iput-object p1, p0, Lgc8;->o:Ljava/lang/Object;
+    iget-boolean v0, p0, Lgc8;->c:Z
 
-    iget p1, p0, Lgc8;->X:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final next()Ljava/lang/Object;
+    .locals 4
 
-    or-int/2addr p1, v0
+    iget-wide v0, p0, Lgc8;->o:J
 
-    iput p1, p0, Lgc8;->X:I
+    iget-wide v2, p0, Lgc8;->b:J
 
-    iget-object p1, p0, Lgc8;->Y:Lwb;
+    cmp-long v2, v0, v2
 
-    const/4 v0, 0x0
+    if-nez v2, :cond_1
 
-    invoke-virtual {p1, v0, p0}, Lwb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-boolean v2, p0, Lgc8;->c:Z
 
-    move-result-object p0
+    if-eqz v2, :cond_0
 
-    return-object p0
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lgc8;->c:Z
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    iget-wide v2, p0, Lgc8;->a:J
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Lgc8;->o:J
+
+    :goto_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

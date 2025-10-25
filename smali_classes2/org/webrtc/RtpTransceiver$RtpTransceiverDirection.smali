@@ -175,7 +175,7 @@
 
     const-string v1, "Uknown native RtpTransceiverDirection type"
 
-    invoke-static {p0, v1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -215,12 +215,12 @@
 
 # virtual methods
 .method public getNativeIndex()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RtpTransceiverDirection"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/RtpTransceiver$RtpTransceiverDirection;->nativeIndex:I
+    iget v0, p0, Lorg/webrtc/RtpTransceiver$RtpTransceiverDirection;->nativeIndex:I
 
-    return p0
+    return v0
 .end method

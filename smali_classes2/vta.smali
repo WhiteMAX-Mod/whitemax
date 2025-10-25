@@ -1,31 +1,77 @@
-.class public final Lvta;
+.class public abstract synthetic Lvta;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/util/Set;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/Set;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x4
 
-    iput p2, p0, Lvta;->b:I
+    invoke-static {v0}, Ldy1;->y(I)[I
 
-    iput-object p1, p0, Lvta;->a:Ljava/lang/String;
+    move-result-object v1
 
-    iput-object p3, p0, Lvta;->c:Ljava/lang/String;
+    array-length v1, v1
 
-    iput-object p4, p0, Lvta;->d:Ljava/util/Set;
+    new-array v1, v1, [I
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x2
+
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    sput-object v1, Lvta;->$EnumSwitchMapping$0:[I
+
+    invoke-static {v0}, Ldy1;->y(I)[I
+
+    move-result-object v1
+
+    array-length v1, v1
+
+    new-array v1, v1, [I
+
+    const/4 v4, 0x0
+
+    :try_start_1
+    aput v2, v1, v4
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    aput v3, v1, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v3, 0x3
+
+    :try_start_3
+    aput v3, v1, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    aput v0, v1, v3
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v1, Lvta;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

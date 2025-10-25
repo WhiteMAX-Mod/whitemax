@@ -1,27 +1,15 @@
-.class public final Lbo0;
-.super Lfo0;
+.class public abstract Lbo0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final c()Ljava/lang/String;
+# direct methods
+.method public static a(Landroid/app/KeyguardManager;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/Intent;
     .locals 0
 
-    const-string p0, "pipe_ui"
+    invoke-virtual {p0, p1, p2}, Landroid/app/KeyguardManager;->createConfirmDeviceCredentialIntent(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object p0
 
     return-object p0
-.end method
-
-.method public final d()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "BitmapMemoryCacheGetProducer"
-
-    return-object p0
-.end method
-
-.method public final e(Ldi0;Lco0;Z)Ldi0;
-    .locals 0
-
-    return-object p1
 .end method

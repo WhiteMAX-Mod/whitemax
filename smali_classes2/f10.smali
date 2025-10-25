@@ -4,122 +4,121 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public A:Ljava/lang/String;
 
-.field public final b:Z
+.field public a:La20;
 
+.field public b:Ls10;
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 0
+.field public c:Ll10;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public d:Ld20;
 
-    iput-object p1, p0, Lf10;->a:Ljava/lang/String;
+.field public e:Le10;
 
-    iput-boolean p2, p0, Lf10;->b:Z
+.field public f:Lz10;
 
-    return-void
-.end method
+.field public g:Lw10;
+
+.field public h:Lc10;
+
+.field public i:Lx10;
+
+.field public j:J
+
+.field public k:F
+
+.field public l:Ljava/lang/String;
+
+.field public m:Ljava/lang/String;
+
+.field public n:Z
+
+.field public o:J
+
+.field public p:J
+
+.field public q:Lh10;
+
+.field public r:Ln10;
+
+.field public s:Li10;
+
+.field public t:Lt10;
+
+.field public u:J
+
+.field public v:Lp10;
+
+.field public w:Lhmh;
+
+.field public x:Lu10;
+
+.field public y:Z
+
+.field public z:Z
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lf10;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lf10;
-
-    iget-object v1, p0, Lf10;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lf10;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean p0, p0, Lf10;->b:Z
-
-    iget-boolean p1, p1, Lf10;->b:Z
-
-    if-eq p0, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final a()Le20;
     .locals 1
 
-    iget-object v0, p0, Lf10;->a:Ljava/lang/String;
+    iget-object v0, p0, Lf10;->a:La20;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    if-nez v0, :cond_0
 
-    move-result v0
+    sget-object v0, La20;->a:La20;
 
-    mul-int/lit8 v0, v0, 0x1f
+    iput-object v0, p0, Lf10;->a:La20;
 
-    iget-boolean p0, p0, Lf10;->b:Z
+    :cond_0
+    iget-object v0, p0, Lf10;->i:Lx10;
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    if-nez v0, :cond_1
 
-    move-result p0
+    sget-object v0, Lx10;->a:Lx10;
 
-    add-int/2addr p0, v0
+    iput-object v0, p0, Lf10;->i:Lx10;
 
-    return p0
+    :cond_1
+    iget-object v0, p0, Lf10;->x:Lu10;
+
+    if-nez v0, :cond_2
+
+    sget-object v0, Lu10;->a:Lu10;
+
+    iput-object v0, p0, Lf10;->x:Lu10;
+
+    :cond_2
+    new-instance v0, Le20;
+
+    invoke-direct {v0, p0}, Le20;-><init>(Lf10;)V
+
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final b()Ln10;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lf10;->r:Ln10;
 
-    const-string v1, "PreviewCacheKey(attachId="
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object v0, Ln10;->f:Ln10;
 
-    iget-object v1, p0, Lf10;->a:Ljava/lang/String;
+    :cond_0
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final c()Ld20;
+    .locals 1
 
-    const-string v1, ", blurred="
+    iget-object v0, p0, Lf10;->d:Ld20;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    iget-boolean p0, p0, Lf10;->b:Z
+    sget-object v0, Ld20;->r:Ld20;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_0
+    return-object v0
 .end method

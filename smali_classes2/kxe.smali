@@ -1,43 +1,47 @@
-.class public final Lkxe;
-.super Ljava/lang/Object;
+.class public abstract Lkxe;
+.super Loxe;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final h:Ljava/math/BigInteger;
 
-.field public final b:Lcl7;
+.field public final i:Ljava/math/BigInteger;
 
-.field public final c:Lcl7;
+.field public final j:Ljava/math/BigInteger;
 
-.field public final d:Lcl7;
-
-.field public final e:Lcl7;
-
-.field public final f:Lcl7;
-
-.field public final g:Lzte;
+.field public final k:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;Lzte;)V
-    .locals 0
+.method public constructor <init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;Lo39;)V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x1
 
-    iput-object p1, p0, Lkxe;->a:Landroid/content/Context;
+    move-object v0, p0
 
-    iput-object p2, p0, Lkxe;->b:Lcl7;
+    move v1, p1
 
-    iput-object p3, p0, Lkxe;->c:Lcl7;
+    move-wide v3, p2
 
-    iput-object p4, p0, Lkxe;->d:Lcl7;
+    move-object v5, p4
 
-    iput-object p5, p0, Lkxe;->e:Lcl7;
+    move-object/from16 v6, p10
 
-    iput-object p6, p0, Lkxe;->f:Lcl7;
+    move-object/from16 v7, p11
 
-    iput-object p7, p0, Lkxe;->g:Lzte;
+    invoke-direct/range {v0 .. v7}, Loxe;-><init>(IIJLjava/lang/String;Ljava/lang/String;Lo39;)V
+
+    iput-object p5, p0, Lkxe;->h:Ljava/math/BigInteger;
+
+    iput-object p6, p0, Lkxe;->i:Ljava/math/BigInteger;
+
+    iput-object p7, p0, Lkxe;->j:Ljava/math/BigInteger;
+
+    move-wide/from16 p1, p8
+
+    iput-wide p1, p0, Lkxe;->k:J
 
     return-void
 .end method

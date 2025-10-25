@@ -4,10 +4,10 @@
 
 
 # static fields
-.field public static final PARSER:Lvh7;
+.field public static final PARSER:Lpq7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lvh7;"
+            "Lpq7;"
         }
     .end annotation
 .end field
@@ -46,23 +46,25 @@
     .end annotation
 .end field
 
+.field public final wtEndpoint:Ljava/lang/String;
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ljl5;
+    new-instance v0, Lyx6;
 
-    const/16 v1, 0x1b
+    const/4 v1, 0x6
 
-    invoke-direct {v0, v1}, Ljl5;-><init>(I)V
+    invoke-direct {v0, v1}, Lyx6;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->PARSER:Lvh7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->PARSER:Lpq7;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZI)V
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZI)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -77,6 +79,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
+            "Ljava/lang/String;",
             "ZI)V"
         }
     .end annotation
@@ -85,35 +88,37 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->id:Ljava/lang/String;
 
-    iput p8, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->deviceIndex:I
+    iput p9, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->deviceIndex:I
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->turn:Ljava/util/List;
 
     iput-object p4, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->endpoint:Ljava/lang/String;
 
-    iput-object p5, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
+    iput-object p5, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->wtEndpoint:Ljava/lang/String;
 
-    iput-boolean p7, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->isP2PForbidden:Z
+    iput-object p6, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
+
+    iput-boolean p8, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->isP2PForbidden:Z
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->stun:Ljava/util/List;
 
-    iput-object p6, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->clientType:Ljava/lang/String;
+    iput-object p7, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->clientType:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static synthetic a(Lzh7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
+.method public static synthetic a(Lvq7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->lambda$static$0(Lzh7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->lambda$static$0(Lvq7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Lzh7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
-    .locals 12
+.method private static synthetic lambda$static$0(Lvq7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
+    .locals 13
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -123,7 +128,7 @@
 
     sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    invoke-interface {p0}, Lzh7;->s()V
+    invoke-interface {p0}, Lvq7;->s()V
 
     const/4 v1, 0x0
 
@@ -141,18 +146,20 @@
 
     move-object v9, v8
 
-    move v10, v2
+    move-object v10, v9
 
-    move v11, v10
+    move v11, v2
+
+    move v12, v11
 
     :goto_0
-    invoke-interface {p0}, Lzh7;->hasNext()Z
+    invoke-interface {p0}, Lvq7;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
-    invoke-interface {p0}, Lzh7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lvq7;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -177,12 +184,12 @@
 
     if-nez v0, :cond_0
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_0
-    const/4 v3, 0x7
+    const/16 v3, 0x8
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :sswitch_1
     const-string v1, "stun_server"
@@ -196,12 +203,12 @@
     goto :goto_1
 
     :cond_1
-    const/4 v3, 0x6
+    const/4 v3, 0x7
 
     goto :goto_1
 
     :sswitch_2
-    const-string v1, "turn_server"
+    const-string v1, "wt_endpoint"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -212,12 +219,12 @@
     goto :goto_1
 
     :cond_2
-    const/4 v3, 0x5
+    const/4 v3, 0x6
 
     goto :goto_1
 
     :sswitch_3
-    const-string v1, "device_idx"
+    const-string v1, "turn_server"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -228,12 +235,12 @@
     goto :goto_1
 
     :cond_3
-    const/4 v3, 0x4
+    const/4 v3, 0x5
 
     goto :goto_1
 
     :sswitch_4
-    const-string v1, "token"
+    const-string v1, "device_idx"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -244,12 +251,12 @@
     goto :goto_1
 
     :cond_4
-    const/4 v3, 0x3
+    const/4 v3, 0x4
 
     goto :goto_1
 
     :sswitch_5
-    const-string v1, "id"
+    const-string v1, "token"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -260,12 +267,12 @@
     goto :goto_1
 
     :cond_5
-    const/4 v3, 0x2
+    const/4 v3, 0x3
 
     goto :goto_1
 
     :sswitch_6
-    const-string v1, "p2p_forbidden"
+    const-string v1, "id"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -276,12 +283,12 @@
     goto :goto_1
 
     :cond_6
-    const/4 v3, 0x1
+    const/4 v3, 0x2
 
     goto :goto_1
 
     :sswitch_7
-    const-string v1, "client_type"
+    const-string v1, "p2p_forbidden"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -292,77 +299,100 @@
     goto :goto_1
 
     :cond_7
+    const/4 v3, 0x1
+
+    goto :goto_1
+
+    :sswitch_8
+    const-string v1, "client_type"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_1
+
+    :cond_8
     move v3, v2
 
     :goto_1
     packed-switch v3, :pswitch_data_0
 
-    invoke-interface {p0}, Lzh7;->B()V
+    invoke-interface {p0}, Lvq7;->y()V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :pswitch_0
-    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lvq7;->B()Ljava/lang/String;
 
     move-result-object v7
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :pswitch_1
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lzh7;)Ljava/util/List;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lvq7;)Ljava/util/List;
 
     move-result-object v6
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :pswitch_2
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lzh7;)Ljava/util/List;
-
-    move-result-object v5
-
-    goto/16 :goto_0
-
-    :pswitch_3
-    invoke-interface {p0}, Lzh7;->E()I
-
-    move-result v11
-
-    goto/16 :goto_0
-
-    :pswitch_4
-    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lvq7;->B()Ljava/lang/String;
 
     move-result-object v8
 
     goto/16 :goto_0
 
+    :pswitch_3
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lvq7;)Ljava/util/List;
+
+    move-result-object v5
+
+    goto/16 :goto_0
+
+    :pswitch_4
+    invoke-interface {p0}, Lvq7;->z()I
+
+    move-result v12
+
+    goto/16 :goto_0
+
     :pswitch_5
-    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
-
-    move-result-object v4
-
-    goto/16 :goto_0
-
-    :pswitch_6
-    invoke-interface {p0}, Lzh7;->e0()Z
-
-    move-result v10
-
-    goto/16 :goto_0
-
-    :pswitch_7
-    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lvq7;->B()Ljava/lang/String;
 
     move-result-object v9
 
     goto/16 :goto_0
 
-    :cond_8
-    invoke-interface {p0}, Lzh7;->q()V
+    :pswitch_6
+    invoke-interface {p0}, Lvq7;->B()Ljava/lang/String;
+
+    move-result-object v4
+
+    goto/16 :goto_0
+
+    :pswitch_7
+    invoke-interface {p0}, Lvq7;->W()Z
+
+    move-result v11
+
+    goto/16 :goto_0
+
+    :pswitch_8
+    invoke-interface {p0}, Lvq7;->B()Ljava/lang/String;
+
+    move-result-object v10
+
+    goto/16 :goto_0
+
+    :cond_9
+    invoke-interface {p0}, Lvq7;->q()V
 
     new-instance v3, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
 
-    invoke-direct/range {v3 .. v11}, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZI)V
+    invoke-direct/range {v3 .. v12}, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZI)V
 
     return-object v3
 
@@ -370,18 +400,20 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0xa5a04d2 -> :sswitch_7
-        -0x10d1018 -> :sswitch_6
-        0xd1b -> :sswitch_5
-        0x696b9f9 -> :sswitch_4
-        0x2e94c954 -> :sswitch_3
-        0x31de9545 -> :sswitch_2
+        -0xa5a04d2 -> :sswitch_8
+        -0x10d1018 -> :sswitch_7
+        0xd1b -> :sswitch_6
+        0x696b9f9 -> :sswitch_5
+        0x2e94c954 -> :sswitch_4
+        0x31de9545 -> :sswitch_3
+        0x54c2a8b7 -> :sswitch_2
         0x657dbe68 -> :sswitch_1
         0x67c71d95 -> :sswitch_0
     .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_8
         :pswitch_7
         :pswitch_6
         :pswitch_5
@@ -434,22 +466,27 @@
     iput-object v2, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->endpoint:Ljava/lang/String;
 
     .line 17
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->wtEndpoint:Ljava/lang/String;
+
+    iput-object v2, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->wtEndpoint:Ljava/lang/String;
+
+    .line 18
     iget v2, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->deviceIndex:I
 
     iput v2, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->deviceIndex:I
 
-    .line 18
+    .line 19
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
 
     iput-object v2, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->token:Ljava/lang/String;
 
-    .line 19
+    .line 20
     iput-object v1, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->stunTurnServers:Ljava/util/List;
 
-    .line 20
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->isP2PForbidden:Z
+    .line 21
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->isP2PForbidden:Z
 
-    iput-boolean p0, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->isP2PForbidden:Z
+    iput-boolean v1, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->isP2PForbidden:Z
 
     return-object v0
 .end method
@@ -507,9 +544,9 @@
     iput p1, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->deviceIndex:I
 
     .line 8
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
 
-    iput-object p0, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->token:Ljava/lang/String;
+    iput-object p1, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->token:Ljava/lang/String;
 
     .line 9
     iput-object v1, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->stunTurnServers:Ljava/util/List;
@@ -518,7 +555,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -554,17 +591,25 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    const-string v1, "\', wtEndpoint=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->wtEndpoint:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     const-string v1, "\', token=\'"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
 
-    const-string v1, "\'}"
+    const-string v2, "\'}"
 
-    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

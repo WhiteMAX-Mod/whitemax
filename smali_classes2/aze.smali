@@ -1,42 +1,77 @@
 .class public final Laze;
-.super Landroid/view/TextureView;
+.super Lrdi;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lzye;
+# static fields
+.field public static final c:Laze;
 
 
-# virtual methods
-.method public final onDetachedFromWindow()V
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    iget-object v0, p0, Laze;->a:Lzye;
+    new-instance v0, Laze;
 
-    if-eqz v0, :cond_0
+    const/16 v1, 0xb
 
-    check-cast v0, Lywe;
+    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
 
-    iget-object v0, v0, Lywe;->b:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/messages/video/widgets/VideoView;
-
-    iget-object v0, v0, Lru/ok/messages/video/widgets/VideoView;->o:Lz5g;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lz5g;->Z()V
-
-    :cond_0
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+    sput-object v0, Laze;->c:Laze;
 
     return-void
 .end method
 
-.method public setListener(Lzye;)V
-    .locals 0
 
-    iput-object p1, p0, Laze;->a:Lzye;
+# virtual methods
+.method public final S0(J)Lwf4;
+    .locals 2
+
+    const-string v0, ":chats?id="
+
+    const-string v1, "&type=local"
+
+    invoke-static {p1, p2, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Lwf4;
+
+    invoke-direct {p2, p1}, Lwf4;-><init>(Ljava/lang/String;)V
+
+    return-object p2
+.end method
+
+.method public final T0()V
+    .locals 3
+
+    invoke-virtual {p0}, Lrdi;->q0()Lag4;
+
+    move-result-object v0
+
+    const-string v1, ":chat-list"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
+.end method
+
+.method public final U0(Lli6;)V
+    .locals 3
+
+    invoke-virtual {p0}, Lrdi;->q0()Lag4;
+
+    move-result-object v0
+
+    new-instance v1, Lmrd;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2, p1}, Lmrd;-><init>(ILli6;)V
+
+    invoke-virtual {v0, v1}, Lag4;->e(Lji6;)V
 
     return-void
 .end method

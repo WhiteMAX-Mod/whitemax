@@ -1,133 +1,287 @@
 .class public final Lxt7;
-.super Ljava/util/AbstractList;
+.super Lf4;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/RandomAccess;
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lxt7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final a:J
 
-.field public final b:Llc6;
+.field public final b:I
+
+.field public final c:Z
+
+.field public final o:Lt6i;
 
 
 # direct methods
-.method public constructor <init>(Llc6;Ljava/util/List;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljmg;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1}, Ljmg;-><init>(I)V
+
+    sput-object v0, Lxt7;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(JIZLt6i;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-wide p1, p0, Lxt7;->a:J
 
-    iput-object p2, p0, Lxt7;->a:Ljava/util/List;
+    iput p3, p0, Lxt7;->b:I
 
-    iput-object p1, p0, Lxt7;->b:Llc6;
+    iput-boolean p4, p0, Lxt7;->c:Z
+
+    iput-object p5, p0, Lxt7;->o:Lt6i;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    iget-object v0, p0, Lxt7;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lxt7;->b:Llc6;
-
-    invoke-interface {p0, p1}, Llc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    iget-object p0, p0, Lxt7;->a:Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 0
-
-    invoke-virtual {p0}, Ljava/util/AbstractList;->listIterator()Ljava/util/ListIterator;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 2
-
-    new-instance v0, Lwt7;
-
-    iget-object v1, p0, Lxt7;->a:Ljava/util/List;
-
-    invoke-interface {v1, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object p1
+    instance-of v0, p1, Lxt7;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Lwt7;-><init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    check-cast p1, Lxt7;
+
+    iget-wide v2, p0, Lxt7;->a:J
+
+    iget-wide v4, p1, Lxt7;->a:J
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_1
+
+    iget v0, p0, Lxt7;->b:I
+
+    iget v2, p1, Lxt7;->b:I
+
+    if-ne v0, v2, :cond_1
+
+    iget-boolean v0, p0, Lxt7;->c:Z
+
+    iget-boolean v2, p1, Lxt7;->c:Z
+
+    if-ne v0, v2, :cond_1
+
+    iget-object v0, p0, Lxt7;->o:Lt6i;
+
+    iget-object p1, p1, Lxt7;->o:Lt6i;
+
+    invoke-static {v0, p1}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lxt7;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    iget v1, p0, Lxt7;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget-boolean v2, p0, Lxt7;->c:Z
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "LastLocationRequest["
+
+    invoke-static {v0}, Ldy1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-wide v1, 0x7fffffffffffffffL
+
+    iget-wide v3, p0, Lxt7;->a:J
+
+    cmp-long v1, v3, v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "maxAge="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v3, v4, v0}, Lz7i;->a(JLjava/lang/StringBuilder;)V
+
+    :cond_0
+    iget v1, p0, Lxt7;->b:I
+
+    if-eqz v1, :cond_4
+
+    const-string v2, ", "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz v1, :cond_3
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_2
+
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_1
+
+    const-string v1, "GRANULARITY_FINE"
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
+
+    :cond_2
+    const-string v1, "GRANULARITY_COARSE"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "GRANULARITY_PERMISSION_LEVEL"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_4
+    iget-boolean v1, p0, Lxt7;->c:Z
+
+    if-eqz v1, :cond_5
+
+    const-string v1, ", bypass"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_5
+    iget-object v1, p0, Lxt7;->o:Lt6i;
+
+    if-eqz v1, :cond_6
+
+    const-string v2, ", impersonation="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    :cond_6
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final remove(I)Ljava/lang/Object;
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    iget-object v0, p0, Lxt7;->a:Ljava/util/List;
+    const/16 v0, 0x4f45
 
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    move-result-object p1
+    move-result v0
 
-    iget-object p0, p0, Lxt7;->b:Llc6;
+    const/16 v1, 0x8
 
-    invoke-interface {p0, p1}, Llc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    move-result-object p0
+    invoke-static {p1, v2, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    return-object p0
-.end method
+    iget-wide v1, p0, Lxt7;->a:J
 
-.method public final removeRange(II)V
-    .locals 0
+    invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    iget-object p0, p0, Lxt7;->a:Ljava/util/List;
+    const/4 v1, 0x2
 
-    invoke-interface {p0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
+    const/4 v2, 0x4
 
-    move-result-object p0
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    invoke-interface {p0}, Ljava/util/List;->clear()V
+    iget v1, p0, Lxt7;->b:I
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    iget-boolean v1, p0, Lxt7;->c:Z
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v1, 0x5
+
+    iget-object v2, p0, Lxt7;->o:Lt6i;
+
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
 
     return-void
-.end method
-
-.method public final size()I
-    .locals 0
-
-    iget-object p0, p0, Lxt7;->a:Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result p0
-
-    return p0
 .end method

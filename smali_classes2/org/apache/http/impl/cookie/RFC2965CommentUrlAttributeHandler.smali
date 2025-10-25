@@ -25,22 +25,22 @@
 .method public match(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z
     .locals 0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public parse(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/cookie/MalformedCookieException;
         }
     .end annotation
 
-    instance-of p0, p1, Lorg/apache/http/cookie/SetCookie2;
+    instance-of v0, p1, Lorg/apache/http/cookie/SetCookie2;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     check-cast p1, Lorg/apache/http/cookie/SetCookie2;
 

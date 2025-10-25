@@ -1,74 +1,59 @@
 .class public final Lx94;
-.super Laa4;
+.super Liwi;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final n(Lk55;)I
-    .locals 0
+.method public final a(Lnhe;FF)V
+    .locals 5
 
-    invoke-virtual {p1}, Lk55;->o()I
+    mul-float v0, p3, p2
 
-    move-result p0
+    const/high16 v1, 0x43340000    # 180.0f
 
-    return p0
-.end method
+    const/4 v2, 0x0
 
-.method public final o()Lu37;
-    .locals 1
+    const/high16 v3, 0x42b40000    # 90.0f
 
-    new-instance p0, Lu37;
+    invoke-virtual {p1, v2, v0, v1, v3}, Lnhe;->d(FFFF)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    float-to-double v0, v3
 
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
 
-    iput v0, p0, Lu37;->a:I
+    move-result-wide v0
 
-    iput-boolean v0, p0, Lu37;->b:Z
+    invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
 
-    iput-boolean v0, p0, Lu37;->c:Z
+    move-result-wide v0
 
-    return-object p0
-.end method
+    float-to-double v3, p3
 
-.method public final declared-synchronized s(Lk55;I)Z
-    .locals 1
+    mul-double/2addr v0, v3
 
-    monitor-enter p0
+    float-to-double p2, p2
 
-    :try_start_0
-    invoke-static {p2}, Ldi0;->b(I)Z
+    mul-double/2addr v0, p2
 
-    move-result v0
+    double-to-float v0, v0
 
-    if-eqz v0, :cond_0
+    float-to-double v1, v2
 
-    const/4 p1, 0x0
+    invoke-static {v1, v2}, Ljava/lang/Math;->toRadians(D)D
 
-    goto :goto_0
+    move-result-wide v1
 
-    :cond_0
-    iget-object v0, p0, Laa4;->g:Lgf7;
+    invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
 
-    invoke-virtual {v0, p1, p2}, Lgf7;->e(Lk55;I)Z
+    move-result-wide v1
 
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    mul-double/2addr v1, v3
 
-    :goto_0
-    monitor-exit p0
+    mul-double/2addr v1, p2
 
-    return p1
+    double-to-float p2, v1
 
-    :catchall_0
-    move-exception p1
+    invoke-virtual {p1, v0, p2}, Lnhe;->c(FF)V
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-void
 .end method

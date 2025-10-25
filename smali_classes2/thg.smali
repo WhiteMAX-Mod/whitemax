@@ -1,168 +1,97 @@
-.class public final Lthg;
-.super Ljava/lang/Object;
+.class public final enum Lthg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final Companion:Lshg;
+.field public static final synthetic X:[Lthg;
 
+.field public static final enum a:Lthg;
 
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final enum b:Lthg;
 
-.field public final b:Ljava/lang/String;
+.field public static final enum c:Lthg;
+
+.field public static final enum o:Lthg;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 6
 
-    new-instance v0, Lshg;
+    new-instance v0, Lthg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lthg;->Companion:Lshg;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x3
-
-    const/4 v1, 0x3
-
-    if-ne v1, v0, :cond_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lthg;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lthg;->b:Ljava/lang/String;
-
-    return-void
-
-    :cond_0
-    sget-object p0, Lrhg;->a:Lrhg;
-
-    invoke-virtual {p0}, Lrhg;->d()Lqid;
-
-    move-result-object p0
-
-    invoke-static {p1, v1, p0}, Lla6;->F(IILqid;)V
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lthg;->a:Ljava/lang/String;
-
-    .line 4
-    iput-object p2, p0, Lthg;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lthg;
+    const-string v1, "ALL"
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return v2
+    sput-object v0, Lthg;->a:Lthg;
 
-    :cond_1
-    check-cast p1, Lthg;
+    new-instance v1, Lthg;
 
-    iget-object v1, p0, Lthg;->a:Ljava/lang/String;
+    const-string v2, "USER_FOLDER"
 
-    iget-object v3, p1, Lthg;->a:Ljava/lang/String;
+    const/4 v3, 0x1
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result v1
+    sput-object v1, Lthg;->b:Lthg;
 
-    if-nez v1, :cond_2
+    new-instance v2, Lthg;
 
-    return v2
+    const-string v3, "CREATE_FOLDER"
 
-    :cond_2
-    iget-object p0, p0, Lthg;->b:Ljava/lang/String;
+    const/4 v4, 0x2
 
-    iget-object p1, p1, Lthg;->b:Ljava/lang/String;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput-object v2, Lthg;->c:Lthg;
 
-    move-result p0
+    new-instance v3, Lthg;
 
-    if-nez p0, :cond_3
+    const-string v4, "RECOMMENDED_FOLDER"
 
-    return v2
+    const/4 v5, 0x3
 
-    :cond_3
-    return v0
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lthg;->o:Lthg;
+
+    filled-new-array {v0, v1, v2, v3}, [Lthg;
+
+    move-result-object v0
+
+    sput-object v0, Lthg;->X:[Lthg;
+
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public static valueOf(Ljava/lang/String;)Lthg;
     .locals 1
 
-    iget-object v0, p0, Lthg;->a:Ljava/lang/String;
+    const-class v0, Lthg;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lthg;->b:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, ", status="
-
-    const-string v1, ")"
-
-    const-string v2, "WebAppDownloadFileResponse(requestId="
-
-    iget-object v3, p0, Lthg;->a:Ljava/lang/String;
-
-    iget-object p0, p0, Lthg;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, p0, v1}, Lz7e;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lthg;
+
     return-object p0
+.end method
+
+.method public static values()[Lthg;
+    .locals 1
+
+    sget-object v0, Lthg;->X:[Lthg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lthg;
+
+    return-object v0
 .end method

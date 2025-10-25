@@ -228,17 +228,25 @@
 
     :cond_1
     :goto_0
+    const-string p0, "Rating"
+
+    const-string v0, "Invalid percentage-based rating value"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     const/4 p0, 0x0
 
     return-object p0
 .end method
 
 .method public static newStarRating(IF)Landroid/support/v4/media/RatingCompat;
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x3
 
     const/4 v1, 0x0
+
+    const-string v2, "Rating"
 
     if-eq p0, v0, :cond_2
 
@@ -249,6 +257,24 @@
     const/4 v0, 0x5
 
     if-eq p0, v0, :cond_0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Invalid rating style ("
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ") for a star rating"
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
@@ -266,11 +292,11 @@
     const/high16 v0, 0x40400000    # 3.0f
 
     :goto_0
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    cmpg-float v2, p1, v2
+    cmpg-float v3, p1, v3
 
-    if-ltz v2, :cond_4
+    if-ltz v3, :cond_4
 
     cmpl-float v0, p1, v0
 
@@ -287,6 +313,10 @@
 
     :cond_4
     :goto_1
+    const-string p0, "Trying to set out of range star-based rating"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-object v1
 .end method
 
@@ -346,11 +376,11 @@
 
 # virtual methods
 .method public describeContents()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
-    return p0
+    return v0
 .end method
 
 .method public getPercentRating()F
@@ -371,15 +401,15 @@
     goto :goto_0
 
     :cond_0
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
-    return p0
+    return v0
 
     :cond_1
     :goto_0
-    const/high16 p0, -0x40800000    # -1.0f
+    const/high16 v0, -0x40800000    # -1.0f
 
-    return p0
+    return v0
 .end method
 
 .method public getRating()Ljava/lang/Object;
@@ -399,9 +429,9 @@
 
     packed-switch v0, :pswitch_data_0
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 
     :pswitch_0
     invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->getPercentRating()F
@@ -466,9 +496,9 @@
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Landroid/support/v4/media/RatingCompat;->mRatingObj:Ljava/lang/Object;
+    iget-object v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingObj:Ljava/lang/Object;
 
-    return-object p0
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -482,11 +512,11 @@
 .end method
 
 .method public getRatingStyle()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
-    return p0
+    return v0
 .end method
 
 .method public getStarRating()F
@@ -515,19 +545,19 @@
 
     if-eqz v0, :cond_1
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
-    return p0
+    return v0
 
     :cond_1
     :goto_0
-    const/high16 p0, -0x40800000    # -1.0f
+    const/high16 v0, -0x40800000    # -1.0f
 
-    return p0
+    return v0
 .end method
 
 .method public hasHeart()Z
-    .locals 3
+    .locals 4
 
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
@@ -540,13 +570,13 @@
     return v1
 
     :cond_0
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    cmpl-float p0, p0, v0
+    cmpl-float v0, v0, v3
 
-    if-nez p0, :cond_1
+    if-nez v0, :cond_1
 
     return v2
 
@@ -555,24 +585,24 @@
 .end method
 
 .method public isRated()Z
-    .locals 1
+    .locals 2
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    cmpl-float p0, p0, v0
+    cmpl-float v0, v0, v1
 
-    if-ltz p0, :cond_0
+    if-ltz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public isThumbUp()Z
@@ -589,24 +619,24 @@
     return v2
 
     :cond_0
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    cmpl-float p0, p0, v0
+    cmpl-float v0, v0, v1
 
-    if-nez p0, :cond_1
+    if-nez v0, :cond_1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_1
     return v2
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -622,31 +652,31 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
+    iget v1, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    cmpg-float v1, p0, v1
+    cmpg-float v2, v1, v2
 
-    if-gez v1, :cond_0
+    if-gez v2, :cond_0
 
-    const-string p0, "unrated"
+    const-string v1, "unrated"
 
     goto :goto_0
 
     :cond_0
-    invoke-static {p0}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
     :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
@@ -656,9 +686,9 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
+    iget p2, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeFloat(F)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
     return-void
 .end method

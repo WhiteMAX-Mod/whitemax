@@ -1,55 +1,97 @@
 .class public final Lad0;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldd0;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
-
-.field public Y:Ll;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lgd0;
-
-.field public final synthetic r0:Lgd0;
-
-.field public s0:I
+.field public final a:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>(Lgd0;Ljx3;)V
+.method public constructor <init>(Landroid/content/Intent;)V
     .locals 0
 
-    iput-object p1, p0, Lad0;->r0:Lgd0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lad0;->a:Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lad0;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lad0;
+
+    iget-object v1, p0, Lad0;->a:Landroid/content/Intent;
+
+    iget-object p1, p1, Lad0;->a:Landroid/content/Intent;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Lad0;->Z:Ljava/lang/Object;
+    iget-object v0, p0, Lad0;->a:Landroid/content/Intent;
 
-    iget p1, p0, Lad0;->s0:I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Lad0;->s0:I
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object p1, p0, Lad0;->r0:Lgd0;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, "CameraScreenIntentReady(intent="
 
-    invoke-static {p1, v0, v0, v0, p0}, Lgd0;->q(Lgd0;Landroid/net/Uri;Ljava/lang/String;Ll;Ljx3;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
+    iget-object v1, p0, Lad0;->a:Landroid/content/Intent;
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

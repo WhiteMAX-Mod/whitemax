@@ -1,159 +1,255 @@
 .class public final Lsv7;
-.super Lwn9;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
 
 
 # instance fields
-.field public final l:Lb5h;
+.field public final synthetic a:I
 
-.field public m:Lzn7;
-
-.field public n:Ltv7;
+.field public b:J
 
 
 # direct methods
-.method public constructor <init>(Lb5h;)V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    invoke-direct {p0}, Lcu7;-><init>()V
+    iput p1, p0, Lsv7;->a:I
 
-    iput-object p1, p0, Lsv7;->l:Lb5h;
-
-    iget-object v0, p1, Lb5h;->a:Lsv7;
-
-    if-nez v0, :cond_0
-
-    iput-object p0, p1, Lb5h;->a:Lsv7;
+    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "There is already a listener registered"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final g()V
-    .locals 1
+.method public final write(I)V
+    .locals 4
 
-    iget-object p0, p0, Lsv7;->l:Lb5h;
+    iget p1, p0, Lsv7;->a:I
 
-    const/4 v0, 0x1
+    packed-switch p1, :pswitch_data_0
 
-    iput-boolean v0, p0, Lb5h;->b:Z
+    .line 1
+    iget-wide v0, p0, Lsv7;->b:J
 
-    const/4 v0, 0x0
+    const-wide/16 v2, 0x1
 
-    iput-boolean v0, p0, Lb5h;->d:Z
+    add-long/2addr v0, v2
 
-    iput-boolean v0, p0, Lb5h;->c:Z
-
-    iget-object v0, p0, Lb5h;->i:Ljava/util/concurrent/Semaphore;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->drainPermits()I
-
-    invoke-virtual {p0}, Lb5h;->a()V
-
-    new-instance v0, Lqw;
-
-    invoke-direct {v0, p0}, Lqw;-><init>(Lb5h;)V
-
-    iput-object v0, p0, Lb5h;->g:Lqw;
-
-    invoke-virtual {p0}, Lb5h;->b()V
+    iput-wide v0, p0, Lsv7;->b:J
 
     return-void
-.end method
 
-.method public final h()V
-    .locals 1
+    .line 2
+    :pswitch_0
+    iget-wide v0, p0, Lsv7;->b:J
 
-    iget-object p0, p0, Lsv7;->l:Lb5h;
+    const-wide/16 v2, 0x1
 
-    const/4 v0, 0x0
+    add-long/2addr v0, v2
 
-    iput-boolean v0, p0, Lb5h;->b:Z
-
-    return-void
-.end method
-
-.method public final j(Le8a;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lcu7;->j(Le8a;)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lsv7;->m:Lzn7;
-
-    iput-object p1, p0, Lsv7;->n:Ltv7;
+    iput-wide v0, p0, Lsv7;->b:J
 
     return-void
+
+    .line 3
+    :pswitch_1
+    iget-wide v0, p0, Lsv7;->b:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lsv7;->b:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final l()V
+.method public final write([B)V
+    .locals 4
+
+    iget v0, p0, Lsv7;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 4
+    iget-wide v0, p0, Lsv7;->b:J
+
+    array-length p1, p1
+
+    int-to-long v2, p1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lsv7;->b:J
+
+    return-void
+
+    .line 5
+    :pswitch_0
+    iget-wide v0, p0, Lsv7;->b:J
+
+    array-length p1, p1
+
+    int-to-long v2, p1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lsv7;->b:J
+
+    return-void
+
+    .line 6
+    :pswitch_1
+    iget-wide v0, p0, Lsv7;->b:J
+
+    array-length p1, p1
+
+    int-to-long v2, p1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lsv7;->b:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final write([BII)V
     .locals 2
 
-    iget-object v0, p0, Lsv7;->m:Lzn7;
+    iget v0, p0, Lsv7;->a:I
 
-    iget-object v1, p0, Lsv7;->n:Ltv7;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    if-ltz p2, :cond_0
 
-    if-eqz v1, :cond_0
+    .line 7
+    array-length p1, p1
 
-    invoke-super {p0, v1}, Lcu7;->j(Le8a;)V
+    if-gt p2, p1, :cond_0
 
-    invoke-virtual {p0, v0, v1}, Lcu7;->e(Lzn7;Le8a;)V
+    if-ltz p3, :cond_0
 
+    add-int/2addr p2, p3
+
+    if-gt p2, p1, :cond_0
+
+    if-ltz p2, :cond_0
+
+    .line 8
+    iget-wide p1, p0, Lsv7;->b:J
+
+    int-to-long v0, p3
+
+    add-long/2addr p1, v0
+
+    iput-wide p1, p0, Lsv7;->b:J
+
+    return-void
+
+    .line 9
     :cond_0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    .line 10
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    if-ltz p2, :cond_1
+
+    .line 11
+    array-length p1, p1
+
+    if-gt p2, p1, :cond_1
+
+    if-ltz p3, :cond_1
+
+    add-int/2addr p2, p3
+
+    if-gt p2, p1, :cond_1
+
+    if-ltz p2, :cond_1
+
+    .line 12
+    iget-wide p1, p0, Lsv7;->b:J
+
+    int-to-long v0, p3
+
+    add-long/2addr p1, v0
+
+    iput-wide p1, p0, Lsv7;->b:J
+
     return-void
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    .line 13
+    :cond_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 14
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    const/16 v1, 0x40
+    throw p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    :pswitch_1
+    if-ltz p2, :cond_2
 
-    const-string v1, "LoaderInfo{"
+    .line 15
+    array-length v0, p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-gt p2, v0, :cond_2
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    if-ltz p3, :cond_2
 
-    move-result v1
+    add-int/2addr p2, p3
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    array-length p1, p1
 
-    move-result-object v1
+    if-gt p2, p1, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ltz p2, :cond_2
 
-    const-string v1, " #0 : "
+    .line 16
+    iget-wide p1, p0, Lsv7;->b:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    int-to-long v0, p3
 
-    iget-object p0, p0, Lsv7;->l:Lb5h;
+    add-long/2addr p1, v0
 
-    invoke-static {v0, p0}, Lhs9;->c(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
+    iput-wide p1, p0, Lsv7;->b:J
 
-    const-string p0, "}}"
+    return-void
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 17
+    :cond_2
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    move-result-object p0
+    throw p1
 
-    return-object p0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

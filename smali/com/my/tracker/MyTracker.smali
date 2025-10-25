@@ -92,8 +92,75 @@
 .end method
 
 .method public static initTracker(Ljava/lang/String;Landroid/app/Application;)V
-    .locals 0
+    .locals 2
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string p0, "MyTracker initialization failed: id can\'t be empty"
+
+    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
+
     return-void
+
+    :cond_0
+    sget-object v0, Lcom/my/tracker/MyTracker;->a:Lcom/my/tracker/obfuscated/i0;
+
+    if-eqz v0, :cond_1
+
+    const-string p0, "MyTracker has already been initialized"
+
+    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->c(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_1
+    const-class v0, Lcom/my/tracker/MyTracker;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lcom/my/tracker/MyTracker;->a:Lcom/my/tracker/obfuscated/i0;
+
+    if-eqz v1, :cond_2
+
+    const-string p0, "MyTracker has already been initialized"
+
+    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->c(Ljava/lang/String;)V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_0
+
+    :cond_2
+    sget-object v1, Lcom/my/tracker/MyTracker$a;->a:Lcom/my/tracker/obfuscated/z0;
+
+    invoke-static {p0, v1, p1}, Lcom/my/tracker/obfuscated/i0;->a(Ljava/lang/String;Lcom/my/tracker/obfuscated/z0;Landroid/app/Application;)Lcom/my/tracker/obfuscated/i0;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/i0;->b()V
+
+    sput-object p0, Lcom/my/tracker/MyTracker;->a:Lcom/my/tracker/obfuscated/i0;
+
+    monitor-exit v0
+
+    return-void
+
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method public static isDebugMode()Z

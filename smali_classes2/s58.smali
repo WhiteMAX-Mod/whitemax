@@ -2,293 +2,171 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lms4;
+
 
 # instance fields
-.field public final a:Ljava/util/Map;
+.field public final a:Ltrf;
 
-.field public final b:Ljava/util/Map;
+.field public final b:Lau1;
 
-.field public final c:Ljava/util/Map;
+.field public final c:Lli6;
 
-.field public final d:Ljava/util/Map;
+.field public final d:I
 
-.field public final e:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final e:J
 
-.field public final f:Lkxe;
+.field public final f:Lx0f;
 
-.field public final g:Lax9;
-
-.field public final h:Z
+.field public final g:Ln0d;
 
 
 # direct methods
-.method public constructor <init>(Lkxe;Lax9;)V
-    .locals 3
+.method public constructor <init>(Ltrf;Lji6;Lli6;II)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    and-int/lit8 p5, p5, 0x8
 
-    new-instance v0, Ly88;
+    if-eqz p5, :cond_0
 
-    const/16 v1, 0xa
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ly88;-><init>(II)V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ls58;->a:Ljava/util/Map;
-
-    new-instance v0, Ly88;
-
-    invoke-direct {v0, v1, v2}, Ly88;-><init>(II)V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ls58;->b:Ljava/util/Map;
-
-    new-instance v0, Ly88;
-
-    invoke-direct {v0, v1, v2}, Ly88;-><init>(II)V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ls58;->c:Ljava/util/Map;
-
-    new-instance v0, Ly88;
-
-    invoke-direct {v0, v1, v2}, Ly88;-><init>(II)V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ls58;->d:Ljava/util/Map;
-
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object v0, p0, Ls58;->e:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iput-object p1, p0, Ls58;->f:Lkxe;
-
-    iput-object p2, p0, Ls58;->g:Lax9;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Ls58;->h:Z
-
-    return-void
-.end method
-
-.method public static a()V
-    .locals 2
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_0
-
-    return-void
+    const/4 p4, 0x0
 
     :cond_0
-    new-instance v0, Ljava/lang/RuntimeException;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "This thread is main!"
+    iput-object p1, p0, Ls58;->a:Ltrf;
 
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    check-cast p2, Lau1;
 
-    throw v0
+    iput-object p2, p0, Ls58;->b:Lau1;
+
+    iput-object p3, p0, Ls58;->c:Lli6;
+
+    iput p4, p0, Ls58;->d:I
+
+    sget-object p1, Las4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Ls58;->e:J
+
+    invoke-virtual {p0}, Ls58;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ls58;->f:Lx0f;
+
+    new-instance p2, Ln0d;
+
+    invoke-direct {p2, p1}, Ln0d;-><init>(Lj1a;)V
+
+    iput-object p2, p0, Ls58;->g:Ln0d;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroid/content/Context;Lc78;ZZ)Lp58;
-    .locals 8
+.method public final c()Lq0f;
+    .locals 1
 
-    invoke-static {}, Ls58;->a()V
+    iget-object v0, p0, Ls58;->g:Ln0d;
 
-    iget-object v0, p0, Ls58;->a:Ljava/util/Map;
+    return-object v0
+.end method
 
-    iget-object v1, p0, Ls58;->c:Ljava/util/Map;
+.method public final d(Lre4;)V
+    .locals 4
 
-    iget-object v2, p0, Ls58;->b:Ljava/util/Map;
+    iget-wide v0, p1, Lre4;->a:J
 
-    const-string v3, "Wrong marker weight"
+    iget-wide v2, p0, Ls58;->e:J
 
-    const/4 v4, 0x1
+    invoke-static {v0, v1, v2, v3}, Las4;->a(JJ)Z
 
-    iget-object v5, p0, Ls58;->f:Lkxe;
+    move-result p1
 
-    if-eqz p3, :cond_5
+    if-eqz p1, :cond_0
 
-    if-eqz p4, :cond_2
+    iget-object p1, p0, Ls58;->b:Lau1;
 
-    invoke-interface {v2, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lp58;
-
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v7
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v4, :cond_0
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v3, La1d;->S:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v3, La1d;->T:I
-
-    goto :goto_0
-
-    :cond_2
-    invoke-interface {v1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lp58;
-
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v7
-
-    if-eqz v7, :cond_4
-
-    if-ne v7, v4, :cond_3
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v3, La1d;->U:I
-
-    goto :goto_0
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_4
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v3, La1d;->V:I
-
-    goto :goto_0
-
-    :cond_5
-    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lp58;
-
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v7
-
-    if-eqz v7, :cond_7
-
-    if-ne v7, v4, :cond_6
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v3, La1d;->W:I
-
-    goto :goto_0
-
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_7
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v3, La1d;->W:I
-
-    :goto_0
-    if-nez v6, :cond_a
-
-    sget-object v4, Lyu4;->t0:Lbx9;
-
-    iget-object v5, v5, Lkxe;->a:Landroid/content/Context;
-
-    invoke-static {v4, v5}, Lmhc;->h(Lbx9;Landroid/content/Context;)Lqy6;
-
-    move-result-object v4
-
-    iget v4, v4, Lqy6;->k:I
-
-    invoke-static {v3, v4, p1}, Lxfc;->J(IILandroid/content/Context;)Landroid/graphics/Bitmap;
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object p0, p0, Ls58;->g:Lax9;
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {p1}, Lax9;->j(Landroid/graphics/Bitmap;)Lsn0;
+    move-result p1
 
-    move-result-object p0
+    xor-int/lit8 p1, p1, 0x1
 
-    new-instance v3, Lp58;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-direct {v3, p1, p0}, Lp58;-><init>(Landroid/graphics/Bitmap;Lsn0;)V
+    move-result-object p1
 
-    if-eqz p3, :cond_9
+    iget-object v0, p0, Ls58;->c:Lli6;
 
-    if-eqz p4, :cond_8
+    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v2, p2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Ls58;->e()Ljava/util/List;
 
-    return-object v3
+    move-result-object p1
 
-    :cond_8
-    invoke-interface {v1, p2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    return-object v3
+    iget-object v1, p0, Ls58;->f:Lx0f;
 
-    :cond_9
-    invoke-interface {v0, p2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, p1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object v3
+    :cond_0
+    return-void
+.end method
 
-    :cond_a
-    return-object v6
+.method public final e()Ljava/util/List;
+    .locals 8
+
+    new-instance v0, Lre4;
+
+    new-instance v6, Lqe4;
+
+    iget-object v1, p0, Ls58;->b:Lau1;
+
+    invoke-interface {v1}, Lji6;->invoke()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    invoke-direct {v6, v1}, Lqe4;-><init>(Z)V
+
+    const/16 v7, 0x8
+
+    iget-wide v1, p0, Ls58;->e:J
+
+    iget-object v3, p0, Ls58;->a:Ltrf;
+
+    iget v4, p0, Ls58;->d:I
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v0 .. v7}, Lre4;-><init>(JLtrf;ILtrf;Liyi;I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -33,7 +33,7 @@
     .line 3
     const-string v0, "output is null"
 
-    invoke-static {p1, v0}, Lz48;->i(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcvi;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->out:Ljava/io/OutputStream;
 
@@ -63,31 +63,31 @@
 .end method
 
 .method public close()V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->out:Ljava/io/OutputStream;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->out:Ljava/io/OutputStream;
 
-    invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
     return-void
 .end method
 
 .method public flush()V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->out:Ljava/io/OutputStream;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->out:Ljava/io/OutputStream;
 
-    invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
+    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
     return-void
 .end method
@@ -115,9 +115,9 @@
     iput-object p1, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->buffer:Lorg/msgpack/core/buffer/MessageBuffer;
 
     :cond_0
-    iget-object p0, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->buffer:Lorg/msgpack/core/buffer/MessageBuffer;
+    iget-object p1, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->buffer:Lorg/msgpack/core/buffer/MessageBuffer;
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public reset(Ljava/io/OutputStream;)Ljava/io/OutputStream;
@@ -136,16 +136,16 @@
 .end method
 
 .method public write([BII)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->out:Ljava/io/OutputStream;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->out:Ljava/io/OutputStream;
 
-    invoke-virtual {p0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
 
     return-void
 .end method

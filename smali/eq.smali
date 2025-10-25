@@ -1,106 +1,116 @@
-.class public final synthetic Leq;
+.class public final Leq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbc6;
+.implements Lyq9;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Leq;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lh8;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lh8;-><init>(I)V
+
+    sput-object v0, Leq;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Leq;->a:I
-
-    iput-object p1, p0, Leq;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Leq;->a:I
+
+    iput-object p2, p0, Leq;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 1
 
-    iget v0, p0, Leq;->a:I
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Leq;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    return v0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Ljava/lang/Integer;
+    const/16 v0, 0x21
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    iget-object v1, p0, Leq;->b:Ljava/lang/String;
 
-    move-result p1
-
-    iget-object p0, p0, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:Lv06;
-
-    invoke-virtual {p0}, Lv06;->j()I
+    invoke-static {v0, v1}, Lu15;->e(ILjava/lang/String;)I
 
     move-result v0
 
-    if-gtz v0, :cond_0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    :cond_0
-    invoke-virtual {p0, p1}, Lls7;->C(I)Ljava/lang/Object;
+    const-string v0, "Ait(controlCode="
 
-    move-result-object p0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p0, Lts7;
+    iget v0, p0, Leq;->a:I
 
-    check-cast p0, Li4f;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-boolean p0, p0, Li4f;->a:Z
+    const-string v0, ",url="
 
-    const/4 p1, 0x1
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne p0, p1, :cond_1
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v0, ")"
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_1
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
+.end method
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->r0:[Lxi7;
+    iget-object p2, p0, Leq;->b:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->y0()Lxq;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    move-result-object p0
+    iget p2, p0, Leq;->a:I
 
-    iget-object p0, p0, Lxq;->G0:Lv85;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    sget-object p1, Lw53;->b:Lw53;
-
-    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

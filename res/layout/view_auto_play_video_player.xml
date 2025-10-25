@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ru.ok.utils.widgets.RoundedRectFrameLayout android:layout_gravity="center" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ru.ok.messages.views.widgets.VideoThumbnailView android:layout_gravity="center" android:id="@id/view_auto_play_video_player__iv_thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <ru.ok.messages.video.widgets.VideoView android:layout_gravity="center" android:id="@id/view_auto_play_video_player__v_video" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <ru.ok.messages.video.widgets.VideoPlayerSeekBar android:gravity="center" android:layout_gravity="bottom" android:id="@id/view_auto_play_video_player__sb_seek" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="4.0dip" android:paddingStart="0.0dip" android:paddingEnd="0.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" app:seekBarEnable="false" />
-    <androidx.appcompat.widget.AppCompatImageButton android:layout_gravity="end|top" android:id="@id/view_auto_play_video_player__ib_sound" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="8.0dip" android:layout_marginEnd="8.0dip" />
-    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/view_auto_play_video_player__progress" android:layout_width="35.0dip" android:layout_height="35.0dip" android:scaleType="fitXY" />
-</ru.ok.utils.widgets.RoundedRectFrameLayout>

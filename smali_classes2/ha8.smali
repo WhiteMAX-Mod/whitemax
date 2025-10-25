@@ -1,166 +1,116 @@
 .class public final Lha8;
-.super Ljava/lang/Object;
+.super Ljava/lang/Error;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ld1b;
-
-.field public final c:Z
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(ILd1b;Z)V
+.method public constructor <init>(BLjava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x0
 
-    iput p1, p0, Lha8;->a:I
+    .line 1
+    invoke-direct {p0, p2, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object p2, p0, Lha8;->b:Ld1b;
+    iput-object p2, p0, Lha8;->a:Ljava/lang/String;
 
-    iput-boolean p3, p0, Lha8;->c:Z
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
+
+    packed-switch p2, :pswitch_data_0
+
+    .line 2
+    const-string p2, "InvalidPhoneNumber ("
+
+    const-string v0, ")"
+
+    .line 3
+    invoke-static {p2, p1, v0}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    .line 4
+    invoke-direct {p0, p2, p1}, Lha8;-><init>(BLjava/lang/String;)V
+
+    return-void
+
+    .line 5
+    :pswitch_0
+    const-string p2, "SmsAttemptExceed (Phone: "
+
+    const-string v0, ")"
+
+    .line 6
+    invoke-static {p2, p1, v0}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    .line 7
+    invoke-direct {p0, p2, p1}, Lha8;-><init>(BLjava/lang/String;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    .line 18
+    const-string p1, "Unspecified"
+
+    :cond_0
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p2, 0x0
+
+    :goto_0
+    const-string v0, " | "
+
+    .line 19
+    invoke-static {p1, v0, p2}, Lu15;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    .line 20
+    invoke-direct {p0, p2, p1}, Lha8;-><init>(BLjava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final getMessage()Ljava/lang/String;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lha8;->a:Ljava/lang/String;
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lha8;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lha8;
-
-    iget v0, p0, Lha8;->a:I
-
-    iget v1, p1, Lha8;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lha8;->b:Ld1b;
-
-    iget-object v1, p1, Lha8;->b:Ld1b;
-
-    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean p0, p0, Lha8;->c:Z
-
-    iget-boolean p1, p1, Lha8;->c:Z
-
-    if-eq p0, p1, :cond_4
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_4
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lha8;->a:I
-
-    invoke-static {v0}, Lmw1;->t(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lha8;->b:Ld1b;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ld1b;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lha8;->c:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "NetworkConditionChange(condition="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lha8;->a:I
-
-    invoke-static {v1}, Lyv7;->s(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", suggestedVideoSettings="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lha8;->b:Ld1b;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", preferHardwarePVXEncoder="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lha8;->c:Z
-
-    invoke-static {v0, p0, v1}, Lmw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

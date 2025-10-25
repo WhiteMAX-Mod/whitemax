@@ -1,114 +1,87 @@
-.class public final synthetic Lka2;
+.class public final Lka2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public A:J
 
-.field public final synthetic b:Lza2;
+.field public B:Ljava/util/LinkedHashMap;
 
-.field public final synthetic c:J
+.field public C:Ltmg;
 
+.field public D:Z
 
-# direct methods
-.method public synthetic constructor <init>(Lza2;JI)V
-    .locals 0
+.field public E:Z
 
-    iput p4, p0, Lka2;->a:I
+.field public F:J
 
-    iput-object p1, p0, Lka2;->b:Lza2;
+.field public G:Ljava/util/LinkedHashMap;
 
-    iput-wide p2, p0, Lka2;->c:J
+.field public H:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public I:Z
 
-    return-void
-.end method
+.field public J:J
 
+.field public K:Ljava/lang/String;
 
-# virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 3
+.field public L:J
 
-    iget v0, p0, Lka2;->a:I
+.field public M:J
 
-    packed-switch v0, :pswitch_data_0
+.field public N:I
 
-    iget-object v0, p0, Lka2;->b:Lza2;
+.field public O:I
 
-    iget-object v0, v0, Lza2;->g:Ljava/util/concurrent/ConcurrentHashMap;
+.field public a:J
 
-    iget-wide v1, p0, Lka2;->c:J
+.field public b:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.field public c:J
 
-    move-result-object p0
+.field public d:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.field public e:J
 
-    move-result-object p0
+.field public f:Ljava/lang/String;
 
-    check-cast p0, Ls72;
+.field public g:Ljava/lang/String;
 
-    if-eqz p0, :cond_0
+.field public h:Ljava/lang/String;
 
-    return-object p0
+.field public i:Lda9;
 
-    :cond_0
-    new-instance p0, Lru/ok/tamtam/exception/ChatNotFoundException;
+.field public j:J
 
-    const-string v0, "chat not found: "
+.field public k:J
 
-    invoke-static {v1, v2, v0}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
+.field public l:I
 
-    move-result-object v0
+.field public m:J
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+.field public n:Ljava/lang/String;
 
-    throw p0
+.field public o:Lnhd;
 
-    :pswitch_0
-    iget-object v0, p0, Lka2;->b:Lza2;
+.field public p:I
 
-    iget-object v0, v0, Lza2;->f:Ljava/util/concurrent/ConcurrentHashMap;
+.field public q:Lfv6;
 
-    iget-wide v1, p0, Lka2;->c:J
+.field public r:I
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.field public s:Ljava/lang/String;
 
-    move-result-object p0
+.field public t:Lzz;
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.field public u:I
 
-    move-result-object p0
+.field public v:Luq2;
 
-    check-cast p0, Ls72;
+.field public w:Lda9;
 
-    if-eqz p0, :cond_1
+.field public x:Z
 
-    return-object p0
+.field public y:Z
 
-    :cond_1
-    new-instance p0, Lru/ok/tamtam/exception/ChatNotFoundException;
-
-    const-string v0, "chat not found: "
-
-    invoke-static {v1, v2, v0}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public z:Z

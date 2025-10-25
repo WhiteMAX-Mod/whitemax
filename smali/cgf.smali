@@ -1,55 +1,76 @@
-.class public final Lcgf;
+.class public final synthetic Lcgf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:F
+.field public final synthetic b:Lvr3;
 
-.field public final c:F
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:F
-
-.field public final g:F
-
-.field public final h:I
-
-.field public final i:F
-
-.field public final j:I
+.field public final synthetic c:Landroid/view/Surface;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;FFIIFFIFI)V
+.method public synthetic constructor <init>(Lvr3;Landroid/view/Surface;I)V
     .locals 0
+
+    iput p3, p0, Lcgf;->a:I
+
+    iput-object p1, p0, Lcgf;->b:Lvr3;
+
+    iput-object p2, p0, Lcgf;->c:Landroid/view/Surface;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcgf;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    iput p2, p0, Lcgf;->b:F
 
-    iput p3, p0, Lcgf;->c:F
+# virtual methods
+.method public final run()V
+    .locals 3
 
-    iput p4, p0, Lcgf;->d:I
+    iget v0, p0, Lcgf;->a:I
 
-    iput p5, p0, Lcgf;->e:I
+    packed-switch v0, :pswitch_data_0
 
-    iput p6, p0, Lcgf;->f:F
+    new-instance v0, Lbc0;
 
-    iput p7, p0, Lcgf;->g:F
+    const/4 v1, 0x4
 
-    iput p8, p0, Lcgf;->h:I
+    iget-object v2, p0, Lcgf;->c:Landroid/view/Surface;
 
-    iput p9, p0, Lcgf;->i:F
+    invoke-direct {v0, v1, v2}, Lbc0;-><init>(ILandroid/view/Surface;)V
 
-    iput p10, p0, Lcgf;->j:I
+    iget-object v1, p0, Lcgf;->b:Lvr3;
+
+    invoke-interface {v1, v0}, Lvr3;->accept(Ljava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    new-instance v0, Lbc0;
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lcgf;->c:Landroid/view/Surface;
+
+    invoke-direct {v0, v1, v2}, Lbc0;-><init>(ILandroid/view/Surface;)V
+
+    iget-object v1, p0, Lcgf;->b:Lvr3;
+
+    invoke-interface {v1, v0}, Lvr3;->accept(Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,62 +1,159 @@
 .class public final Loa5;
-.super Ljava/lang/Object;
+.super Lrdi;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/Runnable;
+.field public final synthetic c:I
 
-.field public final b:Lja5;
-
-.field public final c:Lka5;
+.field public final synthetic o:Lone/me/sdk/lists/widgets/EmptyRecyclerView;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Lja5;Lka5;)V
+.method public synthetic constructor <init>(Lone/me/sdk/lists/widgets/EmptyRecyclerView;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Loa5;->c:I
 
-    iput-object p1, p0, Loa5;->a:Ljava/lang/Runnable;
+    iput-object p1, p0, Loa5;->o:Lone/me/sdk/lists/widgets/EmptyRecyclerView;
 
-    iput-object p2, p0, Loa5;->b:Lja5;
+    const/4 p1, 0x0
 
-    iput-object p3, p0, Loa5;->c:Lka5;
+    const/16 p2, 0xc
+
+    invoke-direct {p0, p2, p1}, Lrdi;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 4
 
-    iget-object v0, p0, Loa5;->c:Lka5;
+    iget v0, p0, Loa5;->c:I
 
-    iget-object v1, p0, Loa5;->b:Lja5;
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Lja5;->a()J
+    const/4 v2, 0x0
 
-    move-result-wide v1
+    iget-object v3, p0, Loa5;->o:Lone/me/sdk/lists/widgets/EmptyRecyclerView;
 
-    :try_start_0
-    iget-object p0, p0, Loa5;->a:Ljava/lang/Runnable;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p2, Landroid/view/View;
 
-    invoke-virtual {v0, v1, v2}, Lka5;->a(J)V
+    check-cast p1, Landroid/view/View;
 
+    if-eqz p2, :cond_0
+
+    sget-object p1, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->W1:[Ltr7;
+
+    new-instance p1, Lna5;
+
+    invoke-direct {p1, v2, v3}, Lna5;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, v3, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->U1:Lna5;
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p2, v3, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->U1:Lna5;
+
+    invoke-static {p1, p2}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->I0(Lt6d;Lv6d;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, v3, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->U1:Lna5;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p2, v3, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->U1:Lna5;
+
+    invoke-static {p1, p2}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->J0(Lt6d;Lv6d;)V
+
+    :cond_1
+    iput-object v1, v3, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->U1:Lna5;
+
+    :cond_2
+    :goto_0
     return-void
 
-    :catchall_0
-    move-exception p0
+    :pswitch_0
+    check-cast p2, Landroid/view/View;
 
-    invoke-virtual {v0, v1, v2}, Lka5;->a(J)V
+    check-cast p1, Landroid/view/View;
 
-    throw p0
+    if-eqz p2, :cond_3
+
+    sget-object p1, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->W1:[Ltr7;
+
+    new-instance p1, Lna5;
+
+    invoke-direct {p1, v2, v3}, Lna5;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, v3, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->U1:Lna5;
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p2, v3, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->U1:Lna5;
+
+    invoke-static {p1, p2}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->I0(Lt6d;Lv6d;)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, v3, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->U1:Lna5;
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p2, v3, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->U1:Lna5;
+
+    invoke-static {p1, p2}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->J0(Lt6d;Lv6d;)V
+
+    :cond_4
+    iput-object v1, v3, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->U1:Lna5;
+
+    :cond_5
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,297 +1,663 @@
-.class public abstract Lz0a;
+.class public final Lz0a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/List;
+.implements Lkr7;
+
+
+# instance fields
+.field public final a:Lb1a;
+
 
 # direct methods
-.method public static a(Landroid/app/Notification$Action$Builder;Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
+.method public constructor <init>(Lb1a;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-object p1, p0, Lz0a;->a:Lb1a;
 
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/app/Notification$Action$Builder;Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->addRemoteInput(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/app/Notification$Action$Builder;)Landroid/app/Notification$Action;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Action$Builder;
+# virtual methods
+.method public final add(ILjava/lang/Object;)V
     .locals 1
 
-    new-instance v0, Landroid/app/Notification$Action$Builder;
+    .line 2
+    iget-object v0, p0, Lz0a;->a:Lb1a;
 
-    invoke-direct {v0, p0, p1, p2}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    invoke-virtual {v0, p1, p2}, Lb1a;->a(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final add(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lz0a;->a:Lb1a;
+
+    invoke-virtual {v0, p1}, Lb1a;->b(Ljava/lang/Object;)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final addAll(ILjava/util/Collection;)Z
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Lz0a;->a:Lb1a;
+
+    if-ltz p1, :cond_4
+
+    .line 2
+    iget v1, v0, Lb1a;->b:I
+
+    if-gt p1, v1, :cond_4
+
+    .line 3
+    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    return v2
+
+    .line 4
+    :cond_0
+    iget v1, v0, Lb1a;->b:I
+
+    invoke-interface {p2}, Ljava/util/Collection;->size()I
+
+    move-result v3
+
+    add-int/2addr v3, v1
+
+    invoke-virtual {v0, v3}, Lb1a;->e(I)V
+
+    .line 5
+    iget-object v1, v0, Lb1a;->a:[Ljava/lang/Object;
+
+    .line 6
+    iget v3, v0, Lb1a;->b:I
+
+    if-eq p1, v3, :cond_1
+
+    .line 7
+    invoke-interface {p2}, Ljava/util/Collection;->size()I
+
+    move-result v3
+
+    add-int/2addr v3, p1
+
+    .line 8
+    iget v4, v0, Lb1a;->b:I
+
+    .line 9
+    invoke-static {v3, p1, v4, v1, v1}, Ljt;->o(III[Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 10
+    :cond_1
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    add-int/lit8 v5, v2, 0x1
+
+    if-ltz v2, :cond_2
+
+    add-int/2addr v2, p1
+
+    .line 11
+    aput-object v4, v1, v2
+
+    move v2, v5
+
+    goto :goto_0
+
+    .line 12
+    :cond_2
+    invoke-static {}, Lob3;->j()V
+
+    const/4 p1, 0x0
+
+    throw p1
+
+    .line 13
+    :cond_3
+    iget p1, v0, Lb1a;->b:I
+
+    invoke-interface {p2}, Ljava/util/Collection;->size()I
+
+    move-result p2
+
+    add-int/2addr p2, p1
+
+    iput p2, v0, Lb1a;->b:I
+
+    const/4 p1, 0x1
+
+    return p1
+
+    .line 14
+    :cond_4
+    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "Index "
+
+    const-string v2, " must be in 0.."
+
+    .line 15
+    invoke-static {p1, v1, v2}, Li57;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    .line 16
+    iget v0, v0, Lb1a;->b:I
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 3
+
+    .line 21
+    iget-object v0, p0, Lz0a;->a:Lb1a;
+
+    iget v1, v0, Lb1a;->b:I
+
+    .line 22
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    .line 23
+    invoke-virtual {v0, v2}, Lb1a;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 24
+    :cond_0
+    iget p1, v0, Lb1a;->b:I
+
+    if-eq v1, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    iget-object v0, p0, Lz0a;->a:Lb1a;
+
+    invoke-virtual {v0}, Lb1a;->d()V
+
+    return-void
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lz0a;->a:Lb1a;
+
+    invoke-virtual {v0, p1}, Lb1a;->g(Ljava/lang/Object;)I
+
+    move-result p1
+
+    if-ltz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 2
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lz0a;->a:Lb1a;
+
+    invoke-virtual {v1, v0}, Lb1a;->g(Ljava/lang/Object;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1, p0}, Lvha;->a(ILjava/util/List;)V
+
+    iget-object v0, p0, Lz0a;->a:Lb1a;
+
+    invoke-virtual {v0, p1}, Lb1a;->f(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final indexOf(Ljava/lang/Object;)I
+    .locals 1
+
+    iget-object v0, p0, Lz0a;->a:Lb1a;
+
+    invoke-virtual {v0, p1}, Lb1a;->g(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Lz0a;->a:Lb1a;
+
+    invoke-virtual {v0}, Lb1a;->h()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    new-instance v0, Ly0a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Ly0a;-><init>(ILjava/util/List;)V
 
     return-object v0
 .end method
 
-.method public static e(Ljava/util/ArrayList;I)Lwz9;
-    .locals 18
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Landroid/os/Parcelable;",
-            ">;I)",
-            "Lwz9;"
-        }
-    .end annotation
+.method public final lastIndexOf(Ljava/lang/Object;)I
+    .locals 4
 
-    invoke-virtual/range {p0 .. p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    iget-object v0, p0, Lz0a;->a:Lb1a;
 
-    move-result-object v0
+    const/4 v1, -0x1
 
-    check-cast v0, Landroid/app/Notification$Action;
+    if-nez p1, :cond_1
 
-    invoke-static {v0}, Lxz9;->g(Landroid/app/Notification$Action;)[Landroid/app/RemoteInput;
+    iget-object p1, v0, Lb1a;->a:[Ljava/lang/Object;
 
-    move-result-object v1
+    iget v0, v0, Lb1a;->b:I
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_0
-
-    move-object v11, v3
-
-    goto :goto_1
-
-    :cond_0
-    array-length v4, v1
-
-    new-array v4, v4, [Lbrc;
-
-    move v5, v2
+    add-int/lit8 v0, v0, -0x1
 
     :goto_0
-    array-length v6, v1
+    if-ge v1, v0, :cond_3
 
-    if-ge v5, v6, :cond_1
+    aget-object v2, p1, v0
 
-    aget-object v6, v1, v5
+    if-nez v2, :cond_0
 
-    new-instance v7, Lbrc;
+    return v0
 
-    invoke-static {v6}, Lxz9;->h(Landroid/app/RemoteInput;)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v6}, Lxz9;->f(Landroid/app/RemoteInput;)Ljava/lang/CharSequence;
-
-    move-result-object v9
-
-    invoke-static {v6}, Lxz9;->b(Landroid/app/RemoteInput;)[Ljava/lang/CharSequence;
-
-    move-result-object v10
-
-    invoke-static {v6}, Lxz9;->a(Landroid/app/RemoteInput;)Z
-
-    move-result v11
-
-    invoke-static {v6}, Lc0a;->c(Landroid/app/RemoteInput;)I
-
-    move-result v12
-
-    invoke-static {v6}, Lxz9;->d(Landroid/app/RemoteInput;)Landroid/os/Bundle;
-
-    move-result-object v13
-
-    const/4 v14, 0x0
-
-    invoke-direct/range {v7 .. v14}, Lbrc;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZILandroid/os/Bundle;Ljava/util/HashSet;)V
-
-    aput-object v7, v4, v5
-
-    add-int/lit8 v5, v5, 0x1
+    :cond_0
+    add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
     :cond_1
-    move-object v11, v4
+    iget-object v2, v0, Lb1a;->a:[Ljava/lang/Object;
+
+    iget v0, v0, Lb1a;->b:I
+
+    add-int/lit8 v0, v0, -0x1
 
     :goto_1
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    if-ge v1, v0, :cond_3
 
-    invoke-static {v0}, Lxz9;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+    aget-object v3, v2, v0
 
-    move-result-object v4
+    invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    const-string v5, "android.support.allowGeneratedReplies"
+    move-result v3
 
-    invoke-virtual {v4, v5}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    if-eqz v3, :cond_2
 
-    move-result v4
-
-    const/4 v5, 0x1
-
-    if-nez v4, :cond_3
-
-    invoke-static {v0}, La0a;->a(Landroid/app/Notification$Action;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    goto :goto_2
+    return v0
 
     :cond_2
-    move v13, v2
+    add-int/lit8 v0, v0, -0x1
 
-    goto :goto_3
+    goto :goto_1
 
     :cond_3
-    :goto_2
-    move v13, v5
+    return v1
+.end method
 
-    :goto_3
-    invoke-static {v0}, Lxz9;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 2
 
-    move-result-object v4
+    .line 1
+    new-instance v0, Ly0a;
 
-    const-string v6, "android.support.action.showsUserInterface"
+    const/4 v1, 0x0
 
-    invoke-virtual {v4, v6, v5}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-direct {v0, v1, p0}, Ly0a;-><init>(ILjava/util/List;)V
 
-    move-result v15
+    return-object v0
+.end method
 
-    invoke-static {v0}, Lb0a;->a(Landroid/app/Notification$Action;)I
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 1
 
-    move-result v14
+    .line 2
+    new-instance v0, Ly0a;
 
-    invoke-static {v0}, Lc0a;->e(Landroid/app/Notification$Action;)Z
+    invoke-direct {v0, p1, p0}, Ly0a;-><init>(ILjava/util/List;)V
 
-    move-result v16
+    return-object v0
+.end method
 
-    const/16 v4, 0x1f
+.method public final remove(I)Ljava/lang/Object;
+    .locals 1
 
-    if-lt v1, v4, :cond_4
+    .line 3
+    invoke-static {p1, p0}, Lvha;->a(ILjava/util/List;)V
 
-    invoke-static {v0}, Ld0a;->a(Landroid/app/Notification$Action;)Z
+    .line 4
+    iget-object v0, p0, Lz0a;->a:Lb1a;
 
-    move-result v2
+    invoke-virtual {v0, p1}, Lb1a;->i(I)Ljava/lang/Object;
 
-    :cond_4
-    move/from16 v17, v2
+    move-result-object p1
 
-    invoke-static {v0}, Lzz9;->a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
+    return-object p1
+.end method
 
-    move-result-object v1
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
 
-    if-nez v1, :cond_6
+    .line 1
+    iget-object v0, p0, Lz0a;->a:Lb1a;
 
-    iget v1, v0, Landroid/app/Notification$Action;->icon:I
+    invoke-virtual {v0, p1}, Lb1a;->g(Ljava/lang/Object;)I
 
-    if-eqz v1, :cond_6
+    move-result p1
 
-    new-instance v6, Lwz9;
+    if-ltz p1, :cond_0
 
-    iget-object v8, v0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
+    .line 2
+    invoke-virtual {v0, p1}, Lb1a;->i(I)Ljava/lang/Object;
 
-    iget-object v9, v0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
+    const/4 p1, 0x1
 
-    invoke-static {v0}, Lxz9;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+    return p1
 
-    move-result-object v10
+    :cond_0
+    const/4 p1, 0x0
 
-    if-nez v1, :cond_5
+    return p1
+.end method
 
-    :goto_4
-    move-object v7, v3
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 3
 
-    goto :goto_5
+    iget-object v0, p0, Lz0a;->a:Lb1a;
 
-    :cond_5
-    const-string v0, ""
+    iget v1, v0, Lb1a;->b:I
 
-    invoke-static {v3, v0, v1}, Landroidx/core/graphics/drawable/IconCompat;->d(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object p1
 
-    goto :goto_4
-
-    :goto_5
-    const/4 v12, 0x0
-
-    invoke-direct/range {v6 .. v17}, Lwz9;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lbrc;[Lbrc;ZIZZZ)V
-
-    return-object v6
-
-    :cond_6
-    invoke-static {v0}, Lzz9;->a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
-
-    move-result-object v1
-
-    if-nez v1, :cond_7
-
-    :goto_6
-    move-object v7, v3
-
-    goto :goto_7
-
-    :cond_7
-    invoke-static {v0}, Lzz9;->a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
-
-    move-result-object v1
-
-    sget-object v2, Landroidx/core/graphics/drawable/IconCompat;->k:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {v1}, Lty6;->c(Ljava/lang/Object;)I
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    const/4 v4, 0x2
+    if-eqz v2, :cond_1
 
-    if-ne v2, v4, :cond_8
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-static {v1}, Lty6;->a(Ljava/lang/Object;)I
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lb1a;->g(Ljava/lang/Object;)I
 
     move-result v2
 
-    if-nez v2, :cond_8
+    if-ltz v2, :cond_0
 
-    goto :goto_6
+    invoke-virtual {v0, v2}, Lb1a;->i(I)Ljava/lang/Object;
 
-    :cond_8
-    invoke-static {v1}, Lry6;->a(Landroid/graphics/drawable/Icon;)Landroidx/core/graphics/drawable/IconCompat;
+    goto :goto_0
 
-    move-result-object v3
+    :cond_1
+    iget p1, v0, Lb1a;->b:I
 
-    goto :goto_6
+    if-eq v1, p1, :cond_2
 
-    :goto_7
-    new-instance v6, Lwz9;
+    const/4 p1, 0x1
 
-    iget-object v8, v0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
+    return p1
 
-    iget-object v9, v0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
+    :cond_2
+    const/4 p1, 0x0
 
-    invoke-static {v0}, Lxz9;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+    return p1
+.end method
 
-    move-result-object v10
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 5
 
-    const/4 v12, 0x0
+    iget-object v0, p0, Lz0a;->a:Lb1a;
 
-    invoke-direct/range {v6 .. v17}, Lwz9;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lbrc;[Lbrc;ZIZZZ)V
+    iget v1, v0, Lb1a;->b:I
 
-    return-object v6
+    iget-object v2, v0, Lb1a;->a:[Ljava/lang/Object;
+
+    add-int/lit8 v3, v1, -0x1
+
+    :goto_0
+    const/4 v4, -0x1
+
+    if-ge v4, v3, :cond_1
+
+    aget-object v4, v2, v3
+
+    invoke-interface {p1, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-virtual {v0, v3}, Lb1a;->i(I)Ljava/lang/Object;
+
+    :cond_0
+    add-int/lit8 v3, v3, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget p1, v0, Lb1a;->b:I
+
+    if-eq v1, p1, :cond_2
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1, p0}, Lvha;->a(ILjava/util/List;)V
+
+    iget-object v0, p0, Lz0a;->a:Lb1a;
+
+    if-ltz p1, :cond_0
+
+    iget v1, v0, Lb1a;->b:I
+
+    if-ge p1, v1, :cond_1
+
+    iget-object v0, v0, Lb1a;->a:[Ljava/lang/Object;
+
+    aget-object v1, v0, p1
+
+    aput-object p2, v0, p1
+
+    return-object v1
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_1
+    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "set index "
+
+    const-string v2, " must be between 0 .. "
+
+    invoke-static {p1, v1, v2}, Li57;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    iget v0, v0, Lb1a;->b:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lz0a;->a:Lb1a;
+
+    iget v0, v0, Lb1a;->b:I
+
+    return v0
+.end method
+
+.method public final subList(II)Ljava/util/List;
+    .locals 1
+
+    invoke-static {p0, p1, p2}, Lvha;->b(Ljava/util/List;II)V
+
+    new-instance v0, La1a;
+
+    invoke-direct {v0, p0, p1, p2}, La1a;-><init>(Ljava/util/List;II)V
+
+    return-object v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    invoke-static {p0}, Lba4;->h(Ljava/util/Collection;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 0
+
+    .line 2
+    invoke-static {p0, p1}, Lba4;->i(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

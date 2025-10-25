@@ -1,64 +1,99 @@
-.class public final synthetic Lr5;
+.class public abstract Lr5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll86;
-
 
 # instance fields
-.field public final synthetic a:Lt5;
+.field public final a:Lppd;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lt5;)V
+.method public constructor <init>(Lppd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lr5;->a:Lt5;
+    iput-object p1, p0, Lr5;->a:Lppd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/fragment/app/a;)V
-    .locals 0
+.method public a(Ljava/lang/Class;)Ljava/util/ArrayList;
+    .locals 1
 
-    iget-object p0, p0, Lr5;->a:Lt5;
+    iget-object v0, p0, Lr5;->a:Lppd;
 
-    :try_start_0
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, p1}, Lppd;->b(Ljava/lang/Class;)Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lt5;->J0:Lr2b;
+    move-result-object p1
 
-    iget-object p0, p0, Lr2b;->a:Ljava/lang/Object;
+    return-object p1
+.end method
 
-    check-cast p0, Lpe3;
+.method public b(Ljava/lang/Class;)Lwif;
+    .locals 3
 
-    check-cast p0, Lbfa;
+    new-instance v0, Lmk5;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
+    const/4 v1, 0x3
 
-    move-result-object p0
+    iget-object v2, p0, Lr5;->a:Lppd;
 
-    const-class p1, Lnve;
+    invoke-direct {v0, v2, v1, p1}, Lmk5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    new-instance p1, Lwif;
 
-    move-result-object p0
+    invoke-direct {p1, v0}, Lwif;-><init>(Lji6;)V
 
-    check-cast p0, Lnve;
+    return-object p1
+.end method
 
-    invoke-virtual {p0}, Lnve;->C()La24;
+.method public c(Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 2
 
-    move-result-object p0
+    iget-object v0, p0, Lr5;->a:Lppd;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v1, 0x1
 
-    :catchall_0
-    return-void
+    invoke-virtual {v0, p1, v1}, Lppd;->c(Ljava/lang/Class;Z)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public d(Ljava/lang/Class;)Lwif;
+    .locals 3
+
+    new-instance v0, Lopd;
+
+    iget-object v1, p0, Lr5;->a:Lppd;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p1, v2}, Lopd;-><init>(Lppd;Ljava/lang/Class;Z)V
+
+    new-instance p1, Lwif;
+
+    invoke-direct {p1, v0}, Lwif;-><init>(Lji6;)V
+
+    return-object p1
+.end method
+
+.method public e()Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lr5;->a:Lppd;
+
+    const/4 v1, 0x0
+
+    const-class v2, Lad7;
+
+    invoke-virtual {v0, v2, v1}, Lppd;->c(Ljava/lang/Class;Z)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

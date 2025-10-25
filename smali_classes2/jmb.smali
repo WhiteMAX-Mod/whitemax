@@ -3,150 +3,85 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lkmb;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/widget/LinearLayout;
-
-.field public final synthetic c:Landroid/widget/ScrollView;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/widget/LinearLayout;Landroid/widget/ScrollView;I)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput p3, p0, Ljmb;->a:I
-
-    iput-object p1, p0, Ljmb;->b:Landroid/widget/LinearLayout;
-
-    iput-object p2, p0, Ljmb;->c:Landroid/widget/ScrollView;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ljmb;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Ljmb;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Ljmb;->b:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 v1, 0x0
+    instance-of v1, p1, Ljmb;
 
-    :goto_0
-    if-eqz v1, :cond_1
+    const/4 v2, 0x0
 
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    if-nez v1, :cond_1
 
-    goto :goto_1
+    return v2
 
     :cond_1
-    const/4 v1, 0x0
+    check-cast p1, Ljmb;
 
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    iget-wide v3, p0, Ljmb;->a:J
 
-    move-result v0
+    iget-wide v5, p1, Ljmb;->a:J
 
-    add-int/2addr v0, v1
+    cmp-long p1, v3, v5
 
-    iget-object p0, p0, Ljmb;->c:Landroid/widget/ScrollView;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    invoke-virtual {p0, v1, v2, v3, v0}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ljmb;->b:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v2, :cond_2
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    goto :goto_2
+    return v2
 
     :cond_2
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    :goto_2
-    if-eqz v1, :cond_3
+.method public final hashCode()I
+    .locals 2
 
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    iget-wide v0, p0, Ljmb;->a:J
 
-    goto :goto_3
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_3
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    add-int/2addr v0, v1
+    return v0
+.end method
 
-    iget-object p0, p0, Ljmb;->c:Landroid/widget/ScrollView;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+    const-string v0, "OpenChat(chatId="
 
-    move-result v1
+    const-string v1, ")"
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+    iget-wide v2, p0, Ljmb;->a:J
 
-    move-result v2
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+    move-result-object v0
 
-    move-result v3
-
-    invoke-virtual {p0, v1, v2, v3, v0}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

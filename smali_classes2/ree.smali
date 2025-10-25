@@ -1,165 +1,79 @@
 .class public final Lree;
-.super Landroid/widget/FrameLayout;
+.super Ldg4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lck7;
+# static fields
+.field public static final b:Lree;
 
-.field public b:Lpge;
+.field public static final c:Lyf4;
 
-.field public c:Lhfe;
+.field public static final d:Lyf4;
+
+.field public static final e:Lyf4;
+
+.field public static final f:Lyf4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 6
 
-    const/4 v0, 0x0
+    new-instance v0, Lree;
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0}, Ldg4;-><init>()V
 
-    new-instance v0, Lck7;
-
-    invoke-direct {v0, p1}, Lck7;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lree;->a:Lck7;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
-
-    iget-object p1, v0, Lck7;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v1, -0x1
-
-    invoke-direct {v0, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lhfe;)V
-    .locals 5
-
-    iget-object v0, p0, Lree;->c:Lhfe;
+    sput-object v0, Lree;->b:Lree;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    new-array v2, v1, [Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    const-string v3, ":settings/privacy"
 
-    goto :goto_0
+    const/4 v4, 0x0
 
-    :cond_0
-    iget v3, v0, Lhfe;->Z:I
+    const/16 v5, 0xe
 
-    iget v4, p1, Lhfe;->Z:I
+    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    if-ne v3, v4, :cond_2
+    move-result-object v2
 
-    iget v0, v0, Lhfe;->r0:I
+    sput-object v2, Lree;->c:Lyf4;
 
-    iget v3, p1, Lhfe;->r0:I
+    const-string v2, ":settings/blacklist"
 
-    if-eq v0, v3, :cond_1
+    new-array v3, v1, [Ljava/lang/String;
 
-    goto :goto_0
+    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    :cond_1
-    move v2, v1
+    move-result-object v2
 
-    :cond_2
-    :goto_0
-    iput-object p1, p0, Lree;->c:Lhfe;
+    sput-object v2, Lree;->d:Lyf4;
 
-    iget-object v0, p0, Lree;->b:Lpge;
+    const-string v2, ":settings/privacy/onboarding"
 
-    if-eqz v0, :cond_3
+    new-array v1, v1, [Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lpge;->b(Lhfe;)V
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    :cond_3
-    iget-object p1, p1, Lhfe;->o:Ljava/lang/String;
+    move-result-object v1
 
-    iget-object v0, p0, Lree;->a:Lck7;
+    sput-object v1, Lree;->e:Lyf4;
 
-    iget-object v0, v0, Lck7;->b:Ljava/lang/Object;
+    const-string v1, "mode"
 
-    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    invoke-static {p1}, Li27;->b(Ljava/lang/String;)Li27;
+    move-result-object v1
 
-    move-result-object p1
+    const-string v2, ":settings/privacy/pincode"
 
-    sget v3, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->A0:I
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, p1, v3}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->o(Li27;Li27;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    :cond_4
-    return-void
-.end method
-
-.method public final getSizeConfigurator()Lpge;
-    .locals 0
-
-    iget-object p0, p0, Lree;->b:Lpge;
-
-    return-object p0
-.end method
-
-.method public final onMeasure(II)V
-    .locals 1
-
-    iget-object v0, p0, Lree;->b:Lpge;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Lpge;->a(II)Lhs;
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
     move-result-object v0
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget p1, v0, Lhs;->b:I
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    iget p2, v0, Lhs;->c:I
-
-    :cond_2
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
-
-    return-void
-.end method
-
-.method public final setSizeConfigurator(Lpge;)V
-    .locals 0
-
-    iput-object p1, p0, Lree;->b:Lpge;
+    sput-object v0, Lree;->f:Lyf4;
 
     return-void
 .end method

@@ -1,81 +1,152 @@
-.class public abstract synthetic Lpw6;
-.super Ljava/lang/Object;
+.class public final enum Lpw6;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lrw6;
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final enum X:Lpw6;
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public static final enum Y:Lpw6;
+
+.field public static final synthetic Z:[Lpw6;
+
+.field public static final enum b:Lpw6;
+
+.field public static final enum c:Lpw6;
+
+.field public static final enum o:Lpw6;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 9
 
-    const/4 v0, 0x3
+    new-instance v0, Lpw6;
 
-    invoke-static {v0}, Lmw1;->w(I)[I
+    const-string v1, "KEYBOARD_PRESS"
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    array-length v1, v1
+    const/4 v3, 0x3
 
-    new-array v1, v1, [I
+    invoke-direct {v0, v1, v2, v3}, Lpw6;-><init>(Ljava/lang/String;II)V
 
-    const/4 v2, 0x1
+    new-instance v1, Lpw6;
 
-    const/4 v3, 0x2
+    const-string v2, "VIRTUAL_KEY"
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v4, 0x1
 
-    :catch_0
-    const/4 v4, 0x0
+    invoke-direct {v1, v2, v4, v4}, Lpw6;-><init>(Ljava/lang/String;II)V
 
-    :try_start_1
-    aput v3, v1, v4
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    sput-object v1, Lpw6;->b:Lpw6;
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    new-instance v2, Lpw6;
 
-    :catch_2
-    sput-object v1, Lpw6;->$EnumSwitchMapping$0:[I
+    const-string v4, "KEYBOARD_TAP"
 
-    invoke-static {}, Lnl;->values()[Lnl;
+    const/4 v5, 0x2
 
-    move-result-object v1
+    invoke-direct {v2, v4, v5, v3}, Lpw6;-><init>(Ljava/lang/String;II)V
 
-    array-length v1, v1
+    sput-object v2, Lpw6;->c:Lpw6;
 
-    new-array v1, v1, [I
+    move v4, v3
 
-    :try_start_3
-    aput v2, v1, v0
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    new-instance v3, Lpw6;
 
-    :catch_3
-    :try_start_4
-    aput v3, v1, v3
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    const-string v5, "CONTEXT_CLICK"
 
-    :catch_4
-    :try_start_5
-    aput v0, v1, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    const/4 v6, 0x6
 
-    :catch_5
-    sput-object v1, Lpw6;->$EnumSwitchMapping$1:[I
+    invoke-direct {v3, v5, v4, v6}, Lpw6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lpw6;->o:Lpw6;
+
+    new-instance v4, Lpw6;
+
+    const/4 v5, 0x4
+
+    const/16 v6, 0xc
+
+    const-string v7, "GESTURE_START"
+
+    invoke-direct {v4, v7, v5, v6}, Lpw6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lpw6;->X:Lpw6;
+
+    new-instance v5, Lpw6;
+
+    const/4 v6, 0x5
+
+    const/16 v7, 0x10
+
+    const-string v8, "CONFIRM"
+
+    invoke-direct {v5, v8, v6, v7}, Lpw6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Lpw6;->Y:Lpw6;
+
+    filled-new-array/range {v0 .. v5}, [Lpw6;
+
+    move-result-object v0
+
+    sput-object v0, Lpw6;->Z:[Lpw6;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lpw6;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lpw6;
+    .locals 1
+
+    const-class v0, Lpw6;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lpw6;
+
+    return-object p0
+.end method
+
+.method public static values()[Lpw6;
+    .locals 1
+
+    sget-object v0, Lpw6;->Z:[Lpw6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lpw6;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 1
+
+    iget v0, p0, Lpw6;->a:I
+
+    return v0
 .end method

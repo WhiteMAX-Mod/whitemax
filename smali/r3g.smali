@@ -1,164 +1,251 @@
 .class public final Lr3g;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Ljava/util/Iterator;
+.implements Lir7;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public b:Ljava/util/Iterator;
 
-.field public final synthetic Z:Landroid/view/View;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
-    .locals 0
+.method public constructor <init>(Lf2;)V
+    .locals 1
 
-    iput-object p3, p0, Lr3g;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lr3g;->Z:Landroid/view/View;
+    iput v0, p0, Lr3g;->a:I
 
-    const/4 p1, 0x2
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 2
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lr3g;->c:Ljava/lang/Object;
+
+    .line 3
+    iput-object p1, p0, Lr3g;->b:Ljava/util/Iterator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ls3g;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lr3g;->a:I
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    iput-object p1, p0, Lr3g;->c:Ljava/lang/Object;
+
+    .line 6
+    iget-object p1, p1, Ls3g;->a:Lk2e;
+
+    .line 7
+    invoke-interface {p1}, Lk2e;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lr3g;->b:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final hasNext()Z
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lr3g;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lr3g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v0, p0, Lr3g;->b:Ljava/util/Iterator;
 
-    check-cast p0, Lr3g;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    sget-object p1, Lylf;->a:Lylf;
+    move-result v0
 
-    invoke-virtual {p0, p1}, Lr3g;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
 
-    return-object p1
+    :pswitch_0
+    iget-object v0, p0, Lr3g;->b:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final next()Ljava/lang/Object;
+    .locals 5
 
-    new-instance v0, Lr3g;
+    iget v0, p0, Lr3g;->a:I
 
-    iget-object v1, p0, Lr3g;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lr3g;->Z:Landroid/view/View;
+    iget-object v0, p0, Lr3g;->b:Ljava/util/Iterator;
 
-    invoke-direct {v0, p0, p2, v1}, Lr3g;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iput-object p1, v0, Lr3g;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    return-object v0
-.end method
+    iget-object v1, p0, Lr3g;->c:Ljava/lang/Object;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    check-cast v1, Ljava/util/ArrayList;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    move-object v2, v0
 
-    iget-object p1, p0, Lr3g;->X:Ljava/lang/Object;
+    check-cast v2, Landroid/view/View;
 
-    check-cast p1, Lylf;
+    instance-of v3, v2, Landroid/view/ViewGroup;
 
-    iget-object p1, p0, Lr3g;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    const/4 v4, 0x0
 
-    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lxi7;
+    if-eqz v3, :cond_0
 
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->A0()Lnyf;
-
-    move-result-object p1
-
-    new-instance v0, Lmr1;
-
-    iget-object v1, p0, Lr3g;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    iget-object v2, p0, Lr3g;->Z:Landroid/view/View;
-
-    const/4 v3, 0x5
-
-    invoke-direct {v0, v1, v3, v2}, Lmr1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    invoke-virtual {p1}, Landroid/view/View;->isLaidOut()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lr3g;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    iget-object v1, v1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->Y:Ljava/lang/String;
-
-    sget-object v2, Ljtg;->g:Loja;
-
-    if-nez v2, :cond_0
+    check-cast v2, Landroid/view/ViewGroup;
 
     goto :goto_0
 
     :cond_0
-    sget-object v3, Lqz7;->X:Lqz7;
+    move-object v2, v4
 
-    invoke-virtual {v2, v3}, Loja;->a(Lqz7;)Z
+    :goto_0
+    if-eqz v2, :cond_1
 
-    move-result v4
+    new-instance v4, Lf2;
 
-    if-eqz v4, :cond_1
+    const/4 v3, 0x5
 
-    const-string v4, "updating blur for video message screen"
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v3, v1, v4, v5}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v4, v3, v2}, Lf2;-><init>(ILjava/lang/Object;)V
 
     :cond_1
-    :goto_0
-    iget-object v1, p0, Lr3g;->Z:Landroid/view/View;
+    if-eqz v4, :cond_2
 
-    invoke-virtual {v1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lr3g;->b:Ljava/util/Iterator;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iput-object v4, p0, Lr3g;->b:Ljava/util/Iterator;
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    iget-object v2, p0, Lr3g;->b:Ljava/util/Iterator;
+
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-static {v1}, Lnb3;->K(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Iterator;
+
+    iput-object v2, p0, Lr3g;->b:Ljava/util/Iterator;
+
+    invoke-static {v1}, Ltb3;->s(Ljava/util/ArrayList;)V
+
+    goto :goto_1
+
+    :cond_3
+    :goto_2
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lr3g;->c:Ljava/lang/Object;
+
+    check-cast v0, Ls3g;
+
+    iget-object v0, v0, Ls3g;->b:Lli6;
+
+    iget-object v1, p0, Lr3g;->b:Ljava/util/Iterator;
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    invoke-interface {v0, v1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2
-    new-instance v1, Lt3g;
+    move-result-object v0
 
-    invoke-direct {v1, p1, v0}, Lt3g;-><init>(Lnyf;Lmr1;)V
+    return-object v0
 
-    iget-object p1, p0, Lr3g;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    nop
 
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->A0()Lnyf;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object p1
+.method public final remove()V
+    .locals 2
 
-    new-instance v0, Ljb;
+    iget v0, p0, Lr3g;->a:I
 
-    iget-object v2, p0, Lr3g;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lr3g;->Z:Landroid/view/View;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const/4 v3, 0x2
+    const-string v1, "Operation is not supported for read-only collection"
 
-    invoke-direct {v0, v1, v2, p0, v3}, Ljb;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, v0}, Lcb7;->m(Landroid/view/ViewGroup;Lbc6;)V
+    throw v0
 
-    sget-object p0, Lylf;->a:Lylf;
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    return-object p0
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

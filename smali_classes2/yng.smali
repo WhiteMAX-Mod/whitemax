@@ -1,23 +1,23 @@
 .class public final Lyng;
-.super Lpg7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public final a:Lwq5;
 
-.field public final d:Ljava/lang/String;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lwq5;J)V
     .locals 0
 
-    invoke-direct {p0}, Lpg7;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyng;->c:Ljava/lang/String;
+    iput-object p1, p0, Lyng;->a:Lwq5;
 
-    iput-object p2, p0, Lyng;->d:Ljava/lang/String;
+    iput-wide p2, p0, Lyng;->b:J
 
     return-void
 .end method

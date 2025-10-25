@@ -38,35 +38,35 @@
 
 # virtual methods
 .method public add(Ljava/net/URI;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/client/RedirectLocations;->uris:Ljava/util/Set;
+    iget-object v0, p0, Lorg/apache/http/impl/client/RedirectLocations;->uris:Ljava/util/Set;
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public contains(Ljava/net/URI;)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/client/RedirectLocations;->uris:Ljava/util/Set;
+    iget-object v0, p0, Lorg/apache/http/impl/client/RedirectLocations;->uris:Ljava/util/Set;
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public remove(Ljava/net/URI;)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/client/RedirectLocations;->uris:Ljava/util/Set;
+    iget-object v0, p0, Lorg/apache/http/impl/client/RedirectLocations;->uris:Ljava/util/Set;
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method

@@ -1,50 +1,43 @@
-.class public final synthetic Le0e;
-.super Ls8;
+.class public final Le0e;
+.super Landroidx/recyclerview/widget/RecyclerView;
 .source "SourceFile"
-
-# interfaces
-.implements Lrc6;
-
-
-# static fields
-.field public static final r0:Le0e;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Le0e;
-
-    const-string v1, "<init>(Ljava/util/List;Ljava/util/List;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lc0e;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Ls8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Le0e;->r0:Le0e;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onMeasure(II)V
+    .locals 3
 
-    check-cast p1, Ljava/util/List;
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    check-cast p2, Ljava/util/List;
+    move-result v0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    const/16 v1, 0x96
 
-    new-instance p0, Lc0e;
+    int-to-float v1, v1
 
-    invoke-direct {p0, p1, p2}, Lc0e;-><init>(Ljava/util/List;Ljava/util/List;)V
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    return-object p0
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v1, v2, v0}, Lu15;->q(FFI)I
+
+    move-result v0
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result p2
+
+    invoke-static {v0, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result p2
+
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->onMeasure(II)V
+
+    return-void
 .end method

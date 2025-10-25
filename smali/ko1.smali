@@ -1,52 +1,121 @@
-.class public final synthetic Lko1;
-.super Ljava/lang/Object;
+.class public final enum Lko1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lbc6;
 
+# static fields
+.field public static final synthetic X:[Lko1;
 
-# instance fields
-.field public final synthetic a:Z
+.field public static final synthetic Y:Lzd5;
 
-.field public final synthetic b:Lpo1;
+.field public static final enum a:Lko1;
 
-.field public final synthetic c:Ljava/util/List;
+.field public static final enum b:Lko1;
+
+.field public static final enum c:Lko1;
+
+.field public static final enum o:Lko1;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLpo1;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lko1;
 
-    iput-boolean p1, p0, Lko1;->a:Z
+    const-string v1, "CALL"
 
-    iput-object p2, p0, Lko1;->b:Lpo1;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lko1;->c:Ljava/util/List;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lko1;->a:Lko1;
+
+    new-instance v1, Lko1;
+
+    const-string v2, "STOP"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lko1;->b:Lko1;
+
+    new-instance v2, Lko1;
+
+    const-string v3, "UPDATE_ACTIVE_NOTIFICATION"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v3, Lko1;
+
+    const-string v4, "RESTART_FOREGROUND"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lko1;->c:Lko1;
+
+    new-instance v4, Lko1;
+
+    const-string v5, "UPDATE_INCOMING_NOTIFICATION"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v5, Lko1;
+
+    const-string v6, "RESTART_FOREGROUND_SCREENSHARING"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lko1;->o:Lko1;
+
+    filled-new-array/range {v0 .. v5}, [Lko1;
+
+    move-result-object v0
+
+    sput-object v0, Lko1;->X:[Lko1;
+
+    new-instance v1, Lzd5;
+
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lko1;->Y:Lzd5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lko1;
     .locals 1
 
-    check-cast p1, Ljava/lang/Boolean;
+    const-class v0, Lko1;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-boolean p1, p0, Lko1;->a:Z
+    move-result-object p0
 
-    iget-object v0, p0, Lko1;->b:Lpo1;
-
-    iget-object p0, p0, Lko1;->c:Ljava/util/List;
-
-    invoke-static {p1, v0, p0}, Lpo1;->x(ZLpo1;Ljava/util/List;)V
-
-    sget-object p0, Lylf;->a:Lylf;
+    check-cast p0, Lko1;
 
     return-object p0
+.end method
+
+.method public static values()[Lko1;
+    .locals 1
+
+    sget-object v0, Lko1;->X:[Lko1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lko1;
+
+    return-object v0
 .end method

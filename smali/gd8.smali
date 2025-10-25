@@ -1,120 +1,221 @@
 .class public final Lgd8;
-.super Ljava/lang/Object;
+.super Landroid/os/Handler;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lgd8;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lfwc;
 
-.field public final b:Log8;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lfx0;
+
+.field public d:D
+
+.field public e:D
+
+.field public f:D
+
+.field public g:J
+
+.field public h:J
+
+.field public i:D
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/os/Looper;Lfwc;Ljava/lang/String;Lfx0;)V
+    .locals 0
 
-    new-instance v0, Lba8;
+    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    const/4 v1, 0x1
+    iput-object p2, p0, Lgd8;->a:Lfwc;
 
-    invoke-direct {v0, v1}, Lba8;-><init>(I)V
+    iput-object p3, p0, Lgd8;->b:Ljava/lang/String;
 
-    sput-object v0, Lgd8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lgd8;->a:I
-
-    sget-object v0, Log8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Log8;
-
-    iput-object p1, p0, Lgd8;->b:Log8;
+    iput-object p4, p0, Lgd8;->c:Lfx0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
+.method public final a(J)V
+    .locals 10
 
-    const/4 p0, 0x0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    return p0
+    move-result-wide v0
+
+    iget-wide v2, p0, Lgd8;->e:D
+
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+
+    add-double/2addr v2, v4
+
+    iput-wide v2, p0, Lgd8;->e:D
+
+    sub-long p1, v0, p1
+
+    iget-wide v4, p0, Lgd8;->d:D
+
+    long-to-double p1, p1
+
+    add-double/2addr v4, p1
+
+    iput-wide v4, p0, Lgd8;->d:D
+
+    div-double/2addr v4, v2
+
+    iget-wide p1, p0, Lgd8;->i:D
+
+    const-wide/16 v2, 0x0
+
+    cmpl-double v6, p1, v2
+
+    if-lez v6, :cond_0
+
+    iget-wide v6, p0, Lgd8;->f:D
+
+    div-double/2addr v6, p1
+
+    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    :goto_0
+    iget-wide v6, p0, Lgd8;->g:J
+
+    sub-long v6, v0, v6
+
+    const-wide/16 v8, 0x2710
+
+    cmp-long p2, v6, v8
+
+    if-lez p2, :cond_1
+
+    iget-wide v6, p0, Lgd8;->d:D
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v8, "Total calls: "
+
+    invoke-direct {p2, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v6, ", average call time: "
+
+    invoke-virtual {p2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v4, ", average idle time "
+
+    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lgd8;->a:Lfwc;
+
+    iget-object v4, p0, Lgd8;->b:Ljava/lang/String;
+
+    invoke-interface {p2, v4, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-wide v0, p0, Lgd8;->g:J
+
+    iput-wide v2, p0, Lgd8;->e:D
+
+    iput-wide v2, p0, Lgd8;->d:D
+
+    iput-wide v2, p0, Lgd8;->i:D
+
+    iput-wide v2, p0, Lgd8;->f:D
+
+    const-wide/16 p1, 0x0
+
+    iput-wide p1, p0, Lgd8;->h:J
+
+    :cond_1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final dispatchMessage(Landroid/os/Message;)V
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    const-string v1, "MediaItem{mFlags="
+    move-result-wide v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    iget-wide v2, p0, Lgd8;->h:J
 
-    iget v1, p0, Lgd8;->a:I
+    const-wide/16 v4, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    cmp-long v4, v2, v4
 
-    const-string v1, ", mDescription="
+    if-lez v4, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sub-long v2, v0, v2
 
-    iget-object p0, p0, Lgd8;->b:Log8;
+    long-to-double v2, v2
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-wide v2, p0, Lgd8;->f:D
 
-    const/16 p0, 0x7d
+    iget-wide v2, p0, Lgd8;->i:D
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    add-double/2addr v2, v4
 
-    move-result-object p0
+    iput-wide v2, p0, Lgd8;->i:D
 
-    return-object p0
-.end method
+    goto :goto_0
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+    :catchall_0
+    move-exception v2
 
-    iget v0, p0, Lgd8;->a:I
+    goto :goto_1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    :cond_0
+    :goto_0
+    invoke-super {p0, p1}, Landroid/os/Handler;->dispatchMessage(Landroid/os/Message;)V
 
-    iget-object p0, p0, Lgd8;->b:Log8;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    invoke-virtual {p0, p1, p2}, Log8;->writeToParcel(Landroid/os/Parcel;I)V
+    move-result-wide v2
+
+    iput-wide v2, p0, Lgd8;->h:J
+
+    invoke-virtual {p1}, Landroid/os/Message;->getCallback()Ljava/lang/Runnable;
+
+    invoke-virtual {p0, v0, v1}, Lgd8;->a(J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :goto_1
+    invoke-virtual {p1}, Landroid/os/Message;->getCallback()Ljava/lang/Runnable;
+
+    invoke-virtual {p0, v0, v1}, Lgd8;->a(J)V
+
+    iget-object p1, p0, Lgd8;->c:Lfx0;
+
+    invoke-virtual {p1, v2}, Lfx0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

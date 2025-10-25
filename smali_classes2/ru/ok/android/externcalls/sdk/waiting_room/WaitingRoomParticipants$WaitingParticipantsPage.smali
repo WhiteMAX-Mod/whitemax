@@ -82,15 +82,15 @@
 
 # virtual methods
 .method public final getHasMore()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$WaitingParticipantsPage;->hasMore:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$WaitingParticipantsPage;->hasMore:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getParticipantIds()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -100,9 +100,9 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$WaitingParticipantsPage;->participantIds:Ljava/util/List;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$WaitingParticipantsPage;->participantIds:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final setHasMore(Z)V

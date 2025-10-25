@@ -2,509 +2,276 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lts7;
-
 
 # instance fields
-.field public final X:Z
-
-.field public final Y:Z
-
-.field public final Z:Z
-
-.field public final a:Lxg1;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:Z
-
-.field public final r0:J
-
-.field public final s0:Ljava/lang/Integer;
-
-.field public final t0:J
+.field public final a:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Lxg1;Ljava/lang/String;Ljava/lang/String;ZZZZJLjava/lang/Integer;)V
+.method public constructor <init>(Liu7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhf1;->a:Lxg1;
-
-    iput-object p2, p0, Lhf1;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lhf1;->c:Ljava/lang/String;
-
-    iput-boolean p4, p0, Lhf1;->o:Z
-
-    iput-boolean p5, p0, Lhf1;->X:Z
-
-    iput-boolean p6, p0, Lhf1;->Y:Z
-
-    iput-boolean p7, p0, Lhf1;->Z:Z
-
-    iput-wide p8, p0, Lhf1;->r0:J
-
-    iput-object p10, p0, Lhf1;->s0:Ljava/lang/Integer;
-
-    iget-wide p1, p1, Lxg1;->a:J
-
-    iput-wide p1, p0, Lhf1;->t0:J
+    iput-object p1, p0, Lhf1;->a:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(Lru/ok/android/externcalls/sdk/Conversation;Lru/ok/android/externcalls/sdk/ConversationParticipant;ZZ)Lni1;
+    .locals 24
 
-    const/4 v0, 0x1
+    move/from16 v0, p3
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    return v0
+    move-result-object v1
 
-    :cond_0
-    instance-of v1, p1, Lhf1;
+    invoke-static {v1}, Ltdb;->a(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lmi1;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    if-nez v1, :cond_1
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getAudioOptionState()Lzu8;
 
-    return v2
+    move-result-object v2
 
-    :cond_1
-    check-cast p1, Lhf1;
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getVideoOptionState()Lzu8;
 
-    iget-object v1, p0, Lhf1;->a:Lxg1;
+    move-result-object v3
 
-    iget-object v3, p1, Lhf1;->a:Lxg1;
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getScreenshareOptionState()Lzu8;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v4
 
-    move-result v1
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isAudioEnabled()Z
 
-    if-nez v1, :cond_2
+    move-result v5
 
-    return v2
+    const/4 v6, 0x0
 
-    :cond_2
-    iget-object v1, p0, Lhf1;->b:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    iget-object v3, p1, Lhf1;->b:Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isScreenCaptureEnabled()Z
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result v7
 
-    move-result v1
+    if-eqz v7, :cond_0
 
-    if-nez v1, :cond_3
+    move-object/from16 v7, p0
 
-    return v2
+    iget-object v8, v7, Lhf1;->a:Liu7;
 
-    :cond_3
-    iget-object v1, p0, Lhf1;->c:Ljava/lang/String;
+    invoke-interface {v8}, Liu7;->getValue()Ljava/lang/Object;
 
-    iget-object v3, p1, Lhf1;->c:Ljava/lang/String;
+    move-result-object v8
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast v8, Lvpd;
 
-    move-result v1
+    iget-object v8, v8, Lvpd;->b:Lx0f;
 
-    if-nez v1, :cond_4
+    invoke-virtual {v8}, Lx0f;->getValue()Ljava/lang/Object;
 
-    return v2
+    move-result-object v8
 
-    :cond_4
-    iget-boolean v1, p0, Lhf1;->o:Z
+    check-cast v8, Ljava/lang/Boolean;
 
-    iget-boolean v3, p1, Lhf1;->o:Z
+    invoke-virtual {v8}, Ljava/lang/Boolean;->booleanValue()Z
 
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lhf1;->X:Z
-
-    iget-boolean v3, p1, Lhf1;->X:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lhf1;->Y:Z
-
-    iget-boolean v3, p1, Lhf1;->Y:Z
-
-    if-eq v1, v3, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-boolean v1, p0, Lhf1;->Z:Z
-
-    iget-boolean v3, p1, Lhf1;->Z:Z
-
-    if-eq v1, v3, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-wide v3, p0, Lhf1;->r0:J
-
-    iget-wide v5, p1, Lhf1;->r0:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_9
-
-    return v2
-
-    :cond_9
-    iget-object p0, p0, Lhf1;->s0:Ljava/lang/Integer;
-
-    iget-object p1, p1, Lhf1;->s0:Ljava/lang/Integer;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_a
-
-    return v2
-
-    :cond_a
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Lhf1;->t0:J
-
-    return-wide v0
-.end method
-
-.method public final h(Lts7;)Z
-    .locals 2
-
-    iget-wide v0, p0, Lhf1;->t0:J
-
-    invoke-interface {p1}, Lts7;->getItemId()J
-
-    move-result-wide p0
-
-    cmp-long p0, v0, p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lhf1;->a:Lxg1;
-
-    invoke-virtual {v0}, Lxg1;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lhf1;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lhf1;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lhf1;->o:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lhf1;->X:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lhf1;->Y:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lhf1;->Z:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lhf1;->r0:J
-
-    invoke-static {v0, v1, v2, v3}, Lwsf;->d(IIJ)I
-
-    move-result v0
-
-    iget-object p0, p0, Lhf1;->s0:Ljava/lang/Integer;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
+    move-result v8
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    move-object/from16 v7, p0
 
-    move-result p0
+    move v8, v6
 
     :goto_0
-    add-int/2addr v0, p0
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isVideoEnabled()Z
 
-    return v0
-.end method
+    move-result v9
 
-.method public final k(Lts7;)Ljava/lang/Object;
-    .locals 9
+    new-instance v7, Lmxg;
 
-    check-cast p1, Lhf1;
+    new-instance v10, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
 
-    iget-boolean v0, p1, Lhf1;->o:Z
+    invoke-direct {v10}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;-><init>()V
 
-    iget-boolean v1, p1, Lhf1;->Z:Z
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-boolean v2, p1, Lhf1;->X:Z
+    move-result-object v11
 
-    iget-object v3, p1, Lhf1;->c:Ljava/lang/String;
+    invoke-virtual {v10, v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
 
-    iget-object v4, p1, Lhf1;->s0:Ljava/lang/Integer;
+    move-result-object v10
 
-    iget-object v5, p1, Lhf1;->a:Lxg1;
+    sget-object v11, Ltxg;->a:Ltxg;
 
-    invoke-static {}, Lgs3;->m()Los7;
+    invoke-virtual {v10, v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setType(Ltxg;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
 
-    move-result-object v6
+    move-result-object v10
 
-    iget-object p1, p1, Lhf1;->b:Ljava/lang/String;
+    invoke-virtual {v10}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->build()Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
 
-    iget-object v7, p0, Lhf1;->b:Ljava/lang/String;
+    move-result-object v10
 
-    invoke-static {v7, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v7, v9, v10, v0}, Lmxg;-><init>(ZLru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Z)V
 
-    move-result v8
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isScreenCaptureEnabled()Z
 
-    if-nez v8, :cond_0
+    move-result v9
 
-    new-instance v8, Lff1;
+    move v10, v8
 
-    invoke-direct {v8, p1}, Lff1;-><init>(Ljava/lang/String;)V
+    new-instance v8, Lmxg;
 
-    invoke-virtual {v6, v8}, Los7;->add(Ljava/lang/Object;)Z
+    new-instance v11, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
 
-    :cond_0
-    iget-object v8, p0, Lhf1;->s0:Ljava/lang/Integer;
+    invoke-direct {v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;-><init>()V
 
-    invoke-virtual {v8, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    move-result v8
+    move-result-object v12
 
-    if-nez v8, :cond_1
+    invoke-virtual {v11, v12}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
 
-    new-instance v8, Lcf1;
+    move-result-object v11
 
-    invoke-direct {v8, v4}, Lcf1;-><init>(Ljava/lang/Integer;)V
+    sget-object v12, Ltxg;->b:Ltxg;
 
-    invoke-virtual {v6, v8}, Los7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v11, v12}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setType(Ltxg;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->build()Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+    move-result-object v11
+
+    invoke-direct {v8, v9, v11, v6}, Lmxg;-><init>(ZLru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Z)V
+
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isCallAccepted()Z
+
+    move-result v13
+
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getAcceptCallEpochMs()J
+
+    move-result-wide v14
+
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isConnected()Z
+
+    move-result v12
+
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isPrimarySpeaker()Z
+
+    move-result v17
+
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isTalking()Z
+
+    move-result v18
+
+    invoke-interface/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/Conversation;->getParticipantStatesManager()Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;
+
+    move-result-object v9
+
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v11
+
+    invoke-interface {v9, v11}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;->isHandRaised(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Z
+
+    move-result v19
+
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isCreator()Z
+
+    move-result v9
+
+    move v11, v6
+
+    move v6, v10
+
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isAdmin()Z
+
+    move-result v10
+
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getMovies()Ljava/util/List;
+
+    move-result-object v22
+
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->hasRegisteredPeers()Z
+
+    move-result v20
+
+    invoke-interface/range {p1 .. p2}, Lru/ok/android/externcalls/sdk/Conversation;->getParticipantMediaStat(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lw29;
+
+    move-result-object v16
+
+    if-eqz v16, :cond_1
+
+    const/16 v21, 0x1
+
+    goto :goto_1
 
     :cond_1
-    iget-object v4, p0, Lhf1;->c:Ljava/lang/String;
+    const/16 v21, 0x0
 
-    invoke-virtual {v4, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    :goto_1
+    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getNetworkStatus()Li6a;
 
-    move-result v4
+    move-result-object v16
 
-    iget-object v8, p0, Lhf1;->a:Lxg1;
+    invoke-virtual/range {v16 .. v16}, Ljava/lang/Enum;->ordinal()I
 
-    if-eqz v4, :cond_2
+    move-result v11
 
-    invoke-static {v8, v5}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v11, :cond_4
 
-    move-result v4
+    const/4 v0, 0x2
 
-    if-eqz v4, :cond_2
+    move-object/from16 v16, v1
 
-    invoke-static {v7, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v1, 0x1
 
-    move-result v4
+    if-eq v11, v1, :cond_3
 
-    if-nez v4, :cond_3
+    if-ne v11, v0, :cond_2
+
+    const/4 v11, 0x3
+
+    move/from16 v23, v11
+
+    goto :goto_2
 
     :cond_2
-    new-instance v4, Lbf1;
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-direct {v4, v5, p1, v3}, Lbf1;-><init>(Lxg1;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-virtual {v6, v4}, Los7;->add(Ljava/lang/Object;)Z
+    throw v0
 
     :cond_3
-    invoke-static {v8, v5}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move/from16 v23, v0
 
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    iget-boolean p1, p0, Lhf1;->X:Z
-
-    if-ne p1, v2, :cond_4
-
-    iget-boolean p1, p0, Lhf1;->Z:Z
-
-    if-eq p1, v1, :cond_5
+    goto :goto_2
 
     :cond_4
-    new-instance p1, Ldf1;
+    move-object/from16 v16, v1
 
-    invoke-direct {p1, v5, v2, v1}, Ldf1;-><init>(Lxg1;ZZ)V
+    const/4 v1, 0x1
 
-    invoke-virtual {v6, p1}, Los7;->add(Ljava/lang/Object;)Z
+    move/from16 v23, v1
 
-    :cond_5
-    iget-boolean p0, p0, Lhf1;->o:Z
+    :goto_2
+    new-instance v0, Lni1;
 
-    if-ne p0, v0, :cond_6
+    move/from16 v11, p4
 
-    invoke-static {v8, v5}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object/from16 v1, v16
 
-    move-result p0
+    move/from16 v16, p3
 
-    if-nez p0, :cond_7
+    invoke-direct/range {v0 .. v23}, Lni1;-><init>(Lmi1;Lzu8;Lzu8;Lzu8;ZZLmxg;Lmxg;ZZZZZJZZZZZZLjava/util/List;I)V
 
-    :cond_6
-    new-instance p0, Lef1;
-
-    invoke-direct {p0, v5, v0}, Lef1;-><init>(Lxg1;Z)V
-
-    invoke-virtual {v6, p0}, Los7;->add(Ljava/lang/Object;)Z
-
-    :cond_7
-    invoke-static {v6}, Lgs3;->f(Ljava/util/List;)Los7;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m()I
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CallOpponentInfoState(opponentId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lhf1;->a:Lxg1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", userName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhf1;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhf1;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hasMoreAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lhf1;->o:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hasMenuAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isAdmin="
-
-    const-string v2, ", isRaiseHand="
-
-    iget-boolean v3, p0, Lhf1;->X:Z
-
-    iget-boolean v4, p0, Lhf1;->Y:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lmw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    iget-boolean v1, p0, Lhf1;->Z:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isRaiseHandTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lhf1;->r0:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lhf1;->s0:Ljava/lang/Integer;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private final zzd:Lx0f;
+.field private final zzd:Ltpf;
 
 .field private final zze:Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -51,21 +51,21 @@
 
     iput-object p2, p0, Lcom/google/android/gms/ads/identifier/zzd;->zze:Ljava/util/concurrent/atomic/AtomicLong;
 
-    new-instance p2, Ly0f;
+    new-instance p2, Lupf;
 
     const-string v0, "ads_identifier:api"
 
-    invoke-direct {p2, v0}, Ly0f;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, v0}, Lupf;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Lx2h;
+    new-instance v0, Luvh;
 
-    sget-object v1, Lx2h;->u0:Lm68;
+    sget-object v1, Luvh;->t0:Lkxb;
 
-    sget-object v2, Lzk6;->c:Lzk6;
+    sget-object v2, Lxr6;->c:Lxr6;
 
-    invoke-direct {v0, p1, v1, p2, v2}, Lal6;-><init>(Landroid/content/Context;Lm68;Lpk;Lzk6;)V
+    invoke-direct {v0, p1, v1, p2, v2}, Lyr6;-><init>(Landroid/content/Context;Lkxb;Ljl;Lxr6;)V
 
-    iput-object v0, p0, Lcom/google/android/gms/ads/identifier/zzd;->zzd:Lx0f;
+    iput-object v0, p0, Lcom/google/android/gms/ads/identifier/zzd;->zzd:Ltpf;
 
     return-void
 .end method
@@ -122,7 +122,7 @@
 .end method
 
 .method public static zzb(Lcom/google/android/gms/ads/identifier/zzd;JLjava/lang/Exception;)V
-    .locals 2
+    .locals 3
 
     invoke-virtual {p3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
@@ -132,9 +132,15 @@
 
     move-result-object v0
 
-    const-string v1, "getting error as "
+    const-string v1, "AdvertisingIdClient"
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string v2, "getting error as "
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     instance-of v0, p3, Lcom/google/android/gms/common/api/ApiException;
 
@@ -144,11 +150,11 @@
 
     iget-object p3, p3, Lcom/google/android/gms/common/api/ApiException;->a:Lcom/google/android/gms/common/api/Status;
 
-    iget-object p3, p3, Lcom/google/android/gms/common/api/Status;->o:Lrk3;
+    iget-object p3, p3, Lcom/google/android/gms/common/api/Status;->o:Lrp3;
 
     if-eqz p3, :cond_0
 
-    iget p3, p3, Lrk3;->b:I
+    iget p3, p3, Lrp3;->b:I
 
     const/16 v0, 0x18
 
@@ -169,26 +175,44 @@
 
     move-object/from16 v1, p0
 
+    const-string v0, "shouldSendLog "
+
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, v1, Lcom/google/android/gms/ads/identifier/zzd;->zze:Ljava/util/concurrent/atomic/AtomicLong;
+    iget-object v2, v1, Lcom/google/android/gms/ads/identifier/zzd;->zze:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+
+    move-result-wide v5
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "AdvertisingIdClient"
+
+    invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, v1, Lcom/google/android/gms/ads/identifier/zzd;->zze:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
-    move-result-wide v4
+    move-result-wide v5
 
-    const-wide/16 v6, -0x1
+    const-wide/16 v7, -0x1
 
-    cmp-long v0, v4, v6
+    cmp-long v0, v5, v7
 
     if-nez v0, :cond_0
 
@@ -199,31 +223,31 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
-    move-result-wide v4
+    move-result-wide v5
 
-    sub-long v4, v2, v4
+    sub-long v5, v3, v5
 
     sget-object v0, Lcom/google/android/gms/ads/identifier/zzd;->zzc:Ljava/time/Duration;
 
     invoke-virtual {v0}, Ljava/time/Duration;->toMillis()J
 
-    move-result-wide v6
+    move-result-wide v7
 
-    cmp-long v0, v4, v6
+    cmp-long v0, v5, v7
 
     if-lez v0, :cond_2
 
     :goto_0
-    iget-object v0, v1, Lcom/google/android/gms/ads/identifier/zzd;->zzd:Lx0f;
+    iget-object v0, v1, Lcom/google/android/gms/ads/identifier/zzd;->zzd:Ltpf;
 
     if-nez v0, :cond_1
 
     goto :goto_1
 
     :cond_1
-    new-instance v4, Lw0f;
+    new-instance v2, Lspf;
 
-    new-instance v5, Ltf9;
+    new-instance v5, Lur9;
 
     const/4 v14, 0x0
 
@@ -243,9 +267,9 @@
 
     move/from16 v16, p7
 
-    invoke-direct/range {v5 .. v16}, Ltf9;-><init>(IIIJJLjava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v5 .. v16}, Lur9;-><init>(IIIJJLjava/lang/String;Ljava/lang/String;II)V
 
-    filled-new-array {v5}, [Ltf9;
+    filled-new-array {v5}, [Lur9;
 
     move-result-object v5
 
@@ -255,23 +279,19 @@
 
     const/4 v6, 0x0
 
-    invoke-direct {v4, v6, v5}, Lw0f;-><init>(ILjava/util/List;)V
+    invoke-direct {v2, v6, v5}, Lspf;-><init>(ILjava/util/List;)V
 
-    check-cast v0, Lx2h;
+    check-cast v0, Luvh;
 
-    invoke-virtual {v0, v4}, Lx2h;->d(Lw0f;)Lz8h;
+    invoke-virtual {v0, v2}, Luvh;->e(Lspf;)Le2j;
 
     move-result-object v0
 
-    new-instance v4, Lcom/google/android/gms/ads/identifier/zzc;
+    new-instance v2, Lcom/google/android/gms/ads/identifier/zzc;
 
-    invoke-direct {v4, v1, v2, v3}, Lcom/google/android/gms/ads/identifier/zzc;-><init>(Lcom/google/android/gms/ads/identifier/zzd;J)V
+    invoke-direct {v2, v1, v3, v4}, Lcom/google/android/gms/ads/identifier/zzc;-><init>(Lcom/google/android/gms/ads/identifier/zzd;J)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v2, Lh0f;->a:Lkd7;
-
-    invoke-virtual {v0, v2, v4}, Lz8h;->c(Ljava/util/concurrent/Executor;Ln9a;)Lz8h;
+    invoke-virtual {v0, v2}, Le2j;->j(Ltma;)Le2j;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

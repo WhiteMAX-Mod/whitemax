@@ -24,11 +24,11 @@
 
 # virtual methods
 .method public final onGroupInfoAvailable(Landroid/net/wifi/p2p/WifiP2pGroup;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/c;->a:Lorg/webrtc/NetworkMonitorAutoDetect$WifiDirectManagerDelegate;
+    iget-object v0, p0, Lorg/webrtc/c;->a:Lorg/webrtc/NetworkMonitorAutoDetect$WifiDirectManagerDelegate;
 
-    invoke-static {p0, p1}, Lorg/webrtc/NetworkMonitorAutoDetect$WifiDirectManagerDelegate;->a(Lorg/webrtc/NetworkMonitorAutoDetect$WifiDirectManagerDelegate;Landroid/net/wifi/p2p/WifiP2pGroup;)V
+    invoke-static {v0, p1}, Lorg/webrtc/NetworkMonitorAutoDetect$WifiDirectManagerDelegate;->a(Lorg/webrtc/NetworkMonitorAutoDetect$WifiDirectManagerDelegate;Landroid/net/wifi/p2p/WifiP2pGroup;)V
 
     return-void
 .end method

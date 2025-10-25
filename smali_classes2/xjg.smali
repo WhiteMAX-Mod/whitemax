@@ -1,14 +1,23 @@
-.class public interface abstract Lxjg;
+.class public final Lxjg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/lang/Integer;
-.end method
+# static fields
+.field public static final a:Lyxe;
 
-.method public abstract b()Ljava/lang/String;
-.end method
 
-.method public abstract c()Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lyxe;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1}, Lyxe;-><init>(I)V
+
+    sput-object v0, Lxjg;->a:Lyxe;
+
+    return-void
 .end method

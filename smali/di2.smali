@@ -1,302 +1,133 @@
 .class public final Ldi2;
-.super Lure;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ltc6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public X:I
 
-.field public synthetic Y:Ljava/lang/Throwable;
+.field public final synthetic Y:Lev5;
 
-.field public synthetic Z:J
-
-.field public final synthetic r0:Ljava/lang/Object;
+.field public final synthetic Z:Lla2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lev5;Lla2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Ldi2;->X:I
+    iput-object p1, p0, Ldi2;->Y:Lev5;
 
-    iput-object p1, p0, Ldi2;->r0:Ljava/lang/Object;
+    iput-object p2, p0, Ldi2;->Z:Lla2;
 
-    const/4 p1, 0x4
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ldi2;->X:I
+    check-cast p1, Lq54;
 
-    check-cast p1, Lks5;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p2, Ljava/lang/Throwable;
+    invoke-virtual {p0, p1, p2}, Ldi2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p3, Ljava/lang/Number;
+    move-result-object p1
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Ldi2;
 
-    invoke-virtual {p3}, Ljava/lang/Number;->longValue()J
+    sget-object p2, Lccg;->a:Lccg;
 
-    move-result-wide v0
+    invoke-virtual {p1, p2}, Ldi2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p4, Lkotlin/coroutines/Continuation;
+    move-result-object p1
 
-    new-instance p1, Ldi2;
-
-    iget-object p0, p0, Ldi2;->r0:Ljava/lang/Object;
-
-    check-cast p0, Lwwf;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p1, p0, p4, p3}, Ldi2;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Ldi2;->Y:Ljava/lang/Throwable;
-
-    iput-wide v0, p1, Ldi2;->Z:J
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    invoke-virtual {p1, p0}, Ldi2;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    invoke-virtual {p3}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    check-cast p4, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Ldi2;
-
-    iget-object p0, p0, Ldi2;->r0:Ljava/lang/Object;
-
-    check-cast p0, Lgi2;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p0, p4, p3}, Ldi2;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Ldi2;->Y:Ljava/lang/Throwable;
-
-    iput-wide v0, p1, Ldi2;->Z:J
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    invoke-virtual {p1, p0}, Ldi2;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Ldi2;
+
+    iget-object v0, p0, Ldi2;->Y:Lev5;
+
+    iget-object v1, p0, Ldi2;->Z:Lla2;
+
+    invoke-direct {p1, v0, v1, p2}, Ldi2;-><init>(Lev5;Lla2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
     iget v0, p0, Ldi2;->X:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Ldi2;->r0:Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    check-cast v0, Lwwf;
+    if-ne v0, v1, :cond_0
 
-    iget-object v0, v0, Lwwf;->f:Ljava/lang/String;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldi2;->Y:Ljava/lang/Throwable;
-
-    iget-wide v1, p0, Ldi2;->Z:J
-
-    instance-of p0, p1, Lru/ok/tamtam/errors/TamErrorException;
-
-    const/4 v3, 0x0
-
-    const-string v4, "Fetch video. Request failed with "
-
-    if-eqz p0, :cond_0
-
-    move-object p0, p1
-
-    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcxe;
-
-    iget-object p0, p0, Lcxe;->b:Ljava/lang/String;
-
-    invoke-static {p0}, Lxfc;->s(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const-wide/16 v5, 0x2
-
-    cmp-long p0, v1, v5
-
-    if-gtz p0, :cond_0
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ". Retrying"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0, v3}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x1
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    new-instance p0, Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string p1, ". Couldn\'t recover"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0, v3}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x0
-
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget-object v0, p0, Ldi2;->r0:Ljava/lang/Object;
-
-    check-cast v0, Lgi2;
-
-    iget-object v0, v0, Lgi2;->e:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldi2;->Y:Ljava/lang/Throwable;
-
-    iget-wide v1, p0, Ldi2;->Z:J
-
-    instance-of p0, p1, Lru/ok/tamtam/errors/TamErrorException;
-
-    const/4 v3, 0x0
-
-    const-string v4, "request failed with "
-
-    if-eqz p0, :cond_1
-
-    move-object p0, p1
-
-    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcxe;
-
-    iget-object p0, p0, Lcxe;->b:Ljava/lang/String;
-
-    invoke-static {p0}, Lxfc;->s(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    const-wide/16 v5, 0x2
-
-    cmp-long p0, v1, v5
-
-    if-gtz p0, :cond_1
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ". Retrying"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0, v3}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x1
-
-    goto :goto_1
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Ldi2;->Y:Lev5;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p1, Lev5;->X:Ljava/lang/Object;
 
-    const-string p1, ". Couldn\'t recover"
+    check-cast v0, Liu7;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    check-cast v0, Ld33;
 
-    invoke-static {v0, p0, v3}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v2, p0, Ldi2;->Z:Lla2;
 
-    const/4 p0, 0x0
+    iget-wide v2, v2, Lla2;->a:J
 
-    :goto_1
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object p1, p1, Lev5;->o:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast p1, Ljava/util/Set;
 
-    return-object p0
+    iput v1, p0, Ldi2;->X:I
 
-    nop
+    check-cast v0, Ld43;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v2, v3, p1, p0}, Ld43;->S(JLjava/util/Set;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

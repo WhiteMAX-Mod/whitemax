@@ -1,23 +1,39 @@
-.class public final Lqed;
-.super Lsed;
+.class public interface abstract Lqed;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:J
-
-.field public final e:J
+# static fields
+.field public static final a:Lj22;
 
 
 # direct methods
-.method public constructor <init>(Ltec;JJJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct/range {p0 .. p5}, Lsed;-><init>(Ljava/lang/Object;JJ)V
+    new-instance v0, Lj22;
 
-    iput-wide p6, p0, Lqed;->d:J
+    const/4 v1, 0x0
 
-    iput-wide p8, p0, Lqed;->e:J
+    const-wide/16 v2, 0x1770
+
+    invoke-direct {v0, v2, v3, v1}, Lj22;-><init>(JI)V
+
+    sput-object v0, Lqed;->a:Lj22;
+
+    new-instance v0, Lj22;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v2, v3, v1}, Lj22;-><init>(JI)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a()J
+.end method
+
+.method public abstract b(Lh22;)Lped;
 .end method

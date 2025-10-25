@@ -1,3 +1,185 @@
-.class public interface abstract Ld61;
-.super Ljava/lang/Object;
+.class public final Ld61;
+.super Ldg4;
 .source "SourceFile"
+
+
+# static fields
+.field public static final b:Ld61;
+
+.field public static final c:Lyf4;
+
+.field public static final d:Lyf4;
+
+.field public static final e:Lyf4;
+
+.field public static final f:Lyf4;
+
+.field public static final g:Lyf4;
+
+.field public static final h:Lyf4;
+
+.field public static final i:Lyf4;
+
+.field public static final j:Lyf4;
+
+.field public static final k:Lyf4;
+
+.field public static final l:Lyf4;
+
+.field public static final m:Lyf4;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 7
+
+    new-instance v0, Ld61;
+
+    invoke-direct {v0}, Ldg4;-><init>()V
+
+    sput-object v0, Ld61;->b:Ld61;
+
+    const-string v1, "opponent_id"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":call-user"
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0xe
+
+    invoke-static {v0, v2, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v1
+
+    sput-object v1, Ld61;->c:Lyf4;
+
+    const-string v1, "link"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v5, ":call-join-link"
+
+    invoke-static {v0, v5, v2, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v2
+
+    sput-object v2, Ld61;->d:Lyf4;
+
+    const-string v2, "chat_id"
+
+    filled-new-array {v2}, [Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, ":call-chat"
+
+    invoke-static {v0, v6, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v5
+
+    sput-object v5, Ld61;->e:Lyf4;
+
+    const-string v5, "call_name"
+
+    filled-new-array {v2, v5}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v5, ":call-incoming"
+
+    invoke-static {v0, v5, v2, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v2
+
+    sput-object v2, Ld61;->f:Lyf4;
+
+    const/4 v2, 0x0
+
+    new-array v5, v2, [Ljava/lang/String;
+
+    const-string v6, ":call-active"
+
+    invoke-static {v0, v6, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v5
+
+    sput-object v5, Ld61;->g:Lyf4;
+
+    const-string v5, ":call-join-preview"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v5, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v1
+
+    sput-object v1, Ld61;->h:Lyf4;
+
+    const-string v1, ":call-opponents-list"
+
+    new-array v5, v2, [Ljava/lang/String;
+
+    invoke-static {v0, v1, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v1
+
+    sput-object v1, Ld61;->i:Lyf4;
+
+    const-string v1, ":call-admin-settings"
+
+    new-array v5, v2, [Ljava/lang/String;
+
+    invoke-static {v0, v1, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v1
+
+    sput-object v1, Ld61;->j:Lyf4;
+
+    const-string v1, ":call-pip"
+
+    new-array v5, v2, [Ljava/lang/String;
+
+    invoke-static {v0, v1, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v1
+
+    sput-object v1, Ld61;->k:Lyf4;
+
+    const-string v1, ":call-admin-waiting-room"
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    invoke-static {v0, v1, v2, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v1
+
+    sput-object v1, Ld61;->l:Lyf4;
+
+    const-string v1, "is_group"
+
+    const-string v2, "is_video"
+
+    const-string v5, "call_id"
+
+    filled-new-array {v5, v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":call-rate"
+
+    invoke-static {v0, v2, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v0
+
+    sput-object v0, Ld61;->m:Lyf4;
+
+    return-void
+.end method

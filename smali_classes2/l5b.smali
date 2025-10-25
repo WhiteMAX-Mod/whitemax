@@ -1,92 +1,146 @@
 .class public final Ll5b;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:F
 
-.field public final synthetic Y:Lone/me/startconversation/chat/PickChatMembers;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chat/PickChatMembers;)V
+.method public constructor <init>(IF)V
     .locals 0
 
-    iput-object p2, p0, Ll5b;->Y:Lone/me/startconversation/chat/PickChatMembers;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput p2, p0, Ll5b;->a:F
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Ll5b;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Ljava/util/Set;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Ll5b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Ll5b;
 
-    move-result-object p0
+    if-nez v0, :cond_1
 
-    check-cast p0, Ll5b;
+    goto :goto_0
 
-    sget-object p1, Lylf;->a:Lylf;
+    :cond_1
+    check-cast p1, Ll5b;
 
-    invoke-virtual {p0, p1}, Ll5b;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Ll5b;->a:F
 
-    return-object p1
+    iget v1, p1, Ll5b;->a:F
+
+    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    invoke-static {v0, v0}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Ll5b;->b:I
+
+    iget p1, p1, Ll5b;->b:I
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Ll5b;
-
-    iget-object p0, p0, Ll5b;->Y:Lone/me/startconversation/chat/PickChatMembers;
-
-    invoke-direct {v0, p2, p0}, Ll5b;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chat/PickChatMembers;)V
-
-    iput-object p1, v0, Ll5b;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 3
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget v0, p0, Ll5b;->a:F
 
-    iget-object p1, p0, Ll5b;->X:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
 
-    check-cast p1, Ljava/util/Set;
+    move-result v0
 
-    invoke-static {p1}, Lq73;->C0(Ljava/util/Collection;)[J
+    const/16 v1, 0x1f
 
-    move-result-object p1
-
-    iget-object p0, p0, Ll5b;->Y:Lone/me/startconversation/chat/PickChatMembers;
-
-    iget-object v0, p0, Lone/me/startconversation/chat/PickChatMembers;->t0:Lfr;
-
-    sget-object v1, Lone/me/startconversation/chat/PickChatMembers;->x0:[Lxi7;
+    mul-int/2addr v0, v1
 
     const/4 v2, 0x0
 
-    aget-object v1, v1, v2
+    invoke-static {v0, v2, v1}, Lzb3;->b(IFI)I
 
-    invoke-virtual {v0, p0, p1}, Lfr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    move-result v0
 
-    sget-object p0, Lylf;->a:Lylf;
+    iget v1, p0, Ll5b;->b:I
 
-    return-object p0
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "IndicatorConfig(topCorners="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Ll5b;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bottomCorners=0.0, height="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ll5b;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

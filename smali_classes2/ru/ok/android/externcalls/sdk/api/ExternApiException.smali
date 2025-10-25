@@ -52,23 +52,23 @@
 
 # virtual methods
 .method public getErrorCode()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/api/ExternApiException;->errorCode:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/api/ExternApiException;->errorCode:I
 
-    return p0
+    return v0
 .end method
 
 .method public getExtendedError()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/ExternApiException;->extendedError:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/ExternApiException;->extendedError:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -76,13 +76,13 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/api/ExternApiException;->errorCode:I
+    iget v1, p0, Lru/ok/android/externcalls/sdk/api/ExternApiException;->errorCode:I
 
-    const/16 v1, 0x7d
+    const/16 v2, 0x7d
 
-    invoke-static {v0, p0, v1}, Lmw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lfd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

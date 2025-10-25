@@ -1,64 +1,16 @@
-.class public final Lnt4;
+.class public final synthetic Lnt4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lst4;
-
-
-# static fields
-.field public static final a:Lnt4;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lnt4;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lnt4;->a:Lnt4;
-
-    return-void
-.end method
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lnt4;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    const p0, -0x45aaf562
+    invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V
 
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Cancelled"
-
-    return-object p0
+    return-void
 .end method

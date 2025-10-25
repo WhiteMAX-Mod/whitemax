@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ru.ok.messages.views.widgets.SlideOutLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@id/frg_video_view__rl_root" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <include android:id="@id/frg_video_view__player" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/view_full_screen_video_player" />
-        <ru.ok.messages.views.widgets.VideoThumbnailView android:id="@id/frg_video_view__vt_transition" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
-        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/frg_video_view__btn_cancel" android:background="@null" android:visibility="gone" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_centerInParent="true" />
-    </RelativeLayout>
-</ru.ok.messages.views.widgets.SlideOutLayout>

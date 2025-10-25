@@ -1,922 +1,478 @@
-.class public final Limc;
-.super Lure;
-.source "SourceFile"
+.class public abstract Limc;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lpc6;
 
+# static fields
+.field public static action_menu_24:I = 0x7f0802e8
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static add_contact_24:I = 0x7f0802eb
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static add_to_folder_outline_24:I = 0x7f0802ed
 
+.field public static administrator_24:I = 0x7f0802ee
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
-    .locals 0
+.field public static app_logo:I = 0x7f0802f1
 
-    iput-object p2, p0, Limc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static archive_filled_28:I = 0x7f0802f4
 
-    const/4 p2, 0x2
+.field public static arrow_down_20:I = 0x7f0802f5
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static battery_and_network_24:I = 0x7f080304
 
-    return-void
-.end method
+.field public static block_outline_24:I = 0x7f080307
 
+.field public static change_camera_24:I = 0x7f080325
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static check_12:I = 0x7f08032b
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static check_24:I = 0x7f08032c
 
-    invoke-virtual {p0, p1, p2}, Limc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static check_double_outline_16:I = 0x7f08032d
 
-    move-result-object p0
+.field public static check_filled_28:I = 0x7f08032e
 
-    check-cast p0, Limc;
+.field public static check_outline_12:I = 0x7f08032f
 
-    sget-object p1, Lylf;->a:Lylf;
+.field public static check_outline_16:I = 0x7f080330
 
-    invoke-virtual {p0, p1}, Limc;->o(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static check_outline_24:I = 0x7f080331
 
-    return-object p1
-.end method
+.field public static check_shield_outline_24:I = 0x7f080332
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.field public static check_system_24:I = 0x7f080333
 
-    new-instance v0, Limc;
+.field public static check_system_28:I = 0x7f080334
 
-    iget-object p0, p0, Limc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static chevron_left_12:I = 0x7f080335
 
-    invoke-direct {v0, p2, p0}, Limc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.field public static clock_16:I = 0x7f08033c
 
-    iput-object p1, v0, Limc;->X:Ljava/lang/Object;
+.field public static clock_outline_12:I = 0x7f08033d
 
-    return-object v0
-.end method
+.field public static contact_16:I = 0x7f080354
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
+.field public static contact_outline_24:I = 0x7f080357
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+.field public static copy_24:I = 0x7f080359
 
-    iget-object p1, p0, Limc;->X:Ljava/lang/Object;
+.field public static copy_fill_24:I = 0x7f08035a
 
-    check-cast p1, Landroid/view/MotionEvent;
+.field public static copy_outline_24:I = 0x7f08035b
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lxi7;
+.field public static copy_outline_28:I = 0x7f08035c
 
-    iget-object p0, p0, Limc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static cross_16:I = 0x7f08035d
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Lwlc;
+.field public static decor_filled_24:I = 0x7f080362
 
-    move-result-object v0
+.field public static delete_clock_outline_24:I = 0x7f080363
 
-    iget-object v0, v0, Lwlc;->x0:Liic;
+.field public static delete_filled_apart_12:I = 0x7f080366
 
-    iget-object v0, v0, Liic;->a:Lrce;
+.field public static delete_outline_24:I = 0x7f080367
 
-    invoke-interface {v0}, Lrce;->getValue()Ljava/lang/Object;
+.field public static delete_outline_28:I = 0x7f080368
 
-    move-result-object v0
+.field public static doc_16:I = 0x7f08036f
 
-    check-cast v0, Lolc;
+.field public static document_share_outline_24:I = 0x7f080370
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
+.field public static done_fill_round_24:I = 0x7f080371
 
-    move-result-object v1
+.field public static done_rectangle_32:I = 0x7f080373
 
-    invoke-virtual {v1}, Landroid/view/View;->getX()F
+.field public static door_arrow_left_outline_24:I = 0x7f080375
 
-    move-result v1
+.field public static door_arrow_right_outline_24:I = 0x7f080376
 
-    const/4 v2, 0x0
+.field public static download_outline_24:I = 0x7f080378
 
-    cmpg-float v1, v1, v2
+.field public static dropdown_outline_16:I = 0x7f08037f
 
-    if-nez v1, :cond_0
+.field public static edit_outline_24:I = 0x7f080380
 
-    goto/16 :goto_3
+.field public static ellipse_7450:I = 0x7f080381
 
-    :cond_0
-    instance-of v0, v0, Lnlc;
+.field public static error_16:I = 0x7f08039d
 
-    if-nez v0, :cond_13
+.field public static error_circle_12:I = 0x7f08039e
 
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:Landroid/animation/AnimatorSet;
+.field public static error_circle_outline_28:I = 0x7f08039f
 
-    const/4 v1, 0x1
+.field public static favorites_24:I = 0x7f0803f3
 
-    if-eqz v0, :cond_1
+.field public static favorites_fill_24:I = 0x7f0803f4
 
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->isRunning()Z
+.field public static file_fill_28:I = 0x7f0803f7
 
-    move-result v0
+.field public static file_typing:I = 0x7f0803f8
 
-    if-ne v0, v1, :cond_1
+.field public static flash_off_24:I = 0x7f0804f5
 
-    goto/16 :goto_3
+.field public static flash_on_24:I = 0x7f0804f6
 
-    :cond_1
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0:Lpxa;
+.field public static folder_outline_24:I = 0x7f0804f7
 
-    if-nez v0, :cond_2
+.field public static geolocation_filled_16:I = 0x7f0804ff
 
-    goto/16 :goto_3
+.field public static gif_fill_16:I = 0x7f080501
 
-    :cond_2
-    iget-object v3, v0, Lpxa;->a:Ljava/lang/Object;
+.field public static gosuslugi_32:I = 0x7f080504
 
-    check-cast v3, Ljava/lang/Float;
+.field public static hand_outline_24:I = 0x7f080508
 
-    iget-object v0, v0, Lpxa;->b:Ljava/lang/Object;
+.field public static heart_filled_12:I = 0x7f08050a
 
-    check-cast v0, Ljava/lang/Float;
+.field public static help_outline_24:I = 0x7f08050b
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+.field public static hide_fill_24:I = 0x7f08050d
 
-    move-result v4
+.field public static hieroglyph_character_outline_24:I = 0x7f08050e
 
-    const/4 v5, 0x2
+.field public static ic_add_button_28:I = 0x7f080513
 
-    if-ne v4, v5, :cond_13
+.field public static ic_add_contact_fill_24:I = 0x7f080514
 
-    if-eqz v3, :cond_13
+.field public static ic_add_photo_28:I = 0x7f080518
 
-    if-nez v0, :cond_3
+.field public static ic_animated_clock:I = 0x7f080533
 
-    goto/16 :goto_3
+.field public static ic_arrow_down_16:I = 0x7f080539
 
-    :cond_3
-    iget-boolean v4, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->V0:Z
+.field public static ic_arrow_down_24:I = 0x7f08053a
 
-    if-nez v4, :cond_4
+.field public static ic_arrow_down_28:I = 0x7f08053c
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
+.field public static ic_arrow_down_line_24:I = 0x7f08053d
 
-    move-result v4
+.field public static ic_arrow_up_16:I = 0x7f080542
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
+.field public static ic_arrow_up_24:I = 0x7f080543
 
-    move-result-object v6
+.field public static ic_arrow_up_28:I = 0x7f080544
 
-    invoke-virtual {v6}, Landroid/view/View;->getX()F
+.field public static ic_audio_call_type_20:I = 0x7f080549
 
-    move-result v6
+.field public static ic_audio_call_type_24:I = 0x7f08054a
 
-    sub-float/2addr v4, v6
+.field public static ic_back_24:I = 0x7f080552
 
-    iput v4, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0:F
+.field public static ic_banner_icon:I = 0x7f080557
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
+.field public static ic_block_24:I = 0x7f080559
 
-    move-result v4
+.field public static ic_call_fill_24:I = 0x7f080570
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
+.field public static ic_call_incoming_filled_16:I = 0x7f080575
 
-    move-result-object v6
+.field public static ic_camera_add_filled_36:I = 0x7f080586
 
-    invoke-virtual {v6}, Landroid/view/View;->getY()F
+.field public static ic_camera_add_outline_36:I = 0x7f080587
 
-    move-result v6
+.field public static ic_cancel_20:I = 0x7f080589
 
-    sub-float/2addr v4, v6
+.field public static ic_channel_link:I = 0x7f080591
 
-    iput v4, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->U0:F
+.field public static ic_chat_24_filled:I = 0x7f080596
 
-    iput-boolean v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->V0:Z
+.field public static ic_check_28:I = 0x7f080599
 
-    :cond_4
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
+.field public static ic_clock_outline_16:I = 0x7f0805af
 
-    move-result v4
+.field public static ic_contact_24_filled:I = 0x7f0805bc
 
-    iget v6, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0:F
+.field public static ic_create_chat_fill_24:I = 0x7f0805c4
 
-    sub-float/2addr v4, v6
+.field public static ic_cross_10:I = 0x7f0805c6
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
+.field public static ic_cross_16:I = 0x7f0805c8
 
-    move-result p1
+.field public static ic_cross_20:I = 0x7f0805c9
 
-    iget v6, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->U0:F
+.field public static ic_cross_24:I = 0x7f0805ca
 
-    sub-float/2addr p1, v6
+.field public static ic_current_location_24:I = 0x7f0805cd
 
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
+.field public static ic_customization_24:I = 0x7f0805cf
 
-    move-result v6
+.field public static ic_delete_outline_24:I = 0x7f0805d4
 
-    sub-float v6, v4, v6
+.field public static ic_dots_horizontal_24:I = 0x7f0805dd
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+.field public static ic_dots_vertical_24:I = 0x7f0805de
 
-    move-result v7
+.field public static ic_download_24_filled:I = 0x7f0805e5
 
-    sub-float v7, p1, v7
+.field public static ic_error_56:I = 0x7f0805ef
 
-    neg-float v8, v7
+.field public static ic_file_24_filled:I = 0x7f0805f5
 
-    float-to-double v8, v8
+.field public static ic_file_extension:I = 0x7f0805f7
 
-    float-to-double v10, v6
+.field public static ic_file_fill_16:I = 0x7f0805f8
 
-    invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->atan2(DD)D
+.field public static ic_flag_by:I = 0x7f0805fd
 
-    move-result-wide v8
+.field public static ic_flag_en:I = 0x7f0805fe
 
-    double-to-float v6, v8
+.field public static ic_flag_ru:I = 0x7f0805ff
 
-    float-to-double v8, v6
+.field public static ic_folder_fill_24:I = 0x7f080608
 
-    invoke-static {v8, v9}, Ljava/lang/Math;->toDegrees(D)D
+.field public static ic_gif_24:I = 0x7f08061e
 
-    move-result-wide v8
+.field public static ic_group_call_fill_16:I = 0x7f080621
 
-    const-wide/16 v10, 0x0
+.field public static ic_history_clear_24:I = 0x7f08064e
 
-    cmpg-double v6, v8, v10
+.field public static ic_incoming_call_fill_16:I = 0x7f080654
 
-    if-gez v6, :cond_5
+.field public static ic_incoming_video_call_fill_16:I = 0x7f080656
 
-    const/16 v6, 0x168
+.field public static ic_link_external_24:I = 0x7f08066b
 
-    int-to-double v10, v6
+.field public static ic_microphone_off_fill_16:I = 0x7f08069e
 
-    add-double/2addr v8, v10
+.field public static ic_microphone_off_fill_24:I = 0x7f08069f
 
-    :cond_5
-    invoke-static {v8, v9}, Ljava/lang/Math;->ceil(D)D
+.field public static ic_microphone_on_fill_16:I = 0x7f0806a1
 
-    move-result-wide v8
+.field public static ic_microphone_on_fill_24:I = 0x7f0806a2
 
-    invoke-static {v8, v9}, Lya6;->F(D)I
+.field public static ic_mirror_outline_24:I = 0x7f0806a5
 
-    move-result v6
+.field public static ic_next_24:I = 0x7f08073e
 
-    sget-object v8, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:Lw97;
+.field public static ic_open_webapp_24:I = 0x7f08074e
 
-    iget v9, v8, Lu97;->a:I
+.field public static ic_pause_24_filled:I = 0x7f080755
 
-    const/16 v10, 0x8
+.field public static ic_pause_28_filled:I = 0x7f080756
 
-    const/16 v11, 0x28
+.field public static ic_phone_book_fill_24:I = 0x7f08075a
 
-    const/high16 v12, 0x3f800000    # 1.0f
+.field public static ic_phone_off_fill_24:I = 0x7f08075c
 
-    const/high16 v13, 0x42c80000    # 100.0f
+.field public static ic_play_24_filled:I = 0x7f08076f
 
-    if-gt v9, v6, :cond_b
+.field public static ic_plus_24:I = 0x7f080772
 
-    iget v8, v8, Lu97;->b:I
+.field public static ic_report_24:I = 0x7f08078a
 
-    if-gt v6, v8, :cond_b
+.field public static ic_rotation_outline_24:I = 0x7f08078e
 
-    iput v2, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0:F
+.field public static ic_search_24:I = 0x7f080795
 
-    int-to-float v1, v11
+.field public static ic_services_outline_24:I = 0x7f0807a6
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+.field public static ic_settings_fill_24:I = 0x7f0807a8
 
-    move-result-object v4
+.field public static ic_sound_off_fill_24:I = 0x7f0807bf
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static ic_sound_on_fill_24:I = 0x7f0807c2
 
-    move-result-object v4
+.field public static ic_stub_outline_28:I = 0x7f0807d1
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+.field public static ic_unlocked_28:I = 0x7f0807e4
 
-    mul-float/2addr v1, v4
+.field public static ic_user_defence_24:I = 0x7f0807ef
 
-    invoke-static {v1}, Lya6;->G(F)I
+.field public static ic_video_call_type_22:I = 0x7f0807fc
 
-    move-result v1
+.field public static ic_videocam_off_fill_24:I = 0x7f080802
 
-    neg-int v1, v1
+.field public static ic_videocam_on_fill_24:I = 0x7f080805
 
-    int-to-float v1, v1
+.field public static icon_arrow_up_28:I = 0x7f080822
 
-    div-float/2addr v7, v1
+.field public static icon_attach_24:I = 0x7f080823
 
-    invoke-static {v7, v2, v12}, Lkp;->g(FFF)F
+.field public static icon_attach_28:I = 0x7f080824
 
-    move-result v1
+.field public static icon_file_24:I = 0x7f080827
 
-    mul-float/2addr v1, v13
+.field public static icon_microphone_24:I = 0x7f080828
 
-    cmpl-float v1, v1, v13
+.field public static icon_microphone_28:I = 0x7f080829
 
-    if-ltz v1, :cond_6
+.field public static icon_smile_24:I = 0x7f08082a
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Lwlc;
+.field public static icon_smile_square_28:I = 0x7f08082b
 
-    move-result-object p1
+.field public static icon_video_msg_28:I = 0x7f08082c
 
-    invoke-virtual {p1}, Lwlc;->E()V
+.field public static info_24:I = 0x7f080832
 
-    invoke-virtual {p0}, Lxx3;->getView()Landroid/view/View;
+.field public static key_outline_24:I = 0x7f080835
 
-    move-result-object p0
+.field public static keyboard_outline_24:I = 0x7f080836
 
-    if-eqz p0, :cond_13
+.field public static keyboard_outline_28:I = 0x7f080837
 
-    sget-object p1, Ljp6;->Y:Ljp6;
+.field public static launch_outline_24:I = 0x7f08083a
 
-    invoke-static {p0, p1}, Lyu0;->C(Landroid/view/View;Llp6;)Z
+.field public static leave_chat_24:I = 0x7f08083c
 
-    goto/16 :goto_3
+.field public static link_24:I = 0x7f08083e
 
-    :cond_6
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+.field public static link_broken_24:I = 0x7f08083f
 
-    move-result v0
+.field public static link_share_24:I = 0x7f080842
 
-    sub-float/2addr v0, p1
+.field public static linked_24:I = 0x7f080843
 
-    int-to-float v1, v10
+.field public static lock_outline_24:I = 0x7f080846
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+.field public static magic_outline_24:I = 0x7f080854
 
-    move-result-object v4
+.field public static max_image_logo:I = 0x7f08085f
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static media_outline_24:I = 0x7f0808af
 
-    move-result-object v4
+.field public static megaphone_24:I = 0x7f0808b1
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+.field public static memory_24:I = 0x7f0808b2
 
-    mul-float/2addr v1, v4
+.field public static mention_12:I = 0x7f0808b3
 
-    invoke-static {v1}, Lya6;->G(F)I
+.field public static message_arrow_right_outline_24:I = 0x7f0808b5
 
-    move-result v1
+.field public static message_new_outline_24:I = 0x7f0808b7
 
-    int-to-float v1, v1
+.field public static message_outline_24:I = 0x7f0808b8
 
-    cmpl-float v0, v0, v1
+.field public static microphone_16:I = 0x7f0808b9
 
-    if-lez v0, :cond_7
+.field public static minus_outline_24:I = 0x7f0808bd
 
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c1:Landroid/animation/AnimatorSet;
+.field public static more_horizontal_filled_24:I = 0x7f0808bf
 
-    if-eqz v0, :cond_8
+.field public static multi_select_24:I = 0x7f080902
 
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
+.field public static multi_unselect_24:I = 0x7f080903
 
-    goto :goto_0
+.field public static mute_filled_16:I = 0x7f080907
 
-    :cond_7
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c1:Landroid/animation/AnimatorSet;
+.field public static not_delivered_fill_24:I = 0x7f08090a
 
-    if-eqz v0, :cond_8
+.field public static notification_off_outline_24:I = 0x7f080914
 
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
+.field public static notification_outline_24:I = 0x7f080915
 
-    :cond_8
-    :goto_0
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+.field public static pause_16:I = 0x7f080921
 
-    move-result-object v0
+.field public static phone_missed_filled_16:I = 0x7f080923
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Lpxa;
+.field public static phone_outgoing__filled_16:I = 0x7f080924
 
-    if-eqz v1, :cond_9
+.field public static phone_outgoing_filled_24:I = 0x7f080925
 
-    iget-object v1, v1, Lpxa;->a:Ljava/lang/Object;
+.field public static phone_outline_24:I = 0x7f080926
 
-    check-cast v1, Ljava/lang/Number;
+.field public static picture_share_outline_24:I = 0x7f080929
 
-    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
+.field public static pin_off_outline_24:I = 0x7f08092a
 
-    move-result v1
+.field public static pin_on_fill_16:I = 0x7f08092b
 
-    goto :goto_1
+.field public static pin_outline_24:I = 0x7f08092c
 
-    :cond_9
-    move v1, v2
+.field public static placeholder_16:I = 0x7f08092d
 
-    :goto_1
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
+.field public static placeholder_24:I = 0x7f08092e
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+.field public static play_24:I = 0x7f08092f
 
-    move-result-object v0
+.field public static play_filled_16:I = 0x7f080931
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Lpxa;
+.field public static play_filled_24:I = 0x7f080932
 
-    if-eqz v1, :cond_a
+.field public static play_filled_28:I = 0x7f080933
 
-    iget-object v1, v1, Lpxa;->b:Ljava/lang/Object;
+.field public static profile_24:I = 0x7f08093f
 
-    check-cast v1, Ljava/lang/Number;
+.field public static profile_hide_24:I = 0x7f080941
 
-    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
+.field public static qr_code_24:I = 0x7f080942
 
-    move-result v2
+.field public static qr_outline_24:I = 0x7f080943
 
-    :cond_a
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
+.field public static refresh_24:I = 0x7f08094a
 
-    move-result-object v1
+.field public static refresh_circle_outline_24:I = 0x7f08094b
 
-    invoke-virtual {v1}, Landroid/view/View;->getTranslationY()F
+.field public static reply_fill_16:I = 0x7f08094d
 
-    move-result v1
+.field public static reply_outline_24:I = 0x7f08094e
 
-    add-float/2addr v1, v2
+.field public static report_outline_24:I = 0x7f08094f
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
+.field public static saved_messages_avatar:I = 0x7f08096a
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
+.field public static search_outline_24:I = 0x7f08096c
 
-    move-result-object v0
+.field public static security_check_fill_28:I = 0x7f08096d
 
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
+.field public static services_24:I = 0x7f080970
 
-    move-result v1
+.field public static share_external_android_outline_20:I = 0x7f080976
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setX(F)V
+.field public static share_external_android_outline_24:I = 0x7f080977
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
+.field public static share_external_outline_24:I = 0x7f080978
 
-    move-result-object p0
+.field public static share_filled_16:I = 0x7f080979
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setY(F)V
+.field public static share_outline_24:I = 0x7f08097a
 
-    goto/16 :goto_3
+.field public static sound_off_24:I = 0x7f08097f
 
-    :cond_b
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:Lw97;
+.field public static sound_on_24:I = 0x7f080980
 
-    iget v7, p1, Lu97;->a:I
+.field public static speed_1_5x:I = 0x7f080981
 
-    if-gt v7, v6, :cond_13
+.field public static speed_1x:I = 0x7f080982
 
-    iget p1, p1, Lu97;->b:I
+.field public static speed_2x:I = 0x7f080983
 
-    if-gt v6, p1, :cond_13
+.field public static sticker_typing:I = 0x7f080986
 
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
+.field public static stop_filled_16:I = 0x7f080987
 
-    move-result p1
+.field public static stop_filled_24:I = 0x7f080988
 
-    int-to-float v6, v11
+.field public static stop_filled_28:I = 0x7f080989
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+.field public static subtract:I = 0x7f08098a
 
-    move-result-object v7
+.field public static text_typing:I = 0x7f08098f
 
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static timer_outline_24:I = 0x7f080990
 
-    move-result-object v7
+.field public static user_add_24:I = 0x7f080995
 
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
+.field public static user_add_28:I = 0x7f080996
 
-    mul-float/2addr v7, v6
+.field public static user_defence_outline_24:I = 0x7f080997
 
-    invoke-static {v7}, Lya6;->G(F)I
+.field public static user_off_filled_28:I = 0x7f080998
 
-    move-result v7
+.field public static users_outline_24:I = 0x7f080999
 
-    int-to-float v7, v7
+.field public static users_outline_28:I = 0x7f08099a
 
-    sub-float/2addr p1, v7
+.field public static verification_mark_12:I = 0x7f08099b
 
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
+.field public static verification_mark_16:I = 0x7f08099c
 
-    move-result v7
+.field public static video_message_stop_24:I = 0x7f08099e
 
-    const/16 v8, 0x5a
+.field public static videocam__missed_filled_16:I = 0x7f08099f
 
-    int-to-float v8, v8
+.field public static videocam_filled_12:I = 0x7f0809a0
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+.field public static videocam_filled_16:I = 0x7f0809a1
 
-    move-result-object v9
+.field public static videocam_outline_24:I = 0x7f0809a2
 
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v9
-
-    invoke-static {v8}, Lya6;->G(F)I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    sub-float/2addr v7, v8
-
-    sub-float p1, v4, p1
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result v8
-
-    sub-float/2addr v7, v8
-
-    div-float/2addr p1, v7
-
-    invoke-static {p1, v2, v12}, Lkp;->g(FFF)F
-
-    move-result p1
-
-    mul-float/2addr p1, v13
-
-    iput p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0:F
-
-    cmpl-float p1, p1, v13
-
-    if-ltz p1, :cond_c
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Lwlc;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lwlc;->v()Ljkc;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljkc;->e()V
-
-    invoke-virtual {p0}, Lwlc;->s()V
-
-    iget-object p0, p0, Lwlc;->w0:Lyce;
-
-    new-instance p1, Lnlc;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0, v1}, Lnlc;-><init>(ZI)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, p1}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    goto/16 :goto_3
-
-    :cond_c
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    sub-float/2addr p1, v4
-
-    int-to-float v1, v10
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v7
-
-    invoke-static {v1}, Lya6;->G(F)I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    cmpl-float p1, p1, v1
-
-    if-lez p1, :cond_e
-
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b1:Landroid/animation/AnimatorSet;
-
-    if-eqz p1, :cond_d
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->cancel()V
-
-    :cond_d
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c1:Landroid/animation/AnimatorSet;
-
-    if-eqz p1, :cond_10
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->cancel()V
-
-    goto :goto_2
-
-    :cond_e
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b1:Landroid/animation/AnimatorSet;
-
-    if-eqz p1, :cond_f
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
-
-    :cond_f
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c1:Landroid/animation/AnimatorSet;
-
-    if-eqz p1, :cond_10
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
-
-    :cond_10
-    :goto_2
-    const/16 p1, 0x7c
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, p1
-
-    invoke-static {v1}, Lya6;->G(F)I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    const/16 v7, 0x24
-
-    int-to-float v7, v7
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v8
-
-    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v7, v8
-
-    invoke-static {v7}, Lya6;->G(F)I
-
-    move-result v7
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v8
-
-    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {p1, v8, v7}, Lsq3;->q(FFI)I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    iget v8, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0:F
-
-    div-float/2addr v8, v13
-
-    mul-float/2addr v8, v7
-
-    add-float/2addr v8, v1
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v1
-
-    invoke-static {p1}, Lya6;->G(F)I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    div-float/2addr v8, p1
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v8}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v8}, Landroid/view/View;->setScaleY(F)V
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    const/16 v1, 0x14
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v7
-
-    invoke-static {v1}, Lya6;->G(F)I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    sub-float/2addr p1, v1
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result v1
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v6
-
-    invoke-static {v3}, Lya6;->G(F)I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    sub-float/2addr v1, v3
-
-    sub-float v3, v4, p1
-
-    sub-float/2addr v1, p1
-
-    div-float/2addr v3, v1
-
-    invoke-static {v3, v2, v12}, Lkp;->g(FFF)F
-
-    move-result p1
-
-    sub-float/2addr v12, p1
-
-    const/16 v1, -0x14
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v3
-
-    invoke-static {v1}, Lya6;->G(F)I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float/2addr v1, p1
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/widget/TextView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v12}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/widget/TextView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setY(F)V
-
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0:Lq8e;
-
-    if-eqz p1, :cond_11
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    neg-int v0, v0
-
-    int-to-float v0, v0
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    div-int/2addr v1, v5
-
-    int-to-float v1, v1
-
-    add-float/2addr v4, v1
-
-    add-float/2addr v4, v0
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v6, v0
-
-    invoke-static {v6}, Lya6;->G(F)I
-
-    move-result v0
-
-    div-int/2addr v0, v5
-
-    int-to-float v0, v0
-
-    add-float/2addr v4, v0
-
-    invoke-virtual {p1, v4}, Lq8e;->a(F)V
-
-    :cond_11
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Lpxa;
-
-    if-eqz p0, :cond_12
-
-    iget-object p0, p0, Lpxa;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/Number;
-
-    invoke-virtual {p0}, Ljava/lang/Number;->floatValue()F
-
-    move-result v2
-
-    :cond_12
-    invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationY(F)V
-
-    :cond_13
-    :goto_3
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-.end method
+.field public static videocam_outline_28:I = 0x7f0809a3

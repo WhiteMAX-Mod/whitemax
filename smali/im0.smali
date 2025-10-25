@@ -1,94 +1,166 @@
 .class public final Lim0;
-.super Ljava/lang/Object;
+.super Lgf4;
 .source "SourceFile"
-
-# interfaces
-.implements Ltdd;
 
 
 # instance fields
-.field public final X:J
+.field public r0:J
 
-.field public final Y:J
+.field public s0:I
 
-.field public final a:Llm0;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:J
-
-
-# direct methods
-.method public constructor <init>(Llm0;JJJJJ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lim0;->a:Llm0;
-
-    iput-wide p2, p0, Lim0;->b:J
-
-    iput-wide p4, p0, Lim0;->c:J
-
-    iput-wide p6, p0, Lim0;->o:J
-
-    iput-wide p8, p0, Lim0;->X:J
-
-    iput-wide p10, p0, Lim0;->Y:J
-
-    return-void
-.end method
+.field public t0:I
 
 
 # virtual methods
-.method public final c()Z
-    .locals 0
+.method public final A(Lgf4;)Z
+    .locals 5
 
-    const/4 p0, 0x1
+    const/high16 v0, 0x40000000    # 2.0f
 
-    return p0
+    invoke-virtual {p1, v0}, Lvy;->i(I)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lzg8;->c(Z)V
+
+    const/high16 v0, 0x10000000
+
+    invoke-virtual {p1, v0}, Lvy;->i(I)Z
+
+    move-result v0
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lzg8;->c(Z)V
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p1, v0}, Lvy;->i(I)Z
+
+    move-result v0
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lzg8;->c(Z)V
+
+    iget v0, p0, Lim0;->s0:I
+
+    const/high16 v2, -0x80000000
+
+    if-lez v0, :cond_2
+
+    iget v3, p0, Lim0;->t0:I
+
+    if-lt v0, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, v2}, Lvy;->i(I)Z
+
+    move-result v0
+
+    invoke-virtual {p0, v2}, Lvy;->i(I)Z
+
+    move-result v3
+
+    if-eq v0, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p1, Lgf4;->o:Ljava/nio/ByteBuffer;
+
+    if-eqz v0, :cond_2
+
+    iget-object v3, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Ljava/nio/Buffer;->position()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v0
+
+    add-int/2addr v0, v3
+
+    const v3, 0x2ee000
+
+    if-le v0, v3, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    iget v0, p0, Lim0;->s0:I
+
+    add-int/lit8 v3, v0, 0x1
+
+    iput v3, p0, Lim0;->s0:I
+
+    if-nez v0, :cond_3
+
+    iget-wide v3, p1, Lgf4;->Y:J
+
+    iput-wide v3, p0, Lgf4;->Y:J
+
+    invoke-virtual {p1, v1}, Lvy;->i(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iput v1, p0, Lvy;->b:I
+
+    :cond_3
+    invoke-virtual {p1, v2}, Lvy;->i(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iput v2, p0, Lvy;->b:I
+
+    :cond_4
+    iget-object v0, p1, Lgf4;->o:Ljava/nio/ByteBuffer;
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v2
+
+    invoke-virtual {p0, v2}, Lgf4;->y(I)V
+
+    iget-object v2, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    :cond_5
+    iget-wide v2, p1, Lgf4;->Y:J
+
+    iput-wide v2, p0, Lim0;->r0:J
+
+    return v1
 .end method
 
-.method public final e(J)Lrdd;
-    .locals 13
+.method public final w()V
+    .locals 1
 
-    iget-object v0, p0, Lim0;->a:Llm0;
+    invoke-super {p0}, Lgf4;->w()V
 
-    invoke-interface {v0, p1, p2}, Llm0;->b(J)J
+    const/4 v0, 0x0
 
-    move-result-wide v1
+    iput v0, p0, Lim0;->s0:I
 
-    iget-wide v9, p0, Lim0;->X:J
-
-    iget-wide v11, p0, Lim0;->Y:J
-
-    const-wide/16 v3, 0x0
-
-    iget-wide v5, p0, Lim0;->c:J
-
-    iget-wide v7, p0, Lim0;->o:J
-
-    invoke-static/range {v1 .. v12}, Ljm0;->b(JJJJJJ)J
-
-    move-result-wide v0
-
-    new-instance p0, Lrdd;
-
-    new-instance v2, Lxdd;
-
-    invoke-direct {v2, p1, p2, v0, v1}, Lxdd;-><init>(JJ)V
-
-    invoke-direct {p0, v2, v2}, Lrdd;-><init>(Lxdd;Lxdd;)V
-
-    return-object p0
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget-wide v0, p0, Lim0;->b:J
-
-    return-wide v0
+    return-void
 .end method

@@ -106,13 +106,13 @@
 .end method
 
 .method private getBuffer()Ljava/nio/ByteBuffer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/EncodedImage;->buffer:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lorg/webrtc/EncodedImage;->buffer:Ljava/nio/ByteBuffer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private getCaptureTimeNs()J
@@ -126,77 +126,77 @@
 .end method
 
 .method private getEncodedHeight()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/EncodedImage;->encodedHeight:I
+    iget v0, p0, Lorg/webrtc/EncodedImage;->encodedHeight:I
 
-    return p0
+    return v0
 .end method
 
 .method private getEncodedWidth()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/EncodedImage;->encodedWidth:I
+    iget v0, p0, Lorg/webrtc/EncodedImage;->encodedWidth:I
 
-    return p0
+    return v0
 .end method
 
 .method private getFrameType()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/EncodedImage;->frameType:Lorg/webrtc/EncodedImage$FrameType;
+    iget-object v0, p0, Lorg/webrtc/EncodedImage;->frameType:Lorg/webrtc/EncodedImage$FrameType;
 
-    invoke-virtual {p0}, Lorg/webrtc/EncodedImage$FrameType;->getNative()I
+    invoke-virtual {v0}, Lorg/webrtc/EncodedImage$FrameType;->getNative()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method private getQp()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/EncodedImage;->qp:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/EncodedImage;->qp:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private getRotation()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/EncodedImage;->rotation:I
+    iget v0, p0, Lorg/webrtc/EncodedImage;->rotation:I
 
-    return p0
+    return v0
 .end method
 
 
 # virtual methods
 .method public release()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EncodedImage;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
+    iget-object v0, p0, Lorg/webrtc/EncodedImage;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    invoke-virtual {p0}, Lorg/webrtc/RefCountDelegate;->release()V
+    invoke-virtual {v0}, Lorg/webrtc/RefCountDelegate;->release()V
 
     return-void
 .end method
 
 .method public retain()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EncodedImage;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
+    iget-object v0, p0, Lorg/webrtc/EncodedImage;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    invoke-virtual {p0}, Lorg/webrtc/RefCountDelegate;->retain()V
+    invoke-virtual {v0}, Lorg/webrtc/RefCountDelegate;->retain()V
 
     return-void
 .end method

@@ -1,54 +1,52 @@
 .class public final synthetic Lwz6;
-.super Ljava/lang/Object;
+.super Loj6;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lli6;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
+# static fields
+.field public static final a:Lwz6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Lwz6;->a:I
+    new-instance v0, Lwz6;
 
-    iput-object p1, p0, Lwz6;->b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
+    const-string v4, "getTime()J"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lgz6;
+
+    const-string v3, "getTime"
+
+    invoke-direct/range {v0 .. v5}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lwz6;->a:Lwz6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lwz6;->a:I
+    check-cast p1, Lgz6;
 
-    iget-object p0, p0, Lwz6;->b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
+    invoke-interface {p1}, Lgz6;->l()J
 
-    packed-switch v0, :pswitch_data_0
+    move-result-wide v0
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->readCacheFromDisk()V
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->writeCacheToDisk()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

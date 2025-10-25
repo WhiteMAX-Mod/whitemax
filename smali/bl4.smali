@@ -1,193 +1,185 @@
-.class public final synthetic Lbl4;
+.class public abstract Lbl4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:Lv97;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Lv97;
 
-.field public final synthetic b:Lcl4;
+.field public static final c:Lv97;
+
+.field public static final d:Lv97;
+
+.field public static final e:Lv97;
+
+.field public static final f:Lv97;
+
+.field public static final g:Lv97;
+
+.field public static final h:Lv97;
+
+.field public static final i:Lv97;
+
+.field public static final j:Lv97;
+
+.field public static final k:Lv97;
+
+.field public static final l:Lv97;
+
+.field public static final m:Lv97;
+
+.field public static final n:Lv97;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcl4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 15
 
-    iput p2, p0, Lbl4;->a:I
+    new-instance v0, Lv97;
 
-    iput-object p1, p0, Lbl4;->b:Lcl4;
+    const-string v1, "JPEG"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "jpeg"
 
-    return-void
-.end method
+    invoke-direct {v0, v1, v2}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    sput-object v0, Lbl4;->a:Lv97;
 
-# virtual methods
-.method public final run()V
-    .locals 7
+    new-instance v1, Lv97;
 
-    iget v0, p0, Lbl4;->a:I
+    const-string v2, "PNG"
 
-    iget-object p0, p0, Lbl4;->b:Lcl4;
+    const-string v3, "png"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v1, v2, v3}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v0, p0, Lcl4;->Z:I
+    sput-object v1, Lbl4;->b:Lv97;
 
-    if-nez v0, :cond_1
+    new-instance v2, Lv97;
 
-    const/4 v0, 0x1
+    const-string v3, "GIF"
 
-    iput v0, p0, Lcl4;->Z:I
+    const-string v4, "gif"
 
-    invoke-static {}, Lmq0;->w()Lmq0;
+    invoke-direct {v2, v3, v4}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v2, Lbl4;->c:Lv97;
+
+    new-instance v3, Lv97;
+
+    const-string v4, "BMP"
+
+    const-string v5, "bmp"
+
+    invoke-direct {v3, v4, v5}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v3, Lbl4;->d:Lv97;
+
+    new-instance v4, Lv97;
+
+    const-string v5, "ICO"
+
+    const-string v6, "ico"
+
+    invoke-direct {v4, v5, v6}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v4, Lbl4;->e:Lv97;
+
+    new-instance v5, Lv97;
+
+    const-string v6, "WEBP_SIMPLE"
+
+    const-string v7, "webp"
+
+    invoke-direct {v5, v6, v7}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v5, Lbl4;->f:Lv97;
+
+    new-instance v6, Lv97;
+
+    const-string v8, "WEBP_LOSSLESS"
+
+    invoke-direct {v6, v8, v7}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v6, Lbl4;->g:Lv97;
+
+    move-object v8, v7
+
+    new-instance v7, Lv97;
+
+    const-string v9, "WEBP_EXTENDED"
+
+    invoke-direct {v7, v9, v8}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v7, Lbl4;->h:Lv97;
+
+    move-object v9, v8
+
+    new-instance v8, Lv97;
+
+    const-string v10, "WEBP_EXTENDED_WITH_ALPHA"
+
+    invoke-direct {v8, v10, v9}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v8, Lbl4;->i:Lv97;
+
+    move-object v10, v9
+
+    new-instance v9, Lv97;
+
+    const-string v11, "WEBP_ANIMATED"
+
+    invoke-direct {v9, v11, v10}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v9, Lbl4;->j:Lv97;
+
+    new-instance v10, Lv97;
+
+    const-string v11, "HEIF"
+
+    const-string v12, "heif"
+
+    invoke-direct {v10, v11, v12}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v10, Lbl4;->k:Lv97;
+
+    new-instance v11, Lv97;
+
+    const-string v12, "DNG"
+
+    const-string v13, "dng"
+
+    invoke-direct {v11, v12, v13}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v11, Lbl4;->l:Lv97;
+
+    new-instance v11, Lv97;
+
+    const-string v12, "BINARY_XML"
+
+    const-string v13, "xml"
+
+    invoke-direct {v11, v12, v13}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v11, Lbl4;->m:Lv97;
+
+    new-instance v12, Lv97;
+
+    const-string v13, "AVIF"
+
+    const-string v14, "avif"
+
+    invoke-direct {v12, v13, v14}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v12, Lbl4;->n:Lv97;
+
+    filled-new-array/range {v0 .. v12}, [Lv97;
 
     move-result-object v0
 
-    sget-object v1, Lcl4;->w0:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "onAllConstraintsMet for "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lcl4;->c:Ljvg;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lmq0;->q(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcl4;->o:Ldue;
-
-    iget-object v0, v0, Ldue;->o:Lzib;
-
-    iget-object v1, p0, Lcl4;->v0:Lgce;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lzib;->h(Lgce;Lfo8;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcl4;->o:Ldue;
-
-    iget-object v0, v0, Ldue;->c:Lmwg;
-
-    iget-object v1, p0, Lcl4;->c:Ljvg;
-
-    const-string v2, "Starting timer for "
-
-    iget-object v3, v0, Lmwg;->d:Ljava/lang/Object;
-
-    monitor-enter v3
-
-    :try_start_0
-    invoke-static {}, Lmq0;->w()Lmq0;
-
-    move-result-object v4
-
-    sget-object v5, Lmwg;->e:Ljava/lang/String;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v4, v5, v2}, Lmq0;->q(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Lmwg;->a(Ljvg;)V
-
-    new-instance v2, Llwg;
-
-    invoke-direct {v2, v0, v1}, Llwg;-><init>(Lmwg;Ljvg;)V
-
-    iget-object v4, v0, Lmwg;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v4, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v4, v0, Lmwg;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v4, v1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p0, v0, Lmwg;->a:Lck7;
-
-    iget-object p0, p0, Lck7;->b:Ljava/lang/Object;
-
-    check-cast p0, Landroid/os/Handler;
-
-    const-wide/32 v0, 0x927c0
-
-    invoke-virtual {p0, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    monitor-exit v3
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-
-    :cond_0
-    invoke-virtual {p0}, Lcl4;->b()V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {}, Lmq0;->w()Lmq0;
-
-    move-result-object v0
-
-    sget-object v1, Lcl4;->w0:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Already started work for "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lcl4;->c:Ljvg;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v1, p0}, Lmq0;->q(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Lcl4;->a(Lcl4;)V
+    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

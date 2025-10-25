@@ -1,249 +1,167 @@
-.class public final synthetic Lcx0;
-.super Ljava/lang/Object;
+.class public final enum Lcx0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lpm3;
-.implements Lqc6;
+
+# static fields
+.field public static final enum X:Lcx0;
+
+.field public static final enum Y:Lcx0;
+
+.field public static final enum Z:Lcx0;
+
+.field public static final enum b:Lcx0;
+
+.field public static final enum c:Lcx0;
+
+.field public static final enum o:Lcx0;
+
+.field public static final enum q0:Lcx0;
+
+.field public static final enum r0:Lcx0;
+
+.field public static final s0:[Lcx0;
+
+.field public static final synthetic t0:[Lcx0;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lgx0;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgx0;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    iput p2, p0, Lcx0;->a:I
+    new-instance v0, Lcx0;
 
-    iput-object p1, p0, Lcx0;->b:Lgx0;
+    const-string v1, "CALLBACK"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v1}, Lcx0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcx0;->b:Lcx0;
+
+    new-instance v1, Lcx0;
+
+    const-string v2, "LINK"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v2}, Lcx0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lcx0;->c:Lcx0;
+
+    new-instance v2, Lcx0;
+
+    const-string v3, "REQUEST_CONTACT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Lcx0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lcx0;->o:Lcx0;
+
+    new-instance v3, Lcx0;
+
+    const-string v4, "REQUEST_GEO_LOCATION"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v4}, Lcx0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lcx0;->X:Lcx0;
+
+    new-instance v4, Lcx0;
+
+    const-string v5, "CHAT"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v5}, Lcx0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lcx0;->Y:Lcx0;
+
+    new-instance v5, Lcx0;
+
+    const-string v6, "OPEN_APP"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v6}, Lcx0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lcx0;->Z:Lcx0;
+
+    new-instance v6, Lcx0;
+
+    const-string v7, "MESSAGE"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8, v7}, Lcx0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lcx0;->q0:Lcx0;
+
+    new-instance v7, Lcx0;
+
+    const-string v8, "UNKNOWN"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9, v8}, Lcx0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lcx0;->r0:Lcx0;
+
+    filled-new-array/range {v0 .. v7}, [Lcx0;
+
+    move-result-object v0
+
+    sput-object v0, Lcx0;->t0:[Lcx0;
+
+    invoke-static {}, Lcx0;->values()[Lcx0;
+
+    move-result-object v0
+
+    sput-object v0, Lcx0;->s0:[Lcx0;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 2
-
-    iget v0, p0, Lcx0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    iget-object v0, p0, Lcx0;->b:Lgx0;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    monitor-enter v0
-
-    const/4 p0, 0x0
-
-    :try_start_0
-    iput-object p0, v0, Lgx0;->j:Lc7a;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-
-    :pswitch_1
-    iget-object v0, p0, Lcx0;->b:Lgx0;
-
-    check-cast p1, Lex0;
-
-    monitor-enter v0
-
-    :try_start_2
-    iput-object p1, v0, Lgx0;->k:Lex0;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_1
-    move-exception p0
-
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw p0
-
-    :pswitch_2
-    iget-object p0, p0, Lcx0;->b:Lgx0;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "gx0"
-
-    const-string v1, "onClearCacheClicked: failed"
-
-    invoke-static {v0, v1, p1}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object p0, p0, Lgx0;->h:Lru/ok/messages/settings/FrgBaseSettings;
-
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->X0()V
-
-    invoke-interface {p0}, Lfx0;->G()V
-
-    return-void
-
-    :pswitch_3
-    iget-object p0, p0, Lcx0;->b:Lgx0;
-
-    check-cast p1, Lex0;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "gx0"
-
-    const-string v1, "onClearCacheClicked: finished"
-
-    invoke-static {v0, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, p0, Lgx0;->h:Lru/ok/messages/settings/FrgBaseSettings;
-
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->X0()V
-
-    iget-object v0, p1, Lex0;->b:Ljava/lang/String;
-
-    invoke-interface {p0, v0}, Lfx0;->g(Ljava/lang/String;)V
-
-    iget-object p1, p1, Lex0;->c:Ljava/util/ArrayList;
-
-    invoke-interface {p0, p1}, Lfx0;->a(Ljava/util/ArrayList;)V
-
-    return-void
-
-    :pswitch_4
-    iget-object p0, p0, Lcx0;->b:Lgx0;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "gx0"
-
-    const-string v1, "onClearCacheTypesPicked: failed"
-
-    invoke-static {v0, v1, p1}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object p0, p0, Lgx0;->h:Lru/ok/messages/settings/FrgBaseSettings;
-
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->X0()V
-
-    invoke-interface {p0}, Lfx0;->G()V
-
-    return-void
-
-    :pswitch_5
-    iget-object p0, p0, Lcx0;->b:Lgx0;
-
-    check-cast p1, Lex0;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "gx0"
-
-    const-string v1, "onClearCacheTypesPicked: success"
-
-    invoke-static {v0, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, p0, Lgx0;->h:Lru/ok/messages/settings/FrgBaseSettings;
-
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->X0()V
-
-    invoke-interface {p0}, Lfx0;->F()V
-
-    iget-object p1, p1, Lex0;->b:Ljava/lang/String;
-
-    invoke-interface {p0, p1}, Lfx0;->g(Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_6
-    iget-object p0, p0, Lcx0;->b:Lgx0;
-
-    check-cast p1, Lex0;
-
-    const-string v0, "gx0"
-
-    const-string v1, "onViewCreated: finished"
-
-    invoke-static {v0, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, p0, Lgx0;->h:Lru/ok/messages/settings/FrgBaseSettings;
-
-    iget-object p1, p1, Lex0;->b:Ljava/lang/String;
-
-    invoke-interface {p0, p1}, Lfx0;->g(Ljava/lang/String;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    iget-object p0, p0, Lcx0;->b:Lgx0;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p1, Ljava/lang/String;
+    iput-object p3, p0, Lcx0;->a:Ljava/lang/String;
 
-    monitor-enter p0
+    return-void
+.end method
 
-    const/4 p1, 0x0
+.method public static valueOf(Ljava/lang/String;)Lcx0;
+    .locals 1
 
-    :try_start_0
-    iput-object p1, p0, Lgx0;->j:Lc7a;
+    const-class v0, Lcx0;
 
-    invoke-virtual {p0}, Lgx0;->c()Ly4a;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result-object p1
+    move-result-object p0
 
-    monitor-exit p0
+    check-cast p0, Lcx0;
 
-    return-object p1
+    return-object p0
+.end method
 
-    :catchall_0
-    move-exception p1
+.method public static values()[Lcx0;
+    .locals 1
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sget-object v0, Lcx0;->t0:[Lcx0;
 
-    throw p1
+    invoke-virtual {v0}, [Lcx0;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcx0;
+
+    return-object v0
 .end method

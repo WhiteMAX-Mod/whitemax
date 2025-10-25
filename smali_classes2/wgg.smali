@@ -1,105 +1,188 @@
-.class public final enum Lwgg;
-.super Ljava/lang/Enum;
+.class public final synthetic Lwgg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lwgg;
-
-.field public static final enum b:Lwgg;
-
-.field public static final enum c:Lwgg;
-
-.field public static final enum o:Lwgg;
+# interfaces
+.implements Lqk8;
+.implements Lhh3;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Lygg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lwgg;
-
-    const/4 v1, 0x0
-
-    const-string v2, "success"
-
-    const-string v3, "SUCCESS"
-
-    invoke-direct {v0, v3, v1, v2}, Lwgg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lwgg;->b:Lwgg;
-
-    new-instance v1, Lwgg;
-
-    const/4 v2, 0x1
-
-    const-string v3, "downloading"
-
-    const-string v4, "DOWNLOADING"
-
-    invoke-direct {v1, v4, v2, v3}, Lwgg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lwgg;->c:Lwgg;
-
-    new-instance v2, Lwgg;
-
-    const/4 v3, 0x2
-
-    const-string v4, "cancelled"
-
-    const-string v5, "CANCELLED"
-
-    invoke-direct {v2, v5, v3, v4}, Lwgg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lwgg;->o:Lwgg;
-
-    filled-new-array {v0, v1, v2}, [Lwgg;
-
-    move-result-object v0
-
-    sput-object v0, Lwgg;->X:[Lwgg;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public synthetic constructor <init>(Lygg;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    packed-switch p2, :pswitch_data_0
 
-    iput-object p3, p0, Lwgg;->a:Ljava/lang/String;
+    sget-object p2, Logg;->b:Logg;
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwgg;->a:Lygg;
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lwgg;
-    .locals 1
 
-    const-class v0, Lwgg;
+# virtual methods
+.method public b(Lyj8;)V
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lwgg;->a:Lygg;
 
-    move-result-object p0
+    sget-object v1, Logg;->c:Logg;
 
-    check-cast p0, Lwgg;
+    const-string v2, "ygg"
 
-    return-object p0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "getUploadsWithStatus: uploadStatus="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, v0, Lygg;->b:Lwif;
+
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lvgg;
+
+    invoke-interface {v1}, Lvgg;->g()Luj8;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Luj8;->b()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/List;
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Lyj8;->h()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, v1}, Lyj8;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p1}, Lyj8;->b()V
+
+    :cond_2
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
-.method public static values()[Lwgg;
-    .locals 1
+.method public c(Lyg3;)V
+    .locals 3
 
-    sget-object v0, Lwgg;->X:[Lwgg;
+    iget-object v0, p0, Lwgg;->a:Lygg;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const-string v1, "ygg"
 
-    move-result-object v0
+    const-string v2, "clear: "
 
-    check-cast v0, [Lwgg;
+    invoke-static {v1, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v0
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, v0, Lygg;->a:Lahg;
+
+    invoke-virtual {v1}, Lahg;->clear()Lwg3;
+
+    move-result-object v1
+
+    iget-object v2, v0, Lygg;->b:Lwif;
+
+    invoke-virtual {v2}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lvgg;
+
+    invoke-interface {v2}, Lvgg;->clear()Lwg3;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lwg3;->e(Lwg3;)Lxg3;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lwg3;->a()V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Lyg3;->h()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1}, Lyg3;->b()V
+
+    :cond_0
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

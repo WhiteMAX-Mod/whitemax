@@ -1,131 +1,49 @@
 .class public final Ltp5;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:J
+.field public final synthetic X:Lup5;
 
-.field public b:J
+.field public Y:I
 
-.field public c:Z
-
-.field public final d:Lsp5;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ly0b;)V
-    .locals 1
+.method public constructor <init>(Lup5;Ly14;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltp5;->X:Lup5;
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Ltp5;->c:Z
-
-    iput-object p1, p0, Ltp5;->d:Lsp5;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)J
-    .locals 7
 
-    const-string v0, "\n"
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    iput-object p1, p0, Ltp5;->o:Ljava/lang/Object;
 
-    move-result-object p0
+    iget p1, p0, Ltp5;->Y:I
 
-    array-length v0, p0
+    const/high16 v0, -0x80000000
 
-    const/4 v1, 0x0
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Ltp5;->Y:I
 
-    :goto_0
-    const/4 v3, 0x1
+    iget-object p1, p0, Ltp5;->X:Lup5;
 
-    if-ge v2, v0, :cond_1
+    const/4 v0, 0x0
 
-    aget-object v4, p0, v2
+    invoke-static {p1, v0, p0}, Lup5;->T0(Lup5;Ljava/util/List;Ly14;)Ljava/lang/Object;
 
-    const-string v5, "a=fingerprint"
+    move-result-object p1
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    const-string v5, " "
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v4
-
-    array-length v5, v4
-
-    const/4 v6, 0x2
-
-    if-ne v5, v6, :cond_0
-
-    aget-object v1, v4, v3
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    if-eqz v1, :cond_3
-
-    const-string p0, ":"
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-
-    array-length v0, p0
-
-    sub-int/2addr v0, v3
-
-    const/4 v1, 0x7
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    const-wide/16 v1, 0x0
-
-    :goto_1
-    if-ltz v0, :cond_2
-
-    aget-object v3, p0, v0
-
-    const/16 v4, 0x10
-
-    invoke-static {v3, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
-
-    move-result v3
-
-    const/16 v4, 0x8
-
-    shl-long/2addr v1, v4
-
-    int-to-long v3, v3
-
-    or-long/2addr v1, v3
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_1
-
-    :cond_2
-    return-wide v1
-
-    :cond_3
-    const-wide/16 v0, -0x1
-
-    return-wide v0
+    return-object p1
 .end method

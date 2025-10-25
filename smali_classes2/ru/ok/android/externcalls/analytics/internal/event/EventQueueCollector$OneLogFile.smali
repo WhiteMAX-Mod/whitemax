@@ -102,12 +102,12 @@
 .end method
 
 .method public bridge synthetic get()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;->get()Ljava/io/File;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

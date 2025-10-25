@@ -1,209 +1,192 @@
 .class public final Lkt5;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:Lipc;
+.field public final a:Ljava/lang/String;
 
-.field public Y:I
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public final synthetic r0:Lipc;
-
-.field public final synthetic s0:Lks5;
+.field public final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Lipc;Lks5;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lkt5;->r0:Lipc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lkt5;->s0:Lks5;
+    new-instance v0, Ljava/util/HashMap;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lkt5;->b:Ljava/util/HashMap;
+
+    iput-object p1, p0, Lkt5;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    check-cast p1, Lt62;
-
-    iget-object p1, p1, Lt62;->a:Ljava/lang/Object;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    new-instance v0, Lt62;
-
-    invoke-direct {v0, p1}, Lt62;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {p0, v0, p2}, Lkt5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p0}, Landroidx/core/content/FileProvider;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Lkt5;
+    invoke-static {p1}, Landroidx/core/content/FileProvider;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object p1, Lylf;->a:Lylf;
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Lkt5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object p0
+    move-result v0
 
-    return-object p0
-.end method
+    if-nez v0, :cond_1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v0, Lkt5;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lkt5;->r0:Lipc;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lkt5;->s0:Lks5;
+    const/16 p1, 0x2f
 
-    invoke-direct {v0, v1, p0, p2}, Lkt5;-><init>(Lipc;Lks5;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iput-object p1, v0, Lkt5;->Z:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    iget v0, p0, Lkt5;->Y:I
+    move-result p0
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object p0, p0, Lkt5;->X:Lipc;
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkt5;->Z:Ljava/lang/Object;
-
-    check-cast p1, Lt62;
-
-    iget-object p1, p1, Lt62;->a:Ljava/lang/Object;
-
-    instance-of v0, p1, Ls62;
-
-    iget-object v2, p0, Lkt5;->r0:Lipc;
-
-    if-nez v0, :cond_2
-
-    iput-object p1, v2, Lipc;->a:Ljava/lang/Object;
-
-    :cond_2
-    if-eqz v0, :cond_9
-
-    instance-of v0, p1, Lr62;
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_3
-
-    move-object v0, p1
-
-    check-cast v0, Lr62;
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
-    :cond_3
-    move-object v0, v3
+    :cond_0
+    const/4 p0, 0x0
 
+    return p0
+
+    :cond_1
     :goto_0
-    if-eqz v0, :cond_4
+    const/4 p0, 0x1
 
-    iget-object v0, v0, Lr62;->a:Ljava/lang/Throwable;
+    return p0
+.end method
 
-    goto :goto_1
 
-    :cond_4
-    move-object v0, v3
+# virtual methods
+.method public final b(Landroid/net/Uri;)Ljava/io/File;
+    .locals 4
 
-    :goto_1
-    if-nez v0, :cond_8
+    invoke-virtual {p1}, Landroid/net/Uri;->getEncodedPath()Ljava/lang/String;
 
-    iget-object v0, v2, Lipc;->a:Ljava/lang/Object;
+    move-result-object v0
 
-    if-eqz v0, :cond_7
+    const/16 v1, 0x2f
 
-    sget-object v4, Lh4a;->a:Lkotlinx/coroutines/internal/Symbol;
+    const/4 v2, 0x1
 
-    if-ne v0, v4, :cond_5
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->indexOf(II)I
 
-    goto :goto_2
+    move-result v1
 
-    :cond_5
-    move-object v3, v0
+    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    :goto_2
-    iput-object p1, p0, Lkt5;->Z:Ljava/lang/Object;
+    move-result-object v3
 
-    iput-object v2, p0, Lkt5;->X:Lipc;
+    invoke-static {v3}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
 
-    iput v1, p0, Lkt5;->Y:I
+    move-result-object v3
 
-    iget-object p1, p0, Lkt5;->s0:Lks5;
+    add-int/2addr v1, v2
 
-    invoke-interface {p1, v3, p0}, Lks5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object p1, Lz04;->a:Lz04;
+    invoke-static {v0}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
 
-    if-ne p0, p1, :cond_6
+    move-result-object v0
+
+    iget-object v1, p0, Lkt5;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/io/File;
+
+    if-eqz v1, :cond_1
+
+    new-instance p1, Ljava/io/File;
+
+    invoke-direct {p1, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    :try_start_0
+    invoke-virtual {p1}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lkt5;->a(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     return-object p1
 
-    :cond_6
-    move-object p0, v2
+    :cond_0
+    new-instance p1, Ljava/lang/SecurityException;
 
-    :goto_3
-    move-object v2, p0
+    const-string v0, "Resolved path jumped beyond configured root"
 
-    :cond_7
-    sget-object p0, Lh4a;->c:Lkotlinx/coroutines/internal/Symbol;
+    invoke-direct {p1, v0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
-    iput-object p0, v2, Lipc;->a:Ljava/lang/Object;
+    throw p1
 
-    goto :goto_4
+    :catch_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    :cond_8
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Failed to resolve canonical path for "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
     throw v0
 
-    :cond_9
-    :goto_4
-    sget-object p0, Lylf;->a:Lylf;
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    return-object p0
+    const-string v1, "Unable to find configured root for "
+
+    invoke-static {p1, v1}, Lzdf;->q(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

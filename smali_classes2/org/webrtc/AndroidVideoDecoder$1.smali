@@ -74,9 +74,9 @@
     invoke-static {v2, v3, v1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/AndroidVideoDecoder$1;->this$0:Lorg/webrtc/AndroidVideoDecoder;
+    iget-object v1, p0, Lorg/webrtc/AndroidVideoDecoder$1;->this$0:Lorg/webrtc/AndroidVideoDecoder;
 
-    invoke-static {p0, v0}, Lorg/webrtc/AndroidVideoDecoder;->c(Lorg/webrtc/AndroidVideoDecoder;Lorg/webrtc/MediaCodecWrapper;)V
+    invoke-static {v1, v0}, Lorg/webrtc/AndroidVideoDecoder;->c(Lorg/webrtc/AndroidVideoDecoder;Lorg/webrtc/MediaCodecWrapper;)V
 
     return-void
 .end method

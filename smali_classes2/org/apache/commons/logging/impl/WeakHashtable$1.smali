@@ -39,31 +39,31 @@
 
 # virtual methods
 .method public hasMoreElements()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/commons/logging/impl/WeakHashtable$1;->val$enumer:Ljava/util/Enumeration;
+    iget-object v0, p0, Lorg/apache/commons/logging/impl/WeakHashtable$1;->val$enumer:Ljava/util/Enumeration;
 
-    invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
+    invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public nextElement()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/commons/logging/impl/WeakHashtable$1;->val$enumer:Ljava/util/Enumeration;
+    iget-object v0, p0, Lorg/apache/commons/logging/impl/WeakHashtable$1;->val$enumer:Ljava/util/Enumeration;
 
-    invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;
+    check-cast v0, Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;
 
-    invoke-static {p0}, Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;->access$100(Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;)Ljava/lang/Object;
+    invoke-static {v0}, Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;->access$100(Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

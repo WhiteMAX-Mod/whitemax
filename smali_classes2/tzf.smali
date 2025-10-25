@@ -1,82 +1,63 @@
 .class public final Ltzf;
-.super Lure;
+.super Luzf;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic b:I
 
-.field public final synthetic Y:Lwzf;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lwzf;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JI)V
     .locals 0
 
-    iput-object p1, p0, Ltzf;->Y:Lwzf;
+    iput p3, p0, Ltzf;->b:I
 
-    const/4 p1, 0x2
+    packed-switch p3, :pswitch_data_0
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget-object p3, Lszf;->b:Lszf;
+
+    invoke-direct {p0, p3}, Luzf;-><init>(Lszf;)V
+
+    iput-wide p1, p0, Ltzf;->c:J
 
     return-void
-.end method
 
+    :pswitch_0
+    sget-object p3, Lszf;->X:Lszf;
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-direct {p0, p3}, Luzf;-><init>(Lszf;)V
 
-    check-cast p1, Lxy;
+    iput-wide p1, p0, Ltzf;->c:J
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    return-void
 
-    invoke-virtual {p0, p1, p2}, Ltzf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :pswitch_1
+    sget-object p3, Lszf;->o:Lszf;
 
-    move-result-object p0
+    invoke-direct {p0, p3}, Luzf;-><init>(Lszf;)V
 
-    check-cast p0, Ltzf;
+    iput-wide p1, p0, Ltzf;->c:J
 
-    sget-object p1, Lylf;->a:Lylf;
+    return-void
 
-    invoke-virtual {p0, p1}, Ltzf;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_2
+    sget-object p3, Lszf;->c:Lszf;
 
-    return-object p1
-.end method
+    invoke-direct {p0, p3}, Luzf;-><init>(Lszf;)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iput-wide p1, p0, Ltzf;->c:J
 
-    new-instance v0, Ltzf;
+    return-void
 
-    iget-object p0, p0, Ltzf;->Y:Lwzf;
+    nop
 
-    invoke-direct {v0, p0, p2}, Ltzf;-><init>(Lwzf;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ltzf;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ltzf;->X:Ljava/lang/Object;
-
-    check-cast p1, Lxy;
-
-    sget-object v0, Lwzf;->L0:[Lxi7;
-
-    iget-object p0, p0, Ltzf;->Y:Lwzf;
-
-    invoke-virtual {p0, p1}, Lwzf;->z(Lxy;)V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

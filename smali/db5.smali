@@ -2,65 +2,214 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcb5;
+
 
 # instance fields
-.field public final a:J
+.field public final X:Lju1;
 
-.field public final b:J
+.field public final Y:Lgu1;
+
+.field public final Z:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final a:Landroid/media/MediaCodec;
+
+.field public final b:Landroid/media/MediaCodec$BufferInfo;
+
+.field public final c:I
+
+.field public final o:Ljava/nio/ByteBuffer;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 3
+.method public constructor <init>(Landroid/media/MediaCodec;ILandroid/media/MediaCodec$BufferInfo;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x0
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    cmp-long v2, p3, v0
+    const/4 v1, 0x0
 
-    if-nez v2, :cond_0
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    iput-wide v0, p0, Ldb5;->a:J
+    iput-object v0, p0, Ldb5;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const-wide/16 p1, 0x1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-wide p1, p0, Ldb5;->b:J
+    iput-object p1, p0, Ldb5;->a:Landroid/media/MediaCodec;
 
-    return-void
+    iput p2, p0, Ldb5;->c:I
 
-    :cond_0
-    iput-wide p1, p0, Ldb5;->a:J
+    invoke-virtual {p1, p2}, Landroid/media/MediaCodec;->getOutputBuffer(I)Ljava/nio/ByteBuffer;
 
-    iput-wide p3, p0, Ldb5;->b:J
+    move-result-object p1
+
+    iput-object p1, p0, Ldb5;->o:Ljava/nio/ByteBuffer;
+
+    iput-object p3, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    new-instance p2, Lqu0;
+
+    const/4 p3, 0x2
+
+    invoke-direct {p2, p1, p3}, Lqu0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+
+    invoke-static {p2}, Lomi;->a(Lhu1;)Lju1;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ldb5;->X:Lju1;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgu1;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Ldb5;->Y:Lgu1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final A()Landroid/media/MediaCodec$BufferInfo;
+    .locals 1
+
+    iget-object v0, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
+
+    return-object v0
+.end method
+
+.method public final C()Z
+    .locals 2
+
+    iget-object v0, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
+
+    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
+
+    const/4 v1, 0x1
+
+    and-int/2addr v0, v1
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final U()J
+    .locals 2
+
+    iget-object v0, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
+
+    iget-wide v0, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
+
+    return-wide v0
+.end method
+
+.method public final close()V
+    .locals 4
+
+    iget-object v0, p0, Ldb5;->Y:Lgu1;
+
+    iget-object v1, p0, Ldb5;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    iget-object v1, p0, Ldb5;->a:Landroid/media/MediaCodec;
+
+    iget v2, p0, Ldb5;->c:I
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lgu1;->b(Ljava/lang/Object;)Z
+
+    return-void
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v0, v1}, Lgu1;->d(Ljava/lang/Throwable;)Z
+
+    return-void
+.end method
+
+.method public final r()Ljava/nio/ByteBuffer;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ldb5;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    iget-wide v1, p0, Ldb5;->a:J
+    move-result v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    const-string v1, "/"
+    iget-object v0, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v1, v0, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
-    iget-wide v1, p0, Ldb5;->b:J
+    iget-object v2, p0, Ldb5;->o:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v1, v0, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
-    move-result-object p0
+    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    return-object p0
+    add-int/2addr v1, v0
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    return-object v2
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "encoded data is closed."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final size()J
+    .locals 2
+
+    iget-object v0, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
+
+    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
+
+    int-to-long v0, v0
+
+    return-wide v0
 .end method

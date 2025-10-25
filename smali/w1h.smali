@@ -1,62 +1,23 @@
-.class public final Lw1h;
-.super Landroid/content/BroadcastReceiver;
+.class public abstract Lw1h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Landroid/content/Context;
-
-.field public final b:Lzab;
-
-
 # direct methods
-.method public constructor <init>(Lzab;)V
+.method public static a(Landroid/view/View;)F
     .locals 0
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-static {p0}, Lcad;->a(Landroid/view/View;)F
 
-    iput-object p1, p0, Lw1h;->b:Lzab;
+    move-result p0
 
-    return-void
+    return p0
 .end method
 
-
-# virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+.method public static b(Landroid/view/View;F)V
     .locals 0
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    const-string p2, "com.google.android.gms"
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
+    invoke-static {p0, p1}, Lcad;->v(Landroid/view/View;F)V
 
     return-void
-
-    :cond_1
-    iget-object p0, p0, Lw1h;->b:Lzab;
-
-    iget-object p0, p0, Lzab;->c:Ljava/lang/Object;
-
-    const/4 p0, 0x0
-
-    throw p0
 .end method

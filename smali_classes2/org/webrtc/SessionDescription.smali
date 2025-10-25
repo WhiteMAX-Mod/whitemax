@@ -35,25 +35,25 @@
 
 # virtual methods
 .method public getDescription()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getTypeInCanonicalForm()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
+    iget-object v0, p0, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
 
-    invoke-virtual {p0}, Lorg/webrtc/SessionDescription$Type;->canonicalForm()Ljava/lang/String;
+    invoke-virtual {v0}, Lorg/webrtc/SessionDescription$Type;->canonicalForm()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,70 +1,274 @@
-.class public final synthetic Lryg;
-.super Ljava/lang/Object;
+.class public final Lryg;
+.super Lsf8;
 .source "SourceFile"
-
-# interfaces
-.implements Lb27;
-.implements Ll9a;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Object;
+.field public final synthetic X:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(ILjava/lang/Class;III)V
     .locals 0
 
-    iput-object p1, p0, Lryg;->a:Ljava/lang/Object;
+    iput p5, p0, Lryg;->X:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lsf8;->a:I
+
+    iput-object p2, p0, Lsf8;->o:Ljava/lang/Object;
+
+    iput p3, p0, Lsf8;->c:I
+
+    iput p4, p0, Lsf8;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public j(Lc27;)V
-    .locals 0
+.method public final c(Landroid/view/View;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p0, p0, Lryg;->a:Ljava/lang/Object;
+    iget v0, p0, Lryg;->X:I
 
-    check-cast p0, Lsyg;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1}, Lazg;->c(Landroid/view/View;)Z
 
-    :try_start_0
-    invoke-interface {p1}, Lc27;->b()La27;
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    return-object p1
 
-    iget-object p0, p0, Lsyg;->b:Ltyg;
+    :pswitch_0
+    invoke-static {p1}, Lczg;->b(Landroid/view/View;)Ljava/lang/CharSequence;
 
-    invoke-virtual {p0, p1}, Ltyg;->n(La27;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p1
 
-    :cond_0
-    return-void
+    return-object p1
 
-    :catch_0
-    move-exception p0
+    :pswitch_1
+    invoke-static {p1}, Lazg;->b(Landroid/view/View;)Ljava/lang/CharSequence;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    move-result-object p1
 
-    return-void
+    return-object p1
+
+    :pswitch_2
+    invoke-static {p1}, Lazg;->d(Landroid/view/View;)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public p(Lcom/google/android/gms/tasks/Task;)V
-    .locals 0
+.method public final d(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object p0, p0, Lryg;->a:Ljava/lang/Object;
+    iget v0, p0, Lryg;->X:I
 
-    check-cast p0, Lcom/my/tracker/obfuscated/x$c;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p0, p1}, Lcom/my/tracker/obfuscated/x$b;->b(Lcom/my/tracker/obfuscated/x$c;Lcom/google/android/gms/tasks/Task;)V
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    invoke-static {p1, p2}, Lazg;->g(Landroid/view/View;Z)V
 
     return-void
+
+    :pswitch_0
+    check-cast p2, Ljava/lang/CharSequence;
+
+    invoke-static {p1, p2}, Lczg;->e(Landroid/view/View;Ljava/lang/CharSequence;)V
+
+    return-void
+
+    :pswitch_1
+    check-cast p2, Ljava/lang/CharSequence;
+
+    invoke-static {p1, p2}, Lazg;->h(Landroid/view/View;Ljava/lang/CharSequence;)V
+
+    return-void
+
+    :pswitch_2
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    invoke-static {p1, p2}, Lazg;->j(Landroid/view/View;Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 2
+
+    iget v0, p0, Lryg;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    move p1, v1
+
+    goto :goto_0
+
+    :cond_0
+    move p1, v0
+
+    :goto_0
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    move p2, v1
+
+    goto :goto_1
+
+    :cond_1
+    move p2, v0
+
+    :goto_1
+    if-ne p1, p2, :cond_2
+
+    move v0, v1
+
+    :cond_2
+    xor-int/lit8 p1, v0, 0x1
+
+    return p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/CharSequence;
+
+    check-cast p2, Ljava/lang/CharSequence;
+
+    invoke-static {p1, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    :goto_2
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/CharSequence;
+
+    check-cast p2, Ljava/lang/CharSequence;
+
+    invoke-static {p1, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    goto :goto_2
+
+    :pswitch_2
+    check-cast p1, Ljava/lang/Boolean;
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    move p1, v1
+
+    goto :goto_3
+
+    :cond_3
+    move p1, v0
+
+    :goto_3
+    if-eqz p2, :cond_4
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    move p2, v1
+
+    goto :goto_4
+
+    :cond_4
+    move p2, v0
+
+    :goto_4
+    if-ne p1, p2, :cond_5
+
+    move v0, v1
+
+    :cond_5
+    xor-int/lit8 p1, v0, 0x1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

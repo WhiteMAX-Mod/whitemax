@@ -1,48 +1,50 @@
-.class public final Lps3;
-.super Ljava/lang/Object;
+.class public final synthetic Lps3;
+.super Lb9;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lbj6;
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
+# static fields
+.field public static final q0:Lps3;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lps3;
 
-    iput-object p1, p0, Lps3;->a:Ljava/lang/String;
+    const-string v1, "<init>(Lone/me/profileedit/screens/changelink/ChangeLinkScreenState;Ljava/util/List;)V"
 
-    iput-object p2, p0, Lps3;->b:Ljava/lang/String;
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Lg72;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lps3;->q0:Lps3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, ", lastName="
+    check-cast p1, Lu72;
 
-    const-string v1, "}"
+    check-cast p2, Ljava/util/List;
 
-    const-string v2, "ContactNameWrapper{name="
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    iget-object v3, p0, Lps3;->a:Ljava/lang/String;
+    new-instance p3, Lg72;
 
-    iget-object p0, p0, Lps3;->b:Ljava/lang/String;
+    invoke-direct {p3, p1, p2}, Lg72;-><init>(Lu72;Ljava/util/List;)V
 
-    invoke-static {v2, v3, v0, p0, v1}, Lz7e;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p3
 .end method

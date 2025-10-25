@@ -18,15 +18,15 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Lw0h;->c:Lzte;
+    sget-object v0, Loth;->c:Lwif;
 
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lw0h;
+    check-cast v0, Loth;
 
-    iget-object v0, v0, Lw0h;->b:Ljava/lang/Throwable;
+    iget-object v0, v0, Loth;->b:Ljava/lang/Throwable;
 
     return-void
 .end method
@@ -36,15 +36,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lw0h;->c:Lzte;
+    sget-object v0, Loth;->c:Lwif;
 
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lw0h;
+    check-cast v1, Loth;
 
-    iget-object v1, v1, Lw0h;->b:Ljava/lang/Throwable;
+    iget-object v1, v1, Loth;->b:Ljava/lang/Throwable;
 
     if-nez v1, :cond_0
 
@@ -59,21 +59,21 @@
     return-void
 
     :cond_0
-    new-instance p0, Lone/me/sdk/gl/effects/loader/GlEffectsLibraryLoadException;
+    new-instance p1, Lone/me/sdk/gl/effects/loader/GlEffectsLibraryLoadException;
 
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p2
 
-    check-cast p1, Lw0h;
+    check-cast p2, Loth;
 
-    iget-object p1, p1, Lw0h;->b:Ljava/lang/Throwable;
+    iget-object p2, p2, Loth;->b:Ljava/lang/Throwable;
 
-    const-string p2, "VideoMessageStencilHolder failed to init"
+    const-string v0, "VideoMessageStencilHolder failed to init"
 
-    invoke-direct {p0, p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p1, v0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method private static native createNativeInstance(II)J
@@ -100,36 +100,36 @@
 
 # virtual methods
 .method public notifyRecording(Z)Z
-    .locals 1
+    .locals 2
 
     iget-boolean v0, p0, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->isRecording:Z
 
     if-ne v0, p1, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_0
     iput-boolean p1, p0, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->isRecording:Z
 
     if-eqz p1, :cond_1
 
-    iget-wide p0, p0, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->nativeInstance:J
+    iget-wide v0, p0, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->nativeInstance:J
 
-    invoke-static {p0, p1}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->onStartRecording(J)V
+    invoke-static {v0, v1}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->onStartRecording(J)V
 
     goto :goto_0
 
     :cond_1
-    iget-wide p0, p0, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->nativeInstance:J
+    iget-wide v0, p0, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->nativeInstance:J
 
-    invoke-static {p0, p1}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->onStopRecording(J)V
+    invoke-static {v0, v1}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->onStopRecording(J)V
 
     :goto_0
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public release()V
@@ -243,41 +243,41 @@
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result p0
+    move-result v4
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p1
 
-    invoke-static {v2, v3, v0, p0, p1}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->handleTextureId(JIII)V
+    invoke-static {v2, v3, v0, v4, p1}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->handleTextureId(JIII)V
 
     filled-new-array {v0}, [I
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0, p2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
+    invoke-static {v1, p1, p2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
-    const-string p0, "glDeleteTextures"
+    const-string p1, "glDeleteTextures"
 
-    invoke-static {p0}, Lya6;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lzgi;->b(Ljava/lang/String;)V
 
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "The specified bitmap is recycled"
+    const-string p2, "The specified bitmap is recycled"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Tried to push recycled bitmap to video messages stencil effect"
+    const-string p2, "Tried to push recycled bitmap to video messages stencil effect"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

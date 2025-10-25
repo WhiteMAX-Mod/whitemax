@@ -1,100 +1,64 @@
-.class public final Lni2;
-.super Lure;
+.class public final synthetic Lni2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Lpb9;
 
-.field public final synthetic Y:Lone/me/profile/screens/media/ChatMediaTabWidget;
+.field public final synthetic b:Ln10;
+
+.field public final synthetic c:Le20;
+
+.field public final synthetic d:Lqx4;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaTabWidget;)V
+.method public synthetic constructor <init>(Lpb9;Ln10;Le20;Lqx4;)V
     .locals 0
 
-    iput-object p2, p0, Lni2;->Y:Lone/me/profile/screens/media/ChatMediaTabWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lni2;->a:Lpb9;
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lni2;->b:Ln10;
+
+    iput-object p3, p0, Lni2;->c:Le20;
+
+    iput-object p4, p0, Lni2;->d:Lqx4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Loi2;
 
-    invoke-virtual {p0, p1, p2}, Lni2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Loi2;
 
-    move-result-object p0
+    iget-object p1, p0, Lni2;->a:Lpb9;
 
-    check-cast p0, Lni2;
+    iget-wide v1, p1, Lrj0;->a:J
 
-    sget-object p1, Lylf;->a:Lylf;
+    iget-object p1, p0, Lni2;->b:Ln10;
 
-    invoke-virtual {p0, p1}, Lni2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v3, p1, Ln10;->a:J
 
-    return-object p1
-.end method
+    iget-object p1, p0, Lni2;->c:Le20;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object v5, p1, Le20;->r:Ljava/lang/String;
 
-    new-instance v0, Lni2;
+    const/4 v7, 0x0
 
-    iget-object p0, p0, Lni2;->Y:Lone/me/profile/screens/media/ChatMediaTabWidget;
+    iget-object v6, p0, Lni2;->d:Lqx4;
 
-    invoke-direct {v0, p2, p0}, Lni2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaTabWidget;)V
-
-    iput-object p1, v0, Lni2;->X:Ljava/lang/Object;
+    invoke-direct/range {v0 .. v7}, Loi2;-><init>(JJLjava/lang/String;Lqx4;Z)V
 
     return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lni2;->X:Ljava/lang/Object;
-
-    check-cast p1, Lki2;
-
-    sget-object v0, Lone/me/profile/screens/media/ChatMediaTabWidget;->v0:[Lxi7;
-
-    iget-object p0, p0, Lni2;->Y:Lone/me/profile/screens/media/ChatMediaTabWidget;
-
-    iget-object p0, p0, Lone/me/profile/screens/media/ChatMediaTabWidget;->X:Lrm0;
-
-    sget-object v0, Lone/me/profile/screens/media/ChatMediaTabWidget;->v0:[Lxi7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ldsa;
-
-    iget-object v0, p1, Lki2;->b:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Ldsa;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p1, Lki2;->a:Lura;
-
-    invoke-virtual {p0, p1}, Ldsa;->setAvatar(Lura;)V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
 .end method

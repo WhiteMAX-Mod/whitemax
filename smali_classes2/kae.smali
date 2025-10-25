@@ -1,107 +1,124 @@
 .class public final Lkae;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic e:[Lxi7;
-
-.field public static final f:Ljava/lang/String;
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lgr4;
+.field public X:I
 
-.field public final b:Lgr4;
+.field public final synthetic Y:Lnae;
 
-.field public final c:Lgr4;
-
-.field public final d:Lgr4;
+.field public final synthetic Z:Lo8e;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Lnae;Lo8e;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lsxb;
+    iput-object p1, p0, Lkae;->Y:Lnae;
 
-    const-class v1, Lkae;
+    iput-object p2, p0, Lkae;->Z:Lo8e;
 
-    const-string v2, "messageController"
+    const/4 p1, 0x2
 
-    const-string v3, "getMessageController()Lru/ok/tamtam/messages/MessageController;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Ljpc;->a:Lkpc;
-
-    const-string v3, "workerService"
-
-    const-string v5, "getWorkerService()Lru/ok/tamtam/services/WorkerService;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Lee5;->h(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lsxb;
-
-    move-result-object v2
-
-    new-instance v3, Lsxb;
-
-    const-string v5, "fileAttachUploader"
-
-    const-string v6, "getFileAttachUploader()Lru/ok/tamtam/FileAttachUploader;"
-
-    invoke-direct {v3, v1, v5, v6, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    new-instance v5, Lsxb;
-
-    const-string v6, "clientPrefs"
-
-    const-string v7, "getClientPrefs()Lru/ok/tamtam/prefs/ClientPrefs;"
-
-    invoke-direct {v5, v1, v6, v7, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 v6, 0x4
-
-    new-array v6, v6, [Lxi7;
-
-    aput-object v0, v6, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v6, v0
-
-    const/4 v0, 0x2
-
-    aput-object v3, v6, v0
-
-    const/4 v0, 0x3
-
-    aput-object v5, v6, v0
-
-    sput-object v6, Lkae;->e:[Lxi7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lkae;->f:Ljava/lang/String;
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lgr4;Lgr4;Lgr4;Lgr4;)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Lq54;
 
-    iput-object p1, p0, Lkae;->a:Lgr4;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-object p2, p0, Lkae;->b:Lgr4;
+    invoke-virtual {p0, p1, p2}, Lkae;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iput-object p3, p0, Lkae;->c:Lgr4;
+    move-result-object p1
 
-    iput-object p4, p0, Lkae;->d:Lgr4;
+    check-cast p1, Lkae;
 
-    return-void
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lkae;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lkae;
+
+    iget-object v0, p0, Lkae;->Y:Lnae;
+
+    iget-object v1, p0, Lkae;->Z:Lo8e;
+
+    invoke-direct {p1, v0, v1, p2}, Lkae;-><init>(Lnae;Lo8e;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lkae;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkae;->Y:Lnae;
+
+    iget-object p1, p1, Lnae;->b:Lnje;
+
+    new-instance v0, Lrae;
+
+    iget-object v2, p0, Lkae;->Z:Lo8e;
+
+    invoke-direct {v0, v2}, Lrae;-><init>(Lo8e;)V
+
+    iput v1, p0, Lkae;->X:I
+
+    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

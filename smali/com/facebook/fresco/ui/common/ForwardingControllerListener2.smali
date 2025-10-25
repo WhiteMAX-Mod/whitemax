@@ -27,10 +27,10 @@
         "methodName",
         "Lkotlin/Function1;",
         "Lcom/facebook/fresco/ui/common/ControllerListener2;",
-        "Lylf;",
+        "Lccg;",
         "block",
         "forEachListener",
-        "(Ljava/lang/String;Lbc6;)V",
+        "(Ljava/lang/String;Lli6;)V",
         "listener",
         "addListener",
         "(Lcom/facebook/fresco/ui/common/ControllerListener2;)V",
@@ -62,7 +62,7 @@
         "listeners",
         "Ljava/util/List;",
         "Companion",
-        "q66",
+        "fd6",
         "ui-common_release"
     }
     k = 0x1
@@ -76,7 +76,7 @@
 
 
 # static fields
-.field public static final Companion:Lq66;
+.field public static final Companion:Lfd6;
 
 .field private static final TAG:Ljava/lang/String; = "FwdControllerListener2"
 
@@ -97,11 +97,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lq66;
+    new-instance v0, Lfd6;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/facebook/fresco/ui/common/ForwardingControllerListener2;->Companion:Lq66;
+    sput-object v0, Lcom/facebook/fresco/ui/common/ForwardingControllerListener2;->Companion:Lfd6;
 
     return-void
 .end method
@@ -122,13 +122,13 @@
     return-void
 .end method
 
-.method private final forEachListener(Ljava/lang/String;Lbc6;)V
-    .locals 4
+.method private final forEachListener(Ljava/lang/String;Lli6;)V
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lbc6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
@@ -156,20 +156,30 @@
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_1
 
     :try_start_1
-    invoke-interface {p2, v2}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_1
 
     :catch_0
-    new-instance v2, Ljava/lang/StringBuilder;
+    move-exception v2
 
-    const-string v3, "InternalListener exception in "
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v4, "InternalListener exception in "
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "FwdControllerListener2"
+
+    invoke-static {v4, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
     add-int/lit8 v1, v1, 0x1
@@ -218,7 +228,7 @@
 .end method
 
 .method public onEmptyEvent(Ljava/lang/Object;)V
-    .locals 3
+    .locals 5
 
     iget-object v0, p0, Lcom/facebook/fresco/ui/common/ForwardingControllerListener2;->listeners:Ljava/util/List;
 
@@ -247,7 +257,18 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    goto :goto_1
+
     :catch_0
+    move-exception v2
+
+    const-string v3, "FwdControllerListener2"
+
+    const-string v4, "InternalListener exception in onEmptyEvent"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -258,7 +279,7 @@
 .end method
 
 .method public onFailure(Ljava/lang/String;Ljava/lang/Throwable;Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;)V
-    .locals 3
+    .locals 5
 
     iget-object v0, p0, Lcom/facebook/fresco/ui/common/ForwardingControllerListener2;->listeners:Ljava/util/List;
 
@@ -287,7 +308,18 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    goto :goto_1
+
     :catch_0
+    move-exception v2
+
+    const-string v3, "FwdControllerListener2"
+
+    const-string v4, "InternalListener exception in onFailure"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -298,7 +330,7 @@
 .end method
 
 .method public onFinalImageSet(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;)V
-    .locals 3
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -336,7 +368,18 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    goto :goto_1
+
     :catch_0
+    move-exception v2
+
+    const-string v3, "FwdControllerListener2"
+
+    const-string v4, "InternalListener exception in onFinalImageSet"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -347,7 +390,7 @@
 .end method
 
 .method public onIntermediateImageFailed(Ljava/lang/String;)V
-    .locals 3
+    .locals 5
 
     iget-object v0, p0, Lcom/facebook/fresco/ui/common/ForwardingControllerListener2;->listeners:Ljava/util/List;
 
@@ -376,7 +419,18 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    goto :goto_1
+
     :catch_0
+    move-exception v2
+
+    const-string v3, "FwdControllerListener2"
+
+    const-string v4, "InternalListener exception in onIntermediateImageFailed"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -387,7 +441,7 @@
 .end method
 
 .method public onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 3
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -423,7 +477,18 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    goto :goto_1
+
     :catch_0
+    move-exception v2
+
+    const-string v3, "FwdControllerListener2"
+
+    const-string v4, "InternalListener exception in onIntermediateImageSet"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -434,7 +499,7 @@
 .end method
 
 .method public onRelease(Ljava/lang/String;Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;)V
-    .locals 3
+    .locals 5
 
     iget-object v0, p0, Lcom/facebook/fresco/ui/common/ForwardingControllerListener2;->listeners:Ljava/util/List;
 
@@ -463,7 +528,18 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    goto :goto_1
+
     :catch_0
+    move-exception v2
+
+    const-string v3, "FwdControllerListener2"
+
+    const-string v4, "InternalListener exception in onRelease"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -474,7 +550,7 @@
 .end method
 
 .method public onSubmit(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;)V
-    .locals 3
+    .locals 5
 
     iget-object v0, p0, Lcom/facebook/fresco/ui/common/ForwardingControllerListener2;->listeners:Ljava/util/List;
 
@@ -503,7 +579,18 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    goto :goto_1
+
     :catch_0
+    move-exception v2
+
+    const-string v3, "FwdControllerListener2"
+
+    const-string v4, "InternalListener exception in onSubmit"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0

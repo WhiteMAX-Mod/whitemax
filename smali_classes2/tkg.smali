@@ -1,180 +1,142 @@
-.class public final synthetic Ltkg;
-.super Ljava/lang/Object;
+.class public final Ltkg;
+.super Landroid/text/style/ImageSpan;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lwsf;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/webapp/rootscreen/WebAppRootScreen;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lone/me/webapp/rootscreen/WebAppRootScreen;I)V
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
     .locals 0
 
-    iput p2, p0, Ltkg;->a:I
+    invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    iput-object p1, p0, Ltkg;->b:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    move-result-object p2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    invoke-virtual {p9}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+
+    move-result-object p3
+
+    iget p4, p3, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+
+    iget p3, p3, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+
+    sub-int p3, p4, p3
+
+    add-int/2addr p7, p4
+
+    div-int/lit8 p3, p3, 0x2
+
+    sub-int/2addr p7, p3
+
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object p3
+
+    iget p3, p3, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object p4
+
+    iget p4, p4, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr p3, p4
+
+    div-int/lit8 p3, p3, 0x2
+
+    sub-int/2addr p7, p3
+
+    int-to-float p3, p7
+
+    invoke-virtual {p1, p5, p3}, Landroid/graphics/Canvas;->translate(FF)V
+
+    invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
 .end method
 
+.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 10
+    invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    iget v0, p0, Ltkg;->a:I
+    move-result-object p2
 
-    iget-object p0, p0, Ltkg;->b:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p2
 
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->L0:[Lxi7;
+    if-eqz p5, :cond_0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {p1}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
-    const/16 v1, 0x1f
+    move-result-object p1
 
-    if-lt v0, v1, :cond_0
+    iget p3, p1, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget p1, p1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
-    move-result-object p0
+    sub-int/2addr p3, p1
 
-    const-string v0, "vibrator_manager"
+    iget p4, p2, Landroid/graphics/Rect;->bottom:I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iget v0, p2, Landroid/graphics/Rect;->top:I
 
-    move-result-object p0
+    sub-int/2addr p4, v0
 
-    invoke-static {p0}, Lrkg;->c(Ljava/lang/Object;)Landroid/os/VibratorManager;
+    div-int/lit8 p3, p3, 0x2
 
-    move-result-object p0
+    add-int/2addr p3, p1
 
-    invoke-static {p0}, Lrkg;->b(Landroid/os/VibratorManager;)Landroid/os/Vibrator;
+    div-int/lit8 p4, p4, 0x2
 
-    move-result-object p0
+    sub-int p1, p3, p4
+
+    iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+
+    iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
+
+    add-int/2addr p3, p4
+
+    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
+
+    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+
+    :cond_0
+    iget p1, p2, Landroid/graphics/Rect;->right:I
+
+    return p1
+.end method
+
+.method public final onThemeChanged(Lv5b;)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lwsf;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lwsf;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    const-string v0, "vibrator"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Vibrator;
+    const/4 v0, 0x0
 
     :goto_0
-    return-object p0
+    if-eqz v0, :cond_1
 
-    :pswitch_0
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->L0:[Lxi7;
+    invoke-interface {v0, p1}, Lwsf;->onThemeChanged(Lv5b;)V
 
-    new-instance v0, Lprg;
-
-    invoke-virtual {p0}, Lone/me/webapp/rootscreen/WebAppRootScreen;->N0()Le9d;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lprg;-><init>(Le9d;)V
-
-    return-object v0
-
-    :pswitch_1
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->L0:[Lxi7;
-
-    new-instance v0, Ltkg;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p0, v1}, Ltkg;-><init>(Lone/me/webapp/rootscreen/WebAppRootScreen;I)V
-
-    new-instance v9, Lzte;
-
-    invoke-direct {v9, v0}, Lzte;-><init>(Lzb6;)V
-
-    iget-object v0, p0, Lone/me/webapp/rootscreen/WebAppRootScreen;->u0:Lfr;
-
-    sget-object v2, Lone/me/webapp/rootscreen/WebAppRootScreen;->L0:[Lxi7;
-
-    const/4 v3, 0x1
-
-    aget-object v3, v2, v3
-
-    invoke-virtual {v0, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v3
-
-    iget-object v0, p0, Lone/me/webapp/rootscreen/WebAppRootScreen;->v0:Lfr;
-
-    aget-object v1, v2, v1
-
-    invoke-virtual {v0, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Lpcg;
-
-    iget-object v0, p0, Lone/me/webapp/rootscreen/WebAppRootScreen;->t0:Lfr;
-
-    const/4 v1, 0x0
-
-    aget-object v1, v2, v1
-
-    invoke-virtual {v0, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Ljava/lang/Long;
-
-    iget-object v0, p0, Lone/me/webapp/rootscreen/WebAppRootScreen;->w0:Lfr;
-
-    const/4 v1, 0x3
-
-    aget-object v1, v2, v1
-
-    invoke-virtual {v0, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v7, v0
-
-    check-cast v7, Ljava/lang/String;
-
-    iget-object v8, p0, Lone/me/webapp/rootscreen/WebAppRootScreen;->K0:Lymg;
-
-    new-instance v2, Ltmg;
-
-    invoke-direct/range {v2 .. v9}, Ltmg;-><init>(JLpcg;Ljava/lang/Long;Ljava/lang/String;Lymg;Lzte;)V
-
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return-void
 .end method

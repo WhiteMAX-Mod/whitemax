@@ -103,27 +103,27 @@
 
 # virtual methods
 .method public final getHeight()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Builder;->height:I
+    iget v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Builder;->height:I
 
-    return p0
+    return v0
 .end method
 
 .method public final getLimitFps()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Builder;->limitFps:Z
+    iget-boolean v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Builder;->limitFps:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getWidth()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Builder;->width:I
+    iget v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Builder;->width:I
 
-    return p0
+    return v0
 .end method
 
 .method public final setHeight(I)Ljava/lang/Object;

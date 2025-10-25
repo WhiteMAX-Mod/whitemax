@@ -37,57 +37,57 @@
 
 # virtual methods
 .method public a()V
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/l$a;->reset()V
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/l$a;->reset()V
 
     return-void
 .end method
 
 .method public a(Ljava/io/OutputStream;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
 
-    invoke-virtual {p0, p1}, Ljava/io/ByteArrayOutputStream;->writeTo(Ljava/io/OutputStream;)V
+    invoke-virtual {v0, p1}, Ljava/io/ByteArrayOutputStream;->writeTo(Ljava/io/OutputStream;)V
 
     return-void
 .end method
 
 .method public b()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
 
-    invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->size()I
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->size()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public c()[B
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
 
-    invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public d()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/l$a;->m()V
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/l$a;->m()V
 
     return-void
 .end method

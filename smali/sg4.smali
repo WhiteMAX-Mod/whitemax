@@ -1,68 +1,114 @@
-.class public final Lsg4;
+.class public final synthetic Lsg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrj8;
-
-
-# static fields
-.field public static final f:I
+.implements Lu28;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:Landroid/app/NotificationManager;
-
-.field public d:Lrd;
-
-.field public final e:I
+.field public final synthetic b:Lnd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lnd;I)V
+    .locals 0
 
-    sget v0, Lhbc;->default_notification_channel_name:I
+    .line 1
+    iput p2, p0, Lsg4;->a:I
 
-    sput v0, Lsg4;->f:I
+    iput-object p1, p0, Lsg4;->b:Lnd;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lfr0;)V
-    .locals 1
+.method public synthetic constructor <init>(Lnd;Lff4;I)V
+    .locals 0
 
-    iget-object v0, p1, Lfr0;->d:Ljava/lang/Object;
+    .line 2
+    iput p3, p0, Lsg4;->a:I
 
-    check-cast v0, Landroid/content/Context;
-
-    iget p1, p1, Lfr0;->b:I
+    iput-object p1, p0, Lsg4;->b:Lnd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lsg4;->a:Landroid/content/Context;
+    return-void
+.end method
 
-    iput p1, p0, Lsg4;->b:I
 
-    const-string p1, "notification"
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-virtual {v0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iget v0, p0, Lsg4;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Landroid/app/NotificationManager;
+    iget-object v0, p0, Lsg4;->b:Lnd;
 
-    invoke-static {p1}, Lmq0;->i(Ljava/lang/Object;)V
+    check-cast p1, Lod;
 
-    iput-object p1, p0, Lsg4;->c:Landroid/app/NotificationManager;
-
-    sget p1, Lx4c;->media3_notification_small_icon:I
-
-    iput p1, p0, Lsg4;->e:I
+    invoke-interface {p1, v0}, Lod;->v(Lnd;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lsg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->R0(Lnd;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lsg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->I0(Lnd;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lsg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->V(Lnd;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lsg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->t0(Lnd;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lsg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->q0(Lnd;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

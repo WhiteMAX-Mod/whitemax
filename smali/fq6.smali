@@ -1,112 +1,282 @@
 .class public final Lfq6;
-.super Lure;
+.super Lf4;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfq6;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final x0:[Lcom/google/android/gms/common/api/Scope;
+
+.field public static final y0:[Lcq5;
 
 
 # instance fields
-.field public final synthetic X:Lhq6;
+.field public X:Landroid/os/IBinder;
 
-.field public final synthetic Y:Ljava/io/File;
+.field public Y:[Lcom/google/android/gms/common/api/Scope;
+
+.field public Z:Landroid/os/Bundle;
+
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public o:Ljava/lang/String;
+
+.field public q0:Landroid/accounts/Account;
+
+.field public r0:[Lcq5;
+
+.field public s0:[Lcq5;
+
+.field public final t0:Z
+
+.field public final u0:I
+
+.field public v0:Z
+
+.field public final w0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lhq6;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lfq6;->X:Lhq6;
+    new-instance v0, Lp0i;
 
-    iput-object p2, p0, Lfq6;->Y:Ljava/io/File;
+    const/16 v1, 0x1c
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v1}, Lp0i;-><init>(I)V
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lfq6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Lcom/google/android/gms/common/api/Scope;
+
+    sput-object v1, Lfq6;->x0:[Lcom/google/android/gms/common/api/Scope;
+
+    new-array v0, v0, [Lcq5;
+
+    sput-object v0, Lfq6;->y0:[Lcq5;
+
+    return-void
+.end method
+
+.method public constructor <init>(IIILjava/lang/String;Landroid/os/IBinder;[Lcom/google/android/gms/common/api/Scope;Landroid/os/Bundle;Landroid/accounts/Account;[Lcq5;[Lcq5;ZIZLjava/lang/String;)V
+    .locals 7
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-nez p6, :cond_0
+
+    sget-object v1, Lfq6;->x0:[Lcom/google/android/gms/common/api/Scope;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, p6
+
+    :goto_0
+    if-nez p7, :cond_1
+
+    new-instance v2, Landroid/os/Bundle;
+
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
+
+    goto :goto_1
+
+    :cond_1
+    move-object v2, p7
+
+    :goto_1
+    sget-object v3, Lfq6;->y0:[Lcq5;
+
+    if-nez p9, :cond_2
+
+    move-object v4, v3
+
+    goto :goto_2
+
+    :cond_2
+    move-object/from16 v4, p9
+
+    :goto_2
+    if-nez p10, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    move-object/from16 v3, p10
+
+    :goto_3
+    iput p1, p0, Lfq6;->a:I
+
+    iput p2, p0, Lfq6;->b:I
+
+    iput p3, p0, Lfq6;->c:I
+
+    const-string p2, "com.google.android.gms"
+
+    invoke-virtual {p2, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_4
+
+    iput-object p2, p0, Lfq6;->o:Ljava/lang/String;
+
+    goto :goto_4
+
+    :cond_4
+    iput-object p4, p0, Lfq6;->o:Ljava/lang/String;
+
+    :goto_4
+    const/4 p2, 0x2
+
+    if-ge p1, p2, :cond_7
+
+    const/4 p1, 0x0
+
+    if-eqz p5, :cond_6
+
+    sget p3, Ls5;->d:I
+
+    const-string p3, "com.google.android.gms.common.internal.IAccountAccessor"
+
+    invoke-interface {p5, p3}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object p4
+
+    instance-of v5, p4, Lh67;
+
+    if-eqz v5, :cond_5
+
+    check-cast p4, Lh67;
+
+    goto :goto_5
+
+    :cond_5
+    new-instance p4, Lh2j;
+
+    invoke-direct {p4, p5, p3, p2}, Lguh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    :goto_5
+    if-eqz p4, :cond_6
+
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v5
+
+    :try_start_0
+    check-cast p4, Lh2j;
+
+    invoke-virtual {p4}, Lguh;->W()Landroid/os/Parcel;
+
+    move-result-object p3
+
+    invoke-virtual {p4, p3, p2}, Lguh;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p2
+
+    sget-object p3, Landroid/accounts/Account;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p3}, Lx1i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/accounts/Account;
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v5, v6}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    move-object p1, p3
+
+    goto :goto_6
+
+    :catch_0
+    :try_start_1
+    const-string p2, "AccountAccessor"
+
+    const-string p3, "Remote account accessor probably died"
+
+    invoke-static {p2, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {v5, v6}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    goto :goto_6
+
+    :catchall_0
+    move-exception v0
+
+    move-object p1, v0
+
+    invoke-static {v5, v6}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw p1
+
+    :cond_6
+    :goto_6
+    iput-object p1, p0, Lfq6;->q0:Landroid/accounts/Account;
+
+    goto :goto_7
+
+    :cond_7
+    iput-object p5, p0, Lfq6;->X:Landroid/os/IBinder;
+
+    iput-object p8, p0, Lfq6;->q0:Landroid/accounts/Account;
+
+    :goto_7
+    iput-object v1, p0, Lfq6;->Y:[Lcom/google/android/gms/common/api/Scope;
+
+    iput-object v2, p0, Lfq6;->Z:Landroid/os/Bundle;
+
+    iput-object v4, p0, Lfq6;->r0:[Lcq5;
+
+    iput-object v3, p0, Lfq6;->s0:[Lcq5;
+
+    move/from16 p1, p11
+
+    iput-boolean p1, p0, Lfq6;->t0:Z
+
+    move/from16 p1, p12
+
+    iput p1, p0, Lfq6;->u0:I
+
+    move/from16 p1, p13
+
+    iput-boolean p1, p0, Lfq6;->v0:Z
+
+    move-object/from16 p1, p14
+
+    iput-object p1, p0, Lfq6;->w0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    check-cast p1, Ly04;
+    invoke-static {p0, p1, p2}, Lp0i;->a(Lfq6;Landroid/os/Parcel;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfq6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lfq6;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lfq6;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lfq6;
-
-    iget-object v0, p0, Lfq6;->X:Lhq6;
-
-    iget-object p0, p0, Lfq6;->Y:Ljava/io/File;
-
-    invoke-direct {p1, v0, p0, p2}, Lfq6;-><init>(Lhq6;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lfq6;->X:Lhq6;
-
-    iget-object p1, p1, Lhq6;->d:Lcl7;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqoa;
-
-    const-string v0, "\u0414\u0430\u043c\u043f \u043f\u0430\u043c\u044f\u0442\u0438 \u0437\u0430\u043a\u043e\u043d\u0447\u0438\u043b\u0441\u044f"
-
-    invoke-virtual {p1, v0}, Lqoa;->h(Ljava/lang/CharSequence;)V
-
-    iget-object p0, p0, Lfq6;->Y:Ljava/io/File;
-
-    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "\u0415\u0441\u043b\u0438 \u0447\u0442\u043e \u0444\u0430\u0439\u043b \u043c\u043e\u0436\u043d\u043e \u0431\u0443\u0434\u0435\u0442 \u043d\u0430\u0439\u0442\u0438 \u043f\u043e \u044d\u0442\u043e\u043c\u0443 \u043f\u0443\u0442\u0438: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Lqoa;->b(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1}, Lqoa;->i()Lpoa;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

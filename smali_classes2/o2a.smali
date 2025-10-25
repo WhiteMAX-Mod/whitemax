@@ -1,55 +1,50 @@
-.class public final Lo2a;
-.super Ljx3;
+.class public final synthetic Lo2a;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvr3;
 
 
 # instance fields
-.field public X:Lax0;
-
-.field public Y:Ly04;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lru/ok/messages/NotificationsImagesProvider;
-
-.field public final synthetic r0:Lru/ok/messages/NotificationsImagesProvider;
-
-.field public s0:I
+.field public final synthetic a:Z
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/NotificationsImagesProvider;Ljx3;)V
+.method public synthetic constructor <init>(Z)V
     .locals 0
 
-    iput-object p1, p0, Lo2a;->r0:Lru/ok/messages/NotificationsImagesProvider;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lo2a;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    iput-object p1, p0, Lo2a;->Z:Ljava/lang/Object;
+    check-cast p1, Lx78;
 
-    iget p1, p0, Lo2a;->s0:I
+    iget-boolean v0, p0, Lo2a;->a:Z
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lo2a;->s0:I
-
-    iget-object p1, p0, Lo2a;->r0:Lru/ok/messages/NotificationsImagesProvider;
+    iput-boolean v0, p1, Lx78;->b:Z
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, v0, p0}, Lru/ok/messages/NotificationsImagesProvider;->a(Lru/ok/messages/NotificationsImagesProvider;Lu1e;Ly04;Ljx3;)Ljava/lang/Object;
+    iput-boolean v0, p1, Lx78;->m:Z
 
-    move-result-object p0
+    iput-boolean v0, p1, Lx78;->n:Z
 
-    return-object p0
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p1, Lx78;->p:J
+
+    iput-wide v1, p1, Lx78;->q:J
+
+    iput-boolean v0, p1, Lx78;->r:Z
+
+    return-void
 .end method

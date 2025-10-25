@@ -52,7 +52,7 @@
 
 # virtual methods
 .method public final getMessage()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     const-string v0, "Send tasks limit="
 
@@ -60,11 +60,11 @@
 
     iget v2, p0, Lru/ok/tamtam/api/SessionSendLimitException;->a:I
 
-    iget p0, p0, Lru/ok/tamtam/api/SessionSendLimitException;->b:I
+    iget v3, p0, Lru/ok/tamtam/api/SessionSendLimitException;->b:I
 
-    invoke-static {v0, v2, p0, v1}, Lyv7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v3, v1}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

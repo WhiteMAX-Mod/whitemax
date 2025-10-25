@@ -22,14 +22,6 @@
         <item quantity="few">%d новых уведомления</item>
         <item quantity="many">%d новых уведомлений</item>
     </plurals>
-    <plurals name="tt_channel_subtitle_count">
-        <item quantity="other">%d подписчиков</item>
-        <item quantity="zero">%d подписчиков</item>
-        <item quantity="one">%d подписчик</item>
-        <item quantity="two">%d подписчика</item>
-        <item quantity="few">%d подписчика</item>
-        <item quantity="many">%d подписчиков</item>
-    </plurals>
     <plurals name="tt_chat_subtitle_count">
         <item quantity="other">%d участников</item>
         <item quantity="zero">%d участников</item>
@@ -37,14 +29,6 @@
         <item quantity="two">%d участника</item>
         <item quantity="few">%d участника</item>
         <item quantity="many">%d участников</item>
-    </plurals>
-    <plurals name="tt_dates_days">
-        <item quantity="other">%d дней</item>
-        <item quantity="zero">%d дней</item>
-        <item quantity="one">%d день</item>
-        <item quantity="two">%d дня</item>
-        <item quantity="few">%d дня</item>
-        <item quantity="many">%d дней</item>
     </plurals>
     <plurals name="tt_dates_days_last_update">
         <item quantity="other">Обновлено %d дней назад</item>

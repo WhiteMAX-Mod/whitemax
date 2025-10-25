@@ -48,7 +48,7 @@
 
 
 # static fields
-.field private static final synthetic $ENTRIES:Lx75;
+.field private static final synthetic $ENTRIES:Lyd5;
 
 .field private static final synthetic $VALUES:[Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;
 
@@ -109,11 +109,11 @@
 
     sput-object v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;->$VALUES:[Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;
 
-    new-instance v1, Ly75;
+    new-instance v1, Lzd5;
 
-    invoke-direct {v1, v0}, Ly75;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;->$ENTRIES:Lx75;
+    sput-object v1, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;->$ENTRIES:Lyd5;
 
     return-void
 .end method
@@ -135,16 +135,16 @@
     return-void
 .end method
 
-.method public static getEntries()Lx75;
+.method public static getEntries()Lyd5;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lx75;"
+            "Lyd5;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;->$ENTRIES:Lx75;
+    sget-object v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;->$ENTRIES:Lyd5;
 
     return-object v0
 .end method
@@ -180,9 +180,9 @@
 
 # virtual methods
 .method public final getValue()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;->value:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;->value:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

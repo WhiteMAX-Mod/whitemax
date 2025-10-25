@@ -1,511 +1,237 @@
 .class public final Lgx9;
-.super Ljava/lang/Object;
+.super Lym;
 .source "SourceFile"
+
+# interfaces
+.implements Lrnf;
 
 
 # instance fields
-.field public final a:Z
+.field public final X:J
 
-.field public final b:Z
+.field public final Y:Ljava/util/List;
 
-.field public final c:Z
+.field public final Z:Ljava/lang/String;
 
-.field public final d:Z
-
-.field public final e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:I
-
-.field public final k:I
-
-.field public final l:Z
-
-.field public final m:Ljava/lang/Runnable;
-
-.field public final n:I
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(ZZZZLorg/webrtc/PeerConnectionFactory$EnhancerKind;Ljava/lang/String;IIIIIZLwh0;I)V
+.method public constructor <init>(JJJLjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lym;-><init>(J)V
 
-    iput-boolean p1, p0, Lgx9;->a:Z
+    iput-wide p3, p0, Lgx9;->o:J
 
-    iput-boolean p2, p0, Lgx9;->b:Z
+    iput-wide p5, p0, Lgx9;->X:J
 
-    iput-boolean p3, p0, Lgx9;->c:Z
+    iput-object p7, p0, Lgx9;->Y:Ljava/util/List;
 
-    iput-boolean p4, p0, Lgx9;->d:Z
+    const-class p1, Lgx9;
 
-    iput-object p5, p0, Lgx9;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iput-object p6, p0, Lgx9;->f:Ljava/lang/String;
+    move-result-object p1
 
-    iput p7, p0, Lgx9;->g:I
-
-    iput p8, p0, Lgx9;->h:I
-
-    iput p9, p0, Lgx9;->i:I
-
-    iput p10, p0, Lgx9;->j:I
-
-    iput p11, p0, Lgx9;->k:I
-
-    iput-boolean p12, p0, Lgx9;->l:Z
-
-    iput-object p13, p0, Lgx9;->m:Ljava/lang/Runnable;
-
-    iput p14, p0, Lgx9;->n:I
+    iput-object p1, p0, Lgx9;->Z:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto/16 :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lgx9;
-
-    if-nez v0, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    check-cast p1, Lgx9;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-boolean v0, p0, Lgx9;->a:Z
-
-    iget-boolean v1, p1, Lgx9;->a:Z
-
-    if-eq v0, v1, :cond_2
-
-    goto/16 :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lgx9;->b:Z
-
-    iget-boolean v1, p1, Lgx9;->b:Z
-
-    if-eq v0, v1, :cond_3
-
-    goto/16 :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lgx9;->c:Z
-
-    iget-boolean v1, p1, Lgx9;->c:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lgx9;->d:Z
-
-    iget-boolean v1, p1, Lgx9;->d:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lgx9;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-    iget-object v1, p1, Lgx9;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, p0, Lgx9;->f:Ljava/lang/String;
-
-    iget-object v1, p1, Lgx9;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Lgx9;->g:I
-
-    iget v1, p1, Lgx9;->g:I
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget v0, p0, Lgx9;->h:I
-
-    iget v1, p1, Lgx9;->h:I
-
-    if-eq v0, v1, :cond_9
-
-    goto :goto_0
-
-    :cond_9
-    iget v0, p0, Lgx9;->i:I
-
-    iget v1, p1, Lgx9;->i:I
-
-    if-eq v0, v1, :cond_a
-
-    goto :goto_0
-
-    :cond_a
-    iget v0, p0, Lgx9;->j:I
-
-    iget v1, p1, Lgx9;->j:I
-
-    if-eq v0, v1, :cond_b
-
-    goto :goto_0
-
-    :cond_b
-    iget v0, p0, Lgx9;->k:I
-
-    iget v1, p1, Lgx9;->k:I
-
-    if-eq v0, v1, :cond_c
-
-    goto :goto_0
-
-    :cond_c
-    iget-boolean v0, p0, Lgx9;->l:Z
-
-    iget-boolean v1, p1, Lgx9;->l:Z
-
-    if-eq v0, v1, :cond_d
-
-    goto :goto_0
-
-    :cond_d
-    iget-object v0, p0, Lgx9;->m:Ljava/lang/Runnable;
-
-    iget-object v1, p1, Lgx9;->m:Ljava/lang/Runnable;
-
-    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_e
-
-    goto :goto_0
-
-    :cond_e
-    iget p0, p0, Lgx9;->n:I
-
-    iget p1, p1, Lgx9;->n:I
-
-    if-eq p0, p1, :cond_f
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_f
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-boolean v3, p0, Lgx9;->a:Z
-
-    invoke-static {v1, v2, v3}, Lsq3;->e(IIZ)I
-
-    move-result v1
-
-    iget-boolean v3, p0, Lgx9;->b:Z
-
-    invoke-static {v1, v2, v3}, Lsq3;->e(IIZ)I
-
-    move-result v1
-
-    iget-boolean v3, p0, Lgx9;->c:Z
-
-    invoke-static {v1, v2, v3}, Lsq3;->e(IIZ)I
-
-    move-result v1
-
-    iget-boolean v3, p0, Lgx9;->d:Z
-
-    invoke-static {v1, v2, v3}, Lsq3;->e(IIZ)I
-
-    move-result v1
-
-    iget-object v3, p0, Lgx9;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-    if-nez v3, :cond_0
-
-    move v3, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_0
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lgx9;->f:Ljava/lang/String;
-
-    if-nez v3, :cond_1
-
-    move v3, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget v3, p0, Lgx9;->g:I
-
-    invoke-static {v3, v1}, Lr94;->a(II)I
-
-    move-result v1
-
-    iget v3, p0, Lgx9;->h:I
-
-    invoke-static {v3, v1}, Lr94;->a(II)I
-
-    move-result v1
-
-    iget v3, p0, Lgx9;->i:I
-
-    invoke-static {v3, v1}, Lr94;->a(II)I
-
-    move-result v1
-
-    iget v3, p0, Lgx9;->j:I
-
-    invoke-static {v3, v1}, Lr94;->a(II)I
-
-    move-result v1
-
-    iget v3, p0, Lgx9;->k:I
-
-    invoke-static {v3, v1}, Lr94;->a(II)I
-
-    move-result v1
-
-    iget-boolean v3, p0, Lgx9;->l:Z
-
-    invoke-static {v1, v2, v3}, Lsq3;->e(IIZ)I
-
-    move-result v1
-
-    iget-object v3, p0, Lgx9;->m:Ljava/lang/Runnable;
-
-    if-nez v3, :cond_2
-
-    move v3, v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_2
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget p0, p0, Lgx9;->n:I
-
-    if-nez p0, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-static {p0}, Lmw1;->t(I)I
-
-    move-result v0
-
-    :goto_3
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final d(Lpmf;)V
     .locals 5
 
-    const-string v0, ", serversideAnn="
+    check-cast p1, Lhx9;
 
-    const-string v1, ", clientsidePlatform="
+    iget-object p1, p1, Lhx9;->c:Let;
 
-    const-string v2, "NoiseSuppressorActiveState(noiseSuppressorStuttering=false, serversideBasic="
-
-    iget-boolean v3, p0, Lgx9;->a:Z
-
-    iget-boolean v4, p0, Lgx9;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lyv7;->n(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Let;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    const-string v1, ", clientsideAnn="
+    check-cast v0, Lbt;
 
-    const-string v2, ", enhancerKind="
+    iget-object v0, v0, Lbt;->a:Let;
 
-    iget-boolean v3, p0, Lgx9;->c:Z
+    iget v0, v0, Lzoe;->c:I
 
-    iget-boolean v4, p0, Lgx9;->d:Z
+    const-string v1, "reactions: onSuccess: reactionsCount = "
 
-    invoke-static {v1, v2, v0, v3, v4}, Lmw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    iget-object v2, p0, Lgx9;->Z:Ljava/lang/String;
 
-    iget-object v1, p0, Lgx9;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    invoke-static {v0, v1, v2}, Lzb3;->f(ILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    const-string v1, ", filePath="
+    const/16 v1, 0xa
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lgx9;->Y:Ljava/util/List;
 
-    iget-object v1, p0, Lgx9;->f:Ljava/lang/String;
+    invoke-static {v2, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    const-string v1, ", inputSampleRate="
+    invoke-static {v1}, Lzg8;->i(I)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    const-string v1, ", outputSampleRate="
+    const/16 v3, 0x10
 
-    const-string v2, ", fallbackTimeLimitMillis="
+    if-ge v1, v3, :cond_0
 
-    iget v3, p0, Lgx9;->g:I
-
-    iget v4, p0, Lgx9;->h:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", fallbackStutterCountMillis="
-
-    const-string v2, ", fallbackTimeframeMillis="
-
-    iget v3, p0, Lgx9;->i:I
-
-    iget v4, p0, Lgx9;->j:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    iget v1, p0, Lgx9;->k:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", logTimings="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lgx9;->l:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", onNoiseSuppressorDisabledDueToStutter="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgx9;->m:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", kind="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget p0, p0, Lgx9;->n:I
-
-    if-eq p0, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq p0, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq p0, v1, :cond_0
-
-    const-string p0, "null"
-
-    goto :goto_0
+    move v1, v3
 
     :cond_0
-    const-string p0, "PIPELINE"
+    invoke-direct {v0, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Ljava/lang/Number;
+
+    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Lzoe;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lte9;
+
+    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_1
-    const-string p0, "BASELINE"
+    iget-object p1, p0, Lym;->c:Lzm;
 
-    goto :goto_0
+    if-eqz p1, :cond_2
+
+    goto :goto_1
 
     :cond_2
-    const-string p0, "NONE"
+    const/4 p1, 0x0
 
-    :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_1
+    iget-object p1, p1, Lzm;->I:Liu7;
 
-    const-string p0, ")"
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast p1, Lze9;
 
-    move-result-object p0
+    iget-wide v1, p0, Lgx9;->o:J
 
-    return-object p0
+    invoke-virtual {p1, v1, v2, v0}, Lze9;->f(JLjava/util/Map;)V
+
+    return-void
+.end method
+
+.method public final e(Lzlf;)V
+    .locals 4
+
+    iget-object v0, p1, Lzlf;->X:Ljlf;
+
+    const-string v1, "reactions, onFail %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lgx9;->Z:Ljava/lang/String;
+
+    invoke-static {v3, v0, v1, v2}, Ltei;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Lym;->l()Lpw0;
+
+    move-result-object v0
+
+    new-instance v1, Ltj0;
+
+    iget-wide v2, p0, Lym;->a:J
+
+    invoke-direct {v1, v2, v3, p1}, Ltj0;-><init>(JLzlf;)V
+
+    invoke-virtual {v0, v1}, Lpw0;->c(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final i()Lmmf;
+    .locals 5
+
+    iget-object v0, p0, Lgx9;->Y:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Lrw9;
+
+    sget-object v2, Lm8b;->t1:Lm8b;
+
+    const/4 v3, 0x6
+
+    invoke-direct {v1, v2, v3}, Lrw9;-><init>(Lm8b;I)V
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "chatId"
+
+    iget-wide v3, p0, Lgx9;->X:J
+
+    invoke-virtual {v1, v3, v4, v2}, Lmmf;->u(JLjava/lang/String;)V
+
+    const-string v2, "messageIds"
+
+    invoke-virtual {v1, v2, v0}, Lmmf;->o(Ljava/lang/String;Ljava/util/List;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "mesageIds can\'t be empty"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "messageIds is empty, MsgGetReactions requires at least one messageId"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

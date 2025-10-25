@@ -1,102 +1,81 @@
-.class public final synthetic Lzx0;
+.class public final Lzx0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzb6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lty0;
+.field public final b:Lwy0;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lty0;I)V
+.method public constructor <init>(Ljava/lang/String;Lwy0;Ljava/lang/String;Z)V
     .locals 0
 
-    iput p2, p0, Lzx0;->a:I
-
-    iput-object p1, p0, Lzx0;->b:Lty0;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzx0;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lzx0;->b:Lwy0;
+
+    iput-object p3, p0, Lzx0;->c:Ljava/lang/String;
+
+    iput-boolean p4, p0, Lzx0;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Lzx0;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lzx0;->b:Lty0;
+    const-string v1, "CacheClearItem{text=\'"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lty0;->A0:Lwd1;
+    iget-object v1, p0, Lzx0;->a:Ljava/lang/String;
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-object p0, p0, Lty0;->H0:Lzo1;
+    const-string v1, "\', cacheType="
 
-    iget-object p0, p0, Lzo1;->i:Lw61;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    iget-object v1, p0, Lzx0;->b:Lwy0;
 
-    :pswitch_1
-    iget-object p0, p0, Lty0;->i0:Lbq1;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lbq1;->y()Lz9f;
+    const-string v1, ", bytesText=\'"
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    iget-object v1, p0, Lzx0;->c:Ljava/lang/String;
 
-    :pswitch_2
-    iget-object p0, p0, Lty0;->g:Lt0e;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    const-string v1, "\', checked="
 
-    :pswitch_3
-    iget-object p0, p0, Lty0;->g:Lt0e;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    iget-boolean v1, p0, Lzx0;->d:Z
 
-    :pswitch_4
-    iget-object p0, p0, Lty0;->i0:Lbq1;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lbq1;->y()Lz9f;
+    const/16 v1, 0x7d
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    return-object p0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :pswitch_5
-    iget-object p0, p0, Lty0;->e0:Lbh1;
+    move-result-object v0
 
-    iget-object p0, p0, Lbh1;->a:Lwg1;
-
-    iget-object p0, p0, Lwg1;->c:Leo9;
-
-    iget-boolean p0, p0, Leo9;->e:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

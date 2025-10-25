@@ -1,168 +1,318 @@
 .class public final Lqw5;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbx5;
-.implements Llne;
 
 
 # instance fields
-.field public final a:Lkzb;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Ljava/util/concurrent/atomic/AtomicLong;
+.field public final c:Ljava/lang/String;
 
-.field public o:Lrw5;
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkzb;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqw5;->a:Lkzb;
+    sget v0, Lyaf;->a:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v0, 0x1
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    if-eqz p1, :cond_1
 
-    iput-object p1, p0, Lqw5;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+    move-result-object v1
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
-    iput-object p1, p0, Lqw5;->c:Ljava/util/concurrent/atomic/AtomicLong;
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v1, v0
+
+    :goto_1
+    xor-int/2addr v0, v1
+
+    const-string v1, "ApplicationId must be set."
+
+    invoke-static {v1, v0}, Lzui;->k(Ljava/lang/String;Z)V
+
+    iput-object p1, p0, Lqw5;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lqw5;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lqw5;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lqw5;->d:Ljava/lang/String;
+
+    iput-object p5, p0, Lqw5;->e:Ljava/lang/String;
+
+    iput-object p6, p0, Lqw5;->f:Ljava/lang/String;
+
+    iput-object p7, p0, Lqw5;->g:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public static a(Landroid/content/Context;)Lqw5;
+    .locals 9
+
+    new-instance v0, Lqqe;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lqqe;-><init>(Landroid/content/Context;I)V
+
+    const-string p0, "google_app_id"
+
+    invoke-virtual {v0, p0}, Lqqe;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    new-instance v1, Lqw5;
+
+    const-string p0, "google_api_key"
+
+    invoke-virtual {v0, p0}, Lqqe;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string p0, "firebase_database_url"
+
+    invoke-virtual {v0, p0}, Lqqe;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string p0, "ga_trackingId"
+
+    invoke-virtual {v0, p0}, Lqqe;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string p0, "gcm_defaultSenderId"
+
+    invoke-virtual {v0, p0}, Lqqe;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string p0, "google_storage_bucket"
+
+    invoke-virtual {v0, p0}, Lqqe;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string p0, "project_id"
+
+    invoke-virtual {v0, p0}, Lqqe;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-direct/range {v1 .. v8}, Lqw5;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v1
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object v0, p0, Lqw5;->o:Lrw5;
+    instance-of v0, p1, Lqw5;
 
-    invoke-virtual {v0}, Lrw5;->cancel()V
+    const/4 v1, 0x0
 
-    iget-object p0, p0, Lqw5;->o:Lrw5;
+    if-nez v0, :cond_0
 
-    iget-object p0, p0, Lrw5;->r0:Lbjd;
+    return v1
 
-    invoke-virtual {p0}, Lbjd;->b()V
+    :cond_0
+    check-cast p1, Lqw5;
 
-    return-void
-.end method
+    iget-object v0, p0, Lqw5;->b:Ljava/lang/String;
 
-.method public final cancel()V
-    .locals 0
+    iget-object v2, p1, Lqw5;->b:Ljava/lang/String;
 
-    iget-object p0, p0, Lqw5;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {p0}, Lnne;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
-
-    return-void
-.end method
-
-.method public final d(Llne;)V
-    .locals 4
-
-    iget-object v0, p0, Lqw5;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {v0, p1}, Lnne;->c(Ljava/util/concurrent/atomic/AtomicReference;Llne;)Z
+    invoke-static {v0, v2}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lqw5;->c:Ljava/util/concurrent/atomic/AtomicLong;
+    iget-object v0, p0, Lqw5;->a:Ljava/lang/String;
 
-    const-wide/16 v0, 0x0
+    iget-object v2, p1, Lqw5;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
+    invoke-static {v0, v2}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-wide v2
+    move-result v0
 
-    cmp-long p0, v2, v0
+    if-eqz v0, :cond_1
 
-    if-eqz p0, :cond_0
+    iget-object v0, p0, Lqw5;->c:Ljava/lang/String;
 
-    invoke-interface {p1, v2, v3}, Llne;->h(J)V
+    iget-object v2, p1, Lqw5;->c:Ljava/lang/String;
 
-    :cond_0
-    return-void
-.end method
+    invoke-static {v0, v2}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final h(J)V
-    .locals 1
+    move-result v0
 
-    iget-object v0, p0, Lqw5;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lqw5;->c:Ljava/util/concurrent/atomic/AtomicLong;
+    iget-object v0, p0, Lqw5;->d:Ljava/lang/String;
 
-    invoke-static {v0, p0, p1, p2}, Lnne;->b(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;J)V
+    iget-object v2, p1, Lqw5;->d:Ljava/lang/String;
 
-    return-void
-.end method
+    invoke-static {v0, v2}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    move-result v0
 
-    iget-object v0, p0, Lqw5;->o:Lrw5;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lrw5;->cancel()V
+    iget-object v0, p0, Lqw5;->e:Ljava/lang/String;
 
-    iget-object p0, p0, Lqw5;->o:Lrw5;
+    iget-object v2, p1, Lqw5;->e:Ljava/lang/String;
 
-    iget-object p0, p0, Lrw5;->r0:Lbjd;
+    invoke-static {v0, v2}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, p1}, Lbjd;->onError(Ljava/lang/Throwable;)V
+    move-result v0
 
-    return-void
-.end method
+    if-eqz v0, :cond_1
 
-.method public final s(Ljava/lang/Object;)V
-    .locals 1
+    iget-object v0, p0, Lqw5;->f:Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    iget-object v2, p1, Lqw5;->f:Ljava/lang/String;
+
+    invoke-static {v0, v2}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lqw5;->g:Ljava/lang/String;
+
+    iget-object p1, p1, Lqw5;->g:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_2
+    if-eqz p1, :cond_1
 
-    :cond_0
-    iget-object p1, p0, Lqw5;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 p1, 0x1
 
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lnne;->a:Lnne;
-
-    if-ne p1, v0, :cond_1
-
-    goto :goto_0
+    return p1
 
     :cond_1
-    iget-object p1, p0, Lqw5;->o:Lrw5;
+    return v1
+.end method
 
-    iget-object v0, p0, Lqw5;->a:Lkzb;
+.method public final hashCode()I
+    .locals 7
 
-    check-cast v0, Lrv5;
+    iget-object v5, p0, Lqw5;->f:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lrv5;->e(Ljne;)V
+    iget-object v6, p0, Lqw5;->g:Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    iget-object v0, p0, Lqw5;->b:Ljava/lang/String;
 
-    move-result p1
+    iget-object v1, p0, Lqw5;->a:Ljava/lang/String;
 
-    if-nez p1, :cond_0
+    iget-object v2, p0, Lqw5;->c:Ljava/lang/String;
 
-    :cond_2
-    :goto_0
-    return-void
+    iget-object v3, p0, Lqw5;->d:Ljava/lang/String;
+
+    iget-object v4, p0, Lqw5;->e:Ljava/lang/String;
+
+    filled-new-array/range {v0 .. v6}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Lzgd;
+
+    invoke-direct {v0, p0}, Lzgd;-><init>(Ljava/lang/Object;)V
+
+    const-string v1, "applicationId"
+
+    iget-object v2, p0, Lqw5;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "apiKey"
+
+    iget-object v2, p0, Lqw5;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "databaseUrl"
+
+    iget-object v2, p0, Lqw5;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "gcmSenderId"
+
+    iget-object v2, p0, Lqw5;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "storageBucket"
+
+    iget-object v2, p0, Lqw5;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "projectId"
+
+    iget-object v2, p0, Lqw5;->g:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lzgd;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

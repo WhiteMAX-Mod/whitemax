@@ -1,89 +1,97 @@
-.class public final Lmzc;
-.super Landroid/view/ViewOutlineProvider;
+.class public final synthetic Lmzc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lezc;
 
-.field public final b:Landroid/graphics/Rect;
+.field public final synthetic b:Landroid/view/ViewGroup;
 
-.field public final c:F
+.field public final synthetic c:Lli6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Rect;F)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lmzc;->a:I
-
-    iput-object p1, p0, Lmzc;->b:Landroid/graphics/Rect;
-
-    iput p2, p0, Lmzc;->c:F
-
-    .line 2
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Landroid/graphics/Rect;FI)V
+.method public synthetic constructor <init>(Lezc;Landroid/view/ViewGroup;Lli6;)V
     .locals 0
 
-    .line 1
-    iput p3, p0, Lmzc;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+    iput-object p1, p0, Lmzc;->a:Lezc;
 
-    iput-object p1, p0, Lmzc;->b:Landroid/graphics/Rect;
+    iput-object p2, p0, Lmzc;->b:Landroid/view/ViewGroup;
 
-    iput p2, p0, Lmzc;->c:F
+    iput-object p3, p0, Lmzc;->c:Lli6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 0
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
 
-    iget p1, p0, Lmzc;->a:I
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    move-result-object p1
 
-    iget-object p1, p0, Lmzc;->b:Landroid/graphics/Rect;
+    check-cast p1, Ljava/lang/Integer;
 
-    iget p0, p0, Lmzc;->c:F
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {p2, p1, p0}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
+    move-result v0
 
+    iget-object v1, p0, Lmzc;->a:Lezc;
+
+    iget-object v1, v1, Lezc;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    const-string v3, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    if-eqz v2, :cond_2
+
+    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v1, p0, Lmzc;->b:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lmzc;->c:Lli6;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
     return-void
 
-    :pswitch_0
-    iget-object p1, p0, Lmzc;->b:Landroid/graphics/Rect;
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    iget p0, p0, Lmzc;->c:F
+    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, p1, p0}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
+    throw p1
 
-    return-void
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    :pswitch_1
-    iget-object p1, p0, Lmzc;->b:Landroid/graphics/Rect;
+    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    iget p0, p0, Lmzc;->c:F
-
-    invoke-virtual {p2, p1, p0}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

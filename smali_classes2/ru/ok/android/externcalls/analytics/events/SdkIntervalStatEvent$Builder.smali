@@ -108,21 +108,21 @@
 .end method
 
 .method public final build()Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent$Builder;->map:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+    iget-object v1, p0, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent$Builder;->map:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->getItems()Ljava/util/Map;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->getItems()Ljava/util/Map;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-static {p0}, Li68;->N(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v1}, Lzg8;->n(Ljava/util/Map;)Ljava/util/Map;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent;-><init>(Ljava/util/Map;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent;-><init>(Ljava/util/Map;)V
 
     return-object v0
 .end method

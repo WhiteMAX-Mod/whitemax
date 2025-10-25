@@ -55,7 +55,7 @@
 
     const-string v2, "Compressor"
 
-    invoke-static {v1, p1, v2}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -69,7 +69,7 @@
 
     const-string v3, "net.jpountz.lz4.LZ4HC"
 
-    invoke-static {v3, p1, v2}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, p1, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -83,7 +83,7 @@
 
     const-string v3, "FastDecompressor"
 
-    invoke-static {v1, p1, v3}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v3}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -97,7 +97,7 @@
 
     const-string v3, "SafeDecompressor"
 
-    invoke-static {v1, p1, v3}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v3}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -265,18 +265,18 @@
     goto :goto_2
 
     :cond_2
-    new-instance p0, Ljava/lang/AssertionError;
+    new-instance p1, Ljava/lang/AssertionError;
 
-    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
+    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
 
-    throw p0
+    throw p1
 
     :cond_3
-    new-instance p0, Ljava/lang/AssertionError;
+    new-instance p1, Ljava/lang/AssertionError;
 
-    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
+    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
 
-    throw p0
+    throw p1
 
     :cond_4
     return-void
@@ -365,12 +365,12 @@
 .method public static fastestInstance()Lnet/jpountz/lz4/LZ4Factory;
     .locals 2
 
-    const-class v0, Lgs9;
+    const-class v0, Lk4a;
 
     monitor-enter v0
 
     :try_start_0
-    sget-boolean v1, Lgs9;->a:Z
+    sget-boolean v1, Lk4a;->a:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
@@ -378,7 +378,7 @@
 
     if-nez v1, :cond_1
 
-    const-class v0, Lgs9;
+    const-class v0, Lk4a;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -431,7 +431,7 @@
 .method public static fastestJavaInstance()Lnet/jpountz/lz4/LZ4Factory;
     .locals 1
 
-    sget-boolean v0, Lorf;->b:Z
+    sget-boolean v0, Lpig;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -668,38 +668,38 @@
 
 # virtual methods
 .method public decompressor()Lnet/jpountz/lz4/LZ4Decompressor;
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Lnet/jpountz/lz4/LZ4Factory;->fastDecompressor()Lnet/jpountz/lz4/LZ4FastDecompressor;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public fastCompressor()Lnet/jpountz/lz4/LZ4Compressor;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4Factory;->fastCompressor:Lnet/jpountz/lz4/LZ4Compressor;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4Factory;->fastCompressor:Lnet/jpountz/lz4/LZ4Compressor;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public fastDecompressor()Lnet/jpountz/lz4/LZ4FastDecompressor;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4Factory;->fastDecompressor:Lnet/jpountz/lz4/LZ4FastDecompressor;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4Factory;->fastDecompressor:Lnet/jpountz/lz4/LZ4FastDecompressor;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public highCompressor()Lnet/jpountz/lz4/LZ4Compressor;
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4Factory;->highCompressor:Lnet/jpountz/lz4/LZ4Compressor;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4Factory;->highCompressor:Lnet/jpountz/lz4/LZ4Compressor;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public highCompressor(I)Lnet/jpountz/lz4/LZ4Compressor;
@@ -723,19 +723,19 @@
     .line 2
     :cond_1
     :goto_0
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4Factory;->highCompressors:[Lnet/jpountz/lz4/LZ4Compressor;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4Factory;->highCompressors:[Lnet/jpountz/lz4/LZ4Compressor;
 
-    aget-object p0, p0, p1
+    aget-object p1, v0, p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public safeDecompressor()Lnet/jpountz/lz4/LZ4SafeDecompressor;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4Factory;->safeDecompressor:Lnet/jpountz/lz4/LZ4SafeDecompressor;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4Factory;->safeDecompressor:Lnet/jpountz/lz4/LZ4SafeDecompressor;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -747,23 +747,23 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4Factory;->impl:Ljava/lang/String;
+    iget-object v1, p0, Lnet/jpountz/lz4/LZ4Factory;->impl:Ljava/lang/String;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public unknownSizeDecompressor()Lnet/jpountz/lz4/LZ4UnknownSizeDecompressor;
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Lnet/jpountz/lz4/LZ4Factory;->safeDecompressor()Lnet/jpountz/lz4/LZ4SafeDecompressor;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

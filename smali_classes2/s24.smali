@@ -1,264 +1,254 @@
 .class public final Ls24;
-.super Lrl;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvye;
-.implements Lt2b;
+.implements Lji6;
+
+
+# static fields
+.field public static final X:Ls24;
+
+.field public static final Y:Ls24;
+
+.field public static final Z:Ls24;
+
+.field public static final b:Ls24;
+
+.field public static final c:Ls24;
+
+.field public static final o:Ls24;
+
+.field public static final q0:Ls24;
+
+.field public static final r0:Ls24;
+
+.field public static final s0:Ls24;
+
+.field public static final t0:Ls24;
+
+.field public static final u0:Ls24;
+
+.field public static final v0:Ls24;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final o:Ldl;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(JLdl;)V
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ls24;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->b:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->c:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->o:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->X:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->Y:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->Z:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->q0:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->r0:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->s0:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->t0:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->u0:Ls24;
+
+    new-instance v0, Ls24;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Ls24;-><init>(I)V
+
+    sput-object v0, Ls24;->v0:Ls24;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lrl;-><init>(J)V
+    iput p1, p0, Ls24;->a:I
 
-    iput-object p3, p0, Ls24;->o:Ldl;
-
-    const-class p1, Ls24;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ls24;->X:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final d()V
-    .locals 3
-
-    invoke-virtual {p0}, Lrl;->s()Lo0f;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lrl;->a:J
-
-    invoke-virtual {v0, v1, v2}, Lo0f;->d(J)V
-
-    return-void
-.end method
-
-.method public final e(Lsxe;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "onSuccess: logEntry="
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Ls24;->o:Ldl;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Ls24;->X:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final f()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$CritLog;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$CritLog;-><init>()V
-
-    iget-wide v1, p0, Lrl;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->requestId:J
-
-    iget-object p0, p0, Ls24;->o:Ldl;
-
-    iget-wide v1, p0, Ldl;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->time:J
-
-    iget-wide v1, p0, Ldl;->b:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->userId:J
-
-    iget-wide v1, p0, Ldl;->c:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->sessionId:J
-
-    iget-object v1, p0, Ldl;->d:Ljava/lang/String;
-
-    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->type:Ljava/lang/String;
-
-    iget-object v1, p0, Ldl;->e:Ljava/lang/String;
-
-    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->event:Ljava/lang/String;
-
-    new-instance v1, Ljava/io/ByteArrayOutputStream;
-
-    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
-
-    iget-object p0, p0, Ldl;->f:Ljava/util/Map;
-
-    invoke-static {p0, v1}, Lqe5;->Q(Ljava/util/Map;Ljava/io/ByteArrayOutputStream;)V
-
-    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
-
-    move-result-object p0
-
-    iput-object p0, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->params:[B
-
-    invoke-static {v0}, Lj29;->toByteArray(Lj29;)[B
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final g()I
-    .locals 0
-
-    const p0, 0xf4240
-
-    return p0
-.end method
-
-.method public final getId()J
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    iget-wide v0, p0, Lrl;->a:J
+    iget v0, p0, Ls24;->a:I
 
-    return-wide v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final getType()Lu2b;
-    .locals 0
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    sget-object p0, Lu2b;->b1:Lu2b;
+    const/16 v1, 0x40
 
-    return-object p0
-.end method
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
 
-.method public final h()Lpxe;
-    .locals 1
+    new-instance v1, Lbi6;
 
-    new-instance v0, Lbc2;
+    invoke-direct {v1, v0}, Lbi6;-><init>(Ljava/util/concurrent/ConcurrentHashMap;)V
 
-    iget-object p0, p0, Ls24;->o:Ldl;
+    return-object v1
 
-    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    :pswitch_0
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    move-result-object p0
+    const/16 v1, 0x40
 
-    invoke-direct {v0, p0}, Lbc2;-><init>(Ljava/util/List;)V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
+
+    new-instance v1, Lbi6;
+
+    invoke-direct {v1, v0}, Lbi6;-><init>(Ljava/util/concurrent/ConcurrentHashMap;)V
+
+    return-object v1
+
+    :pswitch_1
+    sget-object v0, Lssa;->a:Lssa;
+
+    invoke-virtual {v0}, Lssa;->k()Lcua;
+
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final j(Lcxe;)V
-    .locals 5
+    :pswitch_2
+    sget-object v0, Lssa;->a:Lssa;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-object v0
 
-    const-string v1, "onFail: logEntry="
+    :pswitch_3
+    sget-object v0, Lptd;->a:Lptd;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-object v0
 
-    iget-object v1, p0, Ls24;->o:Ldl;
+    :pswitch_4
+    sget-object v0, Lccg;->a:Lccg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_5
+    const/4 v0, 0x0
 
-    move-result-object v0
+    return-object v0
 
-    iget-object v2, p0, Ls24;->X:Ljava/lang/String;
+    :pswitch_6
+    const/4 v0, 0x0
 
-    invoke-static {v2, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    return-object v0
 
-    iget-object v0, p1, Lcxe;->b:Ljava/lang/String;
+    :pswitch_7
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lxfc;->s(Ljava/lang/String;)Z
+    return-object v0
 
-    move-result v2
+    :pswitch_8
+    const-class v0, Ll24;
 
-    if-nez v2, :cond_1
+    return-object v0
 
-    invoke-virtual {p0}, Ls24;->d()V
+    :pswitch_9
+    const-class v0, Ll24;
 
-    iget-object p0, p0, Lrl;->c:Lsl;
+    return-object v0
 
-    if-eqz p0, :cond_0
+    :pswitch_a
+    const-class v0, Ll24;
 
-    goto :goto_0
+    return-object v0
 
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    iget-object p0, p0, Lsl;->u:Lcl7;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lq95;
-
-    iget-object v2, p1, Lcxe;->c:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Could not send crit event "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ".\nError: "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ".\nMessage: "
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object p1, p1, Lcxe;->X:Lmwe;
-
-    new-instance v1, Lru/ok/tamtam/ExceptionHandler$HandledException;
-
-    const-string v2, "ONEME-18649"
-
-    invoke-direct {v1, v0, v2, p1}, Lru/ok/tamtam/ExceptionHandler$HandledException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {p0, v1}, Lq95;->b(Lq95;Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

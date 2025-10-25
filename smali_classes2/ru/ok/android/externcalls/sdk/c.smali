@@ -3,32 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqm3;
+.implements Ltr3;
 
 
 # instance fields
-.field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+.field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Boolean;
+.field public final synthetic b:Ljava/lang/Object;
 
 .field public final synthetic c:Z
 
-.field public final synthetic d:Lqm3;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLqm3;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lru/ok/android/externcalls/sdk/c;->a:I
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/c;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/c;->b:Ljava/lang/Boolean;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/c;->b:Ljava/lang/Object;
 
     iput-boolean p3, p0, Lru/ok/android/externcalls/sdk/c;->c:Z
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/c;->d:Lqm3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -36,19 +32,55 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/c;->d:Lqm3;
+    iget v0, p0, Lru/ok/android/externcalls/sdk/c;->a:I
 
-    check-cast p1, Ljava/util/Collection;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/c;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/c;->b:Ljava/lang/Object;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/c;->b:Ljava/lang/Boolean;
+    check-cast v0, Lrne;
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/c;->c:Z
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/c;->c:Z
 
-    invoke-static {v1, v2, p0, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->v(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLqm3;Ljava/util/Collection;)V
+    check-cast p1, Lhi1;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->E(Lrne;ZLhi1;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/c;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/c;->c:Z
+
+    check-cast p1, Lhi1;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->M(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLhi1;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/c;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/c;->c:Z
+
+    check-cast p1, Lhi1;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->c(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLhi1;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,90 +1,61 @@
-.class public final synthetic Lqa2;
-.super Ljava/lang/Object;
+.class public final Lqa2;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lpm3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ljava/lang/Comparable;
 
-.field public final synthetic b:Lfb2;
+.field public Y:Lu18;
+
+.field public Z:Lu18;
+
+.field public o:Lra2;
+
+.field public q0:Z
+
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Lra2;
+
+.field public t0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfb2;I)V
+.method public constructor <init>(Lra2;Ly14;)V
     .locals 0
 
-    iput p2, p0, Lqa2;->a:I
+    iput-object p1, p0, Lqa2;->s0:Lra2;
 
-    iput-object p1, p0, Lqa2;->b:Lfb2;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lqa2;->a:I
+    iput-object p1, p0, Lqa2;->r0:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lqa2;->t0:I
 
-    iget-object p0, p0, Lqa2;->b:Lfb2;
+    const/high16 v0, -0x80000000
 
-    check-cast p1, Leb2;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1, p0}, Leb2;->a(Lfb2;)V
+    iput p1, p0, Lqa2;->t0:I
 
-    return-void
+    const-wide/16 v0, 0x0
 
-    :pswitch_0
-    check-cast p1, Leb2;
+    const/4 p1, 0x0
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v2, p0, Lqa2;->s0:Lra2;
 
-    invoke-virtual {p1}, Leb2;->b()Ljava/util/List;
+    invoke-virtual {v2, v0, v1, p0, p1}, Lra2;->a(JLy14;Ljava/lang/String;)Ljava/io/Serializable;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iget-object p0, p0, Lqa2;->b:Lfb2;
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    iget-object p0, p1, Leb2;->A:Ljava/util/ArrayList;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
-
-    :cond_0
-    iget-object p0, p1, Leb2;->A:Ljava/util/ArrayList;
-
-    if-nez p0, :cond_1
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p0, p1, Leb2;->A:Ljava/util/ArrayList;
-
-    :cond_1
-    iget-object p0, p1, Leb2;->A:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

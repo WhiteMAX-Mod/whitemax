@@ -1,125 +1,97 @@
 .class public final Lfu9;
-.super Landroid/telephony/PhoneStateListener;
+.super Ljava/util/concurrent/FutureTask;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lgu9;
+.field public final synthetic a:Lzx;
 
 
 # direct methods
-.method public constructor <init>(Lgu9;)V
+.method public constructor <init>(Lzx;Lsj4;)V
     .locals 0
 
-    iput-object p1, p0, Lfu9;->a:Lgu9;
+    iput-object p1, p0, Lfu9;->a:Lzx;
 
-    invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
+    invoke-direct {p0, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
-    .locals 1
+.method public final done()V
+    .locals 5
 
-    invoke-static {p1}, Lll8;->c(Landroid/telephony/TelephonyDisplayInfo;)I
+    const-string v0, "An error occurred while executing doInBackground()"
 
-    move-result p1
+    iget-object v1, p0, Lfu9;->a:Lzx;
 
-    const/4 v0, 0x3
+    iget-object v2, v1, Lzx;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    if-eq p1, v0, :cond_1
+    :try_start_0
+    invoke-virtual {p0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
 
-    const/4 v0, 0x4
+    move-result-object v3
 
-    if-ne p1, v0, :cond_0
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    goto :goto_0
+    move-result v4
 
-    :cond_0
-    const/4 p1, 0x0
+    if-nez v4, :cond_0
 
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
-    if-eqz p1, :cond_2
-
-    const/16 p1, 0xa
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p1, 0x5
-
-    :goto_2
-    iget-object p0, p0, Lfu9;->a:Lgu9;
-
-    invoke-static {p1, p0}, Lgu9;->g(ILgu9;)V
+    invoke-virtual {v1, v3}, Lzx;->a(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
-.end method
 
-.method public final onServiceStateChanged(Landroid/telephony/ServiceState;)V
-    .locals 1
+    :catchall_0
+    move-exception v1
 
-    if-nez p1, :cond_0
+    new-instance v2, Ljava/lang/RuntimeException;
 
-    const-string p1, ""
+    invoke-direct {v2, v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_0
+    throw v2
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/telephony/ServiceState;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    :goto_0
-    const-string v0, "nrState=CONNECTED"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    :catch_0
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_0
 
-    const-string v0, "nrState=NOT_RESTRICTED"
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v1, v0}, Lzx;->a(Ljava/lang/Object;)V
 
-    move-result p1
+    goto :goto_0
 
-    if-eqz p1, :cond_1
+    :catch_1
+    move-exception v1
 
-    goto :goto_1
+    new-instance v2, Ljava/lang/RuntimeException;
 
-    :cond_1
-    const/4 p1, 0x0
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
-    goto :goto_2
+    move-result-object v1
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    invoke-direct {v2, v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_2
-    if-eqz p1, :cond_3
+    throw v2
 
-    const/16 p1, 0xa
+    :catch_2
+    move-exception v0
 
-    goto :goto_3
+    const-string v1, "AsyncTask"
 
-    :cond_3
-    const/4 p1, 0x5
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_3
-    iget-object p0, p0, Lfu9;->a:Lgu9;
-
-    invoke-static {p1, p0}, Lgu9;->g(ILgu9;)V
-
+    :cond_0
+    :goto_0
     return-void
 .end method

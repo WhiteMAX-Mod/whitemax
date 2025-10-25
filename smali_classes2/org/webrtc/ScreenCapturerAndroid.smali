@@ -51,11 +51,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lw6d;
+    new-instance v0, Lypd;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lw6d;-><init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
+    invoke-direct {v0, p0, v1}, Lypd;-><init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
 
     iput-object v0, p0, Lorg/webrtc/ScreenCapturerAndroid;->rerequestTextureFrame:Ljava/lang/Runnable;
 
@@ -139,26 +139,26 @@
 
     move-result-wide v0
 
-    cmp-long p0, v0, v2
+    cmp-long v0, v0, v2
 
-    if-nez p0, :cond_2
+    if-nez v0, :cond_2
 
     return-object p1
 
     :cond_2
-    new-instance p0, Lorg/webrtc/VideoFrame;
+    new-instance v0, Lorg/webrtc/VideoFrame;
 
     invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getBuffer()Lorg/webrtc/VideoFrame$Buffer;
 
-    move-result-object v0
+    move-result-object v1
 
     invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getRotation()I
 
     move-result p1
 
-    invoke-direct {p0, v0, p1, v2, v3}, Lorg/webrtc/VideoFrame;-><init>(Lorg/webrtc/VideoFrame$Buffer;IJ)V
+    invoke-direct {v0, v1, p1, v2, v3}, Lorg/webrtc/VideoFrame;-><init>(Lorg/webrtc/VideoFrame$Buffer;IJ)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public static synthetic b(Lorg/webrtc/ScreenCapturerAndroid;)V
@@ -178,22 +178,22 @@
 .end method
 
 .method private checkNotDisposed()V
-    .locals 1
+    .locals 2
 
-    iget-boolean p0, p0, Lorg/webrtc/ScreenCapturerAndroid;->isDisposed:Z
+    iget-boolean v0, p0, Lorg/webrtc/ScreenCapturerAndroid;->isDisposed:Z
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "capturer is disposed."
+    const-string v1, "capturer is disposed."
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method private createVirtualDisplay()V
@@ -294,11 +294,11 @@
 .end method
 
 .method private synthetic lambda$new$0()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/ScreenCapturerAndroid;->surfaceTextureHelper:Lorg/webrtc/SurfaceTextureHelper;
+    iget-object v0, p0, Lorg/webrtc/ScreenCapturerAndroid;->surfaceTextureHelper:Lorg/webrtc/SurfaceTextureHelper;
 
-    invoke-virtual {p0}, Lorg/webrtc/SurfaceTextureHelper;->deliverFrame()V
+    invoke-virtual {v0}, Lorg/webrtc/SurfaceTextureHelper;->deliverFrame()V
 
     return-void
 .end method
@@ -339,13 +339,13 @@
 
     new-instance v1, Landroid/view/Surface;
 
-    iget-object p0, p0, Lorg/webrtc/ScreenCapturerAndroid;->surfaceTextureHelper:Lorg/webrtc/SurfaceTextureHelper;
+    iget-object v2, p0, Lorg/webrtc/ScreenCapturerAndroid;->surfaceTextureHelper:Lorg/webrtc/SurfaceTextureHelper;
 
-    invoke-virtual {p0}, Lorg/webrtc/SurfaceTextureHelper;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+    invoke-virtual {v2}, Lorg/webrtc/SurfaceTextureHelper;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-direct {v1, p0}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+    invoke-direct {v1, v2}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
     invoke-virtual {v0, v1}, Landroid/hardware/display/VirtualDisplay;->setSurface(Landroid/view/Surface;)V
 
@@ -390,11 +390,11 @@
 
     move-result-object p1
 
-    new-instance p2, Lw6d;
+    new-instance p2, Lypd;
 
     const/4 p3, 0x1
 
-    invoke-direct {p2, p0, p3}, Lw6d;-><init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
+    invoke-direct {p2, p0, p3}, Lypd;-><init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
 
     invoke-static {p1, p2}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/lang/Runnable;)V
     :try_end_1
@@ -462,11 +462,11 @@
 .end method
 
 .method public getMediaProjection()Landroid/media/projection/MediaProjection;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/ScreenCapturerAndroid;->mediaProjection:Landroid/media/projection/MediaProjection;
+    iget-object v0, p0, Lorg/webrtc/ScreenCapturerAndroid;->mediaProjection:Landroid/media/projection/MediaProjection;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getNumCapturedFrames()J
@@ -542,11 +542,11 @@
 .end method
 
 .method public isScreencast()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
 .method public onFrame(Lorg/webrtc/VideoFrame;)V
@@ -593,9 +593,9 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/webrtc/ScreenCapturerAndroid;->capturerObserver:Lorg/webrtc/CapturerObserver;
+    iget-object v0, p0, Lorg/webrtc/ScreenCapturerAndroid;->capturerObserver:Lorg/webrtc/CapturerObserver;
 
-    invoke-interface {p0, p1}, Lorg/webrtc/CapturerObserver;->onFrameCaptured(Lorg/webrtc/VideoFrame;)V
+    invoke-interface {v0, p1}, Lorg/webrtc/CapturerObserver;->onFrameCaptured(Lorg/webrtc/VideoFrame;)V
 
     return-void
 .end method

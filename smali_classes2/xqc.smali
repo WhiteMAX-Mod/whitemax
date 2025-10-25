@@ -1,23 +1,10 @@
-.class public final Lxqc;
-.super Lj96;
-.source "SourceFile"
+.class public abstract Lxqc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final f:Lv17;
+# static fields
+.field public static inactive_ttl:I = 0x7f110018
 
-.field public g:Lh0;
+.field public static inactive_ttl_item:I = 0x7f110019
 
-.field public h:Lh0;
-
-
-# direct methods
-.method public constructor <init>(Ltxe;Lq95;Lv17;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lj96;-><init>(Ltxe;Lq95;)V
-
-    iput-object p3, p0, Lxqc;->f:Lv17;
-
-    return-void
-.end method
+.field public static profile_delete_dates_days_left:I = 0x7f110037

@@ -5,13 +5,13 @@
 
 # virtual methods
 .method public final getMessage()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    throw p0
+    throw v0
 .end method

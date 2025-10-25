@@ -3,38 +3,41 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$ClassLoaderCreator;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/appcompat/widget/e;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/appcompat/widget/e;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/appcompat/widget/a;->a:Landroidx/appcompat/widget/e;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    .line 2
-    new-instance p0, Landroidx/appcompat/widget/Toolbar$a;
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->a:Landroidx/appcompat/widget/e;
 
-    const/4 v0, 0x0
+    iget-object v0, v0, Landroidx/appcompat/widget/e;->mSuggestionsAdapter:Li94;
 
-    invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/Toolbar$a;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    instance-of v1, v0, Ldef;
 
-    return-object p0
-.end method
+    if-eqz v1, :cond_0
 
-.method public final createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
-    .locals 0
+    const/4 v1, 0x0
 
-    .line 1
-    new-instance p0, Landroidx/appcompat/widget/Toolbar$a;
+    invoke-virtual {v0, v1}, Li94;->b(Landroid/database/Cursor;)V
 
-    invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/Toolbar$a;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-.end method
-
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
-
-    new-array p0, p1, [Landroidx/appcompat/widget/Toolbar$a;
-
-    return-object p0
+    :cond_0
+    return-void
 .end method

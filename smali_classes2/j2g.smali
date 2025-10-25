@@ -4,128 +4,74 @@
 
 
 # static fields
-.field public static final a:Ljava/util/List;
-
-.field public static final b:Ljava/util/List;
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 13
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Lpg6;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/4 v1, 0x4
 
-    invoke-static {v0, v1}, Lyr5;->a(FF)J
+    invoke-direct {v0, v1}, Lpg6;-><init>(I)V
 
-    move-result-wide v2
+    const v1, 0x9c40
 
-    new-instance v4, Lyr5;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v4, v2, v3}, Lyr5;-><init>(J)V
+    move-result-object v1
 
-    const/high16 v2, 0x44610000    # 900.0f
+    sget-object v2, Ljg6;->b:Ljg6;
 
-    invoke-static {v2, v1}, Lyr5;->a(FF)J
+    invoke-virtual {v0, v2, v1}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
 
-    move-result-wide v5
+    sget-object v2, Ljg6;->c:Ljg6;
 
-    new-instance v3, Lyr5;
+    invoke-virtual {v0, v2, v1}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
 
-    invoke-direct {v3, v5, v6}, Lyr5;-><init>(J)V
+    sget-object v2, Ljg6;->o:Ljg6;
 
-    const v5, 0x44c1c000    # 1550.0f
+    invoke-virtual {v0, v2, v1}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
 
-    invoke-static {v5, v0}, Lyr5;->a(FF)J
+    const v1, 0x26160
 
-    move-result-wide v6
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance v8, Lyr5;
+    move-result-object v1
 
-    invoke-direct {v8, v6, v7}, Lyr5;-><init>(J)V
+    sget-object v2, Ljg6;->X:Ljg6;
 
-    const v6, 0x44dac000    # 1750.0f
+    invoke-virtual {v0, v2, v1}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
 
-    invoke-static {v6, v1}, Lyr5;->a(FF)J
+    sget-object v2, Ljg6;->Y:Ljg6;
 
-    move-result-wide v9
+    invoke-virtual {v0, v2, v1}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
 
-    new-instance v7, Lyr5;
+    const v1, 0x493e0
 
-    invoke-direct {v7, v9, v10}, Lyr5;-><init>(J)V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/high16 v9, 0x44fa0000    # 2000.0f
+    move-result-object v1
 
-    invoke-static {v9, v1}, Lyr5;->a(FF)J
+    sget-object v2, Ljg6;->Z:Ljg6;
 
-    move-result-wide v10
+    invoke-virtual {v0, v2, v1}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
 
-    new-instance v12, Lyr5;
+    sget-object v2, Ljg6;->q0:Ljg6;
 
-    invoke-direct {v12, v10, v11}, Lyr5;-><init>(J)V
+    invoke-virtual {v0, v2, v1}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
 
-    filled-new-array {v4, v3, v8, v7, v12}, [Lyr5;
+    sget-object v2, Ljg6;->r0:Ljg6;
 
-    move-result-object v3
+    invoke-virtual {v0, v2, v1}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
 
-    invoke-static {v3}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
+    sget-object v2, Ljg6;->s0:Ljg6;
 
-    move-result-object v3
+    invoke-virtual {v0, v2, v1}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
 
-    sput-object v3, Lj2g;->a:Ljava/util/List;
-
-    new-instance v3, Lbr;
-
-    const v4, 0x3ba3d70a    # 0.005f
-
-    invoke-direct {v3, v0, v0, v4, v0}, Lbr;-><init>(FFFF)V
-
-    new-instance v4, Lbr;
-
-    const v7, 0x3f03d70a    # 0.515f
-
-    const/high16 v8, 0x43370000    # 183.0f
-
-    invoke-direct {v4, v2, v0, v7, v8}, Lbr;-><init>(FFFF)V
-
-    new-instance v0, Lbr;
-
-    const v2, 0x3f5be76d    # 0.859f
-
-    const/high16 v7, 0x43890000    # 274.0f
-
-    const v8, 0x3f05e354    # 0.523f
-
-    invoke-direct {v0, v5, v8, v2, v7}, Lbr;-><init>(FFFF)V
-
-    new-instance v2, Lbr;
-
-    const v5, 0x3f7020c5    # 0.938f
-
-    const v7, 0x43988000    # 305.0f
-
-    const v8, 0x3f445a1d    # 0.767f
-
-    invoke-direct {v2, v6, v8, v5, v7}, Lbr;-><init>(FFFF)V
-
-    new-instance v5, Lbr;
-
-    const v6, 0x3f7eb852    # 0.995f
-
-    const/high16 v7, 0x43b40000    # 360.0f
-
-    invoke-direct {v5, v9, v6, v1, v7}, Lbr;-><init>(FFFF)V
-
-    filled-new-array {v3, v4, v0, v2, v5}, [Lbr;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lj2g;->b:Ljava/util/List;
+    invoke-virtual {v0}, Lpg6;->C()Lic7;
 
     return-void
 .end method

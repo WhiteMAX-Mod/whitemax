@@ -1,51 +1,93 @@
-.class public final Lp0;
-.super Ljx3;
+.class public abstract Lp0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lg54;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lc2d;
-
-.field public Z:I
-
-.field public o:Ly1d;
+.field private final key:Lh54;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lh54;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lc2d;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lh54;)V
     .locals 0
 
-    iput-object p1, p0, Lp0;->Y:Lc2d;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lp0;->key:Lh54;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public fold(Ljava/lang/Object;Lzi6;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "Lzi6;",
+            ")TR;"
+        }
+    .end annotation
+
+    invoke-interface {p2, p1, p0}, Lzi6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public get(Lh54;)Lg54;
+    .locals 0
+
+    invoke-static {p0, p1}, Lkwi;->a(Lg54;Lh54;)Lg54;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public getKey()Lh54;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lh54;"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lp0;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lp0;->key:Lh54;
 
-    iget p1, p0, Lp0;->Z:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public minusKey(Lh54;)Li54;
+    .locals 0
 
-    or-int/2addr p1, v0
+    invoke-static {p0, p1}, Lkwi;->c(Lg54;Lh54;)Li54;
 
-    iput p1, p0, Lp0;->Z:I
+    move-result-object p1
 
-    iget-object p1, p0, Lp0;->Y:Lc2d;
+    return-object p1
+.end method
 
-    const/4 v0, 0x0
+.method public plus(Li54;)Li54;
+    .locals 0
 
-    invoke-virtual {p1, v0, p0}, Lc2d;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p0, p1}, Ljwi;->a(Li54;Li54;)Li54;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

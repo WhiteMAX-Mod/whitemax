@@ -48,41 +48,41 @@
 
 # virtual methods
 .method public getNetworkSubType()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$NetworkState;->subtype:I
+    iget v0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$NetworkState;->subtype:I
 
-    return p0
+    return v0
 .end method
 
 .method public getNetworkType()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$NetworkState;->type:I
+    iget v0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$NetworkState;->type:I
 
-    return p0
+    return v0
 .end method
 
 .method public getUnderlyingNetworkSubtypeForVpn()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$NetworkState;->underlyingNetworkSubtypeForVpn:I
+    iget v0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$NetworkState;->underlyingNetworkSubtypeForVpn:I
 
-    return p0
+    return v0
 .end method
 
 .method public getUnderlyingNetworkTypeForVpn()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$NetworkState;->underlyingNetworkTypeForVpn:I
+    iget v0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$NetworkState;->underlyingNetworkTypeForVpn:I
 
-    return p0
+    return v0
 .end method
 
 .method public isConnected()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$NetworkState;->connected:Z
+    iget-boolean v0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$NetworkState;->connected:Z
 
-    return p0
+    return v0
 .end method

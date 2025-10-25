@@ -1,154 +1,69 @@
-.class public abstract Lq1e;
-.super Lls7;
+.class public final Lq1e;
+.super Ly14;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:Ljava/lang/String;
+
+.field public Y:Lzw0;
+
+.field public Z:Luw0;
+
+.field public o:Lr1e;
+
+.field public q0:Lpb9;
+
+.field public r0:J
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lr1e;
+
+.field public u0:I
+
+
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 3
+.method public constructor <init>(Lr1e;Ly14;)V
+    .locals 0
 
-    new-instance v0, Lm84;
+    iput-object p1, p0, Lq1e;->t0:Lr1e;
 
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lm84;-><init>(I)V
-
-    new-instance v1, Lbh8;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, p1, v2, v0}, Lbh8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-direct {p0, v1}, Lls7;-><init>(Lbh8;)V
-
-    const/4 p1, 0x1
-
-    invoke-super {p0, p1}, Lcoc;->A(Z)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(I)Lts7;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    if-ltz p1, :cond_0
+    iput-object p1, p0, Lq1e;->s0:Ljava/lang/Object;
 
-    iget-object v0, p0, Lls7;->o:Lfu;
+    iget p1, p0, Lq1e;->u0:I
 
-    iget-object v0, v0, Lfu;->f:Ljava/util/List;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
+    or-int/2addr p1, v0
 
-    move-result v0
+    iput p1, p0, Lq1e;->u0:I
 
-    if-ge p1, v0, :cond_0
+    const/4 v4, 0x0
 
-    invoke-virtual {p0, p1}, Lls7;->C(I)Ljava/lang/Object;
+    const/4 v5, 0x0
 
-    move-result-object p0
+    iget-object v0, p0, Lq1e;->t0:Lr1e;
 
-    check-cast p0, Lts7;
+    const-wide/16 v1, 0x0
 
-    return-object p0
+    const/4 v3, 0x0
 
-    :cond_0
-    const/4 p0, 0x0
+    move-object v6, p0
 
-    return-object p0
-.end method
+    invoke-virtual/range {v0 .. v6}, Lr1e;->u(JLjava/lang/String;Lzw0;Luw0;Ly14;)Ljava/lang/Object;
 
-.method public H(Lj2e;I)V
-    .locals 0
+    move-result-object p1
 
-    invoke-virtual {p0, p2}, Lls7;->C(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lts7;
-
-    invoke-virtual {p1, p0}, Lj2e;->y(Lts7;)V
-
-    return-void
-.end method
-
-.method public I(Lj2e;)V
-    .locals 0
-
-    invoke-virtual {p1}, Lj2e;->E()V
-
-    return-void
-.end method
-
-.method public k(I)J
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lls7;->C(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lts7;
-
-    invoke-interface {p0}, Lts7;->getItemId()J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public l(I)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lls7;->C(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lts7;
-
-    invoke-interface {p0}, Lts7;->m()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public bridge synthetic r(Lzoc;I)V
-    .locals 0
-
-    check-cast p1, Lj2e;
-
-    invoke-virtual {p0, p1, p2}, Lq1e;->H(Lj2e;I)V
-
-    return-void
-.end method
-
-.method public final w(Lzoc;)V
-    .locals 0
-
-    check-cast p1, Lj2e;
-
-    invoke-virtual {p1}, Lj2e;->B()V
-
-    return-void
-.end method
-
-.method public final x(Lzoc;)V
-    .locals 0
-
-    check-cast p1, Lj2e;
-
-    invoke-virtual {p1}, Lj2e;->C()V
-
-    return-void
-.end method
-
-.method public bridge synthetic y(Lzoc;)V
-    .locals 0
-
-    check-cast p1, Lj2e;
-
-    invoke-virtual {p0, p1}, Lq1e;->I(Lj2e;)V
-
-    return-void
+    return-object p1
 .end method

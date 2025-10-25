@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfec;
+.implements Lgwc;
 
 
 # annotations
@@ -28,20 +28,10 @@
 
 
 # virtual methods
-.method public bridge synthetic log(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public bridge synthetic shouldHideSensitiveInformation()Z
+    .locals 1
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public bridge synthetic logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public bridge synthetic reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    return-void
+    return v0
 .end method

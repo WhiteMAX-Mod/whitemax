@@ -1,24 +1,21 @@
-.class public final synthetic Ls0h;
-.super Ljava/lang/Object;
+.class public final Ls0h;
+.super Lv0h;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/my/tracker/obfuscated/n;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lcom/my/tracker/obfuscated/t;
+.field public final synthetic b:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/my/tracker/obfuscated/t;I)V
+.method public synthetic constructor <init>(Landroidx/viewpager2/widget/ViewPager2;I)V
     .locals 0
 
     iput p2, p0, Ls0h;->a:I
 
-    iput-object p1, p0, Ls0h;->b:Lcom/my/tracker/obfuscated/t;
+    iput-object p1, p0, Ls0h;->b:Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,48 +24,77 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
+.method public a(I)V
     .locals 1
 
     iget v0, p0, Ls0h;->a:I
 
-    iget-object p0, p0, Ls0h;->b:Lcom/my/tracker/obfuscated/t;
-
     packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lcom/my/tracker/obfuscated/b1;
-
-    invoke-static {p0, p1}, Lcom/my/tracker/obfuscated/t;->a(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/b1;)V
 
     return-void
 
     :pswitch_0
-    check-cast p1, Lcom/my/tracker/obfuscated/b1;
+    if-nez p1, :cond_0
 
-    invoke-static {p0, p1}, Lcom/my/tracker/obfuscated/t;->j(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/b1;)V
+    iget-object p1, p0, Ls0h;->b:Landroidx/viewpager2/widget/ViewPager2;
 
+    invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2;->h()V
+
+    :cond_0
     return-void
 
-    :pswitch_1
-    check-cast p1, Ljava/lang/Boolean;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/t;->c(Ljava/lang/Boolean;)V
+.method public final c(I)V
+    .locals 2
 
+    iget v0, p0, Ls0h;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p0, Ls0h;->b:Landroidx/viewpager2/widget/ViewPager2;
+
+    invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
+
+    invoke-virtual {p1}, Landroid/view/View;->hasFocus()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->v0:Ly0h;
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->requestFocus(I)Z
+
+    :cond_0
     return-void
 
-    :pswitch_2
-    check-cast p1, Ljava/lang/Boolean;
+    :pswitch_0
+    iget-object v0, p0, Ls0h;->b:Landroidx/viewpager2/widget/ViewPager2;
 
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/t;->b(Ljava/lang/Boolean;)V
+    iget v1, v0, Landroidx/viewpager2/widget/ViewPager2;->o:I
 
+    if-eq v1, p1, :cond_1
+
+    iput p1, v0, Landroidx/viewpager2/widget/ViewPager2;->o:I
+
+    iget-object p1, v0, Landroidx/viewpager2/widget/ViewPager2;->F0:Lr1e;
+
+    invoke-virtual {p1}, Lr1e;->F()V
+
+    :cond_1
     return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

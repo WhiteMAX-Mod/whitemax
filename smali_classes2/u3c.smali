@@ -1,34 +1,103 @@
-.class public abstract Lu3c;
-.super Ljava/lang/Object;
+.class public final Lu3c;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static attach_bar_thumbnail_size:I = 0x7f070054
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static flash_close_button_height:I = 0x7f0700f8
+.field public final synthetic Y:Ld4c;
 
-.field public static flash_close_button_width:I = 0x7f0700f9
 
-.field public static flash_close_wrapper_height:I = 0x7f0700fa
+# direct methods
+.method public constructor <init>(Ld4c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static flash_close_wrapper_width:I = 0x7f0700fb
+    iput-object p1, p0, Lu3c;->Y:Ld4c;
 
-.field public static full_screen_mode_button_height:I = 0x7f070114
+    const/4 p1, 0x2
 
-.field public static full_screen_mode_button_width:I = 0x7f070115
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static gallery_album_cover_size:I = 0x7f070116
+    return-void
+.end method
 
-.field public static progress_bar_medium:I = 0x7f0703ee
 
-.field public static quick_camera_button_margin:I = 0x7f0703f0
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static quick_camera_button_margin_bottom:I = 0x7f0703f1
+    check-cast p1, Ltcb;
 
-.field public static quick_camera_chronometer_text_size:I = 0x7f0703f2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static quick_camera_wrapper_controllers_height:I = 0x7f0703f3
+    invoke-virtual {p0, p1, p2}, Lu3c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static quick_camera_wrapper_height:I = 0x7f0703f4
+    move-result-object p1
 
-.field public static quick_camera_wrapper_width:I = 0x7f0703f5
+    check-cast p1, Lu3c;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lu3c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lu3c;
+
+    iget-object v1, p0, Lu3c;->Y:Ld4c;
+
+    invoke-direct {v0, v1, p2}, Lu3c;-><init>(Ld4c;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lu3c;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lu3c;->X:Ljava/lang/Object;
+
+    check-cast p1, Ltcb;
+
+    iget-object v0, p1, Ltcb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lla2;
+
+    iget-object p1, p1, Ltcb;->b:Ljava/lang/Object;
+
+    check-cast p1, Lwr3;
+
+    iget-object v1, p0, Lu3c;->Y:Ld4c;
+
+    iget-boolean v2, v1, Ld4c;->x0:Z
+
+    if-nez v2, :cond_0
+
+    iget-object v2, v1, Ld4c;->v0:Lx0f;
+
+    const/4 v3, 0x0
+
+    invoke-static {v1, v0, p1, v3}, Ld4c;->r(Ld4c;Lla2;Lwr3;Z)Lq3c;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v2, v0, p1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method

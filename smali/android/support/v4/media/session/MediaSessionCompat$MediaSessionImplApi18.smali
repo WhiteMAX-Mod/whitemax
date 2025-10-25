@@ -19,10 +19,10 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Lrtf;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Lrkg;Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p6}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Lrtf;Landroid/os/Bundle;)V
+    invoke-direct/range {p0 .. p6}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Lrkg;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -30,30 +30,32 @@
 
 # virtual methods
 .method public getRccTransportControlFlagsFromActions(J)I
-    .locals 2
+    .locals 3
 
     invoke-super {p0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->getRccTransportControlFlagsFromActions(J)I
 
-    move-result p0
+    move-result v0
 
-    const-wide/16 v0, 0x100
+    const-wide/16 v1, 0x100
 
-    and-long/2addr p1, v0
+    and-long/2addr p1, v1
 
-    const-wide/16 v0, 0x0
+    const-wide/16 v1, 0x0
 
-    cmp-long p1, p1, v0
+    cmp-long p1, p1, v1
 
     if-eqz p1, :cond_0
 
-    or-int/lit16 p0, p0, 0x100
+    or-int/lit16 p1, v0, 0x100
+
+    return p1
 
     :cond_0
-    return p0
+    return v0
 .end method
 
 .method public registerMediaButtonEventReceiver(Landroid/app/PendingIntent;Landroid/content/ComponentName;)V
-    .locals 1
+    .locals 2
 
     sget-boolean v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;->sIsMbrPendingIntentSupported:Z
 
@@ -69,6 +71,12 @@
     goto :goto_0
 
     :catch_0
+    const-string v0, "MediaSessionCompat"
+
+    const-string v1, "Unable to register media button event receiver with PendingIntent, falling back to ComponentName."
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;->sIsMbrPendingIntentSupported:Z
@@ -92,11 +100,11 @@
 
     if-nez p1, :cond_0
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mRcc:Landroid/media/RemoteControlClient;
+    iget-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mRcc:Landroid/media/RemoteControlClient;
 
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
-    invoke-virtual {p0, p1}, Landroid/media/RemoteControlClient;->setPlaybackPositionUpdateListener(Landroid/media/RemoteControlClient$OnPlaybackPositionUpdateListener;)V
+    invoke-virtual {p1, p2}, Landroid/media/RemoteControlClient;->setPlaybackPositionUpdateListener(Landroid/media/RemoteControlClient$OnPlaybackPositionUpdateListener;)V
 
     return-void
 
@@ -105,9 +113,9 @@
 
     invoke-direct {p1, p0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18$1;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;)V
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mRcc:Landroid/media/RemoteControlClient;
+    iget-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mRcc:Landroid/media/RemoteControlClient;
 
-    invoke-virtual {p0, p1}, Landroid/media/RemoteControlClient;->setPlaybackPositionUpdateListener(Landroid/media/RemoteControlClient$OnPlaybackPositionUpdateListener;)V
+    invoke-virtual {p2, p1}, Landroid/media/RemoteControlClient;->setPlaybackPositionUpdateListener(Landroid/media/RemoteControlClient$OnPlaybackPositionUpdateListener;)V
 
     return-void
 .end method
@@ -181,9 +189,9 @@
 
     invoke-virtual {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->getRccStateFromState(I)I
 
-    move-result p0
+    move-result p1
 
-    invoke-virtual {v3, p0, v0, v1, v2}, Landroid/media/RemoteControlClient;->setPlaybackState(IJF)V
+    invoke-virtual {v3, p1, v0, v1, v2}, Landroid/media/RemoteControlClient;->setPlaybackState(IJF)V
 
     return-void
 .end method
@@ -195,9 +203,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mAudioManager:Landroid/media/AudioManager;
+    iget-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mAudioManager:Landroid/media/AudioManager;
 
-    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->unregisterMediaButtonEventReceiver(Landroid/app/PendingIntent;)V
+    invoke-virtual {p2, p1}, Landroid/media/AudioManager;->unregisterMediaButtonEventReceiver(Landroid/app/PendingIntent;)V
 
     return-void
 

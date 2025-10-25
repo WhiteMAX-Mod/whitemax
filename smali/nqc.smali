@@ -1,130 +1,40 @@
-.class public final Lnqc;
-.super Lw37;
-.source "SourceFile"
+.class public abstract Lnqc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final transient X:[Ljava/lang/Object;
+# static fields
+.field public static expand_button:I = 0x7f0d005b
 
-.field public final transient Y:I
+.field public static image_frame:I = 0x7f0d006b
 
-.field public final transient Z:I
+.field public static preference:I = 0x7f0d00fc
 
-.field public final transient o:Lp37;
+.field public static preference_category:I = 0x7f0d00fd
 
+.field public static preference_category_material:I = 0x7f0d00fe
 
-# direct methods
-.method public constructor <init>(Lp37;[Ljava/lang/Object;II)V
-    .locals 0
+.field public static preference_dialog_edittext:I = 0x7f0d00ff
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+.field public static preference_dropdown:I = 0x7f0d0100
 
-    iput-object p1, p0, Lnqc;->o:Lp37;
+.field public static preference_dropdown_material:I = 0x7f0d0101
 
-    iput-object p2, p0, Lnqc;->X:[Ljava/lang/Object;
+.field public static preference_information:I = 0x7f0d0102
 
-    iput p3, p0, Lnqc;->Y:I
+.field public static preference_information_material:I = 0x7f0d0103
 
-    iput p4, p0, Lnqc;->Z:I
+.field public static preference_list_fragment:I = 0x7f0d0104
 
-    return-void
-.end method
+.field public static preference_material:I = 0x7f0d0105
 
+.field public static preference_recyclerview:I = 0x7f0d0106
 
-# virtual methods
-.method public final b(I[Ljava/lang/Object;)I
-    .locals 0
+.field public static preference_widget_checkbox:I = 0x7f0d0107
 
-    invoke-virtual {p0}, Lw37;->a()Ll37;
+.field public static preference_widget_seekbar:I = 0x7f0d0108
 
-    move-result-object p0
+.field public static preference_widget_seekbar_material:I = 0x7f0d0109
 
-    invoke-virtual {p0, p1, p2}, Ll37;->b(I[Ljava/lang/Object;)I
+.field public static preference_widget_switch:I = 0x7f0d010a
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 2
-
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lnqc;->o:Lp37;
-
-    invoke-virtual {p0, v0}, Lp37;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final g()Lgmf;
-    .locals 1
-
-    invoke-virtual {p0}, Lw37;->a()Ll37;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ll37;->l(I)Lgx5;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final k()Ll37;
-    .locals 1
-
-    new-instance v0, Lmqc;
-
-    invoke-direct {v0, p0}, Lmqc;-><init>(Lnqc;)V
-
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 0
-
-    iget p0, p0, Lnqc;->Z:I
-
-    return p0
-.end method
+.field public static preference_widget_switch_compat:I = 0x7f0d010b

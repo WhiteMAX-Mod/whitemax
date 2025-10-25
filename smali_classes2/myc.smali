@@ -1,161 +1,91 @@
-.class public final Lmyc;
-.super Ljava/lang/Object;
+.class public final enum Lmyc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
 
 # static fields
-.field public static final a:Lmyc;
+.field public static final enum b:Lmyc;
 
-.field public static final b:Li04;
+.field public static final synthetic c:[Lmyc;
+
+.field public static final synthetic o:Lzd5;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
     new-instance v0, Lmyc;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "EMOJI"
 
-    sput-object v0, Lmyc;->a:Lmyc;
+    const/4 v2, 0x0
 
-    new-instance v0, Li04;
+    invoke-direct {v0, v1, v2, v2}, Lmyc;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {v0}, Li04;-><init>()V
+    sput-object v0, Lmyc;->b:Lmyc;
 
-    sput-object v0, Lmyc;->b:Li04;
+    new-instance v1, Lmyc;
 
-    return-void
-.end method
+    const-string v2, "STICKER"
 
+    const/4 v3, 0x1
 
-# virtual methods
-.method public final onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
-    .locals 3
+    invoke-direct {v1, v2, v3, v3}, Lmyc;-><init>(Ljava/lang/String;II)V
 
-    sget-object v0, Lmyc;->b:Li04;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    filled-new-array {v0, v1}, [Lmyc;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sput-object v0, Lmyc;->c:[Lmyc;
 
-    move-result v1
+    new-instance v1, Lzd5;
 
-    if-eqz v1, :cond_0
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sput-object v1, Lmyc;->o:Lzd5;
 
-    move-result-object v1
-
-    check-cast v1, Landroid/view/ViewGroup$OnHierarchyChangeListener;
-
-    invoke-interface {v1, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p1, p2, Landroid/view/ViewGroup;
-
-    if-eqz p1, :cond_1
-
-    move-object p1, p2
-
-    check-cast p1, Landroid/view/ViewGroup;
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
-
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result p0
-
-    const/4 v0, 0x0
-
-    :goto_1
-    if-ge v0, p0, :cond_1
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    sget-object v2, Lmyc;->a:Lmyc;
-
-    invoke-virtual {v2, p2, v1}, Lmyc;->onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_1
     return-void
 .end method
 
-.method public final onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
-    .locals 4
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    instance-of p0, p2, Landroid/view/ViewGroup;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-eqz p0, :cond_1
+    iput p3, p0, Lmyc;->a:I
 
-    move-object p0, p2
+    return-void
+.end method
 
-    check-cast p0, Landroid/view/ViewGroup;
+.method public static valueOf(Ljava/lang/String;)Lmyc;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    const-class v0, Lmyc;
 
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v2
-
-    sget-object v3, Lmyc;->a:Lmyc;
-
-    invoke-virtual {v3, p2, v2}, Lmyc;->onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
-
-    :cond_1
-    sget-object p0, Lmyc;->b:Li04;
-
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p0, Lmyc;
 
-    move-result v0
+    return-object p0
+.end method
 
-    if-eqz v0, :cond_2
+.method public static values()[Lmyc;
+    .locals 1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget-object v0, Lmyc;->c:[Lmyc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/ViewGroup$OnHierarchyChangeListener;
+    check-cast v0, [Lmyc;
 
-    invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
-
-    goto :goto_1
-
-    :cond_2
-    return-void
+    return-object v0
 .end method

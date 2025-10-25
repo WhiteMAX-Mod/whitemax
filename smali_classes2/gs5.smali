@@ -1,3 +1,3 @@
-.class public interface abstract Lgs5;
-.super Ljava/lang/Object;
+.class public final Lgs5;
+.super Luj0;
 .source "SourceFile"

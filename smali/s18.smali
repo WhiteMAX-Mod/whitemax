@@ -1,201 +1,668 @@
 .class public final Ls18;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrc6;
+.implements Ljava/util/ListIterator;
+.implements Lir7;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final X:Lc3;
 
-.field public synthetic Y:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public synthetic Z:Ljava/util/List;
+.field public b:I
+
+.field public c:I
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method public constructor <init>(Lt18;I)V
+    .locals 1
 
-    iput p3, p0, Ls18;->X:I
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput v0, p0, Ls18;->a:I
+
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    iput-object p1, p0, Ls18;->X:Lc3;
+
+    .line 8
+    iput p2, p0, Ls18;->b:I
+
+    const/4 p2, -0x1
+
+    .line 9
+    iput p2, p0, Ls18;->c:I
+
+    .line 10
+    invoke-static {p1}, Lt18;->b(Lt18;)I
+
+    move-result p1
+
+    iput p1, p0, Ls18;->o:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Lu18;I)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Ls18;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Ls18;->X:Lc3;
+
+    .line 3
+    iput p2, p0, Ls18;->b:I
+
+    const/4 p2, -0x1
+
+    .line 4
+    iput p2, p0, Ls18;->c:I
+
+    .line 5
+    invoke-static {p1}, Lu18;->b(Lu18;)I
+
+    move-result p1
+
+    iput p1, p0, Ls18;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public a()V
     .locals 2
 
-    iget p0, p0, Ls18;->X:I
+    iget-object v0, p0, Ls18;->X:Lc3;
 
-    check-cast p1, Ljava/util/List;
+    check-cast v0, Lt18;
 
-    check-cast p2, Ljava/util/List;
+    iget-object v0, v0, Lt18;->X:Lu18;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    invoke-static {v0}, Lu18;->b(Lu18;)I
 
-    packed-switch p0, :pswitch_data_0
+    move-result v0
 
-    new-instance p0, Ls18;
+    iget v1, p0, Ls18;->o:I
 
-    const/4 v0, 0x3
+    if-ne v0, v1, :cond_0
 
-    const/4 v1, 0x3
+    return-void
 
-    invoke-direct {p0, v0, p3, v1}, Ls18;-><init>(ILkotlin/coroutines/Continuation;I)V
+    :cond_0
+    new-instance v0, Ljava/util/ConcurrentModificationException;
 
-    iput-object p1, p0, Ls18;->Y:Ljava/util/List;
+    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
 
-    iput-object p2, p0, Ls18;->Z:Ljava/util/List;
+    throw v0
+.end method
 
-    sget-object p1, Lylf;->a:Lylf;
+.method public final add(Ljava/lang/Object;)V
+    .locals 3
 
-    invoke-virtual {p0, p1}, Ls18;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Ls18;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
+    invoke-virtual {p0}, Ls18;->b()V
+
+    iget-object v0, p0, Ls18;->X:Lc3;
+
+    check-cast v0, Lu18;
+
+    iget v1, p0, Ls18;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Ls18;->b:I
+
+    invoke-virtual {v0, v1, p1}, Lu18;->add(ILjava/lang/Object;)V
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Ls18;->c:I
+
+    invoke-static {v0}, Lu18;->b(Lu18;)I
+
+    move-result p1
+
+    iput p1, p0, Ls18;->o:I
+
+    return-void
 
     :pswitch_0
-    new-instance p0, Ls18;
+    invoke-virtual {p0}, Ls18;->a()V
 
-    const/4 v0, 0x3
+    iget-object v0, p0, Ls18;->X:Lc3;
 
-    const/4 v1, 0x2
+    check-cast v0, Lt18;
 
-    invoke-direct {p0, v0, p3, v1}, Ls18;-><init>(ILkotlin/coroutines/Continuation;I)V
+    iget v1, p0, Ls18;->b:I
 
-    iput-object p1, p0, Ls18;->Y:Ljava/util/List;
+    add-int/lit8 v2, v1, 0x1
 
-    iput-object p2, p0, Ls18;->Z:Ljava/util/List;
+    iput v2, p0, Ls18;->b:I
 
-    sget-object p1, Lylf;->a:Lylf;
+    invoke-virtual {v0, v1, p1}, Lt18;->add(ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Ls18;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 p1, -0x1
 
-    move-result-object p0
+    iput p1, p0, Ls18;->c:I
 
-    return-object p0
+    invoke-static {v0}, Lt18;->b(Lt18;)I
 
-    :pswitch_1
-    new-instance p0, Ls18;
+    move-result p1
 
-    const/4 v0, 0x3
+    iput p1, p0, Ls18;->o:I
 
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v0, p3, v1}, Ls18;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Ls18;->Y:Ljava/util/List;
-
-    iput-object p2, p0, Ls18;->Z:Ljava/util/List;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Ls18;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    new-instance p0, Ls18;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, p3, v1}, Ls18;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Ls18;->Y:Ljava/util/List;
-
-    iput-object p2, p0, Ls18;->Z:Ljava/util/List;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Ls18;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public b()V
+    .locals 2
 
-    iget v0, p0, Ls18;->X:I
+    iget-object v0, p0, Ls18;->X:Lc3;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lu18;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ls18;->Y:Ljava/util/List;
-
-    iget-object p0, p0, Ls18;->Z:Ljava/util/List;
-
-    invoke-static {p1, p0}, Lq73;->r0(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ls18;->Y:Ljava/util/List;
-
-    iget-object p0, p0, Ls18;->Z:Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-static {v0}, Lu18;->b(Lu18;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    iget v1, p0, Ls18;->o:I
 
-    move-object p1, p0
+    if-ne v0, v1, :cond_0
+
+    return-void
 
     :cond_0
-    return-object p1
+    new-instance v0, Ljava/util/ConcurrentModificationException;
 
-    :pswitch_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
 
-    iget-object p1, p0, Ls18;->Y:Ljava/util/List;
+    throw v0
+.end method
 
-    iget-object p0, p0, Ls18;->Z:Ljava/util/List;
+.method public final hasNext()Z
+    .locals 2
 
-    invoke-interface {p1, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    iget v0, p0, Ls18;->a:I
 
-    return-object p1
+    packed-switch v0, :pswitch_data_0
 
-    :pswitch_2
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget v0, p0, Ls18;->b:I
 
-    iget-object p1, p0, Ls18;->Y:Ljava/util/List;
+    iget-object v1, p0, Ls18;->X:Lc3;
 
-    iget-object p0, p0, Ls18;->Z:Ljava/util/List;
+    check-cast v1, Lu18;
 
-    invoke-interface {p1, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    iget v1, v1, Lu18;->b:I
 
-    return-object p1
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Ls18;->b:I
+
+    iget-object v1, p0, Ls18;->X:Lc3;
+
+    check-cast v1, Lt18;
+
+    iget v1, v1, Lt18;->c:I
+
+    if-ge v0, v1, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    return v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final hasPrevious()Z
+    .locals 1
+
+    iget v0, p0, Ls18;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Ls18;->b:I
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Ls18;->b:I
+
+    if-lez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Ls18;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ls18;->b()V
+
+    iget v0, p0, Ls18;->b:I
+
+    iget-object v1, p0, Ls18;->X:Lc3;
+
+    check-cast v1, Lu18;
+
+    iget v2, v1, Lu18;->b:I
+
+    if-ge v0, v2, :cond_0
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Ls18;->b:I
+
+    iput v0, p0, Ls18;->c:I
+
+    iget-object v1, v1, Lu18;->a:[Ljava/lang/Object;
+
+    aget-object v0, v1, v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ls18;->a()V
+
+    iget v0, p0, Ls18;->b:I
+
+    iget-object v1, p0, Ls18;->X:Lc3;
+
+    check-cast v1, Lt18;
+
+    iget v2, v1, Lt18;->c:I
+
+    if-ge v0, v2, :cond_1
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Ls18;->b:I
+
+    iput v0, p0, Ls18;->c:I
+
+    iget-object v2, v1, Lt18;->a:[Ljava/lang/Object;
+
+    iget v1, v1, Lt18;->b:I
+
+    add-int/2addr v1, v0
+
+    aget-object v0, v2, v1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final nextIndex()I
+    .locals 1
+
+    iget v0, p0, Ls18;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Ls18;->b:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Ls18;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Ls18;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ls18;->b()V
+
+    iget v0, p0, Ls18;->b:I
+
+    if-lez v0, :cond_0
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Ls18;->b:I
+
+    iput v0, p0, Ls18;->c:I
+
+    iget-object v1, p0, Ls18;->X:Lc3;
+
+    check-cast v1, Lu18;
+
+    iget-object v1, v1, Lu18;->a:[Ljava/lang/Object;
+
+    aget-object v0, v1, v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ls18;->a()V
+
+    iget v0, p0, Ls18;->b:I
+
+    if-lez v0, :cond_1
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Ls18;->b:I
+
+    iput v0, p0, Ls18;->c:I
+
+    iget-object v1, p0, Ls18;->X:Lc3;
+
+    check-cast v1, Lt18;
+
+    iget-object v2, v1, Lt18;->a:[Ljava/lang/Object;
+
+    iget v1, v1, Lt18;->b:I
+
+    add-int/2addr v1, v0
+
+    aget-object v0, v2, v1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final previousIndex()I
+    .locals 1
+
+    iget v0, p0, Ls18;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Ls18;->b:I
+
+    :goto_0
+    add-int/lit8 v0, v0, -0x1
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Ls18;->b:I
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final remove()V
+    .locals 3
+
+    iget v0, p0, Ls18;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ls18;->X:Lc3;
+
+    check-cast v0, Lu18;
+
+    invoke-virtual {p0}, Ls18;->b()V
+
+    iget v1, p0, Ls18;->c:I
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {v0, v1}, Lu18;->a(I)Ljava/lang/Object;
+
+    iget v1, p0, Ls18;->c:I
+
+    iput v1, p0, Ls18;->b:I
+
+    iput v2, p0, Ls18;->c:I
+
+    invoke-static {v0}, Lu18;->b(Lu18;)I
+
+    move-result v0
+
+    iput v0, p0, Ls18;->o:I
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Call next() or previous() before removing element from the iterator."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Ls18;->X:Lc3;
+
+    check-cast v0, Lt18;
+
+    invoke-virtual {p0}, Ls18;->a()V
+
+    iget v1, p0, Ls18;->c:I
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_1
+
+    invoke-virtual {v0, v1}, Lt18;->a(I)Ljava/lang/Object;
+
+    iget v1, p0, Ls18;->c:I
+
+    iput v1, p0, Ls18;->b:I
+
+    iput v2, p0, Ls18;->c:I
+
+    invoke-static {v0}, Lt18;->b(Lt18;)I
+
+    move-result v0
+
+    iput v0, p0, Ls18;->o:I
+
+    return-void
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Call next() or previous() before removing element from the iterator."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 2
+
+    iget v0, p0, Ls18;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ls18;->b()V
+
+    iget v0, p0, Ls18;->c:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v1, p0, Ls18;->X:Lc3;
+
+    check-cast v1, Lu18;
+
+    invoke-virtual {v1, v0, p1}, Lu18;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Call next() or previous() before replacing element from the iterator."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    invoke-virtual {p0}, Ls18;->a()V
+
+    iget v0, p0, Ls18;->c:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v1, p0, Ls18;->X:Lc3;
+
+    check-cast v1, Lt18;
+
+    invoke-virtual {v1, v0, p1}, Lt18;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Call next() or previous() before replacing element from the iterator."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

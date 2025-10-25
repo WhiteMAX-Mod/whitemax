@@ -43,9 +43,9 @@
     .line 2
     invoke-static {p1}, Lorg/webrtc/MediaCodecUtils;->isSoftwareOnly(Landroid/media/MediaCodecInfo;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public bridge synthetic test(Ljava/lang/Object;)Z
@@ -56,7 +56,7 @@
 
     invoke-virtual {p0, p1}, Lorg/webrtc/PlatformSoftwareVideoDecoderFactory$1;->test(Landroid/media/MediaCodecInfo;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method

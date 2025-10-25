@@ -1,48 +1,146 @@
 .class public final Lnse;
-.super Ljx3;
+.super Lrdi;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final synthetic c:I
 
-.field public final synthetic Y:Lmse;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic o:Lose;
 
 
 # direct methods
-.method public constructor <init>(Lmse;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lose;I)V
     .locals 0
 
-    iput-object p1, p0, Lnse;->Y:Lmse;
+    iput p2, p0, Lnse;->c:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    packed-switch p2, :pswitch_data_0
+
+    const/4 p2, 0x0
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p2
+
+    iput-object p1, p0, Lnse;->o:Lose;
+
+    const/16 p1, 0xc
+
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p2
+
+    iput-object p1, p0, Lnse;->o:Lose;
+
+    const/16 p1, 0xc
+
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p2
+
+    iput-object p1, p0, Lnse;->o:Lose;
+
+    const/16 p1, 0xc
+
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
-    iput-object p1, p0, Lnse;->o:Ljava/lang/Object;
+    iget v0, p0, Lnse;->c:I
 
-    iget p1, p0, Lnse;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    or-int/2addr p1, v0
+    move-result p1
 
-    iput p1, p0, Lnse;->X:I
+    if-nez p1, :cond_0
 
-    iget-object p1, p0, Lnse;->Y:Lmse;
+    iget-object p1, p0, Lnse;->o:Lose;
 
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Lose;->a()I
 
-    invoke-virtual {p1, v0, p0}, Lmse;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result p2
 
-    move-result-object p0
+    iput p2, p1, Lose;->e:I
 
-    return-object p0
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lnse;->o:Lose;
+
+    iget p2, p1, Lose;->d:F
+
+    invoke-virtual {p1, p2}, Lose;->c(F)V
+
+    invoke-virtual {p1}, Lose;->a()I
+
+    move-result p2
+
+    iput p2, p1, Lose;->e:I
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Lnse;->o:Lose;
+
+    iget p2, p1, Lose;->d:F
+
+    invoke-virtual {p1, p2}, Lose;->c(F)V
+
+    invoke-virtual {p1}, Lose;->a()I
+
+    move-result p2
+
+    iput p2, p1, Lose;->e:I
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

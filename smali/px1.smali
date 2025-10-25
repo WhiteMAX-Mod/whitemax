@@ -1,130 +1,70 @@
-.class public final Lpx1;
+.class public final synthetic Lpx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lae5;
+.implements Liv;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lvx1;
 
-.field public final b:Lko9;
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Lvx1;III)V
     .locals 0
 
-    iput p1, p0, Lpx1;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lko9;->h()Lko9;
+    iput-object p1, p0, Lpx1;->a:Lvx1;
 
-    move-result-object p1
+    iput p2, p0, Lpx1;->b:I
 
-    iput-object p1, p0, Lpx1;->b:Lko9;
+    iput p3, p0, Lpx1;->c:I
 
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {}, Lko9;->h()Lko9;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lpx1;->b:Lko9;
+    iput p4, p0, Lpx1;->o:I
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static b(Lzf3;)Lpx1;
-    .locals 3
-
-    new-instance v0, Lpx1;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lpx1;-><init>(I)V
-
-    new-instance v1, Lc9;
-
-    const/16 v2, 0x10
-
-    invoke-direct {v1, v0, v2, p0}, Lc9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {p0, v1}, Lzf3;->b(Lc9;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public a()Lb7;
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Ll28;
+    .locals 4
 
-    new-instance v0, Lb7;
+    check-cast p1, Ljava/lang/Void;
 
-    iget-object p0, p0, Lpx1;->b:Lko9;
+    iget-object p1, p0, Lpx1;->a:Lvx1;
 
-    invoke-static {p0}, Lcva;->a(Lzf3;)Lcva;
+    iget-object p1, p1, Lvx1;->n:Le40;
 
-    move-result-object p0
+    new-instance v0, Lsy1;
 
-    const/4 v1, 0x6
+    iget v1, p0, Lpx1;->b:I
 
-    invoke-direct {v0, v1, p0}, Lb7;-><init>(ILjava/lang/Object;)V
+    iget v2, p0, Lpx1;->c:I
 
-    return-object v0
-.end method
+    iget v3, p0, Lpx1;->o:I
 
-.method public c(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
-    .locals 1
+    invoke-virtual {p1, v1, v2, v3}, Le40;->f(III)Lwy1;
 
-    invoke-static {p1}, Lqx1;->F(Landroid/hardware/camera2/CaptureRequest$Key;)Ld90;
+    move-result-object v1
+
+    iget-object p1, p1, Le40;->g:Ljava/lang/Object;
+
+    check-cast p1, La3e;
+
+    invoke-direct {v0, v1, p1, v2}, Lsy1;-><init>(Lwy1;La3e;I)V
+
+    invoke-static {v0}, Lwag;->i(Ljava/lang/Object;)Lib7;
 
     move-result-object p1
 
-    iget-object p0, p0, Lpx1;->b:Lko9;
-
-    sget-object v0, Lyf3;->c:Lyf3;
-
-    invoke-virtual {p0, p1, v0, p2}, Lko9;->k(Ld90;Lyf3;Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final g()Lpn9;
-    .locals 0
-
-    iget p0, p0, Lpx1;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    const/4 p0, 0x0
-
-    throw p0
-
-    :pswitch_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

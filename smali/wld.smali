@@ -1,61 +1,17 @@
-.class public abstract Lwld;
+.class public interface abstract Lwld;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/LinkedHashSet;
+# virtual methods
+.method public abstract b()V
+.end method
 
-.field public final b:Lj30;
+.method public abstract e()Z
+.end method
 
-.field public final c:Ljava/util/ArrayList;
+.method public abstract h(J)I
+.end method
 
-.field public final d:Ljava/util/ArrayList;
-
-.field public final e:Ljava/util/ArrayList;
-
-.field public f:Lyld;
-
-.field public g:Landroid/hardware/camera2/params/InputConfiguration;
-
-.field public h:Lwa0;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    iput-object v0, p0, Lwld;->a:Ljava/util/LinkedHashSet;
-
-    new-instance v0, Lj30;
-
-    invoke-direct {v0}, Lj30;-><init>()V
-
-    iput-object v0, p0, Lwld;->b:Lj30;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lwld;->c:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lwld;->d:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lwld;->e:Ljava/util/ArrayList;
-
-    return-void
+.method public abstract n(Lzgd;Lgf4;I)I
 .end method

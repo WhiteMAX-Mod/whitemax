@@ -13,7 +13,7 @@
         "",
         "",
         "millis",
-        "Lylf;",
+        "Lccg;",
         "setTimeout",
         "(J)V",
         "",

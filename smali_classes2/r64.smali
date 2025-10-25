@@ -1,146 +1,57 @@
 .class public final Lr64;
-.super Ly7d;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lm0g;
 
 
 # instance fields
-.field public final b:I
+.field public final a:Z
 
-.field public final c:J
+.field public final b:Z
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(IJZZZZLjava/nio/ByteBuffer;)V
-    .locals 0
+.method public constructor <init>(Ltt9;)V
+    .locals 1
 
-    invoke-direct {p0}, Ly7d;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lr64;->b:I
+    const/4 p1, 0x1
 
-    iput-wide p2, p0, Lr64;->c:J
+    :try_start_0
+    sget-object v0, Lru/ok/tracer/minidump/Minidump;->c:Lru/ok/tracer/minidump/Minidump;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-byte p1, p0, Ly7d;->a:B
-
-    if-eqz p4, :cond_0
-
-    or-int/lit8 p1, p1, 0x1
-
-    int-to-byte p1, p1
-
-    iput-byte p1, p0, Ly7d;->a:B
+    move v0, p1
 
     goto :goto_0
 
-    :cond_0
-    and-int/lit8 p1, p1, -0x2
-
-    int-to-byte p1, p1
-
-    iput-byte p1, p0, Ly7d;->a:B
+    :catchall_0
+    const/4 v0, 0x0
 
     :goto_0
-    iget-byte p1, p0, Ly7d;->a:B
+    iput-boolean v0, p0, Lr64;->a:Z
 
-    if-eqz p5, :cond_1
+    iput-boolean p1, p0, Lr64;->b:Z
 
-    or-int/lit8 p1, p1, 0x2
+    const/16 p1, 0xa
 
-    int-to-byte p1, p1
-
-    iput-byte p1, p0, Ly7d;->a:B
-
-    goto :goto_1
-
-    :cond_1
-    and-int/lit8 p1, p1, -0x3
-
-    int-to-byte p1, p1
-
-    iput-byte p1, p0, Ly7d;->a:B
-
-    :goto_1
-    iget-byte p1, p0, Ly7d;->a:B
-
-    if-eqz p6, :cond_2
-
-    or-int/lit8 p1, p1, 0x4
-
-    int-to-byte p1, p1
-
-    iput-byte p1, p0, Ly7d;->a:B
-
-    goto :goto_2
-
-    :cond_2
-    and-int/lit8 p1, p1, -0x5
-
-    int-to-byte p1, p1
-
-    iput-byte p1, p0, Ly7d;->a:B
-
-    :goto_2
-    iget-byte p1, p0, Ly7d;->a:B
-
-    if-eqz p7, :cond_3
-
-    or-int/lit8 p1, p1, 0x8
-
-    int-to-byte p1, p1
-
-    iput-byte p1, p0, Ly7d;->a:B
-
-    return-void
-
-    :cond_3
-    and-int/lit8 p1, p1, -0x9
-
-    int-to-byte p1, p1
-
-    iput-byte p1, p0, Ly7d;->a:B
+    iput p1, p0, Lr64;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/nio/ByteBuffer;
-    .locals 4
+.method public final a()Lnw4;
+    .locals 1
 
-    const/16 v0, 0xb
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    iget v2, p0, Lr64;->b:I
-
-    int-to-short v2, v2
-
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    iget-wide v2, p0, Lr64;->c:J
-
-    long-to-int v2, v2
-
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    const/4 v1, 0x0
-
-    int-to-short v1, v1
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    iget-byte p0, p0, Ly7d;->a:B
-
-    invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+    sget-object v0, Ly8b;->a:Lnw4;
 
     return-object v0
 .end method

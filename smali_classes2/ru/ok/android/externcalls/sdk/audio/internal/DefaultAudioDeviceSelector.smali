@@ -72,7 +72,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/DefaultAudioDeviceSelector$Companion;-><init>(Lld4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/DefaultAudioDeviceSelector$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/DefaultAudioDeviceSelector;->Companion:Lru/ok/android/externcalls/sdk/audio/internal/DefaultAudioDeviceSelector$Companion;
 
@@ -157,7 +157,7 @@
 
     const-string v3, "selecting the best device: bt: "
 
-    invoke-static {v3, p2, v1, p3, v2}, Lyv7;->n(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, p2, v1, p3, v2}, Li57;->o(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 
@@ -238,21 +238,21 @@
     sget-object p1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->SPEAKER_PHONE:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
     :goto_1
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/DefaultAudioDeviceSelector;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/DefaultAudioDeviceSelector;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    new-instance p4, Ljava/lang/StringBuilder;
 
-    const-string p4, "prefer "
+    const-string p5, "prefer "
 
-    invoke-direct {p2, p4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p4, p5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p4
 
-    invoke-interface {p0, p3, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, p3, p4}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p1
 .end method

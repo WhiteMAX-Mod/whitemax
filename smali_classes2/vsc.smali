@@ -1,106 +1,30 @@
-.class public final Lvsc;
+.class public abstract Lvsc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lk0d;
 
 
-# instance fields
-.field public final a:Ljava/lang/Integer;
+# static fields
+.field public static oneme_action_share_qr_code_error:I = 0x7f1307aa
 
+.field public static oneme_contact_not_found_bottom_sheet_negative_button:I = 0x7f130811
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Integer;)V
-    .locals 0
+.field public static oneme_contact_not_found_bottom_sheet_subtitle:I = 0x7f130813
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_contact_not_found_bottom_sheet_title:I = 0x7f130814
 
-    iput-object p1, p0, Lvsc;->a:Ljava/lang/Integer;
+.field public static oneme_found_contact_is_self_error:I = 0x7f130844
 
-    return-void
-.end method
+.field public static oneme_invite_actions_header:I = 0x7f130850
 
+.field public static oneme_invite_by_link_action:I = 0x7f130851
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.field public static oneme_invite_by_phone_action:I = 0x7f130852
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_invite_by_phone_continue_button:I = 0x7f130853
 
-    const/4 p0, 0x1
+.field public static oneme_invite_by_phone_description:I = 0x7f130854
 
-    return p0
+.field public static oneme_invite_by_phone_hint_default:I = 0x7f130855
 
-    :cond_0
-    if-eqz p1, :cond_2
+.field public static oneme_invite_by_phone_title:I = 0x7f130856
 
-    const-class v0, Lvsc;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lvsc;
-
-    iget-object p0, p0, Lvsc;->a:Ljava/lang/Integer;
-
-    iget-object p1, p1, Lvsc;->a:Ljava/lang/Integer;
-
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lvsc;->a:Ljava/lang/Integer;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ReportPerfStatResponse{estimatedPerformanceIndex="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lvsc;->a:Ljava/lang/Integer;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static oneme_invite_friends_to_max_bottom_sheet_title:I = 0x7f130857

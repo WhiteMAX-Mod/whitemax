@@ -1,215 +1,192 @@
-.class public final Llx1;
+.class public final synthetic Llx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfx1;
-
-
-# static fields
-.field public static final g:J
-
-.field public static final synthetic h:I
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lew1;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lmx1;
 
-.field public c:Z
-
-.field public final d:Ljava/util/concurrent/Executor;
-
-.field public final e:Ljava/util/concurrent/ScheduledExecutorService;
-
-.field public final f:Z
+.field public final synthetic c:Lgu1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lmx1;Lgu1;I)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    iput p3, p0, Llx1;->a:I
 
-    const-wide/16 v1, 0x2
+    iput-object p1, p0, Llx1;->b:Lmx1;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Llx1;->g:J
-
-    return-void
-.end method
-
-.method public constructor <init>(Lew1;ILpid;Lxo6;Z)V
-    .locals 1
+    iput-object p2, p0, Llx1;->c:Lgu1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Llx1;->c:Z
-
-    iput-object p1, p0, Llx1;->a:Lew1;
-
-    iput p2, p0, Llx1;->b:I
-
-    iput-object p3, p0, Llx1;->d:Ljava/util/concurrent/Executor;
-
-    iput-object p4, p0, Llx1;->e:Ljava/util/concurrent/ScheduledExecutorService;
-
-    iput-boolean p5, p0, Llx1;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Lgt7;
-    .locals 2
-
-    iget v0, p0, Llx1;->b:I
-
-    invoke-static {v0, p1}, Lj30;->h(ILandroid/hardware/camera2/TotalCaptureResult;)Z
-
-    iget v0, p0, Llx1;->b:I
-
-    invoke-static {v0, p1}, Lj30;->h(ILandroid/hardware/camera2/TotalCaptureResult;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Llx1;->a:Lew1;
-
-    iget-boolean p1, p1, Lew1;->r:Z
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Llx1;->c:Z
-
-    new-instance p1, Lkx1;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lkx1;-><init>(Llx1;I)V
-
-    invoke-static {p1}, Lf54;->l(Lrs1;)Lts1;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lqd6;->a(Lgt7;)Lqd6;
-
-    move-result-object p1
-
-    new-instance v0, Lkx1;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lkx1;-><init>(Llx1;I)V
-
-    iget-object v1, p0, Llx1;->d:Ljava/util/concurrent/Executor;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1, v0, v1}, Lf4h;->J(Lgt7;Lvt;Ljava/util/concurrent/Executor;)Lz32;
-
-    move-result-object p1
-
-    new-instance v0, Lkx1;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p0, v1}, Lkx1;-><init>(Llx1;I)V
-
-    iget-object p0, p0, Llx1;->d:Ljava/util/concurrent/Executor;
-
-    invoke-static {p1, v0, p0}, Lf4h;->J(Lgt7;Lvt;Ljava/util/concurrent/Executor;)Lz32;
-
-    move-result-object p0
-
-    new-instance p1, Lxw1;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p1, v0}, Lxw1;-><init>(I)V
-
-    invoke-static {}, Ln4e;->q()Lep4;
-
-    move-result-object v0
-
-    new-instance v1, Ly9e;
-
-    invoke-direct {v1, p1}, Ly9e;-><init>(Ljava/lang/Object;)V
-
-    invoke-static {p0, v1, v0}, Lf4h;->J(Lgt7;Lvt;Ljava/util/concurrent/Executor;)Lz32;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    :goto_0
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {p0}, Lf4h;->w(Ljava/lang/Object;)Lp27;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final b()Z
-    .locals 0
-
-    iget p0, p0, Llx1;->b:I
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final c()V
+.method public final run()V
     .locals 4
 
-    iget-boolean v0, p0, Llx1;->c:Z
+    iget v0, p0, Llx1;->a:I
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Llx1;->a:Lew1;
-
-    iget-object v1, v0, Lew1;->j:Ldaf;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Ldaf;->a(Lqs1;Z)V
-
-    iget-boolean p0, p0, Llx1;->f:Z
-
-    if-eqz p0, :cond_0
-
-    iget-object p0, v0, Lew1;->h:Lqx5;
+    packed-switch v0, :pswitch_data_0
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v3, v0}, Lqx5;->a(ZZ)V
+    iget-object v1, p0, Llx1;->b:Lmx1;
+
+    iput-boolean v0, v1, Lmx1;->b:Z
+
+    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+
+    const-string v2, "Camera2CameraControl was updated with new options."
+
+    invoke-direct {v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, v1, Lmx1;->g:Ljava/lang/Object;
+
+    check-cast v2, Lgu1;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, v1, Lmx1;->g:Ljava/lang/Object;
 
     :cond_0
+    iget-object v0, p0, Llx1;->c:Lgu1;
+
+    iput-object v0, v1, Lmx1;->g:Ljava/lang/Object;
+
+    iget-boolean v0, v1, Lmx1;->a:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v1, Lmx1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lvx1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lpid;
+
+    const/16 v3, 0x16
+
+    invoke-direct {v2, v3, v0}, Lpid;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v2}, Lomi;->a(Lhu1;)Lju1;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lwag;->k(Ll28;)Ll28;
+
+    move-result-object v0
+
+    new-instance v2, Lk3;
+
+    const/16 v3, 0x1c
+
+    invoke-direct {v2, v3, v1}, Lk3;-><init>(ILjava/lang/Object;)V
+
+    iget-object v3, v1, Lmx1;->d:Ljava/lang/Object;
+
+    check-cast v3, La3e;
+
+    invoke-interface {v0, v2, v3}, Ll28;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, v1, Lmx1;->b:Z
+
+    :cond_1
     return-void
+
+    :pswitch_0
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Llx1;->b:Lmx1;
+
+    iput-boolean v0, v1, Lmx1;->b:Z
+
+    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+
+    const-string v2, "Camera2CameraControl was updated with new options."
+
+    invoke-direct {v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, v1, Lmx1;->g:Ljava/lang/Object;
+
+    check-cast v2, Lgu1;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, v1, Lmx1;->g:Ljava/lang/Object;
+
+    :cond_2
+    iget-object v0, p0, Llx1;->c:Lgu1;
+
+    iput-object v0, v1, Lmx1;->g:Ljava/lang/Object;
+
+    iget-boolean v0, v1, Lmx1;->a:Z
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, v1, Lmx1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lvx1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lpid;
+
+    const/16 v3, 0x16
+
+    invoke-direct {v2, v3, v0}, Lpid;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v2}, Lomi;->a(Lhu1;)Lju1;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lwag;->k(Ll28;)Ll28;
+
+    move-result-object v0
+
+    new-instance v2, Lk3;
+
+    const/16 v3, 0x1c
+
+    invoke-direct {v2, v3, v1}, Lk3;-><init>(ILjava/lang/Object;)V
+
+    iget-object v3, v1, Lmx1;->d:Ljava/lang/Object;
+
+    check-cast v3, La3e;
+
+    invoke-interface {v0, v2, v3}, Ll28;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, v1, Lmx1;->b:Z
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,93 +1,135 @@
-.class public final synthetic Ll39;
+.class public final Ll39;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzb6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ld39;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final b:J
+
+.field public final c:Ljava/util/ArrayList;
+
+.field public volatile d:I
+
+.field public volatile e:I
+
+.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final g:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    iput p2, p0, Ll39;->a:I
-
-    iput-object p1, p0, Ll39;->b:Ljava/lang/String;
+.method public constructor <init>(Ld39;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll39;->a:Ld39;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ll39;->b:J
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Ll39;->c:Ljava/util/ArrayList;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Ll39;->d:I
+
+    iput p1, p0, Ll39;->e:I
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Ll39;->f:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Ll39;->g:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final a(Lone/me/sdk/media/transformer/MediaTransformException;)V
+    .locals 1
+
+    iget-object v0, p0, Ll39;->g:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 8
 
-    iget v0, p0, Ll39;->a:I
+    iget-object v0, p0, Ll39;->a:Ld39;
 
-    iget-object p0, p0, Ll39;->b:Ljava/lang/String;
+    iget-object v1, v0, Ld39;->b:Ljava/util/ArrayList;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v1}, Lo94;->g(Ljava/util/ArrayList;)Ljava/lang/String;
 
-    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->D0:[Lxi7;
+    move-result-object v1
 
-    if-eqz p0, :cond_0
+    iget-object v2, p0, Ll39;->c:Ljava/util/ArrayList;
 
-    new-instance v0, Lpxa;
+    invoke-static {v2}, Lo94;->d(Ljava/util/List;)Ljava/lang/String;
 
-    const-string v1, "link_source"
+    move-result-object v2
 
-    invoke-direct {v0, v1, p0}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v3, v0, Ld39;->c:Ljava/lang/String;
 
-    filled-new-array {v0}, [Lpxa;
+    const-string v4, "              "
 
-    move-result-object p0
+    invoke-static {v0, v4}, Lo94;->f(Ld39;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {p0}, Lw7;->a([Lpxa;)Ltr;
+    move-result-object v4
 
-    move-result-object p0
+    invoke-static {v0}, Lo94;->e(Ld39;)Ljava/lang/String;
 
-    :goto_0
-    move-object v6, p0
+    move-result-object v0
 
-    goto :goto_1
+    const-string v5, "\n              }\n              inputMedias={"
 
-    :cond_0
-    const/4 p0, 0x0
+    const-string v6, "\n              }\n              out="
 
-    goto :goto_0
+    const-string v7, "\n            MediaTransformRequest(\n              in={"
 
-    :goto_1
-    new-instance v0, Lyxa;
+    invoke-static {v7, v1, v5, v2, v6}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    const/4 v2, 0x2
+    const-string v2, "\n              anc={"
 
-    const/4 v3, 0x0
+    const-string v5, "\n              }\n              request={"
 
-    const/4 v4, 0x0
+    invoke-static {v1, v3, v2, v4, v5}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v5, 0x0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v7, 0x1d
+    const-string v0, "\n              }\n            )\n        "
 
-    invoke-direct/range {v0 .. v7}, Lyxa;-><init>(Lcbb;ILi7e;Ljava/lang/Long;Ljava/lang/Long;Ltr;I)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Labf;->j(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -142,7 +142,7 @@
 
 # virtual methods
 .method public match(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z
-    .locals 1
+    .locals 2
 
     if-eqz p1, :cond_3
 
@@ -150,73 +150,73 @@
 
     invoke-virtual {p2}, Lorg/apache/http/cookie/CookieOrigin;->getPort()I
 
-    move-result p0
-
-    instance-of p2, p1, Lorg/apache/http/cookie/ClientCookie;
-
-    if-eqz p2, :cond_1
-
-    move-object p2, p1
-
-    check-cast p2, Lorg/apache/http/cookie/ClientCookie;
-
-    const-string v0, "port"
-
-    invoke-interface {p2, v0}, Lorg/apache/http/cookie/ClientCookie;->containsAttribute(Ljava/lang/String;)Z
-
     move-result p2
 
-    if-eqz p2, :cond_1
+    instance-of v0, p1, Lorg/apache/http/cookie/ClientCookie;
+
+    if-eqz v0, :cond_1
+
+    move-object v0, p1
+
+    check-cast v0, Lorg/apache/http/cookie/ClientCookie;
+
+    const-string v1, "port"
+
+    invoke-interface {v0, v1}, Lorg/apache/http/cookie/ClientCookie;->containsAttribute(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     invoke-interface {p1}, Lorg/apache/http/cookie/Cookie;->getPorts()[I
 
-    move-result-object p2
+    move-result-object v0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    if-nez p2, :cond_0
+    if-nez v0, :cond_0
 
-    return v0
+    return v1
 
     :cond_0
     invoke-interface {p1}, Lorg/apache/http/cookie/Cookie;->getPorts()[I
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lorg/apache/http/impl/cookie/RFC2965PortAttributeHandler;->portMatch(I[I)Z
+    invoke-static {p2, p1}, Lorg/apache/http/impl/cookie/RFC2965PortAttributeHandler;->portMatch(I[I)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    return v0
+    return v1
 
     :cond_1
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Cookie origin may not be null"
+    const-string p2, "Cookie origin may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Cookie may not be null"
+    const-string p2, "Cookie may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public parse(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/cookie/MalformedCookieException;
@@ -225,9 +225,9 @@
 
     if-eqz p1, :cond_1
 
-    instance-of p0, p1, Lorg/apache/http/cookie/SetCookie2;
+    instance-of v0, p1, Lorg/apache/http/cookie/SetCookie2;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     check-cast p1, Lorg/apache/http/cookie/SetCookie2;
 
@@ -235,35 +235,35 @@
 
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result p0
+    move-result v0
 
-    if-lez p0, :cond_0
+    if-lez v0, :cond_0
 
     invoke-static {p2}, Lorg/apache/http/impl/cookie/RFC2965PortAttributeHandler;->parsePortAttribute(Ljava/lang/String;)[I
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-interface {p1, p0}, Lorg/apache/http/cookie/SetCookie2;->setPorts([I)V
+    invoke-interface {p1, p2}, Lorg/apache/http/cookie/SetCookie2;->setPorts([I)V
 
     :cond_0
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Cookie may not be null"
+    const-string p2, "Cookie may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public validate(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/cookie/MalformedCookieException;
@@ -276,64 +276,64 @@
 
     invoke-virtual {p2}, Lorg/apache/http/cookie/CookieOrigin;->getPort()I
 
-    move-result p0
-
-    instance-of p2, p1, Lorg/apache/http/cookie/ClientCookie;
-
-    if-eqz p2, :cond_1
-
-    move-object p2, p1
-
-    check-cast p2, Lorg/apache/http/cookie/ClientCookie;
-
-    const-string v0, "port"
-
-    invoke-interface {p2, v0}, Lorg/apache/http/cookie/ClientCookie;->containsAttribute(Ljava/lang/String;)Z
-
     move-result p2
 
-    if-eqz p2, :cond_1
+    instance-of v0, p1, Lorg/apache/http/cookie/ClientCookie;
+
+    if-eqz v0, :cond_1
+
+    move-object v0, p1
+
+    check-cast v0, Lorg/apache/http/cookie/ClientCookie;
+
+    const-string v1, "port"
+
+    invoke-interface {v0, v1}, Lorg/apache/http/cookie/ClientCookie;->containsAttribute(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     invoke-interface {p1}, Lorg/apache/http/cookie/Cookie;->getPorts()[I
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lorg/apache/http/impl/cookie/RFC2965PortAttributeHandler;->portMatch(I[I)Z
+    invoke-static {p2, p1}, Lorg/apache/http/impl/cookie/RFC2965PortAttributeHandler;->portMatch(I[I)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lorg/apache/http/cookie/MalformedCookieException;
+    new-instance p1, Lorg/apache/http/cookie/MalformedCookieException;
 
-    const-string p1, "Port attribute violates RFC 2965: Request port not found in cookie\'s port list."
+    const-string p2, "Port attribute violates RFC 2965: Request port not found in cookie\'s port list."
 
-    invoke-direct {p0, p1}, Lorg/apache/http/cookie/MalformedCookieException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lorg/apache/http/cookie/MalformedCookieException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
     :goto_0
     return-void
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Cookie origin may not be null"
+    const-string p2, "Cookie origin may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Cookie may not be null"
+    const-string p2, "Cookie may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

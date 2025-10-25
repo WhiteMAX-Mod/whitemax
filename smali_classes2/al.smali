@@ -1,27 +1,23 @@
-.class public interface abstract Lal;
+.class public final Lal;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhl;
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
 
 
-# virtual methods
-.method public getFailParser()Lvh7;
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    sget-object p0, Lse2;->b:Lse2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
-.end method
+    iput-object p1, p0, Lal;->a:Ljava/lang/String;
 
-.method public abstract getOkParser()Lvh7;
-.end method
+    iput-object p2, p0, Lal;->b:Ljava/lang/String;
 
-.method public getScopeAfter()Lol;
-    .locals 0
-
-    sget-object p0, Lol;->a:Lol;
-
-    return-object p0
+    return-void
 .end method

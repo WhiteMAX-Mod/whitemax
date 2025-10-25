@@ -86,39 +86,39 @@
     :cond_2
     iput-object p6, p0, Lorg/webrtc/audio/WebRtcSilenceProvider;->silenceBytes:[B
 
-    sget-object p0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p0, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-virtual {p1, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    array-length p3, p6
+    array-length p1, p6
 
-    const-string p5, ", framesPerBuffer="
+    const-string p3, ", framesPerBuffer="
 
-    const-string p6, ", bufferDuration="
+    const-string p5, ", bufferDuration="
 
-    const-string v0, "Silence provider initialized, sampleRate="
+    const-string p6, "Silence provider initialized, sampleRate="
 
-    invoke-static {v0, p2, p5, p4, p6}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p6, p2, p3, p4, p5}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 
-    invoke-virtual {p2, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string p0, "ms, bufferCapacity="
+    const-string p3, "ms, bufferCapacity="
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "WebRtcSilenceProvider"
+    const-string p2, "WebRtcSilenceProvider"
 
-    invoke-static {p1, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -126,27 +126,27 @@
 
 # virtual methods
 .method public getAudioFormat()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/audio/WebRtcSilenceProvider;->audioFormat:I
+    iget v0, p0, Lorg/webrtc/audio/WebRtcSilenceProvider;->audioFormat:I
 
-    return p0
+    return v0
 .end method
 
 .method public getChannelCount()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/audio/WebRtcSilenceProvider;->channelCount:I
+    iget v0, p0, Lorg/webrtc/audio/WebRtcSilenceProvider;->channelCount:I
 
-    return p0
+    return v0
 .end method
 
 .method public getSampleRate()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/audio/WebRtcSilenceProvider;->sampleRate:I
+    iget v0, p0, Lorg/webrtc/audio/WebRtcSilenceProvider;->sampleRate:I
 
-    return p0
+    return v0
 .end method
 
 .method public read(Ljava/nio/ByteBuffer;I)I
@@ -160,7 +160,11 @@
 
     move-result p2
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/ByteBuffer;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/nio/ByteBuffer;
 
     const/4 v0, 0x0
 

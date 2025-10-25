@@ -1,52 +1,90 @@
-.class public abstract Lzbc;
-.super Ljava/lang/Object;
+.class public final Lzbc;
+.super Landroid/text/style/ClickableSpan;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_startconversation_channel_add_subscribers_error:I = 0x7f130a0f
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static oneme_startconversation_channel_create_error:I = 0x7f130a10
+.field public b:I
 
-.field public static oneme_startconversation_channel_limit_add_subscribers_error:I = 0x7f130a11
+.field public c:Z
 
-.field public static oneme_startconversation_channel_select_subscribers_skip_button:I = 0x7f130a12
+.field public o:Lo08;
 
-.field public static oneme_startconversation_channel_select_subscribers_toolbar_title:I = 0x7f130a13
 
-.field public static oneme_startconversation_title:I = 0x7f130a14
+# direct methods
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-.field public static oneme_startconversations_chat_members:I = 0x7f130a15
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-.field public static oneme_startconversations_chat_titleicon_avatar_bottomsheet_title:I = 0x7f130a16
+    iput-object p1, p0, Lzbc;->a:Ljava/lang/String;
 
-.field public static oneme_startconversations_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f130a17
+    iput p2, p0, Lzbc;->b:I
 
-.field public static oneme_startconversations_chat_titleicon_avatars_take_photo_action:I = 0x7f130a18
+    const/4 p1, 0x1
 
-.field public static oneme_startconversations_chat_titleicon_confirm_button_title:I = 0x7f130a19
+    iput-boolean p1, p0, Lzbc;->c:Z
 
-.field public static oneme_startconversations_chat_titleicon_confirm_button_title_channel:I = 0x7f130a1a
+    return-void
+.end method
 
-.field public static oneme_startconversations_chat_titleicon_hint:I = 0x7f130a1b
 
-.field public static oneme_startconversations_chat_titleicon_hint_channel:I = 0x7f130a1c
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
 
-.field public static oneme_startconversations_chat_titleicon_input_description_hint:I = 0x7f130a1d
+    iget-object p1, p0, Lzbc;->o:Lo08;
 
-.field public static oneme_startconversations_chat_titleicon_input_hint:I = 0x7f130a1e
+    if-eqz p1, :cond_0
 
-.field public static oneme_startconversations_chat_titleicon_input_hint_channel:I = 0x7f130a1f
+    iget-object p1, p1, Lo08;->a:Lq08;
 
-.field public static oneme_startconversations_chat_titleicon_toolbar_title:I = 0x7f130a20
+    iget-object v0, p1, Lq08;->o:Lq7;
 
-.field public static oneme_startconversations_chat_titleicon_toolbar_title_channel:I = 0x7f130a21
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-.field public static oneme_startconversations_continue_create_chat:I = 0x7f130a22
+    move-result-wide v1
 
-.field public static oneme_startconversations_create_empty_chat:I = 0x7f130a23
+    iget-wide v3, v0, Lq7;->a:J
 
-.field public static oneme_startconversations_member_search_hint:I = 0x7f130a24
+    sub-long v3, v1, v3
 
-.field public static oneme_startconversations_phonebook_section_header:I = 0x7f130a25
+    const-wide/16 v5, 0x12c
 
-.field public static oneme_startconversations_search_hint:I = 0x7f130a26
+    cmp-long v3, v3, v5
+
+    if-lez v3, :cond_0
+
+    iput-wide v1, v0, Lq7;->a:J
+
+    iget-object p1, p1, Lq08;->a:Ln08;
+
+    if-eqz p1, :cond_0
+
+    sget-object v0, Lr08;->X:Lr08;
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lzbc;->a:Ljava/lang/String;
+
+    invoke-interface {p1, v2, v0, v1}, Ln08;->b(Ljava/lang/String;Lr08;Landroid/text/style/ClickableSpan;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    iget v0, p0, Lzbc;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-boolean v0, p0, Lzbc;->c:Z
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+
+    return-void
+.end method

@@ -1,47 +1,21 @@
 .class public final Lvw1;
-.super Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+.super Ldq;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
-    .locals 0
+# static fields
+.field public static final a:Lvw1;
 
-    return-void
-.end method
 
-.method public final onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    return-void
-.end method
+    new-instance v0, Lvw1;
 
-.method public final onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
-    .locals 0
+    invoke-direct {v0}, Ldq;-><init>()V
 
-    return-void
-.end method
-
-.method public final onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onCaptureSequenceAborted(Landroid/hardware/camera2/CameraCaptureSession;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
-    .locals 0
+    sput-object v0, Lvw1;->a:Lvw1;
 
     return-void
 .end method

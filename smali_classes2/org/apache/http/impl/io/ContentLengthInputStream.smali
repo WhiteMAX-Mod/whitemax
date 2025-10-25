@@ -53,22 +53,22 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Content length may not be negative"
+    const-string p2, "Content length may not be negative"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Input stream may not be null"
+    const-string p2, "Input stream may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -141,9 +141,9 @@
 
     if-ltz v2, :cond_0
 
-    const/4 p0, -0x1
+    const/4 v0, -0x1
 
-    return p0
+    return v0
 
     :cond_0
     const-wide/16 v2, 0x1
@@ -154,23 +154,23 @@
     iput-wide v0, p0, Lorg/apache/http/impl/io/ContentLengthInputStream;->pos:J
 
     .line 4
-    iget-object p0, p0, Lorg/apache/http/impl/io/ContentLengthInputStream;->in:Lorg/apache/http/io/SessionInputBuffer;
+    iget-object v0, p0, Lorg/apache/http/impl/io/ContentLengthInputStream;->in:Lorg/apache/http/io/SessionInputBuffer;
 
-    invoke-interface {p0}, Lorg/apache/http/io/SessionInputBuffer;->read()I
+    invoke-interface {v0}, Lorg/apache/http/io/SessionInputBuffer;->read()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 
     .line 5
     :cond_1
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/io/IOException;
 
-    const-string v0, "Attempted read from closed stream."
+    const-string v1, "Attempted read from closed stream."
 
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public read([B)I
@@ -188,9 +188,9 @@
 
     invoke-virtual {p0, p1, v0, v1}, Lorg/apache/http/impl/io/ContentLengthInputStream;->read([BII)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public read([BII)I
@@ -215,9 +215,9 @@
 
     if-ltz v4, :cond_0
 
-    const/4 p0, -0x1
+    const/4 p1, -0x1
 
-    return p0
+    return p1
 
     :cond_0
     int-to-long v4, p3
@@ -253,13 +253,13 @@
 
     .line 10
     :cond_2
-    new-instance p0, Ljava/io/IOException;
+    new-instance p1, Ljava/io/IOException;
 
-    const-string p1, "Attempted read from closed stream."
+    const-string p2, "Attempted read from closed stream."
 
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public skip(J)J

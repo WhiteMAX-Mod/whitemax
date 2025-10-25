@@ -16,7 +16,7 @@
 
 # direct methods
 .method public constructor <init>(I)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,13 +29,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Buffer capacity may not be negative"
+    const-string v0, "Buffer capacity may not be negative"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method private expand(I)V
@@ -181,11 +181,11 @@
 
     .line 7
     :cond_3
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    throw p0
+    throw p1
 .end method
 
 .method public append([CII)V
@@ -261,39 +261,39 @@
 
     .line 19
     :cond_4
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    throw p0
+    throw p1
 .end method
 
 .method public buffer()[B
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/util/ByteArrayBuffer;->buffer:[B
+    iget-object v0, p0, Lorg/apache/http/util/ByteArrayBuffer;->buffer:[B
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public byteAt(I)I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/util/ByteArrayBuffer;->buffer:[B
+    iget-object v0, p0, Lorg/apache/http/util/ByteArrayBuffer;->buffer:[B
 
-    aget-byte p0, p0, p1
+    aget-byte p1, v0, p1
 
-    return p0
+    return p1
 .end method
 
 .method public capacity()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/util/ByteArrayBuffer;->buffer:[B
+    iget-object v0, p0, Lorg/apache/http/util/ByteArrayBuffer;->buffer:[B
 
-    array-length p0, p0
+    array-length v0, v0
 
-    return p0
+    return v0
 .end method
 
 .method public clear()V
@@ -307,49 +307,49 @@
 .end method
 
 .method public isEmpty()Z
-    .locals 0
-
-    iget p0, p0, Lorg/apache/http/util/ByteArrayBuffer;->len:I
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public isFull()Z
     .locals 1
 
     iget v0, p0, Lorg/apache/http/util/ByteArrayBuffer;->len:I
 
-    iget-object p0, p0, Lorg/apache/http/util/ByteArrayBuffer;->buffer:[B
+    if-nez v0, :cond_0
 
-    array-length p0, p0
+    const/4 v0, 0x1
 
-    if-ne v0, p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
+.end method
+
+.method public isFull()Z
+    .locals 2
+
+    iget v0, p0, Lorg/apache/http/util/ByteArrayBuffer;->len:I
+
+    iget-object v1, p0, Lorg/apache/http/util/ByteArrayBuffer;->buffer:[B
+
+    array-length v1, v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public length()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/http/util/ByteArrayBuffer;->len:I
+    iget v0, p0, Lorg/apache/http/util/ByteArrayBuffer;->len:I
 
-    return p0
+    return v0
 .end method
 
 .method public setLength(I)V
@@ -368,15 +368,15 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    throw p0
+    throw p1
 .end method
 
 .method public toByteArray()[B
-    .locals 3
+    .locals 4
 
     iget v0, p0, Lorg/apache/http/util/ByteArrayBuffer;->len:I
 
@@ -384,11 +384,11 @@
 
     if-lez v0, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/util/ByteArrayBuffer;->buffer:[B
+    iget-object v2, p0, Lorg/apache/http/util/ByteArrayBuffer;->buffer:[B
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-static {p0, v2, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v2, v3, v1, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     :cond_0
     return-object v1

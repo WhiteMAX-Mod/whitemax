@@ -19,9 +19,9 @@
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    const-wide/16 p0, 0x0
+    const-wide/16 p1, 0x0
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public abstract decode(Lorg/webrtc/EncodedImage;Lorg/webrtc/VideoDecoder$DecodeInfo;J)Lorg/webrtc/VideoCodecStatus;

@@ -1,200 +1,302 @@
 .class public final Lkv6;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
+
+# static fields
+.field public static final f:[B
+
+.field public static final g:[B
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Llv6;
+.field public b:Z
+
+.field public c:I
+
+.field public d:I
+
+.field public e:Ljava/io/Serializable;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Llv6;Lkotlin/coroutines/Continuation;)V
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    const/4 v0, 0x3
+
+    new-array v1, v0, [B
+
+    fill-array-data v1, :array_0
+
+    sput-object v1, Lkv6;->f:[B
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lkv6;->g:[B
+
+    return-void
+
+    :array_0
+    .array-data 1
+        0x0t
+        0x0t
+        0x1t
+    .end array-data
+
+    :array_1
+    .array-data 1
+        0x0t
+        0x0t
+        0x1t
+    .end array-data
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lkv6;->X:Ljava/lang/String;
+    .line 1
+    iput p1, p0, Lkv6;->a:I
 
-    iput-object p2, p0, Lkv6;->Y:Llv6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    return-void
+.end method
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lq12;Landroid/util/Rational;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lkv6;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    invoke-interface {p1}, Lq12;->b()I
+
+    move-result v0
+
+    iput v0, p0, Lkv6;->c:I
+
+    .line 4
+    invoke-interface {p1}, Lq12;->h()I
+
+    move-result p1
+
+    iput p1, p0, Lkv6;->d:I
+
+    .line 5
+    iput-object p2, p0, Lkv6;->e:Ljava/io/Serializable;
+
+    const/4 p1, 0x1
+
+    if-eqz p2, :cond_1
+
+    .line 6
+    invoke-virtual {p2}, Landroid/util/Rational;->getNumerator()I
+
+    move-result v0
+
+    .line 7
+    invoke-virtual {p2}, Landroid/util/Rational;->getDenominator()I
+
+    move-result p2
+
+    if-lt v0, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :cond_1
+    :goto_0
+    iput-boolean p1, p0, Lkv6;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public a(Lka7;)Landroid/util/Size;
+    .locals 5
 
-    check-cast p1, Ly04;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-interface {p1, v0}, Lka7;->J(I)I
 
-    invoke-virtual {p0, p1, p2}, Lkv6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v1
 
-    move-result-object p0
+    const/4 v2, 0x0
 
-    check-cast p0, Lkv6;
+    sget-object v3, Lka7;->C:Lz90;
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lkv6;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lkv6;
-
-    iget-object v0, p0, Lkv6;->X:Ljava/lang/String;
-
-    iget-object p0, p0, Lkv6;->Y:Llv6;
-
-    invoke-direct {p1, v0, p0, p2}, Lkv6;-><init>(Ljava/lang/String;Llv6;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget-object v0, p0, Lkv6;->Y:Llv6;
-
-    iget-object v1, v0, Llv6;->o:Lcl7;
-
-    iget-object v2, v0, Llv6;->r0:Lv85;
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    const/4 p1, 0x0
-
-    iget-object p0, p0, Lkv6;->X:Ljava/lang/String;
-
-    const-string v3, "Custom"
-
-    invoke-static {p0, v3, p1}, Lrme;->c0(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    sget-object v4, Lylf;->a:Lylf;
-
-    if-eqz p1, :cond_0
-
-    new-instance p0, Lhv6;
-
-    iget-object p1, v0, Llv6;->X:Landroid/content/SharedPreferences;
-
-    const-string v0, ""
-
-    invoke-interface {p1, v3, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v3, v2}, Lk0d;->d(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lhv6;-><init>(Ljava/lang/String;)V
+    check-cast p1, Landroid/util/Size;
 
-    invoke-static {v2, p0}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+    iget v2, p0, Lkv6;->d:I
 
-    return-object v4
+    iget v3, p0, Lkv6;->c:I
+
+    if-eqz p1, :cond_2
+
+    invoke-static {v1}, Lymi;->c(I)I
+
+    move-result v1
+
+    const/4 v4, 0x1
+
+    if-ne v4, v2, :cond_0
+
+    move v0, v4
 
     :cond_0
-    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-static {v1, v3, v0}, Lymi;->b(IIZ)I
 
-    move-result-object p1
+    move-result v0
 
-    check-cast p1, Laba;
+    const/16 v1, 0x5a
 
-    invoke-virtual {p1}, Laba;->d()Z
+    if-eq v0, v1, :cond_1
+
+    const/16 v1, 0x10e
+
+    if-ne v0, v1, :cond_2
+
+    :cond_1
+    new-instance v0, Landroid/util/Size;
+
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result p1
 
-    invoke-virtual {v0}, Llv6;->q()Lqgb;
+    invoke-direct {v0, v1, p1}, Landroid/util/Size;-><init>(II)V
 
-    move-result-object v3
+    return-object v0
 
-    check-cast v3, Ltgb;
+    :cond_2
+    return-object p1
+.end method
 
-    iget-object v5, v3, Ltgb;->a:Lh53;
+.method public b(I[BI)V
+    .locals 3
 
-    invoke-virtual {v5}, Lh53;->c()V
+    iget v0, p0, Lkv6;->a:I
 
-    iget-object v5, v3, Ltgb;->b:Lyjd;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v5}, Li3;->c()V
+    iget-boolean v0, p0, Lkv6;->b:Z
 
-    iget-object v5, v3, Ltgb;->c:Ljp;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v5}, Li3;->c()V
+    goto :goto_0
 
-    iget-object v5, v3, Ltgb;->d:Lh70;
+    :cond_0
+    sub-int/2addr p3, p1
 
-    invoke-virtual {v5}, Lh70;->c()V
+    iget-object v0, p0, Lkv6;->e:Ljava/io/Serializable;
 
-    iget-object v3, v3, Ltgb;->e:Ltj5;
+    check-cast v0, [B
 
-    invoke-virtual {v3}, Li3;->c()V
+    array-length v1, v0
 
-    invoke-virtual {v0}, Llv6;->q()Lqgb;
+    iget v2, p0, Lkv6;->c:I
 
-    move-result-object v3
+    add-int/2addr v2, p3
 
-    check-cast v3, Ltgb;
+    if-ge v1, v2, :cond_1
 
-    iget-object v3, v3, Ltgb;->a:Lh53;
+    mul-int/lit8 v2, v2, 0x2
 
-    const-string v5, "server.host"
-
-    invoke-virtual {v3, v5, p0}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Llv6;->q()Lqgb;
-
-    move-result-object p0
-
-    check-cast p0, Ltgb;
-
-    iget-object p0, p0, Ltgb;->a:Lh53;
-
-    const-string v3, "443"
-
-    const-string v5, "server.port"
-
-    invoke-virtual {p0, v5, v3}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, v0, Llv6;->Z:Lyce;
-
-    invoke-virtual {v0}, Llv6;->r()Los7;
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lyce;->setValue(Ljava/lang/Object;)V
-
-    if-eqz p1, :cond_1
-
-    sget-object p0, Liv6;->a:Liv6;
-
-    invoke-static {v2, p0}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Laba;
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Laba;->g(Z)V
+    iput-object v0, p0, Lkv6;->e:Ljava/io/Serializable;
 
     :cond_1
-    sget-object p0, Lgv6;->a:Lgv6;
+    iget-object v0, p0, Lkv6;->e:Ljava/io/Serializable;
 
-    invoke-static {v2, p0}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+    check-cast v0, [B
 
-    return-object v4
+    iget v1, p0, Lkv6;->c:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lkv6;->c:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lkv6;->c:I
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lkv6;->b:Z
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    sub-int/2addr p3, p1
+
+    iget-object v0, p0, Lkv6;->e:Ljava/io/Serializable;
+
+    check-cast v0, [B
+
+    array-length v1, v0
+
+    iget v2, p0, Lkv6;->c:I
+
+    add-int/2addr v2, p3
+
+    if-ge v1, v2, :cond_3
+
+    mul-int/lit8 v2, v2, 0x2
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkv6;->e:Ljava/io/Serializable;
+
+    :cond_3
+    iget-object v0, p0, Lkv6;->e:Ljava/io/Serializable;
+
+    check-cast v0, [B
+
+    iget v1, p0, Lkv6;->c:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lkv6;->c:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lkv6;->c:I
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

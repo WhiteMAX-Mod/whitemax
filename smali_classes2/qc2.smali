@@ -1,48 +1,101 @@
 .class public final Lqc2;
-.super Ljx3;
+.super Luj0;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final synthetic b:I
 
-.field public final synthetic Y:Lwb;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lwb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    iput-object p1, p0, Lqc2;->Y:Lwb;
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput v0, p0, Lqc2;->b:I
+
+    .line 1
+    invoke-direct {p0}, Luj0;-><init>()V
+
+    .line 2
+    iput-wide p1, p0, Lqc2;->c:J
+
+    return-void
+.end method
+
+.method public constructor <init>(JJ)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lqc2;->b:I
+
+    .line 3
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
+
+    .line 4
+    iput-wide p3, p0, Lqc2;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iput-object p1, p0, Lqc2;->o:Ljava/lang/Object;
+    iget v0, p0, Lqc2;->b:I
 
-    iget p1, p0, Lqc2;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    or-int/2addr p1, v0
+    const-string v1, "ReadMarkEvent{chatId="
 
-    iput p1, p0, Lqc2;->X:I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p0, Lqc2;->Y:Lwb;
+    iget-wide v1, p0, Lqc2;->c:J
 
-    const/4 v0, 0x0
+    const/16 v3, 0x7d
 
-    invoke-virtual {p1, v0, p0}, Lwb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Laab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ChatComplainEvent{chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lqc2;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "} "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-super {p0}, Luj0;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

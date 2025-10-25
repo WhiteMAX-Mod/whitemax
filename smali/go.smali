@@ -1,41 +1,80 @@
-.class public abstract Lgo;
+.class public final synthetic Lgo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/window/OnBackInvokedCallback;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
 
 # direct methods
-.method public static a(Landroid/widget/TextView;)I
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeStepGranularity()I
+    iput p1, p0, Lgo;->a:I
 
-    move-result p0
+    iput-object p2, p0, Lgo;->b:Ljava/lang/Object;
 
-    return p0
-.end method
-
-.method public static b(Landroid/widget/TextView;IIII)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithConfiguration(IIII)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static c(Landroid/widget/TextView;[II)V
-    .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithPresetSizes([II)V
+# virtual methods
+.method public final onBackInvoked()V
+    .locals 1
+
+    iget v0, p0, Lgo;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     return-void
-.end method
 
-.method public static d(Landroid/widget/TextView;Ljava/lang/String;)Z
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFontVariationSettings(Ljava/lang/String;)Z
+    check-cast v0, Lji6;
 
-    move-result p0
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
-    return p0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
+
+    check-cast v0, Lii8;
+
+    invoke-interface {v0}, Lii8;->a()V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
+
+    check-cast v0, Lno;
+
+    invoke-virtual {v0}, Lno;->D()Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

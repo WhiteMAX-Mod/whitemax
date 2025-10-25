@@ -1,56 +1,56 @@
 .class public final Lnb7;
-.super Llb7;
+.super Lpg6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lob7;
-
-.field public final c:Ljava/lang/ref/WeakReference;
-
-
-# direct methods
-.method public constructor <init>(Lob7;Lg14;)V
-    .locals 1
-
-    iget-object v0, p2, Llb7;->a:[Ljava/lang/String;
-
-    invoke-direct {p0, v0}, Llb7;-><init>([Ljava/lang/String;)V
-
-    iput-object p1, p0, Lnb7;->b:Lob7;
-
-    new-instance p1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lnb7;->c:Ljava/lang/ref/WeakReference;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a(Ljava/util/Set;)V
+.method public final bridge synthetic C()Lic7;
     .locals 1
 
-    iget-object v0, p0, Lnb7;->c:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Lnb7;->c0()Ly8d;
 
     move-result-object v0
 
-    check-cast v0, Llb7;
+    return-object v0
+.end method
+
+.method public final T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
+
+    return-object p0
+.end method
+
+.method public final c0()Ly8d;
+    .locals 3
+
+    iget v0, p0, Lpg6;->b:I
 
     if-nez v0, :cond_0
 
-    iget-object p1, p0, Lnb7;->b:Lob7;
+    sget-object v0, Ly8d;->r0:Ly8d;
 
-    invoke-virtual {p1, p0}, Lob7;->c(Llb7;)V
-
-    return-void
+    return-object v0
 
     :cond_0
-    invoke-virtual {v0, p1}, Llb7;->a(Ljava/util/Set;)V
+    new-instance v0, Ly8d;
+
+    iget-object v1, p0, Lpg6;->c:Ljava/lang/Object;
+
+    check-cast v1, [Ljava/lang/Object;
+
+    iget v2, p0, Lpg6;->b:I
+
+    invoke-direct {v0, v2, v1}, Ly8d;-><init>(I[Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public final d0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Lpg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lpg6;
 
     return-void
 .end method

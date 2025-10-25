@@ -1,85 +1,85 @@
-.class public abstract Lypa;
+.class public final Lypa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzpa;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    sget v0, Lt7c;->oneme_stickers_preview_action_favorite:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lypa;->a:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_action_forward:I
-
-    sput v0, Lypa;->b:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_action_send:I
-
-    sput v0, Lypa;->c:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_content_container:I
-
-    sput v0, Lypa;->d:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_lottie_cell:I
-
-    sput v0, Lypa;->e:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_static_cell:I
-
-    sput v0, Lypa;->f:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_sticker_container:I
-
-    sput v0, Lypa;->g:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_stickers_set_container:I
-
-    sput v0, Lypa;->h:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_stickers_set_content:I
-
-    sput v0, Lypa;->i:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_stickers_set_header:I
-
-    sput v0, Lypa;->j:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_toolbar:I
-
-    sput v0, Lypa;->k:I
-
-    sget v0, Lt7c;->oneme_stickers_preview_webm_cell:I
-
-    sput v0, Lypa;->l:I
+    iput p1, p0, Lypa;->a:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lypa;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lypa;
+
+    iget v1, p0, Lypa;->a:I
+
+    iget p1, p1, Lypa;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lypa;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Resource(iconRes="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lypa;->a:I
+
+    invoke-static {v2, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,90 +1,88 @@
-.class public final synthetic Lzt;
+.class public final Lzt;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lc6;
+.implements Lj21;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lzg2;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzg2;I)V
-    .locals 0
-
-    iput p2, p0, Lzt;->a:I
-
-    iput-object p1, p0, Lzt;->b:Lzg2;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lzt;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final onAsrRecordStarted(Lh21;)V
     .locals 2
 
-    iget v0, p0, Lzt;->a:I
+    iget-object v0, p0, Lzt;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget-object p0, p0, Lzt;->b:Lzg2;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lzg2;->r0:Lbu;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    monitor-enter v0
+    move-result v1
 
-    monitor-exit v0
+    if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lzg2;->t0:Lbu;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    monitor-enter v0
+    move-result-object v1
 
-    monitor-exit v0
+    check-cast v1, Lj21;
 
-    iget-object v0, p0, Lzg2;->s0:Lbu;
+    invoke-interface {v1, p1}, Lj21;->onAsrRecordStarted(Lh21;)V
 
-    monitor-enter v0
+    goto :goto_0
 
-    monitor-exit v0
-
-    iget-object v0, p0, Lzg2;->o:Lv5d;
-
-    new-instance v1, Ljc;
-
-    invoke-direct {v1, p0}, Ljc;-><init>(Lzg2;)V
-
-    invoke-virtual {v0, v1}, Lv5d;->b(Ljava/lang/Runnable;)Loq4;
-
+    :cond_0
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lzg2;->s0:Lbu;
+.method public final onAsrRecordStopped(Li21;)V
+    .locals 2
 
-    monitor-enter v0
+    iget-object v0, p0, Lzt;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    monitor-exit v0
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    iget-object v0, p0, Lzg2;->o:Lv5d;
+    move-result-object v0
 
-    new-instance v1, Ljc;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {v1, p0}, Ljc;-><init>(Lzg2;)V
+    move-result v1
 
-    invoke-virtual {v0, v1}, Lv5d;->b(Ljava/lang/Runnable;)Loq4;
+    if-eqz v1, :cond_0
 
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lj21;
+
+    invoke-interface {v1, p1}, Lj21;->onAsrRecordStopped(Li21;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

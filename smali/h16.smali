@@ -1,45 +1,37 @@
 .class public final Lh16;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
-# interfaces
-.implements Looc;
+
+# instance fields
+.field public X:Le16;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public Z:I
+
+.field public o:Ly7d;
 
 
 # virtual methods
-.method public final a(Landroid/view/MotionEvent;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
-.end method
+    iput-object p1, p0, Lh16;->Y:Ljava/lang/Object;
 
-.method public final c(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/MotionEvent;)Z
-    .locals 0
+    iget p1, p0, Lh16;->Z:I
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    const/high16 v0, -0x80000000
 
-    move-result p0
+    or-int/2addr p1, v0
 
-    const/4 p2, 0x2
+    iput p1, p0, Lh16;->Z:I
 
-    if-ne p0, p2, :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-static {p1, p0}, Ltq;->o(Lty5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    const/4 p1, 0x1
-
-    invoke-interface {p0, p1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final e(Z)V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

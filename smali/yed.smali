@@ -1,258 +1,334 @@
-.class public abstract Lyed;
-.super Ljava/lang/Object;
+.class public final Lyed;
+.super Li2;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/RandomAccess;
 
-# static fields
-.field public static final a:Lhed;
 
-.field public static final b:I
+# instance fields
+.field public final a:[Ljava/lang/Object;
 
-.field public static final c:[Ljava/util/concurrent/atomic/AtomicReference;
+.field public final b:I
+
+.field public c:I
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(I[Ljava/lang/Object;)V
+    .locals 2
 
-    new-instance v0, Lhed;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v6, 0x0
+    iput-object p2, p0, Lyed;->a:[Ljava/lang/Object;
 
-    new-array v1, v6, [B
+    if-ltz p1, :cond_1
 
-    const/4 v4, 0x0
+    array-length v0, p2
 
-    const/4 v5, 0x0
+    if-gt p1, v0, :cond_0
 
-    const/4 v2, 0x0
+    array-length p2, p2
+
+    iput p2, p0, Lyed;->b:I
+
+    iput p1, p0, Lyed;->o:I
+
+    return-void
+
+    :cond_0
+    const-string v0, "ring buffer filled size: "
+
+    const-string v1, " cannot be larger than the buffer size: "
+
+    invoke-static {p1, v0, v1}, Li57;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    array-length p2, p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_1
+    const-string p2, "ring buffer filled size should not be negative but it is "
+
+    invoke-static {p1, p2}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+
+# virtual methods
+.method public final a(I)V
+    .locals 5
+
+    if-ltz p1, :cond_3
+
+    iget v0, p0, Lyed;->o:I
+
+    if-gt p1, v0, :cond_2
+
+    if-lez p1, :cond_1
+
+    iget v0, p0, Lyed;->c:I
+
+    add-int v1, v0, p1
+
+    iget v2, p0, Lyed;->b:I
+
+    rem-int/2addr v1, v2
 
     const/4 v3, 0x0
 
-    invoke-direct/range {v0 .. v5}, Lhed;-><init>([BIIZZ)V
+    iget-object v4, p0, Lyed;->a:[Ljava/lang/Object;
 
-    sput-object v0, Lyed;->a:Lhed;
+    if-le v0, v1, :cond_0
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    invoke-static {v4, v0, v2, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
+    invoke-static {v4, v0, v1, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
 
-    move-result v0
+    goto :goto_0
 
-    mul-int/lit8 v0, v0, 0x2
-
-    add-int/lit8 v0, v0, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    move-result v0
-
-    sput v0, Lyed;->b:I
-
-    new-array v1, v0, [Ljava/util/concurrent/atomic/AtomicReference;
+    :cond_0
+    invoke-static {v4, v0, v1, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
 
     :goto_0
-    if-ge v6, v0, :cond_0
+    iput v1, p0, Lyed;->c:I
 
-    new-instance v2, Ljava/util/concurrent/atomic/AtomicReference;
+    iget v0, p0, Lyed;->o:I
 
-    invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    sub-int/2addr v0, p1
 
-    aput-object v2, v1, v6
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    sput-object v1, Lyed;->c:[Ljava/util/concurrent/atomic/AtomicReference;
-
-    return-void
-.end method
-
-.method public static final a(Lhed;)V
-    .locals 6
-
-    iget-object v0, p0, Lhed;->f:Lhed;
-
-    if-nez v0, :cond_6
-
-    iget-object v0, p0, Lhed;->g:Lhed;
-
-    if-nez v0, :cond_6
-
-    iget-boolean v0, p0, Lhed;->d:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v0
-
-    sget v2, Lyed;->b:I
-
-    int-to-long v2, v2
-
-    const-wide/16 v4, 0x1
-
-    sub-long/2addr v2, v4
-
-    and-long/2addr v0, v2
-
-    long-to-int v0, v0
-
-    sget-object v1, Lyed;->c:[Ljava/util/concurrent/atomic/AtomicReference;
-
-    aget-object v0, v1, v0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lhed;
-
-    sget-object v2, Lyed;->a:Lhed;
-
-    if-ne v1, v2, :cond_1
-
-    goto :goto_1
+    iput v0, p0, Lyed;->o:I
 
     :cond_1
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
-
-    iget v3, v1, Lhed;->c:I
-
-    goto :goto_0
+    return-void
 
     :cond_2
-    move v3, v2
+    const-string v0, "n shouldn\'t be greater than the buffer size: n = "
 
-    :goto_0
-    const/high16 v4, 0x10000
+    const-string v1, ", size = "
 
-    if-lt v3, v4, :cond_3
+    invoke-static {p1, v0, v1}, Li57;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    move-result-object p1
+
+    iget v0, p0, Lyed;->o:I
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_3
-    iput-object v1, p0, Lhed;->f:Lhed;
+    const-string v0, "n shouldn\'t be negative but it is "
 
-    iput v2, p0, Lhed;->b:I
+    invoke-static {p1, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
-    add-int/lit16 v3, v3, 0x2000
+    move-result-object p1
 
-    iput v3, p0, Lhed;->c:I
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    :cond_4
-    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result v2
+    move-result-object p1
 
-    if-eqz v2, :cond_5
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :goto_1
-    return-void
-
-    :cond_5
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eq v2, v1, :cond_4
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lhed;->f:Lhed;
-
-    return-void
-
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Failed requirement."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    throw v0
 .end method
 
-.method public static final b()Lhed;
-    .locals 6
+.method public final get(I)Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-virtual {p0}, Lyed;->getSize()I
+
+    move-result v0
+
+    if-ltz p1, :cond_0
+
+    if-ge p1, v0, :cond_0
+
+    iget v0, p0, Lyed;->c:I
+
+    add-int/2addr v0, p1
+
+    iget p1, p0, Lyed;->b:I
+
+    rem-int/2addr v0, p1
+
+    iget-object p1, p0, Lyed;->a:[Ljava/lang/Object;
+
+    aget-object p1, p1, v0
+
+    return-object p1
+
+    :cond_0
+    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v2, "index: "
+
+    const-string v3, ", size: "
+
+    invoke-static {v2, p1, v0, v3}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final getSize()I
+    .locals 1
+
+    iget v0, p0, Lyed;->o:I
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
+
+    new-instance v0, Lxed;
+
+    invoke-direct {v0, p0}, Lxed;-><init>(Lyed;)V
+
+    return-object v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lyed;->getSize()I
+
+    move-result v0
+
+    .line 2
+    new-array v0, v0, [Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Lyed;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v0
-
-    sget v2, Lyed;->b:I
-
-    int-to-long v2, v2
-
-    const-wide/16 v4, 0x1
-
-    sub-long/2addr v2, v4
-
-    and-long/2addr v0, v2
-
-    long-to-int v0, v0
-
-    sget-object v1, Lyed;->c:[Ljava/util/concurrent/atomic/AtomicReference;
-
-    aget-object v0, v1, v0
-
-    sget-object v1, Lyed;->a:Lhed;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhed;
-
-    if-ne v2, v1, :cond_0
-
-    new-instance v0, Lhed;
-
-    invoke-direct {v0}, Lhed;-><init>()V
-
     return-object v0
+.end method
 
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 6
+
+    .line 3
+    array-length v0, p1
+
+    .line 4
+    iget v1, p0, Lyed;->o:I
+
+    if-ge v0, v1, :cond_0
+
+    .line 5
+    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 6
     :cond_0
-    const/4 v1, 0x0
+    iget v0, p0, Lyed;->o:I
 
-    if-nez v2, :cond_1
+    .line 7
+    iget v1, p0, Lyed;->c:I
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    const/4 v2, 0x0
 
-    new-instance v0, Lhed;
+    move v3, v2
 
-    invoke-direct {v0}, Lhed;-><init>()V
+    .line 8
+    :goto_0
+    iget-object v4, p0, Lyed;->a:[Ljava/lang/Object;
 
-    return-object v0
+    if-ge v3, v0, :cond_1
+
+    iget v5, p0, Lyed;->b:I
+
+    if-ge v1, v5, :cond_1
+
+    .line 9
+    aget-object v4, v4, v1
+
+    aput-object v4, p1, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
 
     :cond_1
-    iget-object v3, v2, Lhed;->f:Lhed;
+    :goto_1
+    if-ge v3, v0, :cond_2
 
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    .line 10
+    aget-object v1, v4, v2
 
-    iput-object v1, v2, Lhed;->f:Lhed;
+    aput-object v1, p1, v3
 
-    const/4 v0, 0x0
+    add-int/lit8 v3, v3, 0x1
 
-    iput v0, v2, Lhed;->c:I
+    add-int/lit8 v2, v2, 0x1
 
-    return-object v2
+    goto :goto_1
+
+    .line 11
+    :cond_2
+    array-length v1, p1
+
+    if-ge v0, v1, :cond_3
+
+    const/4 v1, 0x0
+
+    .line 12
+    aput-object v1, p1, v0
+
+    :cond_3
+    return-object p1
 .end method

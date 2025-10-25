@@ -1,229 +1,151 @@
-.class public final Lrw4;
+.class public abstract synthetic Lrw4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Lyp8;
-
-.field public final c:Ljava/util/concurrent/CopyOnWriteArrayList;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/CopyOnWriteArrayList;ILyp8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrw4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    iput p2, p0, Lrw4;->a:I
-
-    iput-object p3, p0, Lrw4;->b:Lyp8;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 5
-
-    iget-object v0, p0, Lrw4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    invoke-static {}, Ljava/math/RoundingMode;->values()[Ljava/math/RoundingMode;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lrw4;->a:[I
+
+    :try_start_0
+    sget-object v1, Ljava/math/RoundingMode;->UNNECESSARY:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v1
+    :catch_0
+    :try_start_1
+    sget-object v0, Lrw4;->a:[I
 
-    check-cast v1, Lqw4;
+    sget-object v1, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
 
-    iget-object v2, v1, Lqw4;->b:Ljava/lang/Object;
-
-    iget-object v1, v1, Lqw4;->a:Landroid/os/Handler;
-
-    new-instance v3, Low4;
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, p0, v2, v4}, Low4;-><init>(Lrw4;Ltw4;I)V
-
-    invoke-static {v1, v3}, Lnrf;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 5
-
-    iget-object v0, p0, Lrw4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x2
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result-object v1
+    :catch_1
+    :try_start_2
+    sget-object v0, Lrw4;->a:[I
 
-    check-cast v1, Lqw4;
+    sget-object v1, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
 
-    iget-object v2, v1, Lqw4;->b:Ljava/lang/Object;
-
-    iget-object v1, v1, Lqw4;->a:Landroid/os/Handler;
-
-    new-instance v3, Low4;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, p0, v2, v4}, Low4;-><init>(Lrw4;Ltw4;I)V
-
-    invoke-static {v1, v3}, Lnrf;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(I)V
-    .locals 5
-
-    iget-object v0, p0, Lrw4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x3
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    move-result-object v1
+    :catch_2
+    :try_start_3
+    sget-object v0, Lrw4;->a:[I
 
-    check-cast v1, Lqw4;
+    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
 
-    iget-object v2, v1, Lqw4;->b:Ljava/lang/Object;
-
-    iget-object v1, v1, Lqw4;->a:Landroid/os/Handler;
-
-    new-instance v3, Lll1;
-
-    const/4 v4, 0x7
-
-    invoke-direct {v3, p0, v2, p1, v4}, Lll1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-static {v1, v3}, Lnrf;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Exception;)V
-    .locals 5
-
-    iget-object v0, p0, Lrw4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x4
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    move-result-object v1
+    :catch_3
+    :try_start_4
+    sget-object v0, Lrw4;->a:[I
 
-    check-cast v1, Lqw4;
+    sget-object v1, Ljava/math/RoundingMode;->UP:Ljava/math/RoundingMode;
 
-    iget-object v2, v1, Lqw4;->b:Ljava/lang/Object;
-
-    iget-object v1, v1, Lqw4;->a:Landroid/os/Handler;
-
-    new-instance v3, Lj5;
-
-    const/16 v4, 0x16
-
-    invoke-direct {v3, p0, v2, p1, v4}, Lj5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-static {v1, v3}, Lnrf;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e()V
-    .locals 5
-
-    iget-object v0, p0, Lrw4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x5
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    move-result-object v1
+    :catch_4
+    :try_start_5
+    sget-object v0, Lrw4;->a:[I
 
-    check-cast v1, Lqw4;
+    sget-object v1, Ljava/math/RoundingMode;->HALF_EVEN:Ljava/math/RoundingMode;
 
-    iget-object v2, v1, Lqw4;->b:Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iget-object v1, v1, Lqw4;->a:Landroid/os/Handler;
+    move-result v1
 
-    new-instance v3, Low4;
+    const/4 v2, 0x6
 
-    const/4 v4, 0x0
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    invoke-direct {v3, p0, v2, v4}, Low4;-><init>(Lrw4;Ltw4;I)V
+    :catch_5
+    :try_start_6
+    sget-object v0, Lrw4;->a:[I
 
-    invoke-static {v1, v3}, Lnrf;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    sget-object v1, Ljava/math/RoundingMode;->HALF_UP:Ljava/math/RoundingMode;
 
-    goto :goto_0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    :cond_0
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    sget-object v0, Lrw4;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_DOWN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
     return-void
 .end method

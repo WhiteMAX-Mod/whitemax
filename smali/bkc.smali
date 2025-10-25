@@ -1,48 +1,22 @@
-.class public final Lbkc;
+.class public abstract Lbkc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lts7;
 
 
 # static fields
-.field public static final a:Lbkc;
+.field public static coordinatorLayoutStyle:I = 0x7f04030d
 
-.field public static final b:I
+.field public static keylines:I = 0x7f040588
 
+.field public static layout_anchor:I = 0x7f040599
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static layout_anchorGravity:I = 0x7f04059a
 
-    new-instance v0, Lbkc;
+.field public static layout_behavior:I = 0x7f04059b
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static layout_dodgeInsetEdges:I = 0x7f0405cf
 
-    sput-object v0, Lbkc;->a:Lbkc;
+.field public static layout_insetEdge:I = 0x7f0405dd
 
-    sget v0, Lsea;->s:I
+.field public static layout_keyline:I = 0x7f0405de
 
-    sput v0, Lbkc;->b:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final m()I
-    .locals 0
-
-    sget p0, Lbkc;->b:I
-
-    return p0
-.end method
+.field public static statusBarBackground:I = 0x7f0407e8

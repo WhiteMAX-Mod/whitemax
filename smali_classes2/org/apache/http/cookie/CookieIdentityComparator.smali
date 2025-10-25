@@ -47,40 +47,40 @@
 
     invoke-virtual {p0, p1, p2}, Lorg/apache/http/cookie/CookieIdentityComparator;->compare(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/Cookie;)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public compare(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/Cookie;)I
-    .locals 1
+    .locals 2
 
     .line 2
     invoke-interface {p1}, Lorg/apache/http/cookie/Cookie;->getName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
     invoke-interface {p2}, Lorg/apache/http/cookie/Cookie;->getName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
-    move-result p0
+    move-result v0
 
-    if-nez p0, :cond_2
+    if-nez v0, :cond_2
 
     .line 3
     invoke-interface {p1}, Lorg/apache/http/cookie/Cookie;->getDomain()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 4
-    const-string p1, ""
+    const-string v0, ""
 
-    if-nez p0, :cond_0
+    if-nez p1, :cond_0
 
-    move-object p0, p1
+    move-object p1, v0
 
     .line 5
     :cond_0
@@ -93,14 +93,16 @@
     goto :goto_0
 
     :cond_1
-    move-object p1, p2
+    move-object v0, p2
 
     .line 6
     :goto_0
-    invoke-virtual {p0, p1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+    invoke-virtual {p1, v0}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
-    move-result p0
+    move-result p1
+
+    return p1
 
     :cond_2
-    return p0
+    return v0
 .end method

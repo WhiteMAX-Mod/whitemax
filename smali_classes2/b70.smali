@@ -1,92 +1,129 @@
 .class public final Lb70;
-.super Lsxe;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final c:Ltr;
+.field public final synthetic X:Lc70;
+
+.field public final synthetic Y:I
+
+.field public final synthetic Z:F
+
+.field public final synthetic q0:F
 
 
 # direct methods
-.method public constructor <init>(Ltr;)V
+.method public constructor <init>(Lc70;IFFLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lb70;->X:Lc70;
 
-    iput-object p1, p0, Lb70;->c:Ltr;
+    iput p2, p0, Lb70;->Y:I
+
+    iput p3, p0, Lb70;->Z:F
+
+    iput p4, p0, Lb70;->q0:F
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lb70;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lb70;
-
-    iget-object p0, p0, Lb70;->c:Ltr;
-
-    iget-object p1, p1, Lb70;->c:Ltr;
-
-    invoke-virtual {p0, p1}, Lr1e;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-object p0, p0, Lb70;->c:Ltr;
+    check-cast p1, Lq54;
 
-    invoke-virtual {p0}, Lr1e;->hashCode()I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result p0
+    invoke-virtual {p0, p1, p2}, Lb70;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return p0
+    move-result-object p1
+
+    check-cast p1, Lb70;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lb70;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    iget-object p0, p0, Lb70;->c:Ltr;
+    new-instance v0, Lb70;
 
-    invoke-static {p0}, Lm7g;->t(Ljava/util/Map;)Ljava/lang/String;
+    iget v3, p0, Lb70;->Z:F
 
-    move-result-object p0
+    iget v4, p0, Lb70;->q0:F
 
-    const-string v0, "Response(tokenTypes=\'"
+    iget-object v1, p0, Lb70;->X:Lc70;
 
-    const-string v1, "\')"
+    iget v2, p0, Lb70;->Y:I
 
-    invoke-static {v0, p0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-object v5, p2
 
-    move-result-object p0
+    invoke-direct/range {v0 .. v5}, Lb70;-><init>(Lc70;IFFLkotlin/coroutines/Continuation;)V
 
-    return-object p0
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    new-instance p1, Ljava/lang/Integer;
+
+    iget v0, p0, Lb70;->Y:I
+
+    invoke-direct {p1, v0}, Ljava/lang/Integer;-><init>(I)V
+
+    iget-object v1, p0, Lb70;->X:Lc70;
+
+    iput-object p1, v1, Lc70;->h:Ljava/lang/Integer;
+
+    new-instance p1, Ljava/lang/Float;
+
+    iget v2, p0, Lb70;->Z:F
+
+    invoke-direct {p1, v2}, Ljava/lang/Float;-><init>(F)V
+
+    iput-object p1, v1, Lc70;->k:Ljava/lang/Float;
+
+    new-instance p1, Ljava/lang/Float;
+
+    iget v2, p0, Lb70;->q0:F
+
+    invoke-direct {p1, v2}, Ljava/lang/Float;-><init>(F)V
+
+    iput-object p1, v1, Lc70;->l:Ljava/lang/Float;
+
+    iget-object p1, v1, Lc70;->i:Lss;
+
+    new-instance v2, Lss;
+
+    invoke-direct {v2, v0}, Lss;-><init>(I)V
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v2, p1}, Lss;->addAll(Ljava/util/Collection;)Z
+
+    :cond_0
+    iput-object v2, v1, Lc70;->i:Lss;
+
+    invoke-static {v1}, Lc70;->a(Lc70;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

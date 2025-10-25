@@ -1,59 +1,65 @@
-.class public abstract synthetic Lvg2;
+.class public final Lvg2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Lnje;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lpw0;Lulf;)V
+    .locals 2
 
-    invoke-static {}, Lqi2;->values()[Lqi2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Loje;->b(III)Lnje;
 
     move-result-object v0
 
-    array-length v0, v0
+    iput-object v0, p0, Lvg2;->a:Lnje;
 
-    new-array v0, v0, [I
+    check-cast p2, Lqta;
 
-    const/4 v1, 0x1
+    invoke-virtual {p2}, Lqta;->c()Lce8;
 
-    const/4 v2, 0x0
+    move-result-object p2
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p2}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
 
-    :catch_0
-    const/4 v2, 0x2
+    move-result-object p2
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iput-object p2, p0, Lvg2;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    :catch_1
-    const/4 v1, 0x3
+    invoke-virtual {p1, p0}, Lpw0;->d(Ljava/lang/Object;)V
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    return-void
+.end method
 
-    :catch_2
-    const/4 v2, 0x4
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+# virtual methods
+.method public final onEvent(Ltg2;)V
+    .locals 3
+    .annotation runtime Lzbf;
+    .end annotation
 
-    :catch_3
-    sput-object v0, Lvg2;->$EnumSwitchMapping$0:[I
+    new-instance v0, Lug2;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lug2;-><init>(Lvg2;Ltg2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Lvg2;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
     return-void
 .end method

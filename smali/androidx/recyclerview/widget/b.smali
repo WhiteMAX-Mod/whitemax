@@ -14,7 +14,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcoc;",
+            "Lt6d;",
             ">;"
         }
     .end annotation
@@ -24,7 +24,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lqoc;",
+            "Lg7d;",
             ">;"
         }
     .end annotation
@@ -74,19 +74,19 @@
     return-void
 .end method
 
-.method public attachForPoolingContainer(Lcoc;)V
-    .locals 0
+.method public attachForPoolingContainer(Lt6d;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcoc;",
+            "Lt6d;",
             ")V"
         }
     .end annotation
 
-    iget-object p0, p0, Landroidx/recyclerview/widget/b;->mAttachedAdaptersForPoolingContainer:Ljava/util/Set;
+    iget-object v0, p0, Landroidx/recyclerview/widget/b;->mAttachedAdaptersForPoolingContainer:Ljava/util/Set;
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -111,9 +111,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lqoc;
+    check-cast v1, Lg7d;
 
-    iget-object v2, v1, Lqoc;->a:Ljava/util/ArrayList;
+    iget-object v2, v1, Lg7d;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -130,16 +130,16 @@
 
     move-result-object v3
 
-    check-cast v3, Lzoc;
+    check-cast v3, Lq7d;
 
-    iget-object v3, v3, Lzoc;->a:Landroid/view/View;
+    iget-object v3, v3, Lq7d;->a:Landroid/view/View;
 
-    invoke-static {v3}, Lxeb;->a(Landroid/view/View;)V
+    invoke-static {v3}, Luvb;->a(Landroid/view/View;)V
 
     goto :goto_1
 
     :cond_0
-    iget-object v1, v1, Lqoc;->a:Ljava/util/ArrayList;
+    iget-object v1, v1, Lg7d;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
@@ -163,12 +163,12 @@
     return-void
 .end method
 
-.method public detachForPoolingContainer(Lcoc;Z)V
+.method public detachForPoolingContainer(Lt6d;Z)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcoc;",
+            "Lt6d;",
             "Z)V"
         }
     .end annotation
@@ -210,9 +210,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lqoc;
+    check-cast v0, Lg7d;
 
-    iget-object v0, v0, Lqoc;->a:Ljava/util/ArrayList;
+    iget-object v0, v0, Lg7d;->a:Ljava/util/ArrayList;
 
     move v1, p1
 
@@ -227,11 +227,11 @@
 
     move-result-object v2
 
-    check-cast v2, Lzoc;
+    check-cast v2, Lq7d;
 
-    iget-object v2, v2, Lzoc;->a:Landroid/view/View;
+    iget-object v2, v2, Lq7d;->a:Landroid/view/View;
 
-    invoke-static {v2}, Lxeb;->a(Landroid/view/View;)V
+    invoke-static {v2}, Luvb;->a(Landroid/view/View;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -249,17 +249,17 @@
 .method public factorInBindTime(IJ)V
     .locals 2
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lqoc;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lg7d;
 
     move-result-object p1
 
-    iget-wide v0, p1, Lqoc;->d:J
+    iget-wide v0, p1, Lg7d;->d:J
 
     invoke-virtual {p0, v0, v1, p2, p3}, Landroidx/recyclerview/widget/b;->runningAverage(JJ)J
 
     move-result-wide p2
 
-    iput-wide p2, p1, Lqoc;->d:J
+    iput-wide p2, p1, Lg7d;->d:J
 
     return-void
 .end method
@@ -267,84 +267,84 @@
 .method public factorInCreateTime(IJ)V
     .locals 2
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lqoc;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lg7d;
 
     move-result-object p1
 
-    iget-wide v0, p1, Lqoc;->c:J
+    iget-wide v0, p1, Lg7d;->c:J
 
     invoke-virtual {p0, v0, v1, p2, p3}, Landroidx/recyclerview/widget/b;->runningAverage(JJ)J
 
     move-result-wide p2
 
-    iput-wide p2, p1, Lqoc;->c:J
+    iput-wide p2, p1, Lg7d;->c:J
 
     return-void
 .end method
 
-.method public getRecycledView(I)Lzoc;
-    .locals 1
+.method public getRecycledView(I)Lq7d;
+    .locals 2
 
-    iget-object p0, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
+    iget-object v0, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
 
-    invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lqoc;
+    check-cast p1, Lg7d;
 
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lqoc;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Lg7d;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    add-int/lit8 p1, p1, -0x1
-
-    :goto_0
-    if-ltz p1, :cond_1
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzoc;
-
-    invoke-virtual {v0}, Lzoc;->k()Z
+    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    move-result-object p0
+    move-result v0
 
-    check-cast p0, Lzoc;
+    add-int/lit8 v0, v0, -0x1
 
-    return-object p0
+    :goto_0
+    if-ltz v0, :cond_1
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lq7d;
+
+    invoke-virtual {v1}, Lq7d;->k()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lq7d;
+
+    return-object p1
 
     :cond_0
-    add-int/lit8 p1, p1, -0x1
+    add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public final getScrapDataForType(I)Lqoc;
-    .locals 1
+.method public final getScrapDataForType(I)Lg7d;
+    .locals 2
 
     iget-object v0, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
 
@@ -352,29 +352,29 @@
 
     move-result-object v0
 
-    check-cast v0, Lqoc;
+    check-cast v0, Lg7d;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lqoc;
+    new-instance v0, Lg7d;
 
-    invoke-direct {v0}, Lqoc;-><init>()V
+    invoke-direct {v0}, Lg7d;-><init>()V
 
-    iget-object p0, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
+    iget-object v1, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
 
-    invoke-virtual {p0, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     :cond_0
     return-object v0
 .end method
 
-.method public onAdapterChanged(Lcoc;Lcoc;Z)V
+.method public onAdapterChanged(Lt6d;Lt6d;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcoc;",
-            "Lcoc;",
+            "Lt6d;",
+            "Lt6d;",
             "Z)V"
         }
     .end annotation
@@ -401,64 +401,64 @@
     return-void
 .end method
 
-.method public putRecycledView(Lzoc;)V
-    .locals 2
+.method public putRecycledView(Lq7d;)V
+    .locals 3
 
-    iget v0, p1, Lzoc;->Y:I
+    iget v0, p1, Lq7d;->Y:I
 
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lqoc;
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lg7d;
 
     move-result-object v1
 
-    iget-object v1, v1, Lqoc;->a:Ljava/util/ArrayList;
+    iget-object v1, v1, Lg7d;->a:Ljava/util/ArrayList;
 
-    iget-object p0, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
+    iget-object v2, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
 
-    invoke-virtual {p0, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lqoc;
+    check-cast v0, Lg7d;
 
-    iget p0, p0, Lqoc;->b:I
+    iget v0, v0, Lg7d;->b:I
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    move-result v0
+    move-result v2
 
-    if-gt p0, v0, :cond_0
+    if-gt v0, v2, :cond_0
 
-    iget-object p0, p1, Lzoc;->a:Landroid/view/View;
+    iget-object p1, p1, Lq7d;->a:Landroid/view/View;
 
-    invoke-static {p0}, Lxeb;->a(Landroid/view/View;)V
+    invoke-static {p1}, Luvb;->a(Landroid/view/View;)V
 
     return-void
 
     :cond_0
-    sget-boolean p0, Landroidx/recyclerview/widget/RecyclerView;->K1:Z
+    sget-boolean v0, Landroidx/recyclerview/widget/RecyclerView;->J1:Z
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v0
 
-    if-nez p0, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "this scrap item already exists"
+    const-string v0, "this scrap item already exists"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
     :goto_0
-    invoke-virtual {p1}, Lzoc;->u()V
+    invoke-virtual {p1}, Lq7d;->w()V
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -470,9 +470,9 @@
 
     const-wide/16 v0, 0x0
 
-    cmp-long p0, p1, v0
+    cmp-long v0, p1, v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-wide p3
 
@@ -493,30 +493,30 @@
 .end method
 
 .method public setMaxRecycledViews(II)V
-    .locals 0
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lqoc;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lg7d;
 
-    move-result-object p0
+    move-result-object p1
 
-    iput p2, p0, Lqoc;->b:I
+    iput p2, p1, Lg7d;->b:I
 
-    iget-object p0, p0, Lqoc;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Lg7d;->a:Ljava/util/ArrayList;
 
     :goto_0
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    move-result p1
+    move-result v0
 
-    if-le p1, p2, :cond_0
+    if-le v0, p2, :cond_0
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    move-result p1
+    move-result v0
 
-    add-int/lit8 p1, p1, -0x1
+    add-int/lit8 v0, v0, -0x1
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -546,9 +546,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lqoc;
+    check-cast v2, Lg7d;
 
-    iget-object v2, v2, Lqoc;->a:Ljava/util/ArrayList;
+    iget-object v2, v2, Lg7d;->a:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
@@ -570,71 +570,71 @@
 .end method
 
 .method public willBindInTime(IJJ)Z
-    .locals 2
+    .locals 4
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lqoc;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lg7d;
 
-    move-result-object p0
+    move-result-object p1
 
-    iget-wide p0, p0, Lqoc;->d:J
+    iget-wide v0, p1, Lg7d;->d:J
 
-    const-wide/16 v0, 0x0
+    const-wide/16 v2, 0x0
 
-    cmp-long v0, p0, v0
+    cmp-long p1, v0, v2
 
-    if-eqz v0, :cond_1
+    if-eqz p1, :cond_1
 
-    add-long/2addr p2, p0
+    add-long/2addr p2, v0
 
-    cmp-long p0, p2, p4
+    cmp-long p1, p2, p4
 
-    if-gez p0, :cond_0
+    if-gez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     :goto_0
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public willCreateInTime(IJJ)Z
-    .locals 2
+    .locals 4
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lqoc;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lg7d;
 
-    move-result-object p0
+    move-result-object p1
 
-    iget-wide p0, p0, Lqoc;->c:J
+    iget-wide v0, p1, Lg7d;->c:J
 
-    const-wide/16 v0, 0x0
+    const-wide/16 v2, 0x0
 
-    cmp-long v0, p0, v0
+    cmp-long p1, v0, v2
 
-    if-eqz v0, :cond_1
+    if-eqz p1, :cond_1
 
-    add-long/2addr p2, p0
+    add-long/2addr p2, v0
 
-    cmp-long p0, p2, p4
+    cmp-long p1, p2, p4
 
-    if-gez p0, :cond_0
+    if-gez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     :goto_0
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method

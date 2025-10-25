@@ -1,23 +1,49 @@
-.class public abstract Lkc5;
-.super Ljava/lang/Object;
+.class public final Lkc5;
+.super Ljsf;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:Lmc5;
+
+
 # direct methods
-.method public static a()Lmdb;
-    .locals 3
+.method public constructor <init>(Lmc5;)V
+    .locals 0
 
-    new-instance v0, Lmdb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lpj8;->f()Landroid/media/metrics/LogSessionId;
+    iput-object p1, p0, Lkc5;->a:Lmc5;
 
-    move-result-object v1
+    return-void
+.end method
 
-    new-instance v2, Lldb;
 
-    invoke-direct {v2, v1}, Lldb;-><init>(Landroid/media/metrics/LogSessionId;)V
+# virtual methods
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
-    invoke-direct {v0, v2}, Lmdb;-><init>(Lldb;)V
+    iget-object p1, p0, Lkc5;->a:Lmc5;
 
-    return-object v0
+    invoke-virtual {p1}, Lmc5;->b()Lnc5;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lnc5;->a()V
+
+    return-void
+.end method
+
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    iget-object p1, p0, Lkc5;->a:Lmc5;
+
+    invoke-virtual {p1}, Lmc5;->b()Lnc5;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lnc5;->b()V
+
+    return-void
 .end method

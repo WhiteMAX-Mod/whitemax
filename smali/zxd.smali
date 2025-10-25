@@ -1,31 +1,24 @@
 .class public final Lzxd;
-.super Ljava/lang/Object;
+.super Lvx5;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Lbx9;
-
-.field public static final b:Lh2a;
+# interfaces
+.implements Lbyd;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final a()J
     .locals 2
 
-    new-instance v0, Lbx9;
+    const-wide/16 v0, -0x1
 
-    const/16 v1, 0x11
+    return-wide v0
+.end method
 
-    invoke-direct {v0, v1}, Lbx9;-><init>(I)V
+.method public final b(J)J
+    .locals 0
 
-    sput-object v0, Lzxd;->a:Lbx9;
+    const-wide/16 p1, 0x0
 
-    new-instance v0, Lh2a;
-
-    invoke-direct {v0, v1}, Lh2a;-><init>(I)V
-
-    sput-object v0, Lzxd;->b:Lh2a;
-
-    return-void
+    return-wide p1
 .end method

@@ -1,134 +1,253 @@
 .class public final Ln2h;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 # interfaces
-.implements Lt2h;
+.implements Lw3g;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/view/View;
 
-.field public final synthetic b:Lrwa;
+.field public final b:I
+
+.field public final c:Landroid/view/ViewGroup;
+
+.field public final d:Z
+
+.field public e:Z
+
+.field public f:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrwa;I)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;I)V
+    .locals 1
 
-    iput p2, p0, Ln2h;->a:I
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    iput-object p1, p0, Ln2h;->b:Lrwa;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean v0, p0, Ln2h;->f:Z
+
+    iput-object p1, p0, Ln2h;->a:Landroid/view/View;
+
+    iput p2, p0, Ln2h;->b:I
+
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    iput-object p1, p0, Ln2h;->c:Landroid/view/ViewGroup;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Ln2h;->d:Z
+
+    invoke-virtual {p0, p1}, Ln2h;->g(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final a(Lx3g;)V
     .locals 0
 
-    iget p0, p0, Ln2h;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    const/4 p0, 0x5
-
-    return p0
-
-    :pswitch_0
-    const/4 p0, 0x4
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
 .method public final b()V
     .locals 2
 
-    iget v0, p0, Ln2h;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, v0}, Ln2h;->g(Z)V
 
-    iget-object p0, p0, Ln2h;->b:Lrwa;
+    iget-boolean v0, p0, Ln2h;->f:Z
 
-    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    check-cast p0, Lz0b;
+    iget-object v0, p0, Ln2h;->a:Landroid/view/View;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v1, p0, Ln2h;->b:I
 
-    :try_start_0
-    iget-object p0, p0, Lz0b;->c:Ljava/lang/Object;
+    invoke-static {v0, v1}, Lu1h;->b(Landroid/view/View;I)V
 
-    check-cast p0, Lg7h;
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual {p0}, Lk1h;->Y()Landroid/os/Parcel;
+.method public final c(Lx3g;)V
+    .locals 0
 
-    move-result-object v0
-
-    const/4 v1, 0x5
-
-    invoke-virtual {p0, v0, v1}, Lk1h;->Z(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p1, p0}, Lx3g;->E(Lw3g;)Lx3g;
 
     return-void
+.end method
 
-    :catch_0
-    move-exception p0
+.method public final f()V
+    .locals 2
 
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+    const/4 v0, 0x1
 
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    invoke-virtual {p0, v0}, Ln2h;->g(Z)V
 
-    throw v0
+    iget-boolean v0, p0, Ln2h;->f:Z
 
-    :pswitch_0
-    iget-object p0, p0, Ln2h;->b:Lrwa;
+    if-nez v0, :cond_0
 
-    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
+    iget-object v0, p0, Ln2h;->a:Landroid/view/View;
 
-    check-cast p0, Lz0b;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, v1}, Lu1h;->b(Landroid/view/View;I)V
 
-    :try_start_1
-    iget-object p0, p0, Lz0b;->c:Ljava/lang/Object;
+    :cond_0
+    return-void
+.end method
 
-    check-cast p0, Lg7h;
+.method public final g(Z)V
+    .locals 1
 
-    invoke-virtual {p0}, Lk1h;->Y()Landroid/os/Parcel;
+    iget-boolean v0, p0, Ln2h;->d:Z
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    const/16 v1, 0xf
+    iget-boolean v0, p0, Ln2h;->e:Z
 
-    invoke-virtual {p0, v0, v1}, Lk1h;->Z(Landroid/os/Parcel;I)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
+    if-eq v0, p1, :cond_0
+
+    iget-object v0, p0, Ln2h;->c:Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_0
+
+    iput-boolean p1, p0, Ln2h;->e:Z
+
+    invoke-static {v0, p1}, Lzci;->h(Landroid/view/ViewGroup;Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h(Lx3g;)V
+    .locals 0
 
     return-void
+.end method
 
-    :catch_1
-    move-exception p0
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+    const/4 p1, 0x1
 
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    iput-boolean p1, p0, Ln2h;->f:Z
 
-    throw v0
+    return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    .line 1
+    iget-boolean p1, p0, Ln2h;->f:Z
+
+    if-nez p1, :cond_0
+
+    .line 2
+    iget-object p1, p0, Ln2h;->a:Landroid/view/View;
+
+    iget v0, p0, Ln2h;->b:I
+
+    invoke-static {p1, v0}, Lu1h;->b(Landroid/view/View;I)V
+
+    .line 3
+    iget-object p1, p0, Ln2h;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 4
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 5
+    invoke-virtual {p0, p1}, Ln2h;->g(Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
+    .locals 0
+
+    if-nez p2, :cond_1
+
+    .line 6
+    iget-boolean p1, p0, Ln2h;->f:Z
+
+    if-nez p1, :cond_0
+
+    .line 7
+    iget-object p1, p0, Ln2h;->a:Landroid/view/View;
+
+    iget p2, p0, Ln2h;->b:I
+
+    invoke-static {p1, p2}, Lu1h;->b(Landroid/view/View;I)V
+
+    .line 8
+    iget-object p1, p0, Ln2h;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 9
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 10
+    invoke-virtual {p0, p1}, Ln2h;->g(Z)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;Z)V
+    .locals 0
+
+    if-eqz p2, :cond_0
+
+    .line 2
+    iget-object p1, p0, Ln2h;->a:Landroid/view/View;
+
+    const/4 p2, 0x0
+
+    invoke-static {p1, p2}, Lu1h;->b(Landroid/view/View;I)V
+
+    .line 3
+    iget-object p1, p0, Ln2h;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 4
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    return-void
 .end method

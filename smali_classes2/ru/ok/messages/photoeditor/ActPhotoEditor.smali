@@ -1,162 +1,66 @@
 .class public Lru/ok/messages/photoeditor/ActPhotoEditor;
-.super Lt5;
+.super Lh6;
 .source "SourceFile"
 
 # interfaces
-.implements Lsj3;
+.implements Llo3;
 
 
 # static fields
-.field public static final synthetic Y0:I
+.field public static final synthetic X0:I
 
 
 # instance fields
-.field public T0:Lz4b;
+.field public S0:Lykb;
 
-.field public U0:Lar8;
+.field public T0:Lb39;
 
-.field public V0:Z
+.field public U0:Z
 
-.field public W0:Lncb;
+.field public V0:Lnhd;
 
-.field public final X0:Lzte;
+.field public final W0:Lwif;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
-    invoke-direct {p0}, Lt5;-><init>()V
+    invoke-direct {p0}, Lh6;-><init>()V
 
-    new-instance v0, Lk;
+    new-instance v0, Ll6;
 
-    const/4 v1, 0x2
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Lk;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ll6;-><init>(ILjava/lang/Object;)V
 
-    new-instance v1, Lzte;
+    new-instance v1, Lwif;
 
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
 
-    iput-object v1, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->X0:Lzte;
+    iput-object v1, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->W0:Lwif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final M(Landroid/os/Bundle;)V
-    .locals 11
+.method public final M()Ljava/lang/String;
+    .locals 1
 
-    if-eqz p1, :cond_0
+    const-string v0, "EDIT_IMAGE"
 
-    const-string v0, "photo_editor:cancel_dialog"
-
-    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->setResult(I)V
-
-    invoke-virtual {p0}, Lt5;->finish()V
-
-    return-void
-
-    :cond_0
-    iget-object p0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lz4b;
-
-    iget-object p1, p0, Lz4b;->b:Lv05;
-
-    iget-object v0, p1, Lv05;->a:Lz05;
-
-    invoke-virtual {v0}, Lz05;->getLayers()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    const/4 v9, 0x1
-
-    sub-int/2addr v2, v9
-
-    :goto_0
-    if-ltz v2, :cond_2
-
-    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ls05;
-
-    instance-of v4, v3, Loe0;
-
-    if-nez v4, :cond_1
-
-    iget-object v4, v0, Lz05;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    :cond_1
-    add-int/lit8 v2, v2, -0x1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1}, Lv05;->b()V
-
-    iget-object p1, p0, Lz4b;->e:Lc5b;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-boolean v7, p1, Lc5b;->o:Z
-
-    iget-boolean v8, p1, Lc5b;->X:Z
-
-    iget-boolean v10, p1, Lc5b;->Z:Z
-
-    new-instance v3, Lc5b;
-
-    const/4 v4, 0x0
-
-    move v5, v4
-
-    move v6, v4
-
-    invoke-direct/range {v3 .. v10}, Lc5b;-><init>(ZZZZZZZ)V
-
-    iput-object v3, p0, Lz4b;->e:Lc5b;
-
-    iget-object p0, p0, Lz4b;->a:Ld5b;
-
-    invoke-virtual {p0, v3}, Ld5b;->a(Lc5b;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final N()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "EDIT_IMAGE"
-
-    return-object p0
-.end method
-
-.method public final X()V
+.method public final W()V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lz4b;
+    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->S0:Lykb;
 
-    iget-object v0, v0, Lz4b;->b:Lv05;
+    iget-object v0, v0, Lykb;->b:Lp65;
 
-    iget-boolean v0, v0, Lv05;->h:Z
+    iget-boolean v0, v0, Lp65;->h:Z
 
     if-nez v0, :cond_0
 
@@ -164,7 +68,7 @@
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setResult(I)V
 
-    invoke-virtual {p0}, Lt5;->finish()V
+    invoke-virtual {p0}, Lh6;->finish()V
 
     return-void
 
@@ -183,19 +87,19 @@
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    sget v2, Ld1d;->w2:I
+    sget v2, Ldkd;->f2:I
 
     const-string v3, "ru.ok.tamtam.extra.CONTENT_RES_ID"
 
     invoke-virtual {v1, v3, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    sget v2, Ld1d;->v2:I
+    sget v2, Ldkd;->e2:I
 
     const-string v3, "ru.ok.tamtam.extra.POSITIVE_TEXT_RES_ID"
 
     invoke-virtual {v1, v3, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    sget v2, Ld1d;->r:I
+    sget v2, Ldkd;->p:I
 
     const-string v3, "ru.ok.tamtam.extra.NEGATIVE_TEXT_RES_ID"
 
@@ -209,31 +113,31 @@
 
     invoke-direct {v0}, Lru/ok/messages/views/dialogs/ConfirmationDialog;-><init>()V
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/a;->L0(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/a;->w0(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->C()Lj86;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->F()Lxe6;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "ru.ok.messages.views.dialogs.ConfirmationDialog"
+    const-string v2, "ru.ok.messages.views.dialogs.ConfirmationDialog"
 
-    invoke-virtual {v0, p0, v1}, Landroidx/fragment/app/DialogFragment;->Y0(Landroidx/fragment/app/c;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Landroidx/fragment/app/DialogFragment;->F0(Landroidx/fragment/app/c;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public final Y(Lfl4;)V
+.method public final X(Leq4;)V
     .locals 14
 
-    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lz4b;
+    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->S0:Lykb;
 
-    iget-object v0, v0, Lz4b;->b:Lv05;
+    iget-object v0, v0, Lykb;->b:Lp65;
 
-    invoke-virtual {v0}, Lv05;->a()Lt05;
+    invoke-virtual {v0}, Lp65;->a()Lm65;
 
     move-result-object v0
 
-    iget-object v1, v0, Lt05;->a:Ljava/util/ArrayList;
+    iget-object v1, v0, Lm65;->a:Ljava/util/ArrayList;
 
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -250,7 +154,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-boolean v3, v0, Lt05;->o:Z
+    iget-boolean v3, v0, Lm65;->o:Z
 
     if-eqz v3, :cond_1
 
@@ -262,9 +166,9 @@
     move v3, v2
 
     :goto_0
-    iget-object v4, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lz4b;
+    iget-object v4, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->S0:Lykb;
 
-    iget-boolean v5, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->V0:Z
+    iget-boolean v5, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->U0:Z
 
     if-eqz v5, :cond_2
 
@@ -276,11 +180,11 @@
     move v1, v2
 
     :goto_1
-    iget-object v4, v4, Lz4b;->b:Lv05;
+    iget-object v4, v4, Lykb;->b:Lp65;
 
-    iget-object v4, v4, Lv05;->a:Lz05;
+    iget-object v4, v4, Lp65;->a:Lt65;
 
-    invoke-virtual {v4}, Lz05;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {v4}, Lt65;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v5
 
@@ -352,7 +256,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v4}, Lz05;->getResultBounds()Landroid/graphics/Rect;
+    invoke-virtual {v4}, Lt65;->getResultBounds()Landroid/graphics/Rect;
 
     move-result-object v7
 
@@ -360,7 +264,7 @@
 
     invoke-direct {v9, v6}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v4}, Lz05;->getLayers()Ljava/util/List;
+    invoke-virtual {v4}, Lt65;->getLayers()Ljava/util/List;
 
     move-result-object v4
 
@@ -379,17 +283,17 @@
 
     move-result-object v10
 
-    check-cast v10, Ls05;
+    check-cast v10, Ll65;
 
-    instance-of v11, v10, Loe0;
+    instance-of v11, v10, Llf0;
 
     if-eqz v11, :cond_5
 
     if-eqz v1, :cond_4
 
-    check-cast v10, Loe0;
+    check-cast v10, Llf0;
 
-    iget-object v10, v10, Loe0;->a:Landroid/graphics/drawable/Drawable;
+    iget-object v10, v10, Llf0;->a:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v9}, Landroid/graphics/Canvas;->getWidth()I
 
@@ -443,26 +347,26 @@
     goto :goto_3
 
     :cond_5
-    invoke-interface {v10, v9}, Ls05;->draw(Landroid/graphics/Canvas;)V
+    invoke-interface {v10, v9}, Ll65;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_3
 
     :cond_6
     if-eqz v3, :cond_7
 
-    iget-object v1, p0, Lt5;->J0:Lr2b;
+    iget-object v1, p0, Lh6;->I0:Lyoh;
 
-    iget-object v1, v1, Lr2b;->a:Ljava/lang/Object;
+    iget-object v1, v1, Lyoh;->b:Ljava/lang/Object;
 
-    check-cast v1, Lpe3;
+    check-cast v1, Lej3;
 
-    check-cast v1, Lbfa;
+    check-cast v1, Lssa;
 
-    invoke-virtual {v1}, Lbfa;->n()Ltgb;
+    invoke-virtual {v1}, Lssa;->j()Lrxb;
 
     move-result-object v1
 
-    iget-object v1, v1, Ltgb;->b:Lyjd;
+    iget-object v1, v1, Lrxb;->b:Lgvb;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -472,7 +376,7 @@
 
     int-to-long v4, v4
 
-    invoke-virtual {v1, v3, v4, v5}, Lpad;->o(Ljava/lang/Enum;J)J
+    invoke-virtual {v1, v3, v4, v5}, Lwtd;->m(Ljava/lang/Enum;J)J
 
     move-result-wide v3
 
@@ -484,13 +388,13 @@
 
     int-to-long v7, v5
 
-    invoke-virtual {v1, v4, v7, v8}, Lpad;->o(Ljava/lang/Enum;J)J
+    invoke-virtual {v1, v4, v7, v8}, Lwtd;->m(Ljava/lang/Enum;J)J
 
     move-result-wide v4
 
     long-to-int v1, v4
 
-    invoke-static {v3, v1, v6}, Lxfc;->B(IILandroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {v3, v1, v6}, Ln0i;->k(IILandroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v6
 
@@ -499,15 +403,15 @@
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    iget-object v3, p0, Lt5;->J0:Lr2b;
+    iget-object v3, p0, Lh6;->I0:Lyoh;
 
-    iget-object v3, v3, Lr2b;->a:Ljava/lang/Object;
+    iget-object v3, v3, Lyoh;->b:Ljava/lang/Object;
 
-    check-cast v3, Lpe3;
+    check-cast v3, Lej3;
 
-    check-cast v3, Lbfa;
+    check-cast v3, Lssa;
 
-    invoke-virtual {v3}, Lbfa;->h()Lcp5;
+    invoke-virtual {v3}, Lssa;->e()Liv5;
 
     move-result-object v3
 
@@ -533,7 +437,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcp5;->r(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v3, v4}, Liv5;->p(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v3
 
@@ -546,7 +450,7 @@
 
     const/16 v7, 0x64
 
-    invoke-static {v4, v6, v7, v5}, Lxfc;->C(Ljava/lang/String;Landroid/graphics/Bitmap;ILandroid/graphics/Bitmap$CompressFormat;)V
+    invoke-static {v4, v6, v7, v5}, Ln0i;->m(Ljava/lang/String;Landroid/graphics/Bitmap;ILandroid/graphics/Bitmap$CompressFormat;)V
 
     const-string v4, "photo_editor:result_uri"
 
@@ -568,64 +472,62 @@
 
     invoke-virtual {p0, p1, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
-    invoke-virtual {p0}, Lt5;->finish()V
+    invoke-virtual {p0}, Lh6;->finish()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    sget p1, Ld1d;->K:I
-
-    sget-object v0, Lte2;->d:Landroid/os/Handler;
+    sget p1, Ldkd;->F:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v2, p0, p1}, Lte2;->M(ILandroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v2, p0, p1}, Lurh;->d(ILandroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {p0, v2}, Landroid/app/Activity;->setResult(I)V
 
-    invoke-virtual {p0}, Lt5;->finish()V
+    invoke-virtual {p0}, Lh6;->finish()V
 
     return-void
 .end method
 
-.method public final o()Lcze;
+.method public final i()Lynf;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->U0:Lar8;
+    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lb39;
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lar8;->e0:Lar8;
+    sget-object v0, Lb39;->e0:Lb39;
 
-    iput-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->U0:Lar8;
+    iput-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lb39;
 
     :cond_0
-    iget-object p0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->U0:Lar8;
+    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lb39;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final onBackPressed()V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lz4b;
+    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->S0:Lykb;
 
-    iget-object v0, v0, Lz4b;->b:Lv05;
+    iget-object v0, v0, Lykb;->b:Lp65;
 
-    iget-boolean v0, v0, Lv05;->h:Z
+    iget-boolean v0, v0, Lp65;->h:Z
 
     if-nez v0, :cond_0
 
-    invoke-super {p0}, Lt5;->onBackPressed()V
+    invoke-super {p0}, Lh6;->onBackPressed()V
 
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lru/ok/messages/photoeditor/ActPhotoEditor;->X()V
+    invoke-virtual {p0}, Lru/ok/messages/photoeditor/ActPhotoEditor;->W()V
 
     return-void
 .end method
@@ -633,17 +535,17 @@
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 13
 
-    invoke-super {p0, p1}, Lt5;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lh6;->onCreate(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->U0:Lar8;
+    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lb39;
 
-    iget v0, v0, Lcze;->L:I
+    iget v0, v0, Lynf;->L:I
 
-    invoke-virtual {p0, v0}, Lt5;->T(I)V
+    invoke-virtual {p0, v0}, Lh6;->S(I)V
 
-    sget v0, Lz8c;->act_photo_editor:I
+    sget v0, Lsqc;->act_photo_editor:I
 
-    invoke-virtual {p0, v0}, Lt5;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lh6;->setContentView(I)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -657,62 +559,62 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->V0:Z
+    iput-boolean v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->U0:Z
 
-    iget-object v0, p0, Lt5;->J0:Lr2b;
+    iget-object v0, p0, Lh6;->I0:Lyoh;
 
-    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lyoh;->b:Ljava/lang/Object;
 
-    check-cast v0, Lpe3;
+    check-cast v0, Lej3;
 
-    check-cast v0, Lbfa;
+    check-cast v0, Lssa;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
-
-    move-result-object v0
-
-    const-class v1, Ldze;
-
-    invoke-virtual {v0, v1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    check-cast v0, Ldze;
+    const-class v1, Lznf;
 
-    invoke-virtual {v0}, Ldze;->c()Lcze;
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    sget v1, Lb8c;->act_photo_editor__editor:I
+    check-cast v0, Lznf;
 
-    invoke-virtual {p0, v1}, Lkm;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0}, Lznf;->c()Lynf;
+
+    move-result-object v0
+
+    sget v1, Lvpc;->act_photo_editor__editor:I
+
+    invoke-virtual {p0, v1}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;
 
-    invoke-virtual {v1}, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->getEditorSurfaceView()Lz05;
+    invoke-virtual {v1}, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->getEditorSurfaceView()Lt65;
 
     move-result-object v1
 
-    iget-boolean v3, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->V0:Z
+    iget-boolean v3, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->U0:Z
 
     if-nez v3, :cond_0
 
-    iget-object v3, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->U0:Lar8;
+    iget-object v3, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lb39;
 
-    iget v3, v3, Lcze;->m:I
+    iget v3, v3, Lynf;->m:I
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
     goto :goto_0
 
     :cond_0
-    iget-boolean v3, v0, Lcze;->c:Z
+    iget-boolean v3, v0, Lynf;->c:Z
 
     if-eqz v3, :cond_1
 
-    iget v3, v0, Lcze;->m:I
+    iget v3, v0, Lynf;->m:I
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -724,29 +626,29 @@
     invoke-virtual {v1, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
     :goto_0
-    new-instance v5, Ld5b;
+    new-instance v5, Ldlb;
 
-    sget v3, Lb8c;->act_photo_editor__root:I
+    sget v3, Lvpc;->act_photo_editor__root:I
 
-    invoke-virtual {p0, v3}, Lkm;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    iget-object v4, p0, Lt5;->J0:Lr2b;
+    iget-object v4, p0, Lh6;->I0:Lyoh;
 
-    iget-object v4, v4, Lr2b;->a:Ljava/lang/Object;
+    iget-object v4, v4, Lyoh;->b:Ljava/lang/Object;
 
-    check-cast v4, Lpe3;
+    check-cast v4, Lej3;
 
-    check-cast v4, Lbfa;
+    check-cast v4, Lssa;
 
-    invoke-virtual {v4}, Lbfa;->n()Ltgb;
+    invoke-virtual {v4}, Lssa;->j()Lrxb;
 
     move-result-object v4
 
-    iget-object v4, v4, Ltgb;->c:Ljp;
+    iget-object v4, v4, Lrxb;->c:Lgig;
 
-    invoke-direct {v5, v3, v4}, Ld5b;-><init>(Landroid/view/View;Ljp;)V
+    invoke-direct {v5, v3, v4}, Ldlb;-><init>(Landroid/view/View;Lgig;)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -762,77 +664,75 @@
 
     if-eqz v3, :cond_2
 
-    new-instance v4, Lgu9;
+    new-instance v4, Ld1j;
 
-    invoke-direct {v4, v3}, Lgu9;-><init>(Landroid/net/Uri;)V
+    invoke-direct {v4, v3}, Ld1j;-><init>(Landroid/net/Uri;)V
 
     goto :goto_1
 
     :cond_2
-    new-instance v4, Lgu9;
+    new-instance v4, Ld1j;
 
-    const/4 v3, 0x5
-
-    invoke-direct {v4, v3}, Lgu9;-><init>(I)V
+    invoke-direct {v4}, Ld1j;-><init>()V
 
     :goto_1
-    iget-boolean v0, v0, Lcze;->c:Z
+    iget-boolean v0, v0, Lynf;->c:Z
 
     if-eqz v0, :cond_3
 
-    sget v0, La1d;->m:I
+    sget v0, Lzjd;->p:I
 
     goto :goto_2
 
     :cond_3
-    sget v0, La1d;->n:I
+    sget v0, Lzjd;->q:I
 
     :goto_2
-    invoke-virtual {p0}, Lkm;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lrn;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    sget-object v6, Lmuc;->a:Ljava/lang/ThreadLocal;
+    sget-object v6, Lgdd;->a:Ljava/lang/ThreadLocal;
 
     const/4 v6, 0x0
 
-    invoke-static {v3, v0, v6}, Lhuc;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v3, v0, v6}, Lbdd;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_a
 
-    new-instance v3, Lgu9;
+    new-instance v3, Ld1j;
 
-    invoke-direct {v3, v0}, Lgu9;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v3, v0}, Ld1j;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    new-instance v8, Lxc4;
+    new-instance v8, Lsp4;
 
-    invoke-virtual {p0}, Lkm;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lrn;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    iget-object v7, p0, Lt5;->J0:Lr2b;
+    iget-object v7, p0, Lh6;->I0:Lyoh;
 
-    iget-object v7, v7, Lr2b;->a:Ljava/lang/Object;
+    iget-object v7, v7, Lyoh;->b:Ljava/lang/Object;
 
-    check-cast v7, Lpe3;
+    check-cast v7, Lej3;
 
-    check-cast v7, Lbfa;
+    check-cast v7, Lssa;
 
-    invoke-virtual {v7}, Lbfa;->q()Ltxe;
+    invoke-virtual {v7}, Lssa;->m()Lqmf;
 
     move-result-object v7
 
     invoke-direct {v8}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, v8, Lxc4;->a:Ljava/lang/Object;
+    iput-object v0, v8, Lsp4;->a:Ljava/lang/Object;
 
-    iput-object v7, v8, Lxc4;->b:Ljava/lang/Object;
+    iput-object v7, v8, Lsp4;->b:Ljava/lang/Object;
 
-    iput-object v4, v8, Lxc4;->c:Ljava/lang/Object;
+    iput-object v4, v8, Lsp4;->c:Ljava/lang/Object;
 
-    iput-object v3, v8, Lxc4;->o:Ljava/lang/Object;
+    iput-object v3, v8, Lsp4;->o:Ljava/lang/Object;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -856,7 +756,7 @@
 
     move-object v6, v0
 
-    check-cast v6, Lt05;
+    check-cast v6, Lm65;
 
     :cond_4
     move-object v9, v6
@@ -881,15 +781,15 @@
 
     move-result v10
 
-    new-instance v4, Lz4b;
+    new-instance v4, Lykb;
 
-    new-instance v6, Lv05;
+    new-instance v6, Lp65;
 
-    invoke-direct {v6, v1}, Lv05;-><init>(Lz05;)V
+    invoke-direct {v6, v1}, Lp65;-><init>(Lt65;)V
 
-    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->X0:Lzte;
+    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->W0:Lwif;
 
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -901,136 +801,140 @@
 
     move-object v7, p0
 
-    invoke-direct/range {v4 .. v12}, Lz4b;-><init>(Ld5b;Lv05;Lru/ok/messages/photoeditor/ActPhotoEditor;Lxc4;Lt05;ZZZ)V
+    invoke-direct/range {v4 .. v12}, Lykb;-><init>(Ldlb;Lp65;Lru/ok/messages/photoeditor/ActPhotoEditor;Lsp4;Lm65;ZZZ)V
 
-    iput-object v4, v7, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lz4b;
+    iput-object v4, v7, Lru/ok/messages/photoeditor/ActPhotoEditor;->S0:Lykb;
 
-    sget-object p0, Ld5b;->w0:[I
+    sget-object v1, Ldlb;->v0:[I
 
-    const/4 v1, 0x6
+    const/4 v2, 0x6
 
-    aget p0, p0, v1
+    aget v1, v1, v2
 
-    const-string v1, "app.editor.color"
+    const-string v2, "app.editor.color"
 
-    iget-object v2, v5, Ld5b;->c:Ljp;
+    iget-object v3, v5, Ldlb;->c:Lgig;
 
-    iget-object v3, v2, Li3;->g:Lfl7;
+    iget-object v4, v3, Lw3;->h:Llu7;
 
-    invoke-virtual {v3, v1, p0}, Lfl7;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {v4, v2, v1}, Llu7;->getInt(Ljava/lang/String;I)I
 
-    move-result p0
+    move-result v1
 
-    invoke-virtual {v5, p0}, Ld5b;->c(I)V
+    invoke-virtual {v5, v1}, Ldlb;->c(I)V
 
-    iget-object p0, v5, Ld5b;->b:Landroid/view/View;
+    iget-object v1, v5, Ldlb;->b:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const/high16 p0, 0x41000000    # 8.0f
+    invoke-static {}, Lwt4;->a()Lwt4;
 
-    invoke-static {p0}, Lro4;->a(F)I
+    const/high16 v1, 0x41000000    # 8.0f
 
-    move-result p0
+    float-to-int v1, v1
 
-    iget-object v1, v2, Li3;->g:Lfl7;
+    invoke-static {v1}, Lau4;->b(I)I
 
-    const-string v3, "app.editor.width"
+    move-result v1
 
-    invoke-virtual {v1, v3, p0}, Lfl7;->getInt(Ljava/lang/String;I)I
+    iget-object v2, v3, Lw3;->h:Llu7;
 
-    move-result p0
+    const-string v4, "app.editor.width"
 
-    if-lez p0, :cond_6
+    invoke-virtual {v2, v4, v1}, Llu7;->getInt(Ljava/lang/String;I)I
 
-    int-to-float p0, p0
+    move-result v1
 
-    iget-object v1, v5, Ld5b;->s0:Lcs0;
+    if-lez v1, :cond_6
 
-    invoke-interface {v1, p0}, Lcs0;->setBrushWidth(F)V
+    int-to-float v1, v1
 
-    iget-object v1, v5, Ld5b;->a:Ljava/util/HashSet;
+    iget-object v2, v5, Ldlb;->r0:Llt0;
 
-    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    invoke-interface {v2, v1}, Llt0;->setBrushWidth(F)V
 
-    move-result-object v1
+    iget-object v2, v5, Ldlb;->a:Ljava/util/HashSet;
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
 
     :goto_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_5
+    if-eqz v5, :cond_5
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Lz4b;
+    check-cast v5, Lykb;
 
-    iget-object v4, v4, Lz4b;->b:Lv05;
+    iget-object v5, v5, Lykb;->b:Lp65;
 
-    iput p0, v4, Lv05;->g:F
+    iput v1, v5, Lp65;->g:F
 
     goto :goto_3
 
     :cond_5
-    float-to-int p0, p0
+    float-to-int v1, v1
 
-    invoke-virtual {v2, p0, v3}, Li3;->i(ILjava/lang/String;)V
+    invoke-virtual {v3, v1, v4}, Lw3;->g(ILjava/lang/String;)V
 
     :cond_6
-    const/4 p0, 0x1
+    const/4 v1, 0x1
 
     if-eqz p1, :cond_8
 
-    iget-object v1, v7, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lz4b;
+    iget-object v2, v7, Lru/ok/messages/photoeditor/ActPhotoEditor;->S0:Lykb;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v2, "ru.ok.tamtam.extra.EDITOR_STATE"
+    const-string v3, "ru.ok.tamtam.extra.EDITOR_STATE"
 
-    invoke-virtual {p1, v2}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+    invoke-virtual {p1, v3}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_7
+    if-eqz v4, :cond_7
 
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Lt05;
+    check-cast v3, Lm65;
 
-    iget-object v3, v1, Lz4b;->d:Lxc4;
+    iget-object v4, v2, Lykb;->d:Lsp4;
 
-    iget-object v4, v1, Lz4b;->b:Lv05;
+    iget-object v5, v2, Lykb;->b:Lp65;
 
-    invoke-virtual {v3, v4, v2, p0}, Lxc4;->c(Lv05;Lt05;Z)V
+    invoke-virtual {v4, v5, v3, v1}, Lsp4;->a(Lp65;Lm65;Z)V
 
     :cond_7
-    const-string v2, "ru.ok.tamtam.extra.EDITOR_VIEW_STATE"
+    const-string v3, "ru.ok.tamtam.extra.EDITOR_VIEW_STATE"
 
-    invoke-virtual {p1, v2}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+    invoke-virtual {p1, v3}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_8
+    if-eqz v4, :cond_8
 
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    check-cast p1, Lc5b;
+    check-cast p1, Lclb;
 
-    iput-object p1, v1, Lz4b;->e:Lc5b;
+    iput-object p1, v2, Lykb;->e:Lclb;
 
-    iget-object v1, v1, Lz4b;->a:Ld5b;
+    iget-object v2, v2, Lykb;->a:Ldlb;
 
-    invoke-virtual {v1, p1}, Ld5b;->a(Lc5b;)V
+    invoke-virtual {v2, p1}, Ldlb;->a(Lclb;)V
 
     :cond_8
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1042,71 +946,169 @@
 
     if-nez p1, :cond_9
 
-    invoke-virtual {v7}, Landroidx/fragment/app/b;->C()Lj86;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->F()Lxe6;
 
     move-result-object p1
 
-    new-instance v0, Lw5;
+    new-instance v0, Lj6;
 
-    invoke-direct {v0, p0, v7}, Lw5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lj6;-><init>(ILjava/lang/Object;)V
 
-    const-string p0, "ru.ok.messages.photoeditor.ActPhotoEditor"
+    const-string v1, "ru.ok.messages.photoeditor.ActPhotoEditor"
 
-    invoke-static {p0, p1, v7, v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->d1(Ljava/lang/String;Lj86;Lt5;Lrm3;)V
+    invoke-static {v1, p1, p0, v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->L0(Ljava/lang/String;Lxe6;Lh6;Lur3;)V
 
     :cond_9
     return-void
 
     :cond_a
-    new-instance p0, Ljava/lang/IllegalStateException;
+    move-object v7, p0
 
-    const-string p1, "backgroundDrawable cannot be null"
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v0, "backgroundDrawable cannot be null"
 
-    throw p0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method public final onDestroy()V
-    .locals 0
+    .locals 1
 
-    invoke-super {p0}, Lt5;->onDestroy()V
+    invoke-super {p0}, Lh6;->onDestroy()V
 
-    iget-object p0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lz4b;
+    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->S0:Lykb;
 
-    iget-object p0, p0, Lz4b;->d:Lxc4;
+    iget-object v0, v0, Lykb;->d:Lsp4;
 
-    iget-object p0, p0, Lxc4;->X:Ljava/lang/Object;
+    iget-object v0, v0, Lsp4;->X:Ljava/lang/Object;
 
-    check-cast p0, Lns1;
+    check-cast v0, Ldu1;
 
-    invoke-static {p0}, Ls1d;->b(Loq4;)V
+    invoke-static {v0}, Lrkd;->b(Lvv4;)V
 
     return-void
 .end method
 
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 3
 
-    invoke-super {p0, p1}, Lt5;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lh6;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    iget-object p0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->T0:Lz4b;
+    iget-object v0, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->S0:Lykb;
 
-    iget-object v0, p0, Lz4b;->b:Lv05;
+    iget-object v1, v0, Lykb;->b:Lp65;
 
-    invoke-virtual {v0}, Lv05;->a()Lt05;
+    invoke-virtual {v1}, Lp65;->a()Lm65;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "ru.ok.tamtam.extra.EDITOR_STATE"
+    const-string v2, "ru.ok.tamtam.extra.EDITOR_STATE"
+
+    invoke-virtual {p1, v2, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    const-string v1, "ru.ok.tamtam.extra.EDITOR_VIEW_STATE"
+
+    iget-object v0, v0, Lykb;->e:Lclb;
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    const-string v0, "ru.ok.tamtam.extra.EDITOR_VIEW_STATE"
+    return-void
+.end method
 
-    iget-object p0, p0, Lz4b;->e:Lc5b;
+.method public final y(Landroid/os/Bundle;)V
+    .locals 12
 
-    invoke-virtual {p1, v0, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    if-eqz p1, :cond_0
+
+    const-string v0, "photo_editor:cancel_dialog"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->setResult(I)V
+
+    invoke-virtual {p0}, Lh6;->finish()V
+
+    return-void
+
+    :cond_0
+    iget-object p1, p0, Lru/ok/messages/photoeditor/ActPhotoEditor;->S0:Lykb;
+
+    iget-object v0, p1, Lykb;->b:Lp65;
+
+    iget-object v1, v0, Lp65;->a:Lt65;
+
+    invoke-virtual {v1}, Lt65;->getLayers()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    const/4 v10, 0x1
+
+    sub-int/2addr v3, v10
+
+    :goto_0
+    if-ltz v3, :cond_2
+
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ll65;
+
+    instance-of v5, v4, Llf0;
+
+    if-nez v5, :cond_1
+
+    iget-object v5, v1, Lt65;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    :cond_1
+    add-int/lit8 v3, v3, -0x1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0}, Lp65;->b()V
+
+    iget-object v0, p1, Lykb;->e:Lclb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-boolean v8, v0, Lclb;->o:Z
+
+    iget-boolean v9, v0, Lclb;->X:Z
+
+    iget-boolean v11, v0, Lclb;->Z:Z
+
+    new-instance v4, Lclb;
+
+    const/4 v5, 0x0
+
+    move v6, v5
+
+    move v7, v5
+
+    invoke-direct/range {v4 .. v11}, Lclb;-><init>(ZZZZZZZ)V
+
+    iput-object v4, p1, Lykb;->e:Lclb;
+
+    iget-object p1, p1, Lykb;->a:Ldlb;
+
+    invoke-virtual {p1, v4}, Ldlb;->a(Lclb;)V
 
     return-void
 .end method

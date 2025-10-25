@@ -20,10 +20,10 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams$Builder;",
         "",
-        "Lvmd;",
+        "Ls7e;",
         "toRoomId",
         "<init>",
-        "(Lvmd;)V",
+        "(Ls7e;)V",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participantId",
@@ -32,7 +32,7 @@
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
         "build",
         "()Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
-        "Lvmd;",
+        "Ls7e;",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "calls-sdk_release"
     }
@@ -49,16 +49,16 @@
 # instance fields
 .field private participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-.field private final toRoomId:Lvmd;
+.field private final toRoomId:Ls7e;
 
 
 # direct methods
-.method public constructor <init>(Lvmd;)V
+.method public constructor <init>(Ls7e;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams$Builder;->toRoomId:Lvmd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams$Builder;->toRoomId:Ls7e;
 
     return-void
 .end method
@@ -66,17 +66,17 @@
 
 # virtual methods
 .method public final build()Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;
-    .locals 3
+    .locals 4
 
     new-instance v0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams$Builder;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams$Builder;->toRoomId:Lvmd;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams$Builder;->toRoomId:Ls7e;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v1, p0, v2}, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvmd;Lld4;)V
+    invoke-direct {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ls7e;Lki4;)V
 
     return-object v0
 .end method

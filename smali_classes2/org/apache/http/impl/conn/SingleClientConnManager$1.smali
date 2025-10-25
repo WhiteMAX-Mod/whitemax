@@ -55,11 +55,11 @@
 
     iget-object p2, p0, Lorg/apache/http/impl/conn/SingleClientConnManager$1;->val$route:Lorg/apache/http/conn/routing/HttpRoute;
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/SingleClientConnManager$1;->val$state:Ljava/lang/Object;
+    iget-object p3, p0, Lorg/apache/http/impl/conn/SingleClientConnManager$1;->val$state:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2, p0}, Lorg/apache/http/impl/conn/SingleClientConnManager;->getConnection(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;)Lorg/apache/http/conn/ManagedClientConnection;
+    invoke-virtual {p1, p2, p3}, Lorg/apache/http/impl/conn/SingleClientConnManager;->getConnection(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;)Lorg/apache/http/conn/ManagedClientConnection;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

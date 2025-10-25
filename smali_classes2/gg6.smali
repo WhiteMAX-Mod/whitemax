@@ -1,149 +1,192 @@
 .class public final Lgg6;
-.super Lure;
+.super Lpk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public final c:Lqmg;
 
-.field public final synthetic Y:Lqg6;
+.field public final d:J
+
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lqg6;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lqmg;J)V
     .locals 0
 
-    iput-object p1, p0, Lgg6;->Y:Lqg6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lgg6;->c:Lqmg;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Lgg6;->d:J
+
+    const-class p1, Lgg6;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgg6;->e:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Landroid/graphics/Bitmap;Lmsb;)Lda3;
+    .locals 9
 
-    check-cast p1, Ly04;
+    iget-object v0, p0, Lgg6;->c:Lqmg;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-interface {v0}, Lqmg;->d()Lyy;
 
-    invoke-virtual {p0, p1, p2}, Lgg6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v1
 
-    move-result-object p0
+    if-nez v1, :cond_0
 
-    check-cast p0, Lgg6;
+    iget-object v0, p0, Lgg6;->e:Ljava/lang/String;
 
-    sget-object p1, Lylf;->a:Lylf;
+    const-string v1, "No video collage"
 
-    invoke-virtual {p0, p1}, Lgg6;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Ltei;->r(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p0
-.end method
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    move-result v6
 
-    new-instance p1, Lgg6;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    iget-object p0, p0, Lgg6;->Y:Lqg6;
+    move-result v7
 
-    invoke-direct {p1, p0, p2}, Lgg6;-><init>(Lqg6;Lkotlin/coroutines/Continuation;)V
+    const/4 v8, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v3, p1
+
+    move-object v2, p2
+
+    invoke-virtual/range {v2 .. v8}, Lmsb;->b(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;)Lhi4;
+
+    move-result-object p1
 
     return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lgg6;->X:I
-
-    sget-object v1, Lylf;->a:Lylf;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    return-object v1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    move-object v3, p1
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    move-object v2, p2
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget p1, v1, Lyy;->o:I
 
-    throw p0
+    iget p2, v1, Lyy;->X:I
 
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-interface {v0}, Lqmg;->getDuration()J
 
-    iget-object p1, p0, Lgg6;->Y:Lqg6;
+    move-result-wide v4
 
-    iget-object v0, p1, Lqg6;->Y:Ljf6;
+    long-to-int v0, v4
 
-    iget-object v3, p1, Lqg6;->E0:Lmgd;
+    div-int/2addr v0, p2
 
-    invoke-static {v3}, Lrde;->l(Lmgd;)Ljava/util/ArrayList;
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result-object v3
+    move-result v4
 
-    iget-object v0, v0, Ljf6;->c:Lv85;
+    div-int/2addr v4, p1
 
-    new-instance v4, Ldf6;
+    iget-wide v5, p0, Lgg6;->d:J
 
-    invoke-direct {v4, v3}, Ldf6;-><init>(Ljava/util/List;)V
+    long-to-int v5, v5
 
-    invoke-static {v0, v4}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+    div-int/2addr v5, v0
 
-    iput v2, p0, Lgg6;->X:I
+    add-int/lit8 p2, p2, -0x1
 
-    invoke-virtual {p1}, Lqg6;->s()Lxwe;
+    invoke-static {v5, p2}, Ljava/lang/Math;->min(II)I
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Laga;
+    rem-int/2addr v0, v4
 
-    invoke-virtual {v0}, Laga;->f()Ls04;
+    mul-int/2addr v0, p1
 
-    move-result-object v0
+    invoke-static {v5, p2}, Ljava/lang/Math;->min(II)I
 
-    new-instance v2, Lpg6;
+    move-result p1
 
-    const/4 v3, 0x0
+    div-int/2addr p1, v4
 
-    invoke-direct {v2, p1, v3}, Lpg6;-><init>(Lqg6;Lkotlin/coroutines/Continuation;)V
+    iget v5, v1, Lyy;->c:I
 
-    invoke-static {v0, v2, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    mul-int/2addr p1, v5
 
-    move-result-object p0
+    iget v4, v1, Lyy;->o:I
 
-    sget-object p1, Lz04;->a:Lz04;
+    const/4 v6, 0x0
 
-    if-ne p0, p1, :cond_2
+    move-object v1, v2
 
-    goto :goto_0
+    move v2, v0
 
-    :cond_2
-    move-object p0, v1
+    move-object v0, v1
 
-    :goto_0
-    if-ne p0, p1, :cond_3
+    move-object v1, v3
+
+    move v3, p1
+
+    invoke-virtual/range {v0 .. v6}, Lmsb;->b(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;)Lhi4;
+
+    move-result-object p1
 
     return-object p1
+.end method
 
-    :cond_3
-    return-object v1
+.method public final b()Lmy0;
+    .locals 5
+
+    new-instance v0, Lcpe;
+
+    iget-object v1, p0, Lgg6;->c:Lqmg;
+
+    invoke-interface {v1}, Lqmg;->i()J
+
+    move-result-wide v1
+
+    const-string v3, "videoId="
+
+    const-string v4, ", millis="
+
+    invoke-static {v1, v2, v3, v4}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lgg6;->d:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcpe;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final getName()Ljava/lang/String;
+    .locals 1
+
+    const-class v0, Lgg6;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

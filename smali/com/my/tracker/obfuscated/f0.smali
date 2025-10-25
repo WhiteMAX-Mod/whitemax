@@ -87,11 +87,11 @@
     invoke-direct {v1, p0, p1, p2}, Lcom/my/tracker/obfuscated/f0;-><init>(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/i;Landroid/content/Context;)V
 
     .line 6
-    new-instance p0, Lsle;
+    new-instance p0, Lrsg;
 
-    const/16 p1, 0x1c
+    const/16 p1, 0x9
 
-    invoke-direct {p0, p1, v1}, Lsle;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0, p1, v1}, Lrsg;-><init>(ILjava/lang/Object;)V
 
     invoke-static {p0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 
@@ -114,7 +114,7 @@
 
 # virtual methods
 .method public a()V
-    .locals 1
+    .locals 2
 
     .line 18
     iget-object v0, p0, Lcom/my/tracker/obfuscated/f0;->c:Landroid/content/Context;
@@ -163,25 +163,25 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
     .line 22
-    instance-of v0, p0, Ljava/lang/NoClassDefFoundError;
+    instance-of v1, v0, Ljava/lang/NoClassDefFoundError;
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
     .line 23
-    const-string p0, "HuaweiReferrerHandler: InstallReferrerClient is not found"
+    const-string v0, "HuaweiReferrerHandler: InstallReferrerClient is not found"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 24
     :cond_1
-    const-string v0, "HuaweiReferrerHandler: error occurred while initialization InstallReferrerClient"
+    const-string v1, "HuaweiReferrerHandler: error occurred while initialization InstallReferrerClient"
 
-    invoke-static {v0, p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -198,9 +198,9 @@
     if-nez v1, :cond_0
 
     .line 10
-    const-string p0, "HuaweiReferrerHandler: install referrer client is null"
+    const-string p1, "HuaweiReferrerHandler: install referrer client is null"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
 
     return-void
 
@@ -281,9 +281,9 @@
     if-nez v0, :cond_0
 
     .line 26
-    const-string p0, "HuaweiReferrerHandler: InstallReferrerClient is null"
+    const-string p1, "HuaweiReferrerHandler: InstallReferrerClient is null"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -369,9 +369,9 @@
     if-eqz v1, :cond_0
 
     .line 38
-    const-string p0, "HuaweiReferrerHandler: api referrer has been tracked"
+    const-string p1, "HuaweiReferrerHandler: api referrer has been tracked"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -420,9 +420,9 @@
     invoke-virtual/range {v1 .. v7}, Lcom/my/tracker/obfuscated/t;->b(Ljava/lang/String;Ljava/lang/String;JJ)V
 
     .line 46
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/f0;->b:Lcom/my/tracker/obfuscated/i;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/f0;->b:Lcom/my/tracker/obfuscated/i;
 
-    invoke-virtual {p0, v2}, Lcom/my/tracker/obfuscated/i;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Lcom/my/tracker/obfuscated/i;->a(Ljava/lang/String;)V
 
     .line 47
     invoke-virtual {v0}, Lcom/my/tracker/obfuscated/p0;->s()V

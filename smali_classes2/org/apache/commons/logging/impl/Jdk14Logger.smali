@@ -64,46 +64,42 @@
 
     invoke-virtual {v0, p1}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
 
-    move-result p0
+    move-result v1
 
-    if-eqz p0, :cond_2
+    if-eqz v1, :cond_2
 
-    new-instance p0, Ljava/lang/Throwable;
+    new-instance v1, Ljava/lang/Throwable;
 
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
+    invoke-direct {v1}, Ljava/lang/Throwable;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    array-length v1, p0
-
-    const/4 v2, 0x2
-
-    if-le v1, v2, :cond_0
-
-    aget-object p0, p0, v2
-
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    move-result-object p0
+    array-length v2, v1
 
-    move-object v3, p0
+    const/4 v3, 0x2
 
-    move-object v2, v1
+    if-le v2, v3, :cond_0
+
+    aget-object v1, v1, v3
+
+    invoke-virtual {v1}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object v3, v1
 
     goto :goto_0
 
     :cond_0
-    const-string v1, "unknown"
-
-    move-object v2, v1
+    const-string v2, "unknown"
 
     move-object v3, v2
 
@@ -241,9 +237,9 @@
     iput-object v0, p0, Lorg/apache/commons/logging/impl/Jdk14Logger;->logger:Ljava/util/logging/Logger;
 
     :cond_0
-    iget-object p0, p0, Lorg/apache/commons/logging/impl/Jdk14Logger;->logger:Ljava/util/logging/Logger;
+    iget-object v0, p0, Lorg/apache/commons/logging/impl/Jdk14Logger;->logger:Ljava/util/logging/Logger;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public info(Ljava/lang/Object;)V
@@ -279,99 +275,99 @@
 .end method
 
 .method public isDebugEnabled()Z
-    .locals 1
+    .locals 2
 
     invoke-virtual {p0}, Lorg/apache/commons/logging/impl/Jdk14Logger;->getLogger()Ljava/util/logging/Logger;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v0, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
+    sget-object v1, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    invoke-virtual {p0, v0}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+    invoke-virtual {v0, v1}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isErrorEnabled()Z
-    .locals 1
+    .locals 2
 
     invoke-virtual {p0}, Lorg/apache/commons/logging/impl/Jdk14Logger;->getLogger()Ljava/util/logging/Logger;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v0, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
+    sget-object v1, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
 
-    invoke-virtual {p0, v0}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+    invoke-virtual {v0, v1}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isFatalEnabled()Z
-    .locals 1
+    .locals 2
 
     invoke-virtual {p0}, Lorg/apache/commons/logging/impl/Jdk14Logger;->getLogger()Ljava/util/logging/Logger;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v0, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
+    sget-object v1, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
 
-    invoke-virtual {p0, v0}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+    invoke-virtual {v0, v1}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isInfoEnabled()Z
-    .locals 1
+    .locals 2
 
     invoke-virtual {p0}, Lorg/apache/commons/logging/impl/Jdk14Logger;->getLogger()Ljava/util/logging/Logger;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v0, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
+    sget-object v1, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
 
-    invoke-virtual {p0, v0}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+    invoke-virtual {v0, v1}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isTraceEnabled()Z
-    .locals 1
+    .locals 2
 
     invoke-virtual {p0}, Lorg/apache/commons/logging/impl/Jdk14Logger;->getLogger()Ljava/util/logging/Logger;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v0, Ljava/util/logging/Level;->FINEST:Ljava/util/logging/Level;
+    sget-object v1, Ljava/util/logging/Level;->FINEST:Ljava/util/logging/Level;
 
-    invoke-virtual {p0, v0}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+    invoke-virtual {v0, v1}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isWarnEnabled()Z
-    .locals 1
+    .locals 2
 
     invoke-virtual {p0}, Lorg/apache/commons/logging/impl/Jdk14Logger;->getLogger()Ljava/util/logging/Logger;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+    sget-object v1, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
-    invoke-virtual {p0, v0}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+    invoke-virtual {v0, v1}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public trace(Ljava/lang/Object;)V

@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt1c;
+.implements Lgjc;
 
 
 # virtual methods
-.method public c()Z
-    .locals 0
+.method public d()Z
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method

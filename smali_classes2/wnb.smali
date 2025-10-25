@@ -1,48 +1,48 @@
-.class public final synthetic Lwnb;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Leb4;
+.class public final Lwnb;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public X:I
 
-.field public final synthetic b:Laob;
+.field public final synthetic Y:Lunb;
 
-.field public final synthetic c:Lznb;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLaob;Lznb;)V
+.method public constructor <init>(Lunb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwnb;->Y:Lunb;
 
-    iput-wide p1, p0, Lwnb;->a:J
-
-    iput-object p3, p0, Lwnb;->b:Laob;
-
-    iput-object p4, p0, Lwnb;->c:Lznb;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    iput-object p1, p0, Lwnb;->o:Ljava/lang/Object;
 
-    iget-wide v1, p0, Lwnb;->a:J
+    iget p1, p0, Lwnb;->X:I
 
-    iget-object v3, p0, Lwnb;->b:Laob;
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Lwnb;->c:Lznb;
+    or-int/2addr p1, v0
 
-    invoke-direct {v0, v1, v2, v3, p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;-><init>(JLaob;Lznb;)V
+    iput p1, p0, Lwnb;->X:I
 
-    return-object v0
+    iget-object p1, p0, Lwnb;->Y:Lunb;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lunb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

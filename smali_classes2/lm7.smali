@@ -1,89 +1,109 @@
-.class public abstract synthetic Llm7;
+.class public final Llm7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Ljava/net/InetAddress;
+
+.field public volatile b:I
+
+.field public volatile c:I
+
+.field public volatile d:I
+
+.field public volatile e:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/net/InetAddress;)V
+    .locals 0
 
-    invoke-static {}, Lxz;->values()[Lxz;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llm7;->a:Ljava/net/InetAddress;
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    iput p1, p0, Llm7;->e:F
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 8
+
+    iget-object v0, p0, Llm7;->a:Ljava/net/InetAddress;
+
+    iget v1, p0, Llm7;->b:I
+
+    iget v2, p0, Llm7;->d:I
+
+    iget v3, p0, Llm7;->c:I
+
+    iget v4, p0, Llm7;->c:I
+
+    if-eqz v4, :cond_0
+
+    iget v4, p0, Llm7;->d:I
+
+    int-to-float v4, v4
+
+    iget v5, p0, Llm7;->c:I
+
+    int-to-float v5, v5
+
+    div-float/2addr v4, v5
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v4, 0x0
+
+    :goto_0
+    iget v5, p0, Llm7;->e:F
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, "Ip("
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "|uc="
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "|sc="
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "|tc="
+
+    const-string v1, "|sr="
+
+    invoke-static {v6, v2, v0, v3, v1}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, "|w="
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lxz;->b:Lxz;
-
-    const/16 v1, 0x9
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v1, 0x2
-
-    :try_start_1
-    sget-object v2, Lxz;->b:Lxz;
-
-    const/16 v2, 0xf
-
-    aput v1, v0, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v2, 0x3
-
-    const/4 v3, 0x4
-
-    :try_start_2
-    sget-object v4, Lxz;->b:Lxz;
-
-    aput v2, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v4, 0x5
-
-    :try_start_3
-    sget-object v5, Lxz;->b:Lxz;
-
-    aput v3, v0, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v3, Lxz;->b:Lxz;
-
-    aput v4, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v2, Lxz;->b:Lxz;
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    sput-object v0, Llm7;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

@@ -43,20 +43,20 @@
 
 # virtual methods
 .method public test(Ljava/lang/Object;)Z
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/Predicate$3;->this$0:Lorg/webrtc/Predicate;
+    iget-object v0, p0, Lorg/webrtc/Predicate$3;->this$0:Lorg/webrtc/Predicate;
 
-    invoke-interface {p0, p1}, Lorg/webrtc/Predicate;->test(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Lorg/webrtc/Predicate;->test(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    xor-int/lit8 p0, p0, 0x1
+    xor-int/lit8 p1, p1, 0x1
 
-    return p0
+    return p1
 .end method

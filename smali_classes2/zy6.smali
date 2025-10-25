@@ -1,20 +1,13 @@
-.class public final enum Lzy6;
-.super Ljava/lang/Enum;
+.class public final synthetic Lzy6;
+.super Loj6;
 .source "SourceFile"
+
+# interfaces
+.implements Lli6;
 
 
 # static fields
-.field public static final synthetic X:[Lzy6;
-
-.field public static final enum b:Lzy6;
-
-.field public static final enum c:Lzy6;
-
-.field public static final enum o:Lzy6;
-
-
-# instance fields
-.field public final a:Ljava/util/List;
+.field public static final a:Lzy6;
 
 
 # direct methods
@@ -23,155 +16,37 @@
 
     new-instance v0, Lzy6;
 
-    const-wide v1, 0x4060e00000000000L    # 135.0
+    const-string v4, "getTime()J"
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->toRadians(D)D
+    const/4 v5, 0x0
 
-    move-result-wide v1
+    const/4 v1, 0x1
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    const-class v2, Lgz6;
 
-    move-result-object v1
+    const-string v3, "getTime"
 
-    const-wide v2, 0x4066800000000000L    # 180.0
+    invoke-direct/range {v0 .. v5}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    const-wide v3, 0x406c200000000000L    # 225.0
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v3
-
-    filled-new-array {v1, v2, v3}, [Ljava/lang/Double;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const-string v3, "LEFT"
-
-    invoke-direct {v0, v2, v3, v1}, Lzy6;-><init>(ILjava/lang/String;Ljava/util/List;)V
-
-    sput-object v0, Lzy6;->b:Lzy6;
-
-    new-instance v1, Lzy6;
-
-    const-wide v2, 0x4046800000000000L    # 45.0
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    const-wide/16 v3, 0x0
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v3
-
-    const-wide v4, 0x4073b00000000000L    # 315.0
-
-    invoke-static {v4, v5}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v4
-
-    filled-new-array {v2, v3, v4}, [Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    const-string v4, "RIGHT"
-
-    invoke-direct {v1, v3, v4, v2}, Lzy6;-><init>(ILjava/lang/String;Ljava/util/List;)V
-
-    sput-object v1, Lzy6;->c:Lzy6;
-
-    new-instance v2, Lzy6;
-
-    const/4 v3, 0x2
-
-    sget-object v4, Lp45;->a:Lp45;
-
-    const-string v5, "CENTER"
-
-    invoke-direct {v2, v3, v5, v4}, Lzy6;-><init>(ILjava/lang/String;Ljava/util/List;)V
-
-    sput-object v2, Lzy6;->o:Lzy6;
-
-    filled-new-array {v0, v1, v2}, [Lzy6;
-
-    move-result-object v0
-
-    sput-object v0, Lzy6;->X:[Lzy6;
+    sput-object v0, Lzy6;->a:Lzy6;
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;Ljava/util/List;)V
-    .locals 0
 
-    invoke-direct {p0, p2, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p3, p0, Lzy6;->a:Ljava/util/List;
+    check-cast p1, Lgz6;
 
-    return-void
-.end method
+    invoke-interface {p1}, Lgz6;->l()J
 
-.method public static valueOf(Ljava/lang/String;)Lzy6;
-    .locals 1
+    move-result-wide v0
 
-    const-class v0, Lzy6;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-result-object p1
 
-    move-result-object p0
-
-    check-cast p0, Lzy6;
-
-    return-object p0
-.end method
-
-.method public static values()[Lzy6;
-    .locals 1
-
-    sget-object v0, Lzy6;->X:[Lzy6;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lzy6;
-
-    return-object v0
+    return-object p1
 .end method

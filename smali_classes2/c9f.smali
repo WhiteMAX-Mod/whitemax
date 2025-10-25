@@ -1,39 +1,30 @@
 .class public final Lc9f;
-.super Landroid/view/ViewOutlineProvider;
+.super Ljp7;
 .source "SourceFile"
+
+# interfaces
+.implements Lf9f;
 
 
 # instance fields
-.field public a:I
+.field public final c:Ljava/lang/String;
 
-.field public b:I
+.field public final d:Ljava/lang/String;
+
+.field public final e:Z
 
 
-# virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 3
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
-    iget v0, p0, Lc9f;->a:I
+    invoke-direct {p0}, Ljp7;-><init>()V
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    iput-object p1, p0, Lc9f;->c:Ljava/lang/String;
 
-    move-result v1
+    iput-object p2, p0, Lc9f;->d:Ljava/lang/String;
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    iget p0, p0, Lc9f;->b:I
-
-    sub-int/2addr v2, p0
-
-    const/4 p0, 0x0
-
-    invoke-virtual {p2, p0, v0, v1, v2}, Landroid/graphics/Outline;->setRect(IIII)V
-
-    const/4 p0, 0x1
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setClipToOutline(Z)V
+    iput-boolean p3, p0, Lc9f;->e:Z
 
     return-void
 .end method

@@ -1,78 +1,195 @@
-.class public final enum Ljd6;
-.super Ljava/lang/Enum;
+.class public abstract Ljd6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Lsa7;
 
 
-# static fields
-.field public static final enum a:Ljd6;
+# instance fields
+.field public final a:Ljava/lang/Object;
 
-.field public static final synthetic b:[Ljd6;
+.field public final b:Lsa7;
+
+.field public final c:Ljava/util/HashSet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lsa7;)V
+    .locals 1
 
-    new-instance v0, Ljd6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "INSTANCE"
+    new-instance v0, Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object v0, p0, Ljd6;->a:Ljava/lang/Object;
 
-    sput-object v0, Ljd6;->a:Ljd6;
+    new-instance v0, Ljava/util/HashSet;
 
-    filled-new-array {v0}, [Ljd6;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    move-result-object v0
+    iput-object v0, p0, Ljd6;->c:Ljava/util/HashSet;
 
-    sput-object v0, Ljd6;->b:[Ljd6;
+    iput-object p1, p0, Ljd6;->b:Lsa7;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ljd6;
+
+# virtual methods
+.method public final V()Landroid/media/Image;
     .locals 1
 
-    const-class v0, Ljd6;
+    iget-object v0, p0, Ljd6;->b:Lsa7;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ljd6;
-
-    return-object p0
-.end method
-
-.method public static values()[Ljd6;
-    .locals 1
-
-    sget-object v0, Ljd6;->b:[Ljd6;
-
-    invoke-virtual {v0}, [Ljd6;->clone()Ljava/lang/Object;
+    invoke-interface {v0}, Lsa7;->V()Landroid/media/Image;
 
     move-result-object v0
-
-    check-cast v0, [Ljd6;
 
     return-object v0
 .end method
 
+.method public final c(Lid6;)V
+    .locals 2
 
-# virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
+    iget-object v0, p0, Ljd6;->a:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Comparable;
+    monitor-enter v0
 
-    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    :try_start_0
+    iget-object v1, p0, Ljd6;->c:Ljava/util/HashSet;
 
-    move-result p0
+    invoke-virtual {v1, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    return p0
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public close()V
+    .locals 3
+
+    iget-object v0, p0, Ljd6;->b:Lsa7;
+
+    invoke-interface {v0}, Ljava/lang/AutoCloseable;->close()V
+
+    iget-object v0, p0, Ljd6;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    new-instance v1, Ljava/util/HashSet;
+
+    iget-object v2, p0, Ljd6;->c:Ljava/util/HashSet;
+
+    invoke-direct {v1, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lid6;
+
+    invoke-interface {v1, p0}, Lid6;->a(Ljd6;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final getFormat()I
+    .locals 1
+
+    iget-object v0, p0, Ljd6;->b:Lsa7;
+
+    invoke-interface {v0}, Lsa7;->getFormat()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getHeight()I
+    .locals 1
+
+    iget-object v0, p0, Ljd6;->b:Lsa7;
+
+    invoke-interface {v0}, Lsa7;->getHeight()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getImageInfo()Lz97;
+    .locals 1
+
+    iget-object v0, p0, Ljd6;->b:Lsa7;
+
+    invoke-interface {v0}, Lsa7;->getImageInfo()Lz97;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getWidth()I
+    .locals 1
+
+    iget-object v0, p0, Ljd6;->b:Lsa7;
+
+    invoke-interface {v0}, Lsa7;->getWidth()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final v()[Lrs6;
+    .locals 1
+
+    iget-object v0, p0, Ljd6;->b:Lsa7;
+
+    invoke-interface {v0}, Lsa7;->v()[Lrs6;
+
+    move-result-object v0
+
+    return-object v0
 .end method

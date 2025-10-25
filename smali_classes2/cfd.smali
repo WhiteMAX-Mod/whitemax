@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lffd;
+.implements Ldfd;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcfd;->a:I
+    iput-object p1, p0, Lcfd;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -44,11 +44,15 @@
     :cond_1
     check-cast p1, Lcfd;
 
-    iget p0, p0, Lcfd;->a:I
+    iget-object v1, p0, Lcfd;->a:Ljava/lang/String;
 
-    iget p1, p1, Lcfd;->a:I
+    iget-object p1, p1, Lcfd;->a:Ljava/lang/String;
 
-    if-eq p0, p1, :cond_2
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
@@ -57,29 +61,27 @@
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lcfd;->a:I
+    iget-object v0, p0, Lcfd;->a:Ljava/lang/String;
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    const-string v0, "AlbumHeightChanged(height="
+    iget-object v0, p0, Lcfd;->a:Ljava/lang/String;
 
-    const-string v1, ")"
+    const-string v1, "system_"
 
-    iget p0, p0, Lcfd;->a:I
+    invoke-static {v1, v0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {p0, v0, v1}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

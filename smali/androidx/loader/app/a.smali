@@ -3,16 +3,16 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld8g;
+.implements Ld0h;
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;)Ly7g;
+.method public final a(Ljava/lang/Class;)Lyzg;
     .locals 0
 
-    new-instance p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
+    new-instance p1, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
-    invoke-direct {p0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;-><init>()V
+    invoke-direct {p1}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;-><init>()V
 
-    return-object p0
+    return-object p1
 .end method

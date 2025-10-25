@@ -35,45 +35,45 @@
 
 # virtual methods
 .method public a()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/v0$b;->a:Lcom/my/tracker/obfuscated/j0$e;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/v0$b;->a:Lcom/my/tracker/obfuscated/j0$e;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/j0$a;->a()Z
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/j0$a;->a()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public close()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/v0$b;->a:Lcom/my/tracker/obfuscated/j0$e;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/v0$b;->a:Lcom/my/tracker/obfuscated/j0$e;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/j0$a;->close()V
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/j0$a;->close()V
 
     return-void
 .end method
 
 .method public e()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/v0$b;->a:Lcom/my/tracker/obfuscated/j0$e;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/v0$b;->a:Lcom/my/tracker/obfuscated/j0$e;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/j0$e;->o()Z
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/j0$e;->o()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public g()J
     .locals 2
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/v0$b;->a:Lcom/my/tracker/obfuscated/j0$e;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/v0$b;->a:Lcom/my/tracker/obfuscated/j0$e;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/j0$e;->n()J
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/j0$e;->n()J
 
     move-result-wide v0
 
@@ -83,9 +83,9 @@
 .method public i()J
     .locals 2
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/v0$b;->a:Lcom/my/tracker/obfuscated/j0$e;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/v0$b;->a:Lcom/my/tracker/obfuscated/j0$e;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/j0$e;->m()J
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/j0$e;->m()J
 
     move-result-wide v0
 

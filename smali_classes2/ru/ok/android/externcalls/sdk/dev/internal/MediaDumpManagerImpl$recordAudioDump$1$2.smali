@@ -25,7 +25,7 @@
         "Lorg/webrtc/DumpCallback;",
         "",
         "dumpFolderPath",
-        "Lylf;",
+        "Lccg;",
         "onStarted",
         "(Ljava/lang/String;)V",
         "onComplete",
@@ -59,26 +59,26 @@
 
 # virtual methods
 .method public onComplete(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl$recordAudioDump$1$2;->$listener:Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl$recordAudioDump$1$2;->$listener:Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0, p1}, Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;->onRecordCompleted(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;->onRecordCompleted(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
 .method public onStarted(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl$recordAudioDump$1$2;->$listener:Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl$recordAudioDump$1$2;->$listener:Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0, p1}, Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;->onRecordStarted(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;->onRecordStarted(Ljava/lang/String;)V
 
     :cond_0
     return-void

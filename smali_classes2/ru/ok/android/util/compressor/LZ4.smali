@@ -20,7 +20,11 @@
     move-result-object v4
 
     :try_start_0
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/ByteBuffer;
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/nio/ByteBuffer;
 
     array-length v0, p0
 
@@ -28,7 +32,11 @@
 
     invoke-virtual {v1, p0, v7, v0}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/ByteBuffer;
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/Buffer;->capacity()I
 
@@ -58,7 +66,11 @@
 
     if-gt p0, v0, :cond_0
 
-    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/ByteBuffer;
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/nio/ByteBuffer;
 
     invoke-virtual {v4, p1, v7, p0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
     :try_end_0

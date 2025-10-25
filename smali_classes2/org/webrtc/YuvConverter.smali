@@ -237,9 +237,9 @@
 
     move-result v14
 
-    iget-object v0, v0, Lorg/webrtc/YuvConverter;->i420TextureFrameBuffer:Lorg/webrtc/GlTextureFrameBuffer;
+    iget-object v2, v0, Lorg/webrtc/YuvConverter;->i420TextureFrameBuffer:Lorg/webrtc/GlTextureFrameBuffer;
 
-    invoke-virtual {v0}, Lorg/webrtc/GlTextureFrameBuffer;->getHeight()I
+    invoke-virtual {v2}, Lorg/webrtc/GlTextureFrameBuffer;->getHeight()I
 
     move-result v15
 
@@ -247,7 +247,7 @@
 
     const/16 v17, 0x1401
 
-    move v0, v12
+    move v2, v12
 
     const/4 v12, 0x0
 
@@ -255,81 +255,105 @@
 
     invoke-static/range {v12 .. v18}, Landroid/opengl/GLES20;->glReadPixels(IIIIIILjava/nio/Buffer;)V
 
-    move-object/from16 v2, v18
+    move-object/from16 v4, v18
 
-    const-string v4, "YuvConverter.convert"
+    const-string v7, "YuvConverter.convert"
 
-    invoke-static {v4}, Lorg/webrtc/GlUtil;->checkNoGLES2Error(Ljava/lang/String;)V
+    invoke-static {v7}, Lorg/webrtc/GlUtil;->checkNoGLES2Error(Ljava/lang/String;)V
 
-    const/4 v4, 0x0
+    const/4 v7, 0x0
 
-    invoke-static {v0, v4}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
+    invoke-static {v2, v7}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    mul-int v0, v1, v6
+    mul-int v2, v1, v6
 
-    div-int/lit8 v7, v1, 0x2
+    div-int/lit8 v8, v1, 0x2
 
-    add-int v8, v0, v7
+    add-int v9, v2, v8
 
-    invoke-virtual {v2, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v4, v7}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    move-result-object v7
 
-    move v4, v5
+    check-cast v7, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v4, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/nio/ByteBuffer;
+
+    move v7, v5
 
     move v5, v6
 
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
     move-result-object v6
 
-    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v4, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v11
+
+    check-cast v11, Ljava/nio/ByteBuffer;
 
     add-int/lit8 v11, v10, -0x1
 
     mul-int/2addr v11, v1
 
-    add-int/2addr v11, v7
+    add-int/2addr v11, v8
 
-    add-int/2addr v0, v11
+    add-int/2addr v2, v11
 
-    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v4, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+    move-result-object v2
 
-    move-result-object v0
+    check-cast v2, Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v2, v8}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    add-int/2addr v8, v11
+    move-result-object v8
 
-    invoke-virtual {v2, v8}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v4, v9}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+    move-result-object v2
+
+    check-cast v2, Ljava/nio/ByteBuffer;
+
+    add-int/2addr v9, v11
+
+    invoke-virtual {v4, v9}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
     move-result-object v10
 
     invoke-interface {v3}, Lorg/webrtc/VideoFrame$Buffer;->release()V
 
-    new-instance v12, Lme7;
+    new-instance v12, Lfn7;
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    invoke-direct {v12, v3, v2}, Lme7;-><init>(ILjava/nio/ByteBuffer;)V
+    invoke-direct {v12, v2, v4}, Lfn7;-><init>(ILjava/nio/ByteBuffer;)V
 
     move v9, v1
 
     move v11, v1
 
-    move-object v8, v0
+    move v4, v7
 
     move v7, v1
 
     invoke-static/range {v4 .. v12}, Lorg/webrtc/JavaI420Buffer;->wrap(IILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/lang/Runnable;)Lorg/webrtc/JavaI420Buffer;
 
-    move-result-object v0
+    move-result-object v1
 
-    return-object v0
+    return-object v1
 .end method
 
 .method private static synthetic lambda$convertInternal$0(Ljava/nio/ByteBuffer;)V
@@ -343,29 +367,29 @@
 
 # virtual methods
 .method public convert(Lorg/webrtc/VideoFrame$TextureBuffer;)Lorg/webrtc/VideoFrame$I420Buffer;
-    .locals 1
+    .locals 2
 
     :try_start_0
     invoke-direct {p0, p1}, Lorg/webrtc/YuvConverter;->convertInternal(Lorg/webrtc/VideoFrame$TextureBuffer;)Lorg/webrtc/VideoFrame$I420Buffer;
 
-    move-result-object p0
+    move-result-object p1
     :try_end_0
     .catch Landroid/opengl/GLException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p0
+    return-object p1
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    const-string p1, "YuvConverter"
+    const-string v0, "YuvConverter"
 
-    const-string v0, "Failed to convert TextureBuffer"
+    const-string v1, "Failed to convert TextureBuffer"
 
-    invoke-static {p1, v0, p0}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public release()V
@@ -387,9 +411,9 @@
 
     invoke-virtual {v0}, Lorg/webrtc/VideoFrameDrawer;->release()V
 
-    iget-object p0, p0, Lorg/webrtc/YuvConverter;->threadChecker:Lorg/webrtc/ThreadUtils$ThreadChecker;
+    iget-object v0, p0, Lorg/webrtc/YuvConverter;->threadChecker:Lorg/webrtc/ThreadUtils$ThreadChecker;
 
-    invoke-virtual {p0}, Lorg/webrtc/ThreadUtils$ThreadChecker;->detachThread()V
+    invoke-virtual {v0}, Lorg/webrtc/ThreadUtils$ThreadChecker;->detachThread()V
 
     return-void
 .end method

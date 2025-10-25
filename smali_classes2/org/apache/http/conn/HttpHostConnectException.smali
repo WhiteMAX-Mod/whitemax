@@ -48,9 +48,9 @@
 
 # virtual methods
 .method public getHost()Lorg/apache/http/HttpHost;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/conn/HttpHostConnectException;->host:Lorg/apache/http/HttpHost;
+    iget-object v0, p0, Lorg/apache/http/conn/HttpHostConnectException;->host:Lorg/apache/http/HttpHost;
 
-    return-object p0
+    return-object v0
 .end method

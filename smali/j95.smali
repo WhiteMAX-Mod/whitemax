@@ -1,286 +1,251 @@
 .class public final Lj95;
-.super Ljava/lang/Object;
+.super Li0j;
 .source "SourceFile"
-
-# interfaces
-.implements Lz2d;
 
 
 # instance fields
-.field public X:Lm95;
+.field public final a:Landroid/widget/TextView;
 
-.field public Y:Z
+.field public final b:Ll85;
 
-.field public Z:I
-
-.field public final a:Lx46;
-
-.field public final b:Lim4;
-
-.field public c:[J
-
-.field public o:Z
-
-.field public r0:J
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Lm95;Lx46;Z)V
-    .locals 2
+.method public constructor <init>(Landroid/widget/TextView;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lj95;->a:Lx46;
+    iput-object p1, p0, Lj95;->a:Landroid/widget/TextView;
 
-    iput-object p1, p0, Lj95;->X:Lm95;
+    const/4 v0, 0x1
 
-    new-instance p2, Lim4;
+    iput-boolean v0, p0, Lj95;->c:Z
 
-    const/16 v0, 0x12
+    new-instance v0, Ll85;
 
-    invoke-direct {p2, v0}, Lim4;-><init>(I)V
+    invoke-direct {v0, p1}, Ll85;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p2, p0, Lj95;->b:Lim4;
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide v0, p0, Lj95;->r0:J
-
-    iget-object p2, p1, Lm95;->b:[J
-
-    iput-object p2, p0, Lj95;->c:[J
-
-    invoke-virtual {p0, p1, p3}, Lj95;->a(Lm95;Z)V
+    iput-object v0, p0, Lj95;->b:Ll85;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lm95;Z)V
-    .locals 8
+.method public final F()Z
+    .locals 1
 
-    iget v0, p0, Lj95;->Z:I
+    iget-boolean v0, p0, Lj95;->c:Z
 
-    const/4 v1, 0x1
+    return v0
+.end method
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+.method public final J(Z)V
+    .locals 1
 
-    if-nez v0, :cond_0
+    if-eqz p1, :cond_0
 
-    move-wide v4, v2
+    iget-object p1, p0, Lj95;->a:Landroid/widget/TextView;
 
-    goto :goto_0
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lj95;->L(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
 
     :cond_0
-    iget-object v4, p0, Lj95;->c:[J
+    return-void
+.end method
 
-    sub-int/2addr v0, v1
+.method public final K(Z)V
+    .locals 1
 
-    aget-wide v4, v4, v0
+    iput-boolean p1, p0, Lj95;->c:Z
 
-    :goto_0
-    iput-boolean p2, p0, Lj95;->o:Z
+    iget-object p1, p0, Lj95;->a:Landroid/widget/TextView;
 
-    iput-object p1, p0, Lj95;->X:Lm95;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
 
-    iget-object p1, p1, Lm95;->b:[J
+    move-result-object v0
 
-    iput-object p1, p0, Lj95;->c:[J
+    invoke-virtual {p0, v0}, Lj95;->L(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
 
-    iget-wide v6, p0, Lj95;->r0:J
+    move-result-object v0
 
-    cmp-long p2, v6, v2
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
 
-    if-eqz p2, :cond_2
+    invoke-virtual {p1}, Landroid/widget/TextView;->getFilters()[Landroid/text/InputFilter;
 
-    invoke-static {p1, v6, v7, v1}, Lnrf;->a([JJZ)I
+    move-result-object v0
 
-    move-result p1
+    invoke-virtual {p0, v0}, Lj95;->z([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
 
-    iput p1, p0, Lj95;->Z:I
+    move-result-object v0
 
-    iget-boolean p2, p0, Lj95;->o:Z
-
-    if-eqz p2, :cond_1
-
-    iget-object p2, p0, Lj95;->c:[J
-
-    array-length p2, p2
-
-    if-ne p1, p2, :cond_1
-
-    move-wide v2, v6
-
-    :cond_1
-    iput-wide v2, p0, Lj95;->r0:J
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
 
     return-void
+.end method
+
+.method public final L(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
+    .locals 1
+
+    iget-boolean v0, p0, Lj95;->c:Z
+
+    if-eqz v0, :cond_2
+
+    instance-of v0, p1, Lo95;
+
+    if-eqz v0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    instance-of v0, p1, Landroid/text/method/PasswordTransformationMethod;
+
+    if-eqz v0, :cond_1
+
+    return-object p1
+
+    :cond_1
+    new-instance v0, Lo95;
+
+    invoke-direct {v0, p1}, Lo95;-><init>(Landroid/text/method/TransformationMethod;)V
+
+    return-object v0
 
     :cond_2
-    cmp-long p2, v4, v2
+    instance-of v0, p1, Lo95;
 
-    if-eqz p2, :cond_3
+    if-eqz v0, :cond_3
 
-    const/4 p2, 0x0
+    check-cast p1, Lo95;
 
-    invoke-static {p1, v4, v5, p2}, Lnrf;->a([JJZ)I
-
-    move-result p1
-
-    iput p1, p0, Lj95;->Z:I
+    iget-object p1, p1, Lo95;->a:Landroid/text/method/TransformationMethod;
 
     :cond_3
-    return-void
+    return-object p1
 .end method
 
-.method public final b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final h(J)I
-    .locals 3
-
-    iget v0, p0, Lj95;->Z:I
-
-    iget-object v1, p0, Lj95;->c:[J
-
-    const/4 v2, 0x1
-
-    invoke-static {v1, p1, p2, v2}, Lnrf;->a([JJZ)I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    iget p2, p0, Lj95;->Z:I
-
-    sub-int p2, p1, p2
-
-    iput p1, p0, Lj95;->Z:I
-
-    return p2
-.end method
-
-.method public final o(Lzxc;Lga4;I)I
+.method public final z([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
     .locals 6
 
-    iget v0, p0, Lj95;->Z:I
+    iget-boolean v0, p0, Lj95;->c:Z
 
-    iget-object v1, p0, Lj95;->c:[J
-
-    array-length v1, v1
+    const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    if-ne v0, v1, :cond_0
+    if-nez v0, :cond_5
 
-    move v1, v2
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0, v2}, Landroid/util/SparseArray;-><init>(I)V
+
+    move v2, v1
+
+    :goto_0
+    array-length v3, p1
+
+    if-ge v2, v3, :cond_1
+
+    aget-object v3, p1, v2
+
+    instance-of v4, v3, Ll85;
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v0, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    const/4 v3, -0x4
-
-    const/4 v4, 0x4
-
-    if-eqz v1, :cond_1
-
-    iget-boolean v5, p0, Lj95;->o:Z
-
-    if-nez v5, :cond_1
-
-    iput v4, p2, Llx;->b:I
-
-    return v3
-
     :cond_1
-    and-int/lit8 v5, p3, 0x2
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
-    if-nez v5, :cond_6
+    move-result v2
 
-    iget-boolean v5, p0, Lj95;->Y:Z
+    if-nez v2, :cond_2
 
-    if-nez v5, :cond_2
+    return-object p1
+
+    :cond_2
+    array-length v2, p1
+
+    array-length v3, p1
+
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+
+    move-result v4
+
+    sub-int/2addr v3, v4
+
+    new-array v3, v3, [Landroid/text/InputFilter;
+
+    move v4, v1
+
+    :goto_1
+    if-ge v1, v2, :cond_4
+
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
+
+    move-result v5
+
+    if-gez v5, :cond_3
+
+    aget-object v5, p1, v1
+
+    aput-object v5, v3, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    :cond_2
-    if-eqz v1, :cond_3
-
-    const/4 p0, -0x3
-
-    return p0
-
-    :cond_3
-    and-int/lit8 p1, p3, 0x1
-
-    if-nez p1, :cond_4
-
-    add-int/lit8 p1, v0, 0x1
-
-    iput p1, p0, Lj95;->Z:I
-
     :cond_4
-    and-int/lit8 p1, p3, 0x4
-
-    if-nez p1, :cond_5
-
-    iget-object p1, p0, Lj95;->X:Lm95;
-
-    iget-object p1, p1, Lm95;->a:[Lg95;
-
-    aget-object p1, p1, v0
-
-    iget-object p3, p0, Lj95;->b:Lim4;
-
-    invoke-virtual {p3, p1}, Lim4;->R(Lg95;)[B
-
-    move-result-object p1
-
-    array-length p3, p1
-
-    invoke-virtual {p2, p3}, Lga4;->w(I)V
-
-    iget-object p3, p2, Lga4;->X:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p3, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    return-object v3
 
     :cond_5
-    iget-object p0, p0, Lj95;->c:[J
+    array-length v0, p1
 
-    aget-wide p0, p0, v0
+    move v3, v1
 
-    iput-wide p0, p2, Lga4;->Z:J
+    :goto_2
+    iget-object v4, p0, Lj95;->b:Ll85;
 
-    iput v2, p2, Llx;->b:I
+    if-ge v3, v0, :cond_7
 
-    return v3
+    aget-object v5, p1, v3
+
+    if-ne v5, v4, :cond_6
+
+    return-object p1
 
     :cond_6
-    :goto_1
-    iget-object p2, p0, Lj95;->a:Lx46;
+    add-int/lit8 v3, v3, 0x1
 
-    iput-object p2, p1, Lzxc;->c:Ljava/lang/Object;
+    goto :goto_2
 
-    iput-boolean v2, p0, Lj95;->Y:Z
+    :cond_7
+    array-length v3, p1
 
-    const/4 p0, -0x5
+    add-int/2addr v3, v2
 
-    return p0
+    new-array v2, v3, [Landroid/text/InputFilter;
+
+    invoke-static {p1, v1, v2, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    aput-object v4, v2, v0
+
+    return-object v2
 .end method

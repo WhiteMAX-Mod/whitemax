@@ -50,9 +50,9 @@
     if-nez p1, :cond_0
 
     .line 3
-    const-string p0, "DeeplinkHandler: intent is null"
+    const-string p1, "DeeplinkHandler: intent is null"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-object v3
 
@@ -66,14 +66,14 @@
     if-nez p1, :cond_1
 
     .line 5
-    const-string p0, "DeeplinkHandler: intent data is null"
+    const-string p1, "DeeplinkHandler: intent data is null"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-object v3
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
@@ -153,9 +153,9 @@
     invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     .line 14
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/p;->a:Lcom/my/tracker/obfuscated/t;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/p;->a:Lcom/my/tracker/obfuscated/t;
 
-    invoke-virtual {p0, v2, v4}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v4}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -163,9 +163,9 @@
 
     .line 15
     :goto_1
-    const-string p1, "DeeplinkHandler error: "
+    const-string v0, "DeeplinkHandler error: "
 
-    invoke-static {p1, p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v3
 .end method

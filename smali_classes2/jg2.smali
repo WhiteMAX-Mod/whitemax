@@ -2,86 +2,64 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lng2;
-
 
 # instance fields
-.field public final a:J
+.field public final a:Lnje;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Lpw0;Lulf;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ljg2;->a:J
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Loje;->b(III)Lnje;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ljg2;->a:Lnje;
+
+    check-cast p2, Lqta;
+
+    invoke-virtual {p2}, Lqta;->c()Lce8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ljg2;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lpw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final onEvent(Lhg2;)V
+    .locals 3
+    .annotation runtime Lzbf;
+    .end annotation
 
-    const/4 v0, 0x1
+    new-instance v0, Lig2;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    invoke-direct {v0, p0, p1, v1}, Lig2;-><init>(Ljg2;Lhg2;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    instance-of v1, p1, Ljg2;
+    const/4 p1, 0x3
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Ljg2;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    if-nez v1, :cond_1
+    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Ljg2;
-
-    iget-wide v3, p0, Ljg2;->a:J
-
-    iget-wide p0, p1, Ljg2;->a:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Ljg2;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "DownloadError(messageId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Ljg2;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

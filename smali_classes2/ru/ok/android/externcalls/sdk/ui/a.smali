@@ -12,7 +12,7 @@
 
     invoke-static {p1}, Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion$EMPTY$2;->a(Lorg/webrtc/VideoFrame;)Lorg/webrtc/VideoFrame;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

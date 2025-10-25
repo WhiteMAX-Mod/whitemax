@@ -131,28 +131,28 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/CameraVideoCapturer$CameraStatistics$1;->this$0:Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
+    iget-object v0, p0, Lorg/webrtc/CameraVideoCapturer$CameraStatistics$1;->this$0:Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
 
-    invoke-static {p0}, Lorg/webrtc/CameraVideoCapturer$CameraStatistics;->a(Lorg/webrtc/CameraVideoCapturer$CameraStatistics;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    invoke-static {v0}, Lorg/webrtc/CameraVideoCapturer$CameraStatistics;->a(Lorg/webrtc/CameraVideoCapturer$CameraStatistics;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "Camera failure. Client must return video buffers."
+    const-string v1, "Camera failure. Client must return video buffers."
 
-    invoke-interface {p0, v0}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraFreezed(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraFreezed(Ljava/lang/String;)V
 
     return-void
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/CameraVideoCapturer$CameraStatistics$1;->this$0:Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
+    iget-object v0, p0, Lorg/webrtc/CameraVideoCapturer$CameraStatistics$1;->this$0:Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
 
-    invoke-static {p0}, Lorg/webrtc/CameraVideoCapturer$CameraStatistics;->a(Lorg/webrtc/CameraVideoCapturer$CameraStatistics;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    invoke-static {v0}, Lorg/webrtc/CameraVideoCapturer$CameraStatistics;->a(Lorg/webrtc/CameraVideoCapturer$CameraStatistics;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "Camera failure."
+    const-string v1, "Camera failure."
 
-    invoke-interface {p0, v0}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraFreezed(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraFreezed(Ljava/lang/String;)V
 
     return-void
 

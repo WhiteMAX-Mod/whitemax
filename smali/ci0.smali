@@ -1,234 +1,132 @@
-.class public abstract Lci0;
-.super Ljava/lang/Object;
+.class public final Lci0;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lc63;
-
-
-# static fields
-.field public static final c:Ljava/util/HashSet;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public X:I
 
-.field public b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
+.field public final synthetic Y:Lhi0;
+
+.field public final synthetic Z:Li43;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public constructor <init>(Lhi0;Li43;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashSet;
+    iput-object p1, p0, Lci0;->Y:Lhi0;
 
-    const-string v10, "modified_url"
+    iput-object p2, p0, Lci0;->Z:Li43;
 
-    const-string v11, "image_color_space"
+    const/4 p1, 0x2
 
-    const-string v1, "encoded_size"
-
-    const-string v2, "encoded_width"
-
-    const-string v3, "encoded_height"
-
-    const-string v4, "uri_source"
-
-    const-string v5, "image_format"
-
-    const-string v6, "bitmap_config"
-
-    const-string v7, "is_rounded"
-
-    const-string v8, "non_fatal_decode_error"
-
-    const-string v9, "original_url"
-
-    filled-new-array/range {v1 .. v11}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lci0;->c:Ljava/util/HashSet;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lci0;->a:Ljava/util/HashMap;
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getExtra(Ljava/lang/String;)Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-virtual {p0, p1, v0}, Lci0;->getExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 2
-    iget-object p0, p0, Lci0;->a:Ljava/util/HashMap;
+    check-cast p1, Lq54;
 
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Lci0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez p0, :cond_0
+    move-result-object p1
 
-    return-object p2
+    check-cast p1, Lci0;
 
-    :cond_0
-    return-object p0
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lci0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final getExtras()Ljava/util/Map;
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object p0, p0, Lci0;->a:Ljava/util/HashMap;
+    new-instance p1, Lci0;
 
-    return-object p0
+    iget-object v0, p0, Lci0;->Y:Lhi0;
+
+    iget-object v1, p0, Lci0;->Z:Li43;
+
+    invoke-direct {p1, v0, v1, p2}, Lci0;-><init>(Lhi0;Li43;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final getImageInfo()Lh17;
-    .locals 7
-
-    iget-object v0, p0, Lci0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
-
-    if-nez v0, :cond_0
-
-    new-instance v1, Lcom/facebook/imagepipeline/image/ImageInfoImpl;
-
-    invoke-interface {p0}, Lc63;->getWidth()I
-
-    move-result v2
-
-    invoke-interface {p0}, Lc63;->getHeight()I
-
-    move-result v3
-
-    invoke-interface {p0}, Lc63;->getSizeInBytes()I
-
-    move-result v4
-
-    invoke-virtual {p0}, Lci0;->getQualityInfo()Li0c;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lci0;->a:Ljava/util/HashMap;
-
-    invoke-direct/range {v1 .. v6}, Lcom/facebook/imagepipeline/image/ImageInfoImpl;-><init>(IIILi0c;Ljava/util/Map;)V
-
-    iput-object v1, p0, Lci0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
-
-    :cond_0
-    iget-object p0, p0, Lci0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
-
-    return-object p0
-.end method
-
-.method public getQualityInfo()Li0c;
-    .locals 0
-
-    sget-object p0, Lu37;->d:Lu37;
-
-    return-object p0
-.end method
-
-.method public isStateful()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final putExtra(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 1
-
-    sget-object v0, Lci0;->c:Ljava/util/HashSet;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lci0;->a:Ljava/util/HashMap;
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final putExtras(Ljava/util/Map;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lci0;->X:I
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_1
 
     :cond_0
-    sget-object v0, Lci0;->c:Ljava/util/HashSet;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-object v0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
+    throw p1
 
     :cond_1
-    iget-object v3, p0, Lci0;->a:Ljava/util/HashMap;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput v2, p0, Lci0;->X:I
+
+    new-instance p1, Lgi0;
+
+    const/4 v0, 0x0
+
+    iget-object v2, p0, Lci0;->Y:Lhi0;
+
+    iget-object v3, p0, Lci0;->Z:Li43;
+
+    invoke-direct {p1, v2, v3, v0}, Lgi0;-><init>(Lhi0;Lth0;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, p0}, Ldxi;->c(Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
 
     goto :goto_0
 
     :cond_2
+    move-object p1, v1
+
+    :goto_0
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
     :goto_1
-    return-void
+    return-object v1
 .end method

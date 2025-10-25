@@ -160,23 +160,23 @@
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
 
     :goto_2
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+    iget-object p2, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
-    new-instance p2, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheException;
+    new-instance p3, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheException;
 
-    invoke-direct {p2, p1}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {p3, p1}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheException;-><init>(Ljava/lang/Throwable;)V
 
     const-string p1, "CallAnalyticsFileCacheWriter"
 
-    const-string p3, "Error writing event to file cache"
+    const-string v0, "Error writing event to file cache"
 
-    invoke-interface {p0, p1, p3, p2}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->report(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p2, p1, v0, p3}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->report(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method private verifyOutputFormat(Ljava/io/File;)V
-    .locals 5
+    .locals 9
 
     const-string v0, "Existing file compression state matches expected one ("
 
@@ -190,14 +190,86 @@
 
     invoke-interface {v2, v4, v3}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    const/4 v2, 0x0
+
+    if-eqz p1, :cond_1
+
     :try_start_0
-    invoke-static {p1}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->isCompressed(Ljava/io/File;)Z
+    invoke-static {p1}, Lhv5;->d(Ljava/io/File;)J
 
-    move-result p1
+    move-result-wide v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    iget-boolean v2, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->compressContent:Z
+    const-wide/16 v7, 0x0
 
-    if-eq p1, v2, :cond_0
+    cmp-long v3, v5, v7
+
+    if-nez v3, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    :try_start_1
+    new-instance v3, Ljava/io/FileInputStream;
+
+    invoke-direct {v3, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_1
+    .catch Ljava/util/zip/ZipException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    :try_start_2
+    new-instance p1, Ljava/util/zip/GZIPInputStream;
+
+    const/16 v5, 0x1000
+
+    invoke-direct {p1, v3, v5}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;I)V
+
+    invoke-virtual {p1}, Ljava/util/zip/GZIPInputStream;->close()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+    :try_end_3
+    .catch Ljava/util/zip/ZipException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    const/4 v2, 0x1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_4
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v3
+
+    :try_start_5
+    invoke-virtual {p1, v3}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_0
+    throw p1
+    :try_end_5
+    .catch Ljava/util/zip/ZipException; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    :cond_1
+    :try_start_6
+    sget-object p1, Lhv5;->a:[B
+
+    :catch_0
+    :goto_1
+    iget-boolean p1, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->compressContent:Z
+
+    if-eq v2, p1, :cond_2
 
     iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
@@ -218,35 +290,35 @@
     move-result-object v0
 
     invoke-interface {p1, v4, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    :try_start_1
+    :try_start_7
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->drop()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_1
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    goto :goto_1
+    goto :goto_3
 
-    :catchall_0
+    :catchall_2
     move-exception p1
 
-    goto :goto_0
+    goto :goto_2
 
-    :catch_0
+    :catch_1
     move-exception p1
 
-    :try_start_2
+    :try_start_8
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
     const-string v1, "drop caused by compression conflict failed"
 
     invoke-interface {v0, v4, v1, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_1
+    goto :goto_3
 
-    :cond_0
+    :cond_2
     iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -266,40 +338,40 @@
     move-result-object v0
 
     invoke-interface {p1, v4, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    goto :goto_1
+    goto :goto_3
 
-    :goto_0
+    :goto_2
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
     const-string v1, "Can\'t check if file compressed or not, drop"
 
     invoke-interface {v0, v4, v1, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :try_start_3
+    :try_start_9
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->drop()V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+    :try_end_9
+    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
 
-    goto :goto_1
+    goto :goto_3
 
-    :catch_1
+    :catch_2
     move-exception p1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
-    const-string v0, "drop caused by compression conflict check fault failed"
+    const-string v1, "drop caused by compression conflict check fault failed"
 
-    invoke-interface {p0, v4, v0, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v4, v1, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_1
+    :goto_3
     return-void
 .end method
 
 .method private write(ZLru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;Ljava/io/OutputStream;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -308,47 +380,47 @@
 
     if-eqz p1, :cond_0
 
-    sget-object p0, Lru/ok/android/externcalls/analytics/internal/utils/Files;->SEPARATOR:[B
+    sget-object p1, Lhv5;->a:[B
 
-    invoke-virtual {p3, p0}, Ljava/io/OutputStream;->write([B)V
+    invoke-virtual {p3, p1}, Ljava/io/OutputStream;->write([B)V
 
     :cond_0
-    new-instance p0, Lqbb;
+    new-instance p1, Ljsb;
 
-    new-instance p1, Lcwa;
+    new-instance v0, Lyab;
 
-    invoke-direct {p1, p3}, Lcwa;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v0, p3}, Lyab;-><init>(Ljava/io/OutputStream;)V
 
-    invoke-direct {p0, p1}, Lqbb;-><init>(Ljava/io/Writer;)V
+    invoke-direct {p1, v0}, Ljsb;-><init>(Ljava/io/Writer;)V
 
     :try_start_0
-    sget-object p1, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;
+    sget-object p3, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;
 
-    invoke-virtual {p1, p0, p2}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->serialize(Lgi7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+    invoke-virtual {p3, p1, p2}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->serialize(Lcr7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p0}, Lqbb;->close()V
+    invoke-virtual {p1}, Ljsb;->close()V
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p2
 
     :try_start_1
-    invoke-virtual {p0}, Lqbb;->close()V
+    invoke-virtual {p1}, Ljsb;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_0
 
     :catchall_1
-    move-exception p0
+    move-exception p1
 
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :goto_0
-    throw p1
+    throw p2
 .end method
 
 
@@ -406,15 +478,15 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_0
-    invoke-static {v2}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {v2}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->length:J
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
@@ -425,7 +497,7 @@
 
     :cond_0
     :try_start_2
-    invoke-static {v2}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->delete(Ljava/io/File;)V
+    invoke-static {v2}, Lhv5;->b(Ljava/io/File;)V
 
     iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
@@ -446,15 +518,15 @@
     goto :goto_0
 
     :goto_1
-    invoke-static {v2}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {v2}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->length:J
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
+    iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0
 .end method
@@ -517,15 +589,15 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_0
-    invoke-static {v3}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {v3}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->length:J
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
@@ -589,7 +661,7 @@
 
     invoke-interface {v2, v5, v1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {p1}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v1
 
@@ -599,18 +671,18 @@
 
     if-lez v1, :cond_2
 
-    invoke-static {p1}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->delete(Ljava/io/File;)V
+    invoke-static {p1}, Lhv5;->b(Ljava/io/File;)V
 
     :cond_2
-    invoke-static {p1}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {p1}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v1
 
     iget-boolean v4, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->compressContent:Z
 
-    invoke-static {p1, v3, v4}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->cat(Ljava/io/File;Ljava/io/File;Z)V
+    invoke-static {p1, v3, v4}, Lhv5;->a(Ljava/io/File;Ljava/io/File;Z)V
 
-    invoke-static {p1}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {p1}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v6
 
@@ -639,15 +711,15 @@
     goto :goto_0
 
     :goto_1
-    invoke-static {v3}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {v3}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->length:J
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method
@@ -679,7 +751,7 @@
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {v0}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v4
 
@@ -711,9 +783,9 @@
     return-wide v0
 
     :goto_1
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
+    iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0
 .end method
@@ -776,7 +848,7 @@
 
     invoke-interface {v4}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    invoke-static {v3}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->mkfile(Ljava/io/File;)V
+    invoke-static {v3}, Lhv5;->f(Ljava/io/File;)V
 
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -788,7 +860,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    invoke-static {v3}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {v3}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v7
 
@@ -837,15 +909,15 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     :goto_2
-    invoke-static {v3}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {v3}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->length:J
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     goto :goto_5
 
@@ -900,7 +972,7 @@
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     :try_start_7
-    invoke-static {v3}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->delete(Ljava/io/File;)V
+    invoke-static {v3}, Lhv5;->b(Ljava/io/File;)V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
@@ -935,15 +1007,15 @@
     return-void
 
     :goto_6
-    invoke-static {v3}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/io/File;)J
+    invoke-static {v3}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->length:J
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->lock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method

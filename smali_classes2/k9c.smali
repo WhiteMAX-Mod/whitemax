@@ -1,70 +1,96 @@
-.class public abstract Lk9c;
-.super Ljava/lang/Object;
+.class public final Lk9c;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static auth_call_code_hint:I = 0x7f110000
+# instance fields
+.field public final synthetic X:Lu9c;
 
-.field public static auth_call_description:I = 0x7f110001
 
-.field public static call_dialog_participants:I = 0x7f110002
+# direct methods
+.method public constructor <init>(Lu9c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static call_dialog_participants_when_join:I = 0x7f110003
+    iput-object p1, p0, Lk9c;->X:Lu9c;
 
-.field public static call_history_dlg_delete:I = 0x7f110004
+    const/4 p1, 0x2
 
-.field public static delete_favorite_sticker_question:I = 0x7f11000a
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static delete_recent_sticker_question:I = 0x7f11000b
+    return-void
+.end method
 
-.field public static field_length_exceeded_error:I = 0x7f11000e
 
-.field public static folder_filtered_title_bot_plural:I = 0x7f11000f
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static folder_filtered_title_channel_plural:I = 0x7f110010
+    check-cast p1, Lq54;
 
-.field public static folder_filtered_title_chat_plural:I = 0x7f110011
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static folder_filtered_title_contact_plural:I = 0x7f110012
+    invoke-virtual {p0, p1, p2}, Lk9c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static folder_filtered_title_not_contact_plural:I = 0x7f110013
+    move-result-object p1
 
-.field public static inactive_ttl:I = 0x7f110015
+    check-cast p1, Lk9c;
 
-.field public static max_attach_count_error:I = 0x7f110017
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static max_favorite_sticker_sets_count_reached:I = 0x7f110018
+    invoke-virtual {p1, p2}, Lk9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static max_favorite_stickers_count_reached:I = 0x7f110019
+    return-object p2
+.end method
 
-.field public static max_message_length_error:I = 0x7f11001a
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public static menu_copy_success:I = 0x7f11001b
+    new-instance p1, Lk9c;
 
-.field public static message_compose_forward_or_share__forwarded_messages:I = 0x7f11001c
+    iget-object v0, p0, Lk9c;->X:Lu9c;
 
-.field public static mutual_friends:I = 0x7f11001e
+    invoke-direct {p1, v0, p2}, Lk9c;-><init>(Lu9c;Lkotlin/coroutines/Continuation;)V
 
-.field public static n_contacts:I = 0x7f11001f
+    return-object p1
+.end method
 
-.field public static phone_weight:I = 0x7f11002c
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-.field public static pin_lock_wrong_code_with_attempts:I = 0x7f110031
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.field public static question_delete_messages:I = 0x7f11003a
+    iget-object p1, p0, Lk9c;->X:Lu9c;
 
-.field public static results_more:I = 0x7f11003b
+    iget-object p1, p1, Lu9c;->Y:Liu7;
 
-.field public static selected_messages:I = 0x7f11003c
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
-.field public static sticker_removed_from_favorites:I = 0x7f11003d
+    move-result-object p1
 
-.field public static sticker_removed_from_recents:I = 0x7f11003e
+    check-cast p1, Lc3b;
 
-.field public static sticker_set_description:I = 0x7f11003f
+    sget v0, Luza;->s1:I
 
-.field public static sticker_set_description_with_author:I = 0x7f110040
+    new-instance v1, Lorf;
 
-.field public static to_chats:I = 0x7f110041
+    invoke-direct {v1, v0}, Lorf;-><init>(I)V
 
-.field public static you_sent_messages:I = 0x7f110072
+    invoke-virtual {p1, v1}, Lc3b;->g(Ltrf;)V
+
+    new-instance v0, Lq3b;
+
+    sget v1, Lpjd;->J:I
+
+    invoke-direct {v0, v1}, Lq3b;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lc3b;->e(Lu3b;)V
+
+    invoke-virtual {p1}, Lc3b;->i()Lb3b;
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method

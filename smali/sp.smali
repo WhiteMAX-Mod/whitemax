@@ -1,19 +1,14 @@
-.class public final Lsp;
+.class public interface abstract Lsp;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public abstract b(I)V
+.end method
 
+.method public abstract e(I)V
+.end method
 
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lsp;->a:I
-
-    return-void
+.method public abstract g(IF)V
 .end method

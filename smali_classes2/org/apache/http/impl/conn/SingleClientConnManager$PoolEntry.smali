@@ -53,9 +53,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/AbstractPoolEntry;->connection:Lorg/apache/http/conn/OperatedClientConnection;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/AbstractPoolEntry;->connection:Lorg/apache/http/conn/OperatedClientConnection;
 
-    invoke-interface {p0}, Lorg/apache/http/HttpConnection;->close()V
+    invoke-interface {v0}, Lorg/apache/http/HttpConnection;->close()V
 
     :cond_0
     return-void
@@ -79,9 +79,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/AbstractPoolEntry;->connection:Lorg/apache/http/conn/OperatedClientConnection;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/AbstractPoolEntry;->connection:Lorg/apache/http/conn/OperatedClientConnection;
 
-    invoke-interface {p0}, Lorg/apache/http/HttpConnection;->shutdown()V
+    invoke-interface {v0}, Lorg/apache/http/HttpConnection;->shutdown()V
 
     :cond_0
     return-void

@@ -3,121 +3,478 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lme0;
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
 
-# static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput v0, p0, Lvp5;->a:I
 
-    sput-object v0, Lvp5;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    new-instance v0, Ljava/util/ArrayDeque;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayDeque;-><init>(I)V
+
+    iput-object v0, p0, Lvp5;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lvp5;->a:I
+
+    iput-object p2, p0, Lvp5;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final g(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final h(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final i(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final j(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final k(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final l(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final m(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final n(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final o(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final p(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final q(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final r(Landroid/app/Activity;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 3
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 4
 
-    sget-object p0, Lxp5;->j:Ljava/lang/Object;
+    iget p2, p0, Lvp5;->a:I
 
-    monitor-enter p0
+    packed-switch p2, :pswitch_data_0
 
-    :try_start_0
-    new-instance v0, Ljava/util/ArrayList;
+    :pswitch_0
+    return-void
 
-    sget-object v1, Lxp5;->k:Ltr;
+    :pswitch_1
+    invoke-virtual {p1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
-    invoke-virtual {v1}, Ltr;->values()Ljava/util/Collection;
+    move-result-object p1
 
-    move-result-object v1
+    if-nez p1, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
+    goto/16 :goto_5
 
     :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const-string p2, "FirebaseMessaging"
 
-    move-result v1
+    iget-object v0, p0, Lvp5;->b:Ljava/lang/Object;
 
-    if-eqz v1, :cond_2
+    check-cast v0, Ljava/util/ArrayDeque;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-    check-cast v1, Lxp5;
+    move-result-object p1
 
-    iget-object v2, v1, Lxp5;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
+    if-eqz p1, :cond_4
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    const-string v2, "google.message_id"
 
-    move-result v2
+    invoke-virtual {p1, v2}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v2, :cond_0
+    move-result-object v2
 
-    iget-object v1, v1, Lxp5;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+    if-nez v2, :cond_1
 
-    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    const-string v2, "message_id"
 
-    move-result-object v1
+    invoke-virtual {p1, v2}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
 
     :cond_1
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_0
+    if-nez v3, :cond_3
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ljava/util/ArrayDeque;->contains(Ljava/lang/Object;)Z
 
-    move-result-object v2
+    move-result v3
 
-    check-cast v2, Lup5;
+    if-eqz v3, :cond_2
 
-    iget-object v2, v2, Lup5;->a:Lxp5;
+    goto/16 :goto_5
 
-    if-nez p1, :cond_1
-
-    iget-object v2, v2, Lxp5;->h:Lqyb;
-
-    invoke-interface {v2}, Lqyb;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lnf4;
-
-    invoke-virtual {v2}, Lnf4;->b()V
+    :cond_2
+    invoke-virtual {v0, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :catchall_0
+    :catch_0
     move-exception p1
 
     goto :goto_1
 
+    :cond_3
+    :goto_0
+    const-string v0, "gcm.n.analytics_data"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :goto_1
+    const-string v0, "Failed trying to get analytics data from Intent extras."
+
+    invoke-static {p2, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_4
+    :goto_2
+    const-string p1, "1"
+
+    if-nez v1, :cond_5
+
+    const/4 v0, 0x0
+
+    goto :goto_3
+
+    :cond_5
+    const-string v0, "google.c.a.e"
+
+    invoke-virtual {v1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    :goto_3
+    if-eqz v0, :cond_b
+
+    if-nez v1, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    const-string v0, "google.c.a.tc"
+
+    invoke-virtual {v1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    const/4 v0, 0x3
+
+    if-eqz p1, :cond_9
+
+    invoke-static {}, Lhw5;->b()Lhw5;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lhw5;->a()V
+
+    iget-object p1, p1, Lhw5;->d:Lmi3;
+
+    const-class v2, Ljd;
+
+    invoke-interface {p1, v2}, Lfi3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-nez p1, :cond_8
+
+    invoke-static {p2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    const-string p1, "Received event with track-conversion=true. Setting user property and reengagement event"
+
+    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
+    const-string p1, "Unable to set user property for conversion tracking:  analytics library is missing"
+
+    invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_4
+
+    :cond_8
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :cond_9
+    invoke-static {p2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_a
+
+    const-string p1, "Received event with track-conversion=false. Do not set user property"
+
+    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_a
+    :goto_4
+    const-string p1, "_no"
+
+    invoke-static {p1, v1}, Leli;->e(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_b
+    :goto_5
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 0
+
+    iget p1, p0, Lvp5;->a:I
+
+    return-void
+.end method
+
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 0
+
+    iget p1, p0, Lvp5;->a:I
+
+    return-void
+.end method
+
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 2
+
+    iget p1, p0, Lvp5;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lvp5;->b:Ljava/lang/Object;
+
+    check-cast p1, Lnib;
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x21
+
+    if-lt v0, v1, :cond_0
+
+    iget-object v1, p1, Lnib;->d:Lqib;
+
+    invoke-virtual {v1}, Lqib;->f()V
+
+    :cond_0
+    iget-object v1, p1, Lnib;->e:Lqib;
+
+    invoke-virtual {v1}, Lqib;->f()V
+
+    iget-object v1, p1, Lnib;->k:Lai6;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lqib;->f()V
+
+    :cond_1
+    iget-object v1, p1, Lnib;->f:Lqib;
+
+    invoke-virtual {v1}, Lqib;->f()V
+
+    const/16 v1, 0x22
+
+    if-lt v0, v1, :cond_2
+
+    iget-object v0, p1, Lnib;->g:Lqib;
+
+    invoke-virtual {v0}, Lqib;->f()V
+
     :cond_2
-    monitor-exit p0
+    iget-object v0, p1, Lnib;->h:Lqib;
+
+    invoke-virtual {v0}, Lqib;->f()V
+
+    iget-object v0, p1, Lnib;->i:Lqib;
+
+    invoke-virtual {v0}, Lqib;->f()V
+
+    iget-object p1, p1, Lnib;->j:Lqib;
+
+    invoke-virtual {p1}, Lqib;->f()V
 
     return-void
 
-    :goto_1
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :pswitch_0
+    iget-object p1, p0, Lvp5;->b:Ljava/lang/Object;
 
-    throw p1
+    check-cast p1, Lxhb;
+
+    iget-object p1, p1, Lxhb;->b:Lqib;
+
+    invoke-virtual {p1}, Lqib;->f()V
+
+    :pswitch_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    iget p1, p0, Lvp5;->a:I
+
+    return-void
+.end method
+
+.method public final onActivityStarted(Landroid/app/Activity;)V
+    .locals 0
+
+    iget p1, p0, Lvp5;->a:I
+
+    return-void
+.end method
+
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
+
+    iget p1, p0, Lvp5;->a:I
+
+    return-void
 .end method

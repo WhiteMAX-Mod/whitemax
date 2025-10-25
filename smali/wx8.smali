@@ -3,122 +3,131 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lmi7;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Ljava/util/Iterator;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/Iterator;
-
-.field public final synthetic c:Lcm4;
+.field public final synthetic b:Landroidx/mediarouter/app/d;
 
 
 # direct methods
-.method public constructor <init>(Lcm4;)V
-    .locals 1
+.method public synthetic constructor <init>(Landroidx/mediarouter/app/d;I)V
+    .locals 0
+
+    iput p2, p0, Lwx8;->a:I
+
+    iput-object p1, p0, Lwx8;->b:Landroidx/mediarouter/app/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lwx8;->c:Lcm4;
-
-    iget-object v0, p1, Lcm4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lzr;
-
-    iget-object v0, v0, Lzr;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwx8;->a:Ljava/util/Iterator;
-
-    iget-object p1, p1, Lcm4;->c:Ljava/lang/Object;
-
-    check-cast p1, Lzr;
-
-    iget-object p1, p1, Lzr;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Iterable;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwx8;->b:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 1
-
-    iget-object v0, p0, Lwx8;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lwx8;->b:Ljava/util/Iterator;
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final next()Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    iget-object v0, p0, Lwx8;->c:Lcm4;
+    iget p1, p0, Lwx8;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Lwx8;->a:Ljava/util/Iterator;
+    iget-object p1, p0, Lwx8;->b:Landroidx/mediarouter/app/d;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-boolean v0, p1, Landroidx/mediarouter/app/d;->m1:Z
+
+    xor-int/lit8 v1, v0, 0x1
+
+    iput-boolean v1, p1, Landroidx/mediarouter/app/d;->m1:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->M0:Landroidx/mediarouter/app/OverlayListView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
+    iget-boolean v0, p1, Landroidx/mediarouter/app/d;->m1:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->t1:Landroid/view/animation/Interpolator;
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->u1:Landroid/view/animation/Interpolator;
+
+    :goto_0
+    iput-object v0, p1, Landroidx/mediarouter/app/d;->s1:Landroid/view/animation/Interpolator;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroidx/mediarouter/app/d;->t(Z)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lwx8;->b:Landroidx/mediarouter/app/d;
+
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->a1:Landroid/support/v4/media/session/MediaControllerCompat;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaControllerCompat;->getSessionActivity()Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    iget-object p0, p0, Lwx8;->b:Ljava/util/Iterator;
+    if-eqz v0, :cond_2
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :try_start_0
+    invoke-virtual {v0}, Landroid/app/PendingIntent;->send()V
 
-    move-result-object p0
+    invoke-virtual {p1}, Lpo;->dismiss()V
+    :try_end_0
+    .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance v1, Lpxa;
+    goto :goto_1
 
-    invoke-direct {v1, v0, p0}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    :catch_0
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    return-object v1
-.end method
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-.method public final remove()V
-    .locals 1
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    const-string v0, " was not sent, it had been canceled."
 
-    const-string v0, "Operation is not supported for read-only collection"
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    throw p0
+    move-result-object p1
+
+    const-string v0, "MediaRouteCtrlDialog"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lwx8;->b:Landroidx/mediarouter/app/d;
+
+    invoke-virtual {p1}, Lpo;->dismiss()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,178 +1,128 @@
 .class public final Lpe9;
-.super Lx7g;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final X:Lv85;
+.field public final a:Lue9;
 
-.field public final b:Lhp;
-
-.field public final c:Lyce;
-
-.field public final o:Liic;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lhp;)V
-    .locals 1
+.method public constructor <init>(Lue9;Ljava/lang/String;)V
+    .locals 0
 
-    invoke-direct {p0}, Lx7g;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpe9;->b:Lhp;
+    iput-object p1, p0, Lpe9;->a:Lue9;
 
-    sget-object p1, Lp45;->a:Lp45;
-
-    invoke-static {p1}, Lzce;->a(Ljava/lang/Object;)Lyce;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lpe9;->c:Lyce;
-
-    new-instance v0, Liic;
-
-    invoke-direct {v0, p1}, Liic;-><init>(Lro9;)V
-
-    iput-object v0, p0, Lpe9;->o:Liic;
-
-    new-instance p1, Lv85;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lv85;-><init>(I)V
-
-    iput-object p1, p0, Lpe9;->X:Lv85;
-
-    invoke-virtual {p0}, Lpe9;->q()V
+    iput-object p2, p0, Lpe9;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final q()V
-    .locals 14
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-static {}, Lgs3;->m()Los7;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Ltrd;
-
-    sget v2, Lqka;->a:I
-
-    new-instance v5, Lp2f;
-
-    invoke-direct {v5, v2}, Lp2f;-><init>(I)V
-
-    new-instance v9, Ldrd;
-
-    iget-object v2, p0, Lpe9;->b:Lhp;
-
-    check-cast v2, Ljp;
-
-    const/4 v3, 0x0
-
-    iget-object v2, v2, Li3;->g:Lfl7;
-
-    const-string v4, "app.messages.send.by.enter"
-
-    invoke-virtual {v2, v4, v3}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    invoke-direct {v9, v2, v3}, Ldrd;-><init>(ZZ)V
-
-    const/4 v11, 0x0
-
-    const/16 v12, 0x1b8
-
-    const-wide v2, 0x7fffffffffffffffL
-
-    const/4 v4, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v10, 0x0
-
-    invoke-direct/range {v1 .. v12}, Ltrd;-><init>(JILu2f;Lhrd;Lu2f;Lll7;Lfrd;Lxqd;Lu2f;I)V
-
-    invoke-virtual {v0, v1}, Los7;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Ltrd;
-
-    sget v1, Lqka;->b:I
-
-    new-instance v6, Lp2f;
-
-    invoke-direct {v6, v1}, Lp2f;-><init>(I)V
-
-    sget-object v10, Lard;->a:Lard;
-
-    const/4 v12, 0x0
-
-    const/16 v13, 0x1b8
-
-    const-wide v3, 0x7ffffffffffffffeL
-
-    const/4 v5, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v2 .. v13}, Ltrd;-><init>(JILu2f;Lhrd;Lu2f;Lll7;Lfrd;Lxqd;Lu2f;I)V
-
-    invoke-virtual {v0, v2}, Los7;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v0}, Lgs3;->f(Ljava/util/List;)Los7;
-
-    move-result-object v0
-
-    iget-object p0, p0, Lpe9;->c:Lyce;
-
-    invoke-virtual {p0, v0}, Lyce;->setValue(Ljava/lang/Object;)V
-
-    const-class p0, Lpe9;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    sget-object v1, Ljtg;->g:Loja;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget-object v2, Lqz7;->o:Lqz7;
+    instance-of v1, p1, Lpe9;
 
-    invoke-virtual {v1, v2}, Loja;->a(Lqz7;)Z
+    const/4 v2, 0x0
 
-    move-result v3
+    if-nez v1, :cond_1
 
-    if-eqz v3, :cond_1
+    return v2
 
-    invoke-virtual {v0}, Lu2;->getSize()I
+    :cond_1
+    check-cast p1, Lpe9;
+
+    iget-object v1, p0, Lpe9;->a:Lue9;
+
+    iget-object v3, p1, Lpe9;->a:Lue9;
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lpe9;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lpe9;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lpe9;->a:Lue9;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    const-string v3, "process sections. finish, size:"
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v0, v3}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lpe9;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MessageReaction(reactionType="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpe9;->a:Lue9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", id="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpe9;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, p0, v0, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
+    return-object v0
 .end method

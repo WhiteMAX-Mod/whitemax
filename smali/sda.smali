@@ -3,143 +3,65 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Lhac;->call_history_call_create_banner_permission_denied_subtitle:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
-    sput v0, Lsda;->a:I
+    move-result-object p0
 
-    sget v0, Lhac;->call_history_call_create_banner_permission_denied_title:I
+    return-object p0
+.end method
 
-    sput v0, Lsda;->b:I
+.method public static b(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Lhac;->call_history_call_create_banner_subtitle:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCategory(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
-    sput v0, Lsda;->c:I
+    move-result-object p0
 
-    sget v0, Lhac;->call_history_call_create_banner_title:I
+    return-object p0
+.end method
 
-    sput v0, Lsda;->d:I
+.method public static c(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Lhac;->call_history_info_copy_link:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setColor(I)Landroid/app/Notification$Builder;
 
-    sput v0, Lsda;->e:I
+    move-result-object p0
 
-    sget v0, Lhac;->call_history_info_create_failed:I
+    return-object p0
+.end method
 
-    sput v0, Lsda;->f:I
+.method public static d(Landroid/app/Notification$Builder;Landroid/app/Notification;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Lhac;->call_history_info_creating:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setPublicVersion(Landroid/app/Notification;)Landroid/app/Notification$Builder;
 
-    sput v0, Lsda;->g:I
+    move-result-object p0
 
-    sget v0, Lhac;->call_history_info_join_call:I
+    return-object p0
+.end method
 
-    sput v0, Lsda;->h:I
+.method public static e(Landroid/app/Notification$Builder;Landroid/net/Uri;Ljava/lang/Object;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Lhac;->call_history_info_open_call_chat_title:I
+    check-cast p2, Landroid/media/AudioAttributes;
 
-    sput v0, Lsda;->i:I
+    invoke-virtual {p0, p1, p2}, Landroid/app/Notification$Builder;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)Landroid/app/Notification$Builder;
 
-    sget v0, Lhac;->call_history_info_share:I
+    move-result-object p0
 
-    sput v0, Lsda;->j:I
+    return-object p0
+.end method
 
-    sget v0, Lhac;->call_history_info_start_call:I
+.method public static f(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sput v0, Lsda;->k:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setVisibility(I)Landroid/app/Notification$Builder;
 
-    sget v0, Lhac;->call_history_info_title:I
+    move-result-object p0
 
-    sput v0, Lsda;->l:I
-
-    sget v0, Lhac;->call_history_info_try_load_link_again:I
-
-    sput v0, Lsda;->m:I
-
-    sget v0, Lhac;->call_history_item_call_count_no_users:I
-
-    sput v0, Lsda;->n:I
-
-    sget v0, Lhac;->call_history_item_call_link_call_description:I
-
-    sput v0, Lsda;->o:I
-
-    sget v0, Lhac;->call_history_link_action_error:I
-
-    sput v0, Lsda;->p:I
-
-    sget v0, Lhac;->call_history_link_coped:I
-
-    sput v0, Lsda;->q:I
-
-    sget v0, Lhac;->call_history_link_send_title:I
-
-    sput v0, Lsda;->r:I
-
-    sget v0, Lhac;->call_history_open_last_message_error:I
-
-    sput v0, Lsda;->s:I
-
-    sget v0, Lhac;->call_presettings_call_save_changes:I
-
-    sput v0, Lsda;->t:I
-
-    sget v0, Lhac;->call_presettings_change_call_name_empty_error:I
-
-    sput v0, Lsda;->u:I
-
-    sget v0, Lhac;->call_presettings_change_call_name_title:I
-
-    sput v0, Lsda;->v:I
-
-    return-void
+    return-object p0
 .end method

@@ -1,190 +1,207 @@
-.class public final Lug6;
+.class public final synthetic Lug6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Ljava/util/regex/Pattern;
+# interfaces
+.implements Landroid/database/DatabaseErrorHandler;
 
 
 # instance fields
-.field public a:I
-
-.field public b:I
+.field public final synthetic a:Lz22;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "^ [0-9a-fA-F]{8} ([0-9a-fA-F]{8}) ([0-9a-fA-F]{8})"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lug6;->c:Ljava/util/regex/Pattern;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lk2g;Lz22;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, -0x1
-
-    iput v0, p0, Lug6;->a:I
-
-    iput v0, p0, Lug6;->b:I
+    iput-object p2, p0, Lug6;->a:Lz22;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Z
-    .locals 4
+.method public final onCorruption(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 3
 
-    sget-object v0, Lug6;->c:Ljava/util/regex/Pattern;
+    sget v0, Lwg6;->q0:I
 
-    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    iget-object v0, p0, Lug6;->a:Lz22;
 
-    move-result-object p1
+    iget-object v1, v0, Lz22;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/util/regex/Matcher;->find()Z
+    check-cast v1, Ltg6;
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, v1, Ltg6;->b:Ljava/lang/Object;
+
+    check-cast v2, Landroid/database/sqlite/SQLiteDatabase;
+
+    invoke-static {v2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    new-instance v1, Ltg6;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2, p1}, Ltg6;-><init>(ILjava/lang/Object;)V
+
+    iput-object v1, v0, Lz22;->b:Ljava/lang/Object;
+
+    :cond_1
+    iget-object p1, v1, Ltg6;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroid/database/sqlite/SQLiteDatabase;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "Corruption reported by sqlite on database: "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ".path"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "SupportSQLite"
+
+    invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_2
 
-    const/4 v0, 0x1
-
-    :try_start_0
-    invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    sget v2, Llrf;->a:I
-
-    const/16 v2, 0x10
-
-    invoke-static {v1, v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
-
-    move-result v1
-
-    const/4 v3, 0x2
-
-    invoke-virtual {p1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getPath()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+    if-eqz p1, :cond_6
 
-    move-result p1
+    invoke-static {p1}, Lk2g;->A(Ljava/lang/String;)V
 
-    if-gtz v1, :cond_0
+    return-void
 
-    if-lez p1, :cond_1
-
-    :cond_0
-    iput v1, p0, Lug6;->a:I
-
-    iput p1, p0, Lug6;->b:I
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return v0
-
-    :catch_0
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final b(Lze9;)V
-    .locals 5
-
+    :cond_2
     const/4 v0, 0x0
 
-    :goto_0
-    iget-object v1, p1, Lze9;->a:[Lxe9;
+    :try_start_0
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getAttachedDbs()Ljava/util/List;
 
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_2
-
-    aget-object v1, v1, v0
-
-    instance-of v2, v1, Lz83;
-
-    const-string v3, "iTunSMPB"
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Lz83;
-
-    iget-object v2, v1, Lz83;->c:Ljava/lang/String;
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v1, v1, Lz83;->o:Ljava/lang/String;
-
-    invoke-virtual {p0, v1}, Lug6;->a(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v2, v1, Lha7;
-
-    if-eqz v2, :cond_1
-
-    check-cast v1, Lha7;
-
-    const-string v2, "com.apple.iTunes"
-
-    iget-object v4, v1, Lha7;->b:Ljava/lang/String;
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, v1, Lha7;->c:Ljava/lang/String;
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v1, v1, Lha7;->o:Ljava/lang/String;
-
-    invoke-virtual {p0, v1}, Lug6;->a(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_2
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :catch_0
+    :goto_0
+    :try_start_1
+    invoke-virtual {v1}, Ltg6;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_3
+
     :goto_1
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_2
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Pair;
+
+    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lk2g;->A(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getPath()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    invoke-static {p1}, Lk2g;->A(Ljava/lang/String;)V
+
+    :cond_4
+    throw v1
+
+    :catch_1
+    :goto_3
+    if-eqz v0, :cond_5
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Pair;
+
+    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lk2g;->A(Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :cond_5
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getPath()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_6
+
+    invoke-static {p1}, Lk2g;->A(Ljava/lang/String;)V
+
+    :cond_6
     return-void
 .end method

@@ -1,62 +1,67 @@
-.class public final Lj3g;
+.class public abstract Lj3g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Ljava/util/Iterator;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lnyf;
+.field public final a:Ljava/util/Iterator;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnyf;I)V
+.method public constructor <init>(Ljava/util/Iterator;)V
     .locals 0
 
-    iput p2, p0, Lj3g;->a:I
-
-    iput-object p1, p0, Lj3g;->b:Lnyf;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lj3g;->a:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public abstract a(Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public final hasNext()Z
     .locals 1
 
-    iget v0, p0, Lj3g;->a:I
+    iget-object v0, p0, Lj3g;->a:Ljava/util/Iterator;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object p0, p0, Lj3g;->b:Lnyf;
+    move-result v0
 
-    const/4 v0, 0x0
+    return v0
+.end method
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+.method public final next()Ljava/lang/Object;
+    .locals 1
 
-    sget-object p0, Lylf;->a:Lylf;
+    iget-object v0, p0, Lj3g;->a:Ljava/util/Iterator;
 
-    return-object p0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object p0, p0, Lj3g;->b:Lnyf;
+    move-result-object v0
 
-    const/16 v0, 0x8
+    invoke-virtual {p0, v0}, Lj3g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+    move-result-object v0
 
-    sget-object p0, Lylf;->a:Lylf;
+    return-object v0
+.end method
 
-    return-object p0
+.method public final remove()V
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lj3g;->a:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+
+    return-void
 .end method

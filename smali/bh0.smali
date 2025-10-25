@@ -1,21 +1,25 @@
 .class public final Lbh0;
-.super Lso;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lbh0;
+# instance fields
+.field public final a:Landroid/os/Handler;
+
+.field public final b:Leh4;
+
+.field public c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/os/Handler;Leh4;)V
+    .locals 0
 
-    new-instance v0, Lbh0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lso;-><init>()V
+    iput-object p1, p0, Lbh0;->a:Landroid/os/Handler;
 
-    sput-object v0, Lbh0;->a:Lbh0;
+    iput-object p2, p0, Lbh0;->b:Leh4;
 
     return-void
 .end method

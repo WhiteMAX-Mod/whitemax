@@ -130,39 +130,9 @@
 .end method
 
 .method private scaleBitmap(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
-    .locals 1
-
-    int-to-float p0, p2
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p2
+    .locals 2
 
     int-to-float p2, p2
-
-    div-float p2, p0, p2
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float/2addr p0, v0
-
-    invoke-static {p2, p0}, Ljava/lang/Math;->min(FF)F
-
-    move-result p0
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    mul-float/2addr p2, p0
-
-    float-to-int p2, p2
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -170,29 +140,59 @@
 
     int-to-float v0, v0
 
-    mul-float/2addr v0, p0
+    div-float v0, p2, v0
 
-    float-to-int p0, v0
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    const/4 v0, 0x1
+    move-result v1
 
-    invoke-static {p1, p0, p2, v0}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+    int-to-float v1, v1
 
-    move-result-object p0
+    div-float/2addr p2, v1
 
-    return-object p0
+    invoke-static {v0, p2}, Ljava/lang/Math;->min(FF)F
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    mul-float/2addr v0, p2
+
+    float-to-int v0, v0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, p2
+
+    float-to-int p2, v1
+
+    const/4 v1, 0x1
+
+    invoke-static {p1, p2, v0, v1}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 
 # virtual methods
 .method public build()Landroid/support/v4/media/MediaMetadataCompat;
-    .locals 1
+    .locals 2
 
     new-instance v0, Landroid/support/v4/media/MediaMetadataCompat;
 
-    iget-object p0, p0, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle:Landroid/os/Bundle;
+    iget-object v1, p0, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle:Landroid/os/Bundle;
 
-    invoke-direct {v0, p0}, Landroid/support/v4/media/MediaMetadataCompat;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v0, v1}, Landroid/support/v4/media/MediaMetadataCompat;-><init>(Landroid/os/Bundle;)V
 
     return-object v0
 .end method
@@ -200,15 +200,15 @@
 .method public putBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/support/v4/media/MediaMetadataCompat$Builder;
     .locals 2
 
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Ltr;
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Let;
 
-    invoke-virtual {v0, p1}, Lr1e;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lzoe;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0, p1}, Lr1e;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lzoe;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -225,19 +225,19 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "The "
+    const-string v0, "The "
 
-    const-string v0, " key cannot be used to put a Bitmap"
+    const-string v1, " key cannot be used to put a Bitmap"
 
-    invoke-static {p2, p1, v0}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p2
 
     :cond_1
     :goto_0
@@ -251,15 +251,15 @@
 .method public putLong(Ljava/lang/String;J)Landroid/support/v4/media/MediaMetadataCompat$Builder;
     .locals 2
 
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Ltr;
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Let;
 
-    invoke-virtual {v0, p1}, Lr1e;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lzoe;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0, p1}, Lr1e;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lzoe;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -274,19 +274,19 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "The "
+    const-string p3, "The "
 
-    const-string p3, " key cannot be used to put a long"
+    const-string v0, " key cannot be used to put a long"
 
-    invoke-static {p2, p1, p3}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p1, v0}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p2
 
     :cond_1
     :goto_0
@@ -300,15 +300,15 @@
 .method public putRating(Ljava/lang/String;Landroid/support/v4/media/RatingCompat;)Landroid/support/v4/media/MediaMetadataCompat$Builder;
     .locals 2
 
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Ltr;
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Let;
 
-    invoke-virtual {v0, p1}, Lr1e;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lzoe;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0, p1}, Lr1e;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lzoe;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -325,19 +325,19 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "The "
+    const-string v0, "The "
 
-    const-string v0, " key cannot be used to put a Rating"
+    const-string v1, " key cannot be used to put a Rating"
 
-    invoke-static {p2, p1, v0}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p2
 
     :cond_1
     :goto_0
@@ -357,15 +357,15 @@
 .method public putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;
     .locals 2
 
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Ltr;
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Let;
 
-    invoke-virtual {v0, p1}, Lr1e;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lzoe;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0, p1}, Lr1e;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lzoe;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -382,19 +382,19 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "The "
+    const-string v0, "The "
 
-    const-string v0, " key cannot be used to put a String"
+    const-string v1, " key cannot be used to put a String"
 
-    invoke-static {p2, p1, v0}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p2
 
     :cond_1
     :goto_0
@@ -408,15 +408,15 @@
 .method public putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder;
     .locals 2
 
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Ltr;
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Let;
 
-    invoke-virtual {v0, p1}, Lr1e;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lzoe;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0, p1}, Lr1e;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lzoe;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -433,19 +433,19 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "The "
+    const-string v0, "The "
 
-    const-string v0, " key cannot be used to put a CharSequence"
+    const-string v1, " key cannot be used to put a CharSequence"
 
-    invoke-static {p2, p1, v0}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p2
 
     :cond_1
     :goto_0

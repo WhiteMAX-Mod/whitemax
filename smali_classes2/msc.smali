@@ -1,127 +1,100 @@
-.class public final Lmsc;
+.class public abstract Lmsc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
+# static fields
+.field public static audio_record_click_to_cancel:I = 0x7f13008a
 
-.field public final b:Z
+.field public static audio_record_swipe_to_cancel:I = 0x7f13009b
 
+.field public static chat_screen__leave_chat_action:I = 0x7f13035d
 
-# direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Z)V
-    .locals 0
+.field public static chat_screen__leave_chat_title:I = 0x7f13035e
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static chat_screen__remove_chat_action:I = 0x7f13035f
 
-    iput-object p1, p0, Lmsc;->a:Ljava/util/ArrayList;
+.field public static chat_screen__remove_chat_title:I = 0x7f130360
 
-    iput-boolean p2, p0, Lmsc;->b:Z
+.field public static chat_screen__search_result_down_button_accessibility:I = 0x7f130361
 
-    return-void
-.end method
+.field public static chat_screen__search_result_not_found:I = 0x7f130362
 
+.field public static chat_screen__search_result_success:I = 0x7f130363
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.field public static chat_screen__search_result_up_button_accessibility:I = 0x7f130364
 
-    if-ne p0, p1, :cond_0
+.field public static chat_screen__start_chat_with_bot:I = 0x7f130365
 
-    goto :goto_1
+.field public static chat_screen_channel_search_hint:I = 0x7f13037d
 
-    :cond_0
-    instance-of v0, p1, Lmsc;
+.field public static chat_screen_file_too_big_caption:I = 0x7f13038a
 
-    if-nez v0, :cond_1
+.field public static chat_screen_file_too_big_title:I = 0x7f13038b
 
-    goto :goto_0
+.field public static chat_screen_join_channel:I = 0x7f130392
 
-    :cond_1
-    check-cast p1, Lmsc;
+.field public static chat_screen_join_chat:I = 0x7f130393
 
-    iget-object v0, p0, Lmsc;->a:Ljava/util/ArrayList;
+.field public static chat_screen_leave_chat:I = 0x7f130394
 
-    iget-object v1, p1, Lmsc;->a:Ljava/util/ArrayList;
+.field public static chat_screen_remove_chat:I = 0x7f1303ae
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+.field public static chat_screen_search_hint:I = 0x7f1303b5
 
-    move-result v0
+.field public static chat_screen_status_mute_chat:I = 0x7f1303b8
 
-    if-nez v0, :cond_2
+.field public static chat_screen_status_subscribe_chat:I = 0x7f1303b9
 
-    goto :goto_0
+.field public static chat_screen_status_unmute_chat:I = 0x7f1303ba
 
-    :cond_2
-    iget-boolean p0, p0, Lmsc;->b:Z
+.field public static chat_screen_unblock_contact:I = 0x7f1303bc
 
-    iget-boolean p1, p1, Lmsc;->b:Z
+.field public static media_bar_recent:I = 0x7f13062a
 
-    if-eq p0, p1, :cond_3
+.field public static media_bar_restricted_media_action:I = 0x7f13062b
 
-    :goto_0
-    const/4 p0, 0x0
+.field public static media_bar_restricted_media_subtitle:I = 0x7f13062c
 
-    return p0
+.field public static media_bar_restricted_media_title:I = 0x7f13062d
 
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
+.field public static media_type_picker__close_dialog__accept:I = 0x7f130671
 
-    return p0
-.end method
+.field public static media_type_picker__close_dialog__title:I = 0x7f130672
 
-.method public final hashCode()I
-    .locals 1
+.field public static media_type_picker__contact:I = 0x7f130673
 
-    iget-object v0, p0, Lmsc;->a:Ljava/util/ArrayList;
+.field public static media_type_picker__file:I = 0x7f130674
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+.field public static media_type_picker__file_dialog__from_file_manager:I = 0x7f130675
 
-    move-result v0
+.field public static media_type_picker__file_dialog__from_gallery:I = 0x7f130676
 
-    mul-int/lit8 v0, v0, 0x1f
+.field public static media_type_picker__file_dialog__title:I = 0x7f130677
 
-    iget-boolean p0, p0, Lmsc;->b:Z
+.field public static media_type_picker__gallery:I = 0x7f130678
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+.field public static media_type_picker__input_hint:I = 0x7f130679
 
-    move-result p0
+.field public static media_type_picker__money:I = 0x7f13067a
 
-    add-int/2addr p0, v0
+.field public static media_type_picker__permissions_dialog__button:I = 0x7f13067b
 
-    return p0
-.end method
+.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f13067c
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f13067d
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f13067e
 
-    const-string v1, "ReplyKeyboard(buttons="
+.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f13067f
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f130680
 
-    iget-object v1, p0, Lmsc;->a:Ljava/util/ArrayList;
+.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f130681
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.field public static media_type_picker__permissions_dialog__title:I = 0x7f130682
 
-    const-string v1, ", defaultInputDisabled="
+.field public static media_type_picker__place:I = 0x7f130683
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static media_type_picker__snack_file:I = 0x7f130684
 
-    iget-boolean p0, p0, Lmsc;->b:Z
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static media_type_picker__snack_media:I = 0x7f130685

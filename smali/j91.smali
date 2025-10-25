@@ -3,124 +3,189 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqq1;
+.implements Lvf4;
 
 
-# instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+# static fields
+.field public static final a:Lj91;
+
+.field public static final b:Lk91;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/incoming/CallIncomingScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lj91;
 
-    iput-object p1, p0, Lj91;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lj91;->a:Lj91;
+
+    sget-object v0, Lk91;->b:Lk91;
+
+    sput-object v0, Lj91;->b:Lk91;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final l()V
-    .locals 8
+.method public final a()Ldg4;
+    .locals 1
 
-    iget-object p0, p0, Lj91;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    sget-object v0, Lj91;->b:Lk91;
 
-    iget-object v0, p0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->b:Le2b;
+    return-object v0
+.end method
 
-    iget-object v1, p0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->Z:Ljava/lang/Object;
+.method public final b(Ljava/lang/String;Lyf4;Landroid/os/Bundle;)Lgg4;
+    .locals 12
 
-    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
+    sget-object v0, Lj91;->b:Lk91;
 
-    move-result-object v1
+    iget-object v0, v0, Ldg4;->a:Ljava/util/LinkedHashSet;
 
-    move-object v2, v1
-
-    check-cast v2, Litg;
-
-    invoke-virtual {v0}, Le2b;->b()Lp2b;
-
-    move-result-object v1
-
-    sget-object v3, Lp2b;->m:[Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Lp2b;->b([Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {v0}, Le2b;->b()Lp2b;
-
-    move-result-object p0
-
-    sget v5, Lpbc;->permissions_video_message_request_only_camera_title:I
-
-    sget v6, Lpbc;->permissions_calls_video_preview_request:I
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v7, Lhna;->g:I
-
-    invoke-static {v2, v3}, Lp2b;->i(Litg;[Ljava/lang/String;)Z
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    const/16 v4, 0xb7
+    if-nez v0, :cond_0
 
-    if-eqz v0, :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual/range {v2 .. v7}, Litg;->c([Ljava/lang/String;IIII)V
-
-    return-void
+    return-object p1
 
     :cond_0
-    invoke-virtual {p0, v2, v3, v4}, Lp2b;->f(Litg;[Ljava/lang/String;I)V
+    sget-object v0, Lk91;->b:Lk91;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lk91;->c:Lyf4;
+
+    invoke-virtual {p2, v0}, Lyf4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Lh;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lh;-><init>(I)V
+
+    move-object v10, v0
+
+    goto :goto_1
 
     :cond_1
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->A0()Lr91;
+    sget-object v0, Lk91;->d:Lyf4;
+
+    invoke-virtual {p2, v0}, Lyf4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "call_link"
+
+    invoke-virtual {p3, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->A0()Lr91;
+    const-string v1, "call_title"
 
-    move-result-object p0
+    invoke-virtual {p3, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object p0, p0, Lr91;->u0:Lyce;
+    move-result-object v1
 
-    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
+    const-string v2, "call_chat_id"
 
-    move-result-object p0
+    invoke-static {v2, p3}, Llyi;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
 
-    instance-of v1, p0, Lm91;
+    move-result-object v2
 
-    if-eqz v1, :cond_2
+    const-string v3, "is_link_call"
 
-    check-cast p0, Lm91;
+    invoke-static {v3, p3}, Llyi;->a(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v3
 
     goto :goto_0
 
     :cond_2
-    const/4 p0, 0x0
+    const/4 v3, 0x0
 
     :goto_0
-    if-nez p0, :cond_3
+    new-instance v4, Lh91;
 
-    const/4 p0, 0x0
+    invoke-direct {v4, v2, v0, v1, v3}, Lh91;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    move-object v10, v4
 
     goto :goto_1
 
     :cond_3
-    iget-boolean p0, p0, Lm91;->b:Z
+    sget-object v0, Lk91;->e:Lyf4;
+
+    invoke-virtual {p2, v0}, Lyf4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const-string v0, "chat_id"
+
+    invoke-static {v0, p3}, Llyi;->h(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v0
+
+    new-instance v2, Li91;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, v1, v3}, Li91;-><init>(JI)V
+
+    move-object v10, v2
 
     :goto_1
-    xor-int/lit8 p0, p0, 0x1
+    new-instance v4, Lgg4;
 
-    invoke-virtual {v0, p0}, Lr91;->r(Z)V
+    const/16 v11, 0x18
 
-    return-void
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    move-object v7, p3
+
+    invoke-direct/range {v4 .. v11}, Lgg4;-><init>(Ljava/lang/String;Lyf4;Landroid/os/Bundle;ILeg4;Lfg4;I)V
+
+    return-object v4
+
+    :cond_4
+    move-object v6, p2
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "invalid route "
+
+    invoke-static {p2, v6}, Ldy1;->h(Ljava/lang/String;Lyf4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

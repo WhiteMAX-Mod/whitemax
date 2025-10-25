@@ -1,64 +1,49 @@
 .class public final Le1c;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
-# interfaces
-.implements Lf1c;
 
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-# static fields
-.field public static final a:Le1c;
+.field public final synthetic Y:Lh1c;
+
+.field public Z:I
+
+.field public o:Lh1c;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lh1c;Ly14;)V
+    .locals 0
 
-    new-instance v0, Le1c;
+    iput-object p1, p0, Le1c;->Y:Lh1c;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Le1c;->a:Le1c;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Le1c;->X:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Le1c;->Z:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p0, p1, Le1c;
+    or-int/2addr p1, v0
 
-    if-nez p0, :cond_1
+    iput p1, p0, Le1c;->Z:I
 
-    const/4 p0, 0x0
+    iget-object p1, p0, Le1c;->Y:Lh1c;
 
-    return p0
+    invoke-virtual {p1, p0}, Lh1c;->b(Ly14;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x38597cf0    # -85254.125f
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "ModeVideo"
-
-    return-object p0
+    return-object p1
 .end method

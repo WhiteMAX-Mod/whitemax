@@ -18,12 +18,16 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000e\n\u0000\u0008\u00c6\n\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0013\u0010\u0003\u001a\u00020\u00042\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u0006H\u00d6\u0003J\t\u0010\u0007\u001a\u00020\u0008H\u00d6\u0001J\t\u0010\t\u001a\u00020\nH\u00d6\u0001\u00a8\u0006\u000b"
+        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\u0008\u00c6\n\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0013\u0010\u0007\u001a\u00020\u00082\u0008\u0010\t\u001a\u0004\u0018\u00010\nH\u00d6\u0003J\t\u0010\u000b\u001a\u00020\u000cH\u00d6\u0001J\t\u0010\r\u001a\u00020\u0004H\u00d6\u0001R\u0014\u0010\u0003\u001a\u00020\u0004X\u0096D\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\u000e"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;",
         "Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;",
         "()V",
+        "key",
+        "",
+        "getKey",
+        "()Ljava/lang/String;",
         "equals",
         "",
         "other",
@@ -31,7 +35,6 @@
         "hashCode",
         "",
         "toString",
-        "",
         "calls-sdk-common_release"
     }
     k = 0x1
@@ -47,6 +50,8 @@
 # static fields
 .field public static final INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;
 
+.field private static final key:Ljava/lang/String;
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -57,6 +62,10 @@
     invoke-direct {v0}, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;-><init>()V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;
+
+    const-string v0, "timeout"
+
+    sput-object v0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;->key:Ljava/lang/String;
 
     return-void
 .end method
@@ -81,30 +90,38 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;
+    instance-of p1, p1, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
+.method public getKey()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;->key:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, 0x2c7cd95c
+    const v0, 0x2c7cd95c
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "CallTimeout"
+    const-string v0, "CallTimeout"
 
-    return-object p0
+    return-object v0
 .end method

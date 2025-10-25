@@ -1,145 +1,134 @@
 .class public final Lf78;
-.super Ll76;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final X:Ljava/lang/Object;
+# interfaces
+.implements Lzzb;
 
 
 # instance fields
-.field public final c:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final o:Ljava/lang/Object;
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Landroid/content/ContentResolver;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lf78;->X:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lo6f;Ljava/lang/Object;Ljava/lang/Object;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Landroid/content/ContentResolver;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ll76;-><init>(Lo6f;)V
+    iput p3, p0, Lf78;->a:I
 
-    iput-object p2, p0, Lf78;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lf78;->b:Ljava/util/concurrent/Executor;
 
-    iput-object p3, p0, Lf78;->o:Ljava/lang/Object;
+    iput-object p2, p0, Lf78;->c:Landroid/content/ContentResolver;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)I
-    .locals 1
+.method public final a(Ljj0;La0c;)V
+    .locals 10
 
-    sget-object v0, Lf78;->X:Ljava/lang/Object;
+    iget v0, p0, Lf78;->a:I
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    move-object v8, p2
 
-    if-eqz v0, :cond_0
+    check-cast v8, Lqk0;
 
-    iget-object v0, p0, Lf78;->o:Ljava/lang/Object;
+    iget-object v3, v8, Lqk0;->c:Ld0c;
 
-    if-eqz v0, :cond_0
+    iget-object v7, v8, Lqk0;->a:Lab7;
 
-    move-object p1, v0
+    const-string v0, "local"
 
-    :cond_0
-    iget-object p0, p0, Ll76;->b:Lo6f;
+    const-string v2, "video"
 
-    invoke-virtual {p0, p1}, Lo6f;->b(Ljava/lang/Object;)I
+    invoke-virtual {v8, v0, v2}, Lqk0;->h(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result p0
+    new-instance v0, Lt58;
 
-    return p0
-.end method
+    move-object v5, v3
 
-.method public final f(ILj6f;Z)Lj6f;
-    .locals 1
+    move-object v6, p2
 
-    iget-object v0, p0, Ll76;->b:Lo6f;
+    move-object v1, p0
 
-    invoke-virtual {v0, p1, p2, p3}, Lo6f;->f(ILj6f;Z)Lj6f;
+    move-object v2, p1
 
-    iget-object p1, p2, Lj6f;->b:Ljava/lang/Object;
+    move-object v4, p2
 
-    iget-object p0, p0, Lf78;->o:Ljava/lang/Object;
+    invoke-direct/range {v0 .. v7}, Lt58;-><init>(Lf78;Ljj0;Ld0c;La0c;Ld0c;La0c;Lab7;)V
 
-    invoke-static {p1, p0}, Llrf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v2, Laf4;
 
-    move-result p0
+    const/4 v3, 0x5
 
-    if-eqz p0, :cond_0
+    invoke-direct {v2, v3, v0}, Laf4;-><init>(ILjava/lang/Object;)V
 
-    if-eqz p3, :cond_0
+    invoke-virtual {v8, v2}, Lqk0;->a(Lrk0;)V
 
-    sget-object p0, Lf78;->X:Ljava/lang/Object;
+    iget-object v2, p0, Lf78;->b:Ljava/util/concurrent/Executor;
 
-    iput-object p0, p2, Lj6f;->b:Ljava/lang/Object;
+    invoke-interface {v2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    :cond_0
-    return-object p2
-.end method
+    return-void
 
-.method public final l(I)Ljava/lang/Object;
-    .locals 1
+    :pswitch_0
+    move-object v9, p2
 
-    iget-object v0, p0, Ll76;->b:Lo6f;
+    check-cast v9, Lqk0;
 
-    invoke-virtual {v0, p1}, Lo6f;->l(I)Ljava/lang/Object;
+    iget-object v3, v9, Lqk0;->c:Ld0c;
 
-    move-result-object p1
+    iget-object v7, v9, Lqk0;->a:Lab7;
 
-    iget-object p0, p0, Lf78;->o:Ljava/lang/Object;
+    const-string v0, "local"
 
-    invoke-static {p1, p0}, Llrf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v2, "thumbnail_bitmap"
 
-    move-result p0
+    invoke-virtual {v9, v0, v2}, Lqk0;->h(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz p0, :cond_0
+    new-instance v8, Landroid/os/CancellationSignal;
 
-    sget-object p0, Lf78;->X:Ljava/lang/Object;
+    invoke-direct {v8}, Landroid/os/CancellationSignal;-><init>()V
 
-    return-object p0
+    new-instance v0, Le78;
 
-    :cond_0
-    return-object p1
-.end method
+    move-object v5, v3
 
-.method public final m(ILm6f;J)Lm6f;
-    .locals 1
+    move-object v6, p2
 
-    iget-object v0, p0, Ll76;->b:Lo6f;
+    move-object v1, p0
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lo6f;->m(ILm6f;J)Lm6f;
+    move-object v2, p1
 
-    iget-object p1, p2, Lm6f;->a:Ljava/lang/Object;
+    move-object v4, p2
 
-    iget-object p0, p0, Lf78;->c:Ljava/lang/Object;
+    invoke-direct/range {v0 .. v8}, Le78;-><init>(Lf78;Ljj0;Ld0c;La0c;Ld0c;La0c;Lab7;Landroid/os/CancellationSignal;)V
 
-    invoke-static {p1, p0}, Llrf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v2, Laf4;
 
-    move-result p0
+    const/4 v3, 0x4
 
-    if-eqz p0, :cond_0
+    invoke-direct {v2, v3, v0}, Laf4;-><init>(ILjava/lang/Object;)V
 
-    sget-object p0, Lm6f;->B0:Ljava/lang/Object;
+    invoke-virtual {v9, v2}, Lqk0;->a(Lrk0;)V
 
-    iput-object p0, p2, Lm6f;->a:Ljava/lang/Object;
+    iget-object v2, p0, Lf78;->b:Ljava/util/concurrent/Executor;
 
-    :cond_0
-    return-object p2
+    invoke-interface {v2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

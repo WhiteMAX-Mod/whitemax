@@ -35,43 +35,43 @@
 
 # virtual methods
 .method public getSum()I
-    .locals 8
+    .locals 9
 
-    iget-object p0, p0, Lorg/webrtc/VideoEncoder$BitrateAllocation;->bitratesBbs:[[I
+    iget-object v0, p0, Lorg/webrtc/VideoEncoder$BitrateAllocation;->bitratesBbs:[[I
 
-    array-length v0, p0
+    array-length v1, v0
 
-    const/4 v1, 0x0
-
-    move v2, v1
+    const/4 v2, 0x0
 
     move v3, v2
 
+    move v4, v3
+
     :goto_0
-    if-ge v2, v0, :cond_1
+    if-ge v3, v1, :cond_1
 
-    aget-object v4, p0, v2
+    aget-object v5, v0, v3
 
-    array-length v5, v4
+    array-length v6, v5
 
-    move v6, v1
+    move v7, v2
 
     :goto_1
-    if-ge v6, v5, :cond_0
+    if-ge v7, v6, :cond_0
 
-    aget v7, v4, v6
+    aget v8, v5, v7
 
-    add-int/2addr v3, v7
+    add-int/2addr v4, v8
 
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_1
-    return v3
+    return v4
 .end method

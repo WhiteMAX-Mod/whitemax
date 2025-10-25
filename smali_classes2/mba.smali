@@ -1,80 +1,55 @@
 .class public final Lmba;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:J
+.field public X:Lda9;
 
-.field public final synthetic a:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic b:Loba;
+.field public final synthetic Z:Lnba;
 
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+.field public o:Lnba;
 
-.field public final synthetic o:Ljava/lang/Runnable;
+.field public q0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Loba;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
+.method public constructor <init>(Lnba;Ly14;)V
     .locals 0
 
-    iput p6, p0, Lmba;->a:I
+    iput-object p1, p0, Lmba;->Z:Lnba;
 
-    iput-object p1, p0, Lmba;->b:Loba;
-
-    iput-object p2, p0, Lmba;->c:Landroid/graphics/drawable/Drawable;
-
-    iput-object p3, p0, Lmba;->o:Ljava/lang/Runnable;
-
-    iput-wide p4, p0, Lmba;->X:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lmba;->a:I
+    iput-object p1, p0, Lmba;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lmba;->q0:I
 
-    iget-object v0, p0, Lmba;->o:Ljava/lang/Runnable;
+    const/high16 v0, -0x80000000
 
-    iget-wide v1, p0, Lmba;->X:J
+    or-int/2addr p1, v0
 
-    iget-object v3, p0, Lmba;->b:Loba;
+    iput p1, p0, Lmba;->q0:I
 
-    iget-object p0, p0, Lmba;->c:Landroid/graphics/drawable/Drawable;
+    const-wide/16 v0, 0x0
 
-    invoke-static {v3, p0, v0, v1, v2}, Loba;->c(Loba;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    const/4 p1, 0x0
 
-    return-void
+    iget-object v2, p0, Lmba;->Z:Lnba;
 
-    :pswitch_0
-    iget-object v0, p0, Lmba;->o:Ljava/lang/Runnable;
+    invoke-static {v2, v0, v1, p1, p0}, Lnba;->a(Lnba;JLda9;Ly14;)Ljava/lang/Object;
 
-    iget-wide v1, p0, Lmba;->X:J
+    move-result-object p1
 
-    iget-object v3, p0, Lmba;->b:Loba;
-
-    iget-object p0, p0, Lmba;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v3, p0, v0, v1, v2}, Loba;->c(Loba;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

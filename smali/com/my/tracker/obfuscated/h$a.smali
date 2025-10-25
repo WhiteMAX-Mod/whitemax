@@ -62,7 +62,7 @@
 
 # virtual methods
 .method public a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
-    .locals 1
+    .locals 2
 
     .line 1
     monitor-enter p0
@@ -87,9 +87,9 @@
     .line 4
     new-instance v0, Lcom/my/tracker/obfuscated/h$a$a;
 
-    const/4 p0, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {v0, p0}, Lcom/my/tracker/obfuscated/h$a$a;-><init>(Lcom/my/tracker/obfuscated/h$a;)V
+    invoke-direct {v0, v1}, Lcom/my/tracker/obfuscated/h$a$a;-><init>(Lcom/my/tracker/obfuscated/h$a;)V
 
     .line 5
     :cond_0

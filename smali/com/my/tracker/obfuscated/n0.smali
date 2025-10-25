@@ -70,22 +70,22 @@
 
 # virtual methods
 .method public a()Lcom/my/tracker/obfuscated/b;
-    .locals 3
+    .locals 4
 
     .line 8
     new-instance v0, Lcom/my/tracker/obfuscated/n0$a;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/n0;->a:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/my/tracker/obfuscated/n0;->a:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string v1, "SELECT id, data FROM table_partial_proto_packet ORDER BY ts"
+    const-string v2, "SELECT id, data FROM table_partial_proto_packet ORDER BY ts"
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-virtual {p0, v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-direct {v0, p0}, Lcom/my/tracker/obfuscated/n0$a;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {v0, v1}, Lcom/my/tracker/obfuscated/n0$a;-><init>(Landroid/database/Cursor;)V
 
     return-object v0
 .end method
@@ -101,9 +101,9 @@
     invoke-virtual {v0, v1, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
     .line 10
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/n0;->d:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/n0;->d:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
 
     return-void
 .end method
@@ -139,18 +139,18 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 6
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/n0;->c:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/n0;->c:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
 
     return-void
 
     :catchall_0
     move-exception p1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/n0;->c:Landroid/database/sqlite/SQLiteStatement;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/n0;->c:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
 
     .line 7
     throw p1
@@ -165,9 +165,9 @@
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/n0;->b:Landroid/database/sqlite/SQLiteStatement;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/n0;->b:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
 
     return-void
 .end method

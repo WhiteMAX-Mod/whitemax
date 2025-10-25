@@ -1,485 +1,215 @@
 .class public final Lbre;
-.super Ljava/lang/Object;
+.super Lak0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final X:[F
+.field public A0:Z
 
-.field public Y:Lsm3;
+.field public final x0:I
 
-.field public Z:Ljava/util/concurrent/Executor;
+.field public final y0:Lmb6;
 
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Landroid/view/Surface;
-
-.field public final c:I
-
-.field public final o:Landroid/util/Size;
-
-.field public r0:Z
-
-.field public s0:Z
-
-.field public final t0:Lts1;
-
-.field public u0:Lqs1;
+.field public z0:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/Surface;ILandroid/util/Size;Ldb0;Ldb0;)V
-    .locals 5
+.method public constructor <init>(Lfc4;Lmc4;Lmb6;ILjava/lang/Object;JJJILmb6;)V
+    .locals 16
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide v10, -0x7fffffffffffffffL    # -4.9E-324
 
-    new-instance v0, Ljava/lang/Object;
+    const-wide v12, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v0, p0
 
-    iput-object v0, p0, Lbre;->a:Ljava/lang/Object;
+    move-object/from16 v1, p1
 
-    const/16 v0, 0x10
+    move-object/from16 v2, p2
 
-    new-array v1, v0, [F
+    move-object/from16 v3, p3
 
-    iput-object v1, p0, Lbre;->X:[F
+    move/from16 v4, p4
 
-    new-array v2, v0, [F
+    move-object/from16 v5, p5
 
-    new-array v3, v0, [F
+    move-wide/from16 v6, p6
 
-    new-array v0, v0, [F
+    move-wide/from16 v8, p8
 
-    const/4 v4, 0x0
+    move-wide/from16 v14, p10
 
-    iput-boolean v4, p0, Lbre;->r0:Z
+    invoke-direct/range {v0 .. v15}, Lak0;-><init>(Lfc4;Lmc4;Lmb6;ILjava/lang/Object;JJJJJ)V
 
-    iput-boolean v4, p0, Lbre;->s0:Z
+    move/from16 v1, p12
 
-    iput-object p1, p0, Lbre;->b:Landroid/view/Surface;
+    iput v1, v0, Lbre;->x0:I
 
-    iput p2, p0, Lbre;->c:I
+    move-object/from16 v1, p13
 
-    iput-object p3, p0, Lbre;->o:Landroid/util/Size;
-
-    invoke-static {v1, v3, p4}, Lbre;->c([F[FLdb0;)V
-
-    invoke-static {v2, v0, p5}, Lbre;->c([F[FLdb0;)V
-
-    new-instance p1, Lvpc;
-
-    const/16 p2, 0x1c
-
-    invoke-direct {p1, p2, p0}, Lvpc;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p1}, Lf54;->l(Lrs1;)Lts1;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lbre;->t0:Lts1;
-
-    return-void
-.end method
-
-.method public static c([F[FLdb0;)V
-    .locals 13
-
-    const/4 v0, 0x0
-
-    invoke-static {p0, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v1, p2, Ldb0;->a:Landroid/util/Size;
-
-    iget-boolean v2, p2, Ldb0;->e:Z
-
-    iget v3, p2, Ldb0;->d:I
-
-    invoke-static {p0}, Lgy7;->E([F)V
-
-    int-to-float v4, v3
-
-    invoke-static {p0, v4}, Lgy7;->D([FF)V
-
-    const/high16 v4, -0x40800000    # -1.0f
-
-    const/4 v5, 0x0
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    if-eqz v2, :cond_1
-
-    invoke-static {p0, v0, v6, v5, v5}, Landroid/opengl/Matrix;->translateM([FIFFF)V
-
-    invoke-static {p0, v0, v4, v6, v6}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
-
-    :cond_1
-    invoke-static {v1, v3}, Lldf;->f(Landroid/util/Size;I)Landroid/util/Size;
-
-    move-result-object v7
-
-    new-instance v8, Landroid/graphics/RectF;
-
-    int-to-float v9, v0
-
-    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
-
-    move-result v10
-
-    int-to-float v10, v10
-
-    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    invoke-direct {v8, v9, v9, v10, v1}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    new-instance v1, Landroid/graphics/RectF;
-
-    invoke-virtual {v7}, Landroid/util/Size;->getWidth()I
-
-    move-result v10
-
-    int-to-float v10, v10
-
-    invoke-virtual {v7}, Landroid/util/Size;->getHeight()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    invoke-direct {v1, v9, v9, v10, v11}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    invoke-static {v8, v1, v3, v2}, Lldf;->a(Landroid/graphics/RectF;Landroid/graphics/RectF;IZ)Landroid/graphics/Matrix;
-
-    move-result-object v1
-
-    new-instance v2, Landroid/graphics/RectF;
-
-    iget-object v3, p2, Ldb0;->b:Landroid/graphics/Rect;
-
-    invoke-direct {v2, v3}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    iget v1, v2, Landroid/graphics/RectF;->left:F
-
-    invoke-virtual {v7}, Landroid/util/Size;->getWidth()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    div-float/2addr v1, v3
-
-    invoke-virtual {v7}, Landroid/util/Size;->getHeight()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    invoke-virtual {v2}, Landroid/graphics/RectF;->height()F
-
-    move-result v8
-
-    sub-float/2addr v3, v8
-
-    iget v8, v2, Landroid/graphics/RectF;->top:F
-
-    sub-float/2addr v3, v8
-
-    invoke-virtual {v7}, Landroid/util/Size;->getHeight()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    div-float/2addr v3, v8
-
-    invoke-virtual {v2}, Landroid/graphics/RectF;->width()F
-
-    move-result v8
-
-    invoke-virtual {v7}, Landroid/util/Size;->getWidth()I
-
-    move-result v9
-
-    int-to-float v9, v9
-
-    div-float/2addr v8, v9
-
-    invoke-virtual {v2}, Landroid/graphics/RectF;->height()F
-
-    move-result v2
-
-    invoke-virtual {v7}, Landroid/util/Size;->getHeight()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    div-float/2addr v2, v7
-
-    invoke-static {p0, v0, v1, v3, v5}, Landroid/opengl/Matrix;->translateM([FIFFF)V
-
-    invoke-static {p0, v0, v8, v2, v6}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
-
-    iget-object p2, p2, Ldb0;->c:Loz1;
-
-    invoke-static {p1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
-
-    invoke-static {p1}, Lgy7;->E([F)V
-
-    if-eqz p2, :cond_2
-
-    invoke-interface {p2}, Loz1;->l()Z
-
-    move-result v1
-
-    const-string v2, "Camera has no transform."
-
-    invoke-static {v2, v1}, Ln4e;->n(Ljava/lang/String;Z)V
-
-    invoke-interface {p2}, Loz1;->n()Lmz1;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lmz1;->b()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    invoke-static {p1, v1}, Lgy7;->D([FF)V
-
-    invoke-interface {p2}, Loz1;->n()Lmz1;
-
-    move-result-object p2
-
-    invoke-interface {p2}, Lmz1;->h()I
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    invoke-static {p1, v0, v6, v5, v5}, Landroid/opengl/Matrix;->translateM([FIFFF)V
-
-    invoke-static {p1, v0, v4, v6, v6}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
-
-    :cond_2
-    invoke-static {p1, v0, p1, v0}, Landroid/opengl/Matrix;->invertM([FI[FI)Z
-
-    const/4 v10, 0x0
-
-    const/4 v12, 0x0
-
-    const/4 v8, 0x0
-
-    move-object v11, p0
-
-    move-object v7, p0
-
-    move-object v9, p1
-
-    invoke-static/range {v7 .. v12}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
+    iput-object v1, v0, Lbre;->y0:Lmb6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 2
-
-    iget-object v0, p0, Lbre;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lbre;->s0:Z
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lbre;->s0:Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object p0, p0, Lbre;->u0:Lqs1;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lqs1;->b(Ljava/lang/Object;)Z
+.method public final a()V
+    .locals 0
 
     return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
 .end method
 
-.method public final d(Lxo6;Lsm3;)Landroid/view/Surface;
+.method public final c()Z
     .locals 1
 
-    iget-object v0, p0, Lbre;->a:Ljava/lang/Object;
+    iget-boolean v0, p0, Lbre;->A0:Z
 
-    monitor-enter v0
-
-    :try_start_0
-    iput-object p1, p0, Lbre;->Z:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Lbre;->Y:Lsm3;
-
-    iget-boolean p1, p0, Lbre;->r0:Z
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lbre;->m()V
-
-    :cond_0
-    iget-object p0, p0, Lbre;->b:Landroid/view/Surface;
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
+    return v0
 .end method
 
-.method public final m()V
-    .locals 4
+.method public final load()V
+    .locals 14
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v1, p0, Li63;->r0:Le2f;
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iget-object v0, p0, Lak0;->v0:Lu1f;
 
-    iget-object v1, p0, Lbre;->a:Ljava/lang/Object;
+    invoke-static {v0}, Lsgi;->j(Ljava/lang/Object;)V
 
-    monitor-enter v1
+    iget-object v2, v0, Lu1f;->c:Ljava/lang/Object;
 
-    :try_start_0
-    iget-object v2, p0, Lbre;->Z:Ljava/util/concurrent/Executor;
+    check-cast v2, [Lvld;
 
-    if-eqz v2, :cond_1
+    array-length v3, v2
 
-    iget-object v2, p0, Lbre;->Y:Lsm3;
+    const/4 v4, 0x0
 
-    if-nez v2, :cond_0
+    move v5, v4
+
+    :goto_0
+    const/4 v6, 0x1
+
+    if-ge v5, v3, :cond_1
+
+    aget-object v7, v2, v5
+
+    iget-wide v8, v7, Lvld;->F:J
+
+    const-wide/16 v10, 0x0
+
+    cmp-long v8, v8, v10
+
+    if-eqz v8, :cond_0
+
+    iput-wide v10, v7, Lvld;->F:J
+
+    iput-boolean v6, v7, Lvld;->z:Z
+
+    :cond_0
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    :cond_0
-    iget-boolean v3, p0, Lbre;->s0:Z
+    :cond_1
+    iget v2, p0, Lbre;->x0:I
 
-    if-nez v3, :cond_2
+    invoke-virtual {v0, v2}, Lu1f;->E(I)Lw1g;
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    move-result-object v7
 
-    iget-object v2, p0, Lbre;->Z:Ljava/util/concurrent/Executor;
+    iget-object v0, p0, Lbre;->y0:Lmb6;
 
-    const/4 v3, 0x0
+    invoke-interface {v7, v0}, Lw1g;->d(Lmb6;)V
 
-    iput-boolean v3, p0, Lbre;->r0:Z
+    :try_start_0
+    iget-object v0, p0, Li63;->b:Lmc4;
+
+    iget-wide v2, p0, Lbre;->z0:J
+
+    invoke-virtual {v0, v2, v3}, Lmc4;->c(J)Lmc4;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Le2f;->H(Lmc4;)J
+
+    move-result-wide v2
+
+    const-wide/16 v8, -0x1
+
+    cmp-long v0, v2, v8
+
+    if-eqz v0, :cond_2
+
+    iget-wide v8, p0, Lbre;->z0:J
+
+    add-long/2addr v2, v8
+
+    :cond_2
+    move-wide v12, v2
 
     goto :goto_1
 
     :catchall_0
-    move-exception p0
+    move-exception v0
+
+    goto :goto_3
+
+    :goto_1
+    new-instance v8, Ldk4;
+
+    iget-object v9, p0, Li63;->r0:Le2f;
+
+    iget-wide v10, p0, Lbre;->z0:J
+
+    invoke-direct/range {v8 .. v13}, Ldk4;-><init>(Lyb4;JJ)V
+
+    :goto_2
+    const/4 v0, -0x1
+
+    if-eq v4, v0, :cond_3
+
+    iget-wide v2, p0, Lbre;->z0:J
+
+    int-to-long v4, v4
+
+    add-long/2addr v2, v4
+
+    iput-wide v2, p0, Lbre;->z0:J
+
+    const v0, 0x7fffffff
+
+    invoke-interface {v7, v8, v0, v6}, Lw1g;->c(Lyb4;IZ)I
+
+    move-result v4
 
     goto :goto_2
 
-    :cond_1
-    :goto_0
-    const/4 v2, 0x1
+    :cond_3
+    iget-wide v2, p0, Lbre;->z0:J
 
-    iput-boolean v2, p0, Lbre;->r0:Z
+    long-to-int v11, v2
 
-    :cond_2
-    const/4 v2, 0x0
+    iget-wide v8, p0, Li63;->Z:J
 
-    :goto_1
-    monitor-exit v1
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v10, 0x1
+
+    invoke-interface/range {v7 .. v13}, Lw1g;->a(JIIILu1g;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v2, :cond_3
+    invoke-static {v1}, Lzxi;->a(Lfc4;)V
 
-    :try_start_1
-    new-instance v1, Lz5e;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, p0, v3, v0}, Lz5e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {v2, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_0
-
-    :catch_0
-    :cond_3
-    return-void
-
-    :goto_2
-    :try_start_2
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p0
-.end method
-
-.method public final n([F[F)V
-    .locals 6
-
-    iget-object v4, p0, Lbre;->X:[F
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v0, p1
-
-    move-object v2, p2
-
-    invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
+    iput-boolean v6, p0, Lbre;->A0:Z
 
     return-void
+
+    :goto_3
+    invoke-static {v1}, Lzxi;->a(Lfc4;)V
+
+    throw v0
 .end method

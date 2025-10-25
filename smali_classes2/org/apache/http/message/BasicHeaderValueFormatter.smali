@@ -319,22 +319,22 @@
 .end method
 
 .method public estimateNameValuePairLen(Lorg/apache/http/NameValuePair;)I
-    .locals 0
+    .locals 1
 
     if-nez p1, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_0
     invoke-interface {p1}, Lorg/apache/http/NameValuePair;->getName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result p0
+    move-result v0
 
     invoke-interface {p1}, Lorg/apache/http/NameValuePair;->getValue()Ljava/lang/String;
 
@@ -348,12 +348,12 @@
 
     add-int/lit8 p1, p1, 0x3
 
-    add-int/2addr p1, p0
+    add-int/2addr p1, v0
 
     return p1
 
     :cond_1
-    return p0
+    return v0
 .end method
 
 .method public estimateParametersLen([Lorg/apache/http/NameValuePair;)I
@@ -457,13 +457,13 @@
 
     .line 9
     :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Header element array must not be null."
+    const-string p2, "Header element array must not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public formatHeaderElement(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/HeaderElement;Z)Lorg/apache/http/util/CharArrayBuffer;
@@ -546,13 +546,13 @@
 
     .line 13
     :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Header element must not be null."
+    const-string p2, "Header element must not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public formatNameValuePair(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/NameValuePair;Z)Lorg/apache/http/util/CharArrayBuffer;
@@ -606,13 +606,13 @@
 
     .line 10
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "NameValuePair must not be null."
+    const-string p2, "NameValuePair must not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public formatParameters(Lorg/apache/http/util/CharArrayBuffer;[Lorg/apache/http/NameValuePair;Z)Lorg/apache/http/util/CharArrayBuffer;
@@ -669,53 +669,53 @@
 
     .line 9
     :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Parameters must not be null."
+    const-string p2, "Parameters must not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public isSeparator(C)Z
-    .locals 0
+    .locals 1
 
-    const-string p0, " ;,:@()<>\\\"/[]?={}\t"
+    const-string v0, " ;,:@()<>\\\"/[]?={}\t"
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {v0, p1}, Ljava/lang/String;->indexOf(I)I
 
-    move-result p0
+    move-result p1
 
-    if-ltz p0, :cond_0
+    if-ltz p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public isUnsafe(C)Z
-    .locals 0
+    .locals 1
 
-    const-string p0, "\"\\"
+    const-string v0, "\"\\"
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {v0, p1}, Ljava/lang/String;->indexOf(I)I
 
-    move-result p0
+    move-result p1
 
-    if-ltz p0, :cond_0
+    if-ltz p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method

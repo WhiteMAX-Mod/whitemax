@@ -14,19 +14,19 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;",
         "Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;",
-        "Lty0;",
+        "Lh01;",
         "call",
         "<init>",
-        "(Lty0;)V",
+        "(Lh01;)V",
         "",
         "enabled",
         "isFastScreenShareEnabled",
-        "Lylf;",
+        "Lccg;",
         "setScreenCaptureEnabled",
         "(ZZ)V",
         "setAudioCaptureEnabled",
         "(Z)V",
-        "Lty0;",
+        "Lh01;",
         "isScreenCaptureEnabled",
         "()Z",
         "calls-sdk_release"
@@ -42,16 +42,16 @@
 
 
 # instance fields
-.field private final call:Lty0;
+.field private final call:Lh01;
 
 
 # direct methods
-.method public constructor <init>(Lty0;)V
+.method public constructor <init>(Lh01;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;->call:Lty0;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;->call:Lh01;
 
     return-void
 .end method
@@ -59,168 +59,172 @@
 
 # virtual methods
 .method public isScreenCaptureEnabled()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;->call:Lty0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;->call:Lh01;
 
-    iget-object p0, p0, Lty0;->n0:Leo9;
+    iget-object v0, v0, Lh01;->t0:Lw0a;
 
-    iget-boolean p0, p0, Leo9;->b:Z
+    iget-boolean v0, v0, Lw0a;->b:Z
 
-    return p0
+    return v0
 .end method
 
 .method public setAudioCaptureEnabled(Z)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;->call:Lty0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;->call:Lh01;
 
-    invoke-virtual {p0, p1}, Lty0;->D(Z)V
+    invoke-virtual {v0, p1}, Lh01;->E(Z)V
 
     return-void
 .end method
 
 .method public setScreenCaptureEnabled(ZZ)V
-    .locals 9
+    .locals 10
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;->call:Lty0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;->call:Lh01;
 
-    iget-object v0, p0, Lty0;->n0:Leo9;
+    iget-object v1, v0, Lh01;->t0:Lw0a;
 
-    invoke-virtual {p0}, Lty0;->i()Z
+    invoke-virtual {v0}, Lh01;->j()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
     goto/16 :goto_1
 
     :cond_0
-    invoke-virtual {p0}, Lty0;->i()Z
+    invoke-virtual {v0}, Lh01;->j()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_1
+    if-nez v2, :cond_1
 
     goto/16 :goto_1
 
     :cond_1
     if-eqz p1, :cond_2
 
-    const-string v1, "rtc.screencapture.enabled"
+    const-string v2, "rtc.screencapture.enabled"
 
-    invoke-virtual {p0, v1}, Lty0;->v(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lh01;->x(Ljava/lang/String;)V
 
     :cond_2
-    iget-object v1, p0, Lty0;->A0:Lwd1;
+    iget-object v2, v0, Lh01;->H0:Lgf1;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     if-eqz p1, :cond_3
 
-    new-instance v2, Lys1;
+    new-instance v3, Lbw;
 
-    iget-object v6, v1, Lwd1;->h:Lco9;
+    iget-object v7, v2, Lgf1;->i:Lu0a;
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    const/4 v4, 0x2
+    const/16 v5, 0xc
 
-    const-class v5, Lco9;
+    const-class v6, Lu0a;
 
-    const-string v7, "screenshareState"
+    const-string v8, "screenshareState"
 
-    const-string v8, "getScreenshareState()Lru/ok/android/webrtc/media_options/MediaOptionState;"
+    const-string v9, "getScreenshareState()Lru/ok/android/webrtc/media_options/MediaOptionState;"
 
-    invoke-direct/range {v2 .. v8}, Lys1;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v3 .. v9}, Lbw;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lwd1;->d(Llo9;)Z
+    invoke-static {v3}, Lgf1;->d(Ld1a;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_a
+    if-eqz v2, :cond_a
 
     :cond_3
-    iget-boolean v1, v0, Leo9;->b:Z
+    iget-boolean v2, v1, Lw0a;->b:Z
 
-    if-eq v1, p1, :cond_4
+    if-eq v2, p1, :cond_4
 
-    iput-boolean p1, v0, Leo9;->b:Z
+    iput-boolean p1, v1, Lw0a;->b:Z
 
-    iput-boolean p2, v0, Leo9;->c:Z
+    iput-boolean p2, v1, Lw0a;->c:Z
 
-    invoke-virtual {v0}, Leo9;->a()V
+    invoke-virtual {v1}, Lw0a;->a()V
 
-    invoke-virtual {p0}, Lty0;->x()V
+    invoke-virtual {v0}, Lh01;->J()V
 
-    sget-object p2, Lg61;->X:Lg61;
+    sget-object p2, Li71;->X:Li71;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p2, v1}, Lty0;->k(Lg61;Ljava/lang/Object;)V
+    invoke-virtual {v0, p2, v2}, Lh01;->l(Li71;Ljava/lang/Object;)V
 
     :cond_4
-    iget-object p2, p0, Lty0;->i0:Lbq1;
+    iget-object p2, v0, Lh01;->n0:Lpr1;
 
     if-nez p2, :cond_5
 
     goto :goto_1
 
     :cond_5
-    iget-boolean v0, v0, Leo9;->b:Z
+    iget-boolean v1, v1, Lw0a;->b:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v1, :cond_6
 
-    iget-boolean v0, p0, Lty0;->S0:Z
+    iget-boolean v1, v0, Lh01;->Z0:Z
 
-    if-nez v0, :cond_6
+    if-nez v1, :cond_6
 
-    iget-object v0, p0, Lty0;->a1:Ld1b;
+    iget-object v1, v0, Lh01;->h1:Lggb;
 
     goto :goto_0
 
     :cond_6
-    iget-object v0, p0, Lty0;->b1:Ld1b;
+    iget-object v1, v0, Lh01;->i1:Lggb;
 
     :goto_0
-    if-nez v0, :cond_7
+    if-nez v1, :cond_7
 
     goto :goto_1
 
     :cond_7
-    invoke-virtual {p2}, Lbq1;->I()Z
+    invoke-virtual {p2}, Lpr1;->F()Z
 
     move-result p2
 
     if-eqz p2, :cond_8
 
-    iget-object p2, p0, Lty0;->i0:Lbq1;
+    iget-object p2, v0, Lh01;->n0:Lpr1;
 
-    iput-object v0, p2, Lbq1;->q:Ld1b;
+    iput-object v1, p2, Lpr1;->r:Lggb;
 
-    iget-object p2, p2, Lbq1;->m:Lna8;
+    iget-object p2, p2, Lpr1;->m:Lhl8;
 
     if-eqz p2, :cond_a
 
-    invoke-virtual {p2, v0}, Lna8;->c(Ld1b;)V
+    iput-object v1, p2, Lhl8;->f:Lggb;
+
+    invoke-virtual {p2}, Lhl8;->c()V
 
     goto :goto_1
 
     :cond_8
-    iget-object p2, p0, Lty0;->i0:Lbq1;
+    iget-object p2, v0, Lh01;->n0:Lpr1;
 
-    iput-object v0, p2, Lbq1;->q:Ld1b;
+    iput-object v1, p2, Lpr1;->r:Lggb;
 
-    iget-object v1, p2, Lbq1;->m:Lna8;
+    iget-object v2, p2, Lpr1;->m:Lhl8;
 
-    if-eqz v1, :cond_9
+    if-eqz v2, :cond_9
 
-    invoke-virtual {v1, v0}, Lna8;->c(Ld1b;)V
+    iput-object v1, v2, Lhl8;->f:Lggb;
+
+    invoke-virtual {v2}, Lhl8;->c()V
 
     goto :goto_1
 
     :cond_9
-    invoke-virtual {p2, v0}, Lbq1;->U(Ld1b;)V
+    invoke-virtual {p2, v1}, Lpr1;->R(Lggb;)V
 
     :cond_a
     :goto_1
@@ -228,7 +232,7 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Lty0;->D(Z)V
+    invoke-virtual {v0, p1}, Lh01;->E(Z)V
 
     :cond_b
     return-void

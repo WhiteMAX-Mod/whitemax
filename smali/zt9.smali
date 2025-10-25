@@ -1,121 +1,269 @@
-.class public abstract Lzt9;
-.super Ljava/lang/Object;
+.class public final Lzt9;
+.super Le87;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/String;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzt9;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final X:[I
+
+.field public final Y:[I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final o:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const-string v0, "NetworkStateTracker"
+    new-instance v0, Lvk8;
 
-    invoke-static {v0}, Lmq0;->M(Ljava/lang/String;)Ljava/lang/String;
+    const/16 v1, 0xa
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
 
-    sput-object v0, Lzt9;->a:Ljava/lang/String;
+    sput-object v0, Lzt9;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static final a(Landroid/net/ConnectivityManager;)Lxt9;
-    .locals 8
+.method public constructor <init>(III[I[I)V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+    .line 1
+    const-string v0, "MLLT"
 
-    move-result-object v0
+    invoke-direct {p0, v0}, Le87;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x1
+    .line 2
+    iput p1, p0, Lzt9;->b:I
 
-    const/4 v2, 0x0
+    .line 3
+    iput p2, p0, Lzt9;->c:I
 
-    if-eqz v0, :cond_0
+    .line 4
+    iput p3, p0, Lzt9;->o:I
 
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
+    .line 5
+    iput-object p4, p0, Lzt9;->X:[I
 
-    move-result v3
+    .line 6
+    iput-object p5, p0, Lzt9;->Y:[I
 
-    if-eqz v3, :cond_0
+    return-void
+.end method
 
-    move v3, v1
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
 
-    goto :goto_0
+    .line 7
+    const-string v0, "MLLT"
 
-    :cond_0
-    move v3, v2
+    invoke-direct {p0, v0}, Le87;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    :try_start_0
-    invoke-static {p0}, Lpt9;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
-
-    move-result-object v4
-
-    invoke-static {p0, v4}, Lot9;->a(Landroid/net/ConnectivityManager;Landroid/net/Network;)Landroid/net/NetworkCapabilities;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_1
-
-    const/16 v5, 0x10
-
-    invoke-static {v4, v5}, Lot9;->b(Landroid/net/NetworkCapabilities;I)Z
-
-    move-result v4
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_3
-
-    :catch_0
-    move-exception v4
-
-    goto :goto_2
-
-    :cond_1
-    :goto_1
-    move v4, v2
-
-    goto :goto_3
-
-    :goto_2
-    invoke-static {}, Lmq0;->w()Lmq0;
-
-    move-result-object v5
-
-    sget-object v6, Lzt9;->a:Ljava/lang/String;
-
-    const-string v7, "Unable to validate active network"
-
-    invoke-virtual {v5, v6, v7, v4}, Lmq0;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :goto_3
-    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
-
-    move-result p0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isRoaming()Z
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    if-nez v0, :cond_2
+    iput v0, p0, Lzt9;->b:I
 
-    goto :goto_4
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lzt9;->c:I
+
+    .line 10
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lzt9;->o:I
+
+    .line 11
+    invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object v0
+
+    sget v1, Llig;->a:I
+
+    iput-object v0, p0, Lzt9;->X:[I
+
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object p1
+
+    iput-object p1, p0, Lzt9;->Y:[I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lzt9;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lzt9;
+
+    iget v2, p0, Lzt9;->b:I
+
+    iget v3, p1, Lzt9;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lzt9;->c:I
+
+    iget v3, p1, Lzt9;->c:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lzt9;->o:I
+
+    iget v3, p1, Lzt9;->o:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lzt9;->X:[I
+
+    iget-object v3, p1, Lzt9;->X:[I
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lzt9;->Y:[I
+
+    iget-object p1, p1, Lzt9;->Y:[I
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([I[I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
 
     :cond_2
-    move v1, v2
+    :goto_0
+    return v1
+.end method
 
-    :goto_4
-    new-instance v0, Lxt9;
+.method public final hashCode()I
+    .locals 2
 
-    invoke-direct {v0, v3, v4, p0, v1}, Lxt9;-><init>(ZZZZ)V
+    const/16 v0, 0x20f
 
-    return-object v0
+    iget v1, p0, Lzt9;->b:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lzt9;->c:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lzt9;->o:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lzt9;->X:[I
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lzt9;->Y:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lzt9;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lzt9;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lzt9;->o:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lzt9;->X:[I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    iget-object p2, p0, Lzt9;->Y:[I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    return-void
 .end method

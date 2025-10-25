@@ -11,7 +11,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "ExternalId",
-        "Lsg1;",
+        "Lhi1;",
         "InternalId",
         "calls-sdk_release"
     }

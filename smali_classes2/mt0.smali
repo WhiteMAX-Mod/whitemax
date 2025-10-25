@@ -1,417 +1,123 @@
-.class public final Lmt0;
+.class public final synthetic Lmt0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final g:Lzte;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:F
 
-.field public final c:Lgt0;
-
-.field public final d:Ljava/lang/String;
-
-.field public e:Ljava/nio/ByteBuffer;
-
-.field public f:I
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lm;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Lm;-><init>(I)V
-
-    new-instance v1, Lzte;
-
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
-
-    sput-object v1, Lmt0;->g:Lzte;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ZLgt0;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;FI)V
     .locals 0
 
+    iput p3, p0, Lmt0;->a:I
+
+    iput-object p1, p0, Lmt0;->c:Ljava/lang/Object;
+
+    iput p2, p0, Lmt0;->b:F
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmt0;->a:Ljava/lang/String;
-
-    iput-boolean p2, p0, Lmt0;->b:Z
-
-    iput-object p3, p0, Lmt0;->c:Lgt0;
-
-    const-class p2, Lmt0;
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string p3, "/"
-
-    invoke-static {p2, p3, p1}, Lsq3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmt0;->d:Ljava/lang/String;
-
-    const/16 p1, 0x1000
-
-    iput p1, p0, Lmt0;->f:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 2
-
-    iget-object v0, p0, Lmt0;->e:Ljava/nio/ByteBuffer;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lmt0;->c:Lgt0;
-
-    invoke-virtual {p0}, Lmt0;->e()Ljava/nio/ByteBuffer;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lgt0;->b(Ljava/nio/ByteBuffer;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lmt0;->e:Ljava/nio/ByteBuffer;
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final b()V
-    .locals 6
-
-    iget-object v0, p0, Lmt0;->e:Ljava/nio/ByteBuffer;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lmt0;->e()Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    move-result v1
-
-    iget-object v2, p0, Lmt0;->a:Ljava/lang/String;
-
-    const/16 v3, 0x4400
-
-    if-ge v1, v3, :cond_2
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v1, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    move-result v0
-
-    const-string v3, ", increasing from "
-
-    const-string v4, " to "
-
-    const-string v5, "enlarging buffer "
-
-    invoke-static {v0, v5, v2, v3, v4}, Lyv7;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lmt0;->d:Ljava/lang/String;
-
-    invoke-static {v2, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lmt0;->c:Lgt0;
-
-    invoke-interface {v0, v1}, Lgt0;->a(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lmt0;->e()Ljava/nio/ByteBuffer;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    iget-boolean v4, p0, Lmt0;->b:Z
-
-    if-eqz v4, :cond_1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {p0, v4}, Lmt0;->f(I)V
-
-    :cond_1
-    invoke-interface {v0, v3}, Lgt0;->b(Ljava/nio/ByteBuffer;)V
-
-    iput-object v2, p0, Lmt0;->e:Ljava/nio/ByteBuffer;
-
-    iput v1, p0, Lmt0;->f:I
-
-    return-void
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    move-result p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " buffer insufficient despite having capacity of "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-object v0, p0, Lmt0;->e:Ljava/nio/ByteBuffer;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lmt0;->c:Lgt0;
-
-    iget v1, p0, Lmt0;->f:I
-
-    invoke-interface {v0, v1}, Lgt0;->a(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmt0;->e:Ljava/nio/ByteBuffer;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()Z
-    .locals 1
-
-    iget-object v0, p0, Lmt0;->e:Ljava/nio/ByteBuffer;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lmt0;->a()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final e()Ljava/nio/ByteBuffer;
-    .locals 1
-
-    iget-object p0, p0, Lmt0;->e:Ljava/nio/ByteBuffer;
-
-    if-eqz p0, :cond_0
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Required value was null."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final f(I)V
-    .locals 5
-
-    iget-object v0, p0, Lmt0;->e:Ljava/nio/ByteBuffer;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lmt0;->e()Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->mark()Ljava/nio/Buffer;
-
-    invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    invoke-virtual {p0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result p1
-
-    sget-object v0, Lmt0;->g:Lzte;
-
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [B
-
-    array-length v1, v1
-
-    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    if-lez v1, :cond_1
-
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, [B
-
-    invoke-virtual {p0, v4, v2, v1}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
-
-    add-int/2addr v3, v1
-
-    sub-int v1, p1, v3
-
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, [B
-
-    array-length v4, v4
-
-    invoke-static {v1, v4}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->reset()Ljava/nio/Buffer;
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 4
 
-    iget-object v0, p0, Lmt0;->e:Ljava/nio/ByteBuffer;
+    iget v0, p0, Lmt0;->a:I
 
-    iget v1, p0, Lmt0;->f:I
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lmt0;->c:Ljava/lang/Object;
 
-    const-string v3, "BufferHolder{name=\'"
+    check-cast v0, Lg53;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, v0, Lg53;->c:Ljava/lang/Object;
 
-    iget-object v3, p0, Lmt0;->a:Ljava/lang/String;
+    check-cast v0, Loqe;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Loqe;->d:Lfpg;
 
-    const-string v3, "\', allocator="
+    iget v1, p0, Lmt0;->b:F
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, v1}, Lfpg;->F(F)V
 
-    iget-object v3, p0, Lmt0;->c:Lgt0;
+    return-void
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object v0, p0, Lmt0;->c:Ljava/lang/Object;
 
-    const-string v3, ", plainData="
+    check-cast v0, Lrs6;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lrs6;->b:Ljava/lang/Object;
 
-    iget-boolean p0, p0, Lmt0;->b:Z
+    check-cast v0, Lkz9;
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lkz9;->e:Lfpg;
 
-    const-string p0, ", maxSize=17408, buffer="
+    iget v1, p0, Lmt0;->b:F
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, v1}, Lfpg;->F(F)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
 
-    const-string p0, ", lastSize="
+    :pswitch_1
+    iget-object v0, p0, Lmt0;->c:Ljava/lang/Object;
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;
 
-    const-string p0, "}"
+    iget v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:F
 
-    invoke-static {v2, v1, p0}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    iget v2, p0, Lmt0;->b:F
 
-    move-result-object p0
+    sub-float/2addr v2, v1
 
-    return-object p0
+    iget v3, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->z0:F
+
+    sub-float/2addr v3, v1
+
+    div-float/2addr v2, v3
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    cmpl-float v3, v2, v1
+
+    if-lez v3, :cond_0
+
+    move v2, v1
+
+    :cond_0
+    iget v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
+
+    iget v3, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
+
+    sub-float v3, v1, v3
+
+    mul-float/2addr v3, v2
+
+    sub-float/2addr v1, v3
+
+    iput v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

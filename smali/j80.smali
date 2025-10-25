@@ -1,98 +1,199 @@
 .class public final Lj80;
-.super Ljava/lang/Object;
+.super Landroid/hardware/biometrics/BiometricPrompt$AuthenticationCallback;
 .source "SourceFile"
 
-# interfaces
-.implements Lt4a;
 
-
-# static fields
-.field public static final a:Lj80;
-
-.field public static final b:Llk5;
-
-.field public static final c:Llk5;
+# instance fields
+.field public final synthetic a:Lm80;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lm80;)V
+    .locals 0
 
-    new-instance v0, Lj80;
+    iput-object p1, p0, Lj80;->a:Lm80;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lj80;->a:Lj80;
-
-    new-instance v0, Lix;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lix;-><init>(I)V
-
-    const-class v1, Layb;
-
-    invoke-static {v1, v0}, Lmw1;->o(Ljava/lang/Class;Lix;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Llk5;
-
-    invoke-static {v0}, Lmw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "startMs"
-
-    invoke-direct {v2, v3, v0}, Llk5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lj80;->b:Llk5;
-
-    new-instance v0, Lix;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Lix;-><init>(I)V
-
-    invoke-static {v1, v0}, Lmw1;->o(Ljava/lang/Class;Lix;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Llk5;
-
-    invoke-static {v0}, Lmw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "endMs"
-
-    invoke-direct {v1, v2, v0}, Llk5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lj80;->c:Llk5;
+    invoke-direct {p0}, Landroid/hardware/biometrics/BiometricPrompt$AuthenticationCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public onAuthenticationError(ILjava/lang/CharSequence;)V
+    .locals 1
+
+    iget-object v0, p0, Lj80;->a:Lm80;
+
+    invoke-virtual {v0, p1, p2}, Lm80;->a(ILjava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public onAuthenticationFailed()V
     .locals 2
 
-    check-cast p1, Ld6f;
+    iget-object v0, p0, Lj80;->a:Lm80;
 
-    check-cast p2, Lu4a;
+    check-cast v0, Lmo0;
 
-    sget-object p0, Lj80;->b:Llk5;
+    iget-object v0, v0, Lmo0;->a:Ljava/lang/ref/WeakReference;
 
-    iget-wide v0, p1, Ld6f;->a:J
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-interface {p2, p0, v0, v1}, Lu4a;->e(Llk5;J)Lu4a;
+    move-result-object v1
 
-    sget-object p0, Lj80;->c:Llk5;
+    if-eqz v1, :cond_1
 
-    iget-wide v0, p1, Ld6f;->b:J
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-interface {p2, p0, v0, v1}, Lu4a;->e(Llk5;J)Lu4a;
+    move-result-object v1
+
+    check-cast v1, Landroidx/biometric/BiometricViewModel;
+
+    iget-boolean v1, v1, Landroidx/biometric/BiometricViewModel;->k:Z
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/biometric/BiometricViewModel;
+
+    iget-object v1, v0, Landroidx/biometric/BiometricViewModel;->r:Lo0a;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lo0a;
+
+    invoke-direct {v1}, Lh38;-><init>()V
+
+    iput-object v1, v0, Landroidx/biometric/BiometricViewModel;->r:Lo0a;
+
+    :cond_0
+    iget-object v0, v0, Landroidx/biometric/BiometricViewModel;->r:Lo0a;
+
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {v0, v1}, Landroidx/biometric/BiometricViewModel;->j(Lo0a;Ljava/lang/Object;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public onAuthenticationHelp(ILjava/lang/CharSequence;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAuthenticationSucceeded(Landroid/hardware/biometrics/BiometricPrompt$AuthenticationResult;)V
+    .locals 4
+
+    const/16 v0, 0x1e
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Landroid/hardware/biometrics/BiometricPrompt$AuthenticationResult;->getCryptoObject()Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v2}, Lt84;->d(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljavax/crypto/Cipher;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    new-instance v1, Lq4e;
+
+    invoke-direct {v1, v3}, Lq4e;-><init>(Ljavax/crypto/Cipher;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v2}, Lt84;->f(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljava/security/Signature;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    new-instance v1, Lq4e;
+
+    invoke-direct {v1, v3}, Lq4e;-><init>(Ljava/security/Signature;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {v2}, Lt84;->e(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljavax/crypto/Mac;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_3
+
+    new-instance v1, Lq4e;
+
+    invoke-direct {v1, v3}, Lq4e;-><init>(Ljavax/crypto/Mac;)V
+
+    goto :goto_0
+
+    :cond_3
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v3, v0, :cond_4
+
+    invoke-static {v2}, Lu84;->b(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Landroid/security/identity/IdentityCredential;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_4
+
+    new-instance v1, Lq4e;
+
+    invoke-direct {v1, v2}, Lq4e;-><init>(Landroid/security/identity/IdentityCredential;)V
+
+    :cond_4
+    :goto_0
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/4 v3, -0x1
+
+    if-lt v2, v0, :cond_5
+
+    if-eqz p1, :cond_7
+
+    invoke-static {p1}, Ll80;->a(Landroid/hardware/biometrics/BiometricPrompt$AuthenticationResult;)I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_5
+    const/16 p1, 0x1d
+
+    if-ne v2, p1, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    const/4 v3, 0x2
+
+    :cond_7
+    :goto_1
+    new-instance p1, Ljo0;
+
+    invoke-direct {p1, v1, v3}, Ljo0;-><init>(Lq4e;I)V
+
+    iget-object v0, p0, Lj80;->a:Lm80;
+
+    invoke-virtual {v0, p1}, Lm80;->b(Ljo0;)V
 
     return-void
 .end method

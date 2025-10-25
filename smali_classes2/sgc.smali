@@ -3,106 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Lugc;
 
 
-# instance fields
-.field public final synthetic a:Z
-
-.field public final synthetic b:Lugc;
-
-.field public final synthetic c:Landroid/view/View;
+# static fields
+.field public static final a:Lsgc;
 
 
 # direct methods
-.method public constructor <init>(ZLugc;Landroid/view/View;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsgc;
 
-    iput-boolean p1, p0, Lsgc;->a:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lsgc;->b:Lugc;
-
-    iput-object p3, p0, Lsgc;->c:Landroid/view/View;
+    sput-object v0, Lsgc;->a:Lsgc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
-
-    iget-boolean p1, p0, Lsgc;->a:Z
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lsgc;->b:Lugc;
-
-    iget-object p1, p1, Lugc;->a:Lfgc;
-
-    invoke-virtual {p1}, Lfgc;->invoke()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iget-object p0, p0, Lsgc;->c:Landroid/view/View;
-
-    if-eqz p1, :cond_1
-
-    instance-of p1, p0, Legc;
-
-    if-eqz p1, :cond_0
-
-    move-object p1, p0
-
-    check-cast p1, Legc;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Legc;->b()Z
-
-    move-result p1
 
     const/4 v0, 0x1
 
-    if-ne p1, v0, :cond_2
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lsgc;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    sget-object p1, Ljp6;->Y:Ljp6;
-
-    invoke-static {p0, p1}, Lyu0;->C(Landroid/view/View;Llp6;)Z
-
-    :cond_2
-    return-void
+    return v0
 .end method
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    const v0, 0x20f4ed05
+
+    return v0
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-void
+    const-string v0, "Scanning"
+
+    return-object v0
 .end method

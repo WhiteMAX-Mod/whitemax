@@ -1,206 +1,94 @@
 .class public final Lto1;
-.super Lsxe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lgu9;
-
-.field public Y:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public o:J
+.field public final a:Ls7e;
 
 
 # direct methods
-.method public constructor <init>(Lt39;)V
+.method public constructor <init>(Lr7e;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lsxe;-><init>(Lt39;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lto1;->a:Ls7e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lt39;Ljava/lang/String;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x1
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lto1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lto1;
+
+    iget-object v1, p0, Lto1;->a:Ls7e;
+
+    iget-object p1, p1, Lto1;->a:Ls7e;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lto1;->a:Ls7e;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    const/4 v1, -0x1
-
-    sparse-switch v0, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "turnServer"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x3
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "peerId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "joinLink"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "conversationId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_0
-    packed-switch v1, :pswitch_data_0
-
-    invoke-virtual {p1}, Lt39;->B()V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lgu9;->m(Lt39;)Lgu9;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lto1;->X:Lgu9;
-
-    return-void
-
-    :pswitch_1
-    const-wide/16 v0, 0x0
-
-    invoke-static {p1, v0, v1}, Lqe5;->L(Lt39;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lto1;->o:J
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1}, Lqe5;->O(Lt39;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lto1;->Y:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_3
-    invoke-static {p1}, Lqe5;->O(Lt39;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lto1;->c:Ljava/lang/String;
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x63e72f02 -> :sswitch_3
-        -0x5390a3bc -> :sswitch_2
-        -0x3b2255e3 -> :sswitch_1
-        0x5288a20 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 6
+    .locals 2
 
-    iget-object v0, p0, Lto1;->c:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lto1;->o:J
+    const-string v1, "RemovedParams(roomId="
 
-    iget-object v3, p0, Lto1;->X:Lgu9;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lto1;->Y:Ljava/lang/String;
+    iget-object v1, p0, Lto1;->a:Ls7e;
 
-    const-string v4, "{conversationId=\'"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v5, "\', peerId="
-
-    invoke-static {v4, v1, v2, v0, v5}, Lz7e;->t(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", turnServer="
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", joinLink="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

@@ -170,13 +170,13 @@
 
     .line 13
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Scope may not be null"
+    const-string v0, "Scope may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -204,9 +204,9 @@
 
     invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     :cond_2
     check-cast p1, Lorg/apache/http/auth/AuthScope;
@@ -237,15 +237,15 @@
 
     if-eqz v2, :cond_3
 
-    iget-object p0, p0, Lorg/apache/http/auth/AuthScope;->scheme:Ljava/lang/String;
+    iget-object v2, p0, Lorg/apache/http/auth/AuthScope;->scheme:Ljava/lang/String;
 
     iget-object p1, p1, Lorg/apache/http/auth/AuthScope;->scheme:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Lorg/apache/http/util/LangUtils;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lorg/apache/http/util/LangUtils;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_3
+    if-eqz p1, :cond_3
 
     return v1
 
@@ -254,35 +254,35 @@
 .end method
 
 .method public getHost()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/AuthScope;->host:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/auth/AuthScope;->host:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getPort()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/http/auth/AuthScope;->port:I
+    iget v0, p0, Lorg/apache/http/auth/AuthScope;->port:I
 
-    return p0
+    return v0
 .end method
 
 .method public getRealm()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/AuthScope;->realm:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/auth/AuthScope;->realm:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getScheme()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/AuthScope;->scheme:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/auth/AuthScope;->scheme:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
@@ -308,13 +308,13 @@
 
     move-result v0
 
-    iget-object p0, p0, Lorg/apache/http/auth/AuthScope;->scheme:Ljava/lang/String;
+    iget-object v1, p0, Lorg/apache/http/auth/AuthScope;->scheme:Ljava/lang/String;
 
-    invoke-static {v0, p0}, Lorg/apache/http/util/LangUtils;->hashCode(ILjava/lang/Object;)I
+    invoke-static {v0, v1}, Lorg/apache/http/util/LangUtils;->hashCode(ILjava/lang/Object;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public match(Lorg/apache/http/auth/AuthScope;)I
@@ -416,15 +416,15 @@
     return v0
 
     :cond_6
-    iget-object p0, p0, Lorg/apache/http/auth/AuthScope;->host:Ljava/lang/String;
+    iget-object v2, p0, Lorg/apache/http/auth/AuthScope;->host:Ljava/lang/String;
 
-    sget-object v2, Lorg/apache/http/auth/AuthScope;->ANY_HOST:Ljava/lang/String;
+    sget-object v3, Lorg/apache/http/auth/AuthScope;->ANY_HOST:Ljava/lang/String;
 
-    if-eq p0, v2, :cond_7
+    if-eq v2, v3, :cond_7
 
-    iget-object p0, p1, Lorg/apache/http/auth/AuthScope;->host:Ljava/lang/String;
+    iget-object p1, p1, Lorg/apache/http/auth/AuthScope;->host:Ljava/lang/String;
 
-    if-eq p0, v2, :cond_7
+    if-eq p1, v3, :cond_7
 
     return v1
 
@@ -498,14 +498,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    iget p0, p0, Lorg/apache/http/auth/AuthScope;->port:I
+    iget v1, p0, Lorg/apache/http/auth/AuthScope;->port:I
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

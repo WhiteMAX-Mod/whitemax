@@ -80,9 +80,9 @@
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/f0$a;->a:Lcom/my/tracker/obfuscated/f0;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/f0$a;->a:Lcom/my/tracker/obfuscated/f0;
 
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/f0;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/obfuscated/f0;->a(I)V
 
     return-void
 .end method

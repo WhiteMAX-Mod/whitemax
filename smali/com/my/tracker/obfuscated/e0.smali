@@ -124,7 +124,7 @@
     iput-boolean p1, p0, Lcom/my/tracker/obfuscated/e0;->b:Z
 
     :cond_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/e0;->a:Lcom/my/tracker/obfuscated/d0;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/e0;->a:Lcom/my/tracker/obfuscated/d0;
 
-    return-object p0
+    return-object p1
 .end method

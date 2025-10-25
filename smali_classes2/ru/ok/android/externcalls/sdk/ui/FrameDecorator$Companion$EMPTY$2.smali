@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion$EMPTY$2;
-.super Lnk7;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lji6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lnk7;",
-        "Lzb6;"
+        "Lst7;",
+        "Lji6;"
     }
 .end annotation
 
@@ -64,7 +64,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lnk7;-><init>(I)V
+    invoke-direct {p0, v0}, Lst7;-><init>(I)V
 
     return-void
 .end method
@@ -88,23 +88,23 @@
 
 # virtual methods
 .method public bridge synthetic invoke()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
     .line 2
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion$EMPTY$2;->invoke()Lru/ok/android/externcalls/sdk/ui/FrameDecorator;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final invoke()Lru/ok/android/externcalls/sdk/ui/FrameDecorator;
-    .locals 0
+    .locals 1
 
     .line 1
-    new-instance p0, Lru/ok/android/externcalls/sdk/ui/a;
+    new-instance v0, Lru/ok/android/externcalls/sdk/ui/a;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,0 +1,103 @@
+.class public final Lj8g;
+.super Ldg4;
+.source "SourceFile"
+
+
+# static fields
+.field public static final b:Lj8g;
+
+.field public static final c:Lyf4;
+
+.field public static final d:Lyf4;
+
+.field public static final e:Lyf4;
+
+.field public static final f:Lyf4;
+
+.field public static final g:Lyf4;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 7
+
+    new-instance v0, Lj8g;
+
+    invoke-direct {v0}, Ldg4;-><init>()V
+
+    sput-object v0, Lj8g;->b:Lj8g;
+
+    const-string v1, "state"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":settings/privacy/onboarding-twofa"
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0xe
+
+    invoke-static {v0, v2, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v1
+
+    sput-object v1, Lj8g;->c:Lyf4;
+
+    const-string v1, "src"
+
+    const-string v2, "track_id"
+
+    filled-new-array {v2, v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v5, ":settings/privacy/creation-twofa"
+
+    invoke-static {v0, v5, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v1
+
+    sput-object v1, Lj8g;->d:Lyf4;
+
+    const/4 v1, 0x0
+
+    new-array v5, v1, [Ljava/lang/String;
+
+    const-string v6, ":settings/privacy/profile-deletion"
+
+    invoke-static {v0, v6, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v5
+
+    sput-object v5, Lj8g;->e:Lyf4;
+
+    const-string v5, ":twofa/password/check"
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v5, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v1
+
+    sput-object v1, Lj8g;->f:Lyf4;
+
+    const-string v1, "phone"
+
+    filled-new-array {v2, v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    const-string v4, ":twofa/auth/password/check"
+
+    invoke-static {v0, v4, v1, v3, v2}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v0
+
+    sput-object v0, Lj8g;->g:Lyf4;
+
+    return-void
+.end method

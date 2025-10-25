@@ -60,12 +60,12 @@
 
 # virtual methods
 .method public addSample(II)V
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "HistogramInfo"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/Metrics$HistogramInfo;->samples:Ljava/util/Map;
+    iget-object v0, p0, Lorg/webrtc/Metrics$HistogramInfo;->samples:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -75,7 +75,7 @@
 
     move-result-object p2
 
-    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

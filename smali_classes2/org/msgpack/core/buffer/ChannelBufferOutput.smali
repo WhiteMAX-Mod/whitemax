@@ -33,7 +33,7 @@
     .line 3
     const-string v0, "output channel is null"
 
-    invoke-static {p1, v0}, Lz48;->i(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcvi;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lorg/msgpack/core/buffer/ChannelBufferOutput;->channel:Ljava/nio/channels/WritableByteChannel;
 
@@ -63,16 +63,16 @@
 .end method
 
 .method public close()V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ChannelBufferOutput;->channel:Ljava/nio/channels/WritableByteChannel;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/ChannelBufferOutput;->channel:Ljava/nio/channels/WritableByteChannel;
 
-    invoke-interface {p0}, Ljava/nio/channels/Channel;->close()V
+    invoke-interface {v0}, Ljava/nio/channels/Channel;->close()V
 
     return-void
 .end method
@@ -111,9 +111,9 @@
     iput-object p1, p0, Lorg/msgpack/core/buffer/ChannelBufferOutput;->buffer:Lorg/msgpack/core/buffer/MessageBuffer;
 
     :cond_0
-    iget-object p0, p0, Lorg/msgpack/core/buffer/ChannelBufferOutput;->buffer:Lorg/msgpack/core/buffer/MessageBuffer;
+    iget-object p1, p0, Lorg/msgpack/core/buffer/ChannelBufferOutput;->buffer:Lorg/msgpack/core/buffer/MessageBuffer;
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public reset(Ljava/nio/channels/WritableByteChannel;)Ljava/nio/channels/WritableByteChannel;

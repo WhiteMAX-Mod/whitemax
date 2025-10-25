@@ -1,19 +1,23 @@
 .class public final Lamf;
-.super Ljava/lang/Object;
+.super Lzlf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lzlf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-wide p1, p0, Lamf;->a:J
+    iput-object p4, p0, Lamf;->Y:Ljava/lang/String;
+
+    iput-object p5, p0, Lamf;->Z:Ljava/lang/String;
 
     return-void
 .end method
@@ -21,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -39,46 +43,134 @@
     return v2
 
     :cond_1
-    check-cast p1, Lamf;
+    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-wide v3, p0, Lamf;->a:J
+    move-result v1
 
-    iget-wide p0, p1, Lamf;->a:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
+    check-cast p1, Lamf;
+
+    iget-object v1, p1, Lamf;->Y:Ljava/lang/String;
+
+    iget-object v3, p0, Lamf;->Y:Ljava/lang/String;
+
+    invoke-static {v3, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lamf;->Z:Ljava/lang/String;
+
+    iget-object p1, p1, Lamf;->Z:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
     return v0
+
+    :cond_3
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-wide v0, p0, Lamf;->a:J
+    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    move-result v0
 
-    move-result p0
+    mul-int/lit8 v0, v0, 0x1f
 
-    return p0
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lamf;->Y:Ljava/lang/String;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    iget-object v2, p0, Lamf;->Z:Ljava/lang/String;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :cond_1
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 5
 
-    const-string v0, "UnknownContactState(contactId="
+    const-class v0, Lamf;
 
-    const-string v1, ")"
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    iget-wide v2, p0, Lamf;->a:J
+    move-result-object v0
 
-    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-object p0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "{error=\'"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lzlf;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\', message=\'"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lzlf;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\', title=\'"
+
+    const-string v2, "\', description=\'"
+
+    iget-object v3, p0, Lamf;->Y:Ljava/lang/String;
+
+    iget-object v4, p0, Lamf;->Z:Ljava/lang/String;
+
+    invoke-static {v1, v0, v3, v2, v4}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "\', localizedMessage=\'"
+
+    const-string v2, "\'}"
+
+    iget-object v3, p0, Lzlf;->o:Ljava/lang/String;
+
+    invoke-static {v1, v0, v3, v2}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

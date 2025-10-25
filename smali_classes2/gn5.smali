@@ -1,61 +1,274 @@
 .class public final Lgn5;
-.super Lhn5;
+.super Landroid/webkit/WebViewClient;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lgn5;
+# instance fields
+.field public final synthetic a:Lone/me/webview/FaqWebViewWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lone/me/webview/FaqWebViewWidget;)V
+    .locals 0
 
-    new-instance v0, Lgn5;
+    iput-object p1, p0, Lgn5;->a:Lone/me/webview/FaqWebViewWidget;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lgn5;->a:Lgn5;
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+    .locals 6
 
-    const/4 v0, 0x1
+    iget-object p1, p0, Lgn5;->a:Lone/me/webview/FaqWebViewWidget;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p1, Lone/me/webview/FaqWebViewWidget;->o:Liu7;
 
-    return v0
+    const/4 v1, 0x0
+
+    if-eqz p2, :cond_a
+
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
+
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    goto/16 :goto_3
 
     :cond_0
-    instance-of p0, p1, Lgn5;
+    invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
-    if-nez p0, :cond_1
+    move-result-object v2
 
-    const/4 p0, 0x0
+    const/4 v3, 0x0
 
-    return p0
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_1
+
+    const-string v5, "mailto"
+
+    invoke-static {v2, v5, v1}, Lzaf;->x(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v2
+
+    if-ne v2, v4, :cond_1
+
+    sget-object p2, Lone/me/webview/FaqWebViewWidget;->Z:Lb3j;
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+
+    move-result-object p2
+
+    new-instance v0, Lin5;
+
+    invoke-direct {v0, p1, v3}, Lin5;-><init>(Lone/me/webview/FaqWebViewWidget;Lkotlin/coroutines/Continuation;)V
+
+    sget-object v1, Lt54;->b:Lt54;
+
+    invoke-static {p2, v3, v1, v0, v4}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    move-result-object p2
+
+    iget-object v0, p1, Lone/me/webview/FaqWebViewWidget;->c:Lw0e;
+
+    sget-object v1, Lone/me/webview/FaqWebViewWidget;->q0:[Ltr7;
+
+    aget-object v1, v1, v4
+
+    invoke-virtual {v0, p1, v1, p2}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+
+    return v4
 
     :cond_1
-    return v0
-.end method
+    invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
-.method public final hashCode()I
-    .locals 0
+    move-result-object v2
 
-    const p0, 0x14abf4b9
+    if-eqz v2, :cond_2
 
-    return p0
-.end method
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    move-result-object v5
 
-    const-string p0, "Success"
+    check-cast v5, Ljm;
 
-    return-object p0
+    check-cast v5, Lp18;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v5, "max"
+
+    invoke-static {v2, v5, v1}, Lzaf;->x(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v2
+
+    if-ne v2, v4, :cond_2
+
+    invoke-static {p1, p2}, Lone/me/webview/FaqWebViewWidget;->C0(Lone/me/webview/FaqWebViewWidget;Landroid/net/Uri;)V
+
+    return v4
+
+    :cond_2
+    sget-object v2, Lone/me/webview/FaqWebViewWidget;->Z:Lb3j;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljm;
+
+    check-cast v0, Lp18;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "https"
+
+    filled-new-array {v0}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_3
+
+    goto/16 :goto_3
+
+    :cond_3
+    aget-object v0, v0, v1
+
+    invoke-static {v2, v0, v1}, Lhbf;->w(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/webkit/MimeTypeMap;->getFileExtensionFromUrl(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_a
+
+    invoke-static {v0}, Lzaf;->L(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move-object v0, v3
+
+    :goto_0
+    if-eqz v0, :cond_a
+
+    sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v0}, Landroid/webkit/MimeTypeMap;->getMimeTypeFromExtension(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_a
+
+    invoke-static {v0}, Lzaf;->L(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_5
+
+    move-object v3, v0
+
+    :cond_5
+    if-eqz v3, :cond_a
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v2, Lone/me/webview/FaqWebViewWidget;->r0:Ljava/util/List;
+
+    invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    const-string v2, "image/"
+
+    invoke-static {v0, v2, v4}, Lhbf;->w(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    const-string v2, "djvu"
+
+    invoke-static {v0, v2, v4}, Lzaf;->x(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v2
+
+    if-nez v2, :cond_7
+
+    goto :goto_3
+
+    :cond_7
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    goto :goto_2
+
+    :cond_8
+    const-string v2, "video/"
+
+    invoke-static {v0, v2, v4}, Lhbf;->w(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    goto :goto_3
+
+    :cond_9
+    :goto_2
+    invoke-static {p1, p2}, Lone/me/webview/FaqWebViewWidget;->C0(Lone/me/webview/FaqWebViewWidget;Landroid/net/Uri;)V
+
+    return v4
+
+    :cond_a
+    :goto_3
+    return v1
 .end method

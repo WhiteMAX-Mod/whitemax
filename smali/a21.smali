@@ -1,95 +1,67 @@
-.class public final La21;
-.super Lure;
+.class public interface abstract La21;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltc6;
-
-
-# instance fields
-.field public synthetic X:Z
-
-.field public synthetic Y:Z
-
-.field public synthetic Z:Ly9;
+.implements Ltce;
 
 
 # virtual methods
-.method public final i(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public a()Ltrf;
     .locals 1
 
-    check-cast p1, Ljava/lang/Boolean;
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    check-cast p3, Ly9;
-
-    check-cast p4, Lkotlin/coroutines/Continuation;
-
-    new-instance p2, La21;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p2, v0, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-boolean p0, p2, La21;->X:Z
-
-    iput-boolean p1, p2, La21;->Y:Z
-
-    iput-object p3, p2, La21;->Z:Ly9;
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    invoke-virtual {p2, p0}, La21;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public b()Lice;
+    .locals 1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-boolean p1, p0, La21;->X:Z
+    return-object v0
+.end method
 
-    iget-boolean v0, p0, La21;->Y:Z
+.method public c()Ltrf;
+    .locals 1
 
-    iget-object p0, p0, La21;->Z:Ly9;
+    const/4 v0, 0x0
 
-    iget-boolean v1, p0, Ly9;->a:Z
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public d()Lqce;
+    .locals 1
 
-    if-nez v1, :cond_0
+    const/4 v0, 0x0
 
-    iget-boolean p0, p0, Ly9;->c:Z
+    return-object v0
+.end method
 
-    if-nez p0, :cond_0
+.method public e()Lsu7;
+    .locals 1
 
-    goto :goto_0
+    const/4 v0, 0x0
 
-    :cond_0
-    if-eqz p1, :cond_1
+    return-object v0
+.end method
 
-    if-eqz v0, :cond_1
+.method public abstract f()I
+.end method
 
-    const/4 v2, 0x1
+.method public g()Z
+    .locals 1
 
-    :cond_1
-    :goto_0
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    return v0
+.end method
 
-    return-object p0
+.method public getType()Lsce;
+    .locals 1
+
+    sget-object v0, Lsce;->b:Lsce;
+
+    return-object v0
 .end method

@@ -25,9 +25,9 @@
 .method public match(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z
     .locals 0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public parse(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V
@@ -38,15 +38,15 @@
         }
     .end annotation
 
-    instance-of p0, p1, Lorg/apache/http/cookie/SetCookie2;
+    instance-of p2, p1, Lorg/apache/http/cookie/SetCookie2;
 
-    if-eqz p0, :cond_0
+    if-eqz p2, :cond_0
 
     check-cast p1, Lorg/apache/http/cookie/SetCookie2;
 
-    const/4 p0, 0x1
+    const/4 p2, 0x1
 
-    invoke-interface {p1, p0}, Lorg/apache/http/cookie/SetCookie2;->setDiscard(Z)V
+    invoke-interface {p1, p2}, Lorg/apache/http/cookie/SetCookie2;->setDiscard(Z)V
 
     :cond_0
     return-void

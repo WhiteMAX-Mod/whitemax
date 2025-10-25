@@ -1,62 +1,60 @@
-.class public final synthetic Lglb;
-.super Ljava/lang/Object;
+.class public final Lglb;
+.super Lpmf;
 .source "SourceFile"
-
-# interfaces
-.implements Lbc6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lheb;
+.field public c:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lheb;I)V
+.method public constructor <init>(Lpf9;)V
     .locals 0
 
-    iput p2, p0, Lglb;->a:I
-
-    iput-object p1, p0, Lglb;->b:Lheb;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 1
 
-    iget v0, p0, Lglb;->a:I
+    const-string v0, "url"
 
-    sget-object v1, Lylf;->a:Lylf;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Lglb;->b:Lheb;
+    move-result p2
 
-    check-cast p1, Landroid/view/View;
+    if-eqz p2, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Lpf9;->u0()Ljava/lang/String;
 
-    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->u0:[Lxi7;
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Lheb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p1, p0, Lglb;->c:Ljava/lang/String;
 
-    return-object v1
+    return-void
 
-    :pswitch_0
-    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->u0:[Lxi7;
+    :cond_0
+    invoke-virtual {p1}, Lpf9;->y()V
 
-    invoke-virtual {p0, p1}, Lheb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
+.end method
 
-    return-object v1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    nop
+    iget-object v0, p0, Lglb;->c:Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v1, "{url=\'"
+
+    const-string v2, "\'}"
+
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

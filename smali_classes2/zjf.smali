@@ -1,177 +1,61 @@
-.class public final Lzjf;
-.super Lure;
+.class public final synthetic Lzjf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Ljava/lang/String;
 
-.field public final synthetic Y:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+.field public final synthetic b:Ljkf;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljkf;)V
     .locals 0
 
-    iput-object p2, p0, Lzjf;->Y:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lzjf;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lzjf;->b:Ljkf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onPushTokenGenerated(Ljava/lang/String;)V
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lzjf;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lzjf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p0
+    move-result v0
 
-    check-cast p0, Lzjf;
+    if-nez v0, :cond_0
 
-    sget-object p1, Lylf;->a:Lylf;
+    iget-object v0, p0, Lzjf;->b:Ljkf;
 
-    invoke-virtual {p0, p1}, Lzjf;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, v0, Ljkf;->b:Ljava/lang/String;
 
-    return-object p1
-.end method
+    const-string v2, "checkTokenChanged: token changed"
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-static {v1, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lzjf;
+    iget-object v0, v0, Ljkf;->Z:Liu7;
 
-    iget-object p0, p0, Lzjf;->Y:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
-
-    invoke-direct {v0, p2, p0}, Lzjf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;)V
-
-    iput-object p1, v0, Lzjf;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzjf;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    iget-object p0, p0, Lzjf;->Y:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
-
-    iget-object v0, p0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->Z:Lcic;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz p1, :cond_1
-
-    sget-object v3, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->s0:[Lxi7;
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v3, v2
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move v3, v1
-
-    :goto_1
-    iget-object v4, p0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->r0:Lcic;
-
-    sget-object v5, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->s0:[Lxi7;
-
-    const/4 v6, 0x2
-
-    aget-object v6, v5, v6
-
-    invoke-interface {v4, p0, v6}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/16 v6, 0x8
-
-    if-eqz v3, :cond_2
-
-    move v7, v2
-
-    goto :goto_2
-
-    :cond_2
-    move v7, v6
-
-    :goto_2
-    invoke-virtual {v4, v7}, Landroid/view/View;->setVisibility(I)V
-
-    aget-object v4, v5, v1
-
-    invoke-interface {v0, p0, v4}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/TextView;
-
-    if-nez v3, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    move v2, v6
-
-    :goto_3
-    invoke-virtual {v4, v2}, Landroid/view/View;->setVisibility(I)V
-
-    if-nez v3, :cond_4
-
-    aget-object v1, v5, v1
-
-    invoke-interface {v0, p0, v1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    check-cast v0, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-interface {v0, p1}, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;->onPushTokenGenerated(Ljava/lang/String;)V
 
-    move-result-object p0
-
-    sget v1, Lxbc;->oneme_settings_twofa_creation_email_verify_resend_code_timer:I
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v1, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_4
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    :cond_0
+    return-void
 .end method

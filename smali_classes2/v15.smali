@@ -1,585 +1,255 @@
-.class public abstract Lv15;
+.class public final Lv15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
 
 # static fields
-.field public static final a:Ljava/util/Set;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lv15;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:Ljava/util/LinkedHashSet;
+
+# instance fields
+.field public final a:I
+
+.field public final b:[F
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 15
+    .locals 2
 
-    const-string v13, "\ud83d\udc6c"
+    new-instance v0, Lld4;
 
-    const-string v14, "\ud83d\udc6d"
+    const/4 v1, 0x5
 
-    const-string v0, "\ud83d\udc70\u200d\u2642\ufe0f"
+    invoke-direct {v0, v1}, Lld4;-><init>(I)V
 
-    const-string v1, "\ud83e\udec3"
-
-    const-string v2, "\ud83d\udc6f\u200d\u2642\ufe0f"
-
-    const-string v3, "\ud83d\udc8f"
-
-    const-string v4, "\ud83d\udc68\u200d\u2764\ufe0f\u200d\ud83d\udc8b\u200d\ud83d\udc68"
-
-    const-string v5, "\ud83d\udc69\u200d\u2764\ufe0f\u200d\ud83d\udc8b\u200d\ud83d\udc69"
-
-    const-string v6, "\ud83d\udc91"
-
-    const-string v7, "\ud83d\udc68\u200d\u2764\ufe0f\u200d\ud83d\udc68"
-
-    const-string v8, "\ud83d\udc69\u200d\u2764\ufe0f\u200d\ud83d\udc69"
-
-    const-string v9, "\ud83c\udf08"
-
-    const-string v10, "\ud83c\udff3\ufe0f\u200d\ud83c\udf08"
-
-    const-string v11, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f"
-
-    const-string v12, "\ud83e\uddd1\u200d\ud83e\udd1d\u200d\ud83e\uddd1"
-
-    filled-new-array/range {v0 .. v14}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxnd;->g0([Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lv15;->a:Ljava/util/Set;
-
-    new-instance v1, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-virtual {v2}, Ljava/lang/String;->codePoints()Ljava/util/stream/IntStream;
-
-    move-result-object v2
-
-    new-instance v3, Lu15;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v4}, Lu15;-><init>(I)V
-
-    invoke-interface {v2, v3}, Ljava/util/stream/IntStream;->filter(Ljava/util/function/IntPredicate;)Ljava/util/stream/IntStream;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/stream/IntStream;->toArray()[I
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    sput-object v1, Lv15;->b:Ljava/util/LinkedHashSet;
+    sput-object v0, Lv15;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static final a(I)Z
-    .locals 3
+.method public constructor <init>(I[F)V
+    .locals 0
 
-    const/16 v0, 0x20d0
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-gt v0, p0, :cond_0
+    .line 2
+    iput p1, p0, Lv15;->a:I
 
-    const/16 v0, 0x2100
+    .line 3
+    iput-object p2, p0, Lv15;->b:[F
 
-    if-ge p0, v0, :cond_0
-
-    goto/16 :goto_0
-
-    :cond_0
-    const/16 v0, 0x2194
-
-    const/16 v1, 0x2199
-
-    if-gt v0, p0, :cond_1
-
-    if-ge p0, v1, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    const/16 v0, 0x238c
-
-    if-gt v0, p0, :cond_2
-
-    const/16 v0, 0x2455
-
-    if-ge p0, v0, :cond_2
-
-    goto/16 :goto_0
-
-    :cond_2
-    const/16 v0, 0x25fb
-
-    if-gt v0, p0, :cond_3
-
-    const/16 v0, 0x25ff
-
-    if-ge p0, v0, :cond_3
-
-    goto/16 :goto_0
-
-    :cond_3
-    const/16 v0, 0x2600
-
-    const/16 v2, 0x2700
-
-    if-gt v0, p0, :cond_4
-
-    if-ge p0, v2, :cond_4
-
-    goto/16 :goto_0
-
-    :cond_4
-    if-gt v2, p0, :cond_5
-
-    const/16 v0, 0x27c0
-
-    if-ge p0, v0, :cond_5
-
-    goto/16 :goto_0
-
-    :cond_5
-    const v0, 0xfe00
-
-    if-gt v0, p0, :cond_6
-
-    const v0, 0xfe10
-
-    if-ge p0, v0, :cond_6
-
-    goto/16 :goto_0
-
-    :cond_6
-    const v0, 0x1f1e6
-
-    if-gt v0, p0, :cond_7
-
-    const v0, 0x1f200
-
-    if-ge p0, v0, :cond_7
-
-    goto/16 :goto_0
-
-    :cond_7
-    const v0, 0x1f300
-
-    const v2, 0x1f600
-
-    if-gt v0, p0, :cond_8
-
-    if-ge p0, v2, :cond_8
-
-    goto/16 :goto_0
-
-    :cond_8
-    if-gt v2, p0, :cond_9
-
-    const v0, 0x1f650
-
-    if-ge p0, v0, :cond_9
-
-    goto/16 :goto_0
-
-    :cond_9
-    const v0, 0x1f680
-
-    if-gt v0, p0, :cond_a
-
-    const v0, 0x1f700
-
-    if-ge p0, v0, :cond_a
-
-    goto/16 :goto_0
-
-    :cond_a
-    const v0, 0x1f7e0
-
-    if-gt v0, p0, :cond_b
-
-    const v0, 0x1f7ec
-
-    if-ge p0, v0, :cond_b
-
-    goto/16 :goto_0
-
-    :cond_b
-    const v0, 0x1fa70
-
-    if-gt v0, p0, :cond_c
-
-    const v0, 0x1fa7d
-
-    if-ge p0, v0, :cond_c
-
-    goto/16 :goto_0
-
-    :cond_c
-    const v0, 0x1fa80
-
-    if-gt v0, p0, :cond_d
-
-    const v0, 0x1fac6
-
-    if-ge p0, v0, :cond_d
-
-    goto/16 :goto_0
-
-    :cond_d
-    const v0, 0x1face
-
-    if-gt v0, p0, :cond_e
-
-    const v0, 0x1fadc
-
-    if-ge p0, v0, :cond_e
-
-    goto/16 :goto_0
-
-    :cond_e
-    const v0, 0x1fae0
-
-    if-gt v0, p0, :cond_f
-
-    const v0, 0x1fae9
-
-    if-ge p0, v0, :cond_f
-
-    goto/16 :goto_0
-
-    :cond_f
-    const v0, 0x1faf0
-
-    if-gt v0, p0, :cond_10
-
-    const v0, 0x1faf9
-
-    if-ge p0, v0, :cond_10
-
-    goto/16 :goto_0
-
-    :cond_10
-    const v0, 0x1f900
-
-    if-gt v0, p0, :cond_11
-
-    const v0, 0x1fa00
-
-    if-ge p0, v0, :cond_11
-
-    goto/16 :goto_0
-
-    :cond_11
-    const v0, 0x1f018
-
-    if-gt v0, p0, :cond_12
-
-    const v0, 0x1f271
-
-    if-ge p0, v0, :cond_12
-
-    goto/16 :goto_0
-
-    :cond_12
-    const v0, 0xe0020
-
-    if-gt v0, p0, :cond_13
-
-    const v0, 0xe0080
-
-    if-ge p0, v0, :cond_13
-
-    goto/16 :goto_0
-
-    :cond_13
-    const v0, 0x1f004
-
-    if-eq p0, v0, :cond_15
-
-    const v0, 0x1f7f0
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x203c
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2049
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2122
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2139
-
-    if-eq p0, v0, :cond_15
-
-    if-eq p0, v1, :cond_15
-
-    const/16 v0, 0x21a9
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x21aa
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x231a
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x231b
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2328
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x24c2
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x25aa
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x25ab
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x25b6
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x25c0
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2934
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2935
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2b05
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2b06
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2b07
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2b1b
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2b1c
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2b50
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x2b55
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x3030
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x303d
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x3297
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0x3299
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0xa9
-
-    if-eq p0, v0, :cond_15
-
-    const/16 v0, 0xae
-
-    if-ne p0, v0, :cond_14
-
-    goto :goto_0
-
-    :cond_14
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_15
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 .end method
 
-.method public static final b(Ljava/lang/CharSequence;)Z
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
-    sget-object v0, Lv15;->a:Ljava/util/Set;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Lq73;->Y(Ljava/lang/Iterable;Ljava/lang/Object;)Z
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->createFloatArray()[F
+
+    move-result-object v0
+
+    iput-object v0, p0, Lv15;->b:[F
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    .line 7
+    const-string v0, "LINE"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    const/4 p1, 0x1
+
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Ljava/lang/CharSequence;->codePoints()Ljava/util/stream/IntStream;
+    const-string v0, "CUBIC_BEZIER"
 
-    move-result-object p0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    new-instance v0, Lu15;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lu15;-><init>(I)V
-
-    invoke-interface {p0, v0}, Ljava/util/stream/IntStream;->filter(Ljava/util/function/IntPredicate;)Ljava/util/stream/IntStream;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/stream/IntStream;->toArray()[I
-
-    move-result-object p0
-
-    sget-object v0, Lv15;->b:Ljava/util/LinkedHashSet;
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    const/4 p1, 0x2
 
-    move-result v1
+    .line 8
+    :goto_0
+    iput p1, p0, Lv15;->a:I
 
-    if-eqz v1, :cond_1
+    return-void
 
-    goto :goto_1
-
+    .line 9
     :cond_1
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    move-result-object v0
+    const-string v1, "No enum constant ru.ok.tamtam.photoeditor.state.DrawingPrimitive.Type."
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_2
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    move-result v1
+    const-string v0, "Name is null"
 
-    if-eqz v1, :cond_3
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    if-eqz p1, :cond_3
+
+    const-class v0, Lv15;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    check-cast v1, [I
+    if-eq v0, v1, :cond_1
 
-    invoke-static {v1, p0}, Ljava/util/Arrays;->equals([I[I)Z
+    goto :goto_0
 
-    move-result v1
+    :cond_1
+    check-cast p1, Lv15;
 
-    if-eqz v1, :cond_2
+    iget v0, p0, Lv15;->a:I
 
-    :goto_0
-    const/4 p0, 0x1
+    iget v1, p1, Lv15;->a:I
 
-    return p0
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lv15;->b:[F
+
+    iget-object p1, p1, Lv15;->b:[F
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([F[F)Z
+
+    move-result p1
+
+    return p1
 
     :cond_3
-    :goto_1
-    const/4 p0, 0x0
+    :goto_0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
-.method public static final c(I)Z
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    const/16 v0, 0x200d
+    iget v0, p0, Lv15;->a:I
 
-    if-ne p0, v0, :cond_0
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Ldy1;->v(I)I
+
+    move-result v0
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x1f3fb
-
-    if-gt v0, p0, :cond_1
-
-    const v0, 0x1f400
-
-    if-ge p0, v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const v0, 0xfe0f
-
-    if-ne p0, v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/16 v0, 0x20e3
-
-    if-ne p0, v0, :cond_3
+    const/4 v0, 0x0
 
     :goto_0
-    const/4 p0, 0x1
+    mul-int/lit8 v0, v0, 0x1f
 
-    return p0
+    iget-object v1, p0, Lv15;->b:[F
 
-    :cond_3
-    const/4 p0, 0x0
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([F)I
 
-    return p0
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object p2, p0, Lv15;->b:[F
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
+
+    const/4 p2, 0x1
+
+    iget v0, p0, Lv15;->a:I
+
+    if-eq v0, p2, :cond_1
+
+    const/4 p2, 0x2
+
+    if-ne v0, p2, :cond_0
+
+    const-string p2, "CUBIC_BEZIER"
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_1
+    const-string p2, "LINE"
+
+    :goto_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

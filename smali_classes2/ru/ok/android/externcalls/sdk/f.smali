@@ -3,90 +3,38 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqm3;
+.implements Lone;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-.field public final synthetic b:Lqm3;
-
-.field public final synthetic c:Ljava/io/Serializable;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqm3;Ljava/util/ArrayList;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lru/ok/android/externcalls/sdk/f;->a:I
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/f;->b:Lqm3;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/f;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/f;->c:Ljava/io/Serializable;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lqm3;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Lru/ok/android/externcalls/sdk/f;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/f;->c:Ljava/io/Serializable;
-
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/f;->b:Lqm3;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/f;->b:Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 2
 
-    iget v0, p0, Lru/ok/android/externcalls/sdk/f;->a:I
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/f;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/f;->b:Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/f;->c:Ljava/io/Serializable;
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/f;->b:Lqm3;
-
-    check-cast p1, Ljava/util/Map;
-
-    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->h(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lqm3;Ljava/util/Map;)V
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->j(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;Lorg/json/JSONObject;)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/f;->c:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    check-cast p1, Ljava/util/Map;
-
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/f;->b:Lqm3;
-
-    invoke-static {p0, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->F(Lqm3;Ljava/util/ArrayList;Ljava/util/Map;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

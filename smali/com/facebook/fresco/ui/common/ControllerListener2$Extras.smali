@@ -311,9 +311,9 @@
 
     iput-object v1, v0, Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;->focusY:Ljava/lang/Float;
 
-    iget-object p0, p0, Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;->uiFramework:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;->uiFramework:Ljava/lang/String;
 
-    iput-object p0, v0, Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;->uiFramework:Ljava/lang/String;
+    iput-object v1, v0, Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;->uiFramework:Ljava/lang/String;
 
     return-object v0
 .end method

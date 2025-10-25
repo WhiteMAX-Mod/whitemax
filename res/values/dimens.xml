@@ -86,7 +86,6 @@
     <dimen name="appcompat_dialog_background_inset">16.0dip</dimen>
     <dimen name="attach_bar_thumbnail_size">120.0dip</dimen>
     <dimen name="attach_drawable">56.0dip</dimen>
-    <dimen name="audio_record_static_circle_size">72.0dip</dimen>
     <dimen name="avatar_large">52.0dip</dimen>
     <dimen name="bottom_sheet_corner_radius">20.0dip</dimen>
     <dimen name="browser_actions_context_menu_max_width">500.0dip</dimen>
@@ -162,7 +161,6 @@
     <dimen name="design_textinput_caption_translate_y">5.0dip</dimen>
     <item type="dimen" name="disabled_alpha_material_dark">0.3</item>
     <item type="dimen" name="disabled_alpha_material_light">0.26</item>
-    <dimen name="divider_item_collage">1.0dip</dimen>
     <dimen name="fastscroll__bubble_corner">20.0dip</dimen>
     <dimen name="fastscroll__handle_clickable_width">24.0dip</dimen>
     <dimen name="fastscroll__handle_corner">3.0dip</dimen>
@@ -577,10 +575,10 @@
     <item type="dimen" name="m3_sys_motion_easing_standard_decelerate_control_x2">0.0</item>
     <item type="dimen" name="m3_sys_motion_easing_standard_decelerate_control_y1">0.0</item>
     <item type="dimen" name="m3_sys_motion_easing_standard_decelerate_control_y2">1.0</item>
-    <item type="dimen" name="m3_sys_state_dragged_state_layer_opacity">0.16</item>
-    <item type="dimen" name="m3_sys_state_focus_state_layer_opacity">0.17</item>
-    <item type="dimen" name="m3_sys_state_hover_state_layer_opacity">0.4</item>
-    <item type="dimen" name="m3_sys_state_pressed_state_layer_opacity">0.1</item>
+    <item type="dimen" name="m3_sys_state_dragged_state_layer_opacity">0.32</item>
+    <item type="dimen" name="m3_sys_state_focus_state_layer_opacity">0.2</item>
+    <item type="dimen" name="m3_sys_state_hover_state_layer_opacity">0.16</item>
+    <item type="dimen" name="m3_sys_state_pressed_state_layer_opacity">0.2</item>
     <dimen name="m3_timepicker_display_stroke_width">2.0dip</dimen>
     <item type="dimen" name="m3_timepicker_window_elevation">@dimen/m3_comp_time_picker_container_elevation</item>
     <dimen name="m3_toolbar_text_size_title">20.0dip</dimen>
@@ -628,8 +626,6 @@
     <dimen name="mediarouter_chooser_list_item_padding_end">24.0dip</dimen>
     <dimen name="mediarouter_chooser_list_item_padding_start">24.0dip</dimen>
     <dimen name="mediarouter_chooser_list_item_padding_top">12.0dip</dimen>
-    <dimen name="message_max_attach_width">500.0dip</dimen>
-    <dimen name="message_min_attach_height">120.0dip</dimen>
     <dimen name="mr_cast_group_volume_seekbar_height">4.0dip</dimen>
     <dimen name="mr_cast_meta_art_size">36.0dip</dimen>
     <dimen name="mr_cast_meta_subtitle_text_size">13.0sp</dimen>
@@ -761,14 +757,14 @@
     <dimen name="mtrl_fab_min_touch_target">48.0dip</dimen>
     <dimen name="mtrl_fab_translation_z_hovered_focused">2.0dip</dimen>
     <dimen name="mtrl_fab_translation_z_pressed">6.0dip</dimen>
-    <item type="dimen" name="mtrl_high_ripple_default_alpha">0.24</item>
-    <item type="dimen" name="mtrl_high_ripple_focused_alpha">0.4</item>
-    <item type="dimen" name="mtrl_high_ripple_hovered_alpha">0.4</item>
-    <item type="dimen" name="mtrl_high_ripple_pressed_alpha">0.24</item>
-    <item type="dimen" name="mtrl_low_ripple_default_alpha">0.12</item>
-    <item type="dimen" name="mtrl_low_ripple_focused_alpha">0.2</item>
-    <item type="dimen" name="mtrl_low_ripple_hovered_alpha">0.2</item>
-    <item type="dimen" name="mtrl_low_ripple_pressed_alpha">0.12</item>
+    <item type="dimen" name="mtrl_high_ripple_default_alpha">0.48</item>
+    <item type="dimen" name="mtrl_high_ripple_focused_alpha">0.48</item>
+    <item type="dimen" name="mtrl_high_ripple_hovered_alpha">0.16</item>
+    <item type="dimen" name="mtrl_high_ripple_pressed_alpha">0.48</item>
+    <item type="dimen" name="mtrl_low_ripple_default_alpha">0.24</item>
+    <item type="dimen" name="mtrl_low_ripple_focused_alpha">0.24</item>
+    <item type="dimen" name="mtrl_low_ripple_hovered_alpha">0.08</item>
+    <item type="dimen" name="mtrl_low_ripple_pressed_alpha">0.24</item>
     <dimen name="mtrl_min_touch_target_size">48.0dip</dimen>
     <dimen name="mtrl_navigation_bar_item_default_icon_size">24.0dip</dimen>
     <dimen name="mtrl_navigation_bar_item_default_margin">8.0dip</dimen>

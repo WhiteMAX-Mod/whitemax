@@ -1,114 +1,128 @@
-.class public final synthetic Lz4d;
+.class public final Lz4d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lb5d;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+.field public final b:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;I)V
+.method public constructor <init>(J[B)V
     .locals 0
 
-    iput p2, p0, Lz4d;->a:I
-
-    iput-object p1, p0, Lz4d;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lz4d;->a:J
+
+    iput-object p3, p0, Lz4d;->b:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lz4d;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lz4d;
+
+    iget-wide v3, p0, Lz4d;->a:J
+
+    iget-wide v5, p1, Lz4d;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lz4d;->b:[B
+
+    iget-object p1, p1, Lz4d;->b:[B
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lz4d;->a:I
+    iget-wide v0, p0, Lz4d;->a:J
 
-    iget-object p0, p0, Lz4d;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->H0()Landroid/os/Bundle;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object p0
+    iget-object v1, p0, Lz4d;->b:[B
 
-    const-string v0, "ScheduledSendPickerDialogFragment:arg_input"
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
 
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    move-result v1
 
-    move-result-object p0
+    add-int/2addr v1, v0
 
-    return-object p0
+    return v1
+.end method
 
-    :pswitch_0
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->H0()Landroid/os/Bundle;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    move-result-object p0
+    iget-object v0, p0, Lz4d;->b:[B
 
-    const-string v0, "ScheduledSendPickerDialogFragment:who"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->H0()Landroid/os/Bundle;
-
-    move-result-object p0
-
-    const-string v0, "ScheduledSendPickerViewModel:delayed_attrs"
-
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
     move-result-object v0
 
-    instance-of v1, v0, Lfl4;
+    const-string v1, "AudioMsg(duration="
 
-    if-eqz v1, :cond_0
+    const-string v2, ", wave="
 
-    check-cast v0, Lfl4;
+    iget-wide v3, p0, Lz4d;->a:J
 
-    goto :goto_0
+    invoke-static {v1, v3, v4, v2, v0}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object v0
 
-    :goto_0
-    if-eqz v0, :cond_1
+    const-string v1, ")"
 
-    iget-boolean p0, v0, Lfl4;->b:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_1
-    const-string v0, "ScheduledSendPickerDialogFragment:send_with_notification"
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result p0
-
-    :goto_1
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

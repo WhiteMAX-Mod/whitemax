@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public final A:Lb86;
+.field public final A:Lpe6;
 
-.field public final B:Lyz4;
+.field public final B:Lt93;
 
-.field public C:Lmr8;
+.field public C:Ldgd;
 
-.field public D:Lmr8;
+.field public D:Ldgd;
 
-.field public E:Lmr8;
+.field public E:Ldgd;
 
 .field public F:Ljava/util/ArrayDeque;
 
@@ -34,7 +34,7 @@
 
 .field public O:Landroidx/fragment/app/FragmentManagerViewModel;
 
-.field public final P:Loe;
+.field public final P:Lxe;
 
 .field public final a:Ljava/util/ArrayList;
 
@@ -46,13 +46,13 @@
 
 .field public e:Ljava/util/ArrayList;
 
-.field public final f:Lw76;
+.field public final f:Lke6;
 
-.field public g:Lj9a;
+.field public g:Lpma;
 
-.field public h:Lce0;
+.field public h:Lze0;
 
-.field public final i:Lux3;
+.field public final i:Li24;
 
 .field public final j:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -64,25 +64,25 @@
 
 .field public final n:Ljava/util/ArrayList;
 
-.field public final o:Lim4;
+.field public final o:Lir4;
 
 .field public final p:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-.field public final q:Ly76;
+.field public final q:Lme6;
 
-.field public final r:Ly76;
+.field public final r:Lme6;
 
-.field public final s:Ly76;
+.field public final s:Lme6;
 
-.field public final t:Ly76;
+.field public final t:Lme6;
 
-.field public final u:La86;
+.field public final u:Loe6;
 
 .field public v:I
 
-.field public w:Lu76;
+.field public w:Lie6;
 
-.field public x:Lzyd;
+.field public x:Ltb4;
 
 .field public y:Landroidx/fragment/app/a;
 
@@ -113,23 +113,23 @@
 
     iput-object v0, p0, Landroidx/fragment/app/c;->d:Ljava/util/ArrayList;
 
-    new-instance v0, Lw76;
+    new-instance v0, Lke6;
 
-    invoke-direct {v0, p0}, Lw76;-><init>(Landroidx/fragment/app/c;)V
+    invoke-direct {v0, p0}, Lke6;-><init>(Landroidx/fragment/app/c;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->f:Lw76;
+    iput-object v0, p0, Landroidx/fragment/app/c;->f:Lke6;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->h:Lce0;
+    iput-object v0, p0, Landroidx/fragment/app/c;->h:Lze0;
 
-    new-instance v0, Lux3;
+    new-instance v0, Li24;
 
     const/4 v1, 0x6
 
-    invoke-direct {v0, v1, p0}, Lux3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Li24;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->i:Lux3;
+    iput-object v0, p0, Landroidx/fragment/app/c;->i:Li24;
 
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -173,11 +173,11 @@
 
     iput-object v0, p0, Landroidx/fragment/app/c;->n:Ljava/util/ArrayList;
 
-    new-instance v0, Lim4;
+    new-instance v0, Lir4;
 
-    invoke-direct {v0, p0}, Lim4;-><init>(Landroidx/fragment/app/c;)V
+    invoke-direct {v0, p0}, Lir4;-><init>(Landroidx/fragment/app/c;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->o:Lim4;
+    iput-object v0, p0, Landroidx/fragment/app/c;->o:Lir4;
 
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -185,59 +185,61 @@
 
     iput-object v0, p0, Landroidx/fragment/app/c;->p:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    new-instance v0, Ly76;
+    new-instance v0, Lme6;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Ly76;-><init>(Landroidx/fragment/app/c;I)V
+    invoke-direct {v0, p0, v1}, Lme6;-><init>(Landroidx/fragment/app/c;I)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->q:Ly76;
+    iput-object v0, p0, Landroidx/fragment/app/c;->q:Lme6;
 
-    new-instance v0, Ly76;
+    new-instance v0, Lme6;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Ly76;-><init>(Landroidx/fragment/app/c;I)V
+    invoke-direct {v0, p0, v1}, Lme6;-><init>(Landroidx/fragment/app/c;I)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->r:Ly76;
+    iput-object v0, p0, Landroidx/fragment/app/c;->r:Lme6;
 
-    new-instance v0, Ly76;
+    new-instance v0, Lme6;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, p0, v1}, Ly76;-><init>(Landroidx/fragment/app/c;I)V
+    invoke-direct {v0, p0, v1}, Lme6;-><init>(Landroidx/fragment/app/c;I)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->s:Ly76;
+    iput-object v0, p0, Landroidx/fragment/app/c;->s:Lme6;
 
-    new-instance v0, Ly76;
+    new-instance v0, Lme6;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, p0, v1}, Ly76;-><init>(Landroidx/fragment/app/c;I)V
+    invoke-direct {v0, p0, v1}, Lme6;-><init>(Landroidx/fragment/app/c;I)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->t:Ly76;
+    iput-object v0, p0, Landroidx/fragment/app/c;->t:Lme6;
 
-    new-instance v0, La86;
+    new-instance v0, Loe6;
 
-    invoke-direct {v0, p0}, La86;-><init>(Landroidx/fragment/app/c;)V
+    invoke-direct {v0, p0}, Loe6;-><init>(Landroidx/fragment/app/c;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->u:La86;
+    iput-object v0, p0, Landroidx/fragment/app/c;->u:Loe6;
 
     const/4 v0, -0x1
 
     iput v0, p0, Landroidx/fragment/app/c;->v:I
 
-    new-instance v0, Lb86;
+    new-instance v0, Lpe6;
 
-    invoke-direct {v0, p0}, Lb86;-><init>(Landroidx/fragment/app/c;)V
+    invoke-direct {v0, p0}, Lpe6;-><init>(Landroidx/fragment/app/c;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->A:Lb86;
+    iput-object v0, p0, Landroidx/fragment/app/c;->A:Lpe6;
 
-    new-instance v0, Lyz4;
+    new-instance v0, Lt93;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xa
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->B:Lyz4;
+    invoke-direct {v0, v1}, Lt93;-><init>(I)V
+
+    iput-object v0, p0, Landroidx/fragment/app/c;->B:Lt93;
 
     new-instance v0, Ljava/util/ArrayDeque;
 
@@ -245,18 +247,18 @@
 
     iput-object v0, p0, Landroidx/fragment/app/c;->F:Ljava/util/ArrayDeque;
 
-    new-instance v0, Loe;
+    new-instance v0, Lxe;
 
-    const/16 v1, 0x15
+    const/16 v1, 0x16
 
-    invoke-direct {v0, v1, p0}, Loe;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lxe;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->P:Loe;
+    iput-object v0, p0, Landroidx/fragment/app/c;->P:Lxe;
 
     return-void
 .end method
 
-.method public static F(Lce0;)Ljava/util/HashSet;
+.method public static G(Lze0;)Ljava/util/HashSet;
     .locals 4
 
     new-instance v0, Ljava/util/HashSet;
@@ -266,7 +268,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    iget-object v2, p0, Lce0;->a:Ljava/util/ArrayList;
+    iget-object v2, p0, Lze0;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -274,19 +276,19 @@
 
     if-ge v1, v2, :cond_1
 
-    iget-object v2, p0, Lce0;->a:Ljava/util/ArrayList;
+    iget-object v2, p0, Lze0;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lq86;
+    check-cast v2, Lef6;
 
-    iget-object v2, v2, Lq86;->b:Landroidx/fragment/app/a;
+    iget-object v2, v2, Lef6;->b:Landroidx/fragment/app/a;
 
     if-eqz v2, :cond_0
 
-    iget-boolean v3, p0, Lce0;->g:Z
+    iget-boolean v3, p0, Lze0;->g:Z
 
     if-eqz v3, :cond_0
 
@@ -301,7 +303,7 @@
     return-object v0
 .end method
 
-.method public static K(I)Z
+.method public static L(I)Z
     .locals 1
 
     const-string v0, "FragmentManager"
@@ -322,19 +324,19 @@
     return p0
 .end method
 
-.method public static L(Landroidx/fragment/app/a;)Z
+.method public static M(Landroidx/fragment/app/a;)Z
     .locals 3
 
-    iget-boolean v0, p0, Landroidx/fragment/app/a;->P0:Z
+    iget-boolean v0, p0, Landroidx/fragment/app/a;->N0:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Landroidx/fragment/app/a;->Q0:Z
+    iget-boolean v0, p0, Landroidx/fragment/app/a;->O0:Z
 
     if-nez v0, :cond_3
 
     :cond_0
-    iget-object p0, p0, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object p0, p0, Landroidx/fragment/app/a;->E0:Lxe6;
 
     iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
@@ -365,7 +367,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static {v2}, Landroidx/fragment/app/c;->L(Landroidx/fragment/app/a;)Z
+    invoke-static {v2}, Landroidx/fragment/app/c;->M(Landroidx/fragment/app/a;)Z
 
     move-result v1
 
@@ -381,7 +383,7 @@
     return v0
 .end method
 
-.method public static N(Landroidx/fragment/app/a;)Z
+.method public static O(Landroidx/fragment/app/a;)Z
     .locals 1
 
     if-nez p0, :cond_0
@@ -389,17 +391,17 @@
     goto :goto_0
 
     :cond_0
-    iget-boolean v0, p0, Landroidx/fragment/app/a;->Q0:Z
+    iget-boolean v0, p0, Landroidx/fragment/app/a;->O0:Z
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iget-object v0, p0, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Landroidx/fragment/app/a;->H0:Landroidx/fragment/app/a;
+    iget-object p0, p0, Landroidx/fragment/app/a;->F0:Landroidx/fragment/app/a;
 
-    invoke-static {p0}, Landroidx/fragment/app/c;->N(Landroidx/fragment/app/a;)Z
+    invoke-static {p0}, Landroidx/fragment/app/c;->O(Landroidx/fragment/app/a;)Z
 
     move-result p0
 
@@ -417,7 +419,7 @@
     return p0
 .end method
 
-.method public static O(Landroidx/fragment/app/a;)Z
+.method public static P(Landroidx/fragment/app/a;)Z
     .locals 2
 
     if-nez p0, :cond_0
@@ -425,7 +427,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iget-object v0, p0, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
     iget-object v1, v0, Landroidx/fragment/app/c;->z:Landroidx/fragment/app/a;
 
@@ -437,7 +439,7 @@
 
     iget-object p0, v0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
 
-    invoke-static {p0}, Landroidx/fragment/app/c;->O(Landroidx/fragment/app/a;)Z
+    invoke-static {p0}, Landroidx/fragment/app/c;->P(Landroidx/fragment/app/a;)Z
 
     move-result p0
 
@@ -454,14 +456,232 @@
     return p0
 .end method
 
+.method public static h0(Landroidx/fragment/app/a;)V
+    .locals 2
+
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "show: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "FragmentManager"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-boolean v0, p0, Landroidx/fragment/app/a;->J0:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroidx/fragment/app/a;->J0:Z
+
+    iget-boolean v0, p0, Landroidx/fragment/app/a;->V0:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    iput-boolean v0, p0, Landroidx/fragment/app/a;->V0:Z
+
+    :cond_1
+    return-void
+.end method
+
 
 # virtual methods
-.method public final A(Lce0;Z)V
+.method public final A(Z)Z
+    .locals 8
+
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->z(Z)V
+
+    const/4 p1, 0x0
+
+    move v0, p1
+
+    :goto_0
+    iget-object v1, p0, Landroidx/fragment/app/c;->L:Ljava/util/ArrayList;
+
+    iget-object v2, p0, Landroidx/fragment/app/c;->M:Ljava/util/ArrayList;
+
+    iget-object v3, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
+
+    monitor-enter v3
+
+    :try_start_0
+    iget-object v4, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move v6, p1
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_4
+
+    :cond_0
+    :try_start_1
+    iget-object v4, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    move v5, p1
+
+    move v6, v5
+
+    :goto_1
+    if-ge v5, v4, :cond_1
+
+    iget-object v7, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v7, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lue6;
+
+    invoke-interface {v7, v1, v2}, Lue6;->a(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
+
+    move-result v7
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    or-int/2addr v6, v7
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_1
+    :try_start_2
+    iget-object v1, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+
+    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lie6;
+
+    iget-object v1, v1, Lie6;->o:Landroid/os/Handler;
+
+    iget-object v2, p0, Landroidx/fragment/app/c;->P:Lxe;
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_2
+    if-eqz v6, :cond_2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroidx/fragment/app/c;->b:Z
+
+    :try_start_3
+    iget-object v1, p0, Landroidx/fragment/app/c;->L:Ljava/util/ArrayList;
+
+    iget-object v2, p0, Landroidx/fragment/app/c;->M:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, v1, v2}, Landroidx/fragment/app/c;->X(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->d()V
+
+    goto :goto_0
+
+    :catchall_2
+    move-exception p1
+
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->d()V
+
+    throw p1
+
+    :cond_2
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->k0()V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->v()V
+
+    iget-object p1, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+
+    iget-object p1, p1, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
+
+    return v0
+
+    :goto_3
+    :try_start_4
+    iget-object v0, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
+
+    iget-object v0, v0, Lie6;->o:Landroid/os/Handler;
+
+    iget-object v1, p0, Landroidx/fragment/app/c;->P:Lxe;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    throw p1
+
+    :goto_4
+    monitor-exit v3
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw p1
+.end method
+
+.method public final B(Lze0;Z)V
     .locals 1
 
     if-eqz p2, :cond_1
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz v0, :cond_0
 
@@ -473,13 +693,13 @@
     return-void
 
     :cond_1
-    invoke-virtual {p0, p2}, Landroidx/fragment/app/c;->y(Z)V
+    invoke-virtual {p0, p2}, Landroidx/fragment/app/c;->z(Z)V
 
     iget-object p2, p0, Landroidx/fragment/app/c;->L:Ljava/util/ArrayList;
 
     iget-object v0, p0, Landroidx/fragment/app/c;->M:Ljava/util/ArrayList;
 
-    invoke-virtual {p1, p2, v0}, Lce0;->a(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
+    invoke-virtual {p1, p2, v0}, Lze0;->a(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
 
     const/4 p1, 0x1
 
@@ -498,32 +718,23 @@
 
     invoke-virtual {p0}, Landroidx/fragment/app/c;->k0()V
 
-    iget-boolean p1, p0, Landroidx/fragment/app/c;->K:Z
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->v()V
 
-    if-eqz p1, :cond_2
+    iget-object p1, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    const/4 p1, 0x0
+    iget-object p1, p1, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
 
-    iput-boolean p1, p0, Landroidx/fragment/app/c;->K:Z
-
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->i0()V
-
-    :cond_2
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
-
-    iget-object p0, p0, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
-
-    invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    invoke-virtual {p1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object p1
 
-    invoke-interface {p0, p1}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
+    const/4 p2, 0x0
+
+    invoke-static {p2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object p2
+
+    invoke-interface {p1, p2}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
 
     return-void
 
@@ -535,12 +746,12 @@
     throw p1
 .end method
 
-.method public final B(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
-    .locals 29
+.method public final C(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
+    .locals 27
 
-    move-object/from16 v0, p0
+    move-object/from16 v1, p0
 
-    move-object/from16 v1, p1
+    move-object/from16 v0, p1
 
     move-object/from16 v2, p2
 
@@ -548,19 +759,19 @@
 
     move/from16 v4, p4
 
-    iget-object v5, v0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v5, v1, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    iget-object v6, v0, Landroidx/fragment/app/c;->n:Ljava/util/ArrayList;
+    iget-object v6, v1, Landroidx/fragment/app/c;->n:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lce0;
+    check-cast v7, Lze0;
 
-    iget-boolean v7, v7, Lce0;->o:Z
+    iget-boolean v7, v7, Lze0;->o:Z
 
-    iget-object v8, v0, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
+    iget-object v8, v1, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
 
     if-nez v8, :cond_0
 
@@ -568,7 +779,7 @@
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v8, v0, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
+    iput-object v8, v1, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
 
     goto :goto_0
 
@@ -576,7 +787,7 @@
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
     :goto_0
-    iget-object v8, v0, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
+    iget-object v8, v1, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Landroidx/fragment/app/f;->f()Ljava/util/List;
 
@@ -584,7 +795,7 @@
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    iget-object v8, v0, Landroidx/fragment/app/c;->z:Landroidx/fragment/app/a;
+    iget-object v8, v1, Landroidx/fragment/app/c;->z:Landroidx/fragment/app/a;
 
     move v10, v3
 
@@ -593,48 +804,48 @@
     :goto_1
     if-ge v10, v4, :cond_13
 
-    invoke-virtual {v1, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v15
+    move-result-object v14
 
-    check-cast v15, Lce0;
+    check-cast v14, Lze0;
 
     invoke-virtual {v2, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v16
+    move-result-object v15
 
-    check-cast v16, Ljava/lang/Boolean;
+    check-cast v15, Ljava/lang/Boolean;
 
-    invoke-virtual/range {v16 .. v16}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v15}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v16
+    move-result v15
 
-    if-nez v16, :cond_d
+    if-nez v15, :cond_d
 
-    iget-object v9, v0, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
+    iget-object v15, v1, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
 
-    iget-object v13, v15, Lce0;->a:Ljava/util/ArrayList;
+    iget-object v9, v14, Lze0;->a:Ljava/util/ArrayList;
 
     const/4 v12, 0x0
 
     :goto_2
-    invoke-virtual {v13}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
-    move-result v14
+    move-result v13
 
-    if-ge v12, v14, :cond_c
+    if-ge v12, v13, :cond_c
 
-    invoke-virtual {v13, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v9, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v14
+    move-result-object v13
 
-    check-cast v14, Lq86;
+    check-cast v13, Lef6;
 
-    move/from16 v21, v7
+    move/from16 v19, v7
 
-    iget v7, v14, Lq86;->a:I
+    iget v7, v13, Lef6;->a:I
 
-    move/from16 v22, v10
+    move/from16 v20, v10
 
     const/4 v10, 0x1
 
@@ -642,134 +853,123 @@
 
     const/4 v10, 0x2
 
+    move/from16 v21, v11
+
+    const/16 v11, 0x9
+
     if-eq v7, v10, :cond_5
 
     const/4 v10, 0x3
 
-    if-eq v7, v10, :cond_3
+    if-eq v7, v10, :cond_4
 
     const/4 v10, 0x6
 
-    if-eq v7, v10, :cond_3
+    if-eq v7, v10, :cond_4
 
     const/4 v10, 0x7
 
-    if-eq v7, v10, :cond_2
+    if-eq v7, v10, :cond_3
 
     const/16 v10, 0x8
 
-    if-eq v7, v10, :cond_1
+    if-eq v7, v10, :cond_2
 
-    move-object/from16 v26, v6
-
-    move/from16 v24, v11
+    :cond_1
+    move-object/from16 v24, v6
 
     goto :goto_3
 
-    :cond_1
-    new-instance v7, Lq86;
-
-    move/from16 v24, v11
+    :cond_2
+    new-instance v7, Lef6;
 
     const/4 v10, 0x0
 
-    const/16 v11, 0x9
+    invoke-direct {v7, v11, v8, v10}, Lef6;-><init>(ILandroidx/fragment/app/a;I)V
 
-    invoke-direct {v7, v11, v8, v10}, Lq86;-><init>(ILandroidx/fragment/app/a;I)V
-
-    invoke-virtual {v13, v12, v7}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    invoke-virtual {v9, v12, v7}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     const/4 v10, 0x1
 
-    iput-boolean v10, v14, Lq86;->c:Z
+    iput-boolean v10, v13, Lef6;->c:Z
 
     add-int/lit8 v12, v12, 0x1
 
-    iget-object v7, v14, Lq86;->b:Landroidx/fragment/app/a;
+    iget-object v7, v13, Lef6;->b:Landroidx/fragment/app/a;
 
-    move-object/from16 v26, v6
+    move-object/from16 v24, v6
 
     move-object v8, v7
 
     :goto_3
     const/4 v10, 0x1
 
-    goto/16 :goto_8
-
-    :cond_2
-    const/4 v10, 0x1
-
-    move/from16 v24, v11
-
-    move-object/from16 v26, v6
-
-    goto/16 :goto_7
+    goto/16 :goto_9
 
     :cond_3
-    move/from16 v24, v11
+    const/4 v10, 0x1
 
-    iget-object v7, v14, Lq86;->b:Landroidx/fragment/app/a;
+    :goto_4
+    move-object/from16 v24, v6
 
-    invoke-virtual {v9, v7}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    goto/16 :goto_8
 
-    iget-object v7, v14, Lq86;->b:Landroidx/fragment/app/a;
+    :cond_4
+    iget-object v7, v13, Lef6;->b:Landroidx/fragment/app/a;
 
-    if-ne v7, v8, :cond_4
+    invoke-virtual {v15, v7}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    new-instance v8, Lq86;
+    iget-object v7, v13, Lef6;->b:Landroidx/fragment/app/a;
 
-    const/16 v11, 0x9
+    if-ne v7, v8, :cond_1
 
-    invoke-direct {v8, v11, v7}, Lq86;-><init>(ILandroidx/fragment/app/a;)V
+    new-instance v8, Lef6;
 
-    invoke-virtual {v13, v12, v8}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    invoke-direct {v8, v11, v7}, Lef6;-><init>(ILandroidx/fragment/app/a;)V
+
+    invoke-virtual {v9, v12, v8}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     add-int/lit8 v12, v12, 0x1
 
-    move-object/from16 v26, v6
+    move-object/from16 v24, v6
 
     const/4 v8, 0x0
 
     goto :goto_3
 
-    :cond_4
-    move-object/from16 v26, v6
-
-    goto :goto_3
-
     :cond_5
-    move/from16 v24, v11
+    iget-object v7, v13, Lef6;->b:Landroidx/fragment/app/a;
 
-    iget-object v7, v14, Lq86;->b:Landroidx/fragment/app/a;
+    iget v10, v7, Landroidx/fragment/app/a;->H0:I
 
-    iget v10, v7, Landroidx/fragment/app/a;->J0:I
+    invoke-virtual {v15}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
+    move-result v22
 
-    move-result v11
+    const/16 v18, 0x1
 
-    const/16 v20, 0x1
+    add-int/lit8 v22, v22, -0x1
 
-    add-int/lit8 v11, v11, -0x1
+    move/from16 v11, v22
 
-    const/16 v25, 0x0
+    const/16 v22, 0x0
 
-    :goto_4
+    :goto_5
     if-ltz v11, :cond_9
 
-    invoke-virtual {v9, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v15, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v26
+    move-result-object v24
 
-    move/from16 v27, v11
+    move/from16 v25, v11
 
-    move-object/from16 v11, v26
+    move-object/from16 v11, v24
 
     check-cast v11, Landroidx/fragment/app/a;
 
-    move-object/from16 v26, v6
+    move-object/from16 v24, v6
 
-    iget v6, v11, Landroidx/fragment/app/a;->J0:I
+    iget v6, v11, Landroidx/fragment/app/a;->H0:I
 
     if-ne v6, v10, :cond_8
 
@@ -779,14 +979,14 @@
 
     const/4 v10, 0x1
 
-    const/16 v25, 0x1
+    const/16 v22, 0x1
 
-    goto :goto_6
+    goto :goto_7
 
     :cond_6
     if-ne v11, v8, :cond_7
 
-    new-instance v6, Lq86;
+    new-instance v6, Lef6;
 
     move/from16 v23, v10
 
@@ -794,9 +994,9 @@
 
     const/16 v10, 0x9
 
-    invoke-direct {v6, v10, v11, v8}, Lq86;-><init>(ILandroidx/fragment/app/a;I)V
+    invoke-direct {v6, v10, v11, v8}, Lef6;-><init>(ILandroidx/fragment/app/a;I)V
 
-    invoke-virtual {v13, v12, v6}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    invoke-virtual {v9, v12, v6}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     add-int/lit8 v12, v12, 0x1
 
@@ -804,7 +1004,7 @@
 
     const/4 v8, 0x0
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_7
     move/from16 v23, v10
@@ -813,127 +1013,127 @@
 
     const/16 v10, 0x9
 
-    :goto_5
-    new-instance v10, Lq86;
+    :goto_6
+    new-instance v10, Lef6;
 
-    move-object/from16 v28, v8
+    move-object/from16 v26, v8
 
     const/4 v8, 0x3
 
-    invoke-direct {v10, v8, v11, v6}, Lq86;-><init>(ILandroidx/fragment/app/a;I)V
+    invoke-direct {v10, v8, v11, v6}, Lef6;-><init>(ILandroidx/fragment/app/a;I)V
 
-    iget v6, v14, Lq86;->d:I
+    iget v6, v13, Lef6;->d:I
 
-    iput v6, v10, Lq86;->d:I
+    iput v6, v10, Lef6;->d:I
 
-    iget v6, v14, Lq86;->f:I
+    iget v6, v13, Lef6;->f:I
 
-    iput v6, v10, Lq86;->f:I
+    iput v6, v10, Lef6;->f:I
 
-    iget v6, v14, Lq86;->e:I
+    iget v6, v13, Lef6;->e:I
 
-    iput v6, v10, Lq86;->e:I
+    iput v6, v10, Lef6;->e:I
 
-    iget v6, v14, Lq86;->g:I
+    iget v6, v13, Lef6;->g:I
 
-    iput v6, v10, Lq86;->g:I
+    iput v6, v10, Lef6;->g:I
 
-    invoke-virtual {v13, v12, v10}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    invoke-virtual {v9, v12, v10}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    invoke-virtual {v9, v11}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v15, v11}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     const/4 v10, 0x1
 
     add-int/2addr v12, v10
 
-    move-object/from16 v8, v28
+    move-object/from16 v8, v26
 
-    goto :goto_6
+    goto :goto_7
 
     :cond_8
     move/from16 v23, v10
 
     const/4 v10, 0x1
 
-    :goto_6
-    add-int/lit8 v11, v27, -0x1
+    :goto_7
+    add-int/lit8 v11, v25, -0x1
 
     move/from16 v10, v23
 
-    move-object/from16 v6, v26
+    move-object/from16 v6, v24
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_9
-    move-object/from16 v26, v6
+    move-object/from16 v24, v6
 
     const/4 v10, 0x1
 
-    if-eqz v25, :cond_a
+    if-eqz v22, :cond_a
 
-    invoke-virtual {v13, v12}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    invoke-virtual {v9, v12}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     add-int/lit8 v12, v12, -0x1
 
-    goto :goto_8
+    goto :goto_9
 
     :cond_a
-    iput v10, v14, Lq86;->a:I
+    iput v10, v13, Lef6;->a:I
 
-    iput-boolean v10, v14, Lq86;->c:Z
+    iput-boolean v10, v13, Lef6;->c:Z
 
-    invoke-virtual {v9, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v15, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_8
+    goto :goto_9
 
     :cond_b
-    move-object/from16 v26, v6
+    move/from16 v21, v11
 
-    move/from16 v24, v11
-
-    :goto_7
-    iget-object v6, v14, Lq86;->b:Landroidx/fragment/app/a;
-
-    invoke-virtual {v9, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    goto/16 :goto_4
 
     :goto_8
+    iget-object v6, v13, Lef6;->b:Landroidx/fragment/app/a;
+
+    invoke-virtual {v15, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_9
     add-int/2addr v12, v10
 
-    move/from16 v7, v21
+    move/from16 v7, v19
 
-    move/from16 v10, v22
+    move/from16 v10, v20
 
-    move/from16 v11, v24
+    move/from16 v11, v21
 
-    move-object/from16 v6, v26
+    move-object/from16 v6, v24
 
     goto/16 :goto_2
 
     :cond_c
-    move-object/from16 v26, v6
+    move-object/from16 v24, v6
 
-    move/from16 v21, v7
+    move/from16 v19, v7
 
-    move/from16 v22, v10
+    move/from16 v20, v10
 
-    move/from16 v24, v11
+    move/from16 v21, v11
 
-    goto :goto_b
+    goto :goto_c
 
     :cond_d
-    move-object/from16 v26, v6
+    move-object/from16 v24, v6
 
-    move/from16 v21, v7
+    move/from16 v19, v7
 
-    move/from16 v22, v10
+    move/from16 v20, v10
 
-    move/from16 v24, v11
+    move/from16 v21, v11
 
     const/4 v10, 0x1
 
-    iget-object v6, v0, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
+    iget-object v6, v1, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
 
-    iget-object v7, v15, Lce0;->a:Ljava/util/ArrayList;
+    iget-object v7, v14, Lze0;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -941,16 +1141,16 @@
 
     sub-int/2addr v9, v10
 
-    :goto_9
+    :goto_a
     if-ltz v9, :cond_10
 
     invoke-virtual {v7, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v11
 
-    check-cast v11, Lq86;
+    check-cast v11, Lef6;
 
-    iget v12, v11, Lq86;->a:I
+    iget v12, v11, Lef6;->a:I
 
     if-eq v12, v10, :cond_f
 
@@ -960,90 +1160,90 @@
 
     packed-switch v12, :pswitch_data_0
 
-    goto :goto_a
+    goto :goto_b
 
     :pswitch_0
-    iget-object v12, v11, Lq86;->h:Lcn7;
+    iget-object v12, v11, Lef6;->h:Lhw7;
 
-    iput-object v12, v11, Lq86;->i:Lcn7;
+    iput-object v12, v11, Lef6;->i:Lhw7;
 
-    goto :goto_a
+    goto :goto_b
 
     :pswitch_1
-    iget-object v8, v11, Lq86;->b:Landroidx/fragment/app/a;
+    iget-object v8, v11, Lef6;->b:Landroidx/fragment/app/a;
 
-    goto :goto_a
+    goto :goto_b
 
     :pswitch_2
     const/4 v8, 0x0
 
-    goto :goto_a
+    goto :goto_b
 
     :cond_e
     :pswitch_3
-    iget-object v11, v11, Lq86;->b:Landroidx/fragment/app/a;
+    iget-object v11, v11, Lef6;->b:Landroidx/fragment/app/a;
 
     invoke-virtual {v6, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_a
+    goto :goto_b
 
     :cond_f
     const/4 v10, 0x3
 
     :pswitch_4
-    iget-object v11, v11, Lq86;->b:Landroidx/fragment/app/a;
+    iget-object v11, v11, Lef6;->b:Landroidx/fragment/app/a;
 
     invoke-virtual {v6, v11}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    :goto_a
+    :goto_b
     add-int/lit8 v9, v9, -0x1
 
     const/4 v10, 0x1
 
-    goto :goto_9
+    goto :goto_a
 
     :cond_10
-    :goto_b
-    if-nez v24, :cond_12
+    :goto_c
+    if-nez v21, :cond_12
 
-    iget-boolean v6, v15, Lce0;->g:Z
+    iget-boolean v6, v14, Lze0;->g:Z
 
     if-eqz v6, :cond_11
 
-    goto :goto_c
+    goto :goto_d
 
     :cond_11
     const/4 v11, 0x0
 
-    goto :goto_d
+    goto :goto_e
 
     :cond_12
-    :goto_c
+    :goto_d
     const/4 v11, 0x1
 
-    :goto_d
-    add-int/lit8 v10, v22, 0x1
+    :goto_e
+    add-int/lit8 v10, v20, 0x1
 
-    move/from16 v7, v21
+    move/from16 v7, v19
 
-    move-object/from16 v6, v26
+    move-object/from16 v6, v24
 
     goto/16 :goto_1
 
     :cond_13
-    move-object/from16 v26, v6
+    move-object/from16 v24, v6
 
-    move/from16 v21, v7
+    move/from16 v19, v7
 
-    move/from16 v24, v11
+    move/from16 v21, v11
 
-    iget-object v6, v0, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
+    iget-object v6, v1, Landroidx/fragment/app/c;->N:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    if-nez v21, :cond_16
+    if-nez v19, :cond_16
 
-    iget v6, v0, Landroidx/fragment/app/c;->v:I
+    iget v6, v1, Landroidx/fragment/app/c;->v:I
 
     const/4 v10, 0x1
 
@@ -1051,23 +1251,23 @@
 
     move v6, v3
 
-    :goto_e
+    :goto_f
     if-ge v6, v4, :cond_16
 
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lce0;
+    check-cast v7, Lze0;
 
-    iget-object v7, v7, Lce0;->a:Ljava/util/ArrayList;
+    iget-object v7, v7, Lze0;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
 
     :cond_14
-    :goto_f
+    :goto_10
     invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v8
@@ -1078,44 +1278,44 @@
 
     move-result-object v8
 
-    check-cast v8, Lq86;
+    check-cast v8, Lef6;
 
-    iget-object v8, v8, Lq86;->b:Landroidx/fragment/app/a;
+    iget-object v8, v8, Lef6;->b:Landroidx/fragment/app/a;
 
     if-eqz v8, :cond_14
 
-    iget-object v9, v8, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iget-object v9, v8, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
     if-eqz v9, :cond_14
 
-    invoke-virtual {v0, v8}, Landroidx/fragment/app/c;->g(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
+    invoke-virtual {v1, v8}, Landroidx/fragment/app/c;->g(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
 
     move-result-object v8
 
     invoke-virtual {v5, v8}, Landroidx/fragment/app/f;->g(Landroidx/fragment/app/e;)V
 
-    goto :goto_f
+    goto :goto_10
 
     :cond_15
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_e
+    goto :goto_f
 
     :cond_16
     const-string v5, "Unknown cmd: "
 
     move v6, v3
 
-    :goto_10
+    :goto_11
     const/4 v7, -0x1
 
-    if-ge v6, v4, :cond_29
+    if-ge v6, v4, :cond_22
 
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
-    check-cast v8, Lce0;
+    check-cast v8, Lze0;
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1127,13 +1327,13 @@
 
     move-result v9
 
-    if-eqz v9, :cond_21
+    if-eqz v9, :cond_1e
 
-    invoke-virtual {v8, v7}, Lce0;->c(I)V
+    invoke-virtual {v8, v7}, Lze0;->c(I)V
 
-    iget-object v7, v8, Lce0;->q:Landroidx/fragment/app/c;
+    iget-object v7, v8, Lze0;->q:Landroidx/fragment/app/c;
 
-    iget-object v9, v8, Lce0;->a:Ljava/util/ArrayList;
+    iget-object v9, v8, Lze0;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
@@ -1143,34 +1343,34 @@
 
     sub-int/2addr v10, v11
 
-    :goto_11
-    if-ltz v10, :cond_20
+    :goto_12
+    if-ltz v10, :cond_1d
 
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
-    check-cast v12, Lq86;
+    check-cast v12, Lef6;
 
-    iget-object v13, v12, Lq86;->b:Landroidx/fragment/app/a;
+    iget-object v13, v12, Lef6;->b:Landroidx/fragment/app/a;
 
     if-eqz v13, :cond_1c
 
-    iget-object v14, v13, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v14, v13, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v14, :cond_17
 
-    goto :goto_12
+    goto :goto_13
 
     :cond_17
-    invoke-virtual {v13}, Landroidx/fragment/app/a;->P()Lr76;
+    invoke-virtual {v13}, Landroidx/fragment/app/a;->B()Lfe6;
 
     move-result-object v14
 
-    iput-boolean v11, v14, Lr76;->a:Z
+    iput-boolean v11, v14, Lfe6;->a:Z
 
-    :goto_12
-    iget v11, v8, Lce0;->f:I
+    :goto_13
+    iget v11, v8, Lze0;->f:I
 
     const/16 v14, 0x2002
 
@@ -1194,257 +1394,206 @@
 
     const/4 v14, 0x0
 
-    goto :goto_13
+    goto :goto_14
 
     :cond_18
     const/16 v14, 0x2005
 
-    goto :goto_13
+    goto :goto_14
 
     :cond_19
     move v14, v15
 
     :cond_1a
-    :goto_13
-    iget-object v11, v13, Landroidx/fragment/app/a;->W0:Lr76;
+    :goto_14
+    iget-object v11, v13, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v11, :cond_1b
 
     if-nez v14, :cond_1b
 
-    goto :goto_14
+    goto :goto_15
 
     :cond_1b
-    invoke-virtual {v13}, Landroidx/fragment/app/a;->P()Lr76;
+    invoke-virtual {v13}, Landroidx/fragment/app/a;->B()Lfe6;
 
-    iget-object v11, v13, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v11, v13, Landroidx/fragment/app/a;->U0:Lfe6;
 
-    iput v14, v11, Lr76;->f:I
+    iput v14, v11, Lfe6;->f:I
 
-    :goto_14
-    invoke-virtual {v13}, Landroidx/fragment/app/a;->P()Lr76;
+    :goto_15
+    invoke-virtual {v13}, Landroidx/fragment/app/a;->B()Lfe6;
 
-    iget-object v11, v13, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v11, v13, Landroidx/fragment/app/a;->U0:Lfe6;
 
     invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :cond_1c
-    iget v11, v12, Lq86;->a:I
+    iget v11, v12, Lef6;->a:I
 
     packed-switch v11, :pswitch_data_1
 
     :pswitch_5
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, v12, Lq86;->a:I
+    iget v3, v12, Lef6;->a:I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :pswitch_6
-    iget-object v11, v12, Lq86;->h:Lcn7;
+    iget-object v11, v12, Lef6;->h:Lhw7;
 
-    invoke-virtual {v7, v13, v11}, Landroidx/fragment/app/c;->f0(Landroidx/fragment/app/a;Lcn7;)V
+    invoke-virtual {v7, v13, v11}, Landroidx/fragment/app/c;->e0(Landroidx/fragment/app/a;Lhw7;)V
 
-    :cond_1d
-    :goto_15
+    :goto_16
     const/4 v11, 0x1
 
-    goto/16 :goto_16
+    goto/16 :goto_17
 
     :pswitch_7
-    invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->g0(Landroidx/fragment/app/a;)V
+    invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->f0(Landroidx/fragment/app/a;)V
 
-    goto :goto_15
+    goto :goto_16
 
     :pswitch_8
     const/4 v11, 0x0
 
-    invoke-virtual {v7, v11}, Landroidx/fragment/app/c;->g0(Landroidx/fragment/app/a;)V
+    invoke-virtual {v7, v11}, Landroidx/fragment/app/c;->f0(Landroidx/fragment/app/a;)V
 
-    goto :goto_15
+    goto :goto_16
 
     :pswitch_9
-    iget v11, v12, Lq86;->d:I
+    iget v11, v12, Lef6;->d:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v12, v12, Lq86;->g:I
+    iget v12, v12, Lef6;->g:I
 
-    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     const/4 v11, 0x1
 
-    invoke-virtual {v7, v13, v11}, Landroidx/fragment/app/c;->c0(Landroidx/fragment/app/a;Z)V
+    invoke-virtual {v7, v13, v11}, Landroidx/fragment/app/c;->b0(Landroidx/fragment/app/a;Z)V
 
     invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->h(Landroidx/fragment/app/a;)V
 
-    goto :goto_15
+    goto :goto_16
 
     :pswitch_a
-    iget v11, v12, Lq86;->d:I
+    iget v11, v12, Lef6;->d:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v12, v12, Lq86;->g:I
+    iget v12, v12, Lef6;->g:I
 
-    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->c(Landroidx/fragment/app/a;)V
 
-    goto :goto_15
+    goto :goto_16
 
     :pswitch_b
-    iget v11, v12, Lq86;->d:I
+    iget v11, v12, Lef6;->d:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v12, v12, Lq86;->g:I
+    iget v12, v12, Lef6;->g:I
 
-    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     const/4 v11, 0x1
 
-    invoke-virtual {v7, v13, v11}, Landroidx/fragment/app/c;->c0(Landroidx/fragment/app/a;Z)V
+    invoke-virtual {v7, v13, v11}, Landroidx/fragment/app/c;->b0(Landroidx/fragment/app/a;Z)V
 
-    const/16 v19, 0x2
+    invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->K(Landroidx/fragment/app/a;)V
 
-    invoke-static/range {v19 .. v19}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_1e
-
-    invoke-static {v13}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    :cond_1e
-    iget-boolean v12, v13, Landroidx/fragment/app/a;->L0:Z
-
-    if-nez v12, :cond_1d
-
-    iput-boolean v11, v13, Landroidx/fragment/app/a;->L0:Z
-
-    iget-boolean v12, v13, Landroidx/fragment/app/a;->X0:Z
-
-    xor-int/2addr v12, v11
-
-    iput-boolean v12, v13, Landroidx/fragment/app/a;->X0:Z
-
-    invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->h0(Landroidx/fragment/app/a;)V
-
-    goto :goto_15
+    goto :goto_16
 
     :pswitch_c
-    iget v11, v12, Lq86;->d:I
+    iget v11, v12, Lef6;->d:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v12, v12, Lq86;->g:I
+    iget v12, v12, Lef6;->g:I
 
-    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 v19, 0x2
+    invoke-static {v13}, Landroidx/fragment/app/c;->h0(Landroidx/fragment/app/a;)V
 
-    invoke-static/range {v19 .. v19}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_1f
-
-    invoke-static {v13}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    :cond_1f
-    iget-boolean v11, v13, Landroidx/fragment/app/a;->L0:Z
-
-    if-eqz v11, :cond_1d
-
-    const/4 v11, 0x0
-
-    iput-boolean v11, v13, Landroidx/fragment/app/a;->L0:Z
-
-    iget-boolean v11, v13, Landroidx/fragment/app/a;->X0:Z
-
-    const/16 v20, 0x1
-
-    xor-int/lit8 v11, v11, 0x1
-
-    iput-boolean v11, v13, Landroidx/fragment/app/a;->X0:Z
-
-    goto :goto_15
+    goto :goto_16
 
     :pswitch_d
-    iget v11, v12, Lq86;->d:I
+    iget v11, v12, Lef6;->d:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v12, v12, Lq86;->g:I
+    iget v12, v12, Lef6;->g:I
 
-    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->a(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
 
-    goto/16 :goto_15
+    goto :goto_16
 
     :pswitch_e
-    iget v11, v12, Lq86;->d:I
+    iget v11, v12, Lef6;->d:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v12, v12, Lq86;->g:I
+    iget v12, v12, Lef6;->g:I
 
-    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v11, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     const/4 v11, 0x1
 
-    invoke-virtual {v7, v13, v11}, Landroidx/fragment/app/c;->c0(Landroidx/fragment/app/a;Z)V
+    invoke-virtual {v7, v13, v11}, Landroidx/fragment/app/c;->b0(Landroidx/fragment/app/a;Z)V
 
     invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->W(Landroidx/fragment/app/a;)V
 
-    :goto_16
+    :goto_17
     add-int/lit8 v10, v10, -0x1
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
-    :cond_20
-    move-object/from16 v18, v5
-
-    const/16 v19, 0x2
+    :cond_1d
+    move-object/from16 v17, v5
 
     goto/16 :goto_1d
 
-    :cond_21
+    :cond_1e
     const/4 v11, 0x1
 
-    invoke-virtual {v8, v11}, Lce0;->c(I)V
+    invoke-virtual {v8, v11}, Lze0;->c(I)V
 
-    iget-object v7, v8, Lce0;->q:Landroidx/fragment/app/c;
+    iget-object v7, v8, Lze0;->q:Landroidx/fragment/app/c;
 
-    iget-object v9, v8, Lce0;->a:Ljava/util/ArrayList;
+    iget-object v9, v8, Lze0;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
@@ -1452,291 +1601,232 @@
 
     const/4 v11, 0x0
 
-    :goto_17
-    if-ge v11, v10, :cond_20
+    :goto_18
+    if-ge v11, v10, :cond_1d
 
     invoke-virtual {v9, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
-    check-cast v12, Lq86;
+    check-cast v12, Lef6;
 
-    iget-object v13, v12, Lq86;->b:Landroidx/fragment/app/a;
+    iget-object v13, v12, Lef6;->b:Landroidx/fragment/app/a;
 
-    if-eqz v13, :cond_24
+    if-eqz v13, :cond_21
 
-    iget-object v14, v13, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v14, v13, Landroidx/fragment/app/a;->U0:Lfe6;
 
-    if-nez v14, :cond_22
+    if-nez v14, :cond_1f
 
-    goto :goto_18
+    goto :goto_19
 
-    :cond_22
-    invoke-virtual {v13}, Landroidx/fragment/app/a;->P()Lr76;
+    :cond_1f
+    invoke-virtual {v13}, Landroidx/fragment/app/a;->B()Lfe6;
 
     move-result-object v14
 
     const/4 v15, 0x0
 
-    iput-boolean v15, v14, Lr76;->a:Z
-
-    :goto_18
-    iget v14, v8, Lce0;->f:I
-
-    iget-object v15, v13, Landroidx/fragment/app/a;->W0:Lr76;
-
-    if-nez v15, :cond_23
-
-    if-nez v14, :cond_23
-
-    goto :goto_19
-
-    :cond_23
-    invoke-virtual {v13}, Landroidx/fragment/app/a;->P()Lr76;
-
-    iget-object v15, v13, Landroidx/fragment/app/a;->W0:Lr76;
-
-    iput v14, v15, Lr76;->f:I
+    iput-boolean v15, v14, Lfe6;->a:Z
 
     :goto_19
-    invoke-virtual {v13}, Landroidx/fragment/app/a;->P()Lr76;
+    iget v14, v8, Lze0;->f:I
 
-    iget-object v14, v13, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v15, v13, Landroidx/fragment/app/a;->U0:Lfe6;
+
+    if-nez v15, :cond_20
+
+    if-nez v14, :cond_20
+
+    goto :goto_1a
+
+    :cond_20
+    invoke-virtual {v13}, Landroidx/fragment/app/a;->B()Lfe6;
+
+    iget-object v15, v13, Landroidx/fragment/app/a;->U0:Lfe6;
+
+    iput v14, v15, Lfe6;->f:I
+
+    :goto_1a
+    invoke-virtual {v13}, Landroidx/fragment/app/a;->B()Lfe6;
+
+    iget-object v14, v13, Landroidx/fragment/app/a;->U0:Lfe6;
 
     invoke-virtual {v14}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_24
-    iget v14, v12, Lq86;->a:I
+    :cond_21
+    iget v14, v12, Lef6;->a:I
 
     packed-switch v14, :pswitch_data_2
 
     :pswitch_f
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, v12, Lq86;->a:I
+    iget v3, v12, Lef6;->a:I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :pswitch_10
-    iget-object v12, v12, Lq86;->i:Lcn7;
+    iget-object v12, v12, Lef6;->i:Lhw7;
 
-    invoke-virtual {v7, v13, v12}, Landroidx/fragment/app/c;->f0(Landroidx/fragment/app/a;Lcn7;)V
+    invoke-virtual {v7, v13, v12}, Landroidx/fragment/app/c;->e0(Landroidx/fragment/app/a;Lhw7;)V
 
-    :goto_1a
-    move-object/from16 v18, v5
-
-    :cond_25
     :goto_1b
-    const/16 v19, 0x2
+    move-object/from16 v17, v5
 
     goto/16 :goto_1c
 
     :pswitch_11
     const/4 v12, 0x0
 
-    invoke-virtual {v7, v12}, Landroidx/fragment/app/c;->g0(Landroidx/fragment/app/a;)V
+    invoke-virtual {v7, v12}, Landroidx/fragment/app/c;->f0(Landroidx/fragment/app/a;)V
 
-    goto :goto_1a
+    goto :goto_1b
 
     :pswitch_12
-    invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->g0(Landroidx/fragment/app/a;)V
+    invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->f0(Landroidx/fragment/app/a;)V
 
-    goto :goto_1a
+    goto :goto_1b
 
     :pswitch_13
-    iget v14, v12, Lq86;->d:I
+    iget v14, v12, Lef6;->d:I
 
-    iget v15, v12, Lq86;->e:I
+    iget v15, v12, Lef6;->e:I
 
-    move-object/from16 v18, v5
+    move-object/from16 v17, v5
 
-    iget v5, v12, Lq86;->f:I
+    iget v5, v12, Lef6;->f:I
 
-    iget v12, v12, Lq86;->g:I
+    iget v12, v12, Lef6;->g:I
 
-    invoke-virtual {v13, v14, v15, v5, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v14, v15, v5, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     const/4 v15, 0x0
 
-    invoke-virtual {v7, v13, v15}, Landroidx/fragment/app/c;->c0(Landroidx/fragment/app/a;Z)V
+    invoke-virtual {v7, v13, v15}, Landroidx/fragment/app/c;->b0(Landroidx/fragment/app/a;Z)V
 
     invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->c(Landroidx/fragment/app/a;)V
 
-    goto :goto_1b
+    goto :goto_1c
 
     :pswitch_14
-    move-object/from16 v18, v5
+    move-object/from16 v17, v5
 
-    iget v5, v12, Lq86;->d:I
+    iget v5, v12, Lef6;->d:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v12, v12, Lq86;->g:I
+    iget v12, v12, Lef6;->g:I
 
-    invoke-virtual {v13, v5, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v5, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->h(Landroidx/fragment/app/a;)V
 
-    goto :goto_1b
+    goto :goto_1c
 
     :pswitch_15
-    move-object/from16 v18, v5
+    move-object/from16 v17, v5
 
-    iget v5, v12, Lq86;->d:I
+    iget v5, v12, Lef6;->d:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v12, v12, Lq86;->g:I
+    iget v12, v12, Lef6;->g:I
 
-    invoke-virtual {v13, v5, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v5, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     const/4 v15, 0x0
 
-    invoke-virtual {v7, v13, v15}, Landroidx/fragment/app/c;->c0(Landroidx/fragment/app/a;Z)V
+    invoke-virtual {v7, v13, v15}, Landroidx/fragment/app/c;->b0(Landroidx/fragment/app/a;Z)V
 
-    const/16 v19, 0x2
+    invoke-static {v13}, Landroidx/fragment/app/c;->h0(Landroidx/fragment/app/a;)V
 
-    invoke-static/range {v19 .. v19}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_26
-
-    invoke-static {v13}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    :cond_26
-    iget-boolean v5, v13, Landroidx/fragment/app/a;->L0:Z
-
-    if-eqz v5, :cond_25
-
-    iput-boolean v15, v13, Landroidx/fragment/app/a;->L0:Z
-
-    iget-boolean v5, v13, Landroidx/fragment/app/a;->X0:Z
-
-    const/16 v20, 0x1
-
-    xor-int/lit8 v5, v5, 0x1
-
-    iput-boolean v5, v13, Landroidx/fragment/app/a;->X0:Z
-
-    goto :goto_1b
+    goto :goto_1c
 
     :pswitch_16
-    move-object/from16 v18, v5
+    move-object/from16 v17, v5
 
-    iget v5, v12, Lq86;->d:I
+    iget v5, v12, Lef6;->d:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v12, v12, Lq86;->g:I
+    iget v12, v12, Lef6;->g:I
 
-    invoke-virtual {v13, v5, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v5, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/16 v19, 0x2
-
-    invoke-static/range {v19 .. v19}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_27
-
-    invoke-static {v13}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    :cond_27
-    iget-boolean v5, v13, Landroidx/fragment/app/a;->L0:Z
-
-    if-nez v5, :cond_28
-
-    const/4 v5, 0x1
-
-    iput-boolean v5, v13, Landroidx/fragment/app/a;->L0:Z
-
-    iget-boolean v12, v13, Landroidx/fragment/app/a;->X0:Z
-
-    xor-int/2addr v12, v5
-
-    iput-boolean v12, v13, Landroidx/fragment/app/a;->X0:Z
-
-    invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->h0(Landroidx/fragment/app/a;)V
+    invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->K(Landroidx/fragment/app/a;)V
 
     goto :goto_1c
 
     :pswitch_17
-    move-object/from16 v18, v5
+    move-object/from16 v17, v5
 
-    const/16 v19, 0x2
+    iget v5, v12, Lef6;->d:I
 
-    iget v5, v12, Lq86;->d:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v12, v12, Lef6;->g:I
 
-    iget v12, v12, Lq86;->g:I
-
-    invoke-virtual {v13, v5, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v5, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->W(Landroidx/fragment/app/a;)V
 
     goto :goto_1c
 
     :pswitch_18
-    move-object/from16 v18, v5
+    move-object/from16 v17, v5
 
-    const/16 v19, 0x2
+    iget v5, v12, Lef6;->d:I
 
-    iget v5, v12, Lq86;->d:I
+    iget v14, v12, Lef6;->e:I
 
-    iget v14, v12, Lq86;->e:I
+    iget v15, v12, Lef6;->f:I
 
-    iget v15, v12, Lq86;->f:I
+    iget v12, v12, Lef6;->g:I
 
-    iget v12, v12, Lq86;->g:I
-
-    invoke-virtual {v13, v5, v14, v15, v12}, Landroidx/fragment/app/a;->K0(IIII)V
+    invoke-virtual {v13, v5, v14, v15, v12}, Landroidx/fragment/app/a;->v0(IIII)V
 
     const/4 v15, 0x0
 
-    invoke-virtual {v7, v13, v15}, Landroidx/fragment/app/c;->c0(Landroidx/fragment/app/a;Z)V
+    invoke-virtual {v7, v13, v15}, Landroidx/fragment/app/c;->b0(Landroidx/fragment/app/a;Z)V
 
     invoke-virtual {v7, v13}, Landroidx/fragment/app/c;->a(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
 
-    :cond_28
     :goto_1c
     add-int/lit8 v11, v11, 0x1
 
-    move-object/from16 v5, v18
+    move-object/from16 v5, v17
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :goto_1d
     add-int/lit8 v6, v6, 0x1
 
-    move-object/from16 v5, v18
+    move-object/from16 v5, v17
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
-    :cond_29
+    :cond_22
     add-int/lit8 v5, v4, -0x1
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1749,19 +1839,19 @@
 
     move-result v5
 
-    if-eqz v24, :cond_30
+    if-eqz v21, :cond_29
 
-    invoke-virtual/range {v26 .. v26}, Ljava/util/ArrayList;->isEmpty()Z
+    invoke-virtual/range {v24 .. v24}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v6
 
-    if-nez v6, :cond_30
+    if-nez v6, :cond_29
 
     new-instance v6, Ljava/util/LinkedHashSet;
 
     invoke-direct {v6}, Ljava/util/LinkedHashSet;-><init>()V
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
 
@@ -1770,15 +1860,15 @@
 
     move-result v9
 
-    if-eqz v9, :cond_2a
+    if-eqz v9, :cond_23
 
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v9
 
-    check-cast v9, Lce0;
+    check-cast v9, Lze0;
 
-    invoke-static {v9}, Landroidx/fragment/app/c;->F(Lce0;)Ljava/util/HashSet;
+    invoke-static {v9}, Landroidx/fragment/app/c;->G(Lze0;)Ljava/util/HashSet;
 
     move-result-object v9
 
@@ -1786,16 +1876,165 @@
 
     goto :goto_1e
 
-    :cond_2a
-    iget-object v8, v0, Landroidx/fragment/app/c;->h:Lce0;
+    :cond_23
+    iget-object v8, v1, Landroidx/fragment/app/c;->h:Lze0;
 
-    if-nez v8, :cond_30
+    if-nez v8, :cond_29
 
-    invoke-virtual/range {v26 .. v26}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual/range {v24 .. v24}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
 
     :goto_1f
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_26
+
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v9
+
+    if-nez v9, :cond_25
+
+    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v9
+
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v10
+
+    if-nez v10, :cond_24
+
+    goto :goto_1f
+
+    :cond_24
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/fragment/app/a;
+
+    const/16 v16, 0x0
+
+    throw v16
+
+    :cond_25
+    new-instance v0, Ljava/lang/ClassCastException;
+
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v0
+
+    :cond_26
+    invoke-virtual/range {v24 .. v24}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    :goto_20
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_29
+
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v9
+
+    if-nez v9, :cond_28
+
+    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v9
+
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v10
+
+    if-nez v10, :cond_27
+
+    goto :goto_20
+
+    :cond_27
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/fragment/app/a;
+
+    const/16 v16, 0x0
+
+    throw v16
+
+    :cond_28
+    new-instance v0, Ljava/lang/ClassCastException;
+
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v0
+
+    :cond_29
+    move v6, v3
+
+    :goto_21
+    if-ge v6, v4, :cond_2e
+
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lze0;
+
+    if-eqz v5, :cond_2b
+
+    iget-object v9, v8, Lze0;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
+
+    move-result v9
+
+    const/16 v18, 0x1
+
+    add-int/lit8 v9, v9, -0x1
+
+    :goto_22
+    if-ltz v9, :cond_2d
+
+    iget-object v10, v8, Lze0;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v10, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lef6;
+
+    iget-object v10, v10, Lef6;->b:Landroidx/fragment/app/a;
+
+    if-eqz v10, :cond_2a
+
+    invoke-virtual {v1, v10}, Landroidx/fragment/app/c;->g(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Landroidx/fragment/app/e;->k()V
+
+    :cond_2a
+    add-int/lit8 v9, v9, -0x1
+
+    goto :goto_22
+
+    :cond_2b
+    iget-object v8, v8, Lze0;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    :cond_2c
+    :goto_23
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v9
@@ -1806,162 +2045,13 @@
 
     move-result-object v9
 
-    if-nez v9, :cond_2c
+    check-cast v9, Lef6;
 
-    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget-object v9, v9, Lef6;->b:Landroidx/fragment/app/a;
 
-    move-result-object v9
+    if-eqz v9, :cond_2c
 
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v10
-
-    if-nez v10, :cond_2b
-
-    goto :goto_1f
-
-    :cond_2b
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/fragment/app/a;
-
-    const/16 v17, 0x0
-
-    throw v17
-
-    :cond_2c
-    new-instance v0, Ljava/lang/ClassCastException;
-
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw v0
-
-    :cond_2d
-    invoke-virtual/range {v26 .. v26}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v8
-
-    :goto_20
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_30
-
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v9
-
-    if-nez v9, :cond_2f
-
-    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v9
-
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v10
-
-    if-nez v10, :cond_2e
-
-    goto :goto_20
-
-    :cond_2e
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/fragment/app/a;
-
-    const/16 v17, 0x0
-
-    throw v17
-
-    :cond_2f
-    new-instance v0, Ljava/lang/ClassCastException;
-
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw v0
-
-    :cond_30
-    move v6, v3
-
-    :goto_21
-    if-ge v6, v4, :cond_35
-
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lce0;
-
-    if-eqz v5, :cond_32
-
-    iget-object v9, v8, Lce0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
-
-    move-result v9
-
-    const/16 v20, 0x1
-
-    add-int/lit8 v9, v9, -0x1
-
-    :goto_22
-    if-ltz v9, :cond_34
-
-    iget-object v10, v8, Lce0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v10, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Lq86;
-
-    iget-object v10, v10, Lq86;->b:Landroidx/fragment/app/a;
-
-    if-eqz v10, :cond_31
-
-    invoke-virtual {v0, v10}, Landroidx/fragment/app/c;->g(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Landroidx/fragment/app/e;->k()V
-
-    :cond_31
-    add-int/lit8 v9, v9, -0x1
-
-    goto :goto_22
-
-    :cond_32
-    iget-object v8, v8, Lce0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v8
-
-    :cond_33
-    :goto_23
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_34
-
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lq86;
-
-    iget-object v9, v9, Lq86;->b:Landroidx/fragment/app/a;
-
-    if-eqz v9, :cond_33
-
-    invoke-virtual {v0, v9}, Landroidx/fragment/app/c;->g(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
+    invoke-virtual {v1, v9}, Landroidx/fragment/app/c;->g(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
 
     move-result-object v9
 
@@ -1969,280 +2059,290 @@
 
     goto :goto_23
 
-    :cond_34
+    :cond_2d
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_21
 
-    :cond_35
-    iget v6, v0, Landroidx/fragment/app/c;->v:I
+    :cond_2e
+    iget v6, v1, Landroidx/fragment/app/c;->v:I
 
     const/4 v11, 0x1
 
-    invoke-virtual {v0, v6, v11}, Landroidx/fragment/app/c;->Q(IZ)V
+    invoke-virtual {v1, v6, v11}, Landroidx/fragment/app/c;->R(IZ)V
 
-    invoke-virtual {v0, v1, v3, v4}, Landroidx/fragment/app/c;->f(Ljava/util/ArrayList;II)Ljava/util/HashSet;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_24
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3c
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1, v0, v3, v4}, Landroidx/fragment/app/c;->f(Ljava/util/ArrayList;II)Ljava/util/HashSet;
 
     move-result-object v6
 
-    check-cast v6, Lhi4;
+    invoke-virtual {v6}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    iput-boolean v5, v6, Lhi4;->d:Z
+    move-result-object v6
 
-    iget-object v8, v6, Lhi4;->b:Ljava/util/ArrayList;
+    :goto_24
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
-    monitor-enter v8
+    move-result v8
+
+    if-eqz v8, :cond_35
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lhn4;
+
+    iput-boolean v5, v8, Lhn4;->d:Z
+
+    iget-object v9, v8, Lhn4;->b:Ljava/util/ArrayList;
+
+    monitor-enter v9
 
     :try_start_0
-    invoke-virtual {v6}, Lhi4;->j()V
+    invoke-virtual {v8}, Lhn4;->j()V
 
-    iget-object v9, v6, Lhi4;->b:Ljava/util/ArrayList;
+    iget-object v10, v8, Lhn4;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
 
-    move-result v10
+    move-result v11
 
-    invoke-virtual {v9, v10}, Ljava/util/ArrayList;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object v9
-
-    :cond_36
-    invoke-interface {v9}, Ljava/util/ListIterator;->hasPrevious()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_3b
-
-    invoke-interface {v9}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+    invoke-virtual {v10, v11}, Ljava/util/ArrayList;->listIterator(I)Ljava/util/ListIterator;
 
     move-result-object v10
 
-    move-object v11, v10
+    :goto_25
+    invoke-interface {v10}, Ljava/util/ListIterator;->hasPrevious()Z
 
-    check-cast v11, Ly7e;
+    move-result v11
 
-    iget-object v12, v11, Ly7e;->c:Landroidx/fragment/app/a;
+    if-eqz v11, :cond_34
 
-    iget-object v12, v12, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+    invoke-interface {v10}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
-    invoke-virtual {v12}, Landroid/view/View;->getAlpha()F
+    move-result-object v11
+
+    move-object v12, v11
+
+    check-cast v12, Lwve;
+
+    iget-object v13, v12, Lwve;->c:Landroidx/fragment/app/a;
+
+    iget-object v13, v13, Landroidx/fragment/app/a;->R0:Landroid/view/View;
+
+    invoke-virtual {v13}, Landroid/view/View;->getAlpha()F
+
+    move-result v14
+
+    const/4 v15, 0x0
+
+    cmpg-float v14, v14, v15
+
+    const/4 v15, 0x2
+
+    const/4 v7, 0x4
+
+    if-nez v14, :cond_2f
+
+    invoke-virtual {v13}, Landroid/view/View;->getVisibility()I
+
+    move-result v14
+
+    if-nez v14, :cond_2f
+
+    goto :goto_26
+
+    :cond_2f
+    invoke-virtual {v13}, Landroid/view/View;->getVisibility()I
 
     move-result v13
 
-    const/4 v14, 0x0
+    if-eqz v13, :cond_31
 
-    cmpg-float v13, v13, v14
+    if-eq v13, v7, :cond_32
 
-    const/4 v14, 0x2
+    const/16 v7, 0x8
 
-    const/4 v15, 0x4
+    if-ne v13, v7, :cond_30
 
-    if-nez v13, :cond_37
+    const/4 v7, 0x3
 
-    invoke-virtual {v12}, Landroid/view/View;->getVisibility()I
+    goto :goto_26
 
-    move-result v13
-
-    if-nez v13, :cond_37
-
-    goto :goto_25
-
-    :cond_37
-    invoke-virtual {v12}, Landroid/view/View;->getVisibility()I
-
-    move-result v12
-
-    if-eqz v12, :cond_39
-
-    if-eq v12, v15, :cond_3a
-
-    const/16 v13, 0x8
-
-    if-ne v12, v13, :cond_38
-
-    const/4 v15, 0x3
-
-    goto :goto_25
-
-    :cond_38
+    :cond_30
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v2, "Unknown visibility "
+    const-string v3, "Unknown visibility "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_39
-    move v15, v14
+    :cond_31
+    move v7, v15
 
-    :cond_3a
-    :goto_25
-    iget v11, v11, Ly7e;->a:I
+    :cond_32
+    :goto_26
+    iget v12, v12, Lwve;->a:I
 
-    if-ne v11, v14, :cond_36
+    if-ne v12, v15, :cond_33
 
-    if-eq v15, v14, :cond_36
+    if-eq v7, v15, :cond_33
 
-    goto :goto_26
+    goto :goto_27
+
+    :cond_33
+    const/4 v7, -0x1
+
+    goto :goto_25
 
     :catchall_0
     move-exception v0
 
-    goto :goto_27
+    goto :goto_28
 
-    :cond_3b
-    const/4 v10, 0x0
+    :cond_34
+    const/4 v11, 0x0
 
-    :goto_26
-    check-cast v10, Ly7e;
+    :goto_27
+    check-cast v11, Lwve;
 
-    const/4 v9, 0x0
+    const/4 v7, 0x0
 
-    iput-boolean v9, v6, Lhi4;->e:Z
+    iput-boolean v7, v8, Lhn4;->e:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit v8
+    monitor-exit v9
 
-    invoke-virtual {v6}, Lhi4;->e()V
+    invoke-virtual {v8}, Lhn4;->e()V
+
+    const/4 v7, -0x1
 
     goto :goto_24
 
-    :goto_27
-    monitor-exit v8
+    :goto_28
+    monitor-exit v9
 
     throw v0
 
-    :cond_3c
-    :goto_28
-    if-ge v3, v4, :cond_40
+    :cond_35
+    :goto_29
+    if-ge v3, v4, :cond_39
 
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v5
 
-    check-cast v0, Lce0;
+    check-cast v5, Lze0;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v6
 
-    check-cast v5, Ljava/lang/Boolean;
+    check-cast v6, Ljava/lang/Boolean;
 
-    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_3d
+    if-eqz v6, :cond_36
 
-    iget v5, v0, Lce0;->s:I
+    iget v6, v5, Lze0;->s:I
 
-    if-ltz v5, :cond_3d
+    if-ltz v6, :cond_36
 
-    iput v7, v0, Lce0;->s:I
+    const/4 v6, -0x1
 
-    :cond_3d
-    iget-object v5, v0, Lce0;->p:Ljava/util/ArrayList;
-
-    if-eqz v5, :cond_3f
-
-    const/4 v10, 0x0
-
-    :goto_29
-    iget-object v5, v0, Lce0;->p:Ljava/util/ArrayList;
-
-    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
-
-    move-result v5
-
-    if-ge v10, v5, :cond_3e
-
-    iget-object v5, v0, Lce0;->p:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Runnable;
-
-    invoke-interface {v5}, Ljava/lang/Runnable;->run()V
-
-    add-int/lit8 v10, v10, 0x1
-
-    goto :goto_29
-
-    :cond_3e
-    const/4 v11, 0x0
-
-    iput-object v11, v0, Lce0;->p:Ljava/util/ArrayList;
+    iput v6, v5, Lze0;->s:I
 
     goto :goto_2a
 
-    :cond_3f
-    const/4 v11, 0x0
+    :cond_36
+    const/4 v6, -0x1
 
     :goto_2a
-    add-int/lit8 v3, v3, 0x1
+    iget-object v7, v5, Lze0;->p:Ljava/util/ArrayList;
 
-    goto :goto_28
+    if-eqz v7, :cond_38
 
-    :cond_40
-    if-eqz v24, :cond_42
+    const/4 v10, 0x0
 
-    invoke-virtual/range {v26 .. v26}, Ljava/util/ArrayList;->size()I
+    :goto_2b
+    iget-object v7, v5, Lze0;->p:Ljava/util/ArrayList;
 
-    move-result v0
+    invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
-    if-gtz v0, :cond_41
+    move-result v7
+
+    if-ge v10, v7, :cond_37
+
+    iget-object v7, v5, Lze0;->p:Ljava/util/ArrayList;
+
+    invoke-virtual {v7, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/Runnable;
+
+    invoke-interface {v7}, Ljava/lang/Runnable;->run()V
+
+    add-int/lit8 v10, v10, 0x1
 
     goto :goto_2b
 
-    :cond_41
-    move-object/from16 v0, v26
+    :cond_37
+    const/4 v11, 0x0
+
+    iput-object v11, v5, Lze0;->p:Ljava/util/ArrayList;
+
+    goto :goto_2c
+
+    :cond_38
+    const/4 v11, 0x0
+
+    :goto_2c
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_29
+
+    :cond_39
+    if-eqz v21, :cond_3b
+
+    invoke-virtual/range {v24 .. v24}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-gtz v0, :cond_3a
+
+    goto :goto_2d
+
+    :cond_3a
+    move-object/from16 v0, v24
 
     const/4 v15, 0x0
 
-    invoke-virtual {v0, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {v0, v15}, Lzdf;->p(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Ljava/lang/ClassCastException;
-
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
-
     throw v0
 
-    :cond_42
-    :goto_2b
+    :cond_3b
+    :goto_2d
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x6
@@ -2282,338 +2382,359 @@
     .end packed-switch
 .end method
 
-.method public final C(I)Landroidx/fragment/app/a;
-    .locals 4
+.method public final D(I)Landroidx/fragment/app/a;
+    .locals 5
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    iget-object v0, p0, Landroidx/fragment/app/f;->a:Ljava/util/ArrayList;
+    iget-object v1, v0, Landroidx/fragment/app/f;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    move-result v1
+    move-result v2
 
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_0
-    if-ltz v1, :cond_1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/fragment/app/a;
-
-    if-eqz v2, :cond_0
-
-    iget v3, v2, Landroidx/fragment/app/a;->I0:I
-
-    if-ne v3, p1, :cond_0
-
-    return-object v2
-
-    :cond_0
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p0, p0, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
-
-    invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/fragment/app/e;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, v0, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
-
-    iget v1, v0, Landroidx/fragment/app/a;->I0:I
-
-    if-ne v1, p1, :cond_2
-
-    return-object v0
-
-    :cond_3
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final D(Ljava/lang/String;)Landroidx/fragment/app/a;
-    .locals 4
-
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
-
-    iget-object v0, p0, Landroidx/fragment/app/f;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v2, v2, -0x1
 
     :goto_0
-    if-ltz v1, :cond_1
+    if-ltz v2, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Landroidx/fragment/app/a;
-
-    if-eqz v2, :cond_0
-
-    iget-object v3, v2, Landroidx/fragment/app/a;->K0:Ljava/lang/String;
-
-    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
+    check-cast v3, Landroidx/fragment/app/a;
 
     if-eqz v3, :cond_0
 
-    return-object v2
+    iget v4, v3, Landroidx/fragment/app/a;->G0:I
+
+    if-ne v4, p1, :cond_0
+
+    return-object v3
 
     :cond_0
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
     :cond_1
-    iget-object p0, p0, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
+    iget-object v0, v0, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
 
-    invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/fragment/app/e;
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    iget-object v0, v0, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
+    :cond_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v1, v0, Landroidx/fragment/app/a;->K0:Ljava/lang/String;
+    move-result v1
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/fragment/app/e;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v1, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
+
+    iget v2, v1, Landroidx/fragment/app/a;->G0:I
+
+    if-ne v2, p1, :cond_2
+
+    return-object v1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final E(Ljava/lang/String;)Landroidx/fragment/app/a;
+    .locals 5
+
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+
+    iget-object v1, v0, Landroidx/fragment/app/f;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    :goto_0
+    if-ltz v2, :cond_1
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/fragment/app/a;
+
+    if-eqz v3, :cond_0
+
+    iget-object v4, v3, Landroidx/fragment/app/a;->I0:Ljava/lang/String;
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    return-object v3
+
+    :cond_0
+    add-int/lit8 v2, v2, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, v0, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/fragment/app/e;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v1, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
+
+    iget-object v2, v1, Landroidx/fragment/app/a;->I0:Ljava/lang/String;
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    return-object v1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final F()V
+    .locals 4
+
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->e()Ljava/util/HashSet;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    return-object v0
-
-    :cond_3
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final E()V
-    .locals 2
-
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->e()Ljava/util/HashSet;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhi4;
-
-    iget-boolean v1, v0, Lhi4;->e:Z
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lhi4;->e:Z
-
-    invoke-virtual {v0}, Lhi4;->e()V
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public final G(Ljava/lang/String;Landroid/os/Bundle;)Landroidx/fragment/app/a;
-    .locals 4
-
-    invoke-virtual {p2, p1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    const/4 v0, 0x0
-
-    if-nez p2, :cond_0
-
-    return-object v0
-
-    :cond_0
-    iget-object v1, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
-
-    invoke-virtual {v1, p2}, Landroidx/fragment/app/f;->b(Ljava/lang/String;)Landroidx/fragment/app/a;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    if-eqz v1, :cond_1
+    check-cast v1, Lhn4;
 
-    return-object v1
+    iget-boolean v2, v1, Lhn4;->e:Z
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x2
+
+    invoke-static {v2}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "FragmentManager"
+
+    const-string v3, "SpecialEffectsController: Forcing postponed operations"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    new-instance v1, Ljava/lang/IllegalStateException;
+    const/4 v2, 0x0
 
-    const-string v2, "Fragment no longer exists for key "
+    iput-boolean v2, v1, Lhn4;->e:Z
 
-    const-string v3, ": unique id "
+    invoke-virtual {v1}, Lhn4;->e()V
 
-    invoke-static {v2, p1, v3, p2}, Lee5;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v1}, Landroidx/fragment/app/c;->j0(Ljava/lang/IllegalStateException;)V
-
-    throw v0
+    :cond_2
+    return-void
 .end method
 
 .method public final H(Landroidx/fragment/app/a;)Landroid/view/ViewGroup;
     .locals 1
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->S0:Landroid/view/ViewGroup;
+    iget-object v0, p1, Landroidx/fragment/app/a;->Q0:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
     :cond_0
-    iget v0, p1, Landroidx/fragment/app/a;->J0:I
+    iget v0, p1, Landroidx/fragment/app/a;->H0:I
 
     if-gtz v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Landroidx/fragment/app/c;->x:Lzyd;
+    iget-object v0, p0, Landroidx/fragment/app/c;->x:Ltb4;
 
-    invoke-virtual {v0}, Lzyd;->D()Z
+    invoke-virtual {v0}, Ltb4;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->x:Lzyd;
+    iget-object v0, p0, Landroidx/fragment/app/c;->x:Ltb4;
 
-    iget p1, p1, Landroidx/fragment/app/a;->J0:I
+    iget p1, p1, Landroidx/fragment/app/a;->H0:I
 
-    invoke-virtual {p0, p1}, Lzyd;->C(I)Landroid/view/View;
+    invoke-virtual {v0, p1}, Ltb4;->d(I)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p1
 
-    instance-of p1, p0, Landroid/view/ViewGroup;
+    instance-of v0, p1, Landroid/view/ViewGroup;
 
-    if-eqz p1, :cond_2
+    if-eqz v0, :cond_2
 
-    check-cast p0, Landroid/view/ViewGroup;
+    check-cast p1, Landroid/view/ViewGroup;
 
-    return-object p0
+    return-object p1
 
     :cond_2
     :goto_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public final I()Lb86;
+.method public final I()Lpe6;
     .locals 1
 
     iget-object v0, p0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
 
     if-eqz v0, :cond_0
 
-    iget-object p0, v0, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iget-object v0, v0, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->I()Lb86;
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->I()Lpe6;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->A:Lb86;
+    iget-object v0, p0, Landroidx/fragment/app/c;->A:Lpe6;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final J()Lyz4;
+.method public final J()Lt93;
     .locals 1
 
     iget-object v0, p0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
 
     if-eqz v0, :cond_0
 
-    iget-object p0, v0, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iget-object v0, v0, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->J()Lyz4;
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->J()Lt93;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->B:Lyz4;
+    iget-object v0, p0, Landroidx/fragment/app/c;->B:Lt93;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final M()Z
+.method public final K(Landroidx/fragment/app/a;)V
+    .locals 2
+
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "hide: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "FragmentManager"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-boolean v0, p1, Landroidx/fragment/app/a;->J0:Z
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Landroidx/fragment/app/a;->J0:Z
+
+    iget-boolean v1, p1, Landroidx/fragment/app/a;->V0:Z
+
+    xor-int/2addr v0, v1
+
+    iput-boolean v0, p1, Landroidx/fragment/app/a;->V0:Z
+
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->g0(Landroidx/fragment/app/a;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final N()Z
     .locals 2
 
     iget-object v0, p0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
@@ -2625,61 +2746,61 @@
     return v1
 
     :cond_0
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->d0()Z
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->O()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
+    iget-object v0, p0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->U()Landroidx/fragment/app/c;
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->G()Landroidx/fragment/app/c;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->M()Z
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->N()Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
     return v1
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
-.method public final P()Z
+.method public final Q()Z
     .locals 1
 
     iget-boolean v0, p0, Landroidx/fragment/app/c;->H:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean p0, p0, Landroidx/fragment/app/c;->I:Z
+    iget-boolean v0, p0, Landroidx/fragment/app/c;->I:Z
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 
     :cond_1
     :goto_0
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
-.method public final Q(IZ)V
+.method public final R(IZ)V
     .locals 3
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-nez v0, :cond_1
 
@@ -2690,13 +2811,13 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "No activity"
+    const-string p2, "No activity"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
     :goto_0
@@ -2735,7 +2856,7 @@
 
     check-cast v1, Landroidx/fragment/app/a;
 
-    iget-object v1, v1, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v1, v1, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     invoke-virtual {p2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2778,11 +2899,11 @@
 
     iget-object v1, v0, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
 
-    iget-boolean v2, v1, Landroidx/fragment/app/a;->w0:Z
+    iget-boolean v2, v1, Landroidx/fragment/app/a;->u0:Z
 
     if-eqz v2, :cond_5
 
-    invoke-virtual {v1}, Landroidx/fragment/app/a;->f0()Z
+    invoke-virtual {v1}, Landroidx/fragment/app/a;->Q()Z
 
     move-result v1
 
@@ -2799,7 +2920,7 @@
 
     if-eqz p1, :cond_7
 
-    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz p1, :cond_7
 
@@ -2809,7 +2930,7 @@
 
     if-ne p2, v0, :cond_7
 
-    iget-object p1, p1, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object p1, p1, Lie6;->Y:Landroidx/fragment/app/b;
 
     invoke-virtual {p1}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
@@ -2822,10 +2943,10 @@
     return-void
 .end method
 
-.method public final R()V
+.method public final S()V
     .locals 2
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-nez v0, :cond_0
 
@@ -2842,35 +2963,35 @@
 
     iput-boolean v0, v1, Landroidx/fragment/app/FragmentManagerViewModel;->g:Z
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/fragment/app/a;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    iget-object v0, v0, Landroidx/fragment/app/a;->G0:Lj86;
+    :cond_1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0}, Landroidx/fragment/app/c;->R()V
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/fragment/app/a;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v1, Landroidx/fragment/app/a;->E0:Lxe6;
+
+    invoke-virtual {v1}, Landroidx/fragment/app/c;->S()V
 
     goto :goto_0
 
@@ -2879,68 +3000,68 @@
     return-void
 .end method
 
-.method public final S()Z
+.method public final T()Z
     .locals 2
 
     const/4 v0, -0x1
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Landroidx/fragment/app/c;->T(II)Z
+    invoke-virtual {p0, v0, v1}, Landroidx/fragment/app/c;->U(II)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
-.method public final T(II)Z
-    .locals 4
+.method public final U(II)Z
+    .locals 3
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->z(Z)Z
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->A(Z)Z
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, v1}, Landroidx/fragment/app/c;->y(Z)V
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->z(Z)V
 
-    iget-object v2, p0, Landroidx/fragment/app/c;->z:Landroidx/fragment/app/a;
+    iget-object v1, p0, Landroidx/fragment/app/c;->z:Landroidx/fragment/app/a;
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
     if-gez p1, :cond_0
 
-    invoke-virtual {v2}, Landroidx/fragment/app/a;->R()Landroidx/fragment/app/c;
+    invoke-virtual {v1}, Landroidx/fragment/app/a;->D()Landroidx/fragment/app/c;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Landroidx/fragment/app/c;->S()Z
+    invoke-virtual {v1}, Landroidx/fragment/app/c;->T()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
-    return v1
+    return v0
 
     :cond_0
-    iget-object v2, p0, Landroidx/fragment/app/c;->L:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroidx/fragment/app/c;->L:Ljava/util/ArrayList;
 
-    iget-object v3, p0, Landroidx/fragment/app/c;->M:Ljava/util/ArrayList;
+    iget-object v2, p0, Landroidx/fragment/app/c;->M:Ljava/util/ArrayList;
 
-    invoke-virtual {p0, v2, v3, p1, p2}, Landroidx/fragment/app/c;->U(Ljava/util/ArrayList;Ljava/util/ArrayList;II)Z
+    invoke-virtual {p0, v1, v2, p1, p2}, Landroidx/fragment/app/c;->V(Ljava/util/ArrayList;Ljava/util/ArrayList;II)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    iput-boolean v1, p0, Landroidx/fragment/app/c;->b:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/c;->b:Z
 
     :try_start_0
     iget-object p2, p0, Landroidx/fragment/app/c;->L:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->M:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/fragment/app/c;->M:Ljava/util/ArrayList;
 
-    invoke-virtual {p0, p2, v1}, Landroidx/fragment/app/c;->X(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-virtual {p0, p2, v0}, Landroidx/fragment/app/c;->X(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2959,35 +3080,28 @@
     :goto_0
     invoke-virtual {p0}, Landroidx/fragment/app/c;->k0()V
 
-    iget-boolean p2, p0, Landroidx/fragment/app/c;->K:Z
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->v()V
 
-    if-eqz p2, :cond_2
+    iget-object p2, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    iput-boolean v0, p0, Landroidx/fragment/app/c;->K:Z
+    iget-object p2, p2, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->i0()V
-
-    :cond_2
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
-
-    iget-object p0, p0, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
-
-    invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object p0
-
-    const/4 p2, 0x0
-
-    invoke-static {p2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    invoke-virtual {p2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object p2
 
-    invoke-interface {p0, p2}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {p2, v0}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
 
     return p1
 .end method
 
-.method public final U(Ljava/util/ArrayList;Ljava/util/ArrayList;II)Z
+.method public final V(Ljava/util/ArrayList;Ljava/util/ArrayList;II)Z
     .locals 5
 
     const/4 v0, 0x1
@@ -3056,11 +3170,11 @@
 
     move-result-object v4
 
-    check-cast v4, Lce0;
+    check-cast v4, Lze0;
 
     if-ltz p3, :cond_4
 
-    iget v4, v4, Lce0;->s:I
+    iget v4, v4, Lze0;->s:I
 
     if-ne p3, v4, :cond_4
 
@@ -3095,11 +3209,11 @@
 
     move-result-object p4
 
-    check-cast p4, Lce0;
+    check-cast p4, Lze0;
 
     if-ltz p3, :cond_9
 
-    iget p4, p4, Lce0;->s:I
+    iget p4, p4, Lze0;->s:I
 
     if-ne p3, p4, :cond_9
 
@@ -3147,7 +3261,7 @@
 
     move-result-object p4
 
-    check-cast p4, Lce0;
+    check-cast p4, Lze0;
 
     invoke-virtual {p1, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -3163,58 +3277,47 @@
     return v0
 .end method
 
-.method public final V(Landroid/os/Bundle;Ljava/lang/String;Landroidx/fragment/app/a;)V
-    .locals 1
-
-    iget-object v0, p3, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
-
-    if-ne v0, p0, :cond_0
-
-    iget-object p0, p3, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
-
-    invoke-virtual {p1, p2, p0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Fragment "
-
-    const-string v0, " is not currently in the FragmentManager"
-
-    invoke-static {p2, p3, v0}, Lee5;->j(Ljava/lang/String;Landroidx/fragment/app/a;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->j0(Ljava/lang/IllegalStateException;)V
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
 .method public final W(Landroidx/fragment/app/a;)V
-    .locals 2
+    .locals 3
 
     const/4 v0, 0x2
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v0, "FragmentManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "remove: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " nesting="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p1, Landroidx/fragment/app/a;->B0:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->f0()Z
+    invoke-virtual {p1}, Landroidx/fragment/app/a;->Q()Z
 
     move-result v0
 
-    iget-boolean v1, p1, Landroidx/fragment/app/a;->M0:Z
+    iget-boolean v1, p1, Landroidx/fragment/app/a;->K0:Z
 
     if-eqz v1, :cond_2
 
@@ -3244,9 +3347,9 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p1, Landroidx/fragment/app/a;->v0:Z
+    iput-boolean v0, p1, Landroidx/fragment/app/a;->t0:Z
 
-    invoke-static {p1}, Landroidx/fragment/app/c;->L(Landroidx/fragment/app/a;)Z
+    invoke-static {p1}, Landroidx/fragment/app/c;->M(Landroidx/fragment/app/a;)Z
 
     move-result v0
 
@@ -3257,21 +3360,21 @@
     iput-boolean v1, p0, Landroidx/fragment/app/c;->G:Z
 
     :cond_3
-    iput-boolean v1, p1, Landroidx/fragment/app/a;->w0:Z
+    iput-boolean v1, p1, Landroidx/fragment/app/a;->u0:Z
 
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->h0(Landroidx/fragment/app/a;)V
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->g0(Landroidx/fragment/app/a;)V
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     :try_start_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public final X(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
@@ -3311,15 +3414,15 @@
 
     move-result-object v3
 
-    check-cast v3, Lce0;
+    check-cast v3, Lze0;
 
-    iget-boolean v3, v3, Lce0;->o:Z
+    iget-boolean v3, v3, Lze0;->o:Z
 
     if-nez v3, :cond_3
 
     if-eq v2, v1, :cond_1
 
-    invoke-virtual {p0, p1, p2, v2, v1}, Landroidx/fragment/app/c;->B(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
+    invoke-virtual {p0, p1, p2, v2, v1}, Landroidx/fragment/app/c;->C(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
 
     :cond_1
     add-int/lit8 v2, v1, 0x1
@@ -3355,9 +3458,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lce0;
+    check-cast v3, Lze0;
 
-    iget-boolean v3, v3, Lce0;->o:Z
+    iget-boolean v3, v3, Lze0;->o:Z
 
     if-nez v3, :cond_2
 
@@ -3366,7 +3469,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-virtual {p0, p1, p2, v1, v2}, Landroidx/fragment/app/c;->B(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
+    invoke-virtual {p0, p1, p2, v1, v2}, Landroidx/fragment/app/c;->C(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
 
     add-int/lit8 v1, v2, -0x1
 
@@ -3378,24 +3481,24 @@
     :cond_4
     if-eq v2, v0, :cond_5
 
-    invoke-virtual {p0, p1, p2, v2, v0}, Landroidx/fragment/app/c;->B(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
+    invoke-virtual {p0, p1, p2, v2, v0}, Landroidx/fragment/app/c;->C(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
 
     :cond_5
     :goto_2
     return-void
 
     :cond_6
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Internal error with the back stack records"
+    const-string p2, "Internal error with the back stack records"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final Y(Landroid/os/Bundle;)V
-    .locals 17
+    .locals 19
 
     move-object/from16 v0, p0
 
@@ -3437,9 +3540,9 @@
 
     if-eqz v4, :cond_0
 
-    iget-object v5, v0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v5, v0, Landroidx/fragment/app/c;->w:Lie6;
 
-    iget-object v5, v5, Lu76;->r0:Landroidx/fragment/app/b;
+    iget-object v5, v5, Lie6;->c:Landroidx/fragment/app/b;
 
     invoke-virtual {v5}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -3500,9 +3603,9 @@
 
     if-eqz v5, :cond_2
 
-    iget-object v6, v0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v6, v0, Landroidx/fragment/app/c;->w:Lie6;
 
-    iget-object v6, v6, Lu76;->r0:Landroidx/fragment/app/b;
+    iget-object v6, v6, Lie6;->c:Landroidx/fragment/app/b;
 
     invoke-virtual {v6}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -3537,7 +3640,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lk86;
+    check-cast v1, Lye6;
 
     if-nez v1, :cond_4
 
@@ -3546,7 +3649,7 @@
     :cond_4
     invoke-virtual {v5}, Ljava/util/HashMap;->clear()V
 
-    iget-object v4, v1, Lk86;->a:Ljava/util/ArrayList;
+    iget-object v4, v1, Lye6;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -3558,9 +3661,13 @@
 
     move-result v6
 
-    iget-object v7, v0, Landroidx/fragment/app/c;->o:Lim4;
+    iget-object v7, v0, Landroidx/fragment/app/c;->o:Lir4;
 
-    const/4 v8, 0x2
+    const-string v8, "): "
+
+    const/4 v9, 0x2
+
+    const-string v10, "FragmentManager"
 
     if-eqz v6, :cond_9
 
@@ -3570,105 +3677,135 @@
 
     check-cast v6, Ljava/lang/String;
 
-    const/4 v9, 0x0
+    const/4 v11, 0x0
 
-    invoke-virtual {v3, v6, v9}, Landroidx/fragment/app/f;->i(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
-
-    move-result-object v15
-
-    if-eqz v15, :cond_5
-
-    invoke-virtual {v15, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {v3, v6, v11}, Landroidx/fragment/app/f;->i(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object v6
 
-    check-cast v6, Ln86;
+    if-eqz v6, :cond_5
 
-    iget-object v9, v0, Landroidx/fragment/app/c;->O:Landroidx/fragment/app/FragmentManagerViewModel;
+    invoke-virtual {v6, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    iget-object v6, v6, Ln86;->b:Ljava/lang/String;
+    move-result-object v11
 
-    iget-object v9, v9, Landroidx/fragment/app/FragmentManagerViewModel;->b:Ljava/util/HashMap;
+    check-cast v11, Lbf6;
 
-    invoke-virtual {v9, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v12, v0, Landroidx/fragment/app/c;->O:Landroidx/fragment/app/FragmentManagerViewModel;
 
-    move-result-object v6
+    iget-object v11, v11, Lbf6;->b:Ljava/lang/String;
 
-    check-cast v6, Landroidx/fragment/app/a;
+    iget-object v12, v12, Landroidx/fragment/app/FragmentManagerViewModel;->b:Ljava/util/HashMap;
 
-    if-eqz v6, :cond_7
+    invoke-virtual {v12, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v8}, Landroidx/fragment/app/c;->K(I)Z
+    move-result-object v11
 
-    move-result v9
+    check-cast v11, Landroidx/fragment/app/a;
 
-    if-eqz v9, :cond_6
+    if-eqz v11, :cond_7
 
-    invoke-virtual {v6}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
+    invoke-static {v9}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_6
+
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    const-string v13, "restoreSaveState: re-attaching retained "
+
+    invoke-direct {v12, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v12, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v10, v12}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
-    new-instance v9, Landroidx/fragment/app/e;
+    new-instance v12, Landroidx/fragment/app/e;
 
-    invoke-direct {v9, v7, v3, v6, v15}, Landroidx/fragment/app/e;-><init>(Lim4;Landroidx/fragment/app/f;Landroidx/fragment/app/a;Landroid/os/Bundle;)V
+    invoke-direct {v12, v7, v3, v11, v6}, Landroidx/fragment/app/e;-><init>(Lir4;Landroidx/fragment/app/f;Landroidx/fragment/app/a;Landroid/os/Bundle;)V
 
     goto :goto_3
 
     :cond_7
-    new-instance v10, Landroidx/fragment/app/e;
+    new-instance v12, Landroidx/fragment/app/e;
 
-    iget-object v6, v0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v7, v0, Landroidx/fragment/app/c;->w:Lie6;
 
-    iget-object v6, v6, Lu76;->r0:Landroidx/fragment/app/b;
+    iget-object v7, v7, Lie6;->c:Landroidx/fragment/app/b;
 
-    invoke-virtual {v6}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {v7}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
-    move-result-object v13
+    move-result-object v15
 
-    invoke-virtual {v0}, Landroidx/fragment/app/c;->I()Lb86;
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->I()Lpe6;
 
-    move-result-object v14
+    move-result-object v16
 
-    iget-object v11, v0, Landroidx/fragment/app/c;->o:Lim4;
+    iget-object v13, v0, Landroidx/fragment/app/c;->o:Lir4;
 
-    iget-object v12, v0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v14, v0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-direct/range {v10 .. v15}, Landroidx/fragment/app/e;-><init>(Lim4;Landroidx/fragment/app/f;Ljava/lang/ClassLoader;Lb86;Landroid/os/Bundle;)V
+    move-object/from16 v17, v6
 
-    move-object v9, v10
+    invoke-direct/range {v12 .. v17}, Landroidx/fragment/app/e;-><init>(Lir4;Landroidx/fragment/app/f;Ljava/lang/ClassLoader;Lpe6;Landroid/os/Bundle;)V
 
     :goto_3
-    iget-object v6, v9, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
+    iget-object v7, v12, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
 
-    iput-object v15, v6, Landroidx/fragment/app/a;->b:Landroid/os/Bundle;
+    iput-object v6, v7, Landroidx/fragment/app/a;->b:Landroid/os/Bundle;
 
-    iput-object v0, v6, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iput-object v0, v7, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
-    invoke-static {v8}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v9}, Landroidx/fragment/app/c;->L(I)Z
 
-    move-result v7
+    move-result v6
 
-    if-eqz v7, :cond_8
+    if-eqz v6, :cond_8
 
-    invoke-virtual {v6}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v9, "restoreSaveState: active ("
+
+    invoke-direct {v6, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v9, v7, Landroidx/fragment/app/a;->X:Ljava/lang/String;
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v10, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_8
-    iget-object v6, v0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v6, v0, Landroidx/fragment/app/c;->w:Lie6;
 
-    iget-object v6, v6, Lu76;->r0:Landroidx/fragment/app/b;
+    iget-object v6, v6, Lie6;->c:Landroidx/fragment/app/b;
 
     invoke-virtual {v6}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v6
 
-    invoke-virtual {v9, v6}, Landroidx/fragment/app/e;->m(Ljava/lang/ClassLoader;)V
+    invoke-virtual {v12, v6}, Landroidx/fragment/app/e;->m(Ljava/lang/ClassLoader;)V
 
-    invoke-virtual {v3, v9}, Landroidx/fragment/app/f;->g(Landroidx/fragment/app/e;)V
+    invoke-virtual {v3, v12}, Landroidx/fragment/app/f;->g(Landroidx/fragment/app/e;)V
 
     iget v6, v0, Landroidx/fragment/app/c;->v:I
 
-    iput v6, v9, Landroidx/fragment/app/e;->e:I
+    iput v6, v12, Landroidx/fragment/app/e;->e:I
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_9
     iget-object v2, v0, Landroidx/fragment/app/c;->O:Landroidx/fragment/app/FragmentManagerViewModel;
@@ -3704,52 +3841,68 @@
 
     check-cast v4, Landroidx/fragment/app/a;
 
-    iget-object v9, v4, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v11, v4, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
-    invoke-virtual {v5, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v9
+    move-result-object v11
 
-    if-eqz v9, :cond_a
+    if-eqz v11, :cond_a
 
     goto :goto_4
 
     :cond_a
-    invoke-static {v8}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v9}, Landroidx/fragment/app/c;->L(I)Z
 
-    move-result v9
+    move-result v11
 
-    if-eqz v9, :cond_b
+    if-eqz v11, :cond_b
 
-    invoke-virtual {v4}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    iget-object v9, v1, Lk86;->a:Ljava/util/ArrayList;
+    const-string v12, "Discarding retained Fragment "
 
-    invoke-static {v9}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v11, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v12, " that was not found in the set of active Fragments "
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v12, v1, Lye6;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v10, v11}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_b
-    iget-object v9, v0, Landroidx/fragment/app/c;->O:Landroidx/fragment/app/FragmentManagerViewModel;
+    iget-object v11, v0, Landroidx/fragment/app/c;->O:Landroidx/fragment/app/FragmentManagerViewModel;
 
-    invoke-virtual {v9, v4}, Landroidx/fragment/app/FragmentManagerViewModel;->g(Landroidx/fragment/app/a;)V
+    invoke-virtual {v11, v4}, Landroidx/fragment/app/FragmentManagerViewModel;->i(Landroidx/fragment/app/a;)V
 
-    iput-object v0, v4, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iput-object v0, v4, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
-    new-instance v9, Landroidx/fragment/app/e;
+    new-instance v11, Landroidx/fragment/app/e;
 
-    invoke-direct {v9, v7, v3, v4}, Landroidx/fragment/app/e;-><init>(Lim4;Landroidx/fragment/app/f;Landroidx/fragment/app/a;)V
+    invoke-direct {v11, v7, v3, v4}, Landroidx/fragment/app/e;-><init>(Lir4;Landroidx/fragment/app/f;Landroidx/fragment/app/a;)V
 
-    iput v6, v9, Landroidx/fragment/app/e;->e:I
+    iput v6, v11, Landroidx/fragment/app/e;->e:I
 
-    invoke-virtual {v9}, Landroidx/fragment/app/e;->k()V
+    invoke-virtual {v11}, Landroidx/fragment/app/e;->k()V
 
-    iput-boolean v6, v4, Landroidx/fragment/app/a;->w0:Z
+    iput-boolean v6, v4, Landroidx/fragment/app/a;->u0:Z
 
-    invoke-virtual {v9}, Landroidx/fragment/app/e;->k()V
+    invoke-virtual {v11}, Landroidx/fragment/app/e;->k()V
 
     goto :goto_4
 
     :cond_c
-    iget-object v2, v1, Lk86;->b:Ljava/util/ArrayList;
+    iget-object v2, v1, Lye6;->b:Ljava/util/ArrayList;
 
     iget-object v4, v3, Landroidx/fragment/app/f;->a:Ljava/util/ArrayList;
 
@@ -3780,13 +3933,29 @@
 
     if-eqz v5, :cond_e
 
-    invoke-static {v8}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v9}, Landroidx/fragment/app/c;->L(I)Z
 
-    move-result v4
+    move-result v7
 
-    if-eqz v4, :cond_d
+    if-eqz v7, :cond_d
 
-    invoke-virtual {v5}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string v11, "restoreSaveState: added ("
+
+    invoke-direct {v7, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v10, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_d
     invoke-virtual {v3, v5}, Landroidx/fragment/app/f;->a(Landroidx/fragment/app/a;)V
@@ -3794,28 +3963,28 @@
     goto :goto_5
 
     :cond_e
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string v1, "No instantiated fragment for ("
+    const-string v2, "No instantiated fragment for ("
 
-    const-string v2, ")"
+    const-string v3, ")"
 
-    invoke-static {v1, v4, v2}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v4, v3}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw v1
 
     :cond_f
-    iget-object v2, v1, Lk86;->c:[Lde0;
+    iget-object v2, v1, Lye6;->c:[Laf0;
 
     if-eqz v2, :cond_17
 
     new-instance v2, Ljava/util/ArrayList;
 
-    iget-object v5, v1, Lk86;->c:[Lde0;
+    iget-object v5, v1, Lye6;->c:[Laf0;
 
     array-length v5, v5
 
@@ -3826,7 +3995,7 @@
     const/4 v2, 0x0
 
     :goto_6
-    iget-object v5, v1, Lk86;->c:[Lde0;
+    iget-object v5, v1, Lye6;->c:[Laf0;
 
     array-length v7, v5
 
@@ -3834,170 +4003,202 @@
 
     aget-object v5, v5, v2
 
-    iget-object v7, v5, Lde0;->b:Ljava/util/ArrayList;
+    iget-object v7, v5, Laf0;->b:Ljava/util/ArrayList;
 
-    new-instance v9, Lce0;
+    new-instance v11, Lze0;
 
-    invoke-direct {v9, v0}, Lce0;-><init>(Landroidx/fragment/app/c;)V
+    invoke-direct {v11, v0}, Lze0;-><init>(Landroidx/fragment/app/c;)V
 
-    iget-object v10, v5, Lde0;->a:[I
+    iget-object v12, v5, Laf0;->a:[I
 
-    const/4 v11, 0x0
+    const/4 v13, 0x0
 
-    const/4 v12, 0x0
+    const/4 v14, 0x0
 
     :goto_7
-    array-length v13, v10
+    array-length v15, v12
 
-    if-ge v11, v13, :cond_12
+    if-ge v13, v15, :cond_12
 
-    new-instance v13, Lq86;
+    new-instance v15, Lef6;
 
-    invoke-direct {v13}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v15}, Ljava/lang/Object;-><init>()V
 
-    add-int/lit8 v14, v11, 0x1
+    add-int/lit8 v16, v13, 0x1
 
-    aget v15, v10, v11
+    move/from16 p1, v9
 
-    iput v15, v13, Lq86;->a:I
+    aget v9, v12, v13
 
-    invoke-static {v8}, Landroidx/fragment/app/c;->K(I)Z
+    iput v9, v15, Lef6;->a:I
 
-    move-result v15
+    invoke-static/range {p1 .. p1}, Landroidx/fragment/app/c;->L(I)Z
 
-    if-eqz v15, :cond_10
+    move-result v9
 
-    invoke-static {v9}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    if-eqz v9, :cond_10
 
-    aget v15, v10, v14
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v4, "Instantiate "
+
+    invoke-direct {v9, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, " op #"
+
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, " base fragment #"
+
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget v4, v12, v16
+
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v10, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_10
-    invoke-static {}, Lcn7;->values()[Lcn7;
+    invoke-static {}, Lhw7;->values()[Lhw7;
 
-    move-result-object v15
+    move-result-object v4
 
-    move/from16 p1, v8
+    iget-object v9, v5, Laf0;->c:[I
 
-    iget-object v8, v5, Lde0;->c:[I
+    aget v9, v9, v14
 
-    aget v8, v8, v12
+    aget-object v4, v4, v9
 
-    aget-object v8, v15, v8
+    iput-object v4, v15, Lef6;->h:Lhw7;
 
-    iput-object v8, v13, Lq86;->h:Lcn7;
+    invoke-static {}, Lhw7;->values()[Lhw7;
 
-    invoke-static {}, Lcn7;->values()[Lcn7;
+    move-result-object v4
 
-    move-result-object v8
+    iget-object v9, v5, Laf0;->o:[I
 
-    iget-object v15, v5, Lde0;->o:[I
+    aget v9, v9, v14
 
-    aget v15, v15, v12
+    aget-object v4, v4, v9
 
-    aget-object v8, v8, v15
+    iput-object v4, v15, Lef6;->i:Lhw7;
 
-    iput-object v8, v13, Lq86;->i:Lcn7;
+    add-int/lit8 v4, v13, 0x2
 
-    add-int/lit8 v8, v11, 0x2
+    aget v9, v12, v16
 
-    aget v14, v10, v14
+    if-eqz v9, :cond_11
 
-    if-eqz v14, :cond_11
-
-    move v14, v6
+    move v9, v6
 
     goto :goto_8
 
     :cond_11
-    const/4 v14, 0x0
+    const/4 v9, 0x0
 
     :goto_8
-    iput-boolean v14, v13, Lq86;->c:Z
+    iput-boolean v9, v15, Lef6;->c:Z
 
-    add-int/lit8 v14, v11, 0x3
+    add-int/lit8 v9, v13, 0x3
 
-    aget v8, v10, v8
+    aget v4, v12, v4
 
-    iput v8, v13, Lq86;->d:I
+    iput v4, v15, Lef6;->d:I
 
-    add-int/lit8 v15, v11, 0x4
+    add-int/lit8 v16, v13, 0x4
 
-    aget v14, v10, v14
+    aget v9, v12, v9
 
-    iput v14, v13, Lq86;->e:I
+    iput v9, v15, Lef6;->e:I
 
-    add-int/lit8 v16, v11, 0x5
+    add-int/lit8 v18, v13, 0x5
 
-    aget v15, v10, v15
+    aget v6, v12, v16
 
-    iput v15, v13, Lq86;->f:I
+    iput v6, v15, Lef6;->f:I
 
-    add-int/lit8 v11, v11, 0x6
+    add-int/lit8 v13, v13, 0x6
 
-    aget v4, v10, v16
+    move-object/from16 v16, v12
 
-    iput v4, v13, Lq86;->g:I
+    aget v12, v16, v18
 
-    iput v8, v9, Lce0;->b:I
+    iput v12, v15, Lef6;->g:I
 
-    iput v14, v9, Lce0;->c:I
+    iput v4, v11, Lze0;->b:I
 
-    iput v15, v9, Lce0;->d:I
+    iput v9, v11, Lze0;->c:I
 
-    iput v4, v9, Lce0;->e:I
+    iput v6, v11, Lze0;->d:I
 
-    invoke-virtual {v9, v13}, Lce0;->b(Lq86;)V
+    iput v12, v11, Lze0;->e:I
 
-    add-int/lit8 v12, v12, 0x1
+    invoke-virtual {v11, v15}, Lze0;->b(Lef6;)V
 
-    move/from16 v8, p1
+    add-int/lit8 v14, v14, 0x1
 
-    goto :goto_7
+    move/from16 v9, p1
+
+    move-object/from16 v12, v16
+
+    const/4 v6, 0x1
+
+    goto/16 :goto_7
 
     :cond_12
-    move/from16 p1, v8
+    move/from16 p1, v9
 
-    iget v4, v5, Lde0;->X:I
+    iget v4, v5, Laf0;->X:I
 
-    iput v4, v9, Lce0;->f:I
+    iput v4, v11, Lze0;->f:I
 
-    iget-object v4, v5, Lde0;->Y:Ljava/lang/String;
+    iget-object v4, v5, Laf0;->Y:Ljava/lang/String;
 
-    iput-object v4, v9, Lce0;->h:Ljava/lang/String;
+    iput-object v4, v11, Lze0;->h:Ljava/lang/String;
 
-    iput-boolean v6, v9, Lce0;->g:Z
+    const/4 v4, 0x1
 
-    iget v4, v5, Lde0;->r0:I
+    iput-boolean v4, v11, Lze0;->g:Z
 
-    iput v4, v9, Lce0;->i:I
+    iget v4, v5, Laf0;->q0:I
 
-    iget-object v4, v5, Lde0;->s0:Ljava/lang/CharSequence;
+    iput v4, v11, Lze0;->i:I
 
-    iput-object v4, v9, Lce0;->j:Ljava/lang/CharSequence;
+    iget-object v4, v5, Laf0;->r0:Ljava/lang/CharSequence;
 
-    iget v4, v5, Lde0;->t0:I
+    iput-object v4, v11, Lze0;->j:Ljava/lang/CharSequence;
 
-    iput v4, v9, Lce0;->k:I
+    iget v4, v5, Laf0;->s0:I
 
-    iget-object v4, v5, Lde0;->u0:Ljava/lang/CharSequence;
+    iput v4, v11, Lze0;->k:I
 
-    iput-object v4, v9, Lce0;->l:Ljava/lang/CharSequence;
+    iget-object v4, v5, Laf0;->t0:Ljava/lang/CharSequence;
 
-    iget-object v4, v5, Lde0;->v0:Ljava/util/ArrayList;
+    iput-object v4, v11, Lze0;->l:Ljava/lang/CharSequence;
 
-    iput-object v4, v9, Lce0;->m:Ljava/util/ArrayList;
+    iget-object v4, v5, Laf0;->u0:Ljava/util/ArrayList;
 
-    iget-object v4, v5, Lde0;->w0:Ljava/util/ArrayList;
+    iput-object v4, v11, Lze0;->m:Ljava/util/ArrayList;
 
-    iput-object v4, v9, Lce0;->n:Ljava/util/ArrayList;
+    iget-object v4, v5, Laf0;->v0:Ljava/util/ArrayList;
 
-    iget-boolean v4, v5, Lde0;->x0:Z
+    iput-object v4, v11, Lze0;->n:Ljava/util/ArrayList;
 
-    iput-boolean v4, v9, Lce0;->o:Z
+    iget-boolean v4, v5, Laf0;->w0:Z
 
-    iget v4, v5, Lde0;->Z:I
+    iput-boolean v4, v11, Lze0;->o:Z
 
-    iput v4, v9, Lce0;->s:I
+    iget v4, v5, Laf0;->Z:I
+
+    iput v4, v11, Lze0;->s:I
 
     const/4 v4, 0x0
 
@@ -4016,19 +4217,19 @@
 
     if-eqz v5, :cond_13
 
-    iget-object v8, v9, Lce0;->a:Ljava/util/ArrayList;
+    iget-object v6, v11, Lze0;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v8, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v6, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v8
+    move-result-object v6
 
-    check-cast v8, Lq86;
+    check-cast v6, Lef6;
 
     invoke-virtual {v3, v5}, Landroidx/fragment/app/f;->b(Ljava/lang/String;)Landroidx/fragment/app/a;
 
     move-result-object v5
 
-    iput-object v5, v8, Lq86;->b:Landroidx/fragment/app/a;
+    iput-object v5, v6, Lef6;->b:Landroidx/fragment/app/a;
 
     :cond_13
     add-int/lit8 v4, v4, 0x1
@@ -4036,31 +4237,53 @@
     goto :goto_9
 
     :cond_14
-    invoke-virtual {v9, v6}, Lce0;->c(I)V
+    const/4 v4, 0x1
 
-    invoke-static/range {p1 .. p1}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-virtual {v11, v4}, Lze0;->c(I)V
 
-    move-result v4
+    invoke-static/range {p1 .. p1}, Landroidx/fragment/app/c;->L(I)Z
 
-    if-eqz v4, :cond_15
+    move-result v5
 
-    invoke-virtual {v9}, Lce0;->toString()Ljava/lang/String;
+    if-eqz v5, :cond_15
 
-    new-instance v4, Lyz7;
+    const-string v5, "restoreAllState: back stack #"
 
-    invoke-direct {v4}, Lyz7;-><init>()V
+    const-string v6, " (index "
 
-    new-instance v5, Ljava/io/PrintWriter;
+    invoke-static {v2, v5, v6}, Li57;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v5, v4}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
+    move-result-object v5
 
-    const-string v4, "  "
+    iget v6, v11, Lze0;->s:I
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v10, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v5, Lk98;
+
+    invoke-direct {v5}, Lk98;-><init>()V
+
+    new-instance v6, Ljava/io/PrintWriter;
+
+    invoke-direct {v6, v5}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
+
+    const-string v5, "  "
 
     const/4 v7, 0x0
 
-    invoke-virtual {v9, v4, v5, v7}, Lce0;->g(Ljava/lang/String;Ljava/io/PrintWriter;Z)V
+    invoke-virtual {v11, v5, v6, v7}, Lze0;->g(Ljava/lang/String;Ljava/io/PrintWriter;Z)V
 
-    invoke-virtual {v5}, Ljava/io/PrintWriter;->close()V
+    invoke-virtual {v6}, Ljava/io/PrintWriter;->close()V
 
     goto :goto_a
 
@@ -4068,13 +4291,15 @@
     const/4 v7, 0x0
 
     :goto_a
-    iget-object v4, v0, Landroidx/fragment/app/c;->d:Ljava/util/ArrayList;
+    iget-object v5, v0, Landroidx/fragment/app/c;->d:Ljava/util/ArrayList;
 
-    invoke-virtual {v4, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v2, v2, 0x1
 
-    move/from16 v8, p1
+    move/from16 v9, p1
+
+    move v6, v4
 
     goto/16 :goto_6
 
@@ -4095,11 +4320,11 @@
     :goto_b
     iget-object v2, v0, Landroidx/fragment/app/c;->j:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget v4, v1, Lk86;->o:I
+    iget v4, v1, Lye6;->o:I
 
     invoke-virtual {v2, v4}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    iget-object v2, v1, Lk86;->X:Ljava/lang/String;
+    iget-object v2, v1, Lye6;->X:Ljava/lang/String;
 
     if-eqz v2, :cond_18
 
@@ -4112,7 +4337,7 @@
     invoke-virtual {v0, v2}, Landroidx/fragment/app/c;->r(Landroidx/fragment/app/a;)V
 
     :cond_18
-    iget-object v2, v1, Lk86;->Y:Ljava/util/ArrayList;
+    iget-object v2, v1, Lye6;->Y:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_19
 
@@ -4131,13 +4356,13 @@
 
     check-cast v3, Ljava/lang/String;
 
-    iget-object v5, v1, Lk86;->Z:Ljava/util/ArrayList;
+    iget-object v5, v1, Lye6;->Z:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lee0;
+    check-cast v5, Lbf0;
 
     iget-object v6, v0, Landroidx/fragment/app/c;->k:Ljava/util/Map;
 
@@ -4150,7 +4375,7 @@
     :cond_19
     new-instance v2, Ljava/util/ArrayDeque;
 
-    iget-object v1, v1, Lk86;->r0:Ljava/util/ArrayList;
+    iget-object v1, v1, Lye6;->q0:Ljava/util/ArrayList;
 
     invoke-direct {v2, v1}, Ljava/util/ArrayDeque;-><init>(Ljava/util/Collection;)V
 
@@ -4160,19 +4385,19 @@
 .end method
 
 .method public final Z()Landroid/os/Bundle;
-    .locals 11
+    .locals 12
 
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->E()V
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->F()V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->w()V
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->x()V
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1}, Landroidx/fragment/app/c;->z(Z)Z
+    invoke-virtual {p0, v1}, Landroidx/fragment/app/c;->A(Z)Z
 
     iput-boolean v1, p0, Landroidx/fragment/app/c;->H:Z
 
@@ -4222,7 +4447,7 @@
 
     iget-object v6, v4, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
 
-    iget-object v7, v6, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v7, v6, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     invoke-virtual {v4}, Landroidx/fragment/app/e;->o()Landroid/os/Bundle;
 
@@ -4230,21 +4455,39 @@
 
     invoke-virtual {v1, v7, v4}, Landroidx/fragment/app/f;->i(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    iget-object v4, v6, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v4, v6, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v5}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v5}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {v6}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
+    const-string v4, "FragmentManager"
 
-    iget-object v4, v6, Landroidx/fragment/app/a;->b:Landroid/os/Bundle;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-static {v4}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v7, "Saved state of "
+
+    invoke-direct {v5, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v7, ": "
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v6, v6, Landroidx/fragment/app/a;->b:Landroid/os/Bundle;
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
@@ -4259,7 +4502,19 @@
 
     if-eqz v3, :cond_2
 
-    goto/16 :goto_6
+    invoke-static {v5}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    const-string v1, "FragmentManager"
+
+    const-string v2, "saveAllState: no fragments!"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v0
 
     :cond_2
     iget-object v3, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
@@ -4286,9 +4541,9 @@
     goto :goto_2
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
-    goto/16 :goto_7
+    goto/16 :goto_6
 
     :cond_3
     new-instance v6, Ljava/util/ArrayList;
@@ -4321,17 +4576,41 @@
 
     check-cast v8, Landroidx/fragment/app/a;
 
-    iget-object v9, v8, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v9, v8, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     invoke-virtual {v6, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v5}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v5}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v9
 
     if-eqz v9, :cond_4
 
-    invoke-virtual {v8}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
+    const-string v9, "FragmentManager"
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "saveAllState: adding fragment ("
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v11, v8, Landroidx/fragment/app/a;->X:Ljava/lang/String;
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v11, "): "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v9, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
@@ -4349,14 +4628,14 @@
 
     if-lez v3, :cond_7
 
-    new-array v4, v3, [Lde0;
+    new-array v4, v3, [Laf0;
 
     const/4 v8, 0x0
 
     :goto_3
     if-ge v8, v3, :cond_8
 
-    new-instance v9, Lde0;
+    new-instance v9, Laf0;
 
     iget-object v10, p0, Landroidx/fragment/app/c;->d:Ljava/util/ArrayList;
 
@@ -4364,25 +4643,41 @@
 
     move-result-object v10
 
-    check-cast v10, Lce0;
+    check-cast v10, Lze0;
 
-    invoke-direct {v9, v10}, Lde0;-><init>(Lce0;)V
+    invoke-direct {v9, v10}, Laf0;-><init>(Lze0;)V
 
     aput-object v9, v4, v8
 
-    invoke-static {v5}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v5}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v9
 
     if-eqz v9, :cond_6
 
-    iget-object v9, p0, Landroidx/fragment/app/c;->d:Ljava/util/ArrayList;
+    const-string v9, "FragmentManager"
 
-    invoke-virtual {v9, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    const-string v10, "saveAllState: adding back stack #"
 
-    move-result-object v9
+    const-string v11, ": "
 
-    invoke-static {v9}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v8, v10, v11}, Li57;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    iget-object v11, p0, Landroidx/fragment/app/c;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v11, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
     add-int/lit8 v8, v8, 0x1
@@ -4393,29 +4688,29 @@
     move-object v4, v7
 
     :cond_8
-    new-instance v3, Lk86;
+    new-instance v3, Lye6;
 
     invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
-    iput-object v7, v3, Lk86;->X:Ljava/lang/String;
+    iput-object v7, v3, Lye6;->X:Ljava/lang/String;
 
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v5, v3, Lk86;->Y:Ljava/util/ArrayList;
+    iput-object v5, v3, Lye6;->Y:Ljava/util/ArrayList;
 
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v7, v3, Lk86;->Z:Ljava/util/ArrayList;
+    iput-object v7, v3, Lye6;->Z:Ljava/util/ArrayList;
 
-    iput-object v2, v3, Lk86;->a:Ljava/util/ArrayList;
+    iput-object v2, v3, Lye6;->a:Ljava/util/ArrayList;
 
-    iput-object v6, v3, Lk86;->b:Ljava/util/ArrayList;
+    iput-object v6, v3, Lye6;->b:Ljava/util/ArrayList;
 
-    iput-object v4, v3, Lk86;->c:[Lde0;
+    iput-object v4, v3, Lye6;->c:[Laf0;
 
     iget-object v2, p0, Landroidx/fragment/app/c;->j:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -4423,15 +4718,15 @@
 
     move-result v2
 
-    iput v2, v3, Lk86;->o:I
+    iput v2, v3, Lye6;->o:I
 
     iget-object v2, p0, Landroidx/fragment/app/c;->z:Landroidx/fragment/app/a;
 
     if-eqz v2, :cond_9
 
-    iget-object v2, v2, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v2, v2, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
-    iput-object v2, v3, Lk86;->X:Ljava/lang/String;
+    iput-object v2, v3, Lye6;->X:Ljava/lang/String;
 
     :cond_9
     iget-object v2, p0, Landroidx/fragment/app/c;->k:Ljava/util/Map;
@@ -4456,7 +4751,7 @@
 
     invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iput-object v2, v3, Lk86;->r0:Ljava/util/ArrayList;
+    iput-object v2, v3, Lye6;->q0:Ljava/util/ArrayList;
 
     const-string v2, "state"
 
@@ -4487,7 +4782,7 @@
 
     const-string v4, "result_"
 
-    invoke-static {v4, v3}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v3}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -4506,86 +4801,99 @@
     :cond_a
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_5
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_b
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/String;
+    :goto_5
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    const-string v3, "fragment_"
+    move-result v3
 
-    invoke-static {v3, v2}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v3, :cond_b
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
-    invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v3, Ljava/lang/String;
 
-    move-result-object v2
+    const-string v4, "fragment_"
 
-    check-cast v2, Landroid/os/Bundle;
+    invoke-static {v4, v3}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    move-result-object v4
+
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/os/Bundle;
+
+    invoke-virtual {v0, v4, v3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
     goto :goto_5
 
     :cond_b
-    :goto_6
     return-object v0
 
-    :goto_7
+    :goto_6
     :try_start_1
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw v0
 .end method
 
 .method public final a(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
     .locals 3
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->a1:Ljava/lang/String;
+    iget-object v0, p1, Landroidx/fragment/app/a;->X0:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1, v0}, Lp86;->c(Landroidx/fragment/app/a;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Ldf6;->c(Landroidx/fragment/app/a;Ljava/lang/String;)V
 
     :cond_0
     const/4 v0, 0x2
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "add: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "FragmentManager"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->g(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
 
     move-result-object v0
 
-    iput-object p0, p1, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iput-object p0, p1, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
     iget-object v1, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
     invoke-virtual {v1, v0}, Landroidx/fragment/app/f;->g(Landroidx/fragment/app/e;)V
 
-    iget-boolean v2, p1, Landroidx/fragment/app/a;->M0:Z
+    iget-boolean v2, p1, Landroidx/fragment/app/a;->K0:Z
 
     if-nez v2, :cond_3
 
@@ -4593,16 +4901,16 @@
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p1, Landroidx/fragment/app/a;->w0:Z
+    iput-boolean v1, p1, Landroidx/fragment/app/a;->u0:Z
 
-    iget-object v2, p1, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+    iget-object v2, p1, Landroidx/fragment/app/a;->R0:Landroid/view/View;
 
     if-nez v2, :cond_2
 
-    iput-boolean v1, p1, Landroidx/fragment/app/a;->X0:Z
+    iput-boolean v1, p1, Landroidx/fragment/app/a;->V0:Z
 
     :cond_2
-    invoke-static {p1}, Landroidx/fragment/app/c;->L(Landroidx/fragment/app/a;)Z
+    invoke-static {p1}, Landroidx/fragment/app/c;->M(Landroidx/fragment/app/a;)Z
 
     move-result p1
 
@@ -4616,80 +4924,73 @@
     return-object v0
 .end method
 
-.method public final a0(Landroidx/fragment/app/a;)Ls76;
-    .locals 4
+.method public final a0()V
+    .locals 3
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v0, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    monitor-enter v0
 
-    iget-object v1, v1, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
+    :try_start_0
+    iget-object v1, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    move-result-object v0
+    move-result v1
 
-    check-cast v0, Landroidx/fragment/app/e;
+    const/4 v2, 0x1
 
-    const/4 v1, 0x0
+    if-ne v1, v2, :cond_0
 
-    if-eqz v0, :cond_1
+    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
-    iget-object v2, v0, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
+    iget-object v1, v1, Lie6;->o:Landroid/os/Handler;
 
-    invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v2, p0, Landroidx/fragment/app/c;->P:Lxe;
 
-    move-result v3
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    if-eqz v3, :cond_1
+    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
-    iget p0, v2, Landroidx/fragment/app/a;->a:I
+    iget-object v1, v1, Lie6;->o:Landroid/os/Handler;
 
-    const/4 p1, -0x1
+    iget-object v2, p0, Landroidx/fragment/app/c;->P:Lxe;
 
-    if-le p0, p1, :cond_0
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    new-instance p0, Ls76;
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->k0()V
 
-    invoke-virtual {v0}, Landroidx/fragment/app/e;->o()Landroid/os/Bundle;
+    goto :goto_0
 
-    move-result-object p1
+    :catchall_0
+    move-exception v1
 
-    invoke-direct {p0, p1}, Ls76;-><init>(Landroid/os/Bundle;)V
-
-    return-object p0
+    goto :goto_1
 
     :cond_0
-    return-object v1
+    :goto_0
+    monitor-exit v0
 
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    return-void
 
-    const-string v2, "Fragment "
-
-    const-string v3, " is not currently in the FragmentManager"
-
-    invoke-static {v2, p1, v3}, Lee5;->j(Ljava/lang/String;Landroidx/fragment/app/a;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->j0(Ljava/lang/IllegalStateException;)V
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v1
 .end method
 
-.method public final b(Lu76;Lzyd;Landroidx/fragment/app/a;)V
-    .locals 5
+.method public final b(Lie6;Ltb4;Landroidx/fragment/app/a;)V
+    .locals 4
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-nez v0, :cond_10
 
-    iput-object p1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iput-object p1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
-    iput-object p2, p0, Landroidx/fragment/app/c;->x:Lzyd;
+    iput-object p2, p0, Landroidx/fragment/app/c;->x:Ltb4;
 
     iput-object p3, p0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
 
@@ -4697,9 +4998,9 @@
 
     if-eqz p3, :cond_0
 
-    new-instance v0, Ld86;
+    new-instance v0, Lre6;
 
-    invoke-direct {v0, p3}, Ld86;-><init>(Landroidx/fragment/app/a;)V
+    invoke-direct {v0, p3}, Lre6;-><init>(Landroidx/fragment/app/a;)V
 
     invoke-virtual {p2, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
@@ -4721,13 +5022,13 @@
     :cond_2
     if-eqz p1, :cond_4
 
-    iget-object p2, p1, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object p2, p1, Lie6;->Y:Landroidx/fragment/app/b;
 
-    invoke-virtual {p2}, Lpd3;->t()Lj9a;
+    invoke-virtual {p2}, Lei3;->A()Lpma;
 
     move-result-object p2
 
-    iput-object p2, p0, Landroidx/fragment/app/c;->g:Lj9a;
+    iput-object p2, p0, Landroidx/fragment/app/c;->g:Lpma;
 
     if-eqz p3, :cond_3
 
@@ -4739,20 +5040,20 @@
     move-object v0, p1
 
     :goto_1
-    iget-object v1, p0, Landroidx/fragment/app/c;->i:Lux3;
+    iget-object v1, p0, Landroidx/fragment/app/c;->i:Li24;
 
-    invoke-virtual {p2, v0, v1}, Lj9a;->a(Lzn7;Lb9a;)V
+    invoke-virtual {p2, v0, v1}, Lpma;->a(Lfx7;Lhma;)V
 
     :cond_4
     if-eqz p3, :cond_6
 
-    iget-object p1, p3, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iget-object p1, p3, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
     iget-object p1, p1, Landroidx/fragment/app/c;->O:Landroidx/fragment/app/FragmentManagerViewModel;
 
     iget-object p2, p1, Landroidx/fragment/app/FragmentManagerViewModel;->c:Ljava/util/HashMap;
 
-    iget-object v0, p3, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v0, p3, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -4768,7 +5069,7 @@
 
     invoke-direct {v0, p1}, Landroidx/fragment/app/FragmentManagerViewModel;-><init>(Z)V
 
-    iget-object p1, p3, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object p1, p3, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     invoke-virtual {p2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -4780,25 +5081,25 @@
     :cond_6
     if-eqz p1, :cond_7
 
-    iget-object p1, p1, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object p1, p1, Lie6;->Y:Landroidx/fragment/app/b;
 
-    invoke-virtual {p1}, Lpd3;->v()Lf8g;
+    invoke-virtual {p1}, Lei3;->k()Lf0h;
 
     move-result-object p1
 
-    new-instance p2, Lj9e;
+    new-instance p2, Lnhd;
 
     sget-object v0, Landroidx/fragment/app/FragmentManagerViewModel;->h:Landroidx/fragment/app/d;
 
-    invoke-direct {p2, p1, v0}, Lj9e;-><init>(Lf8g;Ld8g;)V
+    invoke-direct {p2, p1, v0}, Lnhd;-><init>(Lf0h;Ld0h;)V
 
     const-class p1, Landroidx/fragment/app/FragmentManagerViewModel;
 
-    invoke-static {p1}, Ljpc;->a(Ljava/lang/Class;)Ly33;
+    invoke-static {p1}, Lz7d;->a(Ljava/lang/Class;)Lh73;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lj9e;->b(Ly33;)Ly7g;
+    invoke-virtual {p2, p1}, Lnhd;->V(Lh73;)Lyzg;
 
     move-result-object p1
 
@@ -4820,7 +5121,7 @@
     :goto_2
     iget-object p1, p0, Landroidx/fragment/app/c;->O:Landroidx/fragment/app/FragmentManagerViewModel;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->P()Z
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->Q()Z
 
     move-result p2
 
@@ -4832,31 +5133,31 @@
 
     iput-object p2, p1, Landroidx/fragment/app/f;->d:Landroidx/fragment/app/FragmentManagerViewModel;
 
-    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz p1, :cond_8
 
     if-nez p3, :cond_8
 
-    invoke-virtual {p1}, Lu76;->y()Lom;
+    invoke-virtual {p1}, Lie6;->m()Lvn;
 
     move-result-object p1
 
-    new-instance p2, Lz76;
+    new-instance p2, Lne6;
 
     move-object v0, p0
 
-    check-cast v0, Lj86;
+    check-cast v0, Lxe6;
 
     const/4 v1, 0x0
 
-    invoke-direct {p2, v1, v0}, Lz76;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v1, v0}, Lne6;-><init>(ILjava/lang/Object;)V
 
     const-string v0, "android:support:fragments"
 
-    invoke-virtual {p1, v0, p2}, Lom;->f(Ljava/lang/String;La4d;)V
+    invoke-virtual {p1, v0, p2}, Lvn;->f(Ljava/lang/String;Lxmd;)V
 
-    invoke-virtual {p1, v0}, Lom;->c(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-virtual {p1, v0}, Lvn;->c(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -4865,13 +5166,13 @@
     invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->Y(Landroid/os/Bundle;)V
 
     :cond_8
-    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz p1, :cond_a
 
-    iget-object p1, p1, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object p1, p1, Lie6;->Y:Landroidx/fragment/app/b;
 
-    iget-object p1, p1, Lpd3;->r0:Lnd3;
+    iget-object p1, p1, Lei3;->q0:Lci3;
 
     if-eqz p3, :cond_9
 
@@ -4879,11 +5180,11 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v0, p3, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v0, p3, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     const-string v1, ":"
 
-    invoke-static {p2, v0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0, v1}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -4895,252 +5196,230 @@
     :goto_3
     const-string v0, "FragmentManager:"
 
-    invoke-static {v0, p2}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     const-string v0, "StartActivityForResult"
 
-    invoke-static {p2, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Ld8;
+    new-instance v1, Lm8;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, v2}, Ld8;-><init>(I)V
+    invoke-direct {v1, v2}, Lm8;-><init>(I)V
 
-    new-instance v2, Lnyc;
+    new-instance v2, Lj7;
 
     move-object v3, p0
 
-    check-cast v3, Lj86;
+    check-cast v3, Lxe6;
 
-    const/16 v4, 0x11
+    invoke-direct {v2, v3}, Lj7;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v2, v4, v3}, Lnyc;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0, v1, v2}, Lnd3;->c(Ljava/lang/String;Lcb7;Lc8;)Lmr8;
+    invoke-virtual {p1, v0, v1, v2}, Lci3;->c(Ljava/lang/String;Lm8;Lk8;)Ldgd;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->C:Lmr8;
+    iput-object v0, p0, Landroidx/fragment/app/c;->C:Ldgd;
 
     const-string v0, "StartIntentSenderForResult"
 
-    invoke-static {p2, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Ld8;
+    new-instance v1, Lm8;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, v2}, Ld8;-><init>(I)V
+    invoke-direct {v1, v2}, Lm8;-><init>(I)V
 
-    new-instance v2, Lq02;
+    new-instance v2, Ltvi;
 
-    const/16 v4, 0xe
+    invoke-direct {v2, v3}, Ltvi;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v2, v4, v3}, Lq02;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0, v1, v2}, Lnd3;->c(Ljava/lang/String;Lcb7;Lc8;)Lmr8;
+    invoke-virtual {p1, v0, v1, v2}, Lci3;->c(Ljava/lang/String;Lm8;Lk8;)Ldgd;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->D:Lmr8;
+    iput-object v0, p0, Landroidx/fragment/app/c;->D:Ldgd;
 
     const-string v0, "RequestPermissions"
 
-    invoke-static {p2, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    new-instance v0, Ld8;
+    new-instance v0, Lm8;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ld8;-><init>(I)V
+    invoke-direct {v0, v1}, Lm8;-><init>(I)V
 
-    new-instance v1, Lg8h;
+    new-instance v1, Li5;
 
-    invoke-direct {v1, v3}, Lg8h;-><init>(Ljava/lang/Object;)V
+    const/16 v2, 0xe
 
-    invoke-virtual {p1, p2, v0, v1}, Lnd3;->c(Ljava/lang/String;Lcb7;Lc8;)Lmr8;
+    invoke-direct {v1, v2, v3}, Li5;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, p2, v0, v1}, Lci3;->c(Ljava/lang/String;Lm8;Lk8;)Ldgd;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/fragment/app/c;->E:Lmr8;
+    iput-object p1, p0, Landroidx/fragment/app/c;->E:Ldgd;
 
     :cond_a
-    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz p1, :cond_b
 
-    iget-object p2, p0, Landroidx/fragment/app/c;->q:Ly76;
+    iget-object p2, p0, Landroidx/fragment/app/c;->q:Lme6;
 
-    iget-object p1, p1, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object p1, p1, Lie6;->Y:Landroidx/fragment/app/b;
 
-    invoke-virtual {p1, p2}, Lpd3;->p(Lsm3;)V
+    invoke-virtual {p1, p2}, Lei3;->v(Lvr3;)V
 
     :cond_b
-    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz p1, :cond_c
 
-    iget-object p1, p1, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object p1, p1, Lie6;->Y:Landroidx/fragment/app/b;
 
-    iget-object p1, p1, Lpd3;->t0:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object p1, p1, Lei3;->s0:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object p2, p0, Landroidx/fragment/app/c;->r:Ly76;
+    iget-object p2, p0, Landroidx/fragment/app/c;->r:Lme6;
 
     invoke-virtual {p1, p2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_c
-    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz p1, :cond_d
 
-    iget-object p1, p1, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object p1, p1, Lie6;->Y:Landroidx/fragment/app/b;
 
-    iget-object p1, p1, Lpd3;->v0:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object p1, p1, Lei3;->u0:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object p2, p0, Landroidx/fragment/app/c;->s:Ly76;
+    iget-object p2, p0, Landroidx/fragment/app/c;->s:Lme6;
 
     invoke-virtual {p1, p2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_d
-    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz p1, :cond_e
 
-    iget-object p1, p1, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object p1, p1, Lie6;->Y:Landroidx/fragment/app/b;
 
-    iget-object p1, p1, Lpd3;->w0:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object p1, p1, Lei3;->v0:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object p2, p0, Landroidx/fragment/app/c;->t:Ly76;
+    iget-object p2, p0, Landroidx/fragment/app/c;->t:Lme6;
 
     invoke-virtual {p1, p2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_e
-    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz p1, :cond_f
 
     if-nez p3, :cond_f
 
-    iget-object p1, p1, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object p1, p1, Lie6;->Y:Landroidx/fragment/app/b;
 
-    iget-object p1, p1, Lpd3;->c:Lfo8;
+    iget-object p1, p1, Lei3;->c:Lw9c;
 
-    iget-object p2, p1, Lfo8;->b:Ljava/lang/Object;
+    iget-object p2, p1, Lw9c;->b:Ljava/lang/Object;
 
     check-cast p2, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->u:La86;
+    iget-object p3, p0, Landroidx/fragment/app/c;->u:Loe6;
 
-    invoke-virtual {p2, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p2, p3}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object p0, p1, Lfo8;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lw9c;->a:Ljava/lang/Object;
 
-    check-cast p0, Ljava/lang/Runnable;
+    check-cast p1, Ljava/lang/Runnable;
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_f
     return-void
 
     :cond_10
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Already attached"
+    const-string p2, "Already attached"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
-.method public final b0()V
-    .locals 3
+.method public final b0(Landroidx/fragment/app/a;Z)V
+    .locals 1
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->H(Landroidx/fragment/app/a;)Landroid/view/ViewGroup;
 
-    monitor-enter v0
+    move-result-object p1
 
-    :try_start_0
-    iget-object v1, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    instance-of v0, p1, Landroidx/fragment/app/FragmentContainerView;
 
-    move-result v1
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x1
+    check-cast p1, Landroidx/fragment/app/FragmentContainerView;
 
-    if-ne v1, v2, :cond_0
+    xor-int/lit8 p2, p2, 0x1
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lu76;
-
-    iget-object v1, v1, Lu76;->s0:Landroid/os/Handler;
-
-    iget-object v2, p0, Landroidx/fragment/app/c;->P:Loe;
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lu76;
-
-    iget-object v1, v1, Lu76;->s0:Landroid/os/Handler;
-
-    iget-object v2, p0, Landroidx/fragment/app/c;->P:Loe;
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->k0()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
+    invoke-virtual {p1, p2}, Landroidx/fragment/app/FragmentContainerView;->setDrawDisappearingViewsLast(Z)V
 
     :cond_0
-    :goto_0
-    monitor-exit v0
-
     return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method
 
 .method public final c(Landroidx/fragment/app/a;)V
-    .locals 2
+    .locals 4
 
     const/4 v0, 0x2
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v1
 
+    const-string v2, "FragmentManager"
+
     if-eqz v1, :cond_0
 
-    invoke-static {p1}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "attach: "
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-boolean v1, p1, Landroidx/fragment/app/a;->M0:Z
+    iget-boolean v1, p1, Landroidx/fragment/app/a;->K0:Z
 
     if-eqz v1, :cond_2
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p1, Landroidx/fragment/app/a;->M0:Z
+    iput-boolean v1, p1, Landroidx/fragment/app/a;->K0:Z
 
-    iget-boolean v1, p1, Landroidx/fragment/app/a;->v0:Z
+    iget-boolean v1, p1, Landroidx/fragment/app/a;->t0:Z
 
     if-nez v1, :cond_2
 
@@ -5148,16 +5427,28 @@
 
     invoke-virtual {v1, p1}, Landroidx/fragment/app/f;->a(Landroidx/fragment/app/a;)V
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "add from attach: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    invoke-static {p1}, Landroidx/fragment/app/c;->L(Landroidx/fragment/app/a;)Z
+    invoke-static {p1}, Landroidx/fragment/app/c;->M(Landroidx/fragment/app/a;)Z
 
     move-result p1
 
@@ -5171,26 +5462,72 @@
     return-void
 .end method
 
-.method public final c0(Landroidx/fragment/app/a;Z)V
-    .locals 0
+.method public final c0(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 3
 
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->H(Landroidx/fragment/app/a;)Landroid/view/ViewGroup;
+    iget-object v0, p0, Landroidx/fragment/app/c;->m:Ljava/util/Map;
 
-    move-result-object p0
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz p0, :cond_0
+    move-result-object v0
 
-    instance-of p1, p0, Landroidx/fragment/app/FragmentContainerView;
+    check-cast v0, Lte6;
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
-    check-cast p0, Landroidx/fragment/app/FragmentContainerView;
+    iget-object v1, v0, Lte6;->a:Lhx7;
 
-    xor-int/lit8 p1, p2, 0x1
+    iget-object v1, v1, Lhx7;->d:Lhw7;
 
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentContainerView;->setDrawDisappearingViewsLast(Z)V
+    sget-object v2, Lhw7;->o:Lhw7;
+
+    invoke-virtual {v1, v2}, Lhw7;->a(Lhw7;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lte6;->b(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    goto :goto_0
 
     :cond_0
+    iget-object v0, p0, Landroidx/fragment/app/c;->l:Ljava/util/Map;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_0
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Setting fragment result with key "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " and result "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "FragmentManager"
+
+    invoke-static {p2, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
     return-void
 .end method
 
@@ -5205,59 +5542,93 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->L:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/fragment/app/c;->L:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     return-void
 .end method
 
-.method public final d0(Ljava/lang/String;Landroid/os/Bundle;)V
+.method public final d0(Ljava/lang/String;Lfx7;Laf6;)V
     .locals 3
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->m:Ljava/util/Map;
+    invoke-interface {p2}, Lfx7;->x()Lhx7;
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p2
 
-    move-result-object v0
+    iget-object v0, p2, Lhx7;->d:Lhw7;
 
-    check-cast v0, Lf86;
+    sget-object v1, Lhw7;->a:Lhw7;
 
-    if-eqz v0, :cond_0
+    if-ne v0, v1, :cond_0
 
-    iget-object v1, v0, Lf86;->a:Lbo7;
+    return-void
 
-    iget-object v1, v1, Lbo7;->d:Lcn7;
+    :cond_0
+    new-instance v0, Lqe6;
 
-    sget-object v2, Lcn7;->o:Lcn7;
+    invoke-direct {v0, p0, p1, p3, p2}, Lqe6;-><init>(Landroidx/fragment/app/c;Ljava/lang/String;Laf6;Lhx7;)V
 
-    invoke-virtual {v1, v2}, Lcn7;->a(Lcn7;)Z
+    new-instance v1, Lte6;
+
+    invoke-direct {v1, p2, p3, v0}, Lte6;-><init>(Lhx7;Laf6;Lqe6;)V
+
+    iget-object v2, p0, Landroidx/fragment/app/c;->m:Ljava/util/Map;
+
+    invoke-interface {v2, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lte6;
+
+    if-eqz v1, :cond_1
+
+    iget-object v2, v1, Lte6;->a:Lhx7;
+
+    iget-object v1, v1, Lte6;->c:Lqe6;
+
+    invoke-virtual {v2, v1}, Lhx7;->f(Lbx7;)V
+
+    :cond_1
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v0, p1, p2}, Lf86;->b(Ljava/lang/String;Landroid/os/Bundle;)V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v2, "Setting FragmentResultListener with key "
 
-    :cond_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->l:Ljava/util/Map;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    const/4 p0, 0x2
+    const-string p1, " lifecycleOwner "
 
-    invoke-static {p0}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p0
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-eqz p0, :cond_1
+    const-string p1, " and listener "
 
-    invoke-static {p2}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p3, "FragmentManager"
+
+    invoke-static {p3, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    invoke-virtual {p2, v0}, Lhx7;->a(Lbx7;)V
+
     return-void
 .end method
 
@@ -5294,32 +5665,32 @@
 
     iget-object v2, v2, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
 
-    iget-object v2, v2, Landroidx/fragment/app/a;->S0:Landroid/view/ViewGroup;
+    iget-object v2, v2, Landroidx/fragment/app/a;->Q0:Landroid/view/ViewGroup;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->J()Lyz4;
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->J()Lt93;
 
-    sget v3, Lr7c;->special_effects_controller_view_tag:I
+    sget v3, Lhpc;->special_effects_controller_view_tag:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    instance-of v4, v3, Lhi4;
+    instance-of v4, v3, Lhn4;
 
     if-eqz v4, :cond_1
 
-    check-cast v3, Lhi4;
+    check-cast v3, Lhn4;
 
     goto :goto_1
 
     :cond_1
-    new-instance v3, Lhi4;
+    new-instance v3, Lhn4;
 
-    invoke-direct {v3, v2}, Lhi4;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v3, v2}, Lhn4;-><init>(Landroid/view/ViewGroup;)V
 
-    sget v4, Lr7c;->special_effects_controller_view_tag:I
+    sget v4, Lhpc;->special_effects_controller_view_tag:I
 
     invoke-virtual {v2, v4, v3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
@@ -5332,150 +5703,10 @@
     return-object v0
 .end method
 
-.method public final e0(Ljava/lang/String;Lzn7;Lm86;)V
+.method public final e0(Landroidx/fragment/app/a;Lhw7;)V
     .locals 2
 
-    invoke-interface {p2}, Lzn7;->L()Lbo7;
-
-    move-result-object p2
-
-    iget-object v0, p2, Lbo7;->d:Lcn7;
-
-    sget-object v1, Lcn7;->a:Lcn7;
-
-    if-ne v0, v1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lc86;
-
-    invoke-direct {v0, p0, p1, p3, p2}, Lc86;-><init>(Landroidx/fragment/app/c;Ljava/lang/String;Lm86;Lbo7;)V
-
-    new-instance v1, Lf86;
-
-    invoke-direct {v1, p2, p3, v0}, Lf86;-><init>(Lbo7;Lm86;Lc86;)V
-
-    iget-object p0, p0, Landroidx/fragment/app/c;->m:Ljava/util/Map;
-
-    invoke-interface {p0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lf86;
-
-    if-eqz p0, :cond_1
-
-    iget-object p1, p0, Lf86;->a:Lbo7;
-
-    iget-object p0, p0, Lf86;->c:Lc86;
-
-    invoke-virtual {p1, p0}, Lbo7;->f(Lvn7;)V
-
-    :cond_1
-    const/4 p0, 0x2
-
-    invoke-static {p0}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    invoke-static {p3}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    :cond_2
-    invoke-virtual {p2, v0}, Lbo7;->a(Lvn7;)V
-
-    return-void
-.end method
-
-.method public final f(Ljava/util/ArrayList;II)Ljava/util/HashSet;
-    .locals 5
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    :goto_0
-    if-ge p2, p3, :cond_3
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lce0;
-
-    iget-object v1, v1, Lce0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lq86;
-
-    iget-object v2, v2, Lq86;->b:Landroidx/fragment/app/a;
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v2, Landroidx/fragment/app/a;->S0:Landroid/view/ViewGroup;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->J()Lyz4;
-
-    sget v3, Lr7c;->special_effects_controller_view_tag:I
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    instance-of v4, v3, Lhi4;
-
-    if-eqz v4, :cond_1
-
-    check-cast v3, Lhi4;
-
-    goto :goto_2
-
-    :cond_1
-    new-instance v3, Lhi4;
-
-    invoke-direct {v3, v2}, Lhi4;-><init>(Landroid/view/ViewGroup;)V
-
-    sget v4, Lr7c;->special_effects_controller_view_tag:I
-
-    invoke-virtual {v2, v4, v3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    :goto_2
-    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_2
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    return-object v0
-.end method
-
-.method public final f0(Landroidx/fragment/app/a;Lcn7;)V
-    .locals 2
-
-    iget-object v0, p1, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v0, p1, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     iget-object v1, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
@@ -5489,16 +5720,16 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->F0:Lu76;
+    iget-object v0, p1, Landroidx/fragment/app/a;->D0:Lie6;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iget-object v0, p1, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
     if-ne v0, p0, :cond_1
 
     :cond_0
-    iput-object p2, p1, Landroidx/fragment/app/a;->b1:Lcn7;
+    iput-object p2, p1, Landroidx/fragment/app/a;->Y0:Lhw7;
 
     return-void
 
@@ -5521,62 +5752,102 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {p2, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p2
 .end method
 
-.method public final g(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
-    .locals 3
+.method public final f(Ljava/util/ArrayList;II)Ljava/util/HashSet;
+    .locals 5
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    new-instance v0, Ljava/util/HashSet;
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iget-object v2, v1, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
+    :goto_0
+    if-ge p2, p3, :cond_3
 
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Landroidx/fragment/app/e;
+    check-cast v1, Lze0;
 
-    if-eqz v0, :cond_0
+    iget-object v1, v1, Lze0;->a:Ljava/util/ArrayList;
 
-    return-object v0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
 
     :cond_0
-    new-instance v0, Landroidx/fragment/app/e;
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v2, p0, Landroidx/fragment/app/c;->o:Lim4;
+    move-result v2
 
-    invoke-direct {v0, v2, v1, p1}, Landroidx/fragment/app/e;-><init>(Lim4;Landroidx/fragment/app/f;Landroidx/fragment/app/a;)V
+    if-eqz v2, :cond_2
 
-    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object p1, p1, Lu76;->r0:Landroidx/fragment/app/b;
+    move-result-object v2
 
-    invoke-virtual {p1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+    check-cast v2, Lef6;
 
-    move-result-object p1
+    iget-object v2, v2, Lef6;->b:Landroidx/fragment/app/a;
 
-    invoke-virtual {v0, p1}, Landroidx/fragment/app/e;->m(Ljava/lang/ClassLoader;)V
+    if-eqz v2, :cond_0
 
-    iget p0, p0, Landroidx/fragment/app/c;->v:I
+    iget-object v2, v2, Landroidx/fragment/app/a;->Q0:Landroid/view/ViewGroup;
 
-    iput p0, v0, Landroidx/fragment/app/e;->e:I
+    if-eqz v2, :cond_0
 
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->J()Lt93;
+
+    sget v3, Lhpc;->special_effects_controller_view_tag:I
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    instance-of v4, v3, Lhn4;
+
+    if-eqz v4, :cond_1
+
+    check-cast v3, Lhn4;
+
+    goto :goto_2
+
+    :cond_1
+    new-instance v3, Lhn4;
+
+    invoke-direct {v3, v2}, Lhn4;-><init>(Landroid/view/ViewGroup;)V
+
+    sget v4, Lhpc;->special_effects_controller_view_tag:I
+
+    invoke-virtual {v2, v4, v3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    :goto_2
+    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_3
     return-object v0
 .end method
 
-.method public final g0(Landroidx/fragment/app/a;)V
+.method public final f0(Landroidx/fragment/app/a;)V
     .locals 3
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v0, p1, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     iget-object v1, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
@@ -5590,11 +5861,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->F0:Lu76;
+    iget-object v0, p1, Landroidx/fragment/app/a;->D0:Lie6;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iget-object v0, p1, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
     if-ne v0, p0, :cond_0
 
@@ -5619,9 +5890,9 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -5640,203 +5911,272 @@
     return-void
 .end method
 
-.method public final h(Landroidx/fragment/app/a;)V
+.method public final g(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
     .locals 3
 
-    const/4 v0, 0x2
+    iget-object v0, p1, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
+    iget-object v1, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    move-result v1
+    iget-object v2, v1, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p1}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    move-result-object v0
+
+    check-cast v0, Landroidx/fragment/app/e;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
 
     :cond_0
-    iget-boolean v1, p1, Landroidx/fragment/app/a;->M0:Z
+    new-instance v0, Landroidx/fragment/app/e;
 
-    if-nez v1, :cond_3
+    iget-object v2, p0, Landroidx/fragment/app/c;->o:Lir4;
 
-    const/4 v1, 0x1
+    invoke-direct {v0, v2, v1, p1}, Landroidx/fragment/app/e;-><init>(Lir4;Landroidx/fragment/app/f;Landroidx/fragment/app/a;)V
 
-    iput-boolean v1, p1, Landroidx/fragment/app/a;->M0:Z
+    iget-object p1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
-    iget-boolean v2, p1, Landroidx/fragment/app/a;->v0:Z
+    iget-object p1, p1, Lie6;->c:Landroidx/fragment/app/b;
 
-    if-eqz v2, :cond_3
+    invoke-virtual {p1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
+    move-result-object p1
 
-    move-result v0
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/e;->m(Ljava/lang/ClassLoader;)V
 
-    if-eqz v0, :cond_1
+    iget p1, p0, Landroidx/fragment/app/c;->v:I
 
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
+    iput p1, v0, Landroidx/fragment/app/e;->e:I
 
-    :cond_1
-    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
-
-    iget-object v2, v0, Landroidx/fragment/app/f;->a:Ljava/util/ArrayList;
-
-    monitor-enter v2
-
-    :try_start_0
-    iget-object v0, v0, Landroidx/fragment/app/f;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p1, Landroidx/fragment/app/a;->v0:Z
-
-    invoke-static {p1}, Landroidx/fragment/app/c;->L(Landroidx/fragment/app/a;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iput-boolean v1, p0, Landroidx/fragment/app/c;->G:Z
-
-    :cond_2
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->h0(Landroidx/fragment/app/a;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-
-    :cond_3
-    return-void
+    return-object v0
 .end method
 
-.method public final h0(Landroidx/fragment/app/a;)V
-    .locals 4
+.method public final g0(Landroidx/fragment/app/a;)V
+    .locals 5
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->H(Landroidx/fragment/app/a;)Landroid/view/ViewGroup;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_7
+    if-eqz v0, :cond_7
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v1, p1, Landroidx/fragment/app/a;->U0:Lfe6;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
-    move v2, v1
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    iget v2, v0, Lr76;->b:I
+    iget v3, v1, Lfe6;->b:I
 
     :goto_0
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
-    move v3, v1
+    move v4, v2
 
     goto :goto_1
 
     :cond_1
-    iget v3, v0, Lr76;->c:I
+    iget v4, v1, Lfe6;->c:I
 
     :goto_1
-    add-int/2addr v3, v2
+    add-int/2addr v4, v3
 
-    if-nez v0, :cond_2
+    if-nez v1, :cond_2
 
-    move v2, v1
+    move v3, v2
 
     goto :goto_2
 
     :cond_2
-    iget v2, v0, Lr76;->d:I
+    iget v3, v1, Lfe6;->d:I
 
     :goto_2
-    add-int/2addr v2, v3
+    add-int/2addr v3, v4
 
-    if-nez v0, :cond_3
+    if-nez v1, :cond_3
 
-    move v0, v1
+    move v1, v2
 
     goto :goto_3
 
     :cond_3
-    iget v0, v0, Lr76;->e:I
+    iget v1, v1, Lfe6;->e:I
 
     :goto_3
-    add-int/2addr v0, v2
+    add-int/2addr v1, v3
 
-    if-lez v0, :cond_7
+    if-lez v1, :cond_7
 
-    sget v0, Lr7c;->visible_removing_fragment_view_tag:I
+    sget v1, Lhpc;->visible_removing_fragment_view_tag:I
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_4
+
+    sget v1, Lhpc;->visible_removing_fragment_view_tag:I
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    :cond_4
+    sget v1, Lhpc;->visible_removing_fragment_view_tag:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-nez v0, :cond_4
+    check-cast v0, Landroidx/fragment/app/a;
 
-    sget v0, Lr7c;->visible_removing_fragment_view_tag:I
-
-    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    :cond_4
-    sget v0, Lr7c;->visible_removing_fragment_view_tag:I
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroidx/fragment/app/a;
-
-    iget-object p1, p1, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object p1, p1, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez p1, :cond_5
 
     goto :goto_4
 
     :cond_5
-    iget-boolean v1, p1, Lr76;->a:Z
+    iget-boolean v2, p1, Lfe6;->a:Z
 
     :goto_4
-    iget-object p1, p0, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object p1, v0, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez p1, :cond_6
 
     goto :goto_5
 
     :cond_6
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->P()Lr76;
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->B()Lfe6;
 
-    move-result-object p0
+    move-result-object p1
 
-    iput-boolean v1, p0, Lr76;->a:Z
+    iput-boolean v2, p1, Lfe6;->a:Z
 
     :cond_7
     :goto_5
     return-void
 .end method
 
+.method public final h(Landroidx/fragment/app/a;)V
+    .locals 4
+
+    const-string v0, "FragmentManager"
+
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "detach: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-boolean v2, p1, Landroidx/fragment/app/a;->K0:Z
+
+    if-nez v2, :cond_3
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p1, Landroidx/fragment/app/a;->K0:Z
+
+    iget-boolean v3, p1, Landroidx/fragment/app/a;->t0:Z
+
+    if-eqz v3, :cond_3
+
+    invoke-static {v1}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "remove from detach: "
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+
+    iget-object v1, v0, Landroidx/fragment/app/f;->a:Ljava/util/ArrayList;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v0, v0, Landroidx/fragment/app/f;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p1, Landroidx/fragment/app/a;->t0:Z
+
+    invoke-static {p1}, Landroidx/fragment/app/c;->M(Landroidx/fragment/app/a;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iput-boolean v2, p0, Landroidx/fragment/app/c;->G:Z
+
+    :cond_2
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->g0(Landroidx/fragment/app/a;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :cond_3
+    return-void
+.end method
+
 .method public final i(ZLandroid/content/res/Configuration;)V
-    .locals 2
+    .locals 3
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-nez v0, :cond_0
 
@@ -5851,47 +6191,47 @@
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->j0(Ljava/lang/IllegalStateException;)V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_2
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/fragment/app/a;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    invoke-virtual {v0, p2}, Landroidx/fragment/app/a;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    :cond_2
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/fragment/app/a;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1, p2}, Landroidx/fragment/app/a;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     if-eqz p1, :cond_2
 
-    iget-object v0, v0, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object v1, v1, Landroidx/fragment/app/a;->E0:Lxe6;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, p2}, Landroidx/fragment/app/c;->i(ZLandroid/content/res/Configuration;)V
+    invoke-virtual {v1, v2, p2}, Landroidx/fragment/app/c;->i(ZLandroid/content/res/Configuration;)V
 
     goto :goto_1
 
@@ -5928,7 +6268,7 @@
 
     iget-object v2, v1, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
 
-    iget-boolean v3, v2, Landroidx/fragment/app/a;->U0:Z
+    iget-boolean v3, v2, Landroidx/fragment/app/a;->S0:Z
 
     if-eqz v3, :cond_0
 
@@ -5945,7 +6285,7 @@
     :cond_1
     const/4 v3, 0x0
 
-    iput-boolean v3, v2, Landroidx/fragment/app/a;->U0:Z
+    iput-boolean v3, v2, Landroidx/fragment/app/a;->S0:Z
 
     invoke-virtual {v1}, Landroidx/fragment/app/e;->k()V
 
@@ -5956,7 +6296,7 @@
 .end method
 
 .method public final j()Z
-    .locals 4
+    .locals 5
 
     iget v0, p0, Landroidx/fragment/app/c;->v:I
 
@@ -5969,48 +6309,48 @@
     goto :goto_1
 
     :cond_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/fragment/app/a;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    iget-boolean v3, v0, Landroidx/fragment/app/a;->L0:Z
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    if-nez v3, :cond_2
+    move-result v3
 
-    iget-object v0, v0, Landroidx/fragment/app/a;->G0:Lj86;
+    if-eqz v3, :cond_3
 
-    invoke-virtual {v0}, Landroidx/fragment/app/c;->j()Z
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v3
+
+    check-cast v3, Landroidx/fragment/app/a;
+
+    if-eqz v3, :cond_1
+
+    iget-boolean v4, v3, Landroidx/fragment/app/a;->J0:Z
+
+    if-nez v4, :cond_2
+
+    iget-object v3, v3, Landroidx/fragment/app/a;->E0:Lxe6;
+
+    invoke-virtual {v3}, Landroidx/fragment/app/c;->j()Z
+
+    move-result v3
 
     goto :goto_0
 
     :cond_2
-    move v0, v1
+    move v3, v1
 
     :goto_0
-    if-eqz v0, :cond_1
+    if-eqz v3, :cond_1
 
     return v2
 
@@ -6020,45 +6360,73 @@
 .end method
 
 .method public final j0(Ljava/lang/IllegalStateException;)V
-    .locals 5
+    .locals 7
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    new-instance v0, Lyz7;
+    move-result-object v0
 
-    invoke-direct {v0}, Lyz7;-><init>()V
+    const-string v1, "FragmentManager"
 
-    new-instance v1, Ljava/io/PrintWriter;
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
+    const-string v0, "Activity state:"
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v2, 0x0
+    new-instance v0, Lk98;
 
-    const/4 v3, 0x0
+    invoke-direct {v0}, Lk98;-><init>()V
 
-    const-string v4, "  "
+    new-instance v2, Ljava/io/PrintWriter;
+
+    invoke-direct {v2, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
+
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
+
+    const-string v3, "Failed dumping state"
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const-string v6, "  "
 
     if-eqz v0, :cond_0
 
     :try_start_0
-    new-array p0, v2, [Ljava/lang/String;
+    new-array v4, v4, [Ljava/lang/String;
 
-    iget-object v0, v0, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object v0, v0, Lie6;->Y:Landroidx/fragment/app/b;
 
-    invoke-virtual {v0, v4, v3, v1, p0}, Landroidx/fragment/app/b;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    invoke-virtual {v0, v6, v5, v2, v4}, Landroidx/fragment/app/b;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {v1, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
     :cond_0
-    new-array v0, v2, [Ljava/lang/String;
+    :try_start_1
+    new-array v0, v4, [Ljava/lang/String;
 
-    invoke-virtual {p0, v4, v3, v1, v0}, Landroidx/fragment/app/c;->v(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p0, v6, v5, v2, v0}, Landroidx/fragment/app/c;->w(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    :catch_0
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    invoke-static {v1, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     throw p1
 .end method
@@ -6107,25 +6475,25 @@
 
     if-eqz v5, :cond_1
 
-    invoke-static {v5}, Landroidx/fragment/app/c;->N(Landroidx/fragment/app/a;)Z
+    invoke-static {v5}, Landroidx/fragment/app/c;->O(Landroidx/fragment/app/a;)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    iget-boolean v6, v5, Landroidx/fragment/app/a;->L0:Z
+    iget-boolean v6, v5, Landroidx/fragment/app/a;->J0:Z
 
     if-nez v6, :cond_3
 
-    iget-boolean v6, v5, Landroidx/fragment/app/a;->P0:Z
+    iget-boolean v6, v5, Landroidx/fragment/app/a;->N0:Z
 
     if-eqz v6, :cond_2
 
-    iget-boolean v6, v5, Landroidx/fragment/app/a;->Q0:Z
+    iget-boolean v6, v5, Landroidx/fragment/app/a;->O0:Z
 
     if-eqz v6, :cond_2
 
-    invoke-virtual {v5, p1, p2}, Landroidx/fragment/app/a;->l0(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {v5, p1, p2}, Landroidx/fragment/app/a;->W(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     move v6, v2
 
@@ -6135,7 +6503,7 @@
     move v6, v1
 
     :goto_1
-    iget-object v7, v5, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object v7, v5, Landroidx/fragment/app/a;->E0:Lxe6;
 
     invoke-virtual {v7, p1, p2}, Landroidx/fragment/app/c;->k(Landroid/view/Menu;Landroid/view/MenuInflater;)Z
 
@@ -6211,50 +6579,68 @@
 .method public final k0()V
     .locals 5
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
+    const-string v0, "FragmentManager "
 
-    monitor-enter v0
-
-    :try_start_0
     iget-object v1, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+    monitor-enter v1
 
-    move-result v1
+    :try_start_0
+    iget-object v2, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
 
-    const/4 v2, 0x3
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
-    const/4 v3, 0x1
+    move-result v2
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x3
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->i:Lux3;
+    const/4 v4, 0x1
 
-    invoke-virtual {v1, v3}, Lb9a;->f(Z)V
+    if-nez v2, :cond_1
 
-    invoke-static {v2}, Landroidx/fragment/app/c;->K(I)Z
+    iget-object v2, p0, Landroidx/fragment/app/c;->i:Li24;
 
-    move-result v1
+    invoke-virtual {v2, v4}, Lhma;->f(Z)V
 
-    if-eqz v1, :cond_0
+    invoke-static {v3}, Landroidx/fragment/app/c;->L(I)Z
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->toString()Ljava/lang/String;
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "FragmentManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " enabling OnBackPressedCallback, caused by non-empty pending actions"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
     goto :goto_3
 
     :cond_0
     :goto_0
-    monitor-exit v0
+    monitor-exit v1
 
     return-void
 
     :cond_1
-    monitor-exit v0
+    monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -6264,18 +6650,18 @@
 
     move-result v0
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->h:Lce0;
+    iget-object v1, p0, Landroidx/fragment/app/c;->h:Lze0;
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
     if-eqz v1, :cond_2
 
-    move v1, v3
+    move v1, v4
 
     goto :goto_1
 
     :cond_2
-    move v1, v4
+    move v1, v2
 
     :goto_1
     add-int/2addr v0, v1
@@ -6284,7 +6670,7 @@
 
     iget-object v0, p0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->O(Landroidx/fragment/app/a;)Z
+    invoke-static {v0}, Landroidx/fragment/app/c;->P(Landroidx/fragment/app/a;)Z
 
     move-result v0
 
@@ -6293,31 +6679,51 @@
     goto :goto_2
 
     :cond_3
-    move v3, v4
+    move v4, v2
 
     :goto_2
-    invoke-static {v2}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v3}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->toString()Ljava/lang/String;
+    const-string v0, "FragmentManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "OnBackPressedCallback for FragmentManager "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " enabled state is "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
-    iget-object p0, p0, Landroidx/fragment/app/c;->i:Lux3;
+    iget-object v0, p0, Landroidx/fragment/app/c;->i:Li24;
 
-    invoke-virtual {p0, v3}, Lb9a;->f(Z)V
+    invoke-virtual {v0, v4}, Lhma;->f(Z)V
 
     return-void
 
     :goto_3
     :try_start_1
-    monitor-exit v0
+    monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw v0
 .end method
 
 .method public final l()V
@@ -6327,11 +6733,11 @@
 
     iput-boolean v0, p0, Landroidx/fragment/app/c;->J:Z
 
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->z(Z)Z
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->A(Z)Z
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->w()V
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->x()V
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     iget-object v2, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
@@ -6344,7 +6750,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v1, v1, Lu76;->r0:Landroidx/fragment/app/b;
+    iget-object v1, v1, Lie6;->c:Landroidx/fragment/app/b;
 
     if-eqz v1, :cond_1
 
@@ -6379,9 +6785,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lee0;
+    check-cast v1, Lbf0;
 
-    iget-object v1, v1, Lee0;->a:Ljava/util/ArrayList;
+    iget-object v1, v1, Lbf0;->a:Ljava/util/ArrayList;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -6404,7 +6810,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {v4, v3, v5}, Landroidx/fragment/app/FragmentManagerViewModel;->f(Ljava/lang/String;Z)V
+    invoke-virtual {v4, v3, v5}, Landroidx/fragment/app/FragmentManagerViewModel;->g(Ljava/lang/String;Z)V
 
     goto :goto_1
 
@@ -6413,59 +6819,59 @@
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->u(I)V
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, v0, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object v0, v0, Lie6;->Y:Landroidx/fragment/app/b;
 
-    iget-object v0, v0, Lpd3;->t0:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, v0, Lei3;->s0:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->r:Ly76;
+    iget-object v1, p0, Landroidx/fragment/app/c;->r:Lme6;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     :cond_4
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, v0, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object v0, v0, Lie6;->Y:Landroidx/fragment/app/b;
 
-    iget-object v0, v0, Lpd3;->s0:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, v0, Lei3;->r0:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->q:Ly76;
+    iget-object v1, p0, Landroidx/fragment/app/c;->q:Lme6;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     :cond_5
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz v0, :cond_6
 
-    iget-object v0, v0, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object v0, v0, Lie6;->Y:Landroidx/fragment/app/b;
 
-    iget-object v0, v0, Lpd3;->v0:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, v0, Lei3;->u0:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->s:Ly76;
+    iget-object v1, p0, Landroidx/fragment/app/c;->s:Lme6;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     :cond_6
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz v0, :cond_7
 
-    iget-object v0, v0, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object v0, v0, Lie6;->Y:Landroidx/fragment/app/b;
 
-    iget-object v0, v0, Lpd3;->w0:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, v0, Lei3;->v0:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->t:Ly76;
+    iget-object v1, p0, Landroidx/fragment/app/c;->t:Lme6;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     :cond_7
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz v0, :cond_9
 
@@ -6473,19 +6879,19 @@
 
     if-nez v1, :cond_9
 
-    iget-object v0, v0, Lu76;->u0:Landroidx/fragment/app/b;
+    iget-object v0, v0, Lie6;->Y:Landroidx/fragment/app/b;
 
-    iget-object v0, v0, Lpd3;->c:Lfo8;
+    iget-object v0, v0, Lei3;->c:Lw9c;
 
-    iget-object v1, v0, Lfo8;->b:Ljava/lang/Object;
+    iget-object v1, v0, Lw9c;->b:Ljava/lang/Object;
 
     check-cast v1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object v2, p0, Landroidx/fragment/app/c;->u:La86;
+    iget-object v2, p0, Landroidx/fragment/app/c;->u:Loe6;
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    iget-object v1, v0, Lfo8;->c:Ljava/lang/Object;
+    iget-object v1, v0, Lw9c;->c:Ljava/lang/Object;
 
     check-cast v1, Ljava/util/HashMap;
 
@@ -6495,7 +6901,7 @@
 
     if-nez v1, :cond_8
 
-    iget-object v0, v0, Lfo8;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lw9c;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Runnable;
 
@@ -6504,57 +6910,57 @@
     goto :goto_2
 
     :cond_8
-    new-instance p0, Ljava/lang/ClassCastException;
+    new-instance v0, Ljava/lang/ClassCastException;
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
 
-    throw p0
+    throw v0
 
     :cond_9
     :goto_2
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iput-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->x:Lzyd;
+    iput-object v0, p0, Landroidx/fragment/app/c;->x:Ltb4;
 
     iput-object v0, p0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->g:Lj9a;
+    iget-object v1, p0, Landroidx/fragment/app/c;->g:Lpma;
 
     if-eqz v1, :cond_a
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->i:Lux3;
+    iget-object v1, p0, Landroidx/fragment/app/c;->i:Li24;
 
-    invoke-virtual {v1}, Lb9a;->e()V
+    invoke-virtual {v1}, Lhma;->e()V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->g:Lj9a;
+    iput-object v0, p0, Landroidx/fragment/app/c;->g:Lpma;
 
     :cond_a
-    iget-object v0, p0, Landroidx/fragment/app/c;->C:Lmr8;
+    iget-object v0, p0, Landroidx/fragment/app/c;->C:Ldgd;
 
     if-eqz v0, :cond_b
 
-    invoke-virtual {v0}, Lmr8;->y()V
+    invoke-virtual {v0}, Ldgd;->u()V
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->D:Lmr8;
+    iget-object v0, p0, Landroidx/fragment/app/c;->D:Ldgd;
 
-    invoke-virtual {v0}, Lmr8;->y()V
+    invoke-virtual {v0}, Ldgd;->u()V
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->E:Lmr8;
+    iget-object v0, p0, Landroidx/fragment/app/c;->E:Ldgd;
 
-    invoke-virtual {p0}, Lmr8;->y()V
+    invoke-virtual {v0}, Ldgd;->u()V
 
     :cond_b
     return-void
 .end method
 
 .method public final m(Z)V
-    .locals 2
+    .locals 3
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-nez v0, :cond_0
 
@@ -6569,47 +6975,47 @@
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->j0(Ljava/lang/IllegalStateException;)V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_2
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/fragment/app/a;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->onLowMemory()V
+    :cond_2
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/fragment/app/a;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Landroidx/fragment/app/a;->onLowMemory()V
 
     if-eqz p1, :cond_2
 
-    iget-object v0, v0, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object v1, v1, Landroidx/fragment/app/a;->E0:Lxe6;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->m(Z)V
+    invoke-virtual {v1, v2}, Landroidx/fragment/app/c;->m(Z)V
 
     goto :goto_1
 
@@ -6618,11 +7024,11 @@
 .end method
 
 .method public final n(Z)V
-    .locals 2
+    .locals 3
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-nez v0, :cond_0
 
@@ -6637,45 +7043,45 @@
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->j0(Ljava/lang/IllegalStateException;)V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_2
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/fragment/app/a;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
+
+    :cond_2
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/fragment/app/a;
+
+    if-eqz v1, :cond_2
 
     if-eqz p1, :cond_2
 
-    iget-object v0, v0, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object v1, v1, Landroidx/fragment/app/a;->E0:Lxe6;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->n(Z)V
+    invoke-virtual {v1, v2}, Landroidx/fragment/app/c;->n(Z)V
 
     goto :goto_1
 
@@ -6684,43 +7090,43 @@
 .end method
 
 .method public final o()V
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/f;->e()Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/f;->e()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/fragment/app/a;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->e0()Z
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/a;->r0(Z)V
+    if-eqz v1, :cond_1
 
-    iget-object v0, v0, Landroidx/fragment/app/a;->G0:Lj86;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/c;->o()V
+    move-result-object v1
+
+    check-cast v1, Landroidx/fragment/app/a;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Landroidx/fragment/app/a;->P()Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroidx/fragment/app/a;->c0(Z)V
+
+    iget-object v1, v1, Landroidx/fragment/app/a;->E0:Lxe6;
+
+    invoke-virtual {v1}, Landroidx/fragment/app/c;->o()V
 
     goto :goto_0
 
@@ -6729,7 +7135,7 @@
 .end method
 
 .method public final p(Landroid/view/MenuItem;)Z
-    .locals 4
+    .locals 5
 
     iget v0, p0, Landroidx/fragment/app/c;->v:I
 
@@ -6742,67 +7148,67 @@
     goto :goto_1
 
     :cond_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/fragment/app/a;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    iget-boolean v3, v0, Landroidx/fragment/app/a;->L0:Z
-
-    if-nez v3, :cond_3
-
-    iget-boolean v3, v0, Landroidx/fragment/app/a;->P0:Z
-
-    if-eqz v3, :cond_2
-
-    iget-boolean v3, v0, Landroidx/fragment/app/a;->Q0:Z
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v0, p1}, Landroidx/fragment/app/a;->u0(Landroid/view/MenuItem;)Z
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_4
 
-    move v0, v2
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/fragment/app/a;
+
+    if-eqz v3, :cond_1
+
+    iget-boolean v4, v3, Landroidx/fragment/app/a;->J0:Z
+
+    if-nez v4, :cond_3
+
+    iget-boolean v4, v3, Landroidx/fragment/app/a;->N0:Z
+
+    if-eqz v4, :cond_2
+
+    iget-boolean v4, v3, Landroidx/fragment/app/a;->O0:Z
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v3, p1}, Landroidx/fragment/app/a;->f0(Landroid/view/MenuItem;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    move v3, v2
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, v0, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object v3, v3, Landroidx/fragment/app/a;->E0:Lxe6;
 
-    invoke-virtual {v0, p1}, Landroidx/fragment/app/c;->p(Landroid/view/MenuItem;)Z
+    invoke-virtual {v3, p1}, Landroidx/fragment/app/c;->p(Landroid/view/MenuItem;)Z
 
-    move-result v0
+    move-result v3
 
     goto :goto_0
 
     :cond_3
-    move v0, v1
+    move v3, v1
 
     :goto_0
-    if-eqz v0, :cond_1
+    if-eqz v3, :cond_1
 
     return v2
 
@@ -6812,7 +7218,7 @@
 .end method
 
 .method public final q()V
-    .locals 2
+    .locals 3
 
     iget v0, p0, Landroidx/fragment/app/c;->v:I
 
@@ -6823,39 +7229,39 @@
     goto :goto_1
 
     :cond_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/fragment/app/a;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    iget-boolean v1, v0, Landroidx/fragment/app/a;->L0:Z
+    :cond_1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    if-nez v1, :cond_1
+    move-result v1
 
-    iget-object v0, v0, Landroidx/fragment/app/a;->G0:Lj86;
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v0}, Landroidx/fragment/app/c;->q()V
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/fragment/app/a;
+
+    if-eqz v1, :cond_1
+
+    iget-boolean v2, v1, Landroidx/fragment/app/a;->J0:Z
+
+    if-nez v2, :cond_1
+
+    iget-object v1, v1, Landroidx/fragment/app/a;->E0:Lxe6;
+
+    invoke-virtual {v1}, Landroidx/fragment/app/c;->q()V
 
     goto :goto_0
 
@@ -6865,67 +7271,67 @@
 .end method
 
 .method public final r(Landroidx/fragment/app/a;)V
-    .locals 1
+    .locals 2
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p1, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v0, p1, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v1, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/f;->b(Ljava/lang/String;)Landroidx/fragment/app/a;
+    invoke-virtual {v1, v0}, Landroidx/fragment/app/f;->b(Ljava/lang/String;)Landroidx/fragment/app/a;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    iget-object p0, p1, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Landroidx/fragment/app/c;->O(Landroidx/fragment/app/a;)Z
-
-    move-result p0
-
-    iget-object v0, p1, Landroidx/fragment/app/a;->u0:Ljava/lang/Boolean;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eq v0, p0, :cond_1
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Landroidx/fragment/app/c;->P(Landroidx/fragment/app/a;)Z
+
+    move-result v0
+
+    iget-object v1, p1, Landroidx/fragment/app/a;->s0:Ljava/lang/Boolean;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eq v1, v0, :cond_1
 
     :cond_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p0
+    move-result-object v0
 
-    iput-object p0, p1, Landroidx/fragment/app/a;->u0:Ljava/lang/Boolean;
+    iput-object v0, p1, Landroidx/fragment/app/a;->s0:Ljava/lang/Boolean;
 
-    iget-object p0, p1, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object p1, p1, Landroidx/fragment/app/a;->E0:Lxe6;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->k0()V
+    invoke-virtual {p1}, Landroidx/fragment/app/c;->k0()V
 
-    iget-object p1, p0, Landroidx/fragment/app/c;->z:Landroidx/fragment/app/a;
+    iget-object v0, p1, Landroidx/fragment/app/c;->z:Landroidx/fragment/app/a;
 
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->r(Landroidx/fragment/app/a;)V
+    invoke-virtual {p1, v0}, Landroidx/fragment/app/c;->r(Landroidx/fragment/app/a;)V
 
     :cond_1
     return-void
 .end method
 
 .method public final s(Z)V
-    .locals 2
+    .locals 3
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-nez v0, :cond_0
 
@@ -6940,45 +7346,45 @@
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->j0(Ljava/lang/IllegalStateException;)V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_2
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/fragment/app/a;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
+
+    :cond_2
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/fragment/app/a;
+
+    if-eqz v1, :cond_2
 
     if-eqz p1, :cond_2
 
-    iget-object v0, v0, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object v1, v1, Landroidx/fragment/app/a;->E0:Lxe6;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->s(Z)V
+    invoke-virtual {v1, v2}, Landroidx/fragment/app/c;->s(Z)V
 
     goto :goto_1
 
@@ -6987,7 +7393,7 @@
 .end method
 
 .method public final t(Landroid/view/Menu;)Z
-    .locals 5
+    .locals 6
 
     iget v0, p0, Landroidx/fragment/app/c;->v:I
 
@@ -7000,84 +7406,84 @@
     return v1
 
     :cond_0
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
+    iget-object v0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
+    invoke-virtual {v0}, Landroidx/fragment/app/f;->f()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v0
 
-    move v0, v1
+    move v3, v1
 
     :cond_1
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/fragment/app/a;
-
-    if-eqz v3, :cond_1
-
-    invoke-static {v3}, Landroidx/fragment/app/c;->N(Landroidx/fragment/app/a;)Z
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
+    if-eqz v4, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/fragment/app/a;
+
     if-eqz v4, :cond_1
 
-    iget-boolean v4, v3, Landroidx/fragment/app/a;->L0:Z
+    invoke-static {v4}, Landroidx/fragment/app/c;->O(Landroidx/fragment/app/a;)Z
 
-    if-nez v4, :cond_3
+    move-result v5
 
-    iget-boolean v4, v3, Landroidx/fragment/app/a;->P0:Z
+    if-eqz v5, :cond_1
 
-    if-eqz v4, :cond_2
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->J0:Z
 
-    iget-boolean v4, v3, Landroidx/fragment/app/a;->Q0:Z
+    if-nez v5, :cond_3
 
-    if-eqz v4, :cond_2
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->N0:Z
 
-    invoke-virtual {v3, p1}, Landroidx/fragment/app/a;->w0(Landroid/view/Menu;)V
+    if-eqz v5, :cond_2
 
-    move v4, v2
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->O0:Z
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v4, p1}, Landroidx/fragment/app/a;->h0(Landroid/view/Menu;)V
+
+    move v5, v2
 
     goto :goto_1
 
     :cond_2
-    move v4, v1
+    move v5, v1
 
     :goto_1
-    iget-object v3, v3, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object v4, v4, Landroidx/fragment/app/a;->E0:Lxe6;
 
-    invoke-virtual {v3, p1}, Landroidx/fragment/app/c;->t(Landroid/view/Menu;)Z
+    invoke-virtual {v4, p1}, Landroidx/fragment/app/c;->t(Landroid/view/Menu;)Z
 
-    move-result v3
+    move-result v4
 
-    or-int/2addr v3, v4
+    or-int/2addr v4, v5
 
     goto :goto_2
 
     :cond_3
-    move v3, v1
+    move v4, v1
 
     :goto_2
-    if-eqz v3, :cond_1
+    if-eqz v4, :cond_1
 
-    move v0, v2
+    move v3, v2
 
     goto :goto_0
 
     :cond_4
-    return v0
+    return v3
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -7127,24 +7533,24 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
+    iget-object v1, p0, Landroidx/fragment/app/c;->y:Landroidx/fragment/app/a;
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    invoke-static {v1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    move-result p0
+    move-result v1
 
-    invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-eqz v1, :cond_1
 
@@ -7160,37 +7566,37 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    invoke-static {v1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    move-result p0
+    move-result v1
 
-    invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
     :cond_1
-    const-string p0, "null"
+    const-string v1, "null"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_0
-    const-string p0, "}}"
+    const-string v1, "}}"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final u(I)V
@@ -7236,7 +7642,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0, p1, v1}, Landroidx/fragment/app/c;->Q(IZ)V
+    invoke-virtual {p0, p1, v1}, Landroidx/fragment/app/c;->R(IZ)V
 
     invoke-virtual {p0}, Landroidx/fragment/app/c;->e()Ljava/util/HashSet;
 
@@ -7257,9 +7663,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lhi4;
+    check-cast v2, Lhn4;
 
-    invoke-virtual {v2}, Lhi4;->h()V
+    invoke-virtual {v2}, Lhn4;->h()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -7273,7 +7679,7 @@
     :cond_2
     iput-boolean v1, p0, Landroidx/fragment/app/c;->b:Z
 
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->z(Z)Z
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->A(Z)Z
 
     return-void
 
@@ -7283,12 +7689,29 @@
     throw p1
 .end method
 
-.method public final v(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+.method public final v()V
+    .locals 1
+
+    iget-boolean v0, p0, Landroidx/fragment/app/c;->K:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroidx/fragment/app/c;->K:Z
+
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->i0()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final w(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 8
 
     const-string v0, "    "
 
-    invoke-static {p1, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -7298,7 +7721,7 @@
 
     const-string v3, "    "
 
-    invoke-static {p1, v3}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v3}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -7353,7 +7776,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget v5, v4, Landroidx/fragment/app/a;->I0:I
+    iget v5, v4, Landroidx/fragment/app/a;->G0:I
 
     invoke-static {v5}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
@@ -7365,7 +7788,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget v5, v4, Landroidx/fragment/app/a;->J0:I
+    iget v5, v4, Landroidx/fragment/app/a;->H0:I
 
     invoke-static {v5}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
@@ -7377,7 +7800,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v5, v4, Landroidx/fragment/app/a;->K0:Ljava/lang/String;
+    iget-object v5, v4, Landroidx/fragment/app/a;->I0:Ljava/lang/String;
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
@@ -7395,7 +7818,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v5, v4, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
+    iget-object v5, v4, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -7403,7 +7826,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget v5, v4, Landroidx/fragment/app/a;->D0:I
+    iget v5, v4, Landroidx/fragment/app/a;->B0:I
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(I)V
 
@@ -7413,7 +7836,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean v5, v4, Landroidx/fragment/app/a;->v0:Z
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->t0:Z
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Z)V
 
@@ -7421,7 +7844,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean v5, v4, Landroidx/fragment/app/a;->w0:Z
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->u0:Z
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Z)V
 
@@ -7429,7 +7852,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean v5, v4, Landroidx/fragment/app/a;->y0:Z
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->w0:Z
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Z)V
 
@@ -7437,7 +7860,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean v5, v4, Landroidx/fragment/app/a;->z0:Z
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->x0:Z
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Z)V
 
@@ -7447,7 +7870,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean v5, v4, Landroidx/fragment/app/a;->L0:Z
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->J0:Z
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Z)V
 
@@ -7455,7 +7878,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean v5, v4, Landroidx/fragment/app/a;->M0:Z
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->K0:Z
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Z)V
 
@@ -7463,7 +7886,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean v5, v4, Landroidx/fragment/app/a;->Q0:Z
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->O0:Z
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Z)V
 
@@ -7471,7 +7894,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean v5, v4, Landroidx/fragment/app/a;->P0:Z
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->N0:Z
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Z)V
 
@@ -7481,7 +7904,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean v5, v4, Landroidx/fragment/app/a;->N0:Z
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->L0:Z
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Z)V
 
@@ -7489,11 +7912,11 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean v5, v4, Landroidx/fragment/app/a;->V0:Z
+    iget-boolean v5, v4, Landroidx/fragment/app/a;->T0:Z
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Z)V
 
-    iget-object v5, v4, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iget-object v5, v4, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
     if-eqz v5, :cond_0
 
@@ -7503,12 +7926,12 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v5, v4, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
+    iget-object v5, v4, Landroidx/fragment/app/a;->C0:Landroidx/fragment/app/c;
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     :cond_0
-    iget-object v5, v4, Landroidx/fragment/app/a;->F0:Lu76;
+    iget-object v5, v4, Landroidx/fragment/app/a;->D0:Lie6;
 
     if-eqz v5, :cond_1
 
@@ -7518,12 +7941,12 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v5, v4, Landroidx/fragment/app/a;->F0:Lu76;
+    iget-object v5, v4, Landroidx/fragment/app/a;->D0:Lie6;
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     :cond_1
-    iget-object v5, v4, Landroidx/fragment/app/a;->H0:Landroidx/fragment/app/a;
+    iget-object v5, v4, Landroidx/fragment/app/a;->F0:Landroidx/fragment/app/a;
 
     if-eqz v5, :cond_2
 
@@ -7533,12 +7956,12 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v5, v4, Landroidx/fragment/app/a;->H0:Landroidx/fragment/app/a;
+    iget-object v5, v4, Landroidx/fragment/app/a;->F0:Landroidx/fragment/app/a;
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     :cond_2
-    iget-object v5, v4, Landroidx/fragment/app/a;->Z:Landroid/os/Bundle;
+    iget-object v5, v4, Landroidx/fragment/app/a;->Y:Landroid/os/Bundle;
 
     if-eqz v5, :cond_3
 
@@ -7548,7 +7971,7 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v5, v4, Landroidx/fragment/app/a;->Z:Landroid/os/Bundle;
+    iget-object v5, v4, Landroidx/fragment/app/a;->Y:Landroid/os/Bundle;
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
@@ -7600,7 +8023,7 @@
     :cond_6
     const/4 v5, 0x0
 
-    invoke-virtual {v4, v5}, Landroidx/fragment/app/a;->X(Z)Landroidx/fragment/app/a;
+    invoke-virtual {v4, v5}, Landroidx/fragment/app/a;->I(Z)Landroidx/fragment/app/a;
 
     move-result-object v6
 
@@ -7618,7 +8041,7 @@
 
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget v6, v4, Landroidx/fragment/app/a;->t0:I
+    iget v6, v4, Landroidx/fragment/app/a;->r0:I
 
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->println(I)V
 
@@ -7629,7 +8052,7 @@
 
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v6, v4, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v6, v4, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v6, :cond_8
 
@@ -7638,12 +8061,12 @@
     goto :goto_1
 
     :cond_8
-    iget-boolean v6, v6, Lr76;->a:Z
+    iget-boolean v6, v6, Lfe6;->a:Z
 
     :goto_1
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->println(Z)V
 
-    iget-object v6, v4, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v6, v4, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v6, :cond_9
 
@@ -7652,7 +8075,7 @@
     goto :goto_2
 
     :cond_9
-    iget v6, v6, Lr76;->b:I
+    iget v6, v6, Lfe6;->b:I
 
     :goto_2
     if-eqz v6, :cond_b
@@ -7663,7 +8086,7 @@
 
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v6, v4, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v6, v4, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v6, :cond_a
 
@@ -7672,13 +8095,13 @@
     goto :goto_3
 
     :cond_a
-    iget v6, v6, Lr76;->b:I
+    iget v6, v6, Lfe6;->b:I
 
     :goto_3
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->println(I)V
 
     :cond_b
-    iget-object v6, v4, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v6, v4, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v6, :cond_c
 
@@ -7687,7 +8110,7 @@
     goto :goto_4
 
     :cond_c
-    iget v6, v6, Lr76;->c:I
+    iget v6, v6, Lfe6;->c:I
 
     :goto_4
     if-eqz v6, :cond_e
@@ -7698,7 +8121,7 @@
 
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v6, v4, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v6, v4, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v6, :cond_d
 
@@ -7707,13 +8130,13 @@
     goto :goto_5
 
     :cond_d
-    iget v6, v6, Lr76;->c:I
+    iget v6, v6, Lfe6;->c:I
 
     :goto_5
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->println(I)V
 
     :cond_e
-    iget-object v6, v4, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v6, v4, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v6, :cond_f
 
@@ -7722,7 +8145,7 @@
     goto :goto_6
 
     :cond_f
-    iget v6, v6, Lr76;->d:I
+    iget v6, v6, Lfe6;->d:I
 
     :goto_6
     if-eqz v6, :cond_11
@@ -7733,7 +8156,7 @@
 
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v6, v4, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v6, v4, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v6, :cond_10
 
@@ -7742,13 +8165,13 @@
     goto :goto_7
 
     :cond_10
-    iget v6, v6, Lr76;->d:I
+    iget v6, v6, Lfe6;->d:I
 
     :goto_7
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->println(I)V
 
     :cond_11
-    iget-object v6, v4, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v6, v4, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v6, :cond_12
 
@@ -7757,7 +8180,7 @@
     goto :goto_8
 
     :cond_12
-    iget v6, v6, Lr76;->e:I
+    iget v6, v6, Lfe6;->e:I
 
     :goto_8
     if-eqz v6, :cond_14
@@ -7768,20 +8191,20 @@
 
     invoke-virtual {p3, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v6, v4, Landroidx/fragment/app/a;->W0:Lr76;
+    iget-object v6, v4, Landroidx/fragment/app/a;->U0:Lfe6;
 
     if-nez v6, :cond_13
 
     goto :goto_9
 
     :cond_13
-    iget v5, v6, Lr76;->e:I
+    iget v5, v6, Lfe6;->e:I
 
     :goto_9
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(I)V
 
     :cond_14
-    iget-object v5, v4, Landroidx/fragment/app/a;->S0:Landroid/view/ViewGroup;
+    iget-object v5, v4, Landroidx/fragment/app/a;->Q0:Landroid/view/ViewGroup;
 
     if-eqz v5, :cond_15
 
@@ -7791,12 +8214,12 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v5, v4, Landroidx/fragment/app/a;->S0:Landroid/view/ViewGroup;
+    iget-object v5, v4, Landroidx/fragment/app/a;->Q0:Landroid/view/ViewGroup;
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     :cond_15
-    iget-object v5, v4, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+    iget-object v5, v4, Landroidx/fragment/app/a;->R0:Landroid/view/View;
 
     if-eqz v5, :cond_16
 
@@ -7806,12 +8229,12 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v5, v4, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+    iget-object v5, v4, Landroidx/fragment/app/a;->R0:Landroid/view/View;
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     :cond_16
-    invoke-virtual {v4}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
+    invoke-virtual {v4}, Landroidx/fragment/app/a;->E()Landroid/content/Context;
 
     move-result-object v5
 
@@ -7819,11 +8242,11 @@
 
     new-instance v5, Landroidx/loader/app/b;
 
-    invoke-interface {v4}, Lg8g;->v()Lf8g;
+    invoke-interface {v4}, Lg0h;->k()Lf0h;
 
     move-result-object v6
 
-    invoke-direct {v5, v4, v6}, Landroidx/loader/app/b;-><init>(Lzn7;Lf8g;)V
+    invoke-direct {v5, v4, v6}, Landroidx/loader/app/b;-><init>(Lfx7;Lf0h;)V
 
     invoke-virtual {v5, v3, p3}, Landroidx/loader/app/b;->a(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
@@ -7836,7 +8259,7 @@
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v6, v4, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object v6, v4, Landroidx/fragment/app/a;->E0:Lxe6;
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -7850,15 +8273,15 @@
 
     invoke-virtual {p3, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    iget-object v4, v4, Landroidx/fragment/app/a;->G0:Lj86;
+    iget-object v4, v4, Landroidx/fragment/app/a;->E0:Lxe6;
 
     const-string v5, "  "
 
-    invoke-static {v3, v5}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v5}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5, p2, p3, p4}, Landroidx/fragment/app/c;->v(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    invoke-virtual {v4, v5, p2, p3, p4}, Landroidx/fragment/app/c;->w(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -7995,7 +8418,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lce0;
+    check-cast v2, Lze0;
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -8009,7 +8432,7 @@
 
     invoke-virtual {p3, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lce0;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lze0;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -8017,7 +8440,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2, v0, p3, v3}, Lce0;->g(Ljava/lang/String;Ljava/io/PrintWriter;Z)V
+    invoke-virtual {v2, v0, p3, v3}, Lze0;->g(Ljava/lang/String;Ljava/io/PrintWriter;Z)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -8074,7 +8497,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lg86;
+    check-cast v1, Lue6;
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -8095,7 +8518,7 @@
     goto :goto_d
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_e
 
@@ -8116,7 +8539,7 @@
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object p2, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object p2, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
@@ -8126,7 +8549,7 @@
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object p2, p0, Landroidx/fragment/app/c;->x:Lzyd;
+    iget-object p2, p0, Landroidx/fragment/app/c;->x:Ltb4;
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
@@ -8189,9 +8612,9 @@
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-boolean p0, p0, Landroidx/fragment/app/c;->G:Z
+    iget-boolean p1, p0, Landroidx/fragment/app/c;->G:Z
 
-    invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Z)V
+    invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->println(Z)V
 
     :cond_1f
     return-void
@@ -8202,34 +8625,34 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
-.method public final w()V
-    .locals 1
+.method public final x()V
+    .locals 2
 
     invoke-virtual {p0}, Landroidx/fragment/app/c;->e()Ljava/util/HashSet;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Lhi4;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0}, Lhi4;->h()V
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lhn4;
+
+    invoke-virtual {v1}, Lhn4;->h()V
 
     goto :goto_0
 
@@ -8237,38 +8660,38 @@
     return-void
 .end method
 
-.method public final x(Lg86;Z)V
+.method public final y(Lue6;Z)V
     .locals 2
 
     if-nez p2, :cond_3
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-nez v0, :cond_1
 
-    iget-boolean p0, p0, Landroidx/fragment/app/c;->J:Z
+    iget-boolean p1, p0, Landroidx/fragment/app/c;->J:Z
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "FragmentManager has been destroyed"
+    const-string p2, "FragmentManager has been destroyed"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "FragmentManager has not been attached to a host."
+    const-string p2, "FragmentManager has not been attached to a host."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->P()Z
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->Q()Z
 
     move-result v0
 
@@ -8277,13 +8700,13 @@
     goto :goto_0
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Can not perform this action after onSaveInstanceState"
+    const-string p2, "Can not perform this action after onSaveInstanceState"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_3
     :goto_0
@@ -8292,7 +8715,7 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-nez v1, :cond_5
 
@@ -8303,25 +8726,25 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
     :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Activity has been destroyed"
+    const-string p2, "Activity has been destroyed"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_5
     iget-object p2, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->b0()V
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->a0()V
 
     monitor-exit v0
 
@@ -8332,49 +8755,49 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
-.method public final y(Z)V
+.method public final z(Z)V
     .locals 2
 
     iget-boolean v0, p0, Landroidx/fragment/app/c;->b:Z
 
     if-nez v0, :cond_6
 
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lie6;
 
     if-nez v0, :cond_1
 
-    iget-boolean p0, p0, Landroidx/fragment/app/c;->J:Z
+    iget-boolean p1, p0, Landroidx/fragment/app/c;->J:Z
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "FragmentManager has been destroyed"
+    const-string v0, "FragmentManager has been destroyed"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "FragmentManager has not been attached to a host."
+    const-string v0, "FragmentManager has not been attached to a host."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lu76;
+    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lie6;
 
-    iget-object v1, v1, Lu76;->s0:Landroid/os/Handler;
+    iget-object v1, v1, Lie6;->o:Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
@@ -8384,7 +8807,7 @@
 
     if-nez p1, :cond_3
 
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->P()Z
+    invoke-virtual {p0}, Landroidx/fragment/app/c;->Q()Z
 
     move-result p1
 
@@ -8393,13 +8816,13 @@
     goto :goto_0
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Can not perform this action after onSaveInstanceState"
+    const-string v0, "Can not perform this action after onSaveInstanceState"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_3
     :goto_0
@@ -8423,199 +8846,20 @@
     return-void
 
     :cond_5
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Must be called from main thread of fragment host"
+    const-string v0, "Must be called from main thread of fragment host"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_6
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "FragmentManager is already executing transactions"
+    const-string v0, "FragmentManager is already executing transactions"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final z(Z)Z
-    .locals 8
-
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/c;->y(Z)V
-
-    const/4 p1, 0x0
-
-    move v0, p1
-
-    :goto_0
-    iget-object v1, p0, Landroidx/fragment/app/c;->L:Ljava/util/ArrayList;
-
-    iget-object v2, p0, Landroidx/fragment/app/c;->M:Ljava/util/ArrayList;
-
-    iget-object v3, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
-
-    monitor-enter v3
-
-    :try_start_0
-    iget-object v4, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move v6, p1
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_4
-
-    :cond_0
-    :try_start_1
-    iget-object v4, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    move v5, p1
-
-    move v6, v5
-
-    :goto_1
-    if-ge v5, v4, :cond_1
-
-    iget-object v7, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v7, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lg86;
-
-    invoke-interface {v7, v1, v2}, Lg86;->a(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
-
-    move-result v7
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    or-int/2addr v6, v7
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_3
-
-    :cond_1
-    :try_start_2
-    iget-object v1, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v1, p0, Landroidx/fragment/app/c;->w:Lu76;
-
-    iget-object v1, v1, Lu76;->s0:Landroid/os/Handler;
-
-    iget-object v2, p0, Landroidx/fragment/app/c;->P:Loe;
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    monitor-exit v3
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_2
-    if-eqz v6, :cond_2
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroidx/fragment/app/c;->b:Z
-
-    :try_start_3
-    iget-object v1, p0, Landroidx/fragment/app/c;->L:Ljava/util/ArrayList;
-
-    iget-object v2, p0, Landroidx/fragment/app/c;->M:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v1, v2}, Landroidx/fragment/app/c;->X(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->d()V
-
-    goto :goto_0
-
-    :catchall_2
-    move-exception p1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->d()V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
-
-    :cond_2
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->k0()V
-
-    iget-boolean v1, p0, Landroidx/fragment/app/c;->K:Z
-
-    if-eqz v1, :cond_3
-
-    iput-boolean p1, p0, Landroidx/fragment/app/c;->K:Z
-
-    invoke-virtual {p0}, Landroidx/fragment/app/c;->i0()V
-
-    :cond_3
-    iget-object p0, p0, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
-
-    iget-object p0, p0, Landroidx/fragment/app/f;->b:Ljava/util/HashMap;
-
-    invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p0, p1}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
-
-    return v0
-
-    :goto_3
-    :try_start_4
-    iget-object v0, p0, Landroidx/fragment/app/c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v0, p0, Landroidx/fragment/app/c;->w:Lu76;
-
-    iget-object v0, v0, Lu76;->s0:Landroid/os/Handler;
-
-    iget-object p0, p0, Landroidx/fragment/app/c;->P:Loe;
-
-    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    throw p1
-
-    :goto_4
-    monitor-exit v3
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    throw p0
 .end method

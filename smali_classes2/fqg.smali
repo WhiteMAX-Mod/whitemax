@@ -1,64 +1,69 @@
 .class public final Lfqg;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
-# interfaces
-.implements Lsg7;
 
+# instance fields
+.field public X:Ljava/lang/String;
 
-# static fields
-.field public static final a:Lfqg;
+.field public Y:Lpb9;
+
+.field public Z:J
+
+.field public o:Liqg;
+
+.field public q0:J
+
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Liqg;
+
+.field public t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Liqg;Ly14;)V
+    .locals 0
 
-    new-instance v0, Lfqg;
+    iput-object p1, p0, Lfqg;->s0:Liqg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lfqg;->a:Lfqg;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lfqg;->r0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lfqg;->t0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p0, p1, Lfqg;
+    or-int/2addr p1, v0
 
-    if-nez p0, :cond_1
+    iput p1, p0, Lfqg;->t0:I
 
-    const/4 p0, 0x0
+    const/4 v7, 0x0
 
-    return p0
+    const/4 v8, 0x0
 
-    :cond_1
-    return v0
-.end method
+    iget-object v0, p0, Lfqg;->s0:Liqg;
 
-.method public final hashCode()I
-    .locals 0
+    const-wide/16 v1, 0x0
 
-    const p0, -0x62efdd2c
+    const-wide/16 v3, 0x0
 
-    return p0
-.end method
+    const-wide/16 v5, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    move-object v9, p0
 
-    const-string p0, "WebAppReady"
+    invoke-virtual/range {v0 .. v9}, Liqg;->c(JJJLjava/lang/String;Lntg;Ly14;)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object p1
+
+    return-object p1
 .end method

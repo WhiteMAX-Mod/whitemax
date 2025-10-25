@@ -167,46 +167,46 @@
     .line 12
     invoke-static {}, Lorg/webrtc/audio/WebRtcAudioUtils;->getThreadInfo()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    const-string p2, "ctor"
+    const-string p3, "ctor"
 
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "WebRtcAudioTrackExternal"
+    const-string p2, "WebRtcAudioTrackExternal"
 
-    invoke-static {p1, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private GetPlayoutUnderrunCount()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/media/AudioTrack;->getUnderrunCount()I
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->getUnderrunCount()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, -0x1
+    const/4 v0, -0x1
 
-    return p0
+    return v0
 .end method
 
 .method public static bridge synthetic a(Lorg/webrtc/audio/WebRtcAudioTrack;)Landroid/media/AudioTrack;
@@ -223,11 +223,11 @@
         value = 0x1d
     .end annotation
 
-    invoke-virtual {p1}, Landroid/media/AudioAttributes;->getAllowedCapturePolicy()I
+    invoke-static {p1}, Lyjh;->a(Landroid/media/AudioAttributes;)I
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setAllowedCapturePolicy(I)Landroid/media/AudioAttributes$Builder;
+    invoke-static {p0, p1}, Lyjh;->c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object p0
 
@@ -268,20 +268,20 @@
 .end method
 
 .method private channelCountToConfiguration(I)I
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    if-ne p1, p0, :cond_0
+    if-ne p1, v0, :cond_0
 
-    const/4 p0, 0x4
+    const/4 p1, 0x4
 
-    return p0
+    return p1
 
     :cond_0
-    const/16 p0, 0xc
+    const/16 p1, 0xc
 
-    return p0
+    return p1
 .end method
 
 .method private static createAudioTrackBeforeOreo(IIILandroid/media/AudioAttributes;)Landroid/media/AudioTrack;
@@ -422,7 +422,7 @@
 .end method
 
 .method private doAudioTrackStateCallback(I)V
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -440,29 +440,29 @@
 
     invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->stateCallback:Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStateCallback;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->stateCallback:Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStateCallback;
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
     if-nez p1, :cond_0
 
-    invoke-interface {p0}, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStateCallback;->onWebRtcAudioTrackStart()V
+    invoke-interface {v0}, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStateCallback;->onWebRtcAudioTrackStart()V
 
     return-void
 
     :cond_0
-    const/4 v0, 0x1
+    const/4 v2, 0x1
 
-    if-ne p1, v0, :cond_1
+    if-ne p1, v2, :cond_1
 
-    invoke-interface {p0}, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStateCallback;->onWebRtcAudioTrackStop()V
+    invoke-interface {v0}, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStateCallback;->onWebRtcAudioTrackStop()V
 
     return-void
 
     :cond_1
-    const-string p0, "Invalid audio state"
+    const-string p1, "Invalid audio state"
 
-    invoke-static {v1, p0}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     return-void
@@ -495,7 +495,7 @@
 .end method
 
 .method private static getAudioAttributes(Landroid/media/AudioAttributes;)Landroid/media/AudioAttributes;
-    .locals 2
+    .locals 3
 
     new-instance v0, Landroid/media/AudioAttributes$Builder;
 
@@ -547,6 +547,12 @@
 
     invoke-virtual {v0, v1}, Landroid/media/AudioAttributes$Builder;->setFlags(I)Landroid/media/AudioAttributes$Builder;
 
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x1d
+
+    if-lt v1, v2, :cond_2
+
     invoke-static {v0, p0}, Lorg/webrtc/audio/WebRtcAudioTrack;->applyAttributesOnQOrHigher(Landroid/media/AudioAttributes$Builder;Landroid/media/AudioAttributes;)Landroid/media/AudioAttributes$Builder;
 
     move-result-object v0
@@ -560,27 +566,27 @@
 .end method
 
 .method private getBufferSizeInFrames()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
 
-    invoke-virtual {p0}, Landroid/media/AudioTrack;->getBufferSizeInFrames()I
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->getBufferSizeInFrames()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method private getInitialBufferSizeInFrames()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->initialBufferSizeInFrames:I
+    iget v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->initialBufferSizeInFrames:I
 
-    return p0
+    return v0
 .end method
 
 .method private getStreamMaxVolume()I
@@ -598,15 +604,15 @@
 
     invoke-static {v0, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioManager:Landroid/media/AudioManager;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method private getStreamVolume()I
@@ -624,15 +630,15 @@
 
     invoke-static {v0, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioManager:Landroid/media/AudioManager;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/media/AudioManager;->getStreamVolume(I)I
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getStreamVolume(I)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public static bridge synthetic h(Lorg/webrtc/audio/WebRtcAudioTrack;Ljava/lang/String;)V
@@ -907,63 +913,63 @@
 .end method
 
 .method private logBufferCapacityInFrames()V
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
 
-    invoke-virtual {p0}, Landroid/media/AudioTrack;->getBufferCapacityInFrames()I
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->getBufferCapacityInFrames()I
 
-    move-result p0
+    move-result v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "AudioTrack: buffer capacity in frames: "
+    const-string v2, "AudioTrack: buffer capacity in frames: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "WebRtcAudioTrackExternal"
+    const-string v1, "WebRtcAudioTrackExternal"
 
-    invoke-static {v0, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private logBufferSizeInFrames()V
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
 
-    invoke-virtual {p0}, Landroid/media/AudioTrack;->getBufferSizeInFrames()I
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->getBufferSizeInFrames()I
 
-    move-result p0
+    move-result v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "AudioTrack: buffer size in frames: "
+    const-string v2, "AudioTrack: buffer size in frames: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "WebRtcAudioTrackExternal"
+    const-string v1, "WebRtcAudioTrackExternal"
 
-    invoke-static {v0, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private logMainParameters()V
-    .locals 6
+    .locals 7
 
     iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
 
@@ -977,41 +983,41 @@
 
     move-result v1
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
+    iget-object v2, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
 
-    invoke-virtual {p0}, Landroid/media/AudioTrack;->getSampleRate()I
-
-    move-result p0
-
-    invoke-static {}, Landroid/media/AudioTrack;->getMaxVolume()F
+    invoke-virtual {v2}, Landroid/media/AudioTrack;->getSampleRate()I
 
     move-result v2
 
-    const-string v3, ", channels: "
+    invoke-static {}, Landroid/media/AudioTrack;->getMaxVolume()F
 
-    const-string v4, ", sample rate: "
+    move-result v3
 
-    const-string v5, "AudioTrack: session ID: "
+    const-string v4, ", channels: "
 
-    invoke-static {v5, v0, v3, v1, v4}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v5, ", sample rate: "
+
+    const-string v6, "AudioTrack: session ID: "
+
+    invoke-static {v6, v0, v4, v1, v5}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p0, ", max gain: "
+    const-string v1, ", max gain: "
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "WebRtcAudioTrackExternal"
+    const-string v1, "WebRtcAudioTrackExternal"
 
-    invoke-static {v0, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1062,29 +1068,29 @@
 .end method
 
 .method private logUnderrunCount()V
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioTrack:Landroid/media/AudioTrack;
 
-    invoke-virtual {p0}, Landroid/media/AudioTrack;->getUnderrunCount()I
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->getUnderrunCount()I
 
-    move-result p0
+    move-result v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "underrun count: "
+    const-string v2, "underrun count: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "WebRtcAudioTrackExternal"
+    const-string v1, "WebRtcAudioTrackExternal"
 
-    invoke-static {v0, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1143,11 +1149,11 @@
 
     invoke-static {v1, v0, v2}, Lorg/webrtc/audio/WebRtcAudioUtils;->logAudioState(Ljava/lang/String;Landroid/content/Context;Landroid/media/AudioManager;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->errorCallback:Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->errorCallback:Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0, p1}, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;->onWebRtcAudioTrackError(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;->onWebRtcAudioTrackError(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1178,11 +1184,11 @@
 
     invoke-static {v1, v0, v2}, Lorg/webrtc/audio/WebRtcAudioUtils;->logAudioState(Ljava/lang/String;Landroid/content/Context;Landroid/media/AudioManager;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->errorCallback:Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->errorCallback:Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0, p1}, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;->onWebRtcAudioTrackInitError(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;->onWebRtcAudioTrackInitError(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1219,11 +1225,11 @@
 
     invoke-static {v1, v0, v2}, Lorg/webrtc/audio/WebRtcAudioUtils;->logAudioState(Ljava/lang/String;Landroid/content/Context;Landroid/media/AudioManager;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->errorCallback:Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->errorCallback:Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0, p1, p2}, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;->onWebRtcAudioTrackStartError(Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStartErrorCode;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;->onWebRtcAudioTrackStartError(Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStartErrorCode;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1268,20 +1274,20 @@
 
     if-eqz v0, :cond_0
 
-    const-string p0, "The device implements a fixed volume policy."
+    const-string p1, "The device implements a fixed volume policy."
 
-    invoke-static {v1, p0}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioTrack;->audioManager:Landroid/media/AudioManager;
 
-    invoke-virtual {p0, v2, p1, v2}, Landroid/media/AudioManager;->setStreamVolume(III)V
+    invoke-virtual {v0, v2, p1, v2}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method private startPlayout()Z
@@ -1369,7 +1375,7 @@
 
     const-string v3, "AudioTrack.play failed - incorrect state :"
 
-    invoke-static {v1, v3}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v3}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1390,7 +1396,7 @@
 
     const-string v3, "AudioTrack.play failed: "
 
-    invoke-static {v3, v0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,138 +1,80 @@
 .class public final Lsm4;
-.super Ljava/lang/Object;
+.super Lbpd;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+# static fields
+.field public static final b:Lsm4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsm4;
 
-    iput-object p1, p0, Lsm4;->a:Ljava/lang/String;
+    sget v5, Lppf;->c:I
 
-    iput-object p2, p0, Lsm4;->b:Ljava/lang/String;
+    sget v6, Lppf;->d:I
 
-    iput-object p3, p0, Lsm4;->c:Ljava/lang/String;
+    sget-wide v2, Lppf;->e:J
+
+    sget-object v4, Lppf;->a:Ljava/lang/String;
+
+    invoke-direct {v0}, Lk54;-><init>()V
+
+    new-instance v1, Lp54;
+
+    invoke-direct/range {v1 .. v6}, Lp54;-><init>(JLjava/lang/String;II)V
+
+    iput-object v1, v0, Lbpd;->a:Lp54;
+
+    sput-object v0, Lsm4;->b:Lsm4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final close()V
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    if-ne p0, p1, :cond_0
+    const-string v1, "Dispatchers.Default cannot be closed"
 
-    return v0
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lsm4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lsm4;
-
-    iget-object v2, p0, Lsm4;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lsm4;->a:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lsm4;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lsm4;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object p0, p0, Lsm4;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lsm4;->c:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
+    throw v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final limitedParallelism(ILjava/lang/String;)Lk54;
+    .locals 1
 
-    iget-object v0, p0, Lsm4;->a:Ljava/lang/String;
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    sget v0, Lppf;->c:I
 
-    move-result v0
+    if-lt p1, v0, :cond_0
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lk54;Ljava/lang/String;)Lk54;
 
-    const/4 v1, 0x0
+    move-result-object p1
 
-    iget-object v2, p0, Lsm4;->b:Ljava/lang/String;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    move v2, v1
+    invoke-super {p0, p1, p2}, Lk54;->limitedParallelism(ILjava/lang/String;)Lk54;
 
-    :goto_0
-    add-int/2addr v0, v2
+    move-result-object p1
 
-    mul-int/lit8 v0, v0, 0x1f
+    return-object p1
+.end method
 
-    iget-object p0, p0, Lsm4;->c:Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    if-eqz p0, :cond_1
+    const-string v0, "Dispatchers.Default"
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :cond_1
-    add-int/2addr v0, v1
-
-    return v0
+    return-object v0
 .end method

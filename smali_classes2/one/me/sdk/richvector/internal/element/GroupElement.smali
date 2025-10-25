@@ -36,7 +36,7 @@
         "prototype",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;)V",
         "element",
-        "Lylf;",
+        "Lccg;",
         "addGroup",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;)V",
         "Lone/me/sdk/richvector/internal/element/PathElement;",
@@ -198,7 +198,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;FFFFFFFLone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/ElementHolder;ILld4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;FFFFFFFLone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/ElementHolder;ILki4;)V
     .locals 13
 
     move/from16 v0, p11
@@ -301,7 +301,7 @@
 
     const/4 v10, 0x2
 
-    invoke-direct {v9, p2, v0, v10, v0}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILld4;)V
+    invoke-direct {v9, p2, v0, v10, v0}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILki4;)V
 
     goto :goto_0
 
@@ -325,126 +325,132 @@
     invoke-direct/range {v0 .. v10}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Ljava/lang/String;FFFFFFFLone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/ElementHolder;)V
 
     .line 29
-    iget-object p0, v0, Lone/me/sdk/richvector/internal/element/GroupElement;->scaleMatrix:Landroid/graphics/Matrix;
+    iget-object p2, v0, Lone/me/sdk/richvector/internal/element/GroupElement;->scaleMatrix:Landroid/graphics/Matrix;
 
-    iget-object p2, p1, Lone/me/sdk/richvector/internal/element/GroupElement;->scaleMatrix:Landroid/graphics/Matrix;
+    iget-object v1, p1, Lone/me/sdk/richvector/internal/element/GroupElement;->scaleMatrix:Landroid/graphics/Matrix;
 
-    invoke-virtual {p0, p2}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+    invoke-virtual {p2, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
     .line 30
-    iget-object p0, v0, Lone/me/sdk/richvector/internal/element/GroupElement;->originalTransformMatrix:Landroid/graphics/Matrix;
+    iget-object p2, v0, Lone/me/sdk/richvector/internal/element/GroupElement;->originalTransformMatrix:Landroid/graphics/Matrix;
 
-    iget-object p2, p1, Lone/me/sdk/richvector/internal/element/GroupElement;->originalTransformMatrix:Landroid/graphics/Matrix;
+    iget-object v1, p1, Lone/me/sdk/richvector/internal/element/GroupElement;->originalTransformMatrix:Landroid/graphics/Matrix;
 
-    invoke-virtual {p0, p2}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+    invoke-virtual {p2, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
     .line 31
-    iget-object p0, v0, Lone/me/sdk/richvector/internal/element/GroupElement;->finalTransformMatrix:Landroid/graphics/Matrix;
+    iget-object p2, v0, Lone/me/sdk/richvector/internal/element/GroupElement;->finalTransformMatrix:Landroid/graphics/Matrix;
 
-    iget-object p2, p1, Lone/me/sdk/richvector/internal/element/GroupElement;->finalTransformMatrix:Landroid/graphics/Matrix;
+    iget-object v1, p1, Lone/me/sdk/richvector/internal/element/GroupElement;->finalTransformMatrix:Landroid/graphics/Matrix;
 
-    invoke-virtual {p0, p2}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+    invoke-virtual {p2, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
     .line 32
-    invoke-virtual {v0}, Lone/me/sdk/richvector/internal/element/GroupElement;->getGroupElements()Ljava/util/List;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/GroupElement;->getGroupElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-static {p0}, Lvkf;->c(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p2}, Lwag;->d(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
 
     .line 33
     invoke-virtual {p1}, Lone/me/sdk/richvector/internal/element/GroupElement;->getGroupElements()Ljava/util/List;
 
-    move-result-object p2
+    move-result-object v1
 
     .line 34
-    invoke-static {p2}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {v1}, Lob3;->d(Ljava/util/List;)I
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    if-ltz v1, :cond_3
+    if-ltz v2, :cond_3
 
-    move v3, v2
+    move v4, v3
 
     .line 35
     :goto_1
-    invoke-static {v3, p2}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v4, v1}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    if-eqz v4, :cond_2
+    if-eqz v5, :cond_2
 
-    check-cast v4, Lone/me/sdk/richvector/internal/element/GroupElement;
+    check-cast v5, Lone/me/sdk/richvector/internal/element/GroupElement;
 
     .line 36
-    new-instance v5, Lone/me/sdk/richvector/internal/element/GroupElement;
+    new-instance v6, Lone/me/sdk/richvector/internal/element/GroupElement;
 
-    invoke-direct {v5, v4, v0}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;)V
+    invoke-direct {v6, v5, p0}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;)V
 
-    invoke-interface {p0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    if-eq v3, v1, :cond_3
+    if-eq v4, v2, :cond_3
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
     .line 37
     :cond_3
-    invoke-virtual {v0}, Lone/me/sdk/richvector/internal/element/GroupElement;->getPathElements()Ljava/util/List;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/GroupElement;->getPathElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-static {p0}, Lvkf;->c(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p2}, Lwag;->d(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
 
     .line 38
     invoke-virtual {p1}, Lone/me/sdk/richvector/internal/element/GroupElement;->getPathElements()Ljava/util/List;
 
-    move-result-object p2
+    move-result-object v1
 
     .line 39
-    invoke-static {p2}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {v1}, Lob3;->d(Ljava/util/List;)I
 
-    move-result v1
+    move-result v2
 
-    if-ltz v1, :cond_5
+    if-ltz v2, :cond_5
 
-    move v3, v2
+    move v4, v3
 
     .line 40
     :goto_2
-    invoke-static {v3, p2}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v4, v1}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    if-eqz v4, :cond_4
+    if-eqz v5, :cond_4
 
-    check-cast v4, Lone/me/sdk/richvector/internal/element/PathElement;
+    check-cast v5, Lone/me/sdk/richvector/internal/element/PathElement;
 
     .line 41
-    new-instance v5, Lone/me/sdk/richvector/internal/element/PathElement;
+    new-instance v6, Lone/me/sdk/richvector/internal/element/PathElement;
 
-    invoke-direct {v5, v4}, Lone/me/sdk/richvector/internal/element/PathElement;-><init>(Lone/me/sdk/richvector/internal/element/PathElement;)V
+    invoke-direct {v6, v5}, Lone/me/sdk/richvector/internal/element/PathElement;-><init>(Lone/me/sdk/richvector/internal/element/PathElement;)V
 
-    invoke-interface {p0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_4
-    if-eq v3, v1, :cond_5
+    if-eq v4, v2, :cond_5
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
     .line 42
     :cond_5
-    invoke-virtual {v0}, Lone/me/sdk/richvector/internal/element/GroupElement;->getClipPathElements()Ljava/util/List;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/GroupElement;->getClipPathElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-static {p0}, Lvkf;->c(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p2}, Lwag;->d(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
 
     .line 43
     invoke-virtual {p1}, Lone/me/sdk/richvector/internal/element/GroupElement;->getClipPathElements()Ljava/util/List;
@@ -452,33 +458,33 @@
     move-result-object p1
 
     .line 44
-    invoke-static {p1}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {p1}, Lob3;->d(Ljava/util/List;)I
 
-    move-result p2
+    move-result v1
 
-    if-ltz p2, :cond_7
+    if-ltz v1, :cond_7
 
     .line 45
     :goto_3
-    invoke-static {v2, p1}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, p1}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    if-eqz v0, :cond_6
+    if-eqz v2, :cond_6
 
-    check-cast v0, Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    check-cast v2, Lone/me/sdk/richvector/internal/element/ClipPathElement;
 
     .line 46
-    new-instance v1, Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    new-instance v4, Lone/me/sdk/richvector/internal/element/ClipPathElement;
 
-    invoke-direct {v1, v0}, Lone/me/sdk/richvector/internal/element/ClipPathElement;-><init>(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
+    invoke-direct {v4, v2}, Lone/me/sdk/richvector/internal/element/ClipPathElement;-><init>(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
 
-    invoke-interface {p0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_6
-    if-eq v2, p2, :cond_7
+    if-eq v3, v1, :cond_7
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
 
@@ -486,7 +492,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILld4;)V
+.method public synthetic constructor <init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILki4;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -537,7 +543,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
 
     move-result v1
 
@@ -548,7 +554,7 @@
     move v3, v2
 
     :goto_0
-    invoke-static {v3, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -574,7 +580,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
 
     move-result v1
 
@@ -583,7 +589,7 @@
     move v3, v2
 
     :goto_1
-    invoke-static {v3, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -609,14 +615,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
 
     move-result v1
 
     if-ltz v1, :cond_5
 
     :goto_2
-    invoke-static {v2, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -644,31 +650,31 @@
 
 # virtual methods
 .method public addClipPath(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addClipPath(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addClipPath(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
 
     return-void
 .end method
 
 .method public addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
 
     return-void
 .end method
 
 .method public addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
 
     return-void
 .end method
@@ -719,7 +725,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
 
     move-result v1
 
@@ -728,7 +734,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v2, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -752,53 +758,53 @@
 .end method
 
 .method public draw(Landroid/graphics/Canvas;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->draw(Landroid/graphics/Canvas;)V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 .end method
 
 .method public findClipPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findClipPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findClipPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public findGroup(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/GroupElement;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findGroup(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/GroupElement;
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findGroup(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/GroupElement;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public findPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/PathElement;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/PathElement;
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/PathElement;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getClipPathElements()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -808,17 +814,17 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getClipPathElements()Ljava/util/List;
+    invoke-interface {v0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getClipPathElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getGroupElements()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -828,33 +834,33 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getGroupElements()Ljava/util/List;
+    invoke-interface {v0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getGroupElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getName()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->name:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->name:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getParent()Lone/me/sdk/richvector/internal/element/GroupElement;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->parent:Lone/me/sdk/richvector/internal/element/GroupElement;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->parent:Lone/me/sdk/richvector/internal/element/GroupElement;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getPathElements()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -864,69 +870,69 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getPathElements()Ljava/util/List;
+    invoke-interface {v0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getPathElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getPivotX()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->pivotX:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->pivotX:F
 
-    return p0
+    return v0
 .end method
 
 .method public final getPivotY()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->pivotY:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->pivotY:F
 
-    return p0
+    return v0
 .end method
 
 .method public final getRotation()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->rotation:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->rotation:F
 
-    return p0
+    return v0
 .end method
 
 .method public final getScaleX()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->scaleX:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->scaleX:F
 
-    return p0
+    return v0
 .end method
 
 .method public final getScaleY()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->scaleY:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->scaleY:F
 
-    return p0
+    return v0
 .end method
 
 .method public final getTranslateX()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->translateX:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->translateX:F
 
-    return p0
+    return v0
 .end method
 
 .method public final getTranslateY()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->translateY:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->translateY:F
 
-    return p0
+    return v0
 .end method
 
 .method public final scaleAllPaths(Landroid/graphics/Matrix;)V
@@ -942,11 +948,11 @@
 .end method
 
 .method public scaleAllStrokeWidth(F)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/GroupElement;->$$delegate_0:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->scaleAllStrokeWidth(F)V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->scaleAllStrokeWidth(F)V
 
     return-void
 .end method
@@ -1030,7 +1036,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 18
+    .locals 19
 
     move-object/from16 v0, p0
 
@@ -1102,23 +1108,23 @@
 
     move-result-object v15
 
-    invoke-virtual {v0}, Lone/me/sdk/richvector/internal/element/GroupElement;->getClipPathElements()Ljava/util/List;
+    invoke-virtual/range {p0 .. p0}, Lone/me/sdk/richvector/internal/element/GroupElement;->getClipPathElements()Ljava/util/List;
 
     move-result-object v0
 
-    move-object/from16 p0, v0
+    move-object/from16 v16, v0
 
     const-string v0, ", parent="
 
-    move-object/from16 v16, v3
+    move-object/from16 v17, v3
 
     const-string v3, ", pivotX="
 
-    move-object/from16 v17, v15
+    move-object/from16 v18, v15
 
     const-string v15, "GroupElement(name="
 
-    invoke-static {v15, v1, v0, v2, v3}, Lz7e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v15, v1, v0, v2, v3}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1188,7 +1194,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v1, v17
+    move-object/from16 v1, v18
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1196,11 +1202,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v1, p0
+    move-object/from16 v1, v16
 
-    move-object/from16 v2, v16
+    move-object/from16 v2, v17
 
-    invoke-static {v0, v1, v2}, Lmw1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ldy1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

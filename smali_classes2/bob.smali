@@ -1,97 +1,102 @@
 .class public final Lbob;
-.super Lcb4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfnb;
 
-# static fields
-.field public static final b:Lbob;
 
-.field public static final c:Lxa4;
-
-.field public static final d:Lxa4;
-
-.field public static final e:Lxa4;
-
-.field public static final f:Lxa4;
+# instance fields
+.field public final synthetic a:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;)V
+    .locals 0
 
-    new-instance v0, Lbob;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lcb4;-><init>()V
+    iput-object p1, p0, Lbob;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    sput-object v0, Lbob;->b:Lbob;
+    return-void
+.end method
 
-    const-string v6, "id"
 
-    const-string v7, "type"
+# virtual methods
+.method public final Y(Lapb;Z)Z
+    .locals 4
 
-    filled-new-array {v6, v7}, [Ljava/lang/String;
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->z0:[Ltr7;
 
-    move-result-object v2
+    iget-object v0, p0, Lbob;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    const/16 v5, 0xe
+    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->X:Lqs;
 
-    const/4 v4, 0x0
+    sget-object v2, Lone/me/chats/picker/chats/PickerChatsListWidget;->z0:[Ltr7;
 
-    const-string v1, ":profile/edit"
+    const/4 v3, 0x2
 
-    const/4 v3, 0x0
+    aget-object v2, v2, v3
 
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v1
-
-    sput-object v1, Lbob;->c:Lxa4;
-
-    filled-new-array {v6}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/member_permissions"
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    invoke-virtual {v1, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v1
 
-    sput-object v1, Lbob;->d:Lxa4;
+    check-cast v1, Ljava/lang/Boolean;
 
-    const-string v1, "flow"
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    filled-new-array {v6, v7, v1}, [Ljava/lang/String;
+    move-result v1
 
-    move-result-object v2
+    if-eqz v1, :cond_0
 
-    const-string v1, ":profile/edit/link"
+    const/4 p1, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    return p1
+
+    :cond_0
+    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->Y:Lli6;
+
+    if-eqz v1, :cond_1
+
+    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {v1, v2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->F0()Lmnb;
 
     move-result-object v1
 
-    sput-object v1, Lbob;->e:Lxa4;
-
-    const-string v1, "contact_id"
-
-    const-string v2, "permissions_type"
-
-    const-string v3, "chat_id"
-
-    filled-new-array {v3, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/edit/admin_permission"
-
-    const/4 v3, 0x0
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->E0()Lrf2;
 
     move-result-object v0
 
-    sput-object v0, Lbob;->f:Lxa4;
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, p1, p2, v0, v2}, Lmnb;->r(Lapb;ZLrf2;Z)V
+
+    return v2
+.end method
+
+.method public final j0(Lapb;Z)V
+    .locals 3
+
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->z0:[Ltr7;
+
+    iget-object v0, p0, Lbob;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->F0()Lmnb;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->E0()Lrf2;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, p1, p2, v0, v2}, Lmnb;->r(Lapb;ZLrf2;Z)V
 
     return-void
 .end method

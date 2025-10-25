@@ -1,34 +1,71 @@
-.class public abstract Lyt6;
-.super Ljava/lang/Object;
+.class public final Lyt6;
+.super Lcu6;
 .source "SourceFile"
-
-# interfaces
-.implements Lfp5;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/util/List;
-
-.field public final c:Z
+.field public d:I
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Z)V
-    .locals 0
+# virtual methods
+.method public final a(Lhu6;Landroid/view/View;Lbdb;IZ)I
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lyt6;->a:Ljava/lang/String;
+    invoke-super/range {p0 .. p5}, Lcu6;->a(Lhu6;Landroid/view/View;Lbdb;IZ)I
 
-    invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    move-result p1
 
-    move-result-object p1
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
-    iput-object p1, p0, Lyt6;->b:Ljava/util/List;
+    move-result p1
 
-    iput-boolean p3, p0, Lyt6;->c:Z
+    return p1
+.end method
+
+.method public final b(II)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Lcu6;->b(II)V
+
+    iget v0, p0, Lyt6;->d:I
+
+    add-int/2addr p1, p2
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    iput p1, p0, Lyt6;->d:I
 
     return-void
+.end method
+
+.method public final c()V
+    .locals 1
+
+    invoke-super {p0}, Lcu6;->c()V
+
+    const/high16 v0, -0x80000000
+
+    iput v0, p0, Lyt6;->d:I
+
+    return-void
+.end method
+
+.method public final d(Z)I
+    .locals 1
+
+    invoke-super {p0, p1}, Lcu6;->d(Z)I
+
+    move-result p1
+
+    iget v0, p0, Lyt6;->d:I
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    return p1
 .end method

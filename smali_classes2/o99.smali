@@ -1,100 +1,201 @@
 .class public final Lo99;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic X:Lfb9;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ldq7;
+.field public final b:Lvne;
 
 
 # direct methods
-.method public constructor <init>(Lfb9;Ldq7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lvne;I)V
     .locals 0
 
-    iput-object p1, p0, Lo99;->X:Lfb9;
+    iput p2, p0, Lo99;->a:I
 
-    iput-object p2, p0, Lo99;->Y:Ldq7;
+    iput-object p1, p0, Lo99;->b:Lvne;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public static a(Landroid/content/Context;I)Landroid/graphics/Bitmap;
     .locals 0
 
-    check-cast p1, Ly04;
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget p1, Lc1b;->r:I
 
-    invoke-virtual {p0, p1, p2}, Lo99;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    goto :goto_0
+
+    :pswitch_0
+    sget p1, Lc1b;->q:I
+
+    goto :goto_0
+
+    :pswitch_1
+    sget p1, Lc1b;->p:I
+
+    goto :goto_0
+
+    :pswitch_2
+    sget p1, Lc1b;->o:I
+
+    goto :goto_0
+
+    :pswitch_3
+    sget p1, Lc1b;->n:I
+
+    goto :goto_0
+
+    :pswitch_4
+    sget p1, Lc1b;->l:I
+
+    goto :goto_0
+
+    :pswitch_5
+    sget p1, Lc1b;->k:I
+
+    goto :goto_0
+
+    :pswitch_6
+    sget p1, Lc1b;->j:I
+
+    goto :goto_0
+
+    :pswitch_7
+    sget p1, Lc1b;->i:I
+
+    goto :goto_0
+
+    :pswitch_8
+    sget p1, Lc1b;->h:I
+
+    goto :goto_0
+
+    :pswitch_9
+    sget p1, Lc1b;->g:I
+
+    goto :goto_0
+
+    :pswitch_a
+    sget p1, Lc1b;->f:I
+
+    goto :goto_0
+
+    :pswitch_b
+    sget p1, Lc1b;->e:I
+
+    goto :goto_0
+
+    :pswitch_c
+    sget p1, Lc1b;->d:I
+
+    goto :goto_0
+
+    :pswitch_d
+    sget p1, Lc1b;->c:I
+
+    goto :goto_0
+
+    :pswitch_e
+    sget p1, Lc1b;->y:I
+
+    goto :goto_0
+
+    :pswitch_f
+    sget p1, Lc1b;->x:I
+
+    goto :goto_0
+
+    :pswitch_10
+    sget p1, Lc1b;->w:I
+
+    goto :goto_0
+
+    :pswitch_11
+    sget p1, Lc1b;->v:I
+
+    goto :goto_0
+
+    :pswitch_12
+    sget p1, Lc1b;->u:I
+
+    goto :goto_0
+
+    :pswitch_13
+    sget p1, Lc1b;->t:I
+
+    goto :goto_0
+
+    :pswitch_14
+    sget p1, Lc1b;->s:I
+
+    goto :goto_0
+
+    :pswitch_15
+    sget p1, Lc1b;->m:I
+
+    goto :goto_0
+
+    :pswitch_16
+    sget p1, Lc1b;->b:I
+
+    goto :goto_0
+
+    :pswitch_17
+    sget p1, Lc1b;->a:I
+
+    :goto_0
+    invoke-static {p0, p1}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
-    check-cast p0, Lo99;
+    instance-of p1, p0, Landroid/graphics/drawable/BitmapDrawable;
 
-    sget-object p1, Lylf;->a:Lylf;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p0, p1}, Lo99;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
 
-    return-object p1
-.end method
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lo99;
-
-    iget-object v0, p0, Lo99;->X:Lfb9;
-
-    iget-object p0, p0, Lo99;->Y:Ldq7;
-
-    invoke-direct {p1, v0, p0, p2}, Lo99;-><init>(Lfb9;Ldq7;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lo99;->X:Lfb9;
-
-    iget-object v0, p1, Lfb9;->c:Lih1;
-
-    iget-object p0, p0, Lo99;->Y:Ldq7;
-
-    move-object v1, p0
-
-    check-cast v1, Lzp7;
-
-    iget-object v1, v1, Lzp7;->a:Ljava/lang/String;
-
-    new-instance v5, Ljv3;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v5, p1, v2, p0}, Ljv3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-virtual/range {v0 .. v5}, Lih1;->j(Ljava/lang/String;ZZZLzb6;)V
-
-    sget-object p0, Lylf;->a:Lylf;
+    move-result-object p0
 
     return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

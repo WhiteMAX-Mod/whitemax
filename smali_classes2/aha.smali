@@ -1,80 +1,146 @@
 .class public final Laha;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-.field public final synthetic c:Lh17;
-
-.field public final synthetic o:Landroid/graphics/drawable/Animatable;
+.field public final synthetic Y:Lbha;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;Ljava/lang/String;Lh17;Landroid/graphics/drawable/Animatable;I)V
+.method public constructor <init>(Lbha;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p5, p0, Laha;->a:I
+    iput-object p1, p0, Laha;->Y:Lbha;
 
-    iput-object p1, p0, Laha;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Laha;->c:Lh17;
-
-    iput-object p4, p0, Laha;->o:Landroid/graphics/drawable/Animatable;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Laha;->a:I
+    check-cast p1, Lq54;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Laha;->c:Lh17;
+    invoke-virtual {p0, p1, p2}, Laha;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Laha;->o:Landroid/graphics/drawable/Animatable;
+    move-result-object p1
 
-    iget-object p0, p0, Laha;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    check-cast p1, Laha;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->p(Lh17;Landroid/graphics/drawable/Animatable;)V
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    invoke-virtual {p1, p2}, Laha;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    move-result-object p1
 
-    return-void
+    return-object p1
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Laha;->c:Lh17;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v1, p0, Laha;->o:Landroid/graphics/drawable/Animatable;
+    new-instance p1, Laha;
 
-    iget-object p0, p0, Laha;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    iget-object v0, p0, Laha;->Y:Lbha;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->p(Lh17;Landroid/graphics/drawable/Animatable;)V
+    invoke-direct {p1, v0, p2}, Laha;-><init>(Lbha;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    return-object p1
+.end method
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    return-void
+    iget v0, p0, Laha;->X:I
 
-    nop
+    const/4 v1, 0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Laha;->Y:Lbha;
+
+    :try_start_1
+    iput v1, p0, Laha;->X:I
+
+    iget-object v0, p1, Lbha;->a:Lfgd;
+
+    new-instance v1, Lsj4;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v1, v2, p1}, Lsj4;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v1, p0}, Lexi;->b(Lfgd;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :goto_0
+    const-string v0, "NotificationsTrackerMessagesDao"
+
+    const-string v1, "onLogout: failed"
+
+    invoke-static {v0, v1, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :goto_2
+    throw p1
 .end method

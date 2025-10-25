@@ -212,40 +212,40 @@
 .end method
 
 .method private averageTimeAsString(JI)Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     if-gtz p3, :cond_0
 
-    const-string p0, "NA"
+    const-string p1, "NA"
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    sget-object p0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    int-to-long v0, p3
+    int-to-long v1, p3
 
-    div-long/2addr p1, v0
+    div-long/2addr p1, v1
 
-    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMicros(J)J
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMicros(J)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string p0, " us"
+    const-string p1, " us"
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public static synthetic b(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;JZ)V
@@ -291,9 +291,9 @@
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glClear(I)V
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->eglBase:Lorg/webrtc/EglBase;
+    iget-object p1, p0, Lorg/webrtc/EglRenderer;->eglBase:Lorg/webrtc/EglBase;
 
-    invoke-interface {p0}, Lorg/webrtc/EglBase;->swapBuffers()V
+    invoke-interface {p1}, Lorg/webrtc/EglBase;->swapBuffers()V
 
     :cond_0
     return-void
@@ -388,20 +388,20 @@
 .end method
 
 .method private synthetic lambda$addFrameListener$1(Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
-    .locals 1
+    .locals 2
 
     if-nez p1, :cond_0
 
     iget-object p1, p0, Lorg/webrtc/EglRenderer;->drawer:Lorg/webrtc/RendererCommon$GlDrawer;
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->frameListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lorg/webrtc/EglRenderer;->frameListeners:Ljava/util/ArrayList;
 
-    new-instance v0, Lorg/webrtc/EglRenderer$FrameListenerAndParams;
+    new-instance v1, Lorg/webrtc/EglRenderer$FrameListenerAndParams;
 
-    invoke-direct {v0, p2, p3, p1, p4}, Lorg/webrtc/EglRenderer$FrameListenerAndParams;-><init>(Lorg/webrtc/EglRenderer$FrameListener;FLorg/webrtc/RendererCommon$GlDrawer;Z)V
+    invoke-direct {v1, p2, p3, p1, p4}, Lorg/webrtc/EglRenderer$FrameListenerAndParams;-><init>(Lorg/webrtc/EglRenderer$FrameListener;FLorg/webrtc/RendererCommon$GlDrawer;Z)V
 
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -468,23 +468,23 @@
     iput-object v1, p0, Lorg/webrtc/EglRenderer;->eglBase:Lorg/webrtc/EglBase;
 
     :cond_1
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->frameListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lorg/webrtc/EglRenderer;->frameListeners:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method private synthetic lambda$releaseEglSurface$3(Ljava/lang/Runnable;)V
@@ -496,9 +496,9 @@
 
     invoke-interface {v0}, Lorg/webrtc/EglBase;->detachCurrent()V
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->eglBase:Lorg/webrtc/EglBase;
+    iget-object v0, p0, Lorg/webrtc/EglRenderer;->eglBase:Lorg/webrtc/EglBase;
 
-    invoke-interface {p0}, Lorg/webrtc/EglBase;->releaseSurface()V
+    invoke-interface {v0}, Lorg/webrtc/EglBase;->releaseSurface()V
 
     :cond_0
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
@@ -507,35 +507,35 @@
 .end method
 
 .method private synthetic lambda$removeFrameListener$2(Ljava/util/concurrent/CountDownLatch;Lorg/webrtc/EglRenderer$FrameListener;)V
-    .locals 0
+    .locals 1
 
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->frameListeners:Ljava/util/ArrayList;
+    iget-object p1, p0, Lorg/webrtc/EglRenderer;->frameListeners:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    check-cast p1, Lorg/webrtc/EglRenderer$FrameListenerAndParams;
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object p1, p1, Lorg/webrtc/EglRenderer$FrameListenerAndParams;->listener:Lorg/webrtc/EglRenderer$FrameListener;
+    move-result v0
 
-    if-ne p1, p2, :cond_0
+    if-eqz v0, :cond_1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->remove()V
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/webrtc/EglRenderer$FrameListenerAndParams;
+
+    iget-object v0, v0, Lorg/webrtc/EglRenderer$FrameListenerAndParams;->listener:Lorg/webrtc/EglRenderer$FrameListener;
+
+    if-ne v0, p2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
@@ -615,59 +615,59 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p2
 
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p2
 .end method
 
 .method private logD(Ljava/lang/String;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "EglRenderer"
+    const-string v0, "EglRenderer"
 
-    invoke-static {p1, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private logE(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "EglRenderer"
+    const-string v0, "EglRenderer"
 
-    invoke-static {p1, p0, p2}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1, p2}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -717,7 +717,7 @@
     goto/16 :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
     goto :goto_1
 
@@ -845,29 +845,29 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v0
 .end method
 
 .method private logW(Ljava/lang/String;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "EglRenderer"
+    const-string v0, "EglRenderer"
 
-    invoke-static {p1, p0}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1125,27 +1125,27 @@
 .end method
 
 .method private postToRenderThread(Ljava/lang/Runnable;)V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lorg/webrtc/EglRenderer;->threadLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->eglThread:Lorg/webrtc/EglThread;
+    iget-object v1, p0, Lorg/webrtc/EglRenderer;->eglThread:Lorg/webrtc/EglThread;
 
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lorg/webrtc/EglThread;->getHandler()Landroid/os/Handler;
+    invoke-virtual {v1}, Lorg/webrtc/EglThread;->getHandler()Landroid/os/Handler;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
@@ -1160,7 +1160,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method private renderFrameOnRenderThread()V
@@ -1181,8 +1181,6 @@
 
     :catchall_0
     move-exception v0
-
-    move-object p0, v0
 
     goto/16 :goto_b
 
@@ -1265,8 +1263,6 @@
 
     :catchall_1
     move-exception v0
-
-    move-object p0, v0
 
     goto/16 :goto_9
 
@@ -1472,8 +1468,6 @@
     :catchall_3
     move-exception v0
 
-    move-object p0, v0
-
     goto :goto_8
 
     :catch_0
@@ -1513,9 +1507,9 @@
 
     invoke-virtual {v0}, Lorg/webrtc/VideoFrameDrawer;->release()V
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->bitmapTextureFramebuffer:Lorg/webrtc/GlTextureFrameBuffer;
+    iget-object v0, p0, Lorg/webrtc/EglRenderer;->bitmapTextureFramebuffer:Lorg/webrtc/GlTextureFrameBuffer;
 
-    invoke-virtual {p0}, Lorg/webrtc/GlTextureFrameBuffer;->release()V
+    invoke-virtual {v0}, Lorg/webrtc/GlTextureFrameBuffer;->release()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
@@ -1526,19 +1520,17 @@
     :goto_8
     invoke-virtual {v3}, Lorg/webrtc/VideoFrame;->release()V
 
-    throw p0
+    throw v0
 
     :catchall_4
     move-exception v0
-
-    move-object p0, v0
 
     :try_start_7
     monitor-exit v2
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
-    throw p0
+    throw v0
 
     :goto_9
     :try_start_8
@@ -1546,7 +1538,7 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    throw p0
+    throw v0
 
     :cond_b
     :goto_a
@@ -1564,7 +1556,7 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    throw p0
+    throw v0
 .end method
 
 .method private resetStatistics(J)V
@@ -1596,13 +1588,13 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method private swapBuffersOnRenderThread(Lorg/webrtc/VideoFrame;J)V
@@ -1617,16 +1609,16 @@
 
     if-eqz v1, :cond_0
 
-    new-instance v2, Ld15;
+    new-instance v2, Ly65;
 
-    invoke-direct {v2, p0, p1, p2, p3}, Ld15;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;J)V
+    invoke-direct {v2, p0, p1, p2, p3}, Ly65;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;J)V
 
     invoke-virtual {v1, v2}, Lorg/webrtc/EglThread;->scheduleRenderUpdate(Lorg/webrtc/EglThread$RenderUpdate;)V
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
@@ -1641,7 +1633,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -1674,7 +1666,7 @@
     .locals 6
 
     .line 3
-    new-instance v0, Lb15;
+    new-instance v0, Lw65;
 
     move-object v1, p0
 
@@ -1686,9 +1678,9 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lb15;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
+    invoke-direct/range {v0 .. v5}, Lw65;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
 
-    invoke-direct {v1, v0}, Lorg/webrtc/EglRenderer;->postToRenderThread(Ljava/lang/Runnable;)V
+    invoke-direct {p0, v0}, Lorg/webrtc/EglRenderer;->postToRenderThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -1726,7 +1718,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_0
 
@@ -1736,7 +1728,7 @@
 
     move-result-object v0
 
-    new-instance v2, Lc15;
+    new-instance v2, Lx65;
 
     move-object v3, p0
 
@@ -1748,7 +1740,7 @@
 
     move v7, p4
 
-    invoke-direct/range {v2 .. v7}, Lc15;-><init>(Lorg/webrtc/EglRenderer;FFFF)V
+    invoke-direct/range {v2 .. v7}, Lx65;-><init>(Lorg/webrtc/EglRenderer;FFFF)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
@@ -1762,7 +1754,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public createEglSurface(Landroid/graphics/SurfaceTexture;)V
@@ -1882,19 +1874,19 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->logStatisticsRunnable:Ljava/lang/Runnable;
+    iget-object p2, p0, Lorg/webrtc/EglRenderer;->logStatisticsRunnable:Ljava/lang/Runnable;
 
-    sget-object p2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object p3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x4
 
     .line 13
-    invoke-virtual {p2, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-virtual {p3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    move-result-wide p2
+    move-result-wide v1
 
     .line 14
-    invoke-virtual {p1, p0, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p1, p2, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 15
     monitor-exit v0
@@ -1902,7 +1894,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
@@ -1910,23 +1902,23 @@
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
+    iget-object p2, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p0, "Already initialized"
+    const-string p2, "Already initialized"
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
@@ -1936,7 +1928,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public onFrame(Lorg/webrtc/VideoFrame;)V
@@ -1977,7 +1969,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_3
 
@@ -2008,7 +2000,7 @@
     goto :goto_1
 
     :catchall_1
-    move-exception p0
+    move-exception p1
 
     goto :goto_2
 
@@ -2024,11 +2016,11 @@
 
     move-result-object p1
 
-    new-instance v3, Lje4;
+    new-instance v3, Lgj4;
 
-    const/16 v5, 0xe
+    const/16 v5, 0x11
 
-    invoke-direct {v3, v5, p0}, Lje4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v5, p0}, Lgj4;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2059,13 +2051,13 @@
     return-void
 
     :catchall_2
-    move-exception p0
+    move-exception v0
 
     monitor-exit p1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    throw p0
+    throw v0
 
     :cond_3
     return-void
@@ -2077,24 +2069,24 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     :try_start_6
-    throw p0
+    throw p1
 
     :goto_3
     monitor-exit v1
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    throw p0
+    throw p1
 
     :catchall_3
-    move-exception p0
+    move-exception p1
 
     :try_start_7
     monitor-exit v0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    throw p0
+    throw p1
 .end method
 
 .method public pauseVideo()V
@@ -2171,7 +2163,7 @@
     goto :goto_1
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_2
 
@@ -2185,7 +2177,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method public release()V
@@ -2219,7 +2211,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
     goto :goto_2
 
@@ -2244,11 +2236,11 @@
 
     move-result-object v2
 
-    new-instance v3, Lik4;
+    new-instance v3, Lyo4;
 
-    const/16 v4, 0x9
+    const/16 v4, 0xd
 
-    invoke-direct {v3, p0, v4, v0}, Lik4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v3, p0, v4, v0}, Lyo4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
@@ -2282,7 +2274,7 @@
     goto :goto_0
 
     :catchall_1
-    move-exception p0
+    move-exception v1
 
     goto :goto_1
 
@@ -2304,7 +2296,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    throw p0
+    throw v1
 
     :goto_2
     :try_start_3
@@ -2312,7 +2304,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    throw p0
+    throw v0
 .end method
 
 .method public releaseEglSurface(Ljava/lang/Runnable;)V
@@ -2347,11 +2339,11 @@
 
     move-result-object v1
 
-    new-instance v2, Lik4;
+    new-instance v2, Lyo4;
 
-    const/16 v3, 0x8
+    const/16 v3, 0xc
 
-    invoke-direct {v2, p0, v3, p1}, Lik4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, v3, p1}, Lyo4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
@@ -2360,7 +2352,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
@@ -2379,7 +2371,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public removeFrameListener(Lorg/webrtc/EglRenderer$FrameListener;)V
@@ -2405,7 +2397,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
@@ -2430,11 +2422,11 @@
 
     if-eq v2, v3, :cond_1
 
-    new-instance v2, Lj5;
+    new-instance v2, Lo65;
 
-    const/16 v3, 0x1a
+    const/4 v3, 0x1
 
-    invoke-direct {v2, p0, v0, p1, v3}, Lj5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v2, p0, v0, p1, v3}, Lo65;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-direct {p0, v2}, Lorg/webrtc/EglRenderer;->postToRenderThread(Ljava/lang/Runnable;)V
 
@@ -2448,20 +2440,20 @@
 
     :cond_1
     :try_start_1
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string p1, "removeFrameListener must not be called on the render thread."
+    const-string v0, "removeFrameListener must not be called on the render thread."
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :goto_0
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setErrorCallback(Lorg/webrtc/EglRenderer$ErrorCallback;)V
@@ -2495,7 +2487,7 @@
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
@@ -2539,7 +2531,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setLayoutAspectRatio(F)V
@@ -2557,13 +2549,13 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setMirror(Z)V
@@ -2588,13 +2580,13 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setMirrorVertically(Z)V
@@ -2619,11 +2611,11 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method

@@ -110,20 +110,20 @@
     iput-object p1, p0, Lorg/webrtc/RenderSynchronizer;->mainThreadHandler:Landroid/os/Handler;
 
     .line 6
-    new-instance v0, Lmrc;
+    new-instance v0, Ldad;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lmrc;-><init>(Lorg/webrtc/RenderSynchronizer;I)V
+    invoke-direct {v0, p0, v1}, Ldad;-><init>(Lorg/webrtc/RenderSynchronizer;I)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 7
-    const-string p0, "RenderSynchronizer"
+    const-string p1, "RenderSynchronizer"
 
-    const-string p1, "Created"
+    const-string v0, "Created"
 
-    invoke-static {p0, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -153,7 +153,7 @@
 .end method
 
 .method private closeRenderWindow()V
-    .locals 1
+    .locals 2
 
     const/4 v0, 0x0
 
@@ -161,26 +161,26 @@
 
     invoke-direct {p0}, Lorg/webrtc/RenderSynchronizer;->traceRenderWindowChange()V
 
-    iget-object p0, p0, Lorg/webrtc/RenderSynchronizer;->listeners:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/RenderSynchronizer;->listeners:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Lorg/webrtc/RenderSynchronizer$Listener;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {v0}, Lorg/webrtc/RenderSynchronizer$Listener;->onRenderWindowClose()V
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/RenderSynchronizer$Listener;
+
+    invoke-interface {v1}, Lorg/webrtc/RenderSynchronizer$Listener;->onRenderWindowClose()V
 
     goto :goto_0
 
@@ -205,11 +205,11 @@
 
     iget-object v0, p0, Lorg/webrtc/RenderSynchronizer;->choreographer:Landroid/view/Choreographer;
 
-    new-instance v1, Lfg;
+    new-instance v1, Lng;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, v2, p0}, Lfg;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lng;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
@@ -247,7 +247,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
@@ -258,11 +258,11 @@
 
     iget-object v0, p0, Lorg/webrtc/RenderSynchronizer;->choreographer:Landroid/view/Choreographer;
 
-    new-instance v1, Lfg;
+    new-instance v1, Lng;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, v2, p0}, Lfg;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lng;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
@@ -320,11 +320,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method private openRenderWindow()V
-    .locals 1
+    .locals 2
 
     const/4 v0, 0x1
 
@@ -332,26 +332,26 @@
 
     invoke-direct {p0}, Lorg/webrtc/RenderSynchronizer;->traceRenderWindowChange()V
 
-    iget-object p0, p0, Lorg/webrtc/RenderSynchronizer;->listeners:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/RenderSynchronizer;->listeners:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Lorg/webrtc/RenderSynchronizer$Listener;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {v0}, Lorg/webrtc/RenderSynchronizer$Listener;->onRenderWindowOpen()V
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/RenderSynchronizer$Listener;
+
+    invoke-interface {v1}, Lorg/webrtc/RenderSynchronizer$Listener;->onRenderWindowOpen()V
 
     goto :goto_0
 
@@ -362,9 +362,15 @@
 .method private traceRenderWindowChange()V
     .locals 2
 
-    iget-boolean p0, p0, Lorg/webrtc/RenderSynchronizer;->renderWindowOpen:Z
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-eqz p0, :cond_0
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_1
+
+    iget-boolean v0, p0, Lorg/webrtc/RenderSynchronizer;->renderWindowOpen:Z
+
+    if-eqz v0, :cond_0
 
     const-wide/16 v0, 0x1
 
@@ -374,10 +380,9 @@
     const-wide/16 v0, 0x0
 
     :goto_0
-    const-string p0, "RenderWindow"
+    invoke-static {v0, v1}, Lcad;->k(J)V
 
-    invoke-static {p0, v0, v1}, Landroid/os/Trace;->setCounter(Ljava/lang/String;J)V
-
+    :cond_1
     return-void
 .end method
 
@@ -411,18 +416,18 @@
 
     iget-object v0, p0, Lorg/webrtc/RenderSynchronizer;->mainThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lmrc;
+    new-instance v1, Ldad;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lmrc;-><init>(Lorg/webrtc/RenderSynchronizer;I)V
+    invoke-direct {v1, p0, v2}, Ldad;-><init>(Lorg/webrtc/RenderSynchronizer;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
     goto :goto_1
 
@@ -437,15 +442,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v0
 .end method
 
 .method public removeListener(Lorg/webrtc/RenderSynchronizer$Listener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/RenderSynchronizer;->listeners:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/RenderSynchronizer;->listeners:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method

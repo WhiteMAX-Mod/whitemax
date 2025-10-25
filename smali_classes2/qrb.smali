@@ -1,48 +1,49 @@
 .class public final Lqrb;
-.super Ljx3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic Y:Lorb;
+.field public final b:Lxya;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Lbi4;
+
+.field public final d:Lwif;
+
+.field public final e:Lrrb;
 
 
 # direct methods
-.method public constructor <init>(Lorb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lqrb;->Y:Lorb;
-
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Landroid/content/Context;Lxya;Lbi4;)V
     .locals 1
 
-    iput-object p1, p0, Lqrb;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lqrb;->X:I
+    iput-object p1, p0, Lqrb;->a:Landroid/content/Context;
 
-    const/high16 v0, -0x80000000
+    iput-object p2, p0, Lqrb;->b:Lxya;
 
-    or-int/2addr p1, v0
+    iput-object p3, p0, Lqrb;->c:Lbi4;
 
-    iput p1, p0, Lqrb;->X:I
+    new-instance p3, Lrra;
 
-    iget-object p1, p0, Lqrb;->Y:Lorb;
+    const/16 v0, 0x12
 
-    const/4 v0, 0x0
+    invoke-direct {p3, p1, v0}, Lrra;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {p1, v0, p0}, Lorb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    new-instance v0, Lwif;
 
-    move-result-object p0
+    invoke-direct {v0, p3}, Lwif;-><init>(Lji6;)V
 
-    return-object p0
+    iput-object v0, p0, Lqrb;->d:Lwif;
+
+    new-instance p3, Lrrb;
+
+    invoke-direct {p3, p1, p2}, Lrrb;-><init>(Landroid/content/Context;Lxya;)V
+
+    iput-object p3, p0, Lqrb;->e:Lrrb;
+
+    return-void
 .end method

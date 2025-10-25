@@ -15,166 +15,222 @@
     return-void
 .end method
 
+.method public static e()Z
+    .locals 2
 
-# virtual methods
-.method public final a(Lmz1;Lra0;)Z
-    .locals 3
+    const-string v0, "Samsung"
 
-    sget-object p0, Landroid/os/Build;->BRAND:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
-    const-string p1, "Samsung"
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "SM-J400G"
-
-    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    sget-object p0, Lra0;->f:Lra0;
+    const-string v0, "SM-J710MN"
 
-    if-eq p2, p0, :cond_6
+    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    sget-object p0, Lra0;->g:Lra0;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    if-ne p2, p0, :cond_7
+    move-result v0
 
-    goto/16 :goto_1
+    if-eqz v0, :cond_0
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1b
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
 
     :cond_0
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static f()Z
+    .locals 2
+
+    const-string v0, "Samsung"
+
+    sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    const-string v0, "SM-J260F"
+    const-string v0, "SM-G610M"
+
+    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1b
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public final a(Lq12;Lmb0;)Z
+    .locals 3
+
+    sget-object p1, Landroid/os/Build;->BRAND:Ljava/lang/String;
+
+    const-string v0, "Samsung"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "SM-J400G"
 
     sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_0
+
+    sget-object p1, Lmb0;->f:Lmb0;
+
+    if-eq p2, p1, :cond_6
+
+    sget-object p1, Lmb0;->g:Lmb0;
+
+    if-ne p2, p1, :cond_7
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "SM-J260F"
+
+    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
-    const-string v0, "SM-J530F"
+    const-string v1, "SM-J530F"
 
     sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
-    const-string v0, "sm-j600g"
+    const-string v1, "sm-j600g"
 
     sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
     goto :goto_0
 
     :cond_3
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_4
+    if-eqz p1, :cond_4
 
-    const-string v0, "SM-J701F"
+    const-string p1, "SM-J701F"
 
-    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_4
+    if-eqz p1, :cond_4
 
     goto :goto_0
 
     :cond_4
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ExcludeStretchedVideoQualityQuirk;->f()Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_5
+    if-nez p1, :cond_5
 
-    const-string v0, "SM-G610M"
+    invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ExcludeStretchedVideoQualityQuirk;->e()Z
 
-    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    move-result p1
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    goto :goto_0
+    if-eqz p1, :cond_7
 
     :cond_5
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_7
-
-    const-string p0, "SM-J710MN"
-
-    sget-object p1, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_7
-
     :goto_0
-    sget-object p0, Lra0;->f:Lra0;
+    sget-object p1, Lmb0;->f:Lmb0;
 
-    if-ne p2, p0, :cond_7
+    if-ne p2, p1, :cond_7
 
     :cond_6
     :goto_1
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_7
-    return v1
+    const/4 p1, 0x0
+
+    return p1
 .end method

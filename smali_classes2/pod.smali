@@ -1,118 +1,100 @@
 .class public final Lpod;
-.super Lure;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lji6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lyod;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lyod;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lpod;->Y:Lyod;
+    iput p1, p0, Lpod;->a:I
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lpod;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lst7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Ly04;
+    iget v0, p0, Lpod;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lpod;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lpod;->b:Ljava/lang/Object;
 
-    move-result-object p0
+    return-object v0
 
-    check-cast p0, Lpod;
+    :pswitch_0
+    iget-object v0, p0, Lpod;->b:Ljava/lang/Object;
 
-    sget-object p1, Lylf;->a:Lylf;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Lpod;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
+    check-cast v0, Lg0h;
 
-    return-object p0
-.end method
+    instance-of v1, v0, Lsw6;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    if-eqz v1, :cond_0
 
-    new-instance p1, Lpod;
-
-    iget-object p0, p0, Lpod;->Y:Lyod;
-
-    invoke-direct {p1, p0, p2}, Lpod;-><init>(Lyod;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lpod;->X:I
-
-    iget-object v1, p0, Lpod;->Y:Lyod;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    check-cast v0, Lsw6;
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    if-eqz v0, :cond_1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0}, Lsw6;->f()Li0a;
 
-    throw p0
+    move-result-object v0
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    sget-object v0, Li74;->b:Li74;
 
-    iget-object p1, v1, Lyod;->b:Lci6;
+    :goto_1
+    return-object v0
 
-    iput v2, p0, Lpod;->X:I
+    :pswitch_1
+    iget-object v0, p0, Lpod;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1, p0}, Lci6;->d(Ljx3;)Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    sget-object p0, Lz04;->a:Lz04;
+    check-cast v0, Lg0h;
 
-    if-ne p1, p0, :cond_2
+    invoke-interface {v0}, Lg0h;->k()Lf0h;
 
-    return-object p0
+    move-result-object v0
 
-    :cond_2
-    :goto_0
-    check-cast p1, Lfud;
+    return-object v0
 
-    iget-object p0, v1, Lyod;->A0:Lyce;
+    nop
 
-    invoke-virtual {p0, p1}, Lyce;->setValue(Ljava/lang/Object;)V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

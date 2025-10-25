@@ -1,343 +1,149 @@
 .class public final Lam6;
-.super Ljava/lang/Object;
+.super Lbm6;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lxl6;
+.field public final D0:Lan6;
 
-.field public final b:Lzl6;
+.field public E0:Lone/me/sdk/gallery/view/NumericCheckButton;
 
-.field public final c:Lbm6;
+.field public final F0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public final d:Lcm6;
-
-.field public final e:Ldm6;
-
-.field public final f:Llm6;
-
-.field public final g:Lmm6;
-
-.field public final h:Lom6;
+.field public final G0:Lone/me/sdk/gallery/view/VideoInfoTextView;
 
 
 # direct methods
-.method public constructor <init>(Lxl6;Lzl6;Lbm6;Lcm6;Ldm6;Llm6;Lmm6;Lom6;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Lan6;)V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lq7d;-><init>(Landroid/view/View;)V
 
-    iput-object p1, p0, Lam6;->a:Lxl6;
+    iput-object p2, p0, Lam6;->D0:Lan6;
 
-    iput-object p2, p0, Lam6;->b:Lzl6;
+    sget v0, Lg1b;->e:I
 
-    iput-object p3, p0, Lam6;->c:Lbm6;
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iput-object p4, p0, Lam6;->d:Lcm6;
+    move-result-object v0
 
-    iput-object p5, p0, Lam6;->e:Ldm6;
+    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    iput-object p6, p0, Lam6;->f:Llm6;
+    iput-object v0, p0, Lam6;->F0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    iput-object p7, p0, Lam6;->g:Lmm6;
+    sget v1, Lg1b;->c:I
 
-    iput-object p8, p0, Lam6;->h:Lom6;
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    return-void
-.end method
+    move-result-object v1
 
+    check-cast v1, Landroid/view/ViewStub;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    sget v2, Lg1b;->f:I
 
-    const/4 v0, 0x1
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v2
 
-    return v0
+    check-cast v2, Lone/me/sdk/gallery/view/VideoInfoTextView;
+
+    iput-object v2, p0, Lam6;->G0:Lone/me/sdk/gallery/view/VideoInfoTextView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    sget v3, Lzjd;->W:I
+
+    invoke-static {v2, v3}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    sget-object v3, Lqn4;->e0:Lqn4;
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lam6;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const/4 v2, 0x0
+    move-result-object v3
 
-    if-nez v1, :cond_1
+    sget-object v4, Lynf;->a0:Lwif;
 
-    return v2
+    invoke-static {v3}, Laa4;->c(Landroid/content/Context;)Lynf;
+
+    move-result-object v3
+
+    :goto_0
+    iget v3, v3, Lynf;->w:I
+
+    const v4, 0x3e99999a    # 0.3f
+
+    invoke-static {v3, v4}, Lpui;->b(IF)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    invoke-virtual {v0}, Lq15;->getHierarchy()Ln15;
+
+    move-result-object v3
+
+    check-cast v3, Lnn6;
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v2, v4}, Lnn6;->i(Landroid/graphics/drawable/Drawable;I)V
 
     :cond_1
-    check-cast p1, Lam6;
+    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
 
-    iget-object v1, p0, Lam6;->a:Lxl6;
+    move-result v2
 
-    iget-object v3, p1, Lam6;->a:Lxl6;
+    if-eqz v2, :cond_2
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object p1, Lqn4;->e0:Lqn4;
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
+    goto :goto_1
 
     :cond_2
-    iget-object v1, p0, Lam6;->b:Lzl6;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget-object v3, p1, Lam6;->b:Lzl6;
+    move-result-object p1
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v2, Lynf;->a0:Lwif;
 
-    move-result v1
+    invoke-static {p1}, Laa4;->c(Landroid/content/Context;)Lynf;
 
-    if-nez v1, :cond_3
+    move-result-object p1
 
-    return v2
+    :goto_1
+    iget p1, p1, Lynf;->H:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    iget-object p1, p2, Lan6;->b:Lel6;
+
+    iget-boolean p1, p1, Lel6;->c:Z
+
+    if-eqz p1, :cond_3
+
+    new-instance p1, Lzl6;
+
+    invoke-direct {p1, p0}, Lzl6;-><init>(Lam6;)V
+
+    invoke-virtual {v1, p1}, Landroid/view/ViewStub;->setOnInflateListener(Landroid/view/ViewStub$OnInflateListener;)V
+
+    invoke-virtual {v1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     :cond_3
-    iget-object v1, p0, Lam6;->c:Lbm6;
-
-    iget-object v3, p1, Lam6;->c:Lbm6;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lam6;->d:Lcm6;
-
-    iget-object v3, p1, Lam6;->d:Lcm6;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lam6;->e:Ldm6;
-
-    iget-object v3, p1, Lam6;->e:Ldm6;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lam6;->f:Llm6;
-
-    iget-object v3, p1, Lam6;->f:Llm6;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object v1, p0, Lam6;->g:Lmm6;
-
-    iget-object v3, p1, Lam6;->g:Lmm6;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-object p0, p0, Lam6;->h:Lom6;
-
-    iget-object p1, p1, Lam6;->h:Lom6;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_9
-
-    return v2
-
-    :cond_9
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lam6;->a:Lxl6;
-
-    invoke-virtual {v0}, Lxl6;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lam6;->b:Lzl6;
-
-    invoke-virtual {v1}, Lzl6;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lam6;->c:Lbm6;
-
-    iget-object v0, v0, Lbm6;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lam6;->d:Lcm6;
-
-    invoke-virtual {v1}, Lcm6;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lam6;->e:Ldm6;
-
-    invoke-virtual {v0}, Ldm6;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lam6;->f:Llm6;
-
-    iget-object v1, v1, Llm6;->a:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lam6;->g:Lmm6;
-
-    invoke-virtual {v0}, Lmm6;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lam6;->h:Lom6;
-
-    invoke-virtual {p0}, Lom6;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "GradientsColors(bannerDK="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lam6;->a:Lxl6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buttonTextPromo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lam6;->b:Lzl6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", complex="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lam6;->c:Lbm6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", emptyBlockIconWrapper="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lam6;->d:Lcm6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", loadingIcon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lam6;->e:Ldm6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", local="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lam6;->f:Llm6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", overlay="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lam6;->g:Lmm6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", skeletonGradient="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lam6;->h:Lom6;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

@@ -2,137 +2,98 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyi7;
-
 
 # instance fields
-.field public final a:Lrid;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:F
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:I
+
+.field public final m:I
+
+.field public final n:I
+
+.field public final o:Z
+
+.field public final p:I
+
+.field public final q:I
+
+.field public final r:I
+
+.field public final s:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    sget-object v0, Lfme;->a:Lfme;
+.method public constructor <init>(IIIIIIFIIZZIIIZIIII)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lrid;
+    iput p1, p0, Li4a;->a:I
 
-    sget-object v1, Lfme;->b:Lbib;
+    iput p2, p0, Li4a;->b:I
 
-    invoke-direct {v0, v1}, Lrid;-><init>(Lqid;)V
+    iput p3, p0, Li4a;->c:I
 
-    iput-object v0, p0, Li4a;->a:Lrid;
+    iput p4, p0, Li4a;->d:I
 
-    return-void
-.end method
+    iput p5, p0, Li4a;->e:I
 
+    iput p6, p0, Li4a;->f:I
 
-# virtual methods
-.method public final a(Lu8;)Ljava/lang/Object;
-    .locals 0
+    iput p7, p0, Li4a;->g:F
 
-    invoke-virtual {p1}, Lu8;->r()Z
+    iput p8, p0, Li4a;->h:I
 
-    move-result p0
+    iput p9, p0, Li4a;->i:I
 
-    if-eqz p0, :cond_0
+    iput-boolean p10, p0, Li4a;->j:Z
 
-    sget-object p0, Lfme;->a:Lfme;
+    iput-boolean p11, p0, Li4a;->k:Z
 
-    invoke-virtual {p1, p0}, Lu8;->u(Lyi7;)Ljava/lang/Object;
+    iput p12, p0, Li4a;->l:I
 
-    move-result-object p0
+    iput p13, p0, Li4a;->m:I
 
-    return-object p0
+    iput p14, p0, Li4a;->n:I
 
-    :cond_0
-    const/4 p0, 0x0
+    iput-boolean p15, p0, Li4a;->o:Z
 
-    return-object p0
-.end method
+    move/from16 p1, p16
 
-.method public final b(Lay3;Ljava/lang/Object;)V
-    .locals 0
+    iput p1, p0, Li4a;->p:I
 
-    if-eqz p2, :cond_0
+    move/from16 p1, p17
 
-    sget-object p0, Lfme;->a:Lfme;
+    iput p1, p0, Li4a;->q:I
 
-    invoke-virtual {p1, p0, p2}, Lay3;->j(Lyi7;Ljava/lang/Object;)V
+    move/from16 p1, p18
 
-    return-void
+    iput p1, p0, Li4a;->r:I
 
-    :cond_0
-    invoke-virtual {p1}, Lay3;->g()V
+    move/from16 p1, p19
+
+    iput p1, p0, Li4a;->s:I
 
     return-void
-.end method
-
-.method public final d()Lqid;
-    .locals 0
-
-    iget-object p0, p0, Li4a;->a:Lrid;
-
-    return-object p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p1, :cond_3
-
-    const-class p0, Li4a;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    if-eq p0, v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Li4a;
-
-    sget-object p0, Lfme;->a:Lfme;
-
-    invoke-virtual {p0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    sget-object p0, Lfme;->a:Lfme;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
 .end method

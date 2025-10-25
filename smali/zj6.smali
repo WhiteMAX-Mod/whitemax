@@ -4,20 +4,8 @@
 
 
 # virtual methods
-.method public A()V
-    .locals 0
-
-    return-void
+.method public abstract a(Ljava/lang/Object;)V
 .end method
 
-.method public q()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s(Lck6;)V
-    .locals 0
-
-    return-void
+.method public abstract onFailure(Ljava/lang/Throwable;)V
 .end method

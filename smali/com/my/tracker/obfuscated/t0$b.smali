@@ -35,23 +35,23 @@
 
 # virtual methods
 .method public a()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/t0$b;->a:Lcom/my/tracker/obfuscated/j0$c;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/t0$b;->a:Lcom/my/tracker/obfuscated/j0$c;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/j0$a;->a()Z
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/j0$a;->a()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public close()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/t0$b;->a:Lcom/my/tracker/obfuscated/j0$c;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/t0$b;->a:Lcom/my/tracker/obfuscated/j0$c;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/j0$a;->close()V
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/j0$a;->close()V
 
     return-void
 .end method
@@ -59,9 +59,9 @@
 .method public k()J
     .locals 2
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/t0$b;->a:Lcom/my/tracker/obfuscated/j0$c;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/t0$b;->a:Lcom/my/tracker/obfuscated/j0$c;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/j0$c;->k()J
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/j0$c;->k()J
 
     move-result-wide v0
 

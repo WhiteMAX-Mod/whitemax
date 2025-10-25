@@ -1,84 +1,162 @@
-.class public abstract Lq8a;
-.super Ljava/lang/Object;
+.class public final Lq8a;
+.super Lza9;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lwd3;
+.field public R0:Lqn6;
+
+.field public S0:Lyxe;
 
 
-# direct methods
-.method public constructor <init>(Lwd3;)V
-    .locals 0
+# virtual methods
+.method public final M(Lone/me/messages/list/loader/MessageModel;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p1, Lone/me/messages/list/loader/MessageModel;->s0:Lsz;
 
-    iput-object p1, p0, Lq8a;->a:Lwd3;
+    iget-object p1, p1, Lsz;->b:Lt00;
+
+    instance-of v0, p1, Lqn6;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lqn6;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p1, v1
+
+    :goto_0
+    if-nez p1, :cond_1
+
+    return-void
+
+    :cond_1
+    iput-object p1, p0, Lq8a;->R0:Lqn6;
+
+    iget-object v0, p0, Lza9;->G0:Landroid/view/ViewGroup;
+
+    check-cast v0, Lp8a;
+
+    invoke-virtual {v0, p1}, Lp8a;->a(Lqn6;)V
+
+    iget-object v2, p0, Lq8a;->S0:Lyxe;
+
+    if-eqz v2, :cond_2
+
+    new-instance v1, Lla;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v1, p0, v2, p1}, Lla;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lt76;
+
+    const/16 v2, 0x17
+
+    invoke-direct {p1, v2, v1}, Lt76;-><init>(ILjava/lang/Object;)V
+
+    move-object v1, p1
+
+    :cond_2
+    invoke-virtual {v0, v1}, Lp8a;->setExternalMapButtonClickListener(Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget v1, Lmya;->Z0:I
+
+    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lp8a;->setExternalMapButtonText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
+.method public final N(Lvt0;)V
+    .locals 4
 
-# virtual methods
-.method public abstract a()Lwk;
-.end method
+    iget-object v0, p0, Lq8a;->R0:Lqn6;
 
-.method public abstract b()Lr8a;
-.end method
+    iget-object v1, p0, Lza9;->G0:Landroid/view/ViewGroup;
 
-.method public abstract c()Lk1d;
-.end method
+    if-eqz v0, :cond_0
 
-.method public final d()Lwd3;
-    .locals 2
+    move-object v2, v1
 
-    new-instance v0, Lwd3;
+    check-cast v2, Lp8a;
 
-    invoke-direct {v0}, Lwd3;-><init>()V
+    invoke-virtual {v2, v0}, Lp8a;->a(Lqn6;)V
 
-    iget-object p0, p0, Lq8a;->a:Lwd3;
+    :cond_0
+    check-cast v1, Lp8a;
 
-    iget-object v1, p0, Lwd3;->a:Ljava/lang/Object;
+    iget-object v0, v1, Lp8a;->D0:Lxc4;
 
-    check-cast v1, Lsh3;
+    iget-object v2, p1, Lvt0;->d:Lyt0;
 
-    iput-object v1, v0, Lwd3;->a:Ljava/lang/Object;
+    iget v3, v2, Lyt0;->m:I
 
-    iget-object v1, p0, Lwd3;->o:Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lxc4;->setTextColor$message_list_release(I)V
 
-    check-cast v1, Ljl;
+    invoke-virtual {v0, v3}, Lxc4;->setDateViewStatusColor(I)V
 
-    iput-object v1, v0, Lwd3;->o:Ljava/lang/Object;
+    iget-object v0, v1, Lp8a;->B0:Lcqa;
 
-    iget-object v1, p0, Lwd3;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Lg8f;
+    iget v1, v2, Lyt0;->i:I
 
-    iput-object v1, v0, Lwd3;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v1, p0, Lwd3;->c:Ljava/lang/Object;
+    iget-object v1, v0, Lcqa;->b:Ljava/lang/Object;
 
-    check-cast v1, Ljavax/inject/Provider;
+    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
 
-    iput-object v1, v0, Lwd3;->c:Ljava/lang/Object;
+    iget-object v2, p1, Lvt0;->a:Lot0;
 
-    iget-object v1, p0, Lwd3;->Z:Ljava/lang/Object;
+    iget v2, v2, Lot0;->m:I
 
-    check-cast v1, Lql;
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    iput-object v1, v0, Lwd3;->Z:Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    iget-object v1, p0, Lwd3;->Y:Ljava/lang/Object;
+    int-to-float v2, v2
 
-    check-cast v1, Lul;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    iput-object v1, v0, Lwd3;->Y:Ljava/lang/Object;
+    move-result-object v3
 
-    iget-object p0, p0, Lwd3;->X:Ljava/lang/Object;
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    check-cast p0, Lfo8;
+    move-result-object v3
 
-    iput-object p0, v0, Lwd3;->X:Ljava/lang/Object;
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    return-object v0
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lfhi;->b(F)I
+
+    move-result v2
+
+    iget-object p1, p1, Lvt0;->c:Lxt0;
+
+    iget p1, p1, Lxt0;->b:I
+
+    invoke-virtual {v1, v2, p1}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
 .end method

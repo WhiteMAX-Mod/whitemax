@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
-.super Lj29;
+.super Lee9;
 .source "SourceFile"
 
 
@@ -32,7 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lj29;-><init>()V
+    invoke-direct {p0}, Lee9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->clear()Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
 
@@ -46,7 +46,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lla7;->b:Ljava/lang/Object;
+    sget-object v0, Lij7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -88,7 +88,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Lq63;)Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
+.method public static parseFrom(Loa3;)Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -101,7 +101,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->mergeFrom(Lq63;)Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->mergeFrom(Loa3;)Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
 
     move-result-object p0
 
@@ -121,7 +121,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;-><init>()V
 
-    invoke-static {v0, p0}, Lj29;->mergeFrom(Lj29;[B)Lj29;
+    invoke-static {v0, p0}, Lee9;->mergeFrom(Lee9;[B)Lee9;
 
     move-result-object p0
 
@@ -143,7 +143,7 @@
 
     iput-object v1, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->description:Ljava/lang/String;
 
-    sget-object v1, Lxnd;->j:[J
+    sget-object v1, Lzbi;->b:[J
 
     iput-object v1, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->admins:[J
 
@@ -151,13 +151,13 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lj29;->cachedSize:I
+    iput v0, p0, Lee9;->cachedSize:I
 
     return-object p0
 .end method
 
 .method public computeSerializedSize()I
-    .locals 5
+    .locals 6
 
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->membersCount:I
 
@@ -167,7 +167,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v2, v0}, Lr63;->f(II)I
+    invoke-static {v2, v0}, Lpa3;->f(II)I
 
     move-result v0
 
@@ -191,7 +191,7 @@
 
     iget-object v3, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->description:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lr63;->l(ILjava/lang/String;)I
+    invoke-static {v2, v3}, Lpa3;->l(ILjava/lang/String;)I
 
     move-result v2
 
@@ -215,9 +215,9 @@
 
     if-ge v1, v4, :cond_2
 
-    aget-wide v3, v3, v1
+    aget-wide v4, v3, v1
 
-    invoke-static {v3, v4}, Lr63;->k(J)I
+    invoke-static {v4, v5}, Lpa3;->k(J)I
 
     move-result v3
 
@@ -235,25 +235,25 @@
     add-int/2addr v0, v1
 
     :cond_3
-    iget-boolean p0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->signAdmin:Z
+    iget-boolean v1, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->signAdmin:Z
 
-    if-eqz p0, :cond_4
+    if-eqz v1, :cond_4
 
-    const/4 p0, 0x4
+    const/4 v1, 0x4
 
-    invoke-static {p0}, Lr63;->a(I)I
+    invoke-static {v1}, Lpa3;->a(I)I
 
-    move-result p0
+    move-result v1
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    return p0
+    return v1
 
     :cond_4
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Lq63;)Lj29;
+.method public bridge synthetic mergeFrom(Loa3;)Lee9;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -262,14 +262,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->mergeFrom(Lq63;)Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->mergeFrom(Loa3;)Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public mergeFrom(Lq63;)Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
+.method public mergeFrom(Loa3;)Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -280,7 +280,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Lq63;->s()I
+    invoke-virtual {p1}, Loa3;->s()I
 
     move-result v0
 
@@ -309,7 +309,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Lq63;->u(I)Z
+    invoke-virtual {p1, v0}, Loa3;->u(I)Z
 
     move-result v0
 
@@ -319,7 +319,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Lq63;->f()Z
+    invoke-virtual {p1}, Loa3;->f()Z
 
     move-result v0
 
@@ -329,17 +329,17 @@
 
     .line 5
     :cond_2
-    invoke-virtual {p1}, Lq63;->p()I
+    invoke-virtual {p1}, Loa3;->p()I
 
     move-result v0
 
     .line 6
-    invoke-virtual {p1, v0}, Lq63;->e(I)I
+    invoke-virtual {p1, v0}, Loa3;->e(I)I
 
     move-result v0
 
     .line 7
-    invoke-virtual {p1}, Lq63;->c()I
+    invoke-virtual {p1}, Loa3;->c()I
 
     move-result v1
 
@@ -347,14 +347,14 @@
 
     .line 8
     :goto_1
-    invoke-virtual {p1}, Lq63;->b()I
+    invoke-virtual {p1}, Loa3;->b()I
 
     move-result v4
 
     if-lez v4, :cond_3
 
     .line 9
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     add-int/lit8 v3, v3, 0x1
 
@@ -362,7 +362,7 @@
 
     .line 10
     :cond_3
-    invoke-virtual {p1, v1}, Lq63;->t(I)V
+    invoke-virtual {p1, v1}, Loa3;->t(I)V
 
     .line 11
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->admins:[J
@@ -392,7 +392,7 @@
     if-ge v4, v3, :cond_6
 
     .line 14
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     move-result-wide v1
 
@@ -408,13 +408,13 @@
     iput-object v5, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->admins:[J
 
     .line 17
-    invoke-virtual {p1, v0}, Lq63;->d(I)V
+    invoke-virtual {p1, v0}, Loa3;->d(I)V
 
     goto :goto_0
 
     .line 18
     :cond_7
-    invoke-static {p1, v1}, Lxnd;->F(Lq63;I)I
+    invoke-static {p1, v1}, Lzbi;->c(Loa3;I)I
 
     move-result v0
 
@@ -448,7 +448,7 @@
     if-ge v3, v1, :cond_a
 
     .line 22
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     move-result-wide v1
 
@@ -456,7 +456,7 @@
     aput-wide v1, v4, v3
 
     .line 24
-    invoke-virtual {p1}, Lq63;->s()I
+    invoke-virtual {p1}, Loa3;->s()I
 
     add-int/lit8 v3, v3, 0x1
 
@@ -464,7 +464,7 @@
 
     .line 25
     :cond_a
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     move-result-wide v0
 
@@ -478,7 +478,7 @@
 
     .line 28
     :cond_b
-    invoke-virtual {p1}, Lq63;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Loa3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -488,7 +488,7 @@
 
     .line 29
     :cond_c
-    invoke-virtual {p1}, Lq63;->p()I
+    invoke-virtual {p1}, Loa3;->p()I
 
     move-result v0
 
@@ -502,7 +502,7 @@
     return-object p0
 .end method
 
-.method public writeTo(Lr63;)V
+.method public writeTo(Lpa3;)V
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -516,7 +516,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v1, v0}, Lr63;->w(II)V
+    invoke-virtual {p1, v1, v0}, Lpa3;->w(II)V
 
     :cond_0
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->description:Ljava/lang/String;
@@ -533,7 +533,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->description:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lr63;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lpa3;->E(ILjava/lang/String;)V
 
     :cond_1
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->admins:[J
@@ -557,20 +557,20 @@
 
     aget-wide v3, v1, v0
 
-    invoke-virtual {p1, v2, v3, v4}, Lr63;->x(IJ)V
+    invoke-virtual {p1, v2, v3, v4}, Lpa3;->x(IJ)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_2
-    iget-boolean p0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->signAdmin:Z
+    iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->signAdmin:Z
 
-    if-eqz p0, :cond_3
+    if-eqz v0, :cond_3
 
-    const/4 v0, 0x4
+    const/4 v1, 0x4
 
-    invoke-virtual {p1, v0, p0}, Lr63;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lpa3;->r(IZ)V
 
     :cond_3
     return-void

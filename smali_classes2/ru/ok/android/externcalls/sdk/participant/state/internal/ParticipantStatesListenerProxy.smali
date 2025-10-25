@@ -28,7 +28,7 @@
         "(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;Landroid/os/Handler;)V",
         "Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;",
         "event",
-        "Lylf;",
+        "Lccg;",
         "accumulate",
         "(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;)V",
         "merge",
@@ -131,7 +131,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy$Companion;-><init>(Lld4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->Companion:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy$Companion;
 
@@ -163,11 +163,11 @@
 
     iput-boolean p1, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->scheduleNextRaise:Z
 
-    new-instance p1, Ls36;
+    new-instance p1, Lrta;
 
-    const/16 p2, 0x1c
+    const/4 p2, 0x1
 
-    invoke-direct {p1, p2, p0}, Ls36;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Lrta;-><init>(ILjava/lang/Object;)V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->raiseRunnable:Ljava/lang/Runnable;
 
@@ -277,15 +277,15 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lq73;->B0(Ljava/lang/Iterable;)Ljava/util/List;
+    invoke-static {v1}, Lnb3;->Y(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;-><init>(Ljava/util/Collection;)V
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->accumulator:Ljava/util/HashMap;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->accumulator:Ljava/util/HashMap;
 
-    invoke-virtual {p0}, Ljava/util/HashMap;->clear()V
+    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
     return-object v0
 .end method
@@ -368,9 +368,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
     return-void
@@ -416,34 +416,34 @@
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->mainThreadHandler:Landroid/os/Handler;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->raiseRunnable:Ljava/lang/Runnable;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->raiseRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v0, 0xa
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     :cond_1
     return-void
 .end method
 
 .method public final release()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->mainThreadHandler:Landroid/os/Handler;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->raiseRunnable:Ljava/lang/Runnable;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->raiseRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
 .method public final removeListener(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method

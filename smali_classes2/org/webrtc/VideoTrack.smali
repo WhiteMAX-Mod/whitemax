@@ -83,21 +83,21 @@
 
     invoke-virtual {p0}, Lorg/webrtc/MediaStreamTrack;->getNativeMediaStreamTrack()J
 
-    move-result-wide p0
+    move-result-wide v2
 
-    invoke-static {p0, p1, v0, v1}, Lorg/webrtc/VideoTrack;->nativeAddSink(JJ)V
+    invoke-static {v2, v3, v0, v1}, Lorg/webrtc/VideoTrack;->nativeAddSink(JJ)V
 
     :cond_0
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "The VideoSink is not allowed to be null"
+    const-string v0, "The VideoSink is not allowed to be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public dispose()V
@@ -185,9 +185,9 @@
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    invoke-static {p0, p1}, Lorg/webrtc/VideoTrack;->nativeFreeSink(J)V
+    invoke-static {v0, v1}, Lorg/webrtc/VideoTrack;->nativeFreeSink(J)V
 
     :cond_0
     return-void
@@ -202,9 +202,9 @@
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result p0
+    move-result p1
 
-    invoke-static {v0, v1, p0}, Lorg/webrtc/VideoTrack;->nativeSetContentHint(JI)V
+    invoke-static {v0, v1, p1}, Lorg/webrtc/VideoTrack;->nativeSetContentHint(JI)V
 
     return-void
 .end method

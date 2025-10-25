@@ -30,12 +30,12 @@
 .end method
 
 .method private getAddress()[B
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "IPAddress"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/NetworkChangeDetector$IPAddress;->address:[B
+    iget-object v0, p0, Lorg/webrtc/NetworkChangeDetector$IPAddress;->address:[B
 
-    return-object p0
+    return-object v0
 .end method

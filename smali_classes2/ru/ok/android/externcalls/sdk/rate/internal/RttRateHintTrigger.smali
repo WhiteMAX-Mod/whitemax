@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldj1;
+.implements Lru/ok/android/externcalls/sdk/rate/internal/HintTrigger;
 
 
 # annotations
@@ -19,21 +19,21 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;",
-        "Ldj1;",
-        "Lfec;",
+        "Lru/ok/android/externcalls/sdk/rate/internal/HintTrigger;",
+        "Lfwc;",
         "log",
         "Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;",
         "config",
         "Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;",
         "collection",
         "<init>",
-        "(Lfec;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V",
-        "Lhec;",
-        "rtcStat",
-        "Lylf;",
-        "onRtcStats",
-        "(Lhec;)V",
-        "Lfec;",
+        "(Lfwc;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V",
+        "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
+        "stat",
+        "Lccg;",
+        "onNetworkStat",
+        "(Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;)V",
+        "Lfwc;",
         "Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;",
         "Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;",
         "",
@@ -70,7 +70,7 @@
 
 .field private highRttCount:I
 
-.field private final log:Lfec;
+.field private final log:Lfwc;
 
 .field private wasReported:Z
 
@@ -83,19 +83,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger$Companion;-><init>(Lld4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->Companion:Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lfec;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
+.method public constructor <init>(Lfwc;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lfec;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lfwc;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
 
@@ -106,64 +106,43 @@
 
 
 # virtual methods
-.method public onRtcStats(Lhec;)V
+.method public onNetworkStat(Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;)V
     .locals 5
 
-    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->wasReported:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    invoke-virtual {p1}, Lhec;->c()Lo12;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;->getRttMs()Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
-
-    iget-object p1, p1, Lo12;->h:Ljava/lang/String;
-
-    if-eqz p1, :cond_2
-
     const/4 v0, 0x0
 
-    :try_start_0
-    sget-object v1, Ld7d;->a:Lmpc;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v1, p1}, Lmpc;->a(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :cond_1
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    float-to-long v0, p1
 
     goto :goto_0
 
-    :cond_2
-    const-wide/16 v0, 0x0
+    :cond_0
+    move p1, v0
 
     :goto_0
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lfec;
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->wasReported:Z
+
+    if-nez v1, :cond_3
+
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
+
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;->getRttMs()Ljava/lang/Long;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lfwc;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -171,7 +150,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -179,67 +158,77 @@
 
     const-string v3, "RateManager"
 
-    invoke-interface {p1, v3, v2}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v3, v2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    int-to-long v1, p1
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;->getRttMs()J
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;->getRttMs()Ljava/lang/Long;
 
-    move-result-wide v2
+    move-result-object p1
 
-    cmp-long p1, v0, v2
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    const/4 v0, 0x1
+    move-result-wide v3
 
-    if-ltz p1, :cond_3
+    cmp-long p1, v1, v3
+
+    const/4 v1, 0x1
+
+    if-ltz p1, :cond_2
 
     iget p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->highRttCount:I
 
-    add-int/2addr p1, v0
+    add-int/2addr p1, v1
 
     iput p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->highRttCount:I
 
     goto :goto_1
 
-    :cond_3
-    const/4 p1, 0x0
-
-    iput p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->highRttCount:I
+    :cond_2
+    iput v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->highRttCount:I
 
     :goto_1
     iget p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->highRttCount:I
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;->getHighRttCount()I
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;->getHighRttCount()I
 
-    move-result v1
+    move-result v0
 
-    if-lt p1, v1, :cond_4
+    if-lt p1, v0, :cond_3
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->collection:Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;
 
-    new-instance v1, Lru/ok/android/externcalls/sdk/rate/RateHint;
+    new-instance v0, Lru/ok/android/externcalls/sdk/rate/RateHint;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;->getRttMs()J
-
-    move-result-wide v2
-
-    const-string v4, "rtt_"
-
-    invoke-static {v2, v3, v4}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;->getRttMs()Ljava/lang/Long;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lru/ok/android/externcalls/sdk/rate/RateHint;-><init>(Ljava/lang/String;)V
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-interface {p1, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;->addRateHint(Lru/ok/android/externcalls/sdk/rate/RateHint;)V
+    const-string v4, "rtt_"
 
-    iput-boolean v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->wasReported:Z
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_4
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Lru/ok/android/externcalls/sdk/rate/RateHint;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p1, v0}, Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;->addRateHint(Lru/ok/android/externcalls/sdk/rate/RateHint;)V
+
+    iput-boolean v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->wasReported:Z
+
+    :cond_3
     :goto_2
     return-void
 .end method

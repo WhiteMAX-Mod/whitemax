@@ -3,33 +3,29 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:[B
+# static fields
+.field public static final a:Lccg;
 
 
 # direct methods
-.method public synthetic constructor <init>(IIIII[B)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lccg;->a:I
+    new-instance v0, Lccg;
 
-    iput p3, p0, Lccg;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p4, p0, Lccg;->c:I
-
-    iput p5, p0, Lccg;->d:I
-
-    iput-object p6, p0, Lccg;->e:[B
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lccg;->a:Lccg;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "kotlin.Unit"
+
+    return-object v0
 .end method

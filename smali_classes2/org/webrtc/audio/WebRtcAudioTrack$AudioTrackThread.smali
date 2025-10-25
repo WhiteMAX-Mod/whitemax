@@ -195,7 +195,11 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/ByteBuffer;
+    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/nio/ByteBuffer;
 
     iget-object v5, p0, Lorg/webrtc/audio/WebRtcAudioTrack$AudioTrackThread;->this$0:Lorg/webrtc/audio/WebRtcAudioTrack;
 
@@ -217,7 +221,11 @@
 
     move-result-object v5
 
-    invoke-virtual {v5, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v5, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/nio/ByteBuffer;
 
     :cond_3
     sget-boolean v5, Lorg/webrtc/audio/WebRtcAudioTrack;->TRACK_LATEINIT:Z
@@ -424,7 +432,11 @@
 
     iget-object v5, p0, Lorg/webrtc/audio/WebRtcAudioTrack$AudioTrackThread;->aggregatedByteBuffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/ByteBuffer;
+    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/nio/ByteBuffer;
 
     iget-object v5, p0, Lorg/webrtc/audio/WebRtcAudioTrack$AudioTrackThread;->this$0:Lorg/webrtc/audio/WebRtcAudioTrack;
 
@@ -442,7 +454,11 @@
 
     iget-object v5, p0, Lorg/webrtc/audio/WebRtcAudioTrack$AudioTrackThread;->aggregatedByteBuffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/ByteBuffer;
+    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/nio/ByteBuffer;
 
     :cond_8
     :goto_6
@@ -452,7 +468,11 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/ByteBuffer;
+    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/nio/ByteBuffer;
 
     goto/16 :goto_2
 

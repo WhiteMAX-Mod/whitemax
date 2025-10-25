@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lfg4;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lrwa;
+.field public final synthetic b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrwa;I)V
+.method public synthetic constructor <init>(JI)V
     .locals 0
 
-    iput p2, p0, Li91;->a:I
+    iput p3, p0, Li91;->a:I
 
-    iput-object p1, p0, Li91;->b:Lrwa;
+    iput-wide p1, p0, Li91;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,151 +27,121 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
     iget v0, p0, Li91;->a:I
 
-    iget-object p0, p0, Li91;->b:Lrwa;
-
     packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
+    new-instance v0, Lone/me/webapp/settings/WebAppSettingsScreen;
 
-    check-cast p0, Landroid/content/Context;
+    iget-wide v1, p0, Li91;->b:J
 
-    sget v0, Lx3c;->ic_link_16:I
+    invoke-direct {v0, v1, v2}, Lone/me/webapp/settings/WebAppSettingsScreen;-><init>(J)V
 
-    sget v1, Lpma;->a:I
-
-    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    new-instance v1, Ly3f;
-
-    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v1
+    return-object v0
 
     :pswitch_0
-    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
+    new-instance v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    check-cast p0, Landroid/content/Context;
+    sget-object v1, Lq5f;->o:Lq5f;
 
-    sget v0, La1d;->h0:I
+    iget-wide v2, p0, Li91;->b:J
 
-    sget v1, Lpma;->a:I
+    invoke-direct {v0, v1, v2, v3}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lq5f;J)V
 
-    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    new-instance v1, Ly3f;
-
-    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v1
+    return-object v0
 
     :pswitch_1
-    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
+    new-instance v0, Lone/me/startconversation/channel/PickSubscribersScreen;
 
-    check-cast p0, Landroid/content/Context;
+    iget-wide v1, p0, Li91;->b:J
 
-    sget v0, La1d;->i0:I
+    invoke-direct {v0, v1, v2}, Lone/me/startconversation/channel/PickSubscribersScreen;-><init>(J)V
 
-    sget v1, Lpma;->a:I
-
-    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    new-instance v1, Ly3f;
-
-    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v1
+    return-object v0
 
     :pswitch_2
-    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
+    new-instance v0, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
 
-    check-cast p0, Landroid/content/Context;
+    iget-wide v1, p0, Li91;->b:J
 
-    sget v0, La1d;->X:I
+    invoke-direct {v0, v1, v2}, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;-><init>(J)V
 
-    sget v1, Lpma;->a:I
-
-    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    new-instance v1, Ly3f;
-
-    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v1
+    return-object v0
 
     :pswitch_3
-    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
+    new-instance v0, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;
 
-    check-cast p0, Landroid/content/Context;
+    iget-wide v1, p0, Li91;->b:J
 
-    sget v0, La1d;->Y:I
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;-><init>(J)V
 
-    sget v1, Lpma;->a:I
-
-    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    new-instance v1, Ly3f;
-
-    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v1
+    return-object v0
 
     :pswitch_4
-    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
+    new-instance v0, Lone/me/profile/screens/invite/ProfileInviteScreen;
 
-    check-cast p0, Landroid/content/Context;
+    iget-wide v1, p0, Li91;->b:J
 
-    sget v0, La1d;->e0:I
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/invite/ProfileInviteScreen;-><init>(J)V
 
-    sget v1, Lpma;->a:I
-
-    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    new-instance v1, Ly3f;
-
-    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v1
+    return-object v0
 
     :pswitch_5
-    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
+    new-instance v0, Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-    check-cast p0, Landroid/content/Context;
+    iget-wide v1, p0, Li91;->b:J
 
-    sget v0, La1d;->f0:I
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/media/ChatMediaTabWidget;-><init>(J)V
 
-    sget v1, Lpma;->a:I
+    return-object v0
 
-    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    :pswitch_6
+    new-instance v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    move-result-object v0
+    iget-wide v1, p0, Li91;->b:J
 
-    new-instance v1, Ly3f;
+    invoke-direct {v0, v1, v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(J)V
 
-    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    return-object v0
 
-    return-object v1
+    :pswitch_7
+    new-instance v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;
+
+    iget-wide v1, p0, Li91;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/folders/pickerfolders/FoldersPickerScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_8
+    new-instance v0, Lone/me/folders/edit/FolderEditScreen;
+
+    iget-wide v1, p0, Li91;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/folders/edit/FolderEditScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+
+    iget-wide v1, p0, Li91;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;-><init>(J)V
+
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
         :pswitch_5
         :pswitch_4
         :pswitch_3

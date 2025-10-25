@@ -1,89 +1,122 @@
 .class public final Lop7;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ldq7;
-.implements Lbq7;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lop7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public X:I
 
-.field public final b:Ljava/lang/String;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lz73;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lra7;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lra7;-><init>(I)V
-
-    sput-object v0, Lop7;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
+.method public constructor <init>(Lz73;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lop7;->Z:Lz73;
 
-    iput-object p1, p0, Lop7;->a:Landroid/net/Uri;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lop7;->b:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x0
+    check-cast p1, Lmp7;
 
-    return p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lop7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lop7;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lop7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final n()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lop7;->b:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Lgb4;
+    new-instance v0, Lop7;
 
-    iget-object v1, p0, Lop7;->a:Landroid/net/Uri;
+    iget-object v1, p0, Lop7;->Z:Lz73;
 
-    invoke-direct {v0, v1}, Lgb4;-><init>(Landroid/net/Uri;)V
+    invoke-direct {v0, v1, p2}, Lop7;-><init>(Lz73;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    iput-object p1, v0, Lop7;->Y:Ljava/lang/Object;
 
-    iget-object p0, p0, Lop7;->b:Ljava/lang/String;
+    return-object v0
+.end method
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    return-void
+    iget v0, p0, Lop7;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lop7;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lmp7;
+
+    iget-object v0, p0, Lop7;->Z:Lz73;
+
+    iget-object v0, v0, Lz73;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lmv0;
+
+    iput v1, p0, Lop7;->X:I
+
+    invoke-interface {v0, p1, p0}, Lo1e;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

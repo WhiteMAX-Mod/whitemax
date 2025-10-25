@@ -21,7 +21,7 @@
         value = {
             "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lsg1;",
+            "Lhi1;",
             ">;"
         }
     .end annotation
@@ -44,7 +44,7 @@
             "Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;",
             "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lsg1;",
+            "Lhi1;",
             ">;)V"
         }
     .end annotation
@@ -81,7 +81,7 @@
             "(",
             "Ljava/util/Map<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lsg1;",
+            "Lhi1;",
             ">;)V"
         }
     .end annotation
@@ -112,7 +112,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lsg1;
+    check-cast v1, Lhi1;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -128,13 +128,13 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    invoke-virtual {v3, v0, v1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->addMapping(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsg1;)V
+    invoke-virtual {v3, v0, v1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->addMapping(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lhi1;)V
 
     if-eqz v2, :cond_0
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;->stateModifier:Lru/ok/android/externcalls/sdk/id/InternalIdsResolver$ParticipantPrivateStateModifier;
 
-    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver$ParticipantPrivateStateModifier;->setInternalId(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lsg1;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver$ParticipantPrivateStateModifier;->setInternalId(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lhi1;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
@@ -147,7 +147,7 @@
 .end method
 
 .method private getResolutionCandidates()Ljava/util/List;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -161,37 +161,37 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v1
 
     :cond_0
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lru/ok/android/externcalls/sdk/ConversationParticipant;
-
-    invoke-static {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->getInternalIdExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lsg1;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    if-nez v2, :cond_0
+    check-cast v2, Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-static {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->getInternalIdExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lhi1;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-nez v3, :cond_0
+
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
@@ -217,9 +217,9 @@
 
     if-eqz v1, :cond_0
 
-    sget-object p0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
+    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
 
-    return-object p0
+    return-object v0
 
     :cond_0
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;->mapper:Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper;
@@ -273,34 +273,34 @@
 
 
 # virtual methods
-.method public resolveIdsAndGetFailed()Lk2e;
-    .locals 2
+.method public resolveIdsAndGetFailed()Lwpe;
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lk2e;"
+            "Lwpe;"
         }
     .end annotation
 
-    new-instance v0, Lo5;
+    new-instance v0, Lc6;
 
     const/4 v1, 0x7
 
-    invoke-direct {v0, v1, p0}, Lo5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lc6;-><init>(ILjava/lang/Object;)V
 
-    new-instance p0, Ls7a;
+    new-instance v1, Ltka;
 
-    const/4 v1, 0x4
+    const/4 v2, 0x4
 
-    invoke-direct {p0, v1, v0}, Ls7a;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Ltka;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {}, Li6d;->b()Lv5d;
+    invoke-static {}, Lkpd;->b()Lxod;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lk2e;->m(Lv5d;)Ld3e;
+    invoke-virtual {v1, v0}, Lwpe;->m(Lxod;)Lrqe;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

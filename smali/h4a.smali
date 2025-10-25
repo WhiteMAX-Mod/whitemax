@@ -1,43 +1,67 @@
-.class public abstract Lh4a;
+.class public final Lh4a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lkotlinx/coroutines/internal/Symbol;
+# instance fields
+.field public final a:I
 
-.field public static final b:Lkotlinx/coroutines/internal/Symbol;
+.field public final b:I
 
-.field public static final c:Lkotlinx/coroutines/internal/Symbol;
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:F
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:I
+
+.field public final k:I
+
+.field public final l:I
+
+.field public final m:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(IIIIIIFZZIIIZ)V
+    .locals 0
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "NULL"
+    iput p1, p0, Lh4a;->a:I
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    iput p2, p0, Lh4a;->b:I
 
-    sput-object v0, Lh4a;->a:Lkotlinx/coroutines/internal/Symbol;
+    iput p3, p0, Lh4a;->c:I
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    iput p4, p0, Lh4a;->d:I
 
-    const-string v1, "UNINITIALIZED"
+    iput p5, p0, Lh4a;->e:I
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    iput p6, p0, Lh4a;->f:I
 
-    sput-object v0, Lh4a;->b:Lkotlinx/coroutines/internal/Symbol;
+    iput p7, p0, Lh4a;->g:F
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    iput-boolean p8, p0, Lh4a;->h:Z
 
-    const-string v1, "DONE"
+    iput-boolean p9, p0, Lh4a;->i:Z
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    iput p10, p0, Lh4a;->j:I
 
-    sput-object v0, Lh4a;->c:Lkotlinx/coroutines/internal/Symbol;
+    iput p11, p0, Lh4a;->k:I
+
+    iput p12, p0, Lh4a;->l:I
+
+    iput-boolean p13, p0, Lh4a;->m:Z
 
     return-void
 .end method

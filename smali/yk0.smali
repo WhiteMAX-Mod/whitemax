@@ -1,25 +1,34 @@
-.class public final Lyk0;
+.class public final synthetic Lyk0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnScrollChangedListener;
+
 
 # instance fields
-.field public a:I
+.field public final synthetic a:Lkse;
 
-.field public b:I
 
-.field public c:I
+# direct methods
+.method public synthetic constructor <init>(Lkse;)V
+    .locals 0
 
-.field public d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public e:I
+    iput-object p1, p0, Lyk0;->a:Lkse;
 
-.field public f:I
+    return-void
+.end method
 
-.field public g:I
 
-.field public h:Z
+# virtual methods
+.method public final onScrollChanged()V
+    .locals 1
 
-.field public i:Z
+    iget-object v0, p0, Lyk0;->a:Lkse;
 
-.field public j:I
+    invoke-virtual {v0}, Ldl0;->w()V
+
+    return-void
+.end method

@@ -1,101 +1,73 @@
-.class public final Lnb1;
-.super Lub1;
+.class public final enum Lnb1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lhd0;
+# static fields
+.field public static final enum a:Lnb1;
+
+.field public static final enum b:Lnb1;
+
+.field public static final synthetic c:[Lnb1;
 
 
 # direct methods
-.method public constructor <init>(Lhd0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lnb1;
 
-    iput-object p1, p0, Lnb1;->a:Lhd0;
+    const-string v1, "NONE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lnb1;->a:Lnb1;
+
+    new-instance v1, Lnb1;
+
+    const-string v2, "CALL"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lnb1;->b:Lnb1;
+
+    filled-new-array {v0, v1}, [Lnb1;
+
+    move-result-object v0
+
+    sput-object v0, Lnb1;->c:[Lnb1;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lnb1;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    const-class v0, Lnb1;
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lnb1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lnb1;
-
-    iget-object p0, p0, Lnb1;->a:Lhd0;
-
-    iget-object p1, p1, Lnb1;->a:Lhd0;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lnb1;->a:Lhd0;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Lhd0;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Avatar(avatarInfo="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lnb1;->a:Lhd0;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lnb1;
+
     return-object p0
+.end method
+
+.method public static values()[Lnb1;
+    .locals 1
+
+    sget-object v0, Lnb1;->c:[Lnb1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lnb1;
+
+    return-object v0
 .end method

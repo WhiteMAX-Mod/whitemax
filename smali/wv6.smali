@@ -1,17 +1,42 @@
-.class public final Lwv6;
-.super Lxv6;
+.class public final synthetic Lwv6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lyv4;
+
+
+# instance fields
+.field public final synthetic a:Lxv6;
+
+.field public final synthetic b:Ljava/lang/Runnable;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lxv6;Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwv6;->a:Lxv6;
+
+    iput-object p2, p0, Lwv6;->b:Ljava/lang/Runnable;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(Llw6;)V
-    .locals 1
+.method public final dispose()V
+    .locals 2
 
-    const/16 p0, 0x8
+    iget-object v0, p0, Lwv6;->b:Ljava/lang/Runnable;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lwv6;->a:Lxv6;
 
-    invoke-virtual {p1, p0, v0}, Llw6;->c(ILjava/io/IOException;)V
+    iget-object v1, v1, Lxv6;->a:Landroid/os/Handler;
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     return-void
 .end method

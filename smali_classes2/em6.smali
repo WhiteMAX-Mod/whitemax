@@ -1,111 +1,51 @@
-.class public final Lem6;
+.class public final synthetic Lem6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
+.field public final synthetic a:Lan6;
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public synthetic constructor <init>(Lan6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lem6;->a:I
-
-    iput p2, p0, Lem6;->b:I
+    iput-object p1, p0, Lem6;->a:Lan6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Lm0e;)V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v1, "got toggle state "
 
-    :cond_0
-    instance-of v0, p1, Lem6;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_1
-    check-cast p1, Lem6;
+    move-result-object v0
 
-    iget v0, p0, Lem6;->a:I
+    const-string v1, "an6"
 
-    iget v1, p1, Lem6;->a:I
+    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eq v0, v1, :cond_2
+    iget-object v0, p0, Lem6;->a:Lan6;
 
-    goto :goto_0
+    iget-object v0, v0, Lan6;->M0:Lx0f;
 
-    :cond_2
-    iget p0, p0, Lem6;->b:I
+    const/4 v1, 0x0
 
-    iget p1, p1, Lem6;->b:I
+    invoke-virtual {v0, v1, p1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eq p0, p1, :cond_3
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lem6;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget p0, p0, Lem6;->b:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, ", transparent="
-
-    const-string v1, ")"
-
-    const-string v2, "GradientsLoadingIconContrastColors(filled="
-
-    iget v3, p0, Lem6;->a:I
-
-    iget p0, p0, Lem6;->b:I
-
-    invoke-static {v2, v3, v0, p0, v1}, Lsg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

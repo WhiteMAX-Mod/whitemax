@@ -1,120 +1,62 @@
-.class public final Lwn3;
-.super Lure;
+.class public final synthetic Lwn3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Landroid/text/InputFilter;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lxn3;
-
-.field public final synthetic Z:Ljava/lang/String;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lxn3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lwn3;->Y:Lxn3;
+    iput p1, p0, Lwn3;->a:I
 
-    iput-object p2, p0, Lwn3;->Z:Ljava/lang/String;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
     .locals 0
 
-    check-cast p1, Ly04;
+    iget p2, p0, Lwn3;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string p3, ""
 
-    invoke-virtual {p0, p1, p2}, Lwn3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch p2, :pswitch_data_0
 
-    move-result-object p0
+    sget-object p1, Lgd9;->P0:[Ltr7;
 
-    check-cast p0, Lwn3;
+    return-object p3
 
-    sget-object p1, Lylf;->a:Lylf;
+    :pswitch_0
+    sget-object p2, Lxn3;->b:Lc8d;
 
-    invoke-virtual {p0, p1}, Lwn3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Lc8d;->a(Ljava/lang/CharSequence;)Z
 
-    move-result-object p0
+    move-result p2
 
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lwn3;
-
-    iget-object v0, p0, Lwn3;->Y:Lxn3;
-
-    iget-object p0, p0, Lwn3;->Z:Ljava/lang/String;
-
-    invoke-direct {p1, v0, p0, p2}, Lwn3;-><init>(Lxn3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lwn3;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    if-eqz p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    move-object p1, p3
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lwn3;->Y:Lxn3;
-
-    iget-object p1, p1, Lxn3;->n:Lnxd;
-
-    iput v1, p0, Lwn3;->X:I
-
-    iget-object v0, p0, Lwn3;->Z:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, p0}, Lnxd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
+    :goto_0
     return-object p1
 
-    :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    nop
 
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

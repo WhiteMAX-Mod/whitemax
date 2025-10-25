@@ -1,84 +1,55 @@
 .class public final Lg48;
-.super Lure;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic X:Li48;
+.field public X:Ly85;
+
+.field public Y:Lylf;
+
+.field public Z:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+
+.field public o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Li48;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lg48;->X:Li48;
+    iput-object p1, p0, Lg48;->r0:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lg48;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lg48;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lg48;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lg48;
-
-    iget-object p0, p0, Lg48;->X:Li48;
-
-    invoke-direct {p1, p0, p2}, Lg48;-><init>(Li48;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iput-object p1, p0, Lg48;->q0:Ljava/lang/Object;
 
-    iget-object p0, p0, Lg48;->X:Li48;
+    iget p1, p0, Lg48;->s0:I
 
-    iget-object p0, p0, Li48;->c:Lcl7;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    move-result-object p0
+    iput p1, p0, Lg48;->s0:I
 
-    check-cast p0, Lt1b;
+    iget-object p1, p0, Lg48;->r0:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-    const/4 p1, 0x2
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    invoke-virtual {p0, p1, v0}, Lt1b;->g(II)V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-object p1
 .end method

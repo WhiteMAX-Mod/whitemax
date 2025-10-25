@@ -1,92 +1,51 @@
 .class public final Lwhg;
-.super Lyhg;
+.super Lvpe;
 .source "SourceFile"
+
+# interfaces
+.implements Lvm7;
 
 
 # instance fields
-.field public final a:J
+.field public D0:Lw0e;
 
 
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
+# virtual methods
+.method public final A(Ly18;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Luhg;
 
-    iput-wide p1, p0, Lwhg;->a:J
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
+
+    check-cast v0, Lvhg;
+
+    iget-object v1, p1, Luhg;->b:Lthg;
+
+    invoke-virtual {v0, v1}, Lvhg;->setType(Lthg;)V
+
+    iget-object p1, p1, Luhg;->c:Ltrf;
+
+    invoke-virtual {p1, p0}, Ltrf;->a(Lvpe;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, ""
+
+    :cond_0
+    invoke-virtual {v0, p1}, Lvhg;->setTitle(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
+.method public final F()V
+    .locals 1
 
-# virtual methods
-.method public final a()J
-    .locals 2
+    const/4 v0, 0x0
 
-    iget-wide v0, p0, Lwhg;->a:J
+    iput-object v0, p0, Lwhg;->D0:Lw0e;
 
-    return-wide v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lwhg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lwhg;
-
-    iget-wide v3, p0, Lwhg;->a:J
-
-    iget-wide p0, p1, Lwhg;->a:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lwhg;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Completed(requestId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lwhg;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

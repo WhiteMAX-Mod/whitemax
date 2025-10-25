@@ -7,17 +7,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    sget v0, Lq2c;->editTextPreferenceStyle:I
+    sget v0, Lekc;->editTextPreferenceStyle:I
 
     const v1, 0x1010092
 
-    invoke-static {v0, v1, p1}, Ln2e;->k(IILandroid/content/Context;)I
+    invoke-static {v0, v1, p1}, Lt0i;->d(IILandroid/content/Context;)I
 
     move-result v0
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/DialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget-object v1, Ladc;->EditTextPreference:[I
+    sget-object v1, Lzuc;->EditTextPreference:[I
 
     const/4 v2, 0x0
 
@@ -25,7 +25,7 @@
 
     move-result-object p1
 
-    sget p2, Ladc;->EditTextPreference_useSimpleSummaryProvider:I
+    sget p2, Lzuc;->EditTextPreference_useSimpleSummaryProvider:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -37,22 +37,22 @@
 
     if-eqz p2, :cond_1
 
-    sget-object p2, Lvw9;->x0:Lvw9;
+    sget-object p2, Lgy9;->Y:Lgy9;
 
     if-nez p2, :cond_0
 
-    new-instance p2, Lvw9;
+    new-instance p2, Lgy9;
 
-    const/16 v0, 0xb
+    const/16 v0, 0x9
 
-    invoke-direct {p2, v0}, Lvw9;-><init>(I)V
+    invoke-direct {p2, v0}, Lgy9;-><init>(I)V
 
-    sput-object p2, Lvw9;->x0:Lvw9;
+    sput-object p2, Lgy9;->Y:Lgy9;
 
     :cond_0
-    sget-object p2, Lvw9;->x0:Lvw9;
+    sget-object p2, Lgy9;->Y:Lgy9;
 
-    iput-object p2, p0, Landroidx/preference/Preference;->Z:Lkgb;
+    iput-object p2, p0, Landroidx/preference/Preference;->Z:Lixb;
 
     :cond_1
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
@@ -62,12 +62,12 @@
 
 
 # virtual methods
-.method public final c(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
+.method public final d(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 0
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

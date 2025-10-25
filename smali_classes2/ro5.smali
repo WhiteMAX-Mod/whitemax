@@ -1,91 +1,84 @@
-.class public final Lro5;
-.super Laec;
+.class public final synthetic Lro5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic o:I
+.field public final synthetic a:Lso5;
+
+.field public final synthetic b:J
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lso5;JJ)V
     .locals 0
 
-    iput p1, p0, Lro5;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lro5;->a:Lso5;
 
-    invoke-direct {p0, p1}, Laec;-><init>(I)V
+    iput-wide p2, p0, Lro5;->b:J
 
-    return-void
-.end method
-
-.method private final L(Lhu0;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final M(Lhu0;)V
-    .locals 0
+    iput-wide p4, p0, Lro5;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final K(Lhu0;)V
-    .locals 0
+.method public final call()Ljava/lang/Object;
+    .locals 10
 
-    iget p0, p0, Lro5;->o:I
+    iget-object v0, p0, Lro5;->a:Lso5;
 
-    return-void
-.end method
+    iget-object v0, v0, Lso5;->a:Lll;
 
-.method public final k()J
-    .locals 2
+    check-cast v0, Lmna;
 
-    iget p0, p0, Lro5;->o:I
+    new-instance v1, Lwu;
 
-    packed-switch p0, :pswitch_data_0
+    invoke-virtual {v0}, Lmna;->x()Lpxb;
 
-    const-wide/16 v0, 0x0
+    move-result-object v2
 
-    return-wide v0
+    check-cast v2, Lrxb;
 
-    :pswitch_0
-    const-wide/16 v0, 0x0
+    iget-object v2, v2, Lrxb;->a:Ld78;
 
-    return-wide v0
+    invoke-virtual {v2}, Lntd;->k()J
 
-    nop
+    move-result-wide v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    const/4 v4, 0x5
 
-.method public final l()Lor8;
-    .locals 0
+    iget-wide v5, p0, Lro5;->b:J
 
-    iget p0, p0, Lro5;->o:I
+    iget-wide v7, p0, Lro5;->c:J
 
-    packed-switch p0, :pswitch_data_0
+    const/4 v9, -0x1
 
-    sget-object p0, Lmpf;->h:Lor8;
+    invoke-direct/range {v1 .. v9}, Lwu;-><init>(JIJJI)V
 
-    return-object p0
+    invoke-virtual {v0}, Lmna;->y()Lunf;
 
-    :pswitch_0
-    sget-object p0, Lvo5;->e:Lor8;
+    move-result-object v0
 
-    return-object p0
+    const/16 v2, 0xc
 
-    nop
+    const/4 v3, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v0, v1, v3, v2}, Lunf;->d(Lunf;Lym;ZI)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
 .end method

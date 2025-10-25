@@ -1,157 +1,131 @@
 .class public final Lykg;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lvkg;
 
-.field public final synthetic Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+.field public final b:Lzkg;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+.method public constructor <init>(Lvkg;Lzkg;)V
     .locals 0
 
-    iput-object p2, p0, Lykg;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lykg;->a:Lvkg;
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lykg;->b:Lzkg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lykg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    return v0
 
-    check-cast p0, Lykg;
+    :cond_0
+    instance-of v1, p1, Lykg;
 
-    sget-object p1, Lylf;->a:Lylf;
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1}, Lykg;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    return-object p1
-.end method
+    return v2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    :cond_1
+    check-cast p1, Lykg;
 
-    new-instance v0, Lykg;
+    iget-object v1, p0, Lykg;->a:Lvkg;
 
-    iget-object p0, p0, Lykg;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    iget-object v3, p1, Lykg;->a:Lvkg;
 
-    invoke-direct {v0, p2, p0}, Lykg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iput-object p1, v0, Lykg;->X:Ljava/lang/Object;
+    move-result v1
 
-    return-object v0
-.end method
+    if-nez v1, :cond_2
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    return v2
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    :cond_2
+    iget-object v1, p0, Lykg;->b:Lzkg;
 
-    iget-object p1, p0, Lykg;->X:Ljava/lang/Object;
+    iget-object p1, p1, Lykg;->b:Lzkg;
 
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object p0, p0, Lykg;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    if-nez p1, :cond_3
 
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lone/me/webapp/rootscreen/WebAppRootScreen;->L0:[Lxi7;
-
-    invoke-virtual {p0}, Lxx3;->getActivity()Landroid/app/Activity;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    invoke-virtual {p0, p1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
-
-    goto :goto_0
-
-    :cond_1
-    sget-object p1, Lone/me/webapp/rootscreen/WebAppRootScreen;->L0:[Lxi7;
-
-    invoke-virtual {p0}, Lxx3;->getActivity()Landroid/app/Activity;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object p1
-
-    if-nez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/high16 v0, -0x40800000    # -1.0f
-
-    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    invoke-virtual {p0, p1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+    return v2
 
     :cond_3
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    return v0
+.end method
 
-    return-object p0
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lykg;->a:Lvkg;
+
+    invoke-virtual {v0}, Lvkg;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lykg;->b:Lzkg;
+
+    iget-object v1, v1, Lzkg;->a:Lalg;
+
+    invoke-virtual {v1}, Lalg;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "VfxColors(buttonIconOverlayPlain="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lykg;->a:Lvkg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", emptyBlock="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lykg;->b:Lzkg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

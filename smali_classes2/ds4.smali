@@ -1,53 +1,21 @@
 .class public final Lds4;
-.super Ljx3;
+.super Ldq;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ld10;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-.field public o:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-.field public r0:I
+# static fields
+.field public static final a:Lds4;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Ljx3;)V
-    .locals 0
-
-    iput-object p1, p0, Lds4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lds4;->Y:Ljava/lang/Object;
+    new-instance v0, Lds4;
 
-    iget p1, p0, Lds4;->r0:I
+    invoke-direct {v0}, Ldq;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sput-object v0, Lds4;->a:Lds4;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lds4;->r0:I
-
-    iget-object p1, p0, Lds4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, v0, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->c(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Ld10;Luz8;Ljx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

@@ -1,51 +1,88 @@
 .class public final Lzv8;
-.super Ljx3;
+.super Lpd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ldw8;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ldw8;
-
-.field public o:Ldw8;
-
-.field public r0:I
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ldw8;Ljx3;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lzv8;->Z:Ldw8;
+    const/16 v0, 0x8
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
+
+    iput-object p1, p0, Lzv8;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lzv8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lzv8;
+
+    iget-object v1, p0, Lzv8;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lzv8;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Lzv8;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lzv8;->b:Ljava/lang/String;
 
-    iget p1, p0, Lzv8;->r0:I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Lzv8;->r0:I
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object p1, p0, Lzv8;->Z:Ldw8;
+    const-string v0, "PopWithPickedImage(uriString="
 
-    invoke-virtual {p1, p0}, Ldw8;->x(Ljx3;)Ljava/lang/Object;
+    const-string v1, ")"
 
-    move-result-object p0
+    iget-object v2, p0, Lzv8;->b:Ljava/lang/String;
 
-    return-object p0
+    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

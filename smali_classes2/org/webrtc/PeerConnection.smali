@@ -322,9 +322,9 @@
 
     invoke-direct {p0, v0, v1, p1}, Lorg/webrtc/PeerConnection;->nativeAddIceCandidate(Ljava/lang/String;ILjava/lang/String;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public addStream(Lorg/webrtc/MediaStream;)Z
@@ -340,18 +340,18 @@
 
     if-nez v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/PeerConnection;->localStreams:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection;->localStreams:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public addTrack(Lorg/webrtc/MediaStreamTrack;)Lorg/webrtc/RtpSender;
@@ -362,9 +362,9 @@
 
     invoke-virtual {p0, p1, v0}, Lorg/webrtc/PeerConnection;->addTrack(Lorg/webrtc/MediaStreamTrack;Ljava/util/List;)Lorg/webrtc/RtpSender;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public addTrack(Lorg/webrtc/MediaStreamTrack;Ljava/util/List;)Lorg/webrtc/RtpSender;
@@ -396,31 +396,31 @@
     if-eqz p1, :cond_0
 
     .line 3
-    iget-object p0, p0, Lorg/webrtc/PeerConnection;->senders:Ljava/util/List;
+    iget-object p2, p0, Lorg/webrtc/PeerConnection;->senders:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p1
 
     .line 4
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "C++ addTrack failed."
+    const-string p2, "C++ addTrack failed."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     .line 5
     :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p1, "No MediaStreamTrack specified in addTrack."
+    const-string p2, "No MediaStreamTrack specified in addTrack."
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public addTransceiver(Lorg/webrtc/MediaStreamTrack$MediaType;)Lorg/webrtc/RtpTransceiver;
@@ -433,9 +433,9 @@
 
     invoke-virtual {p0, p1, v0}, Lorg/webrtc/PeerConnection;->addTransceiver(Lorg/webrtc/MediaStreamTrack$MediaType;Lorg/webrtc/RtpTransceiver$RtpTransceiverInit;)Lorg/webrtc/RtpTransceiver;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public addTransceiver(Lorg/webrtc/MediaStreamTrack$MediaType;Lorg/webrtc/RtpTransceiver$RtpTransceiverInit;)Lorg/webrtc/RtpTransceiver;
@@ -459,31 +459,31 @@
     if-eqz p1, :cond_1
 
     .line 10
-    iget-object p0, p0, Lorg/webrtc/PeerConnection;->transceivers:Ljava/util/List;
+    iget-object p2, p0, Lorg/webrtc/PeerConnection;->transceivers:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p1
 
     .line 11
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "C++ addTransceiver failed."
+    const-string p2, "C++ addTransceiver failed."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     .line 12
     :cond_2
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p1, "No MediaType specified for addTransceiver."
+    const-string p2, "No MediaType specified for addTransceiver."
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public addTransceiver(Lorg/webrtc/MediaStreamTrack;)Lorg/webrtc/RtpTransceiver;
@@ -496,9 +496,9 @@
 
     invoke-virtual {p0, p1, v0}, Lorg/webrtc/PeerConnection;->addTransceiver(Lorg/webrtc/MediaStreamTrack;Lorg/webrtc/RtpTransceiver$RtpTransceiverInit;)Lorg/webrtc/RtpTransceiver;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public addTransceiver(Lorg/webrtc/MediaStreamTrack;Lorg/webrtc/RtpTransceiver$RtpTransceiverInit;)Lorg/webrtc/RtpTransceiver;
@@ -526,31 +526,31 @@
     if-eqz p1, :cond_1
 
     .line 4
-    iget-object p0, p0, Lorg/webrtc/PeerConnection;->transceivers:Ljava/util/List;
+    iget-object p2, p0, Lorg/webrtc/PeerConnection;->transceivers:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p1
 
     .line 5
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "C++ addTransceiver failed."
+    const-string p2, "C++ addTransceiver failed."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     .line 6
     :cond_2
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p1, "No MediaStreamTrack specified for addTransceiver."
+    const-string p2, "No MediaStreamTrack specified for addTransceiver."
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public close()V
@@ -562,13 +562,13 @@
 .end method
 
 .method public connectionState()Lorg/webrtc/PeerConnection$PeerConnectionState;
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lorg/webrtc/PeerConnection;->nativeConnectionState()Lorg/webrtc/PeerConnection$PeerConnectionState;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createAnswer(Lorg/webrtc/SdpObserver;Lorg/webrtc/MediaConstraints;)V
@@ -584,9 +584,9 @@
 
     invoke-direct {p0, p1, p2}, Lorg/webrtc/PeerConnection;->nativeCreateDataChannel(Ljava/lang/String;Lorg/webrtc/DataChannel$Init;)Lorg/webrtc/DataChannel;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public createOffer(Lorg/webrtc/SdpObserver;Lorg/webrtc/MediaConstraints;)V
@@ -606,9 +606,9 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection;->senders:Ljava/util/List;
+    iget-object p2, p0, Lorg/webrtc/PeerConnection;->senders:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
     return-object p1
@@ -745,23 +745,23 @@
 .end method
 
 .method public getCertificate()Lorg/webrtc/RtcCertificatePem;
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lorg/webrtc/PeerConnection;->nativeGetCertificate()Lorg/webrtc/RtcCertificatePem;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getLocalDescription()Lorg/webrtc/SessionDescription;
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lorg/webrtc/PeerConnection;->nativeGetLocalDescription()Lorg/webrtc/SessionDescription;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getNativeOwnedPeerConnection()J
@@ -827,19 +827,19 @@
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getRemoteDescription()Lorg/webrtc/SessionDescription;
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lorg/webrtc/PeerConnection;->nativeGetRemoteDescription()Lorg/webrtc/SessionDescription;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSenders()Ljava/util/List;
@@ -885,9 +885,9 @@
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getStats(Lorg/webrtc/RTCStatsCollectorCallback;)V
@@ -945,9 +945,9 @@
     :goto_0
     invoke-direct {p0, p1, v0, v1}, Lorg/webrtc/PeerConnection;->nativeOldGetStats(Lorg/webrtc/StatsObserver;J)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public getTransceivers()Ljava/util/List;
@@ -993,29 +993,29 @@
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public iceConnectionState()Lorg/webrtc/PeerConnection$IceConnectionState;
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lorg/webrtc/PeerConnection;->nativeIceConnectionState()Lorg/webrtc/PeerConnection$IceConnectionState;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public iceGatheringState()Lorg/webrtc/PeerConnection$IceGatheringState;
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lorg/webrtc/PeerConnection;->nativeIceGatheringState()Lorg/webrtc/PeerConnection$IceGatheringState;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public removeIceCandidates([Lorg/webrtc/IceCandidate;)Z
@@ -1023,9 +1023,9 @@
 
     invoke-direct {p0, p1}, Lorg/webrtc/PeerConnection;->nativeRemoveIceCandidates([Lorg/webrtc/IceCandidate;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public removeStream(Lorg/webrtc/MediaStream;)V
@@ -1037,9 +1037,9 @@
 
     invoke-direct {p0, v0, v1}, Lorg/webrtc/PeerConnection;->nativeRemoveLocalStream(J)V
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection;->localStreams:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection;->localStreams:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -1055,18 +1055,18 @@
 
     invoke-direct {p0, v0, v1}, Lorg/webrtc/PeerConnection;->nativeRemoveTrack(J)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p1, "No RtpSender specified for removeTrack."
+    const-string v0, "No RtpSender specified for removeTrack."
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public restartIce()V
@@ -1098,9 +1098,9 @@
 
     invoke-direct {p0, p1, p2, p3}, Lorg/webrtc/PeerConnection;->nativeSetBitrate(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public setConfiguration(Lorg/webrtc/PeerConnection$RTCConfiguration;)Z
@@ -1108,9 +1108,9 @@
 
     invoke-direct {p0, p1}, Lorg/webrtc/PeerConnection;->nativeSetConfiguration(Lorg/webrtc/PeerConnection$RTCConfiguration;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public setLocalDescription(Lorg/webrtc/SdpObserver;)V
@@ -1140,13 +1140,13 @@
 .end method
 
 .method public signalingState()Lorg/webrtc/PeerConnection$SignalingState;
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lorg/webrtc/PeerConnection;->nativeSignalingState()Lorg/webrtc/PeerConnection$SignalingState;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public startRtcEventLog(II)Z
@@ -1154,9 +1154,9 @@
 
     invoke-direct {p0, p1, p2}, Lorg/webrtc/PeerConnection;->nativeStartRtcEventLog(II)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public stopRtcEventLog()V

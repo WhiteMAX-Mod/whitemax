@@ -1,53 +1,135 @@
 .class public final Lc4;
-.super Landroid/text/style/ClickableSpan;
+.super Lgdi;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public final a(Le4;La4;La4;)Z
+    .locals 1
 
-.field public final b:Lp4;
+    monitor-enter p1
 
-.field public final c:I
+    :try_start_0
+    iget-object v0, p1, Le4;->b:La4;
 
+    if-ne v0, p2, :cond_0
 
-# direct methods
-.method public constructor <init>(ILp4;I)V
+    iput-object p3, p1, Le4;->b:La4;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final b(Le4;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Le4;->a:Ljava/lang/Object;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Le4;->a:Ljava/lang/Object;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final c(Le4;Ld4;Ld4;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Le4;->c:Ld4;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Le4;->c:Ld4;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final e(Ld4;Ld4;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
-
-    iput p1, p0, Lc4;->a:I
-
-    iput-object p2, p0, Lc4;->b:Lp4;
-
-    iput p3, p0, Lc4;->c:I
+    iput-object p2, p1, Ld4;->b:Ld4;
 
     return-void
 .end method
 
+.method public final f(Ld4;Ljava/lang/Thread;)V
+    .locals 0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    new-instance p1, Landroid/os/Bundle;
-
-    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
-
-    const-string v0, "ACCESSIBILITY_CLICKABLE_SPAN_ID"
-
-    iget v1, p0, Lc4;->a:I
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    iget v0, p0, Lc4;->c:I
-
-    iget-object p0, p0, Lc4;->b:Lp4;
-
-    iget-object p0, p0, Lp4;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p0, v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->performAction(ILandroid/os/Bundle;)Z
+    iput-object p2, p1, Ld4;->a:Ljava/lang/Thread;
 
     return-void
 .end method

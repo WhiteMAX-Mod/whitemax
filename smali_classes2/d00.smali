@@ -1,137 +1,178 @@
 .class public final Ld00;
-.super Ljava/lang/Object;
+.super Le00;
 .source "SourceFile"
-
-
-# static fields
-.field public static final j:Ld00;
 
 
 # instance fields
 .field public final a:J
 
-.field public final b:Ljava/lang/String;
+.field public final b:F
 
-.field public final c:J
-
-.field public final d:[B
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:J
-
-.field public final h:J
-
-.field public final i:I
+.field public final c:Lsrf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lc00;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Ld00;
-
-    invoke-direct {v1, v0}, Ld00;-><init>(Lc00;)V
-
-    sput-object v1, Ld00;->j:Ld00;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lc00;)V
-    .locals 2
+.method public constructor <init>(JFLsrf;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v0, p1, Lc00;->a:J
+    iput-wide p1, p0, Ld00;->a:J
 
-    iput-wide v0, p0, Ld00;->a:J
+    iput p3, p0, Ld00;->b:F
 
-    iget-object v0, p1, Lc00;->b:Ljava/lang/String;
-
-    iput-object v0, p0, Ld00;->b:Ljava/lang/String;
-
-    iget-wide v0, p1, Lc00;->c:J
-
-    iput-wide v0, p0, Ld00;->c:J
-
-    iget-object v0, p1, Lc00;->d:[B
-
-    iput-object v0, p0, Ld00;->d:[B
-
-    iget-object v0, p1, Lc00;->e:Ljava/lang/String;
-
-    iput-object v0, p0, Ld00;->e:Ljava/lang/String;
-
-    iget-object v0, p1, Lc00;->f:Ljava/lang/String;
-
-    iput-object v0, p0, Ld00;->f:Ljava/lang/String;
-
-    iget-wide v0, p1, Lc00;->g:J
-
-    iput-wide v0, p0, Ld00;->g:J
-
-    iget-wide v0, p1, Lc00;->h:J
-
-    iput-wide v0, p0, Ld00;->h:J
-
-    iget p1, p1, Lc00;->i:I
-
-    iput p1, p0, Ld00;->i:I
+    iput-object p4, p0, Ld00;->c:Lsrf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lc00;
+.method public final a()J
+    .locals 2
+
+    iget-wide v0, p0, Ld00;->a:J
+
+    return-wide v0
+.end method
+
+.method public final b()Ltrf;
+    .locals 1
+
+    iget-object v0, p0, Ld00;->c:Lsrf;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Ld00;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ld00;
+
+    iget-wide v0, p0, Ld00;->a:J
+
+    iget-wide v2, p1, Ld00;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Ld00;->b:F
+
+    iget v1, p1, Ld00;->b:F
+
+    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Ld00;->c:Lsrf;
+
+    iget-object p1, p1, Ld00;->c:Lsrf;
+
+    invoke-virtual {v0, p1}, Lsrf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
     .locals 3
 
-    new-instance v0, Lc00;
+    iget-wide v0, p0, Ld00;->a:J
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Ld00;->b:F
+
+    invoke-static {v0, v2, v1}, Lzb3;->b(IFI)I
+
+    move-result v0
+
+    iget-object v1, p0, Ld00;->c:Lsrf;
+
+    invoke-virtual {v1}, Lsrf;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Uploading(messageId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-wide v1, p0, Ld00;->a:J
 
-    iput-wide v1, v0, Lc00;->a:J
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ld00;->b:Ljava/lang/String;
+    const-string v1, ", progress="
 
-    iput-object v1, v0, Lc00;->b:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Ld00;->c:J
+    iget v1, p0, Ld00;->b:F
 
-    iput-wide v1, v0, Lc00;->c:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ld00;->d:[B
+    const-string v1, ", textSize="
 
-    iput-object v1, v0, Lc00;->d:[B
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ld00;->f:Ljava/lang/String;
+    iget-object v1, p0, Ld00;->c:Lsrf;
 
-    iput-object v1, v0, Lc00;->f:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ld00;->e:Ljava/lang/String;
+    const-string v1, ")"
 
-    iput-object v1, v0, Lc00;->e:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Ld00;->g:J
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput-wide v1, v0, Lc00;->g:J
-
-    iget-wide v1, p0, Ld00;->h:J
-
-    iput-wide v1, v0, Lc00;->h:J
-
-    iget p0, p0, Ld00;->i:I
-
-    iput p0, v0, Lc00;->i:I
+    move-result-object v0
 
     return-object v0
 .end method

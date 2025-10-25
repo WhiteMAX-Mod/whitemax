@@ -1,113 +1,94 @@
 .class public final Lch2;
-.super Ljava/lang/Object;
+.super Lpj2;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/List;
-
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-
-# direct methods
-.method public constructor <init>(Ljava/util/List;ZZIII)V
+# virtual methods
+.method public final bridge synthetic A(Ly18;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Lr49;
 
-    iput-object p1, p0, Lch2;->a:Ljava/util/List;
-
-    iput-boolean p2, p0, Lch2;->b:Z
-
-    iput-boolean p3, p0, Lch2;->c:Z
-
-    iput p4, p0, Lch2;->e:I
-
-    iput p5, p0, Lch2;->f:I
-
-    iput p6, p0, Lch2;->d:I
+    invoke-virtual {p0, p1}, Lch2;->H(Lr49;)V
 
     return-void
 .end method
 
+.method public final G(Lu49;Lli6;Lzi6;)V
+    .locals 0
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    check-cast p1, Lr49;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Lch2;->H(Lr49;)V
 
-    const-string v1, "ChatMediaResult{messages="
+    invoke-super {p0, p1, p2, p3}, Lpj2;->G(Lu49;Lli6;Lzi6;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    iget-object v1, p0, Lch2;->a:Ljava/util/List;
+.method public final H(Lr49;)V
+    .locals 5
+
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
+
+    check-cast v0, Lmj2;
+
+    iget-wide v1, p1, Lr49;->a:J
+
+    long-to-int v1, v1
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    iget-object v1, p1, Lr49;->X:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lmj2;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v1, p1, Lr49;->Z:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Lmj2;->setLink(Ljava/lang/CharSequence;)V
+
+    iget-object v1, p1, Lr49;->Y:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Lmj2;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    iget-boolean v1, p1, Lr49;->q0:Z
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    iget-object p1, v0, Lmj2;->I0:Lyoa;
 
-    move-result v1
+    iget-object v1, v0, Lmj2;->E0:Ljava/lang/Object;
 
-    goto :goto_0
+    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    new-instance v2, Lre1;
+
+    const/16 v3, 0x10
+
+    invoke-direct {v2, v3}, Lre1;-><init>(I)V
+
+    new-instance v3, Lre1;
+
+    const/16 v4, 0x11
+
+    invoke-direct {v3, v4}, Lre1;-><init>(I)V
+
+    const/4 v4, 0x6
+
+    invoke-static {p1, v1, v2, v3, v4}, Lyoa;->o(Lyoa;Landroid/graphics/drawable/Drawable;Lli6;Lli6;I)V
+
+    invoke-virtual {v0}, Lmj2;->v()V
+
+    return-void
 
     :cond_0
-    const/4 v1, 0x0
+    iget-object p1, p1, Lr49;->o:Ljava/lang/String;
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Lmj2;->setLinkPhoto(Ljava/lang/String;)V
 
-    const-string v1, ", forward="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lch2;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isNetworkLoading="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lch2;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", responseCount="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lch2;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", forwardCount="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lch2;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", backwardCount="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lch2;->f:I
-
-    const/16 v1, 0x7d
-
-    invoke-static {v0, p0, v1}, Lmw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

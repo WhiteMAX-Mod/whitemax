@@ -24,25 +24,25 @@
 
 # virtual methods
 .method public onComplete(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/NativeDumpCallback;->callback:Lorg/webrtc/DumpCallback;
+    iget-object v0, p0, Lorg/webrtc/NativeDumpCallback;->callback:Lorg/webrtc/DumpCallback;
 
-    invoke-interface {p0, p1}, Lorg/webrtc/DumpCallback;->onComplete(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lorg/webrtc/DumpCallback;->onComplete(Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public onStarted(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/NativeDumpCallback;->callback:Lorg/webrtc/DumpCallback;
+    iget-object v0, p0, Lorg/webrtc/NativeDumpCallback;->callback:Lorg/webrtc/DumpCallback;
 
-    invoke-interface {p0, p1}, Lorg/webrtc/DumpCallback;->onStarted(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lorg/webrtc/DumpCallback;->onStarted(Ljava/lang/String;)V
 
     return-void
 .end method

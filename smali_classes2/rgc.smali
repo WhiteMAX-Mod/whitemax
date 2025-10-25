@@ -3,90 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/transition/Transition$TransitionListener;
+.implements Lugc;
 
 
-# instance fields
-.field public final synthetic a:Landroid/view/View;
-
-.field public final synthetic b:Laz4;
-
-.field public final synthetic c:F
+# static fields
+.field public static final a:Lrgc;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Laz4;F)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lrgc;
 
-    iput-object p1, p0, Lrgc;->a:Landroid/view/View;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lrgc;->b:Laz4;
-
-    iput p3, p0, Lrgc;->c:F
+    sput-object v0, Lrgc;->a:Lrgc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTransitionCancel(Landroid/transition/Transition;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lrgc;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final onTransitionEnd(Landroid/transition/Transition;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    const v0, -0x4d6d233d
+
+    return v0
 .end method
 
-.method public final onTransitionPause(Landroid/transition/Transition;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-void
-.end method
+    const-string v0, "NotFound"
 
-.method public final onTransitionResume(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTransitionStart(Landroid/transition/Transition;)V
-    .locals 2
-
-    new-instance p1, Lq8e;
-
-    iget-object v0, p0, Lrgc;->a:Landroid/view/View;
-
-    iget-object v1, p0, Lrgc;->b:Laz4;
-
-    iget p0, p0, Lrgc;->c:F
-
-    invoke-direct {p1, v0, v1, p0}, Lq8e;-><init>(Ljava/lang/Object;Lqe5;F)V
-
-    const/4 v0, 0x0
-
-    iput v0, p1, Lq8e;->a:F
-
-    new-instance v0, Lr8e;
-
-    invoke-direct {v0, p0}, Lr8e;-><init>(F)V
-
-    const/high16 p0, 0x43c80000    # 400.0f
-
-    invoke-virtual {v0, p0}, Lr8e;->b(F)V
-
-    const p0, 0x3f2e147b    # 0.68f
-
-    invoke-virtual {v0, p0}, Lr8e;->a(F)V
-
-    iput-object v0, p1, Lq8e;->m:Lr8e;
-
-    invoke-virtual {p1}, Lq8e;->g()V
-
-    return-void
+    return-object v0
 .end method

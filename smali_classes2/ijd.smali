@@ -1,3 +1,3 @@
-.class public final Lijd;
-.super Loi0;
+.class public interface abstract Lijd;
+.super Ljava/lang/Object;
 .source "SourceFile"

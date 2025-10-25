@@ -1,66 +1,67 @@
-.class public final synthetic Lzwd;
+.class public interface abstract Lzwd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Laxd;
-
-
-# direct methods
-.method public synthetic constructor <init>(Laxd;I)V
-    .locals 0
-
-    iput p2, p0, Lzwd;->a:I
-
-    iput-object p1, p0, Lzwd;->b:Laxd;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Ltce;
 
 
 # virtual methods
-.method public final run()V
+.method public a()Ltrf;
     .locals 1
 
-    iget v0, p0, Lzwd;->a:I
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lzwd;->b:Laxd;
+    return-object v0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public b()Lice;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    return-object v0
+.end method
 
-    check-cast p0, Landroid/view/View;
+.method public c()Ltrf;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->performClick()Z
+    const/4 v0, 0x0
 
-    return-void
+    return-object v0
+.end method
 
-    :pswitch_0
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+.method public d()Lqce;
+    .locals 1
 
-    move-result-object p0
+    const/4 v0, 0x0
 
-    check-cast p0, Landroid/view/View;
+    return-object v0
+.end method
 
-    invoke-virtual {p0}, Landroid/view/View;->performClick()Z
+.method public e()Lsu7;
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
 
-    nop
+    return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract f()I
+.end method
+
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public getType()Lsce;
+    .locals 1
+
+    sget-object v0, Lsce;->b:Lsce;
+
+    return-object v0
 .end method

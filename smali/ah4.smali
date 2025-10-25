@@ -1,80 +1,88 @@
-.class public final Lah4;
+.class public final synthetic Lah4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ldp9;
-
-
-# static fields
-.field public static final b:Ljava/lang/String;
+.implements Lu28;
 
 
 # instance fields
-.field public final a:Laa6;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lj48;
+
+.field public final synthetic c:Lwt8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lnd;Lj48;Lwt8;)V
+    .locals 0
 
-    sget-object v0, Laa6;->f:Ljava/lang/String;
+    .line 1
+    const/4 p1, 0x1
 
-    sput-object v0, Lah4;->b:Ljava/lang/String;
+    iput p1, p0, Lah4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lah4;->b:Lj48;
+
+    iput-object p3, p0, Lah4;->c:Lwt8;
 
     return-void
 .end method
 
-.method public constructor <init>(Laa6;)V
+.method public synthetic constructor <init>(Lnd;Lj48;Lwt8;I)V
     .locals 0
+
+    .line 2
+    const/4 p1, 0x0
+
+    iput p1, p0, Lah4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lah4;->a:Laa6;
+    iput-object p2, p0, Lah4;->b:Lj48;
+
+    iput-object p3, p0, Lah4;->c:Lwt8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lye9;)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object p0, p0, Lah4;->a:Laa6;
+    iget v0, p0, Lah4;->a:I
 
-    invoke-virtual {p0, p1}, Laa6;->a(Lye9;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    iget-object v0, p0, Lah4;->c:Lwt8;
 
-.method public final b(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
-    .locals 0
+    check-cast p1, Lod;
 
-    iget-object p0, p0, Lah4;->a:Laa6;
+    iget-object v1, p0, Lah4;->b:Lj48;
 
-    invoke-virtual {p0, p1, p2, p3}, Laa6;->b(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
+    invoke-interface {p1, v1, v0}, Lod;->H(Lj48;Lwt8;)V
 
     return-void
-.end method
 
-.method public final c(Lx46;)I
-    .locals 0
+    :pswitch_0
+    check-cast p1, Lod;
 
-    iget-object p0, p0, Lah4;->a:Laa6;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, p1}, Laa6;->c(Lx46;)I
+    iget-object v0, p0, Lah4;->b:Lj48;
 
-    move-result p0
+    iget-object v1, p0, Lah4;->c:Lwt8;
 
-    return p0
-.end method
-
-.method public final close()V
-    .locals 0
-
-    iget-object p0, p0, Lah4;->a:Laa6;
-
-    invoke-virtual {p0}, Laa6;->close()V
+    invoke-interface {p1, v0, v1}, Lod;->R(Lj48;Lwt8;)V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

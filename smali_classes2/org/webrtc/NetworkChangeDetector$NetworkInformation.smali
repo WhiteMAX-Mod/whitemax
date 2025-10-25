@@ -46,14 +46,14 @@
 .end method
 
 .method private getConnectionType()Lorg/webrtc/NetworkChangeDetector$ConnectionType;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "NetworkInformation"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/NetworkChangeDetector$NetworkInformation;->type:Lorg/webrtc/NetworkChangeDetector$ConnectionType;
+    iget-object v0, p0, Lorg/webrtc/NetworkChangeDetector$NetworkInformation;->type:Lorg/webrtc/NetworkChangeDetector$ConnectionType;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private getHandle()J
@@ -68,34 +68,34 @@
 .end method
 
 .method private getIpAddresses()[Lorg/webrtc/NetworkChangeDetector$IPAddress;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "NetworkInformation"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/NetworkChangeDetector$NetworkInformation;->ipAddresses:[Lorg/webrtc/NetworkChangeDetector$IPAddress;
+    iget-object v0, p0, Lorg/webrtc/NetworkChangeDetector$NetworkInformation;->ipAddresses:[Lorg/webrtc/NetworkChangeDetector$IPAddress;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private getName()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "NetworkInformation"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/NetworkChangeDetector$NetworkInformation;->name:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/NetworkChangeDetector$NetworkInformation;->name:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private getUnderlyingConnectionTypeForVpn()Lorg/webrtc/NetworkChangeDetector$ConnectionType;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "NetworkInformation"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/NetworkChangeDetector$NetworkInformation;->underlyingTypeForVpn:Lorg/webrtc/NetworkChangeDetector$ConnectionType;
+    iget-object v0, p0, Lorg/webrtc/NetworkChangeDetector$NetworkInformation;->underlyingTypeForVpn:Lorg/webrtc/NetworkChangeDetector$ConnectionType;
 
-    return-object p0
+    return-object v0
 .end method

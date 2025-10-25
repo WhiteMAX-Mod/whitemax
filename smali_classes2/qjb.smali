@@ -1,105 +1,354 @@
-.class public abstract Lqjb;
+.class public final Lqjb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/util/List;
+
+.field public final f:Ljava/util/List;
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Ljava/lang/String;
+
+.field public i:Ljava/lang/String;
+
+
 # direct methods
-.method public static a([B)Lrjb;
-    .locals 14
+.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
+    iput p1, p0, Lqjb;->a:I
 
-    :try_start_0
-    invoke-static {v0, p0}, Lj29;->mergeFrom(Lj29;[B)Lj29;
+    iput-object p2, p0, Lqjb;->b:Ljava/lang/String;
 
-    move-result-object p0
+    iput-object p3, p0, Lqjb;->c:Ljava/lang/String;
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$Profile;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object p4, p0, Lqjb;->d:Ljava/lang/String;
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+    iput-object p5, p0, Lqjb;->e:Ljava/util/List;
 
-    if-eqz v0, :cond_0
+    iput-object p6, p0, Lqjb;->f:Ljava/util/List;
 
-    new-instance v1, Lu00;
+    iput-object p7, p0, Lqjb;->g:Ljava/lang/String;
 
-    iget v2, v0, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+    iput-object p8, p0, Lqjb;->h:Ljava/lang/String;
 
-    iget v3, v0, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+    invoke-static {p3, p4}, Lrwa;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    iget v4, v0, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+    move-result-object p1
 
-    iget v5, v0, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+    iput-object p1, p0, Lqjb;->i:Ljava/lang/String;
 
-    const/4 v6, 0x2
+    return-void
+.end method
 
-    invoke-direct/range {v1 .. v6}, Lu00;-><init>(FFFFI)V
 
-    :goto_0
-    move-object v10, v1
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 8
 
-    goto :goto_1
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
     const/4 v1, 0x0
 
-    goto :goto_0
+    if-eqz p1, :cond_c
 
-    :goto_1
-    new-instance v2, Lrjb;
+    const-class v2, Lqjb;
 
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
+    move-result-object v3
 
-    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
+    if-eq v2, v3, :cond_1
 
-    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
-
-    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
-
-    iget-object v11, p0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
-
-    iget-object v12, p0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
-
-    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
-
-    const-string v0, "PRESET_AVATAR"
-
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    const/4 p0, 0x1
-
-    :goto_2
-    move v13, p0
-
-    goto :goto_3
+    goto :goto_4
 
     :cond_1
-    const/4 p0, 0x2
+    check-cast p1, Lqjb;
+
+    iget-object v2, p1, Lqjb;->h:Ljava/lang/String;
+
+    iget-object v3, p1, Lqjb;->g:Ljava/lang/String;
+
+    iget-object v4, p1, Lqjb;->f:Ljava/util/List;
+
+    iget-object v5, p1, Lqjb;->e:Ljava/util/List;
+
+    iget-object v6, p1, Lqjb;->b:Ljava/lang/String;
+
+    iget v7, p0, Lqjb;->a:I
+
+    iget p1, p1, Lqjb;->a:I
+
+    if-eq v7, p1, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-object p1, p0, Lqjb;->b:Ljava/lang/String;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz v6, :cond_4
+
+    :goto_0
+    return v1
+
+    :cond_4
+    iget-object p1, p0, Lqjb;->e:Ljava/util/List;
+
+    if-eqz p1, :cond_5
+
+    invoke-interface {p1, v5}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    goto :goto_1
+
+    :cond_5
+    if-eqz v5, :cond_6
+
+    :goto_1
+    return v1
+
+    :cond_6
+    iget-object p1, p0, Lqjb;->f:Ljava/util/List;
+
+    if-eqz p1, :cond_7
+
+    invoke-interface {p1, v4}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
 
     goto :goto_2
 
+    :cond_7
+    if-eqz v4, :cond_8
+
+    :goto_2
+    return v1
+
+    :cond_8
+    iget-object p1, p0, Lqjb;->g:Ljava/lang/String;
+
+    if-eqz p1, :cond_9
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_a
+
+    goto :goto_3
+
+    :cond_9
+    if-eqz v3, :cond_a
+
     :goto_3
-    invoke-direct/range {v2 .. v13}, Lrjb;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLu00;Ljava/lang/String;Ljava/lang/String;I)V
+    return v1
 
-    return-object v2
+    :cond_a
+    iget-object p1, p0, Lqjb;->h:Ljava/lang/String;
 
-    :catch_0
-    move-exception v0
+    if-eqz p1, :cond_b
 
-    move-object p0, v0
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+    move-result p1
 
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    return p1
 
-    throw v0
+    :cond_b
+    if-nez v2, :cond_c
+
+    return v0
+
+    :cond_c
+    :goto_4
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lqjb;->a:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lqjb;->b:Ljava/lang/String;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lqjb;->e:Ljava/util/List;
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v2}, Ljava/util/List;->hashCode()I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v1
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lqjb;->f:Ljava/util/List;
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v2}, Ljava/util/List;->hashCode()I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_2
+    move v2, v1
+
+    :goto_2
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lqjb;->g:Ljava/lang/String;
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_3
+
+    :cond_3
+    move v2, v1
+
+    :goto_3
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lqjb;->h:Ljava/lang/String;
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :cond_4
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Phone{contactId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lqjb;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", name=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqjb;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', phones="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqjb;->e:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", serverPhones="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqjb;->f:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", avatarPath=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqjb;->g:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', email=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqjb;->h:Ljava/lang/String;
+
+    const-string v2, "\'}"
+
+    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

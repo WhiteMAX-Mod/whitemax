@@ -1,67 +1,68 @@
-.class public final Ls12;
+.class public interface abstract Ls12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final g:Ls12;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:Landroid/graphics/Typeface;
+# interfaces
+.implements Lmz1;
+.implements Lihg;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 7
+# virtual methods
+.method public a()Lq12;
+    .locals 1
 
-    new-instance v0, Ls12;
+    invoke-interface {p0}, Ls12;->n()Lq12;
 
-    const/4 v5, -0x1
+    move-result-object v0
 
-    const/4 v6, 0x0
+    return-object v0
+.end method
 
-    const/4 v1, -0x1
-
-    const/high16 v2, -0x1000000
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Ls12;-><init>(IIIIILandroid/graphics/Typeface;)V
-
-    sput-object v0, Ls12;->g:Ls12;
+.method public c(Lq02;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>(IIIIILandroid/graphics/Typeface;)V
+.method public abstract e()Lzha;
+.end method
+
+.method public abstract f()Lx02;
+.end method
+
+.method public g()Lo02;
+    .locals 1
+
+    sget-object v0, Lr02;->a:Lq02;
+
+    return-object v0
+.end method
+
+.method public i(Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput p1, p0, Ls12;->a:I
+.method public abstract j(Ljava/util/ArrayList;)V
+.end method
 
-    iput p2, p0, Ls12;->b:I
+.method public abstract k(Ljava/util/ArrayList;)V
+.end method
 
-    iput p3, p0, Ls12;->c:I
+.method public l()Z
+    .locals 1
 
-    iput p4, p0, Ls12;->d:I
+    const/4 v0, 0x1
 
-    iput p5, p0, Ls12;->e:I
+    return v0
+.end method
 
-    iput-object p6, p0, Ls12;->f:Landroid/graphics/Typeface;
+.method public m(Z)V
+    .locals 0
 
     return-void
+.end method
+
+.method public abstract n()Lq12;
 .end method

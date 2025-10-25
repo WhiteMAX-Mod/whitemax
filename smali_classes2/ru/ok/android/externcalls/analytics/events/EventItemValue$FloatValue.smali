@@ -160,53 +160,53 @@
 
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->value:F
+    iget v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->value:F
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->equals-impl(FLjava/lang/Object;)Z
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->equals-impl(FLjava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final getValue()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->value:F
+    iget v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->value:F
 
-    return p0
+    return v0
 .end method
 
 .method public hashCode()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->value:F
+    iget v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->value:F
 
-    invoke-static {p0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->hashCode-impl(F)I
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->hashCode-impl(F)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->value:F
+    iget v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->value:F
 
-    invoke-static {p0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->toString-impl(F)Ljava/lang/String;
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->toString-impl(F)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final synthetic unbox-impl()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->value:F
+    iget v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;->value:F
 
-    return p0
+    return v0
 .end method

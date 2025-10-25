@@ -38,33 +38,33 @@
 .end method
 
 .method private getStreamVolume(I)I
-    .locals 0
+    .locals 1
 
     :try_start_0
-    iget-object p0, p0, Lorg/webrtc/audio/VolumeLogger$LogVolumeTask;->this$0:Lorg/webrtc/audio/VolumeLogger;
+    iget-object v0, p0, Lorg/webrtc/audio/VolumeLogger$LogVolumeTask;->this$0:Lorg/webrtc/audio/VolumeLogger;
 
-    invoke-static {p0}, Lorg/webrtc/audio/VolumeLogger;->a(Lorg/webrtc/audio/VolumeLogger;)Landroid/media/AudioManager;
+    invoke-static {v0}, Lorg/webrtc/audio/VolumeLogger;->a(Lorg/webrtc/audio/VolumeLogger;)Landroid/media/AudioManager;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getStreamVolume(I)I
+    invoke-virtual {v0, p1}, Landroid/media/AudioManager;->getStreamVolume(I)I
 
-    move-result p0
+    move-result p1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return p0
+    return p1
 
     :catch_0
-    const/4 p0, -0x1
+    const/4 p1, -0x1
 
-    return p0
+    return p1
 .end method
 
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lorg/webrtc/audio/VolumeLogger$LogVolumeTask;->this$0:Lorg/webrtc/audio/VolumeLogger;
 
@@ -92,15 +92,15 @@
 
     move-result v0
 
-    iget p0, p0, Lorg/webrtc/audio/VolumeLogger$LogVolumeTask;->maxRingVolume:I
+    iget v1, p0, Lorg/webrtc/audio/VolumeLogger$LogVolumeTask;->maxRingVolume:I
 
-    const-string v1, "STREAM_RING stream volume: "
+    const-string v5, "STREAM_RING stream volume: "
 
-    invoke-static {v1, v0, v3, p0, v2}, Lsg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v0, v3, v1, v2}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {v4, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -115,15 +115,15 @@
 
     move-result v0
 
-    iget p0, p0, Lorg/webrtc/audio/VolumeLogger$LogVolumeTask;->maxVoiceCallVolume:I
+    iget v1, p0, Lorg/webrtc/audio/VolumeLogger$LogVolumeTask;->maxVoiceCallVolume:I
 
-    const-string v1, "VOICE_CALL stream volume: "
+    const-string v5, "VOICE_CALL stream volume: "
 
-    invoke-static {v1, v0, v3, p0, v2}, Lsg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v0, v3, v1, v2}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {v4, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return-void

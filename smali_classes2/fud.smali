@@ -1,304 +1,192 @@
 .class public final Lfud;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final h:Lfud;
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Landroid/view/View;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/CharSequence;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Z
+.field public final synthetic Z:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
-
-    new-instance v0, Lfud;
-
-    const-string v7, ""
-
-    const/4 v8, 0x0
-
-    const-wide/16 v1, -0x1
-
-    const/4 v3, 0x0
-
-    const-string v4, ""
-
-    const-string v5, ""
-
-    const-string v6, ""
-
-    invoke-direct/range {v0 .. v8}, Lfud;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    sput-object v0, Lfud;->h:Lfud;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public constructor <init>(Landroid/view/View;Lone/me/chatscreen/search/SearchMessageBottomWidget;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfud;->Y:Landroid/view/View;
 
-    iput-wide p1, p0, Lfud;->a:J
+    iput-object p2, p0, Lfud;->Z:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
-    iput-object p3, p0, Lfud;->b:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Lfud;->c:Ljava/lang/String;
-
-    iput-object p5, p0, Lfud;->d:Ljava/lang/CharSequence;
-
-    iput-object p6, p0, Lfud;->e:Ljava/lang/String;
-
-    iput-object p7, p0, Lfud;->f:Ljava/lang/String;
-
-    iput-boolean p8, p0, Lfud;->g:Z
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lsvd;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lfud;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lfud;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lfud;
 
-    iget-wide v3, p0, Lfud;->a:J
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-wide v5, p1, Lfud;->a:J
+    invoke-virtual {p1, p2}, Lfud;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lfud;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lfud;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lfud;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lfud;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lfud;->d:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Lfud;->d:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lfud;->e:Ljava/lang/String;
-
-    iget-object v3, p1, Lfud;->e:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lfud;->f:Ljava/lang/String;
-
-    iget-object v3, p1, Lfud;->f:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-boolean p0, p0, Lfud;->g:Z
-
-    iget-boolean p1, p1, Lfud;->g:Z
-
-    if-eq p0, p1, :cond_8
-
-    return v2
-
-    :cond_8
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    iget-wide v0, p0, Lfud;->a:J
+    new-instance v0, Lfud;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v1, p0, Lfud;->Y:Landroid/view/View;
 
-    move-result v0
+    iget-object v2, p0, Lfud;->Z:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
-    const/16 v1, 0x1f
+    invoke-direct {v0, v1, v2, p2}, Lfud;-><init>(Landroid/view/View;Lone/me/chatscreen/search/SearchMessageBottomWidget;Lkotlin/coroutines/Continuation;)V
 
-    mul-int/2addr v0, v1
+    iput-object p1, v0, Lfud;->X:Ljava/lang/Object;
 
-    iget-object v2, p0, Lfud;->b:Ljava/lang/String;
+    return-object v0
+.end method
 
-    if-nez v2, :cond_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    const/4 v2, 0x0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lfud;->X:Ljava/lang/Object;
+
+    check-cast p1, Lsvd;
+
+    instance-of v0, p1, Lovd;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
+    const/16 v1, 0x8
 
     :goto_0
-    add-int/2addr v0, v2
+    iget-object v2, p0, Lfud;->Y:Landroid/view/View;
 
-    mul-int/2addr v0, v1
+    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v2, p0, Lfud;->c:Ljava/lang/String;
+    instance-of v1, p1, Lpvd;
 
-    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
+    if-nez v1, :cond_4
 
-    move-result v0
+    instance-of v1, p1, Lqvd;
 
-    iget-object v2, p0, Lfud;->d:Ljava/lang/CharSequence;
+    if-eqz v1, :cond_1
 
-    invoke-static {v2, v0, v1}, Lee5;->e(Ljava/lang/CharSequence;II)I
+    goto :goto_2
 
-    move-result v0
+    :cond_1
+    if-eqz v0, :cond_3
 
-    iget-object v2, p0, Lfud;->e:Ljava/lang/String;
+    check-cast p1, Lovd;
 
-    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
+    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->q0:[Ltr7;
 
-    move-result v0
+    iget-object v0, p0, Lfud;->Z:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
-    iget-object v2, p0, Lfud;->f:Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->D0()Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
+    move-result-object v1
 
-    move-result v0
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iget-boolean p0, p0, Lfud;->g:Z
+    move-result-object v2
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget v3, p1, Lovd;->a:I
 
-    move-result p0
+    iget-boolean v4, p1, Lovd;->d:Z
 
-    add-int/2addr p0, v0
+    iget-boolean v5, p1, Lovd;->c:Z
 
-    return p0
-.end method
+    if-nez v3, :cond_2
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    sget p1, Losa;->f:I
 
-    const-string v0, "SettingsProfileDataModel(id="
+    invoke-virtual {v2, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    const-string v1, ", avatarUrl="
+    move-result-object p1
 
-    iget-wide v2, p0, Lfud;->a:J
+    goto :goto_1
 
-    iget-object v4, p0, Lfud;->b:Ljava/lang/String;
+    :cond_2
+    sget v6, Losa;->g:I
 
-    invoke-static {v0, v2, v3, v1, v4}, Lmhc;->i(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget p1, p1, Lovd;->b:I
 
-    move-result-object v0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v1, ", fullName="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v1, p0, Lfud;->c:Ljava/lang/String;
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    filled-new-array {p1, v3}, [Ljava/lang/Object;
 
-    const-string v1, ", abbreviation="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v6, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    iget-object v1, p0, Lfud;->d:Ljava/lang/CharSequence;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :goto_1
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const-string v1, ", phone="
+    iput-boolean v5, v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Y:Z
 
-    const-string v2, ", nickName="
+    invoke-virtual {v0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->F0()Landroidx/appcompat/widget/AppCompatImageView;
 
-    iget-object v3, p0, Lfud;->e:Ljava/lang/String;
+    move-result-object p1
 
-    iget-object v4, p0, Lfud;->f:Ljava/lang/String;
+    invoke-virtual {v0, p1, v5}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->H0(Landroidx/appcompat/widget/AppCompatImageView;Z)V
 
-    invoke-static {v0, v1, v3, v2, v4}, Lee5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    iput-boolean v4, v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:Z
 
-    const-string v1, ", hasEsiaConnection="
+    invoke-virtual {v0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->C0()Landroidx/appcompat/widget/AppCompatImageView;
 
-    const-string v2, ")"
+    move-result-object p1
 
-    iget-boolean p0, p0, Lfud;->g:Z
+    invoke-virtual {v0, p1, v4}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->H0(Landroidx/appcompat/widget/AppCompatImageView;Z)V
 
-    invoke-static {v0, v1, p0, v2}, Lyv7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    goto :goto_2
 
-    move-result-object p0
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    return-object p0
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    :goto_2
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

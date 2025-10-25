@@ -1,646 +1,416 @@
-.class public final synthetic Ljjb;
-.super Ljava/lang/Object;
+.class public final Ljjb;
+.super Lj2;
 .source "SourceFile"
-
-# interfaces
-.implements Lzb6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lx4g;
 
-.field public final synthetic b:Lkjb;
+.field public Y:I
+
+.field public final c:Lhjb;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkjb;I)V
-    .locals 0
+.method public constructor <init>(Lhjb;I)V
+    .locals 1
 
-    iput p2, p0, Ljjb;->a:I
+    iget v0, p1, Lhjb;->q0:I
 
-    iput-object p1, p0, Ljjb;->b:Lkjb;
+    invoke-direct {p0, p2, v0}, Lj2;-><init>(II)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljjb;->c:Lhjb;
+
+    invoke-virtual {p1}, Lhjb;->e()I
+
+    move-result p1
+
+    iput p1, p0, Ljjb;->o:I
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Ljjb;->Y:I
+
+    invoke-virtual {p0}, Ljjb;->b()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 10
+.method public final a()V
+    .locals 2
 
-    iget v0, p0, Ljjb;->a:I
+    iget v0, p0, Ljjb;->o:I
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Ljjb;->c:Lhjb;
 
-    const/4 v2, 0x1
+    invoke-virtual {v1}, Lhjb;->e()I
 
-    const/4 v3, 0x0
+    move-result v1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne v0, v1, :cond_0
 
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    invoke-static {}, Lya6;->q()Lxa6;
-
-    new-instance v0, Lp9;
-
-    iget-object p0, p0, Lkjb;->t:Lzte;
-
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ldjb;
-
-    invoke-direct {v0, p0, v2}, Lp9;-><init>(Ldjb;I)V
-
-    return-object v0
-
-    :pswitch_0
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->b:Lgjb;
-
-    new-instance v1, Lv64;
-
-    iget-object v4, v0, Lgjb;->j:Lmgb;
-
-    sget-object v5, Lvs1;->a:Lvs1;
-
-    invoke-direct {v1, v5, v4, v3}, Lv64;-><init>(Ljava/util/concurrent/Executor;Lmgb;I)V
-
-    new-instance v4, Lp9;
-
-    invoke-direct {v4, v1, v3}, Lp9;-><init>(Ldjb;I)V
-
-    iget-object v1, p0, Lkjb;->h:Ll27;
-
-    invoke-virtual {v0, v4, v2, v1}, Lgjb;->a(Ldjb;ZLl27;)Lytc;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lkjb;->g(Ldjb;)Ldjb;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->b:Lgjb;
-
-    new-instance v1, Lzv7;
-
-    iget-object v4, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v4}, Lra5;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v4
-
-    iget-object v5, v0, Lgjb;->j:Lmgb;
-
-    iget-object v6, v0, Lgjb;->c:Landroid/content/res/AssetManager;
-
-    invoke-direct {v1, v4, v5, v6, v3}, Lzv7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Ljava/lang/Object;I)V
-
-    new-instance v4, Lmw7;
-
-    iget-object v5, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v5}, Lra5;->n()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v5
-
-    iget-object v6, v0, Lgjb;->j:Lmgb;
-
-    iget-object v0, v0, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v4, v5, v6, v0}, Lmw7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;)V
-
-    new-array v0, v2, [Lm5f;
-
-    aput-object v4, v0, v3
-
-    invoke-virtual {p0, v1, v0}, Lkjb;->h(Lpw7;[Lm5f;)Ldjb;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->b:Lgjb;
-
-    new-instance v1, Lzv7;
-
-    iget-object v4, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v4}, Lra5;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v4
-
-    iget-object v5, v0, Lgjb;->j:Lmgb;
-
-    iget-object v6, v0, Lgjb;->b:Landroid/content/res/Resources;
-
-    invoke-direct {v1, v4, v5, v6, v2}, Lzv7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Ljava/lang/Object;I)V
-
-    new-instance v4, Lmw7;
-
-    iget-object v5, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v5}, Lra5;->n()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v5
-
-    iget-object v6, v0, Lgjb;->j:Lmgb;
-
-    iget-object v0, v0, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v4, v5, v6, v0}, Lmw7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;)V
-
-    new-array v0, v2, [Lm5f;
-
-    aput-object v4, v0, v3
-
-    invoke-virtual {p0, v1, v0}, Lkjb;->h(Lpw7;[Lm5f;)Ldjb;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_3
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->b:Lgjb;
-
-    new-instance v1, Lgw7;
-
-    iget-object v4, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v4}, Lra5;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v4
-
-    iget-object v5, v0, Lgjb;->j:Lmgb;
-
-    iget-object v6, v0, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v1, v4, v5, v6, v2}, Lgw7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;I)V
-
-    new-instance v4, Lmw7;
-
-    iget-object v5, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v5}, Lra5;->n()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v5
-
-    iget-object v6, v0, Lgjb;->j:Lmgb;
-
-    iget-object v0, v0, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v4, v5, v6, v0}, Lmw7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;)V
-
-    new-array v0, v2, [Lm5f;
-
-    aput-object v4, v0, v3
-
-    invoke-virtual {p0, v1, v0}, Lkjb;->h(Lpw7;[Lm5f;)Ldjb;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_4
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->b:Lgjb;
-
-    new-instance v1, Lyx7;
-
-    iget-object v2, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v2}, Lra5;->g()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v2
-
-    iget-object v0, v0, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v1, v2, v0, v3}, Lyx7;-><init>(Ljava/util/concurrent/Executor;Landroid/content/ContentResolver;I)V
-
-    invoke-virtual {p0, v1}, Lkjb;->f(Ldjb;)Ldjb;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_5
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->b:Lgjb;
-
-    new-instance v4, Lgw7;
-
-    iget-object v5, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v5}, Lra5;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v5
-
-    iget-object v6, v0, Lgjb;->j:Lmgb;
-
-    iget-object v7, v0, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v4, v5, v6, v7, v3}, Lgw7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;I)V
-
-    new-instance v5, Lhw7;
-
-    iget-object v7, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v7}, Lra5;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v8
-
-    iget-object v9, v0, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v5, v8, v6, v9}, Lhw7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;)V
-
-    new-instance v8, Lmw7;
-
-    invoke-interface {v7}, Lra5;->n()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v7
-
-    iget-object v0, v0, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v8, v7, v6, v0}, Lmw7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;)V
-
-    new-array v0, v1, [Lm5f;
-
-    aput-object v5, v0, v3
-
-    aput-object v8, v0, v2
-
-    invoke-virtual {p0, v4, v0}, Lkjb;->h(Lpw7;[Lm5f;)Ldjb;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_6
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->b:Lgjb;
-
-    new-instance v1, Lyx7;
-
-    iget-object v3, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v3}, Lra5;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v3
-
-    iget-object v0, v0, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v1, v3, v0, v2}, Lyx7;-><init>(Ljava/util/concurrent/Executor;Landroid/content/ContentResolver;I)V
-
-    invoke-virtual {p0, v1}, Lkjb;->f(Ldjb;)Ldjb;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_7
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->b:Lgjb;
-
-    new-instance v1, Lv64;
-
-    iget-object v4, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v4}, Lra5;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v4
-
-    iget-object v5, v0, Lgjb;->j:Lmgb;
-
-    invoke-direct {v1, v4, v5, v2}, Lv64;-><init>(Ljava/util/concurrent/Executor;Lmgb;I)V
-
-    new-instance v4, Lmw7;
-
-    iget-object v5, v0, Lgjb;->i:Lra5;
-
-    invoke-interface {v5}, Lra5;->n()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v5
-
-    iget-object v6, v0, Lgjb;->j:Lmgb;
-
-    iget-object v0, v0, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v4, v5, v6, v0}, Lmw7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;)V
-
-    new-array v0, v2, [Lm5f;
-
-    aput-object v4, v0, v3
-
-    invoke-virtual {p0, v1, v0}, Lkjb;->h(Lpw7;[Lm5f;)Ldjb;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_8
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->e:Lr2b;
-
-    iget-object v1, p0, Lkjb;->b:Lgjb;
-
-    invoke-static {}, Lya6;->q()Lxa6;
-
-    new-instance v2, Lgw7;
-
-    iget-object v4, v1, Lgjb;->i:Lra5;
-
-    invoke-interface {v4}, Lra5;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v4
-
-    iget-object v5, v1, Lgjb;->j:Lmgb;
-
-    iget-object v1, v1, Lgjb;->a:Landroid/content/ContentResolver;
-
-    invoke-direct {v2, v4, v5, v1, v3}, Lgw7;-><init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;I)V
-
-    invoke-virtual {p0, v2}, Lkjb;->i(Ldjb;)Ldo0;
-
-    move-result-object p0
-
-    new-instance v1, Ls4f;
-
-    invoke-direct {v1, p0, v0, v3}, Ls4f;-><init>(Ldjb;Ljava/lang/Object;I)V
-
-    return-object v1
-
-    :pswitch_9
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->e:Lr2b;
-
-    iget-object v1, p0, Lkjb;->b:Lgjb;
-
-    invoke-static {}, Lya6;->q()Lxa6;
-
-    new-instance v4, Lv64;
-
-    iget-object v5, v1, Lgjb;->i:Lra5;
-
-    invoke-interface {v5}, Lra5;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v5
-
-    iget-object v1, v1, Lgjb;->j:Lmgb;
-
-    invoke-direct {v4, v5, v1, v2}, Lv64;-><init>(Ljava/util/concurrent/Executor;Lmgb;I)V
-
-    invoke-virtual {p0, v4}, Lkjb;->i(Ldjb;)Ldo0;
-
-    move-result-object p0
-
-    new-instance v1, Ls4f;
-
-    invoke-direct {v1, p0, v0, v3}, Ls4f;-><init>(Ldjb;Ljava/lang/Object;I)V
-
-    return-object v1
-
-    :pswitch_a
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    iget-object v0, p0, Lkjb;->b:Lgjb;
-
-    invoke-static {}, Lya6;->q()Lxa6;
-
-    iget-object p0, p0, Lkjb;->t:Lzte;
-
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ldjb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lp9;
-
-    invoke-direct {v0, p0, v1}, Lp9;-><init>(Ldjb;I)V
-
-    return-object v0
-
-    :pswitch_b
-    iget-object v0, p0, Ljjb;->b:Lkjb;
-
-    iget-object p0, v0, Lkjb;->c:Ljs9;
-
-    invoke-static {}, Lya6;->q()Lxa6;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-static {}, Lya6;->q()Lxa6;
-
-    iget-object v4, v0, Lkjb;->b:Lgjb;
-
-    new-instance v5, Lop4;
-
-    iget-object v6, v4, Lgjb;->j:Lmgb;
-
-    iget-object v4, v4, Lgjb;->d:Lah6;
-
-    invoke-direct {v5, v6, v4, p0, v1}, Lop4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v5}, Lkjb;->i(Ldjb;)Ldo0;
-
-    move-result-object p0
-
-    new-instance v1, Lp9;
-
-    invoke-direct {v1, p0, v3}, Lp9;-><init>(Ldjb;I)V
-
-    iget-object p0, v0, Lkjb;->b:Lgjb;
-
-    iget-boolean v4, v0, Lkjb;->d:Z
-
-    if-eqz v4, :cond_0
-
-    iget-object v4, v0, Lkjb;->f:Lju4;
-
-    sget-object v5, Lju4;->c:Lju4;
-
-    if-eq v4, v5, :cond_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
+    return-void
 
     :cond_0
-    move v2, v3
+    new-instance v0, Ljava/util/ConcurrentModificationException;
 
-    :goto_0
-    iget-object v3, v0, Lkjb;->h:Ll27;
+    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
 
-    invoke-virtual {p0, v1, v2, v3}, Lgjb;->a(Ldjb;ZLl27;)Lytc;
+    throw v0
+.end method
 
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public final add(Ljava/lang/Object;)V
+    .locals 2
 
-    monitor-exit v0
+    invoke-virtual {p0}, Ljjb;->a()V
 
-    return-object p0
+    iget v0, p0, Lj2;->a:I
 
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v1, p0, Ljjb;->c:Lhjb;
 
-    throw p0
+    invoke-virtual {v1, v0, p1}, Lhjb;->add(ILjava/lang/Object;)V
 
-    :pswitch_c
-    iget-object p0, p0, Ljjb;->b:Lkjb;
+    iget p1, p0, Lj2;->a:I
 
-    iget-object v0, p0, Lkjb;->b:Lgjb;
+    add-int/lit8 p1, p1, 0x1
 
-    invoke-static {}, Lya6;->q()Lxa6;
+    iput p1, p0, Lj2;->a:I
 
-    iget-object p0, p0, Lkjb;->p:Lzte;
+    invoke-virtual {v1}, Lhjb;->getSize()I
 
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p0
+    iput p1, p0, Lj2;->b:I
 
-    check-cast p0, Ldjb;
+    invoke-virtual {v1}, Lhjb;->e()I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result p1
 
-    new-instance v0, Lp9;
+    iput p1, p0, Ljjb;->o:I
 
-    invoke-direct {v0, p0, v1}, Lp9;-><init>(Ldjb;I)V
+    const/4 p1, -0x1
+
+    iput p1, p0, Ljjb;->Y:I
+
+    invoke-virtual {p0}, Ljjb;->b()V
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 7
+
+    iget-object v0, p0, Ljjb;->c:Lhjb;
+
+    iget-object v1, v0, Lhjb;->Y:[Ljava/lang/Object;
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Ljjb;->X:Lx4g;
+
+    return-void
+
+    :cond_0
+    iget v2, v0, Lhjb;->q0:I
+
+    const/4 v3, 0x1
+
+    sub-int/2addr v2, v3
+
+    and-int/lit8 v2, v2, -0x20
+
+    iget v4, p0, Lj2;->a:I
+
+    if-le v4, v2, :cond_1
+
+    move v4, v2
+
+    :cond_1
+    iget v0, v0, Lhjb;->o:I
+
+    div-int/lit8 v0, v0, 0x5
+
+    add-int/2addr v0, v3
+
+    iget-object v5, p0, Ljjb;->X:Lx4g;
+
+    if-nez v5, :cond_2
+
+    new-instance v3, Lx4g;
+
+    invoke-direct {v3, v1, v4, v2, v0}, Lx4g;-><init>([Ljava/lang/Object;III)V
+
+    iput-object v3, p0, Ljjb;->X:Lx4g;
+
+    return-void
+
+    :cond_2
+    iput v4, v5, Lj2;->a:I
+
+    iput v2, v5, Lj2;->b:I
+
+    iput v0, v5, Lx4g;->c:I
+
+    iget-object v6, v5, Lx4g;->o:[Ljava/lang/Object;
+
+    array-length v6, v6
+
+    if-ge v6, v0, :cond_3
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    iput-object v0, v5, Lx4g;->o:[Ljava/lang/Object;
+
+    :cond_3
+    iget-object v0, v5, Lx4g;->o:[Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    aput-object v1, v0, v6
+
+    if-ne v4, v2, :cond_4
+
+    move v6, v3
+
+    :cond_4
+    iput-boolean v6, v5, Lx4g;->X:Z
+
+    sub-int/2addr v4, v6
+
+    invoke-virtual {v5, v4, v3}, Lx4g;->b(II)V
+
+    return-void
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 4
+
+    invoke-virtual {p0}, Ljjb;->a()V
+
+    invoke-virtual {p0}, Lj2;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget v0, p0, Lj2;->a:I
+
+    iput v0, p0, Ljjb;->Y:I
+
+    iget-object v1, p0, Ljjb;->X:Lx4g;
+
+    iget-object v2, p0, Ljjb;->c:Lhjb;
+
+    if-nez v1, :cond_0
+
+    iget-object v1, v2, Lhjb;->Z:[Ljava/lang/Object;
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Lj2;->a:I
+
+    aget-object v0, v1, v0
 
     return-object v0
 
-    :pswitch_d
-    iget-object p0, p0, Ljjb;->b:Lkjb;
+    :cond_0
+    invoke-virtual {v1}, Lj2;->hasNext()Z
 
-    iget-object v0, p0, Lkjb;->e:Lr2b;
+    move-result v0
 
-    iget-object v1, p0, Lkjb;->b:Lgjb;
+    if-eqz v0, :cond_1
 
-    invoke-static {}, Lya6;->q()Lxa6;
+    iget v0, p0, Lj2;->a:I
 
-    iget-object p0, p0, Lkjb;->r:Lzte;
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+    iput v0, p0, Lj2;->a:I
 
-    move-result-object p0
-
-    check-cast p0, Ldjb;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Ls4f;
-
-    invoke-direct {v1, p0, v0, v3}, Ls4f;-><init>(Ldjb;Ljava/lang/Object;I)V
-
-    return-object v1
-
-    :pswitch_e
-    iget-object p0, p0, Ljjb;->b:Lkjb;
-
-    invoke-static {}, Lya6;->q()Lxa6;
-
-    iget-object v0, p0, Lkjb;->r:Lzte;
-
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lx4g;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ldjb;
+    return-object v0
 
-    invoke-virtual {p0, v0}, Lkjb;->g(Ldjb;)Ldjb;
+    :cond_1
+    iget-object v0, v2, Lhjb;->Z:[Ljava/lang/Object;
 
-    move-result-object p0
+    iget v2, p0, Lj2;->a:I
 
-    return-object p0
+    add-int/lit8 v3, v2, 0x1
 
-    :pswitch_f
-    iget-object p0, p0, Ljjb;->b:Lkjb;
+    iput v3, p0, Lj2;->a:I
 
-    invoke-static {}, Lya6;->q()Lxa6;
+    iget v1, v1, Lj2;->b:I
 
-    new-instance v0, Lp9;
+    sub-int/2addr v2, v1
 
-    iget-object p0, p0, Lkjb;->u:Lzte;
-
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ldjb;
-
-    invoke-direct {v0, p0, v2}, Lp9;-><init>(Ldjb;I)V
+    aget-object v0, v0, v2
 
     return-object v0
 
-    :pswitch_10
-    iget-object p0, p0, Ljjb;->b:Lkjb;
+    :cond_2
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    invoke-static {}, Lya6;->q()Lxa6;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    new-instance v0, Lp9;
+    throw v0
+.end method
 
-    iget-object p0, p0, Lkjb;->p:Lzte;
+.method public final previous()Ljava/lang/Object;
+    .locals 4
 
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljjb;->a()V
 
-    move-result-object p0
+    invoke-virtual {p0}, Lj2;->hasPrevious()Z
 
-    check-cast p0, Ldjb;
+    move-result v0
 
-    invoke-direct {v0, p0, v2}, Lp9;-><init>(Ldjb;I)V
+    if-eqz v0, :cond_2
+
+    iget v0, p0, Lj2;->a:I
+
+    add-int/lit8 v1, v0, -0x1
+
+    iput v1, p0, Ljjb;->Y:I
+
+    iget-object v1, p0, Ljjb;->X:Lx4g;
+
+    iget-object v2, p0, Ljjb;->c:Lhjb;
+
+    if-nez v1, :cond_0
+
+    iget-object v1, v2, Lhjb;->Z:[Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lj2;->a:I
+
+    aget-object v0, v1, v0
 
     return-object v0
 
-    nop
+    :cond_0
+    iget v3, v1, Lj2;->b:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-le v0, v3, :cond_1
+
+    iget-object v1, v2, Lhjb;->Z:[Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lj2;->a:I
+
+    sub-int/2addr v0, v3
+
+    aget-object v0, v1, v0
+
+    return-object v0
+
+    :cond_1
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lj2;->a:I
+
+    invoke-virtual {v1}, Lx4g;->previous()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_2
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final remove()V
+    .locals 4
+
+    invoke-virtual {p0}, Ljjb;->a()V
+
+    iget v0, p0, Ljjb;->Y:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v2, p0, Ljjb;->c:Lhjb;
+
+    invoke-virtual {v2, v0}, Lhjb;->a(I)Ljava/lang/Object;
+
+    iget v0, p0, Ljjb;->Y:I
+
+    iget v3, p0, Lj2;->a:I
+
+    if-ge v0, v3, :cond_0
+
+    iput v0, p0, Lj2;->a:I
+
+    :cond_0
+    invoke-virtual {v2}, Lhjb;->getSize()I
+
+    move-result v0
+
+    iput v0, p0, Lj2;->b:I
+
+    invoke-virtual {v2}, Lhjb;->e()I
+
+    move-result v0
+
+    iput v0, p0, Ljjb;->o:I
+
+    iput v1, p0, Ljjb;->Y:I
+
+    invoke-virtual {p0}, Ljjb;->b()V
+
+    return-void
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 2
+
+    invoke-virtual {p0}, Ljjb;->a()V
+
+    iget v0, p0, Ljjb;->Y:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v1, p0, Ljjb;->c:Lhjb;
+
+    invoke-virtual {v1, v0, p1}, Lhjb;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1}, Lhjb;->e()I
+
+    move-result p1
+
+    iput p1, p0, Ljjb;->o:I
+
+    invoke-virtual {p0}, Ljjb;->b()V
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
 .end method

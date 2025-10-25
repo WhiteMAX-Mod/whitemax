@@ -23,36 +23,36 @@
 
 # virtual methods
 .method public newInstance(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/cookie/CookieSpec;
-    .locals 3
+    .locals 4
 
     if-eqz p1, :cond_0
 
-    new-instance p0, Lorg/apache/http/impl/cookie/BestMatchSpec;
+    new-instance v0, Lorg/apache/http/impl/cookie/BestMatchSpec;
 
-    const-string v0, "http.protocol.cookie-datepatterns"
+    const-string v1, "http.protocol.cookie-datepatterns"
 
-    invoke-interface {p1, v0}, Lorg/apache/http/params/HttpParams;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lorg/apache/http/params/HttpParams;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, [Ljava/lang/String;
+    check-cast v1, [Ljava/lang/String;
 
-    const-string v1, "http.protocol.single-cookie-header"
+    const-string v2, "http.protocol.single-cookie-header"
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-interface {p1, v1, v2}, Lorg/apache/http/params/HttpParams;->getBooleanParameter(Ljava/lang/String;Z)Z
+    invoke-interface {p1, v2, v3}, Lorg/apache/http/params/HttpParams;->getBooleanParameter(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    invoke-direct {p0, v0, p1}, Lorg/apache/http/impl/cookie/BestMatchSpec;-><init>([Ljava/lang/String;Z)V
+    invoke-direct {v0, v1, p1}, Lorg/apache/http/impl/cookie/BestMatchSpec;-><init>([Ljava/lang/String;Z)V
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    new-instance p0, Lorg/apache/http/impl/cookie/BestMatchSpec;
+    new-instance p1, Lorg/apache/http/impl/cookie/BestMatchSpec;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/cookie/BestMatchSpec;-><init>()V
+    invoke-direct {p1}, Lorg/apache/http/impl/cookie/BestMatchSpec;-><init>()V
 
-    return-object p0
+    return-object p1
 .end method

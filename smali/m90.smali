@@ -3,161 +3,181 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Ljava/util/List;
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:Ljava/lang/Integer;
+.field public final b:I
 
-.field public final c:Ll55;
+.field public final c:I
 
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:Ljava/util/Map;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Integer;Ll55;JJLjava/util/HashMap;)V
+.method static constructor <clinit>()V
+    .locals 7
+
+    const v0, 0xbb80
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const v0, 0xac44
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/16 v0, 0x5622
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/16 v0, 0x2b11
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const/16 v0, 0x1f40
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const/16 v0, 0x12c0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    filled-new-array/range {v1 .. v6}, [Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lm90;->e:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(IIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm90;->a:Ljava/lang/String;
+    iput p1, p0, Lm90;->a:I
 
-    iput-object p2, p0, Lm90;->b:Ljava/lang/Integer;
+    iput p2, p0, Lm90;->b:I
 
-    iput-object p3, p0, Lm90;->c:Ll55;
+    iput p3, p0, Lm90;->c:I
 
-    iput-wide p4, p0, Lm90;->d:J
-
-    iput-wide p6, p0, Lm90;->e:J
-
-    iput-object p8, p0, Lm90;->f:Ljava/util/Map;
+    iput p4, p0, Lm90;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
+.method public final a()I
+    .locals 5
 
-    iget-object p0, p0, Lm90;->f:Ljava/util/Map;
+    iget v0, p0, Lm90;->c:I
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-lez v0, :cond_0
 
-    move-result-object p0
+    const/4 v1, 0x1
 
-    check-cast p0, Ljava/lang/String;
-
-    if-nez p0, :cond_0
-
-    const-string p0, ""
+    goto :goto_0
 
     :cond_0
-    return-object p0
-.end method
+    const/4 v1, 0x0
 
-.method public final b(Ljava/lang/String;)I
-    .locals 0
+    :goto_0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lm90;->f:Ljava/util/Map;
+    const-string v3, "Invalid channel count: "
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    check-cast p0, Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-nez p0, :cond_0
+    move-result-object v2
 
-    const/4 p0, 0x0
+    invoke-static {v2, v1}, Ldvi;->a(Ljava/lang/String;Z)V
 
-    return p0
+    iget v1, p0, Lm90;->d:I
 
-    :cond_0
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+    const/4 v2, 0x2
 
-    move-result-object p0
+    if-eq v1, v2, :cond_5
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    const/4 v2, 0x3
 
-    move-result p0
+    if-eq v1, v2, :cond_4
 
-    return p0
-.end method
+    const/4 v3, 0x4
 
-.method public final c()Lbl3;
-    .locals 3
+    if-eq v1, v3, :cond_3
 
-    new-instance v0, Lbl3;
+    const/16 v4, 0x15
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-eq v1, v4, :cond_2
 
-    iget-object v1, p0, Lm90;->a:Ljava/lang/String;
+    const/16 v2, 0x16
 
-    if-eqz v1, :cond_1
+    if-ne v1, v2, :cond_1
 
-    iput-object v1, v0, Lbl3;->a:Ljava/lang/Object;
-
-    iget-object v1, p0, Lm90;->b:Ljava/lang/Integer;
-
-    iput-object v1, v0, Lbl3;->b:Ljava/lang/Object;
-
-    iget-object v1, p0, Lm90;->c:Ll55;
-
-    if-eqz v1, :cond_0
-
-    iput-object v1, v0, Lbl3;->c:Ljava/lang/Object;
-
-    iget-wide v1, p0, Lm90;->d:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lbl3;->o:Ljava/lang/Object;
-
-    iget-wide v1, p0, Lm90;->e:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lbl3;->X:Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/HashMap;
-
-    iget-object p0, p0, Lm90;->f:Ljava/util/Map;
-
-    invoke-direct {v1, p0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
-
-    iput-object v1, v0, Lbl3;->Y:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string v0, "Null encodedPayload"
-
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    goto :goto_1
 
     :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Null transportName"
+    const-string v2, "Invalid audio encoding: "
 
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v2}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
-    throw p0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    mul-int/2addr v0, v2
+
+    return v0
+
+    :cond_3
+    :goto_1
+    mul-int/2addr v0, v3
+
+    :cond_4
+    return v0
+
+    :cond_5
+    mul-int/2addr v0, v2
+
+    return v0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -170,88 +190,44 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
     check-cast p1, Lm90;
 
-    iget-object v1, p1, Lm90;->a:Ljava/lang/String;
+    iget v1, p0, Lm90;->a:I
 
-    iget-object v3, p1, Lm90;->b:Ljava/lang/Integer;
+    iget v3, p1, Lm90;->a:I
 
-    iget-object v4, p0, Lm90;->a:Ljava/lang/String;
+    if-ne v1, v3, :cond_1
 
-    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget v1, p0, Lm90;->b:I
 
-    move-result v1
+    iget v3, p1, Lm90;->b:I
 
-    if-eqz v1, :cond_2
+    if-ne v1, v3, :cond_1
 
-    iget-object v1, p0, Lm90;->b:Ljava/lang/Integer;
+    iget v1, p0, Lm90;->c:I
 
-    if-nez v1, :cond_1
+    iget v3, p1, Lm90;->c:I
 
-    if-nez v3, :cond_2
+    if-ne v1, v3, :cond_1
 
-    goto :goto_0
+    iget v1, p0, Lm90;->d:I
 
-    :cond_1
-    invoke-virtual {v1, v3}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
+    iget p1, p1, Lm90;->d:I
 
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    :goto_0
-    iget-object v1, p0, Lm90;->c:Ll55;
-
-    iget-object v3, p1, Lm90;->c:Ll55;
-
-    invoke-virtual {v1, v3}, Ll55;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-wide v3, p0, Lm90;->d:J
-
-    iget-wide v5, p1, Lm90;->d:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget-wide v3, p0, Lm90;->e:J
-
-    iget-wide v5, p1, Lm90;->e:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget-object p0, p0, Lm90;->f:Ljava/util/Map;
-
-    iget-object p1, p1, Lm90;->f:Ljava/util/Map;
-
-    invoke-interface {p0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
+    if-ne v1, p1, :cond_1
 
     return v0
 
-    :cond_2
+    :cond_1
     return v2
 .end method
 
 .method public final hashCode()I
-    .locals 7
+    .locals 3
 
-    iget-object v0, p0, Lm90;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    iget v0, p0, Lm90;->a:I
 
     const v1, 0xf4243
 
@@ -259,69 +235,23 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lm90;->b:Ljava/lang/Integer;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Integer;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lm90;->c:Ll55;
-
-    invoke-virtual {v2}, Ll55;->hashCode()I
-
-    move-result v2
+    iget v2, p0, Lm90;->b:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    iget-wide v2, p0, Lm90;->d:J
-
-    const/16 v4, 0x20
-
-    ushr-long v5, v2, v4
-
-    xor-long/2addr v2, v5
-
-    long-to-int v2, v2
+    iget v2, p0, Lm90;->c:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    iget-wide v2, p0, Lm90;->e:J
+    iget v1, p0, Lm90;->d:I
 
-    ushr-long v4, v2, v4
+    xor-int/2addr v0, v1
 
-    xor-long/2addr v2, v4
-
-    long-to-int v2, v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object p0, p0, Lm90;->f:Ljava/util/Map;
-
-    invoke-interface {p0}, Ljava/util/Map;->hashCode()I
-
-    move-result p0
-
-    xor-int/2addr p0, v0
-
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -329,61 +259,41 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "EventInternal{transportName="
+    const-string v1, "AudioSettings{audioSource="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lm90;->a:Ljava/lang/String;
+    iget v1, p0, Lm90;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sampleRate="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", code="
+    iget v1, p0, Lm90;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", channelCount="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lm90;->b:Ljava/lang/Integer;
+    iget v1, p0, Lm90;->c:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", encodedPayload="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lm90;->c:Ll55;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", eventMillis="
+    const-string v1, ", audioFormat="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lm90;->d:J
+    iget v1, p0, Lm90;->d:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v2, "}"
 
-    const-string v1, ", uptimeMillis="
+    invoke-static {v0, v1, v2}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-wide v1, p0, Lm90;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", autoMetadata="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lm90;->f:Ljava/util/Map;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

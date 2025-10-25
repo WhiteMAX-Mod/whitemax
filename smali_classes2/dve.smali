@@ -1,61 +1,86 @@
-.class public final synthetic Ldve;
-.super Ljava/lang/Object;
+.class public final Ldve;
+.super Lgve;
 .source "SourceFile"
-
-# interfaces
-.implements Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
-
-.field public final synthetic b:Lnve;
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Lnve;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Ldve;->a:Ljava/lang/String;
+    invoke-direct {p0, p1, p2, v0}, Lgve;-><init>(JI)V
 
-    iput-object p2, p0, Ldve;->b:Lnve;
+    iput-wide p1, p0, Ldve;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPushTokenGenerated(Ljava/lang/String;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ldve;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ldve;
+
+    iget-wide v3, p0, Ldve;->c:J
+
+    iget-wide v5, p1, Ldve;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Ldve;->a:Ljava/lang/String;
+    iget-wide v0, p0, Ldve;->c:J
 
-    invoke-static {v0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    return v0
+.end method
 
-    iget-object p0, p0, Ldve;->b:Lnve;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget-object v0, p0, Lnve;->b:Ljava/lang/String;
+    const-string v0, "DialogBotId(botId="
 
-    const-string v1, "checkTokenChanged: token changed"
+    const-string v1, ")"
 
-    invoke-static {v0, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    iget-wide v2, p0, Ldve;->c:J
 
-    iget-object p0, p0, Lnve;->Y:Lcl7;
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
-
-    check-cast p0, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
-
-    invoke-interface {p0, p1}, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;->onPushTokenGenerated(Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

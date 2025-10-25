@@ -42,11 +42,11 @@
 
 # virtual methods
 .method public getYuvTextures()[I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
+    iget-object v0, p0, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public release()V
@@ -117,9 +117,9 @@
 
     invoke-virtual {p0, v2, p1, v0, v1}, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->uploadYuvData(II[I[Ljava/nio/ByteBuffer;)[I
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public uploadYuvData(II[I[Ljava/nio/ByteBuffer;)[I
@@ -289,7 +289,7 @@
     goto :goto_2
 
     :cond_6
-    iget-object v0, v0, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
+    iget-object v1, v0, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
 
-    return-object v0
+    return-object v1
 .end method

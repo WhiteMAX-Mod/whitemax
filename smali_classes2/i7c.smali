@@ -1,34 +1,86 @@
-.class public abstract Li7c;
-.super Ljava/lang/Object;
+.class public final Li7c;
+.super Lm7c;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_section_avatar:I = 0x7f0a07a1
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static oneme_section_description:I = 0x7f0a07a2
 
-.field public static oneme_section_end_arrow:I = 0x7f0a07a3
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-.field public static oneme_section_end_container:I = 0x7f0a07a4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_section_end_text:I = 0x7f0a07a5
+    iput-object p1, p0, Li7c;->a:Ljava/lang/String;
 
-.field public static oneme_section_start_icon:I = 0x7f0a07a6
+    return-void
+.end method
 
-.field public static oneme_section_title:I = 0x7f0a07a7
 
-.field public static oneme_section_upper_text:I = 0x7f0a07a8
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static oneme_settings_itemcontent_container:I = 0x7f0a07b1
+    const/4 v0, 0x1
 
-.field public static oneme_settings_itemcontent_counter:I = 0x7f0a07b2
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_itemcontent_end_icon:I = 0x7f0a07b3
+    return v0
 
-.field public static oneme_settings_itemcontent_end_radio:I = 0x7f0a07b4
+    :cond_0
+    instance-of v1, p1, Li7c;
 
-.field public static oneme_settings_itemcontent_end_switch:I = 0x7f0a07b5
+    const/4 v2, 0x0
 
-.field public static oneme_settings_itemcontent_end_text:I = 0x7f0a07b6
+    if-nez v1, :cond_1
 
-.field public static oneme_settingslist_rv:I = 0x7f0a086d
+    return v2
+
+    :cond_1
+    check-cast p1, Li7c;
+
+    iget-object v1, p0, Li7c;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Li7c;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Li7c;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "CopyToClipboard(text="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Li7c;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

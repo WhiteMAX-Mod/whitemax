@@ -19,10 +19,10 @@
         "errorResponse",
         "Lkotlin/Function1;",
         "",
-        "Lylf;",
+        "Lccg;",
         "onError",
         "parseErrorResponse",
-        "(Ljava/lang/String;Lorg/json/JSONObject;Lbc6;)V",
+        "(Ljava/lang/String;Lorg/json/JSONObject;Lli6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -46,84 +46,86 @@
 
 
 # virtual methods
-.method public final parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lbc6;)V
-    .locals 2
+.method public final parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lli6;)V
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Lorg/json/JSONObject;",
-            "Lbc6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 
     if-eqz p3, :cond_2
 
-    const-string p0, "error"
+    const-string v0, "error"
 
-    invoke-virtual {p2, p0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "rooms.roomInactive"
+    const-string v1, "rooms.roomInactive"
 
-    invoke-static {p0, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomInactiveException;
+    new-instance p1, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomInactiveException;
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomInactiveException;-><init>()V
+    invoke-direct {p1}, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomInactiveException;-><init>()V
 
     goto :goto_0
 
     :cond_0
-    const-string v0, "rooms.notAdmin"
+    const-string v1, "rooms.notAdmin"
 
-    invoke-static {p0, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomNotAdminException;
+    new-instance p1, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomNotAdminException;
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomNotAdminException;-><init>()V
+    invoke-direct {p1}, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomNotAdminException;-><init>()V
 
     goto :goto_0
 
     :cond_1
-    new-instance p0, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomException;
+    new-instance v0, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "Error response for "
+    const-string v2, "Error response for "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, " command "
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     const/4 p2, 0x2
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1, v0, p2, v0}, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILld4;)V
+    invoke-direct {v0, p1, v1, p2, v1}, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILki4;)V
+
+    move-object p1, v0
 
     :goto_0
-    invoke-interface {p3, p0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
     return-void

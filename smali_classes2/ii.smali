@@ -2,107 +2,122 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lone/me/rlottie/ImageReceiver;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lfgd;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Lei;
+
+.field public final c:Lfi;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lii;->a:I
-
-    iput-object p2, p0, Lii;->b:Ljava/lang/Object;
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lii;->a:Lfgd;
+
+    new-instance v0, Lei;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lii;->b:Lei;
+
+    new-instance v0, Lfi;
+
+    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lii;->c:Lfi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invalidate()V
-    .locals 1
+.method public final a(Ljava/util/Collection;Ly14;)Ljava/lang/Object;
+    .locals 4
 
-    iget v0, p0, Lii;->a:I
+    const-string v0, "SELECT * FROM animoji WHERE id IN ("
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ldy1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p0, Lvrg;
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    move-result v1
 
-    return-void
+    invoke-static {v1, v0}, Ln2j;->a(ILjava/lang/StringBuilder;)V
 
-    :pswitch_0
-    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+    const-string v2, ")"
 
-    check-cast p0, Lpgc;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast p0, Landroid/widget/ImageView;
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-static {v1, v0}, Lvgd;->c(ILjava/lang/String;)Lvgd;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_1
-    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    check-cast p0, Lr39;
+    move-result-object p1
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    const/4 v1, 0x1
 
-    return-void
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    :pswitch_2
-    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+    move-result v2
 
-    check-cast p0, Lb29;
+    if-eqz v2, :cond_1
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-void
+    move-result-object v2
 
-    :pswitch_3
-    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+    check-cast v2, Ljava/lang/Long;
 
-    check-cast p0, Lr15;
+    if-nez v2, :cond_0
 
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+    invoke-virtual {v0, v1}, Lvgd;->S(I)V
 
-    check-cast p0, Landroid/widget/ImageView;
+    goto :goto_1
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
-    return-void
+    move-result-wide v2
 
-    :pswitch_4
-    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2, v3}, Lvgd;->k(IJ)V
 
-    check-cast p0, Lji;
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    goto :goto_0
 
-    return-void
+    :cond_1
+    new-instance p1, Landroid/os/CancellationSignal;
 
-    nop
+    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    new-instance v1, Lhi;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, v0, v2}, Lhi;-><init>(Lii;Lvgd;I)V
+
+    iget-object v0, p0, Lii;->a:Lfgd;
+
+    invoke-static {v0, p1, v1, p2}, Lexi;->a(Lfgd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

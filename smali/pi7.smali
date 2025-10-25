@@ -1,6 +1,21 @@
-.class public interface abstract Lpi7;
+.class public abstract Lpi7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmi7;
+
+# static fields
+.field public static final synthetic a:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ll0a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ll0a;-><init>(I)V
+
+    return-void
+.end method

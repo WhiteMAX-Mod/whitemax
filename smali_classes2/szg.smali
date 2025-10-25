@@ -1,45 +1,40 @@
-.class public abstract synthetic Lszg;
+.class public final synthetic Lszg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxw7;
 
-# static fields
-.field public static final synthetic a:[I
 
+# virtual methods
+.method public final d(Lfx7;Lgw7;)V
+    .locals 2
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x2
+    const-string v1, "shared.ViewLifecycle/"
 
-    invoke-static {v0}, Lmw1;->w(I)[I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    array-length v1, v1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-array v1, v1, [I
+    move-result-object p1
 
-    sput-object v1, Lszg;->a:[I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x1
+    const-string v1, "onStateChanged "
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Lszg;->a:[I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    move-result-object p2
 
-    :catch_1
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method

@@ -1,346 +1,188 @@
-.class public abstract Llt7;
-.super Ljava/lang/Object;
+.class public final Llt7;
+.super Ljava/util/Random;
 .source "SourceFile"
 
 
 # instance fields
-.field private mAppContext:Landroid/content/Context;
+.field public final a:Lqwc;
 
-.field private volatile mStopped:Z
-
-.field private mUsed:Z
-
-.field private mWorkerParams:Landroidx/work/WorkerParameters;
+.field public b:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lrwc;->a:Lqwc;
 
-    if-eqz p1, :cond_1
+    invoke-direct {p0}, Ljava/util/Random;-><init>()V
 
-    if-eqz p2, :cond_0
-
-    iput-object p1, p0, Llt7;->mAppContext:Landroid/content/Context;
-
-    iput-object p2, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
+    iput-object v0, p0, Llt7;->a:Lqwc;
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "WorkerParameters is null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Application Context is null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final getApplicationContext()Landroid/content/Context;
-    .locals 0
+.method public final next(I)I
+    .locals 1
 
-    iget-object p0, p0, Llt7;->mAppContext:Landroid/content/Context;
+    iget-object v0, p0, Llt7;->a:Lqwc;
 
-    return-object p0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lrwc;->b:Lp3;
+
+    invoke-virtual {v0, p1}, Lp3;->a(I)I
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public getBackgroundExecutor()Ljava/util/concurrent/Executor;
-    .locals 0
+.method public final nextBoolean()Z
+    .locals 1
 
-    iget-object p0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
+    iget-object v0, p0, Llt7;->a:Lqwc;
 
-    iget-object p0, p0, Landroidx/work/WorkerParameters;->f:Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p0
+    sget-object v0, Lrwc;->b:Lp3;
+
+    invoke-virtual {v0}, Lp3;->h()Z
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public getForegroundInfoAsync()Lgt7;
+.method public final nextBytes([B)V
+    .locals 1
+
+    iget-object v0, p0, Llt7;->a:Lqwc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lrwc;->b:Lp3;
+
+    invoke-virtual {v0}, Lp3;->g()Ljava/util/Random;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/util/Random;->nextBytes([B)V
+
+    return-void
+.end method
+
+.method public final nextDouble()D
     .locals 2
 
-    new-instance p0, Lznd;
+    iget-object v0, p0, Llt7;->a:Lqwc;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    sget-object v0, Lrwc;->b:Lp3;
 
-    const-string v1, "Expedited WorkRequests require a ListenableWorker to provide an implementation for `getForegroundInfoAsync()`"
+    invoke-virtual {v0}, Lp3;->g()Ljava/util/Random;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Lznd;->j(Ljava/lang/Throwable;)Z
+    invoke-virtual {v0}, Ljava/util/Random;->nextDouble()D
 
-    return-object p0
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
-.method public final getId()Ljava/util/UUID;
-    .locals 0
-
-    iget-object p0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget-object p0, p0, Landroidx/work/WorkerParameters;->a:Ljava/util/UUID;
-
-    return-object p0
-.end method
-
-.method public final getInputData()Lp64;
-    .locals 0
-
-    iget-object p0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget-object p0, p0, Landroidx/work/WorkerParameters;->b:Lp64;
-
-    return-object p0
-.end method
-
-.method public final getNetwork()Landroid/net/Network;
-    .locals 0
-
-    iget-object p0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget-object p0, p0, Landroidx/work/WorkerParameters;->d:Lfo8;
-
-    iget-object p0, p0, Lfo8;->c:Ljava/lang/Object;
-
-    check-cast p0, Landroid/net/Network;
-
-    return-object p0
-.end method
-
-.method public final getRunAttemptCount()I
-    .locals 0
-
-    iget-object p0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget p0, p0, Landroidx/work/WorkerParameters;->e:I
-
-    return p0
-.end method
-
-.method public final getTags()Ljava/util/Set;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object p0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget-object p0, p0, Landroidx/work/WorkerParameters;->c:Ljava/util/HashSet;
-
-    return-object p0
-.end method
-
-.method public getTaskExecutor()Lg0f;
-    .locals 0
-
-    iget-object p0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget-object p0, p0, Landroidx/work/WorkerParameters;->g:Lay7;
-
-    return-object p0
-.end method
-
-.method public final getTriggeredContentAuthorities()Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object p0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget-object p0, p0, Landroidx/work/WorkerParameters;->d:Lfo8;
-
-    iget-object p0, p0, Lfo8;->a:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/List;
-
-    return-object p0
-.end method
-
-.method public final getTriggeredContentUris()Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Landroid/net/Uri;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object p0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget-object p0, p0, Landroidx/work/WorkerParameters;->d:Lfo8;
-
-    iget-object p0, p0, Lfo8;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/List;
-
-    return-object p0
-.end method
-
-.method public getWorkerFactory()Lqwg;
-    .locals 0
-
-    iget-object p0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget-object p0, p0, Landroidx/work/WorkerParameters;->h:Lqwg;
-
-    return-object p0
-.end method
-
-.method public final isStopped()Z
-    .locals 0
-
-    iget-boolean p0, p0, Llt7;->mStopped:Z
-
-    return p0
-.end method
-
-.method public final isUsed()Z
-    .locals 0
-
-    iget-boolean p0, p0, Llt7;->mUsed:Z
-
-    return p0
-.end method
-
-.method public onStopped()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final setForegroundAsync(Lh46;)Lgt7;
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lh46;",
-            ")",
-            "Lgt7;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget-object v2, v0, Landroidx/work/WorkerParameters;->j:Livg;
-
-    invoke-virtual {p0}, Llt7;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    invoke-virtual {p0}, Llt7;->getId()Ljava/util/UUID;
-
-    move-result-object v4
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Lznd;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    iget-object p0, v2, Livg;->a:Lg0f;
-
-    new-instance v1, Lod8;
-
-    const/4 v7, 0x2
-
-    move-object v5, p1
-
-    invoke-direct/range {v1 .. v7}, Lod8;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-interface {p0, v1}, Lg0f;->g(Ljava/lang/Runnable;)V
-
-    return-object v3
-.end method
-
-.method public setProgressAsync(Lp64;)Lgt7;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lp64;",
-            ")",
-            "Lgt7;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Llt7;->mWorkerParams:Landroidx/work/WorkerParameters;
-
-    iget-object v2, v0, Landroidx/work/WorkerParameters;->i:Lzvg;
-
-    invoke-virtual {p0}, Llt7;->getApplicationContext()Landroid/content/Context;
-
-    invoke-virtual {p0}, Llt7;->getId()Ljava/util/UUID;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v5, Lznd;
-
-    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
-
-    iget-object p0, v2, Lzvg;->b:Lg0f;
-
-    new-instance v1, Lswg;
-
-    const/16 v6, 0x9
-
-    move-object v4, p1
-
-    invoke-direct/range {v1 .. v6}, Lswg;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-interface {p0, v1}, Lg0f;->g(Ljava/lang/Runnable;)V
-
-    return-object v5
-.end method
-
-.method public final setUsed()V
+.method public final nextFloat()F
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Llt7;->a:Lqwc;
 
-    iput-boolean v0, p0, Llt7;->mUsed:Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    sget-object v0, Lrwc;->b:Lp3;
+
+    invoke-virtual {v0}, Lp3;->i()F
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public abstract startWork()Lgt7;
-.end method
-
-.method public final stop()V
+.method public final nextInt()I
     .locals 1
 
-    const/4 v0, 0x1
+    .line 1
+    iget-object v0, p0, Llt7;->a:Lqwc;
 
-    iput-boolean v0, p0, Llt7;->mStopped:Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0}, Llt7;->onStopped()V
+    .line 2
+    sget-object v0, Lrwc;->b:Lp3;
+
+    .line 3
+    invoke-virtual {v0}, Lp3;->b()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final nextInt(I)I
+    .locals 1
+
+    .line 4
+    iget-object v0, p0, Llt7;->a:Lqwc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 5
+    sget-object v0, Lrwc;->b:Lp3;
+
+    .line 6
+    invoke-virtual {v0, p1}, Lp3;->c(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final nextLong()J
+    .locals 2
+
+    iget-object v0, p0, Llt7;->a:Lqwc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lrwc;->b:Lp3;
+
+    invoke-virtual {v0}, Lp3;->d()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final setSeed(J)V
+    .locals 0
+
+    iget-boolean p1, p0, Llt7;->b:Z
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Llt7;->b:Z
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Setting seed is not supported."
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

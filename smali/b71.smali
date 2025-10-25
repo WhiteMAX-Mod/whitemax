@@ -3,48 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llu1;
+.implements Lc71;
 
 
-# instance fields
-.field public final a:Lq8a;
-
-.field public final b:Lzte;
+# static fields
+.field public static final a:Lb71;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lcl7;Lq8a;Lcl7;Lcl7;Lcl7;)V
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lb71;
 
-    iput-object p4, p0, Lb71;->a:Lq8a;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ly61;
-
-    const/4 v8, 0x0
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v6, p2
-
-    move-object v3, p3
-
-    move-object v7, p5
-
-    move-object v4, p6
-
-    move-object/from16 v5, p7
-
-    invoke-direct/range {v0 .. v8}, Ly61;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance p1, Lzte;
-
-    invoke-direct {p1, v0}, Lzte;-><init>(Lzb6;)V
-
-    iput-object p1, p0, Lb71;->b:Lzte;
+    sput-object v0, Lb71;->a:Lb71;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lb71;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x76f2ecaf
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Unmuted"
+
+    return-object v0
 .end method

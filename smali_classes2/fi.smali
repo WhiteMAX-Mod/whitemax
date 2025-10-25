@@ -1,330 +1,191 @@
-.class public final synthetic Lfi;
-.super Ljava/lang/Object;
+.class public final Lfi;
+.super Lf3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lfgd;I)V
     .locals 0
 
-    iput p1, p0, Lfi;->a:I
+    iput p2, p0, Lfi;->o:I
 
-    iput-object p2, p0, Lfi;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lf3;-><init>(Lfgd;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final d()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lfi;->a:I
-
-    iget-object p0, p0, Lfi;->b:Ljava/lang/Object;
+    iget v0, p0, Lfi;->o:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lxrc;
+    const-string v0, "UPDATE messages SET update_time = ? WHERE id = ?"
 
-    invoke-virtual {p0, p1}, Lxrc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/VibrationEffect;
-
-    return-object p0
+    return-object v0
 
     :pswitch_0
-    check-cast p0, Laqc;
+    const-string v0, "UPDATE messages SET localized_error = ? WHERE id = ?"
 
-    invoke-virtual {p0, p1}, Laqc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lxm4;
-
-    return-object p0
+    return-object v0
 
     :pswitch_1
-    check-cast p0, Lxrc;
+    const-string v0, "UPDATE messages SET error = ? WHERE id = ?"
 
-    invoke-virtual {p0, p1}, Lxrc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/content/SharedPreferences;
-
-    return-object p0
+    return-object v0
 
     :pswitch_2
-    check-cast p0, Lzu3;
+    const-string v0, "DELETE FROM message_uploads"
 
-    invoke-virtual {p0, p1}, Lzu3;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_3
-    check-cast p0, Lnaa;
+    const-string v0, "DELETE FROM message_uploads WHERE message_id=? AND chat_id=? AND attach_id=?"
 
-    invoke-virtual {p0, p1}, Lnaa;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_4
-    check-cast p0, Lst1;
+    const-string v0, "DELETE FROM fcm_notifications_history"
 
-    invoke-virtual {p0, p1}, Lst1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzfb;
-
-    return-object p0
+    return-object v0
 
     :pswitch_5
-    check-cast p0, Lea;
+    const-string v0, "DELETE FROM fcm_notifications_analytics WHERE received_time<=?"
 
-    invoke-virtual {p0, p1}, Lea;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzfb;
-
-    return-object p0
+    return-object v0
 
     :pswitch_6
-    check-cast p0, Lst1;
+    const-string v0, "DELETE FROM fcm_notifications_analytics WHERE analytics_status=? AND chat_id=? AND time<=?"
 
-    invoke-virtual {p0, p1}, Lst1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/concurrent/ThreadFactory;
-
-    return-object p0
+    return-object v0
 
     :pswitch_7
-    check-cast p0, Lea;
+    const-string v0, "DELETE FROM fcm_notifications_analytics"
 
-    invoke-virtual {p0, p1}, Lea;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p0, 0x0
-
-    return-object p0
+    return-object v0
 
     :pswitch_8
-    check-cast p0, Laka;
+    const-string v0, "DELETE FROM favorite_stickers"
 
-    invoke-virtual {p0, p1}, Laka;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lbk;
-
-    return-object p0
+    return-object v0
 
     :pswitch_9
-    check-cast p0, Lea;
+    const-string v0, "DELETE FROM favorite_sticker_sets"
 
-    invoke-virtual {p0, p1}, Lea;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/concurrent/ExecutorService;
-
-    return-object p0
+    return-object v0
 
     :pswitch_a
-    check-cast p0, Lnaa;
+    const-string v0, "DELETE FROM draft_uploads"
 
-    invoke-virtual {p0, p1}, Lnaa;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lvo9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_b
-    check-cast p0, Lj8;
+    const-string v0, "DELETE FROM draft_uploads WHERE chat_id=? AND attach_id=?"
 
-    invoke-virtual {p0, p1}, Lj8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lqe7;
-
-    return-object p0
+    return-object v0
 
     :pswitch_c
-    check-cast p0, Lea;
+    const-string v0, "DELETE FROM default_emoji"
 
-    invoke-virtual {p0, p1}, Lea;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_d
-    check-cast p0, Lzu3;
+    const-string v0, "DELETE FROM contact_title"
 
-    invoke-virtual {p0, p1}, Lzu3;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_e
-    check-cast p0, Lvl2;
+    const-string v0, "DELETE FROM contact_title WHERE docid=?"
 
-    invoke-virtual {p0, p1}, Lvl2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_f
-    check-cast p0, Lb03;
+    const-string v0, "INSERT OR REPLACE INTO contact_title (docid, link, allNormalizedTitles, allOriginalTitles, allNormalizedTitlesWithoutEmoji, allOriginalTitlesWithoutEmoji) VALUES(?, ?, ?, ?, ?, ?)"
 
-    invoke-virtual {p0, p1}, Lb03;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_10
-    check-cast p0, Lb03;
+    const-string v0, "DELETE FROM contacts"
 
-    invoke-virtual {p0, p1}, Lb03;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_11
-    check-cast p0, Lvl2;
+    const-string v0, "UPDATE contacts SET presence = ?, presence_type = ? WHERE server_id = ?"
 
-    invoke-virtual {p0, p1}, Lvl2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_12
-    check-cast p0, Lzz2;
+    const-string v0, "UPDATE contacts SET server_id = ?, data = ? WHERE id = ?"
 
-    invoke-virtual {p0, p1}, Lzz2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_13
-    check-cast p0, Lzz2;
+    const-string v0, "DELETE FROM complain_reasons"
 
-    invoke-virtual {p0, p1}, Lzz2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_14
-    check-cast p0, Lbi0;
+    const-string v0, "DELETE FROM chat_title"
 
-    check-cast p1, Ljava/lang/String;
-
-    :try_start_0
-    iget-object v0, p0, Lbi0;->a:Ljwg;
-
-    iget-object v0, v0, Ljwg;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljn4;
-
-    invoke-virtual {v0}, Ljn4;->e()V
-
-    iget-object p0, p0, Lbi0;->c:Lf9e;
-
-    check-cast p0, Lg9e;
-
-    invoke-virtual {p0, p1}, Lg9e;->a(Ljava/lang/String;)Lu6e;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Lone/me/net/client/impl/internal/SocketFactoryCreateException;
-
-    invoke-direct {p1, p0}, Lone/me/net/client/impl/internal/SocketFactoryCreateException;-><init>(Ljava/io/IOException;)V
-
-    throw p1
+    return-object v0
 
     :pswitch_15
-    check-cast p0, Lh8;
+    const-string v0, "DELETE FROM chat_title WHERE docid=?"
 
-    invoke-virtual {p0, p1}, Lh8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lro9;
-
-    return-object p0
+    return-object v0
 
     :pswitch_16
-    check-cast p0, Lj8;
+    const-string v0, "INSERT OR REPLACE INTO chat_title (docid, normalizedTitle, originalTitle, normalizedTitleWithoutEmoji, originalTitleWithoutEmoji, sortTime) VALUES(?, ?, ?, ?, ?, ?)"
 
-    invoke-virtual {p0, p1}, Lj8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object v0
 
-    move-result-object p0
+    :pswitch_17
+    const-string v0, "DELETE FROM chats"
 
-    check-cast p0, Lone/me/rlottie/RLottieDrawable;
+    return-object v0
 
-    return-object p0
+    :pswitch_18
+    const-string v0, "DELETE FROM chats WHERE id = ?"
+
+    return-object v0
+
+    :pswitch_19
+    const-string v0, "DELETE FROM call_links"
+
+    return-object v0
+
+    :pswitch_1a
+    const-string v0, "DELETE FROM call_links WHERE conversation_id=?"
+
+    return-object v0
+
+    :pswitch_1b
+    const-string v0, "DELETE FROM animoji_set"
+
+    return-object v0
+
+    :pswitch_1c
+    const-string v0, "DELETE FROM animoji"
+
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
         :pswitch_16
         :pswitch_15
         :pswitch_14

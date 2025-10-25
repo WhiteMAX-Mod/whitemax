@@ -1,31 +1,60 @@
-.class public final Lgxa;
-.super Ljava/lang/Object;
+.class public final synthetic Lgxa;
+.super Lb9;
 .source "SourceFile"
 
+# interfaces
+.implements Lbj6;
 
-# instance fields
-.field public final a:I
 
-.field public final b:Lfxa;
-
-.field public final c:J
-
-.field public final d:Ldxa;
+# static fields
+.field public static final q0:Lgxa;
 
 
 # direct methods
-.method public constructor <init>(ILfxa;JLdxa;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgxa;
 
-    iput p1, p0, Lgxa;->a:I
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    iput-object p2, p0, Lgxa;->b:Lfxa;
+    const/4 v2, 0x4
 
-    iput-wide p3, p0, Lgxa;->c:J
+    const/4 v3, 0x3
 
-    iput-object p5, p0, Lgxa;->d:Ldxa;
+    const-class v4, Ltcb;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lgxa;->q0:Lgxa;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    new-instance p3, Ltcb;
+
+    new-instance v0, Ljava/lang/Integer;
+
+    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
+
+    invoke-direct {p3, v0, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object p3
 .end method

@@ -1,137 +1,150 @@
 .class public final Lrv4;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
 
-.field public final synthetic b:Lsv4;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsv4;I)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;II)V
     .locals 0
 
-    iput p2, p0, Lrv4;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrv4;->b:Lsv4;
+    iput-object p1, p0, Lrv4;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput p2, p0, Lrv4;->b:I
+
+    iput p3, p0, Lrv4;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lrv4;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
-
-    iget-object p0, p0, Lrv4;->b:Lsv4;
-
-    invoke-static {p0}, Lsv4;->a(Lsv4;)V
-
-    iget-object p1, p0, Lsv4;->Y:Ljava/util/ArrayList;
-
-    if-eqz p1, :cond_0
-
-    iget-boolean v0, p0, Lsv4;->Z:Z
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lie;
-
-    invoke-virtual {v0, p0}, Lie;->a(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lrv4;
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lrv4;
+
+    iget-object v1, p0, Lrv4;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+    iget-object v3, p1, Lrv4;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lrv4;->b:I
+
+    iget v3, p1, Lrv4;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lrv4;->c:I
+
+    iget p1, p1, Lrv4;->c:I
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    iget v0, p0, Lrv4;->a:I
+    iget-object v0, p0, Lrv4;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
-
-    iget-object p0, p0, Lrv4;->b:Lsv4;
-
-    iget-object p1, p0, Lsv4;->Y:Ljava/util/ArrayList;
-
-    if-eqz p1, :cond_0
-
-    iget-boolean v0, p0, Lsv4;->Z:Z
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    const/16 v1, 0x1f
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lrv4;->b:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, Lrv4;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DisplayLayout(track="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lrv4;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", w="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lrv4;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", h="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget v2, p0, Lrv4;->c:I
+
+    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lie;
-
-    invoke-virtual {v0, p0}, Lie;->b(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

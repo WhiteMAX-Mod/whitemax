@@ -118,11 +118,11 @@
 
 # virtual methods
 .method public getAudioInput()Lorg/webrtc/audio/WebRtcAudioRecord;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getNativeAudioDeviceModulePointer()J
@@ -168,8 +168,6 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
-
     goto :goto_1
 
     :cond_0
@@ -185,7 +183,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v0
 .end method
 
 .method public release()V
@@ -211,7 +209,7 @@
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_1
 
@@ -226,15 +224,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
-.method public restartAudioRecording()V
-    .locals 0
+.method public restartAudioRecording(Z)V
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    invoke-virtual {p0}, Lorg/webrtc/audio/WebRtcAudioRecord;->restartAudioRecording()V
+    invoke-virtual {v0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->restartAudioRecording(Z)V
 
     return-void
 .end method
@@ -258,9 +256,9 @@
 
     invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->setMicrophoneMute(Z)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->setMicrophoneMute(Z)V
 
     return-void
 .end method
@@ -284,13 +282,13 @@
 
     invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->setNoiseSuppressorEnabled(Z)Z
+    invoke-virtual {v0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->setNoiseSuppressorEnabled(Z)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public setOneAnnNoiseSuppressorEnabled(Z)V
@@ -312,9 +310,9 @@
 
     invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->setOneAnnNoiseSuppressorEnabled(Z)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->setOneAnnNoiseSuppressorEnabled(Z)V
 
     return-void
 .end method
@@ -338,9 +336,9 @@
 
     invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->setPreferredDevice(Landroid/media/AudioDeviceInfo;)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->setPreferredDevice(Landroid/media/AudioDeviceInfo;)V
 
     return-void
 .end method
@@ -364,29 +362,29 @@
 
     invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioOutput:Lorg/webrtc/audio/WebRtcAudioTrack;
+    iget-object v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioOutput:Lorg/webrtc/audio/WebRtcAudioTrack;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/audio/WebRtcAudioTrack;->setSpeakerMute(Z)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/audio/WebRtcAudioTrack;->setSpeakerMute(Z)V
 
     return-void
 .end method
 
 .method public startDeviceAudioShare(Landroid/media/projection/MediaProjection;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->initDeviceAudioRecord(Landroid/media/projection/MediaProjection;)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->initDeviceAudioRecord(Landroid/media/projection/MediaProjection;)V
 
     return-void
 .end method
 
 .method public stopDeviceAudioShare()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioInput:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    invoke-virtual {p0}, Lorg/webrtc/audio/WebRtcAudioRecord;->stopDeviceAudioRecord()V
+    invoke-virtual {v0}, Lorg/webrtc/audio/WebRtcAudioRecord;->stopDeviceAudioRecord()V
 
     return-void
 .end method

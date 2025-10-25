@@ -1,68 +1,478 @@
-.class public interface abstract Lgy6;
+.class public final Lgy6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/IInterface;
+
+# instance fields
+.field public final a:Ljava/util/List;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:I
+
+.field public final k:I
+
+.field public final l:F
+
+.field public final m:I
+
+.field public final n:Ljava/lang/String;
+
+.field public final o:Lq4e;
 
 
-# virtual methods
-.method public abstract C(Lay6;I)V
+# direct methods
+.method public constructor <init>(Ljava/util/List;IIIIIIIIIIFILjava/lang/String;Lq4e;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgy6;->a:Ljava/util/List;
+
+    iput p2, p0, Lgy6;->b:I
+
+    iput p3, p0, Lgy6;->c:I
+
+    iput p4, p0, Lgy6;->d:I
+
+    iput p5, p0, Lgy6;->e:I
+
+    iput p6, p0, Lgy6;->f:I
+
+    iput p7, p0, Lgy6;->g:I
+
+    iput p8, p0, Lgy6;->h:I
+
+    iput p9, p0, Lgy6;->i:I
+
+    iput p10, p0, Lgy6;->j:I
+
+    iput p11, p0, Lgy6;->k:I
+
+    iput p12, p0, Lgy6;->l:F
+
+    iput p13, p0, Lgy6;->m:I
+
+    iput-object p14, p0, Lgy6;->n:Ljava/lang/String;
+
+    iput-object p15, p0, Lgy6;->o:Lq4e;
+
+    return-void
 .end method
 
-.method public abstract F(Lay6;IJ)V
-.end method
+.method public static a(Ledb;ZLq4e;)Lgy6;
+    .locals 35
 
-.method public abstract G(Lay6;I)V
-.end method
+    move-object/from16 v0, p0
 
-.method public abstract I(Lay6;ILandroid/os/Bundle;)V
-.end method
+    const/4 v1, 0x4
 
-.method public abstract J(Lay6;I)V
-.end method
+    if-eqz p1, :cond_0
 
-.method public abstract N(Lay6;ILandroid/os/Bundle;)V
-.end method
+    :try_start_0
+    invoke-virtual {v0, v1}, Ledb;->K(I)V
 
-.method public abstract P(Lay6;ILandroid/os/Bundle;Z)V
-.end method
+    goto :goto_0
 
-.method public abstract Q(Lay6;)V
-.end method
+    :catch_0
+    move-exception v0
 
-.method public abstract R(Lay6;ILandroid/os/Bundle;Landroid/os/Bundle;)V
-.end method
+    goto/16 :goto_9
 
-.method public abstract U(Lay6;I)V
-.end method
+    :cond_0
+    const/16 v2, 0x15
 
-.method public abstract a(Lay6;ILandroid/os/Bundle;)V
-.end method
+    invoke-virtual {v0, v2}, Ledb;->K(I)V
 
-.method public abstract d(Lay6;ILandroid/os/Bundle;Z)V
-.end method
+    :goto_0
+    invoke-virtual {v0}, Ledb;->x()I
 
-.method public abstract e(Lay6;I)V
-.end method
+    move-result v2
 
-.method public abstract i(Lay6;ILandroid/os/Bundle;J)V
-.end method
+    and-int/lit8 v2, v2, 0x3
 
-.method public abstract p(Lay6;I)V
-.end method
+    invoke-virtual {v0}, Ledb;->x()I
 
-.method public abstract s(Lay6;ILandroid/os/IBinder;IJ)V
-.end method
+    move-result v3
 
-.method public abstract t(Lay6;IF)V
-.end method
+    iget v4, v0, Ledb;->b:I
 
-.method public abstract u(Lay6;IF)V
-.end method
+    const/4 v5, 0x0
 
-.method public abstract y(Lay6;ILandroid/os/IBinder;Z)V
-.end method
+    move v6, v5
 
-.method public abstract z(Lay6;II)V
+    move v7, v6
+
+    :goto_1
+    const/4 v8, 0x1
+
+    if-ge v6, v3, :cond_2
+
+    invoke-virtual {v0, v8}, Ledb;->K(I)V
+
+    invoke-virtual {v0}, Ledb;->D()I
+
+    move-result v8
+
+    move v9, v5
+
+    :goto_2
+    if-ge v9, v8, :cond_1
+
+    invoke-virtual {v0}, Ledb;->D()I
+
+    move-result v10
+
+    add-int/lit8 v11, v10, 0x4
+
+    add-int/2addr v7, v11
+
+    invoke-virtual {v0, v10}, Ledb;->K(I)V
+
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_2
+
+    :cond_1
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v0, v4}, Ledb;->J(I)V
+
+    new-array v4, v7, [B
+
+    const/4 v6, -0x1
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    const/4 v10, 0x0
+
+    move-object/from16 v26, p2
+
+    move v14, v6
+
+    move v15, v14
+
+    move/from16 v16, v15
+
+    move/from16 v17, v16
+
+    move/from16 v18, v17
+
+    move/from16 v19, v18
+
+    move/from16 v20, v19
+
+    move/from16 v21, v20
+
+    move/from16 v22, v21
+
+    move/from16 v24, v22
+
+    move/from16 v23, v9
+
+    move-object/from16 v25, v10
+
+    move v6, v5
+
+    move v9, v6
+
+    :goto_3
+    if-ge v6, v3, :cond_9
+
+    invoke-virtual {v0}, Ledb;->x()I
+
+    move-result v10
+
+    and-int/lit8 v10, v10, 0x3f
+
+    invoke-virtual {v0}, Ledb;->D()I
+
+    move-result v11
+
+    move v13, v5
+
+    move-object/from16 v12, v26
+
+    :goto_4
+    if-ge v13, v11, :cond_8
+
+    move/from16 v27, v8
+
+    invoke-virtual {v0}, Ledb;->D()I
+
+    move-result v8
+
+    move/from16 v28, v2
+
+    sget-object v2, Lj0i;->a:[B
+
+    invoke-static {v2, v5, v4, v9, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    add-int/lit8 v9, v9, 0x4
+
+    iget-object v2, v0, Ledb;->a:[B
+
+    iget v1, v0, Ledb;->b:I
+
+    invoke-static {v2, v1, v4, v9, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    const/16 v1, 0x20
+
+    if-ne v10, v1, :cond_3
+
+    if-nez v13, :cond_3
+
+    add-int v1, v9, v8
+
+    invoke-static {v9, v4, v1}, Lj0i;->m(I[BI)Lq4e;
+
+    move-result-object v12
+
+    goto/16 :goto_6
+
+    :cond_3
+    const/16 v1, 0x21
+
+    if-ne v10, v1, :cond_6
+
+    if-nez v13, :cond_6
+
+    add-int v1, v9, v8
+
+    invoke-static {v4, v9, v1, v12}, Lj0i;->l([BIILq4e;)Ld4a;
+
+    move-result-object v1
+
+    iget v2, v1, Ld4a;->a:I
+
+    add-int/lit8 v14, v2, 0x1
+
+    iget v15, v1, Ld4a;->g:I
+
+    iget v2, v1, Ld4a;->h:I
+
+    iget v5, v1, Ld4a;->c:I
+
+    add-int/lit8 v17, v5, 0x8
+
+    iget v5, v1, Ld4a;->d:I
+
+    add-int/lit8 v18, v5, 0x8
+
+    iget v5, v1, Ld4a;->k:I
+
+    move/from16 v16, v2
+
+    iget v2, v1, Ld4a;->l:I
+
+    move/from16 v19, v2
+
+    iget v2, v1, Ld4a;->m:I
+
+    move/from16 v20, v2
+
+    iget v2, v1, Ld4a;->i:F
+
+    move/from16 v21, v2
+
+    iget v2, v1, Ld4a;->j:I
+
+    iget-object v1, v1, Ld4a;->b:La4a;
+
+    if-eqz v1, :cond_4
+
+    move/from16 v23, v2
+
+    iget v2, v1, La4a;->a:I
+
+    move/from16 v29, v2
+
+    iget-boolean v2, v1, La4a;->b:Z
+
+    move/from16 v30, v2
+
+    iget v2, v1, La4a;->c:I
+
+    move/from16 v31, v2
+
+    iget v2, v1, La4a;->d:I
+
+    move/from16 v32, v2
+
+    iget-object v2, v1, La4a;->e:[I
+
+    iget v1, v1, La4a;->f:I
+
+    move/from16 v34, v1
+
+    move-object/from16 v33, v2
+
+    invoke-static/range {v29 .. v34}, Lma3;->a(IZII[II)Ljava/lang/String;
+
+    move-result-object v25
+
+    goto :goto_5
+
+    :cond_4
+    move/from16 v23, v2
+
+    :goto_5
+    move/from16 v24, v23
+
+    move/from16 v23, v21
+
+    move/from16 v21, v20
+
+    move/from16 v20, v19
+
+    move/from16 v19, v5
+
+    :cond_5
+    const/4 v5, 0x0
+
+    goto :goto_6
+
+    :cond_6
+    const/16 v1, 0x27
+
+    if-ne v10, v1, :cond_5
+
+    if-nez v13, :cond_5
+
+    add-int v1, v9, v8
+
+    invoke-static {v9, v4, v1}, Lj0i;->k(I[BI)Lkx5;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_5
+
+    if-eqz v12, :cond_5
+
+    iget v1, v1, Lkx5;->b:I
+
+    iget-object v2, v12, Lq4e;->b:Ljava/lang/Object;
+
+    check-cast v2, Lec7;
+
+    const/4 v5, 0x0
+
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lz3a;
+
+    iget v2, v2, Lz3a;->b:I
+
+    if-ne v1, v2, :cond_7
+
+    const/16 v22, 0x4
+
+    goto :goto_6
+
+    :cond_7
+    const/4 v1, 0x5
+
+    move/from16 v22, v1
+
+    :goto_6
+    add-int/2addr v9, v8
+
+    invoke-virtual {v0, v8}, Ledb;->K(I)V
+
+    add-int/lit8 v13, v13, 0x1
+
+    move/from16 v8, v27
+
+    move/from16 v2, v28
+
+    const/4 v1, 0x4
+
+    goto/16 :goto_4
+
+    :cond_8
+    move/from16 v28, v2
+
+    move/from16 v27, v8
+
+    add-int/lit8 v6, v6, 0x1
+
+    move-object/from16 v26, v12
+
+    const/4 v1, 0x4
+
+    goto/16 :goto_3
+
+    :cond_9
+    move/from16 v28, v2
+
+    move/from16 v27, v8
+
+    if-nez v7, :cond_a
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    :goto_7
+    move-object v12, v0
+
+    goto :goto_8
+
+    :cond_a
+    invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_7
+
+    :goto_8
+    new-instance v11, Lgy6;
+
+    add-int/lit8 v13, v28, 0x1
+
+    invoke-direct/range {v11 .. v26}, Lgy6;-><init>(Ljava/util/List;IIIIIIIIIIFILjava/lang/String;Lq4e;)V
+    :try_end_0
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v11
+
+    :goto_9
+    if-eqz p1, :cond_b
+
+    const-string v1, "L-HEVC config"
+
+    goto :goto_a
+
+    :cond_b
+    const-string v1, "HEVC config"
+
+    :goto_a
+    const-string v2, "Error parsing"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object v0
+
+    throw v0
 .end method

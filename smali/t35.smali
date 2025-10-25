@@ -3,88 +3,80 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/method/TransformationMethod;
+.implements Lqp0;
 
 
 # instance fields
-.field public final a:Landroid/text/method/TransformationMethod;
+.field public final a:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/method/TransformationMethod;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lt35;->a:Landroid/text/method/TransformationMethod;
+    new-instance v0, Ljava/util/IdentityHashMap;
+
+    invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
+
+    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lt35;->a:Ljava/util/Set;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+.method public final a(Ln89;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final c(Ljava/lang/Object;)V
     .locals 1
 
-    invoke-virtual {p2}, Landroid/view/View;->isInEditMode()Z
+    check-cast p1, Landroid/graphics/Bitmap;
 
-    move-result v0
+    iget-object v0, p0, Lt35;->a:Ljava/util/Set;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    return-object p1
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
-    :cond_0
-    iget-object p0, p0, Lt35;->a:Landroid/text/method/TransformationMethod;
+    return-void
+.end method
 
-    if-eqz p0, :cond_1
+.method public final get(I)Ljava/lang/Object;
+    .locals 4
 
-    invoke-interface {p0, p1, p2}, Landroid/text/method/TransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    int-to-double v0, p1
+
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
+
+    div-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v0
+
+    double-to-int p1, v0
+
+    sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    :cond_1
-    if-eqz p1, :cond_3
+    iget-object v0, p0, Lt35;->a:Ljava/util/Set;
 
-    invoke-static {}, Lb25;->a()Lb25;
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    move-result-object p0
-
-    invoke-virtual {p0}, Lb25;->b()I
-
-    move-result p0
-
-    const/4 p2, 0x1
-
-    if-eq p0, p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {}, Lb25;->a()Lb25;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lb25;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    :goto_0
     return-object p1
-.end method
-
-.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-    .locals 0
-
-    iget-object p0, p0, Lt35;->a:Landroid/text/method/TransformationMethod;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface/range {p0 .. p5}, Landroid/text/method/TransformationMethod;->onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-
-    :cond_0
-    return-void
 .end method

@@ -3,124 +3,118 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljc9;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lone/me/messages/list/ui/MessagesListWidget;
-
-.field public final synthetic c:Ljava/util/List;
+.field public final b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput p3, p0, Lic9;->a:I
-
-    iput-object p1, p0, Lic9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iput-object p2, p0, Lic9;->c:Ljava/util/List;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lic9;->a:J
+
+    iput-wide p3, p0, Lic9;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lic9;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lic9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
-
-    iget-object p0, p0, Lic9;->c:Ljava/util/List;
-
-    sget-object v1, Ljtg;->g:Loja;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget-object v2, Lqz7;->Y:Lqz7;
+    instance-of v1, p1, Lic9;
 
-    invoke-virtual {v1, v2}, Loja;->a(Lqz7;)Z
+    const/4 v2, 0x0
 
-    move-result v3
+    if-nez v1, :cond_1
 
-    if-eqz v3, :cond_1
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result p0
-
-    const-string v3, "WARNING! Can\'t set new messages, size="
-
-    invoke-static {p0, v3}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v0, p0, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_1
-    :goto_0
-    return-void
+    check-cast p1, Lic9;
 
-    :pswitch_0
-    iget-object v0, p0, Lic9;->b:Lone/me/messages/list/ui/MessagesListWidget;
+    iget-wide v3, p0, Lic9;->a:J
 
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+    iget-wide v5, p1, Lic9;->a:J
 
-    iget-object p0, p0, Lic9;->c:Ljava/util/List;
+    cmp-long v1, v3, v5
 
-    sget-object v1, Ljtg;->g:Loja;
+    if-eqz v1, :cond_2
 
-    if-nez v1, :cond_2
-
-    goto :goto_1
+    return v2
 
     :cond_2
-    sget-object v2, Lqz7;->o:Lqz7;
+    iget-wide v3, p0, Lic9;->b:J
 
-    invoke-virtual {v1, v2}, Loja;->a(Lqz7;)Z
+    iget-wide v5, p1, Lic9;->b:J
 
-    move-result v3
+    cmp-long p1, v3, v5
 
-    if-eqz v3, :cond_3
+    if-eqz p1, :cond_3
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result p0
-
-    const-string v3, "New messages submitted, size="
-
-    invoke-static {p0, v3}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v0, p0, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_3
-    :goto_1
-    return-void
+    return v0
+.end method
 
-    nop
+.method public final hashCode()I
+    .locals 3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-wide v0, p0, Lic9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lic9;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ByRange(startTime="
+
+    const-string v1, ", endTime="
+
+    iget-wide v2, p0, Lic9;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lic9;->b:J
+
+    invoke-static {v0, v2, v3, v1}, Lrv8;->g(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

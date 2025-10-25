@@ -1,40 +1,48 @@
-.class public interface abstract Lvqc;
+.class public abstract Lvqc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# direct methods
-.method public static synthetic d(Lvqc;JIJLjx3;)Ljava/lang/Object;
-    .locals 10
+# static fields
+.field public static menu_attach_photo:I = 0x7f0f0000
 
-    const/4 v4, 0x0
+.field public static menu_attach_video:I = 0x7f0f0001
 
-    const-wide v7, 0x7fffffffffffffffL
+.field public static menu_calls_selected_actions:I = 0x7f0f0002
 
-    move-object v0, p0
+.field public static menu_channel_profile:I = 0x7f0f0003
 
-    move-wide v1, p1
+.field public static menu_channel_settings:I = 0x7f0f0004
 
-    move v3, p3
+.field public static menu_chat:I = 0x7f0f0005
 
-    move-wide v5, p4
+.field public static menu_chat_profile:I = 0x7f0f0006
 
-    move-object/from16 v9, p6
+.field public static menu_chat_selected_actions:I = 0x7f0f0007
 
-    invoke-interface/range {v0 .. v9}, Lvqc;->c(JIIJJLjx3;)Ljava/lang/Object;
+.field public static menu_constructor:I = 0x7f0f0008
 
-    move-result-object p0
+.field public static menu_contact_profile:I = 0x7f0f0009
 
-    return-object p0
-.end method
+.field public static menu_contacts_selected_actions:I = 0x7f0f000a
 
+.field public static menu_empty:I = 0x7f0f000b
 
-# virtual methods
-.method public abstract c(JIIJJLjx3;)Ljava/lang/Object;
-.end method
+.field public static menu_folder_page:I = 0x7f0f000c
 
-.method public e(Lrr6;)V
-    .locals 0
+.field public static menu_left_chat_profile:I = 0x7f0f000d
 
-    return-void
-.end method
+.field public static menu_local_photo:I = 0x7f0f000e
+
+.field public static menu_local_video:I = 0x7f0f000f
+
+.field public static menu_location:I = 0x7f0f0010
+
+.field public static menu_location_layer:I = 0x7f0f0011
+
+.field public static menu_profile:I = 0x7f0f0012
+
+.field public static menu_search:I = 0x7f0f0013
+
+.field public static menu_sticker_set:I = 0x7f0f0014
+
+.field public static menu_tam_crop_image:I = 0x7f0f0015

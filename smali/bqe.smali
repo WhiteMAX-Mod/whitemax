@@ -1,143 +1,140 @@
 .class public final Lbqe;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lxpe;
-.implements Ljava/io/Serializable;
+.implements Lela;
+.implements Lvv4;
 
 
 # instance fields
-.field public final transient a:Ljava/lang/Object;
+.field public final a:Lsqe;
 
-.field public final b:Lxpe;
+.field public final b:Lwpe;
 
-.field public volatile transient c:Z
-
-.field public transient o:Ljava/lang/Object;
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Lxpe;)V
-    .locals 1
+.method public constructor <init>(Lsqe;Lwpe;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p1, p0, Lbqe;->a:Lsqe;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lbqe;->a:Ljava/lang/Object;
-
-    iput-object p1, p0, Lbqe;->b:Lxpe;
+    iput-object p2, p0, Lbqe;->b:Lwpe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
+.method public final b()V
     .locals 3
 
     iget-boolean v0, p0, Lbqe;->c:Z
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lbqe;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lbqe;->c:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lbqe;->b:Lxpe;
-
-    invoke-interface {v1}, Lxpe;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lbqe;->o:Ljava/lang/Object;
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, p0, Lbqe;->c:Z
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    monitor-exit v0
+    const/4 v0, 0x1
 
-    goto :goto_1
+    iput-boolean v0, p0, Lbqe;->c:Z
 
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v0, Lkxb;
 
-    throw p0
+    iget-object v1, p0, Lbqe;->a:Lsqe;
 
-    :cond_1
-    :goto_1
-    iget-object p0, p0, Lbqe;->o:Ljava/lang/Object;
+    const/16 v2, 0x1b
 
-    return-object p0
+    invoke-direct {v0, p0, v2, v1}, Lkxb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object v1, p0, Lbqe;->b:Lwpe;
+
+    invoke-virtual {v1, v0}, Lwpe;->k(Lsqe;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final c(Lvv4;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lzv4;->f(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
 
-    const-string v1, "Suppliers.memoize("
+    move-result p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz p1, :cond_0
 
-    iget-boolean v1, p0, Lbqe;->c:Z
+    iget-object p1, p0, Lbqe;->a:Lsqe;
 
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "<supplier that returned "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lbqe;->o:Ljava/lang/Object;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ">"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_0
+    invoke-interface {p1, p0}, Lsqe;->c(Lvv4;)V
 
     :cond_0
-    iget-object p0, p0, Lbqe;->b:Lxpe;
+    return-void
+.end method
 
-    :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final d(Ljava/lang/Object;)V
+    .locals 0
 
-    const-string p0, ")"
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast p1, Lvv4;
 
-    move-result-object p0
+    invoke-interface {p1}, Lvv4;->g()V
 
-    return-object p0
+    invoke-virtual {p0}, Lbqe;->b()V
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 0
+
+    invoke-static {p0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvv4;
+
+    invoke-static {v0}, Lzv4;->c(Lvv4;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lbqe;->c:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lbqe;->c:Z
+
+    iget-object v0, p0, Lbqe;->a:Lsqe;
+
+    invoke-interface {v0, p1}, Lsqe;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

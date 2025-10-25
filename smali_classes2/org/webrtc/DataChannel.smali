@@ -40,20 +40,20 @@
 
     const-wide/16 v2, 0x0
 
-    cmp-long p0, v0, v2
+    cmp-long v0, v0, v2
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "DataChannel has been disposed."
+    const-string v1, "DataChannel has been disposed."
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method private native nativeBufferedAmount()J
@@ -131,27 +131,27 @@
 .end method
 
 .method public id()I
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lorg/webrtc/DataChannel;->checkDataChannelExists()V
 
     invoke-direct {p0}, Lorg/webrtc/DataChannel;->nativeId()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public label()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lorg/webrtc/DataChannel;->checkDataChannelExists()V
 
     invoke-direct {p0}, Lorg/webrtc/DataChannel;->nativeLabel()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public registerObserver(Lorg/webrtc/DataChannel$Observer;)V
@@ -200,9 +200,9 @@
 
     invoke-direct {p0, v0, p1}, Lorg/webrtc/DataChannel;->nativeSend([BZ)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public varargs sendMultiple(Z[Ljava/nio/ByteBuffer;)Z
@@ -260,21 +260,21 @@
     :cond_1
     invoke-direct {p0, v0, p1}, Lorg/webrtc/DataChannel;->nativeSend([BZ)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public state()Lorg/webrtc/DataChannel$State;
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lorg/webrtc/DataChannel;->checkDataChannelExists()V
 
     invoke-direct {p0}, Lorg/webrtc/DataChannel;->nativeState()Lorg/webrtc/DataChannel$State;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public unregisterObserver()V

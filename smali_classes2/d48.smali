@@ -1,23 +1,22 @@
 .class public final Ld48;
-.super Lx2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lf48;
 
-# static fields
-.field public static final c:Ld48;
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Ld48;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lx2;-><init>(I)V
-
-    sput-object v0, Ld48;->c:Ld48;
+    iput p1, p0, Ld48;->a:I
 
     return-void
 .end method

@@ -1,38 +1,49 @@
 .class public final Lvqg;
-.super Lj2e;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public E0:Lsqg;
+.field public final synthetic X:Lxqg;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lxqg;Ly14;)V
+    .locals 0
+
+    iput-object p1, p0, Lvqg;->X:Lxqg;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final y(Lts7;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    instance-of v0, p1, Lrqg;
+    iput-object p1, p0, Lvqg;->o:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    iget p1, p0, Lvqg;->Y:I
 
-    return-void
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    move-object v0, p1
+    or-int/2addr p1, v0
 
-    check-cast v0, Lsqg;
+    iput p1, p0, Lvqg;->Y:I
 
-    iput-object v0, p0, Lvqg;->E0:Lsqg;
+    iget-object p1, p0, Lvqg;->X:Lxqg;
 
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+    const/4 v0, 0x0
 
-    check-cast p0, Lsrd;
+    invoke-virtual {p1, v0, p0}, Lxqg;->d(Lx23;Ly14;)Ljava/lang/Enum;
 
-    check-cast p1, Lrqg;
+    move-result-object p1
 
-    iget-object p1, p1, Lrqg;->a:Ltrd;
-
-    invoke-virtual {p0, p1}, Lsrd;->setModelItem(Lird;)V
-
-    return-void
+    return-object p1
 .end method

@@ -1,136 +1,154 @@
-.class public final synthetic Lok4;
+.class public final Lok4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lu17;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lpk4;
+.field public final synthetic a:Lrk4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpk4;I)V
+.method public constructor <init>(Lrk4;)V
     .locals 0
-
-    .line 1
-    iput p2, p0, Lok4;->a:I
-
-    iput-object p1, p0, Lok4;->b:Lpk4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lpk4;Ljava/lang/String;)V
-    .locals 0
-
-    .line 2
-    const/4 p2, 0x0
-
-    iput p2, p0, Lok4;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lok4;->b:Lpk4;
+    iput-object p1, p0, Lok4;->a:Lrk4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final a()V
+    .locals 1
 
-    iget v0, p0, Lok4;->a:I
+    iget-object v0, p0, Lok4;->a:Lrk4;
 
-    iget-object p0, p0, Lok4;->b:Lpk4;
+    iget-object v0, v0, Lrk4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Lpk4;->b()V
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     return-void
+.end method
 
-    :pswitch_0
-    invoke-virtual {p0}, Lpk4;->a()V
+.method public final b(Landroid/net/Uri;Lh48;Z)Z
+    .locals 9
 
-    return-void
+    iget-object p3, p0, Lok4;->a:Lrk4;
 
-    :pswitch_1
-    :try_start_0
-    iget-object v0, p0, Lpk4;->e:Lts1;
+    iget-object v0, p3, Lrk4;->b:Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Lts1;->get()Ljava/lang/Object;
+    iget-object v1, p3, Lrk4;->x0:Ljava/lang/Object;
 
-    sget-object v0, Lpk4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
+    check-cast v1, Le17;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    const/4 v4, 0x0
 
-    sget-object v0, Lpk4;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+    if-nez v1, :cond_2
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-wide v1
 
-    return-void
+    iget-object v3, p3, Lrk4;->w0:Ljava/lang/Object;
 
-    :catch_0
-    move-exception v0
+    check-cast v3, Lm17;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    sget-object v5, Lnig;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lpk4;->a:Ljava/lang/Object;
+    iget-object v3, v3, Lm17;->e:Ljava/util/List;
 
-    monitor-enter v1
+    move v5, v4
 
-    :try_start_1
-    new-instance v2, Ljava/lang/IllegalArgumentException;
+    move v6, v5
 
-    const-string v3, "DeferrableSurface %s [closed: %b, use_count: %s] terminated with unexpected exception."
+    :goto_0
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    iget-boolean v4, p0, Lpk4;->c:Z
+    move-result v7
 
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-ge v5, v7, :cond_1
 
-    move-result-object v4
+    invoke-interface {v3, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget v5, p0, Lpk4;->b:I
+    move-result-object v7
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast v7, Lk17;
 
-    move-result-object v5
+    iget-object v7, v7, Lk17;->a:Landroid/net/Uri;
 
-    filled-new-array {p0, v4, v5}, [Ljava/lang/Object;
+    invoke-virtual {v0, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v7
 
-    invoke-static {v3, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    check-cast v7, Lqk4;
 
-    move-result-object p0
+    if-eqz v7, :cond_0
 
-    invoke-direct {v2, p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-wide v7, v7, Lqk4;->q0:J
 
-    throw v2
+    cmp-long v7, v1, v7
 
-    :catchall_0
-    move-exception p0
+    if-gez v7, :cond_0
 
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    add-int/lit8 v6, v6, 0x1
 
-    throw p0
+    :cond_0
+    add-int/lit8 v5, v5, 0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Lq95;
+
+    iget-object v1, p3, Lrk4;->w0:Ljava/lang/Object;
+
+    check-cast v1, Lm17;
+
+    iget-object v1, v1, Lm17;->e:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    const/4 v7, 0x3
+
+    const/4 v3, 0x1
+
+    invoke-direct/range {v2 .. v7}, Lq95;-><init>(IIIII)V
+
+    iget-object p3, p3, Lrk4;->s0:Ljava/lang/Object;
+
+    check-cast p3, Lnh2;
+
+    invoke-virtual {p3, v2, p2}, Lnh2;->h(Lq95;Lh48;)Lu21;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_2
+
+    iget p3, p2, Lu21;->b:I
+
+    const/4 v1, 0x2
+
+    if-ne p3, v1, :cond_2
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqk4;
+
+    if-eqz p1, :cond_2
+
+    iget-wide p2, p2, Lu21;->c:J
+
+    invoke-static {p1, p2, p3}, Lqk4;->a(Lqk4;J)Z
+
+    :cond_2
+    return v4
 .end method

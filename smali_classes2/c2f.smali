@@ -1,40 +1,49 @@
 .class public final Lc2f;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrc6;
+
+# instance fields
+.field public final a:Lfgd;
+
+.field public final b:Lei;
+
+.field public final c:Lxfd;
+
+.field public final d:Lxfd;
 
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+# direct methods
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
-    check-cast p1, Lera;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Lfz4;
+    iput-object p1, p0, Lc2f;->a:Lfgd;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    new-instance v0, Lei;
 
-    new-instance p0, Lc2f;
+    const/16 v1, 0x18
 
-    const/4 p1, 0x3
+    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lc2f;->b:Lei;
 
-    sget-object p1, Lylf;->a:Lylf;
+    new-instance v0, Lxfd;
 
-    invoke-virtual {p0, p1}, Lc2f;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v1, 0x5
 
-    return-object p1
-.end method
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iput-object v0, p0, Lc2f;->c:Lxfd;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    new-instance v0, Lxfd;
 
-    sget-object p0, Lylf;->a:Lylf;
+    const/4 v1, 0x6
 
-    return-object p0
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lc2f;->d:Lxfd;
+
+    return-void
 .end method

@@ -1,140 +1,191 @@
-.class public final Lxa9;
-.super Lure;
+.class public final synthetic Lxa9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lli6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lfb9;
+.field public final synthetic b:Lqa9;
 
-.field public final synthetic Z:Ljuf;
+.field public final synthetic c:Lza9;
 
 
 # direct methods
-.method public constructor <init>(Lfb9;Ljuf;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public synthetic constructor <init>(Lza9;Lzn9;)V
+    .locals 1
 
-    iput-object p1, p0, Lxa9;->Y:Lfb9;
+    .line 1
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lxa9;->Z:Ljuf;
+    iput v0, p0, Lxa9;->a:I
 
-    const/4 p1, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxa9;->c:Lza9;
+
+    iput-object p2, p0, Lxa9;->b:Lqa9;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lzn9;Lza9;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Lxa9;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxa9;->b:Lqa9;
+
+    iput-object p2, p0, Lxa9;->c:Lza9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    check-cast p1, Ly04;
+    iget v0, p0, Lxa9;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v1, Lccg;->a:Lccg;
 
-    invoke-virtual {p0, p1, p2}, Lxa9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lxa9;->c:Lza9;
 
-    move-result-object p0
+    iget-object v3, p0, Lxa9;->b:Lqa9;
 
-    check-cast p0, Lxa9;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p1, Lylf;->a:Lylf;
+    move-object v5, p1
 
-    invoke-virtual {p0, p1}, Lxa9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v5, Ldyc;
 
-    move-result-object p0
+    iget-wide v6, v2, Lza9;->H0:J
 
-    return-object p0
-.end method
+    check-cast v3, Lzn9;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object p1, v3, Lzn9;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    new-instance p1, Lxa9;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Ltr7;
 
-    iget-object v0, p0, Lxa9;->Y:Lfb9;
+    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Ljn9;
 
-    iget-object p0, p0, Lxa9;->Z:Ljuf;
+    move-result-object v0
 
-    invoke-direct {p1, v0, p0, p2}, Lxa9;-><init>(Lfb9;Ljuf;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, v0, Ljn9;->x1:Lx0f;
 
-    return-object p1
-.end method
+    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+    move-result-object v0
 
-    iget v0, p0, Lxa9;->X:I
+    check-cast v0, Ldk9;
 
-    const/4 v1, 0x1
+    invoke-interface {v0, v6, v7}, Ljk9;->e(J)Lone/me/messages/list/loader/MessageModel;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    if-ne v0, v1, :cond_0
+    const/4 v2, 0x0
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    if-nez v0, :cond_0
+
+    move-object v4, v2
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v4, Lwzc;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-wide v6, v0, Lone/me/messages/list/loader/MessageModel;->a:J
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-wide v8, v0, Lone/me/messages/list/loader/MessageModel;->b:J
 
-    throw p0
+    iget-object v10, v0, Lone/me/messages/list/loader/MessageModel;->C0:Lwe9;
+
+    invoke-direct/range {v4 .. v10}, Lwzc;-><init>(Ldyc;JJLwe9;)V
+
+    :goto_0
+    if-nez v4, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxa9;->Y:Lfb9;
-
-    iget-object p1, p1, Lfb9;->b1:Lcl7;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Ld0d;
 
     move-result-object p1
 
-    move-object v2, p1
+    invoke-virtual {p1}, Ld0d;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    check-cast v2, Lp3d;
+    move-result-object p1
 
-    iget-object p1, p0, Lxa9;->Z:Ljuf;
+    invoke-virtual {p1, v4}, Lru/ok/onechat/reactions/ReactionsViewModel;->l(Lwzc;)V
 
-    iget-wide v3, p1, Ljuf;->a:J
+    iget-object p1, v4, Lwzc;->d:Lwe9;
 
-    iget-object v5, p1, Ljuf;->b:Ljava/lang/String;
+    if-eqz p1, :cond_2
 
-    iget-wide v6, p1, Ljuf;->d:J
+    iget-object p1, p1, Lwe9;->c:Llyc;
 
-    iget-wide v8, p1, Ljuf;->e:J
+    if-eqz p1, :cond_2
 
-    iget-boolean v10, p1, Ljuf;->f:Z
-
-    iput v1, p0, Lxa9;->X:I
-
-    move-object v11, p0
-
-    invoke-virtual/range {v2 .. v11}, Lp3d;->a(JLjava/lang/String;JJZLure;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
+    iget-object v2, p1, Llyc;->b:Ldyc;
 
     :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    invoke-static {v2, v5}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object p0
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    sget-object p1, Ldj9;->a:Ldj9;
+
+    invoke-virtual {p1}, Ldj9;->a()Lad7;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    new-instance v0, Lzc7;
+
+    sget-object v2, Lxc7;->X:Lxc7;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v2, v3}, Lzc7;-><init>(Lxc7;I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sget-object v2, Lupd;->M0:Lupd;
+
+    invoke-virtual {p1, v0, v2}, Lad7;->f(Ljava/util/Set;Lupd;)V
+
+    :cond_4
+    :goto_1
+    return-object v1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/String;
+
+    invoke-virtual {v2, v3, p1}, Lza9;->L(Lqa9;Ljava/lang/String;)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -33,32 +33,32 @@
 
 # virtual methods
 .method public getMetrics()Lorg/apache/http/io/HttpTransportMetrics;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->in:Lorg/apache/http/io/SessionInputBuffer;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->in:Lorg/apache/http/io/SessionInputBuffer;
 
-    invoke-interface {p0}, Lorg/apache/http/io/SessionInputBuffer;->getMetrics()Lorg/apache/http/io/HttpTransportMetrics;
+    invoke-interface {v0}, Lorg/apache/http/io/SessionInputBuffer;->getMetrics()Lorg/apache/http/io/HttpTransportMetrics;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public isDataAvailable(I)Z
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->in:Lorg/apache/http/io/SessionInputBuffer;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->in:Lorg/apache/http/io/SessionInputBuffer;
 
-    invoke-interface {p0, p1}, Lorg/apache/http/io/SessionInputBuffer;->isDataAvailable(I)Z
+    invoke-interface {v0, p1}, Lorg/apache/http/io/SessionInputBuffer;->isDataAvailable(I)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public read()I
@@ -88,16 +88,16 @@
     if-lez v0, :cond_0
 
     .line 6
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
+    iget-object v1, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
 
-    invoke-virtual {p0, v0}, Lorg/apache/http/impl/conn/Wire;->input(I)V
+    invoke-virtual {v1, v0}, Lorg/apache/http/impl/conn/Wire;->input(I)V
 
     :cond_0
     return v0
 .end method
 
 .method public read([B)I
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -123,11 +123,11 @@
     if-lez v0, :cond_0
 
     .line 9
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
+    iget-object v1, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1, v1, v0}, Lorg/apache/http/impl/conn/Wire;->input([BII)V
+    invoke-virtual {v1, p1, v2, v0}, Lorg/apache/http/impl/conn/Wire;->input([BII)V
 
     :cond_0
     return v0
@@ -160,9 +160,9 @@
     if-lez p3, :cond_0
 
     .line 3
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
 
-    invoke-virtual {p0, p1, p2, p3}, Lorg/apache/http/impl/conn/Wire;->input([BII)V
+    invoke-virtual {v0, p1, p2, p3}, Lorg/apache/http/impl/conn/Wire;->input([BII)V
 
     :cond_0
     return p3
@@ -211,22 +211,22 @@
     invoke-direct {v2, p1, v1, v0}, Ljava/lang/String;-><init>([CII)V
 
     .line 8
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
 
-    const-string p1, "[EOL]"
+    const-string v1, "[EOL]"
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-virtual {p0, p1}, Lorg/apache/http/impl/conn/Wire;->input(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lorg/apache/http/impl/conn/Wire;->input(Ljava/lang/String;)V
 
     :cond_0
     return v0
 .end method
 
 .method public readLine()Ljava/lang/String;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -252,15 +252,15 @@
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
+    iget-object v1, p0, Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
 
-    const-string v1, "[EOL]"
+    const-string v2, "[EOL]"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {p0, v1}, Lorg/apache/http/impl/conn/Wire;->input(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lorg/apache/http/impl/conn/Wire;->input(Ljava/lang/String;)V
 
     :cond_0
     return-object v0

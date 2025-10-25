@@ -3,46 +3,27 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
+
+
 # direct methods
-.method public static a(Landroid/app/NotificationManager;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/NotificationManager;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/service/notification/StatusBarNotification;",
-            ">;"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getActiveNotifications()[Landroid/service/notification/StatusBarNotification;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    move-result-object p0
+    const-string v1, "NO_OWNER"
 
-    if-nez p0, :cond_0
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    new-instance p0, Ljava/util/ArrayList;
+    sput-object v0, Lr1a;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    return-object p0
+    const-string v1, "ALREADY_LOCKED_BY_OWNER"
 
-    :cond_0
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/app/NotificationManager;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getCurrentInterruptionFilter()I
-
-    move-result p0
-
-    return p0
+    return-void
 .end method

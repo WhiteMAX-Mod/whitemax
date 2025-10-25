@@ -1,71 +1,48 @@
 .class public final Loo3;
-.super Lli0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lno3;
+.field public volatile a:J
 
-.field public c:Lvgb;
+.field public volatile b:J
+
+.field public volatile c:I
+
+.field public volatile d:J
+
+.field public volatile e:J
+
+.field public volatile f:J
+
+.field public volatile g:Ljava/lang/String;
+
+.field public volatile h:I
 
 
 # direct methods
-.method public constructor <init>(JLno3;)V
-    .locals 1
-
-    .line 1
-    sget-object v0, Lvgb;->c:Lvgb;
-
-    invoke-direct {p0, p1, p2, p3, v0}, Loo3;-><init>(JLno3;Lvgb;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JLno3;Lvgb;)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0, p1, p2}, Lli0;-><init>(J)V
-
-    .line 3
-    iput-object p3, p0, Loo3;->b:Lno3;
-
-    .line 4
-    iput-object p4, p0, Loo3;->c:Lvgb;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
+.method public constructor <init>(Z)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "ContactDb{data="
+    const-string v0, ""
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-object v0, p0, Loo3;->g:Ljava/lang/String;
 
-    iget-object v1, p0, Loo3;->b:Lno3;
+    const/4 v0, -0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput v0, p0, Loo3;->h:I
 
-    const-string v1, ", presence="
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget-object p0, p0, Loo3;->c:Lvgb;
+    move-result-wide v0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-wide v0, p0, Loo3;->a:J
 
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_0
+    return-void
 .end method

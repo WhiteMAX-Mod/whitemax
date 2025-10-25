@@ -1,51 +1,80 @@
-.class public final Los1;
-.super Ljx3;
+.class public final synthetic Los1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lps1;
-
-.field public Z:I
-
-.field public o:Lijb;
+.field public final synthetic b:Lus1;
 
 
 # direct methods
-.method public constructor <init>(Lps1;Ljx3;)V
+.method public synthetic constructor <init>(Lus1;I)V
     .locals 0
 
-    iput-object p1, p0, Los1;->Y:Lps1;
+    iput p2, p0, Los1;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Los1;->b:Lus1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Los1;->X:Ljava/lang/Object;
+    iget v0, p0, Los1;->a:I
 
-    iget p1, p0, Los1;->Z:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Los1;->b:Lus1;
 
-    or-int/2addr p1, v0
+    invoke-static {v0}, Lus1;->A(Lus1;)Landroid/graphics/drawable/ShapeDrawable;
 
-    iput p1, p0, Los1;->Z:I
+    move-result-object v0
 
-    iget-object p1, p0, Los1;->Y:Lps1;
+    return-object v0
 
+    :pswitch_0
+    iget-object v0, p0, Los1;->b:Lus1;
+
+    iget-object v0, v0, Lus1;->O0:Lji6;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llpg;
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lps1;->i(Lijb;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :goto_0
+    return-object v0
 
-    move-result-object p0
+    :pswitch_1
+    iget-object v0, p0, Los1;->b:Lus1;
 
-    return-object p0
+    invoke-static {v0}, Lus1;->w(Lus1;)Landroid/graphics/drawable/ShapeDrawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

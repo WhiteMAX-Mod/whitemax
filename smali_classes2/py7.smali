@@ -2,117 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkz7;
 
-# instance fields
-.field public final synthetic a:I
 
-.field public b:I
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lpy7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public c:Ljava/lang/Long;
-
-.field public d:Ljava/lang/Long;
+.field public static final a:Lpy7;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    .line 1
-    const/4 v0, 0x0
+    new-instance v0, Lpy7;
 
-    iput v0, p0, Lpy7;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lpy7;->a:Lpy7;
 
-    return-void
-.end method
+    new-instance v0, Ldu7;
 
-.method public constructor <init>(Lpy7;)V
-    .locals 1
+    const/4 v1, 0x3
 
-    const/4 v0, 0x1
+    invoke-direct {v0, v1}, Ldu7;-><init>(I)V
 
-    iput v0, p0, Lpy7;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iget v0, p1, Lpy7;->b:I
-
-    iput v0, p0, Lpy7;->b:I
-
-    .line 4
-    iget-object v0, p1, Lpy7;->c:Ljava/lang/Long;
-
-    iput-object v0, p0, Lpy7;->c:Ljava/lang/Long;
-
-    .line 5
-    iget-object p1, p1, Lpy7;->d:Ljava/lang/Long;
-
-    iput-object p1, p0, Lpy7;->d:Ljava/lang/Long;
+    sput-object v0, Lpy7;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 2
+.method public final describeContents()I
+    .locals 1
 
-    iget v0, p0, Lpy7;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    move-result-object p0
+    const/4 v0, 0x1
 
-    return-object p0
+    if-ne p0, p1, :cond_0
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    return v0
 
-    const-string v1, "LocationProviderRequest{priority="
+    :cond_0
+    instance-of p1, p1, Lpy7;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez p1, :cond_1
 
-    iget v1, p0, Lpy7;->b:I
+    const/4 p1, 0x0
 
-    invoke-static {v1}, Lyv7;->r(I)Ljava/lang/String;
+    return p1
 
-    move-result-object v1
+    :cond_1
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final hashCode()I
+    .locals 1
 
-    const-string v1, ", interval="
+    const v0, -0x501f9358
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v0
+.end method
 
-    iget-object v1, p0, Lpy7;->c:Ljava/lang/Long;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "ContentLevelError"
 
-    const-string v1, ", fastestInterval="
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object p0, p0, Lpy7;->d:Ljava/lang/Long;
+    const/4 p2, 0x1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

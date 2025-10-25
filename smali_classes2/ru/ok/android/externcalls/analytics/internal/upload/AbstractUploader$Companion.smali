@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lld4;)V
+.method public synthetic constructor <init>(Lki4;)V
     .locals 0
 
     .line 1
@@ -78,179 +78,93 @@
 
     invoke-static {}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->access$getAppVersionString$cp()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_4
+    if-nez v0, :cond_0
 
-    sget-object p0, Lru/ok/android/commons/app/ApplicationProvider;->c:Ljava/lang/String;
+    sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    const/4 v0, 0x0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lx4h;->l()Landroid/app/Application;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object p0
-
-    iget-object v1, p0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
-
-    sput-object v1, Lru/ok/android/commons/app/ApplicationProvider;->c:Ljava/lang/String;
-
-    sget-object v2, Lru/ok/android/commons/app/ApplicationProvider;->b:Ljava/lang/Integer;
-
-    if-nez v2, :cond_1
-
-    iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    sput-object p0, Lru/ok/android/commons/app/ApplicationProvider;->b:Ljava/lang/Integer;
-
-    :cond_1
-    move-object p0, v1
-
-    :goto_0
-    sget-object v1, Lru/ok/android/commons/app/ApplicationProvider;->b:Ljava/lang/Integer;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {}, Lx4h;->l()Landroid/app/Application;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v1
-
-    invoke-static {}, Lx4h;->l()Landroid/app/Application;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {}, Lxfi;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    iget v1, v0, Landroid/content/pm/PackageInfo;->versionCode:I
+    invoke-static {}, Lxfi;->c()I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v1
 
-    move-result-object v2
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    sput-object v2, Lru/ok/android/commons/app/ApplicationProvider;->b:Ljava/lang/Integer;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lru/ok/android/commons/app/ApplicationProvider;->c:Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v2, :cond_3
+    const-string v0, ":"
 
-    iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sput-object v0, Lru/ok/android/commons/app/ApplicationProvider;->c:Ljava/lang/String;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_3
-    move v0, v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :goto_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ":"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    move-result-object v0
 
     invoke-static {}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->access$getCompanion$p()Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$Companion;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->access$setAppVersionString$cp(Ljava/lang/String;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->access$setAppVersionString$cp(Ljava/lang/String;)V
 
-    :cond_4
-    return-object p0
+    :cond_0
+    return-object v0
 .end method
 
 .method public final getPlatformParam()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    sget-object p0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getEventMetaParams()Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getEventMetaParams()Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;->getAppName()Lzb6;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;->getAppName()Lji6;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Ljava/lang/String;
+    check-cast v0, Ljava/lang/String;
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-object p0
+    return-object v0
 
     :cond_1
     :goto_0
-    const-string p0, "debug"
+    const-string v0, "debug"
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getSdkVersionString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->access$getSdkVersionString$cp()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

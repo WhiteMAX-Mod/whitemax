@@ -3,48 +3,89 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxcd;
+.implements Lpcd;
 
 
 # instance fields
-.field public final a:Lp2f;
+.field public a:Lji6;
+
+.field public b:Ljava/lang/Object;
 
 
-# direct methods
-.method public constructor <init>(Lp2f;)V
+# virtual methods
+.method public final e()Z
+    .locals 2
+
+    iget-object v0, p0, Lrcd;->b:Ljava/lang/Object;
+
+    sget-object v1, Lai4;->t0:Lai4;
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lrcd;->b:Ljava/lang/Object;
+
+    sget-object v1, Lai4;->t0:Lai4;
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lrcd;->a:Lji6;
+
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lrcd;->b:Ljava/lang/Object;
+
+    :cond_0
+    iget-object v0, p0, Lrcd;->b:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final reset()V
     .locals 1
 
-    sget v0, Ldqa;->a:I
+    sget-object v0, Lai4;->t0:Lai4;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrcd;->a:Lp2f;
+    iput-object v0, p0, Lrcd;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-# virtual methods
-.method public final a()I
-    .locals 0
+    invoke-virtual {p0}, Lrcd;->e()Z
 
-    const/4 p0, 0x0
+    move-result v0
 
-    return p0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final getItemId()J
-    .locals 2
+    invoke-virtual {p0}, Lrcd;->getValue()Ljava/lang/Object;
 
-    const-wide v0, 0x7ffffffffffffffcL
+    move-result-object v0
 
-    return-wide v0
-.end method
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-.method public final m()I
-    .locals 0
+    move-result-object v0
 
-    sget p0, Ldqa;->s:I
+    return-object v0
 
-    return p0
+    :cond_0
+    const-string v0, "Lazy value not initialized yet."
+
+    return-object v0
 .end method

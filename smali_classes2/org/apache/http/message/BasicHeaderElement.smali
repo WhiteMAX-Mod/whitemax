@@ -65,19 +65,19 @@
 
     .line 6
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Name may not be null"
+    const-string p2, "Name may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
 # virtual methods
 .method public clone()Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/CloneNotSupportedException;
@@ -86,9 +86,9 @@
 
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -134,15 +134,15 @@
 
     if-eqz v2, :cond_2
 
-    iget-object p0, p0, Lorg/apache/http/message/BasicHeaderElement;->parameters:[Lorg/apache/http/NameValuePair;
+    iget-object v2, p0, Lorg/apache/http/message/BasicHeaderElement;->parameters:[Lorg/apache/http/NameValuePair;
 
     iget-object p1, p1, Lorg/apache/http/message/BasicHeaderElement;->parameters:[Lorg/apache/http/NameValuePair;
 
-    invoke-static {p0, p1}, Lorg/apache/http/util/LangUtils;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lorg/apache/http/util/LangUtils;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_2
 
     return v1
 
@@ -151,21 +151,21 @@
 .end method
 
 .method public getName()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/message/BasicHeaderElement;->name:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/message/BasicHeaderElement;->name:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getParameter(I)Lorg/apache/http/NameValuePair;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/message/BasicHeaderElement;->parameters:[Lorg/apache/http/NameValuePair;
+    iget-object v0, p0, Lorg/apache/http/message/BasicHeaderElement;->parameters:[Lorg/apache/http/NameValuePair;
 
-    aget-object p0, p0, p1
+    aget-object p1, v0, p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getParameterByName(Ljava/lang/String;)Lorg/apache/http/NameValuePair;
@@ -202,52 +202,52 @@
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Name may not be null"
+    const-string v0, "Name may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public getParameterCount()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/message/BasicHeaderElement;->parameters:[Lorg/apache/http/NameValuePair;
+    iget-object v0, p0, Lorg/apache/http/message/BasicHeaderElement;->parameters:[Lorg/apache/http/NameValuePair;
 
-    array-length p0, p0
+    array-length v0, v0
 
-    return p0
+    return v0
 .end method
 
 .method public getParameters()[Lorg/apache/http/NameValuePair;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/message/BasicHeaderElement;->parameters:[Lorg/apache/http/NameValuePair;
+    iget-object v0, p0, Lorg/apache/http/message/BasicHeaderElement;->parameters:[Lorg/apache/http/NameValuePair;
 
-    invoke-virtual {p0}, [Lorg/apache/http/NameValuePair;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lorg/apache/http/NameValuePair;->clone()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, [Lorg/apache/http/NameValuePair;
+    check-cast v0, [Lorg/apache/http/NameValuePair;
 
-    check-cast p0, [Lorg/apache/http/NameValuePair;
+    check-cast v0, [Lorg/apache/http/NameValuePair;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getValue()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/message/BasicHeaderElement;->value:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/message/BasicHeaderElement;->value:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
@@ -342,7 +342,7 @@
     :cond_1
     invoke-virtual {v0}, Lorg/apache/http/util/CharArrayBuffer;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

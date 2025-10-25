@@ -1,183 +1,52 @@
-.class public abstract Ln3f;
-.super Ljava/lang/Object;
+.class public final synthetic Ln3f;
+.super Lb9;
 .source "SourceFile"
+
+# interfaces
+.implements Lbj6;
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final q0:Ln3f;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    const-string v0, "#(?i)([\\p{L}0-9_]+)"
+    new-instance v0, Ln3f;
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Ltcb;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Ln3f;->q0:Ln3f;
 
     return-void
 .end method
 
-.method public static a(La4b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
 
-    const-string v0, "+"
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {p2}, Lm7g;->m(Ljava/lang/CharSequence;)Z
+    check-cast p1, Lw3f;
 
-    move-result v1
+    check-cast p2, Ljava/lang/Boolean;
 
-    if-eqz v1, :cond_0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    move-object p2, p3
+    sget-object p3, Ls3f;->F0:[Ltr7;
 
-    :cond_0
-    invoke-static {p2}, Lm7g;->m(Ljava/lang/CharSequence;)Z
+    new-instance p3, Ltcb;
 
-    move-result p3
+    invoke-direct {p3, p1, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const-string v1, "RU"
-
-    if-eqz p3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p2}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object p2
-
-    iget-object p3, p0, La4b;->f:Ljava/util/HashSet;
-
-    invoke-static {p3}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object p3
-
-    invoke-interface {p3, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-object v1, p2
-
-    :goto_0
-    :try_start_0
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    goto :goto_1
-
-    :cond_3
-    move-object p2, p1
-
-    :goto_1
-    invoke-virtual {p0, p2, v1}, La4b;->t(Ljava/lang/String;Ljava/lang/String;)Lr4b;
-
-    move-result-object p2
-    :try_end_0
-    .catch Lio/michaelrocks/libphonenumber/android/NumberParseException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    const/4 p2, 0x0
-
-    :goto_2
-    if-nez p2, :cond_4
-
-    return-object p1
-
-    :cond_4
-    const/4 p1, 0x2
-
-    invoke-virtual {p0, p2, p1}, La4b;->d(Lr4b;I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
-    .locals 1
-
-    instance-of v0, p1, Lru/ok/messages/video/fetcher/FetcherException;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lru/ok/messages/video/fetcher/FetcherException;
-
-    iget p1, p1, Lru/ok/messages/video/fetcher/FetcherException;->a:I
-
-    invoke-static {p1}, Lmw1;->t(I)I
-
-    move-result p1
-
-    packed-switch p1, :pswitch_data_0
-
-    sget p1, Ld1d;->M:I
-
-    goto :goto_0
-
-    :pswitch_0
-    sget p1, Ld1d;->y3:I
-
-    goto :goto_0
-
-    :pswitch_1
-    sget p1, Ld1d;->F3:I
-
-    goto :goto_0
-
-    :pswitch_2
-    sget p1, Ld1d;->G3:I
-
-    goto :goto_0
-
-    :pswitch_3
-    sget p1, Ld1d;->H3:I
-
-    goto :goto_0
-
-    :pswitch_4
-    sget p1, Ld1d;->J3:I
-
-    goto :goto_0
-
-    :pswitch_5
-    sget p1, Ld1d;->C3:I
-
-    goto :goto_0
-
-    :cond_0
-    sget p1, Ld1d;->y3:I
-
-    :goto_0
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x5
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p3
 .end method

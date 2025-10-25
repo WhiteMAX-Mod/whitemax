@@ -1,152 +1,120 @@
-.class public final enum Laob;
-.super Ljava/lang/Enum;
+.class public final synthetic Laob;
+.super Loj6;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Laob;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final synthetic X:Ly75;
-
-.field public static final enum b:Laob;
-
-.field public static final enum c:Laob;
-
-.field public static final synthetic o:[Laob;
+.implements Lli6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;I)V
+    .locals 12
 
-    new-instance v0, Laob;
+    iput p2, p0, Laob;->a:I
 
-    const/4 v1, 0x0
+    packed-switch p2, :pswitch_data_0
 
-    const-string v2, "local_chat"
+    iput-object p1, p0, Laob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    const-string v3, "LOCAL_CHAT"
+    const-string v4, "checkBoxItemDecoration_delegate$lambda$6$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
 
-    invoke-direct {v0, v3, v1, v2}, Laob;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const/4 v5, 0x0
 
-    sput-object v0, Laob;->b:Laob;
+    const/4 v1, 0x1
 
-    new-instance v1, Laob;
+    const-class v2, Lxj7;
 
-    const/4 v2, 0x1
+    const-string v3, "isChatItem"
 
-    const-string v3, "server_chat"
+    move-object v0, p0
 
-    const-string v4, "SERVER_CHAT"
-
-    invoke-direct {v1, v4, v2, v3}, Laob;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v2, Laob;
-
-    const/4 v3, 0x2
-
-    const-string v4, "contact"
-
-    const-string v5, "CONTACT"
-
-    invoke-direct {v2, v5, v3, v4}, Laob;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Laob;->c:Laob;
-
-    filled-new-array {v0, v1, v2}, [Laob;
-
-    move-result-object v0
-
-    sput-object v0, Laob;->o:[Laob;
-
-    new-instance v1, Ly75;
-
-    invoke-direct {v1, v0}, Ly75;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Laob;->X:Ly75;
-
-    new-instance v0, Lgpa;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
-
-    sput-object v0, Laob;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct/range {v0 .. v5}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
-.end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+    :pswitch_0
+    move-object v0, p0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, v0, Laob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    iput-object p3, p0, Laob;->a:Ljava/lang/String;
+    const-string v10, "checkBoxItemDecoration_delegate$lambda$6$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
+
+    const/4 v11, 0x0
+
+    const/4 v7, 0x1
+
+    const-class v8, Lxj7;
+
+    const-string v9, "isChatItem"
+
+    move-object v6, v0
+
+    invoke-direct/range {v6 .. v11}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
-.end method
 
-.method public static valueOf(Ljava/lang/String;)Laob;
-    .locals 1
-
-    const-class v0, Laob;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Laob;
-
-    return-object p0
-.end method
-
-.method public static values()[Laob;
-    .locals 1
-
-    sget-object v0, Laob;->o:[Laob;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Laob;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 p0, 0x0
+    iget v0, p0, Laob;->a:I
 
-    return p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    check-cast p1, Ljava/lang/Number;
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    move-result-object p0
+    move-result p1
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    iget-object v0, p0, Laob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    return-void
+    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, Laob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,64 +1,51 @@
-.class public final synthetic Lq79;
-.super Ljava/lang/Object;
+.class public final Lq79;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lnh3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ljava/lang/Object;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ljph;
+
+.field public o:Ljph;
+
+.field public q0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Ljph;Ly14;)V
     .locals 0
 
-    iput p1, p0, Lq79;->a:I
+    iput-object p1, p0, Lq79;->Z:Ljph;
 
-    iput-object p2, p0, Lq79;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lq79;->a:I
+    iput-object p1, p0, Lq79;->Y:Ljava/lang/Object;
 
-    iget-object p0, p0, Lq79;->b:Ljava/lang/Object;
+    iget p1, p0, Lq79;->q0:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Luca;
+    or-int/2addr p1, v0
 
-    iget-object p0, p0, Luca;->d:Lvtc;
+    iput p1, p0, Lq79;->q0:I
 
-    invoke-virtual {p0}, Lvtc;->reset()V
+    iget-object p1, p0, Lq79;->Z:Ljph;
 
-    return-void
+    invoke-static {p1, p0}, Ljph;->e(Ljph;Ly14;)Ljava/lang/Object;
 
-    :pswitch_0
-    check-cast p0, Ly79;
+    move-result-object p1
 
-    invoke-virtual {p0}, Ly79;->e()Li38;
-
-    move-result-object p0
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p0, v0}, Li38;->j(I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

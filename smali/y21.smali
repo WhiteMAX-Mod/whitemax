@@ -1,24 +1,24 @@
-.class public final synthetic Ly21;
+.class public final Ly21;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lli6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lz21;
+.field public final synthetic b:Liu7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lz21;I)V
+.method public synthetic constructor <init>(Liu7;I)V
     .locals 0
 
     iput p2, p0, Ly21;->a:I
 
-    iput-object p1, p0, Ly21;->b:Lz21;
+    iput-object p1, p0, Ly21;->b:Liu7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,37 +27,69 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
     iget v0, p0, Ly21;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Ly21;->b:Lz21;
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-boolean v0, p0, Lz21;->b:Z
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-boolean v1, p0, Lz21;->c:Z
+    iget-object v0, p0, Ly21;->b:Liu7;
 
-    invoke-virtual {p0, v0, v1}, Lz21;->a(ZZ)V
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    sget-object p0, Lylf;->a:Lylf;
+    move-result-object v0
 
-    return-object p0
+    check-cast v0, Ly83;
+
+    check-cast v0, Ld78;
+
+    iget-object v1, v0, Ld78;->G0:Lq4e;
+
+    sget-object v2, Ld78;->P0:[Ltr7;
+
+    const/16 v3, 0x16
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lq4e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 
     :pswitch_0
-    new-instance v0, Lx21;
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object p0, p0, Ly21;->b:Lz21;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {p0}, Lt7g;->a(Landroid/view/View;)Lzn7;
+    iget-object v0, p0, Ly21;->b:Liu7;
 
-    move-result-object p0
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, p0}, Lx21;-><init>(Lzn7;)V
+    move-result-object v0
 
-    return-object v0
+    check-cast v0, Ly83;
+
+    check-cast v0, Ld78;
+
+    iget-object v1, v0, Ld78;->J0:Lq4e;
+
+    sget-object v2, Ld78;->P0:[Ltr7;
+
+    const/16 v3, 0x19
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lq4e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 
     nop
 

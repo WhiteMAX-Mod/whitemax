@@ -35,17 +35,17 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer$3;->this$0:Lorg/webrtc/CameraCapturer;
+    iget-object v0, p0, Lorg/webrtc/CameraCapturer$3;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p0}, Lorg/webrtc/CameraCapturer;->i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "Camera failed to start within timeout."
+    const-string v1, "Camera failed to start within timeout."
 
-    invoke-interface {p0, v0}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraError(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraError(Ljava/lang/String;)V
 
     return-void
 .end method

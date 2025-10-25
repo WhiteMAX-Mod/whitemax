@@ -1,43 +1,102 @@
-.class public final Lp3;
-.super Ljava/lang/Object;
+.class public abstract Lp3;
+.super Lrwc;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lp3;
-
-
-# instance fields
-.field public volatile a:Ljava/lang/Thread;
-
-.field public volatile b:Lp3;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lp3;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lp3;->c:Lp3;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+# virtual methods
+.method public final a(I)I
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Lp3;->g()Ljava/util/Random;
 
-    sget-object v0, Lq3;->Y:Lla6;
+    move-result-object v0
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
 
-    move-result-object v1
+    move-result v0
 
-    invoke-virtual {v0, p0, v1}, Lla6;->B(Lp3;Ljava/lang/Thread;)V
+    rsub-int/lit8 v1, p1, 0x20
 
-    return-void
+    ushr-int/2addr v0, v1
+
+    neg-int p1, p1
+
+    shr-int/lit8 p1, p1, 0x1f
+
+    and-int/2addr p1, v0
+
+    return p1
+.end method
+
+.method public final b()I
+    .locals 1
+
+    invoke-virtual {p0}, Lp3;->g()Ljava/util/Random;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c(I)I
+    .locals 1
+
+    invoke-virtual {p0}, Lp3;->g()Ljava/util/Random;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/util/Random;->nextInt(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final d()J
+    .locals 2
+
+    invoke-virtual {p0}, Lp3;->g()Ljava/util/Random;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Random;->nextLong()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public abstract g()Ljava/util/Random;
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lp3;->g()Ljava/util/Random;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Random;->nextBoolean()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final i()F
+    .locals 1
+
+    invoke-virtual {p0}, Lp3;->g()Ljava/util/Random;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Random;->nextFloat()F
+
+    move-result v0
+
+    return v0
 .end method

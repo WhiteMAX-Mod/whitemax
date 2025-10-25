@@ -1,119 +1,181 @@
 .class public final Lnka;
-.super Lure;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lela;
 
 
 # instance fields
-.field public X:I
+.field public X:J
 
-.field public final synthetic Y:Loka;
+.field public final a:Lela;
 
-.field public final synthetic Z:Ltm3;
+.field public final b:Lq32;
+
+.field public final c:Luka;
+
+.field public final o:Lexb;
 
 
 # direct methods
-.method public constructor <init>(Loka;Ltm3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lela;JLexb;Lq32;Luka;)V
     .locals 0
 
-    iput-object p1, p0, Lnka;->Y:Loka;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    iput-object p2, p0, Lnka;->Z:Ltm3;
+    iput-object p1, p0, Lnka;->a:Lela;
 
-    const/4 p1, 0x2
+    iput-object p5, p0, Lnka;->b:Lq32;
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p6, p0, Lnka;->c:Luka;
+
+    iput-object p4, p0, Lnka;->o:Lexb;
+
+    iput-wide p2, p0, Lnka;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnka;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lnka;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lnka;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lnka;
-
-    iget-object v0, p0, Lnka;->Y:Loka;
-
-    iget-object p0, p0, Lnka;->Z:Ltm3;
-
-    invoke-direct {p1, v0, p0, p2}, Lnka;-><init>(Loka;Ltm3;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
     .locals 2
 
-    iget v0, p0, Lnka;->X:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    const/4 v1, 0x1
+    move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_2
 
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    return-object p1
+    const/4 v0, 0x1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-object v1, p0, Lnka;->b:Lq32;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v1}, Lq32;->h()Z
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v1
 
-    throw p0
+    if-eqz v1, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget-object v1, p0, Lnka;->c:Luka;
 
-    iget-object p1, p0, Lnka;->Y:Loka;
+    invoke-interface {v1, p0}, Luka;->a(Lela;)V
 
-    invoke-virtual {p1}, Loka;->a()Lqz9;
+    neg-int v0, v0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget-object v0, p0, Lnka;->a:Lela;
+
+    invoke-interface {v0}, Lela;->b()V
+
+    return-void
+.end method
+
+.method public final c(Lvv4;)V
+    .locals 1
+
+    iget-object v0, p0, Lnka;->b:Lq32;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, p1}, Lzv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
+
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lnka;->a:Lela;
+
+    invoke-interface {v0, p1}, Lela;->d(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 4
+
+    iget-wide v0, p0, Lnka;->X:J
+
+    const-wide v2, 0x7fffffffffffffffL
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_0
+
+    const-wide/16 v2, 0x1
+
+    sub-long v2, v0, v2
+
+    iput-wide v2, p0, Lnka;->X:J
+
+    :cond_0
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    iget-object v1, p0, Lnka;->a:Lela;
+
+    if-nez v0, :cond_1
+
+    invoke-interface {v1, p1}, Lela;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_1
+    :try_start_0
+    iget-object v0, p0, Lnka;->o:Lexb;
+
+    invoke-interface {v0, p1}, Lexb;->test(Ljava/lang/Object;)Z
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v0, :cond_2
+
+    invoke-interface {v1, p1}, Lela;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_2
+    invoke-virtual {p0}, Lnka;->a()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    new-instance v2, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
 
     move-result-object p1
 
-    iput v1, p0, Lnka;->X:I
+    invoke-direct {v2, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    iget-object v0, p0, Lnka;->Z:Ltm3;
+    invoke-interface {v1, v2}, Lela;->onError(Ljava/lang/Throwable;)V
 
-    invoke-virtual {p1, v0, p0}, Lqz9;->c(Ltm3;Ljx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    return-object p0
+    return-void
 .end method

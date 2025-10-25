@@ -194,9 +194,9 @@
 
     .line 13
     :goto_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/v;->f:Lcom/my/tracker/obfuscated/k;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/v;->f:Lcom/my/tracker/obfuscated/k;
 
-    invoke-virtual {p0, p3}, Lcom/my/tracker/obfuscated/k;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/j;
+    invoke-virtual {p1, p3}, Lcom/my/tracker/obfuscated/k;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/j;
 
     move-result-object v7
 

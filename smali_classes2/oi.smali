@@ -1,3 +1,3 @@
-.class public interface abstract Loi;
-.super Ljava/lang/Object;
+.class public final Loi;
+.super Lvei;
 .source "SourceFile"

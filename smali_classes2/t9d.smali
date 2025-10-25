@@ -1,19 +1,19 @@
 .class public final Lt9d;
-.super Ljava/lang/Object;
+.super Luj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lz4;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lz4;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Luj0;-><init>()V
 
-    iput-object p1, p0, Lt9d;->a:Lz4;
+    iput-wide p1, p0, Lt9d;->b:J
 
     return-void
 .end method

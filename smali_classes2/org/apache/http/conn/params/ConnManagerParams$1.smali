@@ -31,7 +31,7 @@
 .method public getMaxForRoute(Lorg/apache/http/conn/routing/HttpRoute;)I
     .locals 0
 
-    const/4 p0, 0x2
+    const/4 p1, 0x2
 
-    return p0
+    return p1
 .end method

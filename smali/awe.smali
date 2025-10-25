@@ -1,61 +1,49 @@
-.class public final Lawe;
+.class public abstract Lawe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p2, p0, Lawe;->a:I
-
-    iput p3, p0, Lawe;->b:I
-
-    iput-object p1, p0, Lawe;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lawe;->o:Ljava/lang/String;
-
-    return-void
-.end method
+.implements Lyq9;
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 2
+.method public final describeContents()I
+    .locals 1
 
-    check-cast p1, Lawe;
+    const/4 v0, 0x0
 
-    iget v0, p0, Lawe;->a:I
+    return v0
+.end method
 
-    iget v1, p1, Lawe;->a:I
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sub-int/2addr v0, v1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    iget p0, p0, Lawe;->b:I
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    iget p1, p1, Lawe;->b:I
+    move-result-object v0
 
-    sub-int/2addr p0, p1
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    return p0
+    move-result v1
+
+    const-string v2, "SCTE-35 splice command: type="
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 
     :cond_0
-    return v0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    return-object v0
 .end method

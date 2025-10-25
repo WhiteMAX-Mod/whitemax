@@ -3,93 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ViewStub$OnInflateListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lqf6;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lqf6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqf6;)V
+.method public synthetic constructor <init>(Lqf6;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lpf6;->a:I
 
-    iput-object p1, p0, Lpf6;->a:Lqf6;
+    iput-object p1, p0, Lpf6;->b:Lqf6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onInflate(Landroid/view/ViewStub;Landroid/view/View;)V
-    .locals 8
+.method public final run()V
+    .locals 3
 
-    sget p1, Lyma;->b:I
+    iget v0, p0, Lpf6;->a:I
 
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v6
+    iget-object v0, p0, Lpf6;->b:Lqf6;
 
-    sget p1, Lyma;->a:I
+    const/4 v1, 0x0
 
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iput-boolean v1, v0, Lqf6;->r0:Z
 
-    move-result-object p1
+    iget-object v2, v0, Lqf6;->Y:Lorg/webrtc/ScreenCapturerAndroid;
 
-    move-object v1, p1
+    if-eqz v2, :cond_0
 
-    check-cast v1, Lone/me/sdk/gallery/view/NumericCheckButton;
+    iget-object v2, v0, Lqf6;->Y:Lorg/webrtc/ScreenCapturerAndroid;
 
-    iget-object p0, p0, Lpf6;->a:Lqf6;
-
-    iput-object v1, p0, Lqf6;->F0:Lone/me/sdk/gallery/view/NumericCheckButton;
-
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    const/16 p1, 0xa
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, p0
-
-    invoke-static {p1}, Lya6;->G(F)I
-
-    move-result v2
-
-    if-nez v6, :cond_0
-
-    return-void
+    invoke-virtual {v2}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
 
     :cond_0
-    new-instance v0, Lme3;
+    const/4 v2, 0x0
 
-    const/4 v7, 0x1
+    iput-object v2, v0, Lqf6;->Y:Lorg/webrtc/ScreenCapturerAndroid;
 
-    move v3, v2
+    iput-boolean v1, v0, Lqf6;->s0:Z
 
-    move v4, v2
+    iget-object v1, v0, Lqf6;->X:Lorg/webrtc/SurfaceTextureHelper;
 
-    move v5, v2
+    if-eqz v1, :cond_1
 
-    invoke-direct/range {v0 .. v7}, Lme3;-><init>(Landroid/view/View;IIIILandroid/view/View;I)V
+    iget-object v1, v0, Lqf6;->X:Lorg/webrtc/SurfaceTextureHelper;
 
-    invoke-virtual {v6, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1}, Lorg/webrtc/SurfaceTextureHelper;->dispose()V
+
+    :cond_1
+    iput-object v2, v0, Lqf6;->X:Lorg/webrtc/SurfaceTextureHelper;
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpf6;->b:Lqf6;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lqf6;->r0:Z
+
+    iget-object v2, v0, Lqf6;->Y:Lorg/webrtc/ScreenCapturerAndroid;
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, v0, Lqf6;->Y:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-virtual {v2}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
+
+    :cond_2
+    iput-boolean v1, v0, Lqf6;->s0:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -23,7 +23,7 @@
         "",
         "Landroid/media/AudioDeviceInfo;",
         "addedDevices",
-        "Lylf;",
+        "Lccg;",
         "onAudioDevicesAdded",
         "([Landroid/media/AudioDeviceInfo;)V",
         "removedDevices",
@@ -58,55 +58,55 @@
 
 # virtual methods
 .method public onAudioDevicesAdded([Landroid/media/AudioDeviceInfo;)V
-    .locals 6
+    .locals 7
 
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$createCallbackM$1;->this$0:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$createCallbackM$1;->this$0:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;
 
-    array-length v0, p1
+    array-length v1, p1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    if-ge v1, v0, :cond_1
+    if-ge v2, v1, :cond_1
 
-    aget-object v2, p1, v1
+    aget-object v3, p1, v2
 
-    invoke-virtual {v2}, Landroid/media/AudioDeviceInfo;->getType()I
+    invoke-virtual {v3}, Landroid/media/AudioDeviceInfo;->getType()I
 
-    move-result v3
+    move-result v4
 
-    const/4 v4, 0x7
+    const/4 v5, 0x7
 
-    if-ne v3, v4, :cond_0
+    if-ne v4, v5, :cond_0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;->access$getListener$p(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;->access$getListener$p(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;
+
+    move-result-object v4
+
+    new-instance v5, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;
+
+    invoke-virtual {v3}, Landroid/media/AudioDeviceInfo;->getId()I
+
+    move-result v6
+
+    invoke-virtual {v3}, Landroid/media/AudioDeviceInfo;->getProductName()Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    new-instance v4, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2}, Landroid/media/AudioDeviceInfo;->getId()I
+    move-result-object v3
 
-    move-result v5
+    invoke-direct {v5, v6, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;-><init>(ILjava/lang/String;)V
 
-    invoke-virtual {v2}, Landroid/media/AudioDeviceInfo;->getProductName()Ljava/lang/CharSequence;
+    invoke-interface {v4, v5}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;->onDeviceAvailable(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;)Z
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v4, v5, v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;-><init>(ILjava/lang/String;)V
-
-    invoke-interface {v3, v4}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;->onDeviceAvailable(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;)Z
-
-    move-result v2
+    move-result v3
 
     :cond_0
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
@@ -115,55 +115,55 @@
 .end method
 
 .method public onAudioDevicesRemoved([Landroid/media/AudioDeviceInfo;)V
-    .locals 6
+    .locals 7
 
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$createCallbackM$1;->this$0:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$createCallbackM$1;->this$0:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;
 
-    array-length v0, p1
+    array-length v1, p1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    if-ge v1, v0, :cond_1
+    if-ge v2, v1, :cond_1
 
-    aget-object v2, p1, v1
+    aget-object v3, p1, v2
 
-    invoke-virtual {v2}, Landroid/media/AudioDeviceInfo;->getType()I
+    invoke-virtual {v3}, Landroid/media/AudioDeviceInfo;->getType()I
 
-    move-result v3
+    move-result v4
 
-    const/4 v4, 0x7
+    const/4 v5, 0x7
 
-    if-ne v3, v4, :cond_0
+    if-ne v4, v5, :cond_0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;->access$getListener$p(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;->access$getListener$p(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;
+
+    move-result-object v4
+
+    new-instance v5, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;
+
+    invoke-virtual {v3}, Landroid/media/AudioDeviceInfo;->getId()I
+
+    move-result v6
+
+    invoke-virtual {v3}, Landroid/media/AudioDeviceInfo;->getProductName()Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    new-instance v4, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2}, Landroid/media/AudioDeviceInfo;->getId()I
+    move-result-object v3
 
-    move-result v5
+    invoke-direct {v5, v6, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;-><init>(ILjava/lang/String;)V
 
-    invoke-virtual {v2}, Landroid/media/AudioDeviceInfo;->getProductName()Ljava/lang/CharSequence;
+    invoke-interface {v4, v5}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;->onDeviceUnavailable(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;)Z
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v4, v5, v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;-><init>(ILjava/lang/String;)V
-
-    invoke-interface {v3, v4}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;->onDeviceUnavailable(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$BluetoothDeviceIntent;)Z
-
-    move-result v2
+    move-result v3
 
     :cond_0
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 

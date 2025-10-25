@@ -93,7 +93,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIZLld4;)V
+.method public synthetic constructor <init>(IIZLki4;)V
     .locals 0
 
     .line 1
@@ -105,25 +105,25 @@
 
 # virtual methods
 .method public final getHeight$rlottie_release()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieFactory$Way;->height:I
+    iget v0, p0, Lone/me/rlottie/RLottieFactory$Way;->height:I
 
-    return p0
+    return v0
 .end method
 
 .method public final getLimitFps$rlottie_release()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieFactory$Way;->limitFps:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieFactory$Way;->limitFps:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getWidth$rlottie_release()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieFactory$Way;->width:I
+    iget v0, p0, Lone/me/rlottie/RLottieFactory$Way;->width:I
 
-    return p0
+    return v0
 .end method

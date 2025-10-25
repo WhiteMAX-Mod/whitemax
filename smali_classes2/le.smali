@@ -1,85 +1,127 @@
 .class public final Lle;
-.super Landroid/view/View;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lutf;
 
-# instance fields
-.field public final a:Landroid/graphics/Paint;
+
+# static fields
+.field public static final a:Lle;
+
+.field public static final b:Lk0a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    const/4 v0, 0x0
+    new-instance v0, Lle;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    sput-object v0, Lle;->a:Lle;
 
-    new-instance p1, Landroid/graphics/Paint;
+    new-instance v0, Lk0a;
 
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+    const/16 v1, 0xa
 
-    iput-object p1, p0, Lle;->a:Landroid/graphics/Paint;
+    invoke-direct {v0, v1}, Lk0a;-><init>(I)V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2, v1}, Lk0a;->e(II)V
+
+    const/4 v2, 0x2
+
+    const/16 v3, 0x10
+
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
+
+    const/4 v2, 0x3
+
+    const/16 v4, 0xd
+
+    invoke-virtual {v0, v2, v4}, Lk0a;->e(II)V
+
+    const/4 v2, 0x4
+
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
+
+    const/4 v2, 0x5
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
+
+    const/4 v2, 0x6
+
+    const/4 v3, -0x2
+
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
+
+    const/4 v2, 0x7
+
+    const/4 v3, -0x4
+
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
+
+    const/16 v2, 0x8
+
+    const/4 v3, -0x6
+
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
+
+    const/16 v2, 0x9
+
+    const/4 v3, -0x5
+
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
+
+    const/4 v2, -0x8
+
+    invoke-virtual {v0, v1, v2}, Lk0a;->e(II)V
+
+    sput-object v0, Lle;->b:Lk0a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 4
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    const/high16 v1, 0x40000000    # 2.0f
-
-    div-float/2addr v0, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr v2, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    div-float/2addr v3, v1
-
-    iget-object v1, p0, Lle;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v2, v3, v1}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
-
-    return-void
-.end method
-
-.method public final onMeasure(II)V
+.method public final a(I)V
     .locals 2
 
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    sget-object v0, Lle;->b:Lk0a;
 
-    move-result v0
+    invoke-virtual {v0, p1}, Lk0a;->b(I)I
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    move-result p1
 
-    move-result v1
+    const/4 v1, -0x1
 
-    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setMeasuredDimension(II)V
+    if-ltz p1, :cond_0
 
-    invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
+    iget-object v0, v0, Lk0a;->c:[I
 
+    aget p1, v0, p1
+
+    goto :goto_0
+
+    :cond_0
+    move p1, v1
+
+    :goto_0
+    if-ne p1, v1, :cond_1
+
+    return-void
+
+    :cond_1
+    :try_start_0
+    invoke-static {p1}, Landroid/os/Process;->setThreadPriority(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
     return-void
 .end method

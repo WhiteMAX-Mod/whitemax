@@ -83,20 +83,20 @@
 
     const-wide/16 v2, 0x0
 
-    cmp-long p0, v0, v2
+    cmp-long v0, v0, v2
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "RtpSender has been disposed."
+    const-string v1, "RtpSender has been disposed."
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method private static native nativeGetDtmfSender(J)J
@@ -185,11 +185,11 @@
 .end method
 
 .method public dtmf()Lorg/webrtc/DtmfSender;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/RtpSender;->dtmfSender:Lorg/webrtc/DtmfSender;
+    iget-object v0, p0, Lorg/webrtc/RtpSender;->dtmfSender:Lorg/webrtc/DtmfSender;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getNativeRtpSender()J
@@ -211,9 +211,9 @@
 
     invoke-static {v0, v1}, Lorg/webrtc/RtpSender;->nativeGetParameters(J)Lorg/webrtc/RtpParameters;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getStreams()Ljava/util/List;
@@ -233,9 +233,9 @@
 
     invoke-static {v0, v1}, Lorg/webrtc/RtpSender;->nativeGetStreams(J)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public id()Ljava/lang/String;
@@ -247,13 +247,13 @@
 
     invoke-static {v0, v1}, Lorg/webrtc/RtpSender;->nativeGetId(J)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public setFrameEncryptor(Lorg/webrtc/FrameEncryptor;)V
-    .locals 2
+    .locals 4
 
     invoke-direct {p0}, Lorg/webrtc/RtpSender;->checkRtpSenderExists()V
 
@@ -261,9 +261,9 @@
 
     invoke-interface {p1}, Lorg/webrtc/FrameEncryptor;->getNativeFrameEncryptor()J
 
-    move-result-wide p0
+    move-result-wide v2
 
-    invoke-static {v0, v1, p0, p1}, Lorg/webrtc/RtpSender;->nativeSetFrameEncryptor(JJ)V
+    invoke-static {v0, v1, v2, v3}, Lorg/webrtc/RtpSender;->nativeSetFrameEncryptor(JJ)V
 
     return-void
 .end method
@@ -277,9 +277,9 @@
 
     invoke-static {v0, v1, p1}, Lorg/webrtc/RtpSender;->nativeSetParameters(JLorg/webrtc/RtpParameters;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public setStreams(Ljava/util/List;)V
@@ -327,9 +327,9 @@
 
     if-nez v0, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     iget-object v0, p0, Lorg/webrtc/RtpSender;->cachedTrack:Lorg/webrtc/MediaStreamTrack;
@@ -347,9 +347,9 @@
 
     iput-boolean p2, p0, Lorg/webrtc/RtpSender;->ownsTrack:Z
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public setVideoEncoderObserver(Lorg/webrtc/VideoEncoderObserver;)V
@@ -359,9 +359,9 @@
 
     const-wide/16 v2, 0x0
 
-    cmp-long p0, v0, v2
+    cmp-long v2, v0, v2
 
-    if-eqz p0, :cond_0
+    if-eqz v2, :cond_0
 
     invoke-static {v0, v1, p1}, Lorg/webrtc/RtpSender;->nativeSetVideoEncoderObserver(JLorg/webrtc/VideoEncoderObserver;)V
 
@@ -370,9 +370,9 @@
 .end method
 
 .method public track()Lorg/webrtc/MediaStreamTrack;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/RtpSender;->cachedTrack:Lorg/webrtc/MediaStreamTrack;
+    iget-object v0, p0, Lorg/webrtc/RtpSender;->cachedTrack:Lorg/webrtc/MediaStreamTrack;
 
-    return-object p0
+    return-object v0
 .end method

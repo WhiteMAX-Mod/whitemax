@@ -41,9 +41,9 @@
 
 # virtual methods
 .method public preferSpeakerOverEarpiece()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method

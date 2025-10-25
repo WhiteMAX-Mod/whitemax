@@ -1,30 +1,48 @@
 .class public final Ltu2;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lvu2;
+.super Ly14;
 
 
 # instance fields
-.field public final a:Ljava/util/Set;
+.field public X:I
 
-.field public final b:Z
+.field public final synthetic Y:Lo31;
 
-.field public final c:Ljava/util/Set;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Set;ZLjava/util/Set;)V
+.method public constructor <init>(Lo31;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltu2;->Y:Lo31;
 
-    iput-object p1, p0, Ltu2;->a:Ljava/util/Set;
-
-    iput-boolean p2, p0, Ltu2;->b:Z
-
-    iput-object p3, p0, Ltu2;->c:Ljava/util/Set;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ltu2;->o:Ljava/lang/Object;
+
+    iget p1, p0, Ltu2;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ltu2;->X:I
+
+    iget-object p1, p0, Ltu2;->Y:Lo31;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lo31;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

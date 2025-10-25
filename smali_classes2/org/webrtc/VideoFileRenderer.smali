@@ -91,7 +91,7 @@
 
     const-string v2, "YUV4MPEG2 C420 W"
 
-    invoke-static {v2, p2, p1, p3, v1}, Lsg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p2, p1, p3, v1}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -156,13 +156,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Does not support uneven width or height"
+    const-string p2, "Does not support uneven width or height"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public static synthetic a(Lorg/webrtc/VideoFileRenderer;Lorg/webrtc/VideoFrame;)V
@@ -240,9 +240,9 @@
 
     invoke-interface {v0}, Lorg/webrtc/EglBase;->release()V
 
-    iget-object p0, p0, Lorg/webrtc/VideoFileRenderer;->renderThread:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lorg/webrtc/VideoFileRenderer;->renderThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {p0}, Landroid/os/HandlerThread;->quit()Z
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
 
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
@@ -305,22 +305,22 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object p0, p0, Lorg/webrtc/VideoFileRenderer;->fileThread:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lorg/webrtc/VideoFileRenderer;->fileThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {p0}, Landroid/os/HandlerThread;->quit()Z
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
 
     return-void
 
     :catch_0
-    move-exception p0
+    move-exception v0
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    new-instance v1, Ljava/lang/RuntimeException;
 
-    const-string v1, "Error closing output file"
+    const-string v2, "Error closing output file"
 
-    invoke-direct {v0, v1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    throw v0
+    throw v1
 .end method
 
 .method private synthetic lambda$renderFrameOnRenderThread$1(Lorg/webrtc/VideoFrame$I420Buffer;Lorg/webrtc/VideoFrame;)V
@@ -416,15 +416,15 @@
     :catch_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    const-string p2, "Error writing video to disk"
+    const-string v0, "Error writing video to disk"
 
-    invoke-direct {p1, p2, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p2, v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    throw p1
+    throw p2
 .end method
 
 .method private renderFrameOnRenderThread(Lorg/webrtc/VideoFrame;)V
@@ -558,11 +558,11 @@
 
     iget-object v0, p0, Lorg/webrtc/VideoFileRenderer;->fileThreadHandler:Landroid/os/Handler;
 
-    new-instance v2, Ljxc;
+    new-instance v2, Ldtb;
 
-    const/16 v3, 0xf
+    const/16 v3, 0x15
 
-    invoke-direct {v2, p0, v1, p1, v3}, Ljxc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v2, p0, v1, p1, v3}, Ldtb;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -578,11 +578,11 @@
 
     iget-object v0, p0, Lorg/webrtc/VideoFileRenderer;->renderThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lz5e;
+    new-instance v1, Ltlg;
 
-    const/16 v2, 0x11
+    const/4 v2, 0x3
 
-    invoke-direct {v1, p0, v2, p1}, Lz5e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p0, v2, p1}, Ltlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -600,11 +600,11 @@
 
     iget-object v1, p0, Lorg/webrtc/VideoFileRenderer;->renderThreadHandler:Landroid/os/Handler;
 
-    new-instance v2, Lz5e;
+    new-instance v2, Ltlg;
 
-    const/16 v3, 0x12
+    const/4 v3, 0x4
 
-    invoke-direct {v2, p0, v3, v0}, Lz5e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, v3, v0}, Ltlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -612,37 +612,37 @@
 
     iget-object v0, p0, Lorg/webrtc/VideoFileRenderer;->fileThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lsle;
+    new-instance v1, Lzje;
 
-    const/16 v2, 0x13
+    const/16 v2, 0x1d
 
-    invoke-direct {v1, v2, p0}, Lsle;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lzje;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :try_start_0
-    iget-object p0, p0, Lorg/webrtc/VideoFileRenderer;->fileThread:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lorg/webrtc/VideoFileRenderer;->fileThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {p0}, Ljava/lang/Thread;->join()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->join()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    move-exception p0
+    move-exception v0
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
 
-    const-string v0, "VideoFileRenderer"
+    const-string v1, "VideoFileRenderer"
 
-    const-string v1, "Interrupted while waiting for the write to disk to complete."
+    const-string v2, "Interrupted while waiting for the write to disk to complete."
 
-    invoke-static {v0, v1, p0}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

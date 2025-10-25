@@ -337,19 +337,19 @@
     goto :goto_1
 
     :cond_2
-    new-instance p0, Ljava/util/ArrayList;
+    new-instance p1, Ljava/util/ArrayList;
 
-    const/4 p1, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {p1, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    new-instance p1, Lorg/apache/http/message/BufferedHeader;
+    new-instance v1, Lorg/apache/http/message/BufferedHeader;
 
-    invoke-direct {p1, v0}, Lorg/apache/http/message/BufferedHeader;-><init>(Lorg/apache/http/util/CharArrayBuffer;)V
+    invoke-direct {v1, v0}, Lorg/apache/http/message/BufferedHeader;-><init>(Lorg/apache/http/util/CharArrayBuffer;)V
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    return-object p0
+    return-object p1
 .end method
 
 
@@ -485,34 +485,34 @@
 
     invoke-direct {p0, p1}, Lorg/apache/http/impl/cookie/RFC2109Spec;->doFormatOneHeader(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_1
     invoke-direct {p0, p1}, Lorg/apache/http/impl/cookie/RFC2109Spec;->doFormatManyHeaders(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "List of cookies may not be empty"
+    const-string v0, "List of cookies may not be empty"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "List of cookies may not be null"
+    const-string v0, "List of cookies may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public formatParamAsVer(Lorg/apache/http/util/CharArrayBuffer;Ljava/lang/String;Ljava/lang/String;I)V
@@ -520,21 +520,21 @@
 
     invoke-virtual {p1, p2}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
-    const-string p0, "="
+    const-string p2, "="
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
     if-eqz p3, :cond_1
 
     if-lez p4, :cond_0
 
-    const/16 p0, 0x22
+    const/16 p2, 0x22
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
+    invoke-virtual {p1, p2}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
 
     invoke-virtual {p1, p3}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
+    invoke-virtual {p1, p2}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
 
     return-void
 
@@ -546,19 +546,19 @@
 .end method
 
 .method public getVersion()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
 .method public getVersionHeader()Lorg/apache/http/Header;
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public parse(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;
@@ -591,27 +591,27 @@
 
     invoke-virtual {p0, p1, p2}, Lorg/apache/http/impl/cookie/CookieSpecBase;->parse([Lorg/apache/http/HeaderElement;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Cookie origin may not be null"
+    const-string p2, "Cookie origin may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Header may not be null"
+    const-string p2, "Header may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public validate(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V
@@ -651,29 +651,29 @@
     return-void
 
     :cond_0
-    new-instance p0, Lorg/apache/http/cookie/MalformedCookieException;
+    new-instance p1, Lorg/apache/http/cookie/MalformedCookieException;
 
-    const-string p1, "Cookie name may not start with $"
+    const-string p2, "Cookie name may not start with $"
 
-    invoke-direct {p0, p1}, Lorg/apache/http/cookie/MalformedCookieException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lorg/apache/http/cookie/MalformedCookieException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Lorg/apache/http/cookie/MalformedCookieException;
+    new-instance p1, Lorg/apache/http/cookie/MalformedCookieException;
 
-    const-string p1, "Cookie name may not contain blanks"
+    const-string p2, "Cookie name may not contain blanks"
 
-    invoke-direct {p0, p1}, Lorg/apache/http/cookie/MalformedCookieException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lorg/apache/http/cookie/MalformedCookieException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Cookie may not be null"
+    const-string p2, "Cookie may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

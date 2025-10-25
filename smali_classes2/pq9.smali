@@ -1,147 +1,85 @@
 .class public final Lpq9;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lpq9;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Z
-
-.field public final c:Z
+.field public final synthetic Y:Lone/me/messages/settings/MessagesSettingsScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/settings/MessagesSettingsScreen;)V
+    .locals 0
 
-    new-instance v0, Lba8;
+    iput-object p2, p0, Lpq9;->Y:Lone/me/messages/settings/MessagesSettingsScreen;
 
-    const/16 v1, 0x10
+    const/4 p2, 0x2
 
-    invoke-direct {v0, v1}, Lba8;-><init>(I)V
-
-    sput-object v0, Lpq9;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 3
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lpq9;->a:I
-
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_0
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    iput-boolean v0, p0, Lpq9;->b:Z
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    move v1, v2
-
-    :cond_1
-    iput-boolean v1, p0, Lpq9;->c:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Loq9;)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iget v0, p1, Loq9;->a:I
-
-    iput v0, p0, Lpq9;->a:I
-
-    .line 3
-    iget-boolean v0, p1, Loq9;->b:Z
-
-    iput-boolean v0, p0, Lpq9;->b:Z
-
-    .line 4
-    iget-boolean p1, p1, Loq9;->c:Z
-
-    iput-boolean p1, p0, Lpq9;->c:Z
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return p0
+    invoke-virtual {p0, p1, p2}, Lpq9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lpq9;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lpq9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget p2, p0, Lpq9;->a:I
+    new-instance v0, Lpq9;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v1, p0, Lpq9;->Y:Lone/me/messages/settings/MessagesSettingsScreen;
 
-    iget-boolean p2, p0, Lpq9;->b:Z
+    invoke-direct {v0, p2, v1}, Lpq9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/settings/MessagesSettingsScreen;)V
 
-    int-to-byte p2, p2
+    iput-object p1, v0, Lpq9;->X:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    return-object v0
+.end method
 
-    iget-boolean p0, p0, Lpq9;->c:Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    int-to-byte p0, p0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByte(B)V
+    iget-object p1, p0, Lpq9;->X:Ljava/lang/Object;
 
-    return-void
+    check-cast p1, Le5a;
+
+    instance-of v0, p1, Lwf4;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Loq9;->c:Loq9;
+
+    check-cast p1, Lwf4;
+
+    invoke-virtual {v0, p1}, Lrdi;->t0(Lwf4;)V
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

@@ -1,19 +1,22 @@
 .class public final Lcsb;
-.super Lesb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldsb;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcsb;->a:I
+    iput-object p1, p0, Lcsb;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -41,64 +44,46 @@
     :cond_1
     check-cast p1, Lcsb;
 
-    iget p0, p0, Lcsb;->a:I
+    iget-object v1, p0, Lcsb;->a:Ljava/lang/String;
 
-    iget p1, p1, Lcsb;->a:I
+    iget-object p1, p1, Lcsb;->a:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_2
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return v0
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
 
     :cond_2
-    return v2
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/16 p0, 0x400
-
-    int-to-long v0, p0
-
-    return-wide v0
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lcsb;->a:I
+    iget-object v0, p0, Lcsb;->a:Ljava/lang/String;
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    move-result p0
+    move-result v0
 
-    return p0
-.end method
-
-.method public final m()I
-    .locals 0
-
-    iget p0, p0, Lcsb;->a:I
-
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    iget p0, p0, Lcsb;->a:I
-
-    invoke-static {p0}, Ln2e;->E(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "Loading(itemViewType="
+    const-string v0, "UserPhoto(url="
 
     const-string v1, ")"
 
-    invoke-static {v0, p0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v2, p0, Lcsb;->a:Ljava/lang/String;
 
-    move-result-object p0
+    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,34 +1,43 @@
-.class public abstract Lx7c;
+.class public abstract synthetic Lx7c;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields
-.field public static web_app_root_choose_media_bottomsheet_camera:I = 0x7f0a0d77
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static web_app_root_choose_media_bottomsheet_file_manager:I = 0x7f0a0d78
 
-.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f0a0d79
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-.field public static web_app_root_choose_media_bottomsheet_video:I = 0x7f0a0d7a
+    const/4 v0, 0x2
 
-.field public static webapp_root_content_container:I = 0x7f0a0d7b
+    invoke-static {v0}, Ldy1;->y(I)[I
 
-.field public static webapp_root_error_container:I = 0x7f0a0d7c
+    move-result-object v1
 
-.field public static webapp_root_frame:I = 0x7f0a0d7d
+    array-length v1, v1
 
-.field public static webapp_root_progressbar:I = 0x7f0a0d7e
+    new-array v1, v1, [I
 
-.field public static webapp_root_settings_header:I = 0x7f0a0d7f
+    const/4 v2, 0x1
 
-.field public static webapp_root_settings_sections_recycler:I = 0x7f0a0d80
+    const/4 v3, 0x0
 
-.field public static webapp_root_settings_switcher:I = 0x7f0a0d81
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-.field public static webapp_root_settings_toolbar:I = 0x7f0a0d82
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-.field public static webapp_root_settings_transition:I = 0x7f0a0d83
+    :catch_1
+    sput-object v1, Lx7c;->$EnumSwitchMapping$0:[I
 
-.field public static webapp_root_toolbar:I = 0x7f0a0d84
-
-.field public static webapp_root_webview:I = 0x7f0a0d85
+    return-void
+.end method

@@ -1,19 +1,23 @@
-.class public final Lqig;
+.class public abstract Lqig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lyi7;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lyi7;"
-        }
-    .end annotation
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sget-object p0, Lpig;->a:Lpig;
 
-    return-object p0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    sput-object v0, Lqig;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    return-void
 .end method

@@ -2,191 +2,279 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld8a;
-.implements Lr0c;
-
 
 # instance fields
-.field public X:I
+.field public a:I
 
-.field public final a:Ld8a;
+.field public b:I
 
-.field public b:Loq4;
+.field public c:[I
 
-.field public c:Lr0c;
+.field public d:I
 
-.field public o:Z
+.field public e:I
+
+.field public f:I
+
+.field public g:I
 
 
 # direct methods
-.method public constructor <init>(Ld8a;)V
-    .locals 0
+.method public constructor <init>(IILandroid/content/Context;)V
+    .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvk0;->a:Ld8a;
+    const/4 v0, 0x0
 
-    return-void
-.end method
+    new-array v1, v0, [I
 
+    iput-object v1, p0, Lvk0;->c:[I
 
-# virtual methods
-.method public b()V
-    .locals 1
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    iget-boolean v0, p0, Lvk0;->o:Z
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    sget v2, Lhlc;->mtrl_progress_track_thickness:I
 
-    return-void
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    :cond_0
-    const/4 v0, 0x1
+    move-result v1
 
-    iput-boolean v0, p0, Lvk0;->o:Z
+    sget-object v4, Lfvc;->BaseProgressIndicator:[I
 
-    iget-object p0, p0, Lvk0;->a:Ld8a;
+    new-array v7, v0, [I
 
-    invoke-interface {p0}, Ld8a;->b()V
+    const/4 v3, 0x0
 
-    return-void
-.end method
+    invoke-static {p3, v3, p1, p2}, Lftf;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-.method public final c(Loq4;)V
-    .locals 1
+    move v5, p1
 
-    iget-object v0, p0, Lvk0;->b:Loq4;
+    move v6, p2
 
-    invoke-static {v0, p1}, Lsq4;->h(Loq4;Loq4;)Z
+    move-object v2, p3
 
-    move-result v0
+    invoke-static/range {v2 .. v7}, Lftf;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v2, v3, v4, v5, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    iput-object p1, p0, Lvk0;->b:Loq4;
+    move-result-object p1
 
-    instance-of v0, p1, Lr0c;
+    sget p2, Lfvc;->BaseProgressIndicator_trackThickness:I
 
-    if-eqz v0, :cond_0
+    invoke-static {v2, p1, p2, v1}, Lbhi;->g(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
 
-    check-cast p1, Lr0c;
+    move-result p2
 
-    iput-object p1, p0, Lvk0;->c:Lr0c;
+    iput p2, p0, Lvk0;->a:I
 
-    :cond_0
-    iget-object p1, p0, Lvk0;->a:Ld8a;
+    sget p2, Lfvc;->BaseProgressIndicator_trackCornerRadius:I
 
-    invoke-interface {p1, p0}, Ld8a;->c(Loq4;)V
+    invoke-static {v2, p1, p2, v0}, Lbhi;->g(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
 
-    :cond_1
-    return-void
-.end method
+    move-result p2
 
-.method public clear()V
-    .locals 0
+    iget p3, p0, Lvk0;->a:I
 
-    iget-object p0, p0, Lvk0;->c:Lr0c;
+    div-int/lit8 p3, p3, 0x2
 
-    invoke-interface {p0}, Lf2e;->clear()V
+    invoke-static {p2, p3}, Ljava/lang/Math;->min(II)I
 
-    return-void
-.end method
+    move-result p2
 
-.method public final e()V
-    .locals 0
+    iput p2, p0, Lvk0;->b:I
 
-    iget-object p0, p0, Lvk0;->b:Loq4;
+    sget p2, Lfvc;->BaseProgressIndicator_showAnimationBehavior:I
 
-    invoke-interface {p0}, Loq4;->e()V
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    return-void
-.end method
+    move-result p2
 
-.method public final f()Z
-    .locals 0
+    iput p2, p0, Lvk0;->e:I
 
-    iget-object p0, p0, Lvk0;->b:Loq4;
+    sget p2, Lfvc;->BaseProgressIndicator_hideAnimationBehavior:I
 
-    invoke-interface {p0}, Loq4;->f()Z
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    move-result p0
+    move-result p2
 
-    return p0
-.end method
+    iput p2, p0, Lvk0;->f:I
 
-.method public final isEmpty()Z
-    .locals 0
+    sget p2, Lfvc;->BaseProgressIndicator_indicatorTrackGapSize:I
 
-    iget-object p0, p0, Lvk0;->c:Lr0c;
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
-    invoke-interface {p0}, Lf2e;->isEmpty()Z
+    move-result p2
 
-    move-result p0
+    iput p2, p0, Lvk0;->g:I
 
-    return p0
-.end method
+    sget p2, Lfvc;->BaseProgressIndicator_indicatorColor:I
 
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 0
+    invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    move-result p2
 
-    const-string p1, "Should not be called!"
+    const/4 p3, -0x1
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    if-nez p2, :cond_0
 
-    throw p0
-.end method
+    sget p2, Lgkc;->colorPrimary:I
 
-.method public onError(Ljava/lang/Throwable;)V
-    .locals 1
+    invoke-static {p2, p3, v2}, Lzgi;->e(IILandroid/content/Context;)I
 
-    iget-boolean v0, p0, Lvk0;->o:Z
+    move-result p2
 
-    if-eqz v0, :cond_0
+    filled-new-array {p2}, [I
 
-    invoke-static {p1}, Ln4e;->D(Ljava/lang/Throwable;)V
+    move-result-object p2
 
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lvk0;->o:Z
-
-    iget-object p0, p0, Lvk0;->a:Ld8a;
-
-    invoke-interface {p0, p1}, Ld8a;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public q(I)I
-    .locals 2
-
-    iget-object v0, p0, Lvk0;->c:Lr0c;
-
-    if-eqz v0, :cond_0
-
-    and-int/lit8 v1, p1, 0x4
-
-    if-nez v1, :cond_0
-
-    invoke-interface {v0, p1}, Ls0c;->q(I)I
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iput p1, p0, Lvk0;->X:I
+    iput-object p2, p0, Lvk0;->c:[I
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    sget p2, Lfvc;->BaseProgressIndicator_indicatorColor:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/TypedValue;->type:I
+
+    const/4 v1, 0x1
+
+    if-eq p2, v1, :cond_1
+
+    sget p2, Lfvc;->BaseProgressIndicator_indicatorColor:I
+
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p2
+
+    filled-new-array {p2}, [I
+
+    move-result-object p2
+
+    iput-object p2, p0, Lvk0;->c:[I
+
+    goto :goto_0
 
     :cond_1
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    sget v1, Lfvc;->BaseProgressIndicator_indicatorColor:I
+
+    invoke-virtual {p1, v1, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v1
+
+    invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
+
+    move-result-object p2
+
+    iput-object p2, p0, Lvk0;->c:[I
+
+    array-length p2, p2
+
+    if-eqz p2, :cond_3
+
     :goto_0
-    return p1
+    sget p2, Lfvc;->BaseProgressIndicator_trackColor:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    sget p2, Lfvc;->BaseProgressIndicator_trackColor:I
+
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p2
+
+    iput p2, p0, Lvk0;->d:I
+
+    goto :goto_1
+
+    :cond_2
+    iget-object p2, p0, Lvk0;->c:[I
+
+    aget p2, p2, v0
+
+    iput p2, p0, Lvk0;->d:I
+
+    invoke-virtual {v2}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p2
+
+    const p3, 0x1010033
+
+    filled-new-array {p3}, [I
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+
+    move-result-object p2
+
+    const p3, 0x3e4ccccd    # 0.2f
+
+    invoke-virtual {p2, v0, p3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result p3
+
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
+
+    const/high16 p2, 0x437f0000    # 255.0f
+
+    mul-float/2addr p3, p2
+
+    float-to-int p2, p3
+
+    iget p3, p0, Lvk0;->d:I
+
+    invoke-static {p3, p2}, Lzgi;->d(II)I
+
+    move-result p2
+
+    iput p2, p0, Lvk0;->d:I
+
+    :goto_1
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "indicatorColors cannot be empty when indicatorColor is not used."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public a()V
+    .locals 2
+
+    iget v0, p0, Lvk0;->g:I
+
+    if-ltz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "indicatorTrackGapSize must be >= 0."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

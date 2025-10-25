@@ -1,788 +1,270 @@
-.class public abstract synthetic Lbg9;
-.super Ljava/lang/Object;
+.class public abstract Lbg9;
+.super Lvpe;
 .source "SourceFile"
+
+# interfaces
+.implements Lyv2;
+
+
+# instance fields
+.field public final D0:I
+
+.field public final E0:I
+
+.field public F0:Lcg9;
 
 
 # direct methods
-.method public static a(I)I
+.method public constructor <init>(Landroid/view/View;)V
     .locals 3
 
-    const/4 v0, 0x1
+    invoke-direct {p0, p1}, Lq7d;-><init>(Landroid/view/View;)V
 
-    if-eqz p0, :cond_2
+    const/4 v0, 0x6
 
-    const/4 v1, 0x2
+    int-to-float v0, v0
 
-    if-eq p0, v0, :cond_1
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    if-ne p0, v1, :cond_0
+    move-result-object v1
 
-    const/4 p0, 0x3
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    return p0
+    move-result-object v1
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    const-string v1, "unknown value "
+    mul-float/2addr v0, v1
 
-    const-string v2, " for PhoneType"
+    invoke-static {v0}, Lfhi;->b(F)I
 
-    invoke-static {p0, v1, v2}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    return v1
-
-    :cond_2
-    return v0
-.end method
-
-.method public static synthetic b(I)I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
+    iput v0, p0, Lbg9;->D0:I
 
     const/4 v0, 0x2
 
-    if-eq p0, v0, :cond_1
+    int-to-float v0, v0
 
-    const/4 v0, 0x3
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    if-eq p0, v0, :cond_1
+    move-result-object v1
 
-    const/4 v0, 0x4
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    if-ne p0, v0, :cond_0
+    move-result-object v1
 
-    return v0
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_0
-    const/4 p0, 0x0
+    mul-float/2addr v0, v1
 
-    throw p0
+    invoke-static {v0}, Lfhi;->b(F)I
 
-    :cond_1
-    return v0
-.end method
+    move-result v0
 
-.method public static synthetic c(I)Ljava/lang/String;
-    .locals 2
+    iput v0, p0, Lbg9;->E0:I
 
-    const/4 v0, 0x1
+    new-instance v0, Lsd0;
 
-    const-string v1, "so"
+    const/4 v1, 0x0
 
-    if-eq p0, v0, :cond_2
+    const/16 v2, 0x15
 
-    const/4 v0, 0x2
+    invoke-direct {v0, p0, p1, v1, v2}, Lsd0;-><init>(Lvpe;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-ne p0, v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "dylib"
-
-    return-object p0
-
-    :cond_2
-    return-object v1
-.end method
-
-.method public static synthetic d(I)I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public static synthetic e(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const/4 p0, 0x0
-
-    throw p0
-
-    :pswitch_0
-    const-string p0, "text/x-vcard"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "text/plain"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "video/*"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "video/mp4"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "image/heic"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "image/*"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "image/gif"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "image/webp"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "image/png"
-
-    return-object p0
-
-    :pswitch_9
-    const-string p0, "image/jpeg"
-
-    return-object p0
-
-    :pswitch_a
-    const-string p0, "unknown"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic f(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "RUSTORE"
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "GCM"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "HUAWEI"
-
-    return-object p0
-.end method
-
-.method public static g(FFFF)F
-    .locals 0
-
-    sub-float/2addr p0, p1
-
-    mul-float/2addr p0, p2
-
-    add-float/2addr p0, p3
-
-    return p0
-.end method
-
-.method public static h(III)I
-    .locals 0
-
-    invoke-static {p0}, Lmw1;->t(I)I
-
-    move-result p0
-
-    add-int/2addr p0, p1
-
-    mul-int/2addr p0, p2
-
-    return p0
-.end method
-
-.method public static i(JLjava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static j(Ljava/lang/String;Z)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static l(Lvxc;IJLj79;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3}, Lvxc;->k(IJ)V
-
-    invoke-virtual {p4}, Lj79;->b()Lqe9;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, p1}, Lqdi;->d(Lbj6;Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public static synthetic m(I)Ljava/lang/String;
-    .locals 0
 
-    packed-switch p0, :pswitch_data_0
-
-    const/4 p0, 0x0
-
-    throw p0
-
-    :pswitch_0
-    const-string p0, "RELEASED"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "ERROR"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "ENDED"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "PAUSED"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "PLAYING"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "BUFFERING"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "IDLE"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic n(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "TEXT_VCARD"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "TEXT_PLAIN"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "VIDEO_ANY"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "VIDEO_MP4"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "IMAGE_HEIC"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "IMAGE_ANY"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "IMAGE_GIF"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "IMAGE_WEBP"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "IMAGE_PNG"
-
-    return-object p0
-
-    :pswitch_9
-    const-string p0, "IMAGE_JPEG"
-
-    return-object p0
-
-    :pswitch_a
-    const-string p0, "UNKNOWN"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic o(I)Ljava/lang/String;
+# virtual methods
+.method public final A(Ly18;)V
     .locals 1
 
-    const/4 v0, 0x1
+    check-cast p1, Lone/me/messages/list/loader/MessageModel;
 
-    if-eq p0, v0, :cond_4
+    sget-object v0, Lka5;->a:Lka5;
 
-    const/4 v0, 0x2
+    invoke-virtual {p0, p1, v0}, Lbg9;->G(Lone/me/messages/list/loader/MessageModel;Ljava/util/List;)V
 
-    if-eq p0, v0, :cond_3
+    return-void
+.end method
 
-    const/4 v0, 0x3
+.method public abstract G(Lone/me/messages/list/loader/MessageModel;Ljava/util/List;)V
+.end method
 
-    if-eq p0, v0, :cond_2
+.method public final H(Lone/me/messages/list/loader/MessageModel;Landroid/view/View;)V
+    .locals 9
 
-    const/4 v0, 0x4
+    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    if-eq p0, v0, :cond_1
+    move-result-object v0
 
-    const/4 v0, 0x5
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    if-eq p0, v0, :cond_0
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    const-string p0, "null"
+    iget v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    return-object p0
+    instance-of v3, v0, Lra9;
+
+    if-eqz v3, :cond_0
+
+    move-object v4, v0
+
+    check-cast v4, Lra9;
+
+    goto :goto_0
 
     :cond_0
-    const-string p0, "Margin"
+    const/4 v4, 0x0
 
-    return-object p0
+    :goto_0
+    if-eqz v4, :cond_1
+
+    iget-boolean v4, v4, Lra9;->a:Z
+
+    goto :goto_1
 
     :cond_1
-    const-string p0, "ReplaceablePadding"
+    const/4 v4, 0x1
 
-    return-object p0
+    :goto_1
+    iget p1, p1, Lone/me/messages/list/loader/MessageModel;->J0:I
+
+    const/high16 v5, 0x7c000000
+
+    and-int/2addr v5, p1
+
+    const/high16 v6, 0x8000000
+
+    and-int/2addr v6, p1
+
+    iget v7, p0, Lbg9;->D0:I
+
+    if-eqz v6, :cond_2
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
 
     :cond_2
-    const-string p0, "Padding"
+    const/high16 v6, 0x10000000
 
-    return-object p0
+    and-int/2addr v6, p1
+
+    iget v8, p0, Lbg9;->E0:I
+
+    if-eqz v6, :cond_3
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
 
     :cond_3
-    const-string p0, "Translate"
+    const/high16 v6, 0x20000000
 
-    return-object p0
+    and-int/2addr v6, p1
+
+    if-eqz v6, :cond_4
+
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
 
     :cond_4
-    const-string p0, "None"
+    const/high16 v6, 0x40000000    # 2.0f
 
-    return-object p0
-.end method
+    and-int/2addr v6, p1
 
-.method public static synthetic p(I)Ljava/lang/String;
-    .locals 1
+    if-eqz v6, :cond_5
 
-    const/4 v0, 0x1
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    if-eq p0, v0, :cond_3
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    const/4 v0, 0x2
+    goto :goto_2
 
-    if-eq p0, v0, :cond_2
+    :cond_5
+    if-nez p1, :cond_6
 
-    const/4 v0, 0x3
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    if-eq p0, v0, :cond_1
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    const/4 v0, 0x4
+    goto :goto_2
 
-    if-eq p0, v0, :cond_0
+    :cond_6
+    invoke-static {p1}, Lcg9;->e(I)Z
 
-    const-string p0, "null"
+    move-result v6
 
-    return-object p0
+    if-eqz v6, :cond_7
 
-    :cond_0
-    const-string p0, "PHONE_CONFIRM"
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    return-object p0
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    :cond_1
-    const-string p0, "PHONE_REBINDING"
+    :cond_7
+    :goto_2
+    if-nez p1, :cond_8
 
-    return-object p0
+    goto :goto_3
 
-    :cond_2
-    const-string p0, "PHONE_BINDING"
+    :cond_8
+    invoke-static {p1}, Lcg9;->e(I)Z
 
-    return-object p0
+    move-result p1
 
-    :cond_3
-    const-string p0, "UNKNOWN"
+    if-nez p1, :cond_9
 
-    return-object p0
-.end method
+    if-eqz v3, :cond_9
 
-.method public static synthetic q(I)Ljava/lang/String;
-    .locals 1
+    move-object p1, v0
 
-    const/4 v0, 0x1
+    check-cast p1, Lra9;
 
-    if-eq p0, v0, :cond_2
+    invoke-static {v5}, Lau0;->a(I)Z
 
-    const/4 v0, 0x2
+    move-result v5
 
-    if-eq p0, v0, :cond_1
+    iput-boolean v5, p1, Lra9;->a:Z
 
-    const/4 v0, 0x3
+    :cond_9
+    :goto_3
+    iget p1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    if-eq p0, v0, :cond_0
+    if-ne v1, p1, :cond_b
 
-    const-string p0, "null"
+    iget p1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    return-object p0
+    if-ne v2, p1, :cond_b
 
-    :cond_0
-    const-string p0, "INVALID"
+    if-eqz v3, :cond_a
 
-    return-object p0
+    move-object p1, v0
 
-    :cond_1
-    const-string p0, "VALID"
+    check-cast p1, Lra9;
 
-    return-object p0
+    iget-boolean p1, p1, Lra9;->a:Z
 
-    :cond_2
-    const-string p0, "UNKNOWN"
+    if-eq v4, p1, :cond_a
 
-    return-object p0
-.end method
+    goto :goto_4
 
-.method public static synthetic r(I)Ljava/lang/String;
-    .locals 1
+    :cond_a
+    return-void
 
-    const/4 v0, 0x1
+    :cond_b
+    :goto_4
+    invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    if-eq p0, v0, :cond_4
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "UNSPECIFIED"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "FROM_DEFAULT_COUNTRY"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "FROM_NUMBER_WITHOUT_PLUS_SIGN"
-
-    return-object p0
-
-    :cond_3
-    const-string p0, "FROM_NUMBER_WITH_IDD"
-
-    return-object p0
-
-    :cond_4
-    const-string p0, "FROM_NUMBER_WITH_PLUS_SIGN"
-
-    return-object p0
-.end method
-
-.method public static synthetic s(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "TEMPORARILY_UNMETERED"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "METERED"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "NOT_ROAMING"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "UNMETERED"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "CONNECTED"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "NOT_REQUIRED"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic t(Ljava/lang/String;)I
-    .locals 2
-
-    if-eqz p0, :cond_4
-
-    const-string v0, "UNKNOWN"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const-string v0, "PHONE_BINDING"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_1
-    const-string v0, "PHONE_REBINDING"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 p0, 0x3
-
-    return p0
-
-    :cond_2
-    const-string v0, "PHONE_CONFIRM"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const/4 p0, 0x4
-
-    return p0
-
-    :cond_3
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "No enum constant ru.ok.tamtam.api.commands.base.PhoneBindTokenType."
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_4
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string v0, "Name is null"
-
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method

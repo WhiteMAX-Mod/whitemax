@@ -2,35 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lql0;
 
+# instance fields
+.field public final a:Liu7;
 
-# static fields
-.field public static final a:Lu9d;
+.field public final b:Liu7;
+
+.field public final c:Liu7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lu9d;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lu9d;->a:Lu9d;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Liu7;Liu7;Liu7;)V
     .locals 0
 
-    check-cast p1, [B
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Ljava/lang/Integer;
+    iput-object p3, p0, Lu9d;->a:Liu7;
 
-    return-object p1
+    iput-object p1, p0, Lu9d;->b:Liu7;
+
+    iput-object p2, p0, Lu9d;->c:Liu7;
+
+    return-void
 .end method

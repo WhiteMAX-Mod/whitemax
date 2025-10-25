@@ -73,9 +73,9 @@
 
 # virtual methods
 .method public final getNOOP$calls_audiomanager_release()Lru/ok/android/externcalls/sdk/audio/ProximityTracker;
-    .locals 0
+    .locals 1
 
-    sget-object p0, Lru/ok/android/externcalls/sdk/audio/ProximityTracker$Companion;->NOOP:Lru/ok/android/externcalls/sdk/audio/ProximityTracker;
+    sget-object v0, Lru/ok/android/externcalls/sdk/audio/ProximityTracker$Companion;->NOOP:Lru/ok/android/externcalls/sdk/audio/ProximityTracker;
 
-    return-object p0
+    return-object v0
 .end method

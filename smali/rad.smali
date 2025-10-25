@@ -1,71 +1,50 @@
-.class public final synthetic Lrad;
+.class public final Lrad;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/ArrayList;
 
-.field public final synthetic b:Lut3;
+.field public b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lut3;I)V
-    .locals 0
-
-    iput p2, p0, Lrad;->a:I
-
-    iput-object p1, p0, Lrad;->b:Lut3;
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v0, p0, Lrad;->b:J
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lrad;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-    iget v0, p0, Lrad;->a:I
+    check-cast p1, Lrad;
 
-    check-cast p1, Lgbd;
+    iget-wide v0, p0, Lrad;->b:J
 
-    check-cast p2, Landroid/view/View;
+    iget-wide v2, p1, Lrad;->b:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
 
-    iget-object p0, p0, Lrad;->b:Lut3;
+    move-result p1
 
-    iget-object p0, p0, Lut3;->Y:Ljava/lang/Object;
-
-    check-cast p0, Lone/me/chats/search/ChatsListSearchScreen;
-
-    invoke-virtual {p0, p1, p2}, Lone/me/chats/search/ChatsListSearchScreen;->B0(Lgbd;Landroid/view/View;)V
-
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lrad;->b:Lut3;
-
-    iget-object p0, p0, Lut3;->Y:Ljava/lang/Object;
-
-    check-cast p0, Lone/me/chats/search/ChatsListSearchScreen;
-
-    invoke-virtual {p0, p1, p2}, Lone/me/chats/search/ChatsListSearchScreen;->B0(Lgbd;Landroid/view/View;)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

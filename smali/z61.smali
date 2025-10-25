@@ -3,68 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgec;
+.implements Lf71;
 
 
-# instance fields
-.field public final a:Lcl7;
+# static fields
+.field public static final a:Lz61;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 1
-    sget-object v0, Lxvd;->a:Lxvd;
+    new-instance v0, Lz61;
 
-    .line 2
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
-
-    const-class v1, Lhl8;
-
-    invoke-virtual {v0, v1}, Lz4;->d(Ljava/lang/Class;)Lzte;
-
-    move-result-object v0
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object v0, p0, Lz61;->a:Lcl7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcl7;)V
-    .locals 0
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    iput-object p1, p0, Lz61;->a:Lcl7;
+    sput-object v0, Lz61;->a:Lz61;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public shouldHideSensitiveInformation()Z
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p0, p0, Lz61;->a:Lcl7;
+    const/4 v0, 0x1
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    return v0
 
-    check-cast p0, Lvca;
+    :cond_0
+    instance-of p1, p1, Lz61;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x1
+    const/4 p1, 0x0
 
-    return p0
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x3f0d84a0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Logout"
+
+    return-object v0
 .end method

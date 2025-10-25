@@ -1,66 +1,75 @@
-.class public final synthetic Lvwd;
+.class public interface abstract Lvwd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Leb4;
-
-
-# instance fields
-.field public final synthetic X:Ljava/lang/Integer;
-
-.field public final synthetic Y:Ljava/lang/Boolean;
-
-.field public final synthetic a:J
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic o:I
-
-
-# direct methods
-.method public synthetic constructor <init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lvwd;->a:J
-
-    iput-wide p3, p0, Lvwd;->b:J
-
-    iput-object p5, p0, Lvwd;->c:Ljava/lang/String;
-
-    iput p6, p0, Lvwd;->o:I
-
-    iput-object p7, p0, Lvwd;->X:Ljava/lang/Integer;
-
-    iput-object p8, p0, Lvwd;->Y:Ljava/lang/Boolean;
-
-    return-void
-.end method
+.implements Ltce;
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 9
+.method public a()Ltrf;
+    .locals 1
 
-    new-instance v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    const/4 v0, 0x0
 
-    iget-wide v1, p0, Lvwd;->a:J
+    return-object v0
+.end method
 
-    iget-wide v3, p0, Lvwd;->b:J
+.method public b()Lice;
+    .locals 1
 
-    iget-object v5, p0, Lvwd;->c:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iget v6, p0, Lvwd;->o:I
+    return-object v0
+.end method
 
-    iget-object v7, p0, Lvwd;->X:Ljava/lang/Integer;
+.method public c()Ltrf;
+    .locals 1
 
-    iget-object v8, p0, Lvwd;->Y:Ljava/lang/Boolean;
+    const/4 v0, 0x0
 
-    invoke-direct/range {v0 .. v8}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;-><init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
+    return-object v0
+.end method
+
+.method public d()Lqce;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public e()Lsu7;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract f()I
+.end method
+
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public getType()Lsce;
+    .locals 1
+
+    sget-object v0, Lsce;->b:Lsce;
+
+    return-object v0
+.end method
+
+.method public r()Lli6;
+    .locals 1
+
+    const/4 v0, 0x0
 
     return-object v0
 .end method

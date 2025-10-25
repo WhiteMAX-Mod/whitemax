@@ -50,34 +50,34 @@
 
 # virtual methods
 .method public getDisableEncryption()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Options"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnectionFactory$Options;->disableEncryption:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnectionFactory$Options;->disableEncryption:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getDisableNetworkMonitor()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Options"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnectionFactory$Options;->disableNetworkMonitor:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnectionFactory$Options;->disableNetworkMonitor:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getNetworkIgnoreMask()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Options"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/PeerConnectionFactory$Options;->networkIgnoreMask:I
+    iget v0, p0, Lorg/webrtc/PeerConnectionFactory$Options;->networkIgnoreMask:I
 
-    return p0
+    return v0
 .end method

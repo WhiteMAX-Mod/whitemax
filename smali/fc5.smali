@@ -3,79 +3,173 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrt7;
-.implements Lpt7;
+.implements Ldxb;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ltc5;
+.field public final synthetic a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltc5;I)V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Lfc5;->a:I
-
-    iput-object p1, p0, Lfc5;->b:Ltc5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfc5;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public e(Ljava/lang/Object;Lnr5;)V
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lscb;
+    check-cast p1, Landroid/media/MediaCodecInfo;
 
-    iget-object p0, p0, Lfc5;->b:Ltc5;
+    sget-object v0, Lgc5;->a:Lws;
 
-    iget-object p0, p0, Ltc5;->Z:Ltc5;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    new-instance v0, Lqcb;
+    const/16 v1, 0x1d
 
-    invoke-direct {v0, p2}, Lqcb;-><init>(Lnr5;)V
+    if-lt v0, v1, :cond_0
 
-    invoke-interface {p1, p0, v0}, Lscb;->d0(Lvcb;Lqcb;)V
+    invoke-static {p1}, La15;->A(Landroid/media/MediaCodecInfo;)Z
 
-    return-void
-.end method
+    move-result p1
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
+    return p1
 
-    iget v0, p0, Lfc5;->a:I
+    :cond_0
+    const/4 v2, 0x1
 
-    check-cast p1, Lscb;
+    if-lt v0, v1, :cond_1
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1}, La15;->v(Landroid/media/MediaCodecInfo;)Z
 
-    iget-object p0, p0, Lfc5;->b:Ltc5;
+    move-result p1
 
-    iget-object p0, p0, Ltc5;->Z0:Lmj8;
+    goto :goto_1
 
-    invoke-interface {p1, p0}, Lscb;->h0(Lmj8;)V
+    :cond_1
+    iget-object v0, p0, Lfc5;->a:Ljava/lang/String;
 
-    return-void
+    invoke-static {v0}, Lfs9;->i(Ljava/lang/String;)Z
 
-    :pswitch_0
-    iget-object p0, p0, Lfc5;->b:Ltc5;
+    move-result v0
 
-    iget-object p0, p0, Ltc5;->X0:Lpcb;
+    if-eqz v0, :cond_3
 
-    invoke-interface {p1, p0}, Lscb;->z0(Lpcb;)V
+    :cond_2
+    :goto_0
+    move p1, v2
 
-    return-void
+    goto :goto_1
 
-    nop
+    :cond_3
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    invoke-static {p1}, Lggi;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "arc."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_5
+
+    :cond_4
+    move p1, v1
+
+    goto :goto_1
+
+    :cond_5
+    const-string v0, "omx.google."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "omx.ffmpeg."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "omx.sec."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    const-string v0, ".sw."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    :cond_6
+    const-string v0, "omx.qcom.video.decoder.hevcswvdec"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "c2.android."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "c2.google."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "omx."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    const-string v0, "c2."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    goto :goto_0
+
+    :goto_1
+    xor-int/2addr p1, v2
+
+    return p1
 .end method

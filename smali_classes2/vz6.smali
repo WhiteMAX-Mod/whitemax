@@ -1,106 +1,79 @@
-.class public final Lvz6;
+.class public final synthetic Lvz6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lh0d;
+.implements Lli6;
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/HashMap;)V
+.method public synthetic constructor <init>(ILjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lvz6;->a:I
 
-    iput-object p1, p0, Lvz6;->a:Ljava/util/HashMap;
+    iput-object p2, p0, Lvz6;->b:Ljava/util/List;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lvz6;->a:I
 
-    const/4 p0, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    return p0
+    check-cast p1, Lh59;
 
-    :cond_0
-    if-eqz p1, :cond_2
+    iget-wide v0, p1, Lh59;->a:J
 
-    const-class v0, Lvz6;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    move-result-object v1
+    iget-object v0, p0, Lvz6;->b:Ljava/util/List;
 
-    if-eq v0, v1, :cond_1
+    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lgz6;
+
+    invoke-interface {p1}, Lgz6;->l()J
+
+    move-result-wide v0
+
+    iget-object p1, p0, Lvz6;->b:Ljava/util/List;
+
+    invoke-static {v0, v1, p1}, Lnpi;->a(JLjava/util/List;)Z
+
+    move-result p1
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lvz6;
+    nop
 
-    iget-object p0, p0, Lvz6;->a:Ljava/util/HashMap;
-
-    iget-object p1, p1, Lvz6;->a:Ljava/util/HashMap;
-
-    invoke-interface {p0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lvz6;->a:Ljava/util/HashMap;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "IdMappingsNotification{mapping="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lvz6;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

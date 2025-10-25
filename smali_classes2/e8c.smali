@@ -1,60 +1,132 @@
-.class public abstract Le8c;
-.super Ljava/lang/Object;
+.class public final Le8c;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static back:I = 0x7f0a00ff
+# instance fields
+.field public X:I
 
-.field public static copy:I = 0x7f0a02ec
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public static cut:I = 0x7f0a02f7
+.field public final synthetic Z:Lx23;
 
-.field public static edit_menu_item:I = 0x7f0a0334
+.field public final synthetic q0:Lf8c;
 
-.field public static extendedMenu:I = 0x7f0a037b
 
-.field public static markdown_badge_count_view:I = 0x7f0a0496
+# direct methods
+.method public constructor <init>(Lx23;Lkotlin/coroutines/Continuation;Lf8c;)V
+    .locals 0
 
-.field public static markdown_bold:I = 0x7f0a0497
+    iput-object p1, p0, Le8c;->Z:Lx23;
 
-.field public static markdown_code:I = 0x7f0a0498
+    iput-object p3, p0, Le8c;->q0:Lf8c;
 
-.field public static markdown_group:I = 0x7f0a0499
+    const/4 p1, 0x2
 
-.field public static markdown_heading:I = 0x7f0a049a
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static markdown_italic:I = 0x7f0a049b
+    return-void
+.end method
 
-.field public static markdown_link:I = 0x7f0a049c
 
-.field public static markdown_menu_container:I = 0x7f0a049d
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static markdown_message_bubble_view:I = 0x7f0a049e
+    check-cast p1, Lvy5;
 
-.field public static markdown_mono:I = 0x7f0a049f
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static markdown_original:I = 0x7f0a04a0
+    invoke-virtual {p0, p1, p2}, Le8c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static markdown_preview_send_as_scheduled_button:I = 0x7f0a04a1
+    move-result-object p1
 
-.field public static markdown_preview_send_button:I = 0x7f0a04a2
+    check-cast p1, Le8c;
 
-.field public static markdown_preview_send_button_guideline:I = 0x7f0a04a3
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static markdown_regular:I = 0x7f0a04a4
+    invoke-virtual {p1, p2}, Le8c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static markdown_strikethrough:I = 0x7f0a04a5
+    move-result-object p1
 
-.field public static markdown_underline:I = 0x7f0a04a6
+    return-object p1
+.end method
 
-.field public static menu:I = 0x7f0a0502
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-.field public static menu_list:I = 0x7f0a0536
+    new-instance v0, Le8c;
 
-.field public static paste:I = 0x7f0a08f2
+    iget-object v1, p0, Le8c;->Z:Lx23;
 
-.field public static rect:I = 0x7f0a0a13
+    iget-object v2, p0, Le8c;->q0:Lf8c;
 
-.field public static root:I = 0x7f0a0a24
+    invoke-direct {v0, v1, p2, v2}, Le8c;-><init>(Lx23;Lkotlin/coroutines/Continuation;Lf8c;)V
 
-.field public static select_all:I = 0x7f0a0b51
+    iput-object p1, v0, Le8c;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Le8c;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Le8c;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lvy5;
+
+    new-instance v0, Lec2;
+
+    iget-object v2, p0, Le8c;->q0:Lf8c;
+
+    const/16 v3, 0x8
+
+    invoke-direct {v0, p1, v2, v3}, Lec2;-><init>(Lvy5;Ljava/lang/Object;I)V
+
+    iput v1, p0, Le8c;->X:I
+
+    iget-object p1, p0, Le8c;->Z:Lx23;
+
+    invoke-virtual {p1, v0, p0}, Lx23;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method

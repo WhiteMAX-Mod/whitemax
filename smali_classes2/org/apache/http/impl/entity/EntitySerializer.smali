@@ -14,7 +14,7 @@
 
 # direct methods
 .method public constructor <init>(Lorg/apache/http/entity/ContentLengthStrategy;)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,13 +25,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Content length strategy may not be null"
+    const-string v0, "Content length strategy may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -45,43 +45,43 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/apache/http/impl/entity/EntitySerializer;->lenStrategy:Lorg/apache/http/entity/ContentLengthStrategy;
+    iget-object v0, p0, Lorg/apache/http/impl/entity/EntitySerializer;->lenStrategy:Lorg/apache/http/entity/ContentLengthStrategy;
 
-    invoke-interface {p0, p2}, Lorg/apache/http/entity/ContentLengthStrategy;->determineLength(Lorg/apache/http/HttpMessage;)J
+    invoke-interface {v0, p2}, Lorg/apache/http/entity/ContentLengthStrategy;->determineLength(Lorg/apache/http/HttpMessage;)J
 
     move-result-wide v0
 
     const-wide/16 v2, -0x2
 
-    cmp-long p0, v0, v2
+    cmp-long p2, v0, v2
 
-    if-nez p0, :cond_0
+    if-nez p2, :cond_0
 
-    new-instance p0, Lorg/apache/http/impl/io/ChunkedOutputStream;
+    new-instance p2, Lorg/apache/http/impl/io/ChunkedOutputStream;
 
-    invoke-direct {p0, p1}, Lorg/apache/http/impl/io/ChunkedOutputStream;-><init>(Lorg/apache/http/io/SessionOutputBuffer;)V
+    invoke-direct {p2, p1}, Lorg/apache/http/impl/io/ChunkedOutputStream;-><init>(Lorg/apache/http/io/SessionOutputBuffer;)V
 
-    return-object p0
+    return-object p2
 
     :cond_0
     const-wide/16 v2, -0x1
 
-    cmp-long p0, v0, v2
+    cmp-long p2, v0, v2
 
-    if-nez p0, :cond_1
+    if-nez p2, :cond_1
 
-    new-instance p0, Lorg/apache/http/impl/io/IdentityOutputStream;
+    new-instance p2, Lorg/apache/http/impl/io/IdentityOutputStream;
 
-    invoke-direct {p0, p1}, Lorg/apache/http/impl/io/IdentityOutputStream;-><init>(Lorg/apache/http/io/SessionOutputBuffer;)V
+    invoke-direct {p2, p1}, Lorg/apache/http/impl/io/IdentityOutputStream;-><init>(Lorg/apache/http/io/SessionOutputBuffer;)V
 
-    return-object p0
+    return-object p2
 
     :cond_1
-    new-instance p0, Lorg/apache/http/impl/io/ContentLengthOutputStream;
+    new-instance p2, Lorg/apache/http/impl/io/ContentLengthOutputStream;
 
-    invoke-direct {p0, p1, v0, v1}, Lorg/apache/http/impl/io/ContentLengthOutputStream;-><init>(Lorg/apache/http/io/SessionOutputBuffer;J)V
+    invoke-direct {p2, p1, v0, v1}, Lorg/apache/http/impl/io/ContentLengthOutputStream;-><init>(Lorg/apache/http/io/SessionOutputBuffer;J)V
 
-    return-object p0
+    return-object p2
 .end method
 
 .method public serialize(Lorg/apache/http/io/SessionOutputBuffer;Lorg/apache/http/HttpMessage;Lorg/apache/http/HttpEntity;)V
@@ -101,38 +101,38 @@
 
     invoke-virtual {p0, p1, p2}, Lorg/apache/http/impl/entity/EntitySerializer;->doSerialize(Lorg/apache/http/io/SessionOutputBuffer;Lorg/apache/http/HttpMessage;)Ljava/io/OutputStream;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-interface {p3, p0}, Lorg/apache/http/HttpEntity;->writeTo(Ljava/io/OutputStream;)V
+    invoke-interface {p3, p1}, Lorg/apache/http/HttpEntity;->writeTo(Ljava/io/OutputStream;)V
 
-    invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP entity may not be null"
+    const-string p2, "HTTP entity may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP message may not be null"
+    const-string p2, "HTTP message may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Session output buffer may not be null"
+    const-string p2, "Session output buffer may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

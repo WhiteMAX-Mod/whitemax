@@ -222,7 +222,7 @@
 
 # virtual methods
 .method public decode(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/commons/codec/DecoderException;
@@ -231,50 +231,51 @@
 
     .line 2
     :try_start_0
-    instance-of p0, p1, Ljava/lang/String;
+    instance-of v0, p1, Ljava/lang/String;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
-    move-result-object p0
+    move-result-object p1
 
     goto :goto_0
 
-    :cond_0
-    move-object p0, p1
+    :catch_0
+    move-exception p1
 
-    check-cast p0, [C
+    goto :goto_1
+
+    :cond_0
+    check-cast p1, [C
 
     .line 3
     :goto_0
-    invoke-static {p0}, Lorg/apache/commons/codec/binary/Hex;->decodeHex([C)[B
+    invoke-static {p1}, Lorg/apache/commons/codec/binary/Hex;->decodeHex([C)[B
 
-    move-result-object p0
+    move-result-object p1
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p0
-
-    :catch_0
-    move-exception p0
+    return-object p1
 
     .line 4
-    new-instance p1, Lorg/apache/commons/codec/DecoderException;
+    :goto_1
+    new-instance v0, Lorg/apache/commons/codec/DecoderException;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {p1, p0}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw v0
 .end method
 
 .method public decode([B)[B
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/commons/codec/DecoderException;
@@ -282,23 +283,23 @@
     .end annotation
 
     .line 1
-    new-instance p0, Ljava/lang/String;
+    new-instance v0, Ljava/lang/String;
 
-    invoke-direct {p0, p1}, Ljava/lang/String;-><init>([B)V
+    invoke-direct {v0, p1}, Ljava/lang/String;-><init>([B)V
 
-    invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
+    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {p0}, Lorg/apache/commons/codec/binary/Hex;->decodeHex([C)[B
+    invoke-static {p1}, Lorg/apache/commons/codec/binary/Hex;->decodeHex([C)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public encode(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/commons/codec/EncoderException;
@@ -307,63 +308,64 @@
 
     .line 2
     :try_start_0
-    instance-of p0, p1, Ljava/lang/String;
+    instance-of v0, p1, Ljava/lang/String;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
-    move-result-object p0
+    move-result-object p1
 
     goto :goto_0
 
-    :cond_0
-    move-object p0, p1
+    :catch_0
+    move-exception p1
 
-    check-cast p0, [B
+    goto :goto_1
+
+    :cond_0
+    check-cast p1, [B
 
     .line 3
     :goto_0
-    invoke-static {p0}, Lorg/apache/commons/codec/binary/Hex;->encodeHex([B)[C
+    invoke-static {p1}, Lorg/apache/commons/codec/binary/Hex;->encodeHex([B)[C
 
-    move-result-object p0
+    move-result-object p1
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p0
-
-    :catch_0
-    move-exception p0
+    return-object p1
 
     .line 4
-    new-instance p1, Lorg/apache/commons/codec/EncoderException;
+    :goto_1
+    new-instance v0, Lorg/apache/commons/codec/EncoderException;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {p1, p0}, Lorg/apache/commons/codec/EncoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lorg/apache/commons/codec/EncoderException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw v0
 .end method
 
 .method public encode([B)[B
-    .locals 0
+    .locals 1
 
     .line 1
-    new-instance p0, Ljava/lang/String;
+    new-instance v0, Ljava/lang/String;
 
     invoke-static {p1}, Lorg/apache/commons/codec/binary/Hex;->encodeHex([B)[C
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/String;-><init>([C)V
+    invoke-direct {v0, p1}, Ljava/lang/String;-><init>([C)V
 
-    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

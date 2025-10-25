@@ -1,7 +1,8 @@
-.class public final Ltsg;
+.class public interface abstract Ltsg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public volatile a:F
+# virtual methods
+.method public abstract c()V
+.end method

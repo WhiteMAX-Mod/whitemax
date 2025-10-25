@@ -1,85 +1,99 @@
 .class public final Lked;
-.super Lied;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvef;
 
 
 # instance fields
-.field public final j:Ljava/util/List;
+.field public final a:Ljava/util/Set;
+
+.field public b:Lvef;
 
 
 # direct methods
-.method public constructor <init>(Ltec;JJJJLjava/util/List;JLjava/util/List;JJ)V
-    .locals 17
+.method public constructor <init>()V
+    .locals 1
 
-    move-object/from16 v0, p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object/from16 v1, p1
+    new-instance v0, Ljava/util/WeakHashMap;
 
-    move-wide/from16 v2, p2
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
-    move-wide/from16 v4, p4
+    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
 
-    move-wide/from16 v6, p6
+    move-result-object v0
 
-    move-wide/from16 v8, p8
+    iput-object v0, p0, Lked;->a:Ljava/util/Set;
 
-    move-object/from16 v10, p10
+    const/4 v0, 0x0
 
-    move-wide/from16 v11, p11
-
-    move-wide/from16 v13, p14
-
-    move-wide/from16 v15, p16
-
-    invoke-direct/range {v0 .. v16}, Lied;-><init>(Ltec;JJJJLjava/util/List;JJJ)V
-
-    move-object/from16 v1, p13
-
-    iput-object v1, v0, Lked;->j:Ljava/util/List;
+    iput-object v0, p0, Lked;->b:Lvef;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(J)J
-    .locals 0
+.method public final a(Lvef;)V
+    .locals 3
 
-    iget-object p0, p0, Lked;->j:Ljava/util/List;
+    iput-object p1, p0, Lked;->b:Lvef;
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    iget-object v0, p0, Lked;->a:Ljava/util/Set;
 
-    move-result p0
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    int-to-long p0, p0
+    move-result-object v0
 
-    return-wide p0
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljed;
+
+    invoke-virtual {v1}, Lr0;->g()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1, p1}, Ljed;->p(Lvef;)V
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method
 
-.method public final i(Lwsc;J)Ltec;
+.method public final get()Ljava/lang/Object;
     .locals 2
 
-    iget-wide v0, p0, Lied;->d:J
+    new-instance v0, Ljed;
 
-    sub-long/2addr p2, v0
+    invoke-direct {v0}, Lr0;-><init>()V
 
-    long-to-int p1, p2
+    const/4 v1, 0x0
 
-    iget-object p0, p0, Lked;->j:Ljava/util/List;
+    iput-object v1, v0, Ljed;->h:Lr0;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object v1, p0, Lked;->b:Lvef;
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljed;->p(Lvef;)V
 
-    check-cast p0, Ltec;
+    iget-object v1, p0, Lked;->a:Ljava/util/Set;
 
-    return-object p0
-.end method
+    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-.method public final j()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
+    return-object v0
 .end method

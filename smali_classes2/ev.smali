@@ -1,52 +1,75 @@
-.class public final synthetic Lev;
-.super Led6;
+.class public final Lev;
+.super Luj0;
 .source "SourceFile"
 
-# interfaces
-.implements Lbc6;
 
-
-# static fields
-.field public static final a:Lev;
+# instance fields
+.field public final synthetic b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lev;
+    .line 1
+    iput p1, p0, Lev;->b:I
 
-    const-string v4, "getId()J"
+    invoke-direct {p0}, Luj0;-><init>()V
 
-    const/4 v5, 0x0
+    return-void
+.end method
 
-    const/4 v1, 0x1
+.method public synthetic constructor <init>(JI)V
+    .locals 0
 
-    const-class v2, Lur6;
+    .line 2
+    iput p3, p0, Lev;->b:I
 
-    const-string v3, "getId"
-
-    invoke-direct/range {v0 .. v5}, Led6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lev;->a:Lev;
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public toString()Ljava/lang/String;
+    .locals 1
 
-    check-cast p1, Lur6;
+    iget v0, p0, Lev;->b:I
 
-    invoke-interface {p1}, Lur6;->getId()J
+    sparse-switch v0, :sswitch_data_0
 
-    move-result-wide p0
+    invoke-super {p0}, Luj0;->toString()Ljava/lang/String;
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v0
 
-    move-result-object p0
+    return-object v0
 
-    return-object p0
+    :sswitch_0
+    const-string v0, "PhonesSortEvent"
+
+    return-object v0
+
+    :sswitch_1
+    const-string v0, "ContactSortEvent"
+
+    return-object v0
+
+    :sswitch_2
+    const-string v0, "AudioRecordLimitEvent{}"
+
+    return-object v0
+
+    :sswitch_3
+    const-string v0, "AssetsUpdateEvent{chatId=0}"
+
+    return-object v0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_3
+        0x1 -> :sswitch_2
+        0x2 -> :sswitch_1
+        0x8 -> :sswitch_0
+    .end sparse-switch
 .end method

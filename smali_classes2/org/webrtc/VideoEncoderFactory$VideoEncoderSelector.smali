@@ -39,7 +39,7 @@
         value = "VideoEncoderSelector"
     .end annotation
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method

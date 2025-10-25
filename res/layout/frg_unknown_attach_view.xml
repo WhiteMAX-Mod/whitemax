@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ru.ok.messages.views.widgets.SlideOutLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ru.ok.messages.views.widgets.BlockedAttachView android:id="@id/frg_unknown_attach__deleted_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-</ru.ok.messages.views.widgets.SlideOutLayout>

@@ -35,7 +35,7 @@
         "renderView",
         "Lru/ok/android/externcalls/sdk/ui/FrameDecorator;",
         "decorator",
-        "Lylf;",
+        "Lccg;",
         "setOwnVideoParticipantView",
         "(Lru/ok/android/externcalls/sdk/ui/RendererView;Lru/ok/android/externcalls/sdk/ui/FrameDecorator;)V",
         "removeOwnVideoParticipantView",
@@ -105,7 +105,7 @@
     return-object p0
 .end method
 
-.method public static newInstance(Lzb6;Lbc6;Lzb6;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;
+.method public static newInstance(Lji6;Lli6;Lji6;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -116,9 +116,9 @@
             ":",
             "Lru/ok/android/externcalls/sdk/ui/RendererView;",
             ">(",
-            "Lzb6;",
-            "Lbc6;",
-            "Lzb6;",
+            "Lji6;",
+            "Lli6;",
+            "Lji6;",
             ")",
             "Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager<",
             "TT;>;"
@@ -127,7 +127,7 @@
 
     sget-object v0, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;->Companion:Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager$Companion;
 
-    invoke-virtual {v0, p0, p1, p2}, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager$Companion;->newInstance(Lzb6;Lbc6;Lzb6;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;
+    invoke-virtual {v0, p0, p1, p2}, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager$Companion;->newInstance(Lji6;Lli6;Lji6;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;
 
     move-result-object p0
 
@@ -238,7 +238,7 @@
     .end annotation
 
     .line 2
-    new-instance v0, Lnya;
+    new-instance v0, Lpdb;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 

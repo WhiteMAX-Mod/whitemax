@@ -19,77 +19,77 @@
 .end method
 
 .method private putOriginalLength(Ljava/nio/ByteBuffer;II)V
-    .locals 1
+    .locals 2
 
-    int-to-byte p0, p3
+    int-to-byte v0, p3
 
     .line 5
-    invoke-virtual {p1, p2, p0}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    invoke-virtual {p1, p2, v0}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
-    add-int/lit8 p0, p2, 0x1
+    add-int/lit8 v0, p2, 0x1
 
-    shr-int/lit8 v0, p3, 0x8
+    shr-int/lit8 v1, p3, 0x8
 
-    int-to-byte v0, v0
+    int-to-byte v1, v1
 
     .line 6
-    invoke-virtual {p1, p0, v0}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
-    add-int/lit8 p0, p2, 0x2
+    add-int/lit8 v0, p2, 0x2
 
-    shr-int/lit8 v0, p3, 0x10
+    shr-int/lit8 v1, p3, 0x10
 
-    int-to-byte v0, v0
+    int-to-byte v1, v1
 
     .line 7
-    invoke-virtual {p1, p0, v0}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
     add-int/lit8 p2, p2, 0x3
 
-    shr-int/lit8 p0, p3, 0x18
+    shr-int/lit8 p3, p3, 0x18
 
-    int-to-byte p0, p0
+    int-to-byte p3, p3
 
     .line 8
-    invoke-virtual {p1, p2, p0}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    invoke-virtual {p1, p2, p3}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
     return-void
 .end method
 
 .method private putOriginalLength([BII)V
-    .locals 1
+    .locals 2
 
-    int-to-byte p0, p3
+    int-to-byte v0, p3
 
     .line 1
-    aput-byte p0, p1, p2
+    aput-byte v0, p1, p2
 
-    add-int/lit8 p0, p2, 0x1
+    add-int/lit8 v0, p2, 0x1
 
-    shr-int/lit8 v0, p3, 0x8
+    shr-int/lit8 v1, p3, 0x8
 
-    int-to-byte v0, v0
+    int-to-byte v1, v1
 
     .line 2
-    aput-byte v0, p1, p0
+    aput-byte v1, p1, v0
 
-    add-int/lit8 p0, p2, 0x2
+    add-int/lit8 v0, p2, 0x2
 
-    shr-int/lit8 v0, p3, 0x10
+    shr-int/lit8 v1, p3, 0x10
 
-    int-to-byte v0, v0
+    int-to-byte v1, v1
 
     .line 3
-    aput-byte v0, p1, p0
+    aput-byte v1, p1, v0
 
     add-int/lit8 p2, p2, 0x3
 
-    shr-int/lit8 p0, p3, 0x18
+    shr-int/lit8 p3, p3, 0x18
 
-    int-to-byte p0, p0
+    int-to-byte p3, p3
 
     .line 4
-    aput-byte p0, p1, p2
+    aput-byte p3, p1, p2
 
     return-void
 .end method
@@ -148,9 +148,9 @@
 
     invoke-virtual/range {v1 .. v7}, Lnet/jpountz/lz4/LZ4CompressorWithLength;->compress([BII[BII)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public compress([BII[BII)I
@@ -201,9 +201,9 @@
 
     invoke-virtual/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4CompressorWithLength;->compress([BII[BI)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public compress(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
@@ -234,23 +234,23 @@
 
     invoke-virtual/range {v0 .. v6}, Lnet/jpountz/lz4/LZ4CompressorWithLength;->compress(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I
 
-    move-result p0
+    move-result p1
 
     .line 11
     invoke-virtual {v1}, Ljava/nio/Buffer;->limit()I
 
-    move-result p1
+    move-result p2
 
-    invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v1, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     .line 12
     invoke-virtual {v4}, Ljava/nio/Buffer;->position()I
 
-    move-result p1
+    move-result p2
 
-    add-int/2addr p1, p0
+    add-int/2addr p2, p1
 
-    invoke-virtual {v4, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v4, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-void
 .end method
@@ -265,9 +265,9 @@
 
     invoke-virtual {p0, p1, v0, v1}, Lnet/jpountz/lz4/LZ4CompressorWithLength;->compress([BII)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public compress([BII)[B
@@ -294,26 +294,26 @@
     .line 4
     invoke-virtual/range {v1 .. v6}, Lnet/jpountz/lz4/LZ4CompressorWithLength;->compress([BII[BI)I
 
-    move-result p0
+    move-result p1
 
     .line 5
-    invoke-static {v5, p0}, Ljava/util/Arrays;->copyOf([BI)[B
+    invoke-static {v5, p1}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public maxCompressedLength(I)I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4CompressorWithLength;->compressor:Lnet/jpountz/lz4/LZ4Compressor;
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4CompressorWithLength;->compressor:Lnet/jpountz/lz4/LZ4Compressor;
 
-    invoke-virtual {p0, p1}, Lnet/jpountz/lz4/LZ4Compressor;->maxCompressedLength(I)I
+    invoke-virtual {v0, p1}, Lnet/jpountz/lz4/LZ4Compressor;->maxCompressedLength(I)I
 
-    move-result p0
+    move-result p1
 
-    add-int/lit8 p0, p0, 0x4
+    add-int/lit8 p1, p1, 0x4
 
-    return p0
+    return p1
 .end method

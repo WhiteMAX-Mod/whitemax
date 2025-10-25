@@ -1,21 +1,11 @@
-.class public final Ls17;
+.class public interface abstract Ls17;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ls17;
+# virtual methods
+.method public abstract e()Lhdb;
+.end method
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ls17;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ls17;->a:Ls17;
-
-    return-void
+.method public abstract j(Lm17;Le17;)Lhdb;
 .end method

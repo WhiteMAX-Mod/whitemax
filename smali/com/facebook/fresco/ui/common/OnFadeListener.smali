@@ -11,7 +11,7 @@
     d2 = {
         "Lcom/facebook/fresco/ui/common/OnFadeListener;",
         "",
-        "Lylf;",
+        "Lccg;",
         "onFadeStarted",
         "()V",
         "onFadeFinished",

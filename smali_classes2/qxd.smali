@@ -1,35 +1,47 @@
-.class public final Lqxd;
+.class public abstract synthetic Lqxd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ltxd;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public b:Lx30;
 
-.field public c:Leo9;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-.field public d:Landroid/content/Context;
+    const/4 v0, 0x4
 
-.field public e:Lfec;
+    invoke-static {v0}, Ldy1;->y(I)[I
 
-.field public f:Lrg1;
+    move-result-object v0
 
-.field public g:Ldy0;
+    array-length v0, v0
 
-.field public h:Lzjd;
+    new-array v0, v0, [I
 
-.field public i:Ljava/lang/Integer;
+    const/4 v1, 0x1
 
-.field public j:Z
+    const/4 v2, 0x0
 
-.field public k:Lorg/webrtc/EglBase$Context;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-.field public l:Lgx7;
+    :catch_0
+    const/4 v1, 0x3
 
-.field public m:Lc0d;
+    const/4 v2, 0x2
 
-.field public n:Luyc;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-.field public o:Lqzc;
+    :catch_1
+    sput-object v0, Lqxd;->$EnumSwitchMapping$0:[I
+
+    return-void
+.end method

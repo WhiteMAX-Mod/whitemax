@@ -25,17 +25,17 @@
 
 # virtual methods
 .method public final getCause()Ljava/lang/Throwable;
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getMessage()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    throw p0
+    throw v0
 .end method

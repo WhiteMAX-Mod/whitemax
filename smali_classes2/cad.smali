@@ -1,400 +1,279 @@
-.class public final Lcad;
+.class public abstract synthetic Lcad;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzb6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lz4;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lz4;I)V
+.method public static bridge synthetic A(Landroid/widget/EditText;Landroid/graphics/drawable/GradientDrawable;)V
     .locals 0
 
-    iput p2, p0, Lcad;->a:I
-
-    iput-object p1, p0, Lcad;->b:Lz4;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextCursorDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
+.method public static bridge synthetic B(Landroid/graphics/RenderNode;)V
+    .locals 0
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/graphics/RenderNode;->discardDisplayList()V
+
+    return-void
+.end method
+
+.method public static bridge synthetic C(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->transformMatrixToGlobal(Landroid/graphics/Matrix;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic D(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->transformMatrixToLocal(Landroid/graphics/Matrix;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic a(Landroid/view/View;)F
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->getTransitionAlpha()F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic b(Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;->getRegionCount()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic c(Landroid/graphics/RenderNode;)Landroid/graphics/RecordingCanvas;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/graphics/RenderNode;->beginRecording()Landroid/graphics/RecordingCanvas;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic d(Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;)Landroid/graphics/Region;
     .locals 1
 
-    iget v0, p0, Lcad;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lrj5;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;->getRegionAt(I)Landroid/graphics/Region;
 
     move-result-object p0
 
     return-object p0
+.end method
 
-    :pswitch_0
-    iget-object p0, p0, Lcad;->b:Lz4;
+.method public static synthetic e()Landroid/graphics/RenderNode;
+    .locals 2
 
-    const-class v0, Lv9d;
+    new-instance v0, Landroid/graphics/RenderNode;
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const-string v1, "blur"
+
+    invoke-direct {v0, v1}, Landroid/graphics/RenderNode;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic f(Ljava/lang/Object;)Landroid/graphics/RenderNode;
+    .locals 0
+
+    check-cast p0, Landroid/graphics/RenderNode;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic g(Landroid/widget/EditText;)Landroid/graphics/drawable/Drawable;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/widget/EditText;->getTextCursorDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
     return-object p0
+.end method
 
-    :pswitch_1
-    iget-object p0, p0, Lcad;->b:Lz4;
+.method public static bridge synthetic h(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
+    .locals 0
 
-    const-class v0, Lc39;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lxjd;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/widget/TextView;->getTextCursorDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
     return-object p0
+.end method
 
-    :pswitch_3
-    iget-object p0, p0, Lcad;->b:Lz4;
+.method public static bridge synthetic i(Landroid/view/Display;)Landroid/view/DisplayCutout;
+    .locals 0
 
-    const-class v0, Lahb;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_4
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lqgb;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/Display;->getCutout()Landroid/view/DisplayCutout;
 
     move-result-object p0
 
     return-object p0
+.end method
 
-    :pswitch_5
-    iget-object p0, p0, Lcad;->b:Lz4;
+.method public static bridge synthetic j(Landroid/view/TouchDelegate;)Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;
+    .locals 0
 
-    const-class v0, Lqgb;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_6
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lq95;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/TouchDelegate;->getTouchDelegateInfo()Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;
 
     move-result-object p0
 
     return-object p0
+.end method
 
-    :pswitch_7
-    iget-object p0, p0, Lcad;->b:Lz4;
+.method public static bridge synthetic k(J)V
+    .locals 1
 
-    const-class v0, Lrk;
+    const-string v0, "RenderWindow"
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, p0, p1}, Landroid/os/Trace;->setCounter(Ljava/lang/String;J)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    return-object p0
+.method public static bridge synthetic l(Landroid/app/Activity;Ljbd$a;)V
+    .locals 0
 
-    :pswitch_8
-    iget-object p0, p0, Lcad;->b:Lz4;
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    const-class v0, Lq74;
+    return-void
+.end method
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+.method public static bridge synthetic m(Landroid/app/Service;ILandroid/app/Notification;I)V
+    .locals 0
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
 
-    return-object p0
+    return-void
+.end method
 
-    :pswitch_9
-    iget-object p0, p0, Lcad;->b:Lz4;
+.method public static bridge synthetic n(Landroid/content/pm/ShortcutInfo$Builder;Landroid/content/LocusId;)V
+    .locals 0
 
-    const-class v0, Lc36;
+    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setLocusId(Landroid/content/LocusId;)Landroid/content/pm/ShortcutInfo$Builder;
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p0
+.method public static bridge synthetic o(Landroid/content/pm/ShortcutInfo$Builder;Z)V
+    .locals 0
 
-    return-object p0
+    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setLongLived(Z)Landroid/content/pm/ShortcutInfo$Builder;
 
-    :pswitch_a
-    iget-object p0, p0, Lcad;->b:Lz4;
+    return-void
+.end method
 
-    const-class v0, Lvwe;
+.method public static bridge synthetic p(Landroid/graphics/Canvas;Landroid/graphics/RenderNode;)V
+    .locals 0
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/graphics/Canvas;->drawRenderNode(Landroid/graphics/RenderNode;)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    return-object p0
+.method public static bridge synthetic q(Landroid/graphics/RecordingCanvas;Landroid/graphics/Bitmap;)V
+    .locals 2
 
-    :pswitch_b
-    iget-object p0, p0, Lcad;->b:Lz4;
+    const/4 v0, 0x0
 
-    const-class v0, Lahb;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0, v0, v1}, Landroid/graphics/RecordingCanvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    return-object p0
+.method public static bridge synthetic r(Landroid/graphics/RenderNode;)V
+    .locals 0
 
-    :pswitch_c
-    iget-object p0, p0, Lcad;->b:Lz4;
+    invoke-virtual {p0}, Landroid/graphics/RenderNode;->endRecording()V
 
-    const-class v0, Ldka;
+    return-void
+.end method
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+.method public static bridge synthetic s(Landroid/graphics/RenderNode;F)V
+    .locals 0
 
-    move-result-object p0
+    invoke-virtual {p0, p1}, Landroid/graphics/RenderNode;->setAlpha(F)Z
 
-    return-object p0
+    return-void
+.end method
 
-    :pswitch_d
-    iget-object p0, p0, Lcad;->b:Lz4;
+.method public static bridge synthetic t(Landroid/graphics/RenderNode;II)V
+    .locals 1
 
-    const-class v0, Ljs4;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v0, v0, p1, p2}, Landroid/graphics/RenderNode;->setPosition(IIII)Z
 
-    move-result-object p0
+    return-void
+.end method
 
-    return-object p0
+.method public static bridge synthetic u(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)V
+    .locals 1
 
-    :pswitch_e
-    iget-object p0, p0, Lcad;->b:Lz4;
+    const/4 v0, 0x1
 
-    const-class v0, Lhp4;
+    invoke-virtual {p0, v0}, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;->addMatchingUsage(I)Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p0
+.method public static bridge synthetic v(Landroid/view/View;F)V
+    .locals 0
 
-    return-object p0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setTransitionAlpha(F)V
 
-    :pswitch_f
-    iget-object p0, p0, Lcad;->b:Lz4;
+    return-void
+.end method
 
-    const-class v0, Le39;
+.method public static bridge synthetic w(Landroid/view/View;I)V
+    .locals 0
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/view/View;->setTransitionVisibility(I)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    return-object p0
+.method public static bridge synthetic x(Landroid/view/View;IIII)V
+    .locals 0
 
-    :pswitch_10
-    iget-object p0, p0, Lcad;->b:Lz4;
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->setLeftTopRightBottom(IIII)V
 
-    const-class v0, Lxjd;
+    return-void
+.end method
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+.method public static bridge synthetic y(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 0
 
-    move-result-object p0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setAnimationMatrix(Landroid/graphics/Matrix;)V
 
-    return-object p0
+    return-void
+.end method
 
-    :pswitch_11
-    iget-object p0, p0, Lcad;->b:Lz4;
+.method public static bridge synthetic z(Landroid/view/Window;)V
+    .locals 1
 
-    const-class v0, Lrk;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroid/view/Window;->setNavigationBarContrastEnforced(Z)V
 
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_12
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lq95;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_13
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lf53;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_14
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lrk;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_15
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Ltxe;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_16
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lkha;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_17
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lq17;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_18
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lnn5;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_19
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lfv0;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1a
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lsk5;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1b
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Lpz3;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1c
-    iget-object p0, p0, Lcad;->b:Lz4;
-
-    const-class v0, Ljd7;
-
-    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

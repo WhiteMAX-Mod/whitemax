@@ -642,13 +642,13 @@
 
     .line 22
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Only the array-backed ByteBuffer or DirectBuffer is supported"
+    const-string v0, "Only the array-backed ByteBuffer or DirectBuffer is supported"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public constructor <init>([BII)V
@@ -1032,13 +1032,13 @@
 
 # virtual methods
 .method public array()[B
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->base:Ljava/lang/Object;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->base:Ljava/lang/Object;
 
-    check-cast p0, [B
+    check-cast v0, [B
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public arrayOffset()I
@@ -1046,13 +1046,13 @@
 
     iget-wide v0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    long-to-int p0, v0
+    long-to-int v0, v0
 
-    sget v0, Lorg/msgpack/core/buffer/MessageBuffer;->ARRAY_BYTE_BASE_OFFSET:I
+    sget v1, Lorg/msgpack/core/buffer/MessageBuffer;->ARRAY_BYTE_BASE_OFFSET:I
 
-    sub-int/2addr p0, v0
+    sub-int/2addr v0, v1
 
-    return p0
+    return v0
 .end method
 
 .method public copyTo(ILorg/msgpack/core/buffer/MessageBuffer;II)V
@@ -1064,17 +1064,17 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     iget-object v4, p2, Lorg/msgpack/core/buffer/MessageBuffer;->base:Ljava/lang/Object;
 
-    iget-wide p0, p2, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
+    iget-wide p1, p2, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p2, p3
+    int-to-long v5, p3
 
-    add-long v5, p0, p2
+    add-long/2addr v5, p1
 
     int-to-long v7, p4
 
@@ -1084,7 +1084,7 @@
 .end method
 
 .method public getBoolean(I)Z
-    .locals 4
+    .locals 6
 
     sget-object v0, Lorg/msgpack/core/buffer/MessageBuffer;->unsafe:Lsun/misc/Unsafe;
 
@@ -1092,19 +1092,19 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     invoke-virtual {v0, v1, v2, v3}, Lsun/misc/Unsafe;->getBoolean(Ljava/lang/Object;J)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public getByte(I)B
-    .locals 4
+    .locals 6
 
     sget-object v0, Lorg/msgpack/core/buffer/MessageBuffer;->unsafe:Lsun/misc/Unsafe;
 
@@ -1112,15 +1112,15 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     invoke-virtual {v0, v1, v2, v3}, Lsun/misc/Unsafe;->getByte(Ljava/lang/Object;J)B
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public getBytes(IILjava/nio/ByteBuffer;)V
@@ -1136,20 +1136,20 @@
     .line 3
     invoke-virtual {p0, p1, p2}, Lorg/msgpack/core/buffer/MessageBuffer;->sliceAsByteBuffer(II)Ljava/nio/ByteBuffer;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 4
-    invoke-virtual {p3, p0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-virtual {p3, p1}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     return-void
 
     .line 5
     :cond_0
-    new-instance p0, Ljava/nio/BufferOverflowException;
+    new-instance p1, Ljava/nio/BufferOverflowException;
 
-    invoke-direct {p0}, Ljava/nio/BufferOverflowException;-><init>()V
+    invoke-direct {p1}, Ljava/nio/BufferOverflowException;-><init>()V
 
-    throw p0
+    throw p1
 .end method
 
 .method public getBytes(I[BII)V
@@ -1162,15 +1162,15 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
-    sget p0, Lorg/msgpack/core/buffer/MessageBuffer;->ARRAY_BYTE_BASE_OFFSET:I
+    sget p1, Lorg/msgpack/core/buffer/MessageBuffer;->ARRAY_BYTE_BASE_OFFSET:I
 
-    add-int/2addr p0, p3
+    add-int/2addr p1, p3
 
-    int-to-long v5, p0
+    int-to-long v5, p1
 
     int-to-long v7, p4
 
@@ -1182,17 +1182,17 @@
 .end method
 
 .method public getDouble(I)D
-    .locals 0
+    .locals 2
 
     invoke-virtual {p0, p1}, Lorg/msgpack/core/buffer/MessageBuffer;->getLong(I)J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    invoke-static {p0, p1}, Ljava/lang/Double;->longBitsToDouble(J)D
+    invoke-static {v0, v1}, Ljava/lang/Double;->longBitsToDouble(J)D
 
-    move-result-wide p0
+    move-result-wide v0
 
-    return-wide p0
+    return-wide v0
 .end method
 
 .method public getFloat(I)F
@@ -1200,17 +1200,17 @@
 
     invoke-virtual {p0, p1}, Lorg/msgpack/core/buffer/MessageBuffer;->getInt(I)I
 
-    move-result p0
+    move-result p1
 
-    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
+    invoke-static {p1}, Ljava/lang/Float;->intBitsToFloat(I)F
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public getInt(I)I
-    .locals 4
+    .locals 6
 
     sget-object v0, Lorg/msgpack/core/buffer/MessageBuffer;->unsafe:Lsun/misc/Unsafe;
 
@@ -1218,23 +1218,23 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     invoke-virtual {v0, v1, v2, v3}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    move-result p0
+    move-result p1
 
-    invoke-static {p0}, Ljava/lang/Integer;->reverseBytes(I)I
+    invoke-static {p1}, Ljava/lang/Integer;->reverseBytes(I)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public getLong(I)J
-    .locals 4
+    .locals 6
 
     sget-object v0, Lorg/msgpack/core/buffer/MessageBuffer;->unsafe:Lsun/misc/Unsafe;
 
@@ -1242,23 +1242,23 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     invoke-virtual {v0, v1, v2, v3}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->reverseBytes(J)J
+    invoke-static {v0, v1}, Ljava/lang/Long;->reverseBytes(J)J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    return-wide p0
+    return-wide v0
 .end method
 
 .method public getShort(I)S
-    .locals 4
+    .locals 6
 
     sget-object v0, Lorg/msgpack/core/buffer/MessageBuffer;->unsafe:Lsun/misc/Unsafe;
 
@@ -1266,40 +1266,40 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     invoke-virtual {v0, v1, v2, v3}, Lsun/misc/Unsafe;->getShort(Ljava/lang/Object;J)S
 
-    move-result p0
+    move-result p1
 
-    invoke-static {p0}, Ljava/lang/Short;->reverseBytes(S)S
+    invoke-static {p1}, Ljava/lang/Short;->reverseBytes(S)S
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public hasArray()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->base:Ljava/lang/Object;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->base:Ljava/lang/Object;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public putBoolean(IZ)V
-    .locals 4
+    .locals 6
 
     sget-object v0, Lorg/msgpack/core/buffer/MessageBuffer;->unsafe:Lsun/misc/Unsafe;
 
@@ -1307,9 +1307,9 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lsun/misc/Unsafe;->putBoolean(Ljava/lang/Object;JZ)V
 
@@ -1317,7 +1317,7 @@
 .end method
 
 .method public putByte(IB)V
-    .locals 4
+    .locals 6
 
     sget-object v0, Lorg/msgpack/core/buffer/MessageBuffer;->unsafe:Lsun/misc/Unsafe;
 
@@ -1325,9 +1325,9 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lsun/misc/Unsafe;->putByte(Ljava/lang/Object;JB)V
 
@@ -1361,9 +1361,9 @@
 
     iget-wide v6, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v8, p1
 
-    add-long/2addr v6, p0
+    add-long/2addr v6, v8
 
     int-to-long v8, p3
 
@@ -1373,11 +1373,11 @@
 
     invoke-virtual {p2}, Ljava/nio/Buffer;->position()I
 
-    move-result p0
+    move-result p1
 
-    add-int/2addr p0, p3
+    add-int/2addr p1, p3
 
-    invoke-virtual {p2, p0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-void
 
@@ -1408,9 +1408,9 @@
 
     iget-wide v6, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v8, p1
 
-    add-long/2addr v6, p0
+    add-long/2addr v6, v8
 
     int-to-long v8, p3
 
@@ -1418,11 +1418,11 @@
 
     invoke-virtual {p2}, Ljava/nio/Buffer;->position()I
 
-    move-result p0
+    move-result p1
 
-    add-int/2addr p0, p3
+    add-int/2addr p1, p3
 
-    invoke-virtual {p2, p0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-void
 
@@ -1433,11 +1433,11 @@
 
     if-eqz v0, :cond_2
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->base:Ljava/lang/Object;
+    iget-object v0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->base:Ljava/lang/Object;
 
-    check-cast p0, [B
+    check-cast v0, [B
 
-    invoke-virtual {p2, p0, p1, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
+    invoke-virtual {p2, v0, p1, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     return-void
 
@@ -1486,9 +1486,9 @@
 
     iget-wide v5, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v7, p1
 
-    add-long/2addr v5, p0
+    add-long/2addr v5, v7
 
     int-to-long v7, p4
 
@@ -1524,7 +1524,7 @@
 .end method
 
 .method public putInt(II)V
-    .locals 4
+    .locals 6
 
     invoke-static {p2}, Ljava/lang/Integer;->reverseBytes(I)I
 
@@ -1536,9 +1536,9 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V
 
@@ -1558,9 +1558,9 @@
 
     iget-wide p2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v2, p1
 
-    add-long v2, p2, p0
+    add-long/2addr v2, p2
 
     invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V
 
@@ -1584,9 +1584,9 @@
 
     iget-wide p2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v5, p1
 
-    add-long v5, p2, p0
+    add-long/2addr v5, p2
 
     int-to-long v7, p4
 
@@ -1596,7 +1596,7 @@
 .end method
 
 .method public putShort(IS)V
-    .locals 4
+    .locals 6
 
     invoke-static {p2}, Ljava/lang/Short;->reverseBytes(S)S
 
@@ -1608,9 +1608,9 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lsun/misc/Unsafe;->putShort(Ljava/lang/Object;JS)V
 
@@ -1618,15 +1618,15 @@
 .end method
 
 .method public size()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->size:I
+    iget v0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->size:I
 
-    return p0
+    return v0
 .end method
 
 .method public slice(II)Lorg/msgpack/core/buffer/MessageBuffer;
-    .locals 4
+    .locals 6
 
     if-nez p1, :cond_0
 
@@ -1653,20 +1653,20 @@
 
     iget-wide v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    int-to-long p0, p1
+    int-to-long v4, p1
 
-    add-long/2addr v2, p0
+    add-long/2addr v2, v4
 
     invoke-direct {v0, v1, v2, v3, p2}, Lorg/msgpack/core/buffer/MessageBuffer;-><init>(Ljava/lang/Object;JI)V
 
     return-object v0
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    throw p0
+    throw p1
 .end method
 
 .method public sliceAsByteBuffer()Ljava/nio/ByteBuffer;
@@ -1681,9 +1681,9 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/msgpack/core/buffer/MessageBuffer;->sliceAsByteBuffer(II)Ljava/nio/ByteBuffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public sliceAsByteBuffer(II)Ljava/nio/ByteBuffer;
@@ -1703,35 +1703,35 @@
 
     iget-wide v1, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    sget p0, Lorg/msgpack/core/buffer/MessageBuffer;->ARRAY_BYTE_BASE_OFFSET:I
+    sget v3, Lorg/msgpack/core/buffer/MessageBuffer;->ARRAY_BYTE_BASE_OFFSET:I
 
-    int-to-long v3, p0
+    int-to-long v3, v3
 
     sub-long/2addr v1, v3
 
-    int-to-long p0, p1
+    int-to-long v3, p1
 
-    add-long/2addr v1, p0
+    add-long/2addr v1, v3
 
-    long-to-int p0, v1
+    long-to-int p1, v1
 
-    invoke-static {v0, p0, p2}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
+    invoke-static {v0, p1, p2}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     .line 3
     :cond_0
     iget-wide v0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->address:J
 
-    iget-object p0, p0, Lorg/msgpack/core/buffer/MessageBuffer;->reference:Ljava/nio/ByteBuffer;
+    iget-object v2, p0, Lorg/msgpack/core/buffer/MessageBuffer;->reference:Ljava/nio/ByteBuffer;
 
-    invoke-static {v0, v1, p1, p2, p0}, Lorg/msgpack/core/buffer/DirectBufferAccess;->newByteBuffer(JIILjava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static {v0, v1, p1, p2, v2}, Lorg/msgpack/core/buffer/DirectBufferAccess;->newByteBuffer(JIILjava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public toByteArray()[B
@@ -1755,9 +1755,9 @@
 
     invoke-virtual {p0}, Lorg/msgpack/core/buffer/MessageBuffer;->size()I
 
-    move-result p0
+    move-result v0
 
-    int-to-long v8, p0
+    int-to-long v8, v0
 
     invoke-virtual/range {v1 .. v9}, Lsun/misc/Unsafe;->copyMemory(Ljava/lang/Object;JLjava/lang/Object;JJ)V
 
@@ -1810,7 +1810,7 @@
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

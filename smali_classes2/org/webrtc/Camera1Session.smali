@@ -176,34 +176,34 @@
 .end method
 
 .method private checkIsOnCameraThread()V
-    .locals 1
+    .locals 2
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    iget-object p0, p0, Lorg/webrtc/Camera1Session;->cameraThreadHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lorg/webrtc/Camera1Session;->cameraThreadHandler:Landroid/os/Handler;
 
-    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+    invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
-    move-result-object p0
+    move-result-object v1
 
-    if-ne v0, p0, :cond_0
+    if-ne v0, v1, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Wrong thread"
+    const-string v1, "Wrong thread"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public static create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;ZLandroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;III)V
@@ -288,7 +288,7 @@
 
     move-result v6
     :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_5
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_6
 
     .line 7
     :try_start_1
@@ -296,7 +296,7 @@
 
     move-result-object v7
     :try_end_1
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_4
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_5
 
     if-nez v7, :cond_1
 
@@ -328,7 +328,7 @@
 
     invoke-virtual {v7, v4}, Landroid/hardware/Camera;->setPreviewTexture(Landroid/graphics/SurfaceTexture;)V
     :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_3
 
     .line 10
@@ -475,7 +475,13 @@
     :catch_3
     move-exception v0
 
+    goto :goto_2
+
+    :catch_4
+    move-exception v0
+
     .line 27
+    :goto_2
     invoke-virtual {v7}, Landroid/hardware/Camera;->release()V
 
     .line 28
@@ -489,7 +495,7 @@
 
     return-void
 
-    :catch_4
+    :catch_5
     move-exception v0
 
     .line 29
@@ -503,7 +509,7 @@
 
     return-void
 
-    :catch_5
+    :catch_6
     move-exception v0
 
     .line 30
@@ -627,7 +633,7 @@
 .end method
 
 .method private getFrameOrientation()I
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lorg/webrtc/Camera1Session;->applicationContext:Landroid/content/Context;
 
@@ -635,22 +641,22 @@
 
     move-result v0
 
-    iget-object p0, p0, Lorg/webrtc/Camera1Session;->info:Landroid/hardware/Camera$CameraInfo;
+    iget-object v1, p0, Lorg/webrtc/Camera1Session;->info:Landroid/hardware/Camera$CameraInfo;
 
-    iget v1, p0, Landroid/hardware/Camera$CameraInfo;->facing:I
+    iget v2, v1, Landroid/hardware/Camera$CameraInfo;->facing:I
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
     rsub-int v0, v0, 0x168
 
     :cond_0
-    iget p0, p0, Landroid/hardware/Camera$CameraInfo;->orientation:I
+    iget v1, v1, Landroid/hardware/Camera$CameraInfo;->orientation:I
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    rem-int/lit16 p0, p0, 0x168
+    rem-int/lit16 v1, v1, 0x168
 
-    return p0
+    return v1
 .end method
 
 .method public static bridge synthetic h(Lorg/webrtc/Camera1Session;)Lorg/webrtc/Camera1Session$SessionState;
@@ -708,11 +714,11 @@
 
     if-eq v0, v1, :cond_0
 
-    const-string p0, "Camera1Session"
+    const-string p1, "Camera1Session"
 
-    const-string p1, "Texture frame captured but camera is no longer running."
+    const-string v0, "Texture frame captured but camera is no longer running."
 
-    invoke-static {p0, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -908,9 +914,9 @@
 
     if-ne v0, v2, :cond_0
 
-    const-string p0, "Camera is already stopped"
+    const-string p1, "Camera is already stopped"
 
-    invoke-static {v1, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -969,7 +975,7 @@
 
     const-string v3, "): "
 
-    invoke-static {v2, p1, v3, v0}, Lee5;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v3, v0}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1044,7 +1050,7 @@
 
 # virtual methods
 .method public stop()V
-    .locals 4
+    .locals 5
 
     iget v0, p0, Lorg/webrtc/Camera1Session;->cameraId:I
 
@@ -1080,23 +1086,23 @@
 
     invoke-direct {p0, v2}, Lorg/webrtc/Camera1Session;->stopInternal(Ljava/lang/String;)V
 
-    sget-object p0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    sub-long/2addr v2, v0
+    sub-long/2addr v3, v0
 
-    invoke-virtual {p0, v2, v3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-virtual {v2, v3, v4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v0
 
-    long-to-int p0, v0
+    long-to-int v0, v0
 
-    sget-object v0, Lorg/webrtc/Camera1Session;->camera1StopTimeMsHistogram:Lorg/webrtc/Histogram;
+    sget-object v1, Lorg/webrtc/Camera1Session;->camera1StopTimeMsHistogram:Lorg/webrtc/Histogram;
 
-    invoke-virtual {v0, p0}, Lorg/webrtc/Histogram;->addSample(I)V
+    invoke-virtual {v1, v0}, Lorg/webrtc/Histogram;->addSample(I)V
 
     :cond_0
     return-void

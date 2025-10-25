@@ -1,101 +1,73 @@
-.class public final Lht3;
-.super Lsxe;
+.class public final enum Lht3;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:Ljava/util/List;
+# static fields
+.field public static final enum a:Lht3;
 
-.field public o:I
+.field public static final enum b:Lht3;
+
+.field public static final synthetic c:[Lht3;
 
 
-# virtual methods
-.method public final c(Lt39;Ljava/lang/String;)V
-    .locals 3
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Lht3;
 
-    const-string v0, "result"
+    const-string v1, "BLOCKED"
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v2, 0x0
 
-    move-result v0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-nez v0, :cond_1
+    sput-object v0, Lht3;->a:Lht3;
 
-    const-string v0, "total"
+    new-instance v1, Lht3;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v2, "REMOVED"
 
-    move-result p2
+    const/4 v3, 0x1
 
-    if-nez p2, :cond_0
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p1}, Lt39;->B()V
+    sput-object v1, Lht3;->b:Lht3;
 
-    return-void
+    filled-new-array {v0, v1}, [Lht3;
 
-    :cond_0
-    invoke-virtual {p1}, Lt39;->z0()I
+    move-result-object v0
 
-    move-result p1
-
-    iput p1, p0, Lht3;->o:I
-
-    return-void
-
-    :cond_1
-    sget p2, Lsy;->a:I
-
-    invoke-static {p1}, Lqe5;->E(Lt39;)I
-
-    move-result p2
-
-    new-instance v0, Lsy;
-
-    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, p2, :cond_2
-
-    invoke-static {p1}, Ljt3;->a(Lt39;)Ljt3;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iput-object v0, p0, Lht3;->c:Ljava/util/List;
+    sput-object v0, Lht3;->c:[Lht3;
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public static valueOf(Ljava/lang/String;)Lht3;
+    .locals 1
 
-    iget-object v0, p0, Lht3;->c:Ljava/util/List;
+    const-class v0, Lht3;
 
-    invoke-static {v0}, Lf4h;->h(Ljava/util/Collection;)I
-
-    move-result v0
-
-    iget p0, p0, Lht3;->o:I
-
-    const-string v1, ", total="
-
-    const-string v2, "}"
-
-    const-string v3, "{contacts="
-
-    invoke-static {v3, v0, v1, p0, v2}, Lsg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lht3;
+
     return-object p0
+.end method
+
+.method public static values()[Lht3;
+    .locals 1
+
+    sget-object v0, Lht3;->c:[Lht3;
+
+    invoke-virtual {v0}, [Lht3;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lht3;
+
+    return-object v0
 .end method

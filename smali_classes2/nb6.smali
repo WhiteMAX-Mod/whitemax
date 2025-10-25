@@ -1,94 +1,121 @@
-.class public final Lnb6;
-.super Lure;
+.class public final enum Lnb6;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
 
+# static fields
+.field public static final enum X:Lnb6;
 
-# instance fields
-.field public final synthetic X:Lru/ok/messages/settings/FrgMessagesSettings;
+.field public static final enum Y:Lnb6;
+
+.field public static final synthetic Z:[Lnb6;
+
+.field public static final enum a:Lnb6;
+
+.field public static final enum b:Lnb6;
+
+.field public static final enum c:Lnb6;
+
+.field public static final enum o:Lnb6;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/settings/FrgMessagesSettings;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p1, p0, Lnb6;->X:Lru/ok/messages/settings/FrgMessagesSettings;
+    new-instance v0, Lnb6;
 
-    const/4 p1, 0x2
+    const-string v1, "FORMAT_HANDLED"
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lnb6;->a:Lnb6;
+
+    new-instance v1, Lnb6;
+
+    const-string v2, "FORMAT_EXCEEDS_CAPABILITIES"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lnb6;->b:Lnb6;
+
+    new-instance v2, Lnb6;
+
+    const-string v3, "FORMAT_UNSUPPORTED_DRM"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lnb6;->c:Lnb6;
+
+    new-instance v3, Lnb6;
+
+    const-string v4, "FORMAT_UNSUPPORTED_SUBTYPE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lnb6;->o:Lnb6;
+
+    new-instance v4, Lnb6;
+
+    const-string v5, "FORMAT_UNSUPPORTED_TYPE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lnb6;->X:Lnb6;
+
+    new-instance v5, Lnb6;
+
+    const-string v6, "UNKNOWN"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lnb6;->Y:Lnb6;
+
+    filled-new-array/range {v0 .. v5}, [Lnb6;
+
+    move-result-object v0
+
+    sput-object v0, Lnb6;->Z:[Lnb6;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lnb6;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lnb6;
 
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnb6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
     check-cast p0, Lnb6;
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lnb6;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lnb6;
-
-    iget-object p0, p0, Lnb6;->X:Lru/ok/messages/settings/FrgMessagesSettings;
-
-    invoke-direct {p1, p0, p2}, Lnb6;-><init>(Lru/ok/messages/settings/FrgMessagesSettings;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static values()[Lnb6;
     .locals 1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    sget-object v0, Lnb6;->Z:[Lnb6;
 
-    iget-object p0, p0, Lnb6;->X:Lru/ok/messages/settings/FrgMessagesSettings;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object p1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->p1:Liad;
+    move-result-object v0
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz4;
+    check-cast v0, [Lnb6;
 
-    move-result-object p1
-
-    const-class v0, Lyfb;
-
-    invoke-virtual {p1, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyfb;
-
-    invoke-virtual {p1}, Lyfb;->d()V
-
-    iget-object p0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->p1:Liad;
-
-    invoke-virtual {p0}, Liad;->f()Lza2;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lza2;->O()V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-object v0
 .end method

@@ -2,372 +2,150 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Executor;
-
 
 # instance fields
-.field public final X:Ljava/lang/Object;
+.field public final a:Ll24;
 
-.field public final synthetic a:I
+.field public b:Ljava/lang/String;
 
-.field public final b:Ljava/util/concurrent/Executor;
+.field public c:Lq24;
 
-.field public final c:Ljava/util/ArrayDeque;
+.field public d:Lq24;
 
-.field public o:Ljava/lang/Runnable;
+.field public e:Z
+
+.field public f:I
 
 
 # direct methods
-.method public constructor <init>(Lep4;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Ltid;->a:I
-
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Ltid;->X:Ljava/lang/Object;
-
-    .line 10
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v0, p0, Ltid;->c:Ljava/util/ArrayDeque;
-
-    .line 11
-    iput-object p1, p0, Ltid;->b:Ljava/util/concurrent/Executor;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/concurrent/Executor;I)V
+.method public constructor <init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
     .locals 0
 
-    iput p2, p0, Ltid;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Ltid;->b:Ljava/util/concurrent/Executor;
+    iput-object p1, p0, Ltid;->a:Ll24;
 
-    .line 3
-    new-instance p1, Ljava/util/ArrayDeque;
+    iput-object p2, p0, Ltid;->b:Ljava/lang/String;
 
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+    iput-object p3, p0, Ltid;->c:Lq24;
 
-    iput-object p1, p0, Ltid;->c:Ljava/util/ArrayDeque;
+    iput-object p4, p0, Ltid;->d:Lq24;
 
-    .line 4
-    new-instance p1, Ljava/lang/Object;
+    iput-boolean p5, p0, Ltid;->e:Z
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltid;->X:Ljava/lang/Object;
+    iput p6, p0, Ltid;->f:I
 
     return-void
-
-    .line 5
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltid;->b:Ljava/util/concurrent/Executor;
-
-    .line 6
-    new-instance p1, Ljava/util/ArrayDeque;
-
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object p1, p0, Ltid;->c:Ljava/util/ArrayDeque;
-
-    .line 7
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltid;->X:Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final a(Lq24;)V
+    .locals 2
 
-    iget v0, p0, Ltid;->a:I
+    iget-boolean v0, p0, Ltid;->e:Z
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Ltid;->X:Ljava/lang/Object;
+    iput-object p1, p0, Ltid;->d:Lq24;
 
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Ltid;->c:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Runnable;
-
-    iput-object v1, p0, Ltid;->o:Ljava/lang/Runnable;
-
-    if-eqz v1, :cond_0
-
-    iget-object p0, p0, Ltid;->b:Ljava/util/concurrent/Executor;
-
-    check-cast p0, Lep4;
-
-    invoke-virtual {p0, v1}, Lep4;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
+    return-void
 
     :cond_0
-    :goto_0
-    monitor-exit v0
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    return-void
+    const-class v0, Ltid;
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-
-    :pswitch_0
-    iget-object v0, p0, Ltid;->X:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_1
-    iget-object v1, p0, Ltid;->c:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Ljava/lang/Runnable;
-
-    iput-object v2, p0, Ltid;->o:Ljava/lang/Runnable;
-
-    if-eqz v1, :cond_1
-
-    iget-object p0, p0, Ltid;->b:Ljava/util/concurrent/Executor;
-
-    invoke-interface {p0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception p0
-
-    goto :goto_3
-
-    :cond_1
-    :goto_2
-    monitor-exit v0
-
-    return-void
-
-    :goto_3
-    monitor-exit v0
-
-    throw p0
-
-    :pswitch_1
-    iget-object v0, p0, Ltid;->c:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Runnable;
+    const-string v1, "s can not be modified after being added to a Router."
 
-    iput-object v0, p0, Ltid;->o:Ljava/lang/Runnable;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    iget-object p0, p0, Ltid;->b:Ljava/util/concurrent/Executor;
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    :cond_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method
 
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 4
+.method public final b()Lq24;
+    .locals 1
 
-    iget v0, p0, Ltid;->a:I
+    iget-object v0, p0, Ltid;->a:Ll24;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ll24;->getOverriddenPushHandler()Lq24;
 
-    iget-object v0, p0, Ltid;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    monitor-enter v0
+    if-nez v0, :cond_0
 
-    :try_start_0
-    iget-object v1, p0, Ltid;->c:Ljava/util/ArrayDeque;
-
-    new-instance v2, Lc;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, p0, v3, p1}, Lc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
-
-    iget-object p1, p0, Ltid;->o:Ljava/lang/Runnable;
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Ltid;->a()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
+    iget-object v0, p0, Ltid;->c:Lq24;
 
     :cond_0
-    :goto_0
-    monitor-exit v0
+    return-object v0
+.end method
+
+.method public final c(Lq24;)V
+    .locals 2
+
+    iget-boolean v0, p0, Ltid;->e:Z
+
+    if-nez v0, :cond_0
+
+    iput-object p1, p0, Ltid;->c:Lq24;
 
     return-void
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    throw p0
+    const-class v0, Ltid;
 
-    :pswitch_0
-    iget-object v0, p0, Ltid;->X:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    monitor-enter v0
+    move-result-object v0
 
-    :try_start_1
-    iget-object v1, p0, Ltid;->c:Ljava/util/ArrayDeque;
+    const-string v1, "s can not be modified after being added to a Router."
 
-    new-instance v2, Lz5e;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    const/16 v3, 0xb
+    move-result-object v0
 
-    invoke-direct {v2, p1, v3, p0}, Lz5e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
+    throw p1
+.end method
 
-    iget-object p1, p0, Ltid;->o:Ljava/lang/Runnable;
+.method public final d(Ljava/lang/String;)V
+    .locals 2
 
-    if-nez p1, :cond_1
+    iget-boolean v0, p0, Ltid;->e:Z
 
-    invoke-virtual {p0}, Ltid;->a()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    if-nez v0, :cond_0
 
-    goto :goto_2
-
-    :catchall_1
-    move-exception p0
-
-    goto :goto_3
-
-    :cond_1
-    :goto_2
-    monitor-exit v0
+    iput-object p1, p0, Ltid;->b:Ljava/lang/String;
 
     return-void
 
-    :goto_3
-    monitor-exit v0
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    throw p0
+    const-class v0, Ltid;
 
-    :pswitch_1
-    iget-object v0, p0, Ltid;->X:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    monitor-enter v0
+    move-result-object v0
 
-    :try_start_2
-    iget-object v1, p0, Ltid;->c:Ljava/util/ArrayDeque;
+    const-string v1, "s can not be modified after being added to a Router."
 
-    new-instance v2, Lxd6;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    const/16 v3, 0x16
+    move-result-object v0
 
-    invoke-direct {v2, p0, v3, p1}, Lxd6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
-
-    iget-object p1, p0, Ltid;->o:Ljava/lang/Runnable;
-
-    if-nez p1, :cond_2
-
-    invoke-virtual {p0}, Ltid;->a()V
-
-    goto :goto_4
-
-    :catchall_2
-    move-exception p0
-
-    goto :goto_5
-
-    :cond_2
-    :goto_4
-    monitor-exit v0
-
-    return-void
-
-    :goto_5
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

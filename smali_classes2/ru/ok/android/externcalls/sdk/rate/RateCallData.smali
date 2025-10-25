@@ -71,15 +71,15 @@
 
 # virtual methods
 .method public final getMaxRateForQuestion()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/rate/RateCallData;->maxRateForQuestion:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/rate/RateCallData;->maxRateForQuestion:I
 
-    return p0
+    return v0
 .end method
 
 .method public final getQuestions()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -89,7 +89,7 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/rate/RateCallData;->questions:Ljava/util/List;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/RateCallData;->questions:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method

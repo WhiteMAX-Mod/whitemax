@@ -1,278 +1,188 @@
-.class public final Lu3h;
-.super Lr3;
+.class public abstract Lu3h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lu3h;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:J
 
+.field public static final b:Ljava/lang/Object;
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:J
-
-.field public final o:J
+.field public static c:Lt3h;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 3
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lu3h;->a:J
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lu3h;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;)V
     .locals 2
 
-    new-instance v0, Lp3h;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lp3h;-><init>(I)V
-
-    sput-object v0, Lu3h;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIJJ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lu3h;->a:I
-
-    iput p2, p0, Lu3h;->b:I
-
-    iput-wide p3, p0, Lu3h;->c:J
-
-    iput-wide p5, p0, Lu3h;->o:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    instance-of v0, p1, Lu3h;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lu3h;
-
-    iget v0, p0, Lu3h;->a:I
-
-    iget v2, p1, Lu3h;->a:I
-
-    if-ne v0, v2, :cond_0
-
-    iget v0, p0, Lu3h;->b:I
-
-    iget v2, p1, Lu3h;->b:I
-
-    if-ne v0, v2, :cond_0
-
-    iget-wide v2, p0, Lu3h;->c:J
-
-    iget-wide v4, p1, Lu3h;->c:J
-
-    cmp-long v0, v2, v4
+    sget-object v0, Lu3h;->c:Lt3h;
 
     if-nez v0, :cond_0
 
-    iget-wide v2, p0, Lu3h;->o:J
+    new-instance v0, Lt3h;
 
-    iget-wide p0, p1, Lu3h;->o:J
+    invoke-direct {v0, p0}, Lt3h;-><init>(Landroid/content/Context;)V
 
-    cmp-long p0, v2, p0
+    sput-object v0, Lu3h;->c:Lt3h;
 
-    if-nez p0, :cond_0
+    iget-object p0, v0, Lt3h;->a:Ljava/lang/Object;
 
-    const/4 p0, 0x1
+    monitor-enter p0
 
-    return p0
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, v0, Lt3h;->g:Z
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 
     :cond_0
-    return v1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 5
+.method public static b(Landroid/content/Intent;)V
+    .locals 3
 
-    iget v0, p0, Lu3h;->b:I
+    sget-object v0, Lu3h;->b:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    monitor-enter v0
 
-    move-result-object v0
+    :try_start_0
+    sget-object v1, Lu3h;->c:Lt3h;
 
-    iget v1, p0, Lu3h;->a:I
+    if-eqz v1, :cond_0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v1, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    iget-wide v2, p0, Lu3h;->o:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    iget-wide v3, p0, Lu3h;->c:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    filled-new-array {v0, v1, v2, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 9
-
-    iget v0, p0, Lu3h;->a:I
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    iget v2, p0, Lu3h;->b:I
+    if-eqz v1, :cond_0
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const-string v1, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
 
-    move-result-object v3
+    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    sget-object p0, Lu3h;->c:Lt3h;
 
-    move-result v3
+    invoke-virtual {p0}, Lt3h;->c()V
 
-    iget-wide v4, p0, Lu3h;->o:J
+    goto :goto_0
 
-    invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    :catchall_0
+    move-exception p0
 
-    move-result-object v6
+    goto :goto_1
 
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
-
-    move-result v6
-
-    iget-wide v7, p0, Lu3h;->c:J
-
-    invoke-static {v7, v8}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p0
-
-    add-int/lit8 v1, v1, 0x32
-
-    add-int/2addr v1, v3
-
-    add-int/lit8 v1, v1, 0x12
-
-    add-int/2addr v1, v6
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v1, v1, 0x11
-
-    add-int/2addr v1, p0
-
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string p0, "NetworkLocationStatus: Wifi status: "
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " Cell status: "
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " elapsed time NS: "
-
-    const-string v0, " system time ms: "
-
-    invoke-static {v4, v5, p0, v0, v3}, Lmw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    invoke-virtual {v3, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 5
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Ljs9;->U(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x4
-
-    invoke-static {p1, v0, v1}, Ljs9;->W(Landroid/os/Parcel;II)V
-
-    iget v0, p0, Lu3h;->a:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, v0, v1}, Ljs9;->W(Landroid/os/Parcel;II)V
-
-    iget v0, p0, Lu3h;->b:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x3
-
-    const/16 v2, 0x8
-
-    invoke-static {p1, v0, v2}, Ljs9;->W(Landroid/os/Parcel;II)V
-
-    iget-wide v3, p0, Lu3h;->c:J
-
-    invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
-
-    invoke-static {p1, v1, v2}, Ljs9;->W(Landroid/os/Parcel;II)V
-
-    iget-wide v0, p0, Lu3h;->o:J
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    invoke-static {p1, p2}, Ljs9;->V(Landroid/os/Parcel;I)V
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
     return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static c(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
+    .locals 4
+
+    sget-object v0, Lu3h;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-static {p0}, Lu3h;->a(Landroid/content/Context;)V
+
+    const-string v1, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    const-string v2, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_0
+
+    :cond_0
+    if-nez v1, :cond_1
+
+    sget-object p1, Lu3h;->c:Lt3h;
+
+    sget-wide v1, Lu3h;->a:J
+
+    invoke-virtual {p1, v1, v2}, Lt3h;->a(J)V
+
+    :cond_1
+    monitor-exit v0
+
+    return-object p0
+
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method

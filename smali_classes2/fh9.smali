@@ -1,91 +1,50 @@
-.class public abstract synthetic Lfh9;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lfh9;
+.super Ly14;
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public X:I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public Y:Lvy5;
+
+.field public final synthetic Z:Ldh9;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ldh9;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-static {}, Lxz;->values()[Lxz;
+    iput-object p1, p0, Lfh9;->Z:Ldh9;
 
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    sget-object v2, Lxz;->b:Lxz;
-
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    sget-object v3, Lxz;->b:Lxz;
-
-    const/16 v3, 0x8
-
-    aput v2, v0, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v3, 0x3
-
-    const/16 v4, 0xa
-
-    :try_start_2
-    sget-object v5, Lxz;->b:Lxz;
-
-    aput v3, v0, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v0, Lfh9;->$EnumSwitchMapping$0:[I
-
-    invoke-static {}, Lz00;->values()[Lz00;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_3
-    aput v1, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    const/4 v1, 0x7
-
-    :try_start_4
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    aput v3, v0, v4
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    sput-object v0, Lfh9;->$EnumSwitchMapping$1:[I
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lfh9;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lfh9;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lfh9;->X:I
+
+    iget-object p1, p0, Lfh9;->Z:Ldh9;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ldh9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

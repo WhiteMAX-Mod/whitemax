@@ -1,29 +1,118 @@
 .class public final Lvzc;
-.super Lzoc;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic I0:I
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final E0:Ll42;
+.field public X:I
 
-.field public F0:Lrzc;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public G0:J
-
-.field public H0:Z
+.field public final synthetic Z:Lru/ok/onechat/reactions/ReactionsViewModel;
 
 
 # direct methods
-.method public constructor <init>(Ll42;)V
+.method public constructor <init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lzoc;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Lvzc;->Z:Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    iput-object p1, p0, Lvzc;->E0:Ll42;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lwzc;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lvzc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvzc;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lvzc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lvzc;
+
+    iget-object v1, p0, Lvzc;->Z:Lru/ok/onechat/reactions/ReactionsViewModel;
+
+    invoke-direct {v0, v1, p2}, Lvzc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lvzc;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lvzc;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lvzc;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lwzc;
+
+    iput v1, p0, Lvzc;->X:I
+
+    iget-object v0, p0, Lvzc;->Z:Lru/ok/onechat/reactions/ReactionsViewModel;
+
+    invoke-static {v0, p1, p0}, Lru/ok/onechat/reactions/ReactionsViewModel;->e(Lru/ok/onechat/reactions/ReactionsViewModel;Lwzc;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

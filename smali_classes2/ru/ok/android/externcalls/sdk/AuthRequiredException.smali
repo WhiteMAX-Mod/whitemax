@@ -15,9 +15,9 @@
 
 # virtual methods
 .method public getMessage()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "Authorization required"
+    const-string v0, "Authorization required"
 
-    return-object p0
+    return-object v0
 .end method

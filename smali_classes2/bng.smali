@@ -1,100 +1,257 @@
 .class public final Lbng;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Llhc;
 
-.field public final synthetic Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+.field public final b:F
+
+.field public final c:F
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppSettingsScreen;)V
-    .locals 0
+.method public constructor <init>(Lc20;)V
+    .locals 1
 
-    iput-object p2, p0, Lbng;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iget-object v0, p1, Lc20;->c:Llhc;
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lbng;->a:Llhc;
+
+    iget v0, p1, Lc20;->a:F
+
+    iput v0, p0, Lbng;->b:F
+
+    iget v0, p1, Lc20;->b:F
+
+    iput v0, p0, Lbng;->c:F
+
+    iget-boolean p1, p1, Lc20;->d:Z
+
+    iput-boolean p1, p0, Lbng;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lc20;
+    .locals 2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v0, Lc20;
 
-    invoke-virtual {p0, p1, p2}, Lbng;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x2
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Lc20;-><init>(I)V
 
-    check-cast p0, Lbng;
+    iget-object v1, p0, Lbng;->a:Llhc;
 
-    sget-object p1, Lylf;->a:Lylf;
+    iput-object v1, v0, Lc20;->c:Llhc;
 
-    invoke-virtual {p0, p1}, Lbng;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v1, p0, Lbng;->b:F
 
-    return-object p1
-.end method
+    iput v1, v0, Lc20;->a:F
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget v1, p0, Lbng;->c:F
 
-    new-instance v0, Lbng;
+    iput v1, v0, Lc20;->b:F
 
-    iget-object p0, p0, Lbng;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+    iget-boolean v1, p0, Lbng;->d:Z
 
-    invoke-direct {v0, p2, p0}, Lbng;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppSettingsScreen;)V
-
-    iput-object p1, v0, Lbng;->X:Ljava/lang/Object;
+    iput-boolean v1, v0, Lc20;->d:Z
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lbng;->X:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lhng;
+    return v0
 
-    iget-object p0, p0, Lbng;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+    :cond_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:Lwqg;
+    if-eqz p1, :cond_5
 
-    iget-object v1, p1, Lhng;->b:Ljava/util/List;
+    const-class v2, Lbng;
 
-    invoke-virtual {v0, v1}, Lls7;->E(Ljava/util/List;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lone/me/webapp/settings/WebAppSettingsScreen;->X:Lcic;
+    move-result-object v3
 
-    sget-object v1, Lone/me/webapp/settings/WebAppSettingsScreen;->r0:[Lxi7;
+    if-eq v2, v3, :cond_1
 
-    const/4 v2, 0x2
+    goto :goto_0
 
-    aget-object v1, v1, v2
+    :cond_1
+    check-cast p1, Lbng;
 
-    invoke-interface {v0, p0, v1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+    iget v2, p1, Lbng;->b:F
 
-    move-result-object p0
+    iget v3, p0, Lbng;->b:F
 
-    check-cast p0, Ldsa;
+    invoke-static {v2, v3}, Ljava/lang/Float;->compare(FF)I
 
-    iget-object p1, p1, Lhng;->a:Ljava/lang/String;
+    move-result v2
 
-    invoke-virtual {p0, p1}, Ldsa;->setTitle(Ljava/lang/CharSequence;)V
+    if-eqz v2, :cond_2
 
-    sget-object p0, Lylf;->a:Lylf;
+    return v1
 
-    return-object p0
+    :cond_2
+    iget v2, p1, Lbng;->c:F
+
+    iget v3, p0, Lbng;->c:F
+
+    invoke-static {v2, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-boolean v2, p0, Lbng;->d:Z
+
+    iget-boolean v3, p1, Lbng;->d:Z
+
+    if-eq v2, v3, :cond_4
+
+    return v1
+
+    :cond_4
+    iget-object v2, p0, Lbng;->a:Llhc;
+
+    iget-object p1, p1, Lbng;->a:Llhc;
+
+    if-ne v2, p1, :cond_5
+
+    return v0
+
+    :cond_5
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lbng;->a:Llhc;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v0
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget v2, p0, Lbng;->b:F
+
+    const/4 v3, 0x0
+
+    cmpl-float v4, v2, v3
+
+    if-eqz v4, :cond_1
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v0
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget v2, p0, Lbng;->c:F
+
+    cmpl-float v3, v2, v3
+
+    if-eqz v3, :cond_2
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    :cond_2
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Lbng;->d:Z
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "VideoConvertOptions{quality="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lbng;->a:Llhc;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", startTrimPosition="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lbng;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", endTrimPosition="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lbng;->c:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mute="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lbng;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

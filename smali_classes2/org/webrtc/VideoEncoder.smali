@@ -30,9 +30,9 @@
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    const-wide/16 p0, 0x0
+    const-wide/16 p1, 0x0
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public abstract encode(Lorg/webrtc/VideoFrame;Lorg/webrtc/VideoEncoder$EncodeInfo;)Lorg/webrtc/VideoCodecStatus;
@@ -41,19 +41,19 @@
 .end method
 
 .method public getEncoderInfo()Lorg/webrtc/VideoEncoder$EncoderInfo;
-    .locals 2
+    .locals 3
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    new-instance p0, Lorg/webrtc/VideoEncoder$EncoderInfo;
+    new-instance v0, Lorg/webrtc/VideoEncoder$EncoderInfo;
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {p0, v0, v1}, Lorg/webrtc/VideoEncoder$EncoderInfo;-><init>(IZ)V
+    invoke-direct {v0, v1, v2}, Lorg/webrtc/VideoEncoder$EncoderInfo;-><init>(IZ)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public abstract getImplementationName()Ljava/lang/String;
@@ -62,15 +62,15 @@
 .end method
 
 .method public getResolutionBitrateLimits()[Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    new-array p0, p0, [Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;
+    new-array v0, v0, [Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public abstract getScalingSettings()Lorg/webrtc/VideoEncoder$ScalingSettings;
@@ -84,13 +84,13 @@
 .end method
 
 .method public isHardwareEncoder()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
 .method public abstract release()Lorg/webrtc/VideoCodecStatus;
@@ -118,7 +118,7 @@
 
     invoke-interface {p0, p1, v0}, Lorg/webrtc/VideoEncoder;->setRateAllocation(Lorg/webrtc/VideoEncoder$BitrateAllocation;I)Lorg/webrtc/VideoCodecStatus;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

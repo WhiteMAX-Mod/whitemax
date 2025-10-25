@@ -1,293 +1,352 @@
 .class public final Ljq5;
-.super Lspb;
+.super Lutd;
 .source "SourceFile"
+
+# interfaces
+.implements Ldq5;
+.implements Lh4e;
+
+
+# static fields
+.field public static final synthetic r:[Ltr7;
 
 
 # instance fields
-.field public final E0:Landroidx/appcompat/widget/AppCompatEditText;
+.field public final k:Lcs8;
 
-.field public final F0:Ljava/lang/Object;
+.field public l:Liu7;
+
+.field public final m:Laph;
+
+.field public final n:Liq5;
+
+.field public final o:Ld09;
+
+.field public final p:Lkxb;
+
+.field public final q:Lzgd;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 11
+.method static constructor <clinit>()V
+    .locals 9
 
-    new-instance v0, Landroid/widget/LinearLayout;
+    new-instance v0, Leec;
 
-    invoke-direct {v0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    const-class v1, Ljq5;
 
-    invoke-direct {p0, v0}, Lzoc;-><init>(Landroid/view/View;)V
+    const-string v2, "isCallsSdkKwsEnabled"
 
-    new-instance v1, Landroidx/appcompat/widget/AppCompatEditText;
+    const-string v3, "isCallsSdkKwsEnabled()Z"
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    invoke-direct {v1, p1, v2}, Landroidx/appcompat/widget/AppCompatEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget v3, Lu6c;->profile_edit_first_name_field:I
+    sget-object v2, Lz7d;->a:La8d;
 
-    invoke-virtual {v1, v3}, Landroid/view/View;->setId(I)V
+    const-string v3, "devNullConfig"
 
-    new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
+    const-string v5, "getDevNullConfig()Lru/ok/tamtam/models/pms/DevNullServerConfig;"
 
-    const/4 v4, -0x1
+    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
 
-    const/4 v5, -0x2
+    move-result-object v2
 
-    invoke-direct {v3, v4, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    new-instance v3, Leec;
 
-    invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    const-string v5, "addUtmTagForTriggerShareLink"
 
-    const/16 v3, 0xc
+    const-string v6, "getAddUtmTagForTriggerShareLink()Z"
 
-    int-to-float v3, v3
+    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    new-instance v5, Leec;
 
-    move-result-object v6
+    const-string v6, "isMediaPlaylistEnabled"
 
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const-string v7, "isMediaPlaylistEnabled()Z"
 
-    move-result-object v6
+    invoke-direct {v5, v1, v6, v7, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+    new-instance v6, Leec;
 
-    mul-float/2addr v6, v3
+    const-string v7, "isMIUIMenuEnabled"
 
-    invoke-static {v6}, Lya6;->G(F)I
+    const-string v8, "isMIUIMenuEnabled()Z"
 
-    move-result v6
+    invoke-direct {v6, v1, v7, v8, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    const/16 v7, 0x10
+    const/4 v1, 0x5
 
-    int-to-float v8, v7
+    new-array v1, v1, [Ltr7;
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    aput-object v0, v1, v4
 
-    move-result-object v9
+    const/4 v0, 0x1
 
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    aput-object v2, v1, v0
 
-    move-result-object v9
+    const/4 v0, 0x2
 
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
+    aput-object v3, v1, v0
 
-    mul-float/2addr v9, v8
+    const/4 v0, 0x3
 
-    invoke-static {v9}, Lya6;->G(F)I
+    aput-object v5, v1, v0
 
-    move-result v9
+    const/4 v0, 0x4
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    aput-object v6, v1, v0
 
-    move-result-object v10
+    sput-object v1, Ljq5;->r:[Ltr7;
 
-    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    return-void
+.end method
 
-    move-result-object v10
+.method public constructor <init>(Landroid/content/Context;Lft5;Lwtd;)V
+    .locals 2
 
-    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
+    invoke-direct {p0, p1, p2, p3}, Lutd;-><init>(Landroid/content/Context;Lft5;Lwtd;)V
 
-    mul-float/2addr v3, v10
+    iget-object p1, p3, Lwtd;->n:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-static {v3}, Lya6;->G(F)I
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    move-result v3
+    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-load-kws-by-sdk-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    new-instance p2, Lcs8;
 
-    move-result-object v10
+    const/16 v0, 0xe
 
-    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/4 v1, 0x0
 
-    move-result-object v10
+    invoke-direct {p2, p0, p1, v1, v0}, Lcs8;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
+    iput-object p2, p0, Ljq5;->k:Lcs8;
 
-    mul-float/2addr v10, v8
+    new-instance p1, Leq5;
 
-    invoke-static {v10}, Lya6;->G(F)I
+    const/4 p2, 0x0
 
-    move-result v10
+    invoke-direct {p1, p3, p2}, Leq5;-><init>(Lwtd;I)V
 
-    invoke-virtual {v1, v6, v9, v3, v10}, Landroid/view/View;->setPaddingRelative(IIII)V
+    new-instance p2, Lqcd;
 
-    const/4 v3, 0x1
+    invoke-direct {p2, p1}, Lqcd;-><init>(Lji6;)V
 
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setSingleLine(Z)V
+    iput-object p2, p0, Ljq5;->l:Liu7;
 
-    sget-object v6, Lclf;->m:Lv2f;
+    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->devnull:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    invoke-static {v6, v1}, Lv2f;->d(Lv2f;Landroid/widget/TextView;)V
+    sget-object p2, Lks4;->b:Lye8;
 
-    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v6
+    sget-object p3, Lks4;->d:Lks4;
 
-    sget v9, Lpla;->b0:I
+    new-instance v0, Laph;
 
-    invoke-virtual {v6, v9}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+    invoke-direct {v0, p0, p1, p3, p2}, Laph;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move-result-object v6
+    iput-object v0, p0, Ljq5;->m:Laph;
 
-    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
+    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->landscape:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    invoke-virtual {v1, v3}, Landroid/view/View;->setClipToOutline(Z)V
+    new-instance p2, Liq5;
 
-    new-instance v6, Ln04;
+    invoke-direct {p2, p0, p1}, Liq5;-><init>(Ljq5;Lru/ok/tamtam/android/prefs/PmsKey;)V
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    iput-object p2, p0, Ljq5;->n:Liq5;
 
-    move-result-object v9
+    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->utm-tag-for-trigger-link-share:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    new-instance p2, Ld09;
 
-    move-result-object v9
+    const/16 p3, 0xe
 
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
+    invoke-direct {p2, p0, p3, p1}, Ld09;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    mul-float/2addr v8, v9
+    iput-object p2, p0, Ljq5;->o:Ld09;
 
-    invoke-static {v8}, Lya6;->G(F)I
+    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->media-playlist-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    move-result v8
+    new-instance p2, Lkxb;
 
-    int-to-float v8, v8
+    invoke-direct {p2, p0, p3, p1}, Lkxb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-direct {v6, v8}, Ln04;-><init>(F)V
+    iput-object p2, p0, Ljq5;->p:Lkxb;
 
-    invoke-virtual {v1, v6}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->miui-menu-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    invoke-virtual {v1}, Landroid/widget/TextView;->getInputType()I
+    new-instance p2, Lzgd;
 
-    move-result v6
+    invoke-direct {p2, p0, p3, p1}, Lzgd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    or-int/lit16 v6, v6, 0x4000
-
-    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setInputType(I)V
-
-    iput-object v1, p0, Ljq5;->E0:Landroidx/appcompat/widget/AppCompatEditText;
-
-    new-instance v6, Ldn2;
-
-    const/16 v8, 0xa
-
-    invoke-direct {v6, p1, v8}, Ldn2;-><init>(Landroid/content/Context;I)V
-
-    const/4 p1, 0x3
-
-    invoke-static {p1, v6}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljq5;->F0:Ljava/lang/Object;
-
-    invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
-
-    invoke-virtual {v0, v7}, Landroid/widget/LinearLayout;->setGravity(I)V
-
-    new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
-
-    invoke-direct {p1, v4, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    new-instance p1, Lxc0;
-
-    const/16 v1, 0xc
-
-    invoke-direct {p1, p0, v2, v1}, Lxc0;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {p1, v0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
+    iput-object p2, p0, Ljq5;->q:Lzgd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lu83;)V
-    .locals 3
+.method public final a()V
+    .locals 2
 
-    iget-object v0, p0, Ljq5;->F0:Ljava/lang/Object;
+    iget-object v0, p0, Ljq5;->l:Liu7;
 
-    invoke-interface {v0}, Lcl7;->a()Z
+    instance-of v1, v0, Lpcd;
 
-    move-result v1
+    if-eqz v1, :cond_0
 
-    if-nez v1, :cond_0
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/appcompat/widget/AppCompatTextView;
-
-    if-eqz p1, :cond_1
-
-    const/4 v1, 0x0
+    check-cast v0, Lpcd;
 
     goto :goto_0
 
-    :cond_1
-    const/16 v1, 0x8
+    :cond_0
+    const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    if-eqz v0, :cond_1
 
-    const/4 v1, 0x0
+    invoke-interface {v0}, Lpcd;->reset()V
 
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Lu83;->a(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_2
-    move-object p1, v1
-
-    :goto_1
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
-
-    check-cast p0, Landroid/view/ViewGroup;
-
-    invoke-static {p0, v0, v1}, Ljk7;->i(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
-
+    :cond_1
     return-void
 .end method
 
-.method public final y(Lts7;)V
+.method public final n()Z
     .locals 2
 
-    check-cast p1, Liq5;
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->new-crop-screen-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    iget-object v0, p1, Liq5;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, v0, v1}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
 
-    iget-object v1, p0, Ljq5;->E0:Landroidx/appcompat/widget/AppCompatEditText;
+    move-result v0
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return v0
+.end method
 
-    :cond_0
-    iget-object p1, p1, Liq5;->b:Lu83;
+.method public final o()Z
+    .locals 2
 
-    invoke-virtual {p0, p1}, Ljq5;->F(Lu83;)V
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-player:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    return-void
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final p()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->content-level-access:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final q()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gcas:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final r()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gce:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final s()Z
+    .locals 2
+
+    sget-object v0, Ljq5;->r:[Ltr7;
+
+    const/4 v1, 0x3
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Ljq5;->p:Lkxb;
+
+    invoke-virtual {v1, p0, v0}, Lkxb;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final t()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->search-loader-v2-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final u()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->chat-anim:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final v()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->webm-stickers-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v0, v1}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
 .end method

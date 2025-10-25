@@ -1,392 +1,105 @@
-.class public abstract Lw37;
-.super Lc37;
+.class public final Lw37;
+.super Lsof;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Set;
-
-
-# static fields
-.field public static final synthetic c:I
 
 
 # instance fields
-.field public transient b:Ll37;
+.field public final synthetic e:La47;
+
+.field public final synthetic f:I
+
+.field public final synthetic g:Lnu0;
+
+.field public final synthetic h:I
 
 
 # direct methods
-.method public static h(I)I
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;La47;ILnu0;IZ)V
+    .locals 0
 
-    const/4 v0, 0x2
+    iput-object p2, p0, Lw37;->e:La47;
 
-    invoke-static {p0, v0}, Ljava/lang/Math;->max(II)I
+    iput p3, p0, Lw37;->f:I
 
-    move-result p0
+    iput-object p4, p0, Lw37;->g:Lnu0;
 
-    const v0, 0x2ccccccc
+    iput p5, p0, Lw37;->h:I
 
-    const/4 v1, 0x1
+    const/4 p2, 0x1
 
-    if-ge p0, v0, :cond_1
+    invoke-direct {p0, p1, p2}, Lsof;-><init>(Ljava/lang/String;Z)V
 
-    add-int/lit8 v0, p0, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    move-result v0
-
-    shl-int/2addr v0, v1
-
-    :goto_0
-    int-to-double v1, v0
-
-    const-wide v3, 0x3fe6666666666666L    # 0.7
-
-    mul-double/2addr v1, v3
-
-    int-to-double v3, p0
-
-    cmpg-double v1, v1, v3
-
-    if-gez v1, :cond_0
-
-    shl-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v0
-
-    :cond_1
-    const/high16 v0, 0x40000000    # 2.0f
-
-    if-ge p0, v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_1
-    if-eqz v1, :cond_3
-
-    return v0
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "collection too large"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static varargs i(I[Ljava/lang/Object;)Lw37;
-    .locals 13
-
-    if-eqz p0, :cond_8
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-eq p0, v1, :cond_7
-
-    invoke-static {p0}, Lw37;->h(I)I
-
-    move-result v2
-
-    new-array v8, v2, [Ljava/lang/Object;
-
-    add-int/lit8 v5, v2, -0x1
-
-    move v3, v0
-
-    move v4, v3
-
-    move v6, v4
-
-    :goto_0
-    if-ge v3, p0, :cond_3
-
-    aget-object v7, p1, v3
-
-    if-eqz v7, :cond_2
-
-    invoke-virtual {v7}, Ljava/lang/Object;->hashCode()I
-
-    move-result v9
-
-    invoke-static {v9}, Lgs3;->A(I)I
-
-    move-result v10
-
-    :goto_1
-    and-int v11, v10, v5
-
-    aget-object v12, v8, v11
-
-    if-nez v12, :cond_0
-
-    add-int/lit8 v10, v6, 0x1
-
-    aput-object v7, p1, v6
-
-    aput-object v7, v8, v11
-
-    add-int/2addr v4, v9
-
-    move v6, v10
-
-    goto :goto_2
-
-    :cond_0
-    invoke-virtual {v12, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_1
-
-    :goto_2
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    add-int/lit8 v10, v10, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "at index "
-
-    invoke-static {v3, p1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_3
-    const/4 v3, 0x0
-
-    invoke-static {p1, v6, p0, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
-
-    if-ne v6, v1, :cond_4
-
-    aget-object p0, p1, v0
-
-    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p1, Li4e;
-
-    invoke-direct {p1, p0}, Li4e;-><init>(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_4
-    invoke-static {v6}, Lw37;->h(I)I
-
-    move-result p0
-
-    div-int/lit8 v2, v2, 0x2
-
-    if-ge p0, v2, :cond_5
-
-    invoke-static {v6, p1}, Lw37;->i(I[Ljava/lang/Object;)Lw37;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_5
-    array-length p0, p1
-
-    shr-int/lit8 v0, p0, 0x1
-
-    shr-int/lit8 p0, p0, 0x2
-
-    add-int/2addr v0, p0
-
-    if-ge v6, v0, :cond_6
-
-    invoke-static {p1, v6}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    :cond_6
-    move-object v7, p1
-
-    new-instance v3, Lrqc;
-
-    invoke-direct/range {v3 .. v8}, Lrqc;-><init>(III[Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    return-object v3
-
-    :cond_7
-    aget-object p0, p1, v0
-
-    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p1, Li4e;
-
-    invoke-direct {p1, p0}, Li4e;-><init>(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_8
-    sget-object p0, Lrqc;->t0:Lrqc;
-
-    return-object p0
-.end method
-
-.method public static j(Ljava/util/Collection;)Lw37;
-    .locals 2
-
-    instance-of v0, p0, Lw37;
-
-    if-eqz v0, :cond_0
-
-    instance-of v0, p0, Ljava/util/SortedSet;
-
-    if-nez v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Lw37;
-
-    invoke-virtual {v0}, Lc37;->f()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    return-object v0
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Collection;->toArray()[Ljava/lang/Object;
-
-    move-result-object p0
-
-    array-length v0, p0
-
-    invoke-static {v0, p0}, Lw37;->i(I[Ljava/lang/Object;)Lw37;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public a()Ll37;
-    .locals 1
+.method public final a()J
+    .locals 4
 
-    iget-object v0, p0, Lw37;->b:Ll37;
+    :try_start_0
+    iget-object v0, p0, Lw37;->e:La47;
 
-    if-nez v0, :cond_0
+    iget-object v0, v0, La47;->t0:Ljh6;
 
-    invoke-virtual {p0}, Lw37;->k()Ll37;
+    iget-object v1, p0, Lw37;->g:Lnu0;
 
-    move-result-object v0
+    iget v2, p0, Lw37;->h:I
 
-    iput-object v0, p0, Lw37;->b:Ll37;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_0
-    return-object v0
-.end method
+    int-to-long v2, v2
 
-.method public equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-virtual {v1, v2, v3}, Lnu0;->skip(J)V
 
-    if-ne p1, p0, :cond_0
+    iget-object v0, p0, Lw37;->e:La47;
 
-    const/4 p0, 0x1
+    iget-object v0, v0, La47;->F0:Li47;
 
-    return p0
+    iget v1, p0, Lw37;->f:I
 
-    :cond_0
-    instance-of v0, p1, Lw37;
+    const/16 v2, 0x9
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1, v2}, Li47;->P(II)V
 
-    invoke-virtual {p0}, Lw37;->l()Z
+    iget-object v0, p0, Lw37;->e:La47;
 
-    move-result v0
+    monitor-enter v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v0, :cond_1
+    :try_start_1
+    iget-object v1, p0, Lw37;->e:La47;
 
-    move-object v0, p1
+    iget-object v1, v1, La47;->H0:Ljava/util/LinkedHashSet;
 
-    check-cast v0, Lw37;
+    iget v2, p0, Lw37;->f:I
 
-    invoke-virtual {v0}, Lw37;->l()Z
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v0
+    move-result-object v2
 
-    if-eqz v0, :cond_1
+    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {p0}, Lw37;->hashCode()I
+    :try_start_2
+    monitor-exit v0
 
-    move-result v0
+    goto :goto_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+    :catchall_0
+    move-exception v1
 
-    move-result v1
+    monitor-exit v0
 
-    if-eq v0, v1, :cond_1
+    throw v1
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    const/4 p0, 0x0
+    :catch_0
+    :goto_0
+    const-wide/16 v0, -0x1
 
-    return p0
-
-    :cond_1
-    invoke-static {p0, p1}, Ly30;->k(Ljava/util/Set;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public hashCode()I
-    .locals 0
-
-    invoke-static {p0}, Ly30;->v(Ljava/util/Set;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public k()Ll37;
-    .locals 1
-
-    sget-object v0, Lc37;->a:[Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Lc37;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object v0, Ll37;->b:Lgx5;
-
-    array-length v0, p0
-
-    invoke-static {v0, p0}, Ll37;->h(I[Ljava/lang/Object;)Llqc;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public l()Z
-    .locals 0
-
-    instance-of p0, p0, Lrqc;
-
-    return p0
+    return-wide v0
 .end method

@@ -79,72 +79,72 @@
 
     .line 5
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Status line may not be null."
+    const-string p2, "Status line may not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
 # virtual methods
 .method public getEntity()Lorg/apache/http/HttpEntity;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/message/BasicHttpResponse;->entity:Lorg/apache/http/HttpEntity;
+    iget-object v0, p0, Lorg/apache/http/message/BasicHttpResponse;->entity:Lorg/apache/http/HttpEntity;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getLocale()Ljava/util/Locale;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/message/BasicHttpResponse;->locale:Ljava/util/Locale;
+    iget-object v0, p0, Lorg/apache/http/message/BasicHttpResponse;->locale:Ljava/util/Locale;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getProtocolVersion()Lorg/apache/http/ProtocolVersion;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/message/BasicHttpResponse;->statusline:Lorg/apache/http/StatusLine;
+    iget-object v0, p0, Lorg/apache/http/message/BasicHttpResponse;->statusline:Lorg/apache/http/StatusLine;
 
-    invoke-interface {p0}, Lorg/apache/http/StatusLine;->getProtocolVersion()Lorg/apache/http/ProtocolVersion;
+    invoke-interface {v0}, Lorg/apache/http/StatusLine;->getProtocolVersion()Lorg/apache/http/ProtocolVersion;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getReason(I)Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lorg/apache/http/message/BasicHttpResponse;->reasonCatalog:Lorg/apache/http/ReasonPhraseCatalog;
 
     if-nez v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    iget-object p0, p0, Lorg/apache/http/message/BasicHttpResponse;->locale:Ljava/util/Locale;
+    iget-object v1, p0, Lorg/apache/http/message/BasicHttpResponse;->locale:Ljava/util/Locale;
 
-    invoke-interface {v0, p1, p0}, Lorg/apache/http/ReasonPhraseCatalog;->getReason(ILjava/util/Locale;)Ljava/lang/String;
+    invoke-interface {v0, p1, v1}, Lorg/apache/http/ReasonPhraseCatalog;->getReason(ILjava/util/Locale;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getStatusLine()Lorg/apache/http/StatusLine;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/message/BasicHttpResponse;->statusline:Lorg/apache/http/StatusLine;
+    iget-object v0, p0, Lorg/apache/http/message/BasicHttpResponse;->statusline:Lorg/apache/http/StatusLine;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public setEntity(Lorg/apache/http/HttpEntity;)V
@@ -187,13 +187,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Locale may not be null."
+    const-string v0, "Locale may not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setReasonPhrase(Ljava/lang/String;)V
@@ -220,13 +220,13 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Line break in reason phrase."
+    const-string v0, "Line break in reason phrase."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
     :goto_0
@@ -304,7 +304,7 @@
 .end method
 
 .method public setStatusLine(Lorg/apache/http/StatusLine;)V
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
@@ -315,11 +315,11 @@
 
     .line 2
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Status line may not be null"
+    const-string v0, "Status line may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

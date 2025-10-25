@@ -1,115 +1,75 @@
 .class public final Lxfa;
-.super Lure;
+.super Ldg4;
 .source "SourceFile"
 
-# interfaces
-.implements Lbc6;
 
+# static fields
+.field public static final b:Lxfa;
 
-# instance fields
-.field public X:I
+.field public static final c:Lyf4;
 
-.field public final synthetic Y:Lyfa;
+.field public static final d:Lyf4;
 
-.field public final synthetic Z:Luz8;
+.field public static final e:Lyf4;
 
-.field public final synthetic r0:Ls72;
+.field public static final f:Lyf4;
 
 
 # direct methods
-.method public constructor <init>(Lyfa;Luz8;Ls72;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lxfa;->Y:Lyfa;
-
-    iput-object p2, p0, Lxfa;->Z:Luz8;
-
-    iput-object p3, p0, Lxfa;->r0:Ls72;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    check-cast p1, Lkotlin/coroutines/Continuation;
+.method static constructor <clinit>()V
+    .locals 6
 
     new-instance v0, Lxfa;
 
-    iget-object v1, p0, Lxfa;->Z:Luz8;
+    invoke-direct {v0}, Ldg4;-><init>()V
 
-    iget-object v2, p0, Lxfa;->r0:Ls72;
+    sput-object v0, Lxfa;->b:Lxfa;
 
-    iget-object p0, p0, Lxfa;->Y:Lyfa;
+    const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1, v2, p1}, Lxfa;-><init>(Lyfa;Luz8;Ls72;Lkotlin/coroutines/Continuation;)V
+    new-array v2, v1, [Ljava/lang/String;
 
-    sget-object p0, Lylf;->a:Lylf;
+    const-string v3, ":settings/notifications"
 
-    invoke-virtual {v0, p0}, Lxfa;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    move-result-object p0
+    const/16 v5, 0xe
 
-    return-object p0
-.end method
+    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    move-result-object v2
 
-    iget v0, p0, Lxfa;->X:I
+    sput-object v2, Lxfa;->c:Lyf4;
 
-    const/4 v1, 0x1
+    const-string v2, ":settings/notifications/chat"
 
-    if-eqz v0, :cond_1
+    new-array v3, v1, [Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    move-result-object v2
 
-    return-object p1
+    sput-object v2, Lxfa;->d:Lyf4;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-string v2, ":settings/notifications/dialog"
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    new-array v3, v1, [Ljava/lang/String;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    throw p0
+    move-result-object v2
 
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    sput-object v2, Lxfa;->e:Lyf4;
 
-    new-instance p1, Lk81;
+    const-string v2, ":settings/notifications/other"
 
-    const/4 v0, 0x7
+    new-array v1, v1, [Ljava/lang/String;
 
-    iget-object v2, p0, Lxfa;->Y:Lyfa;
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    iget-object v3, p0, Lxfa;->Z:Luz8;
+    move-result-object v0
 
-    iget-object v4, p0, Lxfa;->r0:Ls72;
+    sput-object v0, Lxfa;->f:Lyf4;
 
-    invoke-direct {p1, v2, v3, v4, v0}, Lk81;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iput v1, p0, Lxfa;->X:I
-
-    invoke-static {p1, p0}, Luyg;->B(Lzb6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    return-object p0
+    return-void
 .end method

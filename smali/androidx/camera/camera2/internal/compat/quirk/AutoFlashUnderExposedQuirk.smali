@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt1c;
+.implements Lgjc;

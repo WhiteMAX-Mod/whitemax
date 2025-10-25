@@ -1,153 +1,115 @@
 .class public final Lna1;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lfs1;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+.field public final synthetic a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/incoming/CallIncomingScreen;)V
     .locals 0
 
-    iput-object p2, p0, Lna1;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lna1;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final r()V
+    .locals 10
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lna1;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
-    invoke-virtual {p0, p1, p2}, Lna1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->b:Lfib;
 
-    move-result-object p0
+    iget-object v2, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->Z:Ljava/lang/Object;
 
-    check-cast p0, Lna1;
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
 
-    sget-object p1, Lylf;->a:Lylf;
+    move-result-object v2
 
-    invoke-virtual {p0, p1}, Lna1;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    move-object v4, v2
 
-    return-object p1
-.end method
+    check-cast v4, Ljmh;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {v1}, Lfib;->b()Lrib;
 
-    new-instance v0, Lna1;
+    move-result-object v2
 
-    iget-object p0, p0, Lna1;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    sget-object v5, Lrib;->m:[Ljava/lang/String;
 
-    invoke-direct {v0, p2, p0}, Lna1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+    invoke-virtual {v2, v5}, Lrib;->c([Ljava/lang/String;)Z
 
-    iput-object p1, v0, Lna1;->X:Ljava/lang/Object;
+    move-result v2
 
-    return-object v0
-.end method
+    if-nez v2, :cond_0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Lna1;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
-
-    iget-object v0, v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->X:Lcl7;
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lna1;->X:Ljava/lang/Object;
-
-    check-cast p0, Lys9;
-
-    instance-of p1, p0, Lz91;
-
-    const-class v1, Lone/me/android/calls/CallNotifierFixActivity;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lmb1;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Landroid/content/Intent;
-
-    invoke-virtual {p0}, Lmb1;->b()Landroid/app/Application;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v0, "action-open-call"
-
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    const/high16 v0, 0x10000000
-
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    invoke-virtual {p0}, Lmb1;->b()Landroid/app/Application;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p1, p0, Laa1;
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmb1;
-
-    check-cast p0, Laa1;
-
-    iget-object v0, p0, Laa1;->b:Ld31;
-
-    iget-boolean p0, p0, Laa1;->c:Z
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Landroid/content/Intent;
-
-    invoke-virtual {p1}, Lmb1;->b()Landroid/app/Application;
+    invoke-virtual {v1}, Lfib;->b()Lrib;
 
     move-result-object v3
 
-    invoke-direct {v2, v3, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v2, v0, p0}, Lmb1;->a(Landroid/content/Intent;Ld31;Z)V
+    sget v8, Lptc;->permissions_video_message_request_only_camera_title:I
 
-    invoke-virtual {p1}, Lmb1;->b()Landroid/app/Application;
+    sget v7, Lptc;->permissions_calls_video_preview_request:I
 
-    move-result-object p0
+    const/16 v6, 0xb7
 
-    invoke-virtual {p0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    const/16 v9, 0x20
+
+    invoke-static/range {v3 .. v9}, Lrib;->l(Lrib;Ljmh;[Ljava/lang/String;IIII)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->E0()Lva1;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->E0()Lva1;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lva1;->s0:Lx0f;
+
+    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v2, v0, Lqa1;
+
+    if-eqz v2, :cond_1
+
+    check-cast v0, Lqa1;
+
+    goto :goto_0
 
     :cond_1
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    const/4 v0, 0x0
 
-    return-object p0
+    :goto_0
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    iget-boolean v0, v0, Lqa1;->b:Z
+
+    :goto_1
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {v1, v0}, Lva1;->s(Z)V
+
+    return-void
 .end method

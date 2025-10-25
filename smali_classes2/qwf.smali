@@ -1,27 +1,49 @@
 .class public final Lqwf;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/Map;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lzwf;
+
+.field public Z:I
+
+.field public o:Lzwf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lzwf;Ly14;)V
+    .locals 0
 
-    new-instance v0, Ly88;
+    iput-object p1, p0, Lqwf;->Y:Lzwf;
 
-    const/16 v1, 0x3e8
-
-    invoke-direct {v0, v1}, Ly88;-><init>(I)V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object v0
-
-    sput-object v0, Lqwf;->a:Ljava/util/Map;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lqwf;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lqwf;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lqwf;->Z:I
+
+    iget-object p1, p0, Lqwf;->Y:Lzwf;
+
+    invoke-virtual {p1, p0}, Lzwf;->g(Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;
-.super Lnk7;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Lbc6;
+.implements Lli6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->invoke()Lzaf;
+    value = Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->invoke()Lv0g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lnk7;",
-        "Lbc6;"
+        "Lst7;",
+        "Lli6;"
     }
 .end annotation
 
@@ -28,10 +28,10 @@
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0004\u001a\u00020\u0001*\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
     }
     d2 = {
-        "Lxaf;",
-        "Lylf;",
+        "Lt0g;",
+        "Lccg;",
         "invoke",
-        "(Lxaf;)V",
+        "(Lt0g;)V",
         "<anonymous>"
     }
     k = 0x3
@@ -65,7 +65,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lnk7;-><init>(I)V
+    invoke-direct {p0, v0}, Lst7;-><init>(I)V
 
     return-void
 .end method
@@ -76,30 +76,30 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lxaf;
+    check-cast p1, Lt0g;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;->invoke(Lxaf;)V
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;->invoke(Lt0g;)V
 
-    sget-object p0, Lylf;->a:Lylf;
+    sget-object p1, Lccg;->a:Lccg;
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public final invoke(Lxaf;)V
-    .locals 1
+.method public final invoke(Lt0g;)V
+    .locals 2
 
     .line 2
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 3
-    new-instance p0, Le2e;
+    new-instance v0, Lnpe;
 
-    const-string v0, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
+    const-string v1, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
 
-    invoke-direct {p0, v0}, Le2e;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lnpe;-><init>(Ljava/lang/String;)V
 
     .line 4
-    iput-object p0, p1, Lxaf;->b:Le2e;
+    iput-object v0, p1, Lt0g;->b:Lnpe;
 
     return-void
 .end method

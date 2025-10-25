@@ -1,293 +1,105 @@
 .class public final Lkx9;
-.super Lmx9;
+.super Lpmf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic i:[Lxi7;
-
-
 # instance fields
-.field public final e:Lao9;
-
-.field public final f:Ljava/util/concurrent/locks/ReentrantLock;
-
-.field public final g:Lncb;
-
-.field public h:J
+.field public c:Ljava/util/Map;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lpf9;)V
+    .locals 0
 
-    new-instance v0, Lmo9;
+    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
 
-    const-string v1, "job"
+    iget-object p1, p0, Lkx9;->c:Ljava/util/Map;
 
-    const-string v2, "getJob()Lkotlinx/coroutines/Job;"
+    if-nez p1, :cond_0
 
-    const-class v3, Lkx9;
+    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    invoke-direct {v0, v3, v1, v2}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p1, p0, Lkx9;->c:Ljava/util/Map;
 
-    sget-object v1, Ljpc;->a:Lkpc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lxi7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lkx9;->i:[Lxi7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ly04;Lcl7;)V
-    .locals 3
-
-    invoke-direct {p0, p1, p2}, Lmx9;-><init>(Ly04;Lcl7;)V
-
-    new-instance p2, Lao9;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, v0}, Lao9;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Lkx9;->e:Lao9;
-
-    new-instance p2, Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-direct {p2}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
-
-    iput-object p2, p0, Lkx9;->f:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-static {}, Lmq0;->L()Lncb;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lkx9;->g:Lncb;
-
-    sget p2, Lfy4;->o:I
-
-    const-wide/16 v1, 0x0
-
-    iput-wide v1, p0, Lkx9;->h:J
-
-    invoke-virtual {p0}, Lmx9;->a()V
-
-    new-instance p2, Ljx9;
-
-    invoke-direct {p2, p0, v0}, Ljx9;-><init>(Lkx9;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {p1, v0, v0, p2, v1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmx9;->c:Lcae;
-
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()V
-    .locals 8
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 4
 
-    iget-object v0, p0, Lkx9;->e:Lao9;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0}, Lkx9;->e()Z
+    const-string v0, "stats"
 
-    move-result v1
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_0
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lpf9;->y()V
 
     return-void
 
     :cond_0
-    iget-object v1, p0, Lkx9;->f:Ljava/util/concurrent/locks/ReentrantLock;
+    new-instance p2, Ljava/util/HashMap;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
 
-    :try_start_0
-    iget v2, v0, Lao9;->d:I
+    iput-object p2, p0, Lkx9;->c:Ljava/util/Map;
 
-    iget-object v3, p0, Lmx9;->b:Lcl7;
+    invoke-static {p1}, Lg0i;->n(Lpf9;)I
 
-    invoke-interface {v3}, Lcl7;->getValue()Ljava/lang/Object;
+    move-result p2
 
-    move-result-object v3
+    const/4 v0, 0x0
 
-    check-cast v3, Lqgb;
+    :goto_0
+    if-ge v0, p2, :cond_1
 
-    check-cast v3, Ltgb;
+    iget-object v1, p0, Lkx9;->c:Ljava/util/Map;
 
-    iget-object v3, v3, Ltgb;->b:Lyjd;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v4, Lru/ok/tamtam/android/prefs/PmsKey;->non-contact-max-chunk-size:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 v5, 0xa
-
-    int-to-long v5, v5
-
-    invoke-virtual {v3, v4, v5, v6}, Lpad;->o(Ljava/lang/Enum;J)J
-
-    move-result-wide v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    long-to-int v3, v3
-
-    if-ge v2, v3, :cond_1
-
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    return-void
-
-    :cond_1
-    :try_start_1
-    sget v2, Lfy4;->o:I
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    invoke-virtual {p1}, Lpf9;->r0()J
 
     move-result-wide v2
 
-    sget-object v4, Lky4;->b:Lky4;
-
-    invoke-static {v2, v3, v4}, Lr94;->c0(JLky4;)J
-
-    move-result-wide v2
-
-    iget-wide v4, p0, Lkx9;->h:J
-
-    invoke-static {v2, v3, v4, v5}, Lfy4;->g(JJ)J
-
-    move-result-wide v4
-
-    invoke-virtual {p0}, Lmx9;->b()J
-
-    move-result-wide v6
-
-    invoke-static {v4, v5, v6, v7}, Lfy4;->c(JJ)I
-
-    move-result v4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-gtz v4, :cond_2
-
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    return-void
-
-    :cond_2
-    :try_start_2
-    iput-wide v2, p0, Lkx9;->h:J
-
-    invoke-static {v0}, Lmq0;->l(Lao9;)Lao9;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lao9;->c()V
+    invoke-static {p1}, Ldf9;->a(Lpf9;)Ldf9;
 
-    iget-object v0, p0, Lmx9;->a:Ly04;
+    move-result-object v3
 
-    sget-object v3, Lb14;->b:Lb14;
+    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v4, Lix9;
+    add-int/lit8 v0, v0, 0x1
 
-    const/4 v5, 0x0
+    goto :goto_0
 
-    invoke-direct {v4, p0, v2, v5}, Lix9;-><init>(Lkx9;Lao9;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v5, v3, v4, v2}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lkx9;->g:Lncb;
-
-    sget-object v3, Lkx9;->i:[Lxi7;
-
-    const/4 v4, 0x0
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v2, p0, v3, v0}, Lncb;->h0(Ljava/lang/Object;Lxi7;Ljava/lang/Object;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
+    :cond_1
     return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p0
 .end method
 
-.method public final e()Z
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {p0}, Lmx9;->b()J
+    iget-object v0, p0, Lkx9;->c:Ljava/util/Map;
 
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {v0, v1, v2, v3}, Lfy4;->c(JJ)I
+    invoke-static {v0}, Lhuh;->d(Ljava/util/Map;)I
 
     move-result v0
 
-    if-lez v0, :cond_0
+    const-string v1, "{stats="
 
-    iget-object p0, p0, Lmx9;->b:Lcl7;
+    const-string v2, "}"
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lqgb;
-
-    check-cast p0, Ltgb;
-
-    iget-object p0, p0, Ltgb;->b:Lyjd;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->non-contact-max-chunk-size:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 v1, 0xa
-
-    int-to-long v1, v1
-
-    invoke-virtual {p0, v0, v1, v2}, Lpad;->o(Ljava/lang/Enum;J)J
-
-    move-result-wide v0
-
-    long-to-int p0, v0
-
-    if-lez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-object v0
 .end method

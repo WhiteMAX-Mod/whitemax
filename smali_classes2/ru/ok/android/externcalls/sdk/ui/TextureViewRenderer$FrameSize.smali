@@ -39,7 +39,7 @@
         "()F",
         "()I",
         "size",
-        "Lylf;",
+        "Lccg;",
         "get",
         "(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;)V",
         "I",
@@ -80,7 +80,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;-><init>(IIIILld4;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;-><init>(IIIILki4;)V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIIILld4;)V
+.method public synthetic constructor <init>(IIIILki4;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x1
@@ -153,9 +153,9 @@
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     :goto_0
@@ -211,25 +211,25 @@
 .end method
 
 .method public final height()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;->rotatedFrameHeight:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;->rotatedFrameHeight:I
 
-    return p0
+    return v0
 .end method
 
 .method public final ratio()F
-    .locals 1
+    .locals 2
 
     iget v0, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;->rotatedFrameWidth:I
 
     int-to-float v0, v0
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;->rotatedFrameHeight:I
+    iget v1, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;->rotatedFrameHeight:I
 
-    int-to-float p0, p0
+    int-to-float v1, v1
 
-    div-float/2addr v0, p0
+    div-float/2addr v0, v1
 
     return v0
 .end method
@@ -262,9 +262,9 @@
 .end method
 
 .method public final width()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;->rotatedFrameWidth:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;->rotatedFrameWidth:I
 
-    return p0
+    return v0
 .end method

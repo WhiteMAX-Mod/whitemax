@@ -149,7 +149,7 @@
     const-string v2, "]"
 
     .line 4
-    invoke-static {p0, v1, v2}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1, v2}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -209,9 +209,9 @@
 
 # virtual methods
 .method public getIndicator()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->indicator:I
+    iget v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->indicator:I
 
-    return p0
+    return v0
 .end method

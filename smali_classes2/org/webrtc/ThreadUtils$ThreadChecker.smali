@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public checkIsOnValidThread()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lorg/webrtc/ThreadUtils$ThreadChecker;->thread:Ljava/lang/Thread;
 
@@ -53,20 +53,20 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lorg/webrtc/ThreadUtils$ThreadChecker;->thread:Ljava/lang/Thread;
+    iget-object v1, p0, Lorg/webrtc/ThreadUtils$ThreadChecker;->thread:Ljava/lang/Thread;
 
-    if-ne v0, p0, :cond_1
+    if-ne v0, v1, :cond_1
 
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Wrong thread"
+    const-string v1, "Wrong thread"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public detachThread()V

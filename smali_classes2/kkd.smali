@@ -1,41 +1,53 @@
 .class public final Lkkd;
-.super Lzkd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final k:J
+.field public final a:Lsl;
+
+.field public final b:Lxod;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/List;)V
+.method public constructor <init>(Lsl;)V
     .locals 0
 
-    invoke-direct {p0, p3, p4, p5}, Lzkd;-><init>(JLjava/util/List;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lkkd;->k:J
+    iput-object p1, p0, Lkkd;->a:Lsl;
+
+    invoke-static {}, Lkpd;->b()Lxod;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lkkd;->b:Lxod;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcld;
-    .locals 1
+.method public final a(Lem;)Lrqe;
+    .locals 2
 
-    new-instance v0, Llkd;
+    new-instance v0, Lf44;
 
-    invoke-direct {v0, p0}, Llkd;-><init>(Lkkd;)V
+    const/16 v1, 0x8
 
-    return-object v0
-.end method
+    invoke-direct {v0, p0, v1, p1}, Lf44;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-.method public final b()Lald;
-    .locals 1
+    new-instance p1, Ltka;
 
-    new-instance v0, Llkd;
+    const/4 v1, 0x4
 
-    invoke-direct {v0, p0}, Llkd;-><init>(Lkkd;)V
+    invoke-direct {p1, v1, v0}, Ltka;-><init>(ILjava/lang/Object;)V
 
-    return-object v0
+    iget-object v0, p0, Lkkd;->b:Lxod;
+
+    invoke-virtual {p1, v0}, Lwpe;->m(Lxod;)Lrqe;
+
+    move-result-object p1
+
+    return-object p1
 .end method

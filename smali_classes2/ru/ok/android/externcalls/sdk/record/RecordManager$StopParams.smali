@@ -20,27 +20,27 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;",
         "",
-        "Lvmd;",
+        "Ls7e;",
         "sessionRoomId",
         "",
         "removeRecord",
         "Lkotlin/Function1;",
         "Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo;",
-        "Lylf;",
+        "Lccg;",
         "onSuccess",
         "",
         "onError",
         "<init>",
-        "(Lvmd;ZLbc6;Lbc6;)V",
-        "Lvmd;",
+        "(Ls7e;ZLli6;Lli6;)V",
+        "Ls7e;",
         "getSessionRoomId",
-        "()Lvmd;",
+        "()Ls7e;",
         "Z",
         "getRemoveRecord",
         "()Z",
-        "Lbc6;",
+        "Lli6;",
         "getOnSuccess",
-        "()Lbc6;",
+        "()Lli6;",
         "getOnError",
         "calls-sdk_release"
     }
@@ -55,25 +55,25 @@
 
 
 # instance fields
-.field private final onError:Lbc6;
+.field private final onError:Lli6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lbc6;"
+            "Lli6;"
         }
     .end annotation
 .end field
 
-.field private final onSuccess:Lbc6;
+.field private final onSuccess:Lli6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lbc6;"
+            "Lli6;"
         }
     .end annotation
 .end field
 
 .field private final removeRecord:Z
 
-.field private final sessionRoomId:Lvmd;
+.field private final sessionRoomId:Ls7e;
 
 
 # direct methods
@@ -95,20 +95,20 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;-><init>(Lvmd;ZLbc6;Lbc6;ILld4;)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;-><init>(Ls7e;ZLli6;Lli6;ILki4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lvmd;ZLbc6;Lbc6;)V
+.method public constructor <init>(Ls7e;ZLli6;Lli6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lvmd;",
+            "Ls7e;",
             "Z",
-            "Lbc6;",
-            "Lbc6;",
+            "Lli6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
@@ -117,21 +117,21 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->sessionRoomId:Lvmd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->sessionRoomId:Ls7e;
 
     .line 4
     iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->removeRecord:Z
 
     .line 5
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->onSuccess:Lbc6;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->onSuccess:Lli6;
 
     .line 6
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->onError:Lbc6;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->onError:Lli6;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lvmd;ZLbc6;Lbc6;ILld4;)V
+.method public synthetic constructor <init>(Ls7e;ZLli6;Lli6;ILki4;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x1
@@ -165,53 +165,53 @@
 
     .line 7
     :cond_3
-    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;-><init>(Lvmd;ZLbc6;Lbc6;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;-><init>(Ls7e;ZLli6;Lli6;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getOnError()Lbc6;
-    .locals 0
+.method public final getOnError()Lli6;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lbc6;"
+            "Lli6;"
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->onError:Lbc6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->onError:Lli6;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final getOnSuccess()Lbc6;
-    .locals 0
+.method public final getOnSuccess()Lli6;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lbc6;"
+            "Lli6;"
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->onSuccess:Lbc6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->onSuccess:Lli6;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getRemoveRecord()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->removeRecord:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->removeRecord:Z
 
-    return p0
+    return v0
 .end method
 
-.method public final getSessionRoomId()Lvmd;
-    .locals 0
+.method public final getSessionRoomId()Ls7e;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->sessionRoomId:Lvmd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->sessionRoomId:Ls7e;
 
-    return-object p0
+    return-object v0
 .end method

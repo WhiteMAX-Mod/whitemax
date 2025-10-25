@@ -1045,19 +1045,19 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/commons/codec/binary/Base64;->decode([B)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     .line 3
     :cond_0
-    new-instance p0, Lorg/apache/commons/codec/DecoderException;
+    new-instance p1, Lorg/apache/commons/codec/DecoderException;
 
-    const-string p1, "Parameter supplied to Base64 decode is not a byte[]"
+    const-string v0, "Parameter supplied to Base64 decode is not a byte[]"
 
-    invoke-direct {p0, p1}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public decode([B)[B
@@ -1066,9 +1066,9 @@
     .line 4
     invoke-static {p1}, Lorg/apache/commons/codec/binary/Base64;->decodeBase64([B)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public encode(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1089,30 +1089,30 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/commons/codec/binary/Base64;->encode([B)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     .line 3
     :cond_0
-    new-instance p0, Lorg/apache/commons/codec/EncoderException;
+    new-instance p1, Lorg/apache/commons/codec/EncoderException;
 
-    const-string p1, "Parameter supplied to Base64 encode is not a byte[]"
+    const-string v0, "Parameter supplied to Base64 encode is not a byte[]"
 
-    invoke-direct {p0, p1}, Lorg/apache/commons/codec/EncoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/commons/codec/EncoderException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public encode([B)[B
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     .line 4
-    invoke-static {p1, p0}, Lorg/apache/commons/codec/binary/Base64;->encodeBase64([BZ)[B
+    invoke-static {p1, v0}, Lorg/apache/commons/codec/binary/Base64;->encodeBase64([BZ)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

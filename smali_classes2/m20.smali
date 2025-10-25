@@ -1,84 +1,94 @@
-.class public final synthetic Lm20;
+.class public final Lm20;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lfjd;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lr20;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lr20;I)V
-    .locals 0
-
-    iput p2, p0, Lm20;->a:I
-
-    iput-object p1, p0, Lm20;->b:Lr20;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public a:Ljava/util/ArrayList;
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget v0, p0, Lm20;->a:I
+    if-ne p0, p1, :cond_0
 
-    iget-object p0, p0, Lm20;->b:Lr20;
+    const/4 p1, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    return p1
 
-    iget-object p0, p0, Lr20;->a:Landroid/content/Context;
+    :cond_0
+    if-eqz p1, :cond_2
 
-    const-string v0, "power"
+    const-class v0, Lm20;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    move-result-object v1
 
-    check-cast p0, Landroid/os/PowerManager;
+    if-eq v0, v1, :cond_1
 
-    const v0, 0x20000006
+    goto :goto_0
 
-    const-string v1, "ru.ok.tamtam:tam-tam-screen-dim"
+    :cond_1
+    check-cast p1, Lm20;
 
-    invoke-virtual {p0, v0, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lm20;->a:Ljava/util/ArrayList;
 
-    move-result-object p0
+    iget-object p1, p1, Lm20;->a:Ljava/util/ArrayList;
 
-    return-object p0
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
 
-    :pswitch_0
-    iget-object p0, p0, Lr20;->a:Landroid/content/Context;
+    move-result p1
 
-    const-string v0, "power"
+    return p1
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
 
-    move-result-object p0
+    return p1
+.end method
 
-    check-cast p0, Landroid/os/PowerManager;
+.method public final hashCode()I
+    .locals 1
 
-    const/16 v0, 0x20
+    iget-object v0, p0, Lm20;->a:Ljava/util/ArrayList;
 
-    const-string v1, "ru.ok.tamtam:tam-tam-prox"
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    invoke-virtual {p0, v0, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    return-object p0
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AudioActivityNotification{participantIds="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lm20;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

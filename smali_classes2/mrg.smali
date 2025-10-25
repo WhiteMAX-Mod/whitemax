@@ -4,24 +4,20 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Landroid/net/Uri;
 
-.field public final b:Z
-
-.field public final c:Lumg;
+.field public b:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZLumg;)V
+.method public constructor <init>(Landroid/net/Uri;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmrg;->a:Ljava/lang/String;
+    iput-object p1, p0, Lmrg;->a:Landroid/net/Uri;
 
     iput-boolean p2, p0, Lmrg;->b:Z
-
-    iput-object p3, p0, Lmrg;->c:Lumg;
 
     return-void
 .end method
@@ -49,11 +45,11 @@
     :cond_1
     check-cast p1, Lmrg;
 
-    iget-object v1, p0, Lmrg;->a:Ljava/lang/String;
+    iget-object v1, p0, Lmrg;->a:Landroid/net/Uri;
 
-    iget-object v3, p1, Lmrg;->a:Ljava/lang/String;
+    iget-object v3, p1, Lmrg;->a:Landroid/net/Uri;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -64,95 +60,66 @@
     :cond_2
     iget-boolean v1, p0, Lmrg;->b:Z
 
-    iget-boolean v3, p1, Lmrg;->b:Z
+    iget-boolean p1, p1, Lmrg;->b:Z
 
-    if-eq v1, v3, :cond_3
+    if-eq v1, p1, :cond_3
 
     return v2
 
     :cond_3
-    iget-object p0, p0, Lmrg;->c:Lumg;
-
-    iget-object p1, p1, Lmrg;->c:Lumg;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lmrg;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lmrg;->b:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-object p0, p0, Lmrg;->c:Lumg;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lmrg;->a:Landroid/net/Uri;
 
-    const-string v1, "WebViewContainerState(title="
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    iget-object v1, p0, Lmrg;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isVerified="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-int/lit8 v0, v0, 0x1f
 
     iget-boolean v1, p0, Lmrg;->b:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    const-string v1, ", loadingState="
+    move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-int/2addr v1, v0
 
-    iget-object p0, p0, Lmrg;->c:Lumg;
+    return v1
+.end method
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const-string p0, ")"
+    iget-boolean v0, p0, Lmrg;->b:Z
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v2, "PendingFragment(uri="
 
-    move-result-object p0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object p0
+    iget-object v2, p0, Lmrg;->a:Landroid/net/Uri;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", finalized="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

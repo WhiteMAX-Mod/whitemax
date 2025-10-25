@@ -1,52 +1,50 @@
-.class public final synthetic Lqn6;
-.super Ls8;
+.class public final Lqn6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrc6;
+.implements Lt00;
 
 
-# static fields
-.field public static final r0:Lqn6;
+# instance fields
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:D
+
+.field public final e:D
+
+.field public final f:F
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lqn6;
-
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lpxa;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Ls8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lqn6;->r0:Lqn6;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;DDFLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    check-cast p1, Ls72;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Lj44;
+    iput-wide p1, p0, Lqn6;->a:J
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lqn6;->b:Ljava/lang/String;
 
-    sget-object p0, Lvn6;->j:Lpxa;
+    iput-object p4, p0, Lqn6;->c:Ljava/lang/String;
 
-    new-instance p0, Lpxa;
+    iput-wide p5, p0, Lqn6;->d:D
 
-    invoke-direct {p0, p1, p2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iput-wide p7, p0, Lqn6;->e:D
 
-    return-object p0
+    iput p9, p0, Lqn6;->f:F
+
+    iput-object p10, p0, Lqn6;->g:Ljava/lang/String;
+
+    iput-object p11, p0, Lqn6;->h:Ljava/lang/String;
+
+    return-void
 .end method

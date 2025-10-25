@@ -1,62 +1,81 @@
 .class public final Ldw6;
-.super Lwze;
+.super Lxod;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic e:Lew6;
-
-.field public final synthetic f:I
-
-.field public final synthetic g:J
+.field public final c:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lew6;IJ)V
+.method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
-    iput-object p2, p0, Ldw6;->e:Lew6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Ldw6;->f:I
-
-    iput-wide p4, p0, Ldw6;->g:J
-
-    const/4 p2, 0x1
-
-    invoke-direct {p0, p1, p2}, Lwze;-><init>(Ljava/lang/String;Z)V
+    iput-object p1, p0, Ldw6;->c:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 5
+.method public final a()Lvod;
+    .locals 2
 
-    iget-object v0, p0, Ldw6;->e:Lew6;
+    new-instance v0, Lbw6;
 
-    :try_start_0
-    iget-object v1, v0, Lew6;->G0:Lmw6;
+    iget-object v1, p0, Ldw6;->c:Landroid/os/Handler;
 
-    iget v2, p0, Ldw6;->f:I
+    invoke-direct {v0, v1}, Lbw6;-><init>(Landroid/os/Handler;)V
 
-    iget-wide v3, p0, Ldw6;->g:J
+    return-object v0
+.end method
 
-    invoke-virtual {v1, v2, v3, v4}, Lmw6;->X(IJ)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
+    .locals 3
 
-    goto :goto_0
+    if-eqz p1, :cond_1
 
-    :catch_0
-    move-exception p0
+    if-eqz p4, :cond_0
 
-    const/4 v1, 0x2
+    new-instance v0, Lcw6;
 
-    invoke-virtual {v0, v1, v1, p0}, Lew6;->c(IILjava/io/IOException;)V
+    iget-object v1, p0, Ldw6;->c:Landroid/os/Handler;
 
-    :goto_0
-    const-wide/16 v0, -0x1
+    invoke-direct {v0, v1, p1}, Lcw6;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    return-wide v0
+    invoke-static {v1, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
+
+    move-result-object p1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2}, Landroid/os/Message;->setAsynchronous(Z)V
+
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide p2
+
+    invoke-virtual {v1, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    return-object v0
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "unit == null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "run == null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

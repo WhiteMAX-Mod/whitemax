@@ -1,126 +1,50 @@
-.class public final Lwkc;
+.class public abstract Lwkc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lalc;
 
 
-# instance fields
-.field public final a:Lpkc;
+# static fields
+.field public static onechat_react_add_tension:I = 0x7f0703c0
 
-.field public final b:Z
+.field public static onechat_react_animation_drawable_size:I = 0x7f0703c1
 
+.field public static onechat_react_badge_corners_radius:I = 0x7f0703c2
 
-# direct methods
-.method public constructor <init>(Lpkc;Z)V
-    .locals 0
+.field public static onechat_react_bubble_width_tension:I = 0x7f0703c3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static onechat_react_change_tension:I = 0x7f0703c4
 
-    iput-object p1, p0, Lwkc;->a:Lpkc;
+.field public static onechat_react_counter_padding:I = 0x7f0703c5
 
-    iput-boolean p2, p0, Lwkc;->b:Z
+.field public static onechat_react_default_small_height_fallback:I = 0x7f0703c6
 
-    return-void
-.end method
+.field public static onechat_react_default_small_width_fallback:I = 0x7f0703c7
 
+.field public static onechat_react_move_tension:I = 0x7f0703c8
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.field public static onechat_react_next_change_delay_coef:I = 0x7f0703c9
 
-    if-ne p0, p1, :cond_0
+.field public static onechat_react_next_move_delay_coef:I = 0x7f0703ca
 
-    goto :goto_1
+.field public static onechat_react_panel_corner_radius:I = 0x7f0703cb
 
-    :cond_0
-    instance-of v0, p1, Lwkc;
+.field public static onechat_react_panel_popup_side_margin:I = 0x7f0703cc
 
-    if-nez v0, :cond_1
+.field public static onechat_react_panel_selected_text_size:I = 0x7f0703cd
 
-    goto :goto_0
+.field public static onechat_react_panel_side_margin:I = 0x7f0703ce
 
-    :cond_1
-    check-cast p1, Lwkc;
+.field public static onechat_react_panel_size:I = 0x7f0703cf
 
-    iget-object v0, p0, Lwkc;->a:Lpkc;
+.field public static onechat_react_panel_text_size:I = 0x7f0703d0
 
-    iget-object v1, p1, Lwkc;->a:Lpkc;
+.field public static onechat_react_panel_vertical_margin:I = 0x7f0703d1
 
-    if-eq v0, v1, :cond_2
+.field public static onechat_react_scale_1_step:I = 0x7f0703d2
 
-    goto :goto_0
+.field public static onechat_react_scale_2_step:I = 0x7f0703d3
 
-    :cond_2
-    iget-boolean p0, p0, Lwkc;->b:Z
+.field public static onechat_react_scale_3_step:I = 0x7f0703d4
 
-    iget-boolean p1, p1, Lwkc;->b:Z
+.field public static onechat_react_side_margin:I = 0x7f0703d5
 
-    if-eq p0, p1, :cond_3
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lwkc;->a:Lpkc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lwkc;->b:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OnTyping(type="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lwkc;->a:Lpkc;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isTyping="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lwkc;->b:Z
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static onechat_react_text_size_small:I = 0x7f0703d6

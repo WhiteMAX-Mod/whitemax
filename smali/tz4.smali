@@ -1,145 +1,256 @@
-.class public abstract Ltz4;
+.class public final Ltz4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljz4;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public final b:Llz4;
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/Class;
+
+.field public e:Luz4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Llz4;ZLjava/lang/Class;)V
+    .locals 0
 
-    const/16 v0, 0xe6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xff
+    iput-object p1, p0, Ltz4;->a:Landroid/content/Context;
 
-    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
+    iput-object p2, p0, Ltz4;->b:Llz4;
 
-    move-result v0
+    iput-boolean p3, p0, Ltz4;->c:Z
 
-    sput v0, Ltz4;->a:I
+    iput-object p4, p0, Ltz4;->d:Ljava/lang/Class;
 
-    const/16 v0, 0x80
+    iget-object p1, p2, Llz4;->e:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    const/16 v1, 0x1b
-
-    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
-
-    move-result v0
-
-    sput v0, Ltz4;->b:I
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
-.method public static a(Lt5;)V
-    .locals 8
 
-    new-instance v1, Leue;
+# virtual methods
+.method public final a(Llz4;)V
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Ltz4;->e:Luz4;
 
-    invoke-direct {v1, v0, v0}, Leue;-><init>(II)V
+    if-eqz v0, :cond_0
 
-    new-instance v2, Leue;
+    iget-object p1, p1, Llz4;->l:Ljava/util/List;
 
-    sget v3, Ltz4;->a:I
+    invoke-static {v0, p1}, Luz4;->a(Luz4;Ljava/util/List;)V
 
-    sget v4, Ltz4;->b:I
+    :cond_0
+    return-void
+.end method
 
-    invoke-direct {v2, v3, v4}, Leue;-><init>(II)V
+.method public final b()V
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    return-void
+.end method
 
-    move-result-object v3
+.method public final c()V
+    .locals 1
 
-    invoke-virtual {v3}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    iget-object v0, p0, Ltz4;->e:Luz4;
 
-    move-result-object v4
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Luz4;->b()V
 
-    move-result-object v3
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+.method public final d(Llz4;Z)V
+    .locals 1
 
-    move-result-object v3
+    if-nez p2, :cond_3
 
-    iget v3, v3, Landroid/content/res/Configuration;->uiMode:I
+    iget-boolean p2, p1, Llz4;->i:Z
 
-    and-int/lit8 v3, v3, 0x30
+    if-nez p2, :cond_3
 
-    const/4 v5, 0x1
+    iget-object p2, p0, Ltz4;->e:Luz4;
 
-    const/16 v6, 0x20
+    if-eqz p2, :cond_1
 
-    if-ne v3, v6, :cond_0
+    iget-boolean p2, p2, Luz4;->X:Z
 
-    move v3, v5
+    if-eqz p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v3, v5
+    return-void
 
-    move v5, v0
-
+    :cond_1
     :goto_0
-    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    iget-object p1, p1, Llz4;->l:Ljava/util/List;
 
-    move-result-object v7
+    const/4 p2, 0x0
 
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    :goto_1
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    move-result-object v7
+    move-result v0
 
-    iget v7, v7, Landroid/content/res/Configuration;->uiMode:I
+    if-ge p2, v0, :cond_3
 
-    and-int/lit8 v7, v7, 0x30
+    invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-ne v7, v6, :cond_1
+    move-result-object v0
 
-    move v6, v3
+    check-cast v0, Lbx4;
+
+    iget v0, v0, Lbx4;->b:I
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {p0}, Ltz4;->g()V
+
+    return-void
+
+    :cond_2
+    add-int/lit8 p2, p2, 0x1
 
     goto :goto_1
 
+    :cond_3
+    return-void
+.end method
+
+.method public final e(Lbx4;Ljava/lang/Exception;)V
+    .locals 0
+
+    iget-object p2, p0, Ltz4;->e:Luz4;
+
+    if-eqz p2, :cond_1
+
+    iget-boolean p2, p2, Luz4;->X:Z
+
+    if-eqz p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
     :cond_1
-    move v6, v0
+    :goto_0
+    iget p1, p1, Lbx4;->b:I
 
-    :goto_1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 p2, 0x2
 
-    const/16 v3, 0x1e
+    if-eq p1, p2, :cond_3
 
-    if-lt v0, v3, :cond_2
+    const/4 p2, 0x5
 
-    new-instance v0, Lxz4;
+    if-eq p1, p2, :cond_3
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x7
 
-    goto :goto_2
+    if-ne p1, p2, :cond_2
+
+    goto :goto_1
 
     :cond_2
-    new-instance v0, Lwz4;
+    return-void
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    :cond_3
+    :goto_1
+    const-string p1, "DownloadService"
 
-    :goto_2
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    const-string p2, "DownloadService wasn\'t running. Restarting."
 
-    move-result-object v3
+    invoke-static {p1, p2}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual/range {v0 .. v6}, Lwz4;->a(Leue;Leue;Landroid/view/Window;Landroid/view/View;ZZ)V
+    invoke-virtual {p0}, Ltz4;->g()V
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    return-void
+.end method
 
-    move-result-object p0
+.method public final f(Llz4;Lbx4;)V
+    .locals 0
 
-    invoke-virtual {v0, p0}, Lvz4;->b(Landroid/view/Window;)V
+    return-void
+.end method
 
+.method public final g()V
+    .locals 5
+
+    iget-boolean v0, p0, Ltz4;->c:Z
+
+    const-string v1, "DownloadService"
+
+    iget-object v2, p0, Ltz4;->d:Ljava/lang/Class;
+
+    iget-object v3, p0, Ltz4;->a:Landroid/content/Context;
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    const-string v0, "androidx.media3.exoplayer.downloadService.action.RESTART"
+
+    new-instance v4, Landroid/content/Intent;
+
+    invoke-direct {v4, v3, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v4, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    sget-object v2, Lnig;->a:Ljava/lang/String;
+
+    invoke-virtual {v3, v0}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    const-string v0, "Failed to restart (foreground launch restriction)"
+
+    invoke-static {v1, v0}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    const-string v0, "androidx.media3.exoplayer.downloadService.action.INIT"
+
+    new-instance v4, Landroid/content/Intent;
+
+    invoke-direct {v4, v3, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v4, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    :try_end_1
+    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
+
+    return-void
+
+    :catch_1
+    const-string v0, "Failed to restart (process is idle)"
+
+    invoke-static {v1, v0}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
     return-void
 .end method

@@ -2,120 +2,173 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Cloneable;
+
 
 # instance fields
-.field public final a:Lcl7;
+.field public X:I
 
-.field public final b:Lcl7;
+.field public a:Ljava/nio/charset/CodingErrorAction;
 
-.field public final c:Lcl7;
+.field public b:Ljava/nio/charset/CodingErrorAction;
 
-.field public final d:Lcl7;
+.field public c:I
 
-.field public final e:Lcl7;
-
-
-# direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lie9;->a:Lcl7;
-
-    iput-object p2, p0, Lie9;->b:Lcl7;
-
-    iput-object p3, p0, Lie9;->c:Lcl7;
-
-    iput-object p4, p0, Lie9;->d:Lcl7;
-
-    iput-object p5, p0, Lie9;->e:Lcl7;
-
-    return-void
-.end method
-
-.method public static synthetic b(Lie9;JLjava/lang/CharSequence;Ljava/lang/Long;Ll56;Lure;I)Ljava/lang/Object;
-    .locals 8
-
-    and-int/lit8 p7, p7, 0x8
-
-    if-eqz p7, :cond_0
-
-    const/4 p5, 0x0
-
-    :cond_0
-    move-object v5, p5
-
-    const/4 v6, 0x0
-
-    move-object v0, p0
-
-    move-wide v1, p1
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v7, p6
-
-    invoke-virtual/range {v0 .. v7}, Lie9;->a(JLjava/lang/CharSequence;Ljava/lang/Long;Ll56;ZLure;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final a(JLjava/lang/CharSequence;Ljava/lang/Long;Ll56;ZLure;)Ljava/lang/Object;
-    .locals 10
+.method public final clone()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lie9;->a:Lcl7;
+    new-instance v0, Lie9;
 
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
 
-    check-cast v0, Lxwe;
+    iput-object v1, v0, Lie9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    check-cast v0, Laga;
+    iput-object v1, v0, Lie9;->b:Ljava/nio/charset/CodingErrorAction;
 
-    invoke-virtual {v0}, Laga;->b()Ls04;
+    const v1, 0x7fffffff
 
-    move-result-object v0
+    iput v1, v0, Lie9;->c:I
 
-    new-instance v1, Lhe9;
+    const/16 v1, 0x2000
 
-    const/4 v9, 0x0
+    iput v1, v0, Lie9;->o:I
 
-    move-object v2, p0
+    iput v1, v0, Lie9;->X:I
 
-    move-wide v3, p1
+    iget-object v1, p0, Lie9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    move-object v5, p3
+    iput-object v1, v0, Lie9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    move-object v6, p4
+    iget-object v1, p0, Lie9;->b:Ljava/nio/charset/CodingErrorAction;
 
-    move-object v8, p5
+    iput-object v1, v0, Lie9;->b:Ljava/nio/charset/CodingErrorAction;
 
-    move/from16 v7, p6
+    iget v1, p0, Lie9;->c:I
 
-    invoke-direct/range {v1 .. v9}, Lhe9;-><init>(Lie9;JLjava/lang/CharSequence;Ljava/lang/Long;ZLl56;Lkotlin/coroutines/Continuation;)V
+    iput v1, v0, Lie9;->c:I
 
-    move-object/from16 p0, p7
+    iget v1, p0, Lie9;->o:I
 
-    invoke-static {v0, v1, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput v1, v0, Lie9;->o:I
 
-    move-result-object p0
+    return-object v0
+.end method
 
-    sget-object p1, Lz04;->a:Lz04;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    if-ne p0, p1, :cond_0
+    instance-of v0, p1, Lie9;
 
-    return-object p0
+    if-nez v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    sget-object p0, Lylf;->a:Lylf;
+    check-cast p1, Lie9;
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lie9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    iget-object v1, p1, Lie9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lie9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    iget-object v1, p1, Lie9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Lie9;->c:I
+
+    iget v1, p1, Lie9;->c:I
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Lie9;->X:I
+
+    iget v1, p1, Lie9;->X:I
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Lie9;->o:I
+
+    iget p1, p1, Lie9;->o:I
+
+    if-ne v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lie9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    const/16 v2, 0x3e0
+
+    add-int/2addr v2, v0
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget-object v0, p0, Lie9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :cond_1
+    add-int/2addr v2, v1
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget v0, p0, Lie9;->c:I
+
+    add-int/2addr v2, v0
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget v0, p0, Lie9;->o:I
+
+    add-int/2addr v2, v0
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget v0, p0, Lie9;->X:I
+
+    add-int/2addr v2, v0
+
+    return v2
 .end method

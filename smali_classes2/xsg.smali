@@ -1,66 +1,57 @@
-.class public final synthetic Lxsg;
-.super Ljava/lang/Object;
+.class public final Lxsg;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Landroid/util/Size;
 
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
+.field public Y:Lhyb;
+
+.field public Z:Ljava/lang/Object;
+
+.field public o:Lhtg;
+
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Lhtg;
+
+.field public s0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
+.method public constructor <init>(Lhtg;Ly14;)V
     .locals 0
 
-    iput p2, p0, Lxsg;->a:I
+    iput-object p1, p0, Lxsg;->r0:Lhtg;
 
-    iput-object p1, p0, Lxsg;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lxsg;->a:I
+    iput-object p1, p0, Lxsg;->q0:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lxsg;->s0:I
 
-    iget-object p0, p0, Lxsg;->b:Lone/me/sdk/arch/Widget;
+    const/high16 v0, -0x80000000
 
-    check-cast p2, Lc43;
+    or-int/2addr p1, v0
 
-    invoke-static {p0, p1, p2}, Lone/me/sdk/arch/Widget;->x0(Lone/me/sdk/arch/Widget;Ljava/lang/Object;Lc43;)Lylf;
+    iput p1, p0, Lxsg;->s0:I
 
-    move-result-object p0
+    iget-object p1, p0, Lxsg;->r0:Lhtg;
 
-    return-object p0
+    const/4 v0, 0x0
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    invoke-virtual {p1, v0, v0, p0}, Lhtg;->m(Landroid/util/Size;Lhyb;Ly14;)Ljava/lang/Object;
 
-    check-cast p2, Lc43;
+    move-result-object p1
 
-    iget-object p0, p0, Lxsg;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-static {p0, p1, p2}, Lone/me/sdk/arch/Widget;->v0(Lone/me/sdk/arch/Widget;Landroid/view/View;Lc43;)Lylf;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

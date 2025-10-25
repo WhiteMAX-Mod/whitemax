@@ -99,11 +99,11 @@
     invoke-direct {v1, p0, p1, p2}, Lcom/my/tracker/obfuscated/a0;-><init>(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/i;Landroid/content/Context;)V
 
     .line 6
-    new-instance p0, Lzyg;
+    new-instance p0, Lyrh;
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, v1, p1}, Lzyg;-><init>(Lcom/my/tracker/obfuscated/a0;I)V
+    invoke-direct {p0, v1, p1}, Lyrh;-><init>(Lcom/my/tracker/obfuscated/a0;I)V
 
     invoke-static {p0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 
@@ -178,7 +178,7 @@
 .end method
 
 .method private synthetic c()V
-    .locals 1
+    .locals 2
 
     .line 2
     :try_start_0
@@ -211,25 +211,25 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
     .line 5
-    instance-of v0, p0, Ljava/lang/NoClassDefFoundError;
+    instance-of v1, v0, Ljava/lang/NoClassDefFoundError;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     .line 6
-    const-string p0, "ReferrerHandler: InstallReferrerClient not found"
+    const-string v0, "ReferrerHandler: InstallReferrerClient not found"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 7
     :cond_0
-    const-string v0, "ReferrerHandler: error occurred while initialization InstallReferrerClient"
+    const-string v1, "ReferrerHandler: error occurred while initialization InstallReferrerClient"
 
-    invoke-static {v0, p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -274,11 +274,11 @@
 
     .line 18
     :cond_0
-    new-instance v0, Lzyg;
+    new-instance v0, Lyrh;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lzyg;-><init>(Lcom/my/tracker/obfuscated/a0;I)V
+    invoke-direct {v0, p0, v1}, Lyrh;-><init>(Lcom/my/tracker/obfuscated/a0;I)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->b(Ljava/lang/Runnable;)V
 
@@ -296,9 +296,9 @@
     if-nez v1, :cond_0
 
     .line 20
-    const-string p0, "ReferrerHandler: install referrer client is null"
+    const-string p1, "ReferrerHandler: install referrer client is null"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
 
     return-void
 
@@ -319,11 +319,11 @@
     move-result-object p1
 
     .line 23
-    new-instance v0, Lrvg;
+    new-instance v0, Ltlg;
 
-    const/16 v1, 0x8
+    const/16 v1, 0x16
 
-    invoke-direct {v0, p0, v1, p1}, Lrvg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Ltlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 
@@ -385,9 +385,9 @@
     if-nez v0, :cond_0
 
     .line 29
-    const-string p0, "ReferrerHandler: InstallReferrerClient is null"
+    const-string p1, "ReferrerHandler: InstallReferrerClient is null"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -466,9 +466,9 @@
     if-eqz v1, :cond_0
 
     .line 47
-    const-string p0, "ReferrerHandler: api referrer has been tracked"
+    const-string p1, "ReferrerHandler: api referrer has been tracked"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -517,9 +517,9 @@
     invoke-virtual/range {v1 .. v7}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/String;Ljava/lang/String;JJ)V
 
     .line 55
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/a0;->b:Lcom/my/tracker/obfuscated/i;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/a0;->b:Lcom/my/tracker/obfuscated/i;
 
-    invoke-virtual {p0, v2}, Lcom/my/tracker/obfuscated/i;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Lcom/my/tracker/obfuscated/i;->a(Ljava/lang/String;)V
 
     .line 56
     invoke-virtual {v0}, Lcom/my/tracker/obfuscated/p0;->r()V
@@ -545,9 +545,9 @@
     if-eqz v1, :cond_0
 
     .line 40
-    const-string p0, "ReferrerHandler: referrer has been tracked"
+    const-string p1, "ReferrerHandler: referrer has been tracked"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -565,9 +565,9 @@
     invoke-virtual {v2, p1, v1, p2}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;)V
 
     .line 43
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/a0;->b:Lcom/my/tracker/obfuscated/i;
+    iget-object p2, p0, Lcom/my/tracker/obfuscated/a0;->b:Lcom/my/tracker/obfuscated/i;
 
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/i;->a(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/my/tracker/obfuscated/i;->a(Ljava/lang/String;)V
 
     .line 44
     invoke-virtual {v0}, Lcom/my/tracker/obfuscated/p0;->u()V

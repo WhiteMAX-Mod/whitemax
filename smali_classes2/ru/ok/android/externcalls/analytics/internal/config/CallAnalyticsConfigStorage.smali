@@ -78,73 +78,71 @@
 
 # virtual methods
 .method public final getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
-    .locals 0
+    .locals 1
 
-    sget-object p0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->config:Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->config:Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
-    .locals 0
+    .locals 1
 
-    sget-object p0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->config:Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->config:Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-object p0
+    return-object v0
 
     :cond_1
     :goto_0
-    sget-object p0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->defaultLogger:Lru/ok/android/externcalls/analytics/internal/log/DefaultCallAnalyticsLogger;
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->defaultLogger:Lru/ok/android/externcalls/analytics/internal/log/DefaultCallAnalyticsLogger;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
-    .locals 15
+    .locals 16
 
-    sget-object p0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->config:Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->config:Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-object p0
+    return-object v0
 
     :cond_1
     :goto_0
-    new-instance v0, Lru/ok/android/externcalls/analytics/config/UploadConfig;
+    new-instance v1, Lru/ok/android/externcalls/analytics/config/UploadConfig;
 
-    const/16 v13, 0x3ff
+    const/16 v14, 0x3ff
 
-    const/4 v14, 0x0
-
-    const/4 v1, 0x0
+    const/4 v15, 0x0
 
     const/4 v2, 0x0
 
-    const-wide/16 v3, 0x0
+    const/4 v3, 0x0
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v4, 0x0
 
-    const/4 v7, 0x0
+    const-wide/16 v6, 0x0
 
     const/4 v8, 0x0
 
@@ -156,9 +154,11 @@
 
     const/4 v12, 0x0
 
-    invoke-direct/range {v0 .. v14}, Lru/ok/android/externcalls/analytics/config/UploadConfig;-><init>(ILjava/util/concurrent/Executor;JJLzb6;Lzb6;Lzb6;Lzb6;Lzb6;Lzb6;ILld4;)V
+    const/4 v13, 0x0
 
-    return-object v0
+    invoke-direct/range {v1 .. v15}, Lru/ok/android/externcalls/analytics/config/UploadConfig;-><init>(ILjava/util/concurrent/Executor;JJLji6;Lji6;Lji6;Lji6;Lji6;Lji6;ILki4;)V
+
+    return-object v1
 .end method
 
 .method public final setConfig(Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;)V

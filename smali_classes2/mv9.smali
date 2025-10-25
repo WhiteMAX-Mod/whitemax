@@ -1,104 +1,73 @@
-.class public final synthetic Lmv9;
-.super Ljava/lang/Object;
+.class public final enum Lmv9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lav9;
-.implements Lbd6;
 
+# static fields
+.field public static final enum a:Lmv9;
 
-# instance fields
-.field public final synthetic a:Lfw9;
+.field public static final enum b:Lmv9;
+
+.field public static final synthetic c:[Lmv9;
 
 
 # direct methods
-.method public constructor <init>(Lfw9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lmv9;
 
-    iput-object p1, p0, Lmv9;->a:Lfw9;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lru9;)V
-    .locals 0
-
-    iget-object p0, p0, Lmv9;->a:Lfw9;
-
-    invoke-virtual {p0, p1}, Lfw9;->w(Lru9;)V
-
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Lav9;
-
-    if-eqz v0, :cond_0
-
-    instance-of v0, p1, Lbd6;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lmv9;->getFunctionDelegate()Luc6;
-
-    move-result-object p0
-
-    check-cast p1, Lbd6;
-
-    invoke-interface {p1}, Lbd6;->getFunctionDelegate()Luc6;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final getFunctionDelegate()Luc6;
-    .locals 7
-
-    new-instance v0, Led6;
-
-    const-string v6, "selectAvatar(Lone/me/login/common/avatars/NeuroAvatarModel;)V"
+    const-string v1, "MOVIE"
 
     const/4 v2, 0x0
 
-    const/4 v1, 0x1
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-class v3, Lfw9;
+    sput-object v0, Lmv9;->a:Lmv9;
 
-    iget-object v4, p0, Lmv9;->a:Lfw9;
+    new-instance v1, Lmv9;
 
-    const-string v5, "selectAvatar"
+    const-string v2, "STREAM"
 
-    invoke-direct/range {v0 .. v6}, Ldd6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v3, 0x1
 
-    return-object v0
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lmv9;->b:Lmv9;
+
+    filled-new-array {v0, v1}, [Lmv9;
+
+    move-result-object v0
+
+    sput-object v0, Lmv9;->c:[Lmv9;
+
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Lmv9;
+    .locals 1
 
-    invoke-virtual {p0}, Lmv9;->getFunctionDelegate()Luc6;
+    const-class v0, Lmv9;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    check-cast p0, Lmv9;
 
-    move-result p0
+    return-object p0
+.end method
 
-    return p0
+.method public static values()[Lmv9;
+    .locals 1
+
+    sget-object v0, Lmv9;->c:[Lmv9;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lmv9;
+
+    return-object v0
 .end method

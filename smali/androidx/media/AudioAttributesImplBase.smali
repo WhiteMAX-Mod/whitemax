@@ -53,13 +53,13 @@
     :cond_0
     iget v0, p0, Landroidx/media/AudioAttributesImplBase;->c:I
 
-    iget p0, p0, Landroidx/media/AudioAttributesImplBase;->a:I
+    iget v1, p0, Landroidx/media/AudioAttributesImplBase;->a:I
 
-    invoke-static {v0, p0}, Landroidx/media/AudioAttributesCompat;->b(II)I
+    invoke-static {v0, v1}, Landroidx/media/AudioAttributesCompat;->b(II)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
@@ -117,22 +117,22 @@
 
     if-ne v0, v2, :cond_3
 
-    iget p0, p0, Landroidx/media/AudioAttributesImplBase;->d:I
+    iget v0, p0, Landroidx/media/AudioAttributesImplBase;->d:I
 
     iget p1, p1, Landroidx/media/AudioAttributesImplBase;->d:I
 
-    if-ne p0, p1, :cond_3
+    if-ne v0, p1, :cond_3
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_3
     return v1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 4
 
     iget v0, p0, Landroidx/media/AudioAttributesImplBase;->b:I
 
@@ -152,21 +152,21 @@
 
     move-result-object v2
 
-    iget p0, p0, Landroidx/media/AudioAttributesImplBase;->d:I
+    iget v3, p0, Landroidx/media/AudioAttributesImplBase;->d:I
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p0
+    move-result-object v3
 
-    filled-new-array {v0, v1, v2, p0}, [Ljava/lang/Object;
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -210,7 +210,7 @@
     :pswitch_0
     const-string v2, "unknown usage "
 
-    invoke-static {v1, v2}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -309,23 +309,23 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Landroidx/media/AudioAttributesImplBase;->c:I
+    iget v1, p0, Landroidx/media/AudioAttributesImplBase;->c:I
 
-    invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     nop
 

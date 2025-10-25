@@ -62,25 +62,25 @@
 
 # virtual methods
 .method public final getDeviceIndex()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/api/JoinByIdResponse;->deviceIndex:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/api/JoinByIdResponse;->deviceIndex:I
 
-    return p0
+    return v0
 .end method
 
 .method public final getEndpoint()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/JoinByIdResponse;->endpoint:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/JoinByIdResponse;->endpoint:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getP2pForbidden()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/api/JoinByIdResponse;->p2pForbidden:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/api/JoinByIdResponse;->p2pForbidden:Z
 
-    return p0
+    return v0
 .end method

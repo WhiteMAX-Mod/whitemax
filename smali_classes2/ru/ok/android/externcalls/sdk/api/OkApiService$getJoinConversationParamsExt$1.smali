@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqc6;
+.implements Laj6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/api/OkApiService;->getJoinConversationParamsExt(Ljava/lang/String;Ljava/lang/String;JLru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lk2e;
+    value = Lru/ok/android/externcalls/sdk/api/OkApiService;->getJoinConversationParamsExt(Ljava/lang/String;Ljava/lang/String;JLru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lwpe;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lqc6;"
+        "Laj6;"
     }
 .end annotation
 
@@ -92,9 +92,9 @@
 
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/api/OkApiService$getJoinConversationParamsExt$1;->apply(Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final apply(Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
@@ -103,7 +103,7 @@
     .line 2
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->toParams()Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

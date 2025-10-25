@@ -95,16 +95,16 @@
 
 # virtual methods
 .method public a(Landroid/content/Intent;)Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     .line 9
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/i0;->g:Lcom/my/tracker/obfuscated/p;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/i0;->g:Lcom/my/tracker/obfuscated/p;
 
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/p;->a(Landroid/content/Intent;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/my/tracker/obfuscated/p;->a(Landroid/content/Intent;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public a()V
@@ -121,9 +121,9 @@
 
     .line 4
     :cond_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/i0;->d:Lcom/my/tracker/obfuscated/t;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/i0;->d:Lcom/my/tracker/obfuscated/t;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/t;->a()V
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/t;->a()V
 
     return-void
 .end method
@@ -142,9 +142,9 @@
 
     .line 6
     :cond_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/i0;->e:Lcom/my/tracker/obfuscated/a;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/i0;->e:Lcom/my/tracker/obfuscated/a;
 
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/a;->d(Landroid/app/Activity;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/obfuscated/a;->d(Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -163,9 +163,9 @@
 
     .line 8
     :cond_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/i0;->d:Lcom/my/tracker/obfuscated/t;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/i0;->d:Lcom/my/tracker/obfuscated/t;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
@@ -187,9 +187,9 @@
     if-nez v0, :cond_0
 
     .line 2
-    const-string p0, "MyTracker: tracker has already been initialized"
+    const-string v0, "MyTracker: tracker has already been initialized"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -237,22 +237,22 @@
     .line 7
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Ls0h;
+    new-instance v2, Lith;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v1, v3}, Ls0h;-><init>(Lcom/my/tracker/obfuscated/t;I)V
+    invoke-direct {v2, v1, v3}, Lith;-><init>(Lcom/my/tracker/obfuscated/t;I)V
 
     iget-object v1, p0, Lcom/my/tracker/obfuscated/i0;->d:Lcom/my/tracker/obfuscated/t;
 
     .line 8
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v3, Ls0h;
+    new-instance v3, Lith;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, v1, v4}, Ls0h;-><init>(Lcom/my/tracker/obfuscated/t;I)V
+    invoke-direct {v3, v1, v4}, Lith;-><init>(Lcom/my/tracker/obfuscated/t;I)V
 
     .line 9
     invoke-virtual {v0, v2, v3}, Lcom/my/tracker/obfuscated/z0;->a(Lcom/my/tracker/obfuscated/n;Lcom/my/tracker/obfuscated/n;)V
@@ -290,9 +290,9 @@
     invoke-static {v0, v1, v2}, Lcom/my/tracker/obfuscated/f0;->a(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/i;Landroid/content/Context;)V
 
     .line 14
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/i0;->e:Lcom/my/tracker/obfuscated/a;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/i0;->e:Lcom/my/tracker/obfuscated/a;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/a;->a()V
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/a;->a()V
 
     return-void
 .end method
@@ -311,30 +311,30 @@
 
     .line 16
     :cond_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/i0;->d:Lcom/my/tracker/obfuscated/t;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/i0;->d:Lcom/my/tracker/obfuscated/t;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/my/tracker/obfuscated/t;->b(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/my/tracker/obfuscated/t;->b(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
 
 .method public c()Z
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/i0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/i0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    move-result p0
+    move-result v0
 
-    xor-int/lit8 v0, p0, 0x1
+    xor-int/lit8 v1, v0, 0x1
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    const-string p0, "MyTracker error: tracker hasn\'t been initialized"
+    const-string v0, "MyTracker error: tracker hasn\'t been initialized"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
 
     :cond_0
-    return v0
+    return v1
 .end method

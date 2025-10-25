@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li77;
+.implements Ldg7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Li77;"
+        "Ldg7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/utils/LoggerInitializer;",
-        "Li77;",
-        "Lw9d;",
+        "Ldg7;",
+        "Lai4;",
         "<init>",
         "()V",
         "tracer-commons_release"
@@ -48,28 +48,28 @@
 
 # virtual methods
 .method public final a()Ljava/util/List;
-    .locals 0
+    .locals 1
 
-    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
     :try_start_0
-    instance-of p0, p1, Lqp6;
+    instance-of v0, p1, Lxw6;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    check-cast p1, Lqp6;
+    check-cast p1, Lxw6;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
     :cond_0
-    sget-object p0, Lw9d;->Y:Lw9d;
+    sget-object p1, Lai4;->s0:Lai4;
 
-    return-object p0
+    return-object p1
 .end method

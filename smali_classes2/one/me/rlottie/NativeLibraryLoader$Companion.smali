@@ -58,7 +58,7 @@
 
     sput-object v0, Lone/me/rlottie/NativeLibraryLoader$Companion;->$$INSTANCE:Lone/me/rlottie/NativeLibraryLoader$Companion;
 
-    new-instance v0, Lis9;
+    new-instance v0, Lo4a;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
@@ -90,11 +90,11 @@
     :catchall_0
     move-exception p0
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lns9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lt4a;
 
     move-result-object v0
 
-    invoke-interface {v0, p0}, Lns9;->F(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p0}, Lt4a;->k(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -110,9 +110,9 @@
 
 # virtual methods
 .method public final getDefault()Lone/me/rlottie/NativeLibraryLoader;
-    .locals 0
+    .locals 1
 
-    sget-object p0, Lone/me/rlottie/NativeLibraryLoader$Companion;->Default:Lone/me/rlottie/NativeLibraryLoader;
+    sget-object v0, Lone/me/rlottie/NativeLibraryLoader$Companion;->Default:Lone/me/rlottie/NativeLibraryLoader;
 
-    return-object p0
+    return-object v0
 .end method

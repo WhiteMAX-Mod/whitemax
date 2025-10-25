@@ -16,7 +16,7 @@
         "Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsSender;",
         "<init>",
         "()V",
-        "Lylf;",
+        "Lccg;",
         "forceSendScheduledEvents",
         "Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;",
         "configuration",
@@ -57,31 +57,31 @@
 
 # virtual methods
 .method public forceSendScheduledEvents()V
-    .locals 0
+    .locals 1
 
-    sget-object p0, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->INSTANCE:Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
+    sget-object v0, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->INSTANCE:Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->forceSendScheduledEvents()V
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->forceSendScheduledEvents()V
 
     return-void
 .end method
 
 .method public bridge synthetic getConfiguration()Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfiguration;
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/analytics/internal/ConversationAnalyticsSenderImpl;->getConfiguration()Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getConfiguration()Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/analytics/internal/ConversationAnalyticsSenderImpl;->configuration:Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/analytics/internal/ConversationAnalyticsSenderImpl;->configuration:Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,488 +1,426 @@
-.class public abstract synthetic Lsq3;
+.class public final Lsq3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:Z
+
+.field public b:I
+
+.field public c:I
+
+.field public d:F
+
+.field public e:Ljava/lang/String;
+
+.field public f:Z
+
+.field public g:I
+
+
 # direct methods
-.method public static synthetic a(I)Ljava/lang/String;
+.method public constructor <init>(Lsq3;Ljava/lang/Object;)V
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p0, v0, :cond_4
+    const/4 v0, 0x0
 
-    const/4 v0, 0x2
+    iput-boolean v0, p0, Lsq3;->a:Z
 
-    if-eq p0, v0, :cond_3
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v0, 0x3
+    iget p1, p1, Lsq3;->b:I
 
-    if-eq p0, v0, :cond_2
+    iput p1, p0, Lsq3;->b:I
 
-    const/4 v0, 0x4
+    invoke-virtual {p0, p2}, Lsq3;->b(Ljava/lang/Object;)V
 
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "UPDATE"
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "ADD"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "REMOVE"
-
-    return-object p0
-
-    :cond_3
-    const-string p0, "UNBLOCK"
-
-    return-object p0
-
-    :cond_4
-    const-string p0, "BLOCK"
-
-    return-object p0
+    return-void
 .end method
 
-.method public static b(FFI)I
-    .locals 0
+.method public static a(Landroid/content/Context;Landroid/content/res/XmlResourceParser;Ljava/util/HashMap;)V
+    .locals 12
 
-    mul-float/2addr p0, p1
-
-    invoke-static {p0}, Lya6;->G(F)I
-
-    move-result p0
-
-    add-int/2addr p0, p2
-
-    return p0
-.end method
-
-.method public static c(IFI)I
-    .locals 0
-
-    invoke-static {p1}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result p1
-
-    add-int/2addr p1, p0
-
-    mul-int/2addr p1, p2
-
-    return p1
-.end method
-
-.method public static d(IILjava/lang/String;)I
-    .locals 0
-
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
-
-    move-result p2
-
-    add-int/2addr p2, p0
-
-    mul-int/2addr p2, p1
-
-    return p2
-.end method
-
-.method public static e(IIZ)I
-    .locals 0
-
-    invoke-static {p2}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p2
-
-    add-int/2addr p2, p0
-
-    mul-int/2addr p2, p1
-
-    return p2
-.end method
-
-.method public static f(ILjava/lang/String;)I
-    .locals 0
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    sget-object v0, Lovc;->CustomAttribute:[I
 
-    move-result p1
+    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    add-int/2addr p1, p0
+    move-result-object p1
 
-    return p1
-.end method
-
-.method public static g(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static i(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static j(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-    .locals 0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0, p3}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {p0, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-object p0
-.end method
-
-.method public static k(J)Ljava/util/List;
-    .locals 1
-
-    new-instance v0, Ljava/lang/Long;
-
-    invoke-direct {v0, p0, p1}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static l(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-    .locals 0
-
-    invoke-virtual {p4, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static synthetic m(Ljava/lang/Object;)V
-    .locals 5
-
-    instance-of v0, p0, Ljava/lang/AutoCloseable;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ljava/lang/AutoCloseable;
-
-    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
-
-    return-void
-
-    :cond_0
-    instance-of v0, p0, Ljava/util/concurrent/ExecutorService;
-
-    if-eqz v0, :cond_5
-
-    check-cast p0, Ljava/util/concurrent/ExecutorService;
-
-    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
-
-    move-result-object v0
-
-    if-ne p0, v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
 
     move-result v0
-
-    if-nez v0, :cond_4
-
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
     const/4 v1, 0x0
 
-    :cond_2
+    const/4 v2, 0x0
+
+    move v4, v1
+
+    move v5, v4
+
+    move v6, v5
+
+    move-object v3, v2
+
     :goto_0
-    if-nez v0, :cond_3
+    if-ge v4, v0, :cond_c
 
-    :try_start_0
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+    invoke-virtual {p1, v4}, Landroid/content/res/TypedArray;->getIndex(I)I
 
-    const-wide/16 v3, 0x1
+    move-result v7
 
-    invoke-interface {p0, v3, v4, v2}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    sget v8, Lovc;->CustomAttribute_attributeName:I
 
-    move-result v0
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v9, 0x1
 
-    goto :goto_0
+    if-ne v7, v8, :cond_0
 
-    :catch_0
-    if-nez v1, :cond_2
+    invoke-virtual {p1, v7}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+    move-result-object v2
 
-    const/4 v1, 0x1
+    if-eqz v2, :cond_b
 
-    goto :goto_0
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    :cond_3
-    if-eqz v1, :cond_4
+    move-result v7
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    if-lez v7, :cond_b
 
-    move-result-object p0
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_4
-    :goto_1
-    return-void
+    invoke-virtual {v2, v1}, Ljava/lang/String;->charAt(I)C
 
-    :cond_5
-    instance-of v0, p0, Landroid/content/res/TypedArray;
+    move-result v8
 
-    if-eqz v0, :cond_6
+    invoke-static {v8}, Ljava/lang/Character;->toUpperCase(C)C
 
-    check-cast p0, Landroid/content/res/TypedArray;
+    move-result v8
 
-    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v2, v9}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    move-result-object v2
 
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    throw p0
-.end method
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public static n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-    .locals 0
+    move-result-object v2
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static p(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static q(FFI)I
-    .locals 0
-
-    mul-float/2addr p0, p1
-
-    invoke-static {p0}, Lya6;->G(F)I
-
-    move-result p0
-
-    sub-int/2addr p2, p0
-
-    return p2
-.end method
-
-.method public static synthetic r(Ljava/lang/Object;)V
-    .locals 0
-
-    if-nez p0, :cond_0
-
-    return-void
+    goto/16 :goto_2
 
     :cond_0
-    new-instance p0, Ljava/lang/ClassCastException;
+    sget v8, Lovc;->CustomAttribute_methodName:I
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    if-ne v7, v8, :cond_1
 
-    throw p0
-.end method
+    invoke-virtual {p1, v7}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-.method public static synthetic s(I)Ljava/lang/String;
-    .locals 1
+    move-result-object v2
 
-    const/4 v0, 0x1
+    move v6, v9
 
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "REMOVED"
-
-    return-object p0
+    goto/16 :goto_2
 
     :cond_1
-    const-string p0, "BLOCKED"
+    sget v8, Lovc;->CustomAttribute_customBoolean:I
 
-    return-object p0
+    if-ne v7, v8, :cond_2
+
+    invoke-virtual {p1, v7, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    const/4 v5, 0x6
+
+    goto/16 :goto_2
+
+    :cond_2
+    sget v8, Lovc;->CustomAttribute_customColorValue:I
+
+    if-ne v7, v8, :cond_3
+
+    invoke-virtual {p1, v7, v1}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/4 v5, 0x3
+
+    goto/16 :goto_2
+
+    :cond_3
+    sget v8, Lovc;->CustomAttribute_customColorDrawableValue:I
+
+    if-ne v7, v8, :cond_4
+
+    invoke-virtual {p1, v7, v1}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/4 v5, 0x4
+
+    goto :goto_2
+
+    :cond_4
+    sget v8, Lovc;->CustomAttribute_customPixelDimension:I
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x7
+
+    if-ne v7, v8, :cond_5
+
+    invoke-virtual {p1, v7, v10}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    invoke-static {v9, v3, v5}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    :goto_1
+    move v5, v11
+
+    goto :goto_2
+
+    :cond_5
+    sget v8, Lovc;->CustomAttribute_customDimension:I
+
+    if-ne v7, v8, :cond_6
+
+    invoke-virtual {p1, v7, v10}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    goto :goto_1
+
+    :cond_6
+    sget v8, Lovc;->CustomAttribute_customFloatValue:I
+
+    if-ne v7, v8, :cond_7
+
+    const/high16 v3, 0x7fc00000    # Float.NaN
+
+    invoke-virtual {p1, v7, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    const/4 v5, 0x2
+
+    goto :goto_2
+
+    :cond_7
+    sget v8, Lovc;->CustomAttribute_customIntegerValue:I
+
+    const/4 v10, -0x1
+
+    if-ne v7, v8, :cond_8
+
+    invoke-virtual {p1, v7, v10}, Landroid/content/res/TypedArray;->getInteger(II)I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    move v5, v9
+
+    goto :goto_2
+
+    :cond_8
+    sget v8, Lovc;->CustomAttribute_customStringValue:I
+
+    if-ne v7, v8, :cond_9
+
+    invoke-virtual {p1, v7}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v5, 0x5
+
+    goto :goto_2
+
+    :cond_9
+    sget v8, Lovc;->CustomAttribute_customReference:I
+
+    if-ne v7, v8, :cond_b
+
+    invoke-virtual {p1, v7, v10}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v3
+
+    if-ne v3, v10, :cond_a
+
+    invoke-virtual {p1, v7, v10}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v3
+
+    :cond_a
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/16 v5, 0x8
+
+    :cond_b
+    :goto_2
+    add-int/lit8 v4, v4, 0x1
+
+    goto/16 :goto_0
+
+    :cond_c
+    if-eqz v2, :cond_d
+
+    if-eqz v3, :cond_d
+
+    new-instance p0, Lsq3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput v5, p0, Lsq3;->b:I
+
+    iput-boolean v6, p0, Lsq3;->a:Z
+
+    invoke-virtual {p0, v3}, Lsq3;->b(Ljava/lang/Object;)V
+
+    invoke-virtual {p2, v2, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_d
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-void
 .end method
 
-.method public static synthetic t(I)Ljava/lang/String;
-    .locals 0
 
-    packed-switch p0, :pswitch_data_0
+# virtual methods
+.method public final b(Ljava/lang/Object;)V
+    .locals 1
 
-    const-string p0, "null"
+    iget v0, p0, Lsq3;->b:I
 
-    return-object p0
+    invoke-static {v0}, Ldy1;->v(I)I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
 
     :pswitch_0
-    const-string p0, "RELEASED"
+    check-cast p1, Ljava/lang/Float;
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, p0, Lsq3;->d:F
+
+    return-void
 
     :pswitch_1
-    const-string p0, "ERROR"
+    check-cast p1, Ljava/lang/Boolean;
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lsq3;->f:Z
+
+    return-void
 
     :pswitch_2
-    const-string p0, "PENDING_RELEASE"
+    check-cast p1, Ljava/lang/String;
 
-    return-object p0
+    iput-object p1, p0, Lsq3;->e:Ljava/lang/String;
+
+    return-void
 
     :pswitch_3
-    const-string p0, "PENDING_START_PAUSED"
+    check-cast p1, Ljava/lang/Integer;
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iput p1, p0, Lsq3;->g:I
+
+    return-void
 
     :pswitch_4
-    const-string p0, "PENDING_START"
+    check-cast p1, Ljava/lang/Float;
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, p0, Lsq3;->d:F
+
+    return-void
 
     :pswitch_5
-    const-string p0, "STOPPING"
+    check-cast p1, Ljava/lang/Integer;
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    :pswitch_6
-    const-string p0, "PAUSED"
+    move-result p1
 
-    return-object p0
+    iput p1, p0, Lsq3;->c:I
 
-    :pswitch_7
-    const-string p0, "STARTED"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "CONFIGURED"
-
-    return-object p0
-
-    nop
+    return-void
 
     :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
+    .packed-switch 0x0
         :pswitch_5
         :pswitch_4
+        :pswitch_3
         :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0
+        :pswitch_5
     .end packed-switch
 .end method

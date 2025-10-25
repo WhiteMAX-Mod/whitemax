@@ -22,7 +22,7 @@
         "",
         "tag",
         "message",
-        "Lylf;",
+        "Lccg;",
         "v",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "",
@@ -70,67 +70,67 @@
 
 # virtual methods
 .method public d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public i(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -142,68 +142,68 @@
 
     invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->tracer:Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->tracer:Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;
 
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
-    const/4 p2, 0x2
+    const/4 v0, 0x2
 
-    invoke-static {p0, p3, p1, p2, p1}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->reportCrash$default(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static {p1, p3, p2, v0, p2}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->reportCrash$default(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
 
     return-void
 .end method
 
 .method public v(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public w(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public w(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .locals 1
 
     .line 3
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;->delegate:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

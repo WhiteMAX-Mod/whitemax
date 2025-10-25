@@ -1,154 +1,349 @@
-.class public Ljsa;
-.super Landroid/webkit/WebView;
+.class public abstract Ljsa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Landroid/webkit/ValueCallback;
+# static fields
+.field public static final A:I
+
+.field public static final B:I
+
+.field public static final C:I
+
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final J:I
+
+.field public static final K:I
+
+.field public static final L:I
+
+.field public static final M:I
+
+.field public static final N:I
+
+.field public static final O:I
+
+.field public static final P:I
+
+.field public static final Q:I
+
+.field public static final R:I
+
+.field public static final S:I
+
+.field public static final T:I
+
+.field public static final U:I
+
+.field public static final V:I
+
+.field public static final W:I
+
+.field public static final X:I
+
+.field public static final Y:I
+
+.field public static final Z:I
+
+.field public static final a:I
+
+.field public static final a0:I
+
+.field public static final b:I
+
+.field public static final b0:I
+
+.field public static final c:I
+
+.field public static final c0:I
+
+.field public static final d:I
+
+.field public static final d0:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    and-int/lit8 p2, p2, 0x4
+    sget v0, Lmnc;->chat_item_view_type:I
 
-    const/4 v0, 0x0
+    sput v0, Ljsa;->a:I
 
-    if-eqz p2, :cond_0
+    sget v0, Lmnc;->chat_item_view_type_pinned:I
 
-    move p2, v0
+    sput v0, Ljsa;->b:I
 
-    goto :goto_0
+    sget v0, Lmnc;->chats_list_folders_container:I
 
-    :cond_0
-    const p2, 0x1010085
+    sput v0, Ljsa;->c:I
 
-    :goto_0
-    new-instance v1, Lfx3;
+    sget v0, Lmnc;->chats_list_folders_pager:I
 
-    invoke-direct {v1, p1, v0}, Lfx3;-><init>(Landroid/content/Context;I)V
+    sput v0, Ljsa;->d:I
 
-    const/4 p1, 0x0
+    sget v0, Lmnc;->chats_list_folders_tabs:I
 
-    invoke-direct {p0, v1, p1, p2, v0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    sput v0, Ljsa;->e:I
 
-    invoke-virtual {p0}, Ljsa;->b()V
+    sget v0, Lmnc;->chats_list_pinbars_view:I
 
-    const/4 p1, 0x1
+    sput v0, Ljsa;->f:I
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
+    sget v0, Lmnc;->chats_list_search_recycler_view:I
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusableInTouchMode(Z)V
+    sput v0, Ljsa;->g:I
 
-    return-void
-.end method
+    sget v0, Lmnc;->chats_list_search_root_view:I
 
+    sput v0, Ljsa;->h:I
 
-# virtual methods
-.method public final b()V
-    .locals 2
+    sget v0, Lmnc;->chats_list_search_toolbar:I
 
-    sget-object v0, Lyu4;->t0:Lbx9;
+    sput v0, Ljsa;->i:I
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    sget v0, Lmnc;->chats_list_toolbar:I
 
-    move-result-object v1
+    sput v0, Ljsa;->j:I
 
-    invoke-virtual {v0, v1}, Lbx9;->k(Landroid/content/Context;)Lyu4;
+    sget v0, Lmnc;->chats_list_view:I
 
-    move-result-object v0
+    sput v0, Ljsa;->k:I
 
-    invoke-virtual {v0}, Lyu4;->j()Lera;
+    sget v0, Lmnc;->chats_search_chat_view_type:I
 
-    move-result-object v0
+    sput v0, Ljsa;->l:I
 
-    invoke-interface {v0}, Lera;->h()Lf83;
+    sget v0, Lmnc;->chats_search_contact_view_type:I
 
-    move-result-object v0
+    sput v0, Ljsa;->m:I
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    sget v0, Lmnc;->chats_search_empty_view_type:I
 
-    move-result v0
+    sput v0, Ljsa;->n:I
 
-    if-eqz v0, :cond_2
+    sget v0, Lmnc;->chats_search_global_chat_view_type:I
 
-    const/4 v1, 0x1
+    sput v0, Ljsa;->o:I
 
-    if-eq v0, v1, :cond_1
+    sget v0, Lmnc;->chats_search_global_contact_view_type:I
 
-    const/4 v1, 0x2
+    sput v0, Ljsa;->p:I
 
-    if-ne v0, v1, :cond_0
+    sget v0, Lmnc;->chats_search_loading_view_type:I
 
-    goto :goto_0
+    sput v0, Ljsa;->q:I
 
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    sget v0, Lmnc;->chats_search_message_view_type:I
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    sput v0, Ljsa;->r:I
 
-    throw p0
+    sget v0, Lmnc;->chats_search_recent_header_view_type:I
 
-    :cond_1
-    sget v0, Lt0d;->a:I
+    sput v0, Ljsa;->s:I
 
-    goto :goto_1
+    sget v0, Lmnc;->chats_search_recent_view_type:I
 
-    :cond_2
-    :goto_0
-    sget v0, Lt0d;->b:I
+    sput v0, Ljsa;->t:I
 
-    :goto_1
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    sget v0, Lmnc;->fake_chat_contact_item_view_type:I
 
-    move-result-object p0
+    sput v0, Ljsa;->u:I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->setTheme(I)V
+    sget v0, Lmnc;->fake_chat_phone_item_view_type:I
 
-    return-void
-.end method
+    sput v0, Ljsa;->v:I
 
-.method public final getFilePathCallback()Landroid/webkit/ValueCallback;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/webkit/ValueCallback<",
-            "[",
-            "Landroid/net/Uri;",
-            ">;"
-        }
-    .end annotation
+    sget v0, Lmnc;->oneme_chat_action_add_favorite:I
 
-    iget-object p0, p0, Ljsa;->a:Landroid/webkit/ValueCallback;
+    sput v0, Ljsa;->w:I
 
-    return-object p0
-.end method
+    sget v0, Lmnc;->oneme_chat_action_add_to_folder:I
 
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
+    sput v0, Ljsa;->x:I
 
-    invoke-virtual {p0}, Ljsa;->b()V
+    sget v0, Lmnc;->oneme_chat_action_block:I
 
-    invoke-super {p0, p1}, Landroid/webkit/WebView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    sput v0, Ljsa;->y:I
 
-    return-void
-.end method
+    sget v0, Lmnc;->oneme_chat_action_clear_chat_history:I
 
-.method public final setFilePathCallback(Landroid/webkit/ValueCallback;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/webkit/ValueCallback<",
-            "[",
-            "Landroid/net/Uri;",
-            ">;)V"
-        }
-    .end annotation
+    sput v0, Ljsa;->z:I
 
-    iput-object p1, p0, Ljsa;->a:Landroid/webkit/ValueCallback;
+    sget v0, Lmnc;->oneme_chat_action_clear_saved_messages:I
+
+    sput v0, Ljsa;->A:I
+
+    sget v0, Lmnc;->oneme_chat_action_close_channel:I
+
+    sput v0, Ljsa;->B:I
+
+    sget v0, Lmnc;->oneme_chat_action_close_chat:I
+
+    sput v0, Ljsa;->C:I
+
+    sget v0, Lmnc;->oneme_chat_action_delete_channel:I
+
+    sput v0, Ljsa;->D:I
+
+    sget v0, Lmnc;->oneme_chat_action_delete_chat:I
+
+    sput v0, Ljsa;->E:I
+
+    sget v0, Lmnc;->oneme_chat_action_leave:I
+
+    sput v0, Ljsa;->F:I
+
+    sget v0, Lmnc;->oneme_chat_action_mark_as_read:I
+
+    sput v0, Ljsa;->G:I
+
+    sget v0, Lmnc;->oneme_chat_action_mark_as_unread:I
+
+    sput v0, Ljsa;->H:I
+
+    sget v0, Lmnc;->oneme_chat_action_move_rights_and_leave:I
+
+    sput v0, Ljsa;->I:I
+
+    sget v0, Lmnc;->oneme_chat_action_mute:I
+
+    sput v0, Ljsa;->J:I
+
+    sget v0, Lmnc;->oneme_chat_action_remove_favorite:I
+
+    sput v0, Ljsa;->K:I
+
+    sget v0, Lmnc;->oneme_chat_action_remove_from_folder:I
+
+    sput v0, Ljsa;->L:I
+
+    sget v0, Lmnc;->oneme_chat_action_select:I
+
+    sput v0, Ljsa;->M:I
+
+    sget v0, Lmnc;->oneme_chat_action_suspend_and_delete_bot:I
+
+    sput v0, Ljsa;->N:I
+
+    sget v0, Lmnc;->oneme_chat_action_suspend_bot:I
+
+    sput v0, Ljsa;->O:I
+
+    sget v0, Lmnc;->oneme_chat_action_unmute:I
+
+    sput v0, Ljsa;->P:I
+
+    sget v0, Lmnc;->oneme_confirm_block:I
+
+    sput v0, Ljsa;->Q:I
+
+    sget v0, Lmnc;->oneme_confirm_cancel:I
+
+    sput v0, Ljsa;->R:I
+
+    sget v0, Lmnc;->oneme_confirm_delete:I
+
+    sput v0, Ljsa;->S:I
+
+    sget v0, Lmnc;->oneme_confirm_delete_for_all:I
+
+    sput v0, Ljsa;->T:I
+
+    sget v0, Lmnc;->oneme_confirm_leave:I
+
+    sput v0, Ljsa;->U:I
+
+    sget v0, Lmnc;->oneme_confirm_mute_1_day:I
+
+    sput v0, Ljsa;->V:I
+
+    sget v0, Lmnc;->oneme_confirm_mute_1_hour:I
+
+    sput v0, Ljsa;->W:I
+
+    sget v0, Lmnc;->oneme_confirm_mute_4_hour:I
+
+    sput v0, Ljsa;->X:I
+
+    sget v0, Lmnc;->oneme_confirm_mute_infinite:I
+
+    sput v0, Ljsa;->Y:I
+
+    sget v0, Lmnc;->oneme_contacts_picker_toolbar:I
+
+    sput v0, Ljsa;->Z:I
+
+    sget v0, Lmnc;->oneme_picker_chat_item_view_type:I
+
+    sput v0, Ljsa;->a0:I
+
+    sget v0, Lmnc;->oneme_picker_container_chats:I
+
+    sput v0, Ljsa;->b0:I
+
+    sget v0, Lmnc;->oneme_picker_main_container:I
+
+    sput v0, Ljsa;->c0:I
+
+    sget v0, Lmnc;->oneme_picker_members_list_view:I
+
+    sput v0, Ljsa;->d0:I
 
     return-void
 .end method

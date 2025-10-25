@@ -3,40 +3,60 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lts7;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lrg5;
+# instance fields
+.field public final a:Ljava/lang/Runnable;
+
+.field public final b:Lmg5;
+
+.field public final c:Lng5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Runnable;Lmg5;Lng5;)V
+    .locals 0
 
-    new-instance v0, Lrg5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrg5;->a:Ljava/lang/Runnable;
 
-    sput-object v0, Lrg5;->a:Lrg5;
+    iput-object p2, p0, Lrg5;->b:Lmg5;
+
+    iput-object p3, p0, Lrg5;->c:Lng5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
+.method public final run()V
+    .locals 4
 
-    const-wide/high16 v0, -0x8000000000000000L
+    iget-object v0, p0, Lrg5;->c:Lng5;
 
-    return-wide v0
-.end method
+    iget-object v1, p0, Lrg5;->b:Lmg5;
 
-.method public final m()I
-    .locals 0
+    invoke-virtual {v1}, Lmg5;->a()J
 
-    sget p0, Lcja;->r:I
+    move-result-wide v1
 
-    return p0
+    :try_start_0
+    iget-object v3, p0, Lrg5;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0, v1, v2}, Lng5;->a(J)V
+
+    return-void
+
+    :catchall_0
+    move-exception v3
+
+    invoke-virtual {v0, v1, v2}, Lng5;->a(J)V
+
+    throw v3
 .end method

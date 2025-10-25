@@ -1,82 +1,228 @@
 .class public final Lw42;
-.super Lure;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:La52;
+.field public b:Z
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(La52;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lw42;->Y:La52;
+    .line 1
+    iput p1, p0, Lw42;->a:I
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lw42;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lon5;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lw42;->a:I
+
+    .line 3
+    iput-object p1, p0, Lw42;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    const/4 p1, 0x0
+
+    .line 4
+    iput-boolean p1, p0, Lw42;->b:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/android/root/RootController;Z)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lw42;->a:I
+
+    iput-object p1, p0, Lw42;->c:Ljava/lang/Object;
+
+    iput-boolean p2, p0, Lw42;->b:Z
+
+    .line 2
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 3
 
-    check-cast p1, Lys9;
+    iget v0, p0, Lw42;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lw42;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Lw42;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v2, 0x1
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lw42;
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
-    sget-object p1, Lylf;->a:Lylf;
+    iput-boolean v2, p0, Lw42;->b:Z
 
-    invoke-virtual {p0, p1}, Lw42;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
 
-    return-object p1
+    :pswitch_0
+    check-cast v1, Lone/me/android/root/RootController;
+
+    iget-boolean p1, p0, Lw42;->b:Z
+
+    sget-object v0, Lone/me/android/root/RootController;->r0:[Ltr7;
+
+    invoke-virtual {v1, p1}, Lone/me/android/root/RootController;->H0(Z)V
+
+    return-void
+
+    :pswitch_1
+    iput-boolean v2, p0, Lw42;->b:Z
+
+    return-void
+
+    :pswitch_2
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
+
+    iput-boolean v2, p0, Lw42;->b:Z
+
+    check-cast v1, Lx42;
+
+    iget-object p1, v1, Lx42;->c:Le4b;
+
+    invoke-virtual {p1}, Le4b;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 3
 
-    new-instance v0, Lw42;
+    iget v0, p0, Lw42;->a:I
 
-    iget-object p0, p0, Lw42;->Y:La52;
+    const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p2}, Lw42;-><init>(La52;Lkotlin/coroutines/Continuation;)V
+    iget-object v2, p0, Lw42;->c:Ljava/lang/Object;
 
-    iput-object p1, v0, Lw42;->X:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
-.end method
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iget-boolean p1, p0, Lw42;->b:Z
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    if-nez p1, :cond_0
 
-    iget-object p1, p0, Lw42;->X:Ljava/lang/Object;
+    check-cast v2, Landroid/view/View;
 
-    check-cast p1, Lys9;
+    const/4 p1, 0x4
 
-    iget-object p0, p0, Lw42;->Y:La52;
+    invoke-virtual {v2, p1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p0, p0, La52;->Z:Lv85;
+    :cond_0
+    iput-boolean v1, p0, Lw42;->b:Z
 
-    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+    return-void
 
-    sget-object p0, Lylf;->a:Lylf;
+    :pswitch_0
+    check-cast v2, Lone/me/android/root/RootController;
 
-    return-object p0
+    iget-boolean p1, p0, Lw42;->b:Z
+
+    sget-object v0, Lone/me/android/root/RootController;->r0:[Ltr7;
+
+    invoke-virtual {v2, p1}, Lone/me/android/root/RootController;->H0(Z)V
+
+    return-void
+
+    :pswitch_1
+    check-cast v2, Lon5;
+
+    iget-boolean p1, p0, Lw42;->b:Z
+
+    if-eqz p1, :cond_1
+
+    iput-boolean v1, p0, Lw42;->b:Z
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p1, v2, Lon5;->I0:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    cmpl-float p1, p1, v0
+
+    if-nez p1, :cond_2
+
+    iput v1, v2, Lon5;->J0:I
+
+    invoke-virtual {v2, v1}, Lon5;->l(I)V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x2
+
+    iput p1, v2, Lon5;->J0:I
+
+    iget-object p1, v2, Lon5;->B0:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :goto_0
+    return-void
+
+    :pswitch_2
+    iget-boolean p1, p0, Lw42;->b:Z
+
+    if-nez p1, :cond_3
+
+    check-cast v2, Lx42;
+
+    invoke-virtual {v2, v1}, Lx42;->c(Z)V
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

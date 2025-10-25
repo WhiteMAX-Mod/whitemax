@@ -1,113 +1,151 @@
-.class public final enum Lai8;
-.super Ljava/lang/Enum;
+.class public final Lai8;
+.super Ltvf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lai8;
-
-.field public static final synthetic Y:Ly75;
-
-.field public static final enum a:Lai8;
-
-.field public static final enum b:Lai8;
-
-.field public static final enum c:Lai8;
-
-.field public static final enum o:Lai8;
+# instance fields
+.field public final e:Lat8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lat8;)V
+    .locals 0
 
-    new-instance v0, Lai8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lai8;->a:Lai8;
-
-    new-instance v1, Lai8;
-
-    const-string v2, "AUDIO_MESSAGE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lai8;->b:Lai8;
-
-    new-instance v2, Lai8;
-
-    const-string v3, "AUDIO_DRAFT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lai8;
-
-    const-string v4, "AUDIO_RECORD"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lai8;->c:Lai8;
-
-    new-instance v4, Lai8;
-
-    const-string v5, "MUSIC_FILE"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lai8;->o:Lai8;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lai8;
-
-    move-result-object v0
-
-    sput-object v0, Lai8;->X:[Lai8;
-
-    new-instance v1, Ly75;
-
-    invoke-direct {v1, v0}, Ly75;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lai8;->Y:Ly75;
+    iput-object p1, p0, Lai8;->e:Lat8;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lai8;
+
+# virtual methods
+.method public final b(Ljava/lang/Object;)I
     .locals 1
 
-    const-class v0, Lai8;
+    sget-object v0, Lyh8;->h:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-ne p1, v0, :cond_0
 
-    move-result-object p0
+    const/4 p1, 0x0
 
-    check-cast p0, Lai8;
+    return p1
 
-    return-object p0
+    :cond_0
+    const/4 p1, -0x1
+
+    return p1
 .end method
 
-.method public static values()[Lai8;
-    .locals 1
+.method public final f(ILovf;Z)Lovf;
+    .locals 11
 
-    sget-object v0, Lai8;->X:[Lai8;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    if-eqz p3, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    check-cast v0, [Lai8;
+    move-object v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, p1
+
+    :goto_0
+    if-eqz p3, :cond_1
+
+    sget-object p1, Lyh8;->h:Ljava/lang/Object;
+
+    :cond_1
+    move-object v3, p1
+
+    sget-object v9, Ly8;->f:Ly8;
+
+    const/4 v10, 0x1
+
+    const/4 v4, 0x0
+
+    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide/16 v7, 0x0
+
+    move-object v1, p2
+
+    invoke-virtual/range {v1 .. v10}, Lovf;->i(Ljava/lang/Object;Ljava/lang/Object;IJJLy8;Z)V
+
+    return-object v1
+.end method
+
+.method public final h()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final l(I)Ljava/lang/Object;
+    .locals 0
+
+    sget-object p1, Lyh8;->h:Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(ILrvf;J)Lrvf;
+    .locals 21
+
+    sget-object v1, Lrvf;->q:Ljava/lang/Object;
+
+    const/16 v18, 0x0
+
+    const-wide/16 v19, 0x0
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lai8;->e:Lat8;
+
+    const/4 v3, 0x0
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x1
+
+    const/4 v12, 0x0
+
+    const-wide/16 v13, 0x0
+
+    const-wide v15, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/16 v17, 0x0
+
+    move-object/from16 v0, p2
+
+    invoke-virtual/range {v0 .. v20}, Lrvf;->b(Ljava/lang/Object;Lat8;Ljava/lang/Object;JJJZZLps8;JJIIJ)V
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lrvf;->k:Z
 
     return-object v0
+.end method
+
+.method public final o()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Latf;
+.implements Lzjg;
 
 
 # annotations
@@ -17,7 +17,7 @@
     d2 = {
         "Lone/me/sdk/richvector/EnhancedVectorDrawable;",
         "Landroid/graphics/drawable/Drawable;",
-        "Latf;",
+        "Lzjg;",
         "Landroid/content/Context;",
         "context",
         "",
@@ -32,7 +32,7 @@
         "Lone/me/sdk/richvector/internal/element/Shape;",
         "buildShape",
         "(I)Lone/me/sdk/richvector/internal/element/Shape;",
-        "Lylf;",
+        "Lccg;",
         "buildScaleMatrix",
         "()V",
         "scaleAllPaths",
@@ -100,7 +100,7 @@
         "scaleMatrix",
         "Landroid/graphics/Matrix;",
         "Companion",
-        "j75",
+        "kd5",
         "rich-vector_release"
     }
     k = 0x1
@@ -114,7 +114,7 @@
 
 
 # static fields
-.field private static final Companion:Lj75;
+.field private static final Companion:Lkd5;
 
 .field private static final TAG:Ljava/lang/String; = "EnhancedVectorDrawable"
 
@@ -145,11 +145,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lj75;
+    new-instance v0, Lkd5;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->Companion:Lj75;
+    sput-object v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->Companion:Lkd5;
 
     return-void
 .end method
@@ -209,7 +209,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Lgvd;
+    sget-object p1, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Ldhe;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -417,81 +417,79 @@
 
     div-float/2addr v3, v2
 
-    iget p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->height:I
+    iget v4, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->height:I
 
-    int-to-float p0, p0
+    int-to-float v4, v4
 
-    div-float/2addr p0, v2
+    div-float/2addr v4, v2
 
-    invoke-virtual {v0, v1, v1, v3, p0}, Landroid/graphics/Matrix;->postScale(FFFF)Z
+    invoke-virtual {v0, v1, v1, v3, v4}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
     return-void
 .end method
 
 .method private final buildShape(I)Lone/me/sdk/richvector/internal/element/Shape;
-    .locals 19
+    .locals 20
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/content/res/Resources$NotFoundException;
         }
     .end annotation
 
-    new-instance v0, Lysf;
+    new-instance v0, Lxjg;
 
-    move-object/from16 v0, p0
+    move-object/from16 v1, p0
 
-    iget-object v0, v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->resources:Landroid/content/res/Resources;
+    iget-object v0, v1, Lone/me/sdk/richvector/EnhancedVectorDrawable;->resources:Landroid/content/res/Resources;
 
-    sget-object v1, Lysf;->a:Leuc;
+    sget-object v2, Lxjg;->a:Lyxe;
 
-    iget-object v2, v1, Leuc;->b:Ljava/lang/Object;
+    iget-object v3, v2, Lyxe;->b:Ljava/lang/Object;
 
-    check-cast v2, Landroid/util/LruCache;
+    check-cast v3, Landroid/util/LruCache;
 
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v3, Lone/me/sdk/richvector/internal/element/Shape;
 
-    move-result-object v2
-
-    check-cast v2, Lone/me/sdk/richvector/internal/element/Shape;
-
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
     new-instance v0, Lone/me/sdk/richvector/internal/element/Shape;
 
-    invoke-direct {v0, v2}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Lone/me/sdk/richvector/internal/element/Shape;)V
+    invoke-direct {v0, v3}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Lone/me/sdk/richvector/internal/element/Shape;)V
 
     return-object v0
 
     :cond_0
-    move/from16 v2, p1
+    move/from16 v3, p1
 
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
-    move-result-object v3
+    move-result-object v4
 
-    new-instance v0, Lj53;
+    new-instance v0, Le93;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v4, Lj53;
-
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
-
-    new-instance v5, Lj53;
+    new-instance v5, Le93;
 
     invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
-    new-instance v6, Lone/me/sdk/richvector/internal/element/Shape;
+    new-instance v6, Le93;
 
-    const/16 v14, 0x40
+    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
 
-    const/4 v15, 0x0
+    new-instance v7, Lone/me/sdk/richvector/internal/element/Shape;
 
-    const/4 v7, 0x0
+    const/16 v15, 0x40
+
+    const/16 v16, 0x0
 
     const/4 v8, 0x0
 
@@ -505,166 +503,169 @@
 
     const/4 v13, 0x0
 
-    invoke-direct/range {v6 .. v15}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILld4;)V
+    const/4 v14, 0x0
 
-    new-instance v7, Ljava/util/Stack;
+    invoke-direct/range {v7 .. v16}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILki4;)V
 
-    invoke-direct {v7}, Ljava/util/Stack;-><init>()V
+    new-instance v8, Ljava/util/Stack;
+
+    invoke-direct {v8}, Ljava/util/Stack;-><init>()V
 
     :try_start_0
-    invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+    invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
-    move-result v8
-
-    const/4 v10, 0x0
+    move-result v9
 
     const/4 v11, 0x0
 
+    const/4 v12, 0x0
+
     :goto_0
-    const/4 v12, 0x1
+    const/4 v13, 0x1
 
-    if-eq v8, v12, :cond_17
+    if-eq v9, v13, :cond_17
 
-    invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+    invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v14
+
+    const/4 v10, 0x3
+
+    const/16 v18, 0x4
+
+    const/4 v15, 0x2
+
+    if-eq v9, v15, :cond_e
+
+    if-eq v9, v10, :cond_1
+
+    goto/16 :goto_a
+
+    :cond_1
+    invoke-static/range {v18 .. v18}, Ldy1;->y(I)[I
+
+    move-result-object v9
+
+    array-length v10, v9
+
+    const/4 v15, 0x0
+
+    :goto_1
+    if-ge v15, v10, :cond_3
+
+    aget v19, v9, v15
+
+    invoke-static/range {v19 .. v19}, Lzdf;->h(I)Ljava/lang/String;
 
     move-result-object v13
 
-    const/4 v14, 0x3
+    invoke-virtual {v13, v14}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    const/4 v9, 0x2
+    move-result v13
 
-    const/16 v17, 0x4
+    if-eqz v13, :cond_2
 
-    const/4 v15, -0x1
-
-    if-eq v8, v9, :cond_e
-
-    if-eq v8, v14, :cond_1
-
-    goto/16 :goto_8
-
-    :cond_1
-    invoke-static/range {v17 .. v17}, Lmw1;->w(I)[I
-
-    move-result-object v8
-
-    array-length v14, v8
-
-    const/4 v9, 0x0
-
-    :goto_1
-    if-ge v9, v14, :cond_3
-
-    aget v18, v8, v9
-
-    invoke-static/range {v18 .. v18}, Lwsf;->b(I)Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-virtual {v12, v13}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_2
-
-    move/from16 v14, v18
+    move/from16 v15, v19
 
     goto :goto_2
 
     :cond_2
-    add-int/lit8 v9, v9, 0x1
-
-    const/4 v12, 0x1
+    add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
     :cond_3
-    const/4 v14, 0x0
+    const/4 v15, 0x0
 
     :goto_2
-    if-nez v14, :cond_4
+    if-nez v15, :cond_4
 
-    move v8, v15
+    const/4 v9, -0x1
 
-    goto :goto_3
+    :goto_3
+    const/4 v10, -0x1
+
+    goto :goto_4
 
     :cond_4
-    sget-object v8, Lxsf;->$EnumSwitchMapping$0:[I
+    sget-object v9, Lwjg;->$EnumSwitchMapping$0:[I
 
-    invoke-static {v14}, Lmw1;->t(I)I
+    invoke-static {v15}, Ldy1;->v(I)I
 
-    move-result v9
+    move-result v10
 
-    aget v8, v8, v9
+    aget v9, v9, v10
     :try_end_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :goto_3
-    if-eq v8, v15, :cond_16
+    goto :goto_3
 
-    const/4 v9, 0x1
+    :goto_4
+    if-eq v9, v10, :cond_16
 
-    if-eq v8, v9, :cond_d
+    const/4 v10, 0x1
 
-    const/4 v9, 0x2
+    if-eq v9, v10, :cond_d
 
-    if-eq v8, v9, :cond_b
+    const/4 v10, 0x2
 
-    const-string v9, "Required value was null."
+    if-eq v9, v10, :cond_b
 
-    const/4 v12, 0x3
+    const-string v10, "Required value was null."
 
-    if-eq v8, v12, :cond_8
+    const/4 v13, 0x3
 
-    move/from16 v12, v17
+    if-eq v9, v13, :cond_8
 
-    if-ne v8, v12, :cond_7
+    move/from16 v13, v18
 
-    if-eqz v11, :cond_6
+    if-ne v9, v13, :cond_7
+
+    if-eqz v12, :cond_6
 
     :try_start_1
-    invoke-virtual {v7}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-virtual {v8}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    move-result v8
+    move-result v9
 
-    if-eqz v8, :cond_5
+    if-eqz v9, :cond_5
 
-    invoke-virtual {v6, v11}, Lone/me/sdk/richvector/internal/element/Shape;->addClipPath(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
+    invoke-virtual {v7, v12}, Lone/me/sdk/richvector/internal/element/Shape;->addClipPath(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
 
-    goto/16 :goto_8
+    goto/16 :goto_a
 
     :catchall_0
     move-exception v0
 
-    goto/16 :goto_d
+    goto/16 :goto_f
 
     :catch_0
     move-exception v0
 
-    goto/16 :goto_a
+    goto/16 :goto_c
 
     :catch_1
     move-exception v0
 
-    goto/16 :goto_b
+    goto/16 :goto_d
 
     :cond_5
-    invoke-virtual {v7}, Ljava/util/Stack;->peek()Ljava/lang/Object;
+    invoke-virtual {v8}, Ljava/util/Stack;->peek()Ljava/lang/Object;
 
-    move-result-object v8
+    move-result-object v9
 
-    check-cast v8, Lone/me/sdk/richvector/internal/element/GroupElement;
+    check-cast v9, Lone/me/sdk/richvector/internal/element/GroupElement;
 
-    invoke-virtual {v8, v11}, Lone/me/sdk/richvector/internal/element/GroupElement;->addClipPath(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
+    invoke-virtual {v9, v12}, Lone/me/sdk/richvector/internal/element/GroupElement;->addClipPath(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
 
-    goto/16 :goto_8
+    goto/16 :goto_a
 
     :cond_6
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {v0, v9}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v10}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -676,172 +677,177 @@
     throw v0
 
     :cond_8
-    if-eqz v10, :cond_a
+    if-eqz v11, :cond_a
 
-    invoke-virtual {v7}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-virtual {v8}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    move-result v8
+    move-result v9
 
-    if-eqz v8, :cond_9
+    if-eqz v9, :cond_9
 
-    invoke-virtual {v6, v10}, Lone/me/sdk/richvector/internal/element/Shape;->addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
+    invoke-virtual {v7, v11}, Lone/me/sdk/richvector/internal/element/Shape;->addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_9
-    invoke-virtual {v7}, Ljava/util/Stack;->peek()Ljava/lang/Object;
+    invoke-virtual {v8}, Ljava/util/Stack;->peek()Ljava/lang/Object;
 
-    move-result-object v8
+    move-result-object v9
 
-    check-cast v8, Lone/me/sdk/richvector/internal/element/GroupElement;
+    check-cast v9, Lone/me/sdk/richvector/internal/element/GroupElement;
 
-    invoke-virtual {v8, v10}, Lone/me/sdk/richvector/internal/element/GroupElement;->addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
+    invoke-virtual {v9, v11}, Lone/me/sdk/richvector/internal/element/GroupElement;->addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
 
-    :goto_4
-    invoke-virtual {v10}, Lone/me/sdk/richvector/internal/element/PathElement;->getPath()Landroid/graphics/Path;
+    :goto_5
+    invoke-virtual {v11}, Lone/me/sdk/richvector/internal/element/PathElement;->getPath()Landroid/graphics/Path;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v6, v8}, Lone/me/sdk/richvector/internal/element/Shape;->appendToFullPath(Landroid/graphics/Path;)V
+    invoke-virtual {v7, v9}, Lone/me/sdk/richvector/internal/element/Shape;->appendToFullPath(Landroid/graphics/Path;)V
 
-    goto/16 :goto_8
+    goto/16 :goto_a
 
     :cond_a
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {v0, v9}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v10}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_b
-    invoke-virtual {v7}, Ljava/util/Stack;->pop()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lone/me/sdk/richvector/internal/element/GroupElement;
-
-    invoke-virtual {v7}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_c
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v8, v9}, Lone/me/sdk/richvector/internal/element/GroupElement;->setParent(Lone/me/sdk/richvector/internal/element/GroupElement;)V
-
-    invoke-virtual {v6, v8}, Lone/me/sdk/richvector/internal/element/Shape;->addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
-
-    goto/16 :goto_8
-
-    :cond_c
-    const/4 v9, 0x0
-
-    invoke-virtual {v7}, Ljava/util/Stack;->peek()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Lone/me/sdk/richvector/internal/element/GroupElement;
-
-    invoke-virtual {v8, v12}, Lone/me/sdk/richvector/internal/element/GroupElement;->setParent(Lone/me/sdk/richvector/internal/element/GroupElement;)V
-
-    invoke-virtual {v7}, Ljava/util/Stack;->peek()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Lone/me/sdk/richvector/internal/element/GroupElement;
-
-    invoke-virtual {v12, v8}, Lone/me/sdk/richvector/internal/element/GroupElement;->addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
-
-    goto :goto_8
-
-    :cond_d
-    const/4 v9, 0x0
-
-    invoke-virtual {v6}, Lone/me/sdk/richvector/internal/element/Shape;->buildTransformMatrices()V
-
-    goto :goto_8
-
-    :cond_e
-    const/4 v9, 0x0
-
-    invoke-static/range {v17 .. v17}, Lmw1;->w(I)[I
-
-    move-result-object v8
-
-    array-length v12, v8
-
-    const/4 v14, 0x0
-
-    :goto_5
-    if-ge v14, v12, :cond_10
-
-    aget v16, v8, v14
-
-    invoke-static/range {v16 .. v16}, Lwsf;->b(I)Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
     move-result-object v9
 
-    invoke-virtual {v9, v13}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    check-cast v9, Lone/me/sdk/richvector/internal/element/GroupElement;
 
-    move-result v9
+    invoke-virtual {v8}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    if-eqz v9, :cond_f
+    move-result v10
 
-    move/from16 v14, v16
+    if-eqz v10, :cond_c
 
-    goto :goto_6
+    const/4 v10, 0x0
 
-    :cond_f
-    add-int/lit8 v14, v14, 0x1
+    invoke-virtual {v9, v10}, Lone/me/sdk/richvector/internal/element/GroupElement;->setParent(Lone/me/sdk/richvector/internal/element/GroupElement;)V
 
-    const/4 v9, 0x0
+    invoke-virtual {v7, v9}, Lone/me/sdk/richvector/internal/element/Shape;->addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
 
-    goto :goto_5
+    goto/16 :goto_a
 
-    :cond_10
-    const/4 v14, 0x0
+    :cond_c
+    const/4 v10, 0x0
+
+    invoke-virtual {v8}, Ljava/util/Stack;->peek()Ljava/lang/Object;
+
+    move-result-object v13
+
+    check-cast v13, Lone/me/sdk/richvector/internal/element/GroupElement;
+
+    invoke-virtual {v9, v13}, Lone/me/sdk/richvector/internal/element/GroupElement;->setParent(Lone/me/sdk/richvector/internal/element/GroupElement;)V
+
+    invoke-virtual {v8}, Ljava/util/Stack;->peek()Ljava/lang/Object;
+
+    move-result-object v13
+
+    check-cast v13, Lone/me/sdk/richvector/internal/element/GroupElement;
+
+    invoke-virtual {v13, v9}, Lone/me/sdk/richvector/internal/element/GroupElement;->addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
+
+    goto :goto_a
+
+    :cond_d
+    const/4 v10, 0x0
+
+    invoke-virtual {v7}, Lone/me/sdk/richvector/internal/element/Shape;->buildTransformMatrices()V
+
+    goto :goto_a
+
+    :cond_e
+    const/4 v10, 0x0
+
+    invoke-static/range {v18 .. v18}, Ldy1;->y(I)[I
+
+    move-result-object v9
+
+    array-length v13, v9
+
+    const/4 v15, 0x0
 
     :goto_6
-    if-nez v14, :cond_11
+    if-ge v15, v13, :cond_10
 
-    move v8, v15
+    aget v17, v9, v15
+
+    invoke-static/range {v17 .. v17}, Lzdf;->h(I)Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v14}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_f
+
+    move/from16 v15, v17
 
     goto :goto_7
 
-    :cond_11
-    sget-object v8, Lxsf;->$EnumSwitchMapping$0:[I
+    :cond_f
+    add-int/lit8 v15, v15, 0x1
 
-    invoke-static {v14}, Lmw1;->t(I)I
+    const/4 v10, 0x0
 
-    move-result v9
+    goto :goto_6
 
-    aget v8, v8, v9
+    :cond_10
+    const/4 v15, 0x0
 
     :goto_7
-    if-eq v8, v15, :cond_16
+    if-nez v15, :cond_11
+
+    const/4 v10, -0x1
+
+    :goto_8
+    const/4 v9, -0x1
+
+    goto :goto_9
+
+    :cond_11
+    sget-object v9, Lwjg;->$EnumSwitchMapping$0:[I
+
+    invoke-static {v15}, Ldy1;->v(I)I
+
+    move-result v10
+
+    aget v10, v9, v10
+
+    goto :goto_8
+
+    :goto_9
+    if-eq v10, v9, :cond_16
 
     const/4 v9, 0x1
 
-    if-eq v8, v9, :cond_15
+    if-eq v10, v9, :cond_15
 
     const/4 v9, 0x2
 
-    if-eq v8, v9, :cond_14
+    if-eq v10, v9, :cond_14
 
-    const/4 v12, 0x3
+    const/4 v13, 0x3
 
-    if-eq v8, v12, :cond_13
+    if-eq v10, v13, :cond_13
 
-    const/4 v12, 0x4
+    const/4 v13, 0x4
 
-    if-ne v8, v12, :cond_12
+    if-ne v10, v13, :cond_12
 
-    invoke-virtual {v5, v3}, Lj53;->J(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    invoke-virtual {v6, v4}, Le93;->r(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
 
-    move-result-object v11
+    move-result-object v12
 
-    goto :goto_8
+    goto :goto_a
 
     :cond_12
     new-instance v0, Lkotlin/NoWhenBranchMatchedException;
@@ -851,35 +857,35 @@
     throw v0
 
     :cond_13
-    invoke-virtual {v4, v3}, Lj53;->L(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/PathElement;
+    invoke-virtual {v5, v4}, Le93;->t(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/PathElement;
 
-    move-result-object v10
+    move-result-object v11
 
-    goto :goto_8
+    goto :goto_a
 
     :cond_14
-    invoke-virtual {v0, v3}, Lj53;->K(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/GroupElement;
+    invoke-virtual {v0, v4}, Le93;->s(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/GroupElement;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v7, v8}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v8, v9}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_8
+    goto :goto_a
 
     :cond_15
-    new-instance v8, Lj53;
+    new-instance v9, Le93;
 
-    invoke-direct {v8}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v9}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v8, v3}, Lj53;->M(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/Shape;
+    invoke-virtual {v9, v4}, Le93;->u(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/Shape;
 
-    move-result-object v6
+    move-result-object v7
 
     :cond_16
-    :goto_8
-    invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
+    :goto_a
+    invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    move-result v8
+    move-result v9
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -888,73 +894,73 @@
     goto/16 :goto_0
 
     :cond_17
-    :goto_9
-    invoke-interface {v3}, Landroid/content/res/XmlResourceParser;->close()V
+    :goto_b
+    invoke-interface {v4}, Landroid/content/res/XmlResourceParser;->close()V
 
-    goto :goto_c
+    goto :goto_e
 
-    :goto_a
+    :goto_c
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    goto :goto_9
+    goto :goto_b
 
-    :goto_b
+    :goto_d
     invoke-virtual {v0}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    goto :goto_9
+    goto :goto_b
 
-    :goto_c
-    iget-object v0, v1, Leuc;->b:Ljava/lang/Object;
+    :goto_e
+    iget-object v0, v2, Lyxe;->b:Ljava/lang/Object;
 
     check-cast v0, Landroid/util/LruCache;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1, v6}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v7}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v0, Lone/me/sdk/richvector/internal/element/Shape;
 
-    invoke-direct {v0, v6}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Lone/me/sdk/richvector/internal/element/Shape;)V
+    invoke-direct {v0, v7}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Lone/me/sdk/richvector/internal/element/Shape;)V
 
     return-object v0
 
-    :goto_d
-    invoke-interface {v3}, Landroid/content/res/XmlResourceParser;->close()V
+    :goto_f
+    invoke-interface {v4}, Landroid/content/res/XmlResourceParser;->close()V
 
     throw v0
 .end method
 
 .method private final dp(F)I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->resources:Landroid/content/res/Resources;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->resources:Landroid/content/res/Resources;
 
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr p0, p1
+    mul-float/2addr v0, p1
 
-    float-to-int p0, p0
+    float-to-int p1, v0
 
-    return p0
+    return p1
 .end method
 
 .method private final scaleAllPaths()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->scaleMatrix:Landroid/graphics/Matrix;
+    iget-object v1, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->scaleMatrix:Landroid/graphics/Matrix;
 
-    invoke-virtual {v0, p0}, Lone/me/sdk/richvector/internal/element/Shape;->scaleAllPaths(Landroid/graphics/Matrix;)V
+    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/internal/element/Shape;->scaleAllPaths(Landroid/graphics/Matrix;)V
 
     return-void
 .end method
@@ -992,9 +998,9 @@
 
     iput v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->strokeRatio:F
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
+    iget-object v1, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/richvector/internal/element/Shape;->scaleAllStrokeWidth(F)V
+    invoke-virtual {v1, v0}, Lone/me/sdk/richvector/internal/element/Shape;->scaleAllStrokeWidth(F)V
 
     return-void
 .end method
@@ -1023,9 +1029,9 @@
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/richvector/internal/element/Shape;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/internal/element/Shape;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 
@@ -1044,9 +1050,9 @@
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
     :try_start_0
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/richvector/internal/element/Shape;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/internal/element/Shape;->draw(Landroid/graphics/Canvas;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1055,23 +1061,23 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/richvector/internal/element/Shape;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/PathElement;
+    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/internal/element/Shape;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/PathElement;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final findTarget$rich_vector_release(Ljava/lang/String;)Lone/me/sdk/richvector/AnimationTarget;
@@ -1083,15 +1089,15 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
+    iget-object p1, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
-    return-object p0
+    return-object p1
 
     :cond_0
     iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
@@ -1116,21 +1122,21 @@
     return-object v0
 
     :cond_2
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/richvector/internal/element/Shape;->findClipPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/internal/element/Shape;->findClipPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 1
 
-    new-instance v0, Lqf;
+    new-instance v0, Lyf;
 
-    invoke-direct {v0, p0}, Lqf;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;)V
+    invoke-direct {v0, p0}, Lyf;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;)V
 
     return-object v0
 .end method
@@ -1146,9 +1152,9 @@
 
     invoke-direct {p0, v0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->dp(F)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getIntrinsicWidth()I
@@ -1162,21 +1168,21 @@
 
     invoke-direct {p0, v0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->dp(F)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getOpacity()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, -0x3
+    const/4 v0, -0x3
 
-    return p0
+    return v0
 .end method
 
 .method public final getPixelSize()F
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
@@ -1230,9 +1236,9 @@
     if-nez v0, :cond_3
 
     :goto_0
-    const/high16 p0, 0x3f800000    # 1.0f
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    return p0
+    return v0
 
     :cond_3
     iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
@@ -1261,11 +1267,11 @@
 
     move-result v2
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
+    iget-object v3, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/Shape;->getViewportHeight()F
+    invoke-virtual {v3}, Lone/me/sdk/richvector/internal/element/Shape;->getViewportHeight()F
 
-    move-result p0
+    move-result v3
 
     int-to-float v0, v0
 
@@ -1273,13 +1279,13 @@
 
     int-to-float v0, v1
 
-    div-float/2addr p0, v0
+    div-float/2addr v3, v0
 
-    invoke-static {v2, p0}, Ljava/lang/Math;->min(FF)F
+    invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public invalidatePath()V
@@ -1291,14 +1297,14 @@
 .end method
 
 .method public bridge synthetic mutate()Landroid/graphics/drawable/Drawable;
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-virtual {p0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->mutate()Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public mutate()Lone/me/sdk/richvector/EnhancedVectorDrawable;
@@ -1360,11 +1366,11 @@
 .end method
 
 .method public setAlpha(I)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/richvector/internal/element/Shape;->setAlpha(I)V
+    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/internal/element/Shape;->setAlpha(I)V
 
     return-void
 .end method
@@ -1376,13 +1382,25 @@
 .end method
 
 .method public setTintList(Landroid/content/res/ColorStateList;)V
-    .locals 0
+    .locals 1
+
+    sget-object p1, Lone/me/sdk/richvector/EnhancedVectorDrawable;->TAG:Ljava/lang/String;
+
+    const-string v0, "tint list is not supported yet"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
 
 .method public setTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
+    .locals 1
+
+    sget-object p1, Lone/me/sdk/richvector/EnhancedVectorDrawable;->TAG:Ljava/lang/String;
+
+    const-string v0, "tint mode is not supported yet"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

@@ -79,20 +79,20 @@
 
     const-wide/16 v2, 0x0
 
-    cmp-long p0, v0, v2
+    cmp-long v0, v0, v2
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "MediaStream has been disposed."
+    const-string v1, "MediaStream has been disposed."
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method private static native nativeAddAudioTrackToNativeStream(JJ)Z
@@ -166,33 +166,33 @@
 
 # virtual methods
 .method public addNativeAudioTrack(J)V
-    .locals 1
+    .locals 2
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/MediaStream;->audioTracks:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/MediaStream;->audioTracks:Ljava/util/List;
 
-    new-instance v0, Lorg/webrtc/AudioTrack;
+    new-instance v1, Lorg/webrtc/AudioTrack;
 
-    invoke-direct {v0, p1, p2}, Lorg/webrtc/AudioTrack;-><init>(J)V
+    invoke-direct {v1, p1, p2}, Lorg/webrtc/AudioTrack;-><init>(J)V
 
-    invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public addNativeVideoTrack(J)V
-    .locals 1
+    .locals 2
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/MediaStream;->videoTracks:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/MediaStream;->videoTracks:Ljava/util/List;
 
-    new-instance v0, Lorg/webrtc/VideoTrack;
+    new-instance v1, Lorg/webrtc/VideoTrack;
 
-    invoke-direct {v0, p1, p2}, Lorg/webrtc/VideoTrack;-><init>(J)V
+    invoke-direct {v1, p1, p2}, Lorg/webrtc/VideoTrack;-><init>(J)V
 
-    invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -214,18 +214,18 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lorg/webrtc/MediaStream;->preservedVideoTracks:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/MediaStream;->preservedVideoTracks:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public addTrack(Lorg/webrtc/AudioTrack;)Z
@@ -248,18 +248,18 @@
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object p0, p0, Lorg/webrtc/MediaStream;->audioTracks:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/MediaStream;->audioTracks:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public addTrack(Lorg/webrtc/VideoTrack;)Z
@@ -282,18 +282,18 @@
     if-eqz v0, :cond_0
 
     .line 6
-    iget-object p0, p0, Lorg/webrtc/MediaStream;->videoTracks:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/MediaStream;->videoTracks:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public dispose()V
@@ -395,9 +395,9 @@
 
     invoke-static {v0, v1}, Lorg/webrtc/MediaStream;->nativeGetId(J)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getNativeMediaStream()J
@@ -411,19 +411,19 @@
 .end method
 
 .method public removeAudioTrack(J)V
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/MediaStream;->audioTracks:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/MediaStream;->audioTracks:Ljava/util/List;
 
-    invoke-static {p0, p1, p2}, Lorg/webrtc/MediaStream;->removeMediaStreamTrack(Ljava/util/List;J)V
+    invoke-static {v0, p1, p2}, Lorg/webrtc/MediaStream;->removeMediaStreamTrack(Ljava/util/List;J)V
 
     return-void
 .end method
 
 .method public removeTrack(Lorg/webrtc/AudioTrack;)Z
-    .locals 2
+    .locals 4
 
     .line 1
     invoke-direct {p0}, Lorg/webrtc/MediaStream;->checkMediaStreamExists()V
@@ -438,17 +438,17 @@
 
     invoke-virtual {p1}, Lorg/webrtc/AudioTrack;->getNativeAudioTrack()J
 
-    move-result-wide p0
+    move-result-wide v2
 
-    invoke-static {v0, v1, p0, p1}, Lorg/webrtc/MediaStream;->nativeRemoveAudioTrack(JJ)Z
+    invoke-static {v0, v1, v2, v3}, Lorg/webrtc/MediaStream;->nativeRemoveAudioTrack(JJ)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public removeTrack(Lorg/webrtc/VideoTrack;)Z
-    .locals 2
+    .locals 4
 
     .line 4
     invoke-direct {p0}, Lorg/webrtc/MediaStream;->checkMediaStreamExists()V
@@ -468,29 +468,29 @@
 
     invoke-virtual {p1}, Lorg/webrtc/VideoTrack;->getNativeVideoTrack()J
 
-    move-result-wide p0
+    move-result-wide v2
 
-    invoke-static {v0, v1, p0, p1}, Lorg/webrtc/MediaStream;->nativeRemoveVideoTrack(JJ)Z
+    invoke-static {v0, v1, v2, v3}, Lorg/webrtc/MediaStream;->nativeRemoveVideoTrack(JJ)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public removeVideoTrack(J)V
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/MediaStream;->videoTracks:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/MediaStream;->videoTracks:Ljava/util/List;
 
-    invoke-static {p0, p1, p2}, Lorg/webrtc/MediaStream;->removeMediaStreamTrack(Ljava/util/List;J)V
+    invoke-static {v0, p1, p2}, Lorg/webrtc/MediaStream;->removeMediaStreamTrack(Ljava/util/List;J)V
 
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     invoke-virtual {p0}, Lorg/webrtc/MediaStream;->getId()Ljava/lang/String;
 
@@ -502,27 +502,27 @@
 
     move-result v1
 
-    iget-object p0, p0, Lorg/webrtc/MediaStream;->videoTracks:Ljava/util/List;
+    iget-object v2, p0, Lorg/webrtc/MediaStream;->videoTracks:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    move-result p0
+    move-result v2
 
-    const-string v2, ":A="
+    const-string v3, ":A="
 
-    const-string v3, ":V="
+    const-string v4, ":V="
 
-    const-string v4, "["
+    const-string v5, "["
 
-    invoke-static {v1, v4, v0, v2, v3}, Lyv7;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v5, v0, v3, v4}, Laab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v1, "]"
 
-    invoke-static {v0, p0, v1}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

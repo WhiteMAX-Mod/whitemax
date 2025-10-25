@@ -1,142 +1,80 @@
-.class public final Laa7;
+.class public interface abstract Laa7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
+.implements Lk0d;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Laa7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final w:Lz90;
 
-
-# instance fields
-.field public final a:Landroid/content/IntentSender;
-
-.field public final b:Landroid/content/Intent;
-
-.field public final c:I
-
-.field public final o:I
+.field public static final x:Lz90;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Li84;
+    new-instance v0, Lz90;
 
-    const/16 v1, 0x1b
+    const-string v1, "camerax.core.imageInput.inputFormat"
 
-    invoke-direct {v0, v1}, Li84;-><init>(I)V
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    sput-object v0, Laa7;->CREATOR:Landroid/os/Parcelable$Creator;
+    const/4 v3, 0x0
 
-    return-void
-.end method
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-.method public constructor <init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
-    .locals 0
+    sput-object v0, Laa7;->w:Lz90;
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz90;
 
-    .line 2
-    iput-object p1, p0, Laa7;->a:Landroid/content/IntentSender;
+    const-string v1, "camerax.core.imageInput.inputDynamicRange"
 
-    .line 3
-    iput-object p2, p0, Laa7;->b:Landroid/content/Intent;
+    const-class v2, Lv45;
 
-    .line 4
-    iput p3, p0, Laa7;->c:I
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    .line 5
-    iput p4, p0, Laa7;->o:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 3
-
-    .line 6
-    const-class v0, Landroid/content/IntentSender;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/IntentSender;
-
-    .line 7
-    const-class v1, Landroid/content/Intent;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/content/Intent;
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    .line 9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    .line 10
-    invoke-direct {p0, v0, v1, v2, p1}, Laa7;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
+    sput-object v0, Laa7;->x:Lz90;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public getInputFormat()I
     .locals 1
 
-    iget-object v0, p0, Laa7;->a:Landroid/content/IntentSender;
+    sget-object v0, Laa7;->w:Lz90;
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    invoke-interface {p0, v0}, Lk0d;->g(Lz90;)Ljava/lang/Object;
 
-    iget-object v0, p0, Laa7;->b:Landroid/content/Intent;
+    move-result-object v0
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    check-cast v0, Ljava/lang/Integer;
 
-    iget p2, p0, Laa7;->c:I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result v0
 
-    iget p0, p0, Laa7;->o:I
+    return v0
+.end method
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+.method public o()Lv45;
+    .locals 2
 
-    return-void
+    sget-object v0, Laa7;->x:Lz90;
+
+    sget-object v1, Lv45;->c:Lv45;
+
+    invoke-interface {p0, v0, v1}, Lk0d;->d(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lv45;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-object v0
 .end method

@@ -66,17 +66,17 @@
     invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
 
     .line 30
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
 
     shr-int/lit8 p1, p1, 0x18
 
     and-int/lit16 p1, p1, 0xff
 
-    invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
 
-    const/4 p0, 0x4
+    const/4 p1, 0x4
 
-    return p0
+    return p1
 .end method
 
 .method private a(I)I
@@ -92,9 +92,9 @@
     if-nez v1, :cond_0
 
     .line 33
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
+    iget-object v1, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
 
-    invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {v1, p1}, Ljava/io/OutputStream;->write(I)V
 
     return v0
 
@@ -132,11 +132,11 @@
     if-nez v1, :cond_0
 
     .line 24
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
+    iget-object v1, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
 
     long-to-int p1, p1
 
-    invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {v1, p1}, Ljava/io/OutputStream;->write(I)V
 
     return v0
 
@@ -176,9 +176,9 @@
     add-int/2addr v0, v1
 
     .line 32
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
+    iget-object v1, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
 
-    invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write([B)V
+    invoke-virtual {v1, p1}, Ljava/io/OutputStream;->write([B)V
 
     return v0
 .end method
@@ -193,17 +193,17 @@
     .line 3
     invoke-direct {p0, v0, v1}, Lcom/my/tracker/obfuscated/r0;->a(J)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     .line 4
     :cond_0
     invoke-direct {p0, p1}, Lcom/my/tracker/obfuscated/r0;->a(I)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method private b(II)I
@@ -216,9 +216,9 @@
     .line 5
     invoke-direct {p0, p1}, Lcom/my/tracker/obfuscated/r0;->a(I)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 
@@ -236,9 +236,9 @@
     .line 6
     invoke-direct {p0, p2}, Lcom/my/tracker/obfuscated/r0;->a(F)I
 
-    move-result p0
+    move-result p2
 
-    add-int/2addr p1, p0
+    add-int/2addr p1, p2
 
     return p1
 .end method
@@ -256,9 +256,9 @@
     .line 2
     invoke-direct {p0, p2}, Lcom/my/tracker/obfuscated/r0;->b(I)I
 
-    move-result p0
+    move-result p2
 
-    add-int/2addr p1, p0
+    add-int/2addr p1, p2
 
     return p1
 .end method
@@ -276,9 +276,9 @@
     .line 4
     invoke-direct {p0, p2, p3}, Lcom/my/tracker/obfuscated/r0;->a(J)I
 
-    move-result p0
+    move-result p2
 
-    add-int/2addr p1, p0
+    add-int/2addr p1, p2
 
     return p1
 .end method
@@ -288,9 +288,9 @@
 
     if-nez p2, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_0
     const/4 v0, 0x2
@@ -315,9 +315,9 @@
     add-int/2addr v1, p1
 
     .line 12
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
 
-    invoke-virtual {p2, p0}, Lcom/my/tracker/obfuscated/l;->a(Ljava/io/OutputStream;)V
+    invoke-virtual {p2, p1}, Lcom/my/tracker/obfuscated/l;->a(Ljava/io/OutputStream;)V
 
     return v1
 .end method
@@ -327,9 +327,9 @@
 
     if-nez p2, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_0
     const/4 v0, 0x2
@@ -348,9 +348,9 @@
 
     invoke-direct {p0, p2}, Lcom/my/tracker/obfuscated/r0;->a([B)I
 
-    move-result p0
+    move-result p2
 
-    add-int/2addr p1, p0
+    add-int/2addr p1, p2
 
     return p1
 .end method
@@ -444,9 +444,9 @@
 
     if-nez p2, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_0
     const/4 v0, 0x2
@@ -459,9 +459,9 @@
     .line 8
     invoke-direct {p0, p2}, Lcom/my/tracker/obfuscated/r0;->a([B)I
 
-    move-result p0
+    move-result p2
 
-    add-int/2addr p1, p0
+    add-int/2addr p1, p2
 
     return p1
 .end method
@@ -502,15 +502,15 @@
 .end method
 
 .method public b([B)I
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/r0;->a:Ljava/io/OutputStream;
 
-    invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write([B)V
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
 
     .line 2
-    array-length p0, p1
+    array-length p1, p1
 
-    return p0
+    return p1
 .end method

@@ -1,231 +1,605 @@
 .class public final Lw57;
-.super Loi0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lel4;
+.field public final a:Landroid/content/Context;
 
-.field public final Y:Z
+.field public final b:Ljava/lang/String;
 
-.field public final Z:J
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:Z
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(JJZLel4;ZJ)V
+.method public constructor <init>(ILandroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Loi0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lw57;->b:J
+    iput-object p2, p0, Lw57;->a:Landroid/content/Context;
 
-    iput-wide p3, p0, Lw57;->c:J
+    iput-object p3, p0, Lw57;->b:Ljava/lang/String;
 
-    iput-boolean p5, p0, Lw57;->o:Z
-
-    iput-object p6, p0, Lw57;->X:Lel4;
-
-    iput-boolean p7, p0, Lw57;->Y:Z
-
-    iput-wide p8, p0, Lw57;->Z:J
+    iput p1, p0, Lw57;->c:I
 
     return-void
 .end method
 
+.method public static a(Ljava/net/HttpURLConnection;I)V
+    .locals 3
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    const/4 v0, -0x1
 
-    const/4 v0, 0x1
+    if-eq p1, v0, :cond_0
 
-    if-ne p0, p1, :cond_0
+    invoke-static {}, Landroid/net/TrafficStats;->getThreadStatsTag()I
 
-    return v0
+    move-result v1
+
+    invoke-static {p1}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lw57;
+    move v1, v0
 
-    const/4 v2, 0x0
+    :goto_0
+    :try_start_0
+    invoke-virtual {p0}, Ljava/net/URLConnection;->connect()V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v1, :cond_1
+    if-eq v1, v0, :cond_1
 
-    return v2
+    invoke-static {v1}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
 
     :cond_1
-    check-cast p1, Lw57;
+    return-void
 
-    iget-wide v3, p0, Lw57;->b:J
+    :catchall_0
+    move-exception p0
 
-    iget-wide v5, p1, Lw57;->b:J
+    goto :goto_1
 
-    cmp-long v1, v3, v5
+    :catch_0
+    move-exception p0
 
-    if-eqz v1, :cond_2
+    :try_start_1
+    throw p0
 
-    return v2
+    :catch_1
+    move-exception p0
 
-    :cond_2
-    iget-wide v3, p0, Lw57;->c:J
+    throw p0
 
-    iget-wide v5, p1, Lw57;->c:J
+    :catch_2
+    move-exception p0
 
-    cmp-long v1, v3, v5
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
-    if-eqz v1, :cond_3
+    move-result-object p1
 
-    return v2
+    if-eqz p1, :cond_3
 
-    :cond_3
-    iget-boolean v1, p0, Lw57;->o:Z
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-boolean v3, p1, Lw57;->o:Z
+    move-result-object p1
 
-    if-eq v1, v3, :cond_4
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    return v2
+    move-result-object p1
 
-    :cond_4
-    iget-object v1, p0, Lw57;->X:Lel4;
+    const-string v2, "libcore.io.GaiException"
 
-    iget-object v3, p1, Lw57;->X:Lel4;
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lw57;->Y:Z
-
-    iget-boolean v3, p1, Lw57;->Y:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-wide v3, p0, Lw57;->Z:J
-
-    iget-wide p0, p1, Lw57;->Z:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lw57;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lw57;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lwsf;->d(IIJ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lw57;->o:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lw57;->X:Lel4;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    add-int/2addr v2, v0
+    if-nez v2, :cond_2
 
-    mul-int/2addr v2, v1
+    const-string v2, "android.system.GaiException"
 
-    iget-boolean v0, p0, Lw57;->Y:Z
+    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v2, v1, v0}, Lsq3;->e(IIZ)I
+    move-result p1
 
-    move-result v0
+    if-nez p1, :cond_2
 
-    iget-wide v1, p0, Lw57;->Z:J
+    throw p0
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    :cond_2
+    new-instance p0, Ljava/net/UnknownHostException;
 
-    move-result p0
+    invoke-direct {p0}, Ljava/net/UnknownHostException;-><init>()V
 
-    add-int/2addr p0, v0
+    throw p0
 
-    return p0
+    :cond_3
+    throw p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_1
+    if-eq v1, v0, :cond_4
+
+    invoke-static {v1}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
+
+    :cond_4
+    throw p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
 
-    const-string v0, "IncomingMessageEvent(chatId="
+# virtual methods
+.method public final b(Ldgd;)Lq57;
+    .locals 12
 
-    const-string v1, ", messageId="
+    const-string v0, "Content-Type"
 
-    iget-wide v2, p0, Lw57;->b:J
+    iget-object v1, p1, Ldgd;->a:Ljava/lang/Object;
 
-    invoke-static {v2, v3, v0, v1}, Lmw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v1, Ljava/lang/String;
+
+    iget-object v2, p1, Ldgd;->b:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/String;
+
+    iget-object p1, p1, Ldgd;->c:Ljava/lang/Object;
+
+    check-cast p1, Lp57;
+
+    new-instance v3, Ljava/net/URL;
+
+    invoke-direct {v3, v2}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/net/HttpURLConnection;
+
+    instance-of v3, v2, Ljavax/net/ssl/HttpsURLConnection;
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    if-eqz v3, :cond_0
+
+    move-object v3, v2
+
+    check-cast v3, Ljavax/net/ssl/HttpsURLConnection;
+
+    invoke-static {}, Ljavax/net/ssl/KeyManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
+
+    move-result-object v6
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v6, v7}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
+
+    invoke-virtual {v6}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljt;->x([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljavax/net/ssl/X509TrustManager;
+
+    sget v8, Lvrc;->rootca_ssl_rsa2022:I
+
+    iget-object v9, p0, Lw57;->a:Landroid/content/Context;
+
+    invoke-virtual {v9}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v8}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+
+    move-result-object v10
+
+    :try_start_0
+    const-string v11, "X509"
+
+    invoke-static {v11}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v10}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
+
+    move-result-object v11
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v10, v7}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    check-cast v11, Ljava/security/cert/X509Certificate;
+
+    invoke-virtual {v9, v8}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {}, Ljava/security/KeyStore;->getDefaultType()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v9}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v7, v7}, Ljava/security/KeyStore;->load(Ljava/io/InputStream;[C)V
+
+    invoke-virtual {v9, v8, v11}, Ljava/security/KeyStore;->setCertificateEntry(Ljava/lang/String;Ljava/security/cert/Certificate;)V
+
+    invoke-static {}, Ljavax/net/ssl/KeyManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v9}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
+
+    invoke-virtual {v8}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
+
+    move-result-object v8
+
+    invoke-static {v8}, Ljt;->x([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljavax/net/ssl/X509TrustManager;
+
+    const/4 v9, 0x2
+
+    new-array v9, v9, [Ljavax/net/ssl/X509TrustManager;
+
+    aput-object v6, v9, v5
+
+    aput-object v8, v9, v4
+
+    new-instance v6, Lcj3;
+
+    invoke-direct {v6, v9}, Lcj3;-><init>([Ljavax/net/ssl/X509TrustManager;)V
+
+    const-string v8, "SSL"
+
+    invoke-static {v8}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
+
+    move-result-object v8
+
+    new-array v9, v4, [Ljavax/net/ssl/TrustManager;
+
+    aput-object v6, v9, v5
+
+    invoke-virtual {v8, v7, v9, v7}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
+
+    invoke-virtual {v8}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
+
+    move-result-object v6
+
+    invoke-virtual {v3, v6}, Ljavax/net/ssl/HttpsURLConnection;->setSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {v10, p1}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_0
+    :goto_0
+    :try_start_2
+    invoke-virtual {v2, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lw57;->b:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    const-string v3, "User-Agent"
+
+    invoke-virtual {v2, v3, v1}, Ljava/net/URLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    goto/16 :goto_6
+
+    :cond_1
+    :goto_1
+    invoke-interface {p1}, Lp57;->getContentType()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Ljava/net/URLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v2, v4}, Ljava/net/URLConnection;->setDoOutput(Z)V
+
+    invoke-interface {p1}, Lp57;->getContentLength()J
+
+    move-result-wide v6
+
+    const-wide/16 v8, 0x0
+
+    cmp-long v1, v6, v8
+
+    if-ltz v1, :cond_2
+
+    invoke-interface {p1}, Lp57;->getContentLength()J
+
+    move-result-wide v6
+
+    invoke-virtual {v2, v6, v7}, Ljava/net/HttpURLConnection;->setFixedLengthStreamingMode(J)V
+
+    goto :goto_2
+
+    :cond_2
+    const/16 v1, 0x1000
+
+    invoke-virtual {v2, v1}, Ljava/net/HttpURLConnection;->setChunkedStreamingMode(I)V
+
+    :goto_2
+    iget v1, p0, Lw57;->c:I
+
+    invoke-static {v2, v1}, Lw57;->a(Ljava/net/HttpURLConnection;I)V
+
+    invoke-virtual {v2}, Ljava/net/URLConnection;->getOutputStream()Ljava/io/OutputStream;
+
+    move-result-object v1
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :try_start_3
+    invoke-interface {p1, v1}, Lp57;->writeTo(Ljava/io/OutputStream;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_6
+
+    :try_start_4
+    invoke-interface {v1}, Ljava/io/Closeable;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+
+    :try_start_5
+    invoke-virtual {v2}, Ljava/net/HttpURLConnection;->getResponseCode()I
+
+    move-result p1
+    :try_end_5
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_5 .. :try_end_5} :catch_2
+    .catch Ljava/lang/NullPointerException; {:try_start_5 .. :try_end_5} :catch_1
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+
+    :try_start_6
+    invoke-virtual {v2}, Ljava/net/HttpURLConnection;->getResponseMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2}, Ljava/net/URLConnection;->getHeaderFields()Ljava/util/Map;
+
+    move-result-object v3
+
+    invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-wide v1, p0, Lw57;->c:J
+    check-cast v0, Ljava/util/List;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_3
 
-    const-string v1, ", isInvisiblePush="
+    invoke-static {v0}, Lnb3;->D(Ljava/util/List;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-boolean v1, p0, Lw57;->o:Z
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_4
 
-    const-string v1, ", itemType="
+    :cond_3
+    const-string v0, "application/octet-stream"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_4
+    const/16 v3, 0x190
 
-    iget-object v1, p0, Lw57;->X:Lel4;
+    const/16 v6, 0x2000
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-ge p1, v3, :cond_6
 
-    const-string v1, ", isControl="
+    invoke-virtual {v2}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    iget-boolean v1, p0, Lw57;->Y:Z
+    instance-of v7, v3, Ljava/io/BufferedInputStream;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    if-eqz v7, :cond_5
 
-    const-string v1, ", sender="
+    check-cast v3, Ljava/io/BufferedInputStream;
 
-    const-string v2, ")"
+    goto :goto_3
 
-    iget-wide v3, p0, Lw57;->Z:J
+    :cond_5
+    new-instance v7, Ljava/io/BufferedInputStream;
 
-    invoke-static {v3, v4, v1, v2, v0}, Lsq3;->g(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-direct {v7, v3, v6}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
 
-    move-result-object p0
+    move-object v3, v7
 
-    return-object p0
+    :goto_3
+    :try_start_7
+    invoke-static {v3}, Lyli;->d(Ljava/io/InputStream;)[B
+
+    move-result-object v6
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    :try_start_8
+    invoke-interface {v3}, Ljava/io/Closeable;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_0
+
+    goto :goto_5
+
+    :catchall_2
+    move-exception p1
+
+    :try_start_9
+    throw p1
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
+    :catchall_3
+    move-exception v0
+
+    :try_start_a
+    invoke-static {v3, p1}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_6
+    invoke-virtual {v2}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
+
+    move-result-object v3
+
+    instance-of v7, v3, Ljava/io/BufferedInputStream;
+
+    if-eqz v7, :cond_7
+
+    check-cast v3, Ljava/io/BufferedInputStream;
+
+    goto :goto_4
+
+    :cond_7
+    new-instance v7, Ljava/io/BufferedInputStream;
+
+    invoke-direct {v7, v3, v6}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_0
+
+    move-object v3, v7
+
+    :goto_4
+    :try_start_b
+    invoke-static {v3}, Lyli;->d(Ljava/io/InputStream;)[B
+
+    move-result-object v6
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_4
+
+    :try_start_c
+    invoke-interface {v3}, Ljava/io/Closeable;->close()V
+
+    :goto_5
+    new-instance v3, Lq57;
+
+    new-instance v7, Lvs5;
+
+    invoke-direct {v7, v0, v4, v6}, Lvs5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-direct {v3, p1, v1, v7, v5}, Lq57;-><init>(ILjava/lang/Object;Ljava/io/Closeable;I)V
+    :try_end_c
+    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_0
+
+    return-object v3
+
+    :catchall_4
+    move-exception p1
+
+    :try_start_d
+    throw p1
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_5
+
+    :catchall_5
+    move-exception v0
+
+    :try_start_e
+    invoke-static {v3, p1}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :catch_1
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_8
+
+    const-string v1, "Attempt to read from field \'int com.android.okhttp.okio.Segment.limit\'"
+
+    invoke-static {v0, v1, v5}, Lhbf;->w(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    new-instance v0, Ljava/io/IOException;
+
+    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_8
+    throw p1
+
+    :catch_2
+    move-exception p1
+
+    new-instance v0, Ljava/io/IOException;
+
+    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+    :try_end_e
+    .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_0
+
+    :catchall_6
+    move-exception p1
+
+    :try_start_f
+    throw p1
+    :try_end_f
+    .catchall {:try_start_f .. :try_end_f} :catchall_7
+
+    :catchall_7
+    move-exception v0
+
+    :try_start_10
+    invoke-static {v1, p1}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v0
+    :try_end_10
+    .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_0
+
+    :goto_6
+    invoke-virtual {v2}, Ljava/net/HttpURLConnection;->disconnect()V
+
+    throw p1
 .end method

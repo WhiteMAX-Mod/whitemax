@@ -1,180 +1,116 @@
 .class public final Le91;
-.super Lx7g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lcl7;
+.field public final a:Liu7;
 
-.field public final Y:Ljava/lang/Object;
-
-.field public final Z:Lyce;
-
-.field public final b:Lcl7;
-
-.field public final c:Lbkd;
-
-.field public final o:Lih1;
-
-.field public final r0:Lyce;
-
-.field public final s0:Lyce;
-
-.field public final t0:Lyce;
-
-.field public final u0:Lyce;
+.field public final b:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lbkd;Lih1;)V
+.method public constructor <init>(Liu7;Liu7;)V
     .locals 0
 
-    invoke-direct {p0}, Lx7g;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Le91;->b:Lcl7;
+    iput-object p1, p0, Le91;->a:Liu7;
 
-    iput-object p3, p0, Le91;->c:Lbkd;
-
-    iput-object p4, p0, Le91;->o:Lih1;
-
-    iput-object p1, p0, Le91;->X:Lcl7;
-
-    new-instance p1, Lk;
-
-    const/16 p2, 0x1a
-
-    invoke-direct {p1, p2, p0}, Lk;-><init>(ILjava/lang/Object;)V
-
-    const/4 p2, 0x3
-
-    invoke-static {p2, p1}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Le91;->Y:Ljava/lang/Object;
-
-    new-instance p1, Lc91;
-
-    invoke-direct {p1}, Lc91;-><init>()V
-
-    invoke-static {p1}, Lzce;->a(Ljava/lang/Object;)Lyce;
-
-    move-result-object p1
-
-    iput-object p1, p0, Le91;->Z:Lyce;
-
-    iput-object p1, p0, Le91;->r0:Lyce;
-
-    new-instance p1, Ltu1;
-
-    sget-object p2, Lp45;->a:Lp45;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p2, p3, p3}, Ltu1;-><init>(Ljava/util/List;ZZ)V
-
-    invoke-static {p1}, Lzce;->a(Ljava/lang/Object;)Lyce;
-
-    move-result-object p1
-
-    iput-object p1, p0, Le91;->s0:Lyce;
-
-    iput-object p1, p0, Le91;->t0:Lyce;
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {p1}, Lzce;->a(Ljava/lang/Object;)Lyce;
-
-    move-result-object p1
-
-    iput-object p1, p0, Le91;->u0:Lyce;
-
-    new-instance p2, Lb91;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p0, p3}, Lb91;-><init>(Le91;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Lnu5;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p3, p1, p2, p4}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    iget-object p0, p0, Lx7g;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p3, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+    iput-object p2, p0, Le91;->b:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final q(JLzr6;)V
-    .locals 5
+.method public final a()V
+    .locals 6
+
+    const-string v0, "HandleSilenceMode"
+
+    const-string v1, "try mute ringtones"
+
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Le91;->b:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lefd;
+
+    invoke-virtual {v0}, Lefd;->a()Lqk1;
+
+    move-result-object v0
+
+    sget-object v1, Lc98;->o:Lc98;
+
+    iget-object v2, v0, Lqk1;->i:Landroid/media/MediaPlayer;
+
+    const/4 v3, 0x0
+
+    const-string v4, "RingtoneManagerTag"
+
+    if-nez v2, :cond_3
+
+    iget-object v2, v0, Lqk1;->g:Lwif;
+
+    invoke-virtual {v2}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/os/Vibrator;
+
+    if-eqz v2, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    iget-object v0, p0, Le91;->Z:Lyce;
+    sget-object v0, Ltei;->a:Lmxa;
 
-    invoke-virtual {v0}, Lyce;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Lc91;
-
-    iget-object v3, v2, Lc91;->b:Ljava/util/Map;
-
-    new-instance v4, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v4, v3}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v4, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v4, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lzr6;
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0, v1}, Lmxa;->b(Lc98;)Z
 
-    move-result-object v3
+    move-result v2
 
-    invoke-interface {v4, v3, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v2, :cond_2
 
-    move-result-object v3
+    const-string v2, " mute already set"
 
-    check-cast v3, Lzr6;
+    invoke-virtual {v0, v1, v4, v2, v3}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    :cond_2
     :goto_0
-    iget-boolean v2, v2, Lc91;->a:Z
+    return-void
 
-    new-instance v3, Lc91;
+    :cond_3
+    :goto_1
+    sget-object v2, Ltei;->a:Lmxa;
 
-    invoke-direct {v3, v2, v4}, Lc91;-><init>(ZLjava/util/Map;)V
+    if-nez v2, :cond_4
 
-    invoke-virtual {v0, v1, v3}, Lyce;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    goto :goto_2
 
-    move-result v0
+    :cond_4
+    invoke-virtual {v2, v1}, Lmxa;->b(Lc98;)Z
 
-    if-eqz v0, :cond_0
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    const-string v5, " set mute"
+
+    invoke-virtual {v2, v1, v4, v5, v3}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_2
+    invoke-virtual {v0}, Lqk1;->e()V
 
     return-void
 .end method

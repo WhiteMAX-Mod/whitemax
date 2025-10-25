@@ -1,65 +1,70 @@
 .class public final Lay9;
-.super Ljava/lang/Object;
+.super Lpmf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic c:[Lxi7;
-
-.field public static final d:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Lfv0;
-
-.field public final b:Lgr4;
+.field public c:Lzz;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lpf9;)V
+    .locals 0
 
-    new-instance v0, Lsxb;
-
-    const-class v1, Lay9;
-
-    const-string v2, "chats"
-
-    const-string v3, "getChats()Lru/ok/tamtam/chats/ChatController;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Ljpc;->a:Lkpc;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Lxi7;
-
-    aput-object v0, v2, v4
-
-    sput-object v2, Lay9;->c:[Lxi7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lay9;->d:Ljava/lang/String;
+    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lfv0;Lgr4;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lay9;->a:Lfv0;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p2, p0, Lay9;->b:Lgr4;
+    const-string v0, "attachments"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lpf9;->y()V
 
     return-void
+
+    :cond_0
+    invoke-static {p1}, Lzz;->a(Lpf9;)Lzz;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lay9;->c:Lzz;
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lay9;->c:Lzz;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{attaches="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

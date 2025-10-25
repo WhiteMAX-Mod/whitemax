@@ -2,59 +2,84 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Le8a;
-
 
 # instance fields
-.field public final synthetic X:Lys8;
+.field public a:Z
 
-.field public a:Ljava/lang/Object;
+.field public b:I
 
-.field public final synthetic b:Lg0f;
+.field public c:I
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public d:I
 
-.field public final synthetic o:Lad6;
+.field public e:I
 
+.field public f:I
 
-# direct methods
-.method public constructor <init>(Lay7;Ljava/lang/Object;Lad6;Lys8;)V
-    .locals 0
+.field public g:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public h:Z
 
-    iput-object p1, p0, Lgu7;->b:Lg0f;
-
-    iput-object p2, p0, Lgu7;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lgu7;->o:Lad6;
-
-    iput-object p4, p0, Lgu7;->X:Lys8;
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lgu7;->a:Ljava/lang/Object;
-
-    return-void
-.end method
+.field public i:Z
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    new-instance v0, Lwd6;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0xa
+    const-string v1, "LayoutState{mAvailable="
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, p0, p1, v2, v1}, Lwd6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    iget v1, p0, Lgu7;->b:I
 
-    iget-object p0, p0, Lgu7;->b:Lg0f;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, v0}, Lg0f;->g(Ljava/lang/Runnable;)V
+    const-string v1, ", mCurrentPosition="
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgu7;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mItemDirection="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgu7;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mLayoutDirection="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgu7;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mStartLine="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgu7;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mEndLine="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgu7;->g:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lfd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

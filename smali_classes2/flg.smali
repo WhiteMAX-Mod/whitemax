@@ -1,87 +1,23 @@
-.class public final Lflg;
+.class public interface abstract Lflg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzlg;
-
-
-# instance fields
-.field public final a:Z
-
-
-# direct methods
-.method public constructor <init>(Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lflg;->a:Z
-
-    return-void
-.end method
+.implements Lt00;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lflg;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lflg;
-
-    iget-boolean p0, p0, Lflg;->a:Z
-
-    iget-boolean p1, p1, Lflg;->a:Z
-
-    if-eq p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
+.method public abstract a()Z
 .end method
 
-.method public final hashCode()I
-    .locals 0
-
-    iget-boolean p0, p0, Lflg;->a:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    return p0
+.method public abstract b()Z
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public abstract c()Lclg;
+.end method
 
-    const-string v0, "CloseScreen(isFromBridge="
+.method public abstract i()Ljava/lang/String;
+.end method
 
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lflg;->a:Z
-
-    invoke-static {v0, v1, p0}, Lz7e;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract j()J
 .end method

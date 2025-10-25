@@ -11,21 +11,21 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutor;",
         "",
-        "Ld71;",
+        "Lh81;",
         "feature",
         "Lkotlin/Function0;",
-        "Lylf;",
+        "Lccg;",
         "onComplete",
         "Lkotlin/Function1;",
         "",
         "onError",
         "enableFeatureForAll",
-        "(Ld71;Lzb6;Lbc6;)V",
+        "(Lh81;Lji6;Lli6;)V",
         "",
-        "Lvg1;",
+        "Lki1;",
         "roles",
         "enableFeatureForRoles",
-        "(Ld71;Ljava/util/Set;Lzb6;Lbc6;)V",
+        "(Lh81;Ljava/util/Set;Lji6;Lli6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -39,29 +39,29 @@
 
 
 # virtual methods
-.method public abstract enableFeatureForAll(Ld71;Lzb6;Lbc6;)V
+.method public abstract enableFeatureForAll(Lh81;Lji6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld71;",
-            "Lzb6;",
-            "Lbc6;",
+            "Lh81;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract enableFeatureForRoles(Ld71;Ljava/util/Set;Lzb6;Lbc6;)V
+.method public abstract enableFeatureForRoles(Lh81;Ljava/util/Set;Lji6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld71;",
+            "Lh81;",
             "Ljava/util/Set<",
             "+",
-            "Lvg1;",
+            "Lki1;",
             ">;",
-            "Lzb6;",
-            "Lbc6;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation

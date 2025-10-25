@@ -1,140 +1,120 @@
 .class public final Lvh1;
-.super Lure;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lrc6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic Y:Landroidx/constraintlayout/widget/ConstraintLayout;
+.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
     .locals 0
 
-    iput p3, p0, Lvh1;->X:I
+    iput-object p2, p0, Lvh1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p0, p0, Lvh1;->X:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Landroidx/constraintlayout/widget/ConstraintLayout;
+    invoke-virtual {p0, p1, p2}, Lvh1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p2, Lera;
+    move-result-object p1
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lvh1;
 
-    packed-switch p0, :pswitch_data_0
+    sget-object p2, Lccg;->a:Lccg;
 
-    new-instance p0, Lvh1;
+    invoke-virtual {p1, p2}, Lvh1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 p2, 0x3
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p2, p3, v0}, Lvh1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lvh1;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lvh1;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p0, Lvh1;
-
-    const/4 p2, 0x3
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p2, p3, v0}, Lvh1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lvh1;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lvh1;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p2
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Lvh1;->X:I
+    new-instance v0, Lvh1;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lvh1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-direct {v0, p2, v1}, Lvh1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
 
-    iget-object p0, p0, Lvh1;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
+    iput-object p1, v0, Lvh1;->X:Ljava/lang/Object;
 
-    sget-object p1, Lyu4;->t0:Lbx9;
+    return-object v0
+.end method
 
-    invoke-virtual {p1, p0}, Lbx9;->l(Landroid/view/View;)Lera;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    move-result-object p1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-interface {p1}, Lera;->b()Lie0;
+    iget-object p1, p0, Lvh1;->X:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast p1, Lsa;
 
-    iget p1, p1, Lie0;->k:I
+    iget-object v0, p0, Lvh1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->y0:Lh0d;
 
-    sget-object p0, Lylf;->a:Lylf;
+    sget-object v2, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
 
-    return-object p0
+    const/16 v3, 0x8
 
-    :pswitch_0
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    aget-object v2, v2, v3
 
-    iget-object p0, p0, Lvh1;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
+    invoke-interface {v1, v0, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
-    sget-object p1, Lyu4;->t0:Lbx9;
+    move-result-object v1
 
-    invoke-virtual {p1, p0}, Lbx9;->l(Landroid/view/View;)Lera;
+    move-object v2, v1
 
-    move-result-object p1
+    check-cast v2, Landroid/widget/TextView;
 
-    invoke-interface {p1}, Lera;->b()Lie0;
+    iget-object v1, p1, Lsa;->b:Ljava/util/List;
 
-    move-result-object p1
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
 
-    iget p1, p1, Lie0;->m:I
+    move-result v1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    xor-int/lit8 v3, v1, 0x1
 
-    sget-object p0, Lylf;->a:Lylf;
+    const/4 v6, 0x0
 
-    return-object p0
+    const/4 v7, 0x6
 
-    nop
+    const-wide/16 v4, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static/range {v2 .. v7}, Loei;->d(Landroid/view/View;ZJLli6;I)V
+
+    iget-object v0, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->D0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Loa;
+
+    iget-object p1, p1, Lsa;->b:Ljava/util/List;
+
+    invoke-virtual {v0, p1}, Lr18;->E(Ljava/util/List;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

@@ -104,9 +104,9 @@
 
     invoke-virtual {v0}, Landroid/media/projection/MediaProjection;->stop()V
 
-    iget-object p0, p0, Lorg/webrtc/ScreenCapturerAndroid$1;->this$0:Lorg/webrtc/ScreenCapturerAndroid;
+    iget-object v0, p0, Lorg/webrtc/ScreenCapturerAndroid$1;->this$0:Lorg/webrtc/ScreenCapturerAndroid;
 
-    invoke-static {p0}, Lorg/webrtc/ScreenCapturerAndroid;->h(Lorg/webrtc/ScreenCapturerAndroid;)V
+    invoke-static {v0}, Lorg/webrtc/ScreenCapturerAndroid;->h(Lorg/webrtc/ScreenCapturerAndroid;)V
 
     :cond_1
     return-void

@@ -372,9 +372,9 @@
 
     invoke-interface/range {v3 .. v9}, Lorg/webrtc/GlGenericDrawer$ShaderCallbacks;->onPrepareShader(Lorg/webrtc/GlShader;[FIIII)V
 
-    const-string p0, "Prepare shader"
+    const-string p1, "Prepare shader"
 
-    invoke-static {p0}, Lorg/webrtc/GlUtil;->checkNoGLES2Error(Ljava/lang/String;)V
+    invoke-static {p1}, Lorg/webrtc/GlUtil;->checkNoGLES2Error(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -382,19 +382,19 @@
 
 # virtual methods
 .method public createShader(Lorg/webrtc/GlGenericDrawer$ShaderType;)Lorg/webrtc/GlShader;
-    .locals 2
+    .locals 3
 
     new-instance v0, Lorg/webrtc/GlShader;
 
     iget-object v1, p0, Lorg/webrtc/GlGenericDrawer;->vertexShader:Ljava/lang/String;
 
-    iget-object p0, p0, Lorg/webrtc/GlGenericDrawer;->genericFragmentSource:Ljava/lang/String;
+    iget-object v2, p0, Lorg/webrtc/GlGenericDrawer;->genericFragmentSource:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Lorg/webrtc/GlGenericDrawer;->createFragmentShaderString(Ljava/lang/String;Lorg/webrtc/GlGenericDrawer$ShaderType;)Ljava/lang/String;
+    invoke-static {v2, p1}, Lorg/webrtc/GlGenericDrawer;->createFragmentShaderString(Ljava/lang/String;Lorg/webrtc/GlGenericDrawer$ShaderType;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {v0, v1, p0}, Lorg/webrtc/GlShader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lorg/webrtc/GlShader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -418,25 +418,25 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/webrtc/GlGenericDrawer;->prepareShader(Lorg/webrtc/GlGenericDrawer$ShaderType;[FIIII)V
 
-    const p0, 0x84c0
+    const p2, 0x84c0
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
+    invoke-static {p2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    const p0, 0x8d65
+    const p2, 0x8d65
 
-    invoke-static {p0, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    invoke-static {p2, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     invoke-static {p5, p6, v5, v6}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
     const/4 p1, 0x4
 
-    const/4 p2, 0x5
+    const/4 p3, 0x5
 
-    const/4 p3, 0x0
+    const/4 p4, 0x0
 
-    invoke-static {p2, p3, p1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+    invoke-static {p3, p4, p1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    invoke-static {p0, p3}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    invoke-static {p2, p4}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     return-void
 .end method
@@ -460,25 +460,25 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/webrtc/GlGenericDrawer;->prepareShader(Lorg/webrtc/GlGenericDrawer$ShaderType;[FIIII)V
 
-    const p0, 0x84c0
+    const p2, 0x84c0
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
+    invoke-static {p2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    const/16 p0, 0xde1
+    const/16 p2, 0xde1
 
-    invoke-static {p0, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    invoke-static {p2, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     invoke-static {p5, p6, v5, v6}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
     const/4 p1, 0x4
 
-    const/4 p2, 0x5
+    const/4 p3, 0x5
 
-    const/4 p3, 0x0
+    const/4 p4, 0x0
 
-    invoke-static {p2, p3, p1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+    invoke-static {p3, p4, p1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    invoke-static {p0, p3}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    invoke-static {p2, p4}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     return-void
 .end method
@@ -502,28 +502,28 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/webrtc/GlGenericDrawer;->prepareShader(Lorg/webrtc/GlGenericDrawer$ShaderType;[FIIII)V
 
-    const/4 p0, 0x0
+    const/4 p2, 0x0
 
-    move p2, p0
+    move p3, p2
 
     :goto_0
-    const/16 p3, 0xde1
+    const/16 p4, 0xde1
 
-    const p4, 0x84c0
+    const p7, 0x84c0
 
-    const/4 p7, 0x3
+    const/4 p8, 0x3
 
-    if-ge p2, p7, :cond_0
+    if-ge p3, p8, :cond_0
 
-    add-int/2addr p4, p2
+    add-int/2addr p7, p3
 
-    invoke-static {p4}, Landroid/opengl/GLES20;->glActiveTexture(I)V
+    invoke-static {p7}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    aget p4, p1, p2
+    aget p7, p1, p3
 
-    invoke-static {p3, p4}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    invoke-static {p4, p7}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    add-int/lit8 p2, p2, 0x1
+    add-int/lit8 p3, p3, 0x1
 
     goto :goto_0
 
@@ -532,20 +532,20 @@
 
     const/4 p1, 0x5
 
-    const/4 p2, 0x4
+    const/4 p3, 0x4
 
-    invoke-static {p1, p0, p2}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+    invoke-static {p1, p2, p3}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    move p1, p0
+    move p1, p2
 
     :goto_1
-    if-ge p1, p7, :cond_1
+    if-ge p1, p8, :cond_1
 
-    add-int p2, p1, p4
+    add-int p3, p1, p7
 
-    invoke-static {p2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
+    invoke-static {p3}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    invoke-static {p3, p0}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    invoke-static {p4, p2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     add-int/lit8 p1, p1, 0x1
 

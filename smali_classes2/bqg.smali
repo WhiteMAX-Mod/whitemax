@@ -1,64 +1,71 @@
 .class public final Lbqg;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
-# interfaces
-.implements Lsg7;
 
+# instance fields
+.field public X:Lla2;
 
-# static fields
-.field public static final a:Lbqg;
+.field public Y:Ljava/lang/String;
+
+.field public Z:Lntg;
+
+.field public o:Liqg;
+
+.field public q0:J
+
+.field public r0:J
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Liqg;
+
+.field public u0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Liqg;Ly14;)V
+    .locals 0
 
-    new-instance v0, Lbqg;
+    iput-object p1, p0, Lbqg;->t0:Liqg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lbqg;->a:Lbqg;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lbqg;->s0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lbqg;->u0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p0, p1, Lbqg;
+    or-int/2addr p1, v0
 
-    if-nez p0, :cond_1
+    iput p1, p0, Lbqg;->u0:I
 
-    const/4 p0, 0x0
+    const/4 v5, 0x0
 
-    return p0
+    const/4 v6, 0x0
 
-    :cond_1
-    return v0
-.end method
+    iget-object v0, p0, Lbqg;->t0:Liqg;
 
-.method public final hashCode()I
-    .locals 0
+    const/4 v1, 0x0
 
-    const p0, 0x43d1be2
+    const-wide/16 v2, 0x0
 
-    return p0
-.end method
+    const/4 v4, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    move-object v7, p0
 
-    const-string p0, "CloseScreen"
+    invoke-virtual/range {v0 .. v7}, Liqg;->b(Lla2;JLjava/lang/String;Lntg;Ljava/lang/Float;Ly14;)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -23,13 +23,13 @@
 .method public final onDoubleTap(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    sget p1, Lcom/google/android/material/timepicker/TimePickerView;->G0:I
+    sget p1, Lcom/google/android/material/timepicker/TimePickerView;->F0:I
 
-    iget-object p0, p0, Lcom/google/android/material/timepicker/f;->a:Lcom/google/android/material/timepicker/TimePickerView;
+    iget-object p1, p0, Lcom/google/android/material/timepicker/f;->a:Lcom/google/android/material/timepicker/TimePickerView;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method

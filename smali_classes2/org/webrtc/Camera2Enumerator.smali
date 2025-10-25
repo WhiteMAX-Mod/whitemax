@@ -194,32 +194,38 @@
 .end method
 
 .method private getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
-    .locals 1
+    .locals 2
 
     :try_start_0
-    iget-object p0, p0, Lorg/webrtc/Camera2Enumerator;->cameraManager:Landroid/hardware/camera2/CameraManager;
+    iget-object v0, p0, Lorg/webrtc/Camera2Enumerator;->cameraManager:Landroid/hardware/camera2/CameraManager;
 
-    invoke-virtual {p0, p1}, Landroid/hardware/camera2/CameraManager;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/CameraManager;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
 
-    move-result-object p0
+    move-result-object p1
     :try_end_0
-    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p0
+    return-object p1
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    const-string p1, "Camera2Enumerator"
+    goto :goto_0
 
-    const-string v0, "Camera access exception"
+    :catch_1
+    move-exception p1
 
-    invoke-static {p1, v0, p0}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :goto_0
+    const-string v0, "Camera2Enumerator"
 
-    const/4 p0, 0x0
+    const-string v1, "Camera access exception"
 
-    return-object p0
+    invoke-static {v0, v1, p1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
 .method public static getFpsUnitFactor([Landroid/util/Range;)I
@@ -734,7 +740,7 @@
 
     move-result v4
     :try_end_0
-    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     const/4 v5, 0x2
@@ -749,6 +755,11 @@
     goto :goto_0
 
     :catch_0
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_1
     move-exception p0
 
     goto :goto_1
@@ -771,49 +782,49 @@
 
 # virtual methods
 .method public createCapturer(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)Lorg/webrtc/CameraVideoCapturer;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lorg/webrtc/Camera2Capturer;
 
-    iget-object p0, p0, Lorg/webrtc/Camera2Enumerator;->context:Landroid/content/Context;
+    iget-object v1, p0, Lorg/webrtc/Camera2Enumerator;->context:Landroid/content/Context;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lorg/webrtc/Camera2Capturer;-><init>(Landroid/content/Context;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
+    invoke-direct {v0, v1, p1, p2, p3}, Lorg/webrtc/Camera2Capturer;-><init>(Landroid/content/Context;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
 
     return-object v0
 .end method
 
 .method public getDeviceNames()[Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     :try_start_0
-    iget-object p0, p0, Lorg/webrtc/Camera2Enumerator;->cameraManager:Landroid/hardware/camera2/CameraManager;
+    iget-object v0, p0, Lorg/webrtc/Camera2Enumerator;->cameraManager:Landroid/hardware/camera2/CameraManager;
 
-    invoke-virtual {p0}, Landroid/hardware/camera2/CameraManager;->getCameraIdList()[Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/hardware/camera2/CameraManager;->getCameraIdList()[Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
     :try_end_0
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p0
+    return-object v0
 
     :catch_0
-    move-exception p0
+    move-exception v0
 
-    const-string v0, "Camera2Enumerator"
+    const-string v1, "Camera2Enumerator"
 
-    const-string v1, "Camera access exception"
+    const-string v2, "Camera access exception"
 
-    invoke-static {v0, v1, p0}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    new-array p0, p0, [Ljava/lang/String;
+    new-array v0, v0, [Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSupportedFormats(Ljava/lang/String;)Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -826,77 +837,77 @@
     .end annotation
 
     .line 1
-    iget-object p0, p0, Lorg/webrtc/Camera2Enumerator;->context:Landroid/content/Context;
+    iget-object v0, p0, Lorg/webrtc/Camera2Enumerator;->context:Landroid/content/Context;
 
-    invoke-static {p0, p1}, Lorg/webrtc/Camera2Enumerator;->getSupportedFormats(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0, p1}, Lorg/webrtc/Camera2Enumerator;->getSupportedFormats(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public isBackFacing(Ljava/lang/String;)Z
-    .locals 0
+    .locals 1
 
     invoke-direct {p0, p1}, Lorg/webrtc/Camera2Enumerator;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
 
-    move-result-object p0
+    move-result-object p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    sget-object p1, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    invoke-virtual {p0, p1}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Ljava/lang/Integer;
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    move-result p0
+    move-result p1
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public isFrontFacing(Ljava/lang/String;)Z
+    .locals 1
+
+    invoke-direct {p0, p1}, Lorg/webrtc/Camera2Enumerator;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-virtual {p1, v0}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
 
     const/4 p1, 0x1
-
-    if-ne p0, p1, :cond_0
 
     return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
-.end method
-
-.method public isFrontFacing(Ljava/lang/String;)Z
-    .locals 0
-
-    invoke-direct {p0, p1}, Lorg/webrtc/Camera2Enumerator;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    sget-object p1, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-virtual {p0, p1}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return p1
 .end method

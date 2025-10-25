@@ -1,52 +1,97 @@
-.class public abstract Lc9c;
+.class public final Lc9c;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Le9c;
 
 
-# static fields
-.field public static menu_attach_photo:I = 0x7f0f0000
+# instance fields
+.field public final a:Ltrf;
 
-.field public static menu_attach_video:I = 0x7f0f0001
 
-.field public static menu_avatar_photo:I = 0x7f0f0002
+# direct methods
+.method public constructor <init>(Ltrf;)V
+    .locals 0
 
-.field public static menu_avatar_view:I = 0x7f0f0003
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static menu_calls_selected_actions:I = 0x7f0f0004
+    iput-object p1, p0, Lc9c;->a:Ltrf;
 
-.field public static menu_channel_profile:I = 0x7f0f0005
+    return-void
+.end method
 
-.field public static menu_channel_settings:I = 0x7f0f0006
 
-.field public static menu_chat:I = 0x7f0f0007
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static menu_chat_profile:I = 0x7f0f0008
+    const/4 v0, 0x1
 
-.field public static menu_chat_selected_actions:I = 0x7f0f0009
+    if-ne p0, p1, :cond_0
 
-.field public static menu_constructor:I = 0x7f0f000a
+    return v0
 
-.field public static menu_contact_profile:I = 0x7f0f000b
+    :cond_0
+    instance-of v1, p1, Lc9c;
 
-.field public static menu_contacts_selected_actions:I = 0x7f0f000c
+    const/4 v2, 0x0
 
-.field public static menu_empty:I = 0x7f0f000d
+    if-nez v1, :cond_1
 
-.field public static menu_folder_page:I = 0x7f0f000e
+    return v2
 
-.field public static menu_left_chat_profile:I = 0x7f0f000f
+    :cond_1
+    check-cast p1, Lc9c;
 
-.field public static menu_local_photo:I = 0x7f0f0010
+    iget-object v1, p0, Lc9c;->a:Ltrf;
 
-.field public static menu_local_video:I = 0x7f0f0011
+    iget-object p1, p1, Lc9c;->a:Ltrf;
 
-.field public static menu_location:I = 0x7f0f0012
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static menu_location_layer:I = 0x7f0f0013
+    move-result p1
 
-.field public static menu_profile:I = 0x7f0f0014
+    if-nez p1, :cond_2
 
-.field public static menu_search:I = 0x7f0f0015
+    return v2
 
-.field public static menu_sticker_set:I = 0x7f0f0016
+    :cond_2
+    return v0
+.end method
 
-.field public static menu_tam_crop_image:I = 0x7f0f0017
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lc9c;->a:Ltrf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowRestoreMembersSnackbar(caption="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lc9c;->a:Ltrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

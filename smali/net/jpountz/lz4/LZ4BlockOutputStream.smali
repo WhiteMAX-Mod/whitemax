@@ -114,11 +114,11 @@
     .locals 0
 
     .line 13
-    invoke-static {}, Lpxg;->b()Lpxg;
+    invoke-static {}, Loqh;->b()Loqh;
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
 .method public constructor <init>(Ljava/io/OutputStream;ILnet/jpountz/lz4/LZ4Compressor;Ljava/util/zip/Checksum;Z)V
@@ -174,11 +174,11 @@
     iput-boolean p2, p0, Lnet/jpountz/lz4/LZ4BlockOutputStream;->finished:Z
 
     .line 12
-    sget-object p0, Lnet/jpountz/lz4/LZ4BlockOutputStream;->MAGIC:[B
+    sget-object p3, Lnet/jpountz/lz4/LZ4BlockOutputStream;->MAGIC:[B
 
-    sget p3, Lnet/jpountz/lz4/LZ4BlockOutputStream;->MAGIC_LENGTH:I
+    sget p4, Lnet/jpountz/lz4/LZ4BlockOutputStream;->MAGIC_LENGTH:I
 
-    invoke-static {p0, p2, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {p3, p2, p1, p2, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-void
 .end method
@@ -215,7 +215,7 @@
 
     const-string v1, "blockSize must be <= 33554432, got "
 
-    invoke-static {p0, v1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -228,7 +228,7 @@
 
     const-string v1, "blockSize must be >= 64, got "
 
-    invoke-static {p0, v1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -238,22 +238,22 @@
 .end method
 
 .method private ensureNotFinished()V
-    .locals 1
+    .locals 2
 
-    iget-boolean p0, p0, Lnet/jpountz/lz4/LZ4BlockOutputStream;->finished:Z
+    iget-boolean v0, p0, Lnet/jpountz/lz4/LZ4BlockOutputStream;->finished:Z
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "This stream is already closed"
+    const-string v1, "This stream is already closed"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method private flushBufferedData()V
@@ -495,9 +495,9 @@
 
     iput-boolean v0, p0, Lnet/jpountz/lz4/LZ4BlockOutputStream;->finished:Z
 
-    iget-object p0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
-    invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
+    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
     return-void
 .end method
@@ -521,9 +521,9 @@
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4BlockOutputStream;->flushBufferedData()V
 
     :cond_0
-    iget-object p0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
-    invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
+    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
     :cond_1
     return-void
@@ -574,19 +574,19 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4BlockOutputStream;->checksum:Ljava/util/zip/Checksum;
+    iget-object v1, p0, Lnet/jpountz/lz4/LZ4BlockOutputStream;->checksum:Ljava/util/zip/Checksum;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, ")"
+    const-string v1, ")"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public write(I)V
@@ -620,9 +620,9 @@
 
     iput v2, p0, Lnet/jpountz/lz4/LZ4BlockOutputStream;->o:I
 
-    int-to-byte p0, p1
+    int-to-byte p1, p1
 
-    aput-byte p0, v0, v1
+    aput-byte p1, v0, v1
 
     return-void
 .end method
@@ -657,7 +657,7 @@
     .end annotation
 
     .line 5
-    invoke-static {p2, p1, p3}, Lo2d;->b(I[BI)V
+    invoke-static {p2, p1, p3}, Lmld;->c(I[BI)V
 
     .line 6
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4BlockOutputStream;->ensureNotFinished()V

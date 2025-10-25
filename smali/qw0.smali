@@ -1,92 +1,65 @@
 .class public final Lqw0;
-.super Ljava/lang/Object;
+.super La42;
 .source "SourceFile"
-
-# interfaces
-.implements Lb74;
 
 
 # instance fields
-.field public a:Lmw0;
-
-.field public final b:Lsl5;
-
-.field public c:Lb74;
-
-.field public d:I
+.field public final synthetic o:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v0, Lsl5;
+    iput v0, p0, Lqw0;->o:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Lqw0;->b:Lsl5;
+    .line 2
+    invoke-direct {p0, v0, v1, v1}, La42;-><init>(ILbp0;Ljava/lang/Float;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILbp0;Ljava/lang/Float;I)V
+    .locals 0
+
+    .line 1
+    iput p4, p0, Lqw0;->o:I
+
+    invoke-direct {p0, p1, p2, p3}, La42;-><init>(ILbp0;Ljava/lang/Float;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ld74;
-    .locals 7
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, p0, Lqw0;->c:Lb74;
+    iget v0, p0, Lqw0;->o:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {v0}, Lb74;->a()Ld74;
+    const-string v0, "[SquareCap]"
 
-    move-result-object v0
+    return-object v0
 
-    :goto_0
-    move-object v3, v0
+    :pswitch_0
+    const-string v0, "[RoundCap]"
 
-    goto :goto_1
+    return-object v0
 
-    :cond_0
-    const/4 v0, 0x0
+    :pswitch_1
+    const-string v0, "[ButtCap]"
 
-    goto :goto_0
+    return-object v0
 
-    :goto_1
-    iget v6, p0, Lqw0;->d:I
-
-    iget-object v2, p0, Lqw0;->a:Lmw0;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    if-nez v3, :cond_1
-
-    const/4 v0, 0x0
-
-    :goto_2
-    move-object v5, v0
-
-    goto :goto_3
-
-    :cond_1
-    new-instance v0, Lpw0;
-
-    invoke-direct {v0, v2}, Lpw0;-><init>(Lmw0;)V
-
-    goto :goto_2
-
-    :goto_3
-    new-instance v1, Lsw0;
-
-    iget-object p0, p0, Lqw0;->b:Lsl5;
-
-    invoke-virtual {p0}, Lsl5;->a()Ld74;
-
-    move-result-object v4
-
-    invoke-direct/range {v1 .. v6}, Lsw0;-><init>(Lmw0;Ld74;Ld74;Lpw0;I)V
-
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

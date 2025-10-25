@@ -1,200 +1,93 @@
 .class public final Lfwb;
-.super Lure;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
+
+# static fields
+.field public static final CREATOR:Lewb;
 
 
 # instance fields
-.field public X:I
+.field public final a:I
 
-.field public final synthetic Y:Lnwb;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lnwb;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lewb;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lfwb;->CREATOR:Lewb;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
+
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lfwb;->a:I
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result p1
+
+    if-lez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lfwb;->b:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcelable;IZ)V
     .locals 0
 
-    iput-object p1, p0, Lfwb;->Y:Lnwb;
+    .line 1
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    const/4 p1, 0x2
+    .line 2
+    iput p2, p0, Lfwb;->a:I
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 3
+    iput-boolean p3, p0, Lfwb;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    check-cast p1, Ly04;
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p2, p0, Lfwb;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lfwb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object p0
+    iget-boolean p2, p0, Lfwb;->b:Z
 
-    check-cast p0, Lfwb;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lfwb;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lfwb;
-
-    iget-object p0, p0, Lfwb;->Y:Lnwb;
-
-    invoke-direct {p1, p0, p2}, Lfwb;-><init>(Lnwb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Lfwb;->Y:Lnwb;
-
-    iget-wide v1, v0, Lnwb;->b:J
-
-    iget v3, p0, Lfwb;->X:I
-
-    const/4 v4, 0x1
-
-    if-eqz v3, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, v0, Lnwb;->Y:Lcl7;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lhj6;
-
-    new-instance v3, Lyzb;
-
-    iget-object v5, v0, Lnwb;->S0:Lcl7;
-
-    invoke-interface {v5}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/content/Context;
-
-    sget-object v6, Lyu4;->t0:Lbx9;
-
-    invoke-virtual {v6, v5}, Lbx9;->k(Landroid/content/Context;)Lyu4;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lyu4;->j()Lera;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Lera;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v3, v1, v2, v5}, La0c;-><init>(JLjava/lang/String;)V
-
-    iput v4, p0, Lfwb;->X:I
-
-    invoke-virtual {p1, v3, v4, p0}, Lhj6;->a(La0c;ZLure;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p0, Lz04;->a:Lz04;
-
-    if-ne p1, p0, :cond_2
-
-    return-object p0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Luzb;
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p1, Luzb;->b:Landroid/graphics/Bitmap;
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result p1
-
-    iget-object v3, v0, Lnwb;->c:Lfmb;
-
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    if-eq v3, v4, :cond_4
-
-    const/4 v4, 0x2
-
-    if-ne v3, v4, :cond_3
-
-    const-string v3, "contact"
-
-    goto :goto_1
-
-    :cond_3
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_4
-    const-string v3, "chat"
-
-    :goto_1
-    iget-object v0, v0, Lnwb;->C0:Lv85;
-
-    sget-object v4, Lltb;->c:Lltb;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1, v2, v3, p1}, Lltb;->c1(JLjava/lang/String;I)Lva4;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    :cond_5
-    return-object p0
+    return-void
 .end method

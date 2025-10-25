@@ -1,61 +1,59 @@
 .class public final Lofa;
-.super Ljx3;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public X:Lla2;
 
-.field public Y:Lone/me/messages/list/loader/MessageModel;
+.field public Y:J
 
-.field public Z:Lone/me/messages/list/loader/MessageModel;
+.field public Z:Z
 
-.field public o:Ljava/lang/Object;
+.field public o:Ltfa;
 
-.field public r0:Lone/me/messages/list/loader/MessageModel;
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Ltfa;
 
 .field public s0:I
 
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lpfa;
-
-.field public v0:I
-
 
 # direct methods
-.method public constructor <init>(Lpfa;Ljx3;)V
+.method public constructor <init>(Ltfa;Ly14;)V
     .locals 0
 
-    iput-object p1, p0, Lofa;->u0:Lpfa;
+    iput-object p1, p0, Lofa;->r0:Ltfa;
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iput-object p1, p0, Lofa;->t0:Ljava/lang/Object;
+    iput-object p1, p0, Lofa;->q0:Ljava/lang/Object;
 
-    iget p1, p0, Lofa;->v0:I
+    iget p1, p0, Lofa;->s0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lofa;->v0:I
+    iput p1, p0, Lofa;->s0:I
 
-    iget-object p1, p0, Lofa;->u0:Lpfa;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lpfa;->e(Lw58;Ljx3;)Ljava/lang/Object;
+    iget-object v2, p0, Lofa;->r0:Ltfa;
 
-    move-result-object p0
+    invoke-static {v2, p1, v0, v1, p0}, Ltfa;->w(Ltfa;Lla2;JLy14;)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object p1
+
+    return-object p1
 .end method

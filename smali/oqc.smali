@@ -1,100 +1,58 @@
-.class public final Loqc;
-.super Lw37;
-.source "SourceFile"
+.class public abstract Loqc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final transient X:Lpqc;
+# static fields
+.field public static custom_dialog:I = 0x7f0d0033
 
-.field public final transient o:Lp37;
+.field public static exo_list_divider:I = 0x7f0d0050
 
+.field public static exo_player_control_view:I = 0x7f0d0051
 
-# direct methods
-.method public constructor <init>(Lp37;Lpqc;)V
-    .locals 0
+.field public static exo_player_view:I = 0x7f0d0052
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+.field public static exo_styled_player_control_ffwd_button:I = 0x7f0d0053
 
-    iput-object p1, p0, Loqc;->o:Lp37;
+.field public static exo_styled_player_control_rewind_button:I = 0x7f0d0054
 
-    iput-object p2, p0, Loqc;->X:Lpqc;
+.field public static exo_styled_player_control_view:I = 0x7f0d0055
 
-    return-void
-.end method
+.field public static exo_styled_player_view:I = 0x7f0d0056
 
+.field public static exo_styled_settings_list:I = 0x7f0d0057
 
-# virtual methods
-.method public final a()Ll37;
-    .locals 0
+.field public static exo_styled_settings_list_item:I = 0x7f0d0058
 
-    iget-object p0, p0, Loqc;->X:Lpqc;
+.field public static exo_styled_sub_settings_list_item:I = 0x7f0d0059
 
-    return-object p0
-.end method
+.field public static exo_track_selection_dialog:I = 0x7f0d005a
 
-.method public final b(I[Ljava/lang/Object;)I
-    .locals 0
+.field public static notification_action:I = 0x7f0d00e1
 
-    iget-object p0, p0, Loqc;->X:Lpqc;
+.field public static notification_action_tombstone:I = 0x7f0d00e2
 
-    invoke-virtual {p0, p1, p2}, Ll37;->b(I[Ljava/lang/Object;)I
+.field public static notification_media_action:I = 0x7f0d00e3
 
-    move-result p0
+.field public static notification_media_cancel_action:I = 0x7f0d00e4
 
-    return p0
-.end method
+.field public static notification_template_big_media:I = 0x7f0d00e5
 
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 0
+.field public static notification_template_big_media_custom:I = 0x7f0d00e6
 
-    iget-object p0, p0, Loqc;->o:Lp37;
+.field public static notification_template_big_media_narrow:I = 0x7f0d00e7
 
-    invoke-virtual {p0, p1}, Lp37;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static notification_template_big_media_narrow_custom:I = 0x7f0d00e8
 
-    move-result-object p0
+.field public static notification_template_custom_big:I = 0x7f0d00e9
 
-    if-eqz p0, :cond_0
+.field public static notification_template_icon_group:I = 0x7f0d00ea
 
-    const/4 p0, 0x1
+.field public static notification_template_lines_media:I = 0x7f0d00eb
 
-    return p0
+.field public static notification_template_media:I = 0x7f0d00ec
 
-    :cond_0
-    const/4 p0, 0x0
+.field public static notification_template_media_custom:I = 0x7f0d00ed
 
-    return p0
-.end method
+.field public static notification_template_part_chronometer:I = 0x7f0d00ee
 
-.method public final f()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final g()Lgmf;
-    .locals 1
-
-    iget-object p0, p0, Loqc;->X:Lpqc;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ll37;->l(I)Lgx5;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final size()I
-    .locals 0
-
-    iget-object p0, p0, Loqc;->o:Lp37;
-
-    invoke-interface {p0}, Ljava/util/Map;->size()I
-
-    move-result p0
-
-    return p0
-.end method
+.field public static notification_template_part_time:I = 0x7f0d00ef

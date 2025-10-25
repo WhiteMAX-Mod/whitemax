@@ -2,63 +2,90 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgs8;
 
+# instance fields
+.field public a:J
 
-# static fields
-.field public static final a:Lfs8;
+.field public b:J
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lfs8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide/high16 v0, -0x8000000000000000L
 
-    sput-object v0, Lfs8;->a:Lfs8;
+    iput-wide v0, p0, Lfs8;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(J)V
+    .locals 2
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_1
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-static {v0}, Lsgi;->d(Z)V
+
+    iput-wide p1, p0, Lfs8;->b:J
+
+    return-void
+.end method
+
+.method public final b(J)V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of p0, p1, Lfs8;
+    const/4 v0, 0x0
 
-    if-nez p0, :cond_1
+    :goto_0
+    invoke-static {v0}, Lsgi;->d(Z)V
 
-    const/4 p0, 0x0
+    iput-wide p1, p0, Lfs8;->a:J
 
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x73235df3
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Money"
-
-    return-object p0
+    return-void
 .end method

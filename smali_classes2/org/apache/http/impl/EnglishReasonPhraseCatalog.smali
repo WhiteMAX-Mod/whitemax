@@ -371,51 +371,51 @@
 
 # virtual methods
 .method public getReason(ILjava/util/Locale;)Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    const/16 p0, 0x64
+    const/16 p2, 0x64
 
-    if-lt p1, p0, :cond_1
+    if-lt p1, p2, :cond_1
 
-    const/16 p0, 0x258
+    const/16 p2, 0x258
 
-    if-ge p1, p0, :cond_1
+    if-ge p1, p2, :cond_1
 
-    div-int/lit8 p0, p1, 0x64
+    div-int/lit8 p2, p1, 0x64
 
-    mul-int/lit8 p2, p0, 0x64
+    mul-int/lit8 v0, p2, 0x64
 
-    sub-int/2addr p1, p2
+    sub-int/2addr p1, v0
 
-    sget-object p2, Lorg/apache/http/impl/EnglishReasonPhraseCatalog;->REASON_PHRASES:[[Ljava/lang/String;
+    sget-object v0, Lorg/apache/http/impl/EnglishReasonPhraseCatalog;->REASON_PHRASES:[[Ljava/lang/String;
 
-    aget-object p0, p2, p0
+    aget-object p2, v0, p2
 
-    array-length p2, p0
+    array-length v0, p2
 
-    if-le p2, p1, :cond_0
+    if-le v0, p1, :cond_0
 
-    aget-object p0, p0, p1
+    aget-object p1, p2, p1
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Unknown category for status code "
+    const-string v0, "Unknown category for status code "
 
-    const-string v0, "."
+    const-string v1, "."
 
-    invoke-static {p1, p2, v0}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p2
 .end method

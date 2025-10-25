@@ -1,92 +1,458 @@
-.class public abstract Lj4c;
+.class public final Lj4c;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
-# static fields
-.field public static add_24:I = 0x7f0802aa
+# instance fields
+.field public final synthetic a:I
 
-.field public static call_24:I = 0x7f0802d9
+.field public final synthetic b:Lji6;
 
-.field public static call_fill_16:I = 0x7f0802db
 
-.field public static cancel_10:I = 0x7f0802e0
+# direct methods
+.method public synthetic constructor <init>(ILji6;)V
+    .locals 0
 
-.field public static cancel_outline_28:I = 0x7f0802e1
+    iput p1, p0, Lj4c;->a:I
 
-.field public static chat_24:I = 0x7f0802e6
+    iput-object p2, p0, Lj4c;->b:Lji6;
 
-.field public static check_24:I = 0x7f0802ec
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static contact_24:I = 0x7f080315
+    return-void
+.end method
 
-.field public static copy_24:I = 0x7f080319
 
-.field public static download_24:I = 0x7f080337
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-.field public static edit_outline_24:I = 0x7f080340
+    iget v0, p0, Lj4c;->a:I
 
-.field public static file_24:I = 0x7f0803b5
+    packed-switch v0, :pswitch_data_0
 
-.field public static forward_24:I = 0x7f0804b8
+    new-instance v0, Ls8d;
 
-.field public static ic_add_16:I = 0x7f0804d2
+    iget-object v1, p0, Lj4c;->b:Lji6;
 
-.field public static ic_arrow_left_outline_28:I = 0x7f080500
+    check-cast v1, Ln7f;
 
-.field public static ic_cancel_filled_24:I = 0x7f080549
+    const/16 v2, 0x14
 
-.field public static ic_cancel_outline_24:I = 0x7f08054a
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
 
-.field public static ic_cancel_outline_28:I = 0x7f08054b
+    return-object v0
 
-.field public static ic_channel_outline_28:I = 0x7f080550
+    :pswitch_0
+    new-instance v0, Ls8d;
 
-.field public static ic_check_filled_24:I = 0x7f080558
+    iget-object v1, p0, Lj4c;->b:Lji6;
 
-.field public static ic_delete_filled_apart_24:I = 0x7f080592
+    check-cast v1, Lcze;
 
-.field public static ic_delete_filled_cut_out_24:I = 0x7f080593
+    const/16 v2, 0x13
 
-.field public static ic_done_28:I = 0x7f08059b
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
 
-.field public static ic_heart_fill_24:I = 0x7f08060c
+    return-object v0
 
-.field public static ic_heart_outline_24:I = 0x7f08060d
+    :pswitch_1
+    new-instance v0, Ls8d;
 
-.field public static ic_mention_24:I = 0x7f08064b
+    iget-object v1, p0, Lj4c;->b:Lji6;
 
-.field public static ic_message_filled_28:I = 0x7f080652
+    check-cast v1, Lw5f;
 
-.field public static ic_more_vertical_filled_16:I = 0x7f080670
+    const/16 v2, 0x12
 
-.field public static ic_next_16:I = 0x7f0806fd
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
 
-.field public static ic_online_24:I = 0x7f080709
+    return-object v0
 
-.field public static ic_phone_28:I = 0x7f080719
+    :pswitch_2
+    new-instance v0, Ls8d;
 
-.field public static ic_search_outline_16:I = 0x7f080756
+    iget-object v1, p0, Lj4c;->b:Lji6;
 
-.field public static ic_settings_filled_28:I = 0x7f080766
+    check-cast v1, Lo5f;
 
-.field public static ic_stub_outline_24:I = 0x7f08078c
+    const/16 v2, 0x11
 
-.field public static ic_swap_24:I = 0x7f080791
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
 
-.field public static ic_users_28:I = 0x7f0807ae
+    return-object v0
 
-.field public static ic_users_outline_28:I = 0x7f0807af
+    :pswitch_3
+    new-instance v0, Ls8d;
 
-.field public static link_24:I = 0x7f0807f6
+    iget-object v1, p0, Lj4c;->b:Lji6;
 
-.field public static media_24:I = 0x7f080864
+    check-cast v1, Ll3f;
 
-.field public static microphone_on_24:I = 0x7f080871
+    const/16 v2, 0x10
 
-.field public static setting_24:I = 0x7f080923
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
 
-.field public static settings_outline_24:I = 0x7f080925
+    return-object v0
 
-.field public static share_24_android:I = 0x7f080927
+    :pswitch_4
+    new-instance v0, Ls8d;
 
-.field public static support_24:I = 0x7f08093d
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lxgd;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lcze;
+
+    const/16 v2, 0xe
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lcze;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_7
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lxle;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_8
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lx3e;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lx3e;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_a
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lx3e;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_b
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Ltee;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_c
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_d
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lx3e;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_e
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lxgd;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_f
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lx3e;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_10
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lx3e;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_11
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lx3e;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_12
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lyac;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_13
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lo8d;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_14
+    new-instance v0, Ln49;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lij1;
+
+    const/16 v2, 0x1d
+
+    invoke-direct {v0, v2, v1}, Ln49;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_15
+    new-instance v0, Ln49;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Li4d;
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v0, v2, v1}, Ln49;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_16
+    new-instance v0, Ln49;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lij1;
+
+    const/16 v2, 0x1b
+
+    invoke-direct {v0, v2, v1}, Ln49;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_17
+    new-instance v0, Ln49;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lyac;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v0, v2, v1}, Ln49;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_18
+    new-instance v0, Ln49;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Ltna;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v0, v2, v1}, Ln49;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_19
+    new-instance v0, Ln49;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lij1;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v0, v2, v1}, Ln49;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_1a
+    new-instance v0, Ln49;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Lij1;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v0, v2, v1}, Ln49;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_1b
+    new-instance v0, Ln49;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Ltna;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v0, v2, v1}, Ln49;-><init>(ILji6;)V
+
+    return-object v0
+
+    :pswitch_1c
+    new-instance v0, Ln49;
+
+    iget-object v1, p0, Lj4c;->b:Lji6;
+
+    check-cast v1, Le4c;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v2, v1}, Ln49;-><init>(ILji6;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

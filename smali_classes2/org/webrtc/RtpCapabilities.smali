@@ -64,7 +64,7 @@
 
 # virtual methods
 .method public getCodecs()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -77,13 +77,13 @@
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpCapabilities;->codecs:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/RtpCapabilities;->codecs:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getHeaderExtensions()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -96,7 +96,7 @@
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpCapabilities;->headerExtensions:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/RtpCapabilities;->headerExtensions:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method

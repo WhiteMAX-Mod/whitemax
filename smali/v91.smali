@@ -1,117 +1,181 @@
 .class public final Lv91;
-.super Lure;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lzi6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+
+# direct methods
+.method public constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lv91;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ly04;
+    check-cast p1, Lmcb;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lv91;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lv91;
+    check-cast p1, Lv91;
 
-    sget-object p1, Lylf;->a:Lylf;
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p0, p1}, Lv91;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lv91;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
-
-    return-object p0
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    .locals 2
 
-    new-instance p0, Lv91;
+    new-instance v0, Lv91;
 
-    const/4 p1, 0x2
+    iget-object v1, p0, Lv91;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, p2}, Lv91;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
 
-    return-object p0
+    iput-object p1, v0, Lv91;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lv91;->X:I
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const/4 v1, 0x1
+    iget-object p1, p0, Lv91;->X:Ljava/lang/Object;
+
+    check-cast p1, Lmcb;
+
+    sget-object v0, Llcb;->a:Llcb;
+
+    invoke-static {p1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    instance-of v0, p1, Lkcb;
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v1, :cond_0
+    check-cast p1, Lkcb;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lm9a;
+
+    iget-object v0, p0, Lv91;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+    iget-object v1, v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->Z:Lwif;
+
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ls91;
+
+    iget-object p1, p1, Lkcb;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+
+    move-result-object p1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lnb3;->Y(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lr18;->E(Ljava/util/List;)V
+
+    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->D0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->F0()Laa1;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Laa1;->s()Z
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
+
+    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->D0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->F0()Laa1;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lka1;->b:Lka1;
+
+    iget-object v1, v0, Laa1;->b:Lka1;
+
+    sget-object v2, Lka1;->b:Lka1;
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v0, v0, Laa1;->o:Lev5;
+
+    iget-object v0, v0, Lev5;->o:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingPrev(Z)V
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    iput v1, p0, Lv91;->X:I
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    const-wide/16 v2, 0x12c
-
-    invoke-static {v2, v3, p0}, Ln2e;->h(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
+    throw p1
 
     :cond_2
-    :goto_0
-    sget-object p0, Lbfa;->a:Lbfa;
+    :goto_1
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-virtual {p0}, Lbfa;->i()Lh47;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    new-instance p1, Lg47;
-
-    sget-object v0, Le47;->s0:Le47;
-
-    invoke-direct {p1, v0, v1}, Lg47;-><init>(Le47;I)V
-
-    invoke-static {p1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object p1
-
-    sget-object v0, Ls6d;->J0:Ls6d;
-
-    invoke-virtual {p0, p1, v0}, Lh47;->f(Ljava/util/Set;Ls6d;)V
-
-    :cond_3
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-object p1
 .end method

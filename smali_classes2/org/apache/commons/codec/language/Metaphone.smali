@@ -47,40 +47,69 @@
 .end method
 
 .method private isLastChar(II)Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    add-int/2addr p2, p0
+    add-int/2addr p2, v0
 
     if-ne p2, p1, :cond_0
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method private isNextChar(Ljava/lang/StringBuffer;IC)Z
-    .locals 2
+    .locals 3
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     if-ltz p2, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/StringBuffer;->length()I
 
-    move-result v0
+    move-result v1
+
+    const/4 v2, 0x1
+
+    sub-int/2addr v1, v2
+
+    if-ge p2, v1, :cond_0
+
+    add-int/2addr p2, v2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuffer;->charAt(I)C
+
+    move-result p1
+
+    if-ne p1, p3, :cond_0
+
+    return v2
+
+    :cond_0
+    return v0
+.end method
+
+.method private isPreviousChar(Ljava/lang/StringBuffer;IC)Z
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-lez p2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/StringBuffer;->length()I
+
+    move-result v1
+
+    if-ge p2, v1, :cond_0
 
     const/4 v1, 0x1
 
-    sub-int/2addr v0, v1
-
-    if-ge p2, v0, :cond_0
-
-    add-int/2addr p2, v1
+    sub-int/2addr p2, v1
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuffer;->charAt(I)C
 
@@ -91,102 +120,73 @@
     return v1
 
     :cond_0
-    return p0
-.end method
-
-.method private isPreviousChar(Ljava/lang/StringBuffer;IC)Z
-    .locals 1
-
-    const/4 p0, 0x0
-
-    if-lez p2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/StringBuffer;->length()I
-
-    move-result v0
-
-    if-ge p2, v0, :cond_0
-
-    const/4 v0, 0x1
-
-    sub-int/2addr p2, v0
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuffer;->charAt(I)C
-
-    move-result p1
-
-    if-ne p1, p3, :cond_0
-
     return v0
-
-    :cond_0
-    return p0
 .end method
 
 .method private isVowel(Ljava/lang/StringBuffer;I)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/commons/codec/language/Metaphone;->vowels:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/commons/codec/language/Metaphone;->vowels:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuffer;->charAt(I)C
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {v0, p1}, Ljava/lang/String;->indexOf(I)I
 
-    move-result p0
+    move-result p1
 
-    if-ltz p0, :cond_0
+    if-ltz p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method private regionMatch(Ljava/lang/StringBuffer;ILjava/lang/String;)Z
-    .locals 1
+    .locals 2
 
     if-ltz p2, :cond_0
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
-    move-result p0
+    move-result v0
 
-    add-int/2addr p0, p2
+    add-int/2addr v0, p2
 
-    add-int/lit8 p0, p0, -0x1
+    add-int/lit8 v0, v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/StringBuffer;->length()I
 
-    move-result v0
+    move-result v1
 
-    if-ge p0, v0, :cond_0
+    if-ge v0, v1, :cond_0
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
-    move-result p0
+    move-result v0
 
-    add-int/2addr p0, p2
+    add-int/2addr v0, p2
 
-    invoke-virtual {p1, p2, p0}, Ljava/lang/StringBuffer;->substring(II)Ljava/lang/String;
+    invoke-virtual {p1, p2, v0}, Ljava/lang/StringBuffer;->substring(II)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 
@@ -209,19 +209,19 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/commons/codec/language/Metaphone;->metaphone(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     .line 3
     :cond_0
-    new-instance p0, Lorg/apache/commons/codec/EncoderException;
+    new-instance p1, Lorg/apache/commons/codec/EncoderException;
 
-    const-string p1, "Parameter supplied to Metaphone encode is not of type java.lang.String"
+    const-string v0, "Parameter supplied to Metaphone encode is not of type java.lang.String"
 
-    invoke-direct {p0, p1}, Lorg/apache/commons/codec/EncoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/commons/codec/EncoderException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public encode(Ljava/lang/String;)Ljava/lang/String;
@@ -230,17 +230,17 @@
     .line 4
     invoke-virtual {p0, p1}, Lorg/apache/commons/codec/language/Metaphone;->metaphone(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getMaxCodeLen()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/commons/codec/language/Metaphone;->maxCodeLen:I
+    iget v0, p0, Lorg/apache/commons/codec/language/Metaphone;->maxCodeLen:I
 
-    return p0
+    return v0
 .end method
 
 .method public isMetaphoneEqual(Ljava/lang/String;Ljava/lang/String;)Z
@@ -252,13 +252,13 @@
 
     invoke-virtual {p0, p2}, Lorg/apache/commons/codec/language/Metaphone;->metaphone(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public metaphone(Ljava/lang/String;)Ljava/lang/String;
@@ -285,9 +285,9 @@
 
     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -994,15 +994,15 @@
     :cond_23
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_24
     :goto_6
-    const-string p0, ""
+    const-string p1, ""
 
-    return-object p0
+    return-object p1
 
     :pswitch_data_0
     .packed-switch 0x41

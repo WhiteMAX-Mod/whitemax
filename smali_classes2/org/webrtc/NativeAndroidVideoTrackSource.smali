@@ -70,17 +70,17 @@
 
     invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getBuffer()Lorg/webrtc/VideoFrame$Buffer;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-interface {p0}, Lorg/webrtc/VideoFrame$Buffer;->getWidth()I
+    invoke-interface {v2}, Lorg/webrtc/VideoFrame$Buffer;->getWidth()I
 
     move-result v2
 
     invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getBuffer()Lorg/webrtc/VideoFrame$Buffer;
 
-    move-result-object p0
+    move-result-object v3
 
-    invoke-interface {p0}, Lorg/webrtc/VideoFrame$Buffer;->getHeight()I
+    invoke-interface {v3}, Lorg/webrtc/VideoFrame$Buffer;->getHeight()I
 
     move-result v3
 
@@ -94,9 +94,9 @@
 
     invoke-static/range {v0 .. v6}, Lorg/webrtc/NativeAndroidVideoTrackSource;->nativeAdaptFrame(JIIIJ)Lorg/webrtc/VideoProcessor$FrameAdaptationParameters;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public adaptOutputFormat(Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Ljava/lang/Integer;)V

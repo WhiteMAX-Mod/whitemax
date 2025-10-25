@@ -1,305 +1,67 @@
 .class public final Lc5b;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lc5b;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final X:Z
+.field public X:Ljava/io/IOException;
 
-.field public final Y:Z
+.field public Y:Ly4b;
 
-.field public final Z:Z
+.field public Z:Ljava/io/File;
 
-.field public final a:Z
+.field public o:Lf5b;
 
-.field public final b:Z
+.field public q0:Ljava/util/Iterator;
 
-.field public final c:Z
+.field public synthetic r0:Ljava/lang/Object;
 
-.field public final o:Z
+.field public final synthetic s0:Lf5b;
+
+.field public t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lgpa;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
-
-    sput-object v0, Lc5b;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZZZZ)V
+.method public constructor <init>(Lf5b;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lc5b;->s0:Lf5b;
 
-    iput-boolean p1, p0, Lc5b;->a:Z
-
-    iput-boolean p2, p0, Lc5b;->b:Z
-
-    iput-boolean p3, p0, Lc5b;->c:Z
-
-    iput-boolean p4, p0, Lc5b;->o:Z
-
-    iput-boolean p5, p0, Lc5b;->X:Z
-
-    iput-boolean p6, p0, Lc5b;->Y:Z
-
-    iput-boolean p7, p0, Lc5b;->Z:Z
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 p0, 0x0
+    iput-object p1, p0, Lc5b;->r0:Ljava/lang/Object;
 
-    return p0
-.end method
+    iget p1, p0, Lc5b;->t0:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const/high16 v0, -0x80000000
 
-    const/4 v0, 0x1
+    or-int/2addr p1, v0
 
-    if-ne p0, p1, :cond_0
+    iput p1, p0, Lc5b;->t0:I
 
-    return v0
+    const/4 v3, 0x0
 
-    :cond_0
-    instance-of v1, p1, Lc5b;
+    const/4 v4, 0x0
+
+    iget-object v0, p0, Lc5b;->s0:Lf5b;
+
+    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    move-object v5, p0
 
-    return v2
+    invoke-virtual/range {v0 .. v5}, Lf5b;->h(Ljava/io/IOException;Lvbd;Ly4b;Ljava/io/File;Ly14;)Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lc5b;
+    move-result-object p1
 
-    iget-boolean v1, p0, Lc5b;->a:Z
-
-    iget-boolean v3, p1, Lc5b;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lc5b;->b:Z
-
-    iget-boolean v3, p1, Lc5b;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lc5b;->c:Z
-
-    iget-boolean v3, p1, Lc5b;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lc5b;->o:Z
-
-    iget-boolean v3, p1, Lc5b;->o:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lc5b;->X:Z
-
-    iget-boolean v3, p1, Lc5b;->X:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lc5b;->Y:Z
-
-    iget-boolean v3, p1, Lc5b;->Y:Z
-
-    if-eq v1, v3, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-boolean p0, p0, Lc5b;->Z:Z
-
-    iget-boolean p1, p1, Lc5b;->Z:Z
-
-    if-eq p0, p1, :cond_8
-
-    return v2
-
-    :cond_8
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-boolean v0, p0, Lc5b;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lc5b;->b:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lc5b;->c:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lc5b;->o:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lc5b;->X:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lc5b;->Y:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean p0, p0, Lc5b;->Z:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", undoVisible="
-
-    const-string v1, ", clearVisible="
-
-    const-string v2, "PhotoEditorViewState(redoVisible="
-
-    iget-boolean v3, p0, Lc5b;->a:Z
-
-    iget-boolean v4, p0, Lc5b;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lyv7;->n(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", drawStickerVisible="
-
-    const-string v2, ", drawStickerEnabled="
-
-    iget-boolean v3, p0, Lc5b;->c:Z
-
-    iget-boolean v4, p0, Lc5b;->o:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lmw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ", doneEnabled="
-
-    const-string v2, ", isRegularSending="
-
-    iget-boolean v3, p0, Lc5b;->X:Z
-
-    iget-boolean v4, p0, Lc5b;->Y:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lmw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lc5b;->Z:Z
-
-    invoke-static {v0, p0, v1}, Lmw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget-boolean p2, p0, Lc5b;->a:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lc5b;->b:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lc5b;->c:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lc5b;->o:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lc5b;->X:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lc5b;->Y:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p0, p0, Lc5b;->Z:Z
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object p1
 .end method

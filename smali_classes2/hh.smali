@@ -1,85 +1,58 @@
 .class public final Lhh;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lmmf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/animation/AnimatorSet;
-
-.field public final synthetic c:Lzb6;
+# static fields
+.field public static final o:Lhh;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/animation/AnimatorSet;Lzb6;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p3, p0, Lhh;->a:I
+    new-instance v0, Lhh;
 
-    iput-object p1, p0, Lhh;->b:Landroid/animation/AnimatorSet;
+    new-instance v1, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
-    iput-object p2, p0, Lhh;->c:Lzb6;
+    invoke-direct {v1}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    const/4 v2, 0x1
+
+    sget-object v3, Lfh;->b:Lfh;
+
+    invoke-direct {v0, v3, v2, v1}, Lmmf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    sput-object v0, Lhh;->o:Lhh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
+.method public final D(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lhh;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p2, p3, v0}, Landroid/util/AttributeSet;->getAttributeResourceValue(II)I
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    move-result p2
 
-    return-void
+    if-eqz p2, :cond_0
 
-    :pswitch_0
-    iget-object p1, p0, Lhh;->b:Landroid/animation/AnimatorSet;
+    invoke-static {p1, p2}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
 
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
+    move-result-object p1
 
-    iget-object p0, p0, Lhh;->c:Lzb6;
+    return-object p1
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-void
+    const-string p2, "Can\'t parse interpolator"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget v0, p0, Lhh;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lhh;->b:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    iget-object p0, p0, Lhh;->c:Lzb6;
-
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

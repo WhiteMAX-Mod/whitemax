@@ -57,17 +57,17 @@
 
 # virtual methods
 .method public getObserver()Lorg/webrtc/PeerConnection$Observer;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnectionDependencies;->observer:Lorg/webrtc/PeerConnection$Observer;
+    iget-object v0, p0, Lorg/webrtc/PeerConnectionDependencies;->observer:Lorg/webrtc/PeerConnection$Observer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSSLCertificateVerifier()Lorg/webrtc/SSLCertificateVerifier;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnectionDependencies;->sslCertificateVerifier:Lorg/webrtc/SSLCertificateVerifier;
+    iget-object v0, p0, Lorg/webrtc/PeerConnectionDependencies;->sslCertificateVerifier:Lorg/webrtc/SSLCertificateVerifier;
 
-    return-object p0
+    return-object v0
 .end method

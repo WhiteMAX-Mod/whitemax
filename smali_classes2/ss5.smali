@@ -1,48 +1,65 @@
 .class public final Lss5;
-.super Ljx3;
+.super Landroid/graphics/drawable/DrawableWrapper;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/Object;
 
-.field public final synthetic Y:Lwb;
+.field public final b:Ljava/lang/Object;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    iput-object p1, p0, Lss5;->Y:Lwb;
+    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget v1, Limc;->ic_file_extension:I
 
-    return-void
-.end method
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
 
+    invoke-direct {p0, v0}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lss5;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lss5;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lss5;->X:I
-
-    iget-object p1, p0, Lss5;->Y:Lwb;
+    new-instance p1, Lrs5;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lwb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {p1, p0, v0}, Lrs5;-><init>(Lss5;I)V
 
-    move-result-object p0
+    const/4 v0, 0x3
 
-    return-object p0
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lss5;->a:Ljava/lang/Object;
+
+    new-instance p1, Lrs5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, p0, v1}, Lrs5;-><init>(Lss5;I)V
+
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lss5;->b:Ljava/lang/Object;
+
+    new-instance p1, Lrs5;
+
+    const/4 v1, 0x2
+
+    invoke-direct {p1, p0, v1}, Lrs5;-><init>(Lss5;I)V
+
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lss5;->c:Ljava/lang/Object;
+
+    return-void
 .end method

@@ -99,37 +99,37 @@
 .end method
 
 .method public getHeight()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/NV21Buffer;->height:I
+    iget v0, p0, Lorg/webrtc/NV21Buffer;->height:I
 
-    return p0
+    return v0
 .end method
 
 .method public getWidth()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/NV21Buffer;->width:I
+    iget v0, p0, Lorg/webrtc/NV21Buffer;->width:I
 
-    return p0
+    return v0
 .end method
 
 .method public release()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/NV21Buffer;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
+    iget-object v0, p0, Lorg/webrtc/NV21Buffer;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    invoke-virtual {p0}, Lorg/webrtc/RefCountDelegate;->release()V
+    invoke-virtual {v0}, Lorg/webrtc/RefCountDelegate;->release()V
 
     return-void
 .end method
 
 .method public retain()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/NV21Buffer;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
+    iget-object v0, p0, Lorg/webrtc/NV21Buffer;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    invoke-virtual {p0}, Lorg/webrtc/RefCountDelegate;->retain()V
+    invoke-virtual {v0}, Lorg/webrtc/RefCountDelegate;->retain()V
 
     return-void
 .end method
@@ -153,9 +153,9 @@
 
     invoke-virtual/range {v0 .. v6}, Lorg/webrtc/NV21Buffer;->cropAndScale(IIIIII)Lorg/webrtc/VideoFrame$Buffer;
 
-    move-result-object p0
+    move-result-object v1
 
-    check-cast p0, Lorg/webrtc/VideoFrame$I420Buffer;
+    check-cast v1, Lorg/webrtc/VideoFrame$I420Buffer;
 
-    return-object p0
+    return-object v1
 .end method

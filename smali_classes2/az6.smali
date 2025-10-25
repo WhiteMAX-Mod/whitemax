@@ -1,67 +1,52 @@
-.class public abstract synthetic Laz6;
-.super Ljava/lang/Object;
+.class public final synthetic Laz6;
+.super Loj6;
 .source "SourceFile"
+
+# interfaces
+.implements Lli6;
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:Laz6;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 6
 
-    invoke-static {}, Lzy6;->values()[Lzy6;
+    new-instance v0, Laz6;
 
-    move-result-object v0
+    const-string v4, "getId()J"
 
-    array-length v0, v0
+    const/4 v5, 0x0
 
-    new-array v0, v0, [I
+    const/4 v1, 0x1
 
-    :try_start_0
-    sget-object v1, Lzy6;->b:Lzy6;
+    const-class v2, Lgz6;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    const-string v3, "getId"
 
-    move-result v1
+    invoke-direct/range {v0 .. v5}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Lzy6;->c:Lzy6;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v1, Lzy6;->o:Lzy6;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v0, Laz6;->$EnumSwitchMapping$0:[I
+    sput-object v0, Laz6;->a:Laz6;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    check-cast p1, Lgz6;
+
+    invoke-interface {p1}, Lgz6;->getId()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
 .end method

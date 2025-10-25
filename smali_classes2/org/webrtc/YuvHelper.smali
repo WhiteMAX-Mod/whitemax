@@ -195,12 +195,20 @@
     if-lt v1, v2, :cond_0
 
     .line 4
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     const/4 v1, 0x0
 
     .line 5
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     .line 6
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -208,10 +216,18 @@
     move-result-object v13
 
     .line 7
-    invoke-virtual {v0, v5}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v5}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     .line 8
-    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     .line 9
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -219,10 +235,18 @@
     move-result-object v15
 
     .line 10
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     .line 11
-    invoke-virtual {v0, v6}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v6}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     .line 12
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -270,7 +294,7 @@
     const-string v4, " was "
 
     .line 16
-    invoke-static {v3, v2, v0, v4}, Lyv7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v2, v0, v4}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -419,7 +443,11 @@
     const/4 v7, 0x0
 
     .line 9
-    invoke-virtual {v0, v7}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v7}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/nio/ByteBuffer;
 
     .line 10
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -427,7 +455,11 @@
     move-result-object v8
 
     .line 11
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/nio/ByteBuffer;
 
     .line 12
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -435,7 +467,11 @@
     move-result-object v10
 
     .line 13
-    invoke-virtual {v0, v5}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v5}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/nio/ByteBuffer;
 
     .line 14
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -475,7 +511,7 @@
     const-string v3, " was "
 
     .line 18
-    invoke-static {v2, v7, v0, v3}, Lyv7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v7, v0, v3}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -588,12 +624,20 @@
     if-lt v5, v1, :cond_0
 
     .line 4
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/nio/ByteBuffer;
 
     const/4 v3, 0x0
 
     .line 5
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/nio/ByteBuffer;
 
     .line 6
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -601,10 +645,18 @@
     move-result-object v11
 
     .line 7
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     .line 8
-    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     .line 9
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -650,7 +702,7 @@
     const-string v4, " was "
 
     .line 13
-    invoke-static {v3, v1, v0, v4}, Lyv7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v1, v0, v4}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -729,7 +781,7 @@
 
     const-string v0, " should not be null"
 
-    invoke-static {p1, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

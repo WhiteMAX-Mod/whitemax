@@ -12,13 +12,13 @@
 
 .field public o:Landroid/util/TypedValue;
 
+.field public q0:Landroid/util/TypedValue;
+
 .field public r0:Landroid/util/TypedValue;
 
-.field public s0:Landroid/util/TypedValue;
+.field public final s0:Landroid/graphics/Rect;
 
-.field public final t0:Landroid/graphics/Rect;
-
-.field public u0:Luv3;
+.field public t0:Ll04;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Landroidx/appcompat/widget/ContentFrameLayout;->t0:Landroid/graphics/Rect;
+    iput-object p1, p0, Landroidx/appcompat/widget/ContentFrameLayout;->s0:Landroid/graphics/Rect;
 
     return-void
 .end method
@@ -41,6 +41,25 @@
 
 # virtual methods
 .method public getFixedHeightMajor()Landroid/util/TypedValue;
+    .locals 1
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->q0:Landroid/util/TypedValue;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    iput-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->q0:Landroid/util/TypedValue;
+
+    :cond_0
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->q0:Landroid/util/TypedValue;
+
+    return-object v0
+.end method
+
+.method public getFixedHeightMinor()Landroid/util/TypedValue;
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->r0:Landroid/util/TypedValue;
@@ -54,28 +73,9 @@
     iput-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->r0:Landroid/util/TypedValue;
 
     :cond_0
-    iget-object p0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->r0:Landroid/util/TypedValue;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->r0:Landroid/util/TypedValue;
 
-    return-object p0
-.end method
-
-.method public getFixedHeightMinor()Landroid/util/TypedValue;
-    .locals 1
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->s0:Landroid/util/TypedValue;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/util/TypedValue;
-
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
-
-    iput-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->s0:Landroid/util/TypedValue;
-
-    :cond_0
-    iget-object p0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->s0:Landroid/util/TypedValue;
-
-    return-object p0
+    return-object v0
 .end method
 
 .method public getFixedWidthMajor()Landroid/util/TypedValue;
@@ -92,9 +92,9 @@
     iput-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->c:Landroid/util/TypedValue;
 
     :cond_0
-    iget-object p0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->c:Landroid/util/TypedValue;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->c:Landroid/util/TypedValue;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getFixedWidthMinor()Landroid/util/TypedValue;
@@ -111,9 +111,9 @@
     iput-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->o:Landroid/util/TypedValue;
 
     :cond_0
-    iget-object p0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->o:Landroid/util/TypedValue;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->o:Landroid/util/TypedValue;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getMinWidthMajor()Landroid/util/TypedValue;
@@ -130,9 +130,9 @@
     iput-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->a:Landroid/util/TypedValue;
 
     :cond_0
-    iget-object p0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->a:Landroid/util/TypedValue;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->a:Landroid/util/TypedValue;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getMinWidthMinor()Landroid/util/TypedValue;
@@ -149,136 +149,136 @@
     iput-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->b:Landroid/util/TypedValue;
 
     :cond_0
-    iget-object p0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->b:Landroid/util/TypedValue;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->b:Landroid/util/TypedValue;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final onAttachedToWindow()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    iget-object p0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->u0:Luv3;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->t0:Ll04;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :cond_0
     return-void
 .end method
 
 .method public final onDetachedFromWindow()V
-    .locals 2
+    .locals 3
 
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    iget-object p0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->u0:Luv3;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->t0:Ll04;
 
-    if-eqz p0, :cond_4
+    if-eqz v0, :cond_4
 
-    check-cast p0, Lnyc;
+    check-cast v0, Ltvi;
 
-    iget-object p0, p0, Lnyc;->b:Ljava/lang/Object;
+    iget-object v0, v0, Ltvi;->a:Ljava/lang/Object;
 
-    check-cast p0, Len;
+    check-cast v0, Lno;
 
-    iget-object v0, p0, Len;->B0:Lna4;
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->e()V
-
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->r0:Loa4;
-
-    check-cast v0, Ls8f;
-
-    iget-object v0, v0, Ls8f;->a:Landroidx/appcompat/widget/Toolbar;
-
-    iget-object v0, v0, Landroidx/appcompat/widget/Toolbar;->a:Landroidx/appcompat/widget/ActionMenuView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuView;->r0:Lc7;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lc7;->g()Z
-
-    iget-object v0, v0, Lc7;->D0:Ly6;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lax8;->b()Z
-
-    move-result v1
+    iget-object v1, v0, Lno;->A0:Lof4;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lax8;->i:Lyw8;
+    check-cast v1, Landroidx/appcompat/widget/ActionBarOverlayLayout;
 
-    invoke-interface {v0}, Lyzd;->dismiss()V
+    invoke-virtual {v1}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->e()V
+
+    iget-object v1, v1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->q0:Lpf4;
+
+    check-cast v1, Lkyf;
+
+    iget-object v1, v1, Lkyf;->a:Landroidx/appcompat/widget/Toolbar;
+
+    iget-object v1, v1, Landroidx/appcompat/widget/Toolbar;->a:Landroidx/appcompat/widget/ActionMenuView;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Landroidx/appcompat/widget/ActionMenuView;->q0:Lk7;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lk7;->f()Z
+
+    iget-object v1, v1, Lk7;->C0:Lg7;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Le99;->b()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v1, v1, Le99;->i:Lc99;
+
+    invoke-interface {v1}, Lume;->dismiss()V
 
     :cond_0
-    iget-object v0, p0, Len;->G0:Landroid/widget/PopupWindow;
+    iget-object v1, v0, Lno;->F0:Landroid/widget/PopupWindow;
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
-    iget-object v0, p0, Len;->v0:Landroid/view/Window;
+    iget-object v1, v0, Lno;->u0:Landroid/view/Window;
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget-object v1, p0, Len;->H0:Ltm;
+    iget-object v2, v0, Lno;->G0:Lbo;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1, v2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    iget-object v0, p0, Len;->G0:Landroid/widget/PopupWindow;
+    iget-object v1, v0, Lno;->F0:Landroid/widget/PopupWindow;
 
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
+    invoke-virtual {v1}, Landroid/widget/PopupWindow;->isShowing()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
     :try_start_0
-    iget-object v0, p0, Len;->G0:Landroid/widget/PopupWindow;
+    iget-object v1, v0, Lno;->F0:Landroid/widget/PopupWindow;
 
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
+    invoke-virtual {v1}, Landroid/widget/PopupWindow;->dismiss()V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
     :cond_1
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Len;->G0:Landroid/widget/PopupWindow;
+    iput-object v1, v0, Lno;->F0:Landroid/widget/PopupWindow;
 
     :cond_2
-    iget-object v0, p0, Len;->I0:Lc9g;
+    iget-object v1, v0, Lno;->H0:Lc1h;
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
-    invoke-virtual {v0}, Lc9g;->b()V
+    invoke-virtual {v1}, Lc1h;->b()V
 
     :cond_3
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0}, Len;->y(I)Ldn;
+    invoke-virtual {v0, v1}, Lno;->z(I)Lmo;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget-object p0, p0, Ldn;->h:Lpw8;
+    iget-object v0, v0, Lmo;->h:Lt89;
 
-    if-eqz p0, :cond_4
+    if-eqz v0, :cond_4
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, v0}, Lpw8;->c(Z)V
+    invoke-virtual {v0, v1}, Lt89;->c(Z)V
 
     :cond_4
     return-void
@@ -327,7 +327,7 @@
 
     move-result v6
 
-    iget-object v7, v0, Landroidx/appcompat/widget/ContentFrameLayout;->t0:Landroid/graphics/Rect;
+    iget-object v7, v0, Landroidx/appcompat/widget/ContentFrameLayout;->s0:Landroid/graphics/Rect;
 
     const/4 v8, 0x6
 
@@ -421,12 +421,12 @@
 
     if-eqz v2, :cond_5
 
-    iget-object v6, v0, Landroidx/appcompat/widget/ContentFrameLayout;->r0:Landroid/util/TypedValue;
+    iget-object v6, v0, Landroidx/appcompat/widget/ContentFrameLayout;->q0:Landroid/util/TypedValue;
 
     goto :goto_5
 
     :cond_5
-    iget-object v6, v0, Landroidx/appcompat/widget/ContentFrameLayout;->s0:Landroid/util/TypedValue;
+    iget-object v6, v0, Landroidx/appcompat/widget/ContentFrameLayout;->r0:Landroid/util/TypedValue;
 
     :goto_5
     if-eqz v6, :cond_8
@@ -584,10 +584,10 @@
     return-void
 .end method
 
-.method public setAttachListener(Luv3;)V
+.method public setAttachListener(Ll04;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/appcompat/widget/ContentFrameLayout;->u0:Luv3;
+    iput-object p1, p0, Landroidx/appcompat/widget/ContentFrameLayout;->t0:Ll04;
 
     return-void
 .end method

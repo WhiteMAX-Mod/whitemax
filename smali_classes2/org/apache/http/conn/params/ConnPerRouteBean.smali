@@ -64,11 +64,11 @@
 
 # virtual methods
 .method public getDefaultMax()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/http/conn/params/ConnPerRouteBean;->defaultMax:I
+    iget v0, p0, Lorg/apache/http/conn/params/ConnPerRouteBean;->defaultMax:I
 
-    return p0
+    return v0
 .end method
 
 .method public getMaxForRoute(Lorg/apache/http/conn/routing/HttpRoute;)I
@@ -88,23 +88,23 @@
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     :cond_0
-    iget p0, p0, Lorg/apache/http/conn/params/ConnPerRouteBean;->defaultMax:I
+    iget p1, p0, Lorg/apache/http/conn/params/ConnPerRouteBean;->defaultMax:I
 
-    return p0
+    return p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP route may not be null."
+    const-string v0, "HTTP route may not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setDefaultMaxPerRoute(I)V
@@ -119,13 +119,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "The maximum must be greater than 0."
+    const-string v0, "The maximum must be greater than 0."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setMaxForRoute(Lorg/apache/http/conn/routing/HttpRoute;I)V
@@ -137,33 +137,33 @@
 
     if-lt p2, v0, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/conn/params/ConnPerRouteBean;->maxPerHostMap:Ljava/util/Map;
+    iget-object v0, p0, Lorg/apache/http/conn/params/ConnPerRouteBean;->maxPerHostMap:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
-    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "The maximum must be greater than 0."
+    const-string p2, "The maximum must be greater than 0."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP route may not be null."
+    const-string p2, "HTTP route may not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setMaxForRoutes(Ljava/util/Map;)V
@@ -187,9 +187,9 @@
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    iget-object p0, p0, Lorg/apache/http/conn/params/ConnPerRouteBean;->maxPerHostMap:Ljava/util/Map;
+    iget-object v0, p0, Lorg/apache/http/conn/params/ConnPerRouteBean;->maxPerHostMap:Ljava/util/Map;
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
     return-void
 .end method

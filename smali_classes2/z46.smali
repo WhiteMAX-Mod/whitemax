@@ -1,154 +1,55 @@
-.class public abstract Lz46;
+.class public final Lz46;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lv2b;
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final c:Liu7;
+
+.field public final d:Liu7;
+
+.field public final e:Lcg7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lcg7;Liu7;Lulf;Ll54;Liu7;)V
+    .locals 1
 
-    new-instance v0, Lpxa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x4
+    const-class v0, Lz46;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    sget-object v2, Ly46;->a:Ly46;
-
-    invoke-direct {v0, v1, v2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Lpxa;
-
-    const/4 v2, 0x3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    sget-object v3, Ly46;->b:Ly46;
-
-    invoke-direct {v1, v2, v3}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v2, Lpxa;
-
-    const/4 v3, 0x2
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    sget-object v4, Ly46;->c:Ly46;
-
-    invoke-direct {v2, v3, v4}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v3, Lpxa;
-
-    const/4 v4, 0x1
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    sget-object v5, Ly46;->o:Ly46;
-
-    invoke-direct {v3, v4, v5}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v4, Lpxa;
-
-    const/4 v5, 0x0
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    sget-object v6, Ly46;->X:Ly46;
-
-    invoke-direct {v4, v5, v6}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lpxa;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljtg;->C([Lpxa;)Lv2b;
+    iput-object v0, p0, Lz46;->a:Ljava/lang/String;
 
-    move-result-object v0
+    check-cast p3, Lqta;
 
-    sput-object v0, Lz46;->a:Lv2b;
+    invoke-virtual {p3}, Lqta;->b()Lk54;
 
-    invoke-virtual {v0}, Lc2;->entrySet()Ljava/util/Set;
+    move-result-object p3
 
-    move-result-object v0
+    invoke-virtual {p3, p4}, Lp0;->plus(Li54;)Li54;
 
-    const/16 v1, 0xa
+    move-result-object p3
 
-    invoke-static {v0, v1}, Ls73;->O(Ljava/lang/Iterable;I)I
+    invoke-static {p3}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result v1
+    move-result-object p3
 
-    invoke-static {v1}, Li68;->I(I)I
+    iput-object p3, p0, Lz46;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result v1
+    iput-object p2, p0, Lz46;->c:Liu7;
 
-    const/16 v2, 0x10
+    iput-object p5, p0, Lz46;->d:Liu7;
 
-    if-ge v1, v2, :cond_0
+    iput-object p1, p0, Lz46;->e:Lcg7;
 
-    move v1, v2
-
-    :cond_0
-    new-instance v2, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v2, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
-
-    check-cast v0, Lc3b;
-
-    invoke-virtual {v0}, Lc3b;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ly46;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v1
-
-    invoke-static {v1}, Lnrf;->C(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method

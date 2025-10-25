@@ -33,7 +33,7 @@
 .end method
 
 .method private tryNewMiuiBadge(Landroid/content/Context;I)V
-    .locals 4
+    .locals 5
     .annotation build Landroid/annotation/TargetApi;
         value = 0x10
     .end annotation
@@ -97,50 +97,50 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lme/leolin/shortcutbadger/impl/XiaomiHomeBadger;->resolveInfo:Landroid/content/pm/ResolveInfo;
+    iget-object v1, p0, Lme/leolin/shortcutbadger/impl/XiaomiHomeBadger;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
-    invoke-virtual {p0}, Landroid/content/pm/ResolveInfo;->getIconResource()I
+    invoke-virtual {v1}, Landroid/content/pm/ResolveInfo;->getIconResource()I
 
-    move-result p0
+    move-result v1
 
-    invoke-virtual {p1, p0}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+    invoke-virtual {p1, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
+    invoke-virtual {p1}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
-    move-result-object p0
+    move-result-object p1
 
     :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    const-string v1, "extraNotification"
-
-    invoke-virtual {p1, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    const-string v2, "setMessageCount"
+    const-string v2, "extraNotification"
 
-    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {v3}, [Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    const-string v3, "setMessageCount"
+
+    sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    filled-new-array {v4}, [Ljava/lang/Class;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -150,26 +150,26 @@
 
     move-result-object p2
 
-    invoke-virtual {v1, p1, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v1, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
-    invoke-virtual {v0, p1, p0}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
+    invoke-virtual {v0, p2, p1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    new-instance p1, Lme/leolin/shortcutbadger/ShortcutBadgeException;
+    new-instance p2, Lme/leolin/shortcutbadger/ShortcutBadgeException;
 
-    const-string p2, "not able to set badge"
+    const-string v0, "not able to set badge"
 
-    invoke-direct {p1, p2, p0}, Lme/leolin/shortcutbadger/ShortcutBadgeException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {p2, v0, p1}, Lme/leolin/shortcutbadger/ShortcutBadgeException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
-    throw p1
+    throw p2
 
     :cond_1
     return-void
@@ -352,11 +352,11 @@
 
     filled-new-array/range {v0 .. v6}, [Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

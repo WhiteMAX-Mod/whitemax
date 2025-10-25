@@ -27,13 +27,13 @@
 .method public applyTransformMatrix(Landroid/graphics/Matrix;II)Lorg/webrtc/VideoFrame$TextureBuffer;
     .locals 0
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    const-string p1, "Not implemented"
+    const-string p2, "Not implemented"
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public abstract getTextureId()I
@@ -46,21 +46,21 @@
 .end method
 
 .method public getUnscaledHeight()I
-    .locals 0
+    .locals 1
 
     invoke-interface {p0}, Lorg/webrtc/VideoFrame$Buffer;->getHeight()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getUnscaledWidth()I
-    .locals 0
+    .locals 1
 
     invoke-interface {p0}, Lorg/webrtc/VideoFrame$Buffer;->getWidth()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method

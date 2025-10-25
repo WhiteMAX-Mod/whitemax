@@ -1,19 +1,18 @@
-.class public final Lac7;
-.super Lec7;
+.class public interface abstract Lac7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llha;
+.implements Ltc7;
 
-# instance fields
-.field public final a:Lu2f;
 
+# virtual methods
+.method public abstract f()I
+.end method
 
-# direct methods
-.method public constructor <init>(Lu2f;)V
-    .locals 0
+.method public abstract j()J
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lac7;->a:Lu2f;
-
-    return-void
+.method public abstract k()Z
 .end method

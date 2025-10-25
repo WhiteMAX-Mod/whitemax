@@ -1,23 +1,27 @@
 .class public final Lzng;
-.super Lpg7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+# static fields
+.field public static final a:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Lpg7;-><init>()V
+    new-instance v0, Lqj8;
 
-    iput-object p1, p0, Lzng;->c:Ljava/lang/String;
+    const/16 v1, 0x3e8
 
-    iput-object p2, p0, Lzng;->d:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lqj8;-><init>(I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object v0
+
+    sput-object v0, Lzng;->a:Ljava/util/Map;
 
     return-void
 .end method

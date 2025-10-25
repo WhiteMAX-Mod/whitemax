@@ -4,52 +4,28 @@
 
 
 # instance fields
-.field public a:Ljava/lang/Boolean;
+.field public final a:Lqj8;
 
-.field public b:Ljava/lang/Long;
+.field public final b:Lka5;
 
-.field public c:Ljava/lang/String;
 
-.field public d:Ljava/lang/String;
+# direct methods
+.method public constructor <init>()V
+    .locals 2
 
-.field public e:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Ljava/lang/String;
+    new-instance v0, Lqj8;
 
-.field public g:Ljava/lang/String;
+    const/16 v1, 0x3e8
 
-.field public h:Ljava/lang/Boolean;
+    invoke-direct {v0, v1}, Lqj8;-><init>(I)V
 
-.field public i:Ljava/lang/Integer;
+    iput-object v0, p0, Lerf;->a:Lqj8;
 
-.field public j:Ljava/lang/Integer;
+    sget-object v0, Lka5;->a:Lka5;
 
-.field public k:Ljava/lang/Integer;
+    iput-object v0, p0, Lerf;->b:Lka5;
 
-.field public l:Ljava/lang/Boolean;
-
-.field public m:Ljava/lang/Boolean;
-
-.field public n:Ljava/lang/Boolean;
-
-.field public o:I
-
-.field public p:I
-
-.field public q:Lfrf;
-
-.field public r:I
-
-.field public s:I
-
-.field public t:Ljava/lang/Boolean;
-
-.field public u:Ljava/lang/Boolean;
-
-.field public v:Ljava/lang/Boolean;
-
-.field public w:I
-
-.field public x:Ljava/lang/Boolean;
-
-.field public y:Ljava/lang/Boolean;
+    return-void
+.end method

@@ -59,15 +59,15 @@
 
     if-nez v2, :cond_2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/waiting_room/ConversationWaitingParticipantId;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/waiting_room/ConversationWaitingParticipantId;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/waiting_room/ConversationWaitingParticipantId;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/id/ParticipantId;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, p1}, Lru/ok/android/externcalls/sdk/id/ParticipantId;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_2
 
     return v0
 
@@ -85,11 +85,11 @@
 .end method
 
 .method public getParticipantId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/waiting_room/ConversationWaitingParticipantId;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/waiting_room/ConversationWaitingParticipantId;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
@@ -101,21 +101,21 @@
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p0
+    move-result-object v1
 
-    filled-new-array {v0, p0}, [Ljava/lang/Object;
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -133,11 +133,11 @@
 
     iget-wide v1, p0, Lru/ok/android/externcalls/sdk/waiting_room/ConversationWaitingParticipantId;->addedTs:J
 
-    const/16 p0, 0x7d
+    const/16 v3, 0x7d
 
-    invoke-static {v0, v1, v2, p0}, Lbg9;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Laab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,412 +1,194 @@
-.class public abstract Ljbc;
+.class public final synthetic Ljbc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static Oneme_profile_invite_qr_code:I = 0x7f130000
 
-.field public static Oneme_profile_invite_share_link:I = 0x7f130001
+# instance fields
+.field public final synthetic a:I
 
-.field public static oneme_profile_add_members_action_title:I = 0x7f1308be
+.field public final synthetic b:Lmbc;
 
-.field public static oneme_profile_add_members_action_title_channel:I = 0x7f1308bf
+.field public final synthetic c:Lz8c;
 
-.field public static oneme_profile_add_members_search_hint:I = 0x7f1308c0
 
-.field public static oneme_profile_add_members_toolbar_title:I = 0x7f1308c1
+# direct methods
+.method public synthetic constructor <init>(Lmbc;Lz8c;)V
+    .locals 1
 
-.field public static oneme_profile_add_members_toolbar_title_channel:I = 0x7f1308c2
+    .line 2
+    const/4 v0, 0x1
 
-.field public static oneme_profile_add_to_chat:I = 0x7f1308c3
+    iput v0, p0, Ljbc;->a:I
 
-.field public static oneme_profile_add_to_contacts:I = 0x7f1308c4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_profile_attachments:I = 0x7f1308c5
+    iput-object p1, p0, Ljbc;->b:Lmbc;
 
-.field public static oneme_profile_attachments_descr:I = 0x7f1308c6
+    iput-object p2, p0, Ljbc;->c:Lz8c;
 
-.field public static oneme_profile_audio:I = 0x7f1308c7
+    return-void
+.end method
 
-.field public static oneme_profile_description_expand_suffix:I = 0x7f1308c8
+.method public synthetic constructor <init>(Lz8c;Lmbc;)V
+    .locals 1
 
-.field public static oneme_profile_edit_chat_type_private:I = 0x7f1308e0
+    .line 1
+    const/4 v0, 0x0
 
-.field public static oneme_profile_edit_chat_type_public:I = 0x7f1308e1
+    iput v0, p0, Ljbc;->a:I
 
-.field public static oneme_profile_invite_toolbar_title:I = 0x7f13091d
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_profile_more_action_add_to_folder:I = 0x7f13091e
+    iput-object p1, p0, Ljbc;->c:Lz8c;
 
-.field public static oneme_profile_more_action_block:I = 0x7f13091f
+    iput-object p2, p0, Ljbc;->b:Lmbc;
 
-.field public static oneme_profile_more_action_clear_history:I = 0x7f130920
+    return-void
+.end method
 
-.field public static oneme_profile_more_action_delete_channel:I = 0x7f130921
 
-.field public static oneme_profile_more_action_delete_chat:I = 0x7f130922
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 11
 
-.field public static oneme_profile_more_action_delete_chat_and_suspend_bot:I = 0x7f130923
+    iget p1, p0, Ljbc;->a:I
 
-.field public static oneme_profile_more_action_leave_channel:I = 0x7f130924
+    packed-switch p1, :pswitch_data_0
 
-.field public static oneme_profile_more_action_leave_chat:I = 0x7f130925
+    iget-object p1, p0, Ljbc;->b:Lmbc;
 
-.field public static oneme_profile_more_action_report:I = 0x7f130926
+    iget-object p1, p1, Lmbc;->X:Llbc;
 
-.field public static oneme_profile_more_action_suspend_bot:I = 0x7f130927
+    iget-object v0, p0, Ljbc;->c:Lz8c;
 
-.field public static oneme_profile_more_action_unsubscribe_channel:I = 0x7f130928
+    check-cast v0, Ls8c;
 
-.field public static oneme_profile_notifications:I = 0x7f130929
+    iget-wide v0, v0, Ls8c;->a:J
 
-.field public static oneme_profile_search:I = 0x7f13092a
+    check-cast p1, Lone/me/profile/ProfileScreen;
 
-.field public static oneme_profile_section_admins:I = 0x7f13092b
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static oneme_profile_section_channel_link:I = 0x7f13092c
+    new-instance v2, Ljava/lang/StringBuilder;
 
-.field public static oneme_profile_section_chat_link:I = 0x7f13092d
+    const-string v3, "ID #"
 
-.field public static oneme_profile_section_common_chats:I = 0x7f13092e
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static oneme_profile_section_contact_link:I = 0x7f13092f
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-.field public static oneme_profile_section_description_bot:I = 0x7f130930
+    const-string v3, " \u0441\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d \u0432 \u0431\u0443\u0444\u0435\u0440 \u043e\u0431\u043c\u0435\u043d\u0430"
 
-.field public static oneme_profile_section_description_bot_official:I = 0x7f130931
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static oneme_profile_section_description_chat:I = 0x7f130932
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static oneme_profile_section_description_contact:I = 0x7f130933
+    move-result-object v2
 
-.field public static oneme_profile_section_members:I = 0x7f130934
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->requireActivity()Lrn;
 
-.field public static oneme_profile_section_phone:I = 0x7f130935
+    move-result-object p1
 
-.field public static oneme_profile_section_subscribers:I = 0x7f130936
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-.field public static oneme_profile_start_bot:I = 0x7f130937
+    move-result-object v0
 
-.field public static oneme_profile_start_chat:I = 0x7f130938
+    sget-object v1, Lg93;->a:Lor6;
 
-.field public static oneme_profile_unblock:I = 0x7f130939
+    new-instance v3, Lgj;
 
-.field public static oneme_profile_video:I = 0x7f13093a
+    const/16 v4, 0x12
 
-.field public static profile_add_admins_tab_chat_members:I = 0x7f130b2c
+    invoke-direct {v3, p1, v2, v0, v4}, Lgj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-.field public static profile_add_admins_tab_contacts:I = 0x7f130b2d
+    invoke-virtual {v1, v3}, Lor6;->Q(Ljava/lang/Runnable;)V
 
-.field public static profile_add_admins_toolbar:I = 0x7f130b2e
+    sget-object p1, Lq2c;->a:Lq2c;
 
-.field public static profile_admins_list_item_added_admin_by_other:I = 0x7f130b2f
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
-.field public static profile_admins_list_item_added_admin_by_you:I = 0x7f130b30
+    move-result-object p1
 
-.field public static profile_block_bottom_sheet_confirm:I = 0x7f130b31
+    const-class v0, Lc3b;
 
-.field public static profile_block_bottom_sheet_description:I = 0x7f130b32
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-.field public static profile_block_bottom_sheet_title:I = 0x7f130b33
+    move-result-object p1
 
-.field public static profile_blocked_contact_subtitle:I = 0x7f130b34
+    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
 
-.field public static profile_change_avatar_error:I = 0x7f130b35
+    move-result-object p1
 
-.field public static profile_change_avatar_success:I = 0x7f130b36
+    check-cast p1, Lc3b;
 
-.field public static profile_change_avatar_title:I = 0x7f130b37
+    invoke-virtual {p1, v2}, Lc3b;->h(Ljava/lang/CharSequence;)V
 
-.field public static profile_change_avatar_upload_from_camera:I = 0x7f130b38
+    iget-object v3, p1, Lc3b;->b:Lb4b;
 
-.field public static profile_change_avatar_upload_from_gallery:I = 0x7f130b39
+    iget-object v0, v3, Lb4b;->X:Lk3b;
 
-.field public static profile_change_owner_and_leave_snackbar_title:I = 0x7f130b3a
+    const/4 v1, 0x0
 
-.field public static profile_change_owner_and_leave_title:I = 0x7f130b3b
+    const/4 v2, 0x6
 
-.field public static profile_change_owner_change_action:I = 0x7f130b3c
+    const/4 v4, 0x2
 
-.field public static profile_change_owner_channel_description:I = 0x7f130b3d
+    invoke-static {v0, v4, v1, v1, v2}, Lk3b;->a(Lk3b;IIII)Lk3b;
 
-.field public static profile_change_owner_chat_bottom_sheet_confirm:I = 0x7f130b3e
+    move-result-object v8
 
-.field public static profile_change_owner_description:I = 0x7f130b3f
+    const/4 v9, 0x0
 
-.field public static profile_change_owner_snackbar_title:I = 0x7f130b40
+    const/16 v10, 0x2f
 
-.field public static profile_change_owner_title:I = 0x7f130b41
+    const/4 v4, 0x0
 
-.field public static profile_change_owner_toolbar:I = 0x7f130b42
+    const/4 v5, 0x0
 
-.field public static profile_channel_deleted_snackbar_title:I = 0x7f130b43
+    const/4 v6, 0x0
 
-.field public static profile_channel_members_list_toolbar_title:I = 0x7f130b44
+    const/4 v7, 0x0
 
-.field public static profile_chat_deleted_snackbar_title:I = 0x7f130b45
+    invoke-static/range {v3 .. v10}, Lb4b;->a(Lb4b;Lu3b;Ljava/lang/CharSequence;Ljava/lang/CharSequence;La4b;Lk3b;Lo3b;I)Lb4b;
 
-.field public static profile_chat_media_empty_tab_title:I = 0x7f130b46
+    move-result-object v0
 
-.field public static profile_chat_media_tab_audio:I = 0x7f130b47
+    iput-object v0, p1, Lc3b;->b:Lb4b;
 
-.field public static profile_chat_media_tab_file:I = 0x7f130b48
+    invoke-virtual {p1}, Lc3b;->i()Lb3b;
 
-.field public static profile_chat_media_tab_link:I = 0x7f130b49
+    return-void
 
-.field public static profile_chat_media_tab_photo_video:I = 0x7f130b4a
+    :pswitch_0
+    iget-object p1, p0, Ljbc;->c:Lz8c;
 
-.field public static profile_chat_members_list_toolbar_title:I = 0x7f130b4b
+    check-cast p1, Lp8c;
 
-.field public static profile_clear_channel_history_bottom_sheet_desctiption:I = 0x7f130b4c
+    iget-object v0, p0, Ljbc;->b:Lmbc;
 
-.field public static profile_clear_channel_history_bottom_sheet_title:I = 0x7f130b4d
+    iget-object v0, v0, Lmbc;->X:Llbc;
 
-.field public static profile_clear_chat_history_bottom_sheet_confirm:I = 0x7f130b4e
+    iget-object p1, p1, Lp8c;->a:Lr2c;
 
-.field public static profile_clear_chat_history_bottom_sheet_title:I = 0x7f130b4f
+    iget-wide v1, p1, Lr2c;->a:J
 
-.field public static profile_clear_chat_history_snackbar_title:I = 0x7f130b50
+    check-cast v0, Lone/me/profile/ProfileScreen;
 
-.field public static profile_clear_dialog_history_bottom_sheet_description:I = 0x7f130b51
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static profile_clear_multi_chat_history_bottom_sheet_title:I = 0x7f130b52
+    sget-object p1, Lx9c;->c:Lx9c;
 
-.field public static profile_contact_added_snackbar_title:I = 0x7f130b53
+    invoke-virtual {p1, v1, v2}, Lx9c;->T0(J)V
 
-.field public static profile_contact_blocked_snackbar_title:I = 0x7f130b54
+    return-void
 
-.field public static profile_contact_deleted_snackbar_title:I = 0x7f130b55
+    nop
 
-.field public static profile_contact_unblocked_snackbar_title:I = 0x7f130b56
-
-.field public static profile_copy_phone_snackbar_title:I = 0x7f130b57
-
-.field public static profile_delete_channel_bottom_sheet_confirm:I = 0x7f130b58
-
-.field public static profile_delete_channel_bottom_sheet_description:I = 0x7f130b59
-
-.field public static profile_delete_channel_bottom_sheet_title:I = 0x7f130b5a
-
-.field public static profile_delete_chat_bottom_sheet_confirm:I = 0x7f130b5b
-
-.field public static profile_delete_chat_bottom_sheet_title:I = 0x7f130b5c
-
-.field public static profile_delete_contact_bottom_sheet_confirm:I = 0x7f130b5d
-
-.field public static profile_delete_contact_bottom_sheet_title:I = 0x7f130b5e
-
-.field public static profile_delete_dialog_bottom_sheet_description:I = 0x7f130b60
-
-.field public static profile_delete_dialog_with_bot_bottom_sheet_confirm_without_suspend:I = 0x7f130b61
-
-.field public static profile_delete_dialog_with_bot_bottom_sheet_description:I = 0x7f130b62
-
-.field public static profile_delete_dialog_with_bot_official_bottom_sheet_description:I = 0x7f130b63
-
-.field public static profile_delete_multi_chat_bottom_sheet_title:I = 0x7f130b64
-
-.field public static profile_invite_channel_copy_link_success:I = 0x7f130bc1
-
-.field public static profile_invite_channel_link:I = 0x7f130bc2
-
-.field public static profile_invite_chat_copy_link_success:I = 0x7f130bc3
-
-.field public static profile_invite_chat_link:I = 0x7f130bc4
-
-.field public static profile_invite_chat_link_description:I = 0x7f130bc5
-
-.field public static profile_invite_chat_link_refresh:I = 0x7f130bc6
-
-.field public static profile_invite_chat_link_update_action:I = 0x7f130bc7
-
-.field public static profile_invite_chat_link_update_action_success:I = 0x7f130bc8
-
-.field public static profile_invite_chat_link_update_confirmation_description:I = 0x7f130bc9
-
-.field public static profile_invite_chat_link_update_confirmation_title:I = 0x7f130bca
-
-.field public static profile_invite_configure_type:I = 0x7f130bcb
-
-.field public static profile_invite_create_link_error_confirm:I = 0x7f130bcc
-
-.field public static profile_invite_create_link_error_no_connection:I = 0x7f130bcd
-
-.field public static profile_invite_create_link_error_service_unavailable:I = 0x7f130bce
-
-.field public static profile_invite_create_link_error_title:I = 0x7f130bcf
-
-.field public static profile_invite_private_link:I = 0x7f130bd0
-
-.field public static profile_leave_channel_admin_bottom_sheet_description:I = 0x7f130bd1
-
-.field public static profile_leave_channel_bottom_sheet_confirm:I = 0x7f130bd2
-
-.field public static profile_leave_channel_bottom_sheet_description:I = 0x7f130bd3
-
-.field public static profile_leave_channel_bottom_sheet_title:I = 0x7f130bd4
-
-.field public static profile_leave_chat_and_move_rights_bottom_sheet_confirm:I = 0x7f130bd5
-
-.field public static profile_leave_chat_bottom_sheet_cancel:I = 0x7f130bd6
-
-.field public static profile_leave_chat_bottom_sheet_confirm:I = 0x7f130bd7
-
-.field public static profile_leave_chat_bottom_sheet_title:I = 0x7f130bd8
-
-.field public static profile_link_action_copy:I = 0x7f130bd9
-
-.field public static profile_link_context_menu_action_copy_mention:I = 0x7f130bdd
-
-.field public static profile_link_context_menu_action_open_mention:I = 0x7f130bde
-
-.field public static profile_link_copy_snackbar_title:I = 0x7f130bdf
-
-.field public static profile_link_mention_copied:I = 0x7f130be1
-
-.field public static profile_media_action_copy_link:I = 0x7f130be3
-
-.field public static profile_media_action_delete:I = 0x7f130be4
-
-.field public static profile_media_action_forward_audio:I = 0x7f130be5
-
-.field public static profile_media_action_forward_file:I = 0x7f130be6
-
-.field public static profile_media_action_forward_gif:I = 0x7f130be7
-
-.field public static profile_media_action_forward_link:I = 0x7f130be8
-
-.field public static profile_media_action_forward_photo:I = 0x7f130be9
-
-.field public static profile_media_action_forward_video:I = 0x7f130bea
-
-.field public static profile_media_action_goto_link:I = 0x7f130beb
-
-.field public static profile_media_action_goto_message:I = 0x7f130bec
-
-.field public static profile_media_action_save:I = 0x7f130bed
-
-.field public static profile_media_action_share_link:I = 0x7f130bee
-
-.field public static profile_media_confirmation_delete_all_chat_button:I = 0x7f130bef
-
-.field public static profile_media_confirmation_delete_all_dialog_button:I = 0x7f130bf0
-
-.field public static profile_media_confirmation_delete_audio_description:I = 0x7f130bf1
-
-.field public static profile_media_confirmation_delete_audio_title:I = 0x7f130bf2
-
-.field public static profile_media_confirmation_delete_file_description:I = 0x7f130bf3
-
-.field public static profile_media_confirmation_delete_file_title:I = 0x7f130bf4
-
-.field public static profile_media_confirmation_delete_link_description:I = 0x7f130bf5
-
-.field public static profile_media_confirmation_delete_link_title:I = 0x7f130bf6
-
-.field public static profile_media_confirmation_delete_media_description:I = 0x7f130bf7
-
-.field public static profile_media_confirmation_delete_media_title:I = 0x7f130bf8
-
-.field public static profile_media_confirmation_delete_self_button:I = 0x7f130bf9
-
-.field public static profile_media_content_level_link_subtitle:I = 0x7f130bfa
-
-.field public static profile_media_content_level_link_title:I = 0x7f130bfb
-
-.field public static profile_media_content_level_snackbar_text:I = 0x7f130bfc
-
-.field public static profile_media_save_gif_snackbar_success:I = 0x7f130bfd
-
-.field public static profile_media_save_image_snackbar_success:I = 0x7f130bfe
-
-.field public static profile_media_save_snackbar_error:I = 0x7f130bff
-
-.field public static profile_media_save_video_snackbar_success:I = 0x7f130c00
-
-.field public static profile_members_list_action_delete_from_admin:I = 0x7f130c01
-
-.field public static profile_members_list_action_delete_from_channel:I = 0x7f130c02
-
-.field public static profile_members_list_action_delete_from_chat:I = 0x7f130c03
-
-.field public static profile_members_list_action_select:I = 0x7f130c04
-
-.field public static profile_members_list_add_to_admin_action:I = 0x7f130c05
-
-.field public static profile_members_list_add_to_channel_action:I = 0x7f130c06
-
-.field public static profile_members_list_add_to_chat_action:I = 0x7f130c07
-
-.field public static profile_members_list_admin_alias:I = 0x7f130c08
-
-.field public static profile_members_list_delete_from_admin_btn:I = 0x7f130c09
-
-.field public static profile_members_list_delete_from_admin_snackbar:I = 0x7f130c0a
-
-.field public static profile_members_list_delete_from_admin_title:I = 0x7f130c0b
-
-.field public static profile_members_list_delete_from_channel_btn:I = 0x7f130c0c
-
-.field public static profile_members_list_delete_from_chat_btn:I = 0x7f130c0d
-
-.field public static profile_members_list_delete_from_chat_btn_with_clean:I = 0x7f130c0e
-
-.field public static profile_members_list_delete_many_from_channel_title:I = 0x7f130c0f
-
-.field public static profile_members_list_delete_many_from_chat_title:I = 0x7f130c10
-
-.field public static profile_members_list_delete_one_from_channel_title:I = 0x7f130c11
-
-.field public static profile_members_list_delete_one_from_chat_title:I = 0x7f130c12
-
-.field public static profile_members_list_invite_by_link_action:I = 0x7f130c13
-
-.field public static profile_members_list_item_added_admin:I = 0x7f130c14
-
-.field public static profile_members_list_item_added_admin_by_you:I = 0x7f130c15
-
-.field public static profile_members_list_item_is_self:I = 0x7f130c16
-
-.field public static profile_members_list_owner_alias:I = 0x7f130c17
-
-.field public static profile_members_list_owner_channel_alias:I = 0x7f130c18
-
-.field public static profile_members_list_owner_chat_alias:I = 0x7f130c19
-
-.field public static profile_members_list_restore_in_admin_snackbar:I = 0x7f130c1a
-
-.field public static profile_members_list_toolbar_admin_title:I = 0x7f130c1b
-
-.field public static profile_notifications_bottom_sheet_title:I = 0x7f130c1f
-
-.field public static profile_notifications_disable_1_day:I = 0x7f130c20
-
-.field public static profile_notifications_disable_1_hour:I = 0x7f130c21
-
-.field public static profile_notifications_disable_4_hour:I = 0x7f130c22
-
-.field public static profile_notifications_disable_forever:I = 0x7f130c23
-
-.field public static profile_notifications_off_snackbar_title:I = 0x7f130c24
-
-.field public static profile_notifications_on_snackbar_title:I = 0x7f130c25
-
-.field public static profile_phone_number_action_copy:I = 0x7f130c26
-
-.field public static profile_phone_number_action_tt_video_call:I = 0x7f130c27
-
-.field public static profile_phone_number_action_tt_voice_call:I = 0x7f130c28
-
-.field public static profile_phone_number_action_voice_call:I = 0x7f130c29
-
-.field public static profile_section_item_action_button_add_member:I = 0x7f130c2a
-
-.field public static profile_section_item_action_button_all_members:I = 0x7f130c2b
-
-.field public static profile_section_item_action_invite_by_link:I = 0x7f130c2c
-
-.field public static profile_self_user_click_snackbar_title:I = 0x7f130c2d
-
-.field public static profile_unsubscribe_channel_action_unsubscribe:I = 0x7f130c3a
-
-.field public static profile_unsubscribe_channel_header:I = 0x7f130c3b
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

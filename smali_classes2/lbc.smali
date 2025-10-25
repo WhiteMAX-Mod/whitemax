@@ -1,6 +1,3 @@
-.class public abstract Llbc;
+.class public interface abstract Llbc;
 .super Ljava/lang/Object;
-
-
-# static fields
-.field public static account_already_exists:I = 0x7f13001f
+.source "SourceFile"

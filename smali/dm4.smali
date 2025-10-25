@@ -2,73 +2,117 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltxd;
+
 
 # instance fields
-.field public a:I
+.field public final synthetic a:Lfm4;
+
+
+# direct methods
+.method public constructor <init>(Lfm4;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldm4;->a:Lfm4;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final c()Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ldm4;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ldm4;
-
-    iget p0, p0, Ldm4;->a:I
-
-    iget p1, p1, Ldm4;->a:I
-
-    if-eq p0, p1, :cond_2
-
-    return v2
-
-    :cond_2
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public final e(J)Lrxd;
+    .locals 11
 
-    iget p0, p0, Ldm4;->a:I
+    iget-object v0, p0, Ldm4;->a:Lfm4;
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v1, v0, Lfm4;->v0:Ljava/lang/Object;
 
-    move-result p0
+    check-cast v1, Lcaf;
 
-    return p0
+    iget v1, v1, Lcaf;->f:I
+
+    int-to-long v1, v1
+
+    mul-long/2addr v1, p1
+
+    const-wide/32 v3, 0xf4240
+
+    div-long/2addr v1, v3
+
+    iget-wide v5, v0, Lfm4;->b:J
+
+    iget-wide v3, v0, Lfm4;->c:J
+
+    sub-long v7, v3, v5
+
+    mul-long/2addr v7, v1
+
+    iget-wide v0, v0, Lfm4;->X:J
+
+    div-long/2addr v7, v0
+
+    add-long/2addr v7, v5
+
+    const-wide/16 v0, 0x7530
+
+    sub-long/2addr v7, v0
+
+    const-wide/16 v0, 0x1
+
+    sub-long/2addr v3, v0
+
+    move-wide v9, v7
+
+    move-wide v7, v3
+
+    move-wide v3, v9
+
+    invoke-static/range {v3 .. v8}, Llig;->j(JJJ)J
+
+    move-result-wide v0
+
+    new-instance v2, Lrxd;
+
+    new-instance v3, Lxxd;
+
+    invoke-direct {v3, p1, p2, v0, v1}, Lxxd;-><init>(JJ)V
+
+    invoke-direct {v2, v3, v3}, Lrxd;-><init>(Lxxd;Lxxd;)V
+
+    return-object v2
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final f()J
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ldm4;->a:Lfm4;
 
-    const-string v1, "DeltaCounter(count="
+    iget-object v1, v0, Lfm4;->v0:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v1, Lcaf;
 
-    iget p0, p0, Ldm4;->a:I
+    iget-wide v2, v0, Lfm4;->X:J
 
-    const/16 v1, 0x29
+    const-wide/32 v4, 0xf4240
 
-    invoke-static {v0, p0, v1}, Lmw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    mul-long/2addr v2, v4
 
-    move-result-object p0
+    iget v0, v1, Lcaf;->f:I
 
-    return-object p0
+    int-to-long v0, v0
+
+    div-long/2addr v2, v0
+
+    return-wide v2
 .end method

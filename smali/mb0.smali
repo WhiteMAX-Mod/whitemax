@@ -3,41 +3,220 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Lmb0;
+
+.field public static final e:Lmb0;
+
+.field public static final f:Lmb0;
+
+.field public static final g:Lmb0;
+
+.field public static final h:Lmb0;
+
+.field public static final i:Lmb0;
+
+.field public static final j:Lmb0;
+
+.field public static final k:Ljava/util/HashSet;
+
+.field public static final l:Ljava/util/List;
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:[B
+.field public final b:Ljava/lang/String;
 
-.field public final c:Lcib;
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;[BLcib;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/util/Size;
 
-    iput-object p1, p0, Lmb0;->a:Ljava/lang/String;
+    const/16 v1, 0x2d0
 
-    iput-object p2, p0, Lmb0;->b:[B
+    const/16 v2, 0x1e0
 
-    iput-object p3, p0, Lmb0;->c:Lcib;
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+
+    new-instance v3, Landroid/util/Size;
+
+    const/16 v4, 0x280
+
+    invoke-direct {v3, v4, v2}, Landroid/util/Size;-><init>(II)V
+
+    filled-new-array {v0, v3}, [Landroid/util/Size;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    new-instance v4, Lmb0;
+
+    const/4 v2, 0x4
+
+    const-string v3, "SD"
+
+    invoke-direct {v4, v2, v3, v0}, Lmb0;-><init>(ILjava/lang/String;Ljava/util/List;)V
+
+    sput-object v4, Lmb0;->d:Lmb0;
+
+    new-instance v0, Landroid/util/Size;
+
+    const/16 v2, 0x500
+
+    invoke-direct {v0, v2, v1}, Landroid/util/Size;-><init>(II)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    new-instance v5, Lmb0;
+
+    const/4 v1, 0x5
+
+    const-string v2, "HD"
+
+    invoke-direct {v5, v1, v2, v0}, Lmb0;-><init>(ILjava/lang/String;Ljava/util/List;)V
+
+    sput-object v5, Lmb0;->e:Lmb0;
+
+    new-instance v0, Landroid/util/Size;
+
+    const/16 v1, 0x780
+
+    const/16 v2, 0x438
+
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    new-instance v6, Lmb0;
+
+    const/4 v1, 0x6
+
+    const-string v2, "FHD"
+
+    invoke-direct {v6, v1, v2, v0}, Lmb0;-><init>(ILjava/lang/String;Ljava/util/List;)V
+
+    sput-object v6, Lmb0;->f:Lmb0;
+
+    new-instance v0, Landroid/util/Size;
+
+    const/16 v1, 0xf00
+
+    const/16 v2, 0x870
+
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    new-instance v7, Lmb0;
+
+    const/16 v1, 0x8
+
+    const-string v2, "UHD"
+
+    invoke-direct {v7, v1, v2, v0}, Lmb0;-><init>(ILjava/lang/String;Ljava/util/List;)V
+
+    sput-object v7, Lmb0;->g:Lmb0;
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v2, Lmb0;
+
+    const/4 v1, 0x0
+
+    const-string v3, "LOWEST"
+
+    invoke-direct {v2, v1, v3, v0}, Lmb0;-><init>(ILjava/lang/String;Ljava/util/List;)V
+
+    sput-object v2, Lmb0;->h:Lmb0;
+
+    new-instance v3, Lmb0;
+
+    const/4 v1, 0x1
+
+    const-string v8, "HIGHEST"
+
+    invoke-direct {v3, v1, v8, v0}, Lmb0;-><init>(ILjava/lang/String;Ljava/util/List;)V
+
+    sput-object v3, Lmb0;->i:Lmb0;
+
+    new-instance v1, Lmb0;
+
+    const/4 v8, -0x1
+
+    const-string v9, "NONE"
+
+    invoke-direct {v1, v8, v9, v0}, Lmb0;-><init>(ILjava/lang/String;Ljava/util/List;)V
+
+    sput-object v1, Lmb0;->j:Lmb0;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    filled-new-array/range {v2 .. v7}, [Lmb0;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    sput-object v0, Lmb0;->k:Ljava/util/HashSet;
+
+    filled-new-array {v7, v6, v5, v4}, [Lmb0;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lmb0;->l:Ljava/util/List;
 
     return-void
 .end method
 
-.method public static a()Ls15;
-    .locals 2
+.method public constructor <init>(ILjava/lang/String;Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Ls15;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lmb0;->a:I
 
-    sget-object v1, Lcib;->a:Lcib;
+    iput-object p2, p0, Lmb0;->b:Ljava/lang/String;
 
-    iput-object v1, v0, Ls15;->c:Ljava/lang/Object;
+    if-eqz p3, :cond_0
 
-    return-object v0
+    iput-object p3, p0, Lmb0;->c:Ljava/util/List;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null typicalSizes"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
@@ -60,9 +239,15 @@
 
     check-cast p1, Lmb0;
 
-    iget-object v1, p0, Lmb0;->a:Ljava/lang/String;
+    iget v1, p0, Lmb0;->a:I
 
-    iget-object v3, p1, Lmb0;->a:Ljava/lang/String;
+    iget v3, p1, Lmb0;->a:I
+
+    if-ne v1, v3, :cond_1
+
+    iget-object v1, p0, Lmb0;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lmb0;->b:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -70,25 +255,15 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lmb0;->b:[B
+    iget-object v1, p0, Lmb0;->c:Ljava/util/List;
 
-    iget-object v3, p1, Lmb0;->b:[B
+    iget-object p1, p1, Lmb0;->c:Ljava/util/List;
 
-    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([B[B)Z
+    invoke-interface {v1, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-eqz v1, :cond_1
-
-    iget-object p0, p0, Lmb0;->c:Lcib;
-
-    iget-object p1, p1, Lmb0;->c:Lcib;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
 
     return v0
 
@@ -99,11 +274,7 @@
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lmb0;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    iget v0, p0, Lmb0;->a:I
 
     const v1, 0xf4243
 
@@ -111,9 +282,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lmb0;->b:[B
+    iget-object v2, p0, Lmb0;->b:Ljava/lang/String;
 
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([B)I
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v2
 
@@ -121,61 +292,49 @@
 
     mul-int/2addr v0, v1
 
-    iget-object p0, p0, Lmb0;->c:Lcib;
+    iget-object v1, p0, Lmb0;->c:Ljava/util/List;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {v1}, Ljava/util/List;->hashCode()I
 
-    move-result p0
+    move-result v1
 
-    xor-int/2addr p0, v0
+    xor-int/2addr v0, v1
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lmb0;->b:[B
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    const-string v1, "ConstantQuality{value="
 
-    const-string v0, ""
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    iget v1, p0, Lmb0;->a:I
 
-    :cond_0
-    const/4 v1, 0x2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+    const-string v1, ", name="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmb0;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", typicalSizes="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmb0;->c:Ljava/util/List;
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Ldy1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "TransportContext("
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lmb0;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lmb0;->c:Lcib;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-static {v1, v0, p0}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

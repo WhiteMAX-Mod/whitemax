@@ -1,96 +1,120 @@
 .class public final Ljj9;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public X:I
+
+.field public final synthetic Y:Lpj9;
+
+.field public final synthetic Z:Llc9;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;)V
+.method public constructor <init>(Lpj9;Llc9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljj9;->Y:Lpj9;
 
-    iput-object p1, p0, Ljj9;->a:Ljava/util/ArrayList;
+    iput-object p2, p0, Ljj9;->Z:Llc9;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lq54;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Ljj9;
+    invoke-virtual {p0, p1, p2}, Ljj9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
+
+    check-cast p1, Ljj9;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Ljj9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Ljj9;
+
+    iget-object v0, p0, Ljj9;->Y:Lpj9;
+
+    iget-object v1, p0, Ljj9;->Z:Llc9;
+
+    invoke-direct {p1, v0, v1, p2}, Ljj9;-><init>(Lpj9;Llc9;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Ljj9;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    check-cast p1, Ljj9;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Ljj9;->a:Ljava/util/ArrayList;
+    iget-object p1, p0, Ljj9;->Y:Lpj9;
 
-    iget-object p1, p1, Ljj9;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Lpj9;->c:Lnje;
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iput v1, p0, Ljj9;->X:I
 
-    move-result p0
+    iget-object v0, p0, Ljj9;->Z:Llc9;
 
-    if-nez p0, :cond_2
+    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :goto_0
-    const/4 p0, 0x0
+    move-result-object p1
 
-    return p0
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    :goto_1
-    const/4 p0, 0x1
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
 
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Ljj9;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MovieThumbnail(qualities="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Ljj9;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

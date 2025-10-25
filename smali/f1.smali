@@ -1,18 +1,47 @@
-.class public abstract Lf1;
-.super Ln1;
+.class public final Lf1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Le1;
+
+# static fields
+.field public static final b:Lf1;
 
 
-# virtual methods
-.method public final isCancelled()Z
-    .locals 0
+# instance fields
+.field public final a:Ljava/lang/Throwable;
 
-    iget-object p0, p0, Ln1;->a:Ljava/lang/Object;
 
-    instance-of p0, p0, Lr0;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    return p0
+    new-instance v0, Lf1;
+
+    new-instance v1, Ld1;
+
+    const-string v2, "Failure occurred while trying to finish a future."
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ld1;-><init>(Ljava/lang/String;I)V
+
+    invoke-direct {v0, v1}, Lf1;-><init>(Ljava/lang/Throwable;)V
+
+    sput-object v0, Lf1;->b:Lf1;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-boolean v0, Ly1;->o:Z
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lf1;->a:Ljava/lang/Throwable;
+
+    return-void
 .end method

@@ -2,15 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc61;
-
 
 # virtual methods
-.method public getPriority()I
-    .locals 0
+.method public abstract a()Z
+.end method
 
-    const/4 p0, 0x1
-
-    return p0
+.method public abstract b()Z
 .end method

@@ -1,124 +1,125 @@
 .class public final Ln6a;
-.super Lzk0;
+.super Landroid/telephony/PhoneStateListener;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Z
-
-.field public Y:Z
-
-.field public final a:Ld8a;
-
-.field public final b:Ljava/util/Iterator;
-
-.field public volatile c:Z
-
-.field public o:Z
+.field public final synthetic a:Lo6a;
 
 
 # direct methods
-.method public constructor <init>(Ld8a;Ljava/util/Iterator;)V
+.method public constructor <init>(Lo6a;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ln6a;->a:Lo6a;
 
-    iput-object p1, p0, Ln6a;->a:Ld8a;
-
-    iput-object p2, p0, Ln6a;->b:Ljava/util/Iterator;
+    invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clear()V
+.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Lix8;->c(Landroid/telephony/TelephonyDisplayInfo;)I
 
-    iput-boolean v0, p0, Ln6a;->X:Z
+    move-result p1
 
-    return-void
-.end method
+    const/4 v0, 0x3
 
-.method public final e()V
-    .locals 1
+    if-eq p1, v0, :cond_1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x4
 
-    iput-boolean v0, p0, Ln6a;->c:Z
+    if-ne p1, v0, :cond_0
 
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    iget-boolean p0, p0, Ln6a;->c:Z
-
-    return p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    iget-boolean p0, p0, Ln6a;->X:Z
-
-    return p0
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 4
-
-    iget-boolean v0, p0, Ln6a;->X:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    return-object v1
+    goto :goto_0
 
     :cond_0
-    iget-boolean v0, p0, Ln6a;->Y:Z
+    const/4 p1, 0x0
 
-    const/4 v2, 0x1
+    goto :goto_1
 
-    iget-object v3, p0, Ln6a;->b:Ljava/util/Iterator;
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    if-eqz v0, :cond_1
+    :goto_1
+    if-eqz p1, :cond_2
 
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    const/16 p1, 0xa
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p1, 0x5
+
+    :goto_2
+    iget-object v0, p0, Ln6a;->a:Lo6a;
+
+    invoke-static {v0, p1}, Lo6a;->a(Lo6a;I)V
+
+    return-void
+.end method
+
+.method public final onServiceStateChanged(Landroid/telephony/ServiceState;)V
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    const-string p1, ""
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/telephony/ServiceState;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    :goto_0
+    const-string v0, "nrState=CONNECTED"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    iput-boolean v2, p0, Ln6a;->X:Z
+    const-string v0, "nrState=NOT_RESTRICTED"
 
-    return-object v1
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    iput-boolean v2, p0, Ln6a;->Y:Z
+    const/4 p1, 0x0
+
+    goto :goto_2
 
     :cond_2
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string v0, "The iterator returned a null value"
-
-    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    return-object p0
-.end method
-
-.method public final q(I)I
-    .locals 0
-
+    :goto_1
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Ln6a;->o:Z
+    :goto_2
+    if-eqz p1, :cond_3
 
-    return p1
+    const/16 p1, 0xa
+
+    goto :goto_3
+
+    :cond_3
+    const/4 p1, 0x5
+
+    :goto_3
+    iget-object v0, p0, Ln6a;->a:Lo6a;
+
+    invoke-static {v0, p1}, Lo6a;->a(Lo6a;I)V
+
+    return-void
 .end method

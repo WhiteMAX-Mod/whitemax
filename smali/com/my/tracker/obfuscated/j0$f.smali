@@ -43,15 +43,15 @@
 
     invoke-virtual {p4, v2, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/j0$f;->b:[B
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/j0$f;->b:[B
 
-    const/4 v0, 0x2
+    const/4 v1, 0x2
 
-    invoke-virtual {p4, v0, p0}, Landroid/database/sqlite/SQLiteProgram;->bindBlob(I[B)V
+    invoke-virtual {p4, v1, v0}, Landroid/database/sqlite/SQLiteProgram;->bindBlob(I[B)V
 
-    new-instance p0, Landroid/database/sqlite/SQLiteCursor;
+    new-instance v0, Landroid/database/sqlite/SQLiteCursor;
 
-    invoke-direct {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteCursor;-><init>(Landroid/database/sqlite/SQLiteDatabase;Landroid/database/sqlite/SQLiteCursorDriver;Ljava/lang/String;Landroid/database/sqlite/SQLiteQuery;)V
+    invoke-direct {v0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteCursor;-><init>(Landroid/database/sqlite/SQLiteDatabase;Landroid/database/sqlite/SQLiteCursorDriver;Ljava/lang/String;Landroid/database/sqlite/SQLiteQuery;)V
 
-    return-object p0
+    return-object v0
 .end method

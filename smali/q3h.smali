@@ -1,80 +1,47 @@
 .class public final Lq3h;
-.super Lq1h;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lc4h;
-
-
-# static fields
-.field public static final synthetic e:I
 
 
 # instance fields
-.field public final synthetic d:Lq5f;
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lwif;
+
+.field public final c:Lwif;
 
 
 # direct methods
-.method public constructor <init>(Lq5f;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    iput-object p1, p0, Lq3h;->d:Lq5f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string p1, "com.google.android.gms.maps.model.internal.ITileProviderDelegate"
+    iput-object p1, p0, Lq3h;->a:Landroid/content/Context;
 
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p1, v0}, Lq1h;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final Z(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
-    .locals 4
+    new-instance p1, Lp3h;
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    invoke-direct {p1, p0, v0}, Lp3h;-><init>(Lq3h;I)V
 
-    if-ne p1, v1, :cond_1
+    new-instance v0, Lwif;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    invoke-direct {v0, p1}, Lwif;-><init>(Lji6;)V
 
-    move-result p1
+    iput-object v0, p0, Lq3h;->b:Lwif;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    new-instance p1, Lp3h;
 
-    move-result v2
+    const/4 v0, 0x1
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    invoke-direct {p1, p0, v0}, Lp3h;-><init>(Lq3h;I)V
 
-    move-result v3
+    new-instance v0, Lwif;
 
-    invoke-static {p2}, Ll4h;->a(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Lwif;-><init>(Lji6;)V
 
-    iget-object p0, p0, Lq3h;->d:Lq5f;
+    iput-object v0, p0, Lq3h;->c:Lwif;
 
-    invoke-interface {p0, p1, v2, v3}, Lq5f;->a(III)Ln5f;
-
-    move-result-object p0
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    if-nez p0, :cond_0
-
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    return v1
-
-    :cond_0
-    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p0, p3, v1}, Ln5f;->writeToParcel(Landroid/os/Parcel;I)V
-
-    return v1
-
-    :cond_1
-    return v0
+    return-void
 .end method

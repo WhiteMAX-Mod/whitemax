@@ -1,124 +1,308 @@
-.class public final synthetic Lup9;
+.class public final Lup9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lad6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lwp9;
+.field public final b:Z
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:J
+
+.field public final f:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwp9;Ljava/lang/Object;I)V
-    .locals 0
+.method public constructor <init>(IZZJJI)V
+    .locals 4
 
-    iput p3, p0, Lup9;->a:I
+    and-int/lit8 v0, p8, 0x2
 
-    iput-object p1, p0, Lup9;->b:Lwp9;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lup9;->c:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
+    move p2, v1
+
+    :cond_0
+    and-int/lit8 v0, p8, 0x4
+
+    if-eqz v0, :cond_1
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    :goto_0
+    and-int/lit8 v2, p8, 0x8
+
+    if-eqz v2, :cond_2
+
+    move p3, v1
+
+    :cond_2
+    and-int/lit8 v1, p8, 0x10
+
+    const-wide/16 v2, 0x0
+
+    if-eqz v1, :cond_3
+
+    move-wide p4, v2
+
+    :cond_3
+    and-int/lit8 p8, p8, 0x20
+
+    if-eqz p8, :cond_4
+
+    move-wide p6, v2
+
+    :cond_4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lup9;->a:I
+
+    iput-boolean p2, p0, Lup9;->b:Z
+
+    iput-boolean v0, p0, Lup9;->c:Z
+
+    iput-boolean p3, p0, Lup9;->d:Z
+
+    iput-wide p4, p0, Lup9;->e:J
+
+    iput-wide p6, p0, Lup9;->f:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lup9;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lup9;
 
     iget v0, p0, Lup9;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p1, Lup9;->a:I
 
-    iget-object v0, p0, Lup9;->c:Ljava/lang/Object;
+    if-eq v0, v1, :cond_2
 
-    check-cast v0, Le0c;
+    goto :goto_0
 
-    check-cast p1, Ltx7;
+    :cond_2
+    iget-boolean v0, p0, Lup9;->b:Z
 
-    iget-object p0, p0, Lup9;->b:Lwp9;
+    iget-boolean v1, p1, Lup9;->b:Z
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eq v0, v1, :cond_3
 
-    const/4 v1, 0x0
+    goto :goto_0
 
-    iput-boolean v1, p1, Ltx7;->a:Z
+    :cond_3
+    iget-boolean v0, p0, Lup9;->c:Z
 
-    const/4 v2, 0x1
+    iget-boolean v1, p1, Lup9;->c:Z
 
-    iput-boolean v2, p1, Ltx7;->b:Z
+    if-eq v0, v1, :cond_4
 
-    iput-boolean v1, p1, Ltx7;->c:Z
+    goto :goto_0
 
-    iput-object v0, p1, Ltx7;->i:Le0c;
+    :cond_4
+    iget-boolean v0, p0, Lup9;->d:Z
 
-    iput-boolean v1, p1, Ltx7;->g:Z
+    iget-boolean v1, p1, Lup9;->d:Z
 
-    iput-boolean v1, p1, Ltx7;->h:Z
+    if-eq v0, v1, :cond_5
 
-    iget-object p0, p0, Lwp9;->s0:Lxvf;
+    goto :goto_0
 
-    iget-boolean p0, p0, Lxvf;->d:Z
+    :cond_5
+    iget-wide v0, p0, Lup9;->e:J
 
-    iput-boolean p0, p1, Ltx7;->n:Z
+    iget-wide v2, p1, Lup9;->e:J
 
-    return-object p1
+    cmp-long v0, v0, v2
 
-    :pswitch_0
-    iget-object v0, p0, Lup9;->c:Ljava/lang/Object;
+    if-eqz v0, :cond_6
 
-    check-cast v0, Lvp9;
+    goto :goto_0
 
-    check-cast p1, Ltx7;
+    :cond_6
+    iget-wide v0, p0, Lup9;->f:J
 
-    iget-object p0, p0, Lup9;->b:Lwp9;
+    iget-wide v2, p1, Lup9;->f:J
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    cmp-long p1, v0, v2
 
-    iget-object v1, v0, Lvp9;->b:Lxvf;
+    if-eqz p1, :cond_7
 
-    iget-object v1, v1, Lxvf;->a:Le0c;
+    :goto_0
+    const/4 p1, 0x0
 
-    iput-object v1, p1, Ltx7;->i:Le0c;
+    return p1
+
+    :cond_7
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lup9;->a:I
+
+    invoke-static {v0}, Ldy1;->v(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lup9;->b:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lup9;->c:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lup9;->d:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lup9;->e:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lup9;->f:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ScrollWork(scrollType="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
-    iput-boolean v1, p1, Ltx7;->a:Z
+    iget v2, p0, Lup9;->a:I
 
-    iput-boolean v1, p1, Ltx7;->b:Z
+    if-eq v2, v1, :cond_3
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
-    iput-boolean v1, p1, Ltx7;->g:Z
+    if-eq v2, v1, :cond_2
 
-    iput-boolean v1, p1, Ltx7;->h:Z
+    const/4 v1, 0x3
 
-    iput-boolean v1, p1, Ltx7;->c:Z
+    if-eq v2, v1, :cond_1
 
-    iget-object p0, p0, Lwp9;->s0:Lxvf;
+    const/4 v1, 0x4
 
-    iget-boolean p0, p0, Lxvf;->d:Z
+    if-eq v2, v1, :cond_0
 
-    iput-boolean p0, p1, Ltx7;->n:Z
+    const-string v1, "null"
 
-    iget-boolean p0, v0, Lvp9;->e:Z
+    goto :goto_0
 
-    iput-boolean p0, p1, Ltx7;->o:Z
+    :cond_0
+    const-string v1, "TO_ANCHOR"
 
-    return-object p1
+    goto :goto_0
 
-    nop
+    :cond_1
+    const-string v1, "TO_LAST_NEW"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "TO_LAST"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "TO_UNREAD"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", highlight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lup9;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", instant="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", alignToBottom="
+
+    const-string v2, ", msgId="
+
+    iget-boolean v3, p0, Lup9;->c:Z
+
+    iget-boolean v4, p0, Lup9;->d:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Ldy1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    iget-wide v1, p0, Lup9;->e:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", time="
+
+    const-string v2, ")"
+
+    iget-wide v3, p0, Lup9;->f:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lu15;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

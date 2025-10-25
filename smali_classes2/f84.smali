@@ -1,126 +1,61 @@
-.class public final synthetic Lf84;
-.super Ljava/lang/Object;
+.class public final Lf84;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lzf2;
 
-.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
+.field public Y:Lj1a;
 
-.field public final synthetic c:I
+.field public Z:Li46;
+
+.field public o:Ln84;
+
+.field public q0:Lzf2;
+
+.field public r0:Lyfd;
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Ln84;
+
+.field public u0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;II)V
+.method public constructor <init>(Ln84;Ly14;)V
     .locals 0
 
-    iput p3, p0, Lf84;->a:I
+    iput-object p1, p0, Lf84;->t0:Ln84;
 
-    iput-object p1, p0, Lf84;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
-
-    iput p2, p0, Lf84;->c:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lf84;->a:I
+    iput-object p1, p0, Lf84;->s0:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lf84;->u0:I
 
-    iget-object v0, p0, Lf84;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
+    const/high16 v0, -0x80000000
 
-    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->G0:Landroidx/recyclerview/widget/RecyclerView;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    iput p1, p0, Lf84;->u0:I
 
-    move-result-object v2
+    iget-object p1, p0, Lf84;->t0:Ln84;
 
-    check-cast v2, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;
+    const/4 v0, 0x0
 
-    iget v3, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->P0:I
+    invoke-virtual {p1, v0, v0, p0}, Ln84;->I(Lzf2;Ljava/lang/Integer;Ly14;)Ljava/lang/Object;
 
-    iget p0, p0, Lf84;->c:I
+    move-result-object p1
 
-    invoke-virtual {v2, p0, v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->m1(II)V
-
-    new-instance p0, Lg84;
-
-    const/4 v2, 0x1
-
-    invoke-direct {p0, v0, v2}, Lg84;-><init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;I)V
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lf84;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
-
-    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->H0:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v2
-
-    check-cast v2, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;
-
-    iget v3, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->P0:I
-
-    iget p0, p0, Lf84;->c:I
-
-    invoke-virtual {v2, p0, v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->m1(II)V
-
-    new-instance p0, Lg84;
-
-    const/4 v2, 0x2
-
-    invoke-direct {p0, v0, v2}, Lg84;-><init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;I)V
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lf84;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
-
-    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->F0:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v2
-
-    check-cast v2, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;
-
-    iget v3, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->P0:I
-
-    iget p0, p0, Lf84;->c:I
-
-    invoke-virtual {v2, p0, v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->m1(II)V
-
-    new-instance p0, Lg84;
-
-    const/4 v2, 0x0
-
-    invoke-direct {p0, v0, v2}, Lg84;-><init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;I)V
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

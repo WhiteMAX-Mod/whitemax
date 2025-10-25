@@ -1,125 +1,96 @@
-.class public final Ldp1;
-.super Lgs3;
+.class public final synthetic Ldp1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic a:I
 
-.field public final d:Z
+.field public final synthetic b:Lfp1;
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method public synthetic constructor <init>(Lfp1;I)V
     .locals 0
 
+    iput p2, p0, Ldp1;->a:I
+
+    iput-object p1, p0, Ldp1;->b:Lfp1;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Ldp1;->c:J
-
-    iput-boolean p3, p0, Ldp1;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ldp1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ldp1;
-
-    iget-wide v3, p0, Ldp1;->c:J
-
-    iget-wide v5, p1, Ldp1;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean p0, p0, Ldp1;->d:Z
-
-    iget-boolean p1, p1, Ldp1;->d:Z
-
-    if-eq p0, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    iget-wide v0, p0, Ldp1;->c:J
+    iget p1, p0, Ldp1;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v0, p0, Ldp1;->b:Lfp1;
 
-    move-result v0
+    packed-switch p1, :pswitch_data_0
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p1, v0, Lfp1;->E0:Lep1;
 
-    iget-boolean p0, p0, Ldp1;->d:Z
+    if-eqz p1, :cond_0
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-boolean v0, v0, Lfp1;->F0:Z
 
-    move-result p0
+    xor-int/lit8 v0, v0, 0x1
 
-    add-int/2addr p0, v0
+    check-cast p1, Lml1;
 
-    return p0
-.end method
+    iget-object p1, p1, Lml1;->a:Lone/me/calls/ui/ui/call/CallScreen;
 
-.method public final r()Z
-    .locals 0
+    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
 
-    iget-boolean p0, p0, Ldp1;->d:Z
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lio1;
 
-    return p0
-.end method
+    move-result-object p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iget-object p1, p1, Lio1;->c:Lcv1;
 
-    const-string v0, "User(userId="
+    iget-object p1, p1, Lcv1;->h:Lvpd;
 
-    const-string v1, ", isVideo="
+    invoke-virtual {p1, v0}, Lvpd;->a(Z)V
 
-    iget-wide v2, p0, Ldp1;->c:J
+    :cond_0
+    return-void
 
-    iget-boolean p0, p0, Ldp1;->d:Z
+    :pswitch_0
+    iget-object p1, v0, Lfp1;->E0:Lep1;
 
-    invoke-static {v2, v3, v0, v1, p0}, Lsg0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_1
 
-    move-result-object p0
+    check-cast p1, Lml1;
 
-    const-string v0, ")"
+    iget-object p1, p1, Lml1;->a:Lone/me/calls/ui/ui/call/CallScreen;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lio1;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1, v0}, Lio1;->z(ZLandroid/content/Intent;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

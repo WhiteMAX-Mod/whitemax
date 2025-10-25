@@ -1,110 +1,91 @@
-.class public final Lu1h;
+.class public abstract Lu1h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbl;
+# static fields
+.field public static final a:La2h;
 
-.field public final b:Lqj5;
+.field public static final b:Lt62;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbl;Lqj5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iput-object p1, p0, Lu1h;->a:Lbl;
+    const/16 v1, 0x1d
 
-    iput-object p2, p0, Lu1h;->b:Lqj5;
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Lb2h;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lu1h;->a:La2h;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, La2h;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lu1h;->a:La2h;
+
+    :goto_0
+    new-instance v0, Lt62;
+
+    const-string v1, "translationAlpha"
+
+    const/16 v2, 0xb
+
+    const-class v3, Ljava/lang/Float;
+
+    invoke-direct {v0, v3, v1, v2}, Lt62;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lu1h;->b:Lt62;
+
+    new-instance v0, Lt62;
+
+    const-string v1, "clipBounds"
+
+    const/16 v2, 0xc
+
+    const-class v3, Landroid/graphics/Rect;
+
+    invoke-direct {v0, v3, v1, v2}, Lt62;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
 
     return-void
 .end method
 
+.method public static a(Landroid/view/View;IIII)V
+    .locals 6
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    sget-object v0, Lu1h;->a:La2h;
 
-    const/4 v0, 0x0
+    move-object v1, p0
 
-    if-eqz p1, :cond_0
+    move v2, p1
 
-    instance-of v1, p1, Lu1h;
+    move v3, p2
 
-    if-eqz v1, :cond_0
+    move v4, p3
 
-    check-cast p1, Lu1h;
+    move v5, p4
 
-    iget-object v1, p0, Lu1h;->a:Lbl;
+    invoke-virtual/range {v0 .. v5}, La2h;->f(Landroid/view/View;IIII)V
 
-    iget-object v2, p1, Lu1h;->a:Lbl;
-
-    invoke-static {v1, v2}, Lhv8;->l(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object p0, p0, Lu1h;->b:Lqj5;
-
-    iget-object p1, p1, Lu1h;->b:Lqj5;
-
-    invoke-static {p0, p1}, Lhv8;->l(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public static b(Landroid/view/View;I)V
     .locals 1
 
-    iget-object v0, p0, Lu1h;->a:Lbl;
+    sget-object v0, Lu1h;->a:La2h;
 
-    iget-object p0, p0, Lu1h;->b:Lqj5;
+    invoke-virtual {v0, p0, p1}, La2h;->c(Landroid/view/View;I)V
 
-    filled-new-array {v0, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Lbh8;
-
-    invoke-direct {v0, p0}, Lbh8;-><init>(Ljava/lang/Object;)V
-
-    const-string v1, "key"
-
-    iget-object v2, p0, Lu1h;->a:Lbl;
-
-    invoke-virtual {v0, v2, v1}, Lbh8;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v1, "feature"
-
-    iget-object p0, p0, Lu1h;->b:Lqj5;
-
-    invoke-virtual {v0, p0, v1}, Lbh8;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lbh8;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

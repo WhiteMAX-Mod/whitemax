@@ -3,102 +3,108 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final X:Lay3;
+.field public final synthetic a:Landroid/view/View;
 
-.field public Y:Z
+.field public final synthetic b:F
 
-.field public final synthetic Z:Leh;
+.field public final synthetic c:F
 
-.field public final a:Landroid/view/ViewGroup;
-
-.field public final b:Landroid/view/View;
-
-.field public final c:Landroid/view/View;
-
-.field public final o:Z
+.field public final synthetic d:Z
 
 
 # direct methods
-.method public constructor <init>(Leh;Lay3;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
+.method public constructor <init>(Landroid/view/View;FFZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lch;->Z:Leh;
+    iput-object p1, p0, Lch;->a:Landroid/view/View;
 
-    iput-object p5, p0, Lch;->a:Landroid/view/ViewGroup;
+    iput p2, p0, Lch;->b:F
 
-    iput-object p3, p0, Lch;->b:Landroid/view/View;
+    iput p3, p0, Lch;->c:F
 
-    iput-object p4, p0, Lch;->c:Landroid/view/View;
-
-    iput-boolean p6, p0, Lch;->o:Z
-
-    iput-object p2, p0, Lch;->X:Lay3;
+    iput-boolean p4, p0, Lch;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 9
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 1
 
-    iget-boolean v0, p0, Lch;->Y:Z
+    iget p1, p0, Lch;->c:F
 
-    if-nez v0, :cond_1
+    iget-object v0, p0, Lch;->a:Landroid/view/View;
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    iput-boolean v0, p0, Lch;->Y:Z
+    iget-boolean p1, p0, Lch;->d:Z
 
-    iget-object v0, p0, Lch;->c:Landroid/view/View;
+    if-eqz p1, :cond_0
 
-    if-eqz v0, :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+    goto :goto_0
 
     :cond_0
-    const/4 v7, 0x1
+    const/16 p1, 0x8
 
-    iget-object v8, p0, Lch;->X:Lay3;
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v2, p0, Lch;->Z:Leh;
-
-    iget-object v3, p0, Lch;->a:Landroid/view/ViewGroup;
-
-    iget-object v4, p0, Lch;->b:Landroid/view/View;
-
-    iget-object v5, p0, Lch;->c:Landroid/view/View;
-
-    iget-boolean v6, p0, Lch;->o:Z
-
-    invoke-virtual/range {v2 .. v8}, Leh;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZLay3;)V
-
-    :cond_1
     return-void
 .end method
 
-.method public final onPreDraw()Z
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget p1, p0, Lch;->c:F
+
+    iget-object v0, p0, Lch;->a:Landroid/view/View;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
+
+    iget-boolean p1, p0, Lch;->d:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
-    invoke-virtual {p0}, Lch;->a()V
+    return-void
+.end method
 
-    const/4 p0, 0x1
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
 
-    return p0
+    iget p1, p0, Lch;->b:F
+
+    iget-object v0, p0, Lch;->a:Landroid/view/View;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
 .end method

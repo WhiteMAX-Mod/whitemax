@@ -11,45 +11,45 @@
 
 # virtual methods
 .method public getAlpha()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/onechat/widgets/NumberTextView;->b:F
+    iget v0, p0, Lru/ok/onechat/widgets/NumberTextView;->b:F
 
-    return p0
+    return v0
 .end method
 
 .method public getOldTextWidth()F
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public getProgress()F
-    .locals 0
+    .locals 1
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    iget p0, p0, Lru/ok/onechat/widgets/NumberTextView;->a:F
+    iget v0, p0, Lru/ok/onechat/widgets/NumberTextView;->a:F
 
-    return p0
+    return v0
 .end method
 
 .method public getTextWidth()F
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
 .method public final onMeasure(II)V
@@ -85,9 +85,9 @@
 .method public setBold(Z)V
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setCenterAlign(Z)V
@@ -102,7 +102,7 @@
     return-void
 .end method
 
-.method public setOnTextWidthProgressChangedListener(Ll4a;)V
+.method public setOnTextWidthProgressChangedListener(Lkha;)V
     .locals 0
 
     return-void
@@ -132,41 +132,41 @@
 .method public setTextColor(I)V
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setTextSize(I)V
-    .locals 1
+    .locals 2
 
-    sget-object v0, Lvo4;->a:Ljava/lang/Object;
+    sget-object v0, Lau4;->a:Ljava/lang/Object;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    int-to-float p0, p1
+    int-to-float p1, p1
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object p1
+    move-result-object v0
 
-    const/4 v0, 0x2
+    const/4 v1, 0x2
 
-    invoke-static {v0, p0, p1}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+    invoke-static {v1, p1, v0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
 .method public setTypeface(Landroid/graphics/Typeface;)V
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method

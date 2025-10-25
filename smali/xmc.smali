@@ -1,81 +1,30 @@
-.class public final enum Lxmc;
-.super Ljava/lang/Enum;
-.source "SourceFile"
+.class public abstract Lxmc;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum a:Lxmc;
+.field public static ghost_view:I = 0x7f0a03e1
 
-.field public static final enum b:Lxmc;
+.field public static ghost_view_holder:I = 0x7f0a03e2
 
-.field public static final synthetic c:[Lxmc;
+.field public static parent_matrix:I = 0x7f0a08d9
 
+.field public static save_non_transition_alpha:I = 0x7f0a0b0b
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.field public static save_overlay_view:I = 0x7f0a0b0c
 
-    new-instance v0, Lxmc;
+.field public static transition_clip:I = 0x7f0a0c31
 
-    const-string v1, "UNDEFINE"
+.field public static transition_current_scene:I = 0x7f0a0c32
 
-    const/4 v2, 0x0
+.field public static transition_image_transform:I = 0x7f0a0c33
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+.field public static transition_layout_save:I = 0x7f0a0c34
 
-    new-instance v1, Lxmc;
+.field public static transition_pause_alpha:I = 0x7f0a0c35
 
-    const-string v2, "OWNER_EXIT"
+.field public static transition_position:I = 0x7f0a0c36
 
-    const/4 v3, 0x1
+.field public static transition_scene_layoutid_cache:I = 0x7f0a0c37
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lxmc;->a:Lxmc;
-
-    new-instance v2, Lxmc;
-
-    const-string v3, "RECORD_STOP"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lxmc;->b:Lxmc;
-
-    filled-new-array {v0, v1, v2}, [Lxmc;
-
-    move-result-object v0
-
-    sput-object v0, Lxmc;->c:[Lxmc;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lxmc;
-    .locals 1
-
-    const-class v0, Lxmc;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lxmc;
-
-    return-object p0
-.end method
-
-.method public static values()[Lxmc;
-    .locals 1
-
-    sget-object v0, Lxmc;->c:[Lxmc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lxmc;
-
-    return-object v0
-.end method
+.field public static transition_transform:I = 0x7f0a0c38

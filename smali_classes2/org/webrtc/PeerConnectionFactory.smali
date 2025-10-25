@@ -67,13 +67,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string p1, "Failed to initialize PeerConnectionFactory!"
+    const-string p2, "Failed to initialize PeerConnectionFactory!"
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public static bridge synthetic a()V
@@ -140,20 +140,20 @@
 
     const-wide/16 v2, 0x0
 
-    cmp-long p0, v0, v2
+    cmp-long v0, v0, v2
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "PeerConnectionFactory has been disposed."
+    const-string v1, "PeerConnectionFactory has been disposed."
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public static fieldTrialsFindFullName(Ljava/lang/String;)Ljava/lang/String;
@@ -327,7 +327,13 @@
 .method private static native nativeSetAnimojiParams(JZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer;)V
 .end method
 
+.method private static native nativeSetKeywordSpotterParams(JZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer;)V
+.end method
+
 .method private static native nativeSetPreprocessorParams(JZILjava/lang/String;IIIIIZLorg/webrtc/NativeRunnable;)V
+.end method
+
+.method private static native nativeSetTFLiteLibraryPath(JLjava/lang/String;)V
 .end method
 
 .method private static native nativeShutdownInternalTracer()V
@@ -349,7 +355,7 @@
 .end method
 
 .method private onNetworkThreadReady()V
-    .locals 1
+    .locals 2
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
@@ -359,21 +365,21 @@
 
     iput-object v0, p0, Lorg/webrtc/PeerConnectionFactory;->networkThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnectionFactory;->networkThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
+    iget-object v0, p0, Lorg/webrtc/PeerConnectionFactory;->networkThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
 
-    sput-object p0, Lorg/webrtc/PeerConnectionFactory;->staticNetworkThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
+    sput-object v0, Lorg/webrtc/PeerConnectionFactory;->staticNetworkThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
 
-    const-string p0, "PeerConnectionFactory"
+    const-string v0, "PeerConnectionFactory"
 
-    const-string v0, "onNetworkThreadReady"
+    const-string v1, "onNetworkThreadReady"
 
-    invoke-static {p0, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private onSignalingThreadReady()V
-    .locals 1
+    .locals 2
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
@@ -383,21 +389,21 @@
 
     iput-object v0, p0, Lorg/webrtc/PeerConnectionFactory;->signalingThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnectionFactory;->signalingThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
+    iget-object v0, p0, Lorg/webrtc/PeerConnectionFactory;->signalingThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
 
-    sput-object p0, Lorg/webrtc/PeerConnectionFactory;->staticSignalingThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
+    sput-object v0, Lorg/webrtc/PeerConnectionFactory;->staticSignalingThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
 
-    const-string p0, "PeerConnectionFactory"
+    const-string v0, "PeerConnectionFactory"
 
-    const-string v0, "onSignalingThreadReady"
+    const-string v1, "onSignalingThreadReady"
 
-    invoke-static {p0, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private onWorkerThreadReady()V
-    .locals 1
+    .locals 2
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
@@ -407,15 +413,15 @@
 
     iput-object v0, p0, Lorg/webrtc/PeerConnectionFactory;->workerThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnectionFactory;->workerThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
+    iget-object v0, p0, Lorg/webrtc/PeerConnectionFactory;->workerThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
 
-    sput-object p0, Lorg/webrtc/PeerConnectionFactory;->staticWorkerThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
+    sput-object v0, Lorg/webrtc/PeerConnectionFactory;->staticWorkerThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
 
-    const-string p0, "PeerConnectionFactory"
+    const-string v0, "PeerConnectionFactory"
 
-    const-string v0, "onWorkerThreadReady"
+    const-string v1, "onWorkerThreadReady"
 
-    invoke-static {p0, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -500,7 +506,7 @@
 
     const-string v5, "pid: "
 
-    invoke-static {v5, p1, v2, v1, v4}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, p1, v2, v1, v4}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -600,9 +606,9 @@
 
     invoke-static {v1, v2, p1}, Lorg/webrtc/PeerConnectionFactory;->nativeCreateAudioSource(JLorg/webrtc/MediaConstraints;)J
 
-    move-result-wide p0
+    move-result-wide v1
 
-    invoke-direct {v0, p0, p1}, Lorg/webrtc/AudioSource;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Lorg/webrtc/AudioSource;-><init>(J)V
 
     return-object v0
 .end method
@@ -622,9 +628,9 @@
 
     invoke-static {v1, v2, p1, v3, v4}, Lorg/webrtc/PeerConnectionFactory;->nativeCreateAudioTrack(JLjava/lang/String;J)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    invoke-direct {v0, p0, p1}, Lorg/webrtc/AudioTrack;-><init>(J)V
+    invoke-direct {v0, p1, p2}, Lorg/webrtc/AudioTrack;-><init>(J)V
 
     return-object v0
 .end method
@@ -640,9 +646,9 @@
 
     invoke-static {v1, v2, p1}, Lorg/webrtc/PeerConnectionFactory;->nativeCreateLocalMediaStream(JLjava/lang/String;)J
 
-    move-result-wide p0
+    move-result-wide v1
 
-    invoke-direct {v0, p0, p1}, Lorg/webrtc/MediaStream;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Lorg/webrtc/MediaStream;-><init>(J)V
 
     return-object v0
 .end method
@@ -678,9 +684,9 @@
     .line 4
     invoke-virtual {p0, v0, p2, p3}, Lorg/webrtc/PeerConnectionFactory;->createPeerConnection(Lorg/webrtc/PeerConnection$RTCConfiguration;Lorg/webrtc/MediaConstraints;Lorg/webrtc/PeerConnection$Observer;)Lorg/webrtc/PeerConnection;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public createPeerConnection(Ljava/util/List;Lorg/webrtc/PeerConnection$Observer;)Lorg/webrtc/PeerConnection;
@@ -710,9 +716,9 @@
     .line 7
     invoke-virtual {p0, v0, p2}, Lorg/webrtc/PeerConnectionFactory;->createPeerConnection(Lorg/webrtc/PeerConnection$RTCConfiguration;Lorg/webrtc/PeerConnection$Observer;)Lorg/webrtc/PeerConnection;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public createPeerConnection(Lorg/webrtc/PeerConnection$RTCConfiguration;Lorg/webrtc/MediaConstraints;Lorg/webrtc/PeerConnection$Observer;)Lorg/webrtc/PeerConnection;
@@ -725,9 +731,9 @@
     .line 1
     invoke-virtual {p0, p1, p2, p3, v0}, Lorg/webrtc/PeerConnectionFactory;->createPeerConnectionInternal(Lorg/webrtc/PeerConnection$RTCConfiguration;Lorg/webrtc/MediaConstraints;Lorg/webrtc/PeerConnection$Observer;Lorg/webrtc/SSLCertificateVerifier;)Lorg/webrtc/PeerConnection;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public createPeerConnection(Lorg/webrtc/PeerConnection$RTCConfiguration;Lorg/webrtc/PeerConnection$Observer;)Lorg/webrtc/PeerConnection;
@@ -738,9 +744,9 @@
     .line 8
     invoke-virtual {p0, p1, v0, p2}, Lorg/webrtc/PeerConnectionFactory;->createPeerConnection(Lorg/webrtc/PeerConnection$RTCConfiguration;Lorg/webrtc/MediaConstraints;Lorg/webrtc/PeerConnection$Observer;)Lorg/webrtc/PeerConnection;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public createPeerConnection(Lorg/webrtc/PeerConnection$RTCConfiguration;Lorg/webrtc/PeerConnectionDependencies;)Lorg/webrtc/PeerConnection;
@@ -760,9 +766,9 @@
     .line 10
     invoke-virtual {p0, p1, v1, v0, p2}, Lorg/webrtc/PeerConnectionFactory;->createPeerConnectionInternal(Lorg/webrtc/PeerConnection$RTCConfiguration;Lorg/webrtc/MediaConstraints;Lorg/webrtc/PeerConnection$Observer;Lorg/webrtc/SSLCertificateVerifier;)Lorg/webrtc/PeerConnection;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public createPeerConnectionInternal(Lorg/webrtc/PeerConnection$RTCConfiguration;Lorg/webrtc/MediaConstraints;Lorg/webrtc/PeerConnection$Observer;Lorg/webrtc/SSLCertificateVerifier;)Lorg/webrtc/PeerConnection;
@@ -795,20 +801,20 @@
 
     invoke-static/range {v0 .. v6}, Lorg/webrtc/PeerConnectionFactory;->nativeCreatePeerConnection(JLorg/webrtc/PeerConnection$RTCConfiguration;Lorg/webrtc/MediaConstraints;JLorg/webrtc/SSLCertificateVerifier;)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    cmp-long p2, p0, v7
+    cmp-long p3, p1, v7
 
-    if-nez p2, :cond_1
+    if-nez p3, :cond_1
 
     return-object v9
 
     :cond_1
-    new-instance p2, Lorg/webrtc/PeerConnection;
+    new-instance p3, Lorg/webrtc/PeerConnection;
 
-    invoke-direct {p2, p0, p1}, Lorg/webrtc/PeerConnection;-><init>(J)V
+    invoke-direct {p3, p1, p2}, Lorg/webrtc/PeerConnection;-><init>(J)V
 
-    return-object p2
+    return-object p3
 .end method
 
 .method public createVideoSource(Z)Lorg/webrtc/VideoSource;
@@ -819,9 +825,9 @@
     .line 3
     invoke-virtual {p0, p1, v0}, Lorg/webrtc/PeerConnectionFactory;->createVideoSource(ZZ)Lorg/webrtc/VideoSource;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public createVideoSource(ZZ)Lorg/webrtc/VideoSource;
@@ -837,9 +843,9 @@
 
     invoke-static {v1, v2, p1, p2}, Lorg/webrtc/PeerConnectionFactory;->nativeCreateVideoSource(JZZ)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    invoke-direct {v0, p0, p1}, Lorg/webrtc/VideoSource;-><init>(J)V
+    invoke-direct {v0, p1, p2}, Lorg/webrtc/VideoSource;-><init>(J)V
 
     return-object v0
 .end method
@@ -859,9 +865,9 @@
 
     invoke-static {v1, v2, p1, v3, v4}, Lorg/webrtc/PeerConnectionFactory;->nativeCreateVideoTrack(JLjava/lang/String;J)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    invoke-direct {v0, p0, p1}, Lorg/webrtc/VideoTrack;-><init>(J)V
+    invoke-direct {v0, p1, p2}, Lorg/webrtc/VideoTrack;-><init>(J)V
 
     return-object v0
 .end method
@@ -923,9 +929,9 @@
 
     invoke-static {v0, v1, p1}, Lorg/webrtc/PeerConnectionFactory;->nativeGetRtpReceiverCapabilities(JLorg/webrtc/MediaStreamTrack$MediaType;)Lorg/webrtc/RtpCapabilities;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getRtpSenderCapabilities(Lorg/webrtc/MediaStreamTrack$MediaType;)Lorg/webrtc/RtpCapabilities;
@@ -937,9 +943,9 @@
 
     invoke-static {v0, v1, p1}, Lorg/webrtc/PeerConnectionFactory;->nativeGetRtpSenderCapabilities(JLorg/webrtc/MediaStreamTrack$MediaType;)Lorg/webrtc/RtpCapabilities;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public printInternalStackTraces(Z)V
@@ -953,23 +959,37 @@
 
     invoke-static {v0, p1}, Lorg/webrtc/PeerConnectionFactory;->printStackTrace(Lorg/webrtc/PeerConnectionFactory$ThreadInfo;Z)V
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnectionFactory;->networkThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
+    iget-object v0, p0, Lorg/webrtc/PeerConnectionFactory;->networkThread:Lorg/webrtc/PeerConnectionFactory$ThreadInfo;
 
-    invoke-static {p0, p1}, Lorg/webrtc/PeerConnectionFactory;->printStackTrace(Lorg/webrtc/PeerConnectionFactory$ThreadInfo;Z)V
+    invoke-static {v0, p1}, Lorg/webrtc/PeerConnectionFactory;->printStackTrace(Lorg/webrtc/PeerConnectionFactory$ThreadInfo;Z)V
 
     return-void
 .end method
 
 .method public setAnimojiParams(ZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
-    .locals 2
+    .locals 3
 
     iget-wide v0, p0, Lorg/webrtc/PeerConnectionFactory;->nativeFactory:J
 
-    new-instance p0, Lorg/webrtc/NativeDoubleArrayConsumer;
+    new-instance v2, Lorg/webrtc/NativeDoubleArrayConsumer;
 
-    invoke-direct {p0, p3}, Lorg/webrtc/NativeDoubleArrayConsumer;-><init>(Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
+    invoke-direct {v2, p3}, Lorg/webrtc/NativeDoubleArrayConsumer;-><init>(Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
 
-    invoke-static {v0, v1, p1, p2, p0}, Lorg/webrtc/PeerConnectionFactory;->nativeSetAnimojiParams(JZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer;)V
+    invoke-static {v0, v1, p1, p2, v2}, Lorg/webrtc/PeerConnectionFactory;->nativeSetAnimojiParams(JZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer;)V
+
+    return-void
+.end method
+
+.method public setKeywordSpotterParams(ZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
+    .locals 3
+
+    iget-wide v0, p0, Lorg/webrtc/PeerConnectionFactory;->nativeFactory:J
+
+    new-instance v2, Lorg/webrtc/NativeDoubleArrayConsumer;
+
+    invoke-direct {v2, p3}, Lorg/webrtc/NativeDoubleArrayConsumer;-><init>(Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
+
+    invoke-static {v0, v1, p1, p2, v2}, Lorg/webrtc/PeerConnectionFactory;->nativeSetKeywordSpotterParams(JZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer;)V
 
     return-void
 .end method
@@ -990,9 +1010,9 @@
 
     new-instance v11, Lorg/webrtc/NativeRunnable;
 
-    move-object/from16 p0, p10
+    move-object/from16 p2, p10
 
-    invoke-direct {v11, p0}, Lorg/webrtc/NativeRunnable;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {v11, p2}, Lorg/webrtc/NativeRunnable;-><init>(Ljava/lang/Runnable;)V
 
     move v2, p1
 
@@ -1015,6 +1035,16 @@
     return-void
 .end method
 
+.method public setTFLiteLibraryPath(Ljava/lang/String;)V
+    .locals 2
+
+    iget-wide v0, p0, Lorg/webrtc/PeerConnectionFactory;->nativeFactory:J
+
+    invoke-static {v0, v1, p1}, Lorg/webrtc/PeerConnectionFactory;->nativeSetTFLiteLibraryPath(JLjava/lang/String;)V
+
+    return-void
+.end method
+
 .method public startAecDump(II)Z
     .locals 2
 
@@ -1024,9 +1054,9 @@
 
     invoke-static {v0, v1, p1, p2}, Lorg/webrtc/PeerConnectionFactory;->nativeStartAecDump(JII)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public stopAecDump()V

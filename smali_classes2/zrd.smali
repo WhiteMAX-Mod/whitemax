@@ -1,101 +1,75 @@
 .class public final Lzrd;
-.super Lasd;
+.super Lrdi;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
+.method public synthetic constructor <init>(Landroid/view/View;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lzrd;->c:I
 
-    iput-object p1, p0, Lzrd;->a:Landroid/net/Uri;
+    const/16 p2, 0xd
+
+    invoke-direct {p0, p2, p1}, Lrdi;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lzrd;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzrd;
-
-    iget-object p0, p0, Lzrd;->a:Landroid/net/Uri;
-
-    iget-object p1, p1, Lzrd;->a:Landroid/net/Uri;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final l0(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
     .locals 0
 
-    iget-object p0, p0, Lzrd;->a:Landroid/net/Uri;
+    iget p1, p0, Lzrd;->c:I
 
-    if-nez p0, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    const/4 p0, 0x0
+    const-string p1, "ContextMenu.ScrollHelper"
 
-    return p0
+    const-string p2, "ScrollView scroll is not yet supported!"
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/net/Uri;->hashCode()I
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result p0
+    return-void
 
-    return p0
-.end method
+    :pswitch_0
+    const-string p1, "ContextMenu.ScrollHelper"
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    const-string p2, "NestedScrollView scroll is not yet supported!"
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v1, "ShowInviteDialog(qrCodeUri="
+    return-void
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :pswitch_1
+    const-string p1, "ContextMenu.ScrollHelper"
 
-    iget-object p0, p0, Lzrd;->a:Landroid/net/Uri;
+    const-string p2, "HorizontalScrollView scroll is not yet supported!"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string p0, ")"
+    return-void
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_2
+    const-string p1, "ContextMenu.ScrollHelper"
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string p2, "AdapterView scroll is not yet supported!"
 
-    move-result-object p0
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-object p0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

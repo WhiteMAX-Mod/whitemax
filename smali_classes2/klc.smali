@@ -1,87 +1,34 @@
-.class public final Lklc;
+.class public abstract Lklc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lolc;
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static attach_bar_thumbnail_size:I = 0x7f070054
 
+.field public static flash_close_button_height:I = 0x7f0700f8
 
-# direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.field public static flash_close_button_width:I = 0x7f0700f9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static flash_close_wrapper_height:I = 0x7f0700fa
 
-    iput-boolean p1, p0, Lklc;->a:Z
+.field public static flash_close_wrapper_width:I = 0x7f0700fb
 
-    return-void
-.end method
+.field public static full_screen_mode_button_height:I = 0x7f070114
 
+.field public static full_screen_mode_button_width:I = 0x7f070115
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static gallery_album_cover_size:I = 0x7f070116
 
-    if-ne p0, p1, :cond_0
+.field public static progress_bar_medium:I = 0x7f0703ee
 
-    goto :goto_1
+.field public static quick_camera_button_margin:I = 0x7f0703f0
 
-    :cond_0
-    instance-of v0, p1, Lklc;
+.field public static quick_camera_button_margin_bottom:I = 0x7f0703f1
 
-    if-nez v0, :cond_1
+.field public static quick_camera_chronometer_text_size:I = 0x7f0703f2
 
-    goto :goto_0
+.field public static quick_camera_wrapper_controllers_height:I = 0x7f0703f3
 
-    :cond_1
-    check-cast p1, Lklc;
+.field public static quick_camera_wrapper_height:I = 0x7f0703f4
 
-    iget-boolean p0, p0, Lklc;->a:Z
-
-    iget-boolean p1, p1, Lklc;->a:Z
-
-    if-eq p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-boolean p0, p0, Lklc;->a:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "Pause(isForced="
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lklc;->a:Z
-
-    invoke-static {v0, v1, p0}, Lz7e;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static quick_camera_wrapper_width:I = 0x7f0703f5

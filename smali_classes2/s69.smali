@@ -1,44 +1,49 @@
 .class public final Ls69;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Ld79;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Ly69;
 
-.field public final b:Lkz;
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLkz;)V
+.method public constructor <init>(Ly69;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ls69;->X:Ly69;
 
-    iput-wide p1, p0, Ls69;->a:J
-
-    iput-object p3, p0, Ls69;->b:Lkz;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 p0, 0x1
+    iput-object p1, p0, Ls69;->o:Ljava/lang/Object;
 
-    return p0
-.end method
+    iget p1, p0, Ls69;->Y:I
 
-.method public final j()J
-    .locals 2
+    const/high16 v0, -0x80000000
 
-    iget-wide v0, p0, Ls69;->a:J
+    or-int/2addr p1, v0
 
-    return-wide v0
+    iput p1, p0, Ls69;->Y:I
+
+    iget-object p1, p0, Ls69;->X:Ly69;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ly69;->s(Ljava/util/Collection;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -2,26 +2,54 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lux1;
+
+
+# instance fields
+.field public final synthetic a:J
+
+.field public final synthetic b:Lgu1;
+
 
 # direct methods
-.method public static a(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)Lm68;
-    .locals 1
+.method public synthetic constructor <init>(JLgu1;)V
+    .locals 0
 
-    :try_start_0
-    new-instance v0, Lm68;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0, p1, p2}, Lm68;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)V
-    :try_end_0
-    .catch Landroidx/camera/core/CameraUnavailableException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-wide p1, p0, Lnx1;->a:J
 
-    return-object v0
+    iput-object p3, p0, Lnx1;->b:Lgu1;
 
-    :catch_0
-    move-exception p0
+    return-void
+.end method
 
-    new-instance p1, Landroidx/camera/core/InitializationException;
 
-    invoke-direct {p1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+# virtual methods
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
+    .locals 2
 
-    throw p1
+    iget-wide v0, p0, Lnx1;->a:J
+
+    invoke-static {p1, v0, v1}, Lvx1;->x(Landroid/hardware/camera2/TotalCaptureResult;J)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iget-object v0, p0, Lnx1;->b:Lgu1;
+
+    invoke-virtual {v0, p1}, Lgu1;->b(Ljava/lang/Object;)Z
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

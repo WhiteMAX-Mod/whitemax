@@ -1,416 +1,135 @@
 .class public final Lx;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$ClassLoaderCreator;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
+
+.field public final synthetic Y:Lb0;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lb0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lx;->a:I
+    iput-object p1, p0, Lx;->Y:Lb0;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 2
-
-    iget p0, p0, Lx;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    .line 1
-    new-instance p0, Lz8g;
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-direct {p0, p1, v0}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    .line 3
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    iput v1, p0, Lz8g;->a:I
-
-    .line 4
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    iput v1, p0, Lz8g;->b:I
-
-    .line 5
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lz8g;->c:Landroid/os/Parcelable;
-
-    return-object p0
-
-    .line 6
-    :pswitch_0
-    new-instance p0, Lq8g;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lq8g;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 7
-    :pswitch_1
-    new-instance p0, Ly1f;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Ly1f;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 8
-    :pswitch_2
-    new-instance p0, Lkcd;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lkcd;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 9
-    :pswitch_3
-    new-instance p0, Ltoc;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Ltoc;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 10
-    :pswitch_4
-    new-instance p0, Lw78;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lw78;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 11
-    :pswitch_5
-    new-instance p0, Ls76;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Ls76;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 12
-    :pswitch_6
-    new-instance p0, Lyz3;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lyz3;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 13
-    :pswitch_7
-    new-instance p0, Lt13;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lt13;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 14
-    :pswitch_8
-    new-instance p0, Ldm;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Ldm;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    :pswitch_9
-    const/4 p0, 0x0
-
-    .line 15
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    .line 16
-    sget-object p0, Ly;->b:Lw;
-
-    return-object p0
-
-    .line 17
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "superState must be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
-    .locals 1
-
-    iget p0, p0, Lx;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    .line 18
-    new-instance p0, Lz8g;
-
-    .line 19
-    invoke-direct {p0, p1, p2}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    .line 20
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lz8g;->a:I
-
-    .line 21
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lz8g;->b:I
-
-    .line 22
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lz8g;->c:Landroid/os/Parcelable;
-
-    return-object p0
-
-    .line 23
-    :pswitch_0
-    new-instance p0, Lq8g;
-
-    invoke-direct {p0, p1, p2}, Lq8g;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 24
-    :pswitch_1
-    new-instance p0, Ly1f;
-
-    invoke-direct {p0, p1, p2}, Ly1f;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 25
-    :pswitch_2
-    new-instance p0, Lkcd;
-
-    invoke-direct {p0, p1, p2}, Lkcd;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 26
-    :pswitch_3
-    new-instance p0, Ltoc;
-
-    invoke-direct {p0, p1, p2}, Ltoc;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 27
-    :pswitch_4
-    new-instance p0, Lw78;
-
-    invoke-direct {p0, p1, p2}, Lw78;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 28
-    :pswitch_5
-    new-instance p0, Ls76;
-
-    invoke-direct {p0, p1, p2}, Ls76;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 29
-    :pswitch_6
-    new-instance p0, Lyz3;
-
-    invoke-direct {p0, p1, p2}, Lyz3;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 30
-    :pswitch_7
-    new-instance p0, Lt13;
-
-    invoke-direct {p0, p1, p2}, Lt13;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 31
-    :pswitch_8
-    new-instance p0, Ldm;
-
-    invoke-direct {p0, p1, p2}, Ldm;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 32
-    :pswitch_9
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    .line 33
-    sget-object p0, Ly;->b:Lw;
-
-    return-object p0
-
-    .line 34
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "superState must be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final newArray(I)[Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget p0, p0, Lx;->a:I
+    check-cast p1, Lq54;
 
-    packed-switch p0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-array p0, p1, [Lz8g;
+    invoke-virtual {p0, p1, p2}, Lx;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
 
-    :pswitch_0
-    new-array p0, p1, [Lq8g;
+    check-cast p1, Lx;
 
-    return-object p0
+    sget-object p2, Lccg;->a:Lccg;
 
-    :pswitch_1
-    new-array p0, p1, [Ly1f;
+    invoke-virtual {p1, p2}, Lx;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object p1
 
-    :pswitch_2
-    new-array p0, p1, [Lkcd;
+    return-object p1
+.end method
 
-    return-object p0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    :pswitch_3
-    new-array p0, p1, [Ltoc;
+    new-instance p1, Lx;
 
-    return-object p0
+    iget-object v0, p0, Lx;->Y:Lb0;
 
-    :pswitch_4
-    new-array p0, p1, [Lw78;
+    invoke-direct {p1, v0, p2}, Lx;-><init>(Lb0;Lkotlin/coroutines/Continuation;)V
 
-    return-object p0
+    return-object p1
+.end method
 
-    :pswitch_5
-    new-array p0, p1, [Ls76;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    return-object p0
+    sget-object v0, Lccg;->a:Lccg;
 
-    :pswitch_6
-    new-array p0, p1, [Lyz3;
+    sget-object v1, Lr54;->a:Lr54;
 
-    return-object p0
+    iget v2, p0, Lx;->X:I
 
-    :pswitch_7
-    new-array p0, p1, [Lt13;
+    const/4 v3, 0x1
 
-    return-object p0
+    if-eqz v2, :cond_1
 
-    :pswitch_8
-    new-array p0, p1, [Ldm;
+    if-ne v2, v3, :cond_0
 
-    return-object p0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    :pswitch_9
-    new-array p0, p1, [Ly;
+    goto :goto_1
 
-    return-object p0
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Ltei;->a:Lmxa;
+
+    if-eqz p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_0
+    if-nez p1, :cond_3
+
+    return-object v0
+
+    :cond_3
+    iput v3, p0, Lx;->X:I
+
+    invoke-virtual {p1, p0}, Lmxa;->a(Ly14;)Ljava/lang/Comparable;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_4
+
+    return-object v1
+
+    :cond_4
+    :goto_1
+    check-cast p1, Ljava/nio/file/Path;
+
+    iget-object v1, p0, Lx;->Y:Lb0;
+
+    iget-object v1, v1, Lb0;->Y:Lxe5;
+
+    new-instance v2, Lw;
+
+    invoke-direct {v2, p1}, Lw;-><init>(Ljava/nio/file/Path;)V
+
+    invoke-static {v1, v2}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    return-object v0
 .end method

@@ -106,7 +106,7 @@
 
 # virtual methods
 .method public final build()Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
-    .locals 10
+    .locals 11
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->context:Landroid/content/Context;
 
@@ -163,9 +163,9 @@
 
     new-instance v8, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v10, p0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-direct {v8, v9, p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;Lru/ok/android/externcalls/sdk/audio/Logger;)V
+    invoke-direct {v8, v9, v10}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;Lru/ok/android/externcalls/sdk/audio/Logger;)V
 
     invoke-direct/range {v0 .. v8}, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;-><init>(Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/ProximityTracker;ZLru/ok/android/externcalls/sdk/audio/VideoTracker;Lru/ok/android/externcalls/sdk/audio/AudioDeviceSelector;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$DisabledAudioDeviceUsagePolicy;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Lru/ok/android/externcalls/sdk/audio/Logger;)V
 
@@ -186,22 +186,22 @@
 
     new-instance v7, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v8, p0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    invoke-direct {v7, v9, p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;Lru/ok/android/externcalls/sdk/audio/Logger;)V
+    invoke-direct {v7, v9, v8}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLogger;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;Lru/ok/android/externcalls/sdk/audio/Logger;)V
 
     invoke-direct/range {v0 .. v7}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;-><init>(Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/ProximityTracker;ZLru/ok/android/externcalls/sdk/audio/VideoTracker;Lru/ok/android/externcalls/sdk/audio/AudioDeviceSelector;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Lru/ok/android/externcalls/sdk/audio/Logger;)V
 
     return-object v0
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Context must not be null"
+    const-string v1, "Context must not be null"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public final setContext(Landroid/content/Context;)Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;

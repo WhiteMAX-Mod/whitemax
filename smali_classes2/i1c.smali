@@ -1,64 +1,102 @@
-.class public final Li1c;
+.class public final synthetic Li1c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lj1c;
+.implements Lji6;
 
 
-# static fields
-.field public static final a:Li1c;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;I)V
+    .locals 0
 
-    new-instance v0, Li1c;
+    iput p2, p0, Li1c;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Li1c;->b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
-    sput-object v0, Li1c;->a:Li1c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Li1c;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Li1c;->b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of p0, p1, Li1c;
+    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->x0:[Ltr7;
 
-    if-nez p0, :cond_1
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->requireResources()Landroid/content/res/Resources;
 
-    const/4 p0, 0x0
+    move-result-object v0
 
-    return p0
+    sget v1, Liuc;->tt_of:I
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-.method public final hashCode()I
-    .locals 0
+    move-result-object v0
 
-    const p0, 0x778a90e9
+    return-object v0
 
-    return p0
-.end method
+    :pswitch_0
+    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->x0:[Ltr7;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->requireActivity()Lrn;
 
-    const-string p0, "RequestCameraPermission"
+    move-result-object v0
 
-    return-object p0
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v2, Laoh;
+
+    invoke-direct {v2, v1, v0}, Laoh;-><init>(Landroid/view/Window;Landroid/view/View;)V
+
+    return-object v2
+
+    :pswitch_1
+    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->x0:[Ltr7;
+
+    sget-object v0, Ll05;->s0:Lk82;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lk82;->p(Landroid/content/Context;)Lewa;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lewa;->c:Lv5b;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

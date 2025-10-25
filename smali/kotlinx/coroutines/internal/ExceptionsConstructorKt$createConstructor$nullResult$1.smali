@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbc6;
+.implements Lli6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->createConstructor(Ljava/lang/Class;)Lbc6;
+    value = Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->createConstructor(Ljava/lang/Class;)Lli6;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -62,16 +62,16 @@
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt$createConstructor$nullResult$1;->invoke(Ljava/lang/Throwable;)Ljava/lang/Void;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final invoke(Ljava/lang/Throwable;)Ljava/lang/Void;
     .locals 0
 
     .line 1
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method

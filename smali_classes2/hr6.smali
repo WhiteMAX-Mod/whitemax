@@ -1,53 +1,14 @@
-.class public final Lhr6;
+.class public interface abstract Lhr6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
+# virtual methods
+.method public abstract Q(Ljr6;)V
+.end method
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lhr6;->a:Ljava/util/ArrayList;
-
-    new-instance v0, Lfr6;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lfr6;-><init>(I)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lhr6;->b:Ljava/lang/Object;
-
-    new-instance v0, Lfr6;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v2}, Lfr6;-><init>(I)V
-
-    invoke-static {v1, v0}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lhr6;->c:Ljava/lang/Object;
+.method public V(Ljr6;Z)V
+    .locals 0
 
     return-void
 .end method

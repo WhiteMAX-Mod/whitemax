@@ -1,201 +1,51 @@
 .class public final Li22;
-.super Llx;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqed;
 
 
 # instance fields
-.field public final synthetic c:I
-
-.field public final synthetic o:Lcom/google/android/material/carousel/CarouselLayoutManager;
+.field public final synthetic b:J
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/carousel/CarouselLayoutManager;I)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput p2, p0, Li22;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch p2, :pswitch_data_0
-
-    iput-object p1, p0, Li22;->o:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    const/4 p1, 0x3
-
-    const/4 p2, 0x1
-
-    invoke-direct {p0, p2, p1}, Llx;-><init>(II)V
+    iput-wide p1, p0, Li22;->b:J
 
     return-void
-
-    :pswitch_0
-    iput-object p1, p0, Li22;->o:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    const/4 p1, 0x3
-
-    const/4 p2, 0x0
-
-    invoke-direct {p0, p2, p1}, Llx;-><init>(II)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final i()I
-    .locals 1
+.method public final a()J
+    .locals 2
 
-    iget v0, p0, Li22;->c:I
+    iget-wide v0, p0, Li22;->b:J
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Li22;->o:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget v0, p0, Landroidx/recyclerview/widget/a;->o:I
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->I()I
-
-    move-result p0
-
-    sub-int/2addr v0, p0
-
-    return v0
-
-    :pswitch_0
-    iget-object p0, p0, Li22;->o:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget p0, p0, Landroidx/recyclerview/widget/a;->o:I
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method
 
-.method public final j()I
+.method public final b(Lh22;)Lped;
     .locals 1
 
-    iget v0, p0, Li22;->c:I
+    iget p1, p1, Lh22;->b:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x1
 
-    const/4 p0, 0x0
+    if-ne p1, v0, :cond_0
 
-    return p0
+    sget-object p1, Lped;->d:Lped;
 
-    :pswitch_0
-    iget-object p0, p0, Li22;->o:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->J()I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final k()I
-    .locals 1
-
-    iget v0, p0, Li22;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Li22;->o:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget p0, p0, Landroidx/recyclerview/widget/a;->n:I
-
-    return p0
-
-    :pswitch_0
-    iget-object p0, p0, Li22;->o:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget v0, p0, Landroidx/recyclerview/widget/a;->n:I
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->K()I
-
-    move-result p0
-
-    sub-int/2addr v0, p0
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final l()I
-    .locals 1
-
-    iget v0, p0, Li22;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Li22;->o:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    invoke-virtual {p0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->L0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget p0, p0, Landroidx/recyclerview/widget/a;->n:I
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    const/4 p0, 0x0
+    sget-object p1, Lped;->e:Lped;
 
-    :goto_0
-    return p0
-
-    :pswitch_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n()I
-    .locals 1
-
-    iget v0, p0, Li22;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Li22;->o:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->L()I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

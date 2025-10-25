@@ -1,218 +1,317 @@
 .class public final Lih6;
-.super Lsz6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/ExecutorService;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final a:Ljava/util/concurrent/ExecutorService;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:[B
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;)V
     .locals 1
 
-    const-string v0, "GEOB"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lsz6;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
 
-    iput-object p1, p0, Lih6;->b:Ljava/lang/String;
+    new-instance p1, Lbn5;
 
-    iput-object p3, p0, Lih6;->c:Ljava/lang/String;
+    const/16 v0, 0xe
 
-    iput-object p4, p0, Lih6;->d:Ljava/lang/String;
+    invoke-direct {p1, v0}, Lbn5;-><init>(I)V
 
-    iput-object p2, p0, Lih6;->e:[B
+    const/4 v0, 0x3
+
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lih6;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()Z
+    .locals 2
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lih6;->b:Ljava/lang/Object;
+
+    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Thread;
+
+    if-ne v0, v1, :cond_0
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
     return v0
 
     :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lih6;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lih6;
-
-    iget-object v2, p0, Lih6;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lih6;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lih6;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lih6;->c:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lih6;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lih6;->d:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object p0, p0, Lih6;->e:[B
-
-    iget-object p1, p1, Lih6;->e:[B
-
-    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lih6;->b:Ljava/lang/String;
+    return v0
+.end method
 
-    if-eqz v1, :cond_0
+.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    .locals 1
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    iget-object v0, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
 
-    move-result v1
+    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
 
-    goto :goto_0
+    move-result p1
 
-    :cond_0
-    move v1, v0
+    return p1
+.end method
 
-    :goto_0
-    const/16 v2, 0x20f
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 2
 
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v1, p0, Lih6;->c:Ljava/lang/String;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    goto :goto_1
-
-    :cond_1
-    move v1, v0
-
-    :goto_1
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v1, p0, Lih6;->d:Ljava/lang/String;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p0}, Lih6;->a()Z
 
     move-result v0
 
-    :cond_2
-    add-int/2addr v2, v0
+    if-eqz v0, :cond_0
 
-    mul-int/lit8 v2, v2, 0x1f
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    iget-object p0, p0, Lih6;->e:[B
+    return-void
 
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([B)I
+    :cond_0
+    new-instance v0, Lo30;
 
-    move-result p0
+    const/4 v1, 0x1
 
-    add-int/2addr p0, v2
+    invoke-direct {v0, p1, v1}, Lo30;-><init>(Ljava/lang/Runnable;I)V
 
-    return p0
+    iget-object p1, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final invokeAll(Ljava/util/Collection;)Ljava/util/List;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final isShutdown()Z
+    .locals 1
+
+    iget-object v0, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isTerminated()Z
+    .locals 1
+
+    iget-object v0, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final shutdown()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final shutdownNow()Ljava/util/List;
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 1
+    invoke-virtual {p0}, Lih6;->a()Z
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v0
 
-    iget-object v1, p0, Lsz6;->a:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 2
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    const-string v1, ": mimeType="
+    .line 3
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
 
-    iget-object v1, p0, Lih6;->b:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
 
-    const-string v1, ", filename="
+    .line 4
+    :cond_0
+    new-instance v0, Lo30;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x3
 
-    iget-object v1, p0, Lih6;->c:Ljava/lang/String;
+    invoke-direct {v0, p1, v1}, Lo30;-><init>(Ljava/lang/Runnable;I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
 
-    const-string v1, ", description="
+    invoke-interface {p1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget-object p0, p0, Lih6;->d:Ljava/lang/String;
+    return-object p1
+.end method
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 5
+    invoke-virtual {p0}, Lih6;->a()Z
 
-    move-result-object p0
+    move-result v0
 
-    return-object p0
+    if-eqz v0, :cond_0
+
+    .line 6
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    .line 7
+    invoke-static {p2}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 8
+    :cond_0
+    new-instance v0, Lo30;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p1, v1}, Lo30;-><init>(Ljava/lang/Runnable;I)V
+
+    iget-object p1, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p1, v0, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    .locals 2
+
+    .line 9
+    invoke-virtual {p0}, Lih6;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 10
+    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 11
+    invoke-static {p1}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 12
+    :cond_0
+    new-instance v0, Lc6;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1, p1}, Lc6;-><init>(ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lih6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+
+    move-result-object p1
+
+    return-object p1
 .end method

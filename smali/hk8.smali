@@ -1,199 +1,91 @@
-.class public Lhk8;
-.super Ljava/lang/Object;
+.class public final Lhk8;
+.super Ljava/util/concurrent/ConcurrentLinkedQueue;
 .source "SourceFile"
+
+# interfaces
+.implements Lkk8;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public a:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:J
-
-.field public final e:I
+.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Lhk8;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
 
-    .line 2
-    iget-object v0, p1, Lhk8;->a:Ljava/lang/Object;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object v0, p0, Lhk8;->a:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    .line 3
-    iget v0, p1, Lhk8;->b:I
-
-    iput v0, p0, Lhk8;->b:I
-
-    .line 4
-    iget v0, p1, Lhk8;->c:I
-
-    iput v0, p0, Lhk8;->c:I
-
-    .line 5
-    iget-wide v0, p1, Lhk8;->d:J
-
-    iput-wide v0, p0, Lhk8;->d:J
-
-    .line 6
-    iget p1, p1, Lhk8;->e:I
-
-    iput p1, p0, Lhk8;->e:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;IIJI)V
-    .locals 0
-
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 8
-    iput-object p1, p0, Lhk8;->a:Ljava/lang/Object;
-
-    .line 9
-    iput p2, p0, Lhk8;->b:I
-
-    .line 10
-    iput p3, p0, Lhk8;->c:I
-
-    .line 11
-    iput-wide p4, p0, Lhk8;->d:J
-
-    .line 12
-    iput p6, p0, Lhk8;->e:I
+    iput-object v0, p0, Lhk8;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final f()I
     .locals 1
 
-    iget p0, p0, Lhk8;->b:I
+    iget-object v0, p0, Lhk8;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const/4 v0, -0x1
-
-    if-eq p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhk8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhk8;
-
-    iget-object v1, p0, Lhk8;->a:Ljava/lang/Object;
-
-    iget-object v3, p1, Lhk8;->a:Ljava/lang/Object;
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget v1, p0, Lhk8;->b:I
-
-    iget v3, p1, Lhk8;->b:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lhk8;->c:I
-
-    iget v3, p1, Lhk8;->c:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-wide v3, p0, Lhk8;->d:J
-
-    iget-wide v5, p1, Lhk8;->d:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget p0, p0, Lhk8;->e:I
-
-    iget p1, p1, Lhk8;->e:I
-
-    if-ne p0, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lhk8;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
 
-    add-int/lit16 v0, v0, 0x20f
+    return v0
+.end method
 
-    mul-int/lit8 v0, v0, 0x1f
+.method public final l()I
+    .locals 1
 
-    iget v1, p0, Lhk8;->b:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lhk8;->c:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lhk8;->d:J
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget p0, p0, Lhk8;->e:I
-
-    add-int/2addr v0, p0
+    iget v0, p0, Lhk8;->a:I
 
     return v0
+.end method
+
+.method public final o()V
+    .locals 0
+
+    invoke-virtual {p0}, Lhk8;->poll()Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lhk8;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    invoke-super {p0, p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->offer(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 2
+
+    invoke-super {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget v1, p0, Lhk8;->a:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Lhk8;->a:I
+
+    :cond_0
+    return-object v0
 .end method

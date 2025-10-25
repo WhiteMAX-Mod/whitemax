@@ -1,106 +1,106 @@
 .class public final Le28;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljava/lang/CharSequence;
+.field public final synthetic b:Lg28;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lg28;I)V
     .locals 0
 
-    iput-object p1, p0, Le28;->Y:Ljava/lang/CharSequence;
+    iput p2, p0, Le28;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Le28;->b:Lg28;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 3
 
-    check-cast p1, Ljava/io/File;
+    iget v0, p0, Le28;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Le28;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Le28;->b:Lg28;
 
-    move-result-object p0
+    iget-object v1, v0, Lg28;->c:Ls25;
 
-    check-cast p0, Le28;
+    if-eqz v1, :cond_0
 
-    sget-object p1, Lylf;->a:Lylf;
+    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
 
-    invoke-virtual {p0, p1}, Le28;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v1
 
-    move-result-object p0
+    if-eqz v1, :cond_0
 
-    return-object p0
-.end method
+    iget-object v1, v0, Lg28;->c:Ls25;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {v1}, Landroid/widget/AdapterView;->getCount()I
 
-    new-instance v0, Le28;
+    move-result v1
 
-    iget-object p0, p0, Le28;->Y:Ljava/lang/CharSequence;
+    iget-object v2, v0, Lg28;->c:Ls25;
 
-    invoke-direct {v0, p0, p2}, Le28;-><init>(Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v2}, Landroid/view/ViewGroup;->getChildCount()I
 
-    iput-object p1, v0, Le28;->X:Ljava/lang/Object;
+    move-result v2
 
-    return-object v0
-.end method
+    if-le v1, v2, :cond_0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    iget-object v1, v0, Lg28;->c:Ls25;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
-    iget-object p1, p0, Le28;->X:Ljava/lang/Object;
+    move-result v1
 
-    check-cast p1, Ljava/io/File;
+    iget v2, v0, Lg28;->v0:I
 
-    new-instance v0, Lr2b;
+    if-gt v1, v2, :cond_0
 
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    iget-object v1, v0, Lg28;->I0:Luo;
 
-    move-result-object p1
+    const/4 v2, 0x2
 
-    invoke-direct {v0, p1}, Lr2b;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
 
-    iget-object p0, p0, Le28;->Y:Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lg28;->f()V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    :cond_0
+    return-void
 
-    move-result-object p0
+    :pswitch_0
+    iget-object v0, p0, Le28;->b:Lg28;
 
-    new-instance p1, Lgwe;
+    iget-object v0, v0, Lg28;->c:Ls25;
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_1
 
-    invoke-direct {p1, v0, v1}, Lgwe;-><init>(Lr2b;Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x1
 
-    new-instance v0, Lc2d;
+    invoke-virtual {v0, v1}, Ls25;->setListSelectionHidden(Z)V
 
-    invoke-direct {v0, p1}, Lc2d;-><init>(Lpc6;)V
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    new-instance p1, Lprb;
+    :cond_1
+    return-void
 
-    const/16 v1, 0x11
+    nop
 
-    invoke-direct {p1, v0, p0, v1}, Lprb;-><init>(Lis5;Ljava/lang/Object;I)V
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

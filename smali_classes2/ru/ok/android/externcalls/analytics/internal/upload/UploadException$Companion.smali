@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lld4;)V
+.method public synthetic constructor <init>(Lki4;)V
     .locals 0
 
     .line 1
@@ -62,45 +62,45 @@
 
 # virtual methods
 .method public final getApiInvocationErrorMessage(Ljava/lang/String;Lru/ok/android/api/core/ApiInvocationException;)Ljava/lang/String;
-    .locals 3
+    .locals 4
 
-    iget p0, p2, Lru/ok/android/api/core/ApiInvocationException;->a:I
+    iget v0, p2, Lru/ok/android/api/core/ApiInvocationException;->a:I
 
     iget-object p2, p2, Lru/ok/android/api/core/ApiInvocationException;->b:Ljava/lang/String;
 
-    const-string v0, ": code="
+    const-string v1, ": code="
 
-    const-string v1, ", message="
+    const-string v2, ", message="
 
-    const-string v2, "Error executing API method "
+    const-string v3, "Error executing API method "
 
-    invoke-static {p0, v2, p1, v0, v1}, Lyv7;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v3, p1, v1, v2}, Laab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final getErrorMessage(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    const-string p2, "Error executing API method "
+    const-string v0, "Error executing API method "
 
-    const-string v0, ": "
+    const-string v1, ": "
 
-    invoke-static {p2, p1, v0, p0}, Lee5;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1, p2}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

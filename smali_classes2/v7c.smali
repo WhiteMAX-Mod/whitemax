@@ -1,52 +1,97 @@
-.class public abstract Lv7c;
-.super Ljava/lang/Object;
+.class public final Lv7c;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static oneme_stickers_settings_confirm_cancel:I = 0x7f0a0895
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static oneme_stickers_settings_confirm_delete_set_action:I = 0x7f0a0896
+.field public final synthetic Y:Lf8c;
 
-.field public static oneme_stickers_settings_confirm_delete_stickers_action:I = 0x7f0a0897
 
-.field public static oneme_stickers_settings_confirm_favorite_clear_action:I = 0x7f0a0898
+# direct methods
+.method public constructor <init>(Lf8c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_stickers_settings_confirm_recent_clear_action:I = 0x7f0a0899
+    iput-object p1, p0, Lv7c;->Y:Lf8c;
 
-.field public static oneme_stickers_settings_content_recycler:I = 0x7f0a089a
+    const/4 p1, 0x2
 
-.field public static oneme_stickers_settings_emoji_suggest_view_type:I = 0x7f0a089b
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_stickers_settings_favorite_view_type:I = 0x7f0a089c
+    return-void
+.end method
 
-.field public static oneme_stickers_settings_menu_copy_link:I = 0x7f0a089d
 
-.field public static oneme_stickers_settings_menu_delete_set:I = 0x7f0a089e
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_stickers_settings_menu_forward:I = 0x7f0a089f
+    check-cast p1, Lla2;
 
-.field public static oneme_stickers_settings_menu_share:I = 0x7f0a08a0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_stickers_settings_recent_view_type:I = 0x7f0a08a1
+    invoke-virtual {p0, p1, p2}, Lv7c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_stickers_settings_set_item_drag:I = 0x7f0a08a2
+    move-result-object p1
 
-.field public static oneme_stickers_settings_set_item_icon:I = 0x7f0a08a3
+    check-cast p1, Lv7c;
 
-.field public static oneme_stickers_settings_set_item_subtitle:I = 0x7f0a08a4
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static oneme_stickers_settings_set_item_title:I = 0x7f0a08a5
+    invoke-virtual {p1, p2}, Lv7c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_stickers_settings_set_view_type:I = 0x7f0a08a6
+    return-object p2
+.end method
 
-.field public static oneme_stickers_settings_sets_title_view_type:I = 0x7f0a08a7
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static oneme_stickers_settings_stickers_favorite_menu_clear:I = 0x7f0a08a8
+    new-instance v0, Lv7c;
 
-.field public static oneme_stickers_settings_stickers_menu_change:I = 0x7f0a08a9
+    iget-object v1, p0, Lv7c;->Y:Lf8c;
 
-.field public static oneme_stickers_settings_stickers_multiselect_delete:I = 0x7f0a08aa
+    invoke-direct {v0, v1, p2}, Lv7c;-><init>(Lf8c;Lkotlin/coroutines/Continuation;)V
 
-.field public static oneme_stickers_settings_stickers_recent_menu_clear:I = 0x7f0a08ab
+    iput-object p1, v0, Lv7c;->X:Ljava/lang/Object;
 
-.field public static oneme_stickers_settings_toolbar:I = 0x7f0a08ac
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lv7c;->X:Ljava/lang/Object;
+
+    check-cast p1, Lla2;
+
+    invoke-virtual {p1}, Lla2;->v()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1}, Lla2;->A()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lv7c;->Y:Lf8c;
+
+    iget-object p1, p1, Lf8c;->D0:Lxe5;
+
+    sget-object v0, Ls93;->b:Ls93;
+
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method

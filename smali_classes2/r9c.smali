@@ -1,8 +1,52 @@
-.class public abstract Lr9c;
-.super Ljava/lang/Object;
+.class public final Lr9c;
+.super Ly14;
 
 
-# static fields
-.field public static chat_screen_action_copy_success:I = 0x7f110008
+# instance fields
+.field public X:I
 
-.field public static chat_screen_confirmation_delete_title:I = 0x7f110009
+.field public Y:Lec2;
+
+.field public Z:Ljava/lang/Object;
+
+.field public synthetic o:Ljava/lang/Object;
+
+.field public final synthetic q0:Lec2;
+
+
+# direct methods
+.method public constructor <init>(Lec2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lr9c;->q0:Lec2;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lr9c;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lr9c;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lr9c;->X:I
+
+    iget-object p1, p0, Lr9c;->q0:Lec2;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lec2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

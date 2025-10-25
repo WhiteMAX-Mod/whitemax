@@ -1,70 +1,53 @@
 .class public final Ljba;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:J
 
-.field public final synthetic b:Loba;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lnba;
+
+.field public o:Lnba;
+
+.field public q0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Loba;I)V
+.method public constructor <init>(Lnba;Ly14;)V
     .locals 0
 
-    iput p2, p0, Ljba;->a:I
+    iput-object p1, p0, Ljba;->Z:Lnba;
 
-    iput-object p1, p0, Ljba;->b:Loba;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Ljba;->a:I
+    iput-object p1, p0, Ljba;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Ljba;->q0:I
 
-    iget-object p0, p0, Ljba;->b:Loba;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, Loba;->C0:Lzb6;
+    or-int/2addr p1, v0
 
-    if-eqz v0, :cond_0
+    iput p1, p0, Ljba;->q0:I
 
-    invoke-interface {v0}, Lzb6;->invoke()Ljava/lang/Object;
+    iget-object p1, p0, Ljba;->Z:Lnba;
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    const-wide/16 v0, 0x0
 
-    return-void
+    invoke-virtual {p1, v0, v1, p0}, Lnba;->b(JLy14;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object p0, p0, Ljba;->b:Loba;
+    move-result-object p1
 
-    iget-object v0, p0, Loba;->C0:Lzb6;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lzb6;->invoke()Ljava/lang/Object;
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

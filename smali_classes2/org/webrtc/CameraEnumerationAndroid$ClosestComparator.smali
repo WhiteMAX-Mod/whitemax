@@ -63,9 +63,9 @@
 
     invoke-virtual {p0, p2}, Lorg/webrtc/CameraEnumerationAndroid$ClosestComparator;->diff(Ljava/lang/Object;)I
 
-    move-result p0
+    move-result p2
 
-    sub-int/2addr p1, p0
+    sub-int/2addr p1, p2
 
     return p1
 .end method

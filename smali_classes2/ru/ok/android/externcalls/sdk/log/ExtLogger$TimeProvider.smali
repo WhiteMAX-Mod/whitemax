@@ -13,6 +13,9 @@
     name = "TimeProvider"
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # virtual methods
 .method public abstract getCurrentTimeMillis()J

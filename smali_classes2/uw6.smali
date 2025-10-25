@@ -2,285 +2,176 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loq4;
-.implements Lxw6;
-
 
 # instance fields
-.field public final X:Ld8a;
+.field public final a:Liu7;
 
-.field public final Y:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final b:Liu7;
 
-.field public Z:J
-
-.field public final a:Lzte;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/io/File;
-
-.field public final o:Lt5d;
+.field public final c:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Ld8a;Lzte;Ljava/io/File;Lt5d;)V
-    .locals 1
+.method public constructor <init>(Liu7;Liu7;Liu7;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object p1, p0, Luw6;->a:Liu7;
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    iput-object p2, p0, Luw6;->b:Liu7;
 
-    iput-object v0, p0, Luw6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    iput-object p2, p0, Luw6;->a:Lzte;
-
-    const-string p2, ""
-
-    iput-object p2, p0, Luw6;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Luw6;->c:Ljava/io/File;
-
-    iput-object p4, p0, Luw6;->o:Lt5d;
-
-    iput-object p1, p0, Luw6;->X:Ld8a;
+    iput-object p3, p0, Luw6;->c:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final a(Lpb9;)Z
+    .locals 5
 
-    iget-object v0, p0, Luw6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Luw6;->b:Liu7;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    check-cast v0, Ldq5;
 
-    return-void
+    check-cast v0, Ljq5;
 
-    :cond_0
-    new-instance v0, Lsw6;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lsw6;-><init>(Luw6;I)V
-
-    iget-object p0, p0, Luw6;->o:Lt5d;
-
-    invoke-virtual {p0, v0}, Lt5d;->b(Ljava/lang/Runnable;)Loq4;
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final c(Z)V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Luw6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-virtual {v0}, Ljq5;->p()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_6
 
-    iget-object v0, p0, Luw6;->o:Lt5d;
+    iget-object v0, p0, Luw6;->c:Liu7;
 
-    invoke-interface {v0}, Loq4;->f()Z
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v0
 
-    if-nez v1, :cond_0
+    check-cast v0, Lsq;
 
-    invoke-interface {v0}, Loq4;->e()V
+    check-cast v0, Lgig;
+
+    invoke-virtual {v0}, Lgig;->u()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_2
 
     :cond_0
-    if-eqz p1, :cond_1
+    invoke-virtual {p1}, Lpb9;->u()Z
 
-    const-string p1, "vw6"
+    move-result v0
 
-    const-string v0, "cancelDownload"
+    if-nez v0, :cond_1
 
-    invoke-static {p1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Luw6;->a:Lzte;
-
-    invoke-virtual {p1}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lax6;
-
-    iget-object p0, p0, Luw6;->c:Ljava/io/File;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, p0, v0}, Lax6;->a(Ljava/io/File;Ljava/lang/String;)V
+    goto :goto_2
 
     :cond_1
-    return-void
-.end method
-
-.method public final e()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Luw6;->c(Z)V
-
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    iget-object p0, p0, Luw6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final g()V
-    .locals 2
-
-    iget-object v0, p0, Luw6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    :goto_0
+    invoke-virtual {p1}, Lpb9;->u()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    iget-object v1, p1, Lpb9;->z0:Lpb9;
 
-    return-void
+    const/4 v2, 0x4
 
-    :cond_0
-    new-instance v0, Lsw6;
+    if-eqz v0, :cond_2
 
-    const/4 v1, 0x0
+    iget v0, v1, Lpb9;->R0:I
 
-    invoke-direct {v0, p0, v1}, Lsw6;-><init>(Luw6;I)V
+    if-eq v0, v2, :cond_2
 
-    iget-object p0, p0, Luw6;->o:Lt5d;
+    move-object p1, v1
 
-    invoke-virtual {p0, v0}, Lt5d;->b(Ljava/lang/Runnable;)Loq4;
+    goto :goto_0
 
-    return-void
-.end method
-
-.method public final getDownloadContext()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Luw6;->c:Ljava/io/File;
-
-    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final i(Ljava/io/File;)V
-    .locals 2
-
-    iget-object v0, p0, Luw6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    :cond_2
+    invoke-virtual {p1}, Lpb9;->u()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_3
 
-    return-void
+    goto :goto_2
 
-    :cond_0
-    new-instance v0, Lox5;
+    :cond_3
+    iget-object v0, p0, Luw6;->a:Liu7;
 
-    const/4 v1, 0x4
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, p0, v1, p1}, Lox5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object v0
 
-    iget-object p0, p0, Luw6;->o:Lt5d;
+    check-cast v0, Ld33;
 
-    invoke-virtual {p0, v0}, Lt5d;->b(Ljava/lang/Runnable;)Loq4;
+    iget-wide v3, p1, Lpb9;->y0:J
 
-    return-void
-.end method
+    check-cast v0, Ld43;
 
-.method public final j()V
-    .locals 2
+    invoke-virtual {v0, v3, v4}, Ld43;->O(J)Ln0d;
 
-    iget-object v0, p0, Luw6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    iget-object v0, v0, Ln0d;->a:Lq0f;
 
-    move-result v0
+    invoke-interface {v0}, Lq0f;->getValue()Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    return-void
+    check-cast v0, Lla2;
 
-    :cond_0
-    new-instance v0, Lsw6;
+    invoke-virtual {p1}, Lpb9;->u()Z
 
-    const/4 v1, 0x2
+    move-result p1
 
-    invoke-direct {v0, p0, v1}, Lsw6;-><init>(Luw6;I)V
+    const/4 v3, 0x1
 
-    iget-object p0, p0, Luw6;->o:Lt5d;
+    if-eqz p1, :cond_4
 
-    invoke-virtual {p0, v0}, Lt5d;->b(Ljava/lang/Runnable;)Loq4;
+    iget p1, v1, Lpb9;->K0:I
 
-    return-void
-.end method
+    and-int/2addr p1, v2
 
-.method public final k(FJ)V
-    .locals 7
+    if-ne p1, v2, :cond_4
 
-    iget-object v0, p0, Luw6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
+    goto :goto_1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    :cond_4
+    if-eqz v0, :cond_6
 
-    move-result v0
+    iget-object p1, v0, Lla2;->b:Lne2;
 
-    if-eqz v0, :cond_0
+    iget-object p1, p1, Lne2;->H:Lce2;
 
-    return-void
+    iget-boolean p1, p1, Lce2;->j:Z
 
-    :cond_0
-    new-instance v1, Ltw6;
+    if-ne p1, v3, :cond_6
 
-    const/4 v6, 0x0
+    :goto_1
+    if-eqz v0, :cond_5
 
-    move-object v2, p0
+    invoke-virtual {v0}, Lla2;->f0()Z
 
-    move v3, p1
+    move-result p1
 
-    move-wide v4, p2
+    if-ne p1, v3, :cond_5
 
-    invoke-direct/range {v1 .. v6}, Ltw6;-><init>(Loq4;FJI)V
+    goto :goto_2
 
-    iget-object p0, v2, Luw6;->o:Lt5d;
+    :cond_5
+    return v3
 
-    invoke-virtual {p0, v1}, Lt5d;->b(Ljava/lang/Runnable;)Loq4;
+    :cond_6
+    :goto_2
+    const/4 p1, 0x0
 
-    return-void
+    return p1
 .end method

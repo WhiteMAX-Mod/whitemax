@@ -43,7 +43,7 @@
 
 # virtual methods
 .method public abort()V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
 
@@ -56,9 +56,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
@@ -74,9 +74,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object p0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v2, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     if-eqz v0, :cond_1
 
@@ -97,9 +97,9 @@
     :catchall_0
     move-exception v0
 
-    iget-object p0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v1, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0
 .end method
@@ -144,15 +144,15 @@
 
     iput-object v1, v0, Lorg/apache/http/message/AbstractHttpMessage;->headergroup:Lorg/apache/http/message/HeaderGroup;
 
-    iget-object p0, p0, Lorg/apache/http/message/AbstractHttpMessage;->params:Lorg/apache/http/params/HttpParams;
+    iget-object v1, p0, Lorg/apache/http/message/AbstractHttpMessage;->params:Lorg/apache/http/params/HttpParams;
 
-    invoke-static {p0}, Lorg/apache/http/client/utils/CloneUtils;->clone(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Lorg/apache/http/client/utils/CloneUtils;->clone(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v1
 
-    check-cast p0, Lorg/apache/http/params/HttpParams;
+    check-cast v1, Lorg/apache/http/params/HttpParams;
 
-    iput-object p0, v0, Lorg/apache/http/message/AbstractHttpMessage;->params:Lorg/apache/http/params/HttpParams;
+    iput-object v1, v0, Lorg/apache/http/message/AbstractHttpMessage;->params:Lorg/apache/http/params/HttpParams;
 
     return-object v0
 .end method
@@ -161,21 +161,21 @@
 .end method
 
 .method public getProtocolVersion()Lorg/apache/http/ProtocolVersion;
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Lorg/apache/http/message/AbstractHttpMessage;->getParams()Lorg/apache/http/params/HttpParams;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Lorg/apache/http/params/HttpProtocolParams;->getVersion(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/ProtocolVersion;
+    invoke-static {v0}, Lorg/apache/http/params/HttpProtocolParams;->getVersion(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/ProtocolVersion;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getRequestLine()Lorg/apache/http/RequestLine;
-    .locals 3
+    .locals 4
 
     invoke-virtual {p0}, Lorg/apache/http/client/methods/HttpRequestBase;->getMethod()Ljava/lang/String;
 
@@ -187,53 +187,53 @@
 
     invoke-virtual {p0}, Lorg/apache/http/client/methods/HttpRequestBase;->getURI()Ljava/net/URI;
 
-    move-result-object p0
+    move-result-object v2
 
-    if-eqz p0, :cond_0
+    if-eqz v2, :cond_0
 
-    invoke-virtual {p0}, Ljava/net/URI;->toASCIIString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/net/URI;->toASCIIString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz v2, :cond_1
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_2
+    if-nez v3, :cond_2
 
     :cond_1
-    const-string p0, "/"
+    const-string v2, "/"
 
     :cond_2
-    new-instance v2, Lorg/apache/http/message/BasicRequestLine;
+    new-instance v3, Lorg/apache/http/message/BasicRequestLine;
 
-    invoke-direct {v2, v0, p0, v1}, Lorg/apache/http/message/BasicRequestLine;-><init>(Ljava/lang/String;Ljava/lang/String;Lorg/apache/http/ProtocolVersion;)V
+    invoke-direct {v3, v0, v2, v1}, Lorg/apache/http/message/BasicRequestLine;-><init>(Ljava/lang/String;Ljava/lang/String;Lorg/apache/http/ProtocolVersion;)V
 
-    return-object v2
+    return-object v3
 .end method
 
 .method public getURI()Ljava/net/URI;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->uri:Ljava/net/URI;
+    iget-object v0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->uri:Ljava/net/URI;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public isAborted()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->aborted:Z
+    iget-boolean v0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->aborted:Z
 
-    return p0
+    return v0
 .end method
 
 .method public setConnectionRequest(Lorg/apache/http/conn/ClientConnectionRequest;)V
@@ -261,9 +261,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
@@ -285,9 +285,9 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_0
-    iget-object p0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method
@@ -317,9 +317,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
@@ -341,9 +341,9 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_0
-    iget-object p0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lorg/apache/http/client/methods/HttpRequestBase;->abortLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method

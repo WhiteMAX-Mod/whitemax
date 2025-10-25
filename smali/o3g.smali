@@ -1,86 +1,263 @@
-.class public final Lo3g;
-.super Lure;
+.class public final synthetic Lo3g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lwma;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Lp3g;
 
-.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public final synthetic b:I
+
+.field public final synthetic c:Lst6;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+.method public synthetic constructor <init>(Lp3g;ILst6;)V
     .locals 0
 
-    iput-object p2, p0, Lo3g;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lo3g;->a:Lp3g;
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lo3g;->b:I
+
+    iput-object p3, p0, Lo3g;->c:Lst6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lh65;JLmb6;Z)V
+    .locals 11
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lo3g;->a:Lp3g;
 
-    invoke-virtual {p0, p1, p2}, Lo3g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget v1, p0, Lo3g;->b:I
 
-    move-result-object p0
+    iget-object v2, p0, Lo3g;->c:Lst6;
 
-    check-cast p0, Lo3g;
+    iget-object v3, v0, Lp3g;->t0:Lq3g;
 
-    sget-object p1, Lylf;->a:Lylf;
+    iget-boolean v4, v3, Lq3g;->c:Z
 
-    invoke-virtual {p0, p1}, Lo3g;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v4, :cond_0
 
-    return-object p1
-.end method
+    :goto_0
+    move-object v3, p1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    move-wide v4, p2
 
-    new-instance v0, Lo3g;
+    move-object v6, p4
 
-    iget-object p0, p0, Lo3g;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    move/from16 v7, p5
 
-    invoke-direct {v0, p2, p0}, Lo3g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    goto/16 :goto_5
 
-    iput-object p1, v0, Lo3g;->X:Ljava/lang/Object;
+    :cond_0
+    iget-object v3, v3, Lq3g;->l:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    monitor-enter v3
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    :try_start_0
+    iget-object v4, v0, Lp3g;->t0:Lq3g;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget-object v4, v4, Lq3g;->m:Laph;
 
-    iget-object p1, p0, Lo3g;->X:Ljava/lang/Object;
+    iget v5, v0, Lp3g;->a:I
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    iget-object v4, v4, Laph;->a:Ljava/lang/Object;
 
-    iget-object p0, p0, Lo3g;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    check-cast v4, Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->A0:Lwtc;
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lwtc;->getValue()Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object p0
+    check-cast v4, Ln3g;
 
-    check-cast p0, Lg2g;
+    iget-object v4, v4, Ln3g;->a:Landroid/util/SparseArray;
 
-    invoke-virtual {p0, p1}, Lg2g;->setFramesListBitmap(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
 
-    sget-object p0, Lylf;->a:Lylf;
+    move-result v4
 
-    return-object p0
+    const/4 v5, 0x1
+
+    if-le v4, v5, :cond_1
+
+    const/4 v4, 0x2
+
+    if-ne v1, v4, :cond_1
+
+    monitor-exit v3
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object p1, v0
+
+    goto/16 :goto_7
+
+    :cond_1
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v1, v0, Lp3g;->c:Ldj3;
+
+    iget-object v1, v1, Ldj3;->a:Lec7;
+
+    iget v3, v0, Lp3g;->a:I
+
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Li65;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v1, p2, v3
+
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_2
+
+    move v1, v5
+
+    goto :goto_1
+
+    :cond_2
+    move v1, v3
+
+    :goto_1
+    const-string v4, "MediaItem duration required for sequence looping could not be extracted."
+
+    invoke-static {v4, v1}, Lsgi;->h(Ljava/lang/Object;Z)V
+
+    iget-wide v6, v0, Lp3g;->s0:J
+
+    add-long/2addr v6, p2
+
+    iput-wide v6, v0, Lp3g;->s0:J
+
+    iget-object v1, v0, Lp3g;->t0:Lq3g;
+
+    iget-object v1, v1, Lq3g;->q:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    if-eqz p5, :cond_3
+
+    :try_start_1
+    iget-object v4, v0, Lp3g;->t0:Lq3g;
+
+    iget v6, v4, Lq3g;->z:I
+
+    sub-int/2addr v6, v5
+
+    iput v6, v4, Lq3g;->z:I
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    move-object p1, v0
+
+    goto :goto_6
+
+    :cond_3
+    :goto_2
+    iget-object v4, v0, Lp3g;->t0:Lq3g;
+
+    iget v6, v4, Lq3g;->z:I
+
+    if-nez v6, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    move v5, v3
+
+    :goto_3
+    iget-wide v6, v0, Lp3g;->s0:J
+
+    iget-wide v8, v4, Lq3g;->y:J
+
+    cmp-long v10, v6, v8
+
+    if-gtz v10, :cond_5
+
+    if-eqz v5, :cond_6
+
+    :cond_5
+    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v5
+
+    iput-wide v5, v4, Lq3g;->y:J
+
+    :goto_4
+    iget-object v4, v0, Lp3g;->t0:Lq3g;
+
+    iget-object v4, v4, Lq3g;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    if-ge v3, v4, :cond_6
+
+    iget-object v4, v0, Lp3g;->t0:Lq3g;
+
+    iget-object v4, v4, Lq3g;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lo2e;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto/16 :goto_0
+
+    :goto_5
+    invoke-interface/range {v2 .. v7}, Lwma;->a(Lh65;JLmb6;Z)V
+
+    return-void
+
+    :goto_6
+    :try_start_2
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw p1
+
+    :goto_7
+    :try_start_3
+    monitor-exit v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p1
 .end method

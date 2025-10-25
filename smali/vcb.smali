@@ -1,83 +1,135 @@
-.class public interface abstract Lvcb;
+.class public final Lvcb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvcb;->a:Ljava/lang/Object;
+
+    iput-object p2, p0, Lvcb;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract A()I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    instance-of v0, p1, Lvcb;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    check-cast p1, Lvcb;
+
+    iget-object v0, p1, Lvcb;->a:Ljava/lang/Object;
+
+    iget-object v2, p0, Lvcb;->a:Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p1, Lvcb;->b:Ljava/lang/Object;
+
+    iget-object v0, p0, Lvcb;->b:Ljava/lang/Object;
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
 .end method
 
-.method public abstract B()I
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lvcb;->a:Ljava/lang/Object;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    iget-object v2, p0, Lvcb;->b:Ljava/lang/Object;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    xor-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public abstract C()Lp6f;
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.method public abstract F(Lzh8;)V
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public abstract G()Z
-.end method
+    const-string v1, "Pair{"
 
-.method public abstract I(IJLjava/util/List;)V
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public abstract K(Ljava/util/List;)V
-.end method
+    iget-object v1, p0, Lvcb;->a:Ljava/lang/Object;
 
-.method public abstract a()F
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public abstract c()J
-.end method
+    const-string v1, " "
 
-.method public abstract getDuration()J
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public abstract getPlaybackState()I
-.end method
+    iget-object v1, p0, Lvcb;->b:Ljava/lang/Object;
 
-.method public abstract getRepeatMode()I
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public abstract h()Z
-.end method
+    const-string v1, "}"
 
-.method public abstract j()J
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public abstract k(Lzh8;J)V
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public abstract l()Z
-.end method
+    move-result-object v0
 
-.method public abstract l0(I)Z
-.end method
-
-.method public abstract m()I
-.end method
-
-.method public abstract n()V
-.end method
-
-.method public abstract play()V
-.end method
-
-.method public abstract prepare()V
-.end method
-
-.method public abstract q()I
-.end method
-
-.method public abstract v()Landroidx/media3/common/PlaybackException;
-.end method
-
-.method public abstract w()J
-.end method
-
-.method public abstract y()Ltcf;
-.end method
-
-.method public abstract z()I
+    return-object v0
 .end method

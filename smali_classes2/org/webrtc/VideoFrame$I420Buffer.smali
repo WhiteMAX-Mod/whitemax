@@ -19,11 +19,11 @@
 
 # virtual methods
 .method public getBufferType()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
 .method public abstract getDataU()Ljava/nio/ByteBuffer;

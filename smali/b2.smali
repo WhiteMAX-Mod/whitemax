@@ -1,181 +1,167 @@
 .class public abstract Lb2;
-.super Lt2;
+.super Lmcg;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public transient X:I
+.field public final b:I
 
-.field public final transient o:Ljava/util/Map;
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Map;)V
+.method public constructor <init>(II)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
+    invoke-direct {p0, v0}, Lmcg;-><init>(I)V
 
-    move-result v0
+    invoke-static {p2, p1}, Lavi;->f(II)V
 
-    invoke-static {v0}, Lgy7;->l(Z)V
+    iput p1, p0, Lb2;->b:I
 
-    iput-object p1, p0, Lb2;->o:Ljava/util/Map;
+    iput p2, p0, Lb2;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/Map;
+.method public final add(Ljava/lang/Object;)V
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public abstract b(I)Ljava/lang/Object;
+.end method
+
+.method public final hasNext()Z
+    .locals 2
+
+    iget v0, p0, Lb2;->c:I
+
+    iget v1, p0, Lb2;->b:I
+
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final hasPrevious()Z
     .locals 1
 
-    iget-object v0, p0, Lt2;->c:Ljava/util/Map;
+    iget v0, p0, Lb2;->c:I
 
-    if-nez v0, :cond_0
+    if-lez v0, :cond_0
 
-    invoke-virtual {p0}, Lb2;->c()Lg2;
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 2
+
+    invoke-virtual {p0}, Lb2;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lb2;->c:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lb2;->c:I
+
+    invoke-virtual {p0, v0}, Lb2;->b(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lt2;->c:Ljava/util/Map;
+    return-object v0
 
     :cond_0
-    return-object v0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
 .end method
 
-.method public final b()V
-    .locals 3
+.method public final nextIndex()I
+    .locals 1
 
-    iget-object v0, p0, Lb2;->o:Ljava/util/Map;
+    iget v0, p0, Lb2;->c:I
 
-    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+    return v0
+.end method
 
-    move-result-object v1
+.method public final previous()Ljava/lang/Object;
+    .locals 1
 
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0}, Lb2;->hasPrevious()Z
 
-    move-result-object v1
+    move-result v0
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v0, :cond_0
 
-    move-result v2
+    iget v0, p0, Lb2;->c:I
 
-    if-eqz v2, :cond_0
+    add-int/lit8 v0, v0, -0x1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iput v0, p0, Lb2;->c:I
 
-    move-result-object v2
+    invoke-virtual {p0, v0}, Lb2;->b(I)Ljava/lang/Object;
 
-    check-cast v2, Ljava/util/Collection;
+    move-result-object v0
 
-    invoke-interface {v2}, Ljava/util/Collection;->clear()V
-
-    goto :goto_0
+    return-object v0
 
     :cond_0
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    iput v0, p0, Lb2;->X:I
-
-    return-void
+    throw v0
 .end method
 
-.method public c()Lg2;
-    .locals 2
+.method public final previousIndex()I
+    .locals 1
 
-    new-instance v0, Lg2;
+    iget v0, p0, Lb2;->c:I
 
-    iget-object v1, p0, Lb2;->o:Ljava/util/Map;
+    add-int/lit8 v0, v0, -0x1
 
-    invoke-direct {v0, p0, v1}, Lg2;-><init>(Lb2;Ljava/util/Map;)V
-
-    return-object v0
+    return v0
 .end method
 
-.method public abstract d()Ljava/util/Collection;
-.end method
+.method public final set(Ljava/lang/Object;)V
+    .locals 0
 
-.method public e()Lh2;
-    .locals 2
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    new-instance v0, Lh2;
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    iget-object v1, p0, Lb2;->o:Ljava/util/Map;
-
-    invoke-direct {v0, p0, v1}, Lh2;-><init>(Lb2;Ljava/util/Map;)V
-
-    return-object v0
-.end method
-
-.method public final f(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 3
-
-    iget-object v0, p0, Lb2;->o:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Collection;
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {p0}, Lb2;->d()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v1, p2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    iget p2, p0, Lb2;->X:I
-
-    add-int/2addr p2, v2
-
-    iput p2, p0, Lb2;->X:I
-
-    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return v2
-
-    :cond_0
-    new-instance p0, Ljava/lang/AssertionError;
-
-    const-string p1, "New Collection violated the Collection spec"
-
-    invoke-direct {p0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p0
-
-    :cond_1
-    invoke-interface {v1, p2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    iget p1, p0, Lb2;->X:I
-
-    add-int/2addr p1, v2
-
-    iput p1, p0, Lb2;->X:I
-
-    return v2
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return p0
+    throw p1
 .end method

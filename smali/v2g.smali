@@ -1,48 +1,76 @@
 .class public final Lv2g;
-.super Ljx3;
+.super Lxod;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lk92;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final c:Lv2g;
 
 
 # direct methods
-.method public constructor <init>(Lk92;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lv2g;->Y:Lk92;
+    new-instance v0, Lv2g;
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lv2g;->c:Lv2g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Lvod;
     .locals 1
 
-    iput-object p1, p0, Lv2g;->o:Ljava/lang/Object;
+    new-instance v0, Lu2g;
 
-    iget p1, p0, Lv2g;->X:I
+    invoke-direct {v0}, Lu2g;-><init>()V
 
-    const/high16 v0, -0x80000000
+    return-object v0
+.end method
 
-    or-int/2addr p1, v0
+.method public final b(Ljava/lang/Runnable;)Lvv4;
+    .locals 0
 
-    iput p1, p0, Lv2g;->X:I
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    iget-object p1, p0, Lv2g;->Y:Lk92;
+    sget-object p1, Lfa5;->a:Lfa5;
 
-    const/4 v0, 0x0
+    return-object p1
+.end method
 
-    invoke-virtual {p1, v0, p0}, Lk92;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
+    .locals 0
 
-    move-result-object p0
+    :try_start_0
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->sleep(J)V
 
-    return-object p0
+    const-string p2, "run is null"
+
+    invoke-static {p1, p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Thread;->interrupt()V
+
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    :goto_0
+    sget-object p1, Lfa5;->a:Lfa5;
+
+    return-object p1
 .end method

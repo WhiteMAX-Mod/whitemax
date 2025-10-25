@@ -1,45 +1,24 @@
 .class public abstract Lbvc;
-.super Lei0;
-.source "SourceFile"
+.super Ljava/lang/Object;
+
+
+# static fields
+.field public static ViewPager2:[I
+
+.field public static ViewPager2_android_orientation:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p1}, Lei0;-><init>(Lkotlin/coroutines/Continuation;)V
+    const v0, 0x10100c4
 
-    if-eqz p1, :cond_1
+    filled-new-array {v0}, [I
 
-    invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Lq04;
+    move-result-object v0
 
-    move-result-object p0
-
-    sget-object p1, Lj45;->a:Lj45;
-
-    if-ne p0, p1, :cond_0
+    sput-object v0, Lbvc;->ViewPager2:[I
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Coroutines with restricted suspension must have EmptyCoroutineContext"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getContext()Lq04;
-    .locals 0
-
-    sget-object p0, Lj45;->a:Lj45;
-
-    return-object p0
 .end method

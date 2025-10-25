@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lz78;
+.implements Lri8;
 
 
 # virtual methods
 .method public final a(IZ)V
     .locals 0
 
-    sget p0, Lcom/google/android/material/timepicker/TimePickerView;->G0:I
+    sget p1, Lcom/google/android/material/timepicker/TimePickerView;->F0:I
 
     return-void
 .end method

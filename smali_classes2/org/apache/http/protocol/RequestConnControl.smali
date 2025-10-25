@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public process(Lorg/apache/http/HttpRequest;Lorg/apache/http/protocol/HttpContext;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/HttpException;,
@@ -33,27 +33,27 @@
 
     if-eqz p1, :cond_1
 
-    const-string p0, "Connection"
+    const-string p2, "Connection"
 
-    invoke-interface {p1, p0}, Lorg/apache/http/HttpMessage;->containsHeader(Ljava/lang/String;)Z
+    invoke-interface {p1, p2}, Lorg/apache/http/HttpMessage;->containsHeader(Ljava/lang/String;)Z
 
-    move-result p2
+    move-result v0
 
-    if-nez p2, :cond_0
+    if-nez v0, :cond_0
 
-    const-string p2, "Keep-Alive"
+    const-string v0, "Keep-Alive"
 
-    invoke-interface {p1, p0, p2}, Lorg/apache/http/HttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, p2, v0}, Lorg/apache/http/HttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP request may not be null"
+    const-string p2, "HTTP request may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

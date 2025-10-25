@@ -25,7 +25,7 @@
 
 # direct methods
 .method public constructor <init>(Lorg/apache/http/HttpRequest;)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/ProtocolException;
@@ -106,79 +106,79 @@
     return-void
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    new-instance p1, Lorg/apache/http/ProtocolException;
+    new-instance v1, Lorg/apache/http/ProtocolException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v2, "Invalid request URI: "
+    const-string v3, "Invalid request URI: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-interface {v0}, Lorg/apache/http/RequestLine;->getUri()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p1, v0, p0}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v1, v0, p1}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    throw p1
+    throw v1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP request may not be null"
+    const-string v0, "HTTP request may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
 # virtual methods
 .method public abort()V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/UnsupportedOperationException;
         }
     .end annotation
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    throw p0
+    throw v0
 .end method
 
 .method public getExecCount()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/http/impl/client/RequestWrapper;->execCount:I
+    iget v0, p0, Lorg/apache/http/impl/client/RequestWrapper;->execCount:I
 
-    return p0
+    return v0
 .end method
 
 .method public getMethod()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/client/RequestWrapper;->method:Ljava/lang/String;
+    iget-object v0, p0, Lorg/apache/http/impl/client/RequestWrapper;->method:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getOriginal()Lorg/apache/http/HttpRequest;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/client/RequestWrapper;->original:Lorg/apache/http/HttpRequest;
+    iget-object v0, p0, Lorg/apache/http/impl/client/RequestWrapper;->original:Lorg/apache/http/HttpRequest;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getProtocolVersion()Lorg/apache/http/ProtocolVersion;
@@ -193,17 +193,17 @@
     :cond_0
     invoke-virtual {p0}, Lorg/apache/http/message/AbstractHttpMessage;->getParams()Lorg/apache/http/params/HttpParams;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Lorg/apache/http/params/HttpProtocolParams;->getVersion(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/ProtocolVersion;
+    invoke-static {v0}, Lorg/apache/http/params/HttpProtocolParams;->getVersion(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/ProtocolVersion;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getRequestLine()Lorg/apache/http/RequestLine;
-    .locals 3
+    .locals 4
 
     invoke-virtual {p0}, Lorg/apache/http/impl/client/RequestWrapper;->getMethod()Ljava/lang/String;
 
@@ -213,45 +213,45 @@
 
     move-result-object v1
 
-    iget-object p0, p0, Lorg/apache/http/impl/client/RequestWrapper;->uri:Ljava/net/URI;
+    iget-object v2, p0, Lorg/apache/http/impl/client/RequestWrapper;->uri:Ljava/net/URI;
 
-    if-eqz p0, :cond_0
+    if-eqz v2, :cond_0
 
-    invoke-virtual {p0}, Ljava/net/URI;->toASCIIString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/net/URI;->toASCIIString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz v2, :cond_1
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_2
+    if-nez v3, :cond_2
 
     :cond_1
-    const-string p0, "/"
+    const-string v2, "/"
 
     :cond_2
-    new-instance v2, Lorg/apache/http/message/BasicRequestLine;
+    new-instance v3, Lorg/apache/http/message/BasicRequestLine;
 
-    invoke-direct {v2, v0, p0, v1}, Lorg/apache/http/message/BasicRequestLine;-><init>(Ljava/lang/String;Ljava/lang/String;Lorg/apache/http/ProtocolVersion;)V
+    invoke-direct {v3, v0, v2, v1}, Lorg/apache/http/message/BasicRequestLine;-><init>(Ljava/lang/String;Ljava/lang/String;Lorg/apache/http/ProtocolVersion;)V
 
-    return-object v2
+    return-object v3
 .end method
 
 .method public getURI()Ljava/net/URI;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/client/RequestWrapper;->uri:Ljava/net/URI;
+    iget-object v0, p0, Lorg/apache/http/impl/client/RequestWrapper;->uri:Ljava/net/URI;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public incrementExecCount()V
@@ -267,19 +267,19 @@
 .end method
 
 .method public isAborted()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public isRepeatable()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
 .method public resetHeaders()V
@@ -301,7 +301,7 @@
 .end method
 
 .method public setMethod(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
@@ -310,13 +310,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Method name may not be null"
+    const-string v0, "Method name may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setProtocolVersion(Lorg/apache/http/ProtocolVersion;)V

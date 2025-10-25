@@ -1,50 +1,23 @@
-.class public abstract Li45;
+.class public final Li45;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
 
 
-# virtual methods
-.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+# direct methods
+.method public constructor <init>(II)V
     .locals 0
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 0
+    iput p1, p0, Li45;->a:I
 
-    return-void
-.end method
-
-.method public onActivityPaused(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onActivityResumed(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
+    iput p2, p0, Li45;->b:I
 
     return-void
 .end method

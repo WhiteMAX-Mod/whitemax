@@ -1,208 +1,330 @@
-.class public final Lgg3;
-.super Lure;
+.class public final enum Lgg3;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
+
+# static fields
+.field public static final enum X:Lgg3;
+
+.field public static final enum Y:Lgg3;
+
+.field public static final enum Z:Lgg3;
+
+.field public static final enum b:Lgg3;
+
+.field public static final enum c:Lgg3;
+
+.field public static final enum o:Lgg3;
+
+.field public static final synthetic q0:[Lgg3;
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lch3;
-
-.field public final synthetic r0:J
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lch3;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p1, p0, Lgg3;->Z:Lch3;
+    new-instance v0, Lgg3;
 
-    iput-wide p2, p0, Lgg3;->r0:J
+    const-string v1, "SPAM"
 
-    const/4 p1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2, v1}, Lgg3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lgg3;->b:Lgg3;
+
+    new-instance v1, Lgg3;
+
+    const-string v2, "PORNO"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v2}, Lgg3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lgg3;->c:Lgg3;
+
+    new-instance v2, Lgg3;
+
+    const-string v3, "EXTREMISM"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Lgg3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lgg3;->o:Lgg3;
+
+    new-instance v3, Lgg3;
+
+    const-string v4, "FAKE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v4}, Lgg3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lgg3;->X:Lgg3;
+
+    new-instance v4, Lgg3;
+
+    const-string v5, "THREAT"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v5}, Lgg3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lgg3;->Y:Lgg3;
+
+    new-instance v5, Lgg3;
+
+    const-string v6, "OTHER"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v6}, Lgg3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lgg3;->Z:Lgg3;
+
+    filled-new-array/range {v0 .. v5}, [Lgg3;
+
+    move-result-object v0
+
+    sput-object v0, Lgg3;->q0:[Lgg3;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    check-cast p1, Ly04;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lgg3;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lgg3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Lgg3;
+    .locals 3
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "PORNO"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x5
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "OTHER"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x4
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "SPAM"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x3
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "FAKE"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v1, 0x2
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "EXTREMISM"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v0, "THREAT"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    const/4 v1, 0x0
+
+    :goto_0
+    packed-switch v1, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "No such value "
+
+    const-string v2, " for Complaint"
+
+    invoke-static {v1, p0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    sget-object p0, Lgg3;->c:Lgg3;
+
+    return-object p0
+
+    :pswitch_1
+    sget-object p0, Lgg3;->Z:Lgg3;
+
+    return-object p0
+
+    :pswitch_2
+    sget-object p0, Lgg3;->b:Lgg3;
+
+    return-object p0
+
+    :pswitch_3
+    sget-object p0, Lgg3;->X:Lgg3;
+
+    return-object p0
+
+    :pswitch_4
+    sget-object p0, Lgg3;->o:Lgg3;
+
+    return-object p0
+
+    :pswitch_5
+    sget-object p0, Lgg3;->Y:Lgg3;
+
+    return-object p0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x6c8bfde6 -> :sswitch_5
+        -0x68bd6116 -> :sswitch_4
+        0x20cf55 -> :sswitch_3
+        0x26ef49 -> :sswitch_2
+        0x48086f0 -> :sswitch_1
+        0x48c7f34 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lgg3;
+    .locals 1
+
+    const-class v0, Lgg3;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
     check-cast p0, Lgg3;
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lgg3;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
     return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+.method public static values()[Lgg3;
+    .locals 1
 
-    new-instance v0, Lgg3;
+    sget-object v0, Lgg3;->q0:[Lgg3;
 
-    iget-object v1, p0, Lgg3;->Z:Lch3;
+    invoke-virtual {v0}, [Lgg3;->clone()Ljava/lang/Object;
 
-    iget-wide v2, p0, Lgg3;->r0:J
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2, v3, p2}, Lgg3;-><init>(Lch3;JLkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lgg3;->Y:Ljava/lang/Object;
+    check-cast v0, [Lgg3;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
 
-    iget v0, p0, Lgg3;->X:I
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v1, p0, Lgg3;->Z:Lch3;
+    const-string v0, "{value=\'"
 
-    const/4 v2, 0x3
+    const-string v1, "\'}"
 
-    const/4 v3, 0x2
+    iget-object v2, p0, Lgg3;->a:Ljava/lang/String;
 
-    const/4 v4, 0x1
+    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object v5, Lz04;->a:Lz04;
+    move-result-object v0
 
-    if-eqz v0, :cond_3
-
-    if-eq v0, v4, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    iget-object v0, p0, Lgg3;->Y:Ljava/lang/Object;
-
-    move-object v1, v0
-
-    check-cast v1, Lch3;
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_2
-    :try_start_0
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lgg3;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ly04;
-
-    iget-wide v6, p0, Lgg3;->r0:J
-
-    :try_start_1
-    sget-object p1, Lch3;->K0:Ljava/lang/String;
-
-    invoke-virtual {v1}, Lch3;->p()Lxwc;
-
-    move-result-object p1
-
-    iput v4, p0, Lgg3;->X:I
-
-    iget-object v0, p1, Lxwc;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
-
-    new-instance v8, Lui5;
-
-    invoke-direct {v8, p1, v6, v7, v2}, Lui5;-><init>(Ljava/lang/Object;JI)V
-
-    invoke-static {v0, v8, p0}, Lmu0;->i(Lexc;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-ne p1, v5, :cond_4
-
-    goto :goto_2
-
-    :catchall_0
-    :cond_4
-    :goto_0
-    sget-object p1, Lch3;->K0:Ljava/lang/String;
-
-    invoke-virtual {v1}, Lch3;->p()Lxwc;
-
-    move-result-object p1
-
-    iput-object v1, p0, Lgg3;->Y:Ljava/lang/Object;
-
-    iput v3, p0, Lgg3;->X:I
-
-    invoke-virtual {p1, p0}, Lxwc;->f(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    :goto_1
-    check-cast p1, Ljava/util/List;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lgg3;->Y:Ljava/lang/Object;
-
-    iput v2, p0, Lgg3;->X:I
-
-    invoke-static {v1, p1, v4, p0}, Lch3;->H(Lch3;Ljava/util/List;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v5, :cond_6
-
-    :goto_2
-    return-object v5
-
-    :cond_6
-    :goto_3
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-object v0
 .end method

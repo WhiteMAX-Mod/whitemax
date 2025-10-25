@@ -1,157 +1,81 @@
-.class public final enum Lum3;
-.super Ljava/lang/Enum;
+.class public final synthetic Lum3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lli6;
 
-# static fields
-.field public static final enum X:Lum3;
 
-.field public static final enum Y:Lum3;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum Z:Lum3;
-
-.field public static final enum a:Lum3;
-
-.field public static final enum b:Lum3;
-
-.field public static final enum c:Lum3;
-
-.field public static final enum o:Lum3;
-
-.field public static final enum r0:Lum3;
-
-.field public static final enum s0:Lum3;
-
-.field public static final synthetic t0:[Lum3;
+.field public final synthetic b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public synthetic constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;I)V
+    .locals 0
 
-    new-instance v0, Lum3;
+    iput p2, p0, Lum3;->a:I
 
-    const-string v1, "OPEN_PROFILE"
+    iput-object p1, p0, Lum3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lum3;->a:Lum3;
-
-    new-instance v1, Lum3;
-
-    const-string v2, "SHARE_CONTACT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lum3;->b:Lum3;
-
-    new-instance v2, Lum3;
-
-    const-string v3, "WRITE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lum3;->c:Lum3;
-
-    new-instance v3, Lum3;
-
-    const-string v4, "SELECT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lum3;->o:Lum3;
-
-    new-instance v4, Lum3;
-
-    const-string v5, "BLOCK"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lum3;->X:Lum3;
-
-    new-instance v5, Lum3;
-
-    const-string v6, "DELETE"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lum3;->Y:Lum3;
-
-    new-instance v6, Lum3;
-
-    const-string v7, "AUDIO_CALL"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lum3;->Z:Lum3;
-
-    new-instance v7, Lum3;
-
-    const-string v8, "VIDEO_CALL"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lum3;->r0:Lum3;
-
-    new-instance v8, Lum3;
-
-    const-string v9, "SUSPEND"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lum3;->s0:Lum3;
-
-    filled-new-array/range {v0 .. v8}, [Lum3;
-
-    move-result-object v0
-
-    sput-object v0, Lum3;->t0:[Lum3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lum3;
-    .locals 1
 
-    const-class v0, Lum3;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lum3;->a:I
 
-    move-result-object p0
+    sget-object v1, Lccg;->a:Lccg;
 
-    check-cast p0, Lum3;
+    iget-object v2, p0, Lum3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    return-object p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public static values()[Lum3;
-    .locals 1
+    check-cast p1, Lzn3;
 
-    sget-object v0, Lum3;->t0:[Lum3;
+    sget-object v0, Lone/me/login/confirm/ConfirmPhoneScreen;->A0:[Ltr7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    sget-object v0, Lzn3;->b:Lzn3;
 
-    move-result-object v0
+    if-ne p1, v0, :cond_0
 
-    check-cast v0, [Lum3;
+    invoke-virtual {v2}, Lone/me/login/confirm/ConfirmPhoneScreen;->H0()Lln3;
 
-    return-object v0
+    move-result-object p1
+
+    iget-object p1, p1, Lln3;->z0:Lx0f;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v2, v0}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_0
+    return-object v1
+
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/login/confirm/ConfirmPhoneScreen;->A0:[Ltr7;
+
+    invoke-virtual {v2}, Ll24;->getRouter()Lqid;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lqid;->C()Z
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

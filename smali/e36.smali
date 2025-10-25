@@ -1,134 +1,168 @@
 .class public final Le36;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
 # interfaces
-.implements Lsve;
+.implements Lq36;
+.implements Lgcf;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lvfc;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final c:Ljava/util/concurrent/atomic/AtomicLong;
+
+.field public o:Lh36;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lvfc;)V
     .locals 0
 
-    iput p1, p0, Le36;->a:I
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    iput-object p2, p0, Le36;->b:Ljava/lang/Object;
+    iput-object p1, p0, Le36;->a:Lvfc;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Le36;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    iput-object p1, p0, Le36;->c:Ljava/util/concurrent/atomic/AtomicLong;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Luve;)V
-    .locals 2
+.method public final b()V
+    .locals 1
 
-    iget v0, p0, Le36;->a:I
+    iget-object v0, p0, Le36;->o:Lh36;
 
-    iget-object p0, p0, Le36;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Lh36;->cancel()V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Le36;->o:Lh36;
 
-    check-cast p0, Landroidx/viewpager/widget/ViewPager;
+    iget-object v0, v0, Lh36;->q0:Lm3e;
 
-    iget p1, p1, Luve;->a:I
-
-    invoke-virtual {p0, p1}, Landroidx/viewpager/widget/ViewPager;->setCurrentItem(I)V
+    invoke-virtual {v0}, Lm3e;->b()V
 
     return-void
+.end method
 
-    :pswitch_0
-    check-cast p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.method public final cancel()V
+    .locals 1
 
-    iget v0, p1, Luve;->a:I
+    iget-object v0, p0, Le36;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    if-lez v0, :cond_0
+    invoke-static {v0}, Ljcf;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
 
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lxi7;
+    return-void
+.end method
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->y0()Lhm;
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
 
-    move-result-object v0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    const/4 v1, 0x0
+    move-result p1
 
-    invoke-virtual {v0, v1}, Lhm;->setExpanded(Z)V
+    if-nez p1, :cond_2
 
     :cond_0
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lxi7;
+    iget-object p1, p0, Le36;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->C0()Lfw9;
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    iget p1, p1, Luve;->a:I
+    sget-object v0, Ljcf;->a:Ljcf;
 
-    invoke-virtual {p0, p1}, Lfw9;->x(I)V
-
-    return-void
-
-    :pswitch_1
-    check-cast p0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->K0:[Lxi7;
-
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->O0()Lfw9;
-
-    move-result-object p0
-
-    iget p1, p1, Luve;->a:I
-
-    invoke-virtual {p0, p1}, Lfw9;->x(I)V
-
-    return-void
-
-    :pswitch_2
-    check-cast p0, Lf36;
-
-    iget-object p1, p1, Luve;->b:Landroid/view/View;
-
-    instance-of v0, p1, Lsqa;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lsqa;
+    if-ne p1, v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move-object p1, v1
+    iget-object p1, p0, Le36;->o:Lh36;
 
-    :goto_0
-    if-eqz p1, :cond_2
+    iget-object v0, p0, Le36;->a:Lvfc;
 
-    invoke-virtual {p1}, Lsqa;->getTabItem()Luba;
+    check-cast v0, Lf26;
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Lf26;->f(Lecf;)V
 
-    if-eqz p1, :cond_2
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
-    iget-object v1, p1, Luba;->a:Ljava/lang/String;
+    move-result p1
+
+    if-nez p1, :cond_0
 
     :cond_2
-    iput-object v1, p0, Lf36;->w0:Ljava/lang/String;
+    :goto_0
+    return-void
+.end method
+
+.method public final e(Lgcf;)V
+    .locals 5
+
+    iget-object v0, p0, Le36;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {v0, p1}, Ljcf;->d(Ljava/util/concurrent/atomic/AtomicReference;Lgcf;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Le36;->c:Ljava/util/concurrent/atomic/AtomicLong;
+
+    const-wide/16 v1, 0x0
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
+
+    move-result-wide v3
+
+    cmp-long v0, v3, v1
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1, v3, v4}, Lgcf;->i(J)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final i(J)V
+    .locals 2
+
+    iget-object v0, p0, Le36;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    iget-object v1, p0, Le36;->c:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-static {v0, v1, p1, p2}, Ljcf;->c(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;J)V
 
     return-void
+.end method
 
-    nop
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Le36;->o:Lh36;
+
+    invoke-virtual {v0}, Lh36;->cancel()V
+
+    iget-object v0, p0, Le36;->o:Lh36;
+
+    iget-object v0, v0, Lh36;->q0:Lm3e;
+
+    invoke-virtual {v0, p1}, Lm3e;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

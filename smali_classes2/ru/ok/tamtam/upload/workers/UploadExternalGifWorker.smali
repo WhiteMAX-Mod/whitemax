@@ -17,8 +17,8 @@
         "workerParams",
         "<init>",
         "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V",
-        "qof",
-        "mof",
+        "kfg",
+        "gfg",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -32,37 +32,37 @@
 
 
 # instance fields
-.field public final X:Lzte;
+.field public final X:Lwif;
 
-.field public final Y:Lzte;
+.field public final Y:Lwif;
 
-.field public final Z:Lzte;
+.field public final Z:Lwif;
 
-.field public final a:Lzte;
+.field public final a:Lwif;
 
-.field public final b:Lzte;
+.field public final b:Lwif;
 
-.field public final c:Lzte;
+.field public final c:Lwif;
 
-.field public final o:Lzte;
+.field public final o:Lwif;
 
-.field public final r0:Lzte;
+.field public final q0:Lwif;
 
-.field public final s0:Lzte;
+.field public final r0:Lwif;
 
-.field public final t0:Lzte;
+.field public final s0:Lwif;
 
-.field public final u0:Lzte;
+.field public final t0:Lwif;
 
-.field public final v0:Lzte;
+.field public final u0:Lwif;
 
-.field public final w0:Lzte;
+.field public final v0:Lwif;
 
-.field public x0:J
+.field public w0:J
 
-.field public volatile y0:Lqof;
+.field public volatile x0:Lkfg;
 
-.field public final z0:Lsof;
+.field public final y0:Lnfg;
 
 
 # direct methods
@@ -71,167 +71,167 @@
 
     invoke-direct {p0, p1, p2}, Lru/ok/tamtam/upload/workers/ForegroundWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->a:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->a:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/4 p2, 0x7
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->b:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->b:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/16 p2, 0x8
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/16 p2, 0x9
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->o:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->o:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/16 p2, 0xa
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->X:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->X:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/16 p2, 0xb
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->Y:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->Y:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/16 p2, 0xc
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->Z:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->Z:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->r0:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->q0:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/4 p2, 0x2
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->s0:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->r0:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/4 p2, 0x3
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->t0:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->s0:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/4 p2, 0x4
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->u0:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->t0:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/4 p2, 0x5
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->v0:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->u0:Lwif;
 
-    new-instance p1, Lkof;
+    new-instance p1, Lefg;
 
     const/4 p2, 0x6
 
-    invoke-direct {p1, p0, p2}, Lkof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
+    invoke-direct {p1, p0, p2}, Lefg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
 
-    new-instance p2, Lzte;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->w0:Lzte;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->v0:Lwif;
 
-    new-instance p1, Lsof;
+    new-instance p1, Lnfg;
 
-    invoke-direct {p1, p0}, Lsof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;)V
+    invoke-direct {p1, p0}, Lnfg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;)V
 
-    iput-object p1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->z0:Lsof;
+    iput-object p1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->y0:Lnfg;
 
     return-void
 .end method
@@ -239,133 +239,133 @@
 .method public static final b(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;)V
     .locals 6
 
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->X:Lzte;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->X:Lwif;
 
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lza2;
+    check-cast v0, Lsd2;
 
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
 
     move-result-object v1
 
-    iget-wide v1, v1, Lmof;->e:J
+    iget-wide v1, v1, Lgfg;->e:J
 
-    invoke-virtual {v0, v1, v2}, Lza2;->C(J)Ls72;
+    invoke-virtual {v0, v1, v2}, Lsd2;->C(J)Lla2;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->Z:Lzte;
+    iget-object v1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->Z:Lwif;
 
-    invoke-virtual {v1}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lxva;
+    check-cast v1, Lrab;
 
-    iget-object v0, v0, Ls72;->b:Lvb2;
+    iget-object v0, v0, Lla2;->b:Lne2;
 
-    iget-wide v2, v0, Lvb2;->a:J
+    iget-wide v2, v0, Lne2;->a:J
 
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
 
     move-result-object v0
 
-    iget-wide v4, v0, Lmof;->d:J
+    iget-wide v4, v0, Lgfg;->d:J
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v2, v3, v4, v5}, Lxva;->b(JJ)V
+    invoke-static {v2, v3, v4, v5}, Lrab;->b(JJ)V
 
     :cond_0
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->t0:Lzte;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->s0:Lwif;
 
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkm5;
+    check-cast v0, Lqs5;
 
-    iget-object v1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c:Lzte;
+    iget-object v1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c:Lwif;
 
-    invoke-virtual {v1}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lnn5;
+    check-cast v1, Ltt5;
 
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lmof;->f:Ljava/lang/String;
-
-    check-cast v1, Lcp5;
-
-    invoke-virtual {v1, p0}, Lcp5;->n(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Lkm5;->b(Ljava/io/File;)V
+    iget-object p0, p0, Lgfg;->f:Ljava/lang/String;
+
+    check-cast v1, Liv5;
+
+    invoke-virtual {v1, p0}, Liv5;->l(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Lqs5;->b(Ljava/io/File;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Lmof;
-    .locals 0
+.method public final c()Lgfg;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->a:Lzte;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->a:Lwif;
 
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lmof;
+    check-cast v0, Lgfg;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final createForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 14
+    .locals 11
 
-    iget-object p1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->y0:Lqof;
+    iget-object p1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->x0:Lkfg;
 
-    instance-of v0, p1, Lpof;
+    instance-of v0, p1, Ljfg;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lpof;
+    check-cast p1, Ljfg;
 
-    iget v0, p1, Lpof;->a:F
+    iget v0, p1, Ljfg;->a:I
 
-    new-instance v1, Ljava/lang/Float;
+    new-instance v1, Lza6;
 
-    invoke-direct {v1, v0}, Ljava/lang/Float;-><init>(F)V
+    invoke-direct {v1, v0}, Lza6;-><init>(I)V
 
-    iget-wide v2, p1, Lpof;->b:J
+    iget-wide v2, p1, Ljfg;->b:J
 
     new-instance p1, Ljava/lang/Long;
 
     invoke-direct {p1, v2, v3}, Ljava/lang/Long;-><init>(J)V
 
-    new-instance v0, Lpxa;
+    new-instance v0, Ltcb;
 
-    invoke-direct {v0, v1, p1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/Float;
+    new-instance p1, Lza6;
 
-    const/high16 v0, -0x40800000    # -1.0f
+    const/4 v0, -0x1
 
-    invoke-direct {p1, v0}, Ljava/lang/Float;-><init>(F)V
+    invoke-direct {p1, v0}, Lza6;-><init>(I)V
 
     new-instance v0, Ljava/lang/Long;
 
@@ -373,765 +373,973 @@
 
     invoke-direct {v0, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
-    new-instance v1, Lpxa;
+    new-instance v1, Ltcb;
 
-    invoke-direct {v1, p1, v0}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, p1, v0}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     move-object v0, v1
 
     :goto_0
-    iget-object p1, v0, Lpxa;->a:Ljava/lang/Object;
+    iget-object p1, v0, Ltcb;->a:Ljava/lang/Object;
+
+    check-cast p1, Lza6;
+
+    iget v8, p1, Lza6;->a:I
+
+    iget-object p1, v0, Ltcb;->b:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Number;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, v0, Lpxa;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
     move-result-wide v0
 
-    invoke-virtual {p0}, Llt7;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lq28;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lsoh;->d(Landroid/content/Context;)Lsoh;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lq28;->getId()Ljava/util/UUID;
 
     move-result-object v2
 
-    invoke-static {v2}, Lqvg;->d(Landroid/content/Context;)Lqvg;
+    invoke-virtual {p1, v2}, Lsoh;->c(Ljava/util/UUID;)Landroid/app/PendingIntent;
+
+    move-result-object v10
+
+    iget-object p1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->X:Lwif;
+
+    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lsd2;
+
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Llt7;->getId()Ljava/util/UUID;
+    iget-wide v2, v2, Lgfg;->e:J
 
-    move-result-object v3
+    invoke-virtual {p1, v2, v3}, Lsd2;->C(J)Lla2;
 
-    invoke-virtual {v2, v3}, Lqvg;->c(Ljava/util/UUID;)Landroid/app/PendingIntent;
+    move-result-object p1
 
-    move-result-object v13
+    iget-object v2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->v0:Lwif;
 
-    iget-object v2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->X:Lzte;
-
-    invoke-virtual {v2}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lza2;
+    check-cast v2, Lus5;
 
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
-
-    move-result-object v3
-
-    iget-wide v3, v3, Lmof;->e:J
-
-    invoke-virtual {v2, v3, v4}, Lza2;->C(J)Ls72;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->w0:Lzte;
-
-    invoke-virtual {v3}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
 
     move-result-object v3
 
-    move-object v4, v3
+    iget-wide v3, v3, Lgfg;->e:J
 
-    check-cast v4, Lom5;
+    move-wide v5, v0
 
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
+    move-object v1, v2
 
-    move-result-object v3
+    move-wide v2, v3
 
-    iget-wide v5, v3, Lmof;->e:J
+    new-instance v4, Ljava/lang/Long;
 
-    new-instance v7, Ljava/lang/Long;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Long;-><init>(J)V
 
-    invoke-direct {v7, v0, v1}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
 
     move-result-object v0
 
-    iget-wide v0, v0, Lmof;->d:J
+    iget-wide v5, v0, Lgfg;->d:J
 
-    new-instance v8, Ljava/lang/Long;
+    move-wide v6, v5
 
-    invoke-direct {v8, v0, v1}, Ljava/lang/Long;-><init>(J)V
+    new-instance v5, Ljava/lang/Long;
 
-    if-eqz v2, :cond_2
+    invoke-direct {v5, v6, v7}, Ljava/lang/Long;-><init>(J)V
 
-    invoke-virtual {v2}, Ls72;->q()Ljava/lang/String;
+    if-eqz p1, :cond_2
 
-    move-result-object v0
+    invoke-virtual {p1}, Lla2;->s()Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    move-result-object p1
+
+    if-nez p1, :cond_1
 
     goto :goto_2
 
     :cond_1
     :goto_1
-    move-object v9, v0
+    move-object v6, p1
 
     goto :goto_3
 
     :cond_2
     :goto_2
-    const-string v0, ""
+    const-string p1, ""
 
     goto :goto_1
 
     :goto_3
-    invoke-virtual {p0}, Llt7;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->w0:Lzte;
-
-    invoke-virtual {v1}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lom5;
-
-    iget v1, v1, Lom5;->g:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v10
-
-    float-to-int v11, p1
-
-    const/4 v12, 0x0
-
-    invoke-virtual/range {v4 .. v13}, Lom5;->b(JLjava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/String;IZLandroid/app/PendingIntent;)Landroid/app/Notification;
+    invoke-virtual {p0}, Lq28;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    new-instance v0, Lh46;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->v0:Lwif;
 
-    iget-object p0, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->b:Lzte;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
+    check-cast v0, Lus5;
 
-    check-cast p0, Ljava/lang/Number;
+    iget v0, v0, Lus5;->g:I
 
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result p0
+    move-result-object v7
 
-    const/4 v1, 0x1
+    const/4 v9, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Lh46;-><init>(ILandroid/app/Notification;I)V
+    invoke-virtual/range {v1 .. v10}, Lus5;->b(JLjava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/String;IZLandroid/app/PendingIntent;)Landroid/app/Notification;
+
+    move-result-object p1
+
+    new-instance v0, Lva6;
+
+    iget-object v1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->b:Lwif;
+
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    sget v2, Lp4e;->a:I
+
+    invoke-direct {v0, v1, p1, v2}, Lva6;-><init>(ILandroid/app/Notification;I)V
 
     return-object v0
 .end method
 
 .method public final doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 17
+    .locals 4
 
-    move-object/from16 v0, p0
+    instance-of v0, p1, Llfg;
 
-    move-object/from16 v1, p1
+    if-eqz v0, :cond_0
 
-    sget-object v2, Lc3e;->Y:Lc3e;
+    move-object v0, p1
 
-    instance-of v3, v1, Lrof;
+    check-cast v0, Llfg;
+
+    iget v1, v0, Llfg;->Y:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
 
     if-eqz v3, :cond_0
 
-    move-object v3, v1
+    sub-int/2addr v1, v2
 
-    check-cast v3, Lrof;
-
-    iget v4, v3, Lrof;->s0:I
-
-    const/high16 v5, -0x80000000
-
-    and-int v6, v4, v5
-
-    if-eqz v6, :cond_0
-
-    sub-int/2addr v4, v5
-
-    iput v4, v3, Lrof;->s0:I
+    iput v1, v0, Llfg;->Y:I
 
     goto :goto_0
 
     :cond_0
-    new-instance v3, Lrof;
+    new-instance v0, Llfg;
 
-    check-cast v1, Ljx3;
+    check-cast p1, Ly14;
 
-    invoke-direct {v3, v0, v1}, Lrof;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;Ljx3;)V
+    invoke-direct {v0, p0, p1}, Llfg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;Ly14;)V
 
     :goto_0
-    iget-object v1, v3, Lrof;->Z:Ljava/lang/Object;
+    iget-object p1, v0, Llfg;->o:Ljava/lang/Object;
 
-    sget-object v4, Lz04;->a:Lz04;
+    iget v1, v0, Llfg;->Y:I
 
-    iget v5, v3, Lrof;->s0:I
+    const/4 v2, 0x1
 
-    const/4 v6, 0x3
+    const-string v3, "ru.ok.tamtam.upload.workers.UploadExternalGifWorker"
 
-    const/4 v7, 0x2
+    if-eqz v1, :cond_2
 
-    const/4 v8, 0x1
-
-    const-string v9, "ru.ok.tamtam.upload.workers.UploadExternalGifWorker"
-
-    if-eqz v5, :cond_4
-
-    if-eq v5, v8, :cond_3
-
-    if-eq v5, v7, :cond_2
-
-    if-ne v5, v6, :cond_1
-
-    iget-object v0, v3, Lrof;->X:Lkt7;
-
-    iget-object v5, v3, Lrof;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+    if-ne v1, v2, :cond_1
 
     :try_start_0
-    invoke-static {v1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-object v1, v0
-
-    move-object v0, v5
-
-    move v10, v7
-
-    move v7, v6
-
-    goto/16 :goto_8
-
-    :catchall_0
-    move-exception v0
-
-    goto/16 :goto_a
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    iget-object v0, v3, Lrof;->X:Lkt7;
-
-    iget-object v5, v3, Lrof;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
-
-    :try_start_1
-    invoke-static {v1}, Lqe5;->V(Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    move/from16 p1, v6
-
-    move v10, v7
-
-    goto/16 :goto_5
-
-    :cond_3
-    iget-object v0, v3, Lrof;->Y:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
-
-    iget-object v5, v3, Lrof;->X:Lkt7;
-
-    iget-object v10, v3, Lrof;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
-
-    :try_start_2
-    invoke-static {v1}, Lqe5;->V(Ljava/lang/Object;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    move-object/from16 p1, v5
-
-    move-object v5, v1
-
-    move-object/from16 v1, p1
-
-    move/from16 p1, v6
-
-    move-object v6, v10
-
-    goto/16 :goto_4
-
-    :cond_4
-    invoke-static {v1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    const-string v1, "doWork"
-
-    invoke-static {v9, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lkt7;->b()Ljt7;
-
-    move-result-object v1
-
-    :try_start_3
-    iget-object v5, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->X:Lzte;
-
-    invoke-virtual {v5}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lza2;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
-
-    move-result-object v10
-
-    iget-wide v10, v10, Lmof;->e:J
-
-    invoke-virtual {v5, v10, v11}, Lza2;->C(J)Ls72;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_5
-
-    iget-object v10, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->Z:Lzte;
-
-    invoke-virtual {v10}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v10
-
-    move-object v11, v10
-
-    check-cast v11, Lxva;
-
-    iget-object v5, v5, Ls72;->b:Lvb2;
-
-    iget-wide v12, v5, Lvb2;->a:J
-
-    sget-object v14, Lxz;->o:Lxz;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
-
-    move-result-object v5
-
-    move/from16 p1, v6
-
-    iget-wide v6, v5, Lmof;->d:J
-
-    move-wide v15, v6
-
-    invoke-virtual/range {v11 .. v16}, Lxva;->f(JLxz;J)V
-
     goto :goto_1
 
-    :cond_5
-    move/from16 p1, v6
-
-    :goto_1
-    iget-object v5, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c:Lzte;
-
-    invoke-virtual {v5}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lnn5;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
-
-    move-result-object v6
-
-    iget-object v6, v6, Lmof;->f:Ljava/lang/String;
-
-    check-cast v5, Lcp5;
-
-    invoke-virtual {v5, v6}, Lcp5;->n(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lsu0;->h(Ljava/io/File;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_6
-
-    iget-object v6, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->z0:Lsof;
-
-    invoke-virtual {v6, v5}, Lsof;->i(Ljava/io/File;)V
+    :catchall_0
+    move-exception p1
 
     goto :goto_2
 
-    :cond_6
-    iget-object v6, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->Y:Lzte;
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v6}, Lzte;->getValue()Ljava/lang/Object;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-object v6
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast v6, Lyw6;
+    throw p1
 
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
+    :cond_2
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-object v7
+    const-string p1, "doWork"
 
-    iget-object v7, v7, Lmof;->b:Ljava/lang/String;
+    invoke-static {v3, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v11, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->z0:Lsof;
+    :try_start_1
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->g()V
 
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
+    iput v2, v0, Llfg;->Y:I
 
-    move-result-object v12
+    invoke-virtual {p0, v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->h(Ly14;)Ljava/lang/Object;
 
-    iget-object v12, v12, Lmof;->f:Ljava/lang/String;
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object v6, v6, Lyw6;->a:Lod;
+    sget-object v0, Lr54;->a:Lr54;
 
-    invoke-virtual {v6, v7, v5, v11, v12}, Lod;->b(Ljava/lang/String;Ljava/io/File;Lxw6;Ljava/lang/String;)Z
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    :goto_1
+    :try_start_2
+    check-cast p1, Lp28;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_3
 
     :goto_2
-    invoke-virtual {v0}, Llt7;->isStopped()Z
+    new-instance v0, Lbed;
 
-    move-result v5
+    invoke-direct {v0, p1}, Lbed;-><init>(Ljava/lang/Throwable;)V
 
-    if-nez v5, :cond_11
-
-    iget-object v5, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->X:Lzte;
-
-    invoke-virtual {v5}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lza2;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
-
-    move-result-object v6
-
-    iget-wide v6, v6, Lmof;->e:J
-
-    invoke-virtual {v5, v6, v7}, Lza2;->C(J)Ls72;
-
-    move-result-object v5
-
-    if-nez v5, :cond_7
-
-    iput-object v2, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->y0:Lqof;
-
-    :cond_7
-    iget-object v5, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->y0:Lqof;
-
-    if-eqz v5, :cond_d
-
-    invoke-virtual {v5, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_8
-
-    const/4 v1, 0x5
-
-    invoke-static {v1}, Lee5;->c(I)Lp64;
-
-    move-result-object v1
-
-    new-instance v2, Lht7;
-
-    invoke-direct {v2, v1}, Lht7;-><init>(Lp64;)V
+    move-object p1, v0
 
     :goto_3
-    move-object v1, v2
-
-    goto/16 :goto_9
-
-    :cond_8
-    instance-of v6, v5, Loof;
-
-    if-nez v6, :cond_11
-
-    instance-of v6, v5, Lnof;
-
-    if-nez v6, :cond_11
-
-    sget-object v6, Lua6;->s0:Lua6;
-
-    invoke-virtual {v5, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_9
-
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Lee5;->c(I)Lp64;
-
-    move-result-object v1
-
-    new-instance v2, Lht7;
-
-    invoke-direct {v2, v1}, Lht7;-><init>(Lp64;)V
-
-    goto :goto_3
-
-    :cond_9
-    sget-object v6, Lw9d;->r0:Lw9d;
-
-    invoke-virtual {v5, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_a
-
-    invoke-static/range {p1 .. p1}, Lee5;->c(I)Lp64;
-
-    move-result-object v1
-
-    new-instance v2, Lht7;
-
-    invoke-direct {v2, v1}, Lht7;-><init>(Lp64;)V
-
-    goto :goto_3
-
-    :cond_a
-    instance-of v6, v5, Lpof;
-
-    if-eqz v6, :cond_e
-
-    move-object v6, v5
-
-    check-cast v6, Lpof;
-
-    iget v6, v6, Lpof;->a:F
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v11, "progress "
-
-    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v9, v6}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    check-cast v5, Lpof;
-
-    iget v5, v5, Lpof;->a:F
-
-    invoke-virtual {v0, v5}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->needToShowNotification(F)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_d
-
-    iput-object v0, v3, Lrof;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
-
-    iput-object v1, v3, Lrof;->X:Lkt7;
-
-    iput-object v0, v3, Lrof;->Y:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
-
-    iput v8, v3, Lrof;->s0:I
-
-    invoke-virtual {v0, v3}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->getForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    if-ne v5, v4, :cond_b
-
-    goto :goto_7
-
-    :cond_b
-    move-object v6, v0
-
-    :goto_4
-    check-cast v5, Lh46;
-
-    iput-object v6, v3, Lrof;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
-
-    iput-object v1, v3, Lrof;->X:Lkt7;
-
-    const/4 v7, 0x0
-
-    iput-object v7, v3, Lrof;->Y:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
-
-    const/4 v10, 0x2
-
-    iput v10, v3, Lrof;->s0:I
-
-    invoke-virtual {v0, v5, v3}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->setForeground(Lh46;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1}, Lded;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object v0
 
-    if-ne v0, v4, :cond_c
+    if-eqz v0, :cond_7
 
-    goto :goto_7
+    instance-of v1, v0, Ljava/util/concurrent/CancellationException;
 
-    :cond_c
-    move-object v0, v1
+    if-eqz v1, :cond_4
 
-    move-object v5, v6
+    const-string v1, "Cancelled"
+
+    invoke-static {v3, v1, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_4
+
+    :cond_4
+    instance-of v1, v0, Ljava/lang/SecurityException;
+
+    if-eqz v1, :cond_5
+
+    const-string v1, "Security exception"
+
+    invoke-static {v3, v1, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_4
+
+    :cond_5
+    instance-of v1, v0, Ljava/lang/IllegalStateException;
+
+    if-eqz v1, :cond_6
+
+    const-string v1, "Illegal state"
+
+    invoke-static {v3, v1, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_4
+
+    :cond_6
+    const-string v1, "Unexpected error"
+
+    invoke-static {v3, v1, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_4
+    invoke-static {p1}, Lded;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    invoke-static {}, Lp28;->a()Lm28;
+
+    move-result-object p1
 
     :goto_5
-    move-object v1, v0
+    return-object p1
+.end method
 
-    move-object v0, v5
+.method public final e(Lkfg;Ly14;)Ljava/lang/Object;
+    .locals 7
 
-    goto :goto_6
+    instance-of v0, p2, Lmfg;
 
-    :cond_d
-    const/4 v10, 0x2
+    if-eqz v0, :cond_0
 
-    goto :goto_6
+    move-object v0, p2
 
-    :cond_e
-    sget-object v1, Lx9d;->r0:Lx9d;
+    check-cast v0, Lmfg;
 
-    invoke-virtual {v5, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget v1, v0, Lmfg;->Z:I
 
-    move-result v1
+    const/high16 v2, -0x80000000
 
-    if-eqz v1, :cond_f
+    and-int v3, v1, v2
 
-    const/4 v1, 0x6
+    if-eqz v3, :cond_0
 
-    invoke-static {v1}, Lee5;->c(I)Lp64;
+    sub-int/2addr v1, v2
 
-    move-result-object v1
+    iput v1, v0, Lmfg;->Z:I
 
-    new-instance v2, Lht7;
+    goto :goto_0
 
-    invoke-direct {v2, v1}, Lht7;-><init>(Lp64;)V
+    :cond_0
+    new-instance v0, Lmfg;
+
+    invoke-direct {v0, p0, p2}, Lmfg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;Ly14;)V
+
+    :goto_0
+    iget-object p2, v0, Lmfg;->X:Ljava/lang/Object;
+
+    iget v1, v0, Lmfg;->Z:I
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    sget-object v5, Lr54;->a:Lr54;
+
+    if-eqz v1, :cond_3
+
+    if-eq v1, v3, :cond_2
+
+    if-ne v1, v2, :cond_1
+
+    invoke-static {p2}, Lxxi;->b(Ljava/lang/Object;)V
+
+    return-object v4
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    iget-object p1, v0, Lmfg;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-static {p2}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_1
+
+    :cond_3
+    invoke-static {p2}, Lxxi;->b(Ljava/lang/Object;)V
+
+    if-nez p1, :cond_4
 
     goto/16 :goto_3
 
-    :cond_f
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    :cond_4
+    sget-object p2, Lfpd;->X:Lfpd;
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    throw v0
+    move-result p2
 
-    :goto_6
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->getWorkDelay()J
+    if-eqz p2, :cond_5
 
-    move-result-wide v5
+    const/4 p1, 0x5
 
-    iput-object v0, v3, Lrof;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+    invoke-static {p1}, Lu15;->a(I)Lnb4;
 
-    iput-object v1, v3, Lrof;->X:Lkt7;
+    move-result-object p1
 
-    move/from16 v7, p1
+    new-instance p2, Lm28;
 
-    iput v7, v3, Lrof;->s0:I
+    invoke-direct {p2, p1}, Lm28;-><init>(Lnb4;)V
 
-    invoke-static {v5, v6, v3}, Ln2e;->h(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-object p2
 
-    move-result-object v5
+    :cond_5
+    instance-of p2, p1, Lifg;
 
-    if-ne v5, v4, :cond_10
+    if-eqz p2, :cond_6
 
-    :goto_7
+    invoke-static {}, Lp28;->b()Lo28;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_6
+    instance-of p2, p1, Lhfg;
+
+    if-eqz p2, :cond_7
+
+    invoke-static {}, Lp28;->b()Lo28;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_7
+    sget-object p2, Lgbi;->o:Lgbi;
+
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_8
+
+    const/4 p1, 0x4
+
+    invoke-static {p1}, Lu15;->a(I)Lnb4;
+
+    move-result-object p1
+
+    new-instance p2, Lm28;
+
+    invoke-direct {p2, p1}, Lm28;-><init>(Lnb4;)V
+
+    return-object p2
+
+    :cond_8
+    sget-object p2, Lnri;->Y:Lnri;
+
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_9
+
+    const/4 p1, 0x3
+
+    invoke-static {p1}, Lu15;->a(I)Lnb4;
+
+    move-result-object p1
+
+    new-instance p2, Lm28;
+
+    invoke-direct {p2, p1}, Lm28;-><init>(Lnb4;)V
+
+    return-object p2
+
+    :cond_9
+    instance-of p2, p1, Ljfg;
+
+    if-eqz p2, :cond_c
+
+    check-cast p1, Ljfg;
+
+    iget p1, p1, Ljfg;->a:I
+
+    invoke-static {p1}, Lza6;->a(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v6, "progress "
+
+    invoke-direct {v1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v1, "ru.ok.tamtam.upload.workers.UploadExternalGifWorker"
+
+    invoke-static {v1, p2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->needToShowNotification-P3Ng7BI(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_b
+
+    iput-object p0, v0, Lmfg;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    iput v3, v0, Lmfg;->Z:I
+
+    invoke-virtual {p0, v0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->getForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-ne p2, v5, :cond_a
+
+    goto :goto_2
+
+    :cond_a
+    move-object p1, p0
+
+    :goto_1
+    check-cast p2, Lva6;
+
+    iput-object v4, v0, Lmfg;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    iput v2, v0, Lmfg;->Z:I
+
+    invoke-virtual {p1, p2, v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->setForeground(Lva6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v5, :cond_b
+
+    :goto_2
+    return-object v5
+
+    :cond_b
+    :goto_3
     return-object v4
 
-    :cond_10
-    :goto_8
-    move/from16 p1, v7
+    :cond_c
+    sget-object p2, Lwyi;->q0:Lwyi;
 
-    goto/16 :goto_2
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    :cond_11
-    :goto_9
-    const-string v2, "doWork %s"
+    move-result p1
 
-    iget-object v3, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->y0:Lqof;
+    if-eqz p1, :cond_d
 
-    filled-new-array {v3}, [Ljava/lang/Object;
+    const/4 p1, 0x6
 
-    move-result-object v3
+    invoke-static {p1}, Lu15;->a(I)Lnb4;
 
-    invoke-static {v9, v2, v3}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object p1
 
-    iget-object v2, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->y0:Lqof;
+    new-instance p2, Lm28;
 
-    instance-of v3, v2, Lnof;
+    invoke-direct {p2, p1}, Lm28;-><init>(Lnb4;)V
 
-    if-eqz v3, :cond_12
+    return-object p2
 
-    iget-object v3, v0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->u0:Lzte;
+    :cond_d
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-virtual {v3}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    move-result-object v3
+    throw p1
+.end method
 
-    move-object v10, v3
+.method public final g()V
+    .locals 8
 
-    check-cast v10, Lel5;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->X:Lwif;
 
-    check-cast v2, Lnof;
-
-    iget-object v11, v2, Lnof;->a:Ldf5;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
-
-    move-result-object v2
-
-    iget-wide v12, v2, Lmof;->d:J
-
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
-
-    move-result-object v2
-
-    iget-wide v14, v2, Lmof;->e:J
-
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lmof;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Lmof;->c:Ljava/lang/String;
+    check-cast v0, Lsd2;
 
-    move-object/from16 v16, v0
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
 
-    invoke-virtual/range {v10 .. v16}, Lel5;->c(Lr2;JJLjava/lang/String;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    move-result-object v1
 
-    :cond_12
-    return-object v1
+    iget-wide v1, v1, Lgfg;->e:J
 
-    :goto_a
-    const-string v1, "failure!"
-
-    invoke-static {v9, v1, v0}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {}, Lkt7;->a()Lht7;
+    invoke-virtual {v0, v1, v2}, Lsd2;->C(J)Lla2;
 
     move-result-object v0
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->Z:Lwif;
+
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lrab;
+
+    iget-object v0, v0, Lla2;->b:Lne2;
+
+    iget-wide v3, v0, Lne2;->a:J
+
+    sget-object v5, La10;->o:La10;
+
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
+
+    move-result-object v0
+
+    iget-wide v6, v0, Lgfg;->d:J
+
+    invoke-virtual/range {v2 .. v7}, Lrab;->f(JLa10;J)V
+
+    :cond_0
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c:Lwif;
+
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ltt5;
+
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lgfg;->f:Ljava/lang/String;
+
+    check-cast v0, Liv5;
+
+    invoke-virtual {v0, v1}, Liv5;->l(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lu1j;->b(Ljava/io/File;)Z
+
+    move-result v1
+
+    iget-object v2, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->y0:Lnfg;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v2, v0}, Lnfg;->e(Ljava/io/File;)V
+
+    return-void
+
+    :cond_1
+    iget-object v1, p0, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->Y:Lwif;
+
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lf57;
+
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lgfg;->b:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lgfg;->f:Ljava/lang/String;
+
+    invoke-virtual {v1, v3, v0, v2, v4}, Lf57;->b(Ljava/lang/String;Ljava/io/File;Le57;Ljava/lang/String;)Z
+
+    return-void
 .end method
 
 .method public final getName()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    invoke-virtual {p0}, Llt7;->getInputData()Lp64;
+    invoke-virtual {p0}, Lq28;->getInputData()Lnb4;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "taskName"
+    const-string v1, "taskName"
 
-    invoke-virtual {p0, v0}, Lp64;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lnb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    const-string p0, "ru.ok.tamtam.upload.workers.UploadExternalGifWorker"
+    const-string v0, "ru.ok.tamtam.upload.workers.UploadExternalGifWorker"
 
     :cond_0
-    return-object p0
+    return-object v0
+.end method
+
+.method public final h(Ly14;)Ljava/lang/Object;
+    .locals 11
+
+    instance-of v0, p1, Lofg;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Lofg;
+
+    iget v1, v0, Lofg;->q0:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lofg;->q0:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lofg;
+
+    invoke-direct {v0, p0, p1}, Lofg;-><init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;Ly14;)V
+
+    :goto_0
+    iget-object p1, v0, Lofg;->Y:Ljava/lang/Object;
+
+    sget-object v1, Lr54;->a:Lr54;
+
+    iget v2, v0, Lofg;->q0:I
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_4
+
+    if-eq v2, v4, :cond_3
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, v0, Lofg;->X:Lp28;
+
+    iget-object v5, v0, Lofg;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    :cond_1
+    move-object p1, v2
+
+    move-object v2, v5
+
+    goto :goto_1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    iget-object v2, v0, Lofg;->X:Lp28;
+
+    iget-object v5, v0, Lofg;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_4
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    invoke-static {}, Lp28;->b()Lo28;
+
+    move-result-object p1
+
+    move-object v2, p0
+
+    :goto_1
+    invoke-virtual {v2}, Lq28;->isStopped()Z
+
+    move-result v5
+
+    if-nez v5, :cond_8
+
+    iget-object v5, v2, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->X:Lwif;
+
+    invoke-virtual {v5}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lsd2;
+
+    invoke-virtual {v2}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
+
+    move-result-object v6
+
+    iget-wide v6, v6, Lgfg;->e:J
+
+    invoke-virtual {v5, v6, v7}, Lsd2;->C(J)Lla2;
+
+    move-result-object v5
+
+    if-nez v5, :cond_5
+
+    sget-object v5, Lfpd;->X:Lfpd;
+
+    iput-object v5, v2, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->x0:Lkfg;
+
+    :cond_5
+    iget-object v5, v2, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->x0:Lkfg;
+
+    iput-object v2, v0, Lofg;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    iput-object p1, v0, Lofg;->X:Lp28;
+
+    iput v4, v0, Lofg;->q0:I
+
+    invoke-virtual {v2, v5, v0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->e(Lkfg;Ly14;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-ne v5, v1, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    move-object v10, v2
+
+    move-object v2, p1
+
+    move-object p1, v5
+
+    move-object v5, v10
+
+    :goto_2
+    check-cast p1, Lp28;
+
+    if-eqz p1, :cond_7
+
+    move-object v2, v5
+
+    goto :goto_4
+
+    :cond_7
+    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->getWorkDelay()J
+
+    move-result-wide v6
+
+    iput-object v5, v0, Lofg;->o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    iput-object v2, v0, Lofg;->X:Lp28;
+
+    iput v3, v0, Lofg;->q0:I
+
+    invoke-static {v6, v7, v0}, Lqyi;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_1
+
+    :goto_3
+    return-object v1
+
+    :cond_8
+    :goto_4
+    sget-object v0, Ltei;->a:Lmxa;
+
+    if-nez v0, :cond_9
+
+    goto :goto_5
+
+    :cond_9
+    sget-object v1, Lc98;->o:Lc98;
+
+    invoke-virtual {v0, v1}, Lmxa;->b(Lc98;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_a
+
+    iget-object v3, v2, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->x0:Lkfg;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "doWork state="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const-string v5, "ru.ok.tamtam.upload.workers.UploadExternalGifWorker"
+
+    invoke-virtual {v0, v1, v5, v3, v4}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_a
+    :goto_5
+    iget-object v0, v2, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->x0:Lkfg;
+
+    instance-of v1, v0, Lhfg;
+
+    if-eqz v1, :cond_b
+
+    iget-object v1, v2, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->t0:Lwif;
+
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v3, v1
+
+    check-cast v3, Lqr5;
+
+    check-cast v0, Lhfg;
+
+    iget-object v4, v0, Lhfg;->a:Lll5;
+
+    invoke-virtual {v2}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
+
+    move-result-object v0
+
+    iget-wide v5, v0, Lgfg;->d:J
+
+    invoke-virtual {v2}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
+
+    move-result-object v0
+
+    iget-wide v7, v0, Lgfg;->e:J
+
+    invoke-virtual {v2}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Lgfg;
+
+    move-result-object v0
+
+    iget-object v9, v0, Lgfg;->c:Ljava/lang/String;
+
+    invoke-virtual/range {v3 .. v9}, Lqr5;->c(La3;JJLjava/lang/String;)V
+
+    :cond_b
+    return-object p1
 .end method

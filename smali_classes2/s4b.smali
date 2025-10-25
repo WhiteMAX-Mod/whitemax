@@ -1,152 +1,223 @@
-.class public final Ls4b;
+.class public abstract Ls4b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lexc;
+# static fields
+.field public static final A:I
 
-.field public final b:Luh;
+.field public static final B:I
 
-.field public final c:Lte4;
+.field public static final C:I
 
-.field public final d:Lf79;
+.field public static final D:I
 
-.field public final e:Lf79;
+.field public static final E:I
 
-.field public final f:Lf79;
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lduc;->oneme_stickers_settings_empty_favorite_title:I
 
-    iput-object p1, p0, Ls4b;->a:Lexc;
+    sput v0, Ls4b;->a:I
 
-    new-instance v0, Luh;
+    sget v0, Lduc;->oneme_stickers_settings_empty_recent_subtitle:I
 
-    const/16 v1, 0xf
+    sput v0, Ls4b;->b:I
 
-    invoke-direct {v0, p1, v1}, Luh;-><init>(Lexc;I)V
+    sget v0, Lduc;->oneme_stickers_settings_empty_recent_title:I
 
-    iput-object v0, p0, Ls4b;->b:Luh;
+    sput v0, Ls4b;->c:I
 
-    new-instance v0, Lte4;
+    sget v0, Lduc;->oneme_stickers_settings_favorite_title:I
 
-    const/4 v1, 0x3
+    sput v0, Ls4b;->d:I
 
-    invoke-direct {v0, p1, v1}, Lte4;-><init>(Lexc;I)V
+    sget v0, Lduc;->oneme_stickers_settings_favorite_toolbar_title:I
 
-    iput-object v0, p0, Ls4b;->c:Lte4;
+    sput v0, Ls4b;->e:I
 
-    new-instance v0, Lf79;
+    sget v0, Lduc;->oneme_stickers_settings_menu_copy_link_title:I
 
-    const/16 v1, 0x13
+    sput v0, Ls4b;->f:I
 
-    invoke-direct {v0, p1, v1}, Lf79;-><init>(Lexc;I)V
+    sget v0, Lduc;->oneme_stickers_settings_menu_copy_set_link_snackbar_title:I
 
-    iput-object v0, p0, Ls4b;->d:Lf79;
+    sput v0, Ls4b;->g:I
 
-    new-instance v0, Lf79;
+    sget v0, Lduc;->oneme_stickers_settings_menu_delete_set_confirm_action:I
 
-    const/16 v1, 0x14
+    sput v0, Ls4b;->h:I
 
-    invoke-direct {v0, p1, v1}, Lf79;-><init>(Lexc;I)V
+    sget v0, Lduc;->oneme_stickers_settings_menu_delete_set_confirm_cancel:I
 
-    iput-object v0, p0, Ls4b;->e:Lf79;
+    sput v0, Ls4b;->i:I
 
-    new-instance v0, Lf79;
+    sget v0, Lduc;->oneme_stickers_settings_menu_delete_set_confirm_subtitle:I
 
-    const/16 v1, 0x15
+    sput v0, Ls4b;->j:I
 
-    invoke-direct {v0, p1, v1}, Lf79;-><init>(Lexc;I)V
+    sget v0, Lduc;->oneme_stickers_settings_menu_delete_set_confirm_title:I
 
-    iput-object v0, p0, Ls4b;->f:Lf79;
+    sput v0, Ls4b;->k:I
 
-    return-void
-.end method
+    sget v0, Lduc;->oneme_stickers_settings_menu_delete_set_snackbar_title:I
 
-.method public static a(Ls4b;Ljava/util/ArrayList;)V
-    .locals 6
+    sput v0, Ls4b;->l:I
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    sget v0, Lduc;->oneme_stickers_settings_menu_delete_set_title:I
 
-    move-result-object p1
+    sput v0, Ls4b;->m:I
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    sget v0, Lduc;->oneme_stickers_settings_menu_forward_title:I
 
-    move-result v0
+    sput v0, Ls4b;->n:I
 
-    if-eqz v0, :cond_0
+    sget v0, Lduc;->oneme_stickers_settings_menu_share_title:I
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sput v0, Ls4b;->o:I
 
-    move-result-object v0
+    sget v0, Lduc;->oneme_stickers_settings_recent_title:I
 
-    check-cast v0, Ljava/lang/Number;
+    sput v0, Ls4b;->p:I
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    sget v0, Lduc;->oneme_stickers_settings_recent_toolbar_title:I
 
-    move-result-wide v0
+    sput v0, Ls4b;->q:I
 
-    iget-object v2, p0, Ls4b;->a:Lexc;
+    sget v0, Lduc;->oneme_stickers_settings_sets_title:I
 
-    invoke-virtual {v2}, Lexc;->b()V
+    sput v0, Ls4b;->r:I
 
-    iget-object v3, p0, Ls4b;->f:Lf79;
+    sget v0, Lduc;->oneme_stickers_settings_stickers_confirm_delete_sticker_title:I
 
-    invoke-virtual {v3}, Ly2;->f()Lqqe;
+    sput v0, Ls4b;->s:I
 
-    move-result-object v4
+    sget v0, Lduc;->oneme_stickers_settings_stickers_confirm_delete_stickers_title:I
 
-    const/4 v5, 0x1
+    sput v0, Ls4b;->t:I
 
-    invoke-interface {v4, v5, v0, v1}, Loqe;->k(IJ)V
+    sget v0, Lduc;->oneme_stickers_settings_stickers_confirm_delete_subtitle:I
 
-    :try_start_0
-    invoke-virtual {v2}, Lexc;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sput v0, Ls4b;->u:I
 
-    :try_start_1
-    invoke-interface {v4}, Lqqe;->C()I
+    sget v0, Lduc;->oneme_stickers_settings_stickers_favorite_confirm_clear_subtitle:I
 
-    invoke-virtual {v2}, Lexc;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    sput v0, Ls4b;->v:I
 
-    :try_start_2
-    invoke-virtual {v2}, Lexc;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    sget v0, Lduc;->oneme_stickers_settings_stickers_favorite_confirm_clear_title:I
 
-    invoke-virtual {v3, v4}, Ly2;->u(Lqqe;)V
+    sput v0, Ls4b;->w:I
 
-    goto :goto_0
+    sget v0, Lduc;->oneme_stickers_settings_stickers_favorite_delete_all_snackbar:I
 
-    :catchall_0
-    move-exception p0
+    sput v0, Ls4b;->x:I
 
-    goto :goto_1
+    sget v0, Lduc;->oneme_stickers_settings_stickers_favorite_snackbar_from:I
 
-    :catchall_1
-    move-exception p0
+    sput v0, Ls4b;->y:I
 
-    :try_start_3
-    invoke-virtual {v2}, Lexc;->k()V
+    sget v0, Lduc;->oneme_stickers_settings_stickers_menu_change_title:I
 
-    throw p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    sput v0, Ls4b;->z:I
 
-    :goto_1
-    invoke-virtual {v3, v4}, Ly2;->u(Lqqe;)V
+    sget v0, Lduc;->oneme_stickers_settings_stickers_recent_confirm_clear_subtitle:I
 
-    throw p0
+    sput v0, Ls4b;->A:I
 
-    :cond_0
+    sget v0, Lduc;->oneme_stickers_settings_stickers_recent_confirm_clear_title:I
+
+    sput v0, Ls4b;->B:I
+
+    sget v0, Lduc;->oneme_stickers_settings_stickers_recent_delete_all_snackbar:I
+
+    sput v0, Ls4b;->C:I
+
+    sget v0, Lduc;->oneme_stickers_settings_stickers_recent_menu_clear_title:I
+
+    sput v0, Ls4b;->D:I
+
+    sget v0, Lduc;->oneme_stickers_settings_stickers_recent_snackbar_from:I
+
+    sput v0, Ls4b;->E:I
+
+    sget v0, Lduc;->oneme_stickers_settings_stickers_snackbar_delete_stickers_title:I
+
+    sput v0, Ls4b;->F:I
+
+    sget v0, Lduc;->oneme_stickers_settings_toolbar_title:I
+
+    sput v0, Ls4b;->G:I
+
+    sget v0, Lduc;->oneme_strickers_settings_stickers_multiselect_empty_title:I
+
+    sput v0, Ls4b;->H:I
+
+    sget v0, Lduc;->oneme_strickers_settings_stickers_multiselect_title:I
+
+    sput v0, Ls4b;->I:I
+
     return-void
 .end method

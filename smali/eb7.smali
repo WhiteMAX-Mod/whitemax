@@ -1,73 +1,33 @@
 .class public final Leb7;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lpc6;
+# static fields
+.field public static final a:Lu1f;
 
-.field public final synthetic Y:Ljava/lang/Object;
-
-.field public o:I
+.field public static final b:Leb7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lq04;Lpc6;Ljava/lang/Object;)V
-    .locals 0
-
-    iput-object p3, p0, Leb7;->X:Lpc6;
-
-    iput-object p4, p0, Leb7;->Y:Ljava/lang/Object;
-
-    invoke-direct {p0, p2, p1}, Ljx3;-><init>(Lq04;Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 3
 
-    iget v0, p0, Leb7;->o:I
+    new-instance v0, Lu1f;
 
-    const/4 v1, 0x2
+    const-string v1, "MLKitImageUtils"
 
-    const/4 v2, 0x1
+    const-string v2, ""
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, v1, v2}, Lu1f;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-ne v0, v2, :cond_0
+    sput-object v0, Leb7;->a:Lu1f;
 
-    iput v1, p0, Leb7;->o:I
+    new-instance v0, Leb7;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-object p1
+    sput-object v0, Leb7;->b:Leb7;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "This coroutine had already completed"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    iput v2, p0, Leb7;->o:I
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Leb7;->X:Lpc6;
-
-    invoke-static {v1, p1}, Lvkf;->e(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Leb7;->Y:Ljava/lang/Object;
-
-    invoke-interface {p1, v0, p0}, Lpc6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

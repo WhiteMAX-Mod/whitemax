@@ -1,59 +1,22 @@
-.class public final Lsb3;
-.super Ltb3;
+.class public abstract Lsb3;
+.super Lrb3;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:I
-
-
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public static n(Ljava/util/Comparator;Ljava/util/List;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    iput p1, p0, Lsb3;->d:I
+    move-result v0
 
+    const/4 v1, 0x1
+
+    if-le v0, v1, :cond_0
+
+    invoke-static {p1, p0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    :cond_0
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(II)Ltb3;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final b(JJ)Ltb3;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ltb3;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final d(ZZ)Ltb3;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final e(ZZ)Ltb3;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final f()I
-    .locals 0
-
-    iget p0, p0, Lsb3;->d:I
-
-    return p0
 .end method

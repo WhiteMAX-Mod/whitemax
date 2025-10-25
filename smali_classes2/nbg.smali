@@ -1,178 +1,123 @@
-.class public final Lnbg;
+.class public abstract synthetic Lnbg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhs1;
 
-
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lnbg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAttendee(Lrr1;)V
-    .locals 1
-
-    iget-object p0, p0, Lnbg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {}, Ljava/util/concurrent/TimeUnit;->values()[Ljava/util/concurrent/TimeUnit;
 
     move-result-object v0
 
-    check-cast v0, Lhs1;
+    array-length v0, v0
 
-    invoke-interface {v0, p1}, Lhs1;->onAttendee(Lrr1;)V
+    new-array v0, v0, [I
 
-    goto :goto_0
+    :try_start_0
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-.method public final onFeedback(Lsr1;)V
-    .locals 1
+    move-result v1
 
-    iget-object p0, p0, Lnbg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const/4 v2, 0x1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p0
+    :catch_0
+    :try_start_1
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    const/4 v2, 0x2
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result-object v0
+    :catch_1
+    :try_start_2
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    check-cast v0, Lhs1;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-interface {v0, p1}, Lhs1;->onFeedback(Lsr1;)V
+    move-result v1
 
-    goto :goto_0
+    const/4 v2, 0x3
 
-    :cond_0
-    return-void
-.end method
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-.method public final onHandUp(Ltr1;)V
-    .locals 1
+    :catch_2
+    :try_start_3
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-object p0, p0, Lnbg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    move-result v1
 
-    move-result-object p0
+    const/4 v2, 0x4
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    move-result v0
+    :catch_3
+    :try_start_4
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
+    const/4 v2, 0x5
 
-    check-cast v0, Lhs1;
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-interface {v0, p1}, Lhs1;->onHandUp(Ltr1;)V
+    :catch_4
+    :try_start_5
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
 
-    goto :goto_0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    :cond_0
-    return-void
-.end method
+    move-result v1
 
-.method public final onMeInWaitingRoomChanged(Z)V
-    .locals 1
+    const/4 v2, 0x6
 
-    iget-object p0, p0, Lnbg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    :catch_5
+    :try_start_6
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
-    move-result-object p0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    move-result v1
 
-    move-result v0
+    const/4 v2, 0x7
 
-    if-eqz v0, :cond_0
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :catch_6
+    sput-object v0, Lnbg;->$EnumSwitchMapping$0:[I
 
-    move-result-object v0
-
-    check-cast v0, Lhs1;
-
-    invoke-interface {v0, p1}, Lhs1;->onMeInWaitingRoomChanged(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onPromotionUpdated(Lur1;)V
-    .locals 1
-
-    iget-object p0, p0, Lnbg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhs1;
-
-    invoke-interface {v0, p1}, Lhs1;->onPromotionUpdated(Lur1;)V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method

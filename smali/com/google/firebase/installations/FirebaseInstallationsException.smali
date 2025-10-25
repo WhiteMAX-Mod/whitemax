@@ -9,7 +9,7 @@
 
     const-string v0, "Detail message must not be empty"
 
-    invoke-static {p1, v0}, Ljk7;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lzui;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 

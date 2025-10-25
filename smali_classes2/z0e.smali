@@ -1,64 +1,23 @@
-.class public final Lz0e;
+.class public interface abstract Lz0e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc1e;
-
-
-# static fields
-.field public static final a:Lz0e;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lz0e;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lz0e;->a:Lz0e;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lz0e;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
+.method public abstract a(Lf0e;)V
 .end method
 
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x63736917
-
-    return p0
+.method public abstract b(Lh0e;)V
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+.method public abstract c()Ln0d;
+.end method
 
-    const-string p0, "Continue"
+.method public abstract d(Lz6a;)V
+.end method
 
-    return-object p0
+.method public abstract f()Lm0d;
+.end method
+
+.method public abstract g()Lqsf;
 .end method

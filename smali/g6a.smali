@@ -1,215 +1,177 @@
 .class public final Lg6a;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Lhr3;
 .source "SourceFile"
-
-# interfaces
-.implements Loq4;
-.implements Ld8a;
 
 
 # instance fields
-.field public X:Loq4;
+.field public final f:Landroid/net/ConnectivityManager;
 
-.field public volatile Y:Z
-
-.field public final a:Lrc3;
-
-.field public final b:Ltx;
-
-.field public final c:Lqc6;
-
-.field public final o:Lxd3;
+.field public final g:Lnp3;
 
 
 # direct methods
-.method public constructor <init>(Lrc3;Lqc6;)V
+.method public constructor <init>(Landroid/content/Context;Lw9c;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    invoke-direct {p0, p1, p2}, Lhr3;-><init>(Landroid/content/Context;Lw9c;)V
 
-    iput-object p1, p0, Lg6a;->a:Lrc3;
+    iget-object p1, p0, Lhr3;->b:Ljava/lang/Object;
 
-    iput-object p2, p0, Lg6a;->c:Lqc6;
+    check-cast p1, Landroid/content/Context;
 
-    new-instance p1, Ltx;
+    const-string p2, "connectivity"
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    iput-object p1, p0, Lg6a;->b:Ltx;
+    move-result-object p1
 
-    new-instance p1, Lxd3;
+    check-cast p1, Landroid/net/ConnectivityManager;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lg6a;->f:Landroid/net/ConnectivityManager;
 
-    iput-object p1, p0, Lg6a;->o:Lxd3;
+    new-instance p1, Lnp3;
 
-    const/4 p1, 0x1
+    const/4 p2, 0x1
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+    invoke-direct {p1, p2, p0}, Lnp3;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lg6a;->g:Lnp3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public final i()Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    iget-object v0, p0, Lg6a;->f:Landroid/net/ConnectivityManager;
 
-    move-result v0
+    invoke-static {v0}, Lh6a;->a(Landroid/net/ConnectivityManager;)Lf6a;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    iget-object v0, p0, Lg6a;->b:Ltx;
-
-    iget-object p0, p0, Lg6a;->a:Lrc3;
-
-    invoke-virtual {v0, p0}, Ltx;->c(Lrc3;)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public final c(Loq4;)V
-    .locals 1
+.method public final r()V
+    .locals 4
 
-    iget-object v0, p0, Lg6a;->X:Loq4;
-
-    invoke-static {v0, p1}, Lsq4;->h(Loq4;Loq4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lg6a;->X:Loq4;
-
-    iget-object p1, p0, Lg6a;->a:Lrc3;
-
-    invoke-interface {p1, p0}, Lrc3;->c(Loq4;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lg6a;->Y:Z
-
-    iget-object v0, p0, Lg6a;->X:Loq4;
-
-    invoke-interface {v0}, Loq4;->e()V
-
-    iget-object v0, p0, Lg6a;->o:Lxd3;
-
-    invoke-virtual {v0}, Lxd3;->e()V
-
-    iget-object p0, p0, Lg6a;->b:Ltx;
-
-    invoke-virtual {p0}, Ltx;->b()V
-
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    iget-object p0, p0, Lg6a;->X:Loq4;
-
-    invoke-interface {p0}, Loq4;->f()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object v0, p0, Lg6a;->b:Ltx;
-
-    invoke-virtual {v0, p1}, Ltx;->a(Ljava/lang/Throwable;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lg6a;->Y:Z
-
-    iget-object p1, p0, Lg6a;->X:Loq4;
-
-    invoke-interface {p1}, Loq4;->e()V
-
-    iget-object p1, p0, Lg6a;->o:Lxd3;
-
-    invoke-virtual {p1}, Lxd3;->e()V
-
-    iget-object p1, p0, Lg6a;->b:Ltx;
-
-    iget-object p0, p0, Lg6a;->a:Lrc3;
-
-    invoke-virtual {p1, p0}, Ltx;->c(Lrc3;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final s(Ljava/lang/Object;)V
-    .locals 2
+    const-string v0, "Received exception while registering network callback"
 
     :try_start_0
-    iget-object v0, p0, Lg6a;->c:Lqc6;
+    invoke-static {}, Lxyh;->e()Lxyh;
 
-    invoke-interface {v0, p1}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    sget-object v2, Lh6a;->a:Ljava/lang/String;
 
-    const-string v0, "The mapper returned a null CompletableSource"
+    const-string v3, "Registering network callback"
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v2, v3}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast p1, Lhc3;
+    iget-object v1, p0, Lg6a;->f:Landroid/net/ConnectivityManager;
+
+    iget-object v2, p0, Lg6a;->g:Lnp3;
+
+    invoke-static {v1, v2}, Ly5a;->a(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    new-instance v0, Ljc3;
-
-    invoke-direct {v0, p0}, Ljc3;-><init>(Lg6a;)V
-
-    iget-boolean v1, p0, Lg6a;->Y:Z
-
-    if-nez v1, :cond_0
-
-    iget-object p0, p0, Lg6a;->o:Lxd3;
-
-    invoke-virtual {p0, v0}, Lxd3;->a(Loq4;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p1, v0}, Lhc3;->h(Lrc3;)V
-
-    :cond_0
     return-void
 
-    :catchall_0
-    move-exception p1
+    :catch_0
+    move-exception v1
 
-    invoke-static {p1}, Lzyd;->F(Ljava/lang/Throwable;)V
+    goto :goto_0
 
-    iget-object v0, p0, Lg6a;->X:Loq4;
+    :catch_1
+    move-exception v1
 
-    invoke-interface {v0}, Loq4;->e()V
+    goto :goto_1
 
-    invoke-virtual {p0, p1}, Lg6a;->onError(Ljava/lang/Throwable;)V
+    :goto_0
+    invoke-static {}, Lxyh;->e()Lxyh;
 
+    move-result-object v2
+
+    sget-object v3, Lh6a;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0, v1}, Lxyh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :goto_1
+    invoke-static {}, Lxyh;->e()Lxyh;
+
+    move-result-object v2
+
+    sget-object v3, Lh6a;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0, v1}, Lxyh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    return-void
+.end method
+
+.method public final s()V
+    .locals 4
+
+    const-string v0, "Received exception while unregistering network callback"
+
+    :try_start_0
+    invoke-static {}, Lxyh;->e()Lxyh;
+
+    move-result-object v1
+
+    sget-object v2, Lh6a;->a:Ljava/lang/String;
+
+    const-string v3, "Unregistering network callback"
+
+    invoke-virtual {v1, v2, v3}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lg6a;->f:Landroid/net/ConnectivityManager;
+
+    iget-object v2, p0, Lg6a;->g:Lnp3;
+
+    invoke-static {v1, v2}, Lw5a;->c(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_1
+
+    :goto_0
+    invoke-static {}, Lxyh;->e()Lxyh;
+
+    move-result-object v2
+
+    sget-object v3, Lh6a;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0, v1}, Lxyh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :goto_1
+    invoke-static {}, Lxyh;->e()Lxyh;
+
+    move-result-object v2
+
+    sget-object v3, Lh6a;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0, v1}, Lxyh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
     return-void
 .end method

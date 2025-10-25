@@ -3,65 +3,53 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
+    .locals 0
 
-    sget v0, Ljac;->call_start_group_call_unavailable:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
 
-    sput v0, Luda;->a:I
+    move-result-object p0
 
-    sget v0, Ljac;->call_start_new_dialog_action_cancel:I
+    return-object p0
+.end method
 
-    sput v0, Luda;->b:I
+.method public static b(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Ljac;->call_start_new_dialog_action_continue_audio:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomBigContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
 
-    sput v0, Luda;->c:I
+    move-result-object p0
 
-    sget v0, Ljac;->call_start_new_dialog_action_continue_video:I
+    return-object p0
+.end method
 
-    sput v0, Luda;->d:I
+.method public static c(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Ljac;->call_start_new_dialog_subtitle:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
 
-    sput v0, Luda;->e:I
+    move-result-object p0
 
-    sget v0, Ljac;->call_start_new_dialog_title:I
+    return-object p0
+.end method
 
-    sput v0, Luda;->f:I
+.method public static d(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Ljac;->call_start_no_network_connection_neutral_button:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomHeadsUpContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
 
-    sput v0, Luda;->g:I
+    move-result-object p0
 
-    sget v0, Ljac;->call_start_no_network_connection_subtitle:I
+    return-object p0
+.end method
 
-    sput v0, Luda;->h:I
+.method public static e(Landroid/app/Notification$Builder;[Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Ljac;->call_start_no_network_connection_title:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setRemoteInputHistory([Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    sput v0, Luda;->i:I
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method

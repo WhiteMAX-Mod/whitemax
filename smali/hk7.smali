@@ -1,188 +1,159 @@
 .class public final Lhk7;
-.super Ljava/util/Random;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lqec;
+.field public final a:Lgk7;
 
-.field public b:Z
+.field public final b:[I
+
+.field public final c:[Ljava/lang/String;
+
+.field public final d:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lgk7;[I[Ljava/lang/String;)V
+    .locals 0
 
-    sget-object v0, Lrec;->a:Lqec;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/util/Random;-><init>()V
+    iput-object p1, p0, Lhk7;->a:Lgk7;
 
-    iput-object v0, p0, Lhk7;->a:Lqec;
+    iput-object p2, p0, Lhk7;->b:[I
+
+    iput-object p3, p0, Lhk7;->c:[Ljava/lang/String;
+
+    array-length p1, p3
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lua5;->a:Lua5;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    aget-object p1, p3, p1
+
+    invoke-static {p1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object p1
+
+    :goto_0
+    iput-object p1, p0, Lhk7;->d:Ljava/util/Set;
+
+    array-length p1, p2
+
+    array-length p2, p3
+
+    if-ne p1, p2, :cond_1
 
     return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "Check failed."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final next(I)I
-    .locals 0
+.method public final a(Ljava/util/Set;)V
+    .locals 7
 
-    iget-object p0, p0, Lhk7;->a:Lqec;
+    iget-object v0, p0, Lhk7;->b:[I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    array-length v1, v0
 
-    sget-object p0, Lrec;->b:Lh3;
+    sget-object v2, Lua5;->a:Lua5;
 
-    invoke-virtual {p0, p1}, Lh3;->a(I)I
+    if-eqz v1, :cond_3
 
-    move-result p0
+    const/4 v3, 0x0
 
-    return p0
-.end method
+    const/4 v4, 0x1
 
-.method public final nextBoolean()Z
-    .locals 0
+    if-eq v1, v4, :cond_2
 
-    iget-object p0, p0, Lhk7;->a:Lqec;
+    new-instance v1, Lp8e;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v1}, Lp8e;-><init>()V
 
-    sget-object p0, Lrec;->b:Lh3;
+    array-length v2, v0
 
-    invoke-virtual {p0}, Lh3;->h()Z
+    move v4, v3
 
-    move-result p0
+    :goto_0
+    if-ge v3, v2, :cond_1
 
-    return p0
-.end method
+    aget v5, v0, v3
 
-.method public final nextBytes([B)V
-    .locals 0
+    add-int/lit8 v6, v4, 0x1
 
-    iget-object p0, p0, Lhk7;->a:Lqec;
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v5
 
-    sget-object p0, Lrec;->b:Lh3;
+    invoke-interface {p1, v5}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lh3;->g()Ljava/util/Random;
+    move-result v5
 
-    move-result-object p0
+    if-eqz v5, :cond_0
 
-    invoke-virtual {p0, p1}, Ljava/util/Random;->nextBytes([B)V
+    iget-object v5, p0, Lhk7;->c:[Ljava/lang/String;
 
-    return-void
-.end method
+    aget-object v4, v5, v4
 
-.method public final nextDouble()D
-    .locals 2
-
-    iget-object p0, p0, Lhk7;->a:Lqec;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p0, Lrec;->b:Lh3;
-
-    invoke-virtual {p0}, Lh3;->g()Ljava/util/Random;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/util/Random;->nextDouble()D
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final nextFloat()F
-    .locals 0
-
-    iget-object p0, p0, Lhk7;->a:Lqec;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p0, Lrec;->b:Lh3;
-
-    invoke-virtual {p0}, Lh3;->i()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final nextInt()I
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lhk7;->a:Lqec;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 2
-    sget-object p0, Lrec;->b:Lh3;
-
-    .line 3
-    invoke-virtual {p0}, Lh3;->b()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final nextInt(I)I
-    .locals 0
-
-    .line 4
-    iget-object p0, p0, Lhk7;->a:Lqec;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 5
-    sget-object p0, Lrec;->b:Lh3;
-
-    .line 6
-    invoke-virtual {p0, p1}, Lh3;->c(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final nextLong()J
-    .locals 2
-
-    iget-object p0, p0, Lhk7;->a:Lqec;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p0, Lrec;->b:Lh3;
-
-    invoke-virtual {p0}, Lh3;->d()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final setSeed(J)V
-    .locals 0
-
-    iget-boolean p1, p0, Lhk7;->b:Z
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lhk7;->b:Z
-
-    return-void
+    invoke-virtual {v1, v4}, Lp8e;->add(Ljava/lang/Object;)Z
 
     :cond_0
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    add-int/lit8 v3, v3, 0x1
 
-    const-string p1, "Setting seed is not supported."
+    move v4, v6
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    throw p0
+    :cond_1
+    invoke-static {v1}, Lu8e;->a(Lp8e;)Lp8e;
+
+    move-result-object v2
+
+    goto :goto_1
+
+    :cond_2
+    aget v0, v0, v3
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object v2, p0, Lhk7;->d:Ljava/util/Set;
+
+    :cond_3
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    iget-object p1, p0, Lhk7;->a:Lgk7;
+
+    invoke-virtual {p1, v2}, Lgk7;->a(Ljava/util/Set;)V
+
+    :cond_4
+    return-void
 .end method

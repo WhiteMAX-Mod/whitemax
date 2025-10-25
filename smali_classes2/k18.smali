@@ -1,3 +1,3 @@
 .class public final Lk18;
-.super Loi0;
+.super Ln18;
 .source "SourceFile"

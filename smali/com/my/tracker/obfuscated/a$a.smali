@@ -65,21 +65,21 @@
 .end method
 
 .method public onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/a$a;->a:Lcom/my/tracker/obfuscated/a;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/a$a;->a:Lcom/my/tracker/obfuscated/a;
 
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/a;->b(Landroid/app/Activity;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/obfuscated/a;->b(Landroid/app/Activity;)V
 
     return-void
 .end method
 
 .method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/a$a;->a:Lcom/my/tracker/obfuscated/a;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/a$a;->a:Lcom/my/tracker/obfuscated/a;
 
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/a;->c(Landroid/app/Activity;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/obfuscated/a;->c(Landroid/app/Activity;)V
 
     return-void
 .end method

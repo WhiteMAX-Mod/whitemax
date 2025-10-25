@@ -1,48 +1,27 @@
-.class public final Lvud;
-.super Ljx3;
+.class public abstract Lvud;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lhc9;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:J
 
 
 # direct methods
-.method public constructor <init>(Lhc9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lvud;->Y:Lhc9;
+    sget v0, Lu35;->o:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x5
+
+    sget-object v1, Lz35;->o:Lz35;
+
+    invoke-static {v0, v1}, Ltzi;->d(ILz35;)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lvud;->a:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lvud;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lvud;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lvud;->X:I
-
-    iget-object p1, p0, Lvud;->Y:Lhc9;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lhc9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method

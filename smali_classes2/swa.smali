@@ -1,42 +1,103 @@
-.class public final synthetic Lswa;
+.class public abstract Lswa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lvwa;
+.field public static final b:I
 
-.field public final synthetic b:D
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvwa;D)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lync;->oneme_contact_not_found_bottom_sheet_negative_button:I
 
-    iput-object p1, p0, Lswa;->a:Lvwa;
+    sput v0, Lswa;->a:I
 
-    iput-wide p2, p0, Lswa;->b:D
+    sget v0, Lync;->oneme_contact_not_found_bottom_sheet_positive_button:I
 
-    return-void
-.end method
+    sput v0, Lswa;->b:I
 
+    sget v0, Lync;->oneme_invite_action_view_type:I
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    sput v0, Lswa;->c:I
 
-    iget-wide v0, p0, Lswa;->b:D
+    sget v0, Lync;->oneme_invite_by_link_action_menu_item:I
 
-    iget-object p0, p0, Lswa;->a:Lvwa;
+    sput v0, Lswa;->d:I
 
-    iget-object p0, p0, Lvwa;->b:Luwa;
+    sget v0, Lync;->oneme_invite_by_phone_action_menu_item:I
 
-    invoke-interface {p0, v0, v1}, Luwa;->b(D)V
+    sput v0, Lswa;->e:I
+
+    sget v0, Lync;->oneme_invite_by_phone_continue_button:I
+
+    sput v0, Lswa;->f:I
+
+    sget v0, Lync;->oneme_invite_by_phone_description:I
+
+    sput v0, Lswa;->g:I
+
+    sget v0, Lync;->oneme_invite_by_phone_input:I
+
+    sput v0, Lswa;->h:I
+
+    sget v0, Lync;->oneme_invite_by_phone_title:I
+
+    sput v0, Lswa;->i:I
+
+    sget v0, Lync;->oneme_invite_by_phone_toolbar:I
+
+    sput v0, Lswa;->j:I
+
+    sget v0, Lync;->oneme_invite_by_qr_bottom_sheet_qr_code:I
+
+    sput v0, Lswa;->k:I
+
+    sget v0, Lync;->oneme_invite_by_qr_bottom_sheet_qr_code_share:I
+
+    sput v0, Lswa;->l:I
+
+    sget v0, Lync;->oneme_invite_friends_to_max_bottom_sheet_image_stack:I
+
+    sput v0, Lswa;->m:I
+
+    sget v0, Lync;->oneme_invite_friends_to_max_bottom_sheet_invite_button:I
+
+    sput v0, Lswa;->n:I
+
+    sget v0, Lync;->oneme_invite_friends_to_max_bottom_sheet_title:I
+
+    sput v0, Lswa;->o:I
 
     return-void
 .end method

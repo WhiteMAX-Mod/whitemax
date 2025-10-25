@@ -1,18 +1,11 @@
-.class public interface abstract Ltf5;
-.super Ljava/lang/Object;
+.class public final Ltf5;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract e()[Lof5;
-.end method
-
-.method public j(Landroid/net/Uri;Ljava/util/Map;)[Lof5;
+.method public final fillInStackTrace()Ljava/lang/Throwable;
     .locals 0
-
-    invoke-interface {p0}, Ltf5;->e()[Lof5;
-
-    move-result-object p0
 
     return-object p0
 .end method

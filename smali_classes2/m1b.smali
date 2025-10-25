@@ -1,141 +1,211 @@
-.class public final Lm1b;
+.class public abstract Lm1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ln1b;
+# static fields
+.field public static final A:I
 
-.field public final b:J
+.field public static final B:I
 
-.field public c:J
+.field public static final C:I
 
-.field public d:J
+.field public static final D:I
 
-.field public e:J
+.field public static final E:I
 
-.field public f:Ljava/util/List;
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>(Ln1b;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lyoc;->audio_record__action_view:I
 
-    iput-object p1, p0, Lm1b;->a:Ln1b;
+    sput v0, Lm1b;->a:I
 
-    iput-wide p2, p0, Lm1b;->b:J
+    sget v0, Lyoc;->audio_record__action_view_background:I
 
-    const-wide/16 p1, -0x1
+    sput v0, Lm1b;->b:I
 
-    iput-wide p1, p0, Lm1b;->c:J
+    sget v0, Lyoc;->audio_record__action_view_bg_container:I
 
-    iput-wide p1, p0, Lm1b;->d:J
+    sput v0, Lm1b;->c:I
 
-    iput-wide p1, p0, Lm1b;->e:J
+    sget v0, Lyoc;->audio_record__action_view_container:I
+
+    sput v0, Lm1b;->d:I
+
+    sget v0, Lyoc;->audio_record__audio_hand_free_record_view:I
+
+    sput v0, Lm1b;->e:I
+
+    sget v0, Lyoc;->audio_record__audio_record_root:I
+
+    sput v0, Lm1b;->f:I
+
+    sget v0, Lyoc;->audio_record__cancel_view:I
+
+    sput v0, Lm1b;->g:I
+
+    sget v0, Lyoc;->audio_record__dot_view:I
+
+    sput v0, Lm1b;->h:I
+
+    sget v0, Lyoc;->audio_record__duration_view:I
+
+    sput v0, Lm1b;->i:I
+
+    sget v0, Lyoc;->audio_record__hand_free_dot_view:I
+
+    sput v0, Lm1b;->j:I
+
+    sget v0, Lyoc;->audio_record__hand_free_duration_view:I
+
+    sput v0, Lm1b;->k:I
+
+    sget v0, Lyoc;->audio_record__lock_view:I
+
+    sput v0, Lm1b;->l:I
+
+    sget v0, Lyoc;->audio_record__pause_recording_button:I
+
+    sput v0, Lm1b;->m:I
+
+    sget v0, Lyoc;->audio_record__play_pause_listening_button:I
+
+    sput v0, Lm1b;->n:I
+
+    sget v0, Lyoc;->audio_record__play_recording_button:I
+
+    sput v0, Lm1b;->o:I
+
+    sget v0, Lyoc;->audio_record__recording_panel:I
+
+    sput v0, Lm1b;->p:I
+
+    sget v0, Lyoc;->audio_record__remove_button:I
+
+    sput v0, Lm1b;->q:I
+
+    sget v0, Lyoc;->audio_record__swipe_remove_button:I
+
+    sput v0, Lm1b;->r:I
+
+    sget v0, Lyoc;->audio_record__wave_container:I
+
+    sput v0, Lm1b;->s:I
+
+    sget v0, Lyoc;->audio_record__wave_view:I
+
+    sput v0, Lm1b;->t:I
+
+    sget v0, Lyoc;->writebar__add_link_bottom_sheet_button_add:I
+
+    sput v0, Lm1b;->u:I
+
+    sget v0, Lyoc;->writebar__add_link_bottom_sheet_input:I
+
+    sput v0, Lm1b;->v:I
+
+    sget v0, Lyoc;->writebar__container:I
+
+    sput v0, Lm1b;->w:I
+
+    sget v0, Lyoc;->writebar__record_controls:I
+
+    sput v0, Lm1b;->x:I
+
+    sget v0, Lyoc;->writebar__root:I
+
+    sput v0, Lm1b;->y:I
+
+    sget v0, Lyoc;->writebar__suggestion_close_button:I
+
+    sput v0, Lm1b;->z:I
+
+    sget v0, Lyoc;->writebar__suggestion_close_panel:I
+
+    sput v0, Lm1b;->A:I
+
+    sget v0, Lyoc;->writebar__suggestion_item:I
+
+    sput v0, Lm1b;->B:I
+
+    sget v0, Lyoc;->writebar__suggestion_not_found:I
+
+    sput v0, Lm1b;->C:I
+
+    sget v0, Lyoc;->writebar__suggestion_popup_drag_layout:I
+
+    sput v0, Lm1b;->D:I
+
+    sget v0, Lyoc;->writebar__suggestion_popup_layout_content:I
+
+    sput v0, Lm1b;->E:I
+
+    sget v0, Lyoc;->writebar__suggestion_popup_layout_list:I
+
+    sput v0, Lm1b;->F:I
+
+    sget v0, Lyoc;->writebar__suggestion_title:I
+
+    sput v0, Lm1b;->G:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lm1b;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lm1b;
-
-    iget-object v0, p0, Lm1b;->a:Ln1b;
-
-    iget-object v1, p1, Lm1b;->a:Ln1b;
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v0, p0, Lm1b;->b:J
-
-    iget-wide p0, p1, Lm1b;->b:J
-
-    cmp-long p0, v0, p0
-
-    if-eqz p0, :cond_3
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lm1b;->a:Ln1b;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lm1b;->b:J
-
-    const/16 p0, 0x3c1
-
-    invoke-static {v0, p0, v1, v2}, Lwsf;->d(IIJ)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PerfSpan(name="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lm1b;->a:Ln1b;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", startTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lm1b;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p0, ", parentSpanName=null, prevSpanName=null)"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

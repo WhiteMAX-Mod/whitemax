@@ -1,14 +1,10 @@
-.class public interface abstract Lasc;
+.class public abstract Lasc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# virtual methods
-.method public a(Ltj0;)V
-    .locals 0
+# static fields
+.field public static force_update_subtitle:I = 0x7f130556
 
-    return-void
-.end method
+.field public static force_update_title:I = 0x7f130557
 
-.method public abstract b(Landroid/os/Handler;Lnc5;Lnc5;Lnc5;Lnc5;)[Ltj0;
-.end method
+.field public static update_button:I = 0x7f130e41

@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method public abstract getContext()Lq04;
+.method public abstract getContext()Li54;
 .end method
 
 .method public abstract resumeWith(Ljava/lang/Object;)V

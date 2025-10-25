@@ -1,84 +1,100 @@
 .class public final Lc9d;
-.super Ljv2;
+.super Lpc7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final transient X:Ld9d;
+
+.field public final transient o:Lic7;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Lic7;Ld9d;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    iput-boolean p1, p0, Lc9d;->a:Z
+    iput-object p1, p0, Lc9d;->o:Lic7;
+
+    iput-object p2, p0, Lc9d;->X:Ld9d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Lec7;
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lc9d;->X:Ld9d;
 
-    goto :goto_1
+    return-object v0
+.end method
+
+.method public final b(I[Ljava/lang/Object;)I
+    .locals 1
+
+    iget-object v0, p0, Lc9d;->X:Ld9d;
+
+    invoke-virtual {v0, p1, p2}, Lec7;->b(I[Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lc9d;->o:Lic7;
+
+    invoke-virtual {v0, p1}, Lic7;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    instance-of v0, p1, Lc9d;
+    const/4 p1, 0x0
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lc9d;
-
-    iget-boolean p0, p0, Lc9d;->a:Z
-
-    iget-boolean p1, p1, Lc9d;->a:Z
-
-    if-eq p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
+    return p1
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public final g()Z
+    .locals 1
 
-    iget-boolean p0, p0, Lc9d;->a:Z
+    const/4 v0, 0x1
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final h()Lmcg;
     .locals 2
 
-    const-string v0, "ScrollToTop(afterPin="
+    iget-object v0, p0, Lc9d;->X:Ld9d;
 
-    const-string v1, ")"
+    const/4 v1, 0x0
 
-    iget-boolean p0, p0, Lc9d;->a:Z
+    invoke-virtual {v0, v1}, Lec7;->m(I)Lv36;
 
-    invoke-static {v0, v1, p0}, Lz7e;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    return-object v0
+.end method
 
-    return-object p0
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lc9d;->o:Lic7;
+
+    invoke-interface {v0}, Ljava/util/Map;->size()I
+
+    move-result v0
+
+    return v0
 .end method

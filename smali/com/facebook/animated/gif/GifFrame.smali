@@ -5,7 +5,7 @@
 
 # instance fields
 .field private mNativeContext:J
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end field
 
@@ -13,7 +13,7 @@
 # direct methods
 .method public constructor <init>(J)V
     .locals 0
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,57 +24,57 @@
 .end method
 
 .method private native nativeDispose()V
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
 .method private native nativeFinalize()V
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
 .method private native nativeGetDisposalMode()I
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
 .method private native nativeGetDurationMs()I
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
 .method private native nativeGetHeight()I
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
 .method private native nativeGetTransparentPixelColor()I
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
 .method private native nativeGetWidth()I
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
 .method private native nativeGetXOffset()I
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
 .method private native nativeGetYOffset()I
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
 .method private native nativeHasTransparency()Z
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
 .method private native nativeRenderFrame(IILandroid/graphics/Bitmap;)V
-    .annotation build Ler4;
+    .annotation build Lmw4;
     .end annotation
 .end method
 
@@ -89,53 +89,53 @@
 .end method
 
 .method public final b()I
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/facebook/animated/gif/GifFrame;->nativeGetDisposalMode()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final c()I
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/facebook/animated/gif/GifFrame;->nativeGetHeight()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final d()I
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/facebook/animated/gif/GifFrame;->nativeGetWidth()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final e()I
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/facebook/animated/gif/GifFrame;->nativeGetXOffset()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final f()I
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/facebook/animated/gif/GifFrame;->nativeGetYOffset()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final finalize()V

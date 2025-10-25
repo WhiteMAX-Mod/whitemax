@@ -1,70 +1,52 @@
 .class public final Lon7;
-.super Lmn7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrn7;
+.implements Lpn7;
 
 
 # instance fields
-.field public final a:Lbo7;
+.field public final a:Landroid/content/Intent;
 
-.field public final b:Lq04;
+.field public final b:I
+
+.field public final synthetic c:Lun7;
 
 
 # direct methods
-.method public constructor <init>(Lbo7;Lq04;)V
+.method public constructor <init>(Lun7;Landroid/content/Intent;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lon7;->a:Lbo7;
+    iput-object p1, p0, Lon7;->c:Lun7;
 
-    iput-object p2, p0, Lon7;->b:Lq04;
+    iput-object p2, p0, Lon7;->a:Landroid/content/Intent;
 
-    iget-object p0, p1, Lbo7;->d:Lcn7;
+    iput p3, p0, Lon7;->b:I
 
-    sget-object p1, Lcn7;->a:Lcn7;
-
-    if-ne p0, p1, :cond_0
-
-    invoke-static {p2}, Lmu0;->b(Lq04;)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lzn7;Lbn7;)V
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    iget-object p1, p0, Lon7;->a:Lbo7;
+    iget-object v0, p0, Lon7;->c:Lun7;
 
-    iget-object p2, p1, Lbo7;->d:Lcn7;
+    iget v1, p0, Lon7;->b:I
 
-    sget-object v0, Lcn7;->a:Lcn7;
+    invoke-virtual {v0, v1}, Landroid/app/Service;->stopSelf(I)V
 
-    invoke-virtual {p2, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result p2
-
-    if-gtz p2, :cond_0
-
-    invoke-virtual {p1, p0}, Lbo7;->f(Lvn7;)V
-
-    iget-object p0, p0, Lon7;->b:Lq04;
-
-    invoke-static {p0}, Lmu0;->b(Lq04;)V
-
-    :cond_0
     return-void
 .end method
 
-.method public final getCoroutineContext()Lq04;
-    .locals 0
+.method public final getIntent()Landroid/content/Intent;
+    .locals 1
 
-    iget-object p0, p0, Lon7;->b:Lq04;
+    iget-object v0, p0, Lon7;->a:Landroid/content/Intent;
 
-    return-object p0
+    return-object v0
 .end method

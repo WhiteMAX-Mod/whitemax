@@ -35,7 +35,7 @@
         "(Lone/me/sdk/richvector/internal/element/Shape;)V",
         "Lone/me/sdk/richvector/internal/element/GroupElement;",
         "element",
-        "Lylf;",
+        "Lccg;",
         "addGroup",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;)V",
         "Lone/me/sdk/richvector/internal/element/PathElement;",
@@ -91,7 +91,7 @@
         "groupElements",
         "pathElements",
         "Companion",
-        "gvd",
+        "dhe",
         "rich-vector_release"
     }
     k = 0x1
@@ -105,7 +105,7 @@
 
 
 # static fields
-.field public static final Companion:Lgvd;
+.field public static final Companion:Ldhe;
 
 .field private static final EMPTY:Lone/me/sdk/richvector/internal/element/Shape;
 
@@ -134,11 +134,11 @@
 .method static constructor <clinit>()V
     .locals 11
 
-    new-instance v0, Lgvd;
+    new-instance v0, Ldhe;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Lgvd;
+    sput-object v0, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Ldhe;
 
     new-instance v1, Lone/me/sdk/richvector/internal/element/Shape;
 
@@ -160,7 +160,7 @@
 
     const/4 v8, 0x0
 
-    invoke-direct/range {v1 .. v10}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILld4;)V
+    invoke-direct/range {v1 .. v10}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILki4;)V
 
     sput-object v1, Lone/me/sdk/richvector/internal/element/Shape;->EMPTY:Lone/me/sdk/richvector/internal/element/Shape;
 
@@ -211,7 +211,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILld4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILki4;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x40
@@ -286,18 +286,18 @@
     invoke-direct/range {v0 .. v7}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;)V
 
     .line 21
-    iget-object p0, v0, Lone/me/sdk/richvector/internal/element/Shape;->fullPath:Landroid/graphics/Path;
+    iget-object v1, v0, Lone/me/sdk/richvector/internal/element/Shape;->fullPath:Landroid/graphics/Path;
 
-    iget-object v1, p1, Lone/me/sdk/richvector/internal/element/Shape;->fullPath:Landroid/graphics/Path;
+    iget-object v2, p1, Lone/me/sdk/richvector/internal/element/Shape;->fullPath:Landroid/graphics/Path;
 
-    invoke-virtual {p0, v1}, Landroid/graphics/Path;->set(Landroid/graphics/Path;)V
+    invoke-virtual {v1, v2}, Landroid/graphics/Path;->set(Landroid/graphics/Path;)V
 
     .line 22
-    iget-object p0, v0, Lone/me/sdk/richvector/internal/element/Shape;->scaleMatrix:Landroid/graphics/Matrix;
+    iget-object v1, v0, Lone/me/sdk/richvector/internal/element/Shape;->scaleMatrix:Landroid/graphics/Matrix;
 
     iget-object p1, p1, Lone/me/sdk/richvector/internal/element/Shape;->scaleMatrix:Landroid/graphics/Matrix;
 
-    invoke-virtual {p0, p1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+    invoke-virtual {v1, p1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
     return-void
 .end method
@@ -313,75 +313,75 @@
 
 # virtual methods
 .method public addClipPath(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addClipPath(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addClipPath(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
 
     return-void
 .end method
 
 .method public addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
 
     return-void
 .end method
 
 .method public addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
 
     return-void
 .end method
 
 .method public final appendToFullPath(Landroid/graphics/Path;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->fullPath:Landroid/graphics/Path;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->fullPath:Landroid/graphics/Path;
 
-    invoke-virtual {p0, p1}, Landroid/graphics/Path;->addPath(Landroid/graphics/Path;)V
+    invoke-virtual {v0, p1}, Landroid/graphics/Path;->addPath(Landroid/graphics/Path;)V
 
     return-void
 .end method
 
 .method public final buildTransformMatrices()V
-    .locals 3
+    .locals 4
 
     invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/Shape;->getGroupElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
 
-    move-result v0
+    move-result v1
 
-    if-ltz v0, :cond_1
+    if-ltz v1, :cond_1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, p0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    check-cast v2, Lone/me/sdk/richvector/internal/element/GroupElement;
+    check-cast v3, Lone/me/sdk/richvector/internal/element/GroupElement;
 
-    invoke-virtual {v2}, Lone/me/sdk/richvector/internal/element/GroupElement;->buildTransformMatrix()V
+    invoke-virtual {v3}, Lone/me/sdk/richvector/internal/element/GroupElement;->buildTransformMatrix()V
 
     :cond_0
-    if-eq v1, v0, :cond_1
+    if-eq v2, v1, :cond_1
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
@@ -390,61 +390,61 @@
 .end method
 
 .method public draw(Landroid/graphics/Canvas;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->draw(Landroid/graphics/Canvas;)V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 .end method
 
 .method public findClipPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findClipPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findClipPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public findGroup(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/GroupElement;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findGroup(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/GroupElement;
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findGroup(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/GroupElement;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public findPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/PathElement;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/PathElement;
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/PathElement;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final getAlpha()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->alpha:I
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->alpha:I
 
-    return p0
+    return v0
 .end method
 
 .method public getClipPathElements()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -454,17 +454,17 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getClipPathElements()Ljava/util/List;
+    invoke-interface {v0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getClipPathElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getGroupElements()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -474,33 +474,33 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getGroupElements()Ljava/util/List;
+    invoke-interface {v0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getGroupElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getHeight()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->height:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->height:F
 
-    return p0
+    return v0
 .end method
 
 .method public final getName()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->name:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->name:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getPathElements()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -510,37 +510,37 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getPathElements()Ljava/util/List;
+    invoke-interface {v0}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getPathElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getViewportHeight()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->viewportHeight:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->viewportHeight:F
 
-    return p0
+    return v0
 .end method
 
 .method public final getViewportWidth()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->viewportWidth:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->viewportWidth:F
 
-    return p0
+    return v0
 .end method
 
 .method public final getWidth()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->width:F
+    iget v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->width:F
 
-    return p0
+    return v0
 .end method
 
 .method public final scaleAllPaths(Landroid/graphics/Matrix;)V
@@ -554,7 +554,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
 
     move-result v1
 
@@ -565,7 +565,7 @@
     move v3, v2
 
     :goto_0
-    invoke-static {v3, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -587,7 +587,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
 
     move-result v1
 
@@ -596,7 +596,7 @@
     move v3, v2
 
     :goto_1
-    invoke-static {v3, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -616,27 +616,27 @@
     :cond_3
     invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/Shape;->getClipPathElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Lr73;->H(Ljava/util/List;)I
+    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
 
-    move-result v0
+    move-result v1
 
-    if-ltz v0, :cond_5
+    if-ltz v1, :cond_5
 
     :goto_2
-    invoke-static {v2, p0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v3
 
-    if-eqz v1, :cond_4
+    if-eqz v3, :cond_4
 
-    check-cast v1, Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    check-cast v3, Lone/me/sdk/richvector/internal/element/ClipPathElement;
 
-    invoke-virtual {v1, p1}, Lone/me/sdk/richvector/internal/element/ClipPathElement;->transform(Landroid/graphics/Matrix;)V
+    invoke-virtual {v3, p1}, Lone/me/sdk/richvector/internal/element/ClipPathElement;->transform(Landroid/graphics/Matrix;)V
 
     :cond_4
-    if-eq v2, v0, :cond_5
+    if-eq v2, v1, :cond_5
 
     add-int/lit8 v2, v2, 0x1
 
@@ -647,11 +647,11 @@
 .end method
 
 .method public scaleAllStrokeWidth(F)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->elementHolder:Lone/me/sdk/richvector/internal/element/ElementHolder;
 
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->scaleAllStrokeWidth(F)V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->scaleAllStrokeWidth(F)V
 
     return-void
 .end method
@@ -665,7 +665,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 12
+    .locals 13
 
     iget-object v0, p0, Lone/me/sdk/richvector/internal/element/Shape;->name:Ljava/lang/String;
 
@@ -693,79 +693,79 @@
 
     invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/Shape;->getClipPathElements()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v10
 
-    new-instance v10, Ljava/lang/StringBuilder;
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    const-string v11, "Shape(name="
+    const-string v12, "Shape(name="
 
-    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v11, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", viewportWidth="
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v0, ", viewportHeight="
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v0, ", alpha="
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v0, ", width="
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v0, ", height="
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v0, ", fullPath="
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", scaleMatrix="
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", groupElements="
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", pathElements="
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", clipPathElements="
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ")"
 
-    invoke-static {v10, p0, v0}, Lmw1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v11, v10, v0}, Ldy1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

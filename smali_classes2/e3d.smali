@@ -1,59 +1,97 @@
 .class public final Le3d;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lj3d;
 
 
 # instance fields
-.field public X:Li27;
-
-.field public Y:Z
-
-.field public Z:Z
-
-.field public o:Lj3d;
-
-.field public synthetic r0:Ljava/lang/Object;
-
-.field public final synthetic s0:Lj3d;
-
-.field public t0:I
+.field public final a:La3;
 
 
 # direct methods
-.method public constructor <init>(Lj3d;Ljx3;)V
+.method public constructor <init>(La3;)V
     .locals 0
 
-    iput-object p1, p0, Le3d;->s0:Lj3d;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Le3d;->a:La3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Le3d;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Le3d;
+
+    iget-object v1, p0, Le3d;->a:La3;
+
+    iget-object p1, p1, Le3d;->a:La3;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Le3d;->a:La3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iput-object p1, p0, Le3d;->r0:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Le3d;->t0:I
+    const-string v1, "OnMediaMessageSend(media="
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Le3d;->a:La3;
 
-    iput p1, p0, Le3d;->t0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
+    const-string v1, ")"
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Le3d;->s0:Lj3d;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v1, p1, v0, v0, p0}, Lj3d;->a(Lj3d;Ljava/lang/String;ZZLjx3;)Ljava/lang/Comparable;
+    move-result-object v0
 
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

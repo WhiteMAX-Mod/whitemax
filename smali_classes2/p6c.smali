@@ -1,110 +1,102 @@
-.class public abstract Lp6c;
-.super Ljava/lang/Object;
+.class public final Lp6c;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static chat_screen_message_send_error_delete_action:I = 0x7f0a0289
+# instance fields
+.field public final synthetic X:Lu6c;
 
-.field public static chat_screen_message_send_error_resend_action_multi:I = 0x7f0a028a
+.field public final synthetic Y:Landroid/graphics/RectF;
 
-.field public static chat_screen_message_send_error_resend_action_solo:I = 0x7f0a028b
 
-.field public static messages_contact_attach_chat_action:I = 0x7f0a0579
+# direct methods
+.method public constructor <init>(Lu6c;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static messages_contact_attach_profile_action:I = 0x7f0a057a
+    iput-object p1, p0, Lp6c;->X:Lu6c;
 
-.field public static messages_list_chat_description_view_id:I = 0x7f0a057b
+    iput-object p2, p0, Lp6c;->Y:Landroid/graphics/RectF;
 
-.field public static messages_list_chat_description_view_type:I = 0x7f0a057c
+    const/4 p1, 0x2
 
-.field public static messages_list_confirm_cancel:I = 0x7f0a057d
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static messages_list_confirm_complaint_extremism:I = 0x7f0a057e
+    return-void
+.end method
 
-.field public static messages_list_confirm_complaint_fake:I = 0x7f0a057f
 
-.field public static messages_list_confirm_complaint_other:I = 0x7f0a0580
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static messages_list_confirm_complaint_porno:I = 0x7f0a0581
+    check-cast p1, Lq54;
 
-.field public static messages_list_confirm_complaint_spam:I = 0x7f0a0582
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static messages_list_confirm_complaint_threat:I = 0x7f0a0583
+    invoke-virtual {p0, p1, p2}, Lp6c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static messages_list_confirm_delete:I = 0x7f0a0584
+    move-result-object p1
 
-.field public static messages_list_confirm_delete_for_all:I = 0x7f0a0585
+    check-cast p1, Lp6c;
 
-.field public static messages_list_confirm_pin_with_notify:I = 0x7f0a0586
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static messages_list_confirm_pin_without_notify:I = 0x7f0a0587
+    invoke-virtual {p1, p2}, Lp6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static messages_list_context_action_copy:I = 0x7f0a0588
+    return-object p2
+.end method
 
-.field public static messages_list_context_action_copy_photo:I = 0x7f0a0589
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static messages_list_context_action_delete:I = 0x7f0a058a
+    new-instance p1, Lp6c;
 
-.field public static messages_list_context_action_delete_for_all:I = 0x7f0a058b
+    iget-object v0, p0, Lp6c;->X:Lu6c;
 
-.field public static messages_list_context_action_edit:I = 0x7f0a058c
+    iget-object v1, p0, Lp6c;->Y:Landroid/graphics/RectF;
 
-.field public static messages_list_context_action_forward:I = 0x7f0a058d
+    invoke-direct {p1, v0, v1, p2}, Lp6c;-><init>(Lu6c;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
 
-.field public static messages_list_context_action_mark_as_unread:I = 0x7f0a058e
+    return-object p1
+.end method
 
-.field public static messages_list_context_action_pin:I = 0x7f0a058f
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-.field public static messages_list_context_action_reply:I = 0x7f0a0590
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.field public static messages_list_context_action_report:I = 0x7f0a0591
+    sget-object p1, Lu6c;->z0:[Ltr7;
 
-.field public static messages_list_context_action_save_to_gallery:I = 0x7f0a0592
+    iget-object p1, p0, Lp6c;->X:Lu6c;
 
-.field public static messages_list_context_action_select:I = 0x7f0a0593
+    invoke-virtual {p1}, Lu6c;->s()Liv5;
 
-.field public static messages_list_context_action_share_externally:I = 0x7f0a0594
+    move-result-object v0
 
-.field public static messages_list_context_action_share_post:I = 0x7f0a0595
+    iget-object v1, p1, Lu6c;->y0:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static messages_list_context_action_unpin:I = 0x7f0a0596
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-.field public static messages_list_context_actions_view_type:I = 0x7f0a0597
+    move-result-object v1
 
-.field public static messages_list_context_content_container:I = 0x7f0a0598
+    check-cast v1, Ljava/lang/String;
 
-.field public static messages_list_context_member_view_type:I = 0x7f0a0599
+    invoke-virtual {v0, v1}, Liv5;->p(Ljava/lang/String;)Ljava/io/File;
 
-.field public static messages_list_context_members_member_cell:I = 0x7f0a059a
+    move-result-object v0
 
-.field public static messages_list_context_members_member_reaction:I = 0x7f0a059b
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-.field public static messages_list_context_reactions_container:I = 0x7f0a059c
+    move-result-object v0
 
-.field public static messages_list_item_alias:I = 0x7f0a059d
+    iget-object v1, p0, Lp6c;->Y:Landroid/graphics/RectF;
 
-.field public static messages_list_item_date:I = 0x7f0a059e
+    invoke-virtual {p1, v0, v1}, Lu6c;->t(Ljava/lang/String;Landroid/graphics/RectF;)V
 
-.field public static messages_list_item_keyboard_buttons:I = 0x7f0a059f
+    sget-object p1, Lccg;->a:Lccg;
 
-.field public static messages_list_item_single_image:I = 0x7f0a05a0
-
-.field public static messages_list_item_text:I = 0x7f0a05a1
-
-.field public static messages_list_item_title:I = 0x7f0a05a2
-
-.field public static messages_list_item_video_duration:I = 0x7f0a05a3
-
-.field public static messages_list_reactions_badge:I = 0x7f0a05a4
-
-.field public static messages_list_recycler_view:I = 0x7f0a05a5
-
-.field public static messages_list_scroll_btn:I = 0x7f0a05a6
-
-.field public static messages_list_share_contact_for_bot_action:I = 0x7f0a05a7
-
-.field public static messages_list_vh_message_subtitle:I = 0x7f0a05a8
-
-.field public static messages_list_vh_message_title:I = 0x7f0a05a9
-
-.field public static messages_share_attach_open_url_action:I = 0x7f0a05aa
+    return-object p1
+.end method

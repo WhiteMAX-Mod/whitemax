@@ -3,35 +3,45 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/app/Notification$Builder;Z)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Lkac;->call_share_message_failed_create_p2p_invite_link:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setAllowSystemGeneratedContextualActions(Z)Landroid/app/Notification$Builder;
 
-    sput v0, Lxda;->a:I
+    move-result-object p0
 
-    sget v0, Lkac;->call_share_picker_confirm_p2p_invite_cancel:I
+    return-object p0
+.end method
 
-    sput v0, Lxda;->b:I
+.method public static b(Landroid/app/Notification$Builder;Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Lkac;->call_share_picker_confirm_p2p_invite_retry:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setBubbleMetadata(Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
 
-    sput v0, Lxda;->c:I
+    move-result-object p0
 
-    sget v0, Lkac;->call_share_search_hint:I
+    return-object p0
+.end method
 
-    sput v0, Lxda;->d:I
+.method public static c(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
+    .locals 0
 
-    return-void
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setContextual(Z)Landroid/app/Notification$Action$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static d(Landroid/app/Notification$Builder;Ljava/lang/Object;)Landroid/app/Notification$Builder;
+    .locals 0
+
+    check-cast p1, Landroid/content/LocusId;
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setLocusId(Landroid/content/LocusId;)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method

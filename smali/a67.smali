@@ -1,19 +1,33 @@
-.class public final La67;
+.class public abstract La67;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lz57;
+# static fields
+.field public static final a:Ljava/util/regex/Pattern;
+
+.field public static final b:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method public constructor <init>(Lz57;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
 
-    iput-object p1, p0, La67;->a:Lz57;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, La67;->a:Ljava/util/regex/Pattern;
+
+    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, La67;->b:Ljava/util/regex/Pattern;
 
     return-void
 .end method

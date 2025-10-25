@@ -42,19 +42,9 @@
     :cond_0
     new-instance v1, Landroid/opengl/GLException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, ": GLES20 error: "
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ": GLES20 error: "
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p0, v2}, Lfd0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -92,7 +82,11 @@
 
     const/4 p0, 0x0
 
-    invoke-virtual {v0, p0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/FloatBuffer;
+    invoke-virtual {v0, p0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/nio/FloatBuffer;
 
     return-object v0
 .end method

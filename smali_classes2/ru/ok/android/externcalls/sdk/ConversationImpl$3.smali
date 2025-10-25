@@ -44,21 +44,21 @@
 
 # virtual methods
 .method public onMeInWaitingRoomChanged(Z)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$3;->val$listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$3;->val$listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;->onMeInWaitingRoomChanged(Z)V
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;->onMeInWaitingRoomChanged(Z)V
 
     return-void
 .end method
 
 .method public onWaitingRoomParticipantsChanged(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$3;->val$listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$3;->val$listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;->onWaitingRoomParticipantsChanged(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;)V
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;->onWaitingRoomParticipantsChanged(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;)V
 
     return-void
 .end method

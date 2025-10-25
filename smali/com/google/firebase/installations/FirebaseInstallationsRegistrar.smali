@@ -24,68 +24,68 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcec;)Lbq5;
+.method public static synthetic a(Lcwc;)Llw5;
     .locals 0
 
-    invoke-static {p0}, Lcom/google/firebase/installations/FirebaseInstallationsRegistrar;->lambda$getComponents$0(Lqd3;)Lbq5;
+    invoke-static {p0}, Lcom/google/firebase/installations/FirebaseInstallationsRegistrar;->lambda$getComponents$0(Lfi3;)Llw5;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static lambda$getComponents$0(Lqd3;)Lbq5;
+.method private static lambda$getComponents$0(Lfi3;)Llw5;
     .locals 7
 
-    new-instance v0, Laq5;
+    new-instance v0, Lkw5;
 
-    const-class v1, Lxp5;
+    const-class v1, Lhw5;
 
-    invoke-interface {p0, v1}, Lqd3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {p0, v1}, Lfi3;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lxp5;
+    check-cast v1, Lhw5;
 
-    const-class v2, Lkq6;
+    const-class v2, Lvx6;
 
-    invoke-interface {p0, v2}, Lqd3;->e(Ljava/lang/Class;)Lqyb;
+    invoke-interface {p0, v2}, Lfi3;->c(Ljava/lang/Class;)Lcfc;
 
     move-result-object v2
 
-    new-instance v3, Ld0c;
+    new-instance v3, Lkhc;
 
-    const-class v4, Lge0;
+    const-class v4, Ldf0;
 
     const-class v5, Ljava/util/concurrent/ExecutorService;
 
-    invoke-direct {v3, v4, v5}, Ld0c;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
+    invoke-direct {v3, v4, v5}, Lkhc;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
 
-    invoke-interface {p0, v3}, Lqd3;->j(Ld0c;)Ljava/lang/Object;
+    invoke-interface {p0, v3}, Lfi3;->f(Lkhc;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/concurrent/ExecutorService;
 
-    new-instance v4, Ld0c;
+    new-instance v4, Lkhc;
 
-    const-class v5, Ljp0;
+    const-class v5, Ltq0;
 
     const-class v6, Ljava/util/concurrent/Executor;
 
-    invoke-direct {v4, v5, v6}, Ld0c;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
+    invoke-direct {v4, v5, v6}, Lkhc;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
 
-    invoke-interface {p0, v4}, Lqd3;->j(Ld0c;)Ljava/lang/Object;
+    invoke-interface {p0, v4}, Lfi3;->f(Lkhc;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Ljava/util/concurrent/Executor;
 
-    new-instance v4, Loid;
+    new-instance v4, Lz2e;
 
-    invoke-direct {v4, p0}, Loid;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-direct {v4, p0}, Lz2e;-><init>(Ljava/util/concurrent/Executor;)V
 
-    invoke-direct {v0, v1, v2, v3, v4}, Laq5;-><init>(Lxp5;Lqyb;Ljava/util/concurrent/ExecutorService;Loid;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lkw5;-><init>(Lhw5;Lcfc;Ljava/util/concurrent/ExecutorService;Lz2e;)V
 
     return-object v0
 .end method
@@ -93,151 +93,125 @@
 
 # virtual methods
 .method public getComponents()Ljava/util/List;
-    .locals 12
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/List<",
-            "Led3;",
+            "Lth3;",
             ">;"
         }
     .end annotation
 
-    new-instance p0, Ldd3;
+    const-class v0, Llw5;
 
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Ljava/lang/Class;
-
-    const-class v2, Lbq5;
-
-    invoke-direct {p0, v2, v1}, Ldd3;-><init>(Ljava/lang/Class;[Ljava/lang/Class;)V
-
-    const-string v1, "fire-installations"
-
-    iput-object v1, p0, Ldd3;->a:Ljava/lang/String;
-
-    const-class v2, Lxp5;
-
-    invoke-static {v2}, Lgm4;->a(Ljava/lang/Class;)Lgm4;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Ldd3;->a(Lgm4;)V
-
-    new-instance v2, Lgm4;
-
-    const/4 v3, 0x1
-
-    const-class v4, Lkq6;
-
-    invoke-direct {v2, v0, v3, v4}, Lgm4;-><init>(IILjava/lang/Class;)V
-
-    invoke-virtual {p0, v2}, Ldd3;->a(Lgm4;)V
-
-    new-instance v2, Ld0c;
-
-    const-class v4, Lge0;
-
-    const-class v5, Ljava/util/concurrent/ExecutorService;
-
-    invoke-direct {v2, v4, v5}, Ld0c;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
-
-    new-instance v4, Lgm4;
-
-    invoke-direct {v4, v2, v3, v0}, Lgm4;-><init>(Ld0c;II)V
-
-    invoke-virtual {p0, v4}, Ldd3;->a(Lgm4;)V
-
-    new-instance v2, Ld0c;
-
-    const-class v4, Ljp0;
-
-    const-class v5, Ljava/util/concurrent/Executor;
-
-    invoke-direct {v2, v4, v5}, Ld0c;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
-
-    new-instance v4, Lgm4;
-
-    invoke-direct {v4, v2, v3, v0}, Lgm4;-><init>(Ld0c;II)V
-
-    invoke-virtual {p0, v4}, Ldd3;->a(Lgm4;)V
-
-    new-instance v0, Ljl5;
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, v2}, Ljl5;-><init>(I)V
-
-    iput-object v0, p0, Ldd3;->g:Ljava/lang/Object;
-
-    invoke-virtual {p0}, Ldd3;->b()Led3;
-
-    move-result-object p0
-
-    new-instance v0, Ljq6;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2}, Ljq6;-><init>(I)V
-
-    new-instance v2, Ljava/util/HashSet;
-
-    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
-
-    new-instance v3, Ljava/util/HashSet;
-
-    invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
-
-    new-instance v11, Ljava/util/HashSet;
-
-    invoke-direct {v11}, Ljava/util/HashSet;-><init>()V
-
-    const-class v4, Ljq6;
-
-    invoke-static {v4}, Ld0c;->a(Ljava/lang/Class;)Ld0c;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    new-instance v10, Lbx1;
-
-    const/16 v4, 0x14
-
-    invoke-direct {v10, v4, v0}, Lbx1;-><init>(ILjava/lang/Object;)V
-
-    new-instance v4, Led3;
-
-    new-instance v6, Ljava/util/HashSet;
-
-    invoke-direct {v6, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v7, Ljava/util/HashSet;
-
-    invoke-direct {v7, v3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    const/4 v5, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x1
-
-    invoke-direct/range {v4 .. v11}, Led3;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILtd3;Ljava/util/Set;)V
-
-    const-string v0, "18.0.0"
-
-    invoke-static {v1, v0}, Lz48;->l(Ljava/lang/String;Ljava/lang/String;)Led3;
+    invoke-static {v0}, Lth3;->b(Ljava/lang/Class;)Lsh3;
 
     move-result-object v0
 
-    filled-new-array {p0, v4, v0}, [Led3;
+    const-string v1, "fire-installations"
 
-    move-result-object p0
+    iput-object v1, v0, Lsh3;->a:Ljava/lang/String;
 
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    const-class v2, Lhw5;
 
-    move-result-object p0
+    invoke-static {v2}, Lgr4;->a(Ljava/lang/Class;)Lgr4;
 
-    return-object p0
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lsh3;->a(Lgr4;)V
+
+    new-instance v2, Lgr4;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    const-class v5, Lvx6;
+
+    invoke-direct {v2, v3, v4, v5}, Lgr4;-><init>(IILjava/lang/Class;)V
+
+    invoke-virtual {v0, v2}, Lsh3;->a(Lgr4;)V
+
+    new-instance v2, Lkhc;
+
+    const-class v5, Ldf0;
+
+    const-class v6, Ljava/util/concurrent/ExecutorService;
+
+    invoke-direct {v2, v5, v6}, Lkhc;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
+
+    new-instance v5, Lgr4;
+
+    invoke-direct {v5, v2, v4, v3}, Lgr4;-><init>(Lkhc;II)V
+
+    invoke-virtual {v0, v5}, Lsh3;->a(Lgr4;)V
+
+    new-instance v2, Lkhc;
+
+    const-class v5, Ltq0;
+
+    const-class v6, Ljava/util/concurrent/Executor;
+
+    invoke-direct {v2, v5, v6}, Lkhc;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
+
+    new-instance v5, Lgr4;
+
+    invoke-direct {v5, v2, v4, v3}, Lgr4;-><init>(Lkhc;II)V
+
+    invoke-virtual {v0, v5}, Lsh3;->a(Lgr4;)V
+
+    new-instance v2, Lko5;
+
+    const/16 v3, 0x14
+
+    invoke-direct {v2, v3}, Lko5;-><init>(I)V
+
+    iput-object v2, v0, Lsh3;->g:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lsh3;->b()Lth3;
+
+    move-result-object v0
+
+    new-instance v2, Lux6;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3}, Lux6;-><init>(I)V
+
+    const-class v3, Lux6;
+
+    invoke-static {v3}, Lth3;->b(Ljava/lang/Class;)Lsh3;
+
+    move-result-object v3
+
+    iput v4, v3, Lsh3;->c:I
+
+    new-instance v4, Lj42;
+
+    const/16 v5, 0x10
+
+    invoke-direct {v4, v5, v2}, Lj42;-><init>(ILjava/lang/Object;)V
+
+    iput-object v4, v3, Lsh3;->g:Ljava/lang/Object;
+
+    invoke-virtual {v3}, Lsh3;->b()Lth3;
+
+    move-result-object v2
+
+    const-string v3, "18.0.0"
+
+    invoke-static {v1, v3}, Lzci;->d(Ljava/lang/String;Ljava/lang/String;)Lth3;
+
+    move-result-object v1
+
+    filled-new-array {v0, v2, v1}, [Lth3;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
 .end method

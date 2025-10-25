@@ -1,345 +1,227 @@
 .class public final Lsr;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Collection;
+.implements Lbj6;
 
 
 # instance fields
-.field public final synthetic a:Ltr;
+.field public synthetic X:Landroid/widget/LinearLayout;
+
+.field public synthetic Y:Lv5b;
+
+.field public final synthetic Z:Landroid/widget/TextView;
+
+.field public final synthetic q0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+.field public final synthetic r0:Landroid/widget/TextView;
+
+.field public final synthetic s0:Landroid/widget/TextView;
+
+.field public final synthetic t0:Landroid/graphics/drawable/ShapeDrawable;
+
+.field public final synthetic u0:Lbr2;
 
 
 # direct methods
-.method public constructor <init>(Ltr;)V
+.method public constructor <init>(Landroid/widget/TextView;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Lbr2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsr;->Z:Landroid/widget/TextView;
 
-    iput-object p1, p0, Lsr;->a:Ltr;
+    iput-object p2, p0, Lsr;->q0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+    iput-object p3, p0, Lsr;->r0:Landroid/widget/TextView;
+
+    iput-object p4, p0, Lsr;->s0:Landroid/widget/TextView;
+
+    iput-object p5, p0, Lsr;->t0:Landroid/graphics/drawable/ShapeDrawable;
+
+    iput-object p6, p0, Lsr;->u0:Lbr2;
+
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p7}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    check-cast p1, Landroid/widget/LinearLayout;
 
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    check-cast p2, Lv5b;
 
-    throw p0
+    move-object v7, p3
+
+    check-cast v7, Lkotlin/coroutines/Continuation;
+
+    new-instance v0, Lsr;
+
+    iget-object v5, p0, Lsr;->t0:Landroid/graphics/drawable/ShapeDrawable;
+
+    iget-object v6, p0, Lsr;->u0:Lbr2;
+
+    iget-object v1, p0, Lsr;->Z:Landroid/widget/TextView;
+
+    iget-object v2, p0, Lsr;->q0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+    iget-object v3, p0, Lsr;->r0:Landroid/widget/TextView;
+
+    iget-object v4, p0, Lsr;->s0:Landroid/widget/TextView;
+
+    invoke-direct/range {v0 .. v7}, Lsr;-><init>(Landroid/widget/TextView;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Lbr2;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lsr;->X:Landroid/widget/LinearLayout;
+
+    iput-object p2, v0, Lsr;->Y:Lv5b;
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    invoke-virtual {v0, p1}, Lsr;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
 .end method
 
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    iget-object p1, p0, Lsr;->X:Landroid/widget/LinearLayout;
 
-    throw p0
-.end method
+    iget-object v0, p0, Lsr;->Y:Lv5b;
 
-.method public final clear()V
-    .locals 0
+    invoke-interface {v0}, Lv5b;->b()Lff0;
 
-    iget-object p0, p0, Lsr;->a:Ltr;
+    move-result-object v1
 
-    invoke-virtual {p0}, Lr1e;->clear()V
+    iget v1, v1, Lff0;->k:I
 
-    return-void
-.end method
+    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 0
-
-    iget-object p0, p0, Lsr;->a:Ltr;
-
-    invoke-virtual {p0, p1}, Lr1e;->a(Ljava/lang/Object;)I
-
-    move-result p0
-
-    if-ltz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lv5b;->getText()Leqf;
 
     move-result-object p1
 
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iget p1, p1, Leqf;->g:I
 
-    move-result v0
+    iget-object v1, p0, Lsr;->Z:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object p1, p0, Lsr;->q0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    move-result-object v0
+    iget-object v1, p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->o:Lh0d;
 
-    invoke-virtual {p0, v0}, Lsr;->contains(Ljava/lang/Object;)Z
+    sget-object v2, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->q0:[Ltr7;
 
-    move-result v0
+    const/4 v3, 0x1
 
-    if-nez v0, :cond_0
+    aget-object v2, v2, v3
 
-    const/4 p0, 0x0
+    invoke-interface {v1, p1, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
-    return p0
+    move-result-object v1
 
-    :cond_1
-    const/4 p0, 0x1
+    check-cast v1, Landroid/widget/TextView;
 
-    return p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    iget-object p0, p0, Lsr;->a:Ltr;
-
-    invoke-virtual {p0}, Lr1e;->isEmpty()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 2
-
-    new-instance v0, Lpr;
-
-    iget-object p0, p0, Lsr;->a:Ltr;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lpr;-><init>(Ltr;I)V
-
-    return-object v0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 0
-
-    iget-object p0, p0, Lsr;->a:Ltr;
-
-    invoke-virtual {p0, p1}, Lr1e;->a(Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-ltz p1, :cond_0
-
-    invoke-virtual {p0, p1}, Lr1e;->g(I)Ljava/lang/Object;
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 5
-
-    iget-object p0, p0, Lsr;->a:Ltr;
-
-    iget v0, p0, Lr1e;->c:I
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    invoke-virtual {p0, v1}, Lr1e;->i(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-interface {p1, v3}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {p0, v1}, Lr1e;->g(I)Ljava/lang/Object;
-
-    add-int/lit8 v1, v1, -0x1
-
-    add-int/lit8 v0, v0, -0x1
-
-    move v2, v4
-
-    :cond_0
-    add-int/2addr v1, v4
-
-    goto :goto_0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 5
-
-    iget-object p0, p0, Lsr;->a:Ltr;
-
-    iget v0, p0, Lr1e;->c:I
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    invoke-virtual {p0, v1}, Lr1e;->i(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-interface {p1, v3}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    if-nez v3, :cond_0
-
-    invoke-virtual {p0, v1}, Lr1e;->g(I)Ljava/lang/Object;
-
-    add-int/lit8 v1, v1, -0x1
-
-    add-int/lit8 v0, v0, -0x1
-
-    move v2, v4
-
-    :cond_0
-    add-int/2addr v1, v4
-
-    goto :goto_0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final size()I
-    .locals 0
-
-    iget-object p0, p0, Lsr;->a:Ltr;
-
-    iget p0, p0, Lr1e;->c:I
-
-    return p0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 4
-
-    .line 1
-    iget-object p0, p0, Lsr;->a:Ltr;
-
-    iget v0, p0, Lr1e;->c:I
-
-    .line 2
-    new-array v1, v0, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v0, :cond_0
-
-    .line 3
-    invoke-virtual {p0, v2}, Lr1e;->i(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v1
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 3
-
-    .line 4
-    iget-object p0, p0, Lsr;->a:Ltr;
-
-    iget v0, p0, Lr1e;->c:I
-
-    .line 5
-    array-length v1, p1
-
-    if-ge v1, v0, :cond_0
-
-    .line 6
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-static {p1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Ljava/lang/Object;
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    .line 7
-    invoke-virtual {p0, v1}, Lr1e;->i(I)Ljava/lang/Object;
+    invoke-interface {v0}, Lv5b;->getText()Leqf;
 
     move-result-object v2
 
-    aput-object v2, p1, v1
+    iget v2, v2, Leqf;->e:I
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    goto :goto_0
+    invoke-interface {v0}, Lv5b;->getText()Leqf;
 
-    .line 8
-    :cond_1
-    array-length p0, p1
+    move-result-object v1
 
-    if-le p0, v0, :cond_2
+    iget v1, v1, Leqf;->g:I
 
-    const/4 p0, 0x0
+    iget-object v2, p0, Lsr;->r0:Landroid/widget/TextView;
 
-    .line 9
-    aput-object p0, p1, v0
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    :cond_2
+    invoke-interface {v0}, Lv5b;->getText()Leqf;
+
+    move-result-object v1
+
+    iget v1, v1, Leqf;->g:I
+
+    iget-object v2, p0, Lsr;->s0:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+
+    move-result-object v1
+
+    new-instance v2, Lrr;
+
+    iget-object v3, p0, Lsr;->u0:Lbr2;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v3, p1, v4}, Lrr;-><init>(Lbr2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x3
+
+    invoke-static {v1, v4, v4, v2, v3}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    invoke-interface {v0}, Lv5b;->b()Lff0;
+
+    move-result-object v0
+
+    iget v0, v0, Lff0;->h:I
+
+    iget-object v1, p0, Lsr;->t0:Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-static {v1, v0}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {p1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->C0()Lgs;
+
+    move-result-object p1
+
+    iget-object v0, p1, Lgs;->B0:Lx0f;
+
+    :cond_0
+    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Las;
+
+    iget-object v3, v2, Las;->a:Ljava/lang/Object;
+
+    invoke-virtual {p1, v3}, Lgs;->w(Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Lgs;->v()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
+    iget-object v2, v2, Las;->b:Ljava/lang/Object;
+
+    new-instance v5, Las;
+
+    invoke-direct {v5, v3, v2, v4}, Las;-><init>(Ljava/util/List;Ljava/util/List;Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v0, v1, v5}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object p1, Lccg;->a:Lccg;
+
     return-object p1
 .end method

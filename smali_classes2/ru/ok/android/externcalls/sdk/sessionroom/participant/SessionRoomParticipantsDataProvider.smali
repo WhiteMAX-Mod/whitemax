@@ -11,24 +11,24 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipantsDataProvider;",
         "",
-        "Lvmd;",
+        "Ls7e;",
         "roomId",
         "Lkotlin/Function1;",
         "Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;",
-        "Lylf;",
+        "Lccg;",
         "onSuccess",
         "",
         "onError",
         "getRoomParticipants",
-        "(Lvmd;Lbc6;Lbc6;)V",
+        "(Ls7e;Lli6;Lli6;)V",
         "",
         "getAllInRoomParticipants",
-        "(Lbc6;Lbc6;)V",
+        "(Lli6;Lli6;)V",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participantId",
         "getParticipantRoomId",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lbc6;Lbc6;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lli6;Lli6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -42,36 +42,36 @@
 
 
 # virtual methods
-.method public abstract getAllInRoomParticipants(Lbc6;Lbc6;)V
+.method public abstract getAllInRoomParticipants(Lli6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbc6;",
-            "Lbc6;",
+            "Lli6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract getParticipantRoomId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lbc6;Lbc6;)V
+.method public abstract getParticipantRoomId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lli6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lbc6;",
-            "Lbc6;",
+            "Lli6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract getRoomParticipants(Lvmd;Lbc6;Lbc6;)V
+.method public abstract getRoomParticipants(Ls7e;Lli6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lvmd;",
-            "Lbc6;",
-            "Lbc6;",
+            "Ls7e;",
+            "Lli6;",
+            "Lli6;",
             ")V"
         }
     .end annotation

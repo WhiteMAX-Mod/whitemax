@@ -88,13 +88,13 @@
 
     .line 7
     :cond_0
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable;->chainTable:[S
+    iget-object v2, p0, Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable;->chainTable:[S
 
-    and-int v2, p2, v3
+    and-int/2addr v3, p2
 
     int-to-short v1, v1
 
-    aput-short v1, p0, v2
+    aput-short v1, v2, v3
 
     .line 8
     aput p2, v0, p1
@@ -120,7 +120,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p2, p1}, Lo2d;->c(I[B)I
+    invoke-static {p2, p1}, Lmld;->d(I[B)I
 
     move-result p1
 
@@ -131,7 +131,7 @@
 .end method
 
 .method private hashPointer(I)I
-    .locals 0
+    .locals 1
 
     .line 5
     invoke-static {p1}, Lnet/jpountz/lz4/LZ4Utils;->hashHC(I)I
@@ -139,11 +139,11 @@
     move-result p1
 
     .line 6
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable;->hashTable:[I
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable;->hashTable:[I
 
-    aget p0, p0, p1
+    aget p1, v0, p1
 
-    return p0
+    return p1
 .end method
 
 .method private hashPointer(Ljava/nio/ByteBuffer;I)I
@@ -157,41 +157,41 @@
     .line 4
     invoke-direct {p0, p1}, Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable;->hashPointer(I)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method private hashPointer([BI)I
     .locals 0
 
     .line 1
-    invoke-static {p2, p1}, Lo2d;->c(I[B)I
+    invoke-static {p2, p1}, Lmld;->d(I[B)I
 
     move-result p1
 
     .line 2
     invoke-direct {p0, p1}, Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable;->hashPointer(I)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method private next(I)I
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable;->chainTable:[S
+    iget-object v0, p0, Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable;->chainTable:[S
 
-    const v0, 0xffff
+    const v1, 0xffff
 
-    and-int v1, p1, v0
+    and-int v2, p1, v1
 
-    aget-short p0, p0, v1
+    aget-short v0, v0, v2
 
-    and-int/2addr p0, v0
+    and-int/2addr v0, v1
 
-    sub-int/2addr p1, p0
+    sub-int/2addr p1, v0
 
     return p1
 .end method
@@ -455,9 +455,9 @@
 
     .line 46
     :cond_6
-    iget p0, p4, Lnet/jpountz/lz4/LZ4Utils$Match;->len:I
+    iget p1, p4, Lnet/jpountz/lz4/LZ4Utils$Match;->len:I
 
-    if-eqz p0, :cond_7
+    if-eqz p1, :cond_7
 
     return p3
 
@@ -651,7 +651,7 @@
     .line 20
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable;->hashTable:[I
 
-    invoke-static {p2, p1}, Lo2d;->c(I[B)I
+    invoke-static {p2, p1}, Lmld;->d(I[B)I
 
     move-result v4
 
@@ -670,9 +670,9 @@
 
     .line 22
     :cond_6
-    iget p0, p4, Lnet/jpountz/lz4/LZ4Utils$Match;->len:I
+    iget p1, p4, Lnet/jpountz/lz4/LZ4Utils$Match;->len:I
 
-    if-eqz p0, :cond_7
+    if-eqz p1, :cond_7
 
     return p3
 
@@ -784,13 +784,13 @@
     .line 28
     :cond_2
     :goto_1
-    iget p0, p6, Lnet/jpountz/lz4/LZ4Utils$Match;->len:I
+    iget p1, p6, Lnet/jpountz/lz4/LZ4Utils$Match;->len:I
 
-    if-le p0, p5, :cond_3
+    if-le p1, p5, :cond_3
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_3
     return v1
@@ -900,13 +900,13 @@
     .line 14
     :cond_2
     :goto_1
-    iget p0, p6, Lnet/jpountz/lz4/LZ4Utils$Match;->len:I
+    iget p1, p6, Lnet/jpountz/lz4/LZ4Utils$Match;->len:I
 
-    if-le p0, p5, :cond_3
+    if-le p1, p5, :cond_3
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_3
     return v1

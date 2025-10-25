@@ -1,327 +1,196 @@
-.class public final Loag;
+.class public final synthetic Loag;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyp;
-
-
-# static fields
-.field public static final synthetic n:I
+.implements Lji6;
 
 
 # instance fields
-.field public final a:Lcl7;
+.field public final synthetic a:I
 
-.field public final b:Lcl7;
+.field public final synthetic b:Landroid/content/Context;
 
-.field public final c:Lcl7;
-
-.field public final d:Ls04;
-
-.field public final e:Lcl7;
-
-.field public f:I
-
-.field public g:J
-
-.field public volatile h:I
-
-.field public final i:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public final j:Lf7d;
-
-.field public volatile k:Z
-
-.field public volatile l:Z
-
-.field public final m:Lnag;
+.field public final synthetic c:Lrag;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lf7d;Lcl7;Lcl7;Lcl7;Ls04;Lcl7;)V
-    .locals 2
+.method public synthetic constructor <init>(Landroid/content/Context;Lrag;I)V
+    .locals 0
+
+    iput p3, p0, Loag;->a:I
+
+    iput-object p1, p0, Loag;->b:Landroid/content/Context;
+
+    iput-object p2, p0, Loag;->c:Lrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Loag;->f:I
-
-    new-instance v1, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v1, p0, Loag;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    iput-boolean v0, p0, Loag;->k:Z
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Loag;->l:Z
-
-    new-instance v0, Lnag;
-
-    invoke-direct {v0, p0}, Lnag;-><init>(Loag;)V
-
-    iput-object v0, p0, Loag;->m:Lnag;
-
-    iput-object p2, p0, Loag;->j:Lf7d;
-
-    iput-object p3, p0, Loag;->a:Lcl7;
-
-    iput-object p4, p0, Loag;->b:Lcl7;
-
-    iput-object p6, p0, Loag;->d:Ls04;
-
-    iput-object p5, p0, Loag;->c:Lcl7;
-
-    iput-object p7, p0, Loag;->e:Lcl7;
-
-    new-instance p2, Ljg0;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p2, p3, p0}, Ljg0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p2}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 7
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    iget v0, p0, Loag;->a:I
 
-    move-result-wide v0
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v2, p0, Loag;->g:J
+    new-instance v0, Lco3;
 
-    sub-long/2addr v0, v2
+    const/4 v1, 0x0
 
-    sget-object v2, Ljtg;->g:Loja;
+    iget-object v2, p0, Loag;->b:Landroid/content/Context;
 
-    if-nez v2, :cond_0
+    invoke-direct {v0, v2, v1}, Lco3;-><init>(Landroid/content/Context;I)V
 
-    goto :goto_0
+    iget-object v1, p0, Loag;->c:Lrag;
 
-    :cond_0
-    sget-object v3, Lqz7;->o:Lqz7;
+    invoke-virtual {v0, v1}, Lco3;->setListener(Lyn3;)V
 
-    invoke-virtual {v2, v3}, Loja;->a(Lqz7;)Z
+    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
-    move-result v4
+    const/4 v3, -0x2
 
-    if-nez v4, :cond_1
+    invoke-direct {v2, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    goto :goto_0
+    const/16 v3, 0x18
 
-    :cond_1
-    new-instance v4, Ljava/lang/StringBuilder;
+    int-to-float v3, v3
 
-    const-string v5, "app enter background, time="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v5
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lgy7;->F(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, ", interactiveTime="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const/4 v5, 0x0
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const-string v6, "oag"
+    move-result-object v4
 
-    invoke-virtual {v2, v3, v6, v4, v5}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-    :goto_0
-    iget-object v2, p0, Loag;->b:Lcl7;
+    mul-float/2addr v3, v4
 
-    invoke-interface {v2}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-static {v3}, Lfhi;->b(F)I
 
-    move-result-object v2
+    move-result v3
 
-    check-cast v2, Lzc;
+    iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    const-string v3, "INTERACTIVE_SESSION"
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v2, v0, v1, v3}, Lzc;->i(JLjava/lang/String;)V
-
-    iget-object v0, p0, Loag;->d:Ls04;
-
-    sget-object v1, Lj45;->a:Lj45;
-
-    new-instance v2, Lmag;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, v3}, Lmag;-><init>(Loag;I)V
-
-    invoke-virtual {v0, v1, v2}, Ls04;->dispatch(Lq04;Ljava/lang/Runnable;)V
-
-    iget-object p0, p0, Loag;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxp;
-
-    invoke-interface {v0}, Lxp;->a()V
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-.end method
-
-.method public final b()V
-    .locals 5
-
-    sget-object v0, Ljtg;->g:Loja;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lqz7;->o:Lqz7;
-
-    invoke-virtual {v0, v1}, Loja;->a(Lqz7;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "app enter foreground, time = "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lgy7;->F(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    const-string v4, "oag"
-
-    invoke-virtual {v0, v1, v4, v2, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Loag;->g:J
-
-    iget-object v0, p0, Loag;->d:Ls04;
-
-    sget-object v1, Lj45;->a:Lj45;
-
-    new-instance v2, Lmag;
+    new-instance v2, Lxm3;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, p0, v3}, Lmag;-><init>(Loag;I)V
+    invoke-direct {v2, v0, v0, v3}, Lxm3;-><init>(Lco3;Lco3;I)V
 
-    invoke-virtual {v0, v1, v2}, Ls04;->dispatch(Lq04;Ljava/lang/Runnable;)V
+    invoke-static {v0, v2}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
 
-    iget-object p0, p0, Loag;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
+    new-instance v2, Lcze;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    const/16 v3, 0x14
 
-    move-result-object p0
+    invoke-direct {v2, v3}, Lcze;-><init>(I)V
 
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, v2}, Lco3;->setKeyboardOpen(Lji6;)V
 
-    move-result v0
+    const/16 v2, 0x11
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return-object v0
 
-    move-result-object v0
+    :pswitch_0
+    new-instance v0, Ls5b;
 
-    check-cast v0, Lxp;
+    iget-object v1, p0, Loag;->b:Landroid/content/Context;
 
-    invoke-interface {v0}, Lxp;->b()V
+    invoke-direct {v0, v1}, Ls5b;-><init>(Landroid/content/Context;)V
 
-    goto :goto_1
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    :cond_2
-    return-void
-.end method
+    const/4 v2, -0x1
 
-.method public final c()Z
-    .locals 1
+    const/4 v3, -0x2
 
-    iget-boolean v0, p0, Loag;->k:Z
+    invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    if-eqz v0, :cond_0
+    const/16 v2, 0x8
 
-    iget-boolean p0, p0, Loag;->l:Z
+    int-to-float v2, v2
 
-    if-eqz p0, :cond_0
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    const/4 p0, 0x1
+    move-result-object v3
 
-    return p0
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    :cond_0
-    const/4 p0, 0x0
+    move-result-object v3
 
-    return p0
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lfhi;->b(F)I
+
+    move-result v2
+
+    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    const/16 v2, 0xc
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lfhi;->b(F)I
+
+    move-result v2
+
+    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v1, Lw0b;->M:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ls5b;->setBackgroundColorAttr(Ljava/lang/Integer;)V
+
+    sget-object v1, Lq5b;->b:Lq5b;
+
+    invoke-virtual {v0, v1}, Ls5b;->setTypingMode(Lq5b;)V
+
+    new-instance v1, Lnag;
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Loag;->c:Lrag;
+
+    invoke-direct {v1, v3, v2}, Lnag;-><init>(Lrag;I)V
+
+    invoke-virtual {v0, v1}, Ls5b;->f(Lli6;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

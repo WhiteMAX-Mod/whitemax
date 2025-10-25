@@ -20,13 +20,13 @@
 
 # virtual methods
 .method public setMaxStatusLineGarbage(I)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/apache/http/params/HttpAbstractParamBean;->params:Lorg/apache/http/params/HttpParams;
+    iget-object v0, p0, Lorg/apache/http/params/HttpAbstractParamBean;->params:Lorg/apache/http/params/HttpParams;
 
-    const-string v0, "http.connection.max-status-line-garbage"
+    const-string v1, "http.connection.max-status-line-garbage"
 
-    invoke-interface {p0, v0, p1}, Lorg/apache/http/params/HttpParams;->setIntParameter(Ljava/lang/String;I)Lorg/apache/http/params/HttpParams;
+    invoke-interface {v0, v1, p1}, Lorg/apache/http/params/HttpParams;->setIntParameter(Ljava/lang/String;I)Lorg/apache/http/params/HttpParams;
 
     return-void
 .end method

@@ -1,70 +1,103 @@
-.class public final synthetic Ldc5;
+.class public interface abstract Ldc5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lot7;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lacb;
-
-.field public final synthetic c:I
+# static fields
+.field public static final q:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lacb;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 12
 
-    iput p3, p0, Ldc5;->a:I
+    const/16 v0, 0xd
 
-    iput-object p1, p0, Ldc5;->b:Lacb;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput p2, p0, Ldc5;->c:I
+    move-result-object v1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xa
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/16 v0, 0x8
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/16 v0, 0xb
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const/4 v0, 0x6
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const/4 v0, 0x5
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v0, 0x4
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    const/16 v0, 0x9
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    const/4 v0, 0x3
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    const/4 v0, 0x7
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    filled-new-array/range {v1 .. v11}, [Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Ldc5;->q:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 1
+.method public abstract g(I)Z
+.end method
 
-    iget v0, p0, Ldc5;->a:I
-
-    check-cast p1, Lrcb;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ldc5;->b:Lacb;
-
-    iget-boolean v0, v0, Lacb;->l:Z
-
-    iget p0, p0, Ldc5;->c:I
-
-    invoke-interface {p1, p0, v0}, Lrcb;->i(IZ)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ldc5;->b:Lacb;
-
-    iget-object v0, v0, Lacb;->a:Lo6f;
-
-    iget p0, p0, Ldc5;->c:I
-
-    invoke-interface {p1, p0}, Lrcb;->z(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract h(I)Lec5;
 .end method

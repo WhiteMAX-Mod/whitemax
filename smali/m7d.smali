@@ -1,277 +1,201 @@
 .class public final Lm7d;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:[J
+.field public a:I
 
-.field public Y:[J
+.field public b:Landroid/util/SparseArray;
 
-.field public Z:I
+.field public c:I
 
-.field public r0:I
+.field public d:I
 
-.field public s0:I
+.field public e:I
 
-.field public t0:I
+.field public f:I
 
-.field public u0:J
+.field public g:Z
 
-.field public v0:I
+.field public h:Z
 
-.field public synthetic w0:Ljava/lang/Object;
+.field public i:Z
 
-.field public final synthetic x0:Llp3;
+.field public j:Z
 
+.field public k:Z
 
-# direct methods
-.method public constructor <init>(Llp3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public l:Z
 
-    iput-object p1, p0, Lm7d;->x0:Llp3;
+.field public m:I
 
-    const/4 p1, 0x2
+.field public n:J
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(I)V
+    .locals 3
 
-    check-cast p1, Lks5;
+    iget v0, p0, Lm7d;->e:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    and-int/2addr v0, p1
 
-    invoke-virtual {p0, p1, p2}, Lm7d;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
-
-    check-cast p0, Lm7d;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lm7d;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lm7d;
-
-    iget-object p0, p0, Lm7d;->x0:Llp3;
-
-    invoke-direct {v0, p0, p2}, Lm7d;-><init>(Llp3;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lm7d;->w0:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 19
-
-    move-object/from16 v0, p0
-
-    iget v1, v0, Lm7d;->v0:I
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x8
-
-    const/4 v4, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v4, :cond_0
-
-    iget v1, v0, Lm7d;->t0:I
-
-    iget v5, v0, Lm7d;->s0:I
-
-    iget-wide v6, v0, Lm7d;->u0:J
-
-    iget v8, v0, Lm7d;->r0:I
-
-    iget v9, v0, Lm7d;->Z:I
-
-    iget-object v10, v0, Lm7d;->Y:[J
-
-    iget-object v11, v0, Lm7d;->X:[J
-
-    iget-object v12, v0, Lm7d;->w0:Ljava/lang/Object;
-
-    check-cast v12, Lks5;
-
-    invoke-static/range {p1 .. p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto/16 :goto_2
+    return-void
 
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v2, "Layout state should be one of "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " but it is "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p1, p0, Lm7d;->e:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
+.end method
 
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lqe5;->V(Ljava/lang/Object;)V
+.method public final b()I
+    .locals 2
 
-    iget-object v1, v0, Lm7d;->w0:Ljava/lang/Object;
+    iget-boolean v0, p0, Lm7d;->h:Z
 
-    check-cast v1, Lks5;
+    if-eqz v0, :cond_0
 
-    iget-object v5, v0, Lm7d;->x0:Llp3;
+    iget v0, p0, Lm7d;->c:I
 
-    iget-object v5, v5, Llp3;->a:Lao9;
+    iget v1, p0, Lm7d;->d:I
 
-    iget-object v6, v5, Lao9;->b:[J
+    sub-int/2addr v0, v1
 
-    iget-object v5, v5, Lao9;->a:[J
+    return v0
 
-    array-length v7, v5
+    :cond_0
+    iget v0, p0, Lm7d;->f:I
 
-    add-int/lit8 v7, v7, -0x2
+    return v0
+.end method
 
-    if-ltz v7, :cond_5
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move v8, v2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :goto_0
-    aget-wide v9, v5, v8
+    const-string v1, "State{mTargetPosition="
 
-    not-long v11, v9
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v13, 0x7
+    iget v1, p0, Lm7d;->a:I
 
-    shl-long/2addr v11, v13
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    and-long/2addr v11, v9
+    const-string v1, ", mData="
 
-    const-wide v13, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    and-long/2addr v11, v13
+    iget-object v1, p0, Lm7d;->b:Landroid/util/SparseArray;
 
-    cmp-long v11, v11, v13
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-eqz v11, :cond_4
+    const-string v1, ", mItemCount="
 
-    sub-int v11, v8, v7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    not-int v11, v11
+    iget v1, p0, Lm7d;->f:I
 
-    ushr-int/lit8 v11, v11, 0x1f
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    rsub-int/lit8 v11, v11, 0x8
+    const-string v1, ", mIsMeasuring="
 
-    move-object v12, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v1, v2
+    iget-boolean v1, p0, Lm7d;->j:Z
 
-    move-wide/from16 v17, v9
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-object v10, v5
+    const-string v1, ", mPreviousLayoutItemCount="
 
-    move v9, v7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v5, v11
+    iget v1, p0, Lm7d;->c:I
 
-    move-object v11, v6
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-wide/from16 v6, v17
+    const-string v1, ", mDeletedInvisibleItemCountSincePreviousLayout="
 
-    :goto_1
-    if-ge v1, v5, :cond_3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide/16 v13, 0xff
+    iget v1, p0, Lm7d;->d:I
 
-    and-long/2addr v13, v6
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-wide/16 v15, 0x80
+    const-string v1, ", mStructureChanged="
 
-    cmp-long v13, v13, v15
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-gez v13, :cond_2
+    iget-boolean v1, p0, Lm7d;->g:Z
 
-    shl-int/lit8 v13, v8, 0x3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    add-int/2addr v13, v1
+    const-string v1, ", mInPreLayout="
 
-    aget-wide v13, v11, v13
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v15, Ljava/lang/Long;
+    iget-boolean v1, p0, Lm7d;->h:Z
 
-    invoke-direct {v15, v13, v14}, Ljava/lang/Long;-><init>(J)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iput-object v12, v0, Lm7d;->w0:Ljava/lang/Object;
+    const-string v1, ", mRunSimpleAnimations="
 
-    iput-object v11, v0, Lm7d;->X:[J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v10, v0, Lm7d;->Y:[J
+    iget-boolean v1, p0, Lm7d;->k:Z
 
-    iput v9, v0, Lm7d;->Z:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iput v8, v0, Lm7d;->r0:I
+    const-string v1, ", mRunPredictiveAnimations="
 
-    iput-wide v6, v0, Lm7d;->u0:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput v5, v0, Lm7d;->s0:I
+    iget-boolean v1, p0, Lm7d;->l:Z
 
-    iput v1, v0, Lm7d;->t0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iput v4, v0, Lm7d;->v0:I
+    const/16 v1, 0x7d
 
-    invoke-interface {v12, v15, v0}, Lks5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-result-object v13
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sget-object v14, Lz04;->a:Lz04;
-
-    if-ne v13, v14, :cond_2
-
-    return-object v14
-
-    :cond_2
-    :goto_2
-    shr-long/2addr v6, v3
-
-    add-int/2addr v1, v4
-
-    goto :goto_1
-
-    :cond_3
-    if-ne v5, v3, :cond_5
-
-    move v7, v9
-
-    move-object v5, v10
-
-    move-object v6, v11
-
-    move-object v1, v12
-
-    :cond_4
-    if-eq v8, v7, :cond_5
-
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_0
-
-    :cond_5
-    sget-object v0, Lylf;->a:Lylf;
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,64 +1,48 @@
 .class public final Ls71;
-.super Lin6;
-.source "SourceFile"
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic c:Lw71;
+.field public X:I
+
+.field public final synthetic Y:Ls3;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lw71;)V
+.method public constructor <init>(Ls3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ls71;->c:Lw71;
+    iput-object p1, p0, Ls71;->Y:Ls3;
 
-    invoke-direct {p0}, Lin6;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(I)I
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p0, p0, Ls71;->c:Lw71;
+    iput-object p1, p0, Ls71;->o:Ljava/lang/Object;
 
-    iget-object v0, p0, Lw71;->K0:Lyua;
+    iget p1, p0, Ls71;->X:I
 
-    iget v1, v0, Lyua;->b:I
+    const/high16 v0, -0x80000000
 
-    const/4 v2, 0x2
+    or-int/2addr p1, v0
 
-    if-ne v1, v2, :cond_0
+    iput p1, p0, Ls71;->X:I
 
-    if-nez p1, :cond_0
+    iget-object p1, p0, Ls71;->Y:Ls3;
 
-    goto :goto_0
+    const/4 v0, 0x0
 
-    :cond_0
-    iget p1, v0, Lyua;->a:I
+    invoke-virtual {p1, v0, p0}, Ls3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    if-eqz p1, :cond_1
+    move-result-object p1
 
-    goto :goto_1
-
-    :cond_1
-    iget-object p0, p0, Lw71;->H0:Lmf1;
-
-    invoke-virtual {p0}, Lls7;->j()I
-
-    move-result p0
-
-    if-gt p0, v2, :cond_2
-
-    :goto_0
-    return v2
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
+    return-object p1
 .end method

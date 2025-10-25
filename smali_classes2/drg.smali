@@ -1,231 +1,110 @@
 .class public final Ldrg;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/LayerDrawable;
 .source "SourceFile"
-
-# interfaces
-.implements Ljrg;
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:Landroid/content/Context;
-
-.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(JJLandroid/content/Context;Lxjd;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-wide p1, p0, Ldrg;->a:J
+    new-array v0, v0, [Landroid/graphics/drawable/Drawable;
 
-    iput-wide p3, p0, Ldrg;->b:J
-
-    iput-object p5, p0, Ldrg;->c:Landroid/content/Context;
-
-    check-cast p6, Lpad;
-
-    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-ds-keys-count:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 p2, 0x64
-
-    int-to-long p2, p2
-
-    invoke-virtual {p6, p1, p2, p3}, Lpad;->o(Ljava/lang/Enum;J)J
-
-    move-result-wide p1
-
-    long-to-int p1, p1
-
-    iput p1, p0, Ldrg;->d:I
+    invoke-direct {p0, v0}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
+.method public final a()V
     .locals 2
 
-    invoke-virtual {p0}, Ldrg;->c()Landroid/content/SharedPreferences;
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v1
+    instance-of v1, v0, Landroid/graphics/drawable/ShapeDrawable;
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p0
-
-    invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    check-cast v0, Landroid/graphics/drawable/ShapeDrawable;
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Map;->size()I
-
-    move-result v1
-
-    iget p0, p0, Ldrg;->d:I
-
-    if-ne v1, p0, :cond_1
-
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p0
-
-    :cond_1
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p0
-
-    invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    :goto_0
-    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object p0
-.end method
-
-.method public final b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    invoke-virtual {p0}, Ldrg;->c()Landroid/content/SharedPreferences;
-
-    move-result-object p0
-
     const/4 v0, 0x0
 
-    invoke-interface {p0, p1, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    move-result-object p0
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
-    return-object p0
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    const/high16 v1, 0x5c000000
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    :cond_1
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    :cond_2
+    return-void
 .end method
 
-.method public final c()Landroid/content/SharedPreferences;
-    .locals 4
+.method public final b(ILjava/lang/Integer;)V
+    .locals 2
 
-    const-string v0, "webapp_ds_"
+    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
-    const-string v1, "_"
+    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
 
-    iget-wide v2, p0, Ldrg;->b:J
+    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
 
-    invoke-static {v2, v3, v0, v1}, Lmw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    move-result-object v0
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
 
-    iget-wide v1, p0, Ldrg;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v0
-
-    iget-object p0, p0, Ldrg;->c:Landroid/content/Context;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final clear()Ljava/lang/Boolean;
-    .locals 1
-
-    invoke-virtual {p0}, Ldrg;->c()Landroid/content/SharedPreferences;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v0
 
     if-eqz v0, :cond_0
 
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p0
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
     :cond_0
-    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    move-result-object p0
+    move-result p1
 
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    move-result-object p0
+    move-result p2
 
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    const/4 v0, 0x0
 
-    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    invoke-virtual {p0, v0, p1, p2}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
 
-    return-object p0
-.end method
+    const/16 p1, 0x11
 
-.method public final remove(Ljava/lang/String;)Ljava/lang/Boolean;
-    .locals 1
+    invoke-virtual {p0, v0, p1}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
 
-    invoke-virtual {p0}, Ldrg;->c()Landroid/content/SharedPreferences;
-
-    move-result-object p0
-
-    invoke-interface {p0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p0
-
-    invoke-interface {p0, p1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object p0
+    return-void
 .end method

@@ -24,7 +24,7 @@
 
     move-result-object p1
 
-    sget p2, Lw8c;->material_time_chip:I
+    sget p2, Lpqc;->material_time_chip:I
 
     invoke-virtual {p1, p2, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -38,7 +38,7 @@
 
     invoke-virtual {p2, v1}, Lcom/google/android/material/chip/Chip;->setAccessibilityClassName(Ljava/lang/CharSequence;)V
 
-    sget v1, Lw8c;->material_time_input:I
+    sget v1, Lpqc;->material_time_input:I
 
     invoke-virtual {p1, v1, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -84,27 +84,27 @@
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    sget p1, Lj5c;->material_label:I
+    sget p1, Lzmc;->material_label:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Landroid/widget/TextView;
+    check-cast p1, Landroid/widget/TextView;
 
-    sget-object p1, Lh7g;->a:Ljava/util/WeakHashMap;
+    sget-object p2, Lhzg;->a:Ljava/util/WeakHashMap;
 
     invoke-static {}, Landroid/view/View;->generateViewId()I
 
-    move-result p1
+    move-result p2
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setId(I)V
+    invoke-virtual {v1, p2}, Landroid/view/View;->setId(I)V
 
     invoke-virtual {v1}, Landroid/view/View;->getId()I
 
-    move-result p1
+    move-result p2
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLabelFor(I)V
+    invoke-virtual {p1, p2}, Landroid/view/View;->setLabelFor(I)V
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setSaveEnabled(Z)V
 
@@ -162,19 +162,19 @@
 
 # virtual methods
 .method public final isChecked()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->a:Lcom/google/android/material/chip/Chip;
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->a:Lcom/google/android/material/chip/Chip;
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
+    invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
+    .locals 1
 
     invoke-super {p0, p1}, Landroid/view/View;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
@@ -194,15 +194,15 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->b:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->b:Landroid/widget/EditText;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setImeHintLocales(Landroid/os/LocaleList;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setImeHintLocales(Landroid/os/LocaleList;)V
 
     return-void
 .end method
 
 .method public final setChecked(Z)V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->a:Lcom/google/android/material/chip/Chip;
 
@@ -220,9 +220,9 @@
     const/4 v2, 0x4
 
     :goto_0
-    iget-object p0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->b:Landroid/widget/EditText;
+    iget-object v3, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->b:Landroid/widget/EditText;
 
-    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v3, v2}, Landroid/view/View;->setVisibility(I)V
 
     if-eqz p1, :cond_1
 
@@ -237,46 +237,46 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p0}, Landroid/view/View;->requestFocus()Z
+    invoke-virtual {v3}, Landroid/view/View;->requestFocus()Z
 
-    new-instance p1, Llg;
+    new-instance p1, Lug;
 
-    const/4 v0, 0x7
+    const/4 v0, 0x5
 
-    invoke-direct {p1, p0, v0}, Llg;-><init>(Landroid/view/View;I)V
+    invoke-direct {p1, v3, v0}, Lug;-><init>(Landroid/view/View;I)V
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v3, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     :cond_2
     return-void
 .end method
 
 .method public final setOnClickListener(Landroid/view/View$OnClickListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->a:Lcom/google/android/material/chip/Chip;
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->a:Lcom/google/android/material/chip/Chip;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
 
 .method public final setTag(ILjava/lang/Object;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->a:Lcom/google/android/material/chip/Chip;
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->a:Lcom/google/android/material/chip/Chip;
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    invoke-virtual {v0, p1, p2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final toggle()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->a:Lcom/google/android/material/chip/Chip;
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->a:Lcom/google/android/material/chip/Chip;
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->toggle()V
+    invoke-virtual {v0}, Landroid/widget/CompoundButton;->toggle()V
 
     return-void
 .end method

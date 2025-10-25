@@ -3,56 +3,61 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqm3;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/StartCallParams;I)V
-    .locals 0
-
-    iput p2, p0, Laz3;->a:I
-
-    iput-object p1, p0, Laz3;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Ld8;
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final a(Lqid;)V
+    .locals 3
 
-    iget v0, p0, Laz3;->a:I
+    new-instance v0, Landroid/content/Intent;
 
-    iget-object p0, p0, Laz3;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
+    const-string v1, "android.intent.action.INSERT"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Ljava/lang/Throwable;
+    const-string v1, "vnd.android.cursor.dir/raw_contact"
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->c(Lru/ok/android/externcalls/sdk/factory/StartCallParams;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "finishActivityOnSaveCompleted"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    :try_start_0
+    invoke-virtual {p1}, Lqid;->d()Landroid/app/Activity;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    const/16 v1, 0x66
+
+    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
 
-    :pswitch_0
-    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
+    :cond_0
+    const-string p1, "Required value was null."
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->i(Lru/ok/android/externcalls/sdk/factory/StartCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const-string p1, "createContact: failed, no activity found"
+
+    const/4 v0, 0x0
+
+    const-string v1, "ContactsDeepLinkFactory"
+
+    invoke-static {v1, p1, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

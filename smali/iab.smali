@@ -17,7 +17,7 @@
 
     new-instance v0, Liab;
 
-    const-string v1, "TOP"
+    const-string v1, "RUN_AS_NON_EXPEDITED_WORK_REQUEST"
 
     const/4 v2, 0x0
 
@@ -27,7 +27,7 @@
 
     new-instance v1, Liab;
 
-    const-string v2, "BOTTOM"
+    const-string v2, "DROP_WORK_REQUEST"
 
     const/4 v3, 0x1
 
@@ -63,7 +63,7 @@
 
     sget-object v0, Liab;->c:[Liab;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

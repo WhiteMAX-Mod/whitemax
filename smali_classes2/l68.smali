@@ -3,1996 +3,1552 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lp14;
-.implements Lew8;
-.implements Lekb;
+.implements Low8;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final a:Lrw8;
 
-.field public Y:Ljava/lang/Object;
+.field public final b:Lyh5;
 
-.field public a:J
+.field public final c:Lqw8;
 
-.field public b:Ljava/lang/Object;
+.field public final d:Landroid/content/Context;
 
-.field public c:Ljava/lang/Object;
+.field public e:Lrdi;
 
-.field public o:Ljava/lang/Object;
+.field public f:Lpmg;
+
+.field public g:Lmw8;
+
+.field public h:F
+
+.field public i:Z
+
+.field public j:Z
+
+.field public k:Landroid/os/PowerManager;
+
+.field public l:Landroid/os/PowerManager$WakeLock;
 
 
 # direct methods
-.method public constructor <init>(Lzrf;Lwpe;)V
-    .locals 2
+.method public constructor <init>(Lrw8;Lyh5;Lqw8;Landroid/content/Context;FZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/WeakHashMap;
+    iput-object p1, p0, Ll68;->a:Lrw8;
 
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+    iput-object p2, p0, Ll68;->b:Lyh5;
 
-    iput-object p1, p0, Ll68;->o:Ljava/lang/Object;
+    iput-object p3, p0, Ll68;->c:Lqw8;
 
-    new-instance v0, Lz96;
+    iput-object p4, p0, Ll68;->d:Landroid/content/Context;
 
-    new-instance v1, Lncb;
+    iput p5, p0, Ll68;->h:F
 
-    invoke-direct {v1, p0, p1}, Lncb;-><init>(Ll68;Lzrf;)V
+    iput-boolean p6, p0, Ll68;->i:Z
 
-    invoke-direct {v0, v1}, Lz96;-><init>(Lncb;)V
+    iput-boolean p7, p0, Ll68;->j:Z
 
-    iput-object v0, p0, Ll68;->b:Ljava/lang/Object;
-
-    new-instance v0, Lz96;
-
-    new-instance v1, Lncb;
-
-    invoke-direct {v1, p0, p1}, Lncb;-><init>(Ll68;Lzrf;)V
-
-    invoke-direct {v0, v1}, Lz96;-><init>(Lncb;)V
-
-    iput-object v0, p0, Ll68;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Ll68;->X:Ljava/lang/Object;
-
-    invoke-interface {p2}, Lwpe;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lfw8;
-
-    const-string p2, "mMemoryCacheParamsSupplier returned null"
-
-    invoke-static {p1, p2}, Lcb7;->i(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object p1, p0, Ll68;->Y:Ljava/lang/Object;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Ll68;->a:J
-
-    return-void
-.end method
-
-.method public static g(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/viewpager2/widget/ViewPager2;
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p0
-
-    instance-of v0, p0, Landroidx/viewpager2/widget/ViewPager2;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroidx/viewpager2/widget/ViewPager2;
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Expected ViewPager2 instance. Got: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static j(Lo14;)V
-    .locals 2
-
-    if-eqz p0, :cond_0
-
-    iget-object v0, p0, Lo14;->e:Ly9e;
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lo14;->a:Lax0;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Ly9e;->B(Lax0;Z)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljx3;)Ljava/lang/Object;
-    .locals 6
-
-    instance-of v0, p1, Lhkb;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Lhkb;
-
-    iget v1, v0, Lhkb;->r0:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lhkb;->r0:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lhkb;
-
-    invoke-direct {v0, p0, p1}, Lhkb;-><init>(Ll68;Ljx3;)V
-
-    :goto_0
-    iget-object p1, v0, Lhkb;->Y:Ljava/lang/Object;
-
-    iget v1, v0, Lhkb;->r0:I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    iget-object p0, v0, Lhkb;->X:Ll68;
-
-    iget-object v0, v0, Lhkb;->o:Ll68;
-
-    :try_start_0
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_2
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object p1, p0, Ll68;->c:Ljava/lang/Object;
-
-    check-cast p1, Lcl7;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyz2;
-
-    iget-wide v4, p0, Ll68;->a:J
-
-    check-cast p1, Ly03;
-
-    invoke-virtual {p1, v4, v5}, Ly03;->N(J)Liic;
-
-    move-result-object p1
-
-    iput-object p0, v0, Lhkb;->o:Ll68;
-
-    iput-object p0, v0, Lhkb;->X:Ll68;
-
-    iput v2, v0, Lhkb;->r0:I
-
-    invoke-static {p1, v0}, Lo97;->Z(Lis5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    sget-object v0, Lz04;->a:Lz04;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
-    move-object v0, p0
-
-    :goto_1
-    :try_start_2
-    check-cast p1, Ls72;
-
-    if-nez p1, :cond_4
-
-    move-object v1, v3
-
-    goto :goto_3
-
-    :cond_4
-    new-instance v1, Lckb;
-
-    invoke-virtual {p1}, Ls72;->q()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v4, Lt2f;
-
-    invoke-direct {v4, v2}, Lt2f;-><init>(Ljava/lang/CharSequence;)V
-
-    invoke-direct {v1, v4}, Lckb;-><init>(Lt2f;)V
-
-    iput-object v1, p0, Ll68;->Y:Ljava/lang/Object;
-
-    new-instance p0, Ldk;
-
-    const/16 v1, 0xf
-
-    invoke-direct {p0, v1, p1}, Ldk;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p0}, Lzxa;->l(Ldk;)Los7;
-
-    move-result-object p0
-
-    new-instance v1, Ltjb;
-
-    invoke-virtual {p1}, Ls72;->f()J
-
-    move-result-wide v4
-
-    invoke-direct {v1, v4, v5, p0}, Ltjb;-><init>(JLjava/util/List;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_3
-
-    :catchall_1
-    move-exception p1
-
-    move-object v0, p0
-
-    move-object p0, p1
-
-    :goto_2
-    new-instance v1, Lhvc;
-
-    invoke-direct {v1, p0}, Lhvc;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_3
-    iget-object p0, v0, Ll68;->o:Ljava/lang/Object;
-
-    check-cast p0, Lyce;
-
-    instance-of p1, v1, Lhvc;
-
-    if-eqz p1, :cond_5
-
-    move-object v1, v3
-
-    :cond_5
-    if-eqz v1, :cond_6
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    goto :goto_4
-
-    :cond_6
-    sget-object p1, Lp45;->a:Lp45;
-
-    :goto_4
-    invoke-virtual {p0, v3, p1}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-.end method
-
-.method public b(Z)Ljava/util/List;
-    .locals 0
-
-    sget-object p0, Lwjb;->o:Lwjb;
-
-    sget-object p1, Lwjb;->X:Lwjb;
-
-    filled-new-array {p0, p1}, [Lwjb;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public c()Liic;
-    .locals 0
-
-    iget-object p0, p0, Ll68;->X:Ljava/lang/Object;
-
-    check-cast p0, Liic;
-
-    return-object p0
-.end method
-
-.method public d(Lwjb;Ltjb;Ljava/lang/String;ZLmz8;Ljx3;)Ljava/lang/Object;
-    .locals 3
-
-    iget-object p2, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast p2, Lj3d;
-
-    instance-of p4, p6, Lgkb;
-
-    if-eqz p4, :cond_0
-
-    move-object p4, p6
-
-    check-cast p4, Lgkb;
-
-    iget v0, p4, Lgkb;->Z:I
-
-    const/high16 v1, -0x80000000
-
-    and-int v2, v0, v1
-
-    if-eqz v2, :cond_0
-
-    sub-int/2addr v0, v1
-
-    iput v0, p4, Lgkb;->Z:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p4, Lgkb;
-
-    invoke-direct {p4, p0, p6}, Lgkb;-><init>(Ll68;Ljx3;)V
-
-    :goto_0
-    iget-object p0, p4, Lgkb;->X:Ljava/lang/Object;
-
-    iget p6, p4, Lgkb;->Z:I
-
-    sget-object v0, Lylf;->a:Lylf;
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x1
-
-    if-eqz p6, :cond_3
-
-    if-eq p6, v2, :cond_2
-
-    if-ne p6, v1, :cond_1
-
-    iget-object p5, p4, Lgkb;->o:Lmz8;
-
-    invoke-static {p0}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    invoke-static {p0}, Lqe5;->V(Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_3
-    invoke-static {p0}, Lqe5;->V(Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p0
-
-    const/4 p1, 0x0
-
-    sget-object p6, Lz04;->a:Lz04;
-
-    if-eqz p0, :cond_7
-
-    if-eq p0, v2, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    iput-object p5, p4, Lgkb;->o:Lmz8;
-
-    iput v1, p4, Lgkb;->Z:I
-
-    invoke-static {p2, p3, p1, p4}, Lj3d;->c(Lj3d;Ljava/lang/String;ZLjx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, p6, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    :goto_1
-    if-eqz p0, :cond_6
-
-    check-cast p0, Landroid/net/Uri;
-
-    new-instance p1, Lzjb;
-
-    invoke-direct {p1, p0}, Lzjb;-><init>(Landroid/net/Uri;)V
-
-    invoke-interface {p5, p1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Required value was null."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_7
-    iput v2, p4, Lgkb;->Z:I
-
-    invoke-static {p2, p3, p1, p4}, Lj3d;->c(Lj3d;Ljava/lang/String;ZLjx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, p6, :cond_8
-
-    :goto_2
-    return-object p6
-
-    :cond_8
-    :goto_3
-    return-object v0
-.end method
-
-.method public e(Lax0;Lf63;Ly9e;)Lid4;
-    .locals 7
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p0}, Ll68;->k()V
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v0, Lz96;
-
-    invoke-virtual {v0, p1}, Lz96;->X(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo14;
-
-    iget-object v1, p0, Ll68;->c:Ljava/lang/Object;
-
-    check-cast v1, Lz96;
-
-    invoke-virtual {v1, p1}, Lz96;->X(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lo14;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_0
-
-    monitor-enter p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    iget-boolean v4, v1, Lo14;->d:Z
-
-    xor-int/2addr v4, v2
-
-    invoke-static {v4}, Lcb7;->j(Z)V
-
-    iput-boolean v2, v1, Lo14;->d:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    monitor-exit p0
-
-    invoke-virtual {p0, v1}, Ll68;->m(Lo14;)Lf63;
-
-    move-result-object v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_3
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :try_start_4
-    throw p1
-
-    :cond_0
-    move-object v1, v3
-
-    :goto_0
-    invoke-virtual {p2}, Lf63;->i0()Ljava/lang/Object;
-
-    move-result-object v4
-
-    iget-object v5, p0, Ll68;->o:Ljava/lang/Object;
-
-    check-cast v5, Lzrf;
-
-    invoke-interface {v5, v4}, Lzrf;->f(Ljava/lang/Object;)I
-
-    move-result v4
-
-    monitor-enter p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :try_start_5
-    iget-object v5, p0, Ll68;->Y:Ljava/lang/Object;
-
-    check-cast v5, Lfw8;
-
-    iget v5, v5, Lfw8;->d:I
-
-    if-gt v4, v5, :cond_1
-
-    monitor-enter p0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    :try_start_6
-    iget-object v5, p0, Ll68;->c:Ljava/lang/Object;
-
-    check-cast v5, Lz96;
-
-    invoke-virtual {v5}, Lz96;->I()I
-
-    move-result v5
-
-    iget-object v6, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v6, Lz96;
-
-    invoke-virtual {v6}, Lz96;->I()I
-
-    move-result v6
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_4
-
-    sub-int/2addr v5, v6
-
-    :try_start_7
-    monitor-exit p0
-
-    iget-object v6, p0, Ll68;->Y:Ljava/lang/Object;
-
-    check-cast v6, Lfw8;
-
-    iget v6, v6, Lfw8;->b:I
-
-    sub-int/2addr v6, v2
-
-    if-gt v5, v6, :cond_1
-
-    monitor-enter p0
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    :try_start_8
-    iget-object v5, p0, Ll68;->c:Ljava/lang/Object;
-
-    check-cast v5, Lz96;
-
-    invoke-virtual {v5}, Lz96;->M()I
-
-    move-result v5
-
-    iget-object v6, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v6, Lz96;
-
-    invoke-virtual {v6}, Lz96;->M()I
-
-    move-result v6
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_3
-
-    sub-int/2addr v5, v6
-
-    :try_start_9
-    monitor-exit p0
-
-    iget-object v6, p0, Ll68;->Y:Ljava/lang/Object;
-
-    check-cast v6, Lfw8;
-
-    iget v6, v6, Lfw8;->a:I
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_2
-
-    sub-int/2addr v6, v4
-
-    if-gt v5, v6, :cond_1
-
-    goto :goto_1
-
-    :catchall_2
-    move-exception p1
-
-    goto :goto_2
-
-    :catchall_3
-    move-exception p1
-
-    :try_start_a
-    monitor-exit p0
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_3
-
-    :try_start_b
-    throw p1
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_2
-
-    :catchall_4
-    move-exception p1
-
-    :try_start_c
-    monitor-exit p0
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_4
-
-    :try_start_d
-    throw p1
-    :try_end_d
-    .catchall {:try_start_d .. :try_end_d} :catchall_2
-
-    :cond_1
-    const/4 v2, 0x0
-
-    :goto_1
-    :try_start_e
-    monitor-exit p0
-
-    if-eqz v2, :cond_2
-
-    new-instance v2, Lo14;
-
-    const/4 v3, -0x1
-
-    invoke-direct {v2, p1, p2, p3, v3}, Lo14;-><init>(Lax0;Lf63;Ly9e;I)V
-
-    iget-object p2, p0, Ll68;->c:Ljava/lang/Object;
-
-    check-cast p2, Lz96;
-
-    invoke-virtual {p2, p1, v2}, Lz96;->W(Lax0;Ljava/lang/Object;)V
-
-    invoke-virtual {p0, v2}, Ll68;->l(Lo14;)Lid4;
-
-    move-result-object v3
-
-    :cond_2
-    monitor-exit p0
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_0
-
-    invoke-static {v1}, Lf63;->W(Lf63;)V
-
-    invoke-static {v0}, Ll68;->j(Lo14;)V
-
-    invoke-virtual {p0}, Ll68;->i()V
-
-    return-object v3
-
-    :goto_2
-    :try_start_f
-    monitor-exit p0
-    :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_2
-
-    :try_start_10
-    throw p1
-
-    :goto_3
-    monitor-exit p0
-    :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_0
-
-    throw p1
-.end method
-
-.method public f(Lax0;Lf63;)Lf63;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, p2, v0}, Ll68;->e(Lax0;Lf63;Ly9e;)Lid4;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public get(Ljava/lang/Object;)Lf63;
-    .locals 3
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v0, Lz96;
-
-    invoke-virtual {v0, p1}, Lz96;->X(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo14;
-
-    iget-object v1, p0, Ll68;->c:Ljava/lang/Object;
-
-    check-cast v1, Lz96;
-
-    monitor-enter v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    iget-object v2, v1, Lz96;->o:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v2, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    monitor-exit v1
-
-    check-cast p1, Lo14;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0, p1}, Ll68;->l(Lo14;)Lid4;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-static {v0}, Ll68;->j(Lo14;)V
-
-    invoke-virtual {p0}, Ll68;->k()V
-
-    invoke-virtual {p0}, Ll68;->i()V
-
-    return-object p1
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :try_start_4
-    throw p1
-
-    :goto_1
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    throw p1
-.end method
-
-.method public declared-synchronized getSizeInBytes()I
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Ll68;->c:Ljava/lang/Object;
-
-    check-cast v0, Lz96;
-
-    invoke-virtual {v0}, Lz96;->M()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public getTitle()Ldkb;
-    .locals 0
-
-    iget-object p0, p0, Ll68;->Y:Ljava/lang/Object;
-
-    check-cast p0, Lckb;
-
-    return-object p0
-.end method
-
-.method public declared-synchronized h(Ljava/util/ArrayList;)V
-    .locals 3
-
-    monitor-enter p0
-
-    if-eqz p1, :cond_0
-
-    :try_start_0
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo14;
-
-    monitor-enter p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-boolean v1, v0, Lo14;->d:Z
-
-    const/4 v2, 0x1
-
-    xor-int/2addr v1, v2
-
-    invoke-static {v1}, Lcb7;->j(Z)V
-
-    iput-boolean v2, v0, Lo14;->d:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    throw p1
-
-    :catchall_1
-    move-exception p1
-
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw p1
-
-    :cond_0
-    monitor-exit p0
-
-    return-void
-.end method
-
-.method public i()V
-    .locals 5
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Ll68;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lfw8;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Ll68;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lfw8;
-
-    iget v0, v0, Lfw8;->b:I
-
-    monitor-enter p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    iget-object v1, p0, Ll68;->c:Ljava/lang/Object;
-
-    check-cast v1, Lz96;
-
-    invoke-virtual {v1}, Lz96;->I()I
-
-    move-result v1
-
-    iget-object v2, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v2, Lz96;
-
-    invoke-virtual {v2}, Lz96;->I()I
-
-    move-result v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
-
-    sub-int/2addr v1, v2
-
-    :try_start_2
-    monitor-exit p0
-
-    sub-int/2addr v0, v1
-
-    const v1, 0x7fffffff
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    iget-object v1, p0, Ll68;->Y:Ljava/lang/Object;
-
-    check-cast v1, Lfw8;
-
-    iget v2, v1, Lfw8;->c:I
-
-    iget v1, v1, Lfw8;->a:I
-
-    monitor-enter p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :try_start_3
-    iget-object v3, p0, Ll68;->c:Ljava/lang/Object;
-
-    check-cast v3, Lz96;
-
-    invoke-virtual {v3}, Lz96;->M()I
-
-    move-result v3
-
-    iget-object v4, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v4, Lz96;
-
-    invoke-virtual {v4}, Lz96;->M()I
-
-    move-result v4
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    sub-int/2addr v3, v4
-
-    :try_start_4
-    monitor-exit p0
-
-    sub-int/2addr v1, v3
-
-    invoke-static {v2, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    invoke-virtual {p0, v0, v1}, Ll68;->n(II)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ll68;->h(Ljava/util/ArrayList;)V
-
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lo14;
-
-    invoke-virtual {p0, v2}, Ll68;->m(Lo14;)Lf63;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lf63;->W(Lf63;)V
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo14;
-
-    invoke-static {v0}, Ll68;->j(Lo14;)V
-
-    goto :goto_1
-
-    :cond_1
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v0
-
-    :try_start_5
-    monitor-exit p0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    :try_start_6
-    throw v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
-
-    :catchall_2
-    move-exception v0
-
-    :try_start_7
-    monitor-exit p0
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    :try_start_8
-    throw v0
-
-    :goto_2
-    monitor-exit p0
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_0
-
-    throw v0
-.end method
-
-.method public declared-synchronized k()V
+.method public final a()V
     .locals 4
 
-    monitor-enter p0
+    sget-object v0, Lrw8;->a:Lrw8;
 
-    :try_start_0
-    iget-wide v0, p0, Ll68;->a:J
+    iget-object v1, p0, Ll68;->a:Lrw8;
 
-    iget-object v2, p0, Ll68;->Y:Ljava/lang/Object;
+    if-eq v1, v0, :cond_4
 
-    check-cast v2, Lfw8;
+    sget-object v0, Lrw8;->b:Lrw8;
 
-    iget-wide v2, v2, Lfw8;->e:J
+    if-eq v1, v0, :cond_4
 
-    add-long/2addr v0, v2
+    invoke-virtual {p0}, Ll68;->g()Z
 
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ll68;->a:J
-
-    iget-object v0, p0, Ll68;->X:Ljava/lang/Object;
-
-    check-cast v0, Lwpe;
-
-    invoke-interface {v0}, Lwpe;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfw8;
-
-    const-string v1, "mMemoryCacheParamsSupplier returned null"
-
-    invoke-static {v0, v1}, Lcb7;->i(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object v0, p0, Ll68;->Y:Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
-.end method
-
-.method public declared-synchronized l(Lo14;)Lid4;
-    .locals 4
-
-    monitor-enter p0
-
-    :try_start_0
-    monitor-enter p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    iget-boolean v0, p1, Lo14;->d:Z
-
-    xor-int/lit8 v0, v0, 0x1
-
-    invoke-static {v0}, Lcb7;->j(Z)V
-
-    iget v0, p1, Lo14;->c:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p1, Lo14;->c:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    monitor-exit p0
-
-    iget-object v0, p1, Lo14;->b:Lf63;
-
-    invoke-virtual {v0}, Lf63;->i0()Ljava/lang/Object;
-
-    move-result-object v0
-
-    new-instance v1, Lwvg;
-
-    const/16 v2, 0x17
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, p0, p1, v3, v2}, Lwvg;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    sget-object p1, Lf63;->Y:Ld6d;
-
-    invoke-static {v0, v1, p1}, Lf63;->t0(Ljava/lang/Object;Lguc;Le63;)Lid4;
-
-    move-result-object p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    monitor-exit p0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :try_start_4
-    throw p1
-
-    :goto_0
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    throw p1
-.end method
-
-.method public declared-synchronized m(Lo14;)Lf63;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-boolean v0, p1, Lo14;->d:Z
-
-    if-eqz v0, :cond_0
-
-    iget v0, p1, Lo14;->c:I
+    move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object p1, p1, Lo14;->b:Lf63;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Ll68;->l:Landroid/os/PowerManager$WakeLock;
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Ll68;->k:Landroid/os/PowerManager;
+
+    if-nez v0, :cond_1
+
+    const-string v0, "power"
+
+    iget-object v2, p0, Ll68;->d:Landroid/content/Context;
+
+    invoke-virtual {v2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/PowerManager;
+
+    iput-object v0, p0, Ll68;->k:Landroid/os/PowerManager;
+
+    :cond_1
+    iget-object v0, p0, Ll68;->k:Landroid/os/PowerManager;
+
+    sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "tamtam:media_player_controller_"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const v3, 0x2000000a
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll68;->l:Landroid/os/PowerManager$WakeLock;
+
+    :cond_2
+    iget-object v0, p0, Ll68;->l:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_3
+    :try_start_0
+    iget-object v0, p0, Ll68;->l:Landroid/os/PowerManager$WakeLock;
 
-    goto :goto_1
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    :cond_0
-    const/4 p1, 0x0
+    const-string v0, "l68"
 
+    const-string v2, "New wake lock acquire %s"
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v0, v2, v1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_4
     :goto_0
-    monitor-exit p0
-
-    return-object p1
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-void
 .end method
 
-.method public declared-synchronized n(II)Ljava/util/ArrayList;
-    .locals 4
+.method public final b(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    monitor-enter p0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :try_start_0
-    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result p1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
+    const-string p1, "-"
 
-    move-result p2
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Ll68;->b:Ljava/lang/Object;
+    iget-object p1, p0, Ll68;->a:Lrw8;
 
-    check-cast v0, Lz96;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lz96;->I()I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final c()V
+    .locals 1
+
+    iget-object v0, p0, Ll68;->e:Lrdi;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lnw8;->G()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d()I
+    .locals 3
+
+    iget-object v0, p0, Ll68;->f:Lpmg;
 
     const/4 v1, 0x0
 
-    if-gt v0, p1, :cond_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v0, Lz96;
-
-    invoke-virtual {v0}, Lz96;->M()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-gt v0, p2, :cond_0
-
-    monitor-exit p0
-
-    return-object v1
-
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_3
+    return v1
 
     :cond_0
-    :try_start_1
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v0, p0, Ll68;->b:Lyh5;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iget-object v2, v0, Lyh5;->Z:Lpmg;
 
-    :goto_0
-    iget-object v2, p0, Ll68;->b:Ljava/lang/Object;
+    if-nez v2, :cond_1
 
-    check-cast v2, Lz96;
-
-    invoke-virtual {v2}, Lz96;->I()I
-
-    move-result v2
-
-    if-gt v2, p1, :cond_2
-
-    iget-object v2, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v2, Lz96;
-
-    invoke-virtual {v2}, Lz96;->M()I
-
-    move-result v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-le v2, p2, :cond_1
-
-    goto :goto_1
+    return v1
 
     :cond_1
-    monitor-exit p0
+    iget v0, v0, Lyh5;->t0:I
 
-    return-object v0
-
-    :cond_2
-    :goto_1
-    :try_start_2
-    iget-object v2, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v2, Lz96;
-
-    monitor-enter v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :try_start_3
-    iget-object v3, v2, Lz96;->o:Ljava/lang/Object;
-
-    check-cast v3, Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v3}, Ljava/util/AbstractMap;->isEmpty()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    move-object v3, v1
-
-    goto :goto_2
-
-    :cond_3
-    iget-object v3, v2, Lz96;->o:Ljava/lang/Object;
-
-    check-cast v3, Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :goto_2
-    :try_start_4
-    monitor-exit v2
-
-    if-eqz v3, :cond_4
-
-    iget-object v2, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v2, Lz96;
-
-    invoke-virtual {v2, v3}, Lz96;->X(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v2, p0, Ll68;->c:Ljava/lang/Object;
-
-    check-cast v2, Lz96;
-
-    invoke-virtual {v2, v3}, Lz96;->X(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lo14;
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "key is null, but exclusiveEntries count: %d, size: %d"
-
-    iget-object v0, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v0, Lz96;
-
-    invoke-virtual {v0}, Lz96;->I()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ll68;->b:Ljava/lang/Object;
-
-    check-cast v1, Lz96;
-
-    invoke-virtual {v1}, Lz96;->M()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {p2, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_5
-    monitor-exit v2
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    :try_start_6
-    throw p1
-
-    :goto_3
-    monitor-exit p0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
-
-    throw p1
+    return v0
 .end method
 
-.method public o(Z)V
-    .locals 12
-
-    iget-object v0, p0, Ll68;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lak8;
-
-    iget-object v1, v0, Lak8;->w0:Ljava/util/List;
-
-    iget-object v2, v0, Lak8;->Y:Lr28;
-
-    iget-object v3, v0, Lak8;->X:Lj86;
-
-    invoke-virtual {v3}, Landroidx/fragment/app/c;->P()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    goto/16 :goto_6
-
-    :cond_0
-    iget-object v4, p0, Ll68;->X:Ljava/lang/Object;
-
-    check-cast v4, Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {v4}, Landroidx/viewpager2/widget/ViewPager2;->getScrollState()I
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    goto/16 :goto_6
-
-    :cond_1
-    invoke-virtual {v2}, Lr28;->g()I
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    return-void
-
-    :cond_2
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    goto/16 :goto_6
-
-    :cond_3
-    iget-object v4, p0, Ll68;->X:Ljava/lang/Object;
-
-    check-cast v4, Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {v4}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I
-
-    move-result v4
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-lt v4, v1, :cond_4
-
-    goto/16 :goto_6
-
-    :cond_4
-    int-to-long v4, v4
-
-    iget-wide v6, p0, Ll68;->a:J
-
-    cmp-long v1, v4, v6
-
-    if-nez v1, :cond_5
-
-    if-nez p1, :cond_5
-
-    goto/16 :goto_6
-
-    :cond_5
-    invoke-virtual {v2, v4, v5}, Lr28;->b(J)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/fragment/app/a;
-
-    if-eqz p1, :cond_e
-
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->d0()Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    goto/16 :goto_6
-
-    :cond_6
-    iput-wide v4, p0, Ll68;->a:J
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Lce0;
-
-    invoke-direct {p1, v3}, Lce0;-><init>(Landroidx/fragment/app/c;)V
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move v5, v3
-
-    :goto_0
-    invoke-virtual {v2}, Lr28;->g()I
-
-    move-result v6
-
-    if-ge v5, v6, :cond_b
-
-    invoke-virtual {v2, v5}, Lr28;->d(I)J
-
-    move-result-wide v6
-
-    invoke-virtual {v2, v5}, Lr28;->h(I)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Landroidx/fragment/app/a;
-
-    invoke-virtual {v8}, Landroidx/fragment/app/a;->d0()Z
-
-    move-result v9
-
-    if-nez v9, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    iget-wide v9, p0, Ll68;->a:J
-
-    cmp-long v9, v6, v9
-
-    if-eqz v9, :cond_9
-
-    sget-object v9, Lcn7;->o:Lcn7;
-
-    invoke-virtual {p1, v8, v9}, Lce0;->i(Landroidx/fragment/app/a;Lcn7;)V
-
-    iget-object v9, v0, Lak8;->t0:Lu35;
-
-    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v10, Ljava/util/ArrayList;
-
-    invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v9, v9, Lu35;->b:Ljava/lang/Object;
-
-    check-cast v9, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v9}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v9
-
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v11
-
-    if-nez v11, :cond_8
-
-    invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_8
-    invoke-static {v9}, Lee5;->i(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_9
-    move-object v4, v8
-
-    :goto_1
-    iget-wide v9, p0, Ll68;->a:J
-
-    cmp-long v6, v6, v9
-
-    if-nez v6, :cond_a
-
-    const/4 v6, 0x1
-
-    goto :goto_2
-
-    :cond_a
-    move v6, v3
-
-    :goto_2
-    invoke-virtual {v8, v6}, Landroidx/fragment/app/a;->N0(Z)V
-
-    :goto_3
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_b
-    if-eqz v4, :cond_d
-
-    sget-object p0, Lcn7;->X:Lcn7;
-
-    invoke-virtual {p1, v4, p0}, Lce0;->i(Landroidx/fragment/app/a;Lcn7;)V
-
-    iget-object p0, v0, Lak8;->t0:Lu35;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object p0, p0, Lu35;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-nez v3, :cond_c
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_4
-
-    :cond_c
-    invoke-static {p0}, Lee5;->i(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_d
-    :goto_4
-    iget-object p0, p1, Lce0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p0
-
-    if-nez p0, :cond_e
-
-    invoke-virtual {p1}, Lce0;->e()V
-
-    invoke-static {v1}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_5
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_e
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v1, v0, Lak8;->t0:Lu35;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lu35;->C(Ljava/util/List;)V
-
-    goto :goto_5
-
-    :cond_e
-    :goto_6
-    return-void
-.end method
-
-.method public w(Ligb;)I
+.method public final e()I
     .locals 3
 
-    monitor-enter p0
+    iget-object v0, p0, Ll68;->f:Lpmg;
 
-    :try_start_0
-    iget-object v0, p0, Ll68;->b:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast v0, Lz96;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lz96;->Z(Ligb;)Ljava/util/ArrayList;
+    return v1
+
+    :cond_0
+    iget-object v0, p0, Ll68;->b:Lyh5;
+
+    iget-object v2, v0, Lyh5;->Z:Lpmg;
+
+    if-nez v2, :cond_1
+
+    return v1
+
+    :cond_1
+    iget v0, v0, Lyh5;->s0:I
+
+    return v0
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget-object v0, p0, Ll68;->f:Lpmg;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Ll68;->b:Lyh5;
+
+    invoke-virtual {v0}, Lyh5;->d()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final g()Z
+    .locals 2
+
+    iget v0, p0, Ll68;->h:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final h()V
+    .locals 1
+
+    iget-object v0, p0, Ll68;->c:Lqw8;
+
+    invoke-virtual {v0, p0}, Lqw8;->m(Ll68;)V
+
+    iget-object v0, p0, Ll68;->e:Lrdi;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lnw8;->s()V
+
+    :cond_0
+    invoke-virtual {p0}, Ll68;->a()V
+
+    return-void
+.end method
+
+.method public final i()V
+    .locals 3
+
+    iget-object v0, p0, Ll68;->f:Lpmg;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Ll68;->a:Lrw8;
+
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Ll68;->c:Ljava/lang/Object;
+    const-string v1, "l68"
 
-    check-cast v1, Lz96;
+    const-string v2, "Pause %s"
 
-    invoke-virtual {v1, p1}, Lz96;->Z(Ligb;)Ljava/util/ArrayList;
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1}, Ll68;->h(Ljava/util/ArrayList;)V
+    iput-boolean v0, p0, Ll68;->j:Z
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, p0, Ll68;->b:Lyh5;
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lyh5;->pause()V
 
-    move-result-object v1
+    return-void
+.end method
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+.method public final j()V
+    .locals 3
 
-    move-result v2
+    iget-object v0, p0, Ll68;->f:Lpmg;
 
-    if-eqz v2, :cond_0
+    if-nez v0, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return-void
 
-    move-result-object v2
+    :cond_0
+    iget-object v0, p0, Ll68;->a:Lrw8;
 
-    check-cast v2, Lo14;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    invoke-virtual {p0, v2}, Ll68;->m(Lo14;)Lf63;
+    move-result-object v0
 
-    move-result-object v2
+    const-string v1, "l68"
 
-    invoke-static {v2}, Lf63;->W(Lf63;)V
+    const-string v2, "Play %s"
+
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ll68;->j:Z
+
+    iget-object v0, p0, Ll68;->b:Lyh5;
+
+    invoke-virtual {v0}, Lyh5;->play()V
+
+    return-void
+.end method
+
+.method public final k()V
+    .locals 3
+
+    iget-object v0, p0, Ll68;->l:Landroid/os/PowerManager$WakeLock;
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Ll68;->l:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
+
+    iget-object v0, p0, Ll68;->a:Lrw8;
+
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const-string v1, "l68"
 
-    move-result v1
+    const-string v2, "Release wake lock %s"
+
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final l(J)V
+    .locals 7
+
+    iget-object v0, p0, Ll68;->f:Lpmg;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Ll68;->b:Lyh5;
+
+    iget-object v1, v0, Lyh5;->a:Ljpe;
+
+    invoke-static {}, Lyh5;->c()V
+
+    iget-object v2, v0, Lyh5;->Z:Lpmg;
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v1}, Ljpe;->S0()V
+
+    iget-object v2, v1, Ljpe;->c:Lwi5;
+
+    invoke-virtual {v2}, Lwi5;->getDuration()J
+
+    move-result-wide v3
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v3, v3, v5
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v1}, Ljpe;->S0()V
+
+    invoke-virtual {v2}, Lwi5;->getDuration()J
+
+    move-result-wide v2
+
+    iget-object v4, v0, Lyh5;->Z:Lpmg;
+
+    invoke-interface {v4}, Lpmg;->g()J
+
+    move-result-wide v4
+
+    sub-long/2addr v2, v4
+
+    cmp-long v2, p1, v2
+
+    if-lez v2, :cond_2
+
+    :goto_0
+    return-void
+
+    :cond_2
+    iget-object v0, v0, Lyh5;->Z:Lpmg;
+
+    invoke-interface {v0}, Lpmg;->g()J
+
+    move-result-wide v2
+
+    add-long/2addr v2, p1
+
+    invoke-virtual {v1}, Ljpe;->u()I
+
+    move-result p1
+
+    invoke-virtual {v1, p1, v2, v3}, Ljpe;->T0(IJ)V
+
+    return-void
+.end method
+
+.method public final m(Landroid/view/Surface;)V
+    .locals 4
+
+    iget-object v0, p0, Ll68;->a:Lrw8;
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "l68"
+
+    const-string v2, "Set surface %s"
+
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Ll68;->b:Lyh5;
+
+    iget-object v0, v0, Lyh5;->a:Ljpe;
+
+    invoke-static {}, Lyh5;->c()V
+
+    const-string v1, "yh5"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v1, v2, v3}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v0}, Ljpe;->S0()V
+
+    iget-object p1, v0, Ljpe;->c:Lwi5;
+
+    invoke-virtual {p1}, Lwi5;->k1()V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lwi5;->e1(Landroid/view/Surface;)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0}, Lwi5;->b1(II)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Ljpe;->S0()V
+
+    iget-object v0, v0, Ljpe;->c:Lwi5;
+
+    invoke-virtual {v0}, Lwi5;->k1()V
+
+    invoke-virtual {v0, p1}, Lwi5;->e1(Landroid/view/Surface;)V
+
+    const/4 p1, -0x1
+
+    invoke-virtual {v0, p1, p1}, Lwi5;->b1(II)V
+
+    return-void
+.end method
+
+.method public final n(Lpmg;Lmw8;)V
+    .locals 28
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p2
+
+    iget-object v2, v0, Ll68;->b:Lyh5;
+
+    iget-object v3, v0, Ll68;->a:Lrw8;
+
+    filled-new-array {v3}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    const-string v4, "l68"
+
+    const-string v5, "Set video content %s"
+
+    invoke-static {v4, v5, v3}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move-object/from16 v3, p1
+
+    iput-object v3, v0, Ll68;->f:Lpmg;
+
+    iget-object v3, v0, Ll68;->g:Lmw8;
+
+    if-eqz v3, :cond_0
+
+    if-eq v3, v1, :cond_0
+
+    invoke-interface {v3}, Lmw8;->K()V
+
+    :cond_0
+    iput-object v1, v0, Ll68;->g:Lmw8;
+
+    invoke-static {}, Lyh5;->c()V
+
+    iput-object v0, v2, Lyh5;->Y:Ll68;
+
+    iget-object v1, v0, Ll68;->f:Lpmg;
+
+    check-cast v1, Lpl0;
+
+    iget-boolean v1, v1, Lpl0;->g:Z
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    goto :goto_0
 
-    check-cast v1, Lo14;
+    :cond_1
+    iget v1, v0, Ll68;->h:F
 
-    invoke-static {v1}, Ll68;->j(Lo14;)V
+    :goto_0
+    invoke-virtual {v2, v1}, Lyh5;->b(F)V
+
+    iget-boolean v1, v0, Ll68;->i:Z
+
+    invoke-static {}, Lyh5;->c()V
+
+    iget-object v3, v2, Lyh5;->a:Ljpe;
+
+    invoke-virtual {v3}, Ljpe;->S0()V
+
+    iget-object v3, v3, Ljpe;->c:Lwi5;
+
+    iget-object v4, v3, Lwi5;->v0:Lcq3;
+
+    invoke-virtual {v3}, Lwi5;->k1()V
+
+    iget v5, v3, Lwi5;->L0:I
+
+    const/4 v6, 0x1
+
+    const/4 v7, 0x0
+
+    if-eq v5, v1, :cond_2
+
+    iput v1, v3, Lwi5;->L0:I
+
+    iget-object v5, v3, Lwi5;->u0:Lkj5;
+
+    iget-object v5, v5, Lkj5;->q0:Ljjf;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljjf;->b()Lhjf;
+
+    move-result-object v8
+
+    iget-object v5, v5, Ljjf;->a:Landroid/os/Handler;
+
+    const/16 v9, 0xb
+
+    invoke-virtual {v5, v9, v1, v7}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object v5
+
+    iput-object v5, v8, Lhjf;->a:Landroid/os/Message;
+
+    invoke-virtual {v8}, Lhjf;->b()V
+
+    new-instance v5, Ltg4;
+
+    invoke-direct {v5, v1, v6}, Ltg4;-><init>(II)V
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v4, v1, v5}, Lcq3;->f(ILt28;)V
+
+    invoke-virtual {v3}, Lwi5;->g1()V
+
+    invoke-virtual {v4}, Lcq3;->c()V
+
+    :cond_2
+    iget-object v1, v0, Ll68;->f:Lpmg;
+
+    iget-boolean v3, v0, Ll68;->j:Z
+
+    iget-object v4, v2, Lyh5;->a:Ljpe;
+
+    invoke-static {}, Lyh5;->c()V
+
+    iget-object v5, v2, Lyh5;->Z:Lpmg;
+
+    const/4 v8, 0x4
+
+    const-string v9, "yh5"
+
+    if-eqz v5, :cond_7
+
+    invoke-virtual {v5, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_7
+
+    invoke-virtual {v4}, Ljpe;->S0()V
+
+    iget-object v5, v4, Ljpe;->c:Lwi5;
+
+    invoke-virtual {v5}, Lwi5;->k1()V
+
+    iget-object v5, v5, Lwi5;->i1:Ltsb;
+
+    iget v5, v5, Ltsb;->e:I
+
+    if-ne v5, v6, :cond_3
 
     goto :goto_1
 
+    :cond_3
+    iget-object v1, v2, Lyh5;->a:Ljpe;
+
+    invoke-virtual {v1}, Ljpe;->S0()V
+
+    iget-object v1, v1, Ljpe;->c:Lwi5;
+
+    invoke-virtual {v1}, Lwi5;->k1()V
+
+    iget-object v1, v1, Lwi5;->i1:Ltsb;
+
+    iget v1, v1, Ltsb;->e:I
+
+    if-ne v1, v8, :cond_4
+
+    const-string v1, "Video ended. Seek to start"
+
+    invoke-static {v9, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Lyh5;->g()V
+
+    :cond_4
+    invoke-virtual {v4}, Ljpe;->S0()V
+
+    iget-object v1, v4, Ljpe;->c:Lwi5;
+
+    invoke-virtual {v1}, Lwi5;->k1()V
+
+    iget-object v1, v1, Lwi5;->i1:Ltsb;
+
+    iget v1, v1, Ltsb;->e:I
+
+    const/4 v5, 0x3
+
+    if-ne v1, v5, :cond_5
+
+    iget-object v1, v2, Lyh5;->Y:Ll68;
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, v1, Ll68;->e:Lrdi;
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v1}, Lnw8;->O()V
+
+    :cond_5
+    invoke-virtual {v4, v3}, Ljpe;->U0(Z)V
+
+    if-eqz v3, :cond_1c
+
+    iget-object v1, v2, Lyh5;->Y:Ll68;
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v1}, Ll68;->h()V
+
+    :cond_6
+    invoke-virtual {v2}, Lyh5;->f()V
+
+    return-void
+
+    :cond_7
+    :goto_1
+    const-string v5, "Prepare new video content"
+
+    invoke-static {v9, v5}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput v7, v2, Lyh5;->s0:I
+
+    iput v7, v2, Lyh5;->t0:I
+
+    iput v7, v2, Lyh5;->u0:I
+
+    iput-boolean v7, v2, Lyh5;->v0:Z
+
+    iget-object v5, v2, Lyh5;->Y:Ll68;
+
+    if-eqz v5, :cond_8
+
+    iget-object v5, v5, Ll68;->e:Lrdi;
+
+    if-eqz v5, :cond_8
+
+    invoke-interface {v5}, Lnw8;->x()V
+
+    :cond_8
+    iput-object v1, v2, Lyh5;->Z:Lpmg;
+
+    invoke-interface {v1}, Lpmg;->getWidth()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    invoke-interface {v1}, Lpmg;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float/2addr v5, v1
+
+    iput v5, v2, Lyh5;->q0:F
+
+    iget-object v1, v2, Lyh5;->b:Ln33;
+
+    iget-object v5, v2, Lyh5;->Z:Lpmg;
+
+    iput-object v5, v1, Ln33;->c:Ljava/lang/Object;
+
+    sget-object v5, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v5, v1, Ln33;->o:Ljava/lang/Object;
+
+    iget-object v9, v1, Ln33;->a:Ljava/lang/Object;
+
+    check-cast v9, Lno4;
+
+    invoke-virtual {v9}, Lno4;->a()Lco4;
+
+    move-result-object v10
+
+    iget-object v11, v10, Lco4;->M:Landroid/util/SparseArray;
+
+    invoke-virtual {v11}, Landroid/util/SparseArray;->size()I
+
+    move-result v12
+
+    if-nez v12, :cond_9
+
+    goto :goto_2
+
+    :cond_9
+    invoke-virtual {v11}, Landroid/util/SparseArray;->clear()V
+
+    :goto_2
+    invoke-virtual {v9, v10}, Lno4;->g(Lco4;)V
+
+    invoke-virtual {v1}, Ln33;->h()Z
+
+    iget-object v1, v2, Lyh5;->Z:Lpmg;
+
+    invoke-interface {v1}, Lpmg;->f()Landroid/net/Uri;
+
+    move-result-object v9
+
+    iget-object v10, v2, Lyh5;->o:Lth5;
+
+    move-object v11, v1
+
+    check-cast v11, Lpl0;
+
+    iget-boolean v11, v11, Lpl0;->c:Z
+
+    iget-object v12, v10, Lth5;->a:Liu7;
+
+    invoke-interface {v12}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Lemf;
+
+    iget-boolean v13, v12, Lemf;->c:Z
+
+    if-nez v13, :cond_b
+
+    :cond_a
+    move v12, v7
+
+    goto :goto_3
+
+    :cond_b
+    invoke-virtual {v9}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-virtual {v12, v13}, Lemf;->d(Ljava/lang/String;)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_a
+
+    move v12, v6
+
+    :goto_3
+    if-nez v11, :cond_d
+
+    if-eqz v12, :cond_c
+
+    iget-object v10, v10, Lth5;->f:Lwif;
+
+    invoke-virtual {v10}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lbc4;
+
+    :goto_4
+    move-object v13, v10
+
+    goto :goto_5
+
+    :cond_c
+    iget-object v10, v10, Lth5;->d:Lwif;
+
+    invoke-virtual {v10}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lbc4;
+
+    goto :goto_4
+
+    :cond_d
+    if-eqz v12, :cond_e
+
+    iget-object v10, v10, Lth5;->e:Lwif;
+
+    invoke-virtual {v10}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lbc4;
+
+    goto :goto_4
+
+    :cond_e
+    iget-object v10, v10, Lth5;->c:Lwif;
+
+    invoke-virtual {v10}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lbc4;
+
+    goto :goto_4
+
+    :goto_5
+    instance-of v10, v1, Lkb4;
+
+    if-eqz v10, :cond_10
+
+    new-instance v1, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;
+
+    invoke-direct {v1, v13}, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;-><init>(Lbc4;)V
+
+    invoke-static {v9}, Lys8;->a(Landroid/net/Uri;)Lys8;
+
+    move-result-object v15
+
+    iget-object v9, v15, Lys8;->b:Lss8;
+
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v9, Lsa4;
+
+    invoke-direct {v9}, Lsa4;-><init>()V
+
+    invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
+
+    move-result v5
+
+    if-nez v5, :cond_f
+
+    new-instance v5, Lp95;
+
+    invoke-direct {v5, v9}, Lp95;-><init>(Lgdb;)V
+
+    move-object/from16 v17, v5
+
+    goto :goto_6
+
+    :cond_f
+    move-object/from16 v17, v9
+
+    :goto_6
+    new-instance v14, Lgb4;
+
+    iget-object v5, v1, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->b:Lbc4;
+
+    iget-object v9, v1, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->a:Lz22;
+
+    iget-object v10, v1, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->d:Lgbi;
+
+    iget-object v11, v1, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->c:Lkj4;
+
+    invoke-virtual {v11, v15}, Lkj4;->f(Lys8;)Ll25;
+
+    move-result-object v20
+
+    iget-object v11, v1, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->e:Lk82;
+
+    iget-wide v12, v1, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->f:J
+
+    move-object/from16 v16, v5
+
+    move-object/from16 v18, v9
+
+    move-object/from16 v19, v10
+
+    move-object/from16 v21, v11
+
+    move-wide/from16 v22, v12
+
+    invoke-direct/range {v14 .. v23}, Lgb4;-><init>(Lys8;Lbc4;Lgdb;Lz22;Lgbi;Ll25;Lk82;J)V
+
+    goto/16 :goto_8
+
+    :cond_10
+    instance-of v10, v1, Lj27;
+
+    if-eqz v10, :cond_12
+
+    new-instance v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;
+
+    invoke-direct {v1, v13}, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;-><init>(Lbc4;)V
+
+    invoke-static {v9}, Lys8;->a(Landroid/net/Uri;)Lys8;
+
+    move-result-object v15
+
+    iget-object v9, v15, Lys8;->b:Lss8;
+
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v9, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->c:Letd;
+
+    invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
+
+    move-result v5
+
+    if-nez v5, :cond_11
+
+    new-instance v5, Lz22;
+
+    invoke-direct {v5, v9}, Lz22;-><init>(Lr17;)V
+
+    move-object v9, v5
+
+    :cond_11
+    new-instance v14, Lf17;
+
+    iget-object v5, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->a:Litb;
+
+    iget-object v10, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->b:Lnri;
+
+    iget-object v11, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->e:Lgbi;
+
+    iget-object v12, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->f:Lkj4;
+
+    invoke-virtual {v12, v15}, Lkj4;->f(Lys8;)Ll25;
+
+    move-result-object v19
+
+    iget-object v12, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->g:Lk82;
+
+    iget-object v13, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->d:Lzg4;
+
+    iget-object v8, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->a:Litb;
+
+    invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v13, Lrk4;
+
+    invoke-direct {v13, v8, v12, v9}, Lrk4;-><init>(Litb;Lk82;Lr17;)V
+
+    iget-wide v8, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->j:J
+
+    iget-boolean v7, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->h:Z
+
+    iget v1, v1, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->i:I
+
+    move/from16 v25, v1
+
+    move-object/from16 v16, v5
+
+    move/from16 v24, v7
+
+    move-wide/from16 v22, v8
+
+    move-object/from16 v17, v10
+
+    move-object/from16 v18, v11
+
+    move-object/from16 v20, v12
+
+    move-object/from16 v21, v13
+
+    invoke-direct/range {v14 .. v25}, Lf17;-><init>(Lys8;Litb;Ll07;Lgbi;Ll25;Lk82;Lrk4;JZI)V
+
+    goto/16 :goto_8
+
+    :cond_12
+    instance-of v5, v1, Ljw9;
+
+    const/16 v7, 0x9
+
+    const/16 v8, 0x1b
+
+    if-eqz v5, :cond_15
+
+    move-object v5, v1
+
+    check-cast v5, Ljw9;
+
+    iget-object v9, v5, Ljw9;->j:Ljava/util/List;
+
+    invoke-interface {v9}, Ljava/util/List;->size()I
+
+    move-result v10
+
+    new-array v10, v10, [Lek0;
+
+    const/4 v11, 0x0
+
+    :goto_7
+    invoke-interface {v9}, Ljava/util/List;->size()I
+
+    move-result v12
+
+    if-ge v11, v12, :cond_14
+
+    invoke-interface {v9, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Lhw9;
+
+    new-instance v14, Lek4;
+
+    invoke-direct {v14}, Ljava/lang/Object;-><init>()V
+
+    new-instance v15, Ln19;
+
+    invoke-direct {v15, v8, v14}, Ln19;-><init>(ILjava/lang/Object;)V
+
+    new-instance v14, Lk82;
+
+    invoke-direct {v14, v7}, Lk82;-><init>(I)V
+
+    iget-object v12, v12, Lhw9;->a:Ljava/lang/String;
+
+    invoke-static {v12}, Ldei;->n(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v12
+
+    invoke-static {v12}, Lys8;->a(Landroid/net/Uri;)Lys8;
+
+    move-result-object v12
+
+    iget-object v6, v12, Lys8;->b:Lss8;
+
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move v6, v11
+
+    new-instance v11, Lvdc;
+
+    iget-object v7, v12, Lys8;->b:Lss8;
+
+    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v7, v12, Lys8;->b:Lss8;
+
+    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-object/from16 v16, v14
+
+    move-object v14, v15
+
+    sget-object v15, Ll25;->a:Li25;
+
+    invoke-direct/range {v11 .. v16}, Lvdc;-><init>(Lys8;Lbc4;Ln19;Ll25;Lk82;)V
+
+    instance-of v7, v1, Lc5g;
+
+    if-eqz v7, :cond_13
+
+    new-instance v7, Lo93;
+
+    sget-object v12, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v5}, Lpl0;->a()J
+
+    move-result-wide v14
+
+    invoke-virtual {v12, v14, v15}, Ljava/util/concurrent/TimeUnit;->toMicros(J)J
+
+    move-result-wide v14
+
+    invoke-direct {v7, v11, v14, v15}, Lo93;-><init>(Lvdc;J)V
+
+    move-object v11, v7
+
+    :cond_13
+    aput-object v11, v10, v6
+
+    add-int/lit8 v11, v6, 0x1
+
+    const/4 v6, 0x1
+
+    const/16 v7, 0x9
+
+    goto :goto_7
+
+    :cond_14
+    new-instance v14, Lz99;
+
+    invoke-direct {v14, v10}, Lz99;-><init>([Lek0;)V
+
+    goto :goto_8
+
+    :cond_15
+    new-instance v1, Lek4;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    new-instance v14, Ln19;
+
+    invoke-direct {v14, v8, v1}, Ln19;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lk82;
+
+    const/16 v5, 0x9
+
+    invoke-direct {v1, v5}, Lk82;-><init>(I)V
+
+    invoke-static {v9}, Lys8;->a(Landroid/net/Uri;)Lys8;
+
+    move-result-object v12
+
+    iget-object v5, v12, Lys8;->b:Lss8;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v11, Lvdc;
+
+    iget-object v5, v12, Lys8;->b:Lss8;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v5, v12, Lys8;->b:Lss8;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v15, Ll25;->a:Li25;
+
+    move-object/from16 v16, v1
+
+    invoke-direct/range {v11 .. v16}, Lvdc;-><init>(Lys8;Lbc4;Ln19;Ll25;Lk82;)V
+
+    move-object v14, v11
+
+    :goto_8
+    iput-object v14, v2, Lyh5;->r0:Lek0;
+
+    invoke-virtual {v4, v3}, Ljpe;->U0(Z)V
+
+    iget-object v5, v4, Ljpe;->c:Lwi5;
+
+    iget-object v1, v2, Lyh5;->Z:Lpmg;
+
+    move-object v6, v1
+
+    check-cast v6, Lpl0;
+
+    iget-wide v6, v6, Lpl0;->b:J
+
+    invoke-interface {v1}, Lpmg;->g()J
+
+    move-result-wide v8
+
+    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v8
+
+    iget-object v1, v2, Lyh5;->Z:Lpmg;
+
+    check-cast v1, Lpl0;
+
+    iget-boolean v1, v1, Lpl0;->c:Z
+
+    if-nez v1, :cond_17
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v1, v8, v6
+
+    if-nez v1, :cond_16
+
+    goto :goto_9
+
+    :cond_16
+    iget-object v1, v2, Lyh5;->r0:Lek0;
+
+    invoke-virtual {v4}, Ljpe;->S0()V
+
+    invoke-virtual {v5}, Lwi5;->k1()V
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v6
+
+    invoke-virtual {v5}, Lwi5;->k1()V
+
+    const/4 v10, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual/range {v5 .. v10}, Lwi5;->d1(Ljava/util/List;IJZ)V
+
+    goto :goto_a
+
+    :cond_17
+    :goto_9
+    iget-object v1, v2, Lyh5;->r0:Lek0;
+
+    invoke-virtual {v4}, Ljpe;->S0()V
+
+    invoke-virtual {v5}, Lwi5;->k1()V
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v6
+
+    invoke-virtual {v5}, Lwi5;->k1()V
+
+    invoke-virtual {v5}, Lwi5;->k1()V
+
+    const/4 v7, -0x1
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v10, 0x1
+
+    invoke-virtual/range {v5 .. v10}, Lwi5;->d1(Ljava/util/List;IJZ)V
+
+    :goto_a
+    invoke-virtual {v4}, Ljpe;->S0()V
+
+    invoke-virtual {v5}, Lwi5;->k1()V
+
+    invoke-virtual {v5}, Lwi5;->j()Z
+
+    move-result v1
+
+    iget-object v4, v5, Lwi5;->G0:Lv30;
+
+    const/4 v6, 0x2
+
+    invoke-virtual {v4, v6, v1}, Lv30;->c(IZ)I
+
+    move-result v4
+
+    const/4 v7, 0x1
+
+    if-eqz v1, :cond_18
+
+    if-eq v4, v7, :cond_18
+
+    move v8, v6
+
+    goto :goto_b
+
+    :cond_18
+    move v8, v7
+
+    :goto_b
+    invoke-virtual {v5, v4, v8, v1}, Lwi5;->h1(IIZ)V
+
+    iget-object v1, v5, Lwi5;->i1:Ltsb;
+
+    iget v4, v1, Ltsb;->e:I
+
+    if-eq v4, v7, :cond_19
+
+    goto :goto_d
+
+    :cond_19
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v4}, Ltsb;->e(Lcom/google/android/exoplayer2/ExoPlaybackException;)Ltsb;
+
+    move-result-object v1
+
+    iget-object v4, v1, Ltsb;->a:Lsvf;
+
+    invoke-virtual {v4}, Lsvf;->p()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1a
+
+    const/4 v8, 0x4
+
+    goto :goto_c
+
+    :cond_1a
+    move v8, v6
+
+    :goto_c
+    invoke-virtual {v1, v8}, Ltsb;->f(I)Ltsb;
+
+    move-result-object v19
+
+    iget v1, v5, Lwi5;->M0:I
+
+    add-int/2addr v1, v7
+
+    iput v1, v5, Lwi5;->M0:I
+
+    iget-object v1, v5, Lwi5;->u0:Lkj5;
+
+    iget-object v1, v1, Lkj5;->q0:Ljjf;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljjf;->b()Lhjf;
+
+    move-result-object v4
+
+    iget-object v1, v1, Ljjf;->a:Landroid/os/Handler;
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v1, v6}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v1
+
+    iput-object v1, v4, Lhjf;->a:Landroid/os/Message;
+
+    invoke-virtual {v4}, Lhjf;->b()V
+
+    const-wide v25, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/16 v27, -0x1
+
+    const/16 v20, 0x1
+
+    const/16 v21, 0x1
+
+    const/16 v22, 0x0
+
+    const/16 v23, 0x0
+
+    const/16 v24, 0x5
+
+    move-object/from16 v18, v5
+
+    invoke-virtual/range {v18 .. v27}, Lwi5;->i1(Ltsb;IIZZIJI)V
+
+    :goto_d
+    if-eqz v3, :cond_1c
+
+    iget-object v1, v2, Lyh5;->Y:Ll68;
+
+    if-eqz v1, :cond_1b
+
+    invoke-virtual {v1}, Ll68;->h()V
+
+    :cond_1b
+    invoke-virtual {v2}, Lyh5;->f()V
+
+    :cond_1c
+    return-void
+.end method
+
+.method public final o(F)V
+    .locals 1
+
+    iget-object v0, p0, Ll68;->f:Lpmg;
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lpl0;
+
+    iget-boolean v0, v0, Lpl0;->g:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput p1, p0, Ll68;->h:F
+
+    iget-object v0, p0, Ll68;->b:Lyh5;
+
+    invoke-virtual {v0, p1}, Lyh5;->b(F)V
+
+    invoke-virtual {p0}, Ll68;->g()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Ll68;->f:Lpmg;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Ll68;->g()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
+
     :cond_1
-    invoke-virtual {p0}, Ll68;->k()V
+    iget-object p1, p0, Ll68;->c:Lqw8;
 
-    invoke-virtual {p0}, Ll68;->i()V
+    invoke-virtual {p1, p0}, Lqw8;->m(Ll68;)V
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    :cond_2
+    :goto_0
+    return-void
+.end method
 
-    move-result p0
+.method public final p()V
+    .locals 3
 
-    return p0
+    iget-object v0, p0, Ll68;->f:Lpmg;
 
-    :catchall_0
-    move-exception p1
+    if-nez v0, :cond_0
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    return-void
 
-    throw p1
+    :cond_0
+    iget-object v0, p0, Ll68;->a:Lrw8;
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "l68"
+
+    const-string v2, "Stop %s"
+
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Ll68;->b:Lyh5;
+
+    invoke-virtual {v0}, Lyh5;->B()V
+
+    return-void
 .end method

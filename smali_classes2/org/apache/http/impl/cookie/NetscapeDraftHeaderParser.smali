@@ -101,47 +101,47 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lorg/apache/http/message/BasicHeaderElement;
+    new-instance p1, Lorg/apache/http/message/BasicHeaderElement;
 
     invoke-interface {v0}, Lorg/apache/http/NameValuePair;->getName()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p2
 
     invoke-interface {v0}, Lorg/apache/http/NameValuePair;->getValue()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v0
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    move-result v0
+    move-result v2
 
-    new-array v0, v0, [Lorg/apache/http/NameValuePair;
+    new-array v2, v2, [Lorg/apache/http/NameValuePair;
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, [Lorg/apache/http/NameValuePair;
+    check-cast v1, [Lorg/apache/http/NameValuePair;
 
-    invoke-direct {p0, p1, p2, v0}, Lorg/apache/http/message/BasicHeaderElement;-><init>(Ljava/lang/String;Ljava/lang/String;[Lorg/apache/http/NameValuePair;)V
+    invoke-direct {p1, p2, v0, v1}, Lorg/apache/http/message/BasicHeaderElement;-><init>(Ljava/lang/String;Ljava/lang/String;[Lorg/apache/http/NameValuePair;)V
 
-    return-object p0
+    return-object p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Parser cursor may not be null"
+    const-string p2, "Parser cursor may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Char array buffer may not be null"
+    const-string p2, "Char array buffer may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

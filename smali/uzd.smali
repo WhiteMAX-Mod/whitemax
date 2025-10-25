@@ -1,94 +1,94 @@
 .class public final Luzd;
-.super Ljv2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lu2f;
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Lbj6;
+
+.field public final c:Lbj6;
+
+.field public final d:Ljava/lang/Object;
+
+.field public final e:Lsgf;
+
+.field public final f:Lbj6;
+
+.field public g:Ljava/lang/Object;
+
+.field public h:I
+
+.field public final synthetic i:Lwzd;
 
 
 # direct methods
-.method public constructor <init>(Lu2f;)V
+.method public constructor <init>(Lwzd;Ljava/lang/Object;Lbj6;Lbj6;Ljava/lang/Object;Lsgf;Lbj6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Luzd;->a:Lu2f;
+    iput-object p1, p0, Luzd;->i:Lwzd;
+
+    iput-object p2, p0, Luzd;->a:Ljava/lang/Object;
+
+    iput-object p3, p0, Luzd;->b:Lbj6;
+
+    iput-object p4, p0, Luzd;->c:Lbj6;
+
+    iput-object p5, p0, Luzd;->d:Ljava/lang/Object;
+
+    iput-object p6, p0, Luzd;->e:Lsgf;
+
+    iput-object p7, p0, Luzd;->f:Lbj6;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Luzd;->h:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a()V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Luzd;->g:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Luzd;
+    instance-of v1, v0, Lkotlinx/coroutines/internal/Segment;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    if-eqz v1, :cond_0
 
-    return v2
+    check-cast v0, Lkotlinx/coroutines/internal/Segment;
+
+    iget v1, p0, Luzd;->h:I
+
+    iget-object v3, p0, Luzd;->i:Lwzd;
+
+    iget-object v3, v3, Lwzd;->a:Li54;
+
+    invoke-virtual {v0, v1, v2, v3}, Lkotlinx/coroutines/internal/Segment;->onCancellation(ILjava/lang/Throwable;Li54;)V
+
+    return-void
+
+    :cond_0
+    instance-of v1, v0, Lyv4;
+
+    if-eqz v1, :cond_1
+
+    move-object v2, v0
+
+    check-cast v2, Lyv4;
 
     :cond_1
-    check-cast p1, Luzd;
+    if-eqz v2, :cond_2
 
-    iget-object p0, p0, Luzd;->a:Lu2f;
-
-    iget-object p1, p1, Luzd;->a:Lu2f;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
+    invoke-interface {v2}, Lyv4;->dispose()V
 
     :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Luzd;->a:Lu2f;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Luzd;->a:Lu2f;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

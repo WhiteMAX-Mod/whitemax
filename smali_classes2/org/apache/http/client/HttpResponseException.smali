@@ -30,9 +30,9 @@
 
 # virtual methods
 .method public getStatusCode()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/http/client/HttpResponseException;->statusCode:I
+    iget v0, p0, Lorg/apache/http/client/HttpResponseException;->statusCode:I
 
-    return p0
+    return v0
 .end method

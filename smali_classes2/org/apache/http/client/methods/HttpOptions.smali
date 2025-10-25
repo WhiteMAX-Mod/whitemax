@@ -53,7 +53,7 @@
 
 # virtual methods
 .method public getAllowedMethods(Lorg/apache/http/HttpResponse;)Ljava/util/Set;
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -67,67 +67,67 @@
 
     if-eqz p1, :cond_2
 
-    const-string p0, "Allow"
+    const-string v0, "Allow"
 
-    invoke-interface {p1, p0}, Lorg/apache/http/HttpMessage;->headerIterator(Ljava/lang/String;)Lorg/apache/http/HeaderIterator;
+    invoke-interface {p1, v0}, Lorg/apache/http/HttpMessage;->headerIterator(Ljava/lang/String;)Lorg/apache/http/HeaderIterator;
 
-    move-result-object p0
+    move-result-object p1
 
-    new-instance p1, Ljava/util/HashSet;
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     :cond_0
-    invoke-interface {p0}, Lorg/apache/http/HeaderIterator;->hasNext()Z
+    invoke-interface {p1}, Lorg/apache/http/HeaderIterator;->hasNext()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    invoke-interface {p0}, Lorg/apache/http/HeaderIterator;->nextHeader()Lorg/apache/http/Header;
+    invoke-interface {p1}, Lorg/apache/http/HeaderIterator;->nextHeader()Lorg/apache/http/Header;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v0}, Lorg/apache/http/Header;->getElements()[Lorg/apache/http/HeaderElement;
+    invoke-interface {v1}, Lorg/apache/http/Header;->getElements()[Lorg/apache/http/HeaderElement;
 
-    move-result-object v0
+    move-result-object v1
 
-    array-length v1, v0
+    array-length v2, v1
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_0
+    if-ge v3, v2, :cond_0
 
-    aget-object v3, v0, v2
+    aget-object v4, v1, v3
 
-    invoke-interface {v3}, Lorg/apache/http/HeaderElement;->getName()Ljava/lang/String;
+    invoke-interface {v4}, Lorg/apache/http/HeaderElement;->getName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {p1, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_1
-    return-object p1
+    return-object v0
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP response may not be null"
+    const-string v0, "HTTP response may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public getMethod()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "OPTIONS"
+    const-string v0, "OPTIONS"
 
-    return-object p0
+    return-object v0
 .end method

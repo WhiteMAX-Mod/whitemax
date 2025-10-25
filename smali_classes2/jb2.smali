@@ -1,91 +1,216 @@
-.class public final Ljb2;
+.class public final synthetic Ljb2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final k:Ljb2;
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
+.field public final synthetic b:Lmb2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public synthetic constructor <init>(Lmb2;I)V
+    .locals 0
 
-    new-instance v0, Ljb2;
+    iput p2, p0, Ljb2;->a:I
 
-    const/4 v9, 0x0
+    iput-object p1, p0, Ljb2;->b:Lmb2;
 
-    const/4 v10, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v0 .. v10}, Ljb2;-><init>(ZZZZZZZZZZ)V
-
-    sput-object v0, Ljb2;->k:Ljb2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(ZZZZZZZZZZ)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iput-boolean p1, p0, Ljb2;->a:Z
+    iget v0, p0, Ljb2;->a:I
 
-    iput-boolean p2, p0, Ljb2;->b:Z
+    packed-switch v0, :pswitch_data_0
 
-    iput-boolean p3, p0, Ljb2;->c:Z
+    new-instance v0, Lytg;
 
-    iput-boolean p4, p0, Ljb2;->d:Z
+    invoke-direct {v0}, Lytg;-><init>()V
 
-    iput-boolean p5, p0, Ljb2;->e:Z
+    const/16 v1, 0x10
 
-    iput-boolean p6, p0, Ljb2;->f:Z
+    int-to-float v1, v1
 
-    iput-boolean p7, p0, Ljb2;->g:Z
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    iput-boolean p8, p0, Ljb2;->h:Z
+    move-result-object v2
 
-    iput-boolean p9, p0, Ljb2;->i:Z
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iput-boolean p10, p0, Ljb2;->j:Z
+    move-result-object v2
 
-    return-void
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lfhi;->b(F)I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v2, v1, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v1, p0, Ljb2;->b:Lmb2;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ls60;
+
+    invoke-direct {v0}, Ls60;-><init>()V
+
+    const/16 v1, 0x10
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lfhi;->b(F)I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v2, v1, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v1, p0, Ljb2;->b:Lmb2;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Lpjd;->j:I
+
+    iget-object v1, p0, Ljb2;->b:Lmb2;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    sget-object v2, Ll05;->s0:Lk82;
+
+    invoke-virtual {v2, v1}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lv5b;->getIcon()Ld77;
+
+    move-result-object v1
+
+    iget v1, v1, Ld77;->k:I
+
+    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
+
+    return-object v0
+
+    :pswitch_2
+    sget v0, Lpjd;->l:I
+
+    iget-object v1, p0, Ljb2;->b:Lmb2;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    sget-object v2, Ll05;->s0:Lk82;
+
+    invoke-virtual {v2, v1}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lv5b;->getIcon()Ld77;
+
+    move-result-object v1
+
+    iget v1, v1, Ld77;->k:I
+
+    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Landroid/graphics/drawable/RippleDrawable;
+
+    sget-object v1, Ll05;->s0:Lk82;
+
+    iget-object v2, p0, Ljb2;->b:Lmb2;
+
+    invoke-virtual {v1, v2}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lv5b;->c()Lj1f;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lj1f;->a:Lh1f;
+
+    iget-object v1, v1, Lh1f;->a:Lg1f;
+
+    iget v1, v1, Lg1f;->i:I
+
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    new-instance v2, Landroid/graphics/drawable/ColorDrawable;
+
+    const/4 v3, -0x1
+
+    invoke-direct {v2, v3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v3, v2}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,169 +1,243 @@
-.class public final Lnw5;
-.super Ljava/util/concurrent/atomic/AtomicLong;
+.class public final synthetic Lnw5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbx5;
-.implements Llne;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljne;
+.field public final synthetic a:I
 
-.field public b:Llne;
-
-.field public c:Z
+.field public final synthetic b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
 
 # direct methods
-.method public constructor <init>(Ljne;)V
+.method public synthetic constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    iput p2, p0, Lnw5;->a:I
 
-    iput-object p1, p0, Lnw5;->a:Ljne;
+    iput-object p1, p0, Lnw5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public final run()V
+    .locals 9
 
-    iget-boolean v0, p0, Lnw5;->c:Z
+    iget v0, p0, Lnw5;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return-void
+    iget-object v0, p0, Lnw5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    :cond_0
-    const/4 v0, 0x1
+    iget-object v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
 
-    iput-boolean v0, p0, Lnw5;->c:Z
+    invoke-static {v1}, Lcwi;->c(Landroid/content/Context;)V
 
-    iget-object p0, p0, Lnw5;->a:Ljne;
+    iget-object v2, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->c:Ltr9;
 
-    invoke-interface {p0}, Ljne;->b()V
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->g()Z
 
-    return-void
-.end method
+    move-result v3
 
-.method public final cancel()V
-    .locals 0
+    const-string v4, "proxy_retention"
 
-    iget-object p0, p0, Lnw5;->b:Llne;
+    sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-interface {p0}, Llne;->cancel()V
+    const/16 v6, 0x1d
 
-    return-void
-.end method
+    if-lt v5, v6, :cond_2
 
-.method public final d(Llne;)V
-    .locals 2
+    invoke-static {v1}, Ldwi;->b(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    iget-object v0, p0, Lnw5;->b:Llne;
+    move-result-object v5
 
-    invoke-static {v0, p1}, Lnne;->e(Llne;Llne;)Z
+    invoke-interface {v5, v4}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v6
 
-    if-eqz v0, :cond_0
+    if-eqz v6, :cond_0
 
-    iput-object p1, p0, Lnw5;->b:Llne;
+    const/4 v6, 0x0
 
-    iget-object v0, p0, Lnw5;->a:Ljne;
+    invoke-interface {v5, v4, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    invoke-interface {v0, p0}, Ljne;->d(Llne;)V
+    move-result v5
 
-    const-wide v0, 0x7fffffffffffffffL
+    if-ne v5, v3, :cond_0
 
-    invoke-interface {p1, v0, v1}, Llne;->h(J)V
+    goto :goto_1
 
     :cond_0
-    return-void
-.end method
+    iget-object v2, v2, Ltr9;->c:Ljava/lang/Object;
 
-.method public final h(J)V
-    .locals 1
+    check-cast v2, Lxid;
 
-    invoke-static {p1, p2}, Lnne;->d(J)Z
+    iget-object v5, v2, Lxid;->c:Lmla;
 
-    move-result v0
+    invoke-virtual {v5}, Lmla;->h()I
 
-    if-eqz v0, :cond_0
+    move-result v5
 
-    invoke-static {p0, p1, p2}, Lz48;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    const v6, 0xe5ee4e0
 
-    :cond_0
-    return-void
-.end method
+    if-lt v5, v6, :cond_1
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    new-instance v5, Landroid/os/Bundle;
 
-    iget-boolean v0, p0, Lnw5;->c:Z
+    invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v5, v4, v3}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    invoke-static {p1}, Ln4e;->D(Ljava/lang/Throwable;)V
+    iget-object v2, v2, Lxid;->b:Landroid/content/Context;
 
-    return-void
+    invoke-static {v2}, Ld1j;->d(Landroid/content/Context;)Ld1j;
 
-    :cond_0
-    const/4 v0, 0x1
+    move-result-object v2
 
-    iput-boolean v0, p0, Lnw5;->c:Z
+    new-instance v4, Lswi;
 
-    iget-object p0, p0, Lnw5;->a:Ljne;
+    monitor-enter v2
 
-    invoke-interface {p0, p1}, Ljne;->onError(Ljava/lang/Throwable;)V
+    :try_start_0
+    iget v6, v2, Ld1j;->b:I
 
-    return-void
-.end method
+    add-int/lit8 v7, v6, 0x1
 
-.method public final s(Ljava/lang/Object;)V
-    .locals 4
+    iput v7, v2, Ld1j;->b:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-boolean v0, p0, Lnw5;->c:Z
+    monitor-exit v2
 
-    if-eqz v0, :cond_0
+    const/4 v7, 0x0
 
-    return-void
+    const/4 v8, 0x4
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    invoke-direct {v4, v6, v8, v5, v7}, Lswi;-><init>(IILandroid/os/Bundle;I)V
 
-    move-result-wide v0
+    invoke-virtual {v2, v4}, Ld1j;->e(Lswi;)Le2j;
 
-    const-wide/16 v2, 0x0
+    move-result-object v2
 
-    cmp-long v0, v0, v2
+    goto :goto_0
 
-    if-eqz v0, :cond_1
+    :catchall_0
+    move-exception v0
 
-    iget-object v0, p0, Lnw5;->a:Ljne;
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-interface {v0, p1}, Ljne;->s(Ljava/lang/Object;)V
-
-    const-wide/16 v0, 0x1
-
-    invoke-static {p0, v0, v1}, Lz48;->A(Ljava/util/concurrent/atomic/AtomicLong;J)V
-
-    return-void
+    throw v0
 
     :cond_1
-    iget-object p1, p0, Lnw5;->b:Llne;
+    new-instance v2, Ljava/io/IOException;
 
-    invoke-interface {p1}, Llne;->cancel()V
+    const-string v4, "SERVICE_NOT_AVAILABLE"
 
-    new-instance p1, Lio/reactivex/rxjava3/exceptions/MissingBackpressureException;
+    invoke-direct {v2, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "Could not emit value due to lack of requests"
+    invoke-static {v2}, Lxj7;->d(Ljava/lang/Exception;)Le2j;
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    invoke-virtual {p0, p1}, Lnw5;->onError(Ljava/lang/Throwable;)V
+    :goto_0
+    new-instance v4, Lns;
 
+    const/4 v5, 0x2
+
+    invoke-direct {v4, v5}, Lns;-><init>(I)V
+
+    new-instance v5, Ljfc;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v5, v6, v1, v3}, Ljfc;-><init>(ILandroid/content/Context;Z)V
+
+    invoke-virtual {v2, v4, v5}, Le2j;->d(Ljava/util/concurrent/Executor;Lbna;)Le2j;
+
+    :cond_2
+    :goto_1
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->g()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->f()V
+
+    :cond_3
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lnw5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    iget-object v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->e:Lfh6;
+
+    invoke-virtual {v1}, Lfh6;->i()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->e()Li9f;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/messaging/FirebaseMessaging;->i(Li9f;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    monitor-enter v0
+
+    :try_start_2
+    iget-boolean v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->i:Z
+
+    if-nez v1, :cond_4
+
+    const-wide/16 v1, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/google/firebase/messaging/FirebaseMessaging;->h(J)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v1
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    monitor-exit v0
+
+    goto :goto_4
+
+    :goto_3
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw v1
+
+    :cond_5
+    :goto_4
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

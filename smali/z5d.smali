@@ -1,41 +1,58 @@
-.class public abstract Lz5d;
-.super Lba5;
+.class public final synthetic Lz5d;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:Lx04;
+.field public final synthetic X:Ljava/lang/Throwable;
+
+.field public final synthetic a:Lf6d;
+
+.field public final synthetic b:Lnb0;
+
+.field public final synthetic c:J
+
+.field public final synthetic o:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Lf6d;Lnb0;JILjava/lang/Throwable;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz5d;->a:Lf6d;
+
+    iput-object p2, p0, Lz5d;->b:Lnb0;
+
+    iput-wide p3, p0, Lz5d;->c:J
+
+    iput p5, p0, Lz5d;->o:I
+
+    iput-object p6, p0, Lz5d;->X:Ljava/lang/Throwable;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final dispatch(Lq04;Ljava/lang/Runnable;)V
-    .locals 0
+.method public final run()V
+    .locals 6
 
-    iget-object p0, p0, Lz5d;->a:Lx04;
+    iget v4, p0, Lz5d;->o:I
 
-    const/4 p1, 0x6
+    iget-object v5, p0, Lz5d;->X:Ljava/lang/Throwable;
 
-    invoke-static {p0, p2, p1}, Lx04;->o(Lx04;Ljava/lang/Runnable;I)V
+    iget-object v0, p0, Lz5d;->a:Lf6d;
 
-    return-void
-.end method
+    iget-object v1, p0, Lz5d;->b:Lnb0;
 
-.method public final dispatchYield(Lq04;Ljava/lang/Runnable;)V
-    .locals 0
+    iget-wide v2, p0, Lz5d;->c:J
 
-    iget-object p0, p0, Lz5d;->a:Lx04;
-
-    const/4 p1, 0x2
-
-    invoke-static {p0, p2, p1}, Lx04;->o(Lx04;Ljava/lang/Runnable;I)V
+    invoke-virtual/range {v0 .. v5}, Lf6d;->I(Lnb0;JILjava/lang/Throwable;)V
 
     return-void
-.end method
-
-.method public final n()Ljava/util/concurrent/Executor;
-    .locals 0
-
-    iget-object p0, p0, Lz5d;->a:Lx04;
-
-    return-object p0
 .end method

@@ -66,9 +66,9 @@
 
 # virtual methods
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "Disconnecting"
+    const-string v0, "Disconnecting"
 
-    return-object p0
+    return-object v0
 .end method

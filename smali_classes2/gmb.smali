@@ -1,147 +1,90 @@
 .class public final Lgmb;
-.super Lcb4;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final b:Lgmb;
 
-.field public static final c:Lxa4;
-
-.field public static final d:Lxa4;
-
-.field public static final e:Lxa4;
-
-.field public static final f:Lxa4;
-
-.field public static final g:Lxa4;
-
-.field public static final h:Lxa4;
-
-.field public static final i:Lxa4;
-
-.field public static final j:Lxa4;
+# instance fields
+.field public final synthetic X:Lhmb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Lhmb;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lgmb;
+    iput-object p1, p0, Lgmb;->X:Lhmb;
 
-    invoke-direct {v0}, Lcb4;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Lgmb;->b:Lgmb;
-
-    const-string v6, "id"
-
-    const-string v7, "type"
-
-    filled-new-array {v6, v7}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const/16 v5, 0xe
-
-    const/4 v4, 0x0
-
-    const-string v1, ":profile/avatars"
-
-    const/4 v3, 0x0
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v1
-
-    sput-object v1, Lgmb;->c:Lxa4;
-
-    filled-new-array {v6, v7}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile"
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v1
-
-    sput-object v1, Lgmb;->d:Lxa4;
-
-    filled-new-array {v6}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/attaches"
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v1
-
-    sput-object v1, Lgmb;->e:Lxa4;
-
-    filled-new-array {v6, v7}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/members"
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v1
-
-    sput-object v1, Lgmb;->f:Lxa4;
-
-    filled-new-array {v6}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/invite"
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v1
-
-    sput-object v1, Lgmb;->g:Lxa4;
-
-    const-string v6, "chat_id"
-
-    filled-new-array {v6}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/add-admins"
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v1
-
-    sput-object v1, Lgmb;->h:Lxa4;
-
-    const-string v1, "is_chat"
-
-    filled-new-array {v6, v1}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/add-members"
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v1
-
-    sput-object v1, Lgmb;->i:Lxa4;
-
-    filled-new-array {v6}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/change-owner"
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v0
-
-    sput-object v0, Lgmb;->j:Lxa4;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lgmb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lgmb;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lgmb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lgmb;
+
+    iget-object v0, p0, Lgmb;->X:Lhmb;
+
+    invoke-direct {p1, v0, p2}, Lgmb;-><init>(Lhmb;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgmb;->X:Lhmb;
+
+    iget-object p1, p1, Lhmb;->Y:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lc3b;
+
+    sget v0, Lxsc;->oneme_location_map_location_error:I
+
+    new-instance v1, Lorf;
+
+    invoke-direct {v1, v0}, Lorf;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lc3b;->g(Ltrf;)V
+
+    invoke-virtual {p1}, Lc3b;->i()Lb3b;
+
+    move-result-object p1
+
+    return-object p1
 .end method

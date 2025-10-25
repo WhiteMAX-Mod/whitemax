@@ -61,7 +61,7 @@
 
     if-eqz p1, :cond_1
 
-    sget-object p1, Loi4;->e0:Loi4;
+    sget-object p1, Lqn4;->e0:Lqn4;
 
     goto :goto_0
 
@@ -72,20 +72,20 @@
     move-result-object p1
 
     .line 5
-    sget-object p2, Lcze;->a0:Lzte;
+    sget-object p2, Lynf;->a0:Lwif;
 
-    invoke-static {p1}, Ln4e;->I(Landroid/content/Context;)Lcze;
+    invoke-static {p1}, Laa4;->c(Landroid/content/Context;)Lynf;
 
     move-result-object p1
 
     .line 6
     :goto_0
-    iget p2, p1, Lcze;->t:I
+    iget p2, p1, Lynf;->t:I
 
     invoke-virtual {p0, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 7
-    sget p2, Lz0d;->c:I
+    sget p2, Lyjd;->c:I
 
     .line 8
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -105,7 +105,7 @@
     int-to-float p2, p2
 
     .line 11
-    invoke-virtual {p0, p3, p2}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {p0, p3, p2}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
     .line 12
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -130,7 +130,7 @@
 
     mul-float/2addr p2, v2
 
-    invoke-static {p2}, Lya6;->G(F)I
+    invoke-static {p2}, Lfhi;->b(F)I
 
     move-result p2
 
@@ -155,7 +155,7 @@
 
     mul-float/2addr v3, v0
 
-    invoke-static {v3}, Lya6;->G(F)I
+    invoke-static {v3}, Lfhi;->b(F)I
 
     move-result v3
 
@@ -178,7 +178,7 @@
 
     mul-float/2addr v4, v2
 
-    invoke-static {v4}, Lya6;->G(F)I
+    invoke-static {v4}, Lfhi;->b(F)I
 
     move-result v4
 
@@ -201,7 +201,7 @@
 
     mul-float/2addr v0, v5
 
-    invoke-static {v0}, Lya6;->G(F)I
+    invoke-static {v0}, Lfhi;->b(F)I
 
     move-result v0
 
@@ -230,7 +230,7 @@
 
     mul-float/2addr v2, p2
 
-    invoke-static {v2}, Lya6;->G(F)I
+    invoke-static {v2}, Lfhi;->b(F)I
 
     move-result p2
 
@@ -243,7 +243,7 @@
     invoke-virtual {p0, p2}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 31
-    iget p1, p1, Lcze;->r:I
+    iget p1, p1, Lynf;->r:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -272,12 +272,12 @@
 
     mul-float/2addr p3, p2
 
-    invoke-static {p3}, Lya6;->G(F)I
+    invoke-static {p3}, Lfhi;->b(F)I
 
     move-result p2
 
     .line 35
-    invoke-static {p1, v1, v1, p2}, Lhv8;->Q(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {p1, v1, v1, p2}, Lba4;->d(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)Landroid/graphics/drawable/GradientDrawable;
 
     move-result-object p1
 

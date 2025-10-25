@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public createNative(J)J
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lorg/webrtc/SoftwareVideoDecoderFactory$1;->this$0:Lorg/webrtc/SoftwareVideoDecoderFactory;
 
@@ -44,11 +44,11 @@
 
     move-result-wide v0
 
-    iget-object p0, p0, Lorg/webrtc/SoftwareVideoDecoderFactory$1;->val$info:Lorg/webrtc/VideoCodecInfo;
+    iget-object v2, p0, Lorg/webrtc/SoftwareVideoDecoderFactory$1;->val$info:Lorg/webrtc/VideoCodecInfo;
 
-    invoke-static {v0, v1, p1, p2, p0}, Lorg/webrtc/SoftwareVideoDecoderFactory;->b(JJLorg/webrtc/VideoCodecInfo;)J
+    invoke-static {v0, v1, p1, p2, v2}, Lorg/webrtc/SoftwareVideoDecoderFactory;->b(JJLorg/webrtc/VideoCodecInfo;)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    return-wide p0
+    return-wide p1
 .end method

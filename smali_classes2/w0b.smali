@@ -1,230 +1,319 @@
-.class public final Lw0b;
+.class public abstract Lw0b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public A:Z
+# static fields
+.field public static final A:I
 
-.field public B:Lc0d;
+.field public static final B:I
 
-.field public C:Lu6d;
+.field public static final C:I
 
-.field public a:Ltxd;
+.field public static final D:I
 
-.field public b:Ld;
+.field public static final E:I
 
-.field public c:Ljava/util/concurrent/ExecutorService;
+.field public static final F:I
 
-.field public d:Lrg1;
+.field public static final G:I
 
-.field public e:Landroid/content/Context;
+.field public static final H:I
 
-.field public f:Liec;
+.field public static final I:I
 
-.field public g:Lfec;
+.field public static final J:I
 
-.field public h:Z
+.field public static final K:I
 
-.field public i:Z
+.field public static final L:I
 
-.field public j:Z
+.field public static final M:I
 
-.field public k:Z
+.field public static final N:I
 
-.field public l:Z
+.field public static final O:I
 
-.field public m:Z
+.field public static final P:I
 
-.field public n:Z
+.field public static final Q:I
 
-.field public o:[Ljava/lang/String;
+.field public static final R:I
 
-.field public p:[Ljava/lang/String;
+.field public static final S:I
 
-.field public q:Z
+.field public static final T:I
 
-.field public r:Z
+.field public static final U:I
 
-.field public s:Z
+.field public static final V:I
 
-.field public t:Z
+.field public static final W:I
 
-.field public u:Z
+.field public static final X:I
 
-.field public v:Ltgd;
+.field public static final Y:I
 
-.field public w:Lmj;
+.field public static final a:I
 
-.field public x:Lpi;
+.field public static final b:I
 
-.field public y:I
+.field public static final c:I
 
-.field public z:Lbkd;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lyjc;->chat_common_background_fileType_archiveBadge:I
 
-    const/4 v0, 0x0
+    sput v0, Lw0b;->a:I
 
-    iput-boolean v0, p0, Lw0b;->h:Z
+    sget v0, Lyjc;->chat_common_background_fileType_archiveBkg:I
 
-    iput-boolean v0, p0, Lw0b;->i:Z
+    sput v0, Lw0b;->b:I
 
-    iput-boolean v0, p0, Lw0b;->j:Z
+    sget v0, Lyjc;->chat_common_background_fileType_archiveElement:I
 
-    iput-boolean v0, p0, Lw0b;->k:Z
+    sput v0, Lw0b;->c:I
 
-    iput-boolean v0, p0, Lw0b;->l:Z
+    sget v0, Lyjc;->chat_common_background_fileType_archiveIcon:I
 
-    iput-boolean v0, p0, Lw0b;->m:Z
+    sput v0, Lw0b;->d:I
 
-    iput-boolean v0, p0, Lw0b;->n:Z
+    sget v0, Lyjc;->chat_common_background_fileType_dataBadge:I
 
-    const/4 v1, 0x0
+    sput v0, Lw0b;->e:I
 
-    iput-object v1, p0, Lw0b;->o:[Ljava/lang/String;
+    sget v0, Lyjc;->chat_common_background_fileType_dataBkg:I
 
-    iput-object v1, p0, Lw0b;->p:[Ljava/lang/String;
+    sput v0, Lw0b;->f:I
 
-    iput-boolean v0, p0, Lw0b;->q:Z
+    sget v0, Lyjc;->chat_common_background_fileType_dataElement:I
 
-    iput-boolean v0, p0, Lw0b;->r:Z
+    sput v0, Lw0b;->g:I
 
-    iput-boolean v0, p0, Lw0b;->s:Z
+    sget v0, Lyjc;->chat_common_background_fileType_dataIcon:I
 
-    iput-boolean v0, p0, Lw0b;->t:Z
+    sput v0, Lw0b;->h:I
 
-    iput-boolean v0, p0, Lw0b;->u:Z
+    sget v0, Lyjc;->chat_common_background_fileType_imageBadge:I
 
-    const/4 v1, 0x4
+    sput v0, Lw0b;->i:I
 
-    iput v1, p0, Lw0b;->y:I
+    sget v0, Lyjc;->chat_common_background_fileType_imageBkg:I
 
-    iput-boolean v0, p0, Lw0b;->A:Z
+    sput v0, Lw0b;->j:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_imageElement:I
+
+    sput v0, Lw0b;->k:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_imageIcon:I
+
+    sput v0, Lw0b;->l:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_musicBadge:I
+
+    sput v0, Lw0b;->m:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_musicBkg:I
+
+    sput v0, Lw0b;->n:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_musicElement:I
+
+    sput v0, Lw0b;->o:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_musicIcon:I
+
+    sput v0, Lw0b;->p:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_presentationBadge:I
+
+    sput v0, Lw0b;->q:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_presentationBkg:I
+
+    sput v0, Lw0b;->r:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_presentationElement:I
+
+    sput v0, Lw0b;->s:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_presentationIcon:I
+
+    sput v0, Lw0b;->t:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_programBadge:I
+
+    sput v0, Lw0b;->u:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_programBkg:I
+
+    sput v0, Lw0b;->v:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_programElement:I
+
+    sput v0, Lw0b;->w:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_programIcon:I
+
+    sput v0, Lw0b;->x:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_textBadge:I
+
+    sput v0, Lw0b;->y:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_textBkg:I
+
+    sput v0, Lw0b;->z:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_textElement:I
+
+    sput v0, Lw0b;->A:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_textIcon:I
+
+    sput v0, Lw0b;->B:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_unknownBadge:I
+
+    sput v0, Lw0b;->C:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_unknownBkg:I
+
+    sput v0, Lw0b;->D:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_unknownElement:I
+
+    sput v0, Lw0b;->E:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_unknownIcon:I
+
+    sput v0, Lw0b;->F:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_videoBadge:I
+
+    sput v0, Lw0b;->G:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_videoBkg:I
+
+    sput v0, Lw0b;->H:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_videoElement:I
+
+    sput v0, Lw0b;->I:I
+
+    sget v0, Lyjc;->chat_common_background_fileType_videoIcon:I
+
+    sput v0, Lw0b;->J:I
+
+    sget v0, Lyjc;->chat_common_text_fileType:I
+
+    sput v0, Lw0b;->K:I
+
+    sget v0, Lyjc;->global_background_accent_neutral:I
+
+    sput v0, Lw0b;->L:I
+
+    sget v0, Lyjc;->global_background_accent_neutralFade:I
+
+    sput v0, Lw0b;->M:I
+
+    sget v0, Lyjc;->global_background_accent_neutralFadeSecondary:I
+
+    sput v0, Lw0b;->N:I
+
+    sget v0, Lyjc;->global_background_surfaceCard:I
+
+    sput v0, Lw0b;->O:I
+
+    sget v0, Lyjc;->global_icon_contrastStatic:I
+
+    sput v0, Lw0b;->P:I
+
+    sget v0, Lyjc;->global_icon_negative:I
+
+    sput v0, Lw0b;->Q:I
+
+    sget v0, Lyjc;->global_icon_primary:I
+
+    sput v0, Lw0b;->R:I
+
+    sget v0, Lyjc;->global_icon_tertiary:I
+
+    sput v0, Lw0b;->S:I
+
+    sget v0, Lyjc;->global_icon_themed:I
+
+    sput v0, Lw0b;->T:I
+
+    sget v0, Lyjc;->global_states_text_disabled_primary:I
+
+    sput v0, Lw0b;->U:I
+
+    sget v0, Lyjc;->global_text_negative:I
+
+    sput v0, Lw0b;->V:I
+
+    sget v0, Lyjc;->global_text_positive:I
+
+    sput v0, Lw0b;->W:I
+
+    sget v0, Lyjc;->global_text_primary:I
+
+    sput v0, Lw0b;->X:I
+
+    sget v0, Lyjc;->global_text_secondary:I
+
+    sput v0, Lw0b;->Y:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ly0b;
-    .locals 4
-
-    iget-object v0, p0, Lw0b;->a:Ltxd;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lw0b;->b:Ld;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lw0b;->c:Ljava/util/concurrent/ExecutorService;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lw0b;->d:Lrg1;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lw0b;->e:Landroid/content/Context;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lw0b;->f:Liec;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lw0b;->g:Lfec;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lw0b;->v:Ltgd;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lw0b;->B:Lc0d;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ly0b;
-
-    invoke-direct {v0, p0}, Ly0b;-><init>(Lw0b;)V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "failed to build peerConnectionClient"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lw0b;->a:Ltxd;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lw0b;->b:Ld;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lw0b;->c:Ljava/util/concurrent/ExecutorService;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lw0b;->d:Lrg1;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lw0b;->e:Landroid/content/Context;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lw0b;->f:Liec;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lw0b;->g:Lfec;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lw0b;->v:Ltgd;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lw0b;->B:Lc0d;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

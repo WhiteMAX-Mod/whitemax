@@ -1,20 +1,21 @@
 .class public final Luie;
-.super Lj2e;
+.super Ldq;
 .source "SourceFile"
 
-# interfaces
-.implements Lzcd;
+
+# static fields
+.field public static final a:Luie;
 
 
-# virtual methods
-.method public final b(Lzie;)V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    return-void
-.end method
+    new-instance v0, Luie;
 
-.method public final y(Lts7;)V
-    .locals 0
+    invoke-direct {v0}, Ldq;-><init>()V
+
+    sput-object v0, Luie;->a:Luie;
 
     return-void
 .end method

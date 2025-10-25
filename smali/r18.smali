@@ -1,119 +1,185 @@
-.class public final synthetic Lr18;
-.super Ljava/lang/Object;
+.class public abstract Lr18;
+.super Lt6d;
 .source "SourceFile"
-
-# interfaces
-.implements Lzb6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Li28;
+.field public final o:Lsv;
 
 
 # direct methods
-.method public synthetic constructor <init>(Li28;I)V
-    .locals 0
+.method public constructor <init>(Lazi;)V
+    .locals 6
 
-    iput p2, p0, Lr18;->a:I
+    .line 1
+    invoke-direct {p0}, Lt6d;-><init>()V
 
-    iput-object p1, p0, Lr18;->b:Li28;
+    .line 2
+    new-instance v0, Lq18;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, p0}, Lq18;-><init>(Lr18;)V
+
+    .line 3
+    new-instance v1, Lsv;
+
+    new-instance v2, Lz22;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, p0}, Lz22;-><init>(ILjava/lang/Object;)V
+
+    .line 4
+    sget-object v3, Liw0;->a:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    .line 5
+    :try_start_0
+    sget-object v4, Liw0;->b:Ljava/util/concurrent/ExecutorService;
+
+    if-nez v4, :cond_0
+
+    const/4 v4, 0x2
+
+    .line 6
+    invoke-static {v4}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v4
+
+    sput-object v4, Liw0;->b:Ljava/util/concurrent/ExecutorService;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    .line 7
+    :cond_0
+    :goto_0
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 8
+    sget-object v3, Liw0;->b:Ljava/util/concurrent/ExecutorService;
+
+    .line 9
+    new-instance v4, Leh8;
+
+    const/4 v5, 0x3
+
+    invoke-direct {v4, v3, v5, p1}, Leh8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    .line 10
+    invoke-direct {v1, v2, v4}, Lsv;-><init>(Lh28;Leh8;)V
+
+    iput-object v1, p0, Lr18;->o:Lsv;
+
+    .line 11
+    iget-object p1, v1, Lsv;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    .line 12
+    :goto_1
+    :try_start_1
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public constructor <init>(Leh8;)V
+    .locals 4
+
+    .line 13
+    invoke-direct {p0}, Lt6d;-><init>()V
+
+    .line 14
+    new-instance v0, Lq18;
+
+    invoke-direct {v0, p0}, Lq18;-><init>(Lr18;)V
+
+    .line 15
+    new-instance v1, Lsv;
+
+    new-instance v2, Lz22;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, p0}, Lz22;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v1, v2, p1}, Lsv;-><init>(Lh28;Leh8;)V
+
+    iput-object v1, p0, Lr18;->o:Lsv;
+
+    .line 16
+    iget-object p1, v1, Lsv;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final C(I)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lr18;->a:I
+    iget-object v0, p0, Lr18;->o:Lsv;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, v0, Lsv;->f:Ljava/util/List;
 
-    iget-object p0, p0, Lr18;->b:Li28;
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v0, p0, Li28;->X:Ljava/util/concurrent/LinkedBlockingQueue;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
+    return-object p1
+.end method
 
-    move-result-object v0
+.method public D(Ljava/util/List;Ljava/util/List;)V
+    .locals 0
 
-    check-cast v0, Ljava/util/List;
+    return-void
+.end method
 
-    iget-object p0, p0, Li28;->Y:Lyce;
+.method public final E(Ljava/util/List;)V
+    .locals 2
 
-    invoke-static {v0}, Lq73;->B0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1, v0}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lr18;->b:Li28;
-
-    iget-object v0, p0, Li28;->Z:Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    iget-object p0, p0, Li28;->r0:Lyce;
-
-    invoke-static {v0}, Lq73;->B0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v0
+    iget-object v0, p0, Lr18;->o:Lsv;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1, v0}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1, v1}, Lsv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
 
-    goto :goto_0
+    return-void
+.end method
 
-    :pswitch_1
-    iget-object p0, p0, Lr18;->b:Li28;
+.method public F(Ljava/util/List;Ljava/lang/Runnable;)V
+    .locals 1
 
-    invoke-virtual {p0}, Li28;->q()Luz0;
+    iget-object v0, p0, Lr18;->o:Lsv;
 
-    move-result-object p0
+    invoke-virtual {v0, p1, p2}, Lsv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
 
-    new-instance v0, Lx18;
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public j()I
+    .locals 1
 
-    const/4 v2, 0x2
+    iget-object v0, p0, Lr18;->o:Lsv;
 
-    invoke-direct {v0, v2, v1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object v0, v0, Lsv;->f:Ljava/util/List;
 
-    invoke-static {p0, v0}, Lo97;->c0(Lis5;Lpc6;)Lzv2;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result-object p0
+    move-result v0
 
-    new-instance v0, Lz18;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lz18;-><init>(Lzv2;I)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

@@ -30,7 +30,7 @@
         "broadcastReceiver",
         "Landroid/content/Intent;",
         "intent",
-        "Lylf;",
+        "Lccg;",
         "onReceiveBroadcast",
         "(Landroid/content/BroadcastReceiver;Landroid/content/Intent;)V",
         "handleHeadsetPlugAction",
@@ -112,7 +112,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$Companion;-><init>(Lld4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->Companion:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$Companion;
 
@@ -199,7 +199,7 @@
 
     move-result-object v5
 
-    invoke-static {v5, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -232,21 +232,21 @@
     const-string v0, "wired headset"
 
     :goto_1
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    const-string p2, "Matching device found "
+    const-string v1, "Matching device found "
 
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-interface {p0, v3, p1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v3, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
@@ -261,28 +261,28 @@
 .end method
 
 .method private final getWiredHeadsetStateSdk27()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState;
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->audioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->audioManager:Landroid/media/AudioManager;
 
-    invoke-virtual {p0}, Landroid/media/AudioManager;->isWiredHeadsetOn()Z
+    invoke-virtual {v0}, Landroid/media/AudioManager;->isWiredHeadsetOn()Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;
+    new-instance v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;
 
-    const-string v0, ""
+    const-string v1, ""
 
-    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;-><init>(Ljava/lang/String;)V
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    sget-object p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;
+    sget-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private final getWiredHeadsetStateSdk28(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState;
@@ -414,9 +414,9 @@
     goto :goto_3
 
     :cond_5
-    sget-object p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;
+    sget-object p1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;
 
-    return-object p0
+    return-object p1
 
     :cond_6
     :goto_3
@@ -460,15 +460,15 @@
     return-object v1
 
     :goto_5
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v1, "Can\'t detect audio device name"
+    const-string v2, "Can\'t detect audio device name"
 
-    invoke-interface {p0, v0, v1, p1}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0, v2, p1}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget-object p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;
+    sget-object p1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Unplugged;
 
-    return-object p0
+    return-object p1
 .end method
 
 .method private final handleHeadsetPlugAction(Landroid/content/Intent;)V
@@ -488,13 +488,13 @@
 
     if-eq v0, v1, :cond_0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string p1, "CallsWiredHeadsetManager"
+    const-string v0, "CallsWiredHeadsetManager"
 
-    const-string v0, "unknown headset state received"
+    const-string v1, "unknown headset state received"
 
-    invoke-interface {p0, p1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -613,21 +613,21 @@
     :catch_0
     move-exception p1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "onReceiveBroadcast: failed to abort broadcast, e: "
+    const-string v1, "onReceiveBroadcast: failed to abort broadcast, e: "
 
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-interface {p0, v2, p1}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, v2, p1}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     :goto_0
@@ -681,7 +681,7 @@
 
     const-string v8, "Wired device plugged: name="
 
-    invoke-static {v8, v0, v5, v1, v4}, Lz7e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v0, v5, v1, v4}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -700,7 +700,7 @@
 
     const-string v8, "Wired device unplugged: name="
 
-    invoke-static {v8, v0, v5, v1, v4}, Lz7e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v0, v5, v1, v4}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -713,38 +713,52 @@
     invoke-interface {v7, v6, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
-    const/4 p2, 0x0
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-eqz p1, :cond_2
+    const/16 v0, 0x1c
+
+    const/4 v4, 0x0
+
+    if-ge p2, v0, :cond_2
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->getWiredHeadsetStateSdk27()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState;
+
+    move-result-object p1
+
+    goto :goto_3
+
+    :cond_2
+    if-eqz p1, :cond_3
 
     goto :goto_2
 
-    :cond_2
-    move-object v1, p2
+    :cond_3
+    move-object v1, v4
 
     :goto_2
     invoke-direct {p0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->getWiredHeadsetStateSdk28(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState;
 
     move-result-object p1
 
+    :goto_3
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->wiredHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState;
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->wiredHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState;
 
     instance-of p1, p1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->callsAudioManager:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->callsAudioManager:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;
 
-    invoke-virtual {p0, v3, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->setSpeakerEnabled$calls_audiomanager_release(ZZ)V
+    invoke-virtual {p1, v3, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->setSpeakerEnabled$calls_audiomanager_release(ZZ)V
 
     return-void
 
-    :cond_3
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->callsAudioManager:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;
+    :cond_4
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->callsAudioManager:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;
 
-    invoke-static {p0, v3, v2, p2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->selectPreferredAudioDevice$calls_audiomanager_release$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;ZILjava/lang/Object;)V
+    invoke-static {p1, v3, v2, v4}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->selectPreferredAudioDevice$calls_audiomanager_release$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -752,40 +766,40 @@
 
 # virtual methods
 .method public final getConnectedDeviceName()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->wiredHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->wiredHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState;
 
-    instance-of v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;
+    instance-of v1, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    check-cast p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;
+    check-cast v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;->getName()Ljava/lang/String;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;->getName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    const-string p0, ""
+    const-string v0, ""
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final isWiredHeadsetPlugged()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->wiredHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->wiredHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState;
 
-    instance-of p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;
+    instance-of v0, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$WiredHeadsetState$Plugged;
 
-    return p0
+    return v0
 .end method
 
 .method public final start()V
-    .locals 4
+    .locals 5
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
@@ -801,11 +815,11 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v0, "already started, ignore"
+    const-string v1, "already started, ignore"
 
-    invoke-interface {p0, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -824,15 +838,15 @@
 
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->callsAudioManager:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->callsAudioManager:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->getWorkerThreadHandler$calls_audiomanager_release()Landroid/os/Handler;
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->getWorkerThreadHandler$calls_audiomanager_release()Landroid/os/Handler;
 
-    move-result-object p0
+    move-result-object v3
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {v0, v1, v2, v3, p0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2, v4, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     return-void
 .end method
@@ -854,11 +868,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v0, "already stopped, ignore"
+    const-string v1, "already stopped, ignore"
 
-    invoke-interface {p0, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -869,9 +883,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->context:Landroid/content/Context;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->headsetReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->headsetReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     return-void
 .end method

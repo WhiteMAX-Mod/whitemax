@@ -3,62 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc74;
+.implements Lu44;
 
 
 # instance fields
-.field public final a:Lc74;
-
-.field public final b:Lnyc;
-
-.field public final c:Lok0;
-
-.field public d:Z
-
-.field public final e:Ltgd;
+.field public final a:Ltrf;
 
 
 # direct methods
-.method public constructor <init>(Lc74;Lnyc;Lok0;)V
+.method public constructor <init>(Ltrf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ls44;->a:Lc74;
-
-    iput-object p2, p0, Ls44;->b:Lnyc;
-
-    iput-object p3, p0, Ls44;->c:Lok0;
-
-    new-instance p1, Ltgd;
-
-    const/16 p2, 0xb
-
-    invoke-direct {p1, p2, p0}, Ltgd;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Ls44;->e:Ltgd;
+    iput-object p1, p0, Ls44;->a:Ltrf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lf74;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    new-instance v0, Lt44;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Ls44;->a:Lc74;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {v1}, Lc74;->a()Lf74;
+    return v0
 
-    move-result-object v1
+    :cond_0
+    instance-of v1, p1, Ls44;
 
-    iget-object v2, p0, Ls44;->e:Ltgd;
+    const/4 v2, 0x0
 
-    iget-object p0, p0, Ls44;->c:Lok0;
+    if-nez v1, :cond_1
 
-    invoke-direct {v0, v1, v2, p0}, Lt44;-><init>(Lf74;Ltgd;Lok0;)V
+    return v2
+
+    :cond_1
+    check-cast p1, Ls44;
+
+    iget-object v1, p0, Ls44;->a:Ltrf;
+
+    iget-object p1, p1, Ls44;->a:Ltrf;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ls44;->a:Ltrf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Failed(message="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ls44;->a:Ltrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

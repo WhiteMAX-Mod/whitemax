@@ -3,53 +3,23 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/app/Notification$Builder;Landroid/app/Person;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Ls5c;->call_share_picker_confirm_p2p_invite_cancel:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Landroid/app/Person;)Landroid/app/Notification$Builder;
 
-    sput v0, Lwda;->a:I
+    move-result-object p0
 
-    sget v0, Ls5c;->call_share_picker_confirm_p2p_invite_retry:I
+    return-object p0
+.end method
 
-    sput v0, Lwda;->b:I
+.method public static b(Landroid/app/Notification$Action$Builder;I)Landroid/app/Notification$Action$Builder;
+    .locals 0
 
-    sget v0, Ls5c;->call_share_picker_quote_view_progress:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setSemanticAction(I)Landroid/app/Notification$Action$Builder;
 
-    sput v0, Lwda;->c:I
+    move-result-object p0
 
-    sget v0, Ls5c;->call_share_picker_quote_view_title:I
-
-    sput v0, Lwda;->d:I
-
-    sget v0, Ls5c;->oneme_message_input_right_outer_icon:I
-
-    sput v0, Lwda;->e:I
-
-    sget v0, Ls5c;->oneme_picker_quote_view:I
-
-    sput v0, Lwda;->f:I
-
-    sget v0, Ls5c;->oneme_picker_toolbar:I
-
-    sput v0, Lwda;->g:I
-
-    return-void
+    return-object p0
 .end method

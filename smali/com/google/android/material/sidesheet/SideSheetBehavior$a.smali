@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/sidesheet/SideSheetBehavior$a;
-.super Ly;
+.super Lg0;
 .source "SourceFile"
 
 
@@ -58,7 +58,7 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Ly;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0, p1, p2}, Lg0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -76,7 +76,7 @@
     sget-object v0, Landroid/view/AbsSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
 
     .line 4
-    invoke-direct {p0, v0}, Ly;-><init>(Landroid/os/Parcelable;)V
+    invoke-direct {p0, v0}, Lg0;-><init>(Landroid/os/Parcelable;)V
 
     .line 5
     iget p1, p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;->h:I
@@ -92,11 +92,11 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Ly;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1, p2}, Lg0;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior$a;->c:I
+    iget p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior$a;->c:I
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

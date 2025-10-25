@@ -4,138 +4,66 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lnje;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:J
-
-.field public final f:Ljava/util/List;
+.field public final c:Lm0d;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lulf;)V
     .locals 1
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lf00;)V
-    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lf00;->a:Ljava/io/Serializable;
+    check-cast p1, Lqta;
 
-    check-cast v0, Ljava/lang/String;
+    invoke-virtual {p1}, Lqta;->a()Lk54;
 
-    iput-object v0, p0, Lg00;->a:Ljava/lang/String;
+    move-result-object p1
 
-    iget-object v0, p1, Lf00;->c:Ljava/io/Serializable;
+    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
 
-    check-cast v0, Ljava/lang/String;
+    move-result-object p1
 
-    iput-object v0, p0, Lg00;->b:Ljava/lang/String;
+    iput-object p1, p0, Lg00;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget v0, p1, Lf00;->d:I
+    const/4 p1, 0x0
 
-    iput v0, p0, Lg00;->c:I
+    const/4 v0, 0x7
 
-    iget v0, p1, Lf00;->f:I
+    invoke-static {p1, p1, v0}, Loje;->b(III)Lnje;
 
-    iput v0, p0, Lg00;->d:I
+    move-result-object p1
 
-    iget-wide v0, p1, Lf00;->b:J
+    iput-object p1, p0, Lg00;->b:Lnje;
 
-    iput-wide v0, p0, Lg00;->e:J
+    new-instance v0, Lm0d;
 
-    iget-object p1, p1, Lf00;->e:Ljava/lang/Object;
+    invoke-direct {v0, p1}, Lm0d;-><init>(Li1a;)V
 
-    check-cast p1, Ljava/util/List;
-
-    iput-object p1, p0, Lg00;->f:Ljava/util/List;
+    iput-object v0, p0, Lg00;->c:Lm0d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final a(Lzxc;)V
+    .locals 3
 
-    iget p0, p0, Lg00;->d:I
+    new-instance v0, Lf00;
 
-    const/4 v0, 0x3
+    const/4 v1, 0x0
 
-    if-ne p0, v0, :cond_0
+    invoke-direct {v0, p0, p1, v1}, Lf00;-><init>(Lg00;Lzxc;Lkotlin/coroutines/Continuation;)V
 
-    const/4 p0, 0x1
+    const/4 p1, 0x3
 
-    return p0
+    iget-object v2, p0, Lg00;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    :cond_0
-    const/4 p0, 0x0
+    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
-    return p0
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    const/4 v0, 0x5
-
-    iget v1, p0, Lg00;->d:I
-
-    if-ne v1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lg00;->a()Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    const/4 p0, 0x4
-
-    if-ne v1, p0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final c()Z
-    .locals 1
-
-    iget p0, p0, Lg00;->c:I
-
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method

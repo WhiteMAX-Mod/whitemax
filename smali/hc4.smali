@@ -1,177 +1,304 @@
 .class public final Lhc4;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljp0;
+
+
+# static fields
+.field public static final X:Lwef;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:La38;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Lsi4;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final c:Landroid/graphics/BitmapFactory$Options;
+
+.field public final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Landroid/os/ConditionVariable;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    .line 1
-    iput p3, p0, Lhc4;->a:I
+    new-instance v0, Lgc4;
 
-    iput-object p1, p0, Lhc4;->c:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lhc4;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lgc4;-><init>(I)V
 
-    const-string p1, "ExoPlayer:SimpleCacheInit"
+    invoke-static {v0}, Lr40;->d(Lwef;)Lwef;
 
-    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    move-result-object v0
+
+    sput-object v0, Lhc4;->X:Lwef;
 
     return-void
 .end method
 
-.method public constructor <init>(Lpc4;Landroid/media/AudioTrack;)V
-    .locals 1
+.method public constructor <init>(La38;Lsi4;Landroid/graphics/BitmapFactory$Options;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lhc4;->a:I
+    .line 4
+    iput-object p1, p0, Lhc4;->a:La38;
+
+    .line 5
+    iput-object p2, p0, Lhc4;->b:Lsi4;
+
+    .line 6
+    iput-object p3, p0, Lhc4;->c:Landroid/graphics/BitmapFactory$Options;
+
+    .line 7
+    iput p4, p0, Lhc4;->o:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
+
+    .line 1
+    sget-object v0, Lhc4;->X:Lwef;
+
+    invoke-interface {v0}, Lwef;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, La38;
+
+    invoke-static {v0}, Lsgi;->j(Ljava/lang/Object;)V
+
+    new-instance v1, Lsi4;
+
+    invoke-direct {v1, p1}, Lsi4;-><init>(Landroid/content/Context;)V
+
+    const/4 p1, 0x0
+
+    const/4 v2, -0x1
 
     .line 2
-    iput-object p1, p0, Lhc4;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lhc4;->b:Ljava/lang/Object;
-
-    const-string p1, "ExoPlayer:AudioTrackReleaseThread"
-
-    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1, p1, v2}, Lhc4;-><init>(La38;Lsi4;Landroid/graphics/BitmapFactory$Options;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final e(Landroid/net/Uri;)Ll28;
     .locals 2
 
-    iget v0, p0, Lhc4;->a:I
+    new-instance v0, Lf44;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x2
 
-    iget-object v0, p0, Lhc4;->c:Ljava/lang/Object;
+    invoke-direct {v0, p0, v1, p1}, Lf44;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    check-cast v0, Lt1e;
+    iget-object p1, p0, Lhc4;->a:La38;
 
-    monitor-enter v0
+    check-cast p1, Lru9;
 
-    :try_start_0
-    iget-object v1, p0, Lhc4;->b:Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lru9;->a(Ljava/util/concurrent/Callable;)Ll28;
 
-    check-cast v1, Landroid/os/ConditionVariable;
+    move-result-object p1
 
-    invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
+    return-object p1
+.end method
 
-    iget-object v1, p0, Lhc4;->c:Ljava/lang/Object;
+.method public final h(Ljava/lang/String;)Z
+    .locals 4
 
-    check-cast v1, Lt1e;
+    sget-object v0, Lnig;->a:Ljava/lang/String;
 
-    invoke-static {v1}, Lt1e;->a(Lt1e;)V
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    iget-object p0, p0, Lhc4;->c:Ljava/lang/Object;
+    move-result v0
 
-    check-cast p0, Lt1e;
+    const/4 v1, 0x0
 
-    iget-object p0, p0, Lt1e;->b:Lvw0;
+    const/4 v2, 0x1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v3, -0x1
 
-    monitor-exit v0
+    sparse-switch v0, :sswitch_data_0
 
-    return-void
+    goto :goto_0
 
-    :catchall_0
-    move-exception p0
+    :sswitch_0
+    const-string v0, "image/png"
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    throw p0
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x6
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "image/bmp"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v3, 0x5
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "image/webp"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v3, 0x4
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "image/jpeg"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v3, 0x3
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "image/heif"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v0, "image/heic"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    move v3, v2
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v0, "image/avif"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    move v3, v1
+
+    :goto_0
+    packed-switch v3, :pswitch_data_0
+
+    goto :goto_1
 
     :pswitch_0
-    iget-object v0, p0, Lhc4;->c:Ljava/lang/Object;
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    check-cast v0, Ls1e;
+    const/16 v0, 0x22
 
-    monitor-enter v0
-
-    :try_start_1
-    iget-object v1, p0, Lhc4;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/os/ConditionVariable;
-
-    invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
-
-    iget-object v1, p0, Lhc4;->c:Ljava/lang/Object;
-
-    check-cast v1, Ls1e;
-
-    invoke-static {v1}, Ls1e;->a(Ls1e;)V
-
-    iget-object p0, p0, Lhc4;->c:Ljava/lang/Object;
-
-    check-cast p0, Ls1e;
-
-    iget-object p0, p0, Ls1e;->b:Lml7;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_1
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    throw p0
+    if-lt p1, v0, :cond_7
 
     :pswitch_1
-    iget-object v0, p0, Lhc4;->c:Ljava/lang/Object;
+    return v2
 
-    check-cast v0, Lpc4;
+    :cond_7
+    :goto_1
+    return v1
 
-    iget-object p0, p0, Lhc4;->b:Ljava/lang/Object;
+    nop
 
-    check-cast p0, Landroid/media/AudioTrack;
-
-    :try_start_2
-    invoke-virtual {p0}, Landroid/media/AudioTrack;->flush()V
-
-    invoke-virtual {p0}, Landroid/media/AudioTrack;->release()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    iget-object p0, v0, Lpc4;->h:Landroid/os/ConditionVariable;
-
-    invoke-virtual {p0}, Landroid/os/ConditionVariable;->open()V
-
-    return-void
-
-    :catchall_2
-    move-exception p0
-
-    iget-object v0, v0, Lpc4;->h:Landroid/os/ConditionVariable;
-
-    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
-
-    throw p0
+    :sswitch_data_0
+    .sparse-switch
+        -0x58abd7ba -> :sswitch_6
+        -0x58a8e8f5 -> :sswitch_5
+        -0x58a8e8f2 -> :sswitch_4
+        -0x58a7d764 -> :sswitch_3
+        -0x58a21830 -> :sswitch_2
+        -0x3468a12f -> :sswitch_1
+        -0x34686c8b -> :sswitch_0
+    .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
     .end packed-switch
+.end method
+
+.method public final i([B)Ll28;
+    .locals 2
+
+    new-instance v0, Lf44;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1, p1}, Lf44;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lhc4;->a:La38;
+
+    check-cast p1, Lru9;
+
+    invoke-virtual {p1, v0}, Lru9;->a(Ljava/util/concurrent/Callable;)Ll28;
+
+    move-result-object p1
+
+    return-object p1
 .end method

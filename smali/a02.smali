@@ -1,51 +1,170 @@
-.class public final La02;
+.class public final synthetic La02;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Luvc;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public final synthetic a:I
+
 .field public final synthetic b:J
+
+.field public final synthetic c:I
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public synthetic constructor <init>(Ltx1;Landroid/hardware/camera2/CameraCaptureSession;IJ)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, La02;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, La02;->b:J
+    iput-object p1, p0, La02;->o:Ljava/lang/Object;
+
+    iput-object p2, p0, La02;->X:Ljava/lang/Object;
+
+    iput p3, p0, La02;->c:I
+
+    iput-wide p4, p0, La02;->b:J
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lzmf;Lym;JI)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, La02;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, La02;->o:Ljava/lang/Object;
+
+    iput-object p2, p0, La02;->X:Ljava/lang/Object;
+
+    iput-wide p3, p0, La02;->b:J
+
+    iput p5, p0, La02;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final run()V
+    .locals 6
 
-    iget-wide v0, p0, La02;->b:J
+    iget v0, p0, La02;->a:I
 
-    return-wide v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b(Lzz1;)Ltvc;
-    .locals 0
+    iget-object v0, p0, La02;->o:Ljava/lang/Object;
 
-    iget p0, p1, Lzz1;->b:I
+    check-cast v0, Lzmf;
 
-    const/4 p1, 0x1
+    iget-object v1, p0, La02;->X:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    check-cast v1, Lym;
 
-    sget-object p0, Ltvc;->d:Ltvc;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p0
+    sget-object v2, Lzmf;->y0:Ljava/lang/String;
 
-    :cond_0
-    sget-object p0, Ltvc;->e:Ltvc;
+    const-string v3, "persistable task execution started, force connection"
 
-    return-object p0
+    invoke-static {v2, v3}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, v0, Lzmf;->X:Liu7;
+
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lpxb;
+
+    check-cast v2, Lrxb;
+
+    iget-object v2, v2, Lrxb;->a:Ld78;
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3}, Lntd;->A(Z)V
+
+    iget-object v2, v0, Lzmf;->o:Liu7;
+
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljpf;
+
+    check-cast v1, Ltib;
+
+    iget-wide v3, p0, La02;->b:J
+
+    iget v5, p0, La02;->c:I
+
+    invoke-virtual {v2, v1, v3, v4, v5}, Ljpf;->g(Ltib;JI)V
+
+    iget-object v1, v0, Lzmf;->s0:Liu7;
+
+    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ltph;
+
+    invoke-static {v1}, Lc6e;->x(Ltph;)V
+
+    iget-object v0, v0, Lzmf;->t0:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lgpf;
+
+    invoke-virtual {v0}, Lgpf;->a()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, La02;->o:Ljava/lang/Object;
+
+    check-cast v0, Ltx1;
+
+    iget-object v1, p0, La02;->X:Ljava/lang/Object;
+
+    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession;
+
+    iget-object v0, v0, Ltx1;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+
+    iget v2, p0, La02;->c:I
+
+    iget-wide v3, p0, La02;->b:J
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

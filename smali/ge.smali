@@ -1,224 +1,312 @@
 .class public final Lge;
-.super Lnk7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lhrh;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public X:F
 
-.field public final synthetic Y:I
+.field public final Y:Z
 
-.field public final synthetic Z:I
+.field public final a:Ln02;
 
-.field public final synthetic a:Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+.field public final b:Landroid/util/Range;
 
-.field public final synthetic b:Landroid/content/IntentSender;
+.field public c:F
 
-.field public final synthetic c:I
-
-.field public final synthetic o:Landroid/content/Intent;
-
-.field public final synthetic r0:Landroid/os/Bundle;
+.field public o:Lgu1;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
-    .locals 0
+.method public constructor <init>(Ln02;)V
+    .locals 5
 
-    iput-object p1, p0, Lge;->a:Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lge;->b:Landroid/content/IntentSender;
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    iput p3, p0, Lge;->c:I
+    iput v0, p0, Lge;->c:F
 
-    iput-object p4, p0, Lge;->o:Landroid/content/Intent;
+    iput v0, p0, Lge;->X:F
 
-    iput p5, p0, Lge;->X:I
+    const/4 v0, 0x0
 
-    iput p6, p0, Lge;->Y:I
+    iput-boolean v0, p0, Lge;->Y:Z
 
-    iput p7, p0, Lge;->Z:I
+    iput-object p1, p0, Lge;->a:Ln02;
 
-    iput-object p8, p0, Lge;->r0:Landroid/os/Bundle;
+    invoke-static {}, Lz4;->f()Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    const/4 p1, 0x0
+    move-result-object v1
 
-    invoke-direct {p0, p1}, Lnk7;-><init>(I)V
+    invoke-virtual {p1, v1}, Ln02;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/util/Range;
+
+    iput-object v1, p0, Lge;->b:Landroid/util/Range;
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x22
+
+    if-lt v1, v2, :cond_1
+
+    iget-object p1, p1, Ln02;->b:Ls9d;
+
+    invoke-static {}, Ltp0;->g()Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    move-result-object v1
+
+    iget-object p1, p1, Ls9d;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroid/hardware/camera2/CameraCharacteristics;
+
+    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [I
+
+    if-eqz p1, :cond_1
+
+    array-length v1, p1
+
+    move v2, v0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget v3, p1, v2
+
+    const/4 v4, 0x1
+
+    if-ne v3, v4, :cond_0
+
+    move v0, v4
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    iput-boolean v0, p0, Lge;->Y:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 11
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)V
+    .locals 2
 
-    iget-object v0, p0, Lge;->a:Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    iget-object v0, p0, Lge;->o:Lgu1;
 
-    iget-object v1, v0, Landroidx/fragment/app/a;->F0:Lu76;
+    if-eqz v0, :cond_2
 
-    if-eqz v1, :cond_8
+    invoke-virtual {p1}, Landroid/hardware/camera2/CaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
 
-    const/4 v1, 0x2
+    move-result-object p1
 
-    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
+    const/4 v0, 0x0
 
-    move-result v2
+    if-nez p1, :cond_0
 
-    iget-object v4, p0, Lge;->b:Landroid/content/IntentSender;
-
-    iget-object v6, p0, Lge;->o:Landroid/content/Intent;
-
-    iget-object v10, p0, Lge;->r0:Landroid/os/Bundle;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
-
-    invoke-static {v4}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    invoke-static {v6}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    invoke-static {v10}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    :cond_0
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->U()Landroidx/fragment/app/c;
-
-    move-result-object v2
-
-    iget-object v3, v2, Landroidx/fragment/app/c;->D:Lmr8;
-
-    iget v5, p0, Lge;->c:I
-
-    iget v7, p0, Lge;->X:I
-
-    iget v8, p0, Lge;->Y:I
-
-    if-eqz v3, :cond_5
-
-    if-eqz v10, :cond_3
-
-    if-nez v6, :cond_1
-
-    new-instance v6, Landroid/content/Intent;
-
-    invoke-direct {v6}, Landroid/content/Intent;-><init>()V
-
-    const-string p0, "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE"
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v6, p0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    :cond_1
-    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {v10}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    :cond_2
-    const-string p0, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
-
-    invoke-virtual {v6, p0, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
-
-    :cond_3
-    new-instance p0, Laa7;
-
-    invoke-direct {p0, v4, v6, v7, v8}, Laa7;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
-
-    new-instance v3, Le86;
-
-    iget-object v4, v0, Landroidx/fragment/app/a;->Y:Ljava/lang/String;
-
-    invoke-direct {v3, v4, v5}, Le86;-><init>(Ljava/lang/String;I)V
-
-    iget-object v4, v2, Landroidx/fragment/app/c;->F:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
-
-    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->toString()Ljava/lang/String;
-
-    :cond_4
-    iget-object v0, v2, Landroidx/fragment/app/c;->D:Lmr8;
-
-    invoke-virtual {v0, p0}, Lmr8;->v(Ljava/lang/Object;)V
+    move-object p1, v0
 
     goto :goto_0
 
-    :cond_5
-    iget-object v0, v2, Landroidx/fragment/app/c;->w:Lu76;
+    :cond_0
+    invoke-static {}, Lz4;->g()Landroid/hardware/camera2/CaptureRequest$Key;
 
-    const/4 v1, -0x1
+    move-result-object v1
 
-    const-string v2, "Starting intent sender with a requestCode requires a FragmentActivity host"
+    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
 
-    if-ne v5, v1, :cond_7
+    move-result-object p1
 
-    iget-object v3, v0, Lu76;->Z:Landroidx/fragment/app/b;
-
-    if-eqz v3, :cond_6
-
-    iget v9, p0, Lge;->Z:I
-
-    invoke-virtual/range {v3 .. v10}, Landroid/app/Activity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+    check-cast p1, Ljava/lang/Float;
 
     :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    if-nez p1, :cond_1
 
-    return-object p0
+    goto :goto_1
 
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :cond_1
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    invoke-direct {p0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result p1
 
-    throw p0
+    iget v1, p0, Lge;->X:F
 
-    :cond_7
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    cmpl-float p1, v1, p1
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    if-nez p1, :cond_2
 
-    invoke-direct {p0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lge;->o:Lgu1;
 
-    throw p0
+    invoke-virtual {p1, v0}, Lgu1;->b(Ljava/lang/Object;)Z
 
-    :cond_8
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iput-object v0, p0, Lge;->o:Lgu1;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    :cond_2
+    :goto_1
+    return-void
+.end method
 
-    const-string v2, "Fragment "
+.method public final c()F
+    .locals 1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lge;->b:Landroid/util/Range;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " not attached to Activity"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast v0, Ljava/lang/Float;
 
-    throw p0
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final e(Litb;)V
+    .locals 2
+
+    invoke-static {}, Lz4;->g()Landroid/hardware/camera2/CaptureRequest$Key;
+
+    move-result-object v0
+
+    iget v1, p0, Lge;->c:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Litb;->I(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
+
+    iget-boolean v0, p0, Lge;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x22
+
+    if-lt v0, v1, :cond_0
+
+    invoke-static {}, Ltp0;->h()Landroid/hardware/camera2/CaptureRequest$Key;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Litb;->I(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()F
+    .locals 1
+
+    iget-object v0, p0, Lge;->b:Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final j()Landroid/graphics/Rect;
+    .locals 2
+
+    iget-object v0, p0, Lge;->a:Ln02;
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-virtual {v0, v1}, Ln02;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-object v0
+.end method
+
+.method public final l(FLgu1;)V
+    .locals 2
+
+    iput p1, p0, Lge;->c:F
+
+    iget-object p1, p0, Lge;->o:Lgu1;
+
+    if-eqz p1, :cond_0
+
+    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+
+    const-string v1, "There is a new zoomRatio being set"
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
+
+    :cond_0
+    iget p1, p0, Lge;->c:F
+
+    iput p1, p0, Lge;->X:F
+
+    iput-object p2, p0, Lge;->o:Lgu1;
+
+    return-void
+.end method
+
+.method public final m()V
+    .locals 3
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    iput v0, p0, Lge;->c:F
+
+    iget-object v0, p0, Lge;->o:Lgu1;
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Landroidx/camera/core/CameraControl$OperationCanceledException;
+
+    const-string v2, "Camera is not active."
+
+    invoke-direct {v1, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lgu1;->d(Ljava/lang/Throwable;)Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lge;->o:Lgu1;
+
+    :cond_0
+    return-void
 .end method

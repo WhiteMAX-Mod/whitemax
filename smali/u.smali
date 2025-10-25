@@ -1,71 +1,86 @@
 .class public final Lu;
-.super Lx7g;
+.super Le5a;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Liic;
-
-.field public final b:Lcl7;
-
-.field public final c:Lv85;
-
-.field public final o:Lyce;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(J)V
+    .locals 1
 
-    sget-object v0, Lg;->a:Lg;
+    sget-object v0, Lccg;->a:Lccg;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
+    invoke-direct {p0, v0}, Le5a;-><init>(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iput-wide p1, p0, Lu;->b:J
 
-    const-class v1, Lvca;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Lz4;->d(Ljava/lang/Class;)Lzte;
 
-    move-result-object v0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-direct {p0}, Lx7g;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lu;->b:Lcl7;
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lv85;
+    return v0
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lv85;-><init>(I)V
-
-    iput-object v0, p0, Lu;->c:Lv85;
-
-    sget-object v0, Lp45;->a:Lp45;
-
-    invoke-static {v0}, Lzce;->a(Ljava/lang/Object;)Lyce;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lu;->o:Lyce;
-
-    new-instance v1, Liic;
-
-    invoke-direct {v1, v0}, Liic;-><init>(Lro9;)V
-
-    iput-object v1, p0, Lu;->X:Liic;
-
-    iget-object v0, p0, Lx7g;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v1, Ls;
+    :cond_0
+    instance-of v1, p1, Lu;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Ls;-><init>(Lu;Lkotlin/coroutines/Continuation;)V
+    if-nez v1, :cond_1
 
-    const/4 p0, 0x3
+    return v2
 
-    invoke-static {v0, v2, v2, v1, p0}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
+    :cond_1
+    check-cast p1, Lu;
 
-    return-void
+    iget-wide v3, p0, Lu;->b:J
+
+    iget-wide v5, p1, Lu;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lu;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "OpenChat(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lu;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

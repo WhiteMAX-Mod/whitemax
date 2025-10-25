@@ -1,130 +1,191 @@
 .class public final Lgu1;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public a:Ljava/lang/Object;
 
-.field public final synthetic Y:Lku1;
+.field public b:Lju1;
 
-.field public final synthetic Z:Lnv3;
+.field public c:Lycd;
 
-
-# direct methods
-.method public constructor <init>(Lku1;Lnv3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lgu1;->Y:Lku1;
-
-    iput-object p2, p0, Lgu1;->Z:Lnv3;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public d:Z
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lgu1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lgu1;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lgu1;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 1
 
-    new-instance p1, Lgu1;
+    iget-object v0, p0, Lgu1;->c:Lycd;
 
-    iget-object v0, p0, Lgu1;->Y:Lku1;
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lgu1;->Z:Lnv3;
+    invoke-virtual {v0, p1, p2}, Le4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    invoke-direct {p1, v0, p0, p2}, Lgu1;-><init>(Lku1;Lnv3;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    :cond_0
+    return-void
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final b(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lgu1;->X:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    iput-boolean v0, p0, Lgu1;->d:Z
 
-    if-eqz v0, :cond_1
+    iget-object v1, p0, Lgu1;->b:Lju1;
 
-    if-ne v0, v1, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget-object v1, v1, Lju1;->b:Liu1;
+
+    invoke-virtual {v1, p1}, Le4;->l(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    if-eqz v0, :cond_1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x0
 
-    throw p0
+    iput-object p1, p0, Lgu1;->a:Ljava/lang/Object;
+
+    iput-object p1, p0, Lgu1;->b:Lju1;
+
+    iput-object p1, p0, Lgu1;->c:Lycd;
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    iget-object p1, p0, Lgu1;->Y:Lku1;
+.method public final c()V
+    .locals 2
 
-    iget-object p1, p1, Lku1;->a:Lnxd;
+    const/4 v0, 0x1
 
-    new-instance v0, Lb61;
+    iput-boolean v0, p0, Lgu1;->d:Z
 
-    iget-object v2, p0, Lgu1;->Z:Lnv3;
+    iget-object v1, p0, Lgu1;->b:Lju1;
 
-    iget-object v2, v2, Lnv3;->b:Ljava/util/List;
+    if-eqz v1, :cond_0
 
-    invoke-static {v2}, Lq73;->F0(Ljava/lang/Iterable;)Ljava/util/Set;
+    iget-object v1, v1, Lju1;->b:Liu1;
+
+    invoke-virtual {v1, v0}, Le4;->cancel(Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lgu1;->a:Ljava/lang/Object;
+
+    iput-object v0, p0, Lgu1;->b:Lju1;
+
+    iput-object v0, p0, Lgu1;->c:Lycd;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Throwable;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lgu1;->d:Z
+
+    iget-object v1, p0, Lgu1;->b:Lju1;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Lju1;->b:Liu1;
+
+    invoke-virtual {v1, p1}, Le4;->m(Ljava/lang/Throwable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lgu1;->a:Ljava/lang/Object;
+
+    iput-object p1, p0, Lgu1;->b:Lju1;
+
+    iput-object p1, p0, Lgu1;->c:Lycd;
+
+    :cond_1
+    return v0
+.end method
+
+.method public final finalize()V
+    .locals 4
+
+    iget-object v0, p0, Lgu1;->b:Lju1;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lju1;->b:Liu1;
+
+    invoke-virtual {v0}, Le4;->isDone()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ld1;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "The completer object was garbage collected - this future would otherwise never complete. The tag was: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lgu1;->a:Ljava/lang/Object;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lb61;-><init>(Ljava/util/Set;)V
+    const/4 v3, 0x3
 
-    iput v1, p0, Lgu1;->X:I
+    invoke-direct {v1, v2, v3}, Ld1;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p1, v0, p0}, Lnxd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Le4;->m(Ljava/lang/Throwable;)Z
 
-    move-result-object p0
+    :cond_0
+    iget-boolean v0, p0, Lgu1;->d:Z
 
-    sget-object p1, Lz04;->a:Lz04;
+    if-nez v0, :cond_1
 
-    if-ne p0, p1, :cond_2
+    iget-object v0, p0, Lgu1;->c:Lycd;
 
-    return-object p1
+    if-eqz v0, :cond_1
 
-    :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    const/4 v1, 0x0
 
-    return-object p0
+    invoke-virtual {v0, v1}, Le4;->l(Ljava/lang/Object;)Z
+
+    :cond_1
+    return-void
 .end method

@@ -162,24 +162,24 @@
 
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     :pswitch_0
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-interface {p0}, Landroid/support/customtabs/trusted/ITrustedWebActivityService;->getSmallIconBitmap()Landroid/os/Bundle;
 
-    move-result-object p0
+    move-result-object p1
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {p0, p3, v3}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {p1, p3, v3}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
@@ -211,15 +211,15 @@
     :cond_1
     invoke-interface {p0, v1}, Landroid/support/customtabs/trusted/ITrustedWebActivityService;->areNotificationsEnabled(Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    move-result-object p0
+    move-result-object p1
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_2
 
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {p0, p3, v3}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {p1, p3, v3}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_1
 
@@ -234,15 +234,15 @@
 
     invoke-interface {p0}, Landroid/support/customtabs/trusted/ITrustedWebActivityService;->getActiveNotifications()Landroid/os/Bundle;
 
-    move-result-object p0
+    move-result-object p1
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    if-eqz p0, :cond_3
+    if-eqz p1, :cond_3
 
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {p0, p3, v3}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {p1, p3, v3}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_2
 
@@ -257,11 +257,11 @@
 
     invoke-interface {p0}, Landroid/support/customtabs/trusted/ITrustedWebActivityService;->getSmallIconId()I
 
-    move-result p0
+    move-result p1
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     return v3
 
@@ -313,15 +313,15 @@
     :cond_5
     invoke-interface {p0, v1}, Landroid/support/customtabs/trusted/ITrustedWebActivityService;->notifyNotificationWithChannel(Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    move-result-object p0
+    move-result-object p1
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    if-eqz p0, :cond_6
+    if-eqz p1, :cond_6
 
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {p0, p3, v3}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {p1, p3, v3}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_3
 
@@ -366,15 +366,15 @@
 
     invoke-interface {p0, p1, v1, p2}, Landroid/support/customtabs/trusted/ITrustedWebActivityService;->extraCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/IBinder;)Landroid/os/Bundle;
 
-    move-result-object p0
+    move-result-object p1
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    if-eqz p0, :cond_a
+    if-eqz p1, :cond_a
 
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {p0, p3, v3}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {p1, p3, v3}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_4
 

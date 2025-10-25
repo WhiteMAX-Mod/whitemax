@@ -63,17 +63,17 @@
 
 # virtual methods
 .method public final getContext()Landroid/content/Context;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;->context:Landroid/content/Context;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;->context:Landroid/content/Context;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getPeerConnection()Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;->peerConnection:Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;->peerConnection:Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;
 
-    return-object p0
+    return-object v0
 .end method

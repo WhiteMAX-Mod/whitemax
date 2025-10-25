@@ -3,354 +3,316 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ls5g;
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/ArrayList;
+.field public final a:Lbxd;
 
-.field public final synthetic Y:Lixd;
+.field public final b:Ledb;
 
-.field public final synthetic Z:Ljava/lang/Object;
+.field public c:I
 
-.field public final synthetic a:I
+.field public d:I
 
-.field public final synthetic b:Landroid/view/View;
+.field public e:Z
 
-.field public final synthetic c:Ljava/util/ArrayList;
-
-.field public final synthetic o:Landroid/view/View;
+.field public f:Z
 
 
 # direct methods
-.method public constructor <init>(Lixd;Landroid/view/View;Landroid/view/View;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+.method public constructor <init>(Lbxd;)V
     .locals 1
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Ldxd;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldxd;->Y:Lixd;
+    iput-object p1, p0, Ldxd;->a:Lbxd;
 
-    iput-object p2, p0, Ldxd;->b:Landroid/view/View;
+    new-instance p1, Ledb;
 
-    iput-object p3, p0, Ldxd;->o:Landroid/view/View;
+    const/16 v0, 0x20
 
-    iput-object p4, p0, Ldxd;->c:Ljava/util/ArrayList;
+    invoke-direct {p1, v0}, Ledb;-><init>(I)V
 
-    iput-object p5, p0, Ldxd;->X:Ljava/util/ArrayList;
-
-    iput-object p6, p0, Ldxd;->Z:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lixd;Landroid/view/View;ZLjava/util/ArrayList;Landroid/view/View;Ljava/util/ArrayList;Landroid/graphics/Rect;)V
-    .locals 0
-
-    const/4 p3, 0x1
-
-    iput p3, p0, Ldxd;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldxd;->Y:Lixd;
-
-    iput-object p2, p0, Ldxd;->b:Landroid/view/View;
-
-    iput-object p4, p0, Ldxd;->c:Ljava/util/ArrayList;
-
-    iput-object p5, p0, Ldxd;->o:Landroid/view/View;
-
-    iput-object p6, p0, Ldxd;->X:Ljava/util/ArrayList;
-
-    iput-object p7, p0, Ldxd;->Z:Ljava/lang/Object;
+    iput-object p1, p0, Ldxd;->b:Ledb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 13
+.method public final a()V
+    .locals 1
 
-    iget v0, p0, Ldxd;->a:I
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Ldxd;->Z:Ljava/lang/Object;
+    iput-boolean v0, p0, Ldxd;->f:Z
 
-    iget-object v2, p0, Ldxd;->X:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    iget-object v3, p0, Ldxd;->o:Landroid/view/View;
+.method public final b(Lawf;Lam5;Lq5g;)V
+    .locals 1
 
-    iget-object v4, p0, Ldxd;->b:Landroid/view/View;
+    iget-object v0, p0, Ldxd;->a:Lbxd;
 
-    iget-object v5, p0, Ldxd;->Y:Lixd;
+    invoke-interface {v0, p1, p2, p3}, Lbxd;->b(Lawf;Lam5;Lq5g;)V
 
-    iget-object p0, p0, Ldxd;->c:Ljava/util/ArrayList;
+    const/4 p1, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    iput-boolean p1, p0, Ldxd;->f:Z
 
-    iget-object v0, v5, Lixd;->Z:Ltr;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lr1e;->isEmpty()Z
+.method public final c(ILedb;)V
+    .locals 7
 
-    move-result v6
+    const/4 v0, 0x1
 
-    const/4 v7, 0x1
+    and-int/2addr p1, v0
 
-    const/4 v8, 0x0
+    const/4 v1, 0x0
 
-    const/4 v9, 0x0
+    if-eqz p1, :cond_0
 
-    if-nez v6, :cond_3
-
-    iget-object v6, v5, Lixd;->v0:Lfef;
-
-    if-eqz v6, :cond_3
-
-    if-nez v4, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    new-instance v6, Ltr;
-
-    invoke-direct {v6, v8}, Lr1e;-><init>(I)V
-
-    invoke-static {v6, v4}, Lw48;->n(Ltr;Landroid/view/View;)V
-
-    iget-object v4, v5, Lixd;->s0:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_1
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Lhxd;
-
-    iget-object v11, v10, Lhxd;->a:Landroid/view/View;
-
-    sget-object v12, Lh7g;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {v11}, Lw6g;->k(Landroid/view/View;)Ljava/lang/String;
-
-    move-result-object v11
-
-    iget-object v10, v10, Lhxd;->a:Landroid/view/View;
-
-    invoke-virtual {v6, v11, v10}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move p1, v0
 
     goto :goto_0
 
-    :cond_1
-    new-instance v4, Ljava/util/ArrayList;
+    :cond_0
+    move p1, v1
 
-    invoke-virtual {v0}, Ltr;->values()Ljava/util/Collection;
+    :goto_0
+    const/4 v2, -0x1
 
-    move-result-object v10
+    if-eqz p1, :cond_1
 
-    invoke-direct {v4, v10}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v6, v4}, Ltr;->l(Ljava/util/Collection;)Z
-
-    iget v4, v0, Lr1e;->c:I
-
-    sub-int/2addr v4, v7
-
-    :goto_1
-    if-ltz v4, :cond_4
-
-    invoke-virtual {v0, v4}, Lr1e;->i(I)Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Ljava/lang/String;
-
-    invoke-virtual {v6, v10}, Lr1e;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v10
-
-    if-nez v10, :cond_2
-
-    invoke-virtual {v0, v4}, Lr1e;->g(I)Ljava/lang/Object;
-
-    :cond_2
-    add-int/lit8 v4, v4, -0x1
-
-    goto :goto_1
-
-    :cond_3
-    :goto_2
-    invoke-virtual {v0}, Lr1e;->clear()V
-
-    move-object v6, v9
-
-    :cond_4
-    if-eqz v6, :cond_5
-
-    invoke-virtual {v6}, Ltr;->values()Ljava/util/Collection;
-
-    move-result-object v4
-
-    invoke-virtual {p0, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_5
-    iget-object v3, v5, Lixd;->v0:Lfef;
-
-    if-eqz v3, :cond_7
-
-    iget-object v3, v3, Lfef;->Y:Ljava/util/ArrayList;
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v3, v5, Lixd;->v0:Lfef;
-
-    iget-object v3, v3, Lfef;->Y:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, p0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    iget-object v3, v5, Lixd;->v0:Lfef;
-
-    invoke-static {v3, v2, p0}, Lw48;->x(Lfef;Ljava/util/List;Ljava/util/List;)V
-
-    iget-object p0, v5, Lixd;->u0:Lfef;
-
-    if-eqz p0, :cond_6
-
-    iget p0, v0, Lr1e;->c:I
-
-    if-lez p0, :cond_6
-
-    if-eqz v6, :cond_6
-
-    invoke-virtual {v0, v8}, Lr1e;->i(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-virtual {v6, p0}, Lr1e;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    move-object v9, p0
-
-    check-cast v9, Landroid/view/View;
-
-    :cond_6
-    if-eqz v9, :cond_7
-
-    check-cast v1, Landroid/graphics/Rect;
-
-    if-eqz v1, :cond_7
-
-    const/4 p0, 0x2
-
-    new-array p0, p0, [I
-
-    invoke-virtual {v9, p0}, Landroid/view/View;->getLocationOnScreen([I)V
-
-    aget v0, p0, v8
-
-    aget v2, p0, v7
-
-    invoke-virtual {v9}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p2}, Ledb;->x()I
 
     move-result v3
 
-    add-int/2addr v3, v0
+    iget v4, p2, Ledb;->b:I
 
-    aget p0, p0, v7
+    add-int/2addr v4, v3
 
-    invoke-virtual {v9}, Landroid/view/View;->getHeight()I
+    goto :goto_1
 
-    move-result v4
+    :cond_1
+    move v4, v2
 
-    add-int/2addr v4, p0
+    :goto_1
+    iget-boolean v3, p0, Ldxd;->f:Z
 
-    invoke-virtual {v1, v0, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
+    if-eqz v3, :cond_3
 
-    :cond_7
+    if-nez p1, :cond_2
+
+    goto/16 :goto_5
+
+    :cond_2
+    iput-boolean v1, p0, Ldxd;->f:Z
+
+    invoke-virtual {p2, v4}, Ledb;->J(I)V
+
+    iput v1, p0, Ldxd;->d:I
+
+    :cond_3
+    :goto_2
+    invoke-virtual {p2}, Ledb;->a()I
+
+    move-result p1
+
+    if-lez p1, :cond_9
+
+    iget p1, p0, Ldxd;->d:I
+
+    const/4 v3, 0x3
+
+    iget-object v4, p0, Ldxd;->b:Ledb;
+
+    if-ge p1, v3, :cond_6
+
+    if-nez p1, :cond_4
+
+    invoke-virtual {p2}, Ledb;->x()I
+
+    move-result p1
+
+    iget v5, p2, Ledb;->b:I
+
+    sub-int/2addr v5, v0
+
+    invoke-virtual {p2, v5}, Ledb;->J(I)V
+
+    const/16 v5, 0xff
+
+    if-ne p1, v5, :cond_4
+
+    iput-boolean v0, p0, Ldxd;->f:Z
+
     return-void
 
-    :pswitch_0
-    check-cast v1, Ljava/util/List;
+    :cond_4
+    invoke-virtual {p2}, Ledb;->a()I
 
-    iget-object v0, v5, Lixd;->u0:Lfef;
+    move-result p1
 
-    if-eqz v0, :cond_a
+    iget v5, p0, Ldxd;->d:I
 
-    invoke-virtual {v0, v4}, Lfef;->F(Landroid/view/View;)V
+    rsub-int/lit8 v5, v5, 0x3
 
-    iget-object v0, v5, Lixd;->u0:Lfef;
+    invoke-static {p1, v5}, Ljava/lang/Math;->min(II)I
 
-    new-instance v6, Ljava/util/ArrayList;
+    move-result p1
 
-    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+    iget-object v5, v4, Ledb;->a:[B
+
+    iget v6, p0, Ldxd;->d:I
+
+    invoke-virtual {p2, v6, v5, p1}, Ledb;->h(I[BI)V
+
+    iget v5, p0, Ldxd;->d:I
+
+    add-int/2addr v5, p1
+
+    iput v5, p0, Ldxd;->d:I
+
+    if-ne v5, v3, :cond_3
+
+    invoke-virtual {v4, v1}, Ledb;->J(I)V
+
+    invoke-virtual {v4, v3}, Ledb;->I(I)V
+
+    invoke-virtual {v4, v0}, Ledb;->K(I)V
+
+    invoke-virtual {v4}, Ledb;->x()I
+
+    move-result p1
+
+    invoke-virtual {v4}, Ledb;->x()I
+
+    move-result v5
+
+    and-int/lit16 v6, p1, 0x80
+
+    if-eqz v6, :cond_5
+
+    move v6, v0
+
+    goto :goto_3
+
+    :cond_5
+    move v6, v1
+
+    :goto_3
+    iput-boolean v6, p0, Ldxd;->e:Z
+
+    and-int/lit8 p1, p1, 0xf
+
+    shl-int/lit8 p1, p1, 0x8
+
+    or-int/2addr p1, v5
+
+    add-int/2addr p1, v3
+
+    iput p1, p0, Ldxd;->c:I
+
+    iget-object v3, v4, Ledb;->a:[B
+
+    array-length v5, v3
+
+    if-ge v5, p1, :cond_3
+
+    array-length v3, v3
+
+    mul-int/lit8 v3, v3, 0x2
+
+    invoke-static {p1, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    const/16 v3, 0x1002
+
+    invoke-static {v3, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    invoke-virtual {v4, p1}, Ledb;->c(I)V
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {p2}, Ledb;->a()I
+
+    move-result p1
+
+    iget v3, p0, Ldxd;->c:I
+
+    iget v5, p0, Ldxd;->d:I
+
+    sub-int/2addr v3, v5
+
+    invoke-static {p1, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    iget-object v3, v4, Ledb;->a:[B
+
+    iget v5, p0, Ldxd;->d:I
+
+    invoke-virtual {p2, v5, v3, p1}, Ledb;->h(I[BI)V
+
+    iget v3, p0, Ldxd;->d:I
+
+    add-int/2addr v3, p1
+
+    iput v3, p0, Ldxd;->d:I
+
+    iget p1, p0, Ldxd;->c:I
+
+    if-ne v3, p1, :cond_3
+
+    iget-boolean v3, p0, Ldxd;->e:Z
 
     if-eqz v3, :cond_8
 
-    invoke-static {v6, v3}, Lixd;->n(Ljava/util/ArrayList;Landroid/view/View;)V
+    iget-object v3, v4, Ledb;->a:[B
 
-    :cond_8
-    invoke-virtual {v6, p0}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
+    invoke-static {v1, p1, v2, v3}, Lnig;->m(III[B)I
 
-    invoke-virtual {v6}, Ljava/util/ArrayList;->isEmpty()Z
+    move-result p1
 
-    move-result p0
+    if-eqz p1, :cond_7
 
-    if-nez p0, :cond_9
+    iput-boolean v0, p0, Ldxd;->f:Z
 
-    invoke-virtual {v6, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v0, v6}, Lw48;->c(Lfef;Ljava/util/ArrayList;)V
-
-    :cond_9
-    invoke-virtual {v2, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    :cond_a
-    if-eqz v1, :cond_c
-
-    iget-object p0, v5, Lixd;->t0:Lfef;
-
-    if-eqz p0, :cond_b
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, v5, Lixd;->t0:Lfef;
-
-    invoke-static {v0, v1, p0}, Lw48;->x(Lfef;Ljava/util/List;Ljava/util/List;)V
-
-    :cond_b
-    invoke-interface {v1}, Ljava/util/List;->clear()V
-
-    invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_c
     return-void
 
-    nop
+    :cond_7
+    iget p1, p0, Ldxd;->c:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    add-int/lit8 p1, p1, -0x4
+
+    invoke-virtual {v4, p1}, Ledb;->I(I)V
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {v4, p1}, Ledb;->I(I)V
+
+    :goto_4
+    invoke-virtual {v4, v1}, Ledb;->J(I)V
+
+    iget-object p1, p0, Ldxd;->a:Lbxd;
+
+    invoke-interface {p1, v4}, Lbxd;->d(Ledb;)V
+
+    iput v1, p0, Ldxd;->d:I
+
+    goto/16 :goto_2
+
+    :cond_9
+    :goto_5
+    return-void
 .end method

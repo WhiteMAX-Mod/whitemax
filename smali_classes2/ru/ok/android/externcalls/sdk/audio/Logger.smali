@@ -14,7 +14,7 @@
         "",
         "tag",
         "message",
-        "Lylf;",
+        "Lccg;",
         "v",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "",

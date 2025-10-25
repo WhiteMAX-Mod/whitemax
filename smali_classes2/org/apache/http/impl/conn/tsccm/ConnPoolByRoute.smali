@@ -102,13 +102,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Connection operator may not be null"
+    const-string p2, "Connection operator may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -182,24 +182,24 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-object v0
 
     :catchall_0
     move-exception p1
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p2, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method
 
 .method public createFreeConnQueue()Ljava/util/Queue;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -209,15 +209,15 @@
         }
     .end annotation
 
-    new-instance p0, Ljava/util/LinkedList;
+    new-instance v0, Ljava/util/LinkedList;
 
-    invoke-direct {p0}, Ljava/util/LinkedList;-><init>()V
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createRouteToPoolMap()Ljava/util/Map;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -228,15 +228,15 @@
         }
     .end annotation
 
-    new-instance p0, Ljava/util/HashMap;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createWaitingThreadQueue()Ljava/util/Queue;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -246,11 +246,11 @@
         }
     .end annotation
 
-    new-instance p0, Ljava/util/LinkedList;
+    new-instance v0, Ljava/util/LinkedList;
 
-    invoke-direct {p0}, Ljava/util/LinkedList;-><init>()V
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public deleteClosedConnections()V
@@ -305,16 +305,16 @@
     goto :goto_1
 
     :cond_1
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
     :goto_1
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0
 .end method
@@ -419,16 +419,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
     :goto_1
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method
@@ -479,16 +479,16 @@
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
     :goto_1
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0
 .end method
@@ -557,9 +557,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :goto_0
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
@@ -619,9 +619,9 @@
     goto :goto_0
 
     :goto_2
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p2, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method
@@ -657,16 +657,16 @@
 
     :cond_0
     :goto_0
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return v0
 
     :goto_1
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method
@@ -1065,16 +1065,16 @@
 
     :cond_c
     :goto_4
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-object v1
 
     :goto_5
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p2, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method
@@ -1280,16 +1280,16 @@
     goto/16 :goto_0
 
     :goto_3
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p2, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 
     :cond_5
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-object v0
 .end method
@@ -1333,16 +1333,16 @@
 
     :cond_0
     :goto_0
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-object v0
 
     :goto_1
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p2, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method
@@ -1392,44 +1392,44 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
     :goto_1
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method
 
 .method public newRouteSpecificPool(Lorg/apache/http/conn/routing/HttpRoute;)Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/ConnPoolByRoute;->connPerRoute:Lorg/apache/http/conn/params/ConnPerRoute;
+    iget-object v1, p0, Lorg/apache/http/impl/conn/tsccm/ConnPoolByRoute;->connPerRoute:Lorg/apache/http/conn/params/ConnPerRoute;
 
-    invoke-interface {p0, p1}, Lorg/apache/http/conn/params/ConnPerRoute;->getMaxForRoute(Lorg/apache/http/conn/routing/HttpRoute;)I
+    invoke-interface {v1, p1}, Lorg/apache/http/conn/params/ConnPerRoute;->getMaxForRoute(Lorg/apache/http/conn/routing/HttpRoute;)I
 
-    move-result p0
+    move-result v1
 
-    invoke-direct {v0, p1, p0}, Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;-><init>(Lorg/apache/http/conn/routing/HttpRoute;I)V
+    invoke-direct {v0, p1, v1}, Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;-><init>(Lorg/apache/http/conn/routing/HttpRoute;I)V
 
     return-object v0
 .end method
 
 .method public newWaitingThread(Ljava/util/concurrent/locks/Condition;Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;)Lorg/apache/http/impl/conn/tsccm/WaitingThread;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/conn/tsccm/WaitingThread;
+    new-instance v0, Lorg/apache/http/impl/conn/tsccm/WaitingThread;
 
-    invoke-direct {p0, p1, p2}, Lorg/apache/http/impl/conn/tsccm/WaitingThread;-><init>(Ljava/util/concurrent/locks/Condition;Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;)V
+    invoke-direct {v0, p1, p2}, Lorg/apache/http/impl/conn/tsccm/WaitingThread;-><init>(Ljava/util/concurrent/locks/Condition;Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public notifyWaitingThread(Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;)V
@@ -1555,16 +1555,16 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :cond_5
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
     :goto_2
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p1
 .end method
@@ -1660,16 +1660,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
     :goto_2
-    iget-object p0, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v1, p0, Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;->poolLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0
 .end method

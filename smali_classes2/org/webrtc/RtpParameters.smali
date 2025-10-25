@@ -97,7 +97,7 @@
 
 # virtual methods
 .method public getCodecs()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -110,23 +110,23 @@
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters;->codecs:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters;->codecs:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getDegradationPreference()Lorg/webrtc/RtpParameters$DegradationPreference;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters;->degradationPreference:Lorg/webrtc/RtpParameters$DegradationPreference;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters;->degradationPreference:Lorg/webrtc/RtpParameters$DegradationPreference;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getEncodings()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -139,13 +139,13 @@
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters;->encodings:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters;->encodings:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getHeaderExtensions()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -158,27 +158,27 @@
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters;->headerExtensions:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters;->headerExtensions:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getRtcp()Lorg/webrtc/RtpParameters$Rtcp;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters;->rtcp:Lorg/webrtc/RtpParameters$Rtcp;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters;->rtcp:Lorg/webrtc/RtpParameters$Rtcp;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getTransactionId()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters;->transactionId:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters;->transactionId:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

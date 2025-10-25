@@ -1,45 +1,49 @@
 .class public final Lfxa;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lpxe;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Z
+.field public final synthetic Y:Lmxa;
 
-.field public final c:Lqwe;
+.field public Z:I
 
-.field public volatile d:J
+.field public o:Ljava/nio/file/Path;
 
 
 # direct methods
-.method public constructor <init>(Lpxe;ZLqwe;)V
+.method public constructor <init>(Lmxa;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfxa;->Y:Lmxa;
 
-    iput-object p1, p0, Lfxa;->a:Lpxe;
-
-    iput-boolean p2, p0, Lfxa;->b:Z
-
-    iput-object p3, p0, Lfxa;->c:Lqwe;
-
-    sget p1, Lzi7;->a:I
-
-    sget p1, Lfy4;->o:I
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p1
-
-    sget-object p3, Lky4;->c:Lky4;
-
-    invoke-static {p1, p2, p3}, Lr94;->c0(JLky4;)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lfxa;->d:J
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lfxa;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lfxa;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lfxa;->Z:I
+
+    iget-object p1, p0, Lfxa;->Y:Lmxa;
+
+    invoke-virtual {p1, p0}, Lmxa;->a(Ly14;)Ljava/lang/Comparable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

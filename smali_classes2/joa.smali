@@ -1,150 +1,398 @@
 .class public final Ljoa;
-.super Landroidx/appcompat/widget/AppCompatImageView;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public o:F
+.field public final a:Lv5;
 
-.field public r0:Landroid/graphics/Path;
+.field public final b:Liu7;
 
-.field public s0:I
+.field public final c:Liu7;
 
-.field public final t0:Landroid/graphics/Paint;
+.field public final d:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method public constructor <init>(Liu7;Liu7;Lv5;Liu7;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput-object p3, p0, Ljoa;->a:Lv5;
 
-    sget-object p1, Lyu4;->t0:Lbx9;
+    iput-object p1, p0, Ljoa;->b:Liu7;
 
-    invoke-virtual {p1, p0}, Lbx9;->l(Landroid/view/View;)Lera;
+    iput-object p2, p0, Ljoa;->c:Liu7;
 
-    move-result-object p1
-
-    invoke-interface {p1}, Lera;->g()Lytf;
-
-    const/high16 p1, 0x29000000
-
-    iput p1, p0, Ljoa;->s0:I
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iput-object p1, p0, Ljoa;->t0:Landroid/graphics/Paint;
-
-    new-instance p1, Lxc0;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x1a
-
-    invoke-direct {p1, v1, v0, v2}, Lxc0;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {p1, p0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
+    iput-object p4, p0, Ljoa;->d:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 6
+.method public final a()Lx5;
+    .locals 1
 
-    iget-object v0, p0, Ljoa;->r0:Landroid/graphics/Path;
+    iget-object v0, p0, Ljoa;->c:Liu7;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    check-cast v0, Lx5;
 
-    move-result v1
+    return-object v0
+.end method
 
-    int-to-float v1, v1
+.method public final b()Lpxb;
+    .locals 1
 
-    iget v2, p0, Ljoa;->o:F
+    iget-object v0, p0, Ljoa;->b:Liu7;
 
-    div-float/2addr v1, v2
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    move-result-object v0
 
-    move-result-object v2
+    check-cast v0, Lpxb;
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    return-object v0
+.end method
 
-    move-result-object v2
+.method public final c()Lyr0;
+    .locals 4
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {p0}, Ljoa;->d()Z
 
-    mul-float/2addr v1, v2
+    move-result v0
 
-    invoke-virtual {p1, v1, v1}, Landroid/graphics/Canvas;->scale(FF)V
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {p0}, Ljoa;->b()Lpxb;
 
     move-result-object v1
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    check-cast v1, Lrxb;
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    iget-object v1, v1, Lrxb;->d:Ld80;
 
-    mul-float/2addr v1, v2
+    iget-object v1, v1, Lw3;->h:Llu7;
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    const-string v2, "auth.account.external"
 
     const/4 v3, 0x0
 
-    mul-float/2addr v2, v3
+    invoke-virtual {v1, v2, v3}, Llu7;->getBoolean(Ljava/lang/String;Z)Z
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    move-result v1
 
-    move-result-object v4
+    new-instance v2, Lyr0;
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    if-eqz v0, :cond_0
 
-    move-result-object v4
+    if-eqz v1, :cond_0
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    iget v3, p0, Ljoa;->s0:I
-
-    iget-object v5, p0, Ljoa;->t0:Landroid/graphics/Paint;
-
-    invoke-virtual {v5, v1, v2, v4, v3}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
-
-    invoke-virtual {p1, v0, v5}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    invoke-virtual {v5}, Landroid/graphics/Paint;->clearShadowLayer()V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+    const/4 v3, 0x1
 
     :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-direct {v2, v0, v3}, Lyr0;-><init>(ZZ)V
+
+    return-object v2
+.end method
+
+.method public final d()Z
+    .locals 4
+
+    invoke-virtual {p0}, Ljoa;->b()Lpxb;
+
+    move-result-object v0
+
+    check-cast v0, Lrxb;
+
+    iget-object v0, v0, Lrxb;->a:Ld78;
+
+    invoke-virtual {v0}, Lntd;->s()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, -0x1
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Ljoa;->b()Lpxb;
+
+    move-result-object v0
+
+    check-cast v0, Lrxb;
+
+    iget-object v0, v0, Lrxb;->d:Ld80;
+
+    const/4 v1, 0x0
+
+    iget-object v0, v0, Lw3;->h:Llu7;
+
+    const-string v2, "auth.token"
+
+    invoke-virtual {v0, v2, v1}, Llu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Ljoa;->a()Lx5;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lx5;->a()Landroid/accounts/Account;
+
+    iget-object v0, v0, Lx5;->a:Lv5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_2
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final e()Z
+    .locals 3
+
+    invoke-virtual {p0}, Ljoa;->d()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ljoa;->b()Lpxb;
+
+    move-result-object v0
+
+    check-cast v0, Lrxb;
+
+    iget-object v0, v0, Lrxb;->d:Ld80;
+
+    const-string v2, "auth.account.external"
+
+    iget-object v0, v0, Lw3;->h:Llu7;
+
+    invoke-virtual {v0, v2, v1}, Llu7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    return v1
+.end method
+
+.method public final f()Ljava/lang/String;
+    .locals 4
+
+    invoke-virtual {p0}, Ljoa;->b()Lpxb;
+
+    move-result-object v0
+
+    check-cast v0, Lrxb;
+
+    iget-object v0, v0, Lrxb;->a:Ld78;
+
+    invoke-virtual {v0}, Lntd;->s()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Ljoa;->b()Lpxb;
+
+    move-result-object v0
+
+    check-cast v0, Lrxb;
+
+    iget-object v0, v0, Lrxb;->d:Ld80;
+
+    iget-object v0, v0, Lw3;->h:Llu7;
+
+    const-string v2, "auth.token"
+
+    invoke-virtual {v0, v2, v1}, Llu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0}, Ljoa;->b()Lpxb;
+
+    move-result-object v0
+
+    check-cast v0, Lrxb;
+
+    iget-object v0, v0, Lrxb;->d:Ld80;
+
+    iget-object v0, v0, Lw3;->h:Llu7;
+
+    invoke-virtual {v0, v2, v1}, Llu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
+
+    :cond_2
+    :goto_0
+    invoke-virtual {p0}, Ljoa;->a()Lx5;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lx5;->a()Landroid/accounts/Account;
+
+    iget-object v0, v0, Lx5;->a:Lv5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_3
+    :goto_1
+    return-object v1
+.end method
+
+.method public final g(Z)V
+    .locals 4
+
+    const-string v0, "joa"
+
+    const-string v1, "removeAccount"
+
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljoa;->b()Lpxb;
+
+    move-result-object v0
+
+    check-cast v0, Lrxb;
+
+    iget-object v0, v0, Lrxb;->d:Ld80;
+
+    invoke-virtual {v0}, Ld80;->c()V
+
+    invoke-virtual {p0}, Ljoa;->a()Lx5;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lx5;->b()V
+
+    if-eqz p1, :cond_0
+
+    sget p1, Lh5e;->o:I
+
+    iget-object p1, p0, Ljoa;->d:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltph;
+
+    invoke-virtual {p0}, Ljoa;->e()Z
+
+    move-result v0
+
+    sget v1, Lu35;->o:I
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v1
+
+    sget-object v3, Lz35;->b:Lz35;
+
+    invoke-static {v1, v2, v3}, Ltzi;->e(JLz35;)J
+
+    move-result-wide v1
+
+    sput-wide v1, Lh5e;->c:J
+
+    new-instance v1, Lh5e;
+
+    invoke-direct {v1, v0}, Lh5e;-><init>(Z)V
+
+    invoke-virtual {p1, v1}, Ltph;->b(Lr4e;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h(Ljava/lang/String;Z)V
+    .locals 2
+
+    invoke-virtual {p0}, Ljoa;->b()Lpxb;
+
+    move-result-object v0
+
+    check-cast v0, Lrxb;
+
+    iget-object v0, v0, Lrxb;->d:Ld80;
+
+    invoke-virtual {p0}, Ljoa;->a()Lx5;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lx5;->a()Landroid/accounts/Account;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p1, p2}, Ld80;->k(Landroid/accounts/Account;Ljava/lang/String;Z)V
+
+    invoke-virtual {p0}, Ljoa;->a()Lx5;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method

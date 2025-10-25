@@ -1,69 +1,63 @@
 .class public final Lj58;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:D
+.field public X:Ljava/util/ArrayList;
 
-.field public b:D
+.field public Y:Ljava/util/LinkedHashMap;
 
-.field public c:Z
+.field public Z:J
 
-.field public d:Z
+.field public o:Lk58;
 
-.field public e:Z
+.field public q0:I
 
-.field public f:I
+.field public r0:I
 
-.field public g:F
+.field public s0:I
 
-.field public h:F
+.field public synthetic t0:Ljava/lang/Object;
 
-.field public i:F
+.field public final synthetic u0:Lk58;
+
+.field public v0:I
 
 
 # direct methods
-.method public constructor <init>(Lj58;)V
-    .locals 2
+.method public constructor <init>(Lk58;Ly14;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lj58;->u0:Lk58;
 
-    iget-wide v0, p1, Lj58;->a:D
-
-    iput-wide v0, p0, Lj58;->a:D
-
-    iget-wide v0, p1, Lj58;->b:D
-
-    iput-wide v0, p0, Lj58;->b:D
-
-    iget-boolean v0, p1, Lj58;->c:Z
-
-    iput-boolean v0, p0, Lj58;->c:Z
-
-    iget-boolean v0, p1, Lj58;->d:Z
-
-    iput-boolean v0, p0, Lj58;->d:Z
-
-    iget-boolean v0, p1, Lj58;->e:Z
-
-    iput-boolean v0, p0, Lj58;->e:Z
-
-    iget v0, p1, Lj58;->f:I
-
-    iput v0, p0, Lj58;->f:I
-
-    iget v0, p1, Lj58;->g:F
-
-    iput v0, p0, Lj58;->g:F
-
-    iget v0, p1, Lj58;->h:F
-
-    iput v0, p0, Lj58;->h:F
-
-    iget p1, p1, Lj58;->i:F
-
-    iput p1, p0, Lj58;->i:F
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lj58;->t0:Ljava/lang/Object;
+
+    iget p1, p0, Lj58;->v0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lj58;->v0:I
+
+    iget-object p1, p0, Lj58;->u0:Lk58;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lk58;->V0(Ljava/util/ArrayList;Ly14;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

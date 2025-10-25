@@ -1,132 +1,168 @@
-.class public final Lkd2;
-.super Lure;
+.class public final synthetic Lkd2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lr6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lld2;
+.field public final synthetic b:J
 
-.field public final synthetic Z:Lmd2;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lld2;Lmd2;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
     .locals 0
 
-    iput-object p1, p0, Lkd2;->Y:Lld2;
+    iput p4, p0, Lkd2;->a:I
 
-    iput-object p2, p0, Lkd2;->Z:Lmd2;
+    iput-object p1, p0, Lkd2;->c:Ljava/lang/Object;
 
-    const/4 p1, 0x2
+    iput-wide p2, p0, Lkd2;->b:J
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 7
 
-    check-cast p1, Ly04;
+    iget v0, p0, Lkd2;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-wide v1, p0, Lkd2;->b:J
 
-    invoke-virtual {p0, p1, p2}, Lkd2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v3, p0, Lkd2;->c:Ljava/lang/Object;
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lkd2;
+    check-cast v3, Lso5;
 
-    sget-object p1, Lylf;->a:Lylf;
+    iget-object v0, v3, Lso5;->a:Lll;
 
-    invoke-virtual {p0, p1}, Lkd2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v3, 0x5
 
-    move-result-object p0
+    check-cast v0, Lmna;
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v3, v1, v2}, Lmna;->f(IJ)J
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    return-void
 
-    new-instance p1, Lkd2;
+    :pswitch_0
+    check-cast v3, Lat3;
 
-    iget-object v0, p0, Lkd2;->Y:Lld2;
+    iget-object v0, v3, Lat3;->h:Lpxb;
 
-    iget-object p0, p0, Lkd2;->Z:Lmd2;
+    check-cast v0, Lrxb;
 
-    invoke-direct {p1, v0, p0, p2}, Lkd2;-><init>(Lld2;Lmd2;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, v0, Lrxb;->a:Ld78;
 
-    return-object p1
-.end method
+    invoke-virtual {v0}, Lntd;->j()J
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    move-result-wide v4
 
-    iget v0, p0, Lkd2;->X:I
+    new-instance v0, Lb10;
 
-    const/4 v1, 0x1
+    const/16 v6, 0xa
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, v4, v5, v6}, Lb10;-><init>(JI)V
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v3, v1, v2, v0}, Lat3;->c(JLsr3;)Lwr3;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    return-void
 
-    goto :goto_0
+    :pswitch_1
+    check-cast v3, Lsd2;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-virtual {v3}, Lsd2;->e()V
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    new-instance v0, Lb60;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 v4, 0x2
 
-    throw p0
+    invoke-direct {v0, v3, v1, v2, v4}, Lb60;-><init>(Ljava/lang/Object;JI)V
 
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const-string v4, "localRemoveChat"
 
-    iget-object p1, p0, Lkd2;->Y:Lld2;
+    invoke-virtual {v3, v4, v0}, Lsd2;->b0(Ljava/lang/String;Ljava/lang/Runnable;)V
 
-    invoke-virtual {p1}, Lrl;->p()Lrh9;
+    iget-object v0, v3, Lsd2;->k:Lpw4;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lpw4;->get()Ljava/lang/Object;
 
-    sget v0, Lfy4;->o:I
+    move-result-object v0
 
-    const/4 v0, 0x2
+    check-cast v0, Lpc4;
 
-    sget-object v2, Lky4;->o:Lky4;
+    check-cast v0, Lwb4;
 
-    invoke-static {v0, v2}, Lr94;->b0(ILky4;)J
+    iget-object v0, v0, Lwb4;->b:Lcgd;
 
-    move-result-wide v2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput v1, p0, Lkd2;->X:I
+    new-instance v4, Lagd;
 
-    iget-object v0, p0, Lkd2;->Z:Lmd2;
+    const/4 v5, 0x1
 
-    invoke-virtual {p1, v0, v2, v3, p0}, Lrh9;->O(Lmd2;JLjx3;)Ljava/lang/Object;
+    invoke-direct {v4, v0, v1, v2, v5}, Lagd;-><init>(Lcgd;JI)V
 
-    move-result-object p0
+    iget-object v0, v0, Lcgd;->a:Lggd;
 
-    sget-object p1, Lz04;->a:Lz04;
+    invoke-virtual {v0}, Lggd;->m()Lfgd;
 
-    if-ne p0, p1, :cond_2
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
 
-    :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    new-instance v5, Lbgd;
 
-    return-object p0
+    const/4 v6, 0x0
+
+    invoke-direct {v5, v6, v4}, Lbgd;-><init>(ILji6;)V
+
+    invoke-virtual {v0, v5}, Lfgd;->o(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+
+    iget-object v0, v3, Lsd2;->r:Lpw4;
+
+    invoke-virtual {v0}, Lpw4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnb9;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v3, "nb9"
+
+    const-string v4, "deleteMessages %d, all!"
+
+    invoke-static {v3, v4}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v0, Lnb9;->a:Lpc4;
+
+    check-cast v0, Lwb4;
+
+    iget-object v0, v0, Lwb4;->c:Ltgd;
+
+    invoke-virtual {v0}, Ltgd;->d()Lij9;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v2}, Lij9;->f(J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

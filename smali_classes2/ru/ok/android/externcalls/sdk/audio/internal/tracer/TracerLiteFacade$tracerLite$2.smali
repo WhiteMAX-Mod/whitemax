@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;
-.super Lnk7;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lji6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lnk7;",
-        "Lzb6;"
+        "Lst7;",
+        "Lji6;"
     }
 .end annotation
 
@@ -28,9 +28,9 @@
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lzaf;",
+        "Lv0g;",
         "invoke",
-        "()Lzaf;",
+        "()Lv0g;",
         "<anonymous>"
     }
     k = 0x3
@@ -54,7 +54,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lnk7;-><init>(I)V
+    invoke-direct {p0, p1}, Lst7;-><init>(I)V
 
     return-void
 .end method
@@ -62,55 +62,55 @@
 
 # virtual methods
 .method public bridge synthetic invoke()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->invoke()Lzaf;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->invoke()Lv0g;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final invoke()Lzaf;
-    .locals 3
+.method public final invoke()Lv0g;
+    .locals 4
 
     .line 2
-    new-instance v0, Lzaf;
+    new-instance v0, Lv0g;
 
     .line 3
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->$context:Landroid/content/Context;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->$context:Landroid/content/Context;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v1
 
     .line 4
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;
+    sget-object v2, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;
 
     .line 5
-    new-instance v2, Lxaf;
+    new-instance v3, Lt0g;
 
-    invoke-direct {v2}, Lxaf;-><init>()V
+    invoke-direct {v3}, Lt0g;-><init>()V
 
-    invoke-interface {v1, v2}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v3}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 6
-    new-instance v1, Lzab;
+    new-instance v2, Lvxe;
 
-    invoke-direct {v1, v2}, Lzab;-><init>(Lxaf;)V
+    invoke-direct {v2, v3}, Lvxe;-><init>(Lt0g;)V
 
     .line 7
-    const-string v2, "ru.ok.android.externcalls.sdk.audio"
+    const-string v3, "ru.ok.android.externcalls.sdk.audio"
 
-    invoke-direct {v0, p0, v2, v1}, Lzaf;-><init>(Landroid/content/Context;Ljava/lang/String;Lzab;)V
+    invoke-direct {v0, v1, v3, v2}, Lv0g;-><init>(Landroid/content/Context;Ljava/lang/String;Lvxe;)V
 
     .line 8
-    const-string p0, "calls-audiomanager-version"
+    const-string v1, "calls-audiomanager-version"
 
-    const-string v1, "3.1.15"
+    const-string v2, "3.1.17"
 
-    invoke-virtual {v0, p0, v1}, Lzaf;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lv0g;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method

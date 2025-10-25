@@ -28,27 +28,27 @@
 
 # virtual methods
 .method public getAuthScheme()Lorg/apache/http/auth/AuthScheme;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/AuthState;->authScheme:Lorg/apache/http/auth/AuthScheme;
+    iget-object v0, p0, Lorg/apache/http/auth/AuthState;->authScheme:Lorg/apache/http/auth/AuthScheme;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getAuthScope()Lorg/apache/http/auth/AuthScope;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/AuthState;->authScope:Lorg/apache/http/auth/AuthScope;
+    iget-object v0, p0, Lorg/apache/http/auth/AuthState;->authScope:Lorg/apache/http/auth/AuthScope;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getCredentials()Lorg/apache/http/auth/Credentials;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/AuthState;->credentials:Lorg/apache/http/auth/Credentials;
+    iget-object v0, p0, Lorg/apache/http/auth/AuthState;->credentials:Lorg/apache/http/auth/Credentials;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public invalidate()V
@@ -66,20 +66,20 @@
 .end method
 
 .method public isValid()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/auth/AuthState;->authScheme:Lorg/apache/http/auth/AuthScheme;
+    iget-object v0, p0, Lorg/apache/http/auth/AuthState;->authScheme:Lorg/apache/http/auth/AuthScheme;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public setAuthScheme(Lorg/apache/http/auth/AuthScheme;)V
@@ -114,7 +114,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -130,23 +130,23 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lorg/apache/http/auth/AuthState;->credentials:Lorg/apache/http/auth/Credentials;
+    iget-object v1, p0, Lorg/apache/http/auth/AuthState;->credentials:Lorg/apache/http/auth/Credentials;
 
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
 
-    const-string p0, "true"
+    const-string v1, "true"
 
     goto :goto_0
 
     :cond_0
-    const-string p0, "false"
+    const-string v1, "false"
 
     :goto_0
-    const-string v1, "]"
+    const-string v2, "]"
 
-    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

@@ -22,7 +22,7 @@
         "",
         "Ljava/lang/Runnable;",
         "action",
-        "Lylf;",
+        "Lccg;",
         "post",
         "(Ljava/lang/Runnable;)V",
         "",

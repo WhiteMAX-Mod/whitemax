@@ -26,11 +26,11 @@
 # instance fields
 .field public final a:Ljava/lang/Class;
 
-.field public final b:Ln6d;
+.field public final b:Lppd;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Class;Ln6d;)V
+.method public constructor <init>(Ljava/lang/Class;Lppd;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -39,7 +39,7 @@
 
     iput-object p1, p0, Lscout/exception/MissingObjectFactoryException;->a:Ljava/lang/Class;
 
-    iput-object p2, p0, Lscout/exception/MissingObjectFactoryException;->b:Ln6d;
+    iput-object p2, p0, Lscout/exception/MissingObjectFactoryException;->b:Lppd;
 
     return-void
 .end method
@@ -47,15 +47,15 @@
 
 # virtual methods
 .method public final getCause()Ljava/lang/Throwable;
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getMessage()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -87,31 +87,31 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lscout/exception/MissingObjectFactoryException;->b:Ln6d;
+    iget-object v1, p0, Lscout/exception/MissingObjectFactoryException;->b:Lppd;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "\nTree of scopes:"
+    const-string v3, "\nTree of scopes:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-static {v1, p0, v2}, Ln6d;->a(Ljava/lang/StringBuilder;Ln6d;I)V
+    invoke-static {v2, v1, v3}, Lppd;->a(Ljava/lang/StringBuilder;Lppd;I)V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

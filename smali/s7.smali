@@ -1,45 +1,34 @@
-.class public abstract Ls7;
+.class public final Ls7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfaa;
+
+
+# static fields
+.field public static final a:Ls7;
+
 
 # direct methods
-.method public static a(Landroid/app/Activity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/app/Activity;->finishAfterTransition()V
+    new-instance v0, Ls7;
 
-    return-void
-.end method
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.method public static b(Landroid/app/Activity;)V
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Activity;->postponeEnterTransition()V
+    sput-object v0, Ls7;->a:Ls7;
 
     return-void
 .end method
 
-.method public static c(Landroid/app/Activity;Landroid/app/SharedElementCallback;)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->setEnterSharedElementCallback(Landroid/app/SharedElementCallback;)V
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-void
-.end method
+    const-string v0, "Active"
 
-.method public static d(Landroid/app/Activity;Landroid/app/SharedElementCallback;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->setExitSharedElementCallback(Landroid/app/SharedElementCallback;)V
-
-    return-void
-.end method
-
-.method public static e(Landroid/app/Activity;)V
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Activity;->startPostponedEnterTransition()V
-
-    return-void
+    return-object v0
 .end method

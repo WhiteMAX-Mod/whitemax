@@ -18,25 +18,25 @@
 .end method
 
 .method public getEncoderSelector()Lorg/webrtc/VideoEncoderFactory$VideoEncoderSelector;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getImplementations()[Lorg/webrtc/VideoCodecInfo;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
     invoke-interface {p0}, Lorg/webrtc/VideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public abstract getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;

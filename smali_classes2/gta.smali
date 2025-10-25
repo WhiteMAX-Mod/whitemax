@@ -1,109 +1,61 @@
-.class public final enum Lgta;
-.super Ljava/lang/Enum;
+.class public final Lgta;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lgta;
+# instance fields
+.field public X:Lpb9;
 
-.field public static final synthetic Y:[Lgta;
+.field public Y:Lsz;
 
-.field public static final enum a:Lgta;
+.field public Z:Lh10;
 
-.field public static final enum b:Lgta;
+.field public o:Lota;
 
-.field public static final enum c:Lgta;
+.field public q0:Z
 
-.field public static final enum o:Lgta;
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Lota;
+
+.field public t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lota;Ly14;)V
+    .locals 0
 
-    new-instance v0, Lgta;
+    iput-object p1, p0, Lgta;->s0:Lota;
 
-    const-string v1, "SOURCE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lgta;->a:Lgta;
-
-    new-instance v1, Lgta;
-
-    const-string v2, "RENDERER"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lgta;->b:Lgta;
-
-    new-instance v2, Lgta;
-
-    const-string v3, "UNEXPECTED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lgta;->c:Lgta;
-
-    new-instance v3, Lgta;
-
-    const-string v4, "REMOTE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lgta;->o:Lgta;
-
-    new-instance v4, Lgta;
-
-    const-string v5, "UNKNOWN"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lgta;->X:Lgta;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lgta;
-
-    move-result-object v0
-
-    sput-object v0, Lgta;->Y:[Lgta;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lgta;
-    .locals 1
 
-    const-class v0, Lgta;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Lgta;->r0:Ljava/lang/Object;
 
-    move-result-object p0
+    iget p1, p0, Lgta;->t0:I
 
-    check-cast p0, Lgta;
+    const/high16 v0, -0x80000000
 
-    return-object p0
-.end method
+    or-int/2addr p1, v0
 
-.method public static values()[Lgta;
-    .locals 1
+    iput p1, p0, Lgta;->t0:I
 
-    sget-object v0, Lgta;->Y:[Lgta;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    iget-object v1, p0, Lgta;->s0:Lota;
 
-    check-cast v0, [Lgta;
+    invoke-virtual {v1, p1, p1, v0, p0}, Lota;->b(Lpb9;Lsz;ZLy14;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method

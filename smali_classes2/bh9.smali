@@ -1,28 +1,28 @@
 .class public final Lbh9;
-.super Lure;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lsx;
+.field public final synthetic X:Ljh9;
 
-.field public final synthetic Y:Lkd8;
+.field public final synthetic Y:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Lsx;Lkd8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljh9;Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lbh9;->X:Lsx;
+    iput-object p1, p0, Lbh9;->X:Ljh9;
 
-    iput-object p2, p0, Lbh9;->Y:Lkd8;
+    iput-object p2, p0, Lbh9;->Y:Ljava/lang/CharSequence;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,130 +32,117 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ly04;
+    check-cast p1, Lq54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lbh9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lbh9;
+    check-cast p1, Lbh9;
 
-    sget-object p1, Lylf;->a:Lylf;
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p0, p1}, Lbh9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lbh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
-
-    return-object p0
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance p1, Lbh9;
 
-    iget-object v0, p0, Lbh9;->X:Lsx;
+    iget-object v0, p0, Lbh9;->X:Ljh9;
 
-    iget-object p0, p0, Lbh9;->Y:Lkd8;
+    iget-object v1, p0, Lbh9;->Y:Ljava/lang/CharSequence;
 
-    invoke-direct {p1, v0, p0, p2}, Lbh9;-><init>(Lsx;Lkd8;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, v1, p2}, Lbh9;-><init>(Ljh9;Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Lbh9;->X:Ljh9;
 
-    :try_start_0
-    iget-object v0, p0, Lbh9;->X:Lsx;
+    iget-object v0, p1, Ljh9;->b:Lq0f;
 
-    invoke-virtual {v0}, Lsx;->d()[B
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-object p0
-
-    :catchall_0
-    move-exception v0
-
-    iget-object p0, p0, Lbh9;->Y:Lkd8;
-
-    invoke-virtual {p0}, Lkd8;->c()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, "load failed"
-
-    invoke-static {p0, v1, v0}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object p1
-
-    :catch_0
-    move-exception p0
-
-    throw p0
-
-    :catch_1
-    move-exception p0
-
-    throw p0
-
-    :catch_2
-    iget-object v0, p0, Lbh9;->Y:Lkd8;
-
-    invoke-virtual {v0}, Lkd8;->c()Ljava/lang/String;
+    invoke-interface {v0}, Lq0f;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object p0, p0, Lbh9;->X:Lsx;
+    check-cast v0, Lla2;
 
-    sget-object v1, Ljtg;->g:Loja;
+    if-eqz v0, :cond_0
 
-    if-nez v1, :cond_0
+    iget-object v0, v0, Lla2;->b:Lne2;
+
+    iget-wide v0, v0, Lne2;->a:J
+
+    new-instance v2, Ljava/lang/Long;
+
+    invoke-direct {v2, v0, v1}, Ljava/lang/Long;-><init>(J)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lqz7;->o:Lqz7;
+    const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Loja;->a(Lqz7;)Z
+    :goto_0
+    iget-object v0, p0, Lbh9;->Y:Ljava/lang/CharSequence;
 
-    move-result v3
+    if-eqz v0, :cond_3
 
-    if-eqz v3, :cond_1
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
-    iget-object p0, p0, Lsx;->c:Ljava/io/File;
+    move-result v0
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    const-string v4, "file "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, " not found"
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, v2, v0, p0, p1}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_1
 
     :cond_1
-    :goto_0
+    if-eqz v2, :cond_3
+
+    iget-object p1, p1, Ljh9;->v0:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v3, p1
+
+    check-cast v3, Lrab;
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    const-wide/16 v0, 0x0
+
+    cmp-long p1, v4, v0
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v6, 0x0
+
+    const-wide/16 v7, 0x0
+
+    invoke-virtual/range {v3 .. v8}, Lrab;->f(JLa10;J)V
+
+    :cond_3
+    :goto_1
+    sget-object p1, Lccg;->a:Lccg;
+
     return-object p1
 .end method

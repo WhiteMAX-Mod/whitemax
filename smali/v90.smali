@@ -2,81 +2,52 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Li17;
-
 
 # instance fields
-.field public final a:Ldwe;
+.field public final a:Ljava/util/concurrent/Executor;
 
-.field public final b:J
-
-.field public final c:I
-
-.field public final d:Landroid/graphics/Matrix;
+.field public final b:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Ldwe;JILandroid/graphics/Matrix;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_1
 
-    iput-object p1, p0, Lv90;->a:Ldwe;
+    iput-object p1, p0, Lv90;->a:Ljava/util/concurrent/Executor;
 
-    iput-wide p2, p0, Lv90;->b:J
+    if-eqz p2, :cond_0
 
-    iput p4, p0, Lv90;->c:I
-
-    if-eqz p5, :cond_0
-
-    iput-object p5, p0, Lv90;->d:Landroid/graphics/Matrix;
+    iput-object p2, p0, Lv90;->b:Landroid/os/Handler;
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p1, "Null sensorToBufferTransformMatrix"
+    const-string p2, "Null schedulerHandler"
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p1, "Null tagBundle"
+    const-string p2, "Null cameraExecutor"
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final d(Lwa5;)V
-    .locals 0
-
-    iget p0, p0, Lv90;->c:I
-
-    invoke-virtual {p1, p0}, Lwa5;->d(I)V
-
-    return-void
-.end method
-
-.method public final e()Ldwe;
-    .locals 0
-
-    iget-object p0, p0, Lv90;->a:Ldwe;
-
-    return-object p0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -93,9 +64,9 @@
 
     check-cast p1, Lv90;
 
-    iget-object v1, p0, Lv90;->a:Ldwe;
+    iget-object v1, p0, Lv90;->a:Ljava/util/concurrent/Executor;
 
-    iget-object v3, p1, Lv90;->a:Ldwe;
+    iget-object v3, p1, Lv90;->a:Ljava/util/concurrent/Executor;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -103,29 +74,15 @@
 
     if-eqz v1, :cond_1
 
-    iget-wide v3, p0, Lv90;->b:J
+    iget-object v1, p0, Lv90;->b:Landroid/os/Handler;
 
-    iget-wide v5, p1, Lv90;->b:J
+    iget-object p1, p1, Lv90;->b:Landroid/os/Handler;
 
-    cmp-long v1, v3, v5
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_1
+    move-result p1
 
-    iget v1, p0, Lv90;->c:I
-
-    iget v3, p1, Lv90;->c:I
-
-    if-ne v1, v3, :cond_1
-
-    iget-object p0, p0, Lv90;->d:Landroid/graphics/Matrix;
-
-    iget-object p1, p1, Lv90;->d:Landroid/graphics/Matrix;
-
-    invoke-virtual {p0, p1}, Landroid/graphics/Matrix;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
 
     return v0
 
@@ -133,18 +90,10 @@
     return v2
 .end method
 
-.method public final getTimestamp()J
+.method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Lv90;->b:J
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 7
-
-    iget-object v0, p0, Lv90;->a:Ldwe;
+    iget-object v0, p0, Lv90;->a:Ljava/util/concurrent/Executor;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -156,81 +105,45 @@
 
     mul-int/2addr v0, v1
 
-    const/16 v2, 0x20
+    iget-object v1, p0, Lv90;->b:Landroid/os/Handler;
 
-    iget-wide v3, p0, Lv90;->b:J
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    ushr-long v5, v3, v2
+    move-result v1
 
-    xor-long v2, v5, v3
+    xor-int/2addr v0, v1
 
-    long-to-int v2, v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lv90;->c:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object p0, p0, Lv90;->d:Landroid/graphics/Matrix;
-
-    invoke-virtual {p0}, Landroid/graphics/Matrix;->hashCode()I
-
-    move-result p0
-
-    xor-int/2addr p0, v0
-
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ImmutableImageInfo{tagBundle="
+    const-string v1, "CameraThreadConfig{cameraExecutor="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lv90;->a:Ldwe;
+    iget-object v1, p0, Lv90;->a:Ljava/util/concurrent/Executor;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", timestamp="
+    const-string v1, ", schedulerHandler="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lv90;->b:J
+    iget-object v1, p0, Lv90;->b:Landroid/os/Handler;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", rotationDegrees="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lv90;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sensorToBufferTransformMatrix="
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lv90;->d:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

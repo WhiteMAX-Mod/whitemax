@@ -78,7 +78,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;JLru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;ILld4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;JLru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;ILki4;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x8
@@ -114,22 +114,22 @@
 
     if-nez v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_0
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     check-cast p1, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final getFinishTimeMs()J
@@ -141,37 +141,37 @@
 .end method
 
 .method public final getKey()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->key:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->key:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getParticipantId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getSource()Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->source:Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->source:Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;->hashCode()I
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;->hashCode()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method

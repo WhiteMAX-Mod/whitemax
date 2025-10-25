@@ -1,280 +1,184 @@
 .class public final Lfg6;
-.super Lure;
+.super Lpk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public final c:Lpmg;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lqg6;
+.field public final d:J
 
 
 # direct methods
-.method public constructor <init>(Lqg6;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lpmg;J)V
     .locals 0
 
-    iput-object p1, p0, Lfg6;->Z:Lqg6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lfg6;->c:Lpmg;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Lfg6;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Landroid/graphics/Bitmap;Lmsb;)Lda3;
+    .locals 10
 
-    check-cast p1, Ly04;
+    iget-object v0, p0, Lfg6;->c:Lpmg;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast v0, Lpl0;
 
-    invoke-virtual {p0, p1, p2}, Lfg6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lpl0;->f:Lyy;
 
-    move-result-object p0
+    if-nez v1, :cond_0
 
-    check-cast p0, Lfg6;
+    const-string v0, "No video collage"
 
-    sget-object p1, Lylf;->a:Lylf;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1}, Lfg6;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "fg6"
 
-    move-result-object p0
+    invoke-static {v2, v0, v1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object p0
-.end method
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    new-instance v0, Lfg6;
+    move-result v7
 
-    iget-object p0, p0, Lfg6;->Z:Lqg6;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    invoke-direct {v0, p0, p2}, Lfg6;-><init>(Lqg6;Lkotlin/coroutines/Continuation;)V
+    move-result v8
 
-    iput-object p1, v0, Lfg6;->Y:Ljava/lang/Object;
+    const/4 v9, 0x0
 
-    return-object v0
-.end method
+    const/4 v5, 0x0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+    const/4 v6, 0x0
 
-    iget-object v0, p0, Lfg6;->Z:Lqg6;
+    move-object v4, p1
 
-    iget-object v1, v0, Lqg6;->y0:Lyce;
+    move-object v3, p2
 
-    iget v2, p0, Lfg6;->X:I
+    invoke-virtual/range {v3 .. v9}, Lmsb;->b(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;)Lhi4;
 
-    const/4 v3, 0x2
+    move-result-object p1
 
-    const/4 v4, 0x1
-
-    const-string v5, "qg6"
-
-    sget-object v6, Lylf;->a:Lylf;
-
-    const/4 v7, 0x0
-
-    sget-object v8, Lz04;->a:Lz04;
-
-    if-eqz v2, :cond_2
-
-    if-eq v2, v4, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    iget-object p0, p0, Lfg6;->Y:Ljava/lang/Object;
-
-    check-cast p0, Ly04;
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto/16 :goto_2
+    return-object p1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    move-object v4, p1
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    move-object v3, p2
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget p1, v1, Lyy;->o:I
 
-    throw p0
+    iget p2, v1, Lyy;->X:I
 
-    :cond_1
-    iget-object v2, p0, Lfg6;->Y:Ljava/lang/Object;
+    iget-wide v5, v0, Lpl0;->a:J
 
-    check-cast v2, Ly04;
+    long-to-int v0, v5
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    div-int/2addr v0, p2
 
-    move-object v11, v2
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-object v2, p1
+    move-result v2
 
-    move-object p1, v11
+    div-int/2addr v2, p1
 
-    goto :goto_0
+    iget-wide v5, p0, Lfg6;->d:J
 
-    :cond_2
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    long-to-int v5, v5
 
-    iget-object p1, p0, Lfg6;->Y:Ljava/lang/Object;
+    div-int/2addr v5, v0
 
-    check-cast p1, Ly04;
+    add-int/lit8 p2, p2, -0x1
 
-    const-string v2, "loadMoreItems(): loadingItemsJob start"
+    invoke-static {v5, p2}, Ljava/lang/Math;->min(II)I
 
-    invoke-static {v5, v2}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v0
 
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    rem-int/2addr v0, v2
 
-    invoke-virtual {v1, v7, v2}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    mul-int/2addr v0, p1
 
-    iget-object v2, v0, Lqg6;->A0:Lyce;
+    invoke-static {v5, p2}, Ljava/lang/Math;->min(II)I
 
-    invoke-virtual {v2}, Lyce;->getValue()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object v2
+    div-int/2addr p1, v2
 
-    check-cast v2, Lse6;
+    iget v5, v1, Lyy;->c:I
 
-    if-nez v2, :cond_3
+    mul-int/2addr p1, v5
 
-    goto :goto_3
+    iget p2, v1, Lyy;->o:I
 
-    :cond_3
-    iget-object v9, v0, Lqg6;->X:Lnx7;
+    const/4 v6, 0x0
 
-    iget-object v10, v0, Lqg6;->x0:Lnf6;
+    move v2, v0
 
-    iget v10, v10, Lnf6;->b:I
+    move-object v0, v3
 
-    iput-object p1, p0, Lfg6;->Y:Ljava/lang/Object;
+    move-object v1, v4
 
-    iput v4, p0, Lfg6;->X:I
+    move v3, p1
 
-    check-cast v9, Lr57;
+    move v4, p2
 
-    invoke-virtual {v9, v2, v10, p0}, Lr57;->c(Lse6;ILure;)Ljava/lang/Object;
+    invoke-virtual/range {v0 .. v6}, Lmsb;->b(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;)Lhi4;
 
-    move-result-object v2
+    move-result-object p1
 
-    if-ne v2, v8, :cond_4
+    return-object p1
+.end method
 
-    goto :goto_1
+.method public final b()Lmy0;
+    .locals 5
 
-    :cond_4
-    :goto_0
-    check-cast v2, Lmx7;
+    new-instance v0, Lcpe;
 
-    sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-virtual {v1, v7, v4}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v1, p0, Lfg6;->c:Lpmg;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    check-cast v1, Lpl0;
 
-    const-string v4, "loadMoreItems(): get result "
+    iget-wide v1, v1, Lpl0;->e:J
 
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v3, "videoId="
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v4, ", millis="
+
+    invoke-static {v1, v2, v3, v4}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lfg6;->d:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v5, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcpe;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lb0b;->r(Ly04;)Z
+    return-object v0
+.end method
 
-    move-result v1
+.method public final getName()Ljava/lang/String;
+    .locals 1
 
-    if-nez v1, :cond_5
+    const-class v0, Lfg6;
 
-    goto :goto_3
-
-    :cond_5
-    instance-of v1, v2, Lkx7;
-
-    if-eqz v1, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    instance-of v1, v2, Llx7;
-
-    if-eqz v1, :cond_9
-
-    check-cast v2, Llx7;
-
-    iget-object v1, v2, Llx7;->a:Ljava/util/List;
-
-    iput-object p1, p0, Lfg6;->Y:Ljava/lang/Object;
-
-    iput v3, p0, Lfg6;->X:I
-
-    invoke-static {v0, v1, p0}, Lqg6;->q(Lqg6;Ljava/util/List;Ljx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v8, :cond_7
-
-    :goto_1
-    return-object v8
-
-    :cond_7
-    move-object v11, p1
-
-    move-object p1, p0
-
-    move-object p0, v11
-
-    :goto_2
-    check-cast p1, Ljava/util/List;
-
-    invoke-static {p0}, Lb0b;->r(Ly04;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_8
-
-    :goto_3
-    return-object v6
-
-    :cond_8
-    iget-object p0, v0, Lqg6;->v0:Lyce;
-
-    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Collection;
-
-    invoke-static {v0, p1}, Lq73;->r0(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v7, p1}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    const-string p0, "loadMoreItems(): loadingItemsJob finish"
-
-    invoke-static {v5, p0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v6
-
-    :cond_9
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    return-object v0
 .end method

@@ -1,87 +1,98 @@
-.class public final enum Lnr;
-.super Ljava/lang/Enum;
+.class public final synthetic Lnr;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lype;
-.implements Lqc6;
+.implements Lli6;
 
 
-# static fields
-.field public static final enum a:Lnr;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic b:[Lnr;
+.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;I)V
+    .locals 0
 
-    new-instance v0, Lnr;
+    iput p2, p0, Lnr;->a:I
 
-    const-string v1, "INSTANCE"
+    iput-object p1, p0, Lnr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lnr;->a:Lnr;
-
-    filled-new-array {v0}, [Lnr;
-
-    move-result-object v0
-
-    sput-object v0, Lnr;->b:[Lnr;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lnr;
-    .locals 1
-
-    const-class v0, Lnr;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lnr;
-
-    return-object p0
-.end method
-
-.method public static values()[Lnr;
-    .locals 1
-
-    sget-object v0, Lnr;->b:[Lnr;
-
-    invoke-virtual {v0}, [Lnr;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lnr;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    new-instance p0, Ljava/util/ArrayList;
+    iget v0, p0, Lnr;->a:I
 
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    iget-object v1, p0, Lnr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    return-object p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final get()Ljava/lang/Object;
-    .locals 0
+    check-cast p1, Ljava/lang/Integer;
 
-    new-instance p0, Ljava/util/ArrayList;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    move-result p1
 
-    return-object p0
+    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:Li76;
+
+    invoke-virtual {v0}, Li76;->j()I
+
+    move-result v1
+
+    if-gtz v1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0, p1}, Lr18;->C(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ly18;
+
+    check-cast p1, Lhtf;
+
+    iget-boolean p1, p1, Lhtf;->a:Z
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->q0:[Ltr7;
+
+    invoke-virtual {v1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->C0()Lgs;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lgs;->E0:Lxe5;
+
+    sget-object v0, Ls93;->b:Ls93;
+
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,128 +1,101 @@
-.class public final Luh3;
-.super Lure;
+.class public final synthetic Luh3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lvh3;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Z
-
-.field public final synthetic Z:J
+.field public final synthetic b:Landroidx/fragment/app/b;
 
 
 # direct methods
-.method public constructor <init>(Lvh3;ZJLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
     .locals 0
 
-    iput-object p1, p0, Luh3;->X:Lvh3;
+    iput p2, p0, Luh3;->a:I
 
-    iput-boolean p2, p0, Luh3;->Y:Z
+    iput-object p1, p0, Luh3;->b:Landroidx/fragment/app/b;
 
-    iput-wide p3, p0, Luh3;->Z:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Luh3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Luh3;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Luh3;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
-
-    new-instance v0, Luh3;
-
-    iget-boolean v2, p0, Luh3;->Y:Z
-
-    iget-wide v3, p0, Luh3;->Z:J
-
-    iget-object v1, p0, Luh3;->X:Lvh3;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Luh3;-><init>(Lvh3;ZJLkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 3
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget v0, p0, Luh3;->a:I
 
-    iget-object p1, p0, Luh3;->X:Lvh3;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p1, Lvh3;->c:Lcl7;
+    iget-object v0, p0, Luh3;->b:Landroidx/fragment/app/b;
 
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+    :try_start_0
+    invoke-static {v0}, Lei3;->s(Landroidx/fragment/app/b;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
+    goto :goto_0
 
-    check-cast v0, Lf53;
+    :catch_0
+    move-exception v0
 
-    check-cast v0, Lh53;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    const-string v1, "app.call.add.dontshowconfirmation"
+    const-string v2, "Attempt to invoke virtual method \'android.os.Handler android.app.FragmentHostCallback.getHandler()\' on a null object reference"
 
-    iget-boolean v2, p0, Luh3;->Y:Z
+    invoke-static {v1, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1, v2}, Li3;->h(Ljava/lang/String;Z)V
+    move-result v1
 
-    iget-object p1, p1, Lvh3;->Y:Lv85;
+    if-eqz v1, :cond_0
 
-    sget-object v0, Lue1;->c:Lue1;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    throw v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :catch_1
+    move-exception v0
 
-    const-string v1, ":profile/add-members?chat_id="
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    iget-wide v1, p0, Luh3;->Z:J
+    const-string v2, "Can not perform this action after onSaveInstanceState"
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string p0, "&is_chat=true"
+    move-result v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_0
+    return-void
 
-    move-result-object p0
+    :cond_1
+    throw v0
 
-    invoke-static {p0, p1}, Lsg0;->l(Ljava/lang/String;Lv85;)V
+    :pswitch_0
+    iget-object v0, p0, Luh3;->b:Landroidx/fragment/app/b;
 
-    sget-object p0, Lylf;->a:Lylf;
+    invoke-virtual {v0}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
-    return-object p0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -4,264 +4,118 @@
 
 
 # instance fields
-.field public A:Ljava/util/ArrayList;
+.field public final a:J
 
-.field public B:Lpb2;
-
-.field public C:Lmb2;
-
-.field public D:Ljava/lang/String;
-
-.field public E:Lxq5;
-
-.field public F:I
-
-.field public G:Ljava/lang/String;
-
-.field public H:Ljava/util/List;
-
-.field public I:I
-
-.field public J:Ljb2;
-
-.field public K:J
-
-.field public L:Z
-
-.field public M:Z
-
-.field public N:Z
-
-.field public O:J
-
-.field public P:I
-
-.field public Q:Ltr;
-
-.field public R:I
-
-.field public S:Lf00;
-
-.field public T:J
-
-.field public U:I
-
-.field public V:J
-
-.field public W:I
-
-.field public X:J
-
-.field public Y:J
-
-.field public Z:Lqq0;
-
-.field public a:J
-
-.field public a0:J
-
-.field public b:Lub2;
-
-.field public b0:Lxga;
-
-.field public c:Ltb2;
-
-.field public c0:J
-
-.field public d:J
-
-.field public d0:J
-
-.field public e:Ljava/util/Map;
-
-.field public e0:Z
-
-.field public f:J
-
-.field public f0:Ljava/util/Map;
-
-.field public g:Ljava/lang/String;
-
-.field public g0:J
-
-.field public h:Ljava/lang/String;
-
-.field public h0:Z
-
-.field public i:Ljava/lang/String;
-
-.field public i0:Lqb2;
-
-.field public j:J
-
-.field public j0:J
-
-.field public k:J
-
-.field public k0:Ljava/lang/String;
-
-.field public l:J
-
-.field public l0:J
-
-.field public m:I
-
-.field public m0:J
-
-.field public n:Lob2;
-
-.field public n0:I
-
-.field public o:Llb2;
-
-.field public p:Lhb2;
-
-.field public q:Lhb2;
-
-.field public r:Lhb2;
-
-.field public s:Lhb2;
-
-.field public t:Lhb2;
-
-.field public u:Lhb2;
-
-.field public v:Lhb2;
-
-.field public w:J
-
-.field public x:Ljava/util/ArrayList;
-
-.field public y:Ljava/util/List;
-
-.field public z:J
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lob2;
+    iput-wide p1, p0, Leb2;->a:J
 
-    invoke-direct {v0}, Lob2;-><init>()V
-
-    iput-object v0, p0, Leb2;->n:Lob2;
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Leb2;->n0:I
-
-    new-instance v0, Ltr;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lr1e;-><init>(I)V
-
-    iput-object v0, p0, Leb2;->Q:Ltr;
-
-    sget-object v0, Lqq0;->c:Lqq0;
-
-    iput-object v0, p0, Leb2;->Z:Lqq0;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Leb2;->i0:Lqb2;
+    iput-object p3, p0, Leb2;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfb2;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Leb2;->A:Ljava/util/ArrayList;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Leb2;->A:Ljava/util/ArrayList;
+    return v0
 
     :cond_0
-    iget-object p0, p0, Leb2;->A:Ljava/util/ArrayList;
+    instance-of v1, p1, Leb2;
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const/4 v2, 0x0
 
-    return-void
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Leb2;
+
+    iget-wide v3, p0, Leb2;->a:J
+
+    iget-wide v5, p1, Leb2;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Leb2;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Leb2;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final b()Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Leb2;->A:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Leb2;->A:Ljava/util/ArrayList;
-
-    :cond_0
-    iget-object p0, p0, Leb2;->A:Ljava/util/ArrayList;
-
-    return-object p0
-.end method
-
-.method public final c()Ljava/util/Map;
+.method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Leb2;->e:Ljava/util/Map;
+    iget-wide v0, p0, Leb2;->a:J
 
-    if-nez v0, :cond_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    new-instance v0, Ltr;
+    move-result v0
 
-    const/4 v1, 0x2
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-direct {v0, v1}, Lr1e;-><init>(I)V
+    iget-object v1, p0, Leb2;->b:Ljava/lang/String;
 
-    iput-object v0, p0, Leb2;->e:Ljava/util/Map;
-
-    :cond_0
-    iget-object p0, p0, Leb2;->e:Ljava/util/Map;
-
-    return-object p0
-.end method
-
-.method public final d(Ljava/util/Map;)V
-    .locals 2
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Ltr;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0}, Lr1e;-><init>(I)V
-
-    iput-object p1, p0, Leb2;->Q:Ltr;
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ltr;
-
-    invoke-interface {p1}, Ljava/util/Map;->size()I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lr1e;-><init>(I)V
+    add-int/2addr v1, v0
 
-    iput-object v0, p0, Leb2;->Q:Ltr;
+    return v1
+.end method
 
-    invoke-virtual {v0, p1}, Ltr;->putAll(Ljava/util/Map;)V
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    return-void
+    const-string v0, "ChatAndFolderCrossRef(chatId="
+
+    const-string v1, ", folderId="
+
+    iget-wide v2, p0, Leb2;->a:J
+
+    iget-object v4, p0, Leb2;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

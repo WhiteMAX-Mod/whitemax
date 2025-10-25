@@ -1,59 +1,60 @@
-.class public final Lyie;
-.super Lx2;
+.class public final synthetic Lyie;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
 
-# static fields
-.field public static final c:Lyie;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Laje;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Laje;I)V
+    .locals 0
 
-    new-instance v0, Lyie;
+    iput p2, p0, Lyie;->a:I
 
-    const/16 v1, 0x8
+    iput-object p1, p0, Lyie;->b:Laje;
 
-    invoke-direct {v0, v1}, Lx2;-><init>(I)V
-
-    sput-object v0, Lyie;->c:Lyie;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final W0(Landroid/content/Intent;Ljava/lang/String;)V
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p0}, Lx2;->F0()Lza4;
+    iget v0, p0, Lyie;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lpxa;
+    iget-object v0, p0, Lyie;->b:Laje;
 
-    const-string v1, "oneme:share:data"
+    invoke-static {v0}, Laje;->i(Laje;)Landroid/graphics/drawable/ShapeDrawable;
 
-    invoke-direct {v0, v1, p1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v0
 
-    new-instance p1, Lpxa;
+    return-object v0
 
-    const-string v1, "tag"
+    :pswitch_0
+    iget-object v0, p0, Lyie;->b:Laje;
 
-    invoke-direct {p1, v1, p2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v0}, Laje;->b(Laje;)Landroid/graphics/drawable/RippleDrawable;
 
-    filled-new-array {v0, p1}, [Lpxa;
+    move-result-object v0
 
-    move-result-object p1
+    return-object v0
 
-    invoke-static {p1}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
+    nop
 
-    move-result-object p1
-
-    const-string p2, ":chats/share"
-
-    invoke-virtual {p0, p2, p1}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

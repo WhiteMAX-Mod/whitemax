@@ -1,81 +1,64 @@
 .class public final Luk9;
-.super Loi0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyk9;
 
-# instance fields
-.field public final X:Ljava/util/List;
 
-.field public final b:J
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final o:Ljava/util/List;
+# static fields
+.field public static final a:Luk9;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/ArrayList;Ljava/util/List;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Loi0;-><init>(J)V
+    new-instance v0, Luk9;
 
-    iput-wide p3, p0, Luk9;->b:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p5, p0, Luk9;->c:Ljava/util/ArrayList;
-
-    iput-object p6, p0, Luk9;->o:Ljava/util/List;
-
-    iput-object p7, p0, Luk9;->X:Ljava/util/List;
+    sput-object v0, Luk9;->a:Luk9;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Luk9;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x2b56aa18
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "HideSearch"
 
-    const-string v1, "MsgGetEvent{serverChatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Luk9;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", serverMessageIds="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Luk9;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messages="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Luk9;->o:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", requestedMessageIds="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Luk9;->X:Ljava/util/List;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

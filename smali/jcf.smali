@@ -1,165 +1,275 @@
-.class public final Ljcf;
-.super Ljava/lang/Object;
+.class public final enum Ljcf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lgcf;
 
 
 # static fields
-.field public static final d:Ljcf;
+.field public static final enum a:Ljcf;
 
-.field public static final e:Ljava/lang/String;
-
-.field public static final f:Ljava/lang/String;
-
-.field public static final g:Ljava/lang/String;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:Z
-
-.field public final c:Z
+.field public static final synthetic b:[Ljcf;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Ljcf;
+
+    const-string v1, "CANCELLED"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ljcf;->a:Ljcf;
+
+    filled-new-array {v0}, [Ljcf;
+
+    move-result-object v0
+
+    sput-object v0, Ljcf;->b:[Ljcf;
+
+    return-void
+.end method
+
+.method public static a(Ljava/util/concurrent/atomic/AtomicReference;)V
     .locals 2
 
-    new-instance v0, Loq9;
-
-    invoke-direct {v0}, Loq9;-><init>()V
-
-    new-instance v1, Ljcf;
-
-    invoke-direct {v1, v0}, Ljcf;-><init>(Loq9;)V
-
-    sput-object v1, Ljcf;->d:Ljcf;
-
-    sget v0, Lnrf;->a:I
-
-    const/4 v0, 0x1
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    sput-object v0, Ljcf;->e:Ljava/lang/String;
+    check-cast v0, Lgcf;
 
-    const/4 v0, 0x2
+    sget-object v1, Ljcf;->a:Ljcf;
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    if-eq v0, v1, :cond_0
 
-    move-result-object v0
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sput-object v0, Ljcf;->f:Ljava/lang/String;
+    move-result-object p0
 
-    const/4 v0, 0x3
+    check-cast p0, Lgcf;
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    if-eq p0, v1, :cond_0
 
-    move-result-object v0
+    if-eqz p0, :cond_0
 
-    sput-object v0, Ljcf;->g:Ljava/lang/String;
+    invoke-interface {p0}, Lgcf;->cancel()V
 
+    :cond_0
     return-void
 .end method
 
-.method public constructor <init>(Loq9;)V
+.method public static c(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;J)V
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lgcf;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p2, p3}, Lgcf;->i(J)V
+
+    return-void
+
+    :cond_0
+    invoke-static {p2, p3}, Ljcf;->e(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1, p2, p3}, Liji;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lgcf;
+
+    if-eqz p0, :cond_1
+
+    const-wide/16 p2, 0x0
+
+    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
+
+    move-result-wide v0
+
+    cmp-long p1, v0, p2
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p0, v0, v1}, Lgcf;->i(J)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public static d(Ljava/util/concurrent/atomic/AtomicReference;Lgcf;)Z
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "s is null"
 
-    iget v0, p1, Loq9;->a:I
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    iput v0, p0, Ljcf;->a:I
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-boolean v0, p1, Loq9;->b:Z
+    invoke-virtual {p0, v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iput-boolean v0, p0, Ljcf;->b:Z
+    move-result v0
 
-    iget-boolean p1, p1, Loq9;->c:Z
+    if-eqz v0, :cond_1
 
-    iput-boolean p1, p0, Ljcf;->c:Z
+    const/4 p0, 0x1
 
-    return-void
+    return p0
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Lgcf;->cancel()V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Ljcf;->a:Ljcf;
+
+    if-eq p0, p1, :cond_2
+
+    new-instance p0, Lio/reactivex/rxjava3/exceptions/ProtocolViolationException;
+
+    const-string p1, "Subscription already set!"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
+.method public static e(J)Z
+    .locals 2
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const-wide/16 v0, 0x0
 
-    const/4 v0, 0x1
+    cmp-long v0, p0, v0
 
-    if-ne p0, p1, :cond_0
+    if-gtz v0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "n > 0 required but it was "
+
+    invoke-static {p0, p1, v1}, Lrv8;->d(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static f(Lgcf;Lgcf;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "next is null"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Liyi;->a(Ljava/lang/Throwable;)V
 
     return v0
 
     :cond_0
-    const/4 v1, 0x0
+    if-eqz p0, :cond_1
 
-    if-eqz p1, :cond_2
+    invoke-interface {p1}, Lgcf;->cancel()V
 
-    const-class v2, Ljcf;
+    new-instance p0, Lio/reactivex/rxjava3/exceptions/ProtocolViolationException;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string p1, "Subscription already set!"
 
-    move-result-object v3
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eq v2, v3, :cond_1
+    invoke-static {p0}, Liyi;->a(Ljava/lang/Throwable;)V
 
-    goto :goto_0
+    return v0
 
     :cond_1
-    check-cast p1, Ljcf;
+    const/4 p0, 0x1
 
-    iget v2, p0, Ljcf;->a:I
-
-    iget v3, p1, Ljcf;->a:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean v2, p0, Ljcf;->b:Z
-
-    iget-boolean v3, p1, Ljcf;->b:Z
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean p0, p0, Ljcf;->c:Z
-
-    iget-boolean p1, p1, Ljcf;->c:Z
-
-    if-ne p0, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
+    return p0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)Ljcf;
+    .locals 1
 
-    iget v0, p0, Ljcf;->a:I
+    const-class v0, Ljcf;
 
-    const/16 v1, 0x1f
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    add-int/2addr v0, v1
+    move-result-object p0
 
-    mul-int/2addr v0, v1
+    check-cast p0, Ljcf;
 
-    iget-boolean v2, p0, Ljcf;->b:Z
+    return-object p0
+.end method
 
-    add-int/2addr v0, v2
+.method public static values()[Ljcf;
+    .locals 1
 
-    mul-int/2addr v0, v1
+    sget-object v0, Ljcf;->b:[Ljcf;
 
-    iget-boolean p0, p0, Ljcf;->c:Z
+    invoke-virtual {v0}, [Ljcf;->clone()Ljava/lang/Object;
 
-    add-int/2addr v0, p0
+    move-result-object v0
 
-    return v0
+    check-cast v0, [Ljcf;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final cancel()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final i(J)V
+    .locals 0
+
+    return-void
 .end method

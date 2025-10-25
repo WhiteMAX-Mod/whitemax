@@ -26,11 +26,11 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 0
 
-    sget p1, Lcom/google/android/material/timepicker/TimePickerView;->G0:I
+    sget p1, Lcom/google/android/material/timepicker/TimePickerView;->F0:I
 
-    iget-object p0, p0, Lcom/google/android/material/timepicker/e;->a:Lcom/google/android/material/timepicker/TimePickerView;
+    iget-object p1, p0, Lcom/google/android/material/timepicker/e;->a:Lcom/google/android/material/timepicker/TimePickerView;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method

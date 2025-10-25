@@ -1,90 +1,299 @@
 .class public final Lvv5;
-.super Lk2e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lld6;
+.implements Lfla;
 
 
 # instance fields
-.field public final a:Lrv5;
+.field public final synthetic a:I
 
-.field public final b:Lid6;
-
-.field public final c:Lpl0;
+.field public final synthetic b:Landroidx/fragment/app/DialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Lrv5;Lid6;Lpl0;)V
+.method public synthetic constructor <init>(Landroidx/fragment/app/DialogFragment;I)V
     .locals 0
 
+    iput p2, p0, Lvv5;->a:I
+
+    iput-object p1, p0, Lvv5;->b:Landroidx/fragment/app/DialogFragment;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvv5;->a:Lrv5;
-
-    iput-object p2, p0, Lvv5;->b:Lid6;
-
-    iput-object p3, p0, Lvv5;->c:Lpl0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lrv5;
-    .locals 4
+.method public final a(Ljava/lang/Object;)V
+    .locals 10
 
-    new-instance v0, Ltv5;
+    iget v0, p0, Lvv5;->a:I
 
-    iget-object v1, p0, Lvv5;->c:Lpl0;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x0
+    check-cast p1, Lfx7;
 
-    iget-object v3, p0, Lvv5;->a:Lrv5;
+    if-eqz p1, :cond_2
 
-    iget-object p0, p0, Lvv5;->b:Lid6;
+    iget-object p1, p0, Lvv5;->b:Landroidx/fragment/app/DialogFragment;
 
-    invoke-direct {v0, v3, p0, v1, v2}, Ltv5;-><init>(Lrv5;Lid6;Ljava/lang/Object;I)V
+    iget-boolean v0, p1, Landroidx/fragment/app/DialogFragment;->o1:Z
 
-    return-object v0
-.end method
+    if-eqz v0, :cond_2
 
-.method public final l(Le3e;)V
-    .locals 3
+    invoke-virtual {p1}, Landroidx/fragment/app/a;->u0()Landroid/view/View;
 
-    :try_start_0
-    iget-object v0, p0, Lvv5;->b:Lid6;
+    move-result-object v0
 
-    iget-object v0, v0, Lid6;->a:Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    const-string v1, "The initialSupplier returned a null value"
+    move-result-object v1
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez v1, :cond_1
 
-    new-instance v1, Luv5;
+    iget-object v1, p1, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
 
-    iget-object v2, p0, Lvv5;->c:Lpl0;
+    if-eqz v1, :cond_2
 
-    invoke-direct {v1, p1, v0, v2}, Luv5;-><init>(Le3e;Ljava/lang/Object;Lpl0;)V
+    const/4 v1, 0x3
 
-    iget-object p0, p0, Lvv5;->a:Lrv5;
+    invoke-static {v1}, Landroidx/fragment/app/c;->L(I)Z
 
-    invoke-virtual {p0, v1}, Lrv5;->c(Lbx5;)V
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "DialogFragment "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " setting the content view on "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p1, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "FragmentManager"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object p1, p1, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
+
+    invoke-virtual {p1, v0}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "DialogFragment can not be attached to a container view"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/CharSequence;
+
+    iget-object v0, p0, Lvv5;->b:Landroidx/fragment/app/DialogFragment;
+
+    check-cast v0, Landroidx/biometric/FingerprintDialogFragment;
+
+    iget-object v1, v0, Landroidx/biometric/FingerprintDialogFragment;->x1:Landroid/os/Handler;
+
+    iget-object v2, v0, Landroidx/biometric/FingerprintDialogFragment;->y1:Lxe;
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    iget-object v0, v0, Landroidx/biometric/FingerprintDialogFragment;->D1:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_3
+    const-wide/16 v3, 0x7d0
+
+    invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 
-    :catchall_0
-    move-exception p0
+    :pswitch_1
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-static {p0}, Lzyd;->F(Ljava/lang/Throwable;)V
+    iget-object v0, p0, Lvv5;->b:Landroidx/fragment/app/DialogFragment;
 
-    sget-object v0, Lk45;->a:Lk45;
+    check-cast v0, Landroidx/biometric/FingerprintDialogFragment;
 
-    invoke-interface {p1, v0}, Le3e;->c(Loq4;)V
+    iget-object v1, v0, Landroidx/biometric/FingerprintDialogFragment;->x1:Landroid/os/Handler;
 
-    invoke-interface {p1, p0}, Le3e;->onError(Ljava/lang/Throwable;)V
+    iget-object v2, v0, Landroidx/biometric/FingerprintDialogFragment;->y1:Lxe;
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    iget-object v4, v0, Landroidx/biometric/FingerprintDialogFragment;->C1:Landroid/widget/ImageView;
+
+    const/4 v5, 0x2
+
+    if-nez v4, :cond_4
+
+    goto :goto_5
+
+    :cond_4
+    iget-object v4, v0, Landroidx/biometric/FingerprintDialogFragment;->z1:Landroidx/biometric/BiometricViewModel;
+
+    iget v4, v4, Landroidx/biometric/BiometricViewModel;->v:I
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->E()Landroid/content/Context;
+
+    move-result-object v6
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    if-nez v6, :cond_5
+
+    const-string v6, "FingerprintFragment"
+
+    const-string v9, "Unable to get asset. Context is null."
+
+    invoke-static {v6, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    :cond_5
+    if-nez v4, :cond_6
+
+    if-ne v3, v7, :cond_6
+
+    sget v8, Lhmc;->fingerprint_dialog_fp_icon:I
+
+    goto :goto_1
+
+    :cond_6
+    if-ne v4, v7, :cond_7
+
+    if-ne v3, v5, :cond_7
+
+    sget v8, Lhmc;->fingerprint_dialog_error:I
+
+    goto :goto_1
+
+    :cond_7
+    if-ne v4, v5, :cond_8
+
+    if-ne v3, v7, :cond_8
+
+    sget v8, Lhmc;->fingerprint_dialog_fp_icon:I
+
+    goto :goto_1
+
+    :cond_8
+    if-ne v4, v7, :cond_9
+
+    const/4 v9, 0x3
+
+    if-ne v3, v9, :cond_9
+
+    sget v8, Lhmc;->fingerprint_dialog_fp_icon:I
+
+    :goto_1
+    invoke-static {v6, v8}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v8
+
+    :cond_9
+    :goto_2
+    if-nez v8, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    iget-object v6, v0, Landroidx/biometric/FingerprintDialogFragment;->C1:Landroid/widget/ImageView;
+
+    invoke-virtual {v6, v8}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    if-nez v4, :cond_b
+
+    if-ne v3, v7, :cond_b
+
+    goto :goto_4
+
+    :cond_b
+    if-ne v4, v7, :cond_c
+
+    if-ne v3, v5, :cond_c
+
+    goto :goto_3
+
+    :cond_c
+    if-ne v4, v5, :cond_d
+
+    if-ne v3, v7, :cond_d
+
+    :goto_3
+    invoke-static {v8}, Lwv5;->a(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_d
+    :goto_4
+    iget-object v4, v0, Landroidx/biometric/FingerprintDialogFragment;->z1:Landroidx/biometric/BiometricViewModel;
+
+    iput v3, v4, Landroidx/biometric/BiometricViewModel;->v:I
+
+    :goto_5
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v3, v0, Landroidx/biometric/FingerprintDialogFragment;->D1:Landroid/widget/TextView;
+
+    if-eqz v3, :cond_f
+
+    if-ne p1, v5, :cond_e
+
+    iget p1, v0, Landroidx/biometric/FingerprintDialogFragment;->A1:I
+
+    goto :goto_6
+
+    :cond_e
+    iget p1, v0, Landroidx/biometric/FingerprintDialogFragment;->B1:I
+
+    :goto_6
+    invoke-virtual {v3, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    :cond_f
+    const-wide/16 v3, 0x7d0
+
+    invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

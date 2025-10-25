@@ -29,11 +29,11 @@
 
 # virtual methods
 .method public run()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lorg/apache/commons/logging/LogFactory;->directGetContextClassLoader()Ljava/lang/ClassLoader;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

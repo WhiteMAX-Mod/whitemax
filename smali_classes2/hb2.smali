@@ -1,111 +1,83 @@
 .class public final Lhb2;
-.super Ljava/lang/Object;
+.super Luj0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final f:Lhb2;
-
-.field public static final g:Lhb2;
-
-
 # instance fields
-.field public final a:Lnb2;
+.field public final b:J
 
-.field public final b:I
+.field public final c:Ljava/util/List;
 
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:Ljava/util/List;
+.field public final o:Ljava/util/Map;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
-
-    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    new-instance v0, Lhb2;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const-wide/16 v3, 0x0
-
-    const-wide/16 v5, 0x0
-
-    invoke-direct/range {v0 .. v7}, Lhb2;-><init>(Lnb2;IJJLjava/util/List;)V
-
-    sput-object v0, Lhb2;->f:Lhb2;
-
-    sget-object v8, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    new-instance v1, Lhb2;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const-wide/16 v4, 0x0
-
-    const-wide/16 v6, 0x0
-
-    invoke-direct/range {v1 .. v8}, Lhb2;-><init>(Lnb2;IJJLjava/util/List;)V
-
-    sput-object v1, Lhb2;->g:Lhb2;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lnb2;IJJLjava/util/List;)V
+.method public constructor <init>(JJLjava/util/List;Ljava/util/Map;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
 
-    iput-object p1, p0, Lhb2;->a:Lnb2;
+    iput-wide p3, p0, Lhb2;->b:J
 
-    iput p2, p0, Lhb2;->b:I
+    iput-object p5, p0, Lhb2;->c:Ljava/util/List;
 
-    iput-wide p3, p0, Lhb2;->c:J
-
-    iput-wide p5, p0, Lhb2;->d:J
-
-    iput-object p7, p0, Lhb2;->e:Ljava/util/List;
+    iput-object p6, p0, Lhb2;->o:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lgb2;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    new-instance v0, Lgb2;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "ChatBotCommandsEvent{chatId="
 
-    iget-object v1, p0, Lhb2;->a:Lnb2;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput-object v1, v0, Lgb2;->o:Ljava/lang/Object;
+    iget-wide v1, p0, Lhb2;->b:J
 
-    iget v1, p0, Lhb2;->b:I
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iput v1, v0, Lgb2;->a:I
+    const-string v1, ", botCommands count="
 
-    iget-wide v1, p0, Lhb2;->c:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-wide v1, v0, Lgb2;->b:J
+    iget-object v1, p0, Lhb2;->c:Ljava/util/List;
 
-    iget-wide v1, p0, Lhb2;->d:J
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    iput-wide v1, v0, Lgb2;->c:J
+    move-result v1
 
-    iget-object p0, p0, Lhb2;->e:Ljava/util/List;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iput-object p0, v0, Lgb2;->X:Ljava/lang/Object;
+    const-string v1, ", botsInfoMap count="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lhb2;->o:Ljava/util/Map;
+
+    invoke-interface {v1}, Ljava/util/Map;->size()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "} "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-super {p0}, Luj0;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,130 +1,40 @@
 .class public final Lc90;
-.super Ld53;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
 
-# instance fields
-.field public final a:Ln80;
+
+# static fields
+.field public static final a:Lc90;
 
 
 # direct methods
-.method public constructor <init>(Ln80;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lc90;
 
-    iput-object p1, p0, Lc90;->a:Ln80;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lc90;->a:Lc90;
+
+    const-string v0, "messagingClientEventExtension"
+
+    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    if-ne p1, p0, :cond_0
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    instance-of v0, p1, Ld53;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Ld53;
-
-    move-object v0, p1
-
-    check-cast v0, Lc90;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lc53;->a:Lc53;
-
-    invoke-virtual {v0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lc90;
-
-    iget-object p1, p1, Lc90;->a:Ln80;
-
-    iget-object p0, p0, Lc90;->a:Ln80;
-
-    invoke-virtual {p0, p1}, Ln80;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    sget-object v0, Lc53;->a:Lc53;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-object p0, p0, Lc90;->a:Ln80;
-
-    invoke-virtual {p0}, Ln80;->hashCode()I
-
-    move-result p0
-
-    xor-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ClientInfo{clientType="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Lc53;->a:Lc53;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", androidClientInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lc90;->a:Ln80;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    throw p1
 .end method

@@ -1,229 +1,129 @@
 .class public final Lp9e;
-.super Ln9e;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final l:J
+.field public final synthetic X:Landroid/content/Intent;
 
-.field public final m:J
-
-.field public final n:J
-
-.field public final o:J
-
-.field public final p:J
-
-.field public final q:J
-
-.field public final r:J
-
-.field public final s:J
+.field public final synthetic Y:Lv9e;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JJJJJJJJLjava/lang/String;Lmr8;Ljava/lang/Boolean;)V
-    .locals 11
+.method public constructor <init>(Landroid/content/Intent;Lv9e;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v1, 0x2
+    iput-object p1, p0, Lp9e;->X:Landroid/content/Intent;
 
-    move-object v0, p0
+    iput-object p2, p0, Lp9e;->Y:Lv9e;
 
-    move-wide v2, p1
+    const/4 p1, 0x2
 
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-object/from16 v8, p23
-
-    move-object/from16 v9, p24
-
-    move-object/from16 v10, p25
-
-    invoke-direct/range {v0 .. v10}, Ln9e;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/lang/String;Lmr8;Ljava/lang/Boolean;)V
-
-    move-wide/from16 p1, p7
-
-    iput-wide p1, p0, Lp9e;->l:J
-
-    move-wide/from16 p1, p9
-
-    iput-wide p1, p0, Lp9e;->m:J
-
-    move-wide/from16 p1, p11
-
-    iput-wide p1, p0, Lp9e;->n:J
-
-    move-wide/from16 p1, p13
-
-    iput-wide p1, p0, Lp9e;->o:J
-
-    move-wide/from16 p1, p15
-
-    iput-wide p1, p0, Lp9e;->p:J
-
-    move-wide/from16 p1, p17
-
-    iput-wide p1, p0, Lp9e;->q:J
-
-    move-wide/from16 p1, p19
-
-    iput-wide p1, p0, Lp9e;->r:J
-
-    move-wide/from16 p1, p21
-
-    iput-wide p1, p0, Lp9e;->s:J
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lq54;
 
-    const-string v1, "VideoSend{ssrc="
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lp9e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-wide v1, p0, Lq9e;->c:J
+    move-result-object p1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    check-cast p1, Lp9e;
 
-    const-string v1, ", transportId=\'"
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Lp9e;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lq9e;->d:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, "\', trackId=\'"
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Lp9e;
 
-    iget-object v1, p0, Lq9e;->e:Ljava/lang/String;
+    iget-object v0, p0, Lp9e;->X:Landroid/content/Intent;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lp9e;->Y:Lv9e;
 
-    const-string v1, "\', packetsSent="
+    invoke-direct {p1, v0, v1, p2}, Lp9e;-><init>(Landroid/content/Intent;Lv9e;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    iget-object v1, p0, Ln9e;->h:Ljava/math/BigInteger;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, ", packetsLost="
+    iget-object p1, p0, Lp9e;->X:Landroid/content/Intent;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez p1, :cond_0
 
-    iget-object v1, p0, Ln9e;->i:Ljava/math/BigInteger;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string v1, ", bytesSent="
+    :cond_0
+    const-class v0, Landroid/graphics/RectF;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "ru.ok.tamtam.extra.CROPPED_RECT"
 
-    iget-object v1, p0, Ln9e;->j:Ljava/math/BigInteger;
+    invoke-static {p1, v1, v0}, La1i;->b(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, ", nacksReceived="
+    check-cast p1, Landroid/os/Parcelable;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    check-cast p1, Landroid/graphics/RectF;
 
-    iget-wide v1, p0, Lp9e;->l:J
+    sget-object v0, Lccg;->a:Lccg;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-nez p1, :cond_1
 
-    const-string v1, ", pliReceived="
+    return-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    sget-object v1, Lv9e;->K0:[Ltr7;
 
-    iget-wide v1, p0, Lp9e;->m:J
+    iget-object v1, p0, Lp9e;->Y:Lv9e;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Lv9e;->u()Liv5;
 
-    const-string v1, ", firReceived="
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, v1, Lv9e;->F0:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-wide v1, p0, Lp9e;->n:J
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    const-string v1, ", framesEncoded="
+    check-cast v3, Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Liv5;->p(Ljava/lang/String;)Ljava/io/File;
 
-    iget-wide v1, p0, Lp9e;->o:J
+    move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    const-string v1, ", adaptationChanges="
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, p1}, Lv9e;->x(Ljava/lang/String;Landroid/graphics/RectF;)V
 
-    iget-wide v1, p0, Lp9e;->p:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avgEncodeMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lp9e;->q:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameWidth="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lp9e;->r:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameHeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lp9e;->s:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isMediaShare="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ln9e;->k:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", unknown="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lq9e;->g:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

@@ -1,35 +1,52 @@
-.class public final Luv9;
-.super Lj2e;
+.class public abstract Luv9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final E()V
-    .locals 0
+# static fields
+.field public static final a:F
 
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-    check-cast p0, Lfyd;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    iget-object p0, p0, Lfyd;->b:Leyd;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Leyd;->d()V
+    invoke-static {v0}, Luv9;->a(F)V
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-static {v0}, Luv9;->a(F)V
+
+    sput v0, Luv9;->a:F
 
     return-void
 .end method
 
-.method public final y(Lts7;)V
-    .locals 0
+.method public static a(F)V
+    .locals 1
 
-    check-cast p1, Ltv9;
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+    cmpg-float v0, v0, p0
 
-    check-cast p0, Lfyd;
+    if-gtz v0, :cond_0
 
-    iget-object p0, p0, Lfyd;->b:Leyd;
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-virtual {p0}, Leyd;->c()V
+    cmpg-float p0, p0, v0
+
+    if-gtz p0, :cond_0
 
     return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Gain must be in range of 0f and 1f"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

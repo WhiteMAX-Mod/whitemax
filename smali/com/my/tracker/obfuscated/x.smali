@@ -40,9 +40,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/x;->a:Lcom/my/tracker/obfuscated/w;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/x;->a:Lcom/my/tracker/obfuscated/w;
 
-    return-object p0
+    return-object p1
 
     :cond_0
     invoke-static {p1}, Lcom/my/tracker/obfuscated/p0;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/p0;
@@ -115,7 +115,7 @@
 
     iput-boolean p1, p0, Lcom/my/tracker/obfuscated/x;->b:Z
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/x;->a:Lcom/my/tracker/obfuscated/w;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/x;->a:Lcom/my/tracker/obfuscated/w;
 
-    return-object p0
+    return-object p1
 .end method

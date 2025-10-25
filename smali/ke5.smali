@@ -3,22 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lme5;
+.implements Lve5;
 
 
-# static fields
-.field public static final a:Lke5;
+# instance fields
+.field public final a:Ljava/lang/Integer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Integer;)V
+    .locals 0
 
-    new-instance v0, Lke5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lke5;->a:Lke5;
+    iput-object p1, p0, Lke5;->a:Ljava/lang/Integer;
 
     return-void
 .end method

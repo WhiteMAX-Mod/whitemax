@@ -1,69 +1,96 @@
 .class public final Lsme;
-.super Lnk7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
 
+# static fields
+.field public static final a:Lsme;
 
-# instance fields
-.field public final synthetic a:[C
+.field public static b:Ltcb;
 
 
 # direct methods
-.method public constructor <init>([C)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lsme;->a:[C
+    new-instance v0, Lsme;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lnk7;-><init>(I)V
+    sput-object v0, Lsme;->a:Lsme;
 
     return-void
 .end method
 
+.method public static a()V
+    .locals 2
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    sget-object v0, Lsme;->b:Ltcb;
 
-    check-cast p1, Ljava/lang/CharSequence;
+    if-eqz v0, :cond_0
 
-    check-cast p2, Ljava/lang/Number;
+    iget-object v0, v0, Ltcb;->b:Ljava/lang/Object;
 
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+    check-cast v0, Lb3b;
 
-    move-result p2
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lsme;->a:[C
+    iget-object v0, v0, Lb3b;->a:Lq40;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1, p0, p2, v0}, Ljme;->p0(Ljava/lang/CharSequence;[CIZ)I
+    sget-object v1, Li3b;->a:Landroid/os/Handler;
 
-    move-result p0
+    iget-object v0, v0, Lq40;->h:Ljava/lang/Object;
 
-    if-gez p0, :cond_0
+    check-cast v0, Lf3b;
 
-    const/4 p0, 0x0
+    sget-object v1, Le3b;->o:Le3b;
 
-    return-object p0
+    invoke-static {v0, v1}, Li3b;->b(Lf3b;Le3b;)V
 
     :cond_0
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    sput-object v0, Lsme;->b:Ltcb;
 
-    const/4 p1, 0x1
+    return-void
+.end method
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+.method public static b(Lwl1;Lji6;)V
+    .locals 1
+
+    sget-object v0, Lsme;->b:Ltcb;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Ltcb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lwl1;
+
+    invoke-virtual {v0, p0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    :cond_0
+    invoke-static {}, Lsme;->a()V
+
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance p2, Lpxa;
+    check-cast p1, Lb3b;
 
-    invoke-direct {p2, p0, p1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eqz p1, :cond_1
 
-    return-object p2
+    new-instance v0, Ltcb;
+
+    invoke-direct {v0, p0, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    sput-object v0, Lsme;->b:Ltcb;
+
+    :cond_1
+    return-void
 .end method

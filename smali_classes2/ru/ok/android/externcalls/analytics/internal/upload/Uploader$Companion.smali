@@ -74,7 +74,7 @@
 
 # virtual methods
 .method public final create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;Z)Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
-    .locals 10
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -91,93 +91,108 @@
         }
     .end annotation
 
-    sget-object p0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getMaxLocalCacheFileCount()I
+    invoke-virtual {v1}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getMaxLocalCacheFileCount()I
 
-    move-result v0
+    move-result v1
 
-    move v8, v0
+    move v9, v1
 
     goto :goto_0
 
     :cond_0
-    move v8, v1
+    move v9, v2
 
     :goto_0
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getTimeToUploadNextMs()Ljava/lang/Long;
+
+    move-result-object v1
+
+    :goto_1
+    move-object v10, v1
+
+    goto :goto_2
+
+    :cond_1
+    const/4 v1, 0x0
+
+    goto :goto_1
+
+    :goto_2
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getTimeToUploadNextMs()Ljava/lang/Long;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getDisableUploadWhenCallIsActive()Z
 
-    move-result-object v0
-
-    :goto_1
-    move-object v9, v0
-
-    goto :goto_2
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :goto_2
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getDisableUploadWhenCallIsActive()Z
-
-    move-result p0
+    move-result v0
 
     :goto_3
-    move v6, p0
+    move v7, v0
 
     goto :goto_4
 
     :cond_2
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     goto :goto_3
 
     :goto_4
-    if-le v8, v1, :cond_3
+    if-le v9, v2, :cond_3
 
-    new-instance v2, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
+    new-instance v3, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
 
-    move-object v3, p1
+    move-object v4, p1
+
+    move-object v5, p2
+
+    move-object v6, p3
+
+    move-object v7, p4
+
+    move/from16 v8, p5
+
+    invoke-direct/range {v3 .. v10}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;ZILjava/lang/Long;)V
+
+    return-object v3
+
+    :cond_3
+    new-instance v3, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader;
 
     move-object v4, p2
 
@@ -185,24 +200,9 @@
 
     move-object v6, p4
 
-    move v7, p5
+    move/from16 v8, p5
 
-    invoke-direct/range {v2 .. v9}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;ZILjava/lang/Long;)V
+    invoke-direct/range {v3 .. v8}, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader;-><init>(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;ZZ)V
 
-    return-object v2
-
-    :cond_3
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move v7, p5
-
-    new-instance v2, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader;
-
-    invoke-direct/range {v2 .. v7}, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader;-><init>(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;ZZ)V
-
-    return-object v2
+    return-object v3
 .end method

@@ -1,421 +1,226 @@
-.class public final Lgf4;
-.super Ljava/lang/Object;
+.class public Lgf4;
+.super Lvy;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[I
+# instance fields
+.field public X:Z
 
-.field public static final b:Lim4;
+.field public Y:J
+
+.field public Z:Ljava/nio/ByteBuffer;
+
+.field public final c:Lr84;
+
+.field public o:Ljava/nio/ByteBuffer;
+
+.field public final q0:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    const/16 v0, 0xe
+    const-string v0, "goog.exo.decoder"
 
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lgf4;->a:[I
-
-    new-instance v0, Lim4;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Lim4;-><init>(I)V
-
-    sput-object v0, Lgf4;->b:Lim4;
+    invoke-static {v0}, Lmj5;->a(Ljava/lang/String;)V
 
     return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x5
-        0x4
-        0xc
-        0x8
-        0x3
-        0xa
-        0x9
-        0xb
-        0x6
-        0x2
-        0x0
-        0x1
-        0x7
-        0xe
-    .end array-data
 .end method
 
-.method public static a(Ljava/util/ArrayList;I)V
-    .locals 7
+.method public constructor <init>(I)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Lvy;-><init>(I)V
+
+    new-instance v0, Lr84;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lr84;-><init>(I)V
+
+    iput-object v0, p0, Lgf4;->c:Lr84;
+
+    iput p1, p0, Lgf4;->q0:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public w()V
+    .locals 2
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    iput v0, p0, Lvy;->b:I
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
 
-    packed-switch p1, :pswitch_data_0
+    if-eqz v1, :cond_0
 
-    :pswitch_0
-    goto/16 :goto_3
-
-    :pswitch_1
-    new-instance p1, Lig7;
-
-    invoke-direct {p1}, Lig7;-><init>()V
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_2
-    new-instance p1, Lacg;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput v2, p1, Lacg;->c:I
-
-    const-wide/16 v0, -0x1
-
-    iput-wide v0, p1, Lacg;->d:J
-
-    const/4 v2, -0x1
-
-    iput v2, p1, Lacg;->f:I
-
-    iput-wide v0, p1, Lacg;->g:J
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_3
-    new-instance p1, Lrff;
-
-    new-instance v0, Lv6f;
-
-    const-wide/16 v3, 0x0
-
-    invoke-direct {v0, v3, v4}, Lv6f;-><init>(J)V
-
-    new-instance v3, Lpj4;
-
-    sget-object v4, Ll37;->b:Lgx5;
-
-    sget-object v4, Llqc;->X:Llqc;
-
-    invoke-direct {v3, v4, v2, v2}, Lpj4;-><init>(Ljava/util/List;II)V
-
-    invoke-direct {p1, v1, v0, v3}, Lrff;-><init>(ILv6f;Lpj4;)V
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_4
-    new-instance p1, Lezb;
-
-    invoke-direct {p1}, Lezb;-><init>()V
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_5
-    new-instance p1, Lj8a;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_6
-    new-instance p1, Lz86;
-
-    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    invoke-direct {p1, v2, v0, v1, v0}, Lz86;-><init>(ILv6f;Ljava/util/List;Lhdb;)V
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance p1, Lrj9;
-
-    invoke-direct {p1, v2}, Lrj9;-><init>(I)V
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_7
-    new-instance p1, Llj9;
-
-    invoke-direct {p1, v2}, Llj9;-><init>(I)V
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_8
-    new-instance p1, Lw88;
-
-    invoke-direct {p1, v2}, Lw88;-><init>(I)V
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_9
-    new-instance p1, Lkx5;
-
-    invoke-direct {p1}, Lkx5;-><init>()V
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_a
-    sget-object p1, Lgf4;->b:Lim4;
-
-    iget-object v3, p1, Lim4;->b:Ljava/lang/Object;
-
-    check-cast v3, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    monitor-enter v3
-
-    :try_start_0
-    iget-object v4, p1, Lim4;->b:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    iget-object p1, p1, Lim4;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/reflect/Constructor;
-
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_4
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
     :cond_0
-    :try_start_1
-    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    iget-object v1, p0, Lgf4;->Z:Ljava/nio/ByteBuffer;
 
-    const-string v5, "com.google.android.exoplayer2.ext.flac.FlacLibrary"
+    if-eqz v1, :cond_1
 
-    invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    move-result-object v5
-
-    const-string v6, "isAvailable"
-
-    invoke-virtual {v5, v6, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v0, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    const-string v4, "com.google.android.exoplayer2.ext.flac.FlacExtractor"
-
-    invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v4
-
-    const-class v5, Lnf5;
-
-    invoke-virtual {v4, v5}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
-
-    move-result-object v4
-
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {v5}, [Ljava/lang/Class;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v4
-
-    iput-object v4, p1, Lim4;->c:Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    :try_start_2
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string v0, "Error instantiating FLAC extension"
-
-    invoke-direct {p1, v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :catch_1
     :cond_1
-    :goto_0
-    iget-object v4, p1, Lim4;->b:Ljava/lang/Object;
+    iput-boolean v0, p0, Lgf4;->X:Z
 
-    check-cast v4, Ljava/util/concurrent/atomic/AtomicBoolean;
+    return-void
+.end method
 
-    invoke-virtual {v4, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+.method public final x(I)Ljava/nio/ByteBuffer;
+    .locals 4
 
-    iget-object p1, p1, Lim4;->c:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast p1, Ljava/lang/reflect/Constructor;
+    iget v1, p0, Lgf4;->q0:I
 
-    monitor-exit v3
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    if-ne v1, v0, :cond_0
 
-    :goto_1
-    if-nez p1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    :try_start_3
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    move-object v0, p1
+    return-object p1
 
-    check-cast v0, Lnf5;
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+    :cond_0
+    const/4 v0, 0x2
 
-    :goto_2
-    if-eqz v0, :cond_3
+    if-ne v1, v0, :cond_1
 
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
-    goto :goto_3
+    move-result-object p1
 
-    :cond_3
-    new-instance p1, Lfr5;
+    return-object p1
 
-    invoke-direct {p1}, Lfr5;-><init>()V
+    :cond_1
+    iget-object v0, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-nez v0, :cond_2
 
-    :goto_3
-    return-void
+    const/4 v0, 0x0
 
-    :catch_2
-    move-exception p0
+    goto :goto_0
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :cond_2
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
 
-    const-string v0, "Unexpected error creating FLAC extractor"
+    move-result v0
 
-    invoke-direct {p1, v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    :goto_0
+    new-instance v1, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer$InsufficientCapacityException;
 
-    throw p1
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    :goto_4
-    :try_start_4
-    monitor-exit v3
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    const/16 v3, 0x2c
 
-    throw p0
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    :pswitch_b
-    new-instance p1, Lxc;
+    const-string v3, "Buffer too small ("
 
-    invoke-direct {p1}, Lxc;-><init>()V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v0, " < "
 
-    :pswitch_c
-    new-instance p1, Lac;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v2}, Lac;-><init>(I)V
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string p1, ")"
 
-    return-void
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_d
-    new-instance p1, Ly3;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {p1}, Ly3;-><init>()V
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    throw v1
+.end method
 
-    :pswitch_e
-    new-instance p1, Lu3;
+.method public final y(I)V
+    .locals 3
 
-    invoke-direct {p1}, Lu3;-><init>()V
+    iget-object v0, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, p1}, Lgf4;->x(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
 
     return-void
 
-    nop
+    :cond_0
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    move-result v1
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    move-result v2
+
+    add-int/2addr p1, v2
+
+    if-lt v1, p1, :cond_1
+
+    iput-object v0, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0, p1}, Lgf4;->x(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    if-lez v2, :cond_2
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    :cond_2
+    iput-object p1, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
+
+    return-void
+.end method
+
+.method public final z()V
+    .locals 1
+
+    iget-object v0, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    :cond_0
+    iget-object v0, p0, Lgf4;->Z:Ljava/nio/ByteBuffer;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    :cond_1
+    return-void
 .end method

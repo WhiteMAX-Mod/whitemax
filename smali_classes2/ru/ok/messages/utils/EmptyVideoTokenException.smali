@@ -26,19 +26,19 @@
 
 # virtual methods
 .method public final getMessage()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     invoke-virtual {p0}, Lru/ok/messages/utils/EmptyVideoTokenException;->getMessage()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "Video token is empty on forward, message="
+    const-string v1, "Video token is empty on forward, message="
 
-    const-string v1, ", video=null, from chat=null"
+    const-string v2, ", video=null, from chat=null"
 
-    invoke-static {v0, p0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

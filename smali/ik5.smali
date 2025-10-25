@@ -3,41 +3,27 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ldi0;
+# static fields
+.field public static final a:Ljava/lang/Object;
 
-.field public final b:Lejb;
-
-.field public c:J
+.field public static final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Ldi0;Lejb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Lik5;->a:Ldi0;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lik5;->b:Lejb;
+    sput-object v0, Lik5;->a:Ljava/lang/Object;
 
-    const-wide/16 p1, 0x0
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-wide p1, p0, Lik5;->c:J
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lik5;->b:Ljava/util/HashMap;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lhjb;
-    .locals 0
-
-    iget-object p0, p0, Lik5;->b:Lejb;
-
-    check-cast p0, Lmj0;
-
-    iget-object p0, p0, Lmj0;->c:Lhjb;
-
-    return-object p0
 .end method

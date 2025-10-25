@@ -11,7 +11,7 @@
     d2 = {
         "Lru/ok/messages/calls/views/AnimatedCirclesView;",
         "Landroid/widget/FrameLayout;",
-        "le",
+        "ue",
         "ui-utils_release"
     }
     k = 0x1
@@ -36,7 +36,7 @@
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget-object p2, Lp45;->a:Lp45;
+    sget-object p2, Lka5;->a:Lka5;
 
     iput-object p2, p0, Lru/ok/messages/calls/views/AnimatedCirclesView;->a:Ljava/lang/Object;
 
@@ -44,25 +44,25 @@
 
     invoke-direct {p2}, Landroid/animation/AnimatorSet;-><init>()V
 
-    sget p2, Lg3c;->calls_circle_1:I
+    sget p2, Lukc;->calls_circle_1:I
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
-    sget v0, Lg3c;->calls_circle_3:I
+    sget v0, Lukc;->calls_circle_3:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    sget v1, Lg3c;->calls_circle_4:I
+    sget v1, Lukc;->calls_circle_4:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    sget v2, Lg3c;->calls_circle_2:I
+    sget v2, Lukc;->calls_circle_2:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -72,7 +72,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p2}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p2
 
@@ -80,7 +80,7 @@
 
     const/16 v1, 0xa
 
-    invoke-static {p2, v1}, Ls73;->O(Ljava/lang/Iterable;I)I
+    invoke-static {p2, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
 
     move-result v1
 
@@ -107,9 +107,9 @@
 
     move-result v1
 
-    new-instance v2, Lle;
+    new-instance v2, Lue;
 
-    invoke-direct {v2, p1}, Lle;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p1}, Lue;-><init>(Landroid/content/Context;)V
 
     new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -123,11 +123,11 @@
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Lmw3;->a(Landroid/content/Context;I)I
+    invoke-static {v3, v1}, Lb14;->a(Landroid/content/Context;I)I
 
     move-result v1
 
-    iget-object v3, v2, Lle;->a:Landroid/graphics/Paint;
+    iget-object v3, v2, Lue;->a:Landroid/graphics/Paint;
 
     invoke-virtual {v3, v1}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -146,7 +146,7 @@
 
 # virtual methods
 .method public final onMeasure(II)V
-    .locals 11
+    .locals 12
 
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
@@ -184,11 +184,11 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
-    move-result p0
+    move-result v4
 
-    int-to-float p0, p0
+    int-to-float v4, v4
 
-    div-float/2addr p0, v3
+    div-float/2addr v4, v3
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -199,87 +199,87 @@
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_0
+    if-eqz v5, :cond_0
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Lle;
+    check-cast v5, Lue;
 
     add-float/2addr v3, v2
 
-    new-instance v5, Landroid/graphics/PointF;
+    new-instance v6, Landroid/graphics/PointF;
 
-    float-to-double v6, v3
+    float-to-double v7, v3
 
-    const-wide v8, 0x3f91df46a2529d39L    # 0.017453292519943295
+    const-wide v9, 0x3f91df46a2529d39L    # 0.017453292519943295
 
-    mul-double/2addr v6, v8
+    mul-double/2addr v7, v9
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v8
-
-    double-to-float v8, v8
-
-    mul-float/2addr v8, p0
-
-    mul-float/2addr v8, p2
-
-    add-float/2addr v8, v1
-
-    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v7, v8}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v9
 
     double-to-float v9, v9
 
-    mul-float/2addr v9, p0
+    mul-float/2addr v9, v4
 
     mul-float/2addr v9, p2
 
-    sub-float v9, v1, v9
+    add-float/2addr v9, v1
 
-    invoke-direct {v5, v8, v9}, Landroid/graphics/PointF;-><init>(FF)V
+    invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
 
-    new-instance v8, Landroid/graphics/PointF;
+    move-result-wide v10
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+    double-to-float v10, v10
 
-    move-result-wide v9
+    mul-float/2addr v10, v4
 
-    double-to-float v9, v9
+    mul-float/2addr v10, p2
 
-    mul-float/2addr v9, p1
+    sub-float v10, v1, v10
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
+    invoke-direct {v6, v9, v10}, Landroid/graphics/PointF;-><init>(FF)V
 
-    move-result-wide v6
+    new-instance v9, Landroid/graphics/PointF;
 
-    double-to-float v6, v6
+    invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
 
-    mul-float/2addr v6, p1
+    move-result-wide v10
 
-    invoke-direct {v8, v9, v6}, Landroid/graphics/PointF;-><init>(FF)V
+    double-to-float v10, v10
 
-    iget v6, v5, Landroid/graphics/PointF;->x:F
+    mul-float/2addr v10, p1
 
-    invoke-virtual {v4, v6}, Landroid/view/View;->setPivotX(F)V
+    invoke-static {v7, v8}, Ljava/lang/Math;->cos(D)D
 
-    iget v5, v5, Landroid/graphics/PointF;->y:F
+    move-result-wide v7
 
-    invoke-virtual {v4, v5}, Landroid/view/View;->setPivotY(F)V
+    double-to-float v7, v7
 
-    iget v5, v8, Landroid/graphics/PointF;->x:F
+    mul-float/2addr v7, p1
 
-    invoke-virtual {v4, v5}, Landroid/view/View;->setTranslationX(F)V
+    invoke-direct {v9, v10, v7}, Landroid/graphics/PointF;-><init>(FF)V
 
-    iget v5, v8, Landroid/graphics/PointF;->y:F
+    iget v7, v6, Landroid/graphics/PointF;->x:F
 
-    invoke-virtual {v4, v5}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {v5, v7}, Landroid/view/View;->setPivotX(F)V
+
+    iget v6, v6, Landroid/graphics/PointF;->y:F
+
+    invoke-virtual {v5, v6}, Landroid/view/View;->setPivotY(F)V
+
+    iget v6, v9, Landroid/graphics/PointF;->x:F
+
+    invoke-virtual {v5, v6}, Landroid/view/View;->setTranslationX(F)V
+
+    iget v6, v9, Landroid/graphics/PointF;->y:F
+
+    invoke-virtual {v5, v6}, Landroid/view/View;->setTranslationY(F)V
 
     goto :goto_0
 

@@ -3,27 +3,27 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrcb;
+.implements Lmtb;
 
 
 # instance fields
 .field public a:Ljava/util/List;
 
-.field public b:Ls12;
+.field public b:Ld42;
 
 .field public c:F
 
 .field public o:F
 
+.field public q0:Z
+
 .field public r0:Z
 
-.field public s0:Z
+.field public s0:I
 
-.field public t0:I
+.field public t0:Ledf;
 
-.field public u0:Lgoe;
-
-.field public v0:Landroid/view/View;
+.field public u0:Landroid/view/View;
 
 
 # direct methods
@@ -36,9 +36,9 @@
 
     iput-object p2, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->a:Ljava/util/List;
 
-    sget-object p2, Ls12;->g:Ls12;
+    sget-object p2, Ld42;->g:Ld42;
 
-    iput-object p2, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->b:Ls12;
+    iput-object p2, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->b:Ld42;
 
     const p2, 0x3d5a511a    # 0.0533f
 
@@ -50,23 +50,23 @@
 
     const/4 p2, 0x1
 
+    iput-boolean p2, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->q0:Z
+
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->r0:Z
 
-    iput-boolean p2, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->s0:Z
-
-    new-instance v0, Lp12;
+    new-instance v0, Lz32;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lp12;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p1, v1}, Lz32;-><init>(Landroid/content/Context;I)V
 
-    iput-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->u0:Lgoe;
+    iput-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->t0:Ledf;
 
-    iput-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->v0:Landroid/view/View;
+    iput-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->u0:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    iput p2, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->t0:I
+    iput p2, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->s0:I
 
     return-void
 .end method
@@ -77,22 +77,22 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Ld44;",
+            "Ly84;",
             ">;"
         }
     .end annotation
+
+    iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->q0:Z
+
+    if-eqz v0, :cond_0
 
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->r0:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->s0:Z
+    iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->a:Ljava/util/List;
 
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->a:Ljava/util/List;
-
-    return-object p0
+    return-object v0
 
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
@@ -124,19 +124,19 @@
 
     move-result-object v3
 
-    check-cast v3, Ld44;
+    check-cast v3, Ly84;
 
-    invoke-virtual {v3}, Ld44;->a()Lb44;
+    invoke-virtual {v3}, Ly84;->a()Lw84;
 
     move-result-object v3
 
-    iget-boolean v4, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->r0:Z
+    iget-boolean v4, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->q0:Z
 
     if-nez v4, :cond_4
 
-    iput-boolean v1, v3, Lb44;->n:Z
+    iput-boolean v1, v3, Lw84;->n:Z
 
-    iget-object v4, v3, Lb44;->a:Ljava/lang/CharSequence;
+    iget-object v4, v3, Lw84;->a:Ljava/lang/CharSequence;
 
     instance-of v5, v4, Landroid/text/Spanned;
 
@@ -150,10 +150,10 @@
 
     move-result-object v4
 
-    iput-object v4, v3, Lb44;->a:Ljava/lang/CharSequence;
+    iput-object v4, v3, Lw84;->a:Ljava/lang/CharSequence;
 
     :cond_1
-    iget-object v4, v3, Lb44;->a:Ljava/lang/CharSequence;
+    iget-object v4, v3, Lw84;->a:Ljava/lang/CharSequence;
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -178,7 +178,7 @@
 
     aget-object v8, v5, v7
 
-    instance-of v9, v8, Lqk7;
+    instance-of v9, v8, Lvt7;
 
     if-nez v9, :cond_2
 
@@ -190,20 +190,20 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {v3}, Lf54;->C(Lb44;)V
+    invoke-static {v3}, Ltq;->z(Lw84;)V
 
     goto :goto_2
 
     :cond_4
-    iget-boolean v4, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->s0:Z
+    iget-boolean v4, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->r0:Z
 
     if-nez v4, :cond_5
 
-    invoke-static {v3}, Lf54;->C(Lb44;)V
+    invoke-static {v3}, Ltq;->z(Lw84;)V
 
     :cond_5
     :goto_2
-    invoke-virtual {v3}, Lb44;->a()Ld44;
+    invoke-virtual {v3}, Lw84;->a()Ly84;
 
     move-result-object v3
 
@@ -220,7 +220,7 @@
 .method private getUserCaptionFontScale()F
     .locals 3
 
-    sget v0, Llrf;->a:I
+    sget v0, Llig;->a:I
 
     const/16 v1, 0x13
 
@@ -239,43 +239,43 @@
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "captioning"
+    const-string v1, "captioning"
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Landroid/view/accessibility/CaptioningManager;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager;->isEnabled()Z
-
-    move-result v0
+    check-cast v0, Landroid/view/accessibility/CaptioningManager;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager;->getFontScale()F
+    invoke-virtual {v0}, Landroid/view/accessibility/CaptioningManager;->isEnabled()Z
 
-    move-result p0
+    move-result v1
 
-    return p0
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/accessibility/CaptioningManager;->getFontScale()F
+
+    move-result v0
+
+    return v0
 
     :cond_1
     :goto_0
     return v2
 .end method
 
-.method private getUserCaptionStyle()Ls12;
-    .locals 10
+.method private getUserCaptionStyle()Ld42;
+    .locals 11
 
-    sget v0, Llrf;->a:I
+    sget v0, Llig;->a:I
 
     const/16 v1, 0x13
 
-    sget-object v2, Ls12;->g:Ls12;
+    sget-object v2, Ld42;->g:Ld42;
 
     if-lt v0, v1, :cond_7
 
@@ -290,62 +290,62 @@
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "captioning"
+    const-string v3, "captioning"
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v1
 
-    check-cast p0, Landroid/view/accessibility/CaptioningManager;
-
-    if-eqz p0, :cond_7
-
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager;->isEnabled()Z
-
-    move-result v1
+    check-cast v1, Landroid/view/accessibility/CaptioningManager;
 
     if-eqz v1, :cond_7
 
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager;->getUserStyle()Landroid/view/accessibility/CaptioningManager$CaptionStyle;
+    invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager;->isEnabled()Z
 
-    move-result-object p0
+    move-result v3
 
-    const/16 v1, 0x15
+    if-eqz v3, :cond_7
 
-    if-lt v0, v1, :cond_6
+    invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager;->getUserStyle()Landroid/view/accessibility/CaptioningManager$CaptionStyle;
 
-    new-instance v2, Ls12;
+    move-result-object v1
 
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasForegroundColor()Z
+    const/16 v2, 0x15
+
+    if-lt v0, v2, :cond_6
+
+    new-instance v3, Ld42;
+
+    invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasForegroundColor()Z
 
     move-result v0
 
-    const/4 v1, -0x1
+    const/4 v2, -0x1
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->foregroundColor:I
+    iget v0, v1, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->foregroundColor:I
 
-    move v3, v0
+    move v4, v0
 
     goto :goto_0
 
     :cond_1
-    move v3, v1
+    move v4, v2
 
     :goto_0
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasBackgroundColor()Z
+    invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasBackgroundColor()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget v0, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->backgroundColor:I
+    iget v0, v1, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->backgroundColor:I
 
     :goto_1
-    move v4, v0
+    move v5, v0
 
     goto :goto_2
 
@@ -355,74 +355,74 @@
     goto :goto_1
 
     :goto_2
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasWindowColor()Z
+    invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasWindowColor()Z
 
     move-result v0
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     if-eqz v0, :cond_3
 
-    iget v0, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->windowColor:I
+    iget v0, v1, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->windowColor:I
 
     goto :goto_3
 
     :cond_3
-    move v0, v5
+    move v0, v6
 
     :goto_3
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasEdgeType()Z
+    invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasEdgeType()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_4
+
+    iget v6, v1, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeType:I
+
+    :cond_4
+    move v7, v6
+
+    invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasEdgeColor()Z
 
     move-result v6
 
-    if-eqz v6, :cond_4
+    if-eqz v6, :cond_5
 
-    iget v5, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeType:I
-
-    :cond_4
-    move v6, v5
-
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasEdgeColor()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_5
-
-    iget v1, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeColor:I
+    iget v2, v1, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeColor:I
 
     :cond_5
-    move v7, v1
+    move v8, v2
 
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->getTypeface()Landroid/graphics/Typeface;
-
-    move-result-object v8
-
-    move v5, v0
-
-    invoke-direct/range {v2 .. v8}, Ls12;-><init>(IIIIILandroid/graphics/Typeface;)V
-
-    return-object v2
-
-    :cond_6
-    new-instance v3, Ls12;
-
-    iget v4, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->foregroundColor:I
-
-    iget v5, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->backgroundColor:I
-
-    iget v7, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeType:I
-
-    iget v8, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeColor:I
-
-    invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->getTypeface()Landroid/graphics/Typeface;
+    invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->getTypeface()Landroid/graphics/Typeface;
 
     move-result-object v9
 
-    const/4 v6, 0x0
+    move v6, v0
 
-    invoke-direct/range {v3 .. v9}, Ls12;-><init>(IIIIILandroid/graphics/Typeface;)V
+    invoke-direct/range {v3 .. v9}, Ld42;-><init>(IIIIILandroid/graphics/Typeface;)V
 
     return-object v3
+
+    :cond_6
+    new-instance v4, Ld42;
+
+    iget v5, v1, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->foregroundColor:I
+
+    iget v6, v1, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->backgroundColor:I
+
+    iget v8, v1, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeType:I
+
+    iget v9, v1, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeColor:I
+
+    invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->getTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v10
+
+    const/4 v7, 0x0
+
+    invoke-direct/range {v4 .. v10}, Ld42;-><init>(IIIIILandroid/graphics/Typeface;)V
+
+    return-object v4
 
     :cond_7
     :goto_4
@@ -436,35 +436,35 @@
             "<T:",
             "Landroid/view/View;",
             ":",
-            "Lgoe;",
+            "Ledf;",
             ">(TT;)V"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->v0:Landroid/view/View;
+    iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->u0:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->v0:Landroid/view/View;
+    iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->u0:Landroid/view/View;
 
-    instance-of v1, v0, Ltrg;
+    instance-of v1, v0, Lqkh;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Ltrg;
+    check-cast v0, Lqkh;
 
-    iget-object v0, v0, Ltrg;->b:Lrrg;
+    iget-object v0, v0, Lqkh;->b:Lokh;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->destroy()V
 
     :cond_0
-    iput-object p1, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->v0:Landroid/view/View;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->u0:Landroid/view/View;
 
     move-object v0, p1
 
-    check-cast v0, Lgoe;
+    check-cast v0, Ledf;
 
-    iput-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->u0:Lgoe;
+    iput-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->t0:Ledf;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -474,21 +474,21 @@
 
 # virtual methods
 .method public final a()V
-    .locals 4
+    .locals 5
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->u0:Lgoe;
+    iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->t0:Ledf;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/SubtitleView;->getCuesWithStylingPreferencesApplied()Ljava/util/List;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->b:Ls12;
+    iget-object v2, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->b:Ld42;
 
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->c:F
 
-    iget p0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->o:F
+    iget v4, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->o:F
 
-    invoke-interface {v0, v1, v2, v3, p0}, Lgoe;->a(Ljava/util/List;Ls12;FF)V
+    invoke-interface {v0, v1, v2, v3, v4}, Ledf;->a(Ljava/util/List;Ld42;FF)V
 
     return-void
 .end method
@@ -504,7 +504,7 @@
 .method public setApplyEmbeddedFontSizes(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->s0:Z
+    iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->r0:Z
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/SubtitleView;->a()V
 
@@ -514,7 +514,7 @@
 .method public setApplyEmbeddedStyles(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->r0:Z
+    iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->q0:Z
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/SubtitleView;->a()V
 
@@ -537,7 +537,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Ld44;",
+            "Ly84;",
             ">;)V"
         }
     .end annotation
@@ -567,10 +567,10 @@
     return-void
 .end method
 
-.method public setStyle(Ls12;)V
+.method public setStyle(Ld42;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->b:Ls12;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->b:Ld42;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/SubtitleView;->a()V
 
@@ -580,7 +580,7 @@
 .method public setViewType(I)V
     .locals 3
 
-    iget v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->t0:I
+    iget v0, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->s0:I
 
     if-ne v0, p1, :cond_0
 
@@ -595,27 +595,27 @@
 
     if-ne p1, v0, :cond_1
 
-    new-instance v0, Ltrg;
+    new-instance v0, Lqkh;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ltrg;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lqkh;-><init>(Landroid/content/Context;)V
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/ui/SubtitleView;->setView(Landroid/view/View;)V
 
     goto :goto_0
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    throw p0
+    throw p1
 
     :cond_2
-    new-instance v0, Lp12;
+    new-instance v0, Lz32;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -623,12 +623,12 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lp12;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, v2}, Lz32;-><init>(Landroid/content/Context;I)V
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/ui/SubtitleView;->setView(Landroid/view/View;)V
 
     :goto_0
-    iput p1, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->t0:I
+    iput p1, p0, Lcom/google/android/exoplayer2/ui/SubtitleView;->s0:I
 
     return-void
 .end method

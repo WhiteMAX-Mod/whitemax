@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$drop$1;
-.super Lnk7;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lji6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lnk7;",
-        "Lzb6;"
+        "Lst7;",
+        "Lji6;"
     }
 .end annotation
 
@@ -28,7 +28,7 @@
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lylf;",
+        "Lccg;",
         "invoke",
         "()V",
         "<anonymous>"
@@ -54,7 +54,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lnk7;-><init>(I)V
+    invoke-direct {p0, p1}, Lst7;-><init>(I)V
 
     return-void
 .end method
@@ -62,18 +62,18 @@
 
 # virtual methods
 .method public bridge synthetic invoke()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$drop$1;->invoke()V
 
-    sget-object p0, Lylf;->a:Lylf;
+    sget-object v0, Lccg;->a:Lccg;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final invoke()V
-    .locals 5
+    .locals 6
 
     .line 2
     const-string v0, "storage dropped:  "
@@ -138,7 +138,7 @@
 
     .line 5
     :cond_0
-    invoke-static {v2}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->delete(Ljava/io/File;)V
+    invoke-static {v2}, Lhv5;->b(Ljava/io/File;)V
 
     .line 6
     iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$drop$1;->this$0:Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;
@@ -177,25 +177,25 @@
 
     move-result-object v1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$drop$1;->this$0:Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;
+    iget-object v3, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$drop$1;->this$0:Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->access$getLogTag$p(Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;)Ljava/lang/String;
+    invoke-static {v3}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->access$getLogTag$p(Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v3
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v4, "storage drop failed "
+    const-string v5, "storage drop failed "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-interface {v1, p0, v2, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v3, v2, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

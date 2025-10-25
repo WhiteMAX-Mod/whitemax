@@ -1,54 +1,42 @@
-.class public final synthetic Lc81;
+.class public final Lc81;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Leb4;
+.implements Lgwc;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Long;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic o:Z
+.field public final a:Liu7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public synthetic constructor <init>(Liu7;)V
     .locals 0
 
+    iput-object p1, p0, Lc81;->a:Liu7;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lc81;->a:Ljava/lang/Long;
-
-    iput-object p2, p0, Lc81;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lc81;->c:Ljava/lang/String;
-
-    iput-boolean p4, p0, Lc81;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
+.method public shouldHideSensitiveInformation()Z
+    .locals 1
 
-    new-instance v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+    iget-object v0, p0, Lc81;->a:Liu7;
 
-    iget-object v1, p0, Lc81;->a:Ljava/lang/Long;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    iget-object v2, p0, Lc81;->b:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v3, p0, Lc81;->c:Ljava/lang/String;
+    check-cast v0, Lfqa;
 
-    iget-boolean p0, p0, Lc81;->o:Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, v1, v2, v3, p0}, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
+    const/4 v0, 0x1
 
-    return-object v0
+    return v0
 .end method

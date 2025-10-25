@@ -1,192 +1,229 @@
-.class public abstract Lim7;
-.super Ljava/lang/Object;
+.class public final Lim7;
+.super Lvod;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final a:Lni3;
+
+.field public final b:Lhm7;
+
+.field public final c:Ljm7;
+
+.field public final o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method public static a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+.method public constructor <init>(Lhm7;)V
     .locals 2
 
-    if-nez p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p0, 0x0
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    return-object p0
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object v0, p0, Lim7;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iput-object p1, p0, Lim7;->b:Lhm7;
+
+    new-instance v0, Lni3;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lim7;->a:Lni3;
+
+    iget-object v0, p1, Lhm7;->c:Lni3;
+
+    iget-boolean v0, v0, Lni3;->b:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lkm7;->h:Ljm7;
+
+    goto :goto_1
 
     :cond_0
-    invoke-static {p0}, Lim7;->b(Landroid/os/Parcelable;)Ljava/lang/Object;
+    iget-object v0, p1, Lhm7;->b:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
 
-    check-cast p0, Landroid/os/Parcelable;
+    move-result v0
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Lhm7;->b:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    check-cast v0, Ljm7;
 
-    :try_start_0
-    invoke-interface {p0, v0, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
+    :goto_0
+    move-object p1, v0
 
-    invoke-interface {p1, v0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    goto :goto_1
 
-    move-result-object p0
+    :cond_1
+    new-instance v0, Ljm7;
 
-    check-cast p0, Landroid/os/Parcelable;
+    iget-object v1, p1, Lhm7;->Y:Ljava/util/concurrent/ThreadFactory;
 
-    invoke-static {p0}, Lim7;->b(Landroid/os/Parcelable;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljm7;-><init>(Ljava/util/concurrent/ThreadFactory;)V
 
-    move-result-object p0
+    iget-object p1, p1, Lhm7;->c:Lni3;
 
-    check-cast p0, Landroid/os/Parcelable;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw p0
-.end method
-
-.method public static b(Landroid/os/Parcelable;)Ljava/lang/Object;
-    .locals 2
-
-    sget v0, Lnrf;->a:I
-
-    const/16 v1, 0x15
-
-    if-lt v0, v1, :cond_2
-
-    const/16 v1, 0x17
-
-    if-lt v0, v1, :cond_0
+    invoke-virtual {p1, v0}, Lni3;->a(Lvv4;)Z
 
     goto :goto_0
 
+    :goto_1
+    iput-object p1, p0, Lim7;->c:Ljm7;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
+    .locals 6
+
+    iget-object v0, p0, Lim7;->a:Lni3;
+
+    iget-boolean v0, v0, Lni3;->b:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lfa5;->a:Lfa5;
+
+    return-object p1
+
     :cond_0
-    instance-of v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+    iget-object v0, p0, Lim7;->c:Ljm7;
+
+    iget-object v5, p0, Lim7;->a:Lni3;
+
+    move-object v1, p1
+
+    move-wide v2, p2
+
+    move-object v4, p4
+
+    invoke-virtual/range {v0 .. v5}, Lw8a;->e(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lwv4;)Lbod;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final g()V
+    .locals 7
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lim7;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+    iget-object v0, p0, Lim7;->a:Lni3;
 
-    new-instance v0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+    invoke-virtual {v0}, Lni3;->g()V
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->getDescription()Landroid/support/v4/media/MediaDescriptionCompat;
+    sget-boolean v0, Lkm7;->i:Z
 
-    move-result-object v1
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lim7;->c(Landroid/support/v4/media/MediaDescriptionCompat;)Landroid/support/v4/media/MediaDescriptionCompat;
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    move-result-object v1
+    const/4 v6, 0x0
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->getFlags()I
+    iget-object v1, p0, Lim7;->c:Ljm7;
 
-    move-result p0
+    const-wide/16 v3, 0x0
 
-    invoke-direct {v0, v1, p0}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-><init>(Landroid/support/v4/media/MediaDescriptionCompat;I)V
+    move-object v2, p0
 
-    return-object v0
+    invoke-virtual/range {v1 .. v6}, Lw8a;->e(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lwv4;)Lbod;
+
+    return-void
+
+    :cond_0
+    move-object v2, p0
+
+    iget-object v0, v2, Lim7;->b:Lhm7;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v3
+
+    iget-wide v5, v0, Lhm7;->a:J
+
+    add-long/2addr v3, v5
+
+    iget-object v1, v2, Lim7;->c:Ljm7;
+
+    iput-wide v3, v1, Ljm7;->c:J
+
+    iget-object v0, v0, Lhm7;->b:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->offer(Ljava/lang/Object;)Z
+
+    return-void
 
     :cond_1
-    instance-of v0, p0, Landroid/support/v4/media/MediaDescriptionCompat;
+    move-object v2, p0
 
-    if-eqz v0, :cond_2
-
-    check-cast p0, Landroid/support/v4/media/MediaDescriptionCompat;
-
-    invoke-static {p0}, Lim7;->c(Landroid/support/v4/media/MediaDescriptionCompat;)Landroid/support/v4/media/MediaDescriptionCompat;
-
-    move-result-object p0
-
-    :cond_2
-    :goto_0
-    return-object p0
+    return-void
 .end method
 
-.method public static c(Landroid/support/v4/media/MediaDescriptionCompat;)Landroid/support/v4/media/MediaDescriptionCompat;
-    .locals 2
+.method public final h()Z
+    .locals 1
 
-    new-instance v0, Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    iget-object v0, p0, Lim7;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {v0}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;-><init>()V
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getMediaId()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v1
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setMediaId(Ljava/lang/String;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+.method public final run()V
+    .locals 5
 
-    move-result-object v0
+    iget-object v0, p0, Lim7;->b:Lhm7;
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    move-result-wide v1
 
-    move-result-object v0
+    iget-wide v3, v0, Lhm7;->a:J
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getSubtitle()Ljava/lang/CharSequence;
+    add-long/2addr v1, v3
 
-    move-result-object v1
+    iget-object v3, p0, Lim7;->c:Ljm7;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setSubtitle(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    iput-wide v1, v3, Ljm7;->c:J
 
-    move-result-object v0
+    iget-object v0, v0, Lhm7;->b:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getDescription()Ljava/lang/CharSequence;
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentLinkedQueue;->offer(Ljava/lang/Object;)Z
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setDescription(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getIconBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setIconBitmap(Landroid/graphics/Bitmap;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getIconUri()Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setIconUri(Landroid/net/Uri;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getExtras()Landroid/os/Bundle;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setExtras(Landroid/os/Bundle;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getMediaUri()Landroid/net/Uri;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setMediaUri(Landroid/net/Uri;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->build()Landroid/support/v4/media/MediaDescriptionCompat;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

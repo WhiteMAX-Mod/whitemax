@@ -1,96 +1,66 @@
-.class public interface abstract Lrr6;
+.class public final synthetic Lrr6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/function/Consumer;
 
-# static fields
-.field public static final a:Lpr6;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(II)V
+    .locals 0
 
-    sget-object v0, Lpr6;->a:Lpr6;
+    iput p2, p0, Lrr6;->a:I
 
-    sput-object v0, Lrr6;->a:Lpr6;
+    iput p1, p0, Lrr6;->b:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Z
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 p0, 0x1
+    iget v0, p0, Lrr6;->a:I
 
-    return p0
-.end method
+    check-cast p1, Lfic;
 
-.method public b()V
-    .locals 0
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Licb;
+
+    iget v1, p0, Lrr6;->b:I
+
+    invoke-direct {v0, v1}, Licb;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lfic;->b(Leic;)V
 
     return-void
-.end method
 
-.method public c()Ljava/util/Comparator;
-    .locals 0
+    :pswitch_0
+    new-instance v0, Licb;
 
-    sget-object p0, Lrr6;->a:Lpr6;
+    iget v1, p0, Lrr6;->b:I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, v1}, Licb;-><init>(I)V
 
-    sget-object p0, Lpr6;->b:Lub3;
+    invoke-virtual {p1, v0}, Lfic;->b(Leic;)V
 
-    return-object p0
-.end method
+    return-void
 
-.method public d(J)La33;
-    .locals 0
+    nop
 
-    invoke-interface {p0}, Lrr6;->i()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-static {p1, p2, p0}, Ly30;->n(JLjava/util/List;)La33;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public e()Ljava/util/Comparator;
-    .locals 0
-
-    sget-object p0, Lrr6;->a:Lpr6;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p0, Lpr6;->c:Lkj4;
-
-    return-object p0
-.end method
-
-.method public f(J)La33;
-    .locals 0
-
-    invoke-interface {p0}, Lrr6;->i()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-static {p1, p2, p0}, Ly30;->o(JLjava/util/List;)La33;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public abstract g()J
-.end method
-
-.method public abstract h()J
-.end method
-
-.method public abstract i()Ljava/util/List;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

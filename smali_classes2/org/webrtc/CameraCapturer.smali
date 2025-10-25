@@ -194,31 +194,31 @@
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->cameraName:Ljava/lang/String;
+    iget-object p2, p0, Lorg/webrtc/CameraCapturer;->cameraName:Ljava/lang/String;
 
-    const-string p2, "Camera name "
+    const-string p3, "Camera name "
 
-    const-string p3, " does not match any known camera device."
+    const-string p4, " does not match any known camera device."
 
     .line 18
-    invoke-static {p2, p0, p3}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p2, p4}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
     .line 19
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
     .line 20
     :cond_3
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string p1, "No cameras attached."
+    const-string p2, "No cameras attached."
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public static bridge synthetic A(Lorg/webrtc/CameraCapturer;)V
@@ -310,40 +310,40 @@
 .end method
 
 .method private checkIsOnCameraThread()V
-    .locals 1
+    .locals 2
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->cameraThreadHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lorg/webrtc/CameraCapturer;->cameraThreadHandler:Landroid/os/Handler;
 
-    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+    invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
-    move-result-object p0
+    move-result-object v1
 
-    if-ne v0, p0, :cond_0
+    if-ne v0, v1, :cond_0
 
     return-void
 
     :cond_0
-    const-string p0, "CameraCapturer"
+    const-string v0, "CameraCapturer"
 
-    const-string v0, "Check is on camera thread failed."
+    const-string v1, "Check is on camera thread failed."
 
-    invoke-static {p0, v0}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "Not on camera thread."
+    const-string v1, "Not on camera thread."
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method private createSessionInternal(I)V
@@ -365,9 +365,9 @@
 
     invoke-direct {v1, p0}, Lorg/webrtc/CameraCapturer$6;-><init>(Lorg/webrtc/CameraCapturer;)V
 
-    int-to-long p0, p1
+    int-to-long v2, p1
 
-    invoke-virtual {v0, v1, p0, p1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method
@@ -493,11 +493,11 @@
 .end method
 
 .method private reportCameraSwitchError(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;)V
-    .locals 0
+    .locals 1
 
-    const-string p0, "CameraCapturer"
+    const-string v0, "CameraCapturer"
 
-    invoke-static {p0, p1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p2, :cond_0
 
@@ -542,7 +542,7 @@
 
     const-string v0, "Attempted to switch to unknown camera device "
 
-    invoke-static {v0, p2}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -571,7 +571,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_0
 
@@ -654,11 +654,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string p0, "CameraCapturer"
+    const-string p1, "CameraCapturer"
 
-    const-string p1, "switchCamera done"
+    const-string p2, "switchCamera done"
 
-    invoke-static {p0, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -668,7 +668,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public static bridge synthetic t(Lorg/webrtc/CameraCapturer;)Landroid/os/Handler;
@@ -742,7 +742,7 @@
 
     const-string v3, "@"
 
-    invoke-static {v1, p1, v2, p2, v3}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2, p2, v3}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -768,13 +768,13 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method public abstract createCameraSession(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Landroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;III)V
@@ -795,27 +795,27 @@
 .end method
 
 .method public getCameraName()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer;->stateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->cameraName:Ljava/lang/String;
+    iget-object v1, p0, Lorg/webrtc/CameraCapturer;->cameraName:Ljava/lang/String;
 
     monitor-exit v0
 
-    return-object p0
+    return-object v1
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method public initialize(Lorg/webrtc/SurfaceTextureHelper;Landroid/content/Context;Lorg/webrtc/CapturerObserver;)V
@@ -837,66 +837,66 @@
 .end method
 
 .method public isScreencast()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public printStackTrace()V
-    .locals 4
+    .locals 5
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->cameraThreadHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lorg/webrtc/CameraCapturer;->cameraThreadHandler:Landroid/os/Handler;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
-    move-result-object p0
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
+    invoke-virtual {v0}, Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
 
-    move-result-object p0
+    move-result-object v0
 
-    array-length v0, p0
+    array-length v1, v0
 
-    if-lez v0, :cond_1
+    if-lez v1, :cond_1
 
-    const-string v0, "CameraCapturer stack trace:"
+    const-string v1, "CameraCapturer stack trace:"
 
-    const-string v1, "CameraCapturer"
+    const-string v2, "CameraCapturer"
 
-    invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    array-length v0, p0
+    array-length v1, v0
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     :goto_1
-    if-ge v2, v0, :cond_1
+    if-ge v3, v1, :cond_1
 
-    aget-object v3, p0, v2
+    aget-object v4, v0, v3
 
-    invoke-virtual {v3}, Ljava/lang/StackTraceElement;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StackTraceElement;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v1, v3}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
@@ -915,7 +915,7 @@
 
     const-string v3, "@"
 
-    invoke-static {v1, p1, v2, p2, v3}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2, p2, v3}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -970,17 +970,17 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    const-string p0, "CameraCapturer"
+    const-string p1, "CameraCapturer"
 
-    const-string p1, "Session already open"
+    const-string p2, "Session already open"
 
-    invoke-static {p0, p1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v0
 
@@ -991,16 +991,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 
     :cond_2
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string p1, "CameraCapturer must be initialized before calling startCapture."
+    const-string p2, "CameraCapturer must be initialized before calling startCapture."
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public stopCapture()V
@@ -1041,23 +1041,23 @@
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_2
 
     :catch_0
     :try_start_2
-    const-string p0, "CameraCapturer"
+    const-string v1, "CameraCapturer"
 
-    const-string v1, "Stop capture interrupted while waiting for the session to open."
+    const-string v2, "Stop capture interrupted while waiting for the session to open."
 
-    invoke-static {p0, v1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
 
     monitor-exit v0
 
@@ -1094,29 +1094,29 @@
 
     iput-object v1, p0, Lorg/webrtc/CameraCapturer;->currentSession:Lorg/webrtc/CameraSession;
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->capturerObserver:Lorg/webrtc/CapturerObserver;
+    iget-object v1, p0, Lorg/webrtc/CameraCapturer;->capturerObserver:Lorg/webrtc/CapturerObserver;
 
-    invoke-interface {p0}, Lorg/webrtc/CapturerObserver;->onCapturerStopped()V
+    invoke-interface {v1}, Lorg/webrtc/CapturerObserver;->onCapturerStopped()V
 
     goto :goto_1
 
     :cond_1
-    const-string p0, "CameraCapturer"
+    const-string v1, "CameraCapturer"
 
-    const-string v1, "Stop capture: No session open"
+    const-string v2, "Stop capture: No session open"
 
-    invoke-static {p0, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    const-string p0, "CameraCapturer"
+    const-string v0, "CameraCapturer"
 
-    const-string v0, "Stop capture done"
+    const-string v1, "Stop capture done"
 
-    invoke-static {p0, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -1126,7 +1126,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method public switchCamera(Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;)V

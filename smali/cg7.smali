@@ -1,74 +1,53 @@
 .class public final Lcg7;
-.super Lx2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Liu7;
+.implements Ljava/io/Serializable;
 
-# static fields
-.field public static final c:Lcg7;
+
+# instance fields
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lcg7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lx2;-><init>(I)V
-
-    sput-object v0, Lcg7;->c:Lcg7;
+    iput-object p1, p0, Lcg7;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static W0(JLjava/lang/String;Ljava/lang/String;Z)Landroid/net/Uri;
-    .locals 2
 
-    new-instance v0, Lya4;
+# virtual methods
+.method public final e()Z
+    .locals 1
 
-    invoke-direct {v0}, Lya4;-><init>()V
+    const/4 v0, 0x1
 
-    const-string v1, ":join"
+    return v0
+.end method
 
-    iput-object v1, v0, Lya4;->a:Ljava/lang/String;
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
 
-    const-string v1, "id"
+    iget-object v0, p0, Lcg7;->a:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return-object v0
+.end method
 
-    move-result-object p0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, p0, v1}, Lya4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v0, p0, Lcg7;->a:Ljava/lang/Object;
 
-    const-string p0, "link"
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {v0, p3, p0}, Lya4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v0
 
-    const-string p0, "channel"
-
-    invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, p0}, Lya4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string p0, "no_anim"
-
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, p1, p0}, Lya4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    if-eqz p2, :cond_0
-
-    const-string p0, "title"
-
-    invoke-virtual {v0, p2, p0}, Lya4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    :cond_0
-    invoke-virtual {v0}, Lya4;->a()Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

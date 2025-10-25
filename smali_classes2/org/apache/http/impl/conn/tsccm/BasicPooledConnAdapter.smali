@@ -30,19 +30,19 @@
 .end method
 
 .method public getManager()Lorg/apache/http/conn/ClientConnectionManager;
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->getManager()Lorg/apache/http/conn/ClientConnectionManager;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getPoolEntry()Lorg/apache/http/impl/conn/AbstractPoolEntry;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/AbstractPooledConnAdapter;->poolEntry:Lorg/apache/http/impl/conn/AbstractPoolEntry;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/AbstractPooledConnAdapter;->poolEntry:Lorg/apache/http/impl/conn/AbstractPoolEntry;
 
-    return-object p0
+    return-object v0
 .end method

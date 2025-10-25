@@ -78,7 +78,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lld4;)V
+.method public synthetic constructor <init>(Lki4;)V
     .locals 0
 
     .line 1
@@ -132,73 +132,73 @@
 
 # virtual methods
 .method public final getDefaultAutoRepeat()Z
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lone/me/rlottie/RLottieFactory$Config;->access$getDefaultAutoRepeat$cp()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final getDefaultAutoStart()Z
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lone/me/rlottie/RLottieFactory$Config;->access$getDefaultAutoStart$cp()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final getDefaultNetworkFetchEnabled()Z
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lone/me/rlottie/RLottieFactory$Config;->access$getDefaultNetworkFetchEnabled$cp()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final getDefaultPrecache()Z
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lone/me/rlottie/RLottieFactory$Config;->access$getDefaultPrecache$cp()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final getDefaultShouldLimitFps()Z
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lone/me/rlottie/RLottieFactory$Config;->access$getDefaultShouldLimitFps$cp()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final getDefaultSize()I
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lone/me/rlottie/RLottieFactory$Config;->access$getDefaultSize$cp()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final getDefaultStartDecodeFirstFrame()Z
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lone/me/rlottie/RLottieFactory$Config;->access$getDefaultStartDecodeFirstFrame$cp()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final setDefaultAutoRepeat(Z)V

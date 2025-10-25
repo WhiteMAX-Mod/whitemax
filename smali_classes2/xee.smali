@@ -1,64 +1,110 @@
 .class public final Lxee;
-.super Lsxe;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public c:Lmee;
+.field public X:I
+
+.field public final synthetic Y:Lqfe;
 
 
 # direct methods
-.method public constructor <init>(Lt39;)V
+.method public constructor <init>(Lqfe;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lsxe;-><init>(Lt39;)V
+    iput-object p1, p0, Lxee;->Y:Lqfe;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lt39;Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "sticker"
+    check-cast p1, Lj0c;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-static {p1}, Lmee;->a(Lt39;)Lmee;
+    invoke-virtual {p0, p1, p2}, Lxee;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, p0, Lxee;->c:Lmee;
+    check-cast p1, Lxee;
 
-    return-void
+    sget-object p2, Lccg;->a:Lccg;
 
-    :cond_0
-    invoke-virtual {p1}, Lt39;->B()V
+    invoke-virtual {p1, p2}, Lxee;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lxee;
+
+    iget-object v0, p0, Lxee;->Y:Lqfe;
+
+    invoke-direct {p1, v0, p2}, Lxee;-><init>(Lqfe;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-object p0, p0, Lxee;->c:Lmee;
+    iget v0, p0, Lxee;->X:I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const/4 v1, 0x1
 
-    move-result-object p0
+    if-eqz v0, :cond_1
 
-    const-string v0, "{sticker = "
+    if-ne v0, v1, :cond_0
 
-    const-string v1, "}"
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-static {v0, p0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object p0
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-object p0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iput v1, p0, Lxee;->X:I
+
+    iget-object p1, p0, Lxee;->Y:Lqfe;
+
+    invoke-static {p1, p0}, Lqfe;->s(Lqfe;Lsgf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

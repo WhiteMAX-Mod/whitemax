@@ -1,89 +1,80 @@
-.class public final enum Load;
-.super Ljava/lang/Enum;
+.class public final synthetic Load;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final enum a:Load;
 
-.field public static final enum b:Load;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Load;
+.field public final synthetic b:Lir4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lir4;)V
+    .locals 1
 
-    new-instance v0, Load;
+    .line 1
+    const/4 v0, 0x1
 
-    const-string v1, "hash"
+    iput v0, p0, Load;->a:I
 
-    const/4 v2, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Load;
-
-    const-string v2, "app-update-type"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Load;->a:Load;
-
-    new-instance v2, Load;
-
-    const-string v3, "has-phone"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Load;
-
-    const-string v4, "esia-verify-botId"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Load;->b:Load;
-
-    filled-new-array {v0, v1, v2, v3}, [Load;
-
-    move-result-object v0
-
-    sput-object v0, Load;->c:[Load;
+    iput-object p1, p0, Load;->b:Lir4;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Load;
-    .locals 1
+.method public synthetic constructor <init>(Lir4;J)V
+    .locals 0
 
-    const-class v0, Load;
+    .line 2
+    const/4 p2, 0x0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput p2, p0, Load;->a:I
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Load;
+    iput-object p1, p0, Load;->b:Lir4;
 
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Load;
-    .locals 1
 
-    sget-object v0, Load;->c:[Load;
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget v0, p0, Load;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, [Load;
+    iget-object v0, p0, Load;->b:Lir4;
 
-    return-object v0
+    iget-object v0, v0, Lir4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lq7b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, v0, Lul0;->i:Lsd6;
+
+    invoke-virtual {v1, v0}, Lsd6;->r(La8b;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Load;->b:Lir4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

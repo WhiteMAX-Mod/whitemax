@@ -1,105 +1,181 @@
 .class public final Lagb;
-.super Ljava/lang/Object;
+.super Lzyi;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lcl7;
+.field public final synthetic a:I
 
-.field public final b:Lcl7;
+.field public final synthetic b:Lorg/webrtc/SessionDescription;
 
-.field public final c:Lcl7;
-
-.field public final d:Lcl7;
-
-.field public final e:Lcl7;
-
-.field public final f:Lcl7;
+.field public final synthetic c:Legb;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;)V
+.method public synthetic constructor <init>(Legb;Lorg/webrtc/SessionDescription;I)V
     .locals 0
 
+    iput p3, p0, Lagb;->a:I
+
+    iput-object p1, p0, Lagb;->c:Legb;
+
+    iput-object p2, p0, Lagb;->b:Lorg/webrtc/SessionDescription;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lagb;->a:Lcl7;
-
-    iput-object p2, p0, Lagb;->b:Lcl7;
-
-    iput-object p3, p0, Lagb;->c:Lcl7;
-
-    iput-object p4, p0, Lagb;->d:Lcl7;
-
-    iput-object p5, p0, Lagb;->e:Lcl7;
-
-    iput-object p6, p0, Lagb;->f:Lcl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ls72;Luz8;)Lzfb;
-    .locals 7
+.method public final onSetFailure(Ljava/lang/String;)V
+    .locals 6
 
-    new-instance v0, Lzfb;
+    iget v0, p0, Lagb;->a:I
 
-    iget-object v1, p0, Lagb;->a:Lcl7;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Lagb;->c:Legb;
 
-    move-result-object v1
+    iget-object v1, v0, Legb;->D:Lei1;
 
-    check-cast v1, Ldka;
+    iget-boolean v1, v1, Lei1;->B:Z
 
-    iget-object v2, p0, Lagb;->b:Lcl7;
+    const/4 v2, 0x0
 
-    invoke-interface {v2}, Lcl7;->getValue()Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    move-result-object v2
+    iget-object v1, p0, Lagb;->b:Lorg/webrtc/SessionDescription;
 
-    check-cast v2, Lco3;
+    iget-object v3, v0, Legb;->N:Lorg/webrtc/PeerConnection;
 
-    iget-object v3, p0, Lagb;->c:Lcl7;
-
-    invoke-interface {v3}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getLocalDescription()Lorg/webrtc/SessionDescription;
 
     move-result-object v3
 
-    check-cast v3, Lqgb;
+    iget-object v4, v1, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
 
-    iget-object v4, p0, Lagb;->d:Lcl7;
-
-    invoke-interface {v4}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-static {v4, v2}, Ll5a;->a(Lorg/webrtc/SessionDescription$Type;Z)Ll5a;
 
     move-result-object v4
 
-    check-cast v4, Ljn4;
+    new-instance v5, Lm5a;
 
-    iget-object v4, p0, Lagb;->e:Lcl7;
+    invoke-direct {v5, v4, p1, v3, v1}, Lm5a;-><init>(Ll5a;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
 
-    invoke-interface {v4}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2, p1}, Legb;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
+
+    new-instance p1, Lsfb;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v0, v5, v1}, Lsfb;-><init>(Legb;Lm5a;I)V
+
+    const-string v1, "onSetFailure"
+
+    invoke-virtual {v0, v1, p1}, Legb;->j(Ljava/lang/String;Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lagb;->b:Lorg/webrtc/SessionDescription;
+
+    invoke-virtual {v0, v1, v2, p1}, Legb;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lagb;->c:Legb;
+
+    iget-object v1, v0, Legb;->D:Lei1;
+
+    iget-boolean v1, v1, Lei1;->B:Z
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lagb;->b:Lorg/webrtc/SessionDescription;
+
+    iget-object v3, v0, Legb;->N:Lorg/webrtc/PeerConnection;
+
+    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getRemoteDescription()Lorg/webrtc/SessionDescription;
+
+    move-result-object v3
+
+    iget-object v4, v1, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
+
+    invoke-static {v4, v2}, Ll5a;->a(Lorg/webrtc/SessionDescription$Type;Z)Ll5a;
 
     move-result-object v4
 
-    check-cast v4, Lq95;
+    new-instance v5, Lm5a;
 
-    iget-object p0, p0, Lagb;->f:Lcl7;
+    invoke-direct {v5, v4, p1, v1, v3}, Lm5a;-><init>(Ll5a;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2, p1}, Legb;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
 
-    move-result-object p0
+    new-instance p1, Lsfb;
 
-    move-object v6, p0
+    const/4 v1, 0x1
 
-    check-cast v6, Ltj;
+    invoke-direct {p1, v0, v5, v1}, Lsfb;-><init>(Legb;Lm5a;I)V
 
-    move-object v5, p1
+    const-string v1, "onSetFailure"
 
-    move-object v4, p2
+    invoke-virtual {v0, v1, p1}, Legb;->j(Ljava/lang/String;Ljava/lang/Runnable;)V
 
-    invoke-direct/range {v0 .. v6}, Lzfb;-><init>(Ldka;Lco3;Lqgb;Luz8;Ls72;Ltj;)V
+    goto :goto_1
 
-    return-object v0
+    :cond_1
+    iget-object v1, p0, Lagb;->b:Lorg/webrtc/SessionDescription;
+
+    invoke-virtual {v0, v1, v2, p1}, Legb;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onSetSuccess()V
+    .locals 3
+
+    iget v0, p0, Lagb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lagb;->b:Lorg/webrtc/SessionDescription;
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lagb;->c:Legb;
+
+    invoke-virtual {v2, v0, v1}, Legb;->o(Lorg/webrtc/SessionDescription;Z)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lagb;->b:Lorg/webrtc/SessionDescription;
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lagb;->c:Legb;
+
+    invoke-virtual {v2, v0, v1}, Legb;->o(Lorg/webrtc/SessionDescription;Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

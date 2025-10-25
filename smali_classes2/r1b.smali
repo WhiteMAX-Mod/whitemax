@@ -1,73 +1,43 @@
-.class public final Lr1b;
+.class public abstract Lr1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lon4;
+# static fields
+.field public static final a:I
 
-.field public final b:Z
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-static {p1}, Ljtg;->x(Landroid/content/Context;)Lon4;
+    sget v0, Lbpc;->oneme_snackbar_caption_id:I
 
-    move-result-object p1
+    sput v0, Lr1b;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lbpc;->oneme_snackbar_container_id:I
 
-    iput-object p1, p0, Lr1b;->a:Lon4;
+    sput v0, Lr1b;->b:I
 
-    sget-object v0, Lon4;->o:Lon4;
+    sget v0, Lbpc;->oneme_snackbar_left_icon_id:I
 
-    invoke-virtual {p1, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    sput v0, Lr1b;->c:I
 
-    move-result p1
+    sget v0, Lbpc;->oneme_snackbar_right_button_id:I
 
-    if-ltz p1, :cond_0
+    sput v0, Lr1b;->d:I
 
-    const/4 p1, 0x1
+    sget v0, Lbpc;->oneme_snackbar_title_id:I
 
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-boolean p1, p0, Lr1b;->b:Z
+    sput v0, Lr1b;->e:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "\n        PerformanceConfig(\n            perfClass="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lr1b;->a:Lon4;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ",\n        )\n    "
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lkme;->P(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

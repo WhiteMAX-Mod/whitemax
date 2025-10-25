@@ -1,204 +1,269 @@
-.class public final Ldv0;
-.super Ljava/lang/ThreadLocal;
+.class public final synthetic Ldv0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final synthetic b:Lfv0;
+
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lfv0;I)V
     .locals 0
 
-    iput p1, p0, Ldv0;->a:I
+    iput p2, p0, Ldv0;->a:I
 
-    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
+    iput-object p1, p0, Ldv0;->b:Lfv0;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final initialValue()Ljava/lang/Object;
-    .locals 2
+.method public final run()V
+    .locals 6
 
-    iget p0, p0, Ldv0;->a:I
+    iget v0, p0, Ldv0;->a:I
 
-    packed-switch p0, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    const-wide/16 v0, 0x0
+    iget-object v0, p0, Ldv0;->b:Lfv0;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v1, v0, Lfv0;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result-object p0
+    const/4 v2, 0x0
 
-    return-object p0
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    :pswitch_0
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    iget-object v1, v0, Lfv0;->g:Lk60;
 
-    return-object p0
+    iget-object v2, v1, Lk60;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    :pswitch_1
-    new-instance p0, Ljava/text/DecimalFormat;
+    const/4 v3, 0x1
 
-    const-string v0, "#,##0.0"
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    invoke-direct {p0, v0}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+    move-result v2
 
-    return-object p0
-
-    :pswitch_2
-    new-instance p0, Ljava/text/DecimalFormat;
-
-    const-string v0, "#,##0"
-
-    invoke-direct {p0, v0}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
-
-    return-object p0
-
-    :pswitch_3
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object p0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    if-ne p0, v0, :cond_0
-
-    invoke-static {}, Ln4e;->A()Lxo6;
-
-    move-result-object p0
+    if-eqz v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result-object p0
+    const/16 v3, 0x1d
 
-    if-eqz p0, :cond_1
+    if-lt v2, v3, :cond_1
 
-    new-instance p0, Landroid/os/Handler;
+    iget-object v2, v1, Lk60;->k:Lj60;
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    if-eqz v2, :cond_1
 
-    move-result-object v0
+    iget-object v3, v1, Lk60;->a:Landroid/media/AudioRecord;
 
-    invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    new-instance v0, Lxo6;
-
-    invoke-direct {v0, p0}, Lxo6;-><init>(Landroid/os/Handler;)V
-
-    move-object p0, v0
-
-    goto :goto_0
+    invoke-static {v3, v2}, Lol;->g(Landroid/media/AudioRecord;Lj60;)V
 
     :cond_1
-    const/4 p0, 0x0
+    iget-object v1, v1, Lk60;->a:Landroid/media/AudioRecord;
+
+    invoke-virtual {v1}, Landroid/media/AudioRecord;->release()V
 
     :goto_0
-    return-object p0
+    iget-object v1, v0, Lfv0;->e:Ljava/lang/Object;
 
-    :pswitch_4
-    new-instance p0, Ljava/util/Random;
+    monitor-enter v1
 
-    invoke-direct {p0}, Ljava/util/Random;-><init>()V
+    const/4 v2, 0x0
 
-    return-object p0
+    :try_start_0
+    iput-object v2, v0, Lfv0;->f:Lev0;
 
-    :pswitch_5
-    new-instance p0, Ljava/text/SimpleDateFormat;
+    iget-object v0, v0, Lfv0;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    const-string v0, "yyyy:MM:dd HH:mm:ss"
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->clear()V
 
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+    monitor-exit v1
 
-    invoke-direct {p0, v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    return-void
 
-    return-object p0
+    :catchall_0
+    move-exception v0
 
-    :pswitch_6
-    new-instance p0, Ljava/text/SimpleDateFormat;
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string v0, "HH:mm:ss"
+    throw v0
 
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+    :pswitch_0
+    iget-object v0, p0, Ldv0;->b:Lfv0;
 
-    invoke-direct {p0, v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-virtual {v0}, Lfv0;->b()V
 
-    return-object p0
+    return-void
 
-    :pswitch_7
-    new-instance p0, Ljava/text/SimpleDateFormat;
+    :pswitch_1
+    iget-object v0, p0, Ldv0;->b:Lfv0;
 
-    const-string v0, "yyyy:MM:dd"
+    :try_start_1
+    iget-object v1, v0, Lfv0;->g:Lk60;
 
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+    invoke-virtual {v1}, Lk60;->d()V
 
-    invoke-direct {p0, v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    iget-object v1, v0, Lfv0;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    return-object p0
+    const/4 v2, 0x1
 
-    :pswitch_8
-    sget-object p0, Lw94;->a:Ldv0;
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    const/16 p0, 0x4000
+    move-result v1
 
-    invoke-static {p0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    if-eqz v1, :cond_2
 
-    move-result-object p0
+    goto :goto_1
 
-    return-object p0
+    :cond_2
+    invoke-virtual {v0}, Lfv0;->b()V
+    :try_end_1
+    .catch Landroidx/camera/video/internal/audio/AudioStream$AudioStreamException; {:try_start_1 .. :try_end_1} :catch_0
 
-    :pswitch_9
-    new-instance p0, Ljava/text/SimpleDateFormat;
+    :goto_1
+    return-void
 
-    const-string v0, "EEE, dd MMM yyyy HH:mm:ss \'GMT\'"
+    :catch_0
+    move-exception v0
 
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+    new-instance v1, Ljava/lang/RuntimeException;
 
-    invoke-direct {p0, v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    const/4 v0, 0x0
+    throw v1
 
-    invoke-virtual {p0, v0}, Ljava/text/DateFormat;->setLenient(Z)V
+    :pswitch_2
+    iget-object v0, p0, Ldv0;->b:Lfv0;
 
-    sget-object v0, Lmrf;->e:Ljava/util/TimeZone;
+    iget-object v1, v0, Lfv0;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {p0, v0}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+    const/4 v2, 0x0
 
-    return-object p0
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    :pswitch_a
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    iget-object v1, v0, Lfv0;->g:Lk60;
 
-    return-object p0
+    invoke-virtual {v1}, Lk60;->a()V
 
-    :pswitch_b
-    new-instance p0, Ljava/util/concurrent/ConcurrentLinkedQueue;
+    iget-object v3, v1, Lk60;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    return-object p0
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v2, v1, Lk60;->a:Landroid/media/AudioRecord;
+
+    invoke-virtual {v2}, Landroid/media/AudioRecord;->stop()V
+
+    iget-object v2, v1, Lk60;->a:Landroid/media/AudioRecord;
+
+    invoke-virtual {v2}, Landroid/media/AudioRecord;->getRecordingState()I
+
+    move-result v2
+
+    const/4 v4, 0x1
+
+    if-eq v2, v4, :cond_4
+
+    const-string v2, "AudioStreamImpl"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "Failed to stop AudioRecord with state: "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v5, v1, Lk60;->a:Landroid/media/AudioRecord;
+
+    invoke-virtual {v5}, Landroid/media/AudioRecord;->getRecordingState()I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Lgfi;->g(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_4
+    const-class v2, Landroidx/camera/video/internal/compat/quirk/AudioTimestampFramePositionIncorrectQuirk;
+
+    sget-object v4, Lus4;->a:Lp95;
+
+    invoke-virtual {v4, v2}, Lp95;->C(Ljava/lang/Class;)Lgjc;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_5
+
+    iget-object v2, v1, Lk60;->a:Landroid/media/AudioRecord;
+
+    invoke-virtual {v2}, Landroid/media/AudioRecord;->release()V
+
+    iget v2, v1, Lk60;->f:I
+
+    iget-object v4, v1, Lk60;->b:Lm90;
+
+    invoke-static {v2, v4, v3}, Lk60;->b(ILm90;Landroid/content/Context;)Landroid/media/AudioRecord;
+
+    move-result-object v2
+
+    iput-object v2, v1, Lk60;->a:Landroid/media/AudioRecord;
+
+    :cond_5
+    :goto_2
+    iget-object v1, v0, Lfv0;->e:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_2
+    iput-object v3, v0, Lfv0;->f:Lev0;
+
+    iget-object v0, v0, Lfv0;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->clear()V
+
+    monitor-exit v1
+
+    return-void
+
+    :catchall_1
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0

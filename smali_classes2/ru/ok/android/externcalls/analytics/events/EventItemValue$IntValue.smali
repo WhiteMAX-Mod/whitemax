@@ -150,53 +150,53 @@
 
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->value:I
+    iget v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->value:I
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->equals-impl(ILjava/lang/Object;)Z
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->equals-impl(ILjava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final getValue()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->value:I
+    iget v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->value:I
 
-    return p0
+    return v0
 .end method
 
 .method public hashCode()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->value:I
+    iget v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->value:I
 
-    invoke-static {p0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->hashCode-impl(I)I
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->hashCode-impl(I)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->value:I
+    iget v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->value:I
 
-    invoke-static {p0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->toString-impl(I)Ljava/lang/String;
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->toString-impl(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final synthetic unbox-impl()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->value:I
+    iget v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemValue$IntValue;->value:I
 
-    return p0
+    return v0
 .end method

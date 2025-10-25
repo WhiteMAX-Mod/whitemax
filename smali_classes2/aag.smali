@@ -1,77 +1,203 @@
 .class public final Laag;
-.super Lvx3;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:Lax;
+.field public X:I
 
-.field public final synthetic b:Landroid/view/ViewTreeObserver;
-
-.field public final synthetic c:Lbag;
-
-.field public final synthetic d:Landroid/view/View;
+.field public final synthetic Y:Lfag;
 
 
 # direct methods
-.method public constructor <init>(Lax;Landroid/view/ViewTreeObserver;Lbag;Landroid/view/View;)V
+.method public constructor <init>(Lfag;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Laag;->Y:Lfag;
 
-    iput-object p1, p0, Laag;->a:Lax;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Laag;->b:Landroid/view/ViewTreeObserver;
-
-    iput-object p3, p0, Laag;->c:Lbag;
-
-    iput-object p4, p0, Laag;->d:Landroid/view/View;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final s(Lxx3;Landroid/view/View;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Laag;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Laag;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Laag;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object p2, p0, Laag;->a:Lax;
+    new-instance p1, Laag;
 
-    iget-object p2, p2, Lax;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Laag;->Y:Lfag;
 
-    check-cast p2, Ljava/util/ArrayList;
+    invoke-direct {p1, v0, p2}, Laag;-><init>(Lfag;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    return-object p1
+.end method
 
-    move-result-object p2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p0, Laag;->Y:Lfag;
 
-    move-result v0
+    iget-object v1, v0, Lfag;->w0:Lxe5;
 
-    if-eqz v0, :cond_0
+    iget v2, p0, Laag;->X:I
 
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v3, 0x1
 
-    move-result-object v0
+    if-eqz v2, :cond_1
 
-    check-cast v0, Ly9g;
+    if-ne v2, v3, :cond_0
 
-    invoke-interface {v0}, Ly9g;->b()V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    check-cast p1, Lded;
+
+    iget-object p1, p1, Lded;->a:Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, p0}, Lxx3;->removeLifecycleListener(Lvx3;)V
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p1, p0, Laag;->c:Lbag;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object p2, p0, Laag;->d:Landroid/view/View;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Laag;->b:Landroid/view/ViewTreeObserver;
+    throw p1
 
-    invoke-static {p1, p2, p0}, Lax;->b(Lbag;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    return-void
+    new-instance p1, Lo8g;
+
+    invoke-direct {p1, v3}, Lo8g;-><init>(Z)V
+
+    invoke-static {v1, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    iget-object p1, v0, Lfag;->X:Ljpa;
+
+    iget-object v2, v0, Lfag;->b:Ljava/lang/String;
+
+    iget-object v4, v0, Lfag;->o:Lmj7;
+
+    iput v3, p0, Laag;->X:I
+
+    invoke-virtual {p1, v2, v4, p0}, Ljpa;->a(Ljava/lang/String;Lmj7;Ly14;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    sget-object v2, Lr54;->a:Lr54;
+
+    if-ne p1, v2, :cond_2
+
+    return-object v2
+
+    :cond_2
+    :goto_0
+    invoke-static {p1}, Lded;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v2
+
+    sget-object v4, Lccg;->a:Lccg;
+
+    if-eqz v2, :cond_3
+
+    new-instance p1, Ln8g;
+
+    invoke-static {v2}, Ls0i;->d(Ljava/lang/Throwable;)Ltrf;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x6
+
+    invoke-direct {p1, v2, v3, v0}, Ln8g;-><init>(IILtrf;)V
+
+    invoke-static {v1, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    return-object v4
+
+    :cond_3
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v5
+
+    iget-object p1, v0, Lfag;->Z:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ly83;
+
+    invoke-static {v5, v6, p1}, Ldyi;->b(JLy83;)I
+
+    move-result p1
+
+    sget v0, Lzjd;->l:I
+
+    sget v2, Lbrc;->oneme_settings_twofa_delete_user_days_notif:I
+
+    new-instance v5, Ljava/lang/Integer;
+
+    invoke-direct {v5, p1}, Ljava/lang/Integer;-><init>(I)V
+
+    filled-new-array {v5}, [Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-static {v5, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v3
+
+    new-instance v5, Lmrf;
+
+    invoke-static {v3}, Ljt;->F([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-direct {v5, v3, v2, p1}, Lmrf;-><init>(Ljava/util/List;II)V
+
+    new-instance p1, Ln8g;
+
+    const/4 v2, 0x4
+
+    invoke-direct {p1, v0, v2, v5}, Ln8g;-><init>(IILtrf;)V
+
+    invoke-static {v1, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    return-object v4
 .end method

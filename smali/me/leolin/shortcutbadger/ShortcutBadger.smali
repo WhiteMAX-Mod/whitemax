@@ -113,7 +113,7 @@
 .end method
 
 .method public static applyCount(Landroid/content/Context;I)Z
-    .locals 0
+    .locals 1
 
     :try_start_0
     invoke-static {p0, p1}, Lme/leolin/shortcutbadger/ShortcutBadger;->applyCountOrThrow(Landroid/content/Context;I)V
@@ -125,6 +125,23 @@
     return p0
 
     :catch_0
+    move-exception p0
+
+    const/4 p1, 0x3
+
+    const-string v0, "ShortcutBadger"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "Unable to execute badge"
+
+    invoke-static {v0, p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
     const/4 p0, 0x0
 
     return p0
@@ -240,7 +257,25 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    return-void
+
     :catch_0
+    move-exception p0
+
+    const/4 p1, 0x3
+
+    const-string p2, "ShortcutBadger"
+
+    invoke-static {p2, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "Unable to execute badge"
+
+    invoke-static {p2, p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_0
     return-void
 .end method
@@ -262,7 +297,25 @@
 
     if-nez v0, :cond_0
 
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Unable to find launch intent for package "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "ShortcutBadger"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
@@ -458,7 +511,7 @@
 .end method
 
 .method public static isBadgeCounterSupported(Landroid/content/Context;)Z
-    .locals 6
+    .locals 9
 
     sget-object v0, Lme/leolin/shortcutbadger/ShortcutBadger;->sIsBadgeCounterSupported:Ljava/lang/Boolean;
 
@@ -477,74 +530,130 @@
 
     const/4 v1, 0x0
 
-    move v2, v1
+    const/4 v2, 0x0
+
+    move v3, v1
 
     :goto_0
-    const/4 v3, 0x3
+    const/4 v4, 0x3
 
-    if-ge v2, v3, :cond_1
+    if-ge v3, v4, :cond_1
 
     :try_start_1
-    const-string v4, "%d/%d."
+    const-string v5, "ShortcutBadger"
 
-    add-int/lit8 v5, v2, 0x1
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v5
+    const-string v7, "Checking if platform supports badge counters, attempt "
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    const-string v7, "%d/%d."
 
-    filled-new-array {v5, v3}, [Ljava/lang/Object;
+    add-int/lit8 v8, v3, 0x1
 
-    move-result-object v3
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v4, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    move-result-object v8
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    filled-new-array {v8, v4}, [Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-static {v7, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v5, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {p0}, Lme/leolin/shortcutbadger/ShortcutBadger;->initBadger(Landroid/content/Context;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_0
+    if-eqz v4, :cond_0
 
-    sget-object v3, Lme/leolin/shortcutbadger/ShortcutBadger;->sShortcutBadger:Lme/leolin/shortcutbadger/Badger;
+    sget-object v4, Lme/leolin/shortcutbadger/ShortcutBadger;->sShortcutBadger:Lme/leolin/shortcutbadger/Badger;
 
-    sget-object v4, Lme/leolin/shortcutbadger/ShortcutBadger;->sComponentName:Landroid/content/ComponentName;
+    sget-object v5, Lme/leolin/shortcutbadger/ShortcutBadger;->sComponentName:Landroid/content/ComponentName;
 
-    invoke-interface {v3, p0, v4, v1}, Lme/leolin/shortcutbadger/Badger;->executeBadge(Landroid/content/Context;Landroid/content/ComponentName;I)V
+    invoke-interface {v4, p0, v5, v1}, Lme/leolin/shortcutbadger/Badger;->executeBadge(Landroid/content/Context;Landroid/content/ComponentName;I)V
 
-    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    sput-object v3, Lme/leolin/shortcutbadger/ShortcutBadger;->sIsBadgeCounterSupported:Ljava/lang/Boolean;
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    sput-object v4, Lme/leolin/shortcutbadger/ShortcutBadger;->sIsBadgeCounterSupported:Ljava/lang/Boolean;
 
-    goto :goto_1
+    const-string v4, "ShortcutBadger"
+
+    const-string v5, "Badge counter is supported in this platform."
+
+    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_3
 
     :catchall_0
     move-exception p0
 
-    goto :goto_2
+    goto :goto_4
 
     :catch_0
-    move-exception v3
+    move-exception v2
 
-    :try_start_2
-    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    goto :goto_1
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    const-string v2, "Failed to initialize the badge counter."
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_2
+
+    :goto_1
+    :try_start_2
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_2
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_1
-    :goto_1
+    :goto_3
     sget-object p0, Lme/leolin/shortcutbadger/ShortcutBadger;->sIsBadgeCounterSupported:Ljava/lang/Boolean;
 
     if-nez p0, :cond_2
+
+    const-string p0, "ShortcutBadger"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Badge counter seems not supported for this platform: "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
@@ -553,9 +662,9 @@
     :cond_2
     monitor-exit v0
 
-    goto :goto_3
+    goto :goto_5
 
-    :goto_2
+    :goto_4
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -563,7 +672,7 @@
     throw p0
 
     :cond_3
-    :goto_3
+    :goto_5
     sget-object p0, Lme/leolin/shortcutbadger/ShortcutBadger;->sIsBadgeCounterSupported:Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z

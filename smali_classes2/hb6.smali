@@ -1,64 +1,91 @@
-.class public final synthetic Lhb6;
+.class public final Lhb6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpm3;
-.implements Lp0e;
-
 
 # instance fields
-.field public final synthetic a:Lru/ok/messages/settings/caching/FrgCachingSettings;
+.field public final a:Ljava/util/concurrent/ConcurrentSkipListSet;
+
+.field public final b:Lgb6;
+
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/settings/caching/FrgCachingSettings;)V
-    .locals 0
-
-    iput-object p1, p0, Lhb6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;-><init>()V
+
+    iput-object v0, p0, Lhb6;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    new-instance v0, Lgb6;
+
+    invoke-direct {v0, p0}, Lgb6;-><init>(Lhb6;)V
+
+    iput-object v0, p0, Lhb6;->b:Lgb6;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lhb6;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
+.method public static synthetic b(Lhb6;Ljava/lang/String;Lji6;)Leb6;
+    .locals 1
 
-# virtual methods
-.method public a(F)Ljava/lang/String;
-    .locals 0
+    sget-object v0, Lka5;->a:Lka5;
 
-    iget-object p0, p0, Lhb6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
+    invoke-virtual {p0, p1, v0, p2}, Lhb6;->a(Ljava/lang/String;Ljava/lang/Iterable;Lji6;)Leb6;
 
-    iget-object p0, p0, Lru/ok/messages/settings/caching/FrgCachingSettings;->F1:[Ljava/lang/String;
-
-    float-to-int p1, p1
-
-    aget-object p0, p0, p1
+    move-result-object p0
 
     return-object p0
 .end method
 
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
 
-    check-cast p1, Loq4;
+# virtual methods
+.method public final a(Ljava/lang/String;Ljava/lang/Iterable;Lji6;)Leb6;
+    .locals 7
 
-    iget-object p0, p0, Lhb6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
+    new-instance v0, Leb6;
 
-    iget-object v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->x1:Lxd3;
+    new-instance v1, Lzz1;
 
-    if-nez v0, :cond_0
+    const/4 v6, 0x6
 
-    new-instance v0, Lxd3;
+    move-object v4, p0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-object v5, p1
 
-    iput-object v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->x1:Lxd3;
+    move-object v2, p2
 
-    :cond_0
-    iget-object p0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->x1:Lxd3;
+    move-object v3, p3
 
-    invoke-virtual {p0, p1}, Lxd3;->a(Loq4;)Z
+    invoke-direct/range {v1 .. v6}, Lzz1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    return-void
+    invoke-direct {v0, v5, v1}, Leb6;-><init>(Ljava/lang/String;Lzz1;)V
+
+    iget-object p1, v4, Lhb6;->c:Ljava/util/ArrayList;
+
+    const/4 p2, 0x0
+
+    iget-object p3, v0, Leb6;->b:Lfb6;
+
+    invoke-virtual {p1, p2, p3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p3}, Ljava/util/concurrent/ForkJoinPool;->execute(Ljava/util/concurrent/ForkJoinTask;)V
+
+    return-object v0
 .end method

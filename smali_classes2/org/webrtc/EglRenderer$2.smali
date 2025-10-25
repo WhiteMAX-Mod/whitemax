@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lorg/webrtc/EglRenderer$2;->this$0:Lorg/webrtc/EglRenderer;
 
@@ -86,26 +86,26 @@
 
     move-result-object v1
 
-    iget-object p0, p0, Lorg/webrtc/EglRenderer$2;->this$0:Lorg/webrtc/EglRenderer;
+    iget-object v2, p0, Lorg/webrtc/EglRenderer$2;->this$0:Lorg/webrtc/EglRenderer;
 
-    invoke-static {p0}, Lorg/webrtc/EglRenderer;->j(Lorg/webrtc/EglRenderer;)Ljava/lang/Runnable;
+    invoke-static {v2}, Lorg/webrtc/EglRenderer;->j(Lorg/webrtc/EglRenderer;)Ljava/lang/Runnable;
 
-    move-result-object p0
+    move-result-object v2
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    const-wide/16 v3, 0x4
+    const-wide/16 v4, 0x4
 
-    invoke-virtual {v2, v3, v4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-virtual {v3, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    invoke-virtual {v1, p0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_1
 
@@ -120,5 +120,5 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method

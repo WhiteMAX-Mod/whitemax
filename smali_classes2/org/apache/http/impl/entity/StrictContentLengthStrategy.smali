@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public determineLength(Lorg/apache/http/HttpMessage;)J
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/HttpException;
@@ -32,135 +32,135 @@
 
     if-eqz p1, :cond_5
 
-    const-string p0, "Transfer-Encoding"
-
-    invoke-interface {p1, p0}, Lorg/apache/http/HttpMessage;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
-
-    move-result-object p0
-
-    const-string v0, "Content-Length"
+    const-string v0, "Transfer-Encoding"
 
     invoke-interface {p1, v0}, Lorg/apache/http/HttpMessage;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
 
     move-result-object v0
 
-    const-wide/16 v1, -0x1
+    const-string v1, "Content-Length"
 
-    if-eqz p0, :cond_3
+    invoke-interface {p1, v1}, Lorg/apache/http/HttpMessage;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
 
-    invoke-interface {p0}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object p0
+    const-wide/16 v2, -0x1
 
-    const-string v0, "chunked"
+    if-eqz v0, :cond_3
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-interface {v0}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "chunked"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p1}, Lorg/apache/http/HttpMessage;->getProtocolVersion()Lorg/apache/http/ProtocolVersion;
+
+    move-result-object v0
+
+    sget-object v1, Lorg/apache/http/HttpVersion;->HTTP_1_0:Lorg/apache/http/HttpVersion;
+
+    invoke-virtual {v0, v1}, Lorg/apache/http/ProtocolVersion;->lessEquals(Lorg/apache/http/ProtocolVersion;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    invoke-interface {p1}, Lorg/apache/http/HttpMessage;->getProtocolVersion()Lorg/apache/http/ProtocolVersion;
+    const-wide/16 v0, -0x2
 
-    move-result-object p0
-
-    sget-object v0, Lorg/apache/http/HttpVersion;->HTTP_1_0:Lorg/apache/http/HttpVersion;
-
-    invoke-virtual {p0, v0}, Lorg/apache/http/ProtocolVersion;->lessEquals(Lorg/apache/http/ProtocolVersion;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const-wide/16 p0, -0x2
-
-    return-wide p0
+    return-wide v0
 
     :cond_0
-    new-instance p0, Lorg/apache/http/ProtocolException;
+    new-instance v0, Lorg/apache/http/ProtocolException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "Chunked transfer encoding not allowed for "
+    const-string v2, "Chunked transfer encoding not allowed for "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-interface {p1}, Lorg/apache/http/HttpMessage;->getProtocolVersion()Lorg/apache/http/ProtocolVersion;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_1
     const-string p1, "identity"
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    return-wide v1
+    return-wide v2
 
     :cond_2
     new-instance p1, Lorg/apache/http/ProtocolException;
 
-    const-string v0, "Unsupported transfer encoding: "
+    const-string v1, "Unsupported transfer encoding: "
 
-    invoke-static {v0, p0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-direct {p1, p0}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
     :cond_3
-    if-eqz v0, :cond_4
+    if-eqz v1, :cond_4
 
-    invoke-interface {v0}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+    invoke-interface {v1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
     :try_start_0
-    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide p0
+    move-result-wide v0
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-wide p0
+    return-wide v0
 
     :catch_0
-    new-instance p1, Lorg/apache/http/ProtocolException;
+    new-instance v0, Lorg/apache/http/ProtocolException;
 
-    const-string v0, "Invalid content length: "
+    const-string v1, "Invalid content length: "
 
-    invoke-static {v0, p0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {p1, p0}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw v0
 
     :cond_4
-    return-wide v1
+    return-wide v2
 
     :cond_5
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP message may not be null"
+    const-string v0, "HTTP message may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

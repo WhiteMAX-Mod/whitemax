@@ -1,51 +1,84 @@
 .class public final Lnc2;
-.super Ljx3;
+.super Luj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lvc2;
-
-.field public Z:I
-
-.field public o:Ljava/util/concurrent/atomic/AtomicLong;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lvc2;Ljx3;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Lnc2;->Y:Lvc2;
+    invoke-direct {p0}, Luj0;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lnc2;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iput-object p1, p0, Lnc2;->X:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lnc2;->Z:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lnc2;
 
-    iput p1, p0, Lnc2;->Z:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lnc2;->Y:Lvc2;
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    invoke-virtual {p1, v0, v0, p0}, Lvc2;->h(Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lnc2;
 
-    move-result-object p0
+    iget-wide v3, p0, Lnc2;->b:J
 
-    return-object p0
+    iget-wide v5, p1, Lnc2;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lnc2;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ChatClearEvent(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lnc2;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

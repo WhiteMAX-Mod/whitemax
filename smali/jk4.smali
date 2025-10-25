@@ -1,227 +1,104 @@
-.class public final Ljk4;
+.class public final synthetic Ljk4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lii3;
+
 
 # instance fields
-.field public final a:Ljxf;
+.field public final synthetic a:I
 
-.field public final b:Lgue;
-
-.field public final c:Lqxf;
-
-.field public final d:Ljava/util/ArrayDeque;
-
-.field public e:Landroid/view/Surface;
-
-.field public f:Lx46;
-
-.field public g:J
-
-.field public h:J
-
-.field public i:Ll5g;
-
-.field public j:Ljava/util/concurrent/Executor;
-
-.field public k:Lbxf;
+.field public final synthetic b:Lkhc;
 
 
 # direct methods
-.method public constructor <init>(Ljxf;Lgue;)V
-    .locals 3
+.method public synthetic constructor <init>(Lkhc;I)V
+    .locals 0
+
+    iput p2, p0, Ljk4;->a:I
+
+    iput-object p1, p0, Ljk4;->b:Lkhc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljk4;->a:Ljxf;
-
-    iput-object p2, p1, Ljxf;->l:Lgue;
-
-    iput-object p2, p0, Ljk4;->b:Lgue;
-
-    new-instance p2, Lqxf;
-
-    new-instance v0, Lmgb;
-
-    const/16 v1, 0xe
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p0, v2, v1}, Lmgb;-><init>(Ljava/lang/Object;ZI)V
-
-    invoke-direct {p2, v0, p1}, Lqxf;-><init>(Lmgb;Ljxf;)V
-
-    iput-object p2, p0, Ljk4;->c:Lqxf;
-
-    new-instance p1, Ljava/util/ArrayDeque;
-
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object p1, p0, Ljk4;->d:Ljava/util/ArrayDeque;
-
-    new-instance p1, Lu46;
-
-    invoke-direct {p1}, Lu46;-><init>()V
-
-    new-instance p2, Lx46;
-
-    invoke-direct {p2, p1}, Lx46;-><init>(Lu46;)V
-
-    iput-object p2, p0, Ljk4;->f:Lx46;
-
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide p1, p0, Ljk4;->g:J
-
-    sget-object p1, Ll5g;->q0:Lse2;
-
-    iput-object p1, p0, Ljk4;->i:Ll5g;
-
-    new-instance p1, Lcr;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2}, Lcr;-><init>(I)V
-
-    iput-object p1, p0, Ljk4;->j:Ljava/util/concurrent/Executor;
-
-    new-instance p1, Lgk4;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljk4;->k:Lbxf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lx46;Ljava/util/List;)V
-    .locals 7
-
-    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
-
-    move-result p2
-
-    invoke-static {p2}, Lmq0;->h(Z)V
-
-    iget p2, p1, Lx46;->u:I
-
-    iget v0, p1, Lx46;->v:I
-
-    iget-object v1, p0, Ljk4;->f:Lx46;
-
-    iget v2, v1, Lx46;->u:I
-
-    if-ne p2, v2, :cond_0
-
-    iget v1, v1, Lx46;->v:I
-
-    if-eq v0, v1, :cond_2
-
-    :cond_0
-    iget-object v1, p0, Ljk4;->c:Lqxf;
-
-    iget-object v2, v1, Lqxf;->d:Lg6f;
-
-    iget-wide v3, v1, Lqxf;->g:J
-
-    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_1
-
-    const-wide/16 v3, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    const-wide/16 v5, 0x1
-
-    add-long/2addr v3, v5
-
-    :goto_0
-    new-instance v1, Ln5g;
-
-    invoke-direct {v1, p2, v0}, Ln5g;-><init>(II)V
-
-    invoke-virtual {v2, v3, v4, v1}, Lg6f;->a(JLjava/lang/Object;)V
-
-    :cond_2
-    iget p2, p1, Lx46;->w:F
-
-    iget-object v0, p0, Ljk4;->f:Lx46;
-
-    iget v0, v0, Lx46;->w:F
-
-    cmpl-float v0, p2, v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Ljk4;->a:Ljxf;
-
-    invoke-virtual {v0, p2}, Ljxf;->g(F)V
-
-    :cond_3
-    iput-object p1, p0, Ljk4;->f:Lx46;
-
-    return-void
-.end method
-
-.method public final b(JJ)V
+.method public final h(Lcwc;)Ljava/lang/Object;
     .locals 6
 
-    iget-wide v0, p0, Ljk4;->g:J
+    iget v0, p0, Ljk4;->a:I
 
-    cmp-long v0, p1, v0
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Ljk4;->b:Lkhc;
 
-    iget-object v0, p0, Ljk4;->c:Lqxf;
+    invoke-static {v0, p1}, Lcom/google/firebase/messaging/FirebaseMessagingRegistrar;->a(Lkhc;Lcwc;)Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    iget-object v1, v0, Lqxf;->e:Lg6f;
+    move-result-object p1
 
-    iget-wide v2, v0, Lqxf;->g:J
+    return-object p1
 
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+    :pswitch_0
+    new-instance v0, Llk4;
 
-    cmp-long v0, v2, v4
+    const-class v1, Landroid/content/Context;
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1, v1}, Lcwc;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const-wide/16 v2, 0x0
+    move-result-object v1
 
-    goto :goto_0
+    check-cast v1, Landroid/content/Context;
 
-    :cond_0
-    const-wide/16 v4, 0x1
+    const-class v2, Lhw5;
 
-    add-long/2addr v2, v4
+    invoke-virtual {p1, v2}, Lcwc;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
-    :goto_0
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v2
 
-    move-result-object v0
+    check-cast v2, Lhw5;
 
-    invoke-virtual {v1, v2, v3, v0}, Lg6f;->a(JLjava/lang/Object;)V
+    invoke-virtual {v2}, Lhw5;->c()Ljava/lang/String;
 
-    iput-wide p1, p0, Ljk4;->g:J
+    move-result-object v2
 
-    :cond_1
-    iput-wide p3, p0, Ljk4;->h:J
+    const-class v3, Lux6;
 
-    return-void
-.end method
+    invoke-static {v3}, Lkhc;->a(Ljava/lang/Class;)Lkhc;
 
-.method public final c()V
-    .locals 2
+    move-result-object v3
 
-    iget-object p0, p0, Ljk4;->c:Lqxf;
+    invoke-virtual {p1, v3}, Lcwc;->b(Lkhc;)Ljava/util/Set;
 
-    iget-wide v0, p0, Lqxf;->g:J
+    move-result-object v3
 
-    iput-wide v0, p0, Lqxf;->i:J
+    const-class v4, Lqo4;
 
-    return-void
+    invoke-virtual {p1, v4}, Lcwc;->c(Ljava/lang/Class;)Lcfc;
+
+    move-result-object v4
+
+    iget-object v5, p0, Ljk4;->b:Lkhc;
+
+    invoke-virtual {p1, v5}, Lcwc;->f(Lkhc;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v5, p1
+
+    check-cast v5, Ljava/util/concurrent/Executor;
+
+    invoke-direct/range {v0 .. v5}, Llk4;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/Set;Lcfc;Ljava/util/concurrent/Executor;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

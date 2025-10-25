@@ -94,27 +94,51 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    move-result-object v4
+
+    check-cast v4, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
     move-result-object v5
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
     move-result-object v7
 
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     add-int/2addr v3, v2
 
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
@@ -122,11 +146,11 @@
 
     new-instance v2, Lorg/webrtc/JavaI420Buffer;
 
-    new-instance v11, Lme7;
+    new-instance v11, Lfn7;
 
     const/4 v1, 0x0
 
-    invoke-direct {v11, v1, v0}, Lme7;-><init>(ILjava/nio/ByteBuffer;)V
+    invoke-direct {v11, v1, v0}, Lfn7;-><init>(ILjava/nio/ByteBuffer;)V
 
     move v6, p0
 
@@ -169,7 +193,7 @@
 
     const-string v0, " bytes, but was "
 
-    invoke-static {p3, p2, p0, v0}, Lyv7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p2, p0, v0}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -213,7 +237,11 @@
 
     add-int v5, v5, p1
 
-    invoke-virtual {v2, v5}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v2, v5}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/nio/ByteBuffer;
 
     div-int/lit8 v5, p1, 0x2
 
@@ -227,7 +255,11 @@
 
     add-int/2addr v7, v5
 
-    invoke-virtual {v3, v7}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v3, v7}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/nio/ByteBuffer;
 
     invoke-interface/range {p0 .. p0}, Lorg/webrtc/VideoFrame$I420Buffer;->getStrideV()I
 
@@ -237,7 +269,11 @@
 
     add-int/2addr v7, v5
 
-    invoke-virtual {v4, v7}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v4, v7}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/nio/ByteBuffer;
 
     invoke-interface/range {p0 .. p0}, Lorg/webrtc/VideoFrame$Buffer;->retain()V
 
@@ -271,13 +307,13 @@
 
     move-result v7
 
-    new-instance v8, Ls36;
+    new-instance v8, La96;
 
-    const/16 v9, 0x9
+    const/16 v9, 0xb
 
     move-object/from16 v10, p0
 
-    invoke-direct {v8, v9, v10}, Ls36;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v8, v9, v10}, La96;-><init>(ILjava/lang/Object;)V
 
     invoke-static/range {v0 .. v8}, Lorg/webrtc/JavaI420Buffer;->wrap(IILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/lang/Runnable;)Lorg/webrtc/JavaI420Buffer;
 
@@ -463,103 +499,103 @@
 
     invoke-static/range {p0 .. p6}, Lorg/webrtc/JavaI420Buffer;->cropAndScaleI420(Lorg/webrtc/VideoFrame$I420Buffer;IIIIII)Lorg/webrtc/VideoFrame$Buffer;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getDataU()Ljava/nio/ByteBuffer;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/JavaI420Buffer;->dataU:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lorg/webrtc/JavaI420Buffer;->dataU:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getDataV()Ljava/nio/ByteBuffer;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/JavaI420Buffer;->dataV:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lorg/webrtc/JavaI420Buffer;->dataV:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getDataY()Ljava/nio/ByteBuffer;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/JavaI420Buffer;->dataY:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lorg/webrtc/JavaI420Buffer;->dataY:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getHeight()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/JavaI420Buffer;->height:I
+    iget v0, p0, Lorg/webrtc/JavaI420Buffer;->height:I
 
-    return p0
+    return v0
 .end method
 
 .method public getStrideU()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/JavaI420Buffer;->strideU:I
+    iget v0, p0, Lorg/webrtc/JavaI420Buffer;->strideU:I
 
-    return p0
+    return v0
 .end method
 
 .method public getStrideV()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/JavaI420Buffer;->strideV:I
+    iget v0, p0, Lorg/webrtc/JavaI420Buffer;->strideV:I
 
-    return p0
+    return v0
 .end method
 
 .method public getStrideY()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/JavaI420Buffer;->strideY:I
+    iget v0, p0, Lorg/webrtc/JavaI420Buffer;->strideY:I
 
-    return p0
+    return v0
 .end method
 
 .method public getWidth()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/JavaI420Buffer;->width:I
+    iget v0, p0, Lorg/webrtc/JavaI420Buffer;->width:I
 
-    return p0
+    return v0
 .end method
 
 .method public release()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/JavaI420Buffer;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
+    iget-object v0, p0, Lorg/webrtc/JavaI420Buffer;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    invoke-virtual {p0}, Lorg/webrtc/RefCountDelegate;->release()V
+    invoke-virtual {v0}, Lorg/webrtc/RefCountDelegate;->release()V
 
     return-void
 .end method
 
 .method public retain()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/JavaI420Buffer;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
+    iget-object v0, p0, Lorg/webrtc/JavaI420Buffer;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    invoke-virtual {p0}, Lorg/webrtc/RefCountDelegate;->retain()V
+    invoke-virtual {v0}, Lorg/webrtc/RefCountDelegate;->retain()V
 
     return-void
 .end method

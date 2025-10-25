@@ -1,61 +1,43 @@
-.class public final Lpk1;
-.super Ldl1;
+.class public final synthetic Lpk1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/MediaPlayer$OnCompletionListener;
 
-# static fields
-.field public static final D:Lpk1;
+
+# instance fields
+.field public final synthetic a:Z
+
+.field public final synthetic b:Lqk1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ZLqk1;)V
+    .locals 0
 
-    new-instance v0, Lpk1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ldl1;-><init>()V
+    iput-boolean p1, p0, Lpk1;->a:Z
 
-    sput-object v0, Lpk1;->D:Lpk1;
+    iput-object p2, p0, Lpk1;->b:Lqk1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onCompletion(Landroid/media/MediaPlayer;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iget-boolean p1, p0, Lpk1;->a:Z
 
-    if-ne p0, p1, :cond_0
+    if-nez p1, :cond_0
 
-    return v0
+    iget-object p1, p0, Lpk1;->b:Lqk1;
+
+    invoke-virtual {p1}, Lqk1;->e()V
 
     :cond_0
-    instance-of p0, p1, Lpk1;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x3c04238b
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "OpenCallProfile"
-
-    return-object p0
+    return-void
 .end method

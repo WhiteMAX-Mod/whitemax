@@ -1,89 +1,51 @@
 .class public final Lqrg;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ltmg;
+.field public X:Lq1a;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lyrg;
+
+.field public o:Lyrg;
+
+.field public q0:I
 
 
 # direct methods
-.method public constructor <init>(Ltmg;)V
+.method public constructor <init>(Lyrg;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqrg;->Z:Lyrg;
 
-    iput-object p1, p0, Lqrg;->a:Ltmg;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final postEvent(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
-    .annotation runtime Landroid/webkit/JavascriptInterface;
-    .end annotation
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p0, p0, Lqrg;->a:Ltmg;
+    iput-object p1, p0, Lqrg;->Y:Ljava/lang/Object;
 
-    iget-object p0, p0, Ltmg;->H0:Ls06;
+    iget p1, p0, Lqrg;->q0:I
 
-    iget-object v0, p0, Ls06;->a:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Ly04;
+    or-int/2addr p1, v0
 
-    iget-object v1, p0, Ls06;->b:Ljava/lang/Object;
+    iput p1, p0, Lqrg;->q0:I
 
-    check-cast v1, Lxwe;
+    iget-object p1, p0, Lqrg;->Z:Lyrg;
 
-    check-cast v1, Laga;
+    invoke-virtual {p1, p0}, Lyrg;->c(Ly14;)Ljava/io/Serializable;
 
-    invoke-virtual {v1}, Laga;->a()Ls04;
+    move-result-object p1
 
-    move-result-object v1
-
-    new-instance v2, Lvg7;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, p2, p0, v3}, Lvg7;-><init>(Ljava/lang/String;Ljava/lang/String;Ls06;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p0, 0x2
-
-    invoke-static {v0, v1, v3, v2, p0}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
-
-    return-void
-.end method
-
-.method public final resolveShare(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)V
-    .locals 7
-    .annotation runtime Landroid/webkit/JavascriptInterface;
-    .end annotation
-
-    iget-object v1, p0, Lqrg;->a:Ltmg;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Ljmg;
-
-    const/4 v6, 0x0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    invoke-direct/range {v0 .. v6}, Ljmg;-><init>(Ltmg;Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p0, 0x3
-
-    const/4 p1, 0x0
-
-    invoke-static {v1, p1, v0, p0}, Lx7g;->n(Lx7g;Lq04;Lpc6;I)Lcae;
-
-    return-void
+    return-object p1
 .end method

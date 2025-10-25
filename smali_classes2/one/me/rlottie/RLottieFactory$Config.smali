@@ -107,7 +107,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lone/me/rlottie/RLottieFactory$Config$Companion;-><init>(Lld4;)V
+    invoke-direct {v0, v1}, Lone/me/rlottie/RLottieFactory$Config$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lone/me/rlottie/RLottieFactory$Config;->Companion:Lone/me/rlottie/RLottieFactory$Config$Companion;
 
@@ -144,7 +144,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottieFactory$Config;-><init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILld4;)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottieFactory$Config;-><init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILki4;)V
 
     return-void
 .end method
@@ -169,7 +169,7 @@
 
     move v2, p2
 
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottieFactory$Config;-><init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILld4;)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottieFactory$Config;-><init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILki4;)V
 
     return-void
 .end method
@@ -194,7 +194,7 @@
 
     move v3, p3
 
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottieFactory$Config;-><init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILld4;)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottieFactory$Config;-><init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILki4;)V
 
     return-void
 .end method
@@ -219,7 +219,7 @@
 
     move v4, p4
 
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottieFactory$Config;-><init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILld4;)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottieFactory$Config;-><init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILki4;)V
 
     return-void
 .end method
@@ -248,7 +248,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILld4;)V
+.method public synthetic constructor <init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILki4;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x2
@@ -570,43 +570,43 @@
 
 # virtual methods
 .method public final getAutoRepeat$rlottie_release()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieFactory$Config;->autoRepeat:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieFactory$Config;->autoRepeat:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getAutoStart$rlottie_release()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieFactory$Config;->autoStart:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieFactory$Config;->autoStart:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getPreCache$rlottie_release()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieFactory$Config;->preCache:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieFactory$Config;->preCache:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getStartDecodeFirstFrame$rlottie_release()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieFactory$Config;->startDecodeFirstFrame:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieFactory$Config;->startDecodeFirstFrame:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getWay$rlottie_release()Lone/me/rlottie/RLottieFactory$Way;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieFactory$Config;->way:Lone/me/rlottie/RLottieFactory$Way;
+    iget-object v0, p0, Lone/me/rlottie/RLottieFactory$Config;->way:Lone/me/rlottie/RLottieFactory$Way;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final setAutoRepeat(Z)Lone/me/rlottie/RLottieFactory$Config;

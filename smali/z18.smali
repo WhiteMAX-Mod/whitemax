@@ -1,118 +1,197 @@
 .class public final Lz18;
-.super Ljava/lang/Object;
+.super Landroid/widget/BaseAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Lis5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Lzv2;
+.field public final synthetic b:La28;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzv2;I)V
+.method public constructor <init>(La28;)V
     .locals 0
 
-    iput p2, p0, Lz18;->a:I
+    iput-object p1, p0, Lz18;->b:La28;
 
-    iput-object p1, p0, Lz18;->b:Lzv2;
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, -0x1
+
+    iput p1, p0, Lz18;->a:I
+
+    invoke-virtual {p0}, Lz18;->a()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+.method public final a()V
+    .locals 5
 
-    iget v0, p0, Lz18;->a:I
+    iget-object v0, p0, Lz18;->b:La28;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, v0, La28;->c:Lt89;
 
-    new-instance v0, Lyf7;
+    iget-object v1, v0, Lt89;->E0:Lx89;
 
-    const/16 v1, 0xa
+    if-eqz v1, :cond_1
 
-    invoke-direct {v0, p1, v1}, Lyf7;-><init>(Lks5;I)V
+    invoke-virtual {v0}, Lt89;->i()V
 
-    iget-object p0, p0, Lz18;->b:Lzv2;
+    iget-object v0, v0, Lt89;->s0:Ljava/util/ArrayList;
 
-    invoke-virtual {p0, v0, p2}, Lzv2;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    move-result-object p0
+    move-result v2
 
-    sget-object p1, Lz04;->a:Lz04;
+    const/4 v3, 0x0
 
-    if-ne p0, p1, :cond_0
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lx89;
+
+    if-ne v4, v1, :cond_0
+
+    iput v3, p0, Lz18;->a:I
+
+    return-void
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    :goto_0
-    return-object p0
-
-    :pswitch_0
-    new-instance v0, Lyf7;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, p1, v1}, Lyf7;-><init>(Lks5;I)V
-
-    iget-object p0, p0, Lz18;->b:Lzv2;
-
-    invoke-virtual {p0, v0, p2}, Lzv2;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_1
-
-    goto :goto_1
-
     :cond_1
-    sget-object p0, Lylf;->a:Lylf;
+    const/4 v0, -0x1
 
-    :goto_1
-    return-object p0
+    iput v0, p0, Lz18;->a:I
 
-    :pswitch_1
-    new-instance v0, Lyf7;
+    return-void
+.end method
 
-    const/4 v1, 0x5
+.method public final b(I)Lx89;
+    .locals 2
 
-    invoke-direct {v0, p1, v1}, Lyf7;-><init>(Lks5;I)V
+    iget-object v0, p0, Lz18;->b:La28;
 
-    iget-object p0, p0, Lz18;->b:Lzv2;
+    iget-object v1, v0, La28;->c:Lt89;
 
-    invoke-virtual {p0, v0, p2}, Lzv2;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lt89;->i()V
 
-    move-result-object p0
+    iget-object v1, v1, Lt89;->s0:Ljava/util/ArrayList;
 
-    sget-object p1, Lz04;->a:Lz04;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ne p0, p1, :cond_2
+    iget v0, p0, Lz18;->a:I
 
-    goto :goto_2
+    if-ltz v0, :cond_0
 
-    :cond_2
-    sget-object p0, Lylf;->a:Lylf;
+    if-lt p1, v0, :cond_0
 
-    :goto_2
-    return-object p0
+    add-int/lit8 p1, p1, 0x1
 
-    nop
+    :cond_0
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    check-cast p1, Lx89;
+
+    return-object p1
+.end method
+
+.method public final getCount()I
+    .locals 2
+
+    iget-object v0, p0, Lz18;->b:La28;
+
+    iget-object v1, v0, La28;->c:Lt89;
+
+    invoke-virtual {v1}, Lt89;->i()V
+
+    iget-object v1, v1, Lt89;->s0:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v0, p0, Lz18;->a:I
+
+    if-gez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    add-int/lit8 v1, v1, -0x1
+
+    return v1
+.end method
+
+.method public final bridge synthetic getItem(I)Ljava/lang/Object;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lz18;->b(I)Lx89;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getItemId(I)J
+    .locals 2
+
+    int-to-long v0, p1
+
+    return-wide v0
+.end method
+
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 2
+
+    if-nez p2, :cond_0
+
+    iget-object p2, p0, Lz18;->b:La28;
+
+    iget-object v0, p2, La28;->b:Landroid/view/LayoutInflater;
+
+    iget p2, p2, La28;->X:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p2, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p2
+
+    :cond_0
+    move-object p3, p2
+
+    check-cast p3, Ll99;
+
+    invoke-virtual {p0, p1}, Lz18;->b(I)Lx89;
+
+    move-result-object p1
+
+    invoke-interface {p3, p1}, Ll99;->d(Lx89;)V
+
+    return-object p2
+.end method
+
+.method public final notifyDataSetChanged()V
+    .locals 0
+
+    invoke-virtual {p0}, Lz18;->a()V
+
+    invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+
+    return-void
 .end method

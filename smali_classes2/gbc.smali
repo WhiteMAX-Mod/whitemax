@@ -1,50 +1,48 @@
-.class public abstract Lgbc;
-.super Ljava/lang/Object;
+.class public final Lgbc;
+.super Ly14;
 
 
-# static fields
-.field public static oneme_notifications_settings_chat_enable_notifications_button:I = 0x7f1308a1
+# instance fields
+.field public X:I
 
-.field public static oneme_notifications_settings_chat_enabled_section_title:I = 0x7f1308a2
+.field public final synthetic Y:Ls3a;
 
-.field public static oneme_notifications_settings_chat_settings_button:I = 0x7f1308a3
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static oneme_notifications_settings_chat_toolbar_title:I = 0x7f1308a4
 
-.field public static oneme_notifications_settings_chat_type_all_button:I = 0x7f1308a5
+# direct methods
+.method public constructor <init>(Ls3a;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_notifications_settings_chat_type_pin_reply_button:I = 0x7f1308a6
+    iput-object p1, p0, Lgbc;->Y:Ls3a;
 
-.field public static oneme_notifications_settings_dialog_enable_notifications_button:I = 0x7f1308a7
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public static oneme_notifications_settings_dialog_settings_button:I = 0x7f1308a8
+    return-void
+.end method
 
-.field public static oneme_notifications_settings_dialog_toolbar_title:I = 0x7f1308a9
 
-.field public static oneme_notifications_settings_enable_all_notifications:I = 0x7f1308aa
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static oneme_notifications_settings_open_settings_button_description:I = 0x7f1308ab
+    iput-object p1, p0, Lgbc;->o:Ljava/lang/Object;
 
-.field public static oneme_notifications_settings_open_settings_button_title:I = 0x7f1308ac
+    iget p1, p0, Lgbc;->X:I
 
-.field public static oneme_notifications_settings_other_in_app_push_button_description:I = 0x7f1308ad
+    const/high16 v0, -0x80000000
 
-.field public static oneme_notifications_settings_other_in_app_push_button_title:I = 0x7f1308ae
+    or-int/2addr p1, v0
 
-.field public static oneme_notifications_settings_other_new_user_button:I = 0x7f1308af
+    iput p1, p0, Lgbc;->X:I
 
-.field public static oneme_notifications_settings_other_settings_button:I = 0x7f1308b0
+    iget-object p1, p0, Lgbc;->Y:Ls3a;
 
-.field public static oneme_notifications_settings_other_toolbar_title:I = 0x7f1308b1
+    const/4 v0, 0x0
 
-.field public static oneme_notifications_settings_reset_default_button:I = 0x7f1308b2
+    invoke-virtual {p1, v0, p0}, Ls3a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.field public static oneme_notifications_settings_show_content_button:I = 0x7f1308b3
+    move-result-object p1
 
-.field public static oneme_notifications_settings_toolbar_title:I = 0x7f1308b4
-
-.field public static oneme_notifications_settings_type_off:I = 0x7f1308b5
-
-.field public static oneme_notifications_settings_type_on:I = 0x7f1308b6
-
-.field public static oneme_notifications_settings_type_reply:I = 0x7f1308b7
+    return-object p1
+.end method

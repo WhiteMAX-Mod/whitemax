@@ -1,240 +1,174 @@
-.class public final Lne;
-.super Landroid/graphics/drawable/DrawableWrapper;
+.class public abstract Lne;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/graphics/drawable/Animatable;
 
+# static fields
+.field public static final a:Landroid/os/Handler;
 
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public static final b:F
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    new-instance v0, Landroid/os/Handler;
 
-    sget v1, Lq0d;->Y:I
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
+    move-result-object v1
 
-    invoke-direct {p0, v0}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    new-instance p1, Lme;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lme;-><init>(Lne;I)V
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, p1}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lne;->a:Ljava/lang/Object;
-
-    new-instance p1, Lme;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, p0, v1}, Lme;-><init>(Lne;I)V
-
-    invoke-static {v0, p1}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lne;->b:Ljava/lang/Object;
-
-    new-instance p1, Lme;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p1, p0, v1}, Lme;-><init>(Lne;I)V
-
-    invoke-static {v0, p1}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lne;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(I)V
-    .locals 1
-
-    iget-object v0, p0, Lne;->a:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/richvector/VectorPath;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
-
-    :cond_0
-    iget-object v0, p0, Lne;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/richvector/VectorPath;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
-
-    :cond_1
-    iget-object v0, p0, Lne;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/richvector/VectorPath;
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
-
-    :cond_2
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    check-cast p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    invoke-virtual {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->invalidatePath()V
-
-    return-void
-.end method
-
-.method public final b(II)V
-    .locals 2
+    sput-object v0, Lne;->a:Landroid/os/Handler;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-static {p1, v0}, Lf54;->L(IF)I
-
-    move-result v0
-
-    shr-int/lit8 p1, p1, 0x18
-
-    and-int/lit16 p1, p1, 0xff
-
-    int-to-float p1, p1
-
-    const/high16 v1, 0x437f0000    # 255.0f
-
-    div-float/2addr p1, v1
-
-    invoke-static {p2, p1, v0}, Lm83;->c(IFI)I
-
-    move-result p1
-
-    iget-object p2, p0, Lne;->a:Ljava/lang/Object;
-
-    invoke-interface {p2}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lone/me/sdk/richvector/VectorPath;
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
-
-    :cond_0
-    iget-object p2, p0, Lne;->b:Ljava/lang/Object;
-
-    invoke-interface {p2}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lone/me/sdk/richvector/VectorPath;
-
-    if-eqz p2, :cond_1
-
-    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
-
-    :cond_1
-    iget-object p2, p0, Lne;->c:Ljava/lang/Object;
-
-    invoke-interface {p2}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lone/me/sdk/richvector/VectorPath;
-
-    if-eqz p2, :cond_2
-
-    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
-
-    :cond_2
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    check-cast p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    invoke-virtual {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->invalidatePath()V
+    sput v0, Lne;->b:F
 
     return-void
 .end method
 
-.method public final isRunning()Z
-    .locals 0
+.method public static a(F)I
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    cmpl-float v0, p0, v0
 
-    check-cast p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->isRunning()Z
+    const/4 p0, 0x0
 
-    move-result p0
+    return p0
+
+    :cond_0
+    sget v0, Lne;->b:F
+
+    mul-float/2addr v0, p0
+
+    float-to-double v0, v0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v0
+
+    double-to-int p0, v0
 
     return p0
 .end method
 
-.method public final start()V
-    .locals 0
+.method public static b()Z
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->start()V
+    move-result-object v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static c(Ljava/util/ArrayList;)V
+    .locals 4
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/Bitmap;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    new-instance v3, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v3, v2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p0, Lme;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, v1}, Lme;-><init>(Ljava/util/ArrayList;I)V
+
+    invoke-static {p0}, Lne;->d(Ljava/lang/Runnable;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public static d(Ljava/lang/Runnable;)V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    invoke-static {p0, v0, v1}, Lne;->e(Ljava/lang/Runnable;J)V
 
     return-void
 .end method
 
-.method public final stop()V
-    .locals 0
+.method public static e(Ljava/lang/Runnable;J)V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    const-wide/16 v0, 0x0
 
-    move-result-object p0
+    cmp-long v0, p1, v0
 
-    check-cast p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    sget-object v1, Lne;->a:Landroid/os/Handler;
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->stop()V
+    if-nez v0, :cond_0
+
+    invoke-virtual {v1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v1, p0, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method

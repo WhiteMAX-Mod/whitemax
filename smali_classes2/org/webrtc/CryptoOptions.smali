@@ -44,13 +44,13 @@
     iput-object v0, v1, Lorg/webrtc/CryptoOptions;->srtp:Lorg/webrtc/CryptoOptions$Srtp;
 
     .line 4
-    new-instance p0, Lorg/webrtc/CryptoOptions$SFrame;
+    new-instance p1, Lorg/webrtc/CryptoOptions$SFrame;
 
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
-    invoke-direct {p0, v1, p4, p1}, Lorg/webrtc/CryptoOptions$SFrame;-><init>(Lorg/webrtc/CryptoOptions;ZI)V
+    invoke-direct {p1, p0, p4, p2}, Lorg/webrtc/CryptoOptions$SFrame;-><init>(Lorg/webrtc/CryptoOptions;ZI)V
 
-    iput-object p0, v1, Lorg/webrtc/CryptoOptions;->sframe:Lorg/webrtc/CryptoOptions$SFrame;
+    iput-object p1, v1, Lorg/webrtc/CryptoOptions;->sframe:Lorg/webrtc/CryptoOptions$SFrame;
 
     return-void
 .end method
@@ -79,21 +79,21 @@
 
 # virtual methods
 .method public getSFrame()Lorg/webrtc/CryptoOptions$SFrame;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/CryptoOptions;->sframe:Lorg/webrtc/CryptoOptions$SFrame;
+    iget-object v0, p0, Lorg/webrtc/CryptoOptions;->sframe:Lorg/webrtc/CryptoOptions$SFrame;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSrtp()Lorg/webrtc/CryptoOptions$Srtp;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/CryptoOptions;->srtp:Lorg/webrtc/CryptoOptions$Srtp;
+    iget-object v0, p0, Lorg/webrtc/CryptoOptions;->srtp:Lorg/webrtc/CryptoOptions$Srtp;
 
-    return-object p0
+    return-object v0
 .end method

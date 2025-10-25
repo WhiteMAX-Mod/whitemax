@@ -1,93 +1,100 @@
 .class public final Lzae;
-.super Lcb4;
+.super Lpd0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lzae;
-
-.field public static final c:Lxa4;
-
-.field public static final d:Lxa4;
-
-.field public static final e:Lxa4;
-
-.field public static final f:Lxa4;
-
-.field public static final g:Lxa4;
+# instance fields
+.field public final b:Lorf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lorf;)V
+    .locals 1
 
-    new-instance v0, Lzae;
+    const/16 v0, 0x10
 
-    invoke-direct {v0}, Lcb4;-><init>()V
+    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
 
-    sput-object v0, Lzae;->b:Lzae;
+    iput-object p1, p0, Lzae;->b:Lorf;
 
-    const/4 v6, 0x0
+    return-void
+.end method
 
-    new-array v2, v6, [Ljava/lang/String;
 
-    const/16 v5, 0xe
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const/4 v4, 0x0
+    if-ne p0, p1, :cond_0
 
-    const-string v1, ":start-conversation"
+    goto :goto_1
 
-    const/4 v3, 0x0
+    :cond_0
+    instance-of v0, p1, Lzae;
 
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    if-nez v0, :cond_1
 
-    move-result-object v1
+    goto :goto_0
 
-    sput-object v1, Lzae;->c:Lxa4;
+    :cond_1
+    check-cast p1, Lzae;
 
-    new-array v2, v6, [Ljava/lang/String;
+    iget-object v0, p0, Lzae;->b:Lorf;
 
-    const-string v1, ":start-conversation/chat"
+    iget-object p1, p1, Lzae;->b:Lorf;
 
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    invoke-virtual {v0, p1}, Lorf;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result p1
 
-    sput-object v1, Lzae;->d:Lxa4;
+    if-nez p1, :cond_2
 
-    new-array v2, v6, [Ljava/lang/String;
+    :goto_0
+    const/4 p1, 0x0
 
-    const-string v1, ":start-conversation/channel"
+    return p1
 
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    move-result-object v1
+    return p1
+.end method
 
-    sput-object v1, Lzae;->e:Lxa4;
+.method public final hashCode()I
+    .locals 1
 
-    new-array v2, v6, [Ljava/lang/String;
+    iget-object v0, p0, Lzae;->b:Lorf;
 
-    const-string v1, ":chat/add-icon"
+    iget v0, v0, Lorf;->c:I
 
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result-object v1
+    move-result v0
 
-    sput-object v1, Lzae;->f:Lxa4;
+    return v0
+.end method
 
-    const-string v1, "id"
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    const-string v1, "ShowSuccess(message="
 
-    const-string v1, ":start-conversation/add-subscribers"
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+    iget-object v1, p0, Lzae;->b:Lorf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lzae;->g:Lxa4;
-
-    return-void
+    return-object v0
 .end method

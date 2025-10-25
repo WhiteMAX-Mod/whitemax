@@ -1,152 +1,85 @@
-.class public final Lbo5;
-.super Lie;
+.class public final synthetic Lbo5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lsr3;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic a:I
 
-.field public final synthetic c:Landroid/graphics/drawable/Drawable$Callback;
+.field public final synthetic b:Lgo5;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable$Callback;I)V
+.method public synthetic constructor <init>(Lgo5;JI)V
     .locals 0
 
-    iput p2, p0, Lbo5;->b:I
+    iput p4, p0, Lbo5;->a:I
 
-    iput-object p1, p0, Lbo5;->c:Landroid/graphics/drawable/Drawable$Callback;
+    iput-object p1, p0, Lbo5;->b:Lgo5;
+
+    iput-wide p2, p0, Lbo5;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private final c(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    iget v0, p0, Lbo5;->b:I
+    iget v0, p0, Lbo5;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "go5"
 
-    iget-object p0, p0, Lbo5;->c:Landroid/graphics/drawable/Drawable$Callback;
+    iget-wide v2, p0, Lbo5;->c:J
 
-    check-cast p0, Ly2f;
+    iget-object v4, p0, Lbo5;->b:Lgo5;
 
-    iget-object p0, p0, Ly2f;->b:Landroid/animation/AnimatorSet;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->end()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lbo5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast p0, Lsge;
-
-    invoke-virtual {p0}, Lsge;->start()V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lbo5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast p0, Lf88;
-
-    iget-object p0, p0, Lf88;->B0:Landroid/content/res/ColorStateList;
-
-    if-eqz p0, :cond_1
-
-    invoke-static {p1, p0}, Liv4;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lbo5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast p0, Lco5;
-
-    iget-object p1, p0, Lco5;->o:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->cancel()V
-
-    invoke-virtual {p0}, Lco5;->start()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(Landroid/graphics/drawable/Drawable;)V
-    .locals 2
-
-    iget v0, p0, Lbo5;->b:I
+    check-cast p1, Ljava/lang/Throwable;
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lbo5;->c:Landroid/graphics/drawable/Drawable$Callback;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    check-cast p0, Ly2f;
+    const-string v0, "onNotifAdded: failed to add sticker set "
 
-    iget-object p0, p0, Ly2f;->b:Landroid/animation/AnimatorSet;
+    const-string v5, " to cache"
 
-    if-eqz p0, :cond_0
+    invoke-static {v2, v3, v0, v5}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p0}, Landroid/animation/Animator;->start()V
+    move-result-object v0
 
-    :cond_0
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v4}, Lgo5;->J()V
+
+    return-void
+
     :pswitch_0
-    return-void
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    :pswitch_1
-    iget-object p0, p0, Lbo5;->c:Landroid/graphics/drawable/Drawable$Callback;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p0, Lf88;
+    const-string v5, "onNotifUpdated: failed for id: "
 
-    iget-object v0, p0, Lf88;->B0:Landroid/content/res/ColorStateList;
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lf88;->F0:[I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+    move-result-object v0
 
-    move-result v1
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0, p0, v1}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result p0
-
-    invoke-static {p1, p0}, Liv4;->g(Landroid/graphics/drawable/Drawable;I)V
-
-    :cond_1
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lbo5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast p0, Lco5;
-
-    iget-object p0, p0, Lco5;->o:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
+    invoke-virtual {v4}, Lgo5;->J()V
 
     return-void
 
@@ -154,8 +87,6 @@
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

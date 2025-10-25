@@ -1,72 +1,63 @@
 .class public final Lcx3;
-.super Landroid/widget/TextView;
+.super Lq7d;
 .source "SourceFile"
-
-# interfaces
-.implements Lx3f;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+.field public final D0:Landroid/widget/ImageView;
+
+.field public final E0:Lru/ok/messages/views/widgets/TamAvatarView;
+
+.field public final F0:Landroid/view/View;
+
+.field public G0:Lrh8;
+
+.field public final synthetic H0:Ldx3;
 
 
 # direct methods
-.method public constructor <init>(Lu2f;Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(Ldx3;Landroid/view/View;)V
+    .locals 1
 
-    iput-object p2, p0, Lcx3;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    iput-object p1, p0, Lcx3;->H0:Ldx3;
 
-    invoke-direct {p0, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lq7d;-><init>(Landroid/view/View;)V
 
-    sget-object p3, Lclf;->m:Lv2f;
+    sget p1, Lvpc;->row_contact_location__static_image:I
 
-    invoke-static {p3, p0}, Lv2f;->d(Lv2f;Landroid/widget/TextView;)V
-
-    const/4 p3, 0x1
-
-    invoke-virtual {p0, p3}, Landroid/widget/TextView;->setMaxLines(I)V
-
-    sget-object p3, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {p0, p3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Lu2f;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    check-cast p1, Landroid/widget/ImageView;
 
-    invoke-static {p2}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->y0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Lera;
+    iput-object p1, p0, Lcx3;->D0:Landroid/widget/ImageView;
 
-    move-result-object p1
+    sget p1, Lvpc;->row_contact_location__live_image:I
 
-    invoke-virtual {p0, p1}, Lcx3;->onThemeChanged(Lera;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onThemeChanged(Lera;)V
-    .locals 0
-
-    iget-object p1, p0, Lcx3;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
-
-    invoke-static {p1}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->y0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Lera;
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lera;->getText()Lh1f;
+    check-cast p1, Lru/ok/messages/views/widgets/TamAvatarView;
+
+    iput-object p1, p0, Lcx3;->E0:Lru/ok/messages/views/widgets/TamAvatarView;
+
+    sget p1, Lvpc;->row_contact_location__indicator:I
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    iget p1, p1, Lh1f;->h:I
+    iput-object p1, p0, Lcx3;->F0:Landroid/view/View;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    new-instance p1, Ljk0;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p1, v0, p0}, Ljk0;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p2, p1}, Ljyi;->b(Landroid/view/View;Lr6;)V
 
     return-void
 .end method

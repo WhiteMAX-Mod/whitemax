@@ -27,7 +27,7 @@
 
 # virtual methods
 .method public clone()Ljava/lang/Object;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/CloneNotSupportedException;
@@ -40,61 +40,61 @@
 
     check-cast v0, Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;
 
-    iget-object p0, p0, Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;->entity:Lorg/apache/http/HttpEntity;
+    iget-object v1, p0, Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;->entity:Lorg/apache/http/HttpEntity;
 
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-static {p0}, Lorg/apache/http/client/utils/CloneUtils;->clone(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Lorg/apache/http/client/utils/CloneUtils;->clone(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v1
 
-    check-cast p0, Lorg/apache/http/HttpEntity;
+    check-cast v1, Lorg/apache/http/HttpEntity;
 
-    iput-object p0, v0, Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;->entity:Lorg/apache/http/HttpEntity;
+    iput-object v1, v0, Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;->entity:Lorg/apache/http/HttpEntity;
 
     :cond_0
     return-object v0
 .end method
 
 .method public expectContinue()Z
-    .locals 1
+    .locals 2
 
     const-string v0, "Expect"
 
     invoke-virtual {p0, v0}, Lorg/apache/http/message/AbstractHttpMessage;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const-string v0, "100-continue"
+    const-string v1, "100-continue"
 
-    invoke-interface {p0}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+    invoke-interface {v0}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public getEntity()Lorg/apache/http/HttpEntity;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;->entity:Lorg/apache/http/HttpEntity;
+    iget-object v0, p0, Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;->entity:Lorg/apache/http/HttpEntity;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public setEntity(Lorg/apache/http/HttpEntity;)V

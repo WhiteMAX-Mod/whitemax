@@ -1,45 +1,45 @@
 .class public final Lw36;
-.super Ljava/lang/Object;
+.super Lx36;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/graphics/Typeface;
-
-.field public final b:I
+.field public final synthetic a:[Ljava/lang/Iterable;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
+.method public constructor <init>([Ljava/lang/Iterable;)V
+    .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    .line 2
-    iput-object v0, p0, Lw36;->a:Landroid/graphics/Typeface;
-
-    .line 3
-    iput p1, p0, Lw36;->b:I
+    iput-object p1, p0, Lw36;->a:[Ljava/lang/Iterable;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/graphics/Typeface;)V
-    .locals 0
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
 
-    .line 5
-    iput-object p1, p0, Lw36;->a:Landroid/graphics/Typeface;
+    new-instance v0, Lv36;
 
-    const/4 p1, 0x0
+    iget-object v1, p0, Lw36;->a:[Ljava/lang/Iterable;
 
-    .line 6
-    iput p1, p0, Lw36;->b:I
+    array-length v1, v1
 
-    return-void
+    invoke-direct {v0, p0, v1}, Lv36;-><init>(Lw36;I)V
+
+    new-instance v1, Lzm7;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    sget-object v2, Lym7;->X:Lym7;
+
+    iput-object v2, v1, Lzm7;->b:Ljava/util/Iterator;
+
+    iput-object v0, v1, Lzm7;->c:Ljava/util/Iterator;
+
+    return-object v1
 .end method

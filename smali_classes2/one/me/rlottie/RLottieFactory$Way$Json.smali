@@ -65,7 +65,7 @@
     const/4 v0, 0x0
 
     .line 5
-    invoke-direct {p0, p3, p4, p5, v0}, Lone/me/rlottie/RLottieFactory$Way;-><init>(IIZLld4;)V
+    invoke-direct {p0, p3, p4, p5, v0}, Lone/me/rlottie/RLottieFactory$Way;-><init>(IIZLki4;)V
 
     .line 6
     iput-object p1, p0, Lone/me/rlottie/RLottieFactory$Way$Json;->jsonString:Ljava/lang/String;
@@ -76,7 +76,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;IIZILld4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;IIZILki4;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x4
@@ -136,17 +136,17 @@
 
 # virtual methods
 .method public final getCacheName$rlottie_release()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieFactory$Way$Json;->cacheName:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$Json;->cacheName:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getJsonString$rlottie_release()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieFactory$Way$Json;->jsonString:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$Json;->jsonString:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

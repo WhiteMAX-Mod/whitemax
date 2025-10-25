@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsc6;
+.implements Lcj6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->getPrepareResultWithInternalIds(Lzb6;)Lk2e;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->getPrepareResultWithInternalIds(Lji6;)Lwpe;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lsc6;"
+        "Lcj6;"
     }
 .end annotation
 
@@ -37,18 +37,18 @@
         "\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u000c\u001a\n \u0002*\u0004\u0018\u00010\t0\t2\u001a\u0010\u0003\u001a\u0016\u0012\u0004\u0012\u00020\u0001 \u0002*\n\u0012\u0004\u0012\u00020\u0001\u0018\u00010\u00000\u00002\u001e\u0010\u0006\u001a\u001a\u0012\u0006\u0012\u0004\u0018\u00010\u0005 \u0002*\u000c\u0012\u0006\u0012\u0004\u0018\u00010\u0005\u0018\u00010\u00040\u00042\u000e\u0010\u0008\u001a\n \u0002*\u0004\u0018\u00010\u00070\u0007H\n\u00a2\u0006\u0004\u0008\n\u0010\u000b"
     }
     d2 = {
-        "Lzua;",
+        "Ln9b;",
         "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
         "kotlin.jvm.PlatformType",
         "params",
         "",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "participants",
-        "Lylf;",
+        "Lccg;",
         "<anonymous parameter 2>",
         "Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;",
         "apply",
-        "(Lzua;Ljava/util/Set;Lylf;)Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;",
+        "(Ln9b;Ljava/util/Set;Lccg;)Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;",
         "<anonymous>"
     }
     k = 0x3
@@ -98,39 +98,39 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lzua;
+    check-cast p1, Ln9b;
 
     check-cast p2, Ljava/util/Set;
 
-    check-cast p3, Lylf;
+    check-cast p3, Lccg;
 
-    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$getPrepareResultWithInternalIds$1;->apply(Lzua;Ljava/util/Set;Lylf;)Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;
+    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$getPrepareResultWithInternalIds$1;->apply(Ln9b;Ljava/util/Set;Lccg;)Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public final apply(Lzua;Ljava/util/Set;Lylf;)Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;
+.method public final apply(Ln9b;Ljava/util/Set;Lccg;)Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lzua;",
+            "Ln9b;",
             "Ljava/util/Set<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;",
-            "Lylf;",
+            "Lccg;",
             ")",
             "Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;"
         }
     .end annotation
 
     .line 2
-    new-instance p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;
+    new-instance p3, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;
 
     .line 3
-    iget-object p1, p1, Lzua;->a:Ljava/lang/Object;
+    iget-object p1, p1, Ln9b;->a:Ljava/lang/Object;
 
     if-eqz p1, :cond_1
 
@@ -143,27 +143,27 @@
 
     .line 5
     :cond_0
-    new-instance p0, Ljava/util/NoSuchElementException;
+    new-instance p1, Ljava/util/NoSuchElementException;
 
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+    invoke-direct {p1}, Ljava/util/NoSuchElementException;-><init>()V
 
-    throw p0
+    throw p1
 
     :cond_1
     const/4 p1, 0x0
 
     .line 6
     :goto_0
-    invoke-static {p2}, Lq73;->c0(Ljava/lang/Iterable;)Ljava/util/List;
+    invoke-static {p2}, Lnb3;->z(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p2
 
-    invoke-static {p2}, Lq73;->F0(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {p2}, Lnb3;->c0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p2
 
     .line 7
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;Ljava/util/Set;)V
+    invoke-direct {p3, p1, p2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;Ljava/util/Set;)V
 
-    return-object p0
+    return-object p3
 .end method

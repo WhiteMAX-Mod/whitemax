@@ -1,206 +1,157 @@
-.class public final Ltnd;
-.super Ljava/util/AbstractSet;
+.class public abstract Ltnd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Ljava/util/Set;
-
-.field public final synthetic b:Ljava/util/Set;
+# static fields
+.field public static final a:[J
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Set;Ljava/util/Set;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ltnd;->a:Ljava/util/Set;
+    const/4 v0, 0x2
 
-    iput-object p2, p0, Ltnd;->b:Ljava/util/Set;
+    new-array v0, v0, [J
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+    fill-array-data v0, :array_0
+
+    sput-object v0, Ltnd;->a:[J
+
+    new-instance v0, Lg1a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lg1a;-><init>(I)V
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 8
+        -0x7f7f7f7f7f7f7f01L    # -2.937446524423077E-306
+        -0x1
+    .end array-data
 .end method
 
-
-# virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final clear()V
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
+.method public static final a(I)I
     .locals 1
 
-    iget-object v0, p0, Ltnd;->a:Ljava/util/Set;
+    const/4 v0, 0x7
 
-    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    if-ne p0, v0, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Ltnd;->b:Ljava/util/Set;
-
-    invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
+    const/4 p0, 0x6
 
     return p0
 
     :cond_0
-    const/4 p0, 0x0
+    div-int/lit8 v0, p0, 0x8
+
+    sub-int/2addr p0, v0
 
     return p0
 .end method
 
-.method public final containsAll(Ljava/util/Collection;)Z
+.method public static final b()Lg1a;
     .locals 1
 
-    iget-object v0, p0, Ltnd;->a:Ljava/util/Set;
+    new-instance v0, Lg1a;
 
-    invoke-interface {v0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Ltnd;->b:Ljava/util/Set;
-
-    invoke-interface {p0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    iget-object v0, p0, Ltnd;->b:Ljava/util/Set;
-
-    iget-object p0, p0, Ltnd;->a:Ljava/util/Set;
-
-    invoke-static {v0, p0}, Ljava/util/Collections;->disjoint(Ljava/util/Collection;Ljava/util/Collection;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
-
-    new-instance v0, Lee7;
-
-    invoke-direct {v0, p0}, Lee7;-><init>(Ltnd;)V
+    invoke-direct {v0}, Lg1a;-><init>()V
 
     return-object v0
 .end method
 
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 0
+.method public static final varargs c([Ltcb;)Lg1a;
+    .locals 5
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Lg1a;
 
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    array-length v1, p0
 
-    throw p0
-.end method
+    invoke-direct {v0, v1}, Lg1a;-><init>(I)V
 
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 0
+    array-length v1, p0
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final size()I
-    .locals 4
-
-    iget-object v0, p0, Ltnd;->a:Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    :cond_0
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    if-ge v2, v1, :cond_0
 
-    move-result v2
+    aget-object v3, p0, v2
 
-    if-eqz v2, :cond_1
+    iget-object v4, v3, Ltcb;->a:Ljava/lang/Object;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v3, v3, Ltcb;->b:Ljava/lang/Object;
 
-    move-result-object v2
+    invoke-virtual {v0, v4, v3}, Lg1a;->l(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-object v3, p0, Ltnd;->b:Ljava/util/Set;
-
-    invoke-interface {v3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
+    return-object v0
+.end method
+
+.method public static final d(I)I
+    .locals 0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x6
+
+    return p0
+
+    :cond_0
+    mul-int/lit8 p0, p0, 0x2
+
+    add-int/lit8 p0, p0, 0x1
+
+    return p0
+.end method
+
+.method public static final e(I)I
+    .locals 1
+
+    if-lez p0, :cond_0
+
+    const/4 v0, -0x1
+
+    invoke-static {p0}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
+
+    move-result p0
+
+    ushr-int p0, v0, p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final f(I)I
+    .locals 2
+
+    const/4 v0, 0x7
+
+    if-ne p0, v0, :cond_0
+
+    const/16 p0, 0x8
+
+    return p0
+
+    :cond_0
+    add-int/lit8 v1, p0, -0x1
+
+    div-int/2addr v1, v0
+
+    add-int/2addr v1, p0
+
     return v1
 .end method

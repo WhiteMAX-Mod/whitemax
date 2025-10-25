@@ -1,83 +1,86 @@
 .class public final Lhhd;
-.super Lkotlinx/coroutines/internal/Segment;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+.field public final synthetic a:Lvm1;
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Lone/me/android/root/RootController;
 
 
 # direct methods
-.method public constructor <init>(JLhhd;I)V
+.method public constructor <init>(Lvm1;ZLone/me/android/root/RootController;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lkotlinx/coroutines/internal/Segment;-><init>(JLkotlinx/coroutines/internal/Segment;I)V
+    iput-object p1, p0, Lhhd;->a:Lvm1;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    iput-boolean p2, p0, Lhhd;->b:Z
 
-    sget p2, Lghd;->f:I
+    iput-object p3, p0, Lhhd;->c:Lone/me/android/root/RootController;
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
-
-    iput-object p1, p0, Lhhd;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getNumberOfSlots()I
-    .locals 0
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 1
 
-    sget p0, Lghd;->f:I
+    sget-object p1, Lone/me/android/root/RootController;->r0:[Ltr7;
 
-    return p0
-.end method
+    iget-object p1, p0, Lhhd;->c:Lone/me/android/root/RootController;
 
-.method public final onCancellation(ILjava/lang/Throwable;Lq04;)V
-    .locals 0
+    iget-boolean v0, p0, Lhhd;->b:Z
 
-    sget-object p2, Lghd;->e:Lkotlinx/coroutines/internal/Symbol;
-
-    iget-object p3, p0, Lhhd;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
-
-    invoke-virtual {p0}, Lkotlinx/coroutines/internal/Segment;->onSlotCleaned()V
+    invoke-virtual {p1, v0}, Lone/me/android/root/RootController;->H0(Z)V
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    sget-object p1, Lone/me/android/root/RootController;->r0:[Ltr7;
+
+    iget-object p1, p0, Lhhd;->c:Lone/me/android/root/RootController;
+
+    iget-boolean v0, p0, Lhhd;->b:Z
+
+    invoke-virtual {p1, v0}, Lone/me/android/root/RootController;->H0(Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-boolean p1, p0, Lhhd;->b:Z
 
-    const-string v1, "SemaphoreSegment[id="
+    iget-object v0, p0, Lhhd;->a:Lvm1;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    iget-wide v1, p0, Lkotlinx/coroutines/internal/Segment;->id:J
+    invoke-interface {v0, p1}, Lvm1;->b(Z)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :cond_0
+    sget-object v0, Lone/me/android/root/RootController;->r0:[Ltr7;
 
-    const-string v1, ", hashCode="
+    iget-object v0, p0, Lhhd;->c:Lone/me/android/root/RootController;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->J0()Le72;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    move-result-object v1
 
-    move-result p0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationY(F)V
 
-    const/16 p0, 0x5d
+    invoke-virtual {v0, p1}, Lone/me/android/root/RootController;->L0(Z)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

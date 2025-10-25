@@ -108,47 +108,47 @@
     :cond_2
     if-ne v3, v4, :cond_3
 
-    iget p0, p0, Lorg/webrtc/RendererCommon$VideoLayoutMeasure;->visibleFractionMatchOrientation:F
+    iget p4, p0, Lorg/webrtc/RendererCommon$VideoLayoutMeasure;->visibleFractionMatchOrientation:F
 
     goto :goto_1
 
     :cond_3
-    iget p0, p0, Lorg/webrtc/RendererCommon$VideoLayoutMeasure;->visibleFractionMismatchOrientation:F
+    iget p4, p0, Lorg/webrtc/RendererCommon$VideoLayoutMeasure;->visibleFractionMismatchOrientation:F
 
     :goto_1
-    invoke-static {p0, p3, v1, v0}, Lorg/webrtc/RendererCommon;->getDisplaySize(FFII)Landroid/graphics/Point;
+    invoke-static {p4, p3, v1, v0}, Lorg/webrtc/RendererCommon;->getDisplaySize(FFII)Landroid/graphics/Point;
 
-    move-result-object p0
+    move-result-object p3
 
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result p1
 
-    const/high16 p3, 0x40000000    # 2.0f
+    const/high16 p4, 0x40000000    # 2.0f
 
-    if-ne p1, p3, :cond_4
+    if-ne p1, p4, :cond_4
 
-    iput v1, p0, Landroid/graphics/Point;->x:I
+    iput v1, p3, Landroid/graphics/Point;->x:I
 
     :cond_4
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result p1
 
-    if-ne p1, p3, :cond_5
+    if-ne p1, p4, :cond_5
 
-    iput v0, p0, Landroid/graphics/Point;->y:I
+    iput v0, p3, Landroid/graphics/Point;->y:I
 
     :cond_5
-    return-object p0
+    return-object p3
 
     :cond_6
     :goto_2
-    new-instance p0, Landroid/graphics/Point;
+    new-instance p1, Landroid/graphics/Point;
 
-    invoke-direct {p0, v1, v0}, Landroid/graphics/Point;-><init>(II)V
+    invoke-direct {p1, v1, v0}, Landroid/graphics/Point;-><init>(II)V
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public setScalingType(Lorg/webrtc/RendererCommon$ScalingType;)V

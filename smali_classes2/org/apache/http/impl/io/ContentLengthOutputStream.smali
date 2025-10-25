@@ -45,22 +45,22 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Content length may not be negative"
+    const-string p2, "Content length may not be negative"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Session output buffer may not be null"
+    const-string p2, "Session output buffer may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -81,25 +81,25 @@
 
     iput-boolean v0, p0, Lorg/apache/http/impl/io/ContentLengthOutputStream;->closed:Z
 
-    iget-object p0, p0, Lorg/apache/http/impl/io/ContentLengthOutputStream;->out:Lorg/apache/http/io/SessionOutputBuffer;
+    iget-object v0, p0, Lorg/apache/http/impl/io/ContentLengthOutputStream;->out:Lorg/apache/http/io/SessionOutputBuffer;
 
-    invoke-interface {p0}, Lorg/apache/http/io/SessionOutputBuffer;->flush()V
+    invoke-interface {v0}, Lorg/apache/http/io/SessionOutputBuffer;->flush()V
 
     :cond_0
     return-void
 .end method
 
 .method public flush()V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/apache/http/impl/io/ContentLengthOutputStream;->out:Lorg/apache/http/io/SessionOutputBuffer;
+    iget-object v0, p0, Lorg/apache/http/impl/io/ContentLengthOutputStream;->out:Lorg/apache/http/io/SessionOutputBuffer;
 
-    invoke-interface {p0}, Lorg/apache/http/io/SessionOutputBuffer;->flush()V
+    invoke-interface {v0}, Lorg/apache/http/io/SessionOutputBuffer;->flush()V
 
     return-void
 .end method
@@ -145,13 +145,13 @@
 
     .line 11
     :cond_1
-    new-instance p0, Ljava/io/IOException;
+    new-instance p1, Ljava/io/IOException;
 
-    const-string p1, "Attempted write to closed stream."
+    const-string v0, "Attempted write to closed stream."
 
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public write([B)V
@@ -224,11 +224,11 @@
 
     .line 5
     :cond_2
-    new-instance p0, Ljava/io/IOException;
+    new-instance p1, Ljava/io/IOException;
 
-    const-string p1, "Attempted write to closed stream."
+    const-string p2, "Attempted write to closed stream."
 
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

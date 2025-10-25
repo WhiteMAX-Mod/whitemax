@@ -109,18 +109,18 @@
     .line 9
     :cond_1
     :goto_2
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$LooperProvider;->looper:Landroid/os/Looper;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$LooperProvider;->looper:Landroid/os/Looper;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public bridge synthetic get()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$LooperProvider;->get()Landroid/os/Looper;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

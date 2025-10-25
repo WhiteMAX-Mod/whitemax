@@ -31,9 +31,9 @@
 
     invoke-virtual {p0, p1, p2, v0}, Lnet/jpountz/lz4/LZ4FastDecompressor;->decompress([B[BI)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final decompress([B[BI)I
@@ -54,9 +54,9 @@
     .line 1
     invoke-virtual/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4FastDecompressor;->decompress([BI[BII)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final decompress(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
@@ -83,23 +83,23 @@
 
     invoke-virtual/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4FastDecompressor;->decompress(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)I
 
-    move-result p0
+    move-result p1
 
     .line 7
     invoke-virtual {v3}, Ljava/nio/Buffer;->limit()I
 
-    move-result p1
+    move-result p2
 
-    invoke-virtual {v3, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v3, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     .line 8
     invoke-virtual {v1}, Ljava/nio/Buffer;->position()I
 
-    move-result p1
+    move-result p2
 
-    add-int/2addr p1, p0
+    add-int/2addr p2, p1
 
-    invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v1, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-void
 .end method
@@ -112,9 +112,9 @@
     .line 5
     invoke-virtual {p0, p1, v0, p2}, Lnet/jpountz/lz4/LZ4FastDecompressor;->decompress([BII)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final decompress([BII)[B
@@ -140,15 +140,15 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

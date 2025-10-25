@@ -125,7 +125,7 @@
 
 # virtual methods
 .method public getMandatory()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -138,13 +138,13 @@
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/MediaConstraints;->mandatory:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/MediaConstraints;->mandatory:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getOptional()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -157,13 +157,13 @@
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/MediaConstraints;->optional:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/MediaConstraints;->optional:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lorg/webrtc/MediaConstraints;->mandatory:Ljava/util/List;
 
@@ -171,19 +171,19 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lorg/webrtc/MediaConstraints;->optional:Ljava/util/List;
+    iget-object v1, p0, Lorg/webrtc/MediaConstraints;->optional:Ljava/util/List;
 
-    invoke-static {p0}, Lorg/webrtc/MediaConstraints;->stringifyKeyValuePairList(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {v1}, Lorg/webrtc/MediaConstraints;->stringifyKeyValuePairList(Ljava/util/List;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "mandatory: "
+    const-string v2, "mandatory: "
 
-    const-string v2, ", optional: "
+    const-string v3, ", optional: "
 
-    invoke-static {v1, v0, v2, p0}, Lee5;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v3, v1}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

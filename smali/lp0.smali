@@ -1,29 +1,27 @@
 .class public final Llp0;
-.super Lc95;
+.super Lpp0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final r0:Ljava/lang/Thread;
+# virtual methods
+.method public final c()Ljava/lang/String;
+    .locals 1
 
+    const-string v0, "pipe_ui"
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Thread;)V
-    .locals 0
-
-    invoke-direct {p0}, Lc95;-><init>()V
-
-    iput-object p1, p0, Llp0;->r0:Ljava/lang/Thread;
-
-    return-void
+    return-object v0
 .end method
 
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-# virtual methods
-.method public final o()Ljava/lang/Thread;
+    const-string v0, "BitmapMemoryCacheGetProducer"
+
+    return-object v0
+.end method
+
+.method public final e(Ljj0;Lmp0;Z)Ljj0;
     .locals 0
 
-    iget-object p0, p0, Llp0;->r0:Ljava/lang/Thread;
-
-    return-object p0
+    return-object p1
 .end method

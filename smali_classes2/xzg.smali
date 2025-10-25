@@ -1,42 +1,88 @@
-.class public final Lxzg;
+.class public abstract Lxzg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lm0d;
-
 
 # instance fields
-.field public final synthetic a:Ld0d;
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Ld0d;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxzg;->a:Ld0d;
+    invoke-static {}, Lrt;->a()Luef;
+
+    move-result-object v0
+
+    sget-object v1, Lmv4;->a:Lsm4;
+
+    sget-object v1, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lce8;
+
+    invoke-virtual {v1}, Lce8;->getImmediate()Lce8;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Li54;->plus(Li54;)Li54;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    return-void
+.end method
+
+.method public static m(Lxzg;Li54;Lzi6;I)Lcye;
+    .locals 1
+
+    and-int/lit8 v0, p3, 0x1
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lea5;->a:Lea5;
+
+    :cond_0
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_1
+
+    sget-object p3, Lt54;->a:Lt54;
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p3, Lt54;->b:Lt54;
+
+    :goto_0
+    iget-object p0, p0, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p0, p1, p3, p2}, Ltki;->c(Lq54;Li54;Lt54;Lzi6;)Lcye;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static o(Lxe5;Ljava/lang/Object;)V
+    .locals 0
+
+    iget-object p0, p0, Lxe5;->b:Lnje;
+
+    invoke-virtual {p0, p1}, Lnje;->h(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lq64;Z)V
-    .locals 2
-
-    new-instance v0, Lqw2;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, p0, p1, p2, v1}, Lqw2;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    iget-object p0, p0, Lxzg;->a:Ld0d;
-
-    iget-object p0, p0, Ld0d;->f:Landroid/os/Handler;
-
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+.method public q()V
+    .locals 0
 
     return-void
 .end method

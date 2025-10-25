@@ -4,20 +4,16 @@
 
 
 # instance fields
-.field public final a:Lvmd;
-
-.field public final b:Lsg1;
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lsg1;Lvmd;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lui1;->a:Lvmd;
-
-    iput-object p1, p0, Lui1;->b:Lsg1;
+    iput-object p1, p0, Lui1;->a:Ljava/util/List;
 
     return-void
 .end method

@@ -97,9 +97,9 @@
 
 # virtual methods
 .method public getCause()Ljava/lang/Throwable;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/commons/logging/LogConfigurationException;->cause:Ljava/lang/Throwable;
+    iget-object v0, p0, Lorg/apache/commons/logging/LogConfigurationException;->cause:Ljava/lang/Throwable;
 
-    return-object p0
+    return-object v0
 .end method

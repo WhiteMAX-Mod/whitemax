@@ -2,99 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lty5;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lwt3;
 
-.field public final c:Ljava/lang/String;
-
-.field public d:I
-
-.field public e:Landroid/media/VolumeProvider;
-
-.field public final synthetic f:Landroid/os/Handler;
-
-.field public final synthetic g:Lbeb;
+.field public final synthetic c:Lkeb;
 
 
 # direct methods
-.method public constructor <init>(Lbeb;IIILjava/lang/String;Landroid/os/Handler;)V
+.method public synthetic constructor <init>(Lwt3;Lkeb;I)V
     .locals 0
 
+    iput p3, p0, Lzdb;->a:I
+
+    iput-object p1, p0, Lzdb;->b:Lwt3;
+
+    iput-object p2, p0, Lzdb;->c:Lkeb;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzdb;->g:Lbeb;
-
-    iput-object p6, p0, Lzdb;->f:Landroid/os/Handler;
-
-    iput p2, p0, Lzdb;->a:I
-
-    iput p3, p0, Lzdb;->b:I
-
-    iput p4, p0, Lzdb;->d:I
-
-    iput-object p5, p0, Lzdb;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/media/VolumeProvider;
-    .locals 8
+.method public final d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lzdb;->e:Landroid/media/VolumeProvider;
+    iget v0, p0, Lzdb;->a:I
 
-    if-nez v0, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    new-instance v0, Lydb;
 
-    const/16 v1, 0x1e
+    iget-object v1, p0, Lzdb;->c:Lkeb;
 
-    if-lt v0, v1, :cond_0
+    const/4 v2, 0x2
 
-    new-instance v2, Lwag;
+    invoke-direct {v0, p1, v1, v2}, Lydb;-><init>(Lvy5;Lkeb;I)V
 
-    iget v6, p0, Lzdb;->d:I
+    iget-object p1, p0, Lzdb;->b:Lwt3;
 
-    iget-object v7, p0, Lzdb;->c:Ljava/lang/String;
+    invoke-virtual {p1, v0, p2}, Lwt3;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget v4, p0, Lzdb;->a:I
+    move-result-object p1
 
-    iget v5, p0, Lzdb;->b:I
+    sget-object p2, Lr54;->a:Lr54;
 
-    move-object v3, p0
-
-    invoke-direct/range {v2 .. v7}, Lwag;-><init>(Lzdb;IIILjava/lang/String;)V
-
-    iput-object v2, v3, Lzdb;->e:Landroid/media/VolumeProvider;
+    if-ne p1, p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move-object v3, p0
-
-    new-instance p0, Lvm1;
-
-    iget v0, v3, Lzdb;->b:I
-
-    iget v1, v3, Lzdb;->d:I
-
-    iget v2, v3, Lzdb;->a:I
-
-    invoke-direct {p0, v3, v2, v0, v1}, Lvm1;-><init>(Lzdb;III)V
-
-    iput-object p0, v3, Lzdb;->e:Landroid/media/VolumeProvider;
-
-    goto :goto_0
-
-    :cond_1
-    move-object v3, p0
+    sget-object p1, Lccg;->a:Lccg;
 
     :goto_0
-    iget-object p0, v3, Lzdb;->e:Landroid/media/VolumeProvider;
+    return-object p1
 
-    return-object p0
+    :pswitch_0
+    new-instance v0, Lydb;
+
+    iget-object v1, p0, Lzdb;->c:Lkeb;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v1, v2}, Lydb;-><init>(Lvy5;Lkeb;I)V
+
+    iget-object p1, p0, Lzdb;->b:Lwt3;
+
+    invoke-virtual {p1, v0, p2}, Lwt3;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_1
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

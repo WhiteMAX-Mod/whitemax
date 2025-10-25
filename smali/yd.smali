@@ -1,31 +1,79 @@
-.class public abstract Lyd;
+.class public final synthetic Lyd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/ImageReader$OnImageAvailableListener;
 
-# static fields
-.field public static final a:Lap6;
+
+# instance fields
+.field public final synthetic a:Lae;
+
+.field public final synthetic b:Ljava/util/concurrent/Executor;
+
+.field public final synthetic c:Lta7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lae;Ljava/util/concurrent/Executor;Lta7;)V
+    .locals 0
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lyd;->a:Lae;
 
-    sget-object v1, Lzd;->a:Lv5d;
+    iput-object p2, p0, Lyd;->b:Ljava/util/concurrent/Executor;
 
-    new-instance v1, Lap6;
-
-    new-instance v2, Landroid/os/Handler;
-
-    invoke-direct {v2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    invoke-direct {v1, v2}, Lap6;-><init>(Landroid/os/Handler;)V
-
-    sput-object v1, Lyd;->a:Lap6;
+    iput-object p3, p0, Lyd;->c:Lta7;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onImageAvailable(Landroid/media/ImageReader;)V
+    .locals 5
+
+    iget-object p1, p0, Lyd;->a:Lae;
+
+    iget-object v0, p0, Lyd;->b:Ljava/util/concurrent/Executor;
+
+    iget-object v1, p0, Lyd;->c:Lta7;
+
+    iget-object v2, p1, Lae;->o:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_0
+    iget-boolean v3, p1, Lae;->b:Z
+
+    if-nez v3, :cond_0
+
+    new-instance v3, Lzd;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, p1, v4, v1}, Lzd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {v0, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v2
+
+    return-void
+
+    :goto_1
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

@@ -3,40 +3,33 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Closeable;
+.implements Lh54;
 
 
 # instance fields
-.field public X:Ljavax/inject/Provider;
+.field public final a:Lli6;
 
-.field public Y:Ljavax/inject/Provider;
-
-.field public Z:Ljavax/inject/Provider;
-
-.field public a:Ljavax/inject/Provider;
-
-.field public b:Ln97;
-
-.field public c:Ljavax/inject/Provider;
-
-.field public o:Lb7;
+.field public final b:Lh54;
 
 
-# virtual methods
-.method public final close()V
+# direct methods
+.method public constructor <init>(Lh54;Lli6;)V
     .locals 0
 
-    iget-object p0, p0, Lj54;->Y:Ljavax/inject/Provider;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    iput-object p2, p0, Lj54;->a:Lli6;
 
-    move-result-object p0
+    instance-of p2, p1, Lj54;
 
-    check-cast p0, Lk95;
+    if-eqz p2, :cond_0
 
-    check-cast p0, Lw1d;
+    check-cast p1, Lj54;
 
-    invoke-virtual {p0}, Lw1d;->close()V
+    iget-object p1, p1, Lj54;->b:Lh54;
+
+    :cond_0
+    iput-object p1, p0, Lj54;->b:Lh54;
 
     return-void
 .end method

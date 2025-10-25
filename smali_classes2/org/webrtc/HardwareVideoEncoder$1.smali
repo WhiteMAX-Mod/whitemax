@@ -50,9 +50,9 @@
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lorg/webrtc/HardwareVideoEncoder$1;->this$0:Lorg/webrtc/HardwareVideoEncoder;
+    iget-object v0, p0, Lorg/webrtc/HardwareVideoEncoder$1;->this$0:Lorg/webrtc/HardwareVideoEncoder;
 
-    invoke-static {p0}, Lorg/webrtc/HardwareVideoEncoder;->c(Lorg/webrtc/HardwareVideoEncoder;)V
+    invoke-static {v0}, Lorg/webrtc/HardwareVideoEncoder;->c(Lorg/webrtc/HardwareVideoEncoder;)V
 
     return-void
 .end method

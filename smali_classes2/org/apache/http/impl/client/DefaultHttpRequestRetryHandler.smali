@@ -49,19 +49,19 @@
 
 # virtual methods
 .method public getRetryCount()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/apache/http/impl/client/DefaultHttpRequestRetryHandler;->retryCount:I
+    iget v0, p0, Lorg/apache/http/impl/client/DefaultHttpRequestRetryHandler;->retryCount:I
 
-    return p0
+    return v0
 .end method
 
 .method public isRequestSentRetryEnabled()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/apache/http/impl/client/DefaultHttpRequestRetryHandler;->requestSentRetryEnabled:Z
+    iget-boolean v0, p0, Lorg/apache/http/impl/client/DefaultHttpRequestRetryHandler;->requestSentRetryEnabled:Z
 
-    return p0
+    return v0
 .end method
 
 .method public retryRequest(Ljava/io/IOException;ILorg/apache/http/protocol/HttpContext;)Z
@@ -126,9 +126,9 @@
 
     if-eqz p1, :cond_6
 
-    iget-boolean p0, p0, Lorg/apache/http/impl/client/DefaultHttpRequestRetryHandler;->requestSentRetryEnabled:Z
+    iget-boolean p1, p0, Lorg/apache/http/impl/client/DefaultHttpRequestRetryHandler;->requestSentRetryEnabled:Z
 
-    if-eqz p0, :cond_5
+    if-eqz p1, :cond_5
 
     goto :goto_0
 
@@ -140,20 +140,20 @@
     return v0
 
     :cond_7
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP context may not be null"
+    const-string p2, "HTTP context may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_8
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Exception parameter may not be null"
+    const-string p2, "Exception parameter may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

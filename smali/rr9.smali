@@ -1,80 +1,93 @@
-.class public final Lrr9;
-.super Lure;
+.class public abstract Lrr9;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:J
+.field public a:Landroid/util/Rational;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a(FFF)Lqr9;
+    .locals 3
 
-    check-cast p1, Ljava/lang/Number;
+    move-object v0, p0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    check-cast v0, Lsyb;
 
-    move-result-wide v0
+    const/4 v1, 0x2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-array v1, v1, [F
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    aput p1, v1, v2
 
-    invoke-virtual {p0, p1, p2}, Lrr9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x1
 
-    move-result-object p0
+    aput p2, v1, p1
 
-    check-cast p0, Lrr9;
+    monitor-enter v0
 
-    sget-object p1, Lylf;->a:Lylf;
+    :try_start_0
+    iget-object p2, v0, Lsyb;->d:Landroid/graphics/Matrix;
 
-    invoke-virtual {p0, p1}, Lrr9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez p2, :cond_0
 
-    return-object p1
-.end method
+    sget-object p1, Lsyb;->e:Landroid/graphics/PointF;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    monitor-exit v0
 
-    new-instance p0, Lrr9;
+    goto :goto_0
 
-    const/4 v0, 0x2
+    :catchall_0
+    move-exception p1
 
-    invoke-direct {p0, v0, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    goto :goto_1
 
-    check-cast p1, Ljava/lang/Number;
+    :cond_0
+    invoke-virtual {p2, v1}, Landroid/graphics/Matrix;->mapPoints([F)V
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-wide p1
+    new-instance p2, Landroid/graphics/PointF;
 
-    iput-wide p1, p0, Lrr9;->X:J
+    aget v0, v1, v2
 
-    return-object p0
-.end method
+    aget p1, v1, p1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-direct {p2, v0, p1}, Landroid/graphics/PointF;-><init>(FF)V
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    move-object p1, p2
 
-    iget-wide p0, p0, Lrr9;->X:J
+    :goto_0
+    new-instance p2, Lqr9;
 
-    invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    iget v0, p1, Landroid/graphics/PointF;->x:F
 
-    move-result-object p0
+    iget p1, p1, Landroid/graphics/PointF;->y:F
 
-    const/4 p1, 0x0
+    iget-object v1, p0, Lrr9;->a:Landroid/util/Rational;
 
-    invoke-static {p0, p1}, Lcom/my/tracker/MyTracker;->trackLoginEvent(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
-    sget-object p0, Lylf;->a:Lylf;
+    iput v0, p2, Lqr9;->a:F
 
-    return-object p0
+    iput p1, p2, Lqr9;->b:F
+
+    iput p3, p2, Lqr9;->c:F
+
+    iput-object v1, p2, Lqr9;->d:Landroid/util/Rational;
+
+    return-object p2
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

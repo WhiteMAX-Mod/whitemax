@@ -48,15 +48,15 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$9;->this$0:Lorg/webrtc/CameraCapturer;
 
     iget-object v1, p0, Lorg/webrtc/CameraCapturer$9;->val$switchEventsHandler:Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer$9;->val$cameraName:Ljava/lang/String;
+    iget-object v2, p0, Lorg/webrtc/CameraCapturer$9;->val$cameraName:Ljava/lang/String;
 
-    invoke-static {v0, v1, p0}, Lorg/webrtc/CameraCapturer;->G(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lorg/webrtc/CameraCapturer;->G(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
 
     return-void
 .end method

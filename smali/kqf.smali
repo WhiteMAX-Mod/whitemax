@@ -4,14 +4,11 @@
 
 
 # virtual methods
-.method public abstract b(Llqf;)V
+.method public abstract a()V
 .end method
 
-.method public abstract d(Llqf;)V
+.method public abstract getState()[I
 .end method
 
-.method public abstract h(Llqf;)V
-.end method
-
-.method public abstract o(Llqf;)V
+.method public abstract onStateChange([I)Z
 .end method

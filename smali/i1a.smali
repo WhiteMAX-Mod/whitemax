@@ -1,25 +1,21 @@
-.class public abstract Li1a;
+.class public interface abstract Li1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljje;
+.implements Lvy5;
 
-# direct methods
-.method public static a(Landroid/app/Notification$Builder;Landroid/app/Person;)Landroid/app/Notification$Builder;
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Landroid/app/Person;)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
+# virtual methods
+.method public abstract a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 .end method
 
-.method public static b(Landroid/app/Notification$Action$Builder;I)Landroid/app/Notification$Action$Builder;
-    .locals 0
+.method public abstract g()V
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setSemanticAction(I)Landroid/app/Notification$Action$Builder;
+.method public abstract h(Ljava/lang/Object;)Z
+.end method
 
-    move-result-object p0
-
-    return-object p0
+.method public abstract i()Lq0f;
 .end method

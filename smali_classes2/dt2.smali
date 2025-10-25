@@ -1,86 +1,179 @@
 .class public final Ldt2;
-.super Luc0;
+.super Ldq;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
+# static fields
+.field public static final a:Ldt2;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x4
+    new-instance v0, Ldt2;
 
-    invoke-direct {p0, v0}, Luc0;-><init>(I)V
+    invoke-direct {v0}, Ldq;-><init>()V
 
-    iput-wide p1, p0, Ldt2;->b:J
+    sput-object v0, Ldt2;->a:Ldt2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final a()Lz73;
+    .locals 9
 
-    const/4 v0, 0x1
+    new-instance v0, Lz73;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    return v0
+    move-result-object v1
 
-    :cond_0
-    instance-of v1, p1, Ldt2;
+    const-class v2, Ld33;
 
-    const/4 v2, 0x0
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    if-nez v1, :cond_1
+    move-result-object v1
 
-    return v2
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    :cond_1
-    check-cast p1, Ldt2;
+    move-result-object v2
 
-    iget-wide v3, p0, Ldt2;->b:J
+    const-class v3, Lulf;
 
-    iget-wide p0, p1, Ldt2;->b:J
+    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    cmp-long p0, v3, p0
+    move-result-object v2
 
-    if-eqz p0, :cond_2
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    return v2
+    move-result-object v4
 
-    :cond_2
-    return v0
+    const-class v5, Lll;
+
+    invoke-virtual {v4, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v5
+
+    const-class v6, Lj4e;
+
+    invoke-virtual {v5, v6}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    move-object v6, v3
+
+    move-object v3, v4
+
+    move-object v4, v5
+
+    new-instance v5, Lw73;
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v6}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v7
+
+    const-class v8, Ljpf;
+
+    invoke-virtual {v7, v8}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    invoke-direct {v5, v6, v7}, Lw73;-><init>(Liu7;Liu7;)V
+
+    invoke-direct/range {v0 .. v5}, Lz73;-><init>(Liu7;Liu7;Liu7;Liu7;Lw73;)V
+
+    return-object v0
 .end method
 
-.method public final hashCode()I
+.method public final b()Lkq9;
+    .locals 7
+
+    new-instance v0, Lkq9;
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const-class v2, Lulf;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const-class v3, Ltph;
+
+    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v3
+
+    const-class v4, Lgp6;
+
+    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v4
+
+    const-class v5, Lrj9;
+
+    invoke-virtual {v4, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v5
+
+    const-class v6, Lmp6;
+
+    invoke-virtual {v5, v6}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    invoke-direct/range {v0 .. v5}, Lkq9;-><init>(Liu7;Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v0
+.end method
+
+.method public final getDispatchers()Lulf;
     .locals 2
 
-    iget-wide v0, p0, Ldt2;->b:J
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    move-result-object v0
 
-    move-result p0
+    const-class v1, Lulf;
 
-    return p0
-.end method
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    move-result-object v0
 
-    const-string v0, "OpenChangeChannelTypeAndUpdateBackstack(chatId="
+    check-cast v0, Lulf;
 
-    const-string v1, ")"
-
-    iget-wide v2, p0, Ldt2;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

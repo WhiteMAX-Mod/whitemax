@@ -3,23 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqc6;
-.implements Lpm3;
+.implements Lji6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lwee;
+.field public final synthetic b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwee;I)V
+.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/SettingsPrivacyScreen;I)V
     .locals 0
 
     iput p2, p0, Ltee;->a:I
 
-    iput-object p1, p0, Ltee;->b:Lwee;
+    iput-object p1, p0, Ltee;->b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,230 +27,167 @@
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 0
-
-    iget-object p0, p0, Ltee;->b:Lwee;
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-virtual {p0, p1}, Lwee;->e(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 13
 
     iget v0, p0, Ltee;->a:I
 
-    iget-object p0, p0, Ltee;->b:Lwee;
-
-    check-cast p1, Ljava/util/List;
+    iget-object v1, p0, Ltee;->b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
     packed-switch v0, :pswitch_data_0
 
-    const-string v0, "loadNetworkStickersSingle: ids=%s"
+    sget-object v0, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->q0:[Ltr7;
 
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "wee"
-
-    invoke-static {v2, v0, v1}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lwee;->f:Lgr4;
-
-    invoke-virtual {v0}, Lgr4;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Lrk;
-
-    new-instance v1, Lys;
-
-    invoke-static {p1}, Lxfc;->g(Ljava/util/List;)[J
-
-    move-result-object p1
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, p1}, Lys;-><init>(I[J)V
-
-    iget-object p1, p0, Lwee;->g:Lv5d;
-
-    check-cast v0, Lgaa;
-
-    invoke-virtual {v0, v1, p1}, Lgaa;->I(Lpxe;Lv5d;)Ld3e;
-
-    move-result-object p1
-
-    new-instance v0, Lsd1;
-
-    const/16 v1, 0xb
-
-    const-class v3, Lct;
-
-    invoke-direct {v0, v1, v3}, Lsd1;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Lk2e;->h(Lqc6;)Lu2e;
-
-    move-result-object p1
-
-    new-instance v0, Liae;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Liae;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Lk2e;->h(Lqc6;)Lu2e;
-
-    move-result-object p1
-
-    new-instance v0, Liae;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Liae;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Lk2e;->h(Lqc6;)Lu2e;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lwee;->i:Lgr4;
-
-    invoke-virtual {v0}, Lgr4;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpye;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lnye;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v0, v2, v3}, Lnye;-><init>(Lpye;II)V
-
-    invoke-virtual {p1, v1}, Lk2e;->j(Lnye;)Lxw5;
-
-    move-result-object p1
-
-    new-instance v0, Ltee;
-
-    invoke-direct {v0, p0, v2}, Ltee;-><init>(Lwee;I)V
-
-    new-instance p0, Lr2e;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, p1, v0, v1}, Lr2e;-><init>(Lk2e;Lpm3;I)V
-
-    return-object p0
+    return-object v0
 
     :pswitch_0
-    new-instance v0, Ljava/util/ArrayList;
+    sget-object v0, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->q0:[Ltr7;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    new-instance v3, Lnae;
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    sget-object v0, Loee;->a:Loee;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object v2
 
-    move-result v1
+    const-class v4, Lpw0;
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v2, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v2
+
+    invoke-virtual {v0}, Loee;->a()Liu7;
+
+    move-result-object v4
+
+    check-cast v4, Lwif;
+
+    invoke-virtual {v4}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lulf;
+
+    invoke-direct {v3, v2, v4}, Lnae;-><init>(Liu7;Lulf;)V
+
+    invoke-virtual {v0}, Loee;->a()Liu7;
+
+    move-result-object v2
+
+    check-cast v2, Lwif;
+
+    invoke-virtual {v2}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v5, v2
+
+    check-cast v5, Lulf;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const-class v4, Lpsd;
+
+    invoke-virtual {v2, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const-class v4, Lll;
+
+    invoke-virtual {v2, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v10
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const-class v4, Ljkf;
+
+    invoke-virtual {v2, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v11
+
+    new-instance v4, Lvxe;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const-class v7, Ly83;
+
+    invoke-virtual {v2, v7}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    new-instance v8, Ltee;
+
+    const/4 v9, 0x1
+
+    invoke-direct {v8, v1, v9}, Ltee;-><init>(Lone/me/settings/privacy/ui/SettingsPrivacyScreen;I)V
+
+    invoke-direct {v4, v2, v8}, Lvxe;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v1
 
-    check-cast v1, Lrjc;
+    const-class v2, Lj4e;
 
-    instance-of v2, v1, Lrfe;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Lrfe;
-
-    iget-wide v1, v1, Lrfe;->c:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    goto :goto_0
+    move-result-object v2
 
-    :cond_1
-    invoke-virtual {p0, v0}, Lwee;->c(Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-virtual {v2, v7}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result-object p1
+    move-result-object v8
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    move-result v1
+    move-result-object v2
 
-    if-nez v1, :cond_2
+    const-class v7, Ldq5;
 
-    invoke-virtual {p0, p1}, Lwee;->d(Ljava/util/List;)Ld3e;
+    invoke-virtual {v2, v7}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result-object p1
+    move-result-object v9
 
-    invoke-virtual {p1}, Lk2e;->e()Ljava/lang/Object;
-
-    :cond_2
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-direct {p1, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    :cond_3
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const-class v2, Ldm3;
 
-    move-result v1
+    invoke-virtual {v0, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_4
+    move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-object v12, v0
 
-    move-result-object v1
+    check-cast v12, Ldm3;
 
-    check-cast v1, Ljava/lang/Long;
+    new-instance v2, Lqfe;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object v7, v1
 
-    iget-object v2, p0, Lwee;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-direct/range {v2 .. v12}, Lqfe;-><init>(Lnae;Lvxe;Lulf;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Ldm3;)V
 
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llee;
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_4
-    return-object p1
+    return-object v2
 
     nop
 

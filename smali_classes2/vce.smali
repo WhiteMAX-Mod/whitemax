@@ -1,150 +1,199 @@
 .class public final Lvce;
-.super Lure;
+.super Lyoe;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ltt5;
-
-.field public final synthetic r0:Lipc;
-
-.field public final synthetic s0:Lks5;
-
-.field public final synthetic t0:J
+.field public final X:Luce;
 
 
 # direct methods
-.method public constructor <init>(Ltt5;Lipc;Lks5;JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Luce;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    iput-object p1, p0, Lvce;->Z:Ltt5;
+    invoke-direct {p0, p2}, Lyoe;-><init>(Ljava/util/concurrent/Executor;)V
 
-    iput-object p2, p0, Lvce;->r0:Lipc;
-
-    iput-object p3, p0, Lvce;->s0:Lks5;
-
-    iput-wide p4, p0, Lvce;->t0:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p6}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lvce;->X:Luce;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final bridge synthetic H(Lvpe;I)V
     .locals 0
 
-    check-cast p1, Ly04;
+    check-cast p1, Lede;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lvce;->J(Lede;I)V
 
-    invoke-virtual {p0, p1, p2}, Lvce;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lvce;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lvce;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+.method public final J(Lede;I)V
+    .locals 4
 
-    new-instance v0, Lvce;
+    invoke-virtual {p0, p2}, Lr18;->C(I)Ljava/lang/Object;
 
-    iget-object v3, p0, Lvce;->s0:Lks5;
+    move-result-object p2
 
-    iget-wide v4, p0, Lvce;->t0:J
+    check-cast p2, Ly18;
 
-    iget-object v1, p0, Lvce;->Z:Ltt5;
+    check-cast p2, Ltce;
 
-    iget-object v2, p0, Lvce;->r0:Lipc;
+    iget-object v0, p1, Lq7d;->a:Landroid/view/View;
 
-    move-object v6, p2
+    move-object v1, v0
 
-    invoke-direct/range {v0 .. v6}, Lvce;-><init>(Ltt5;Lipc;Lks5;JLkotlin/coroutines/Continuation;)V
+    check-cast v1, Lcde;
 
-    iput-object p1, v0, Lvce;->Y:Ljava/lang/Object;
+    invoke-virtual {v1, p2}, Lcde;->setModelItem(Ltce;)V
 
-    return-object v0
-.end method
+    iget-object v1, p0, Lvce;->X:Luce;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    iput-object v1, p1, Lede;->D0:Luce;
 
-    iget v0, p0, Lvce;->X:I
+    invoke-interface {p2}, Ltce;->d()Lqce;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    if-eqz v0, :cond_1
+    instance-of p1, p1, Loce;
 
-    if-ne v0, v1, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    move-object p1, v0
+
+    check-cast p1, Lcde;
+
+    new-instance v2, Lvk;
+
+    const/16 v3, 0x11
+
+    invoke-direct {v2, v3, v1}, Lvk;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v2}, Lcde;->setOnSwitchCheckedListener(Lzi6;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    move-object p1, v0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    check-cast p1, Lcde;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    throw p0
+    invoke-virtual {p1, v2}, Lcde;->setOnSwitchListener(Lzce;)V
+
+    :goto_0
+    new-instance p1, Lnbe;
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v1, v2, p2}, Lnbe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v0, p1}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    return-void
+.end method
+
+.method public final bridge synthetic r(Lq7d;I)V
+    .locals 0
+
+    check-cast p1, Lede;
+
+    invoke-virtual {p0, p1, p2}, Lvce;->J(Lede;I)V
+
+    return-void
+.end method
+
+.method public final s(Lq7d;ILjava/util/List;)V
+    .locals 3
+
+    check-cast p1, Lede;
+
+    invoke-interface {p3}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    new-instance v0, Lrce;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
+
+    invoke-interface {p3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p3
+
+    :cond_0
+    :goto_0
+    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lrce;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Lrce;
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const/4 v1, 0x0
 
-    iget-object p1, p0, Lvce;->Y:Ljava/lang/Object;
+    :goto_1
+    if-eqz v1, :cond_0
 
-    move-object v5, p1
+    invoke-virtual {v0, v1}, Lrdi;->d0(Lrdi;)V
 
-    check-cast v5, Ly04;
-
-    new-instance v2, Luce;
-
-    iget-object v4, p0, Lvce;->s0:Lks5;
-
-    iget-wide v6, p0, Lvce;->t0:J
-
-    iget-object v3, p0, Lvce;->r0:Lipc;
-
-    invoke-direct/range {v2 .. v7}, Luce;-><init>(Lipc;Lks5;Ly04;J)V
-
-    iput v1, p0, Lvce;->X:I
-
-    iget-object p1, p0, Lvce;->Z:Ltt5;
-
-    invoke-virtual {p1, v2, p0}, Ltt5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
+    goto :goto_0
 
     :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+    iget-object p3, p0, Lr18;->o:Lsv;
 
-    return-object p0
+    iget-object p3, p3, Lsv;->f:Ljava/util/List;
+
+    invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ltce;
+
+    invoke-virtual {p1, p2, v0}, Lede;->G(Ltce;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p0, p1, p2}, Lvce;->J(Lede;I)V
+
+    return-void
+.end method
+
+.method public final t(Landroid/view/ViewGroup;I)Lq7d;
+    .locals 2
+
+    new-instance p2, Lede;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v0, Lcde;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lcde;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p2, v0}, Lq7d;-><init>(Landroid/view/View;)V
+
+    return-object p2
 .end method

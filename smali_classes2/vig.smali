@@ -1,25 +1,53 @@
-.class public final Lvig;
+.class public abstract synthetic Lvig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lyi7;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lyi7;"
-        }
-    .end annotation
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-    sget-object p0, Lwig;->a:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    move-result-object p0
+    invoke-static {}, Ldq4;->values()[Ldq4;
 
-    check-cast p0, Lyi7;
+    move-result-object v0
 
-    return-object p0
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_0
+    sget-object v1, Ldq4;->X:Ldq4;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v1, Ldq4;->Y:Ldq4;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Lvig;->$EnumSwitchMapping$0:[I
+
+    return-void
 .end method

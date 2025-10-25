@@ -2,205 +2,209 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvf4;
 
-# instance fields
-.field public final a:Lrl;
 
-.field public final b:Z
+# static fields
+.field public static final a:Lwye;
 
-.field public final c:Z
-
-.field public final d:J
-
-.field public final e:I
+.field public static final b:Lyye;
 
 
 # direct methods
-.method public constructor <init>(Lrl;ZZJI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwye;
 
-    iput-object p1, p0, Lwye;->a:Lrl;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lwye;->b:Z
+    sput-object v0, Lwye;->a:Lwye;
 
-    iput-boolean p3, p0, Lwye;->c:Z
+    sget-object v0, Lyye;->b:Lyye;
 
-    iput-wide p4, p0, Lwye;->d:J
-
-    iput p6, p0, Lwye;->e:I
+    sput-object v0, Lwye;->b:Lyye;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()Ldg4;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    sget-object v0, Lwye;->b:Lyye;
 
-    goto :goto_1
+    return-object v0
+.end method
 
-    :cond_0
-    instance-of v0, p1, Lwye;
+.method public final b(Ljava/lang/String;Lyf4;Landroid/os/Bundle;)Lgg4;
+    .locals 12
 
-    if-nez v0, :cond_1
+    sget-object v0, Lwye;->b:Lyye;
 
-    goto :goto_0
+    iget-object v0, v0, Ldg4;->a:Ljava/util/LinkedHashSet;
 
-    :cond_1
-    check-cast p1, Lwye;
-
-    iget-object v0, p0, Lwye;->a:Lrl;
-
-    iget-object v1, p1, Lwye;->a:Lrl;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    sget-object v0, Lyye;->b:Lyye;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lyye;->c:Lyf4;
+
+    invoke-virtual {p2, v0}, Lyf4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Lvye;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lvye;-><init>(I)V
+
+    :goto_0
+    move-object v10, v0
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v0, Lyye;->d:Lyf4;
+
+    invoke-virtual {p2, v0}, Lyf4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Lvye;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lvye;-><init>(I)V
 
     goto :goto_0
 
     :cond_2
-    iget-boolean v0, p0, Lwye;->b:Z
+    sget-object v0, Lyye;->e:Lyf4;
 
-    iget-boolean v1, p1, Lwye;->b:Z
+    invoke-virtual {p2, v0}, Lyf4;->equals(Ljava/lang/Object;)Z
 
-    if-eq v0, v1, :cond_3
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    new-instance v0, Lvye;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lvye;-><init>(I)V
 
     goto :goto_0
 
     :cond_3
-    iget-boolean v0, p0, Lwye;->c:Z
+    sget-object v0, Lyye;->f:Lyf4;
 
-    iget-boolean v1, p1, Lwye;->c:Z
+    invoke-virtual {p2, v0}, Lyf4;->equals(Ljava/lang/Object;)Z
 
-    if-eq v0, v1, :cond_4
+    move-result v0
 
-    goto :goto_0
+    if-eqz v0, :cond_4
+
+    const-string v0, "ids"
+
+    invoke-static {v0, p3}, Llyi;->d(Ljava/lang/String;Landroid/os/Bundle;)[J
+
+    move-result-object v0
+
+    new-instance v1, Lyy3;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v0}, Lyy3;-><init>(ILjava/lang/Object;)V
+
+    move-object v10, v1
+
+    goto :goto_1
 
     :cond_4
-    iget-wide v0, p0, Lwye;->d:J
+    sget-object v0, Lyye;->g:Lyf4;
 
-    iget-wide v2, p1, Lwye;->d:J
+    invoke-virtual {p2, v0}, Lyf4;->equals(Ljava/lang/Object;)Z
 
-    cmp-long v0, v0, v2
+    move-result v0
 
     if-eqz v0, :cond_5
 
-    goto :goto_0
+    const-string v0, "id"
+
+    invoke-static {v0, p3}, Llyi;->h(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v0
+
+    new-instance v2, Li91;
+
+    const/16 v3, 0x8
+
+    invoke-direct {v2, v0, v1, v3}, Li91;-><init>(JI)V
+
+    move-object v10, v2
+
+    :goto_1
+    new-instance v4, Lgg4;
+
+    const/4 v9, 0x0
+
+    const/16 v11, 0x10
+
+    const/4 v8, 0x1
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    move-object v7, p3
+
+    invoke-direct/range {v4 .. v11}, Lgg4;-><init>(Ljava/lang/String;Lyf4;Landroid/os/Bundle;ILeg4;Lfg4;I)V
+
+    return-object v4
 
     :cond_5
-    iget p0, p0, Lwye;->e:I
+    move-object v6, p2
 
-    iget p1, p1, Lwye;->e:I
+    const-class p1, Lwye;
 
-    if-eq p0, p1, :cond_6
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    :goto_0
-    const/4 p0, 0x0
+    move-result-object p1
 
-    return p0
+    const-string p2, "invalid route "
 
-    :cond_6
-    :goto_1
-    const/4 p0, 0x1
+    invoke-static {p2, v6}, Lrv8;->e(Ljava/lang/String;Lyf4;)Ljava/lang/String;
 
-    return p0
-.end method
+    move-result-object p3
 
-.method public final hashCode()I
-    .locals 4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    iget-object v0, p0, Lwye;->a:Lrl;
+    invoke-static {p2, v6}, Lrv8;->e(Ljava/lang/String;Lyf4;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    move-result-object p2
 
-    move-result v0
+    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const/16 v1, 0x1f
+    invoke-static {p1, p3, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lwye;->b:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lwye;->c:Z
-
-    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lwye;->d:J
-
-    invoke-static {v0, v1, v2, v3}, Lwsf;->d(IIJ)I
-
-    move-result v0
-
-    iget p0, p0, Lwye;->e:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Task(apiTask="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lwye;->a:Lrl;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", executeAndSave="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lwye;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", retry="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lwye;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dependsRequestId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwye;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dependencyType="
-
-    const-string v2, ")"
-
-    iget p0, p0, Lwye;->e:I
-
-    invoke-static {v0, v1, p0, v2}, Lsq3;->i(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v1
 .end method

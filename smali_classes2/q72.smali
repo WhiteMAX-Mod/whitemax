@@ -1,185 +1,82 @@
-.class public final synthetic Lq72;
-.super Ljava/lang/Object;
+.class public final Lq72;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Ls72;
+.field public final synthetic Y:Lt72;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls72;I)V
+.method public constructor <init>(Lt72;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lq72;->a:I
+    iput-object p1, p0, Lq72;->Y:Lt72;
 
-    iput-object p1, p0, Lq72;->b:Ls72;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lq72;->a:I
+    check-cast p1, Lo2c;
 
-    iget-object p0, p0, Lq72;->b:Ls72;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Lrxa;
-
-    iget-object v0, p0, Ls72;->X:Lxx8;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    move-object p1, v1
-
-    goto :goto_3
-
-    :cond_0
-    iget-object v2, v0, Lxx8;->a:Luz8;
-
-    if-eqz p1, :cond_1
-
-    iget-object v3, p1, Lrxa;->a:Ljava/lang/Object;
-
-    check-cast v3, Ljava/lang/Long;
-
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    iget-wide v5, v2, Lli0;->a:J
-
-    cmp-long v3, v3, v5
-
-    if-nez v3, :cond_1
-
-    goto :goto_3
-
-    :cond_1
-    iget-object p1, v0, Lxx8;->r0:Lxs2;
-
-    check-cast p1, Lqe2;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    if-nez v0, :cond_2
-
-    move-object p0, v1
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v3, 0x1
-
-    invoke-static {p1, p0, v0, v3}, Lqe2;->f(Lqe2;Ls72;Lxx8;I)Landroid/text/SpannableString;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-static {p0}, Lm7g;->n(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    sget p1, Lq7e;->a:I
-
-    invoke-static {p0}, Lsh9;->b(Ljava/lang/CharSequence;)Lq7e;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/text/SpannableString;->length()I
-
-    move-result p1
-
-    const-class v0, Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p0, v3, p1, v0}, Landroid/text/SpannableString;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lq72;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    array-length v0, p1
+    check-cast p1, Lq72;
 
-    :goto_1
-    if-ge v3, v0, :cond_5
+    sget-object p2, Lccg;->a:Lccg;
 
-    aget-object v4, p1, v3
+    invoke-virtual {p1, p2}, Lq72;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    instance-of v5, v4, Landroid/text/style/URLSpan;
+    return-object p2
+.end method
 
-    if-nez v5, :cond_3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    instance-of v5, v4, Lt68;
+    new-instance v0, Lq72;
 
-    if-eqz v5, :cond_4
+    iget-object v1, p0, Lq72;->Y:Lt72;
 
-    :cond_3
-    invoke-virtual {p0, v4}, Landroid/text/SpannableString;->removeSpan(Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p2}, Lq72;-><init>(Lt72;Lkotlin/coroutines/Continuation;)V
 
-    :cond_4
-    add-int/lit8 v3, v3, 0x1
+    iput-object p1, v0, Lq72;->X:Ljava/lang/Object;
 
-    goto :goto_1
+    return-object v0
+.end method
 
-    :cond_5
-    iget-wide v2, v2, Lli0;->a:J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-object p1
+    iget-object p1, p0, Lq72;->X:Ljava/lang/Object;
 
-    invoke-static {p0}, Lm7g;->m(Ljava/lang/CharSequence;)Z
+    check-cast p1, Lo2c;
 
-    move-result v0
+    iget-object v0, p0, Lq72;->Y:Lt72;
 
-    if-eqz v0, :cond_6
+    iget-object v0, v0, Lt72;->q0:Lxe5;
 
-    goto :goto_2
+    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    :cond_6
-    sget v0, Lq7e;->a:I
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-static {p0}, Lsh9;->b(Ljava/lang/CharSequence;)Lq7e;
-
-    move-result-object v1
-
-    :goto_2
-    new-instance p0, Lrxa;
-
-    invoke-direct {p0, p1, v1}, Lrxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object p1, p0
-
-    :goto_3
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -308,13 +308,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Lorg/json/JSONException;
+    new-instance v0, Lorg/json/JSONException;
 
-    const-string v0, "Stepping back two steps is not supported"
+    const-string v1, "Stepping back two steps is not supported"
 
-    invoke-direct {p0, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public end()Z
@@ -324,22 +324,22 @@
 
     if-eqz v0, :cond_0
 
-    iget-boolean p0, p0, Lorg/json/JSONTokener;->usePrevious:Z
+    iget-boolean v0, p0, Lorg/json/JSONTokener;->usePrevious:Z
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public more()Z
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -373,40 +373,43 @@
 
     iput-boolean v1, p0, Lorg/json/JSONTokener;->eof:Z
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 
     :cond_1
-    iget-object p0, p0, Lorg/json/JSONTokener;->reader:Ljava/io/Reader;
+    iget-object v0, p0, Lorg/json/JSONTokener;->reader:Ljava/io/Reader;
 
-    invoke-virtual {p0}, Ljava/io/Reader;->reset()V
+    invoke-virtual {v0}, Ljava/io/Reader;->reset()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
     return v1
 
-    :catch_0
-    move-exception p0
+    :goto_0
+    new-instance v1, Lorg/json/JSONException;
 
-    new-instance v0, Lorg/json/JSONException;
+    const-string v2, "Unable to read the next character from the stream"
 
-    const-string v1, "Unable to read the next character from the stream"
+    invoke-direct {v1, v2, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-direct {v0, v1, p0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
+    throw v1
 
     :catch_1
-    move-exception p0
+    move-exception v0
 
-    new-instance v0, Lorg/json/JSONException;
+    new-instance v1, Lorg/json/JSONException;
 
-    const-string v1, "Unable to preserve stream position"
+    const-string v2, "Unable to preserve stream position"
 
-    invoke-direct {v0, v1, p0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v1, v2, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    throw v0
+    throw v1
 .end method
 
 .method public next()C
@@ -465,14 +468,14 @@
     return v0
 
     :catch_0
-    move-exception p0
+    move-exception v0
 
     .line 8
-    new-instance v0, Lorg/json/JSONException;
+    new-instance v1, Lorg/json/JSONException;
 
-    invoke-direct {v0, p0}, Lorg/json/JSONException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v1, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/Throwable;)V
 
-    throw v0
+    throw v1
 .end method
 
 .method public next(C)C
@@ -518,9 +521,9 @@
 
     invoke-virtual {p0, p1}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object p1
 
-    throw p0
+    throw p1
 
     .line 12
     :cond_0
@@ -540,9 +543,9 @@
 
     invoke-virtual {p0, p1}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object p1
 
-    throw p0
+    throw p1
 
     :cond_1
     return v0
@@ -559,9 +562,9 @@
     if-nez p1, :cond_0
 
     .line 13
-    const-string p0, ""
+    const-string p1, ""
 
-    return-object p0
+    return-object p1
 
     .line 14
     :cond_0
@@ -596,17 +599,17 @@
 
     invoke-virtual {p0, p1}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object p1
 
-    throw p0
+    throw p1
 
     .line 18
     :cond_2
-    new-instance p0, Ljava/lang/String;
+    new-instance p1, Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Ljava/lang/String;-><init>([C)V
+    invoke-direct {p1, v0}, Ljava/lang/String;-><init>([C)V
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public nextClean()C
@@ -667,9 +670,9 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -747,16 +750,16 @@
 
     invoke-virtual {p0, v3, p1}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;Ljava/lang/Throwable;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object p1
 
-    throw p0
+    throw p1
 
     :cond_2
     invoke-virtual {p0, v3}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object p1
 
-    throw p0
+    throw p1
 
     :cond_3
     const/16 v1, 0x9
@@ -799,9 +802,9 @@
 
     invoke-virtual {p0, p1}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object p1
 
-    throw p0
+    throw p1
 .end method
 
 .method public nextTo(C)Ljava/lang/String;
@@ -854,13 +857,13 @@
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public nextTo(Ljava/lang/String;)Ljava/lang/String;
@@ -918,13 +921,13 @@
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public nextValue()Ljava/lang/Object;
@@ -1001,18 +1004,18 @@
 
     invoke-static {v0}, Lorg/json/JSONObject;->stringToValue(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_1
     const-string v0, "Missing value"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONTokener;->syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
 
-    move-result-object p0
+    move-result-object v0
 
-    throw p0
+    throw v0
 
     :cond_2
     invoke-virtual {p0}, Lorg/json/JSONTokener;->back()V
@@ -1035,9 +1038,9 @@
     :cond_4
     invoke-virtual {p0, v0}, Lorg/json/JSONTokener;->nextString(C)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public skipTo(C)C
@@ -1078,9 +1081,14 @@
 
     iput-wide v4, p0, Lorg/json/JSONTokener;->line:J
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
 
     :cond_1
     if-ne v6, p1, :cond_0
@@ -1097,72 +1105,70 @@
 
     return v6
 
-    :catch_0
-    move-exception p0
+    :goto_0
+    new-instance v0, Lorg/json/JSONException;
 
-    new-instance p1, Lorg/json/JSONException;
+    invoke-direct {v0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-direct {p1, p0}, Lorg/json/JSONException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
+    throw v0
 .end method
 
 .method public syntaxError(Ljava/lang/String;)Lorg/json/JSONException;
-    .locals 1
+    .locals 2
 
     .line 1
     new-instance v0, Lorg/json/JSONException;
 
     .line 2
-    invoke-static {p1}, Lmw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Ldy1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
     .line 3
     invoke-virtual {p0}, Lorg/json/JSONTokener;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {v0, p0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
 
 .method public syntaxError(Ljava/lang/String;Ljava/lang/Throwable;)Lorg/json/JSONException;
-    .locals 1
+    .locals 2
 
     .line 7
     new-instance v0, Lorg/json/JSONException;
 
     .line 8
-    invoke-static {p1}, Lmw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Ldy1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
     .line 9
     invoke-virtual {p0}, Lorg/json/JSONTokener;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {v0, p0, p2}, Lorg/json/JSONException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, p1, p2}, Lorg/json/JSONException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1188,11 +1194,11 @@
 
     iget-wide v1, p0, Lorg/json/JSONTokener;->line:J
 
-    const-string p0, "]"
+    const-string v3, "]"
 
-    invoke-static {v0, v1, v2, p0}, Lyv7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lrv8;->g(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

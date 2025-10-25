@@ -1,79 +1,73 @@
-.class public final Loib;
-.super Ljava/lang/Object;
+.class public final enum Loib;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic d:[Lxi7;
+.field public static final enum a:Loib;
 
-.field public static final e:Ljava/lang/String;
+.field public static final enum b:Loib;
 
-
-# instance fields
-.field public final a:Lqgb;
-
-.field public final b:Lgr4;
-
-.field public final c:Lgr4;
+.field public static final synthetic c:[Loib;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 4
 
-    new-instance v0, Lsxb;
+    new-instance v0, Loib;
 
-    const-class v1, Loib;
+    const-string v1, "GRANTED"
 
-    const-string v2, "discardServerDraftUseCase"
+    const/4 v2, 0x0
 
-    const-string v3, "getDiscardServerDraftUseCase()Lru/ok/tamtam/draft/DiscardServerDraftUseCase;"
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v4, 0x0
+    sput-object v0, Loib;->a:Loib;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    new-instance v1, Loib;
 
-    sget-object v2, Ljpc;->a:Lkpc;
+    const-string v2, "DENIED"
 
-    const-string v3, "downloadDraftUseCase"
+    const/4 v3, 0x1
 
-    const-string v5, "getDownloadDraftUseCase()Lru/ok/tamtam/draft/DownloadDraftUseCase;"
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v2, v1, v3, v5, v4}, Lee5;->h(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lsxb;
+    sput-object v1, Loib;->b:Loib;
 
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Lxi7;
-
-    aput-object v0, v3, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v3, v0
-
-    sput-object v3, Loib;->d:[Lxi7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    filled-new-array {v0, v1}, [Loib;
 
     move-result-object v0
 
-    sput-object v0, Loib;->e:Ljava/lang/String;
+    sput-object v0, Loib;->c:[Loib;
 
     return-void
 .end method
 
-.method public constructor <init>(Lqgb;Lgr4;Lgr4;)V
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Loib;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Loib;
 
-    iput-object p1, p0, Loib;->a:Lqgb;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iput-object p2, p0, Loib;->b:Lgr4;
+    move-result-object p0
 
-    iput-object p3, p0, Loib;->c:Lgr4;
+    check-cast p0, Loib;
 
-    return-void
+    return-object p0
+.end method
+
+.method public static values()[Loib;
+    .locals 1
+
+    sget-object v0, Loib;->c:[Loib;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Loib;
+
+    return-object v0
 .end method

@@ -1,61 +1,78 @@
-.class public final Lhyf;
-.super Liyf;
+.class public final synthetic Lhyf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final a:Lhyf;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Li6b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Li6b;I)V
+    .locals 0
 
-    new-instance v0, Lhyf;
+    iput p2, p0, Lhyf;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhyf;->b:Li6b;
 
-    sput-object v0, Lhyf;->a:Lhyf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lhyf;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lhyf;->b:Li6b;
 
-    :cond_0
-    instance-of p0, p1, Lhyf;
+    check-cast v0, Lg6b;
 
-    if-nez p0, :cond_1
+    iget-object v0, v0, Lg6b;->a:Ln6b;
 
-    const/4 p0, 0x0
+    iget-object v0, v0, Ln6b;->b:Lli6;
 
-    return p0
+    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lhyf;->b:Li6b;
 
-    const p0, 0x7123af6
+    check-cast v0, Ld6b;
 
-    return p0
-.end method
+    iget-object v0, v0, Ld6b;->a:Lli6;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p0, "Recording"
+    return-void
 
-    return-object p0
+    :pswitch_1
+    iget-object v0, p0, Lhyf;->b:Li6b;
+
+    check-cast v0, Lc6b;
+
+    iget-object v0, v0, Lc6b;->a:Lli6;
+
+    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -4,8 +4,14 @@
 
 
 # virtual methods
-.method public abstract onRecordStarted(Lti1;)V
+.method public abstract onCallParticipantsAdded(Lri1;)V
 .end method
 
-.method public abstract onRecordStopped(Lui1;)V
+.method public abstract onCallParticipantsChanged(Lsi1;)V
+.end method
+
+.method public abstract onCallParticipantsDeAnonimized(Lti1;)V
+.end method
+
+.method public abstract onCallParticipantsRemoved(Lui1;)V
 .end method

@@ -79,9 +79,9 @@
 
     move-result v7
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer$6;->this$0:Lorg/webrtc/CameraCapturer;
+    iget-object v8, p0, Lorg/webrtc/CameraCapturer$6;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p0}, Lorg/webrtc/CameraCapturer;->k(Lorg/webrtc/CameraCapturer;)I
+    invoke-static {v8}, Lorg/webrtc/CameraCapturer;->k(Lorg/webrtc/CameraCapturer;)I
 
     move-result v8
 

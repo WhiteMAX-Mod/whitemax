@@ -3,126 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lis5;
+.implements Lo69;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lis5;
-
-.field public final synthetic c:Lone/me/sdk/messagewrite/MessageWriteWidget;
+# static fields
+.field public static final a:Lj69;
 
 
 # direct methods
-.method public synthetic constructor <init>(Liic;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lj69;->a:I
+    new-instance v0, Lj69;
 
-    iput-object p1, p0, Lj69;->b:Lis5;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lj69;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lj69;->a:Lj69;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lj69;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Li69;
-
-    iget-object v1, p0, Lj69;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, p1, v1, v2}, Li69;-><init>(Lks5;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-
-    iget-object p0, p0, Lj69;->b:Lis5;
-
-    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget-object p0, Lylf;->a:Lylf;
+    instance-of p1, p1, Lj69;
 
-    :goto_0
-    return-object p0
+    if-nez p1, :cond_1
 
-    :pswitch_0
-    new-instance v0, Li69;
+    const/4 p1, 0x0
 
-    iget-object v1, p0, Lj69;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p1, v1, v2}, Li69;-><init>(Lks5;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-
-    iget-object p0, p0, Lj69;->b:Lis5;
-
-    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_1
-
-    goto :goto_1
+    return p1
 
     :cond_1
-    sget-object p0, Lylf;->a:Lylf;
+    return v0
+.end method
 
-    :goto_1
-    return-object p0
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_1
-    new-instance v0, Li69;
+    const v0, -0x45112e64
 
-    iget-object v1, p0, Lj69;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    return v0
+.end method
 
-    const/4 v2, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {v0, p1, v1, v2}, Li69;-><init>(Lks5;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+    const-string v0, "OnDisableClicked"
 
-    iget-object p0, p0, Lj69;->b:Lis5;
-
-    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    sget-object p0, Lylf;->a:Lylf;
-
-    :goto_2
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

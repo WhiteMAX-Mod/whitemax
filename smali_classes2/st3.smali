@@ -1,191 +1,136 @@
 .class public final Lst3;
-.super Lsxe;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lzi6;
 
 
 # instance fields
-.field public c:I
+.field public X:I
 
-.field public o:Ljava/lang/String;
+.field public final synthetic Y:Leu3;
 
 
 # direct methods
-.method public constructor <init>(Lt39;)V
+.method public constructor <init>(Leu3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lsxe;-><init>(Lt39;)V
+    iput-object p1, p0, Lst3;->Y:Leu3;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lt39;Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lq54;
 
-    const-string v0, "verifyResult"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "name"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lt39;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lqe5;->O(Lt39;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lst3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, p0, Lst3;->o:Ljava/lang/String;
+    check-cast p1, Lst3;
 
-    return-void
+    sget-object p2, Lccg;->a:Lccg;
 
-    :cond_1
-    invoke-static {p1}, Lqe5;->O(Lt39;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    const-string p2, "GOOD"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    const-string p2, "BAD"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    const/4 p1, 0x2
-
-    goto :goto_0
-
-    :cond_3
-    const-string p2, "UNDEFINED"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    const/4 p1, 0x3
-
-    :goto_0
-    iput p1, p0, Lst3;->c:I
-
-    return-void
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "No enum constant ru.ok.tamtam.api.commands.ContactVerifyCmd.VerifyResult."
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, p2}, Lst3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_5
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Name is null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget v0, p0, Lst3;->c:I
+    new-instance p1, Lst3;
 
-    iget-object p0, p0, Lst3;->o:Ljava/lang/String;
+    iget-object v0, p0, Lst3;->Y:Leu3;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {p1, v0, p2}, Lst3;-><init>(Leu3;Lkotlin/coroutines/Continuation;)V
 
-    const-string v2, "{verifyResult="
+    return-object p1
+.end method
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v2, 0x1
+    iget v0, p0, Lst3;->X:I
 
-    if-eq v0, v2, :cond_2
+    const/4 v1, 0x1
 
-    const/4 v2, 0x2
+    if-eqz v0, :cond_1
 
-    if-eq v0, v2, :cond_1
+    if-ne v0, v1, :cond_0
 
-    const/4 v2, 0x3
-
-    if-eq v0, v2, :cond_0
-
-    const-string v0, "null"
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    const-string v0, "UNDEFINED"
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    goto :goto_0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    const-string v0, "BAD"
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    goto :goto_0
+    iget-object p1, p0, Lst3;->Y:Leu3;
+
+    iget-object v0, p1, Leu3;->t:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljoa;
+
+    invoke-virtual {v0, v1}, Ljoa;->g(Z)V
+
+    invoke-virtual {p1}, Leu3;->q()Lulf;
+
+    move-result-object v0
+
+    check-cast v0, Lqta;
+
+    invoke-virtual {v0}, Lqta;->c()Lce8;
+
+    move-result-object v0
+
+    new-instance v2, Lrt3;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p1, v3}, Lrt3;-><init>(Leu3;Lkotlin/coroutines/Continuation;)V
+
+    iput v1, p0, Lst3;->X:I
+
+    invoke-static {v0, v2, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    const-string v0, "GOOD"
-
     :goto_0
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object p1, Lccg;->a:Lccg;
 
-    const-string v0, ", name=\'"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "\'}"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

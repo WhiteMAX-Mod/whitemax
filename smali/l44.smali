@@ -1,199 +1,168 @@
-.class public final Ll44;
-.super Landroid/database/ContentObserver;
+.class public abstract Ll44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# virtual methods
+.method public e(Landroid/view/View;)Z
+    .locals 0
 
-.field public final synthetic b:Ljava/lang/Object;
+    const/4 p1, 0x0
 
+    return p1
+.end method
 
-# direct methods
-.method public constructor <init>(Lepe;)V
+.method public f(Landroid/view/View;Landroid/view/View;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public g(Lo44;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public h(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public i(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public j()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public k(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public l(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public m(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public n(Landroid/view/View;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public o(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public p(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII[I)V
+    .locals 0
+
+    const/4 p1, 0x0
+
+    aget p2, p9, p1
+
+    add-int/2addr p2, p6
+
+    aput p2, p9, p1
+
+    const/4 p1, 0x1
+
+    aget p2, p9, p1
+
+    add-int/2addr p2, p7
+
+    aput p2, p9, p1
+
+    return-void
+.end method
+
+.method public q(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Rect;Z)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public r(Landroid/view/View;Landroid/os/Parcelable;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public s(Landroid/view/View;)Landroid/os/Parcelable;
+    .locals 0
+
+    sget-object p1, Landroid/view/View$BaseSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
+
+    return-object p1
+.end method
+
+.method public t()Z
     .locals 1
 
     const/4 v0, 0x0
 
-    iput v0, p0, Ll44;->a:I
+    return v0
+.end method
 
-    .line 2
-    iput-object p1, p0, Ll44;->b:Ljava/lang/Object;
+.method public u(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
+    .locals 0
 
-    .line 3
-    new-instance p1, Landroid/os/Handler;
+    if-nez p6, :cond_0
 
-    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
+    invoke-virtual {p0}, Ll44;->t()Z
 
-    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public v(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;I)V
+    .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>(Lk4b;Landroid/os/Handler;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Ll44;->a:I
-
-    iput-object p1, p0, Ll44;->b:Ljava/lang/Object;
-
-    .line 1
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lr57;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Ll44;->a:I
-
-    iput-object p1, p0, Ll44;->b:Ljava/lang/Object;
+.method public w(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 0
 
     const/4 p1, 0x0
 
-    .line 4
-    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public deliverSelfNotifications()Z
-    .locals 1
-
-    iget v0, p0, Ll44;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    invoke-super {p0}, Landroid/database/ContentObserver;->deliverSelfNotifications()Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_1
-    const/4 p0, 0x0
-
-    return p0
-
-    :pswitch_2
-    const/4 p0, 0x1
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final onChange(Z)V
-    .locals 2
-
-    iget p1, p0, Ll44;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    const-string p1, "Phonebook"
-
-    const-string v0, "contact observer onChange"
-
-    invoke-static {p1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, p0, Ll44;->b:Ljava/lang/Object;
-
-    move-object p1, p0
-
-    check-cast p1, Lk4b;
-
-    iget-object v0, p1, Lk4b;->s0:Lyce;
-
-    :cond_0
-    invoke-virtual {v0}, Lyce;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    move-object v1, p0
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    iget-object v1, p1, Lk4b;->r0:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p0, v1}, Lyce;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lr57;->D0:Ljava/lang/String;
-
-    const-string v0, "ContentObserver: on content changed"
-
-    invoke-static {p1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, p0, Ll44;->b:Ljava/lang/Object;
-
-    check-cast p0, Lr57;
-
-    invoke-virtual {p0}, Lr57;->d()V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Ll44;->b:Ljava/lang/Object;
-
-    check-cast p0, Lepe;
-
-    iget-boolean p1, p0, Ln44;->b:Z
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Ln44;->c:Landroid/database/Cursor;
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Landroid/database/Cursor;->isClosed()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Ln44;->c:Landroid/database/Cursor;
-
-    invoke-interface {p1}, Landroid/database/Cursor;->requery()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Ln44;->a:Z
-
-    :cond_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

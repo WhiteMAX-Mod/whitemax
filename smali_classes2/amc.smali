@@ -1,92 +1,54 @@
-.class public final synthetic Lamc;
+.class public abstract Lamc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static emoji_sprite_0:I = 0x7f080384
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static emoji_sprite_1:I = 0x7f080385
 
+.field public static emoji_sprite_10:I = 0x7f080386
 
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-    .locals 0
+.field public static emoji_sprite_11:I = 0x7f080387
 
-    iput p2, p0, Lamc;->a:I
+.field public static emoji_sprite_12:I = 0x7f080388
 
-    iput-object p1, p0, Lamc;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static emoji_sprite_13:I = 0x7f080389
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static emoji_sprite_14:I = 0x7f08038a
 
-    return-void
-.end method
+.field public static emoji_sprite_15:I = 0x7f08038b
 
+.field public static emoji_sprite_16:I = 0x7f08038c
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+.field public static emoji_sprite_17:I = 0x7f08038d
 
-    iget p1, p0, Lamc;->a:I
+.field public static emoji_sprite_18:I = 0x7f08038e
 
-    iget-object p0, p0, Lamc;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static emoji_sprite_19:I = 0x7f08038f
 
-    packed-switch p1, :pswitch_data_0
+.field public static emoji_sprite_2:I = 0x7f080390
 
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lxi7;
+.field public static emoji_sprite_20:I = 0x7f080391
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Lwlc;
+.field public static emoji_sprite_21:I = 0x7f080392
 
-    move-result-object p0
+.field public static emoji_sprite_22:I = 0x7f080393
 
-    sget-object p1, Lwlc;->I0:[Lxi7;
+.field public static emoji_sprite_23:I = 0x7f080394
 
-    const/4 p1, 0x1
+.field public static emoji_sprite_24:I = 0x7f080395
 
-    invoke-virtual {p0, p1}, Lwlc;->H(Z)V
+.field public static emoji_sprite_3:I = 0x7f080396
 
-    return-void
+.field public static emoji_sprite_4:I = 0x7f080397
 
-    :pswitch_0
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lxi7;
+.field public static emoji_sprite_5:I = 0x7f080398
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Lwlc;
+.field public static emoji_sprite_6:I = 0x7f080399
 
-    move-result-object p0
+.field public static emoji_sprite_7:I = 0x7f08039a
 
-    invoke-virtual {p0}, Lwlc;->F()V
+.field public static emoji_sprite_8:I = 0x7f08039b
 
-    return-void
-
-    :pswitch_1
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lxi7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Lwlc;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lwlc;->B()V
-
-    return-void
-
-    :pswitch_2
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lxi7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Lwlc;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lwlc;->G()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static emoji_sprite_9:I = 0x7f08039c

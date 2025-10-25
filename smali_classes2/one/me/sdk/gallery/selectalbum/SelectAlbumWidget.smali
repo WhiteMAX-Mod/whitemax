@@ -21,10 +21,10 @@
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lo6d;",
+        "Lqpd;",
         "parentScope",
-        "(Ljava/lang/String;Lld4;)V",
-        "r9",
+        "(Ljava/lang/String;Lki4;)V",
+        "y9",
         "media-gallery-widget_release"
     }
     k = 0x1
@@ -38,26 +38,26 @@
 
 
 # static fields
-.field public static final synthetic Y:[Lxi7;
+.field public static final synthetic Y:[Ltr7;
 
 
 # instance fields
-.field public final X:Lrm0;
+.field public final X:Lwn0;
 
-.field public final a:Lcl7;
+.field public final a:Liu7;
 
-.field public final b:Lcl7;
+.field public final b:Liu7;
 
-.field public final c:Lrm0;
+.field public final c:Lwn0;
 
-.field public final o:Lrm0;
+.field public final o:Lwn0;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 8
 
-    new-instance v0, Lsxb;
+    new-instance v0, Leec;
 
     const-class v1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
 
@@ -67,37 +67,37 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Ljpc;->a:Lkpc;
+    sget-object v2, Lz7d;->a:La8d;
 
     const-string v3, "albumAdapter"
 
     const-string v5, "getAlbumAdapter()Lone/me/sdk/gallery/selectalbum/SelectedAlbumAdapter;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lee5;->h(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lsxb;
+    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
 
     move-result-object v2
 
-    new-instance v3, Lsxb;
+    new-instance v3, Leec;
 
     const-string v5, "contentContainer"
 
     const-string v6, "getContentContainer()Lone/me/sdk/gallery/selectalbum/SelectedAlbumRecyclerView;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Lsxb;
+    new-instance v5, Leec;
 
     const-string v6, "popupLayout"
 
     const-string v7, "getPopupLayout()Lone/me/sdk/uikit/common/views/PopupLayout;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Lxi7;
+    new-array v1, v1, [Ltr7;
 
     aput-object v0, v1, v4
 
@@ -113,7 +113,7 @@
 
     aput-object v5, v1, v0
 
-    sput-object v1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lxi7;
+    sput-object v1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Ltr7;
 
     return-void
 .end method
@@ -128,124 +128,124 @@
     const/4 v2, 0x0
 
     .line 6
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILld4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
 
     .line 7
-    new-instance p1, Lfr;
+    new-instance p1, Lqs;
 
-    const-class v1, Lo6d;
+    const-class v1, Lqpd;
 
     const-string v3, "arg_key_scope_id"
 
-    invoke-direct {p1, v1, v3}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v3}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 8
-    sget-object v1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lxi7;
+    sget-object v1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Ltr7;
 
     aget-object v0, v1, v0
 
-    invoke-virtual {p1, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lo6d;
+    check-cast p1, Lqpd;
 
     .line 9
-    iget-object p1, p1, Lo6d;->a:Ljava/lang/String;
+    iget-object p1, p1, Lqpd;->a:Ljava/lang/String;
 
     .line 10
-    const-class v0, Lmfd;
+    const-class v0, Lozd;
 
     .line 11
-    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lzb6;)Lcl7;
+    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 12
-    iput-object p1, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->a:Lcl7;
+    iput-object p1, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->a:Liu7;
 
     .line 13
-    sget-object p1, Lrg8;->a:Lrg8;
+    sget-object p1, Lrr8;->a:Lrr8;
 
     .line 14
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz4;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object p1
 
     .line 15
-    const-class v0, Lkha;
+    const-class v0, Leva;
 
-    invoke-virtual {p1, v0}, Lz4;->d(Ljava/lang/Class;)Lzte;
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object p1
 
     .line 16
-    iput-object p1, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->b:Lcl7;
+    iput-object p1, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->b:Liu7;
 
     .line 17
-    new-instance p1, Lnfd;
+    new-instance p1, Lpzd;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lnfd;-><init>(Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;I)V
+    invoke-direct {p1, p0, v0}, Lpzd;-><init>(Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->c:Lrm0;
+    iput-object p1, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->c:Lwn0;
 
     .line 18
-    new-instance p1, Lnfd;
+    new-instance p1, Lpzd;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Lnfd;-><init>(Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;I)V
+    invoke-direct {p1, p0, v0}, Lpzd;-><init>(Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->o:Lrm0;
+    iput-object p1, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->o:Lwn0;
 
     .line 19
-    new-instance p1, Lnfd;
+    new-instance p1, Lpzd;
 
     const/4 v0, 0x2
 
-    invoke-direct {p1, p0, v0}, Lnfd;-><init>(Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;I)V
+    invoke-direct {p1, p0, v0}, Lpzd;-><init>(Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:Lrm0;
+    iput-object p1, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:Lwn0;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lld4;)V
+.method public constructor <init>(Ljava/lang/String;Lki4;)V
     .locals 1
 
     .line 1
-    new-instance p2, Lo6d;
+    new-instance p2, Lqpd;
 
-    invoke-direct {p2, p1}, Lo6d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Lqpd;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance p1, Lpxa;
+    new-instance p1, Ltcb;
 
     const-string v0, "arg_key_scope_id"
 
-    invoke-direct {p1, v0, p2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
-    filled-new-array {p1}, [Lpxa;
+    filled-new-array {p1}, [Ltcb;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
+    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -257,46 +257,86 @@
 
 
 # virtual methods
-.method public final A0()Lmfd;
-    .locals 0
+.method public final C0()Le0e;
+    .locals 2
 
-    iget-object p0, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->a:Lcl7;
+    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Ltr7;
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    move-result-object p0
+    aget-object v0, v0, v1
 
-    check-cast p0, Lmfd;
+    iget-object v0, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->o:Lwn0;
 
-    return-object p0
+    invoke-virtual {v0}, Lwn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Le0e;
+
+    return-object v0
 .end method
 
-.method public final B0()V
+.method public final D0()Liwb;
+    .locals 2
+
+    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Ltr7;
+
+    const/4 v1, 0x3
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:Lwn0;
+
+    invoke-virtual {v0}, Lwn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Liwb;
+
+    return-object v0
+.end method
+
+.method public final E0()Lozd;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->a:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lozd;
+
+    return-object v0
+.end method
+
+.method public final F0()V
     .locals 3
 
-    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->z0()Llfb;
+    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->D0()Liwb;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Llfb;->getScrollState()Ljfb;
+    invoke-virtual {v0}, Liwb;->getScrollState()Lgwb;
 
     move-result-object v0
 
-    sget-object v1, Ljfb;->a:Ljfb;
+    sget-object v1, Lgwb;->a:Lgwb;
 
     if-ne v0, v1, :cond_1
 
-    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->z0()Llfb;
+    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->D0()Liwb;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Llfb;->getCallback()Lffb;
+    invoke-virtual {v0}, Liwb;->getCallback()Lcwb;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lffb;->f()Landroid/view/View;
+    invoke-virtual {v0}, Lcwb;->f()Landroid/view/View;
 
     move-result-object v0
 
@@ -308,37 +348,37 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->z0()Llfb;
+    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->D0()Liwb;
 
     move-result-object v0
 
-    new-instance v1, Ls0b;
+    new-instance v1, Lrta;
 
-    const/16 v2, 0x13
+    const/16 v2, 0x17
 
-    invoke-direct {v1, v2, p0}, Ls0b;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lrta;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->z0()Llfb;
+    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->D0()Liwb;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Llfb;->k()V
+    invoke-virtual {v0}, Liwb;->k()V
 
     return-void
 
     :cond_1
-    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->z0()Llfb;
+    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->D0()Liwb;
 
-    move-result-object p0
+    move-result-object v0
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, v0}, Llfb;->j(Z)V
+    invoke-virtual {v0, v1}, Liwb;->j(Z)V
 
     return-void
 .end method
@@ -346,11 +386,11 @@
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 0
 
-    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->z0()Llfb;
+    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->D0()Liwb;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final onViewCreated(Landroid/view/View;)V
@@ -358,83 +398,43 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->A0()Lmfd;
+    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->E0()Lozd;
 
     move-result-object p1
 
-    iget-object p1, p1, Lmfd;->X:Lv85;
+    iget-object p1, p1, Lozd;->X:Lxe5;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lzn7;->L()Lbo7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
     move-result-object v0
 
-    sget-object v1, Lcn7;->o:Lcn7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
-    invoke-static {p1, v0, v1}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+    move-result-object v0
+
+    sget-object v1, Lhw7;->o:Lhw7;
+
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
-    new-instance v0, Lpfd;
+    new-instance v0, Lrzd;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lpfd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;)V
+    invoke-direct {v0, v1, p0}, Lrzd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;)V
 
-    new-instance v1, Lnu5;
+    new-instance v1, Lb16;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lnu5;-><init>(Lis5;Lpc6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     return-void
-.end method
-
-.method public final y0()Ldgd;
-    .locals 2
-
-    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lxi7;
-
-    const/4 v1, 0x2
-
-    aget-object v0, v0, v1
-
-    iget-object p0, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->o:Lrm0;
-
-    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ldgd;
-
-    return-object p0
-.end method
-
-.method public final z0()Llfb;
-    .locals 2
-
-    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lxi7;
-
-    const/4 v1, 0x3
-
-    aget-object v0, v0, v1
-
-    iget-object p0, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:Lrm0;
-
-    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Llfb;
-
-    return-object p0
 .end method

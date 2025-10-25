@@ -38,13 +38,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Socket may not be null"
+    const-string p2, "Socket may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -83,9 +83,9 @@
     .catch Ljava/io/InterruptedIOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p0, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
+    iget-object v0, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
 
-    invoke-virtual {p0, v1}, Ljava/net/Socket;->setSoTimeout(I)V
+    invoke-virtual {v0, v1}, Ljava/net/Socket;->setSoTimeout(I)V
 
     return p1
 
@@ -104,9 +104,9 @@
 
     if-eqz v2, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
+    iget-object p1, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
 
-    invoke-virtual {p0, v1}, Ljava/net/Socket;->setSoTimeout(I)V
+    invoke-virtual {p1, v1}, Ljava/net/Socket;->setSoTimeout(I)V
 
     goto :goto_1
 
@@ -117,9 +117,9 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     :goto_0
-    iget-object p0, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
+    iget-object v0, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
 
-    invoke-virtual {p0, v1}, Ljava/net/Socket;->setSoTimeout(I)V
+    invoke-virtual {v0, v1}, Ljava/net/Socket;->setSoTimeout(I)V
 
     throw p1
 
@@ -176,25 +176,25 @@
 
     :catch_0
     :cond_1
-    iget-object p0, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
+    iget-object v2, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
 
-    invoke-virtual {p0, v0}, Ljava/net/Socket;->setSoTimeout(I)V
+    invoke-virtual {v2, v0}, Ljava/net/Socket;->setSoTimeout(I)V
 
     return v1
 
     :catchall_0
     move-exception v1
 
-    iget-object p0, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
+    iget-object v2, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
 
-    invoke-virtual {p0, v0}, Ljava/net/Socket;->setSoTimeout(I)V
+    invoke-virtual {v2, v0}, Ljava/net/Socket;->setSoTimeout(I)V
 
     throw v1
 
     :catch_1
-    iget-object p0, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
+    iget-object v1, p0, Lorg/apache/http/impl/io/SocketInputBuffer;->socket:Ljava/net/Socket;
 
-    invoke-virtual {p0, v0}, Ljava/net/Socket;->setSoTimeout(I)V
+    invoke-virtual {v1, v0}, Ljava/net/Socket;->setSoTimeout(I)V
 
     return v2
 .end method

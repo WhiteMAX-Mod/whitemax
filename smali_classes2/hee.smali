@@ -1,70 +1,86 @@
-.class public abstract Lhee;
-.super Ljava/lang/Object;
+.class public final Lhee;
+.super Lpd0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:J
+
+
 # direct methods
-.method public static a([B)Llz7;
-    .locals 10
+.method public constructor <init>(J)V
+    .locals 1
 
-    :try_start_0
-    new-instance v0, Lru/ok/tamtam/nano/Protos$LogEvent;
+    const/16 v0, 0x12
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$LogEvent;-><init>()V
+    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
 
-    invoke-static {v0, p0}, Lj29;->mergeFrom(Lj29;[B)Lj29;
+    iput-wide p1, p0, Lhee;->b:J
 
-    move-result-object p0
+    return-void
+.end method
 
-    check-cast p0, Lru/ok/tamtam/nano/Protos$LogEvent;
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->time:J
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v7, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->type:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    iget-object v8, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->event:Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->params:[B
+    return v0
 
-    if-eqz v0, :cond_0
+    :cond_0
+    instance-of v1, p1, Lhee;
 
-    invoke-static {v0}, Lqe5;->h([B)Ljava/lang/Object;
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lhee;
+
+    iget-wide v3, p0, Lhee;->b:J
+
+    iget-wide v5, p1, Lhee;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lhee;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ProfileAvatars(id="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lhee;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Map;
-
-    :goto_0
-    move-object v9, v0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :goto_1
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->userId:J
-
-    iget-wide v5, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->sessionId:J
-
-    new-instance v0, Llz7;
-
-    invoke-direct/range {v0 .. v9}, Llz7;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
-
     return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
 .end method

@@ -3,22 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lme5;
+.implements Lve5;
 
 
-# static fields
-.field public static final a:Lle5;
+# instance fields
+.field public final a:I
+
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(IZ)V
+    .locals 0
 
-    new-instance v0, Lle5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lle5;->a:I
 
-    sput-object v0, Lle5;->a:Lle5;
+    iput-boolean p2, p0, Lle5;->b:Z
 
     return-void
 .end method

@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManager;
-.implements Lv01;
+.implements Lk21;
 
 
 # annotations
@@ -15,14 +15,14 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;",
         "Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManager;",
-        "Lv01;",
+        "Lk21;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "store",
         "<init>",
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V",
         "",
         "isAvailable",
-        "Lylf;",
+        "Lccg;",
         "onAsrAvailableChanged",
         "(Z)V",
         "Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;",
@@ -30,10 +30,10 @@
         "addAsrOnlineListener",
         "(Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;)V",
         "removeAsrOnlineListener",
-        "Lqs;",
+        "Leu;",
         "asrRecvDataPackage",
         "onAsrDataPackage",
-        "(Lqs;)V",
+        "(Leu;)V",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "lastIsAvailable",
         "Z",
@@ -94,38 +94,38 @@
 
     invoke-interface {p1, v0}, Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;->onAsrAvailableChanged(Z)V
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public onAsrAvailableChanged(Z)V
-    .locals 1
+    .locals 2
 
     iput-boolean p1, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->lastIsAvailable:Z
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;->onAsrAvailableChanged(Z)V
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;
+
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;->onAsrAvailableChanged(Z)V
 
     goto :goto_0
 
@@ -133,7 +133,7 @@
     return-void
 .end method
 
-.method public onAsrDataPackage(Lqs;)V
+.method public onAsrDataPackage(Leu;)V
     .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
@@ -159,7 +159,7 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v2, v3, p1}, Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk$Companion;->chunkFromPackage$calls_sdk_release(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lqs;)Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk;
+    invoke-virtual {v2, v3, p1}, Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk$Companion;->chunkFromPackage$calls_sdk_release(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Leu;)Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk;
 
     move-result-object v2
 
@@ -172,11 +172,11 @@
 .end method
 
 .method public removeAsrOnlineListener(Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method

@@ -29,13 +29,13 @@
 
 # virtual methods
 .method public consume([Ljava/lang/Double;)V
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/NativeDoubleArrayConsumer;->consumer:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
+    iget-object v0, p0, Lorg/webrtc/NativeDoubleArrayConsumer;->consumer:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
-    invoke-interface {p0, p1}, Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;->consume([Ljava/lang/Double;)V
+    invoke-interface {v0, p1}, Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;->consume([Ljava/lang/Double;)V
 
     return-void
 .end method

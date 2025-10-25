@@ -1,14 +1,23 @@
-.class public interface abstract Lom0;
+.class public abstract Lom0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(Lqf5;J)Lmm0;
-.end method
+# static fields
+.field public static final a:Ljava/lang/String;
 
-.method public q()V
-    .locals 0
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "BatteryChrgTracker"
+
+    invoke-static {v0}, Lxyh;->l(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lom0;->a:Ljava/lang/String;
 
     return-void
 .end method

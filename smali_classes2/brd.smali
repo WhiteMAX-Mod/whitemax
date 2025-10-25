@@ -1,202 +1,129 @@
 .class public final Lbrd;
-.super Lfrd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lbrd;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:Lu2f;
+.field public final a:Lx71;
 
-.field public final b:Ljava/lang/Integer;
+.field public final b:Lavf;
+
+.field public final c:Ljava/util/LinkedHashMap;
+
+.field public final d:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Le5d;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Le5d;-><init>(I)V
-
-    sput-object v0, Lbrd;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lu2f;Ljava/lang/Integer;)V
+.method public constructor <init>(Lx71;Lavf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbrd;->a:Lu2f;
+    iput-object p1, p0, Lbrd;->a:Lx71;
 
-    iput-object p2, p0, Lbrd;->b:Ljava/lang/Integer;
+    iput-object p2, p0, Lbrd;->b:Lavf;
+
+    new-instance p1, Ljava/util/LinkedHashMap;
+
+    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object p1, p0, Lbrd;->c:Ljava/util/LinkedHashMap;
+
+    new-instance p1, Ljava/util/LinkedHashSet;
+
+    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iput-object p1, p0, Lbrd;->d:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Ljava/util/List;)V
     .locals 4
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    return v0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
 
     :cond_0
-    instance-of v1, p1, Lbrd;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lbrd;
-
-    iget-object v1, p0, Lbrd;->a:Lu2f;
-
-    iget-object v3, p1, Lbrd;->a:Lu2f;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_1
 
-    return v2
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :cond_2
-    iget-object p0, p0, Lbrd;->b:Ljava/lang/Integer;
+    move-result-object v1
 
-    iget-object p1, p1, Lbrd;->b:Ljava/lang/Integer;
+    check-cast v1, Lf61;
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v1, v1, Lf61;->a:Lzs1;
 
-    move-result p0
+    iget-object v2, v1, Lzs1;->a:Ltxg;
 
-    if-nez p0, :cond_3
+    sget-object v3, Ltxg;->b:Ltxg;
 
-    return v2
+    if-ne v2, v3, :cond_0
 
-    :cond_3
-    return v0
-.end method
+    iget-object v1, v1, Lzs1;->b:Lhi1;
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lbrd;->a:Lu2f;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lbrd;->b:Ljava/lang/Integer;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    :cond_1
+    iget-object p1, p0, Lbrd;->c:Ljava/util/LinkedHashMap;
 
-    move-result p0
+    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
 
-    :goto_0
-    add-int/2addr v0, p0
+    move-result-object p1
 
-    return v0
-.end method
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result-object p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :cond_2
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    const-string v1, "Property(text="
+    move-result v1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lbrd;->a:Lu2f;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    const-string v1, ", icon="
+    check-cast v1, Ljava/util/Map$Entry;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    iget-object p0, p0, Lbrd;->b:Ljava/lang/Integer;
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v1, Lhi1;
 
-    const-string p0, ")"
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-nez v2, :cond_2
 
-    move-result-object p0
+    iget-object v2, p0, Lbrd;->d:Ljava/util/LinkedHashSet;
 
-    return-object p0
-.end method
+    invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
-    iget-object v0, p0, Lbrd;->a:Lu2f;
+    goto :goto_1
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget-object p0, p0, Lbrd;->b:Ljava/lang/Integer;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
-
-    :cond_0
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
-
+    :cond_3
     return-void
 .end method

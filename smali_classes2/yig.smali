@@ -1,55 +1,38 @@
-.class public final Lyig;
-.super Ljx3;
+.class public interface abstract Lyig;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lxig;
-
-.field public Y:Lbig;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lhjg;
-
-.field public final synthetic r0:Lhjg;
-
-.field public s0:I
-
-
-# direct methods
-.method public constructor <init>(Lhjg;Ljx3;)V
-    .locals 0
-
-    iput-object p1, p0, Lyig;->r0:Lhjg;
-
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
+# virtual methods
+.method public abstract a()Ljava/lang/String;
 .end method
 
+.method public abstract b()I
+.end method
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract e()Lmb7;
+.end method
 
-    iput-object p1, p0, Lyig;->Z:Ljava/lang/Object;
+.method public abstract equals(Ljava/lang/Object;)Z
+.end method
 
-    iget p1, p0, Lyig;->s0:I
+.method public abstract g()Lac7;
+.end method
 
-    const/high16 v0, -0x80000000
+.method public abstract h()Llc7;
+.end method
 
-    or-int/2addr p1, v0
+.method public abstract m()Lwb7;
+.end method
 
-    iput p1, p0, Lyig;->s0:I
+.method public abstract n()Lrc7;
+.end method
 
-    iget-object p1, p0, Lyig;->r0:Lhjg;
+.method public abstract o()Lyb7;
+.end method
 
-    const/4 v0, 0x0
+.method public abstract p()Lqb7;
+.end method
 
-    invoke-virtual {p1, v0, p0}, Lhjg;->g(Ljava/lang/String;Ljx3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract r()Lsb7;
 .end method

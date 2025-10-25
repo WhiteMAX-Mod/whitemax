@@ -1,275 +1,307 @@
 .class public final Lrdb;
-.super Ljava/lang/Object;
+.super Lhr3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final f:Ljava/util/ArrayList;
 
-.field public final b:Z
+.field public final g:Ljava/util/ArrayList;
 
-.field public final c:Z
+.field public final h:Ljava/util/ArrayList;
 
-.field public final d:I
+.field public final i:Ljava/util/HashMap;
 
-.field public final e:I
+.field public final j:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public final f:I
+.field public final k:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public final g:I
-
-.field public final h:I
+.field public final l:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public constructor <init>(Lxjd;)V
-    .locals 11
+.method public constructor <init>(Locf;Lfwc;Lxfb;Lbua;)V
+    .locals 0
 
-    sget-object v0, Lqz7;->o:Lqz7;
+    invoke-direct {p0, p1, p2, p3, p4}, Lhr3;-><init>(Locf;Lfwc;Lxfb;Lbua;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance p1, Ljava/util/ArrayList;
 
-    const-class v1, Lrdb;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-object p1, p0, Lrdb;->f:Ljava/util/ArrayList;
 
-    move-result-object v1
+    new-instance p1, Ljava/util/ArrayList;
 
-    check-cast p1, Lpad;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->player-load-control:Lru/ok/tamtam/android/prefs/PmsKey;
+    iput-object p1, p0, Lrdb;->g:Ljava/util/ArrayList;
 
-    const/4 v3, 0x0
+    new-instance p1, Ljava/util/ArrayList;
 
-    invoke-virtual {p1, v2, v3}, Lpad;->v(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object p1
+    iput-object p1, p0, Lrdb;->h:Ljava/util/ArrayList;
 
-    sget-object v2, Ljtg;->g:Loja;
+    new-instance p1, Ljava/util/HashMap;
 
-    if-nez v2, :cond_0
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    goto :goto_0
+    iput-object p1, p0, Lrdb;->i:Ljava/util/HashMap;
 
-    :cond_0
-    invoke-virtual {v2, v0}, Loja;->a(Lqz7;)Z
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
 
-    move-result v4
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    if-eqz v4, :cond_1
+    iput-object p1, p0, Lrdb;->j:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const-string v4, "Server player control params="
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-static {v4, p1}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    move-result-object v4
+    iput-object p1, p0, Lrdb;->k:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {v2, v0, v1, v4, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
 
-    :cond_1
-    :goto_0
-    if-eqz p1, :cond_2
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    :try_start_0
-    new-instance v2, Lorg/json/JSONObject;
+    iput-object p1, p0, Lrdb;->l:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-direct {v2, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p1
-
-    const-string v2, "Failed to parse player control params"
-
-    invoke-static {v1, v2, p1}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    move-object v2, v3
-
-    :goto_1
-    const/4 p1, 0x4
-
-    const/4 v4, 0x1
-
-    const/16 v5, 0x1f4
-
-    const/16 v6, 0x32c8
-
-    const/16 v7, 0x1388
-
-    const/16 v8, 0xbb8
-
-    const/4 v9, 0x0
-
-    if-eqz v2, :cond_3
-
-    const-string v10, "mp_autoplay_enabled"
-
-    invoke-virtual {v2, v10, v9}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v10
-
-    iput-boolean v10, p0, Lrdb;->a:Z
-
-    const-string v10, "time_over_size"
-
-    invoke-virtual {v2, v10, v9}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v9
-
-    iput-boolean v9, p0, Lrdb;->c:Z
-
-    const-string v9, "buffer_after_rebuffer_ms"
-
-    invoke-virtual {v2, v9, v8}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
-
-    move-result v8
-
-    iput v8, p0, Lrdb;->d:I
-
-    const-string v8, "min_buffer_ms"
-
-    invoke-virtual {v2, v8, v7}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
-
-    move-result v7
-
-    iput v7, p0, Lrdb;->e:I
-
-    const-string v7, "max_buffer_ms"
-
-    invoke-virtual {v2, v7, v6}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
-
-    move-result v6
-
-    iput v6, p0, Lrdb;->f:I
-
-    const-string v6, "buffer_ms"
-
-    invoke-virtual {v2, v6, v5}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
-
-    move-result v5
-
-    iput v5, p0, Lrdb;->g:I
-
-    const-string v5, "use_min_size_lc"
-
-    invoke-virtual {v2, v5, v4}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v4
-
-    iput-boolean v4, p0, Lrdb;->b:Z
-
-    const-string v4, "min_size_lc_fmt_mis_sf"
-
-    invoke-virtual {v2, v4, p1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
-
-    move-result p1
-
-    iput p1, p0, Lrdb;->h:I
-
-    goto :goto_2
-
-    :cond_3
-    iput-boolean v9, p0, Lrdb;->a:Z
-
-    iput-boolean v9, p0, Lrdb;->c:Z
-
-    iput v8, p0, Lrdb;->d:I
-
-    iput v7, p0, Lrdb;->e:I
-
-    iput v6, p0, Lrdb;->f:I
-
-    iput v5, p0, Lrdb;->g:I
-
-    iput-boolean v4, p0, Lrdb;->b:Z
-
-    iput p1, p0, Lrdb;->h:I
-
-    :goto_2
-    sget-object p1, Ljtg;->g:Loja;
-
-    if-nez p1, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {p1, v0}, Loja;->a(Lqz7;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    invoke-virtual {p0}, Lrdb;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, v0, v1, p0, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_5
-    :goto_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final a(Lhi1;Lorg/webrtc/VideoFrame;)V
+    .locals 2
 
-    const-string v0, "\n        isMinSizeLoadControlRequested="
+    new-instance v0, Lm75;
 
-    const-string v1, "\n        isPlaybackPrioritizeTimeOverSize="
+    const/4 v1, 0x4
 
-    const-string v2, "PlayerControl(\n        isAutoPlayEnabledDuringMediaProcessing="
+    invoke-direct {v0, v1}, Lm75;-><init>(I)V
 
-    iget-boolean v3, p0, Lrdb;->a:Z
+    iput-object p1, v0, Lm75;->a:Ljava/lang/Object;
 
-    iget-boolean v4, p0, Lrdb;->b:Z
+    sget-object p1, Ltxg;->b:Ltxg;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lyv7;->n(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object p1, v0, Lm75;->b:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lm75;->b()Lzs1;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lrdb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/List;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lrdb;->c:Z
+    check-cast v0, Lorg/webrtc/VideoSink;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-interface {v0, p2}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
 
-    const-string v1, "\n        playbackMinBufferMs="
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    return-void
+.end method
 
-    iget v1, p0, Lrdb;->e:I
+.method public final d()V
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {}, Let9;->f()V
 
-    const-string v1, "\n        playbackMaxBufferMs="
+    iget-object v0, p0, Lrdb;->j:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    const-string v1, "\n        playbackBufferMs="
+    iget-object v0, p0, Lrdb;->i:Ljava/util/HashMap;
 
-    const-string v2, "\n        playbackBufferAfterRebufferMs="
+    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    iget v3, p0, Lrdb;->f:I
+    return-void
+.end method
 
-    iget v4, p0, Lrdb;->g:I
+.method public final e(Lhi1;Ljava/lang/String;)V
+    .locals 3
 
-    invoke-static {v0, v3, v1, v4, v2}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {}, Let9;->f()V
 
-    const-string v1, "\n        formatMaxInputSizeScaleUpFactor="
+    iget-object p2, p0, Lrdb;->i:Ljava/util/HashMap;
 
-    const-string v2, "\n        )\n        "
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v3, p0, Lrdb;->d:I
+    move-result-object v0
 
-    iget p0, p0, Lrdb;->h:I
+    check-cast v0, Ljava/util/Set;
 
-    invoke-static {v0, v3, v1, p0, v2}, Lsg0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object p0
+    return-void
 
-    return-object p0
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lzs1;
+
+    iget-object v2, p0, Lrdb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 3
+
+    iget-object v0, p0, Lhr3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Handler;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lhr3;->a:Ljava/lang/Object;
+
+    check-cast v0, Locf;
+
+    new-instance v1, Lrta;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, p0}, Lrta;-><init>(ILjava/lang/Object;)V
+
+    iget-object v0, v0, Locf;->a:Ljava/lang/Object;
+
+    check-cast v0, Legb;
+
+    const-string v2, "ParticipantsAgnosticRemoteVideoTracks.closeInternal"
+
+    invoke-virtual {v0, v2, v1}, Legb;->j(Ljava/lang/String;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final k(Lorg/webrtc/RtpReceiver;[Lorg/webrtc/MediaStream;)V
+    .locals 3
+
+    iget-object v0, p0, Lhr3;->a:Ljava/lang/Object;
+
+    check-cast v0, Locf;
+
+    new-instance v1, Lnm4;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, p1, p2, v2}, Lnm4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/io/Serializable;I)V
+
+    iget-object p1, v0, Locf;->a:Ljava/lang/Object;
+
+    check-cast p1, Legb;
+
+    new-instance p2, Lc;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, p1, v1, v0}, Lc;-><init>(Legb;Ltr3;I)V
+
+    const-string v0, "DefaultRemoteVideoTracks.handleVideoTracksOnExecutor"
+
+    invoke-virtual {p1, v0, p2}, Legb;->j(Ljava/lang/String;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final p(Ljava/lang/String;Lzs1;Ljava/util/List;)V
+    .locals 1
+
+    invoke-static {}, Let9;->f()V
+
+    iget-object p1, p0, Lrdb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v0, p0, Lrdb;->i:Ljava/util/HashMap;
+
+    if-nez p3, :cond_1
+
+    invoke-virtual {p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p1, p2, Lzs1;->b:Lhi1;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Set;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+
+    :cond_1
+    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p1, p2, Lzs1;->b:Lhi1;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Set;
+
+    if-nez p1, :cond_2
+
+    new-instance p1, Ljava/util/HashSet;
+
+    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
+
+    iget-object p3, p2, Lzs1;->b:Lhi1;
+
+    invoke-virtual {v0, p3, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    invoke-interface {p1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method

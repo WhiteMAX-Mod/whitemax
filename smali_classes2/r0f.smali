@@ -1,380 +1,110 @@
 .class public final Lr0f;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lexc;
+.field public X:I
 
-.field public final b:Luh;
-
-.field public final c:Lvw9;
-
-.field public final d:Lwwc;
-
-.field public final e:Lwwc;
-
-.field public final f:Lwwc;
-
-.field public final g:Lwwc;
-
-.field public final h:Lwwc;
-
-.field public final i:Lwwc;
+.field public final synthetic Y:J
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lr0f;->Y:J
 
-    new-instance v0, Lvw9;
+    const/4 p1, 0x2
 
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lvw9;-><init>(I)V
-
-    iput-object v0, p0, Lr0f;->c:Lvw9;
-
-    iput-object p1, p0, Lr0f;->a:Lexc;
-
-    new-instance v0, Luh;
-
-    invoke-direct {v0, p0, p1}, Luh;-><init>(Lr0f;Lexc;)V
-
-    iput-object v0, p0, Lr0f;->b:Luh;
-
-    new-instance v0, Lte4;
-
-    invoke-direct {v0, p0, p1}, Lte4;-><init>(Lr0f;Lexc;)V
-
-    new-instance v0, Lwwc;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, p1, v1}, Lwwc;-><init>(Lexc;I)V
-
-    iput-object v0, p0, Lr0f;->d:Lwwc;
-
-    new-instance v0, Lwwc;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, p1, v1}, Lwwc;-><init>(Lexc;I)V
-
-    new-instance v0, Lwwc;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, p1, v1}, Lwwc;-><init>(Lexc;I)V
-
-    iput-object v0, p0, Lr0f;->e:Lwwc;
-
-    new-instance v0, Lwwc;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, p1, v1}, Lwwc;-><init>(Lexc;I)V
-
-    iput-object v0, p0, Lr0f;->f:Lwwc;
-
-    new-instance v0, Lwwc;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, p1, v1}, Lwwc;-><init>(Lexc;I)V
-
-    iput-object v0, p0, Lr0f;->g:Lwwc;
-
-    new-instance v0, Lwwc;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, p1, v1}, Lwwc;-><init>(Lexc;I)V
-
-    iput-object v0, p0, Lr0f;->h:Lwwc;
-
-    new-instance v0, Lwwc;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, p1, v1}, Lwwc;-><init>(Lexc;I)V
-
-    iput-object v0, p0, Lr0f;->i:Lwwc;
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static a(Lr0f;J)V
-    .locals 3
-
-    sget-object v0, Lq0f;->o:Lq0f;
-
-    invoke-virtual {p0, p1, p2, v0}, Lr0f;->c(JLq0f;)V
-
-    iget-object v0, p0, Lr0f;->a:Lexc;
-
-    invoke-virtual {v0}, Lexc;->b()V
-
-    iget-object p0, p0, Lr0f;->f:Lwwc;
-
-    invoke-virtual {p0}, Ly2;->f()Lqqe;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-interface {v1, v2, p1, p2}, Loqe;->k(IJ)V
-
-    :try_start_0
-    invoke-virtual {v0}, Lexc;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-interface {v1}, Lqqe;->C()I
-
-    invoke-virtual {v0}, Lexc;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v0}, Lexc;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {p0, v1}, Ly2;->u(Lqqe;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_3
-    invoke-virtual {v0}, Lexc;->k()V
-
-    throw p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_0
-    invoke-virtual {p0, v1}, Ly2;->u(Lqqe;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final b(ILjava/util/List;)Ljava/util/ArrayList;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "SELECT id FROM tasks WHERE status in ("
+    check-cast p1, Lq54;
 
-    invoke-static {v0}, Lmw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lr0f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    move-result-object p1
 
-    move-result v1
+    check-cast p1, Lr0f;
 
-    invoke-static {v0, v1}, Lte2;->c(Ljava/lang/StringBuilder;I)V
+    sget-object p2, Lccg;->a:Lccg;
 
-    const-string v2, ") LIMIT "
+    invoke-virtual {p1, p2}, Lr0f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v2, "?"
+    return-object p1
+.end method
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance p1, Lr0f;
 
-    move-result-object v0
+    iget-wide v0, p0, Lr0f;->Y:J
 
-    const/4 v2, 0x1
+    invoke-direct {p1, v0, v1, p2}, Lr0f;-><init>(JLkotlin/coroutines/Continuation;)V
 
-    add-int/2addr v1, v2
+    return-object p1
+.end method
 
-    invoke-static {v1, v0}, Lvxc;->c(ILjava/lang/String;)Lvxc;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    move-result-object v0
+    iget v0, p0, Lr0f;->X:I
 
-    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    const/4 v1, 0x1
 
-    move-result-object p2
+    if-eqz v0, :cond_1
 
-    move v3, v2
+    if-ne v0, v1, :cond_0
 
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lq0f;
-
-    iget v4, v4, Lq0f;->a:I
-
-    int-to-long v4, v4
-
-    invoke-virtual {v0, v3, v4, v5}, Lvxc;->k(IJ)V
-
-    add-int/2addr v3, v2
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    int-to-long p1, p1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0, v1, p1, p2}, Lvxc;->k(IJ)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object p0, p0, Lr0f;->a:Lexc;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lexc;->b()V
-
-    invoke-virtual {p0, v0}, Lexc;->n(Lpqe;)Landroid/database/Cursor;
-
-    move-result-object p0
-
-    :try_start_0
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
-
-    move-result p2
-
-    invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(I)V
-
-    :goto_1
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    const/4 p2, 0x0
-
-    invoke-interface {p0, p2}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 p2, 0x0
-
-    goto :goto_2
+    throw p1
 
     :cond_1
-    invoke-interface {p0, p2}, Landroid/database/Cursor;->getLong(I)J
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-wide v1
+    iput v1, p0, Lr0f;->X:I
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-wide v0, p0, Lr0f;->Y:J
 
-    move-result-object p2
+    invoke-static {v0, v1, p0}, Lqyi;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :goto_2
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object p1
 
-    goto :goto_1
+    sget-object v0, Lr54;->a:Lr54;
 
-    :catchall_0
-    move-exception p1
+    if-ne p1, v0, :cond_2
 
-    goto :goto_3
+    return-object v0
 
     :cond_2
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v0}, Lvxc;->n()V
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
-
-    :goto_3
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v0}, Lvxc;->n()V
-
-    throw p1
-.end method
-
-.method public final c(JLq0f;)V
-    .locals 4
-
-    iget-object v0, p0, Lr0f;->a:Lexc;
-
-    invoke-virtual {v0}, Lexc;->b()V
-
-    iget-object p0, p0, Lr0f;->d:Lwwc;
-
-    invoke-virtual {p0}, Ly2;->f()Lqqe;
-
-    move-result-object v1
-
-    iget p3, p3, Lq0f;->a:I
-
-    int-to-long v2, p3
-
-    const/4 p3, 0x1
-
-    invoke-interface {v1, p3, v2, v3}, Loqe;->k(IJ)V
-
-    const/4 p3, 0x2
-
-    invoke-interface {v1, p3, p1, p2}, Loqe;->k(IJ)V
-
-    :try_start_0
-    invoke-virtual {v0}, Lexc;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-interface {v1}, Lqqe;->C()I
-
-    invoke-virtual {v0}, Lexc;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v0}, Lexc;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {p0, v1}, Ly2;->u(Lqqe;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_3
-    invoke-virtual {v0}, Lexc;->k()V
-
-    throw p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_0
-    invoke-virtual {p0, v1}, Ly2;->u(Lqqe;)V
-
-    throw p1
 .end method

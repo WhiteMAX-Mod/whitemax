@@ -1,304 +1,129 @@
-.class public final Ldm6;
+.class public final synthetic Ldm6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ll0e;
+
 
 # instance fields
-.field public final a:Lem6;
-
-.field public final b:Lfm6;
-
-.field public final c:Lgm6;
-
-.field public final d:Lhm6;
-
-.field public final e:Lim6;
-
-.field public final f:Ljm6;
-
-.field public final g:Lkm6;
+.field public final synthetic a:Lan6;
 
 
 # direct methods
-.method public constructor <init>(Lem6;Lfm6;Lgm6;Lhm6;Lim6;Ljm6;Lkm6;)V
+.method public synthetic constructor <init>(Lan6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldm6;->a:Lem6;
-
-    iput-object p2, p0, Ldm6;->b:Lfm6;
-
-    iput-object p3, p0, Ldm6;->c:Lgm6;
-
-    iput-object p4, p0, Ldm6;->d:Lhm6;
-
-    iput-object p5, p0, Ldm6;->e:Lim6;
-
-    iput-object p6, p0, Ldm6;->f:Ljm6;
-
-    iput-object p7, p0, Ldm6;->g:Lkm6;
+    iput-object p1, p0, Ldm6;->a:Lan6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final Y(Ljava/util/Set;)V
+    .locals 6
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Ldm6;->a:Lan6;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, v0, Lan6;->t0:Lx0f;
 
-    return v0
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result v2
+
+    const/16 v3, 0x64
+
+    const/4 v4, 0x1
+
+    if-lt v2, v3, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Ldm6;
-
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    :goto_0
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    return v2
+    move-result-object v2
 
-    :cond_1
-    check-cast p1, Ldm6;
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Ldm6;->a:Lem6;
+    invoke-virtual {v1, v3, v2}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v3, p1, Ldm6;->a:Lem6;
+    invoke-interface {p1}, Ljava/util/Set;->size()I
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v5, "onSelectedMediasChangeListener(), selectedCount "
+
+    invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "an6"
+
+    invoke-static {v2, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    return v2
+    iget-object v1, v0, Lan6;->J0:Lcye;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1, v3}, Llo7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_1
+    iget-object v1, v0, Lan6;->o:Lkk;
+
+    new-instance v2, Lum6;
+
+    invoke-direct {v2, v0, p1, v3}, Lum6;-><init>(Lan6;Ljava/util/Set;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v0, v1, v2, p1}, Lxzg;->m(Lxzg;Li54;Lzi6;I)Lcye;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lan6;->J0:Lcye;
+
+    goto :goto_1
 
     :cond_2
-    iget-object v1, p0, Ldm6;->b:Lfm6;
+    invoke-static {v0, v4}, Lan6;->s(Lan6;I)V
 
-    iget-object v3, p1, Ldm6;->b:Lfm6;
+    :goto_1
+    iget-object p1, v0, Lan6;->Y:Ltl6;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, v0, Lan6;->D0:Ln0e;
 
-    move-result v1
+    invoke-static {v0}, Lhei;->c(Ln0e;)Ljava/util/ArrayList;
 
-    if-nez v1, :cond_3
+    move-result-object v0
 
-    return v2
+    iget-object p1, p1, Ltl6;->c:Lxe5;
 
-    :cond_3
-    iget-object v1, p0, Ldm6;->c:Lgm6;
+    new-instance v1, Lnl6;
 
-    iget-object v3, p1, Ldm6;->c:Lgm6;
+    invoke-direct {v1, v0}, Lnl6;-><init>(Ljava/util/List;)V
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Ldm6;->d:Lhm6;
-
-    iget-object v3, p1, Ldm6;->d:Lhm6;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Ldm6;->e:Lim6;
-
-    iget-object v3, p1, Ldm6;->e:Lim6;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Ldm6;->f:Ljm6;
-
-    iget-object v3, p1, Ldm6;->f:Ljm6;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object p0, p0, Ldm6;->g:Lkm6;
-
-    iget-object p1, p1, Ldm6;->g:Lkm6;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_8
-
-    return v2
-
-    :cond_8
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Ldm6;->a:Lem6;
-
-    invoke-virtual {v0}, Lem6;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ldm6;->b:Lfm6;
-
-    invoke-virtual {v1}, Lfm6;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ldm6;->c:Lgm6;
-
-    invoke-virtual {v0}, Lgm6;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ldm6;->d:Lhm6;
-
-    invoke-virtual {v1}, Lhm6;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ldm6;->e:Lim6;
-
-    invoke-virtual {v0}, Lim6;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ldm6;->f:Ljm6;
-
-    invoke-virtual {v1}, Ljm6;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object p0, p0, Ldm6;->g:Lkm6;
-
-    invoke-virtual {p0}, Lkm6;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v1
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "GradientsLoadingIconColors(contrast="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ldm6;->a:Lem6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contrastStatic="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldm6;->b:Lfm6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", negative="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldm6;->c:Lgm6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", neutralThemed="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldm6;->d:Lhm6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", primary="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldm6;->e:Lim6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", primaryStatic="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldm6;->f:Ljm6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", themed="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Ldm6;->g:Lkm6;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

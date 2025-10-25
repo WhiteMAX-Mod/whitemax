@@ -1,163 +1,166 @@
 .class public final Lfm0;
-.super Lrz6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lfm0;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Li5g;
 
 
 # instance fields
-.field public final b:[B
+.field public final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public varargs constructor <init>([Ljava/security/cert/X509Certificate;)V
+    .locals 6
 
-    new-instance v0, Lz7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x9
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    invoke-direct {v0, v1}, Lz7;-><init>(I)V
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    sput-object v0, Lfm0;->CREATOR:Landroid/os/Parcelable$Creator;
+    array-length v1, p1
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
+    :goto_0
+    if-ge v2, v1, :cond_1
 
-    .line 3
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    aget-object v3, p1, v2
 
-    move-result-object v0
+    invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
 
-    sget v1, Llrf;->a:I
+    move-result-object v4
 
-    invoke-direct {p0, v0}, Lrz6;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v4}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
-    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
+    move-result-object v5
 
-    move-result-object p1
+    if-nez v5, :cond_0
 
-    iput-object p1, p0, Lfm0;->b:[B
+    new-instance v5, Ljava/util/LinkedHashSet;
 
-    return-void
-.end method
+    invoke-direct {v5}, Ljava/util/LinkedHashSet;-><init>()V
 
-.method public constructor <init>([BLjava/lang/String;)V
-    .locals 0
+    invoke-interface {v0, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1
-    invoke-direct {p0, p2}, Lrz6;-><init>(Ljava/lang/String;)V
+    :cond_0
+    check-cast v5, Ljava/util/Set;
 
-    .line 2
-    iput-object p1, p0, Lfm0;->b:[B
+    invoke-interface {v5, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    iput-object v0, p0, Lfm0;->a:Ljava/util/LinkedHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
     .locals 4
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getIssuerX500Principal()Ljavax/security/auth/x500/X500Principal;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v0
 
-    return v0
+    iget-object v1, p0, Lfm0;->a:Ljava/util/LinkedHashMap;
 
-    :cond_0
+    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Set;
+
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_2
+    if-eqz v0, :cond_1
 
-    const-class v2, Lfm0;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lfm0;
-
-    iget-object v2, p0, Lrz6;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lrz6;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :catch_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_0
 
-    iget-object p0, p0, Lfm0;->b:[B
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object p1, p1, Lfm0;->b:[B
+    move-result-object v2
 
-    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+    move-object v3, v2
 
-    move-result p0
+    check-cast v3, Ljava/security/cert/X509Certificate;
 
-    if-eqz p0, :cond_2
+    :try_start_0
+    invoke-virtual {v3}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
 
-    return v0
+    move-result-object v3
 
-    :cond_2
+    invoke-virtual {p1, v3}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v1, v2
+
+    :cond_0
+    check-cast v1, Ljava/security/cert/X509Certificate;
+
+    :cond_1
+    return-object v1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-eq p1, p0, :cond_1
+
+    instance-of v0, p1, Lfm0;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lfm0;
+
+    iget-object p1, p1, Lfm0;->a:Ljava/util/LinkedHashMap;
+
+    iget-object v0, p0, Lfm0;->a:Ljava/util/LinkedHashMap;
+
+    invoke-static {p1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
     :goto_0
-    return v1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
-    iget-object v0, p0, Lrz6;->a:Ljava/lang/String;
+    iget-object v0, p0, Lfm0;->a:Ljava/util/LinkedHashMap;
 
-    const/16 v1, 0x1f
-
-    const/16 v2, 0x20f
-
-    invoke-static {v2, v1, v0}, Lsq3;->d(IILjava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    iget-object p0, p0, Lfm0;->b:[B
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget-object p2, p0, Lrz6;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lfm0;->b:[B
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByteArray([B)V
-
-    return-void
+    return v0
 .end method

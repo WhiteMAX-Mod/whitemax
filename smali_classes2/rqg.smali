@@ -1,66 +1,65 @@
 .class public final Lrqg;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lsqg;
 
 
 # instance fields
-.field public final X:I
+.field public X:Le20;
 
-.field public final a:Ltrd;
+.field public Y:Lqmg;
 
-.field public final b:Lva4;
+.field public Z:J
 
-.field public final c:J
+.field public o:Lxqg;
 
-.field public final o:I
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Lxqg;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Ltrd;Lva4;JI)V
+.method public constructor <init>(Lxqg;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrqg;->r0:Lxqg;
 
-    iput-object p1, p0, Lrqg;->a:Ltrd;
-
-    iput-object p2, p0, Lrqg;->b:Lva4;
-
-    iput-wide p3, p0, Lrqg;->c:J
-
-    iput p5, p0, Lrqg;->o:I
-
-    sget p1, Lnsa;->k:I
-
-    iput p1, p0, Lrqg;->X:I
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget p0, p0, Lrqg;->o:I
+    iput-object p1, p0, Lrqg;->q0:Ljava/lang/Object;
 
-    return p0
-.end method
+    iget p1, p0, Lrqg;->s0:I
 
-.method public final getItemId()J
-    .locals 2
+    const/high16 v0, -0x80000000
 
-    iget-wide v0, p0, Lrqg;->c:J
+    or-int/2addr p1, v0
 
-    return-wide v0
-.end method
+    iput p1, p0, Lrqg;->s0:I
 
-.method public final m()I
-    .locals 0
+    const/4 v5, 0x0
 
-    iget p0, p0, Lrqg;->X:I
+    const/4 v6, 0x0
 
-    return p0
+    iget-object v0, p0, Lrqg;->r0:Lxqg;
+
+    const-wide/16 v1, 0x0
+
+    const-wide/16 v3, 0x0
+
+    move-object v7, p0
+
+    invoke-static/range {v0 .. v7}, Lxqg;->a(Lxqg;JJLe20;Lqmg;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

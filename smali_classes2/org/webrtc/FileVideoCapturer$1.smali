@@ -32,11 +32,11 @@
 
 # virtual methods
 .method public run()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/FileVideoCapturer$1;->this$0:Lorg/webrtc/FileVideoCapturer;
+    iget-object v0, p0, Lorg/webrtc/FileVideoCapturer$1;->this$0:Lorg/webrtc/FileVideoCapturer;
 
-    invoke-virtual {p0}, Lorg/webrtc/FileVideoCapturer;->tick()V
+    invoke-virtual {v0}, Lorg/webrtc/FileVideoCapturer;->tick()V
 
     return-void
 .end method

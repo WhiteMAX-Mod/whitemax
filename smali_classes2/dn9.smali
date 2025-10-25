@@ -1,59 +1,48 @@
 .class public final Ldn9;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lhf8;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:Lon9;
+.field public X:I
+
+.field public final synthetic Y:Ldb8;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lon9;)V
+.method public constructor <init>(Ldb8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldn9;->Y:Ldb8;
 
-    iput-object p1, p0, Ldn9;->a:Lon9;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ljf8;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p0, p0, Ldn9;->a:Lon9;
+    iput-object p1, p0, Ldn9;->o:Ljava/lang/Object;
 
-    iget-object v0, p0, Lon9;->n:Lan9;
+    iget p1, p0, Ldn9;->X:I
 
-    if-eqz v0, :cond_0
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Ljf8;->t()V
+    or-int/2addr p1, v0
 
-    const-string v1, "listener must not be null"
+    iput p1, p0, Ldn9;->X:I
 
-    invoke-static {v0, v1}, Lmq0;->f(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object p1, p0, Ldn9;->Y:Ldb8;
 
-    iget-object p1, p1, Ljf8;->c:Lif8;
+    const/4 v0, 0x0
 
-    invoke-interface {p1, v0}, Lif8;->V(Lscb;)V
+    invoke-virtual {p1, v0, p0}, Ldb8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :cond_0
-    const/4 p1, 0x0
+    move-result-object p1
 
-    iput-object p1, p0, Lon9;->n:Lan9;
-
-    sget p0, Lon9;->K:I
-
-    const-string p0, "on9"
-
-    const-string p1, "onDisconnected"
-
-    invoke-static {p0, p1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object p1
 .end method

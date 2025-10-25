@@ -1,429 +1,247 @@
-.class public final Lk0;
+.class public abstract Lk0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lhy3;
-
-
-# instance fields
-.field public final a:Ljava/util/ArrayList;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lk0;->a:Ljava/util/ArrayList;
-
-    return-void
-.end method
+.implements Ljava/util/Collection;
+.implements Lir7;
 
 
 # virtual methods
-.method public final declared-synchronized a(Lhy3;)V
+.method public final add(Ljava/lang/Object;)Z
     .locals 1
 
-    monitor-enter p0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    :try_start_0
-    iget-object v0, p0, Lk0;->a:Ljava/util/ArrayList;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public final declared-synchronized c(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
-    .locals 3
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    monitor-enter p0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    :try_start_0
-    iget-object v0, p0, Lk0;->a:Ljava/util/ArrayList;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_1
-    iget-object v2, p0, Lk0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhy3;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1, p2, p3}, Lhy3;->c(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_0
-    :try_start_2
-    monitor-enter p0
-
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit p0
-
-    return-void
-
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public final declared-synchronized d(Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final clear()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public contains(Ljava/lang/Object;)Z
     .locals 3
 
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lk0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v1, 0x0
 
-    :goto_0
-    if-ge v1, v0, :cond_1
+    if-eqz v0, :cond_0
 
-    :try_start_1
-    iget-object v2, p0, Lk0;->a:Ljava/util/ArrayList;
+    return v1
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    :cond_0
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lhy3;
+    invoke-static {v2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v2, :cond_0
+    move-result v2
 
-    invoke-interface {v2, p1, p2}, Lhy3;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eqz v2, :cond_1
 
-    goto :goto_1
+    const/4 p1, 0x1
 
-    :catchall_0
-    move-exception p1
+    return p1
 
-    goto :goto_2
+    :cond_2
+    return v1
+.end method
 
-    :catch_0
-    :try_start_2
-    monitor-enter p0
+.method public containsAll(Ljava/util/Collection;)Z
+    .locals 2
 
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
 
     :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    goto :goto_0
+    move-result-object p1
 
     :cond_1
-    monitor-exit p0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-void
+    move-result v0
 
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lk0;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v1
+.end method
+
+.method public abstract getSize()I
+.end method
+
+.method public isEmpty()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lk0;->getSize()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public final declared-synchronized e(Ljava/lang/String;)V
-    .locals 3
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    monitor-enter p0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    :try_start_0
-    iget-object v0, p0, Lk0;->a:Ljava/util/ArrayList;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_1
-    iget-object v2, p0, Lk0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhy3;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1}, Lhy3;->e(Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_0
-    :try_start_2
-    monitor-enter p0
-
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit p0
-
-    return-void
-
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public final declared-synchronized h(Ljava/lang/String;)V
-    .locals 3
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    monitor-enter p0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    :try_start_0
-    iget-object v0, p0, Lk0;->a:Ljava/util/ArrayList;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_1
-    iget-object v2, p0, Lk0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhy3;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1}, Lhy3;->h(Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_0
-    :try_start_2
-    monitor-enter p0
-
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit p0
-
-    return-void
-
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public final k(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 3
+.method public final bridge size()I
+    .locals 1
 
-    iget-object v0, p0, Lk0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p0}, Lk0;->getSize()I
 
     move-result v0
 
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_0
-    iget-object v2, p0, Lk0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhy3;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1, p2}, Lhy3;->k(Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    monitor-enter p0
-
-    monitor-exit p0
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
+    return v0
 .end method
 
-.method public final onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 3
+.method public toArray()[Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lk0;->a:Ljava/util/ArrayList;
+    .line 1
+    invoke-static {p0}, Lba4;->h(Ljava/util/Collection;)[Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    move-result-object v0
 
-    move-result v0
+    return-object v0
+.end method
 
-    const/4 v1, 0x0
+.method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 0
 
-    :goto_0
-    if-ge v1, v0, :cond_1
+    .line 2
+    invoke-static {p0, p1}, Lba4;->i(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
-    :try_start_0
-    iget-object v2, p0, Lk0;->a:Ljava/util/ArrayList;
+    move-result-object p1
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    return-object p1
+.end method
 
-    move-result-object v2
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    check-cast v2, Lhy3;
+    new-instance v4, Lj0;
 
-    if-eqz v2, :cond_0
+    const/4 v0, 0x0
 
-    invoke-interface {v2, p1, p2}, Lhy3;->onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v4, v0, p0}, Lj0;-><init>(ILjava/lang/Object;)V
 
-    goto :goto_1
+    const/16 v5, 0x18
 
-    :catch_0
-    monitor-enter p0
+    const-string v1, ", "
 
-    monitor-exit p0
+    const-string v2, "["
 
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    const-string v3, "]"
 
-    goto :goto_0
+    move-object v0, p0
 
-    :cond_1
-    return-void
+    invoke-static/range {v0 .. v5}, Lnb3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lli6;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
 .end method

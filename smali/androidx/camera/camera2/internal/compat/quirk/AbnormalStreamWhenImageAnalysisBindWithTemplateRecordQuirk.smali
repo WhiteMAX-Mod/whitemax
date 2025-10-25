@@ -17,41 +17,41 @@
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public final d()Z
+    .locals 2
 
-    const-string p0, "samsung"
+    const-string v0, "samsung"
 
-    sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    sget-object p0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "sm-m556"
+    const-string v1, "sm-m556"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method

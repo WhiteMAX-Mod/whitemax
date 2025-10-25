@@ -1,107 +1,143 @@
 .class public final Li31;
-.super Lure;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lfj6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public synthetic X:Z
 
-.field public final synthetic Y:Lt31;
+.field public synthetic Y:Z
+
+.field public synthetic Z:Z
+
+.field public synthetic q0:Z
+
+.field public final synthetic r0:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Lt31;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Liu7;Ly16;)V
     .locals 0
 
-    iput-object p1, p0, Li31;->Y:Lt31;
+    iput-object p1, p0, Li31;->r0:Liu7;
 
-    const/4 p1, 0x2
+    const/4 p1, 0x5
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ly16;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Ls72;
+    check-cast p1, Ljava/lang/Boolean;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {p0, p1, p2}, Li31;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result p1
 
-    move-result-object p0
+    check-cast p2, Ljava/lang/Boolean;
 
-    check-cast p0, Li31;
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    sget-object p1, Lylf;->a:Lylf;
+    move-result p2
 
-    invoke-virtual {p0, p1}, Li31;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p3, Ljava/lang/Boolean;
+
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p3
+
+    check-cast p4, Ljava/lang/Boolean;
+
+    invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p4
+
+    new-instance v0, Li31;
+
+    iget-object v1, p0, Li31;->r0:Liu7;
+
+    invoke-direct {v0, v1, p5}, Li31;-><init>(Liu7;Ly16;)V
+
+    iput-boolean p1, v0, Li31;->X:Z
+
+    iput-boolean p2, v0, Li31;->Y:Z
+
+    iput-boolean p3, v0, Li31;->Z:Z
+
+    iput-boolean p4, v0, Li31;->q0:Z
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    invoke-virtual {v0, p1}, Li31;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    new-instance v0, Li31;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Li31;->Y:Lt31;
+    iget-boolean p1, p0, Li31;->X:Z
 
-    invoke-direct {v0, p0, p2}, Li31;-><init>(Lt31;Lkotlin/coroutines/Continuation;)V
+    iget-boolean v0, p0, Li31;->Y:Z
 
-    iput-object p1, v0, Li31;->X:Ljava/lang/Object;
+    iget-boolean v1, p0, Li31;->Z:Z
 
-    return-object v0
-.end method
+    iget-boolean v2, p0, Li31;->q0:Z
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    iget-object v3, p0, Li31;->r0:Liu7;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p0, Li31;->X:Ljava/lang/Object;
+    move-result-object v3
 
-    check-cast p1, Ls72;
+    check-cast v3, Ldq5;
 
-    if-eqz p1, :cond_0
+    check-cast v3, Ljq5;
 
-    iget-object p0, p0, Li31;->Y:Lt31;
+    invoke-virtual {v3}, Ljq5;->q()Z
 
-    iget-object v0, p0, Lt31;->a:Lqt1;
+    move-result v3
 
-    iget-object v1, p0, Lt31;->f:Lcl7;
+    const/4 v4, 0x0
 
-    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
+    if-nez v3, :cond_0
 
-    move-result-object v1
-
-    check-cast v1, Lxwe;
-
-    check-cast v1, Laga;
-
-    invoke-virtual {v1}, Laga;->a()Ls04;
-
-    move-result-object v1
-
-    new-instance v2, Lh31;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p0, p1, v3}, Lh31;-><init>(Lt31;Ls72;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p0, 0x2
-
-    invoke-static {v0, v1, v3, v2, p0}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
+    goto :goto_0
 
     :cond_0
-    sget-object p0, Lylf;->a:Lylf;
+    if-nez v2, :cond_1
 
-    return-object p0
+    goto :goto_0
+
+    :cond_1
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz v0, :cond_3
+
+    if-eqz p1, :cond_3
+
+    const/4 v4, 0x1
+
+    :cond_3
+    :goto_0
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -101,7 +101,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Companion;-><init>(Lld4;)V
+    invoke-direct {v0, v1}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;->Companion:Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Companion;
 
@@ -138,7 +138,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;-><init>(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;ZZZILld4;)V
+    invoke-direct/range {v0 .. v6}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;-><init>(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;ZZZILki4;)V
 
     return-void
 .end method
@@ -161,7 +161,7 @@
 
     move v2, p2
 
-    invoke-direct/range {v0 .. v6}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;-><init>(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;ZZZILld4;)V
+    invoke-direct/range {v0 .. v6}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;-><init>(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;ZZZILki4;)V
 
     return-void
 .end method
@@ -184,7 +184,7 @@
 
     move v3, p3
 
-    invoke-direct/range {v0 .. v6}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;-><init>(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;ZZZILld4;)V
+    invoke-direct/range {v0 .. v6}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;-><init>(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;ZZZILki4;)V
 
     return-void
 .end method
@@ -210,7 +210,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;ZZZILld4;)V
+.method public synthetic constructor <init>(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;ZZZILki4;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x2
@@ -512,35 +512,35 @@
 
 # virtual methods
 .method public final getAutoRepeat$media_ffmpeg_release()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;->autoRepeat:Z
+    iget-boolean v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;->autoRepeat:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getAutoStart$media_ffmpeg_release()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;->autoStart:Z
+    iget-boolean v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;->autoStart:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getPreCache$media_ffmpeg_release()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;->preCache:Z
+    iget-boolean v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;->preCache:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final getWay$media_ffmpeg_release()Lone/me/sdk/media/ffmpeg/WebmFactory$Way;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;->way:Lone/me/sdk/media/ffmpeg/WebmFactory$Way;
+    iget-object v0, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Config;->way:Lone/me/sdk/media/ffmpeg/WebmFactory$Way;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final setAutoRepeat(Z)Lone/me/sdk/media/ffmpeg/WebmFactory$Config;

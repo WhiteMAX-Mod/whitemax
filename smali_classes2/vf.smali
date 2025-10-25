@@ -2,182 +2,130 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luf;
-
 
 # instance fields
-.field public a:[I
+.field public final a:Ljava/lang/Float;
 
-.field public b:I
+.field public final b:Ljava/lang/Float;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
-
-    packed-switch p1, :pswitch_data_0
+.method public constructor <init>(Ljava/lang/Float;Ljava/lang/Float;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    iput-object p1, p0, Lvf;->a:Ljava/lang/Float;
 
-    const/4 v0, 0x2
-
-    const/4 v1, 0x1
-
-    filled-new-array {v1, p1, v0}, [I
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvf;->a:[I
+    iput-object p2, p0, Lvf;->b:Ljava/lang/Float;
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/16 p1, 0x8
-
-    new-array p1, p1, [I
-
-    iput-object p1, p0, Lvf;->a:[I
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 3
-
-    iget-object v0, p0, Lvf;->a:[I
-
-    iget v1, p0, Lvf;->b:I
-
-    aget v2, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    array-length v0, v0
-
-    rem-int/2addr v1, v0
-
-    iput v1, p0, Lvf;->b:I
-
-    return v2
-.end method
-
-.method public b()I
-    .locals 1
-
-    iget v0, p0, Lvf;->b:I
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lvf;->a:[I
-
-    add-int/lit8 v0, v0, -0x1
-
-    aget p0, p0, v0
-
-    return p0
-
-    :cond_0
-    new-instance p0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw p0
-.end method
-
-.method public c()I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget v0, p0, Lvf;->b:I
+    if-ne p0, p1, :cond_0
 
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lvf;->a:[I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lvf;->b:I
-
-    aget p0, v1, v0
-
-    return p0
+    goto :goto_1
 
     :cond_0
-    new-instance p0, Ljava/util/NoSuchElementException;
+    instance-of v0, p1, Lvf;
 
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw p0
-.end method
-
-.method public d(I)V
-    .locals 1
-
-    iget v0, p0, Lvf;->b:I
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lvf;->a:[I
-
-    add-int/lit8 v0, v0, -0x1
-
-    aput p1, p0, v0
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw p0
-.end method
-
-.method public e(I)V
-    .locals 4
-
-    iget-object v0, p0, Lvf;->a:[I
-
-    array-length v1, v0
-
-    iget v2, p0, Lvf;->b:I
-
-    if-ge v2, v1, :cond_0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    mul-int/lit8 v2, v1, 0x2
+    :cond_1
+    check-cast p1, Lvf;
 
-    new-array v2, v2, [I
+    iget-object v0, p0, Lvf;->a:Ljava/lang/Float;
 
-    const/4 v3, 0x0
+    iget-object v1, p1, Lvf;->a:Ljava/lang/Float;
 
-    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iput-object v2, p0, Lvf;->a:[I
+    move-result v0
 
-    move-object v0, v2
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lvf;->b:Ljava/lang/Float;
+
+    iget-object p1, p1, Lvf;->b:Ljava/lang/Float;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
 
     :goto_0
-    iget v1, p0, Lvf;->b:I
+    const/4 p1, 0x0
 
-    add-int/lit8 v2, v1, 0x1
+    return p1
 
-    iput v2, p0, Lvf;->b:I
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-    aput p1, v0, v1
+    return p1
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lvf;->a:Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lvf;->b:Ljava/lang/Float;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AnimatedValues(start="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lvf;->a:Ljava/lang/Float;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", finish="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvf;->b:Ljava/lang/Float;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

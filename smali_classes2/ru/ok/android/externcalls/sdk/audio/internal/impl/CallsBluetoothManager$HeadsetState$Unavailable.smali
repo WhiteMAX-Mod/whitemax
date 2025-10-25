@@ -66,9 +66,9 @@
 
 # virtual methods
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "Unavailable"
+    const-string v0, "Unavailable"
 
-    return-object p0
+    return-object v0
 .end method

@@ -40,9 +40,9 @@
 
 # virtual methods
 .method public final getComponents()Ljava/util/List;
-    .locals 0
+    .locals 1
 
-    sget-object p0, Lp45;->a:Lp45;
+    sget-object v0, Lka5;->a:Lka5;
 
-    return-object p0
+    return-object v0
 .end method

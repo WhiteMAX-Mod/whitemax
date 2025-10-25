@@ -31,7 +31,7 @@
 
 # virtual methods
 .method public consumeContent()V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -41,44 +41,44 @@
 
     invoke-interface {p0}, Lorg/apache/http/HttpEntity;->isStreaming()Z
 
-    move-result p0
+    move-result v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "streaming entity does not implement consumeContent()"
+    const-string v1, "streaming entity does not implement consumeContent()"
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public getContentEncoding()Lorg/apache/http/Header;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/entity/AbstractHttpEntity;->contentEncoding:Lorg/apache/http/Header;
+    iget-object v0, p0, Lorg/apache/http/entity/AbstractHttpEntity;->contentEncoding:Lorg/apache/http/Header;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getContentType()Lorg/apache/http/Header;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/entity/AbstractHttpEntity;->contentType:Lorg/apache/http/Header;
+    iget-object v0, p0, Lorg/apache/http/entity/AbstractHttpEntity;->contentType:Lorg/apache/http/Header;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public isChunked()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/apache/http/entity/AbstractHttpEntity;->chunked:Z
+    iget-boolean v0, p0, Lorg/apache/http/entity/AbstractHttpEntity;->chunked:Z
 
-    return p0
+    return v0
 .end method
 
 .method public setChunked(Z)V

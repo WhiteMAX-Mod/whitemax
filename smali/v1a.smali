@@ -1,23 +1,17 @@
-.class public final Lv1a;
+.class public interface abstract Lv1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Landroid/content/ComponentName;
-
-.field public final b:Landroid/os/IBinder;
+# interfaces
+.implements Ljava/lang/AutoCloseable;
 
 
-# direct methods
-.method public constructor <init>(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 0
+# virtual methods
+.method public abstract J(ILjava/nio/ByteBuffer;Lwu0;)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract c0(Lmb6;)I
+.end method
 
-    iput-object p1, p0, Lv1a;->a:Landroid/content/ComponentName;
-
-    iput-object p2, p0, Lv1a;->b:Landroid/os/IBinder;
-
-    return-void
+.method public abstract l(Lzq9;)V
 .end method

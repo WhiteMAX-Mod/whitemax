@@ -1,224 +1,98 @@
 .class public final Lqva;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lli6;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lsy;
-
-.field public final d:Lsva;
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Ljava/util/List;
-
-.field public final h:Lfl4;
+.field public final synthetic X:I
 
 
 # direct methods
-.method public constructor <init>(Lpva;)V
-    .locals 2
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lqva;->X:I
 
-    iget-wide v0, p1, Lpva;->a:J
-
-    iput-wide v0, p0, Lqva;->a:J
-
-    iget-object v0, p1, Lpva;->b:Ljava/lang/String;
-
-    iput-object v0, p0, Lqva;->b:Ljava/lang/String;
-
-    iget-object v0, p1, Lpva;->c:Lsy;
-
-    iput-object v0, p0, Lqva;->c:Lsy;
-
-    iget-object v0, p1, Lpva;->d:Lsva;
-
-    iput-object v0, p0, Lqva;->d:Lsva;
-
-    iget-boolean v0, p1, Lpva;->e:Z
-
-    iput-boolean v0, p0, Lqva;->e:Z
-
-    iget-boolean v0, p1, Lpva;->f:Z
-
-    iput-boolean v0, p0, Lqva;->f:Z
-
-    iget-object v0, p1, Lpva;->g:Ljava/util/List;
-
-    iput-object v0, p0, Lqva;->g:Ljava/util/List;
-
-    iget-object p1, p1, Lpva;->h:Lfl4;
-
-    iput-object p1, p0, Lqva;->h:Lfl4;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ltr;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    new-instance v0, Ltr;
+    iget v0, p0, Lqva;->X:I
 
-    const/4 v1, 0x0
+    check-cast p1, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Lr1e;-><init>(I)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v1, p0, Lqva;->a:J
+    new-instance v0, Lqva;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    const/4 v2, 0x1
 
-    const-string v2, "cid"
+    invoke-direct {v0, v1, p1, v2}, Lqva;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {v0, v2, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object p1, Lccg;->a:Lccg;
 
-    iget-object v1, p0, Lqva;->b:Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lqva;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1}, Lm7g;->m(Ljava/lang/CharSequence;)Z
+    return-object p1
 
-    move-result v2
+    :pswitch_0
+    new-instance v0, Lqva;
 
-    if-nez v2, :cond_0
+    const/4 v1, 0x1
 
-    const-string v2, "text"
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v2, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v1, p1, v2}, Lqva;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    :cond_0
-    iget-boolean v1, p0, Lqva;->e:Z
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v0, p1}, Lqva;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    return-object p1
 
-    const-string v2, "detectShare"
+    nop
 
-    invoke-virtual {v0, v2, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, p0, Lqva;->c:Lsy;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    const-string v2, "attaches"
-
-    invoke-virtual {v0, v2, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    iget-object v1, p0, Lqva;->d:Lsva;
-
-    if-eqz v1, :cond_2
-
-    const-string v2, "link"
-
-    invoke-virtual {v0, v2, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    iget-boolean v1, p0, Lqva;->f:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    const-string v2, "isLive"
-
-    invoke-virtual {v0, v2, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, p0, Lqva;->g:Ljava/util/List;
-
-    if-eqz v1, :cond_3
-
-    const-string v2, "elements"
-
-    invoke-virtual {v0, v2, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    iget-object p0, p0, Lqva;->h:Lfl4;
-
-    if-eqz p0, :cond_4
-
-    const-string v1, "delayedAttributes"
-
-    invoke-virtual {p0}, Lfl4;->a()Ljava/util/Map;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v1, p0}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lqva;->g:Ljava/util/List;
+    iget v0, p0, Lqva;->X:I
 
-    invoke-static {v0}, Lf4h;->h(Ljava/util/Collection;)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "OutgoingMessage{cid="
+    sget-object p1, Lccg;->a:Lccg;
 
-    const-string v2, ", text="
+    return-object p1
 
-    iget-wide v3, p0, Lqva;->a:J
+    :pswitch_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v5, "***"
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-static {v1, v3, v4, v2, v5}, Lmhc;->i(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
 
-    move-result-object v1
+    nop
 
-    const-string v2, ", attaches="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lqva;->c:Lsy;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", link="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lqva;->d:Lsva;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", detectShare="
-
-    const-string v3, ", live=\'"
-
-    iget-boolean v4, p0, Lqva;->e:Z
-
-    iget-boolean p0, p0, Lqva;->f:Z
-
-    invoke-static {v2, v3, v1, v4, p0}, Lsq3;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string p0, "\', elements="
-
-    const-string v2, "}"
-
-    invoke-static {v1, p0, v0, v2}, Lsq3;->i(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

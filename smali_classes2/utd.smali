@@ -1,120 +1,187 @@
-.class public final Lutd;
-.super Lure;
+.class public abstract Lutd;
+.super Lw3;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public final i:Lwtd;
 
-.field public final synthetic Y:Leud;
+.field public final j:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public constructor <init>(Leud;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lft5;Lwtd;)V
+    .locals 1
 
-    iput-object p1, p0, Lutd;->Y:Leud;
+    const-string v0, "features_prefs"
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p1, v0, p2}, Lw3;-><init>(Landroid/content/Context;Ljava/lang/String;Lft5;)V
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lutd;->i:Lwtd;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p1, p0, Lutd;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance p1, Lszc;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2, p0}, Lszc;-><init>(ILjava/lang/Object;)V
+
+    iget-object p2, p3, Lwtd;->n:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {p2, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lutd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lutd;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lutd;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lutd;
-
-    iget-object p0, p0, Lutd;->Y:Leud;
-
-    invoke-direct {p1, p0, p2}, Lutd;-><init>(Leud;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
     .locals 2
 
-    iget v0, p0, Lutd;->X:I
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const/4 v1, 0x1
+    move-result-object p2
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0, p1}, Lutd;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
 
-    if-ne v0, v1, :cond_0
+    move-result v0
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lutd;->i:Lwtd;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    iget-object v0, v0, Lw3;->h:Llu7;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lutd;->Y:Leud;
-
-    iget-object p1, p1, Leud;->u0:Lcl7;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lqnf;
+    const-class v1, Ljava/lang/Boolean;
 
-    iput v1, p0, Lutd;->X:I
+    invoke-static {v1}, Lz7d;->a(Ljava/lang/Class;)Lh73;
 
-    const/4 v0, 0x0
+    move-result-object v1
 
-    invoke-virtual {p1, v0, v0, p0}, Lqnf;->a(ZZLure;)Ljava/lang/Object;
+    invoke-static {v0, p1, p2, v1}, Lzzi;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lh73;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    sget-object p1, Lz04;->a:Lz04;
+    check-cast p1, Ljava/lang/Boolean;
 
-    if-ne p0, p1, :cond_2
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final k(Lru/ok/tamtam/android/prefs/PmsKey;J)J
+    .locals 1
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1}, Lutd;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_0
+
+    move-object p3, p0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p3, p0, Lutd;->i:Lwtd;
+
+    :goto_0
+    iget-object p3, p3, Lw3;->h:Llu7;
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-class v0, Ljava/lang/Long;
+
+    invoke-static {v0}, Lz7d;->a(Ljava/lang/Class;)Lh73;
+
+    move-result-object v0
+
+    invoke-static {p3, p1, p2, v0}, Lzzi;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lh73;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final l(Lru/ok/tamtam/android/prefs/PmsKey;Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    invoke-virtual {p0, p1}, Lutd;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lutd;->i:Lwtd;
+
+    :goto_0
+    iget-object v0, v0, Lw3;->h:Llu7;
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-class v1, Ljava/lang/String;
+
+    invoke-static {v1}, Lz7d;->a(Ljava/lang/Class;)Lh73;
+
+    move-result-object v1
+
+    invoke-static {v0, p1, p2, v1}, Lzzi;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lh73;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
 
     return-object p1
+.end method
 
-    :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+.method public final m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+    .locals 1
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lw3;->h:Llu7;
+
+    invoke-virtual {v0, p1}, Llu7;->contains(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
 .end method

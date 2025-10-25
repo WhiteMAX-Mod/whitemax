@@ -40,16 +40,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/InterruptedException;
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/ThreadUtils$1;->val$thread:Ljava/lang/Thread;
+    iget-object v0, p0, Lorg/webrtc/ThreadUtils$1;->val$thread:Ljava/lang/Thread;
 
-    invoke-virtual {p0}, Ljava/lang/Thread;->join()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->join()V
 
     return-void
 .end method

@@ -1,133 +1,358 @@
-.class public abstract Lfy3;
+.class public final synthetic Lfy3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Comparator;
 
-# static fields
-.field public static final synthetic a:[Lxi7;
 
-.field public static final b:Lv94;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:Lv94;
+.field public final synthetic b:Lgy3;
 
-.field public static final d:Lv94;
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Cloneable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lgy3;Ljava/lang/Object;Ljava/lang/Cloneable;I)V
+    .locals 0
 
-    new-instance v0, Lrxb;
+    iput p4, p0, Lfy3;->a:I
 
-    const-string v1, "methodInflate"
+    iput-object p1, p0, Lfy3;->b:Lgy3;
 
-    const-string v2, "getMethodInflate()Ljava/lang/reflect/Method;"
+    iput-object p2, p0, Lfy3;->c:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2}, Lrxb;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p3, p0, Lfy3;->o:Ljava/lang/Cloneable;
 
-    sget-object v1, Ljpc;->a:Lkpc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
+.end method
 
-    new-instance v1, Lrxb;
 
-    const-string v2, "methodRemoveViewReference"
+# virtual methods
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 8
 
-    const-string v3, "getMethodRemoveViewReference()Ljava/lang/reflect/Method;"
+    iget v0, p0, Lfy3;->a:I
 
-    invoke-direct {v1, v2, v3}, Lrxb;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v2, Lrxb;
+    iget-object v0, p0, Lfy3;->c:Ljava/lang/Object;
 
-    const-string v3, "methodSetNeedsAttach"
+    check-cast v0, Let;
 
-    const-string v4, "getMethodSetNeedsAttach()Ljava/lang/reflect/Method;"
+    iget-object v1, p0, Lfy3;->o:Ljava/lang/Cloneable;
 
-    invoke-direct {v2, v3, v4}, Lrxb;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v1, Ljava/text/Collator;
 
-    const/4 v3, 0x3
+    check-cast p1, Lwr3;
 
-    new-array v3, v3, [Lxi7;
+    check-cast p2, Lwr3;
 
-    const/4 v4, 0x0
+    iget-object v2, p0, Lfy3;->b:Lgy3;
 
-    aput-object v0, v3, v4
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Lwr3;->p()J
 
-    aput-object v1, v3, v0
+    move-result-wide v2
 
-    const/4 v1, 0x2
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    aput-object v2, v3, v1
+    move-result-object v2
 
-    sput-object v3, Lfy3;->a:[Lxi7;
+    invoke-virtual {v0, v2}, Lzoe;->containsKey(Ljava/lang/Object;)Z
 
-    const-class v1, Landroid/view/ViewGroup;
+    move-result v2
 
-    filled-new-array {v1}, [Ljava/lang/Class;
+    sget-object v3, Ltxb;->c:Ltxb;
 
-    move-result-object v1
+    if-eqz v2, :cond_0
 
-    new-instance v2, Lv94;
+    invoke-virtual {p1}, Lwr3;->p()J
 
-    sget-object v3, Ley3;->b:Ley3;
+    move-result-wide v4
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [Ljava/lang/Class;
+    invoke-virtual {v0, v2}, Lzoe;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v4, "inflate"
+    move-result-object v2
 
-    invoke-direct {v2, v3, v4, v1}, Lv94;-><init>(Lzb6;Ljava/lang/String;[Ljava/lang/Class;)V
+    check-cast v2, Ltxb;
 
-    sput-object v2, Lfy3;->b:Lv94;
+    goto :goto_0
 
-    const-class v1, Landroid/content/Context;
+    :cond_0
+    move-object v2, v3
 
-    filled-new-array {v1}, [Ljava/lang/Class;
+    :goto_0
+    invoke-virtual {p2}, Lwr3;->p()J
 
-    move-result-object v1
+    move-result-wide v4
 
-    new-instance v2, Lv94;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    sget-object v3, Ley3;->c:Ley3;
+    move-result-object v4
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-virtual {v0, v4}, Lzoe;->containsKey(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result v4
 
-    check-cast v1, [Ljava/lang/Class;
+    if-eqz v4, :cond_1
 
-    const-string v4, "removeViewReference"
+    invoke-virtual {p2}, Lwr3;->p()J
 
-    invoke-direct {v2, v3, v4, v1}, Lv94;-><init>(Lzb6;Ljava/lang/String;[Ljava/lang/Class;)V
+    move-result-wide v3
 
-    sput-object v2, Lfy3;->c:Lv94;
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+    move-result-object v3
 
-    filled-new-array {v1}, [Ljava/lang/Class;
-
-    move-result-object v1
-
-    new-instance v2, Lv94;
-
-    sget-object v3, Ley3;->o:Ley3;
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lzoe;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Ljava/lang/Class;
+    move-object v3, v0
 
-    const-string v1, "setNeedsAttach"
+    check-cast v3, Ltxb;
 
-    invoke-direct {v2, v3, v1, v0}, Lv94;-><init>(Lzb6;Ljava/lang/String;[Ljava/lang/Class;)V
+    :cond_1
+    iget v0, v2, Ltxb;->a:I
 
-    sput-object v2, Lfy3;->d:Lv94;
+    iget v2, v2, Ltxb;->b:I
 
-    return-void
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    const/4 v6, -0x1
+
+    if-nez v0, :cond_6
+
+    iget v7, v3, Ltxb;->a:I
+
+    if-eqz v7, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    iget v0, v3, Ltxb;->b:I
+
+    if-ne v2, v0, :cond_3
+
+    invoke-static {p1, p2, v1}, Lgy3;->a(Lwr3;Lwr3;Ljava/text/Collator;)I
+
+    move-result v4
+
+    goto :goto_3
+
+    :cond_3
+    if-ge v0, v2, :cond_4
+
+    :goto_1
+    move v4, v6
+
+    goto :goto_3
+
+    :cond_4
+    if-ne v0, v2, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move v4, v5
+
+    goto :goto_3
+
+    :cond_6
+    :goto_2
+    if-eqz v0, :cond_9
+
+    iget v7, v3, Ltxb;->a:I
+
+    if-eqz v7, :cond_9
+
+    iget v0, v3, Ltxb;->b:I
+
+    if-ne v2, v0, :cond_7
+
+    invoke-static {p1, p2, v1}, Lgy3;->a(Lwr3;Lwr3;Ljava/text/Collator;)I
+
+    move-result v4
+
+    goto :goto_3
+
+    :cond_7
+    if-ge v0, v2, :cond_8
+
+    goto :goto_1
+
+    :cond_8
+    if-ne v0, v2, :cond_5
+
+    goto :goto_3
+
+    :cond_9
+    if-eqz v0, :cond_5
+
+    goto :goto_1
+
+    :goto_3
+    return v4
+
+    :pswitch_0
+    iget-object v0, p0, Lfy3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lli6;
+
+    iget-object v1, p0, Lfy3;->o:Ljava/lang/Cloneable;
+
+    check-cast v1, Ljava/util/HashMap;
+
+    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-interface {v0, p2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/String;
+
+    iget-object v0, p0, Lfy3;->b:Lgy3;
+
+    iget-object v0, v0, Lgy3;->a:Lype;
+
+    invoke-virtual {v0}, Lwpe;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/text/Collator;
+
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/text/CollationKey;
+
+    if-nez v2, :cond_a
+
+    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/text/Collator;->getCollationKey(Ljava/lang/String;)Ljava/text/CollationKey;
+
+    move-result-object v2
+
+    invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_a
+    invoke-virtual {v1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/text/CollationKey;
+
+    if-nez v3, :cond_b
+
+    invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/text/Collator;->getCollationKey(Ljava/lang/String;)Ljava/text/CollationKey;
+
+    move-result-object v3
+
+    invoke-virtual {v1, p2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_b
+    invoke-static {p1}, Li79;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v4, 0x0
+
+    if-nez v0, :cond_c
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Character;->isLetter(C)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_c
+
+    move p1, v1
+
+    goto :goto_4
+
+    :cond_c
+    move p1, v4
+
+    :goto_4
+    invoke-static {p2}, Li79;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_d
+
+    invoke-virtual {p2, v4}, Ljava/lang/String;->charAt(I)C
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Character;->isLetter(C)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_d
+
+    move v4, v1
+
+    :cond_d
+    if-eqz p1, :cond_e
+
+    if-nez v4, :cond_f
+
+    :cond_e
+    if-nez p1, :cond_10
+
+    if-nez v4, :cond_10
+
+    :cond_f
+    invoke-virtual {v2, v3}, Ljava/text/CollationKey;->compareTo(Ljava/text/CollationKey;)I
+
+    move-result v1
+
+    goto :goto_5
+
+    :cond_10
+    if-eqz p1, :cond_11
+
+    const/4 v1, -0x1
+
+    :cond_11
+    :goto_5
+    return v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -38,13 +38,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Wrapped stream may not be null."
+    const-string p2, "Wrapped stream may not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -85,11 +85,11 @@
 
     invoke-virtual {v0}, Ljava/io/InputStream;->available()I
 
-    move-result p0
+    move-result v0
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return p0
+    return v0
 
     :catch_0
     move-exception v0
@@ -99,9 +99,9 @@
     throw v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public checkAbort()V
@@ -292,7 +292,7 @@
 .end method
 
 .method public isReadAllowed()Z
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -303,27 +303,27 @@
 
     if-nez v0, :cond_1
 
-    iget-object p0, p0, Lorg/apache/http/conn/EofSensorInputStream;->wrappedStream:Ljava/io/InputStream;
+    iget-object v0, p0, Lorg/apache/http/conn/EofSensorInputStream;->wrappedStream:Ljava/io/InputStream;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 
     :cond_1
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/io/IOException;
 
-    const-string v0, "Attempted read on closed stream."
+    const-string v1, "Attempted read on closed stream."
 
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public read()I
@@ -366,9 +366,9 @@
     throw v0
 
     :cond_0
-    const/4 p0, -0x1
+    const/4 v0, -0x1
 
-    return p0
+    return v0
 .end method
 
 .method public read([B)I
@@ -411,9 +411,9 @@
     throw p1
 
     :cond_0
-    const/4 p0, -0x1
+    const/4 p1, -0x1
 
-    return p0
+    return p1
 .end method
 
 .method public read([BII)I
@@ -456,9 +456,9 @@
     throw p1
 
     :cond_0
-    const/4 p0, -0x1
+    const/4 p1, -0x1
 
-    return p0
+    return p1
 .end method
 
 .method public releaseConnection()V

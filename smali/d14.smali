@@ -1,136 +1,89 @@
-.class public final Ld14;
-.super Lure;
+.class public abstract Ld14;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Landroidx/work/CoroutineWorker;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static a(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
+    .locals 6
 
-    iput-object p1, p0, Ld14;->Y:Landroidx/work/CoroutineWorker;
+    and-int/lit8 v0, p5, 0x4
 
-    const/4 p1, 0x2
+    if-eqz v0, :cond_1
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    if-nez p3, :cond_1
 
-    return-void
-.end method
+    new-instance p3, Ljava/lang/StringBuilder;
 
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    check-cast p1, Ly04;
+    move-result-object p5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1, p2}, Ld14;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string p5, ".DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 
-    move-result-object p0
+    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p0, Ld14;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sget-object p1, Lylf;->a:Lylf;
+    move-result-object p3
 
-    invoke-virtual {p0, p1}, Ld14;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, p3}, Lpui;->a(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result p5
+
+    if-nez p5, :cond_0
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Ld14;
-
-    iget-object p0, p0, Ld14;->Y:Landroidx/work/CoroutineWorker;
-
-    invoke-direct {p1, p0, p2}, Ld14;-><init>(Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Ld14;->Y:Landroidx/work/CoroutineWorker;
-
-    iget-object v1, v0, Landroidx/work/CoroutineWorker;->b:Lznd;
-
-    iget v2, p0, Ld14;->X:I
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/RuntimeException;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string p1, "Permission "
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string p2, " is required by your application to receive broadcasts, please add it to your manifest"
+
+    invoke-static {p1, p3, p2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
     :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    and-int/lit8 v5, p5, 0x1
 
-    :try_start_1
-    iput v3, p0, Ld14;->X:I
+    move-object v0, p0
 
-    invoke-virtual {v0, p0}, Landroidx/work/CoroutineWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-object v1, p1
 
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-object v2, p2
 
-    sget-object p0, Lz04;->a:Lz04;
+    move-object v3, p3
 
-    if-ne p1, p0, :cond_2
+    move-object v4, p4
+
+    invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
+
+    move-result-object p0
 
     return-object p0
+.end method
 
-    :cond_2
-    :goto_0
-    :try_start_2
-    check-cast p1, Lkt7;
+.method public static b(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
+    .locals 0
 
-    invoke-virtual {v1, p1}, Lznd;->i(Ljava/lang/Object;)Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-virtual {p0, p1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    goto :goto_2
-
-    :goto_1
-    invoke-virtual {v1, p0}, Lznd;->j(Ljava/lang/Throwable;)Z
-
-    :goto_2
-    sget-object p0, Lylf;->a:Lylf;
+    move-result-object p0
 
     return-object p0
 .end method

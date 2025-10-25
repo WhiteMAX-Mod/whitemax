@@ -1,82 +1,67 @@
-.class public final Lro8;
-.super Ljava/lang/Object;
+.class public abstract Lro8;
+.super Li63;
 .source "SourceFile"
-
-# interfaces
-.implements Lsn8;
 
 
 # instance fields
-.field public final a:Lxo8;
+.field public final s0:J
 
 
 # direct methods
-.method public constructor <init>(Lxo8;)V
-    .locals 0
+.method public constructor <init>(Lfc4;Lmc4;Lmb6;ILjava/lang/Object;JJJ)V
+    .locals 11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v3, 0x1
 
-    iput-object p1, p0, Lro8;->a:Lxo8;
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v4, p3
+
+    move v5, p4
+
+    move-object/from16 v6, p5
+
+    move-wide/from16 v7, p6
+
+    move-wide/from16 v9, p8
+
+    invoke-direct/range {v0 .. v10}, Li63;-><init>(Lfc4;Lmc4;ILmb6;ILjava/lang/Object;JJ)V
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-wide/from16 p1, p10
+
+    iput-wide p1, p0, Lro8;->s0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public b()J
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    iget-wide v0, p0, Lro8;->s0:J
 
-    const/4 p0, 0x1
+    const-wide/16 v2, -0x1
 
-    return p0
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_0
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    return-wide v0
 
     :cond_0
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-class v1, Lro8;
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lro8;
-
-    iget-object p0, p0, Lro8;->a:Lxo8;
-
-    iget-object p1, p1, Lro8;->a:Lxo8;
-
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    return-wide v2
 .end method
 
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lro8;->a:Lxo8;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
+.method public abstract c()Z
 .end method

@@ -32,14 +32,14 @@
         "mainThreadHandler",
         "<init>",
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Landroid/os/Handler;)V",
-        "Lsg1;",
+        "Lhi1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "participantId",
-        "Lug1;",
+        "Lji1;",
         "newState",
-        "Lylf;",
+        "Lccg;",
         "onStateChanged",
-        "(Lsg1;Lug1;)V",
+        "(Lhi1;Lji1;)V",
         "",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "participants",
@@ -49,19 +49,19 @@
         "Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;",
         "Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;",
         "states",
-        "Ls0e;",
+        "Lone;",
         "listener",
         "errorListener",
         "updateMyStates",
-        "(Ljava/util/Map;Ls0e;Ls0e;)V",
+        "(Ljava/util/Map;Lone;Lone;)V",
         "state",
-        "Lumd;",
+        "Lr7e;",
         "roomId",
         "resetStates",
-        "(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lumd;Ls0e;Ls0e;)V",
+        "(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lr7e;Lone;Lone;)V",
         "isOn",
         "updateOwnState",
-        "(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Ls0e;Ls0e;)V",
+        "(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Lone;Lone;)V",
         "",
         "",
         "isOwnStateOn",
@@ -87,7 +87,7 @@
         "",
         "onError",
         "lowerHandForAll",
-        "(Lzb6;Lbc6;)V",
+        "(Lji6;Lli6;)V",
         "",
         "getOwnHandRaiseTime",
         "()J",
@@ -104,7 +104,7 @@
         "getAssistanceRequestTime",
         "getAssistanceRequestIds",
         "resetAssistanceRequests",
-        "(Lumd;)V",
+        "(Lr7e;)V",
         "release",
         "()V",
         "isParticipantStateOn",
@@ -122,9 +122,9 @@
         "mapBooleanFlagToStateValue",
         "(Z)Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;",
         "toExternal",
-        "(Lsg1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;",
+        "(Lhi1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "toInternal",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lsg1;",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lhi1;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;",
         "Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;",
@@ -185,7 +185,7 @@
             "Ljava/util/Map<",
             "Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;",
             "Ljava/util/Map<",
-            "Lsg1;",
+            "Lhi1;",
             "Ljava/lang/Long;",
             ">;>;"
         }
@@ -203,7 +203,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$Companion;-><init>(Lld4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->Companion:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$Companion;
 
@@ -246,10 +246,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lbc6;Lorg/json/JSONObject;)V
+.method public static synthetic a(Lone;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->lowerHandForAll$lambda$14(Lbc6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnStateInternal$lambda$19(Lone;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -270,24 +270,24 @@
     return-object v0
 .end method
 
-.method public static synthetic b(Lzb6;Lorg/json/JSONObject;)V
+.method public static synthetic b(Lji6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->lowerHandForAll$lambda$13(Lzb6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->lowerHandForAll$lambda$13(Lji6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic c(Ls0e;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lorg/json/JSONObject;)V
+.method public static synthetic c(Lli6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnStateInternal$lambda$19(Ls0e;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->lowerHandForAll$lambda$14(Lli6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
 .method private final getOwnStateSetupTime(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)J
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
@@ -301,16 +301,16 @@
 
     if-nez v0, :cond_0
 
-    const-wide/16 p0, 0x0
+    const-wide/16 v0, 0x0
 
-    return-wide p0
+    return-wide v0
 
     :cond_0
     invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->getStateSetupTime(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    return-wide p0
+    return-wide v0
 .end method
 
 .method private final getStateSetupTime(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)J
@@ -326,28 +326,28 @@
 
     if-eqz p2, :cond_0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toInternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lsg1;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toInternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lhi1;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-interface {p2, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Ljava/lang/Long;
+    check-cast p1, Ljava/lang/Long;
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    return-wide p0
+    return-wide p1
 
     :cond_0
-    const-wide/16 p0, 0x0
+    const-wide/16 p1, 0x0
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method private final isParticipantStateOn(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)Z
@@ -363,34 +363,34 @@
 
     if-eqz p2, :cond_0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toInternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lsg1;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toInternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lhi1;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-interface {p2, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-interface {p2, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
-.method private static final lowerHandForAll$lambda$13(Lzb6;Lorg/json/JSONObject;)V
+.method private static final lowerHandForAll$lambda$13(Lji6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lji6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final lowerHandForAll$lambda$14(Lbc6;Lorg/json/JSONObject;)V
+.method private static final lowerHandForAll$lambda$14(Lli6;Lorg/json/JSONObject;)V
     .locals 1
 
     if-eqz p0, :cond_0
@@ -403,7 +403,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, v0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -414,14 +414,14 @@
 
     if-eqz p1, :cond_0
 
-    sget-object p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->STATE_ON:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;
+    sget-object p1, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->STATE_ON:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    sget-object p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->STATE_OFF:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;
+    sget-object p1, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->STATE_OFF:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;
 
-    return-object p0
+    return-object p1
 .end method
 
 .method private final notifyCurrentState(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;)V
@@ -480,9 +480,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lsg1;
+    check-cast v2, Lhi1;
 
-    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toExternal(Lsg1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toExternal(Lhi1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v2
 
@@ -526,7 +526,7 @@
     return-void
 .end method
 
-.method public static synthetic resetStates$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lumd;Ls0e;Ls0e;ILjava/lang/Object;)V
+.method public static synthetic resetStates$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lr7e;Lone;Lone;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x4
@@ -545,58 +545,58 @@
     move-object p4, v0
 
     :cond_1
-    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->resetStates(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lumd;Ls0e;Ls0e;)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->resetStates(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lr7e;Lone;Lone;)V
 
     return-void
 .end method
 
-.method private final toExternal(Lsg1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-    .locals 0
+.method private final toExternal(Lhi1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lsg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lhi1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    move-result-object p0
+    move-result-object p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method private final toInternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lsg1;
-    .locals 0
-
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
-
-    invoke-interface {p0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantCollection;->get(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsg1;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public static synthetic updateMyStates$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Ls0e;Ls0e;ILjava/lang/Object;)V
+.method private final toInternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lhi1;
+    .locals 1
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
+
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantCollection;->get(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public static synthetic updateMyStates$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lone;Lone;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -615,12 +615,12 @@
     move-object p3, v0
 
     :cond_1
-    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateMyStates(Ljava/util/Map;Ls0e;Ls0e;)V
+    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateMyStates(Ljava/util/Map;Lone;Lone;)V
 
     return-void
 .end method
 
-.method public static synthetic updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Ls0e;Ls0e;ILjava/lang/Object;)V
+.method public static synthetic updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lone;Lone;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -640,12 +640,12 @@
 
     .line 2
     :cond_1
-    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState(Ljava/util/Map;Ls0e;Ls0e;)V
+    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState(Ljava/util/Map;Lone;Lone;)V
 
     return-void
 .end method
 
-.method public static synthetic updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Ls0e;Ls0e;ILjava/lang/Object;)V
+.method public static synthetic updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Lone;Lone;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x4
@@ -665,7 +665,7 @@
 
     .line 1
     :cond_1
-    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Ls0e;Ls0e;)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Lone;Lone;)V
 
     return-void
 .end method
@@ -690,14 +690,14 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsg1;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v1
 
     .line 5
-    new-instance v2, Lug1;
+    new-instance v2, Lji1;
 
-    invoke-direct {v2, v1}, Lug1;-><init>(Lsg1;)V
+    invoke-direct {v2, v1}, Lji1;-><init>(Lhi1;)V
 
     .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -740,11 +740,11 @@
     check-cast v5, Ljava/lang/String;
 
     .line 9
-    new-instance v7, Ltg1;
+    new-instance v7, Lii1;
 
-    invoke-direct {v7, v5, v3, v4}, Ltg1;-><init>(Ljava/lang/String;J)V
+    invoke-direct {v7, v5, v3, v4}, Lii1;-><init>(Ljava/lang/String;J)V
 
-    iget-object v5, v2, Lug1;->a:Ljava/util/HashMap;
+    iget-object v5, v2, Lji1;->a:Ljava/util/HashMap;
 
     invoke-virtual {v5, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -754,15 +754,15 @@
     :cond_0
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->stateListener:Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
 
-    invoke-interface {p1, v0, v2}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lug1;)V
+    invoke-interface {p1, v0, v2}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lji1;)V
 
     .line 11
-    invoke-virtual {p0, v1, v2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->onStateChanged(Lsg1;Lug1;)V
+    invoke-virtual {p0, v1, v2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->onStateChanged(Lhi1;Lji1;)V
 
     return-void
 .end method
 
-.method private final updateOwnStateInternal(Ljava/util/Map;Ls0e;Ls0e;)V
+.method private final updateOwnStateInternal(Ljava/util/Map;Lone;Lone;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -771,8 +771,8 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Ls0e;",
-            "Ls0e;",
+            "Lone;",
+            "Lone;",
             ")V"
         }
     .end annotation
@@ -790,16 +790,16 @@
     :cond_0
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->participantStateChanger:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;
 
-    new-instance v1, Liy0;
+    new-instance v1, Ltz0;
 
-    invoke-direct {v1, p2, p0, p1}, Liy0;-><init>(Ls0e;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;)V
+    invoke-direct {v1, p2, p0, p1}, Ltz0;-><init>(Lone;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;)V
 
-    invoke-virtual {v0, p1, v1, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeMyState(Ljava/util/Map;Ls0e;Ls0e;)V
+    invoke-virtual {v0, p1, v1, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeMyState(Ljava/util/Map;Lone;Lone;)V
 
     return-void
 .end method
 
-.method public static synthetic updateOwnStateInternal$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Ls0e;Ls0e;ILjava/lang/Object;)V
+.method public static synthetic updateOwnStateInternal$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lone;Lone;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -818,17 +818,17 @@
     move-object p3, v0
 
     :cond_1
-    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnStateInternal(Ljava/util/Map;Ls0e;Ls0e;)V
+    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnStateInternal(Ljava/util/Map;Lone;Lone;)V
 
     return-void
 .end method
 
-.method private static final updateOwnStateInternal$lambda$19(Ls0e;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lorg/json/JSONObject;)V
+.method private static final updateOwnStateInternal$lambda$19(Lone;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0, p3}, Ls0e;->k(Lorg/json/JSONObject;)V
+    invoke-interface {p0, p3}, Lone;->onResponse(Lorg/json/JSONObject;)V
 
     :cond_0
     invoke-direct {p1, p2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnStateInternal(Ljava/util/Map;)V
@@ -957,9 +957,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lsg1;
+    check-cast v2, Lhi1;
 
-    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toExternal(Lsg1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toExternal(Lhi1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v2
 
@@ -970,16 +970,16 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v1}, Lq73;->F0(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {v1}, Lnb3;->c0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object v1
 
     :cond_3
     if-nez v1, :cond_4
 
-    sget-object p0, Lz45;->a:Lz45;
+    sget-object v0, Lua5;->a:Lua5;
 
-    return-object p0
+    return-object v0
 
     :cond_4
     return-object v1
@@ -999,28 +999,28 @@
 .end method
 
 .method public getAssistanceRequestTime(Lru/ok/android/externcalls/sdk/id/ParticipantId;)J
-    .locals 1
+    .locals 2
 
     .line 2
     sget-object v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->ASSISTANCE_REQUESTED:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;
 
     invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->getStateSetupTime(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    return-wide p0
+    return-wide v0
 .end method
 
 .method public getHandRaiseTime(Lru/ok/android/externcalls/sdk/id/ParticipantId;)J
-    .locals 1
+    .locals 2
 
     sget-object v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->HAND_RAISED:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;
 
     invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->getStateSetupTime(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    return-wide p0
+    return-wide v0
 .end method
 
 .method public getOwnHandRaiseTime()J
@@ -1092,9 +1092,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lsg1;
+    check-cast v2, Lhi1;
 
-    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toExternal(Lsg1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toExternal(Lhi1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v2
 
@@ -1105,16 +1105,16 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v1}, Lq73;->F0(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {v1}, Lnb3;->c0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object v1
 
     :cond_3
     if-nez v1, :cond_4
 
-    sget-object p0, Lz45;->a:Lz45;
+    sget-object v0, Lua5;->a:Lua5;
 
-    return-object p0
+    return-object v0
 
     :cond_4
     return-object v1
@@ -1128,9 +1128,9 @@
 
     invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->isOwnStateOn(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public isAssistanceRequested(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Z
@@ -1141,9 +1141,9 @@
 
     invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->isParticipantStateOn(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public isHandRaised(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Z
@@ -1153,9 +1153,9 @@
 
     invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->isParticipantStateOn(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public isOwnHandRaised()Z
@@ -1165,9 +1165,9 @@
 
     invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->isOwnStateOn(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final isOwnStateOn(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)Z
@@ -1185,42 +1185,42 @@
 
     if-nez v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_0
     invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->isParticipantStateOn(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
-.method public lowerHandForAll(Lzb6;Lbc6;)V
-    .locals 2
+.method public lowerHandForAll(Lji6;Lli6;)V
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lzb6;",
-            "Lbc6;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->participantStateChanger:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->participantStateChanger:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;
 
-    new-instance v0, Lks;
+    new-instance v1, Lxt;
 
-    const/4 v1, 0x7
+    const/4 v2, 0x7
 
-    invoke-direct {v0, v1, p1}, Lks;-><init>(ILzb6;)V
+    invoke-direct {v1, v2, p1}, Lxt;-><init>(ILji6;)V
 
-    new-instance p1, Lls;
+    new-instance p1, Lyt;
 
-    invoke-direct {p1, v1, p2}, Lls;-><init>(ILbc6;)V
+    invoke-direct {p1, v2, p2}, Lyt;-><init>(ILli6;)V
 
-    invoke-virtual {p0, v0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->lowerHandForAll(Ls0e;Ls0e;)V
+    invoke-virtual {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->lowerHandForAll(Lone;Lone;)V
 
     return-void
 .end method
@@ -1230,25 +1230,25 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->participantStateChanger:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-interface {p0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantCollection;->get(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantCollection;->get(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    move-result-object p0
+    move-result-object p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsg1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
-    move-result-object p0
+    move-result-object p1
 
     :goto_0
-    move-object v1, p0
+    move-object v1, p1
 
     goto :goto_1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
     goto :goto_0
 
@@ -1258,15 +1258,15 @@
     return-void
 
     :cond_1
-    sget-object p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->HAND_RAISED:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;
+    sget-object p1, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->HAND_RAISED:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->getKey()Ljava/lang/String;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->getKey()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "0"
+    const-string v2, "0"
 
-    invoke-static {p0, p1}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+    invoke-static {p1, v2}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object v2
 
@@ -1278,7 +1278,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeParticipantState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Lsg1;Ljava/util/Map;Ls0e;Ls0e;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeParticipantState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Lhi1;Ljava/util/Map;Lone;Lone;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1335,7 +1335,7 @@
 
     check-cast v2, Ljava/util/Map;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsg1;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v3
 
@@ -1347,38 +1347,38 @@
     return-void
 .end method
 
-.method public final onStateChanged(Lsg1;Lug1;)V
+.method public final onStateChanged(Lhi1;Lji1;)V
     .locals 8
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->getEntries()Lx75;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->getEntries()Lyd5;
 
     move-result-object v0
 
-    check-cast v0, Lz1;
+    check-cast v0, Li2;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v1, Lw1;
+    new-instance v1, Lf2;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, v0}, Lw1;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Lf2;-><init>(ILjava/lang/Object;)V
 
     :cond_0
     :goto_0
-    invoke-virtual {v1}, Lw1;->hasNext()Z
+    invoke-virtual {v1}, Lf2;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {v1}, Lw1;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;
 
-    iget-object v2, p2, Lug1;->a:Ljava/util/HashMap;
+    iget-object v2, p2, Lji1;->a:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->getKey()Ljava/lang/String;
 
@@ -1388,13 +1388,13 @@
 
     move-result-object v2
 
-    check-cast v2, Ltg1;
+    check-cast v2, Lii1;
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_1
 
-    iget-object v4, v2, Ltg1;->a:Ljava/lang/String;
+    iget-object v4, v2, Lii1;->a:Ljava/lang/String;
 
     goto :goto_1
 
@@ -1404,7 +1404,7 @@
     :goto_1
     const-string v5, "1"
 
-    invoke-static {v4, v5}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -1427,7 +1427,7 @@
     :cond_2
     check-cast v5, Ljava/util/Map;
 
-    iget-wide v6, v2, Ltg1;->b:J
+    iget-wide v6, v2, Lii1;->b:J
 
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1435,7 +1435,7 @@
 
     invoke-interface {v5, p1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toExternal(Lsg1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toExternal(Lhi1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v4
 
@@ -1445,7 +1445,7 @@
 
     const/4 v5, 0x1
 
-    iget-wide v6, v2, Ltg1;->b:J
+    iget-wide v6, v2, Lii1;->b:J
 
     invoke-direct {v3, v4, v5, v6, v7}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;ZJ)V
 
@@ -1454,7 +1454,7 @@
     :cond_3
     const-string v2, "0"
 
-    invoke-static {v4, v2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1484,7 +1484,7 @@
     :goto_2
     if-eqz v2, :cond_5
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toExternal(Lsg1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->toExternal(Lhi1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v2
 
@@ -1559,56 +1559,56 @@
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->listenersMap:Ljava/util/Map;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->listenersMap:Ljava/util/Map;
 
-    invoke-interface {p0}, Ljava/util/Map;->clear()V
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     return-void
 .end method
 
 .method public removeAssistanceRequestListener(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->listenersMap:Ljava/util/Map;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->listenersMap:Ljava/util/Map;
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->ASSISTANCE_REQUESTED:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;
+    sget-object v1, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->ASSISTANCE_REQUESTED:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;
 
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;
+    check-cast v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->removeListener(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;)V
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->removeListener(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;)V
 
     :cond_0
     return-void
 .end method
 
 .method public removeHandListener(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->listenersMap:Ljava/util/Map;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->listenersMap:Ljava/util/Map;
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->HAND_RAISED:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;
+    sget-object v1, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->HAND_RAISED:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;
 
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;
+    check-cast v0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->removeListener(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;)V
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesListenerProxy;->removeListener(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;)V
 
     :cond_0
     return-void
 .end method
 
-.method public resetAssistanceRequests(Lumd;)V
+.method public resetAssistanceRequests(Lr7e;)V
     .locals 7
 
     sget-object v1, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;->ASSISTANCE_REQUESTED:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;
@@ -1625,12 +1625,12 @@
 
     move-object v2, p1
 
-    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->resetStates$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lumd;Ls0e;Ls0e;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->resetStates$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lr7e;Lone;Lone;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final resetStates(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lumd;Ls0e;Ls0e;)V
+.method public final resetStates(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lr7e;Lone;Lone;)V
     .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->statesMap:Ljava/util/Map;
@@ -1654,7 +1654,7 @@
     :cond_0
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v1, p2}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipants(Lvmd;)Ljava/util/Collection;
+    invoke-virtual {v1, p2}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipants(Ls7e;)Ljava/util/Collection;
 
     move-result-object p2
 
@@ -1662,7 +1662,7 @@
 
     const/16 v2, 0xa
 
-    invoke-static {p2, v2}, Ls73;->O(Ljava/lang/Iterable;I)I
+    invoke-static {p2, v2}, Lpb3;->l(Ljava/lang/Iterable;I)I
 
     move-result v2
 
@@ -1685,7 +1685,7 @@
 
     check-cast v2, Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsg1;
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v2
 
@@ -1694,7 +1694,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {v1}, Lq73;->F0(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {v1}, Lnb3;->c0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p2
 
@@ -1720,7 +1720,7 @@
 
     move-object v3, v2
 
-    check-cast v3, Lsg1;
+    check-cast v3, Lhi1;
 
     invoke-interface {p2, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -1748,7 +1748,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lsg1;
+    check-cast v0, Lhi1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->participantStateChanger:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;
 
@@ -1762,7 +1762,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2, p3, p4}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeParticipantState(Lsg1;Ljava/util/Map;Ls0e;Ls0e;)V
+    invoke-virtual {v1, v0, v2, p3, p4}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeParticipantState(Lhi1;Ljava/util/Map;Lone;Lone;)V
 
     goto :goto_2
 
@@ -1801,7 +1801,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Ls0e;Ls0e;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Lone;Lone;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1836,7 +1836,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Ls0e;Ls0e;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Lone;Lone;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1867,12 +1867,12 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateMyStates$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Ls0e;Ls0e;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateMyStates$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lone;Lone;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final updateMyStates(Ljava/util/Map;Ls0e;)V
+.method public final updateMyStates(Ljava/util/Map;Lone;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1882,7 +1882,7 @@
             "+",
             "Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;",
             ">;",
-            "Ls0e;",
+            "Lone;",
             ")V"
         }
     .end annotation
@@ -1900,12 +1900,12 @@
     move-object v2, p2
 
     .line 2
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateMyStates$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Ls0e;Ls0e;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateMyStates$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lone;Lone;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final updateMyStates(Ljava/util/Map;Ls0e;Ls0e;)V
+.method public final updateMyStates(Ljava/util/Map;Lone;Lone;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1915,8 +1915,8 @@
             "+",
             "Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;",
             ">;",
-            "Ls0e;",
-            "Ls0e;",
+            "Lone;",
+            "Lone;",
             ")V"
         }
     .end annotation
@@ -1928,7 +1928,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsg1;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v0
 
@@ -2067,9 +2067,9 @@
     move-result-object v1
 
     .line 11
-    new-instance v3, Lpxa;
+    new-instance v3, Ltcb;
 
-    invoke-direct {v3, v2, v1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v3, v2, v1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 12
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -2078,12 +2078,12 @@
 
     .line 13
     :cond_4
-    invoke-static {p1}, Li68;->M(Ljava/util/ArrayList;)Ljava/util/Map;
+    invoke-static {p1}, Lzg8;->m(Ljava/util/ArrayList;)Ljava/util/Map;
 
     move-result-object p1
 
     .line 14
-    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnStateInternal(Ljava/util/Map;Ls0e;Ls0e;)V
+    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnStateInternal(Ljava/util/Map;Lone;Lone;)V
 
     return-void
 .end method
@@ -2113,12 +2113,12 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Ls0e;Ls0e;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lone;Lone;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final updateOwnState(Ljava/util/Map;Ls0e;)V
+.method public final updateOwnState(Ljava/util/Map;Lone;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2127,7 +2127,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Ls0e;",
+            "Lone;",
             ")V"
         }
     .end annotation
@@ -2145,12 +2145,12 @@
     move-object v2, p2
 
     .line 2
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Ls0e;Ls0e;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lone;Lone;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final updateOwnState(Ljava/util/Map;Ls0e;Ls0e;)V
+.method public final updateOwnState(Ljava/util/Map;Lone;Lone;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2159,14 +2159,14 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Ls0e;",
-            "Ls0e;",
+            "Lone;",
+            "Lone;",
             ")V"
         }
     .end annotation
 
     .line 7
-    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnStateInternal(Ljava/util/Map;Ls0e;Ls0e;)V
+    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnStateInternal(Ljava/util/Map;Lone;Lone;)V
 
     return-void
 .end method
@@ -2189,12 +2189,12 @@
 
     move-object v2, p2
 
-    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Ls0e;Ls0e;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Lone;Lone;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final updateOwnState(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Ls0e;)V
+.method public final updateOwnState(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Lone;)V
     .locals 7
 
     const/16 v5, 0x8
@@ -2212,12 +2212,12 @@
     move-object v3, p3
 
     .line 4
-    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Ls0e;Ls0e;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Lone;Lone;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final updateOwnState(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Ls0e;Ls0e;)V
+.method public final updateOwnState(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$State;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl$StateValue;Lone;Lone;)V
     .locals 0
 
     .line 5
@@ -2226,7 +2226,7 @@
     move-result-object p1
 
     .line 6
-    invoke-virtual {p0, p1, p3, p4}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateMyStates(Ljava/util/Map;Ls0e;Ls0e;)V
+    invoke-virtual {p0, p1, p3, p4}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateMyStates(Ljava/util/Map;Lone;Lone;)V
 
     return-void
 .end method

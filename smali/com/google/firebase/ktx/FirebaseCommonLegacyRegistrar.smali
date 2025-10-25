@@ -20,7 +20,7 @@
         "<init>",
         "()V",
         "",
-        "Led3;",
+        "Lth3;",
         "getComponents",
         "()Ljava/util/List;",
         "com.google.firebase-firebase-common-ktx"
@@ -47,27 +47,27 @@
 
 # virtual methods
 .method public getComponents()Ljava/util/List;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/List<",
-            "Led3;",
+            "Lth3;",
             ">;"
         }
     .end annotation
 
-    const-string p0, "fire-core-ktx"
+    const-string v0, "fire-core-ktx"
 
-    const-string v0, "21.0.0"
+    const-string v1, "21.0.0"
 
-    invoke-static {p0, v0}, Lz48;->l(Ljava/lang/String;Ljava/lang/String;)Led3;
+    invoke-static {v0, v1}, Lzci;->d(Ljava/lang/String;Ljava/lang/String;)Lth3;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

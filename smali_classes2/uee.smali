@@ -1,150 +1,443 @@
-.class public final synthetic Luee;
-.super Ljava/lang/Object;
+.class public final Luee;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lqc6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lwee;
-
-.field public final synthetic c:Ljava/util/List;
+.field public final synthetic Y:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwee;Ljava/util/List;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/SettingsPrivacyScreen;)V
     .locals 0
 
-    iput p3, p0, Luee;->a:I
+    iput-object p2, p0, Luee;->Y:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
-    iput-object p1, p0, Luee;->b:Lwee;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Luee;->c:Ljava/util/List;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Luee;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v1, 0x0
+    invoke-virtual {p0, p1, p2}, Luee;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Luee;->c:Ljava/util/List;
+    move-result-object p1
 
-    iget-object p0, p0, Luee;->b:Lwee;
+    check-cast p1, Luee;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Luee;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Luee;
+
+    iget-object v1, p0, Luee;->Y:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+
+    invoke-direct {v0, p2, v1}, Luee;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/SettingsPrivacyScreen;)V
+
+    iput-object p1, v0, Luee;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 21
+
+    move-object/from16 v0, p0
+
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Luee;->X:Ljava/lang/Object;
+
+    check-cast v1, Le5a;
+
+    instance-of v2, v1, Lwae;
 
     const/4 v3, 0x1
 
-    check-cast p1, Ljava/util/List;
+    const/4 v4, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v5, 0x0
 
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    iget-object v6, v0, Luee;->Y:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
-    move-result v0
+    if-eqz v2, :cond_8
 
-    if-eqz v0, :cond_0
+    check-cast v1, Lwae;
 
-    invoke-static {v2}, Lk2e;->g(Ljava/lang/Object;)Ls7a;
+    sget-object v2, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->q0:[Ltr7;
 
-    move-result-object p0
+    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:[Ltr7;
+
+    iget-object v2, v1, Lwae;->b:Ltrf;
+
+    iget-object v7, v1, Lwae;->d:Lupd;
+
+    new-instance v8, Landroid/os/Bundle;
+
+    invoke-direct {v8}, Landroid/os/Bundle;-><init>()V
+
+    const-string v9, "title"
+
+    invoke-virtual {v8, v9, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    const-string v2, "payload"
+
+    invoke-virtual {v8, v2, v5}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    if-eqz v7, :cond_0
+
+    const-string v2, "stat_screen"
+
+    invoke-virtual {v7}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v8, v2, v7}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v1, v1, Lwae;->c:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lvae;
+
+    iget-boolean v7, v2, Lvae;->c:Z
+
+    iget-object v9, v2, Lvae;->a:Lorf;
+
+    iget v2, v2, Lvae;->b:I
+
+    const/16 v10, 0x38
+
+    const-string v11, "buttons"
+
+    if-eqz v7, :cond_2
+
+    invoke-virtual {v8, v11}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v7
+
+    if-nez v7, :cond_1
+
+    new-instance v7, Ljava/util/ArrayList;
+
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
+
+    :cond_1
+    new-instance v12, Lfo3;
+
+    invoke-direct {v12, v2, v9, v3, v10}, Lfo3;-><init>(ILtrf;II)V
+
+    invoke-virtual {v7, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v8, v11, v7}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     goto :goto_0
 
-    :cond_0
-    invoke-static {v2}, Lk2e;->g(Ljava/lang/Object;)Ls7a;
+    :cond_2
+    invoke-virtual {v8, v11}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
-    move-result-object v0
+    move-result-object v7
 
-    invoke-virtual {p0, p1}, Lwee;->d(Ljava/util/List;)Ld3e;
+    if-nez v7, :cond_3
 
-    move-result-object p0
+    new-instance v7, Ljava/util/ArrayList;
 
-    const/4 p1, 0x2
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    new-array p1, p1, [Lk2e;
+    :cond_3
+    new-instance v12, Lfo3;
 
-    aput-object v0, p1, v1
+    const/4 v13, 0x3
 
-    aput-object p0, p1, v3
+    invoke-direct {v12, v2, v9, v13, v10}, Lfo3;-><init>(ILtrf;II)V
 
-    invoke-static {p1}, Lrv5;->a([Ljava/lang/Object;)Lrv5;
+    invoke-virtual {v7, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object p0
+    invoke-virtual {v8, v11, v7}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    const p1, 0x7fffffff
+    goto :goto_0
 
-    const-string v0, "maxConcurrency"
+    :cond_4
+    new-instance v15, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
-    invoke-static {p1, v0}, Lo97;->a1(ILjava/lang/String;)V
+    invoke-direct {v15, v8}, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;-><init>(Landroid/os/Bundle;)V
 
-    new-instance p1, Lgw5;
+    invoke-virtual {v15, v6}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
 
-    invoke-direct {p1, p0}, Lgw5;-><init>(Lrv5;)V
+    move-object v1, v6
 
-    new-instance p0, Ljava/util/ArrayList;
+    :goto_1
+    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
 
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    move-result-object v2
 
-    new-instance v0, Liae;
+    if-eqz v2, :cond_5
 
-    const/4 v1, 0x7
+    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
 
-    invoke-direct {v0, v1}, Liae;-><init>(I)V
+    move-result-object v1
 
-    new-instance v1, Lid6;
+    goto :goto_1
 
-    invoke-direct {v1, p0}, Lid6;-><init>(Ljava/lang/Object;)V
+    :cond_5
+    instance-of v2, v1, Lwid;
 
-    new-instance p0, Lvv5;
+    if-eqz v2, :cond_6
 
-    invoke-direct {p0, p1, v1, v0}, Lvv5;-><init>(Lrv5;Lid6;Lpl0;)V
+    check-cast v1, Lwid;
 
-    :goto_0
-    return-object p0
+    goto :goto_2
 
-    :pswitch_0
-    invoke-static {v2}, Ly4a;->g(Ljava/lang/Iterable;)Lxc3;
+    :cond_6
+    move-object v1, v5
 
-    move-result-object v0
+    :goto_2
+    if-eqz v1, :cond_7
 
-    new-instance v2, Lha2;
+    invoke-interface {v1}, Lwid;->f0()Lqid;
 
-    const/16 v4, 0x17
+    move-result-object v5
 
-    invoke-direct {v2, v4, p1}, Lha2;-><init>(ILjava/util/List;)V
+    :cond_7
+    invoke-virtual {v15, v6}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
 
-    new-instance v4, Lb5a;
+    if-eqz v5, :cond_10
 
-    invoke-direct {v4, v0, v2, v3}, Lb5a;-><init>(Ly4a;Lggb;I)V
+    new-instance v14, Ltid;
 
-    invoke-virtual {v4}, Ly4a;->t()Lc5a;
+    const/16 v19, 0x0
 
-    move-result-object v0
+    const/16 v20, -0x1
 
-    new-instance v2, Luee;
+    const/16 v16, 0x0
 
-    invoke-direct {v2, p0, p1, v3}, Luee;-><init>(Lwee;Ljava/util/List;I)V
+    const/16 v17, 0x0
 
-    new-instance p0, Lu2e;
+    const/16 v18, 0x0
 
-    invoke-direct {p0, v0, v2, v1}, Lu2e;-><init>(Lk2e;Lqc6;I)V
+    invoke-direct/range {v14 .. v20}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
 
-    return-object p0
+    const-string v1, "BottomSheetWidget"
 
-    nop
+    invoke-static {v4, v14, v3, v1}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v5, v14}, Lqid;->G(Ltid;)V
+
+    goto/16 :goto_5
+
+    :cond_8
+    instance-of v2, v1, Lwf4;
+
+    if-eqz v2, :cond_9
+
+    sget-object v2, Lsee;->c:Lsee;
+
+    check-cast v1, Lwf4;
+
+    invoke-virtual {v2, v1}, Lrdi;->t0(Lwf4;)V
+
+    goto/16 :goto_5
+
+    :cond_9
+    instance-of v2, v1, Lxae;
+
+    if-eqz v2, :cond_a
+
+    new-instance v2, Lc3b;
+
+    invoke-direct {v2, v6}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    check-cast v1, Lxae;
+
+    iget-object v1, v1, Lxae;->b:Lorf;
+
+    invoke-virtual {v2, v1}, Lc3b;->g(Ltrf;)V
+
+    invoke-virtual {v2}, Lc3b;->i()Lb3b;
+
+    goto/16 :goto_5
+
+    :cond_a
+    instance-of v2, v1, Lyae;
+
+    if-eqz v2, :cond_b
+
+    new-instance v2, Lc3b;
+
+    invoke-direct {v2, v6}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    check-cast v1, Lyae;
+
+    iget-object v3, v1, Lyae;->b:Lorf;
+
+    invoke-virtual {v2, v3}, Lc3b;->g(Ltrf;)V
+
+    iget-object v1, v1, Lyae;->c:Ljava/lang/Integer;
+
+    new-instance v3, Lq3b;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    invoke-direct {v3, v1}, Lq3b;-><init>(I)V
+
+    invoke-virtual {v2, v3}, Lc3b;->e(Lu3b;)V
+
+    invoke-virtual {v2}, Lc3b;->i()Lb3b;
+
+    goto :goto_5
+
+    :cond_b
+    instance-of v2, v1, Luae;
+
+    if-eqz v2, :cond_c
+
+    new-instance v1, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+
+    invoke-direct {v1}, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;-><init>()V
+
+    invoke-virtual {v1, v6}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
+
+    invoke-virtual {v6}, Ll24;->getRouter()Lqid;
+
+    move-result-object v2
+
+    new-instance v3, Lskg;
+
+    invoke-direct {v3}, Lskg;-><init>()V
+
+    new-instance v4, Lskg;
+
+    invoke-direct {v4}, Lskg;-><init>()V
+
+    invoke-static {v1, v4, v3}, Lcyi;->a(Ll24;Lmh;Lmh;)Ltid;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Lqid;->G(Ltid;)V
+
+    goto :goto_5
+
+    :cond_c
+    instance-of v1, v1, Ltae;
+
+    if-eqz v1, :cond_10
+
+    sget-object v1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:[Ltr7;
+
+    new-instance v8, Lone/me/settings/privacy/ui/ChangeDisabledDialog;
+
+    invoke-direct {v8}, Lone/me/settings/privacy/ui/ChangeDisabledDialog;-><init>()V
+
+    invoke-virtual {v8, v6}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
+
+    move-object v1, v6
+
+    :goto_3
+    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_d
+
+    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
+
+    move-result-object v1
+
+    goto :goto_3
+
+    :cond_d
+    instance-of v2, v1, Lwid;
+
+    if-eqz v2, :cond_e
+
+    check-cast v1, Lwid;
+
+    goto :goto_4
+
+    :cond_e
+    move-object v1, v5
+
+    :goto_4
+    if-eqz v1, :cond_f
+
+    invoke-interface {v1}, Lwid;->f0()Lqid;
+
+    move-result-object v5
+
+    :cond_f
+    invoke-virtual {v8, v6}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v5, :cond_10
+
+    new-instance v7, Ltid;
+
+    const/4 v12, 0x0
+
+    const/4 v13, -0x1
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    invoke-direct/range {v7 .. v13}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+
+    const-string v1, "change-disabled"
+
+    invoke-static {v4, v7, v3, v1}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
+
+    invoke-virtual {v5, v7}, Lqid;->G(Ltid;)V
+
+    :cond_10
+    :goto_5
+    sget-object v1, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->q0:[Ltr7;
+
+    invoke-virtual {v6}, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->C0()Lqfe;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lqfe;->N0:Lnje;
+
+    invoke-virtual {v1}, Lnje;->g()V
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    return-object v1
 .end method

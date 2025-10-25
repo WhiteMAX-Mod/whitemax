@@ -1,58 +1,27 @@
-.class public final synthetic Lju6;
-.super Ljava/lang/Object;
+.class public final Lju6;
+.super Lb7d;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lpu6;
+.field public Y:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpu6;I)V
+.method public constructor <init>(II)V
     .locals 0
 
-    iput p2, p0, Lju6;->a:I
+    invoke-direct {p0, p1, p2}, Lb7d;-><init>(II)V
 
-    iput-object p1, p0, Lju6;->b:Lpu6;
+    const/4 p1, -0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lju6;->X:I
 
-    return-void
-.end method
+    const/4 p1, 0x0
 
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    iget v0, p0, Lju6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x1
-
-    iget-object p0, p0, Lju6;->b:Lpu6;
-
-    iput-boolean v0, p0, Lpu6;->M0:Z
-
-    invoke-virtual {p0}, Lpu6;->y()V
+    iput p1, p0, Lju6;->Y:I
 
     return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lju6;->b:Lpu6;
-
-    invoke-virtual {p0}, Lpu6;->y()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

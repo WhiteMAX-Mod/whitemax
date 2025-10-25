@@ -1,9 +1,9 @@
 .class public final Lo;
-.super Lure;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lzi6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,47 +34,47 @@
 
     invoke-virtual {p0, p1, p2}, Lo;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lo;
+    check-cast p1, Lo;
 
-    sget-object p1, Lylf;->a:Lylf;
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p0, p1}, Lo;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lo;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lo;
 
-    iget-object p0, p0, Lo;->Y:Lone/me/aboutappsettings/AboutAppSettingsScreen;
+    iget-object v1, p0, Lo;->Y:Lone/me/aboutappsettings/AboutAppSettingsScreen;
 
-    invoke-direct {v0, p2, p0}, Lo;-><init>(Lkotlin/coroutines/Continuation;Lone/me/aboutappsettings/AboutAppSettingsScreen;)V
+    invoke-direct {v0, p2, v1}, Lo;-><init>(Lkotlin/coroutines/Continuation;Lone/me/aboutappsettings/AboutAppSettingsScreen;)V
 
     iput-object p1, v0, Lo;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lo;->X:Ljava/lang/Object;
 
     check-cast p1, Ljava/util/List;
 
-    iget-object p0, p0, Lo;->Y:Lone/me/aboutappsettings/AboutAppSettingsScreen;
+    iget-object v0, p0, Lo;->Y:Lone/me/aboutappsettings/AboutAppSettingsScreen;
 
-    iget-object p0, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->b:Lv06;
+    iget-object v0, v0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->b:Li76;
 
-    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lr18;->E(Ljava/util/List;)V
 
-    sget-object p0, Lylf;->a:Lylf;
+    sget-object p1, Lccg;->a:Lccg;
 
-    return-object p0
+    return-object p1
 .end method

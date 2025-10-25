@@ -10,13 +10,13 @@
 .end method
 
 .method public getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    new-array p0, p0, [Lorg/webrtc/VideoCodecInfo;
+    new-array v0, v0, [Lorg/webrtc/VideoCodecInfo;
 
-    return-object p0
+    return-object v0
 .end method

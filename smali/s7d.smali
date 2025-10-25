@@ -1,97 +1,162 @@
-.class public final enum Ls7d;
-.super Ljava/lang/Enum;
+.class public final Ls7d;
+.super Lt4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Ls7d;
+# instance fields
+.field public final d:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public static final enum a:Ls7d;
-
-.field public static final enum b:Ls7d;
-
-.field public static final enum c:Ls7d;
-
-.field public static final enum o:Ls7d;
+.field public final e:Lr7d;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 0
 
-    new-instance v0, Ls7d;
+    invoke-direct {p0}, Lt4;-><init>()V
 
-    const-string v1, "STARTED"
+    iput-object p1, p0, Ls7d;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    const/4 v2, 0x0
+    iget-object p1, p0, Ls7d;->e:Lr7d;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    if-eqz p1, :cond_0
 
-    sput-object v0, Ls7d;->a:Ls7d;
+    iput-object p1, p0, Ls7d;->e:Lr7d;
 
-    new-instance v1, Ls7d;
+    return-void
 
-    const-string v2, "ERROR"
+    :cond_0
+    new-instance p1, Lr7d;
 
-    const/4 v3, 0x1
+    invoke-direct {p1, p0}, Lr7d;-><init>(Ls7d;)V
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ls7d;->b:Ls7d;
-
-    new-instance v2, Ls7d;
-
-    const-string v3, "FINISHED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ls7d;->c:Ls7d;
-
-    new-instance v3, Ls7d;
-
-    const-string v4, "INIT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ls7d;->o:Ls7d;
-
-    filled-new-array {v0, v1, v2, v3}, [Ls7d;
-
-    move-result-object v0
-
-    sput-object v0, Ls7d;->X:[Ls7d;
+    iput-object p1, p0, Ls7d;->e:Lr7d;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ls7d;
+
+# virtual methods
+.method public final c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
-    const-class v0, Ls7d;
+    invoke-super {p0, p1, p2}, Lt4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    instance-of v0, p1, Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object p0
+    if-eqz v0, :cond_0
 
-    check-cast p0, Ls7d;
+    iget-object v0, p0, Ls7d;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    return-object p0
-.end method
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
 
-.method public static values()[Ls7d;
-    .locals 1
+    move-result v0
 
-    sget-object v0, Ls7d;->X:[Ls7d;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
     move-result-object v0
 
-    check-cast v0, [Ls7d;
+    if-eqz v0, :cond_0
 
-    return-object v0
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/a;->Z(Landroid/view/accessibility/AccessibilityEvent;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Landroid/view/View;Lg5;)V
+    .locals 2
+
+    iget-object v0, p0, Lt4;->a:Landroid/view/View$AccessibilityDelegate;
+
+    iget-object v1, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v0, p1, v1}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    iget-object p1, p0, Ls7d;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p1
+
+    iget-object v0, p1, Landroidx/recyclerview/widget/a;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->c:Lh7d;
+
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->q1:Lm7d;
+
+    invoke-virtual {p1, v1, v0, p2}, Landroidx/recyclerview/widget/a;->a0(Lh7d;Lm7d;Lg5;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final g(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 2
+
+    invoke-super {p0, p1, p2, p3}, Lt4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    iget-object p1, p0, Ls7d;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p1
+
+    iget-object v0, p1, Landroidx/recyclerview/widget/a;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->c:Lh7d;
+
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->q1:Lm7d;
+
+    invoke-virtual {p1, v1, v0, p2, p3}, Landroidx/recyclerview/widget/a;->o0(Lh7d;Lm7d;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method

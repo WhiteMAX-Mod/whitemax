@@ -2,45 +2,36 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnkf;
-
 
 # instance fields
-.field public final a:Lp2f;
+.field public final a:I
 
-.field public final b:Lr2f;
+.field public final b:I
 
 .field public final c:I
 
+.field public final d:Z
+
 
 # direct methods
-.method public constructor <init>(Lp2f;Lr2f;I)V
-    .locals 1
-
-    sget v0, La1d;->a:I
+.method public constructor <init>(IIIZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmkf;->a:Lp2f;
+    iput p1, p0, Lmkf;->a:I
 
-    iput-object p2, p0, Lmkf;->b:Lr2f;
+    iput p2, p0, Lmkf;->b:I
 
     iput p3, p0, Lmkf;->c:I
+
+    iput-boolean p4, p0, Lmkf;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lu2f;
-    .locals 0
-
-    iget-object p0, p0, Lmkf;->b:Lr2f;
-
-    return-object p0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -58,74 +49,55 @@
     :cond_1
     check-cast p1, Lmkf;
 
-    sget v0, La1d;->a:I
+    iget v0, p0, Lmkf;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v1, p1, Lmkf;->a:I
 
-    iget-object v0, p0, Lmkf;->a:Lp2f;
-
-    iget-object v1, p1, Lmkf;->a:Lp2f;
-
-    invoke-virtual {v0, v1}, Lp2f;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
+    if-eq v0, v1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lmkf;->b:Lr2f;
+    iget v0, p0, Lmkf;->b:I
 
-    iget-object v1, p1, Lmkf;->b:Lr2f;
+    iget v1, p1, Lmkf;->b:I
 
-    invoke-virtual {v0, v1}, Lr2f;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
+    if-eq v0, v1, :cond_3
 
     goto :goto_0
 
     :cond_3
-    iget p0, p0, Lmkf;->c:I
+    iget v0, p0, Lmkf;->c:I
 
-    iget p1, p1, Lmkf;->c:I
+    iget v1, p1, Lmkf;->c:I
 
-    if-eq p0, p1, :cond_4
+    if-eq v0, v1, :cond_4
 
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    goto :goto_0
 
     :cond_4
+    iget-boolean v0, p0, Lmkf;->d:Z
+
+    iget-boolean p1, p1, Lmkf;->d:Z
+
+    if-eq v0, p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
     :goto_1
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
-.end method
-
-.method public final getIcon()I
-    .locals 0
-
-    sget p0, La1d;->f:I
-
-    return p0
-.end method
-
-.method public final getTitle()Lu2f;
-    .locals 0
-
-    iget-object p0, p0, Lmkf;->a:Lp2f;
-
-    return-object p0
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    sget v0, La1d;->f:I
+    iget v0, p0, Lmkf;->a:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -135,79 +107,65 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lmkf;->a:Lp2f;
+    iget v2, p0, Lmkf;->b:I
 
-    iget v2, v2, Lp2f;->b:I
-
-    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
     move-result v0
 
-    iget-object v2, p0, Lmkf;->b:Lr2f;
+    iget v2, p0, Lmkf;->c:I
 
-    invoke-virtual {v2}, Lr2f;->hashCode()I
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
-    move-result v2
+    move-result v0
 
-    add-int/2addr v2, v0
+    iget-boolean v1, p0, Lmkf;->d:Z
 
-    mul-int/2addr v2, v1
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    iget p0, p0, Lmkf;->c:I
+    move-result v1
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    add-int/2addr v1, v0
 
-    move-result p0
-
-    add-int/2addr p0, v2
-
-    return p0
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 5
 
-    sget v0, La1d;->f:I
+    const-string v0, ", titleTextColor="
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, ", endIconColor="
 
-    const-string v2, "VerifyEmail(icon="
+    const-string v2, "StateConfig(startIconColor="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v3, p0, Lmkf;->a:I
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v4, p0, Lmkf;->b:I
 
-    const-string v0, ", title="
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-object v0, p0, Lmkf;->a:Lp2f;
+    iget v1, p0, Lmkf;->c:I
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v0, ", subtitle="
+    const-string v1, ", isEndIconVisible="
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lmkf;->b:Lr2f;
+    iget-boolean v1, p0, Lmkf;->d:Z
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v0, ", codeLength="
+    const-string v1, ")"
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lmkf;->c:I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string p0, ")"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

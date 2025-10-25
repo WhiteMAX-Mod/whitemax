@@ -1,39 +1,92 @@
 .class public final Lz70;
-.super Ljava/lang/Object;
+.super Lpmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lcl7;
-
-.field public final b:Lcl7;
-
-.field public final c:Ljava/lang/Object;
+.field public final c:Let;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lr1b;)V
+.method public constructor <init>(Let;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz70;->a:Lcl7;
-
-    iput-object p2, p0, Lz70;->b:Lcl7;
-
-    new-instance p1, Lb3;
-
-    const/4 p2, 0x4
-
-    invoke-direct {p1, p3, p2, p0}, Lb3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    const/4 p2, 0x3
-
-    invoke-static {p2, p1}, Lcb7;->G(ILzb6;)Lcl7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lz70;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lz70;->c:Let;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lz70;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lz70;
+
+    iget-object v0, p0, Lz70;->c:Let;
+
+    iget-object p1, p1, Lz70;->c:Let;
+
+    invoke-virtual {v0, p1}, Lzoe;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lz70;->c:Let;
+
+    invoke-virtual {v0}, Lzoe;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lz70;->c:Let;
+
+    invoke-static {v0}, Li79;->f(Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Response(tokenTypes=\'"
+
+    const-string v2, "\')"
+
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -17,161 +17,164 @@
 .method public final delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 0
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Not allowed."
+    const-string p2, "Not allowed."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final getType(Landroid/net/Uri;)Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Not allowed."
+    const-string v0, "Not allowed."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     .locals 0
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Not allowed."
+    const-string p2, "Not allowed."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final onCreate()Z
-    .locals 4
+    .locals 5
 
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    invoke-static {p0}, Lpv7;->m(Landroid/content/Context;)Lpv7;
-
-    move-result-object p0
-
-    iget-object v0, p0, Lpv7;->o:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    :try_start_0
-    const-string v1, "Startup"
-
-    invoke-static {v1}, Lr94;->e0(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    if-eqz v1, :cond_0
 
-    new-instance v1, Landroid/content/ComponentName;
+    invoke-static {v0}, Lv48;->z(Landroid/content/Context;)Lv48;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    move-result-object v0
+
+    iget-object v1, v0, Lv48;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/content/Context;
+
+    :try_start_0
+    const-string v2, "Startup"
+
+    invoke-static {v2}, Lxyh;->m(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    const-class v3, Landroidx/startup/InitializationProvider;
+    invoke-static {v2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    new-instance v2, Landroid/content/ComponentName;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const-class v4, Landroidx/startup/InitializationProvider;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v4
 
-    const/16 v2, 0x80
+    invoke-direct {v2, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getProviderInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ProviderInfo;
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget-object v0, v0, Landroid/content/pm/ProviderInfo;->metaData:Landroid/os/Bundle;
+    const/16 v3, 0x80
 
-    invoke-virtual {p0, v0}, Lpv7;->j(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getProviderInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ProviderInfo;
+
+    move-result-object v1
+
+    iget-object v1, v1, Landroid/content/pm/ProviderInfo;->metaData:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1}, Lv48;->v(Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
     goto :goto_0
 
     :catch_0
-    move-exception p0
+    move-exception v0
 
     :try_start_1
-    new-instance v0, Landroidx/startup/StartupException;
+    new-instance v1, Landroidx/startup/StartupException;
 
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    throw v0
+    throw v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :catchall_0
-    move-exception p0
-
+    :goto_0
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    throw p0
+    throw v0
 
     :cond_0
-    :goto_0
-    const/4 p0, 0x1
+    :goto_1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_1
-    new-instance p0, Landroidx/startup/StartupException;
+    new-instance v0, Landroidx/startup/StartupException;
 
-    const-string v0, "Context cannot be null"
+    const-string v1, "Context cannot be null"
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public final query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 0
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Not allowed."
+    const-string p2, "Not allowed."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 0
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Not allowed."
+    const-string p2, "Not allowed."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

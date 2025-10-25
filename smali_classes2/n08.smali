@@ -1,19 +1,14 @@
-.class public abstract Ln08;
-.super Lp08;
+.class public interface abstract Ln08;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Lu2f;
-
-
-# direct methods
-.method public constructor <init>(Lu2f;Ljava/lang/Throwable;)V
+# virtual methods
+.method public a(Lzb9;)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lp08;-><init>(Ljava/lang/Throwable;)V
-
-    iput-object p1, p0, Ln08;->c:Lu2f;
-
     return-void
+.end method
+
+.method public abstract b(Ljava/lang/String;Lr08;Landroid/text/style/ClickableSpan;)V
 .end method

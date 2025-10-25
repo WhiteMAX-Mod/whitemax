@@ -1,110 +1,114 @@
-.class public final Ljv;
-.super Lure;
+.class public final synthetic Ljv;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrc6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public synthetic X:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public synthetic Y:J
+.field public final synthetic b:Luj2;
 
-.field public final synthetic Z:Lyv;
+.field public final synthetic c:Lca9;
 
 
 # direct methods
-.method public constructor <init>(Lyv;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Luj2;Lca9;I)V
     .locals 0
 
-    iput-object p1, p0, Ljv;->Z:Lyv;
+    iput p3, p0, Ljv;->a:I
 
-    const/4 p1, 0x3
+    iput-object p1, p0, Ljv;->b:Luj2;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ljv;->c:Lca9;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final run()V
+    .locals 4
 
-    check-cast p1, Ljava/util/List;
+    iget v0, p0, Ljv;->a:I
 
-    check-cast p2, Ljava/lang/Number;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
+    iget-object v0, p0, Ljv;->b:Luj2;
 
-    move-result-wide v0
+    iget-object v1, p0, Ljv;->c:Lca9;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    :try_start_0
+    iget-object v2, v0, Luj2;->b:Lyz6;
 
-    new-instance p2, Ljv;
+    invoke-virtual {v2, v1}, Lyz6;->r(Lgz6;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p0, p0, Ljv;->Z:Lyv;
+    goto :goto_0
 
-    invoke-direct {p2, p0, p3}, Ljv;-><init>(Lyv;Lkotlin/coroutines/Continuation;)V
+    :catchall_0
+    move-exception v1
 
-    iput-object p1, p2, Ljv;->X:Ljava/util/List;
+    iget-object v2, v0, Luj2;->a:Ljava/lang/String;
 
-    iput-wide v0, p2, Ljv;->Y:J
+    const-string v3, "updateHistoryItemSync: exception"
 
-    sget-object p0, Lylf;->a:Lylf;
+    invoke-static {v2, v3, v1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p2, p0}, Ljv;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v0, Luj2;->Y:Lsf5;
 
-    move-result-object p0
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
 
-    return-object p0
-.end method
+    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    invoke-interface {v0, v2}, Lsf5;->a(Ljava/lang/Throwable;)V
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    :goto_0
+    return-void
 
-    iget-object p1, p0, Ljv;->X:Ljava/util/List;
+    :pswitch_0
+    iget-object v0, p0, Ljv;->b:Luj2;
 
-    iget-wide v0, p0, Ljv;->Y:J
+    iget-object v1, p0, Ljv;->c:Lca9;
 
-    sget-object v2, Lyv;->F:[Lxi7;
+    :try_start_1
+    iget-object v2, v0, Luj2;->b:Lyz6;
 
-    iget-object p0, p0, Ljv;->Z:Lyv;
+    invoke-virtual {v2, v1}, Lyz6;->b(Lgz6;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {p0, v0, v1}, Lyv;->l(J)Ljava/util/List;
+    goto :goto_1
 
-    move-result-object v2
+    :catchall_1
+    move-exception v1
 
-    iget-object p0, p0, Lyv;->c:Ly95;
+    iget-object v2, v0, Luj2;->a:Ljava/lang/String;
 
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    const-string v3, "addHistoryItem: exception"
 
-    move-result v3
+    invoke-static {v2, v3, v1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    iget-object v0, v0, Luj2;->Y:Lsf5;
 
-    move-result p1
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
 
-    const-string v4, " out of total "
+    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
 
-    const-string v5, " around "
+    invoke-interface {v0, v2}, Lsf5;->a(Ljava/lang/Throwable;)V
 
-    const-string v6, "getHistoryItems return "
+    :goto_1
+    return-void
 
-    invoke-static {v6, v3, v4, p1, v5}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    nop
 
-    move-result-object p1
-
-    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ly95;->b(Ljava/lang/String;)V
-
-    return-object v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

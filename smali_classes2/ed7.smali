@@ -3,41 +3,21 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lcl7;
+# static fields
+.field public static final a:Led7;
 
-.field public final b:Lcl7;
-
-.field public final c:Lcl7;
+.field public static b:Ldd7;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lcl7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Led7;
 
-    iput-object p1, p0, Led7;->a:Lcl7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Led7;->b:Lcl7;
-
-    iput-object p3, p0, Led7;->c:Lcl7;
+    sput-object v0, Led7;->a:Led7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lf53;
-    .locals 0
-
-    iget-object p0, p0, Led7;->b:Lcl7;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lf53;
-
-    return-object p0
 .end method

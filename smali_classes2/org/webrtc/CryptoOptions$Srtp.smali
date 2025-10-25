@@ -57,34 +57,34 @@
 
 # virtual methods
 .method public getEnableAes128Sha1_32CryptoCipher()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Srtp"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/CryptoOptions$Srtp;->enableAes128Sha1_32CryptoCipher:Z
+    iget-boolean v0, p0, Lorg/webrtc/CryptoOptions$Srtp;->enableAes128Sha1_32CryptoCipher:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getEnableEncryptedRtpHeaderExtensions()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Srtp"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/CryptoOptions$Srtp;->enableEncryptedRtpHeaderExtensions:Z
+    iget-boolean v0, p0, Lorg/webrtc/CryptoOptions$Srtp;->enableEncryptedRtpHeaderExtensions:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getEnableGcmCryptoSuites()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Srtp"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/CryptoOptions$Srtp;->enableGcmCryptoSuites:Z
+    iget-boolean v0, p0, Lorg/webrtc/CryptoOptions$Srtp;->enableGcmCryptoSuites:Z
 
-    return p0
+    return v0
 .end method

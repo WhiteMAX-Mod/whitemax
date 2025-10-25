@@ -1,203 +1,88 @@
 .class public final Lgg5;
-.super Lj2e;
+.super Ljava/util/concurrent/atomic/AtomicBoolean;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+.implements Lvv4;
+
+
+# instance fields
+.field public final a:Ljava/lang/Runnable;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object p1, p0, Lgg5;->a:Ljava/lang/Runnable;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final A(Lts7;Ljava/lang/Object;)V
-    .locals 5
+.method public final g()V
+    .locals 1
 
-    check-cast p1, Lig5;
+    const/4 v0, 0x1
 
-    instance-of v0, p2, Lhg5;
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
+
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final run()V
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    check-cast p2, Lhg5;
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    if-eqz p2, :cond_6
-
-    iget-object p2, p2, Lx2;->b:Ljava/lang/Object;
-
-    check-cast p2, Ljava/util/BitSet;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v0
-
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x5
-
-    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    move-object v0, p0
-
-    check-cast v0, Lt82;
-
-    iget-object v1, p1, Lig5;->b:Landroid/net/Uri;
-
-    iget-object v2, p1, Lig5;->r0:Ljava/lang/CharSequence;
-
-    iget-wide v3, p1, Lig5;->a:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v2, v3}, Lt82;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Ljava/lang/Long;)V
-
-    :cond_2
     const/4 v0, 0x1
 
-    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
+    :try_start_0
+    iget-object v1, p0, Lgg5;->a:Ljava/lang/Runnable;
 
-    move-result v0
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v0, :cond_3
-
-    move-object v0, p0
-
-    check-cast v0, Lt82;
-
-    iget-boolean v1, p1, Lig5;->c:Z
-
-    invoke-virtual {v0, v1}, Lt82;->setOnline(Z)V
-
-    :cond_3
-    const/4 v0, 0x2
-
-    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    move-object v0, p0
-
-    check-cast v0, Lt82;
-
-    iget-object v1, p1, Lig5;->X:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Lt82;->setTitle(Ljava/lang/CharSequence;)V
-
-    :cond_4
-    const/4 v0, 0x3
-
-    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    move-object v0, p0
-
-    check-cast v0, Lt82;
-
-    iget-object v1, p1, Lig5;->Y:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Lt82;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    :cond_5
-    const/4 v0, 0x4
-
-    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
-
-    const/4 v0, 0x6
-
-    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_6
-
-    check-cast p0, Lt82;
-
-    iget-boolean p1, p1, Lig5;->o:Z
-
-    invoke-virtual {p0, p1}, Lt82;->setVerified(Z)V
-
-    :cond_6
-    return-void
-.end method
-
-.method public final F(Lig5;)V
-    .locals 4
-
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
-
-    check-cast p0, Lt82;
-
-    iget-wide v0, p1, Lig5;->a:J
-
-    const-wide/32 v2, 0x7fffffff
-
-    cmp-long v2, v0, v2
-
-    if-lez v2, :cond_0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v2
-
-    goto :goto_0
-
-    :cond_0
-    long-to-int v2, v0
-
-    :goto_0
-    invoke-virtual {p0, v2}, Landroid/view/View;->setId(I)V
-
-    iget-object v2, p1, Lig5;->X:Ljava/lang/CharSequence;
-
-    invoke-virtual {p0, v2}, Lt82;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v2, p1, Lig5;->Y:Ljava/lang/CharSequence;
-
-    invoke-virtual {p0, v2}, Lt82;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-object v2, p1, Lig5;->b:Landroid/net/Uri;
-
-    iget-object v3, p1, Lig5;->r0:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v2, v3, v0}, Lt82;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Ljava/lang/Long;)V
-
-    iget-boolean v0, p1, Lig5;->c:Z
-
-    invoke-virtual {p0, v0}, Lt82;->setOnline(Z)V
-
-    iget-boolean p1, p1, Lig5;->o:Z
-
-    invoke-virtual {p0, p1}, Lt82;->setVerified(Z)V
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
 
     return-void
-.end method
 
-.method public final bridge synthetic y(Lts7;)V
-    .locals 0
+    :catchall_0
+    move-exception v1
 
-    check-cast p1, Lig5;
+    :try_start_1
+    invoke-static {v1}, Liyi;->a(Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0, p1}, Lgg5;->F(Lig5;)V
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    return-void
+    :catchall_1
+    move-exception v1
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
+
+    throw v1
 .end method

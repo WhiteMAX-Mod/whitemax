@@ -26,11 +26,11 @@
 
 # virtual methods
 .method public getFieldTrialsString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, ""
+    const-string v0, ""
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public abstract onConnectionTypeChanged(Lorg/webrtc/NetworkChangeDetector$ConnectionType;)V

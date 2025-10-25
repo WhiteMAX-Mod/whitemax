@@ -1,33 +1,81 @@
 .class public final Lfx9;
-.super Ljava/lang/Object;
+.super Luj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public final X:Ljava/util/List;
 
-.field public b:Z
+.field public final b:J
 
-.field public c:Z
+.field public final c:Ljava/util/ArrayList;
 
-.field public d:Z
+.field public final o:Ljava/util/List;
 
-.field public e:I
 
-.field public f:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+# direct methods
+.method public constructor <init>(JJLjava/util/ArrayList;Ljava/util/List;Ljava/util/List;)V
+    .locals 0
 
-.field public g:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
 
-.field public h:I
+    iput-wide p3, p0, Lfx9;->b:J
 
-.field public i:I
+    iput-object p5, p0, Lfx9;->c:Ljava/util/ArrayList;
 
-.field public j:I
+    iput-object p6, p0, Lfx9;->o:Ljava/util/List;
 
-.field public k:I
+    iput-object p7, p0, Lfx9;->X:Ljava/util/List;
 
-.field public l:I
+    return-void
+.end method
 
-.field public m:Z
 
-.field public n:Lnzg;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MsgGetEvent{serverChatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lfx9;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", serverMessageIds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfx9;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", messages="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfx9;->o:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", requestedMessageIds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfx9;->X:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

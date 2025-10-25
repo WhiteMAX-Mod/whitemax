@@ -19,12 +19,12 @@
 
     invoke-super {p0, p1}, Landroid/view/View;->fitSystemWindows(Landroid/graphics/Rect;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
-.method public setOnFitSystemWindowsListener(Lsq5;)V
+.method public setOnFitSystemWindowsListener(Lfx5;)V
     .locals 0
 
     return-void

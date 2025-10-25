@@ -1,112 +1,61 @@
-.class public final synthetic Lil5;
+.class public final Lil5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc6;
 
-
-# instance fields
-.field public final synthetic a:Lkl5;
-
-.field public final synthetic b:Ld10;
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:Lxx8;
+# static fields
+.field public static final a:Lil5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkl5;Ld10;ZLxx8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lil5;
 
-    iput-object p1, p0, Lil5;->a:Lkl5;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lil5;->b:Ld10;
-
-    iput-boolean p3, p0, Lil5;->c:Z
-
-    iput-object p4, p0, Lil5;->d:Lxx8;
+    sput-object v0, Lil5;->a:Lil5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lil5;->a:Lkl5;
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Lkl5;->c:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Lkl5;->a()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    iget-object v2, v0, Lkl5;->g:Lcp5;
+    instance-of p1, p1, Lil5;
 
-    iget-object v3, p0, Lil5;->b:Ld10;
+    if-nez p1, :cond_1
 
-    invoke-virtual {v2, v3}, Lcp5;->h(Ld10;)Ljava/io/File;
+    const/4 p1, 0x0
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    iget-boolean v2, p0, Lil5;->c:Z
-
-    if-eqz v2, :cond_2
-
-    invoke-static {v3}, Lte2;->x(Ld10;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-static {v3}, Lte2;->z(Ld10;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
+    return p1
 
     :cond_1
-    :goto_0
-    return-void
+    return v0
+.end method
 
-    :cond_2
-    iget-object v2, v0, Lkl5;->a:Landroid/content/Context;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, v0, Lkl5;->b:Lswe;
+    const v0, -0x1b0269f
 
-    check-cast v0, Liad;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Liad;->n()Lsz8;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-object v0
+    const-string v0, "Removed"
 
-    iget-object v1, v1, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lr2b;
-
-    iget-object v1, v1, Lr2b;->a:Ljava/lang/Object;
-
-    check-cast v1, Lpe3;
-
-    check-cast v1, Lbfa;
-
-    invoke-virtual {v1}, Lbfa;->h()Lcp5;
-
-    move-result-object v1
-
-    iget-object p0, p0, Lil5;->d:Lxx8;
-
-    invoke-static {v2, p0, v3, v0, v1}, Lyu0;->B(Landroid/content/Context;Lxx8;Ld10;Lsz8;Lcp5;)V
-
-    return-void
+    return-object v0
 .end method

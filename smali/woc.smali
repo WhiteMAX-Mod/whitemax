@@ -1,19 +1,8 @@
-.class public final Lwoc;
-.super Lgoc;
-.source "SourceFile"
+.class public abstract Lwoc;
+.super Ljava/lang/Object;
 
 
-# virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
-    .locals 0
+# static fields
+.field public static is_pooling_container_tag:I = 0x7f0a040d
 
-    new-instance p0, Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
-
-    return-object p0
-.end method
+.field public static pooling_container_listener_holder_tag:I = 0x7f0a08ec

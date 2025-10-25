@@ -1,181 +1,162 @@
-.class public final synthetic Lcgg;
+.class public final Lcgg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxg6;
 
+# instance fields
+.field public final a:F
 
-# static fields
-.field public static final a:Lcgg;
+.field public final b:J
 
-.field private static final descriptor:Lqid;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(FJLjava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lcgg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lcgg;->a:F
 
-    sput-object v0, Lcgg;->a:Lcgg;
+    iput-wide p2, p0, Lcgg;->b:J
 
-    new-instance v1, Ljeb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryUnavailableResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Ljeb;-><init>(Ljava/lang/String;Lxg6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Ljeb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "available"
-
-    invoke-virtual {v1, v0, v2}, Ljeb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lcgg;->descriptor:Lqid;
+    iput-object p4, p0, Lcgg;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu8;)Ljava/lang/Object;
-    .locals 8
-
-    sget-object p0, Lcgg;->descriptor:Lqid;
-
-    invoke-virtual {p1, p0}, Lu8;->k(Lqid;)Lu8;
-
-    move-result-object p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcgg;
 
     const/4 v2, 0x0
 
-    move v3, v0
+    if-nez v1, :cond_1
 
-    move v4, v1
+    return v2
 
-    move v5, v4
+    :cond_1
+    check-cast p1, Lcgg;
 
-    :goto_0
-    if-eqz v3, :cond_3
+    iget v1, p0, Lcgg;->a:F
 
-    invoke-virtual {p1, p0}, Lu8;->q(Lqid;)I
+    iget v3, p1, Lcgg;->a:F
 
-    move-result v6
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
 
-    const/4 v7, -0x1
+    move-result v1
 
-    if-eq v6, v7, :cond_2
+    if-eqz v1, :cond_2
 
-    if-eqz v6, :cond_1
+    return v2
 
-    if-ne v6, v0, :cond_0
+    :cond_2
+    iget-wide v3, p0, Lcgg;->b:J
 
-    invoke-virtual {p1, p0, v0}, Lu8;->p(Lqid;I)Z
+    iget-wide v5, p1, Lcgg;->b:J
 
-    move-result v5
+    cmp-long v1, v3, v5
 
-    or-int/lit8 v4, v4, 0x2
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lcgg;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lcgg;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lcgg;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lcgg;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcgg;->c:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {p0, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    move-result v1
 
-    throw p0
+    :goto_0
+    add-int/2addr v0, v1
 
-    :cond_1
-    invoke-virtual {p1, p0, v1}, Lu8;->w(Lqid;I)Ljava/lang/String;
-
-    move-result-object v2
-
-    or-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v3, v1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, p0}, Lu8;->z(Lqid;)V
-
-    new-instance p0, Legg;
-
-    invoke-direct {p0, v2, v4, v5}, Legg;-><init>(Ljava/lang/String;IZ)V
-
-    return-object p0
+    return v0
 .end method
 
-.method public final b(Lay3;Ljava/lang/Object;)V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    check-cast p2, Legg;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object p0, Lcgg;->descriptor:Lqid;
+    const-string v1, "UploadState(progress="
 
-    invoke-virtual {p1, p0}, Lay3;->b(Lqid;)Lay3;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget v1, p0, Lcgg;->a:F
 
-    iget-object v0, p2, Legg;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v1, ", fileSize="
 
-    invoke-virtual {p1, p0, v1, v0}, Lay3;->l(Lqid;ILjava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    iget-wide v1, p0, Lcgg;->b:J
 
-    iget-boolean p2, p2, Legg;->b:Z
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p0, v0, p2}, Lay3;->e(Lqid;IZ)V
+    const-string v1, ", uploadToken="
 
-    invoke-virtual {p1}, Lay3;->m()V
+    const-string v2, ")"
 
-    return-void
-.end method
+    iget-object v3, p0, Lcgg;->c:Ljava/lang/String;
 
-.method public final c()[Lyi7;
-    .locals 2
+    invoke-static {v0, v1, v3, v2}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 p0, 0x2
+    move-result-object v0
 
-    new-array p0, p0, [Lyi7;
-
-    sget-object v0, Lfme;->a:Lfme;
-
-    const/4 v1, 0x0
-
-    aput-object v0, p0, v1
-
-    sget-object v0, Lzp0;->a:Lzp0;
-
-    const/4 v1, 0x1
-
-    aput-object v0, p0, v1
-
-    return-object p0
-.end method
-
-.method public final d()Lqid;
-    .locals 0
-
-    sget-object p0, Lcgg;->descriptor:Lqid;
-
-    return-object p0
+    return-object v0
 .end method

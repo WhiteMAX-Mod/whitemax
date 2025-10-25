@@ -1,64 +1,115 @@
-.class public final Lq1b;
+.class public abstract Lq1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lg89;
-
 
 # static fields
-.field public static final a:Lq1b;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lq1b;
+    sget v0, Lapc;->oneme_section_description:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lq1b;->a:I
 
-    sput-object v0, Lq1b;->a:Lq1b;
+    sget v0, Lapc;->oneme_section_end_arrow:I
+
+    sput v0, Lq1b;->b:I
+
+    sget v0, Lapc;->oneme_section_end_checkbox:I
+
+    sput v0, Lq1b;->c:I
+
+    sget v0, Lapc;->oneme_section_end_container:I
+
+    sput v0, Lq1b;->d:I
+
+    sget v0, Lapc;->oneme_section_end_custom_icon:I
+
+    sput v0, Lq1b;->e:I
+
+    sget v0, Lapc;->oneme_section_end_text:I
+
+    sput v0, Lq1b;->f:I
+
+    sget v0, Lapc;->oneme_section_start_icon:I
+
+    sput v0, Lq1b;->g:I
+
+    sget v0, Lapc;->oneme_section_title:I
+
+    sput v0, Lq1b;->h:I
+
+    sget v0, Lapc;->oneme_section_upper_text:I
+
+    sput v0, Lq1b;->i:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_container:I
+
+    sput v0, Lq1b;->j:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_counter:I
+
+    sput v0, Lq1b;->k:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_end_custom_icon:I
+
+    sput v0, Lq1b;->l:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_end_icon:I
+
+    sput v0, Lq1b;->m:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_end_radio:I
+
+    sput v0, Lq1b;->n:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_end_switch:I
+
+    sput v0, Lq1b;->o:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_end_text:I
+
+    sput v0, Lq1b;->p:I
+
+    sget v0, Lapc;->oneme_settingslist_rv:I
+
+    sput v0, Lq1b;->q:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lq1b;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, 0x3e66b1b7
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "PerformHaptic"
-
-    return-object p0
 .end method

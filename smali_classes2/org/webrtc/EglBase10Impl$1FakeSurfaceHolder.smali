@@ -45,45 +45,45 @@
 .end method
 
 .method public getSurface()Landroid/view/Surface;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/EglBase10Impl$1FakeSurfaceHolder;->surface:Landroid/view/Surface;
+    iget-object v0, p0, Lorg/webrtc/EglBase10Impl$1FakeSurfaceHolder;->surface:Landroid/view/Surface;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSurfaceFrame()Landroid/graphics/Rect;
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public isCreating()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public lockCanvas()Landroid/graphics/Canvas;
-    .locals 0
+    .locals 1
 
     .line 1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public lockCanvas(Landroid/graphics/Rect;)Landroid/graphics/Canvas;
     .locals 0
 
     .line 2
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public removeCallback(Landroid/view/SurfaceHolder$Callback;)V

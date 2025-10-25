@@ -1,195 +1,83 @@
 .class public final Lrm6;
-.super Lcze;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final e0:Lrm6;
+# instance fields
+.field public final synthetic a:Lan6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 47
+.method public constructor <init>(Lan6;)V
+    .locals 0
 
-    new-instance v0, Lrm6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide v1, 0xff697cffL
+    iput-object p1, p0, Lrm6;->a:Lan6;
 
-    long-to-int v4, v1
+    return-void
+.end method
 
-    const-wide v1, 0xffffffffL
 
-    long-to-int v5, v1
+# virtual methods
+.method public final a(Lq0e;)V
+    .locals 2
 
-    const-wide v1, 0xff262626L
+    const-string v0, "an6"
 
-    long-to-int v6, v1
+    const-string v1, "onMediaDeselect()"
 
-    const-wide v1, 0xff6988e0L
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    long-to-int v8, v1
+    iget-object v0, p0, Lrm6;->a:Lan6;
 
-    const-wide v1, 0xff2d2d2dL
+    iget-boolean v1, v0, Lan6;->E0:Z
 
-    long-to-int v9, v1
+    if-eqz v1, :cond_0
 
-    const-wide v1, 0xff626262L
+    return-void
 
-    long-to-int v10, v1
+    :cond_0
+    iget-object p1, p1, Lq0e;->a:Ld68;
 
-    const-wide v1, 0xff232323L
+    invoke-static {p1}, Lfei;->e(Ld68;)Lj68;
 
-    long-to-int v12, v1
+    move-result-object p1
 
-    const-wide v1, 0xff000000L
+    const/4 v1, 0x0
 
-    long-to-int v14, v1
+    invoke-virtual {v0, p1, v1}, Lan6;->v(Lj68;Z)I
 
-    const-wide v1, 0xff848484L
+    return-void
+.end method
 
-    long-to-int v15, v1
+.method public final b(Lq0e;)V
+    .locals 2
 
-    const-wide v1, 0xff1c1c1cL
+    const-string v0, "an6"
 
-    long-to-int v1, v1
+    const-string v1, "onMediaSelect()"
 
-    const-wide v2, 0xffff3f3fL
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    long-to-int v2, v2
+    iget-object v0, p0, Lrm6;->a:Lan6;
 
-    move-object/from16 v46, v0
+    iget-boolean v1, v0, Lan6;->E0:Z
 
-    move/from16 v17, v1
+    if-eqz v1, :cond_0
 
-    const-wide v0, 0xfffbc03dL
+    return-void
 
-    long-to-int v0, v0
+    :cond_0
+    iget-object p1, p1, Lq0e;->a:Ld68;
 
-    move/from16 v19, v0
+    invoke-static {p1}, Lfei;->e(Ld68;)Lj68;
 
-    const-wide v0, 0xffaaaaaaL
+    move-result-object p1
 
-    long-to-int v0, v0
+    const/4 v1, 0x0
 
-    move/from16 v29, v0
-
-    const-wide v0, 0xff333333L
-
-    long-to-int v0, v0
-
-    move/from16 v30, v0
-
-    const-wide v0, 0xffe4e4e4L
-
-    long-to-int v0, v0
-
-    move v3, v0
-
-    const-wide v0, 0xff444444L
-
-    long-to-int v0, v0
-
-    move v7, v0
-
-    const-wide v0, 0xff28972bL
-
-    long-to-int v0, v0
-
-    move v1, v3
-
-    new-instance v3, Ln83;
-
-    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v41
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v42
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v43
-
-    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v44
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v45
-
-    move v7, v5
-
-    move v11, v5
-
-    move v13, v5
-
-    move/from16 v16, v5
-
-    move/from16 v20, v9
-
-    move/from16 v21, v6
-
-    move/from16 v22, v9
-
-    move/from16 v23, v6
-
-    move/from16 v24, v9
-
-    move/from16 v25, v5
-
-    move/from16 v26, v17
-
-    move/from16 v27, v17
-
-    move/from16 v28, v9
-
-    move/from16 v31, v9
-
-    move/from16 v32, v29
-
-    move/from16 v33, v6
-
-    move/from16 v35, v15
-
-    move/from16 v36, v5
-
-    move/from16 v37, v5
-
-    move/from16 v38, v12
-
-    move/from16 v39, v10
-
-    move/from16 v40, v30
-
-    move/from16 v34, v0
-
-    move/from16 v18, v2
-
-    invoke-direct/range {v3 .. v45}, Ln83;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    sget-object v7, Lsh9;->X:Lms0;
-
-    sget-object v8, Lsh9;->o:Lms0;
-
-    const/4 v4, 0x1
-
-    const-string v5, "GRAPHITE"
-
-    const-string v1, "TamTam Dark Contrast"
-
-    const-string v2, "TamTam Team"
-
-    move-object v6, v3
-
-    const/4 v3, 0x1
-
-    move-object/from16 v0, v46
-
-    invoke-direct/range {v0 .. v8}, Lcze;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Ln83;Lms0;Lms0;)V
-
-    sput-object v0, Lrm6;->e0:Lrm6;
+    invoke-virtual {v0, p1, v1}, Lan6;->v(Lj68;Z)I
 
     return-void
 .end method

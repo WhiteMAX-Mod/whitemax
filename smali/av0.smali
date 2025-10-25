@@ -1,122 +1,73 @@
-.class public final Lav0;
-.super Ljava/lang/Object;
+.class public final enum Lav0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lbcf;
 
+# static fields
+.field public static final enum a:Lav0;
 
-# instance fields
-.field public final a:I
+.field public static final enum b:Lav0;
 
-.field public final b:Lx46;
-
-.field public final c:Lip4;
-
-.field public d:Lx46;
-
-.field public e:Lbcf;
-
-.field public f:J
+.field public static final synthetic c:[Lav0;
 
 
 # direct methods
-.method public constructor <init>(IILx46;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p2, p0, Lav0;->a:I
-
-    iput-object p3, p0, Lav0;->b:Lx46;
-
-    new-instance p1, Lip4;
-
-    invoke-direct {p1}, Lip4;-><init>()V
-
-    iput-object p1, p0, Lav0;->c:Lip4;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(JIIILzbf;)V
+.method static constructor <clinit>()V
     .locals 4
 
-    iget-wide v0, p0, Lav0;->f:J
+    new-instance v0, Lav0;
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+    const-string v1, "ACTIVE"
 
-    cmp-long v2, v0, v2
+    const/4 v2, 0x0
 
-    if-eqz v2, :cond_0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    cmp-long v0, p1, v0
+    sput-object v0, Lav0;->a:Lav0;
 
-    if-ltz v0, :cond_0
+    new-instance v1, Lav0;
 
-    iget-object v0, p0, Lav0;->c:Lip4;
+    const-string v2, "INACTIVE"
 
-    iput-object v0, p0, Lav0;->e:Lbcf;
+    const/4 v3, 0x1
 
-    :cond_0
-    iget-object p0, p0, Lav0;->e:Lbcf;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lnrf;->a:I
+    sput-object v1, Lav0;->b:Lav0;
 
-    invoke-interface/range {p0 .. p6}, Lbcf;->a(JIIILzbf;)V
+    filled-new-array {v0, v1}, [Lav0;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final b(Lcya;II)V
-    .locals 0
-
-    iget-object p0, p0, Lav0;->e:Lbcf;
-
-    sget p3, Lnrf;->a:I
-
-    const/4 p3, 0x0
-
-    invoke-interface {p0, p1, p2, p3}, Lbcf;->b(Lcya;II)V
+    sput-object v0, Lav0;->c:[Lav0;
 
     return-void
 .end method
 
-.method public final c(Ly64;IZ)I
+.method public static valueOf(Ljava/lang/String;)Lav0;
     .locals 1
 
-    iget-object p0, p0, Lav0;->e:Lbcf;
+    const-class v0, Lav0;
 
-    sget v0, Lnrf;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-interface {p0, p1, p2, p3}, Lbcf;->c(Ly64;IZ)I
+    move-result-object p0
 
-    move-result p0
+    check-cast p0, Lav0;
 
-    return p0
+    return-object p0
 .end method
 
-.method public final d(Lx46;)V
+.method public static values()[Lav0;
     .locals 1
 
-    iget-object v0, p0, Lav0;->b:Lx46;
+    sget-object v0, Lav0;->c:[Lav0;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, [Lav0;->clone()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Lx46;->d(Lx46;)Lx46;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, [Lav0;
 
-    :cond_0
-    iput-object p1, p0, Lav0;->d:Lx46;
-
-    iget-object p0, p0, Lav0;->e:Lbcf;
-
-    sget v0, Lnrf;->a:I
-
-    invoke-interface {p0, p1}, Lbcf;->d(Lx46;)V
-
-    return-void
+    return-object v0
 .end method

@@ -57,7 +57,7 @@
 
 # virtual methods
 .method public add(Lorg/apache/http/HttpConnection;JLjava/util/concurrent/TimeUnit;)V
-    .locals 6
+    .locals 7
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -92,7 +92,7 @@
     invoke-interface {v3, v0}, Lorg/apache/commons/logging/Log;->debug(Ljava/lang/Object;)V
 
     :cond_0
-    iget-object p0, p0, Lorg/apache/http/impl/conn/IdleConnectionHandler;->connectionToTimes:Ljava/util/Map;
+    iget-object v6, p0, Lorg/apache/http/impl/conn/IdleConnectionHandler;->connectionToTimes:Ljava/util/Map;
 
     new-instance v0, Lorg/apache/http/impl/conn/IdleConnectionHandler$TimeValues;
 
@@ -102,7 +102,7 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/apache/http/impl/conn/IdleConnectionHandler$TimeValues;-><init>(JJLjava/util/concurrent/TimeUnit;)V
 
-    invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v6, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -360,7 +360,7 @@
 .end method
 
 .method public remove(Lorg/apache/http/HttpConnection;)Z
-    .locals 3
+    .locals 5
 
     iget-object v0, p0, Lorg/apache/http/impl/conn/IdleConnectionHandler;->connectionToTimes:Ljava/util/Map;
 
@@ -374,11 +374,11 @@
 
     if-nez p1, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/IdleConnectionHandler;->log:Lorg/apache/commons/logging/Log;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/IdleConnectionHandler;->log:Lorg/apache/commons/logging/Log;
 
-    const-string p1, "Removing a connection that never existed!"
+    const-string v1, "Removing a connection that never existed!"
 
-    invoke-interface {p0, p1}, Lorg/apache/commons/logging/Log;->warn(Ljava/lang/Object;)V
+    invoke-interface {p1, v1}, Lorg/apache/commons/logging/Log;->warn(Ljava/lang/Object;)V
 
     return v0
 
@@ -389,26 +389,26 @@
 
     invoke-static {p1}, Lorg/apache/http/impl/conn/IdleConnectionHandler$TimeValues;->access$000(Lorg/apache/http/impl/conn/IdleConnectionHandler$TimeValues;)J
 
-    move-result-wide p0
+    move-result-wide v3
 
-    cmp-long p0, v1, p0
+    cmp-long p1, v1, v3
 
-    if-gtz p0, :cond_1
+    if-gtz p1, :cond_1
 
     return v0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public removeAll()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/IdleConnectionHandler;->connectionToTimes:Ljava/util/Map;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/IdleConnectionHandler;->connectionToTimes:Ljava/util/Map;
 
-    invoke-interface {p0}, Ljava/util/Map;->clear()V
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     return-void
 .end method

@@ -71,7 +71,7 @@
     const/4 v0, 0x0
 
     .line 5
-    invoke-direct {p0, p4, p5, p6, v0}, Lone/me/rlottie/RLottieFactory$Way;-><init>(IIZLld4;)V
+    invoke-direct {p0, p4, p5, p6, v0}, Lone/me/rlottie/RLottieFactory$Way;-><init>(IIZLki4;)V
 
     .line 6
     iput-object p1, p0, Lone/me/rlottie/RLottieFactory$Way$Asset;->context:Landroid/content/Context;
@@ -85,7 +85,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IIZILld4;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IIZILki4;)V
     .locals 0
 
     and-int/lit8 p8, p7, 0x4
@@ -130,9 +130,23 @@
 
     move-result p6
 
-    .line 4
     :cond_3
-    invoke-direct/range {p0 .. p6}, Lone/me/rlottie/RLottieFactory$Way$Asset;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IIZ)V
+    move p7, p6
+
+    move p6, p5
+
+    move p5, p4
+
+    move-object p4, p3
+
+    move-object p3, p2
+
+    move-object p2, p1
+
+    move-object p1, p0
+
+    .line 4
+    invoke-direct/range {p1 .. p7}, Lone/me/rlottie/RLottieFactory$Way$Asset;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IIZ)V
 
     return-void
 .end method
@@ -140,25 +154,25 @@
 
 # virtual methods
 .method public final getAssetsRes$rlottie_release()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieFactory$Way$Asset;->assetsRes:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$Asset;->assetsRes:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getCacheName$rlottie_release()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieFactory$Way$Asset;->cacheName:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$Asset;->cacheName:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getContext$rlottie_release()Landroid/content/Context;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieFactory$Way$Asset;->context:Landroid/content/Context;
+    iget-object v0, p0, Lone/me/rlottie/RLottieFactory$Way$Asset;->context:Landroid/content/Context;
 
-    return-object p0
+    return-object v0
 .end method

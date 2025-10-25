@@ -14,16 +14,18 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/Surface;)Lw9d;
+.method public static a(Landroid/view/Surface;)Leu9;
     .locals 2
 
     invoke-static {p0}, Landroidx/camera/core/impl/utils/SurfaceUtil;->nativeGetSurfaceInfo(Landroid/view/Surface;)[I
 
     move-result-object p0
 
-    new-instance v0, Lw9d;
+    new-instance v0, Leu9;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Leu9;-><init>(I)V
 
     const/4 v1, 0x0
 

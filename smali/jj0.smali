@@ -1,80 +1,341 @@
-.class public final Ljj0;
-.super Lzh9;
+.class public abstract Ljj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
+# instance fields
+.field public a:Z
+
+
+# direct methods
+.method public constructor <init>()V
     .locals 1
 
-    iget p0, p1, Landroid/os/Message;->what:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Ljj0;->a:Z
+
+    return-void
+.end method
+
+.method public static a(I)Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_1
+    and-int/2addr p0, v0
 
-    const/4 v0, 0x2
+    if-ne p0, v0, :cond_0
 
-    if-eq p0, v0, :cond_0
+    return v0
 
-    const-string p1, "Don\'t know how to handle message: "
+    :cond_0
+    const/4 p0, 0x0
 
-    invoke-static {p0, p1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    return p0
+.end method
 
-    move-result-object p0
+.method public static b(I)Z
+    .locals 0
 
-    new-instance p1, Ljava/lang/Exception;
+    invoke-static {p0}, Ljj0;->a(I)Z
 
-    invoke-direct {p1}, Ljava/lang/Exception;-><init>()V
+    move-result p0
 
-    const-string v0, "BasePendingResult"
+    xor-int/lit8 p0, p0, 0x1
 
-    invoke-static {v0, p0, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    return p0
+.end method
+
+.method public static l(II)Z
+    .locals 0
+
+    and-int/2addr p0, p1
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final declared-synchronized c()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Ljj0;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
 
     return-void
 
     :cond_0
-    iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;
+    :try_start_1
+    iput-boolean v0, p0, Ljj0;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->r0:Lcom/google/android/gms/common/api/Status;
+    :try_start_2
+    invoke-virtual {p0}, Ljj0;->d()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->b0(Lcom/google/android/gms/common/api/Status;)V
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    :try_start_3
+    invoke-virtual {p0, v0}, Ljj0;->k(Ljava/lang/Exception;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_0
+    monitor-exit p0
 
     return-void
 
-    :cond_1
-    iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    :goto_1
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    check-cast p0, Landroid/util/Pair;
+    throw v0
+.end method
 
-    iget-object p1, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
+.method public abstract d()V
+.end method
 
-    if-nez p1, :cond_2
+.method public final declared-synchronized e(Ljava/lang/Throwable;)V
+    .locals 1
 
-    iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast p0, Llvc;
-
-    const/4 p0, 0x0
+    monitor-enter p0
 
     :try_start_0
-    throw p0
+    iget-boolean v0, p0, Ljj0;->a:Z
     :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :try_start_1
+    iput-boolean v0, p0, Ljj0;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    invoke-virtual {p0, p1}, Ljj0;->f(Ljava/lang/Throwable;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    sget-object p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->q:Ldv0;
+    :try_start_3
+    invoke-virtual {p0, p1}, Ljj0;->k(Ljava/lang/Exception;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    throw p0
+    :goto_0
+    monitor-exit p0
 
-    :cond_2
-    new-instance p0, Ljava/lang/ClassCastException;
+    return-void
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    :goto_1
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    throw p0
+    throw p1
+.end method
+
+.method public abstract f(Ljava/lang/Throwable;)V
+.end method
+
+.method public final declared-synchronized g(ILjava/lang/Object;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Ljj0;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    invoke-static {p1}, Ljj0;->a(I)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Ljj0;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    invoke-virtual {p0, p1, p2}, Ljj0;->h(ILjava/lang/Object;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    :try_start_3
+    invoke-virtual {p0, p1}, Ljj0;->k(Ljava/lang/Exception;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw p1
+.end method
+
+.method public abstract h(ILjava/lang/Object;)V
+.end method
+
+.method public final declared-synchronized i(F)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Ljj0;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    invoke-virtual {p0, p1}, Ljj0;->j(F)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    :try_start_2
+    invoke-virtual {p0, p1}, Ljj0;->k(Ljava/lang/Exception;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p1
+.end method
+
+.method public abstract j(F)V
+.end method
+
+.method public final k(Ljava/lang/Exception;)V
+    .locals 3
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    sget-object v1, Lem5;->a:Lr98;
+
+    const/4 v2, 0x6
+
+    invoke-interface {v1, v2}, Lr98;->h(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v1, Lem5;->a:Lr98;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v1, p1, v0}, Lr98;->f(Ljava/lang/Exception;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
 .end method

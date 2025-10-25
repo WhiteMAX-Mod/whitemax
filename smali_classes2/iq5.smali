@@ -3,222 +3,200 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnob;
+.implements Lq0f;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Ljq5;
 
-.field public final b:Lu83;
+.field public final synthetic b:Lru/ok/tamtam/android/prefs/PmsKey;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lu83;)V
+.method public constructor <init>(Ljq5;Lru/ok/tamtam/android/prefs/PmsKey;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Liq5;->a:Ljava/lang/String;
+    iput-object p1, p0, Liq5;->a:Ljq5;
 
-    iput-object p2, p0, Liq5;->b:Lu83;
+    iput-object p2, p0, Liq5;->b:Lru/ok/tamtam/android/prefs/PmsKey;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final b()Ljava/util/List;
+    .locals 1
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Liq5;->f()Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v0
 
-    return v0
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    :cond_0
-    instance-of v1, p1, Liq5;
+    move-result-object v0
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Liq5;
-
-    iget-object v1, p0, Liq5;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Liq5;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object p0, p0, Liq5;->b:Lu83;
-
-    iget-object p1, p1, Liq5;->b:Lu83;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object v0
 .end method
 
-.method public final getItemId()J
-    .locals 2
+.method public final d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 5
 
-    const/4 p0, 0x1
+    instance-of v0, p2, Lfq5;
 
-    int-to-long v0, p0
+    if-eqz v0, :cond_0
 
-    return-wide v0
-.end method
+    move-object v0, p2
 
-.method public final h(Lts7;)Z
-    .locals 4
+    check-cast v0, Lfq5;
 
-    const/4 p0, 0x1
+    iget v1, v0, Lfq5;->X:I
 
-    int-to-long v0, p0
+    const/high16 v2, -0x80000000
 
-    invoke-interface {p1}, Lts7;->getItemId()J
+    and-int v3, v1, v2
 
-    move-result-wide v2
+    if-eqz v3, :cond_0
 
-    cmp-long p1, v0, v2
+    sub-int/2addr v1, v2
 
-    if-nez p1, :cond_0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Liq5;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
+    iput v1, v0, Lfq5;->X:I
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    new-instance v0, Lfq5;
 
-    move-result v1
+    invoke-direct {v0, p0, p2}, Lfq5;-><init>(Liq5;Lkotlin/coroutines/Continuation;)V
 
     :goto_0
-    mul-int/lit8 v1, v1, 0x1f
+    iget-object p2, v0, Lfq5;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Liq5;->b:Lu83;
+    iget v1, v0, Lfq5;->X:I
 
-    if-nez p0, :cond_1
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-eq v1, v2, :cond_1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p2}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-static {p2}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p2, p0, Liq5;->a:Ljq5;
+
+    iget-object p2, p2, Lw3;->f:Lnje;
+
+    new-instance v1, Lgq5;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v4, v3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    new-instance v3, Liz5;
+
+    invoke-direct {v3, v1, p2}, Liz5;-><init>(Lzi6;Lty5;)V
+
+    iput v2, v0, Lfq5;->X:I
+
+    new-instance p2, Ls3;
+
+    const/16 v1, 0x13
+
+    invoke-direct {p2, p1, v1, p0}, Ls3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v3, p2, v0}, Liz5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_3
 
     goto :goto_1
 
-    :cond_1
-    iget-object p0, p0, Lu83;->a:Ljava/util/List;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    :cond_3
+    sget-object p1, Lccg;->a:Lccg;
 
     :goto_1
-    add-int/2addr v1, v0
+    if-ne p1, p2, :cond_4
 
-    return v1
+    return-object p2
+
+    :cond_4
+    :goto_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "StateFlow collection never ends"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final k(Lts7;)Ljava/lang/Object;
-    .locals 0
+.method public final f()Ljava/lang/Object;
+    .locals 4
 
-    instance-of p0, p1, Liq5;
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    if-nez p0, :cond_0
+    iget-object v1, p0, Liq5;->a:Ljq5;
 
-    const/4 p0, 0x0
+    iget-object v2, p0, Liq5;->b:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    return-object p0
+    invoke-virtual {v1, v2}, Lutd;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    new-instance p0, Ldpb;
+    iget-object v1, v1, Lutd;->i:Lwtd;
 
-    check-cast p1, Liq5;
+    :goto_0
+    iget-object v1, v1, Lw3;->h:Llu7;
 
-    iget-object p1, p1, Liq5;->b:Lu83;
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    invoke-direct {p0, p1}, Ldpb;-><init>(Lu83;)V
+    move-result-object v2
 
-    return-object p0
+    const-class v3, Ljava/lang/Boolean;
+
+    invoke-static {v3}, Lz7d;->a(Ljava/lang/Class;)Lh73;
+
+    move-result-object v3
+
+    invoke-static {v1, v2, v0, v3}, Lzzi;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lh73;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final m()I
-    .locals 0
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
 
-    const/4 p0, 0x1
+    invoke-virtual {p0}, Liq5;->f()Ljava/lang/Object;
 
-    return p0
-.end method
+    move-result-object v0
 
-.method public final q(Lts7;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Liq5;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "FirstNameItem(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Liq5;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", errorText="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Liq5;->b:Lu83;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

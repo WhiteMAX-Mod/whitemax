@@ -69,27 +69,27 @@
 
     iput-object p3, p0, Lcom/my/tracker/obfuscated/a;->f:Landroid/app/Application;
 
-    new-instance p1, Lwyg;
+    new-instance p1, Lwrh;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p0, p2}, Lwyg;-><init>(Lcom/my/tracker/obfuscated/a;I)V
+    invoke-direct {p1, p0, p2}, Lwrh;-><init>(Lcom/my/tracker/obfuscated/a;I)V
 
     iput-object p1, p0, Lcom/my/tracker/obfuscated/a;->g:Ljava/lang/Runnable;
 
-    new-instance p1, Lwyg;
+    new-instance p1, Lwrh;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, p0, p2}, Lwyg;-><init>(Lcom/my/tracker/obfuscated/a;I)V
+    invoke-direct {p1, p0, p2}, Lwrh;-><init>(Lcom/my/tracker/obfuscated/a;I)V
 
     iput-object p1, p0, Lcom/my/tracker/obfuscated/a;->h:Ljava/lang/Runnable;
 
-    new-instance p1, Lwyg;
+    new-instance p1, Lwrh;
 
     const/4 p2, 0x2
 
-    invoke-direct {p1, p0, p2}, Lwyg;-><init>(Lcom/my/tracker/obfuscated/a;I)V
+    invoke-direct {p1, p0, p2}, Lwrh;-><init>(Lcom/my/tracker/obfuscated/a;I)V
 
     iput-object p1, p0, Lcom/my/tracker/obfuscated/a;->i:Ljava/lang/Runnable;
 
@@ -421,9 +421,9 @@
     iput-wide v0, p0, Lcom/my/tracker/obfuscated/a;->j:J
 
     .line 7
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/a;->i:Ljava/lang/Runnable;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/a;->i:Ljava/lang/Runnable;
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 
     :cond_1
     :goto_0
@@ -434,11 +434,11 @@
     .locals 2
 
     .line 3
-    new-instance v0, Lrvg;
+    new-instance v0, Ltlg;
 
-    const/4 v1, 0x7
+    const/16 v1, 0x15
 
-    invoke-direct {v0, p0, v1, p1}, Lrvg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Ltlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->b(Ljava/lang/Runnable;)V
 
@@ -459,9 +459,9 @@
     return-void
 
     :cond_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/a;->h:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/a;->h:Ljava/lang/Runnable;
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/h;->b(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->b(Ljava/lang/Runnable;)V
 
     return-void
 .end method

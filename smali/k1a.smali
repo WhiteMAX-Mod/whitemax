@@ -1,25 +1,19 @@
-.class public abstract Lk1a;
-.super Ljava/lang/Object;
+.class public final Lk1a;
+.super Lalf;
 .source "SourceFile"
 
 
 # direct methods
-.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
-    .locals 0
+.method public static a()Lk1a;
+    .locals 2
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAuthenticationRequired(Z)Landroid/app/Notification$Action$Builder;
+    new-instance v0, Lk1a;
 
-    move-result-object p0
+    new-instance v1, Landroid/util/ArrayMap;
 
-    return-object p0
-.end method
+    invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
-.method public static b(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
-    .locals 0
+    invoke-direct {v0, v1}, Lalf;-><init>(Landroid/util/ArrayMap;)V
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setForegroundServiceBehavior(I)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

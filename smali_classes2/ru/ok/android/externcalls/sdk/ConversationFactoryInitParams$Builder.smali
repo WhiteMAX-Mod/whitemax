@@ -60,26 +60,26 @@
 
 # virtual methods
 .method public final build()Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;
-    .locals 2
+    .locals 3
 
     new-instance v0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;->context:Landroid/content/Context;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;->peerConnection:Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;->peerConnection:Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;
 
-    if-nez p0, :cond_0
+    if-nez v2, :cond_0
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+    new-instance v2, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;-><init>()V
+    invoke-direct {v2}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;-><init>()V
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->build()Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->build()Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;
 
-    move-result-object p0
+    move-result-object v2
 
     :cond_0
-    invoke-direct {v0, v1, p0}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;-><init>(Landroid/content/Context;Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;)V
+    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;-><init>(Landroid/content/Context;Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;)V
 
     return-object v0
 .end method

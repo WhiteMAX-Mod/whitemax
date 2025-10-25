@@ -1,166 +1,232 @@
-.class public abstract Lao8;
-.super Ljava/lang/Object;
+.class public final Lao8;
+.super Landroid/os/Handler;
 .source "SourceFile"
-
-# interfaces
-.implements Lyn8;
 
 
 # instance fields
-.field public final a:Landroid/media/session/MediaSession;
+.field public final synthetic a:I
 
-.field public final b:Lzn8;
+.field public b:Ljava/lang/Object;
 
-.field public final c:Leo8;
-
-.field public final d:Ljava/lang/Object;
-
-.field public final e:Landroid/os/Bundle;
-
-.field public final f:Landroid/os/RemoteCallbackList;
-
-.field public g:Lgcb;
-
-.field public h:Ljava/util/List;
-
-.field public i:Lnj8;
-
-.field public j:I
-
-.field public k:I
-
-.field public l:Lkd8;
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 2
+.method public constructor <init>(Lco8;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/lang/Object;
+    iput v0, p0, Lao8;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lao8;->d:Ljava/lang/Object;
+    .line 2
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    new-instance v0, Landroid/os/RemoteCallbackList;
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
+    iput-object v0, p0, Lao8;->b:Ljava/lang/Object;
 
-    iput-object v0, p0, Lao8;->f:Landroid/os/RemoteCallbackList;
+    return-void
+.end method
 
-    invoke-virtual {p0, p1, p2, p3}, Lao8;->b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
+.method public constructor <init>(Lj09;Landroid/os/Looper;)V
+    .locals 1
 
-    move-result-object p1
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lao8;->a:Landroid/media/session/MediaSession;
+    iput v0, p0, Lao8;->a:I
 
-    new-instance p2, Lzn8;
+    .line 3
+    iput-object p1, p0, Lao8;->c:Ljava/lang/Object;
 
-    move-object v0, p0
-
-    check-cast v0, Lbo8;
-
-    invoke-direct {p2, v0}, Lzn8;-><init>(Lbo8;)V
-
-    iput-object p2, p0, Lao8;->b:Lzn8;
-
-    new-instance v0, Leo8;
-
-    invoke-virtual {p1}, Landroid/media/session/MediaSession;->getSessionToken()Landroid/media/session/MediaSession$Token;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p2}, Leo8;-><init>(Ljava/lang/Object;Lfy6;)V
-
-    iput-object v0, p0, Lao8;->c:Leo8;
-
-    iput-object p3, p0, Lao8;->e:Landroid/os/Bundle;
-
-    const/4 p0, 0x3
-
-    invoke-virtual {p1, p0}, Landroid/media/session/MediaSession;->setFlags(I)V
+    .line 4
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
-.end method
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 8
 
-.method public final c(Lkd8;Landroid/os/Handler;)V
-    .locals 3
+    iget v0, p0, Lao8;->a:I
 
-    iget-object v0, p0, Lao8;->d:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    monitor-enter v0
-
-    :try_start_0
-    iput-object p1, p0, Lao8;->l:Lkd8;
-
-    iget-object v1, p0, Lao8;->a:Landroid/media/session/MediaSession;
-
-    if-nez p1, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v2, p1, Lkd8;->b:Ljava/lang/Object;
-
-    check-cast v2, Lxn8;
-
-    :goto_0
-    invoke-virtual {v1, v2, p2}, Landroid/media/session/MediaSession;->setCallback(Landroid/media/session/MediaSession$Callback;Landroid/os/Handler;)V
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1, p0, p2}, Lkd8;->I(Lyn8;Landroid/os/Handler;)V
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_2
-
-    :cond_1
-    :goto_1
-    monitor-exit v0
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     return-void
 
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :pswitch_0
+    const-string v0, "MediaBrowserCompat"
 
-    throw p0
-.end method
+    const-string v1, "\n  Client version: 1\n  Service version: "
 
-.method public final getCallback()Lkd8;
-    .locals 1
+    const-string v2, "Unhandled message: "
 
-    iget-object v0, p0, Lao8;->d:Ljava/lang/Object;
+    iget-object v3, p0, Lao8;->c:Ljava/lang/Object;
 
-    monitor-enter v0
+    check-cast v3, Ljava/lang/ref/WeakReference;
+
+    if-nez v3, :cond_0
+
+    goto/16 :goto_1
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/os/Messenger;
+
+    iget-object v4, p0, Lao8;->b:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v4}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lco8;
+
+    if-eqz v3, :cond_6
+
+    if-nez v4, :cond_1
+
+    goto/16 :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+
+    move-result-object v5
+
+    invoke-static {v5}, Ld09;->q(Landroid/os/Bundle;)V
 
     :try_start_0
-    iget-object p0, p0, Lao8;->l:Lkd8;
+    iget v6, p1, Landroid/os/Message;->what:I
 
-    monitor-exit v0
+    const/4 v7, 0x3
 
-    return-object p0
+    if-eq v6, v7, :cond_2
 
-    :catchall_0
-    move-exception p0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    monitor-exit v0
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p1, p1, Landroid/os/Message;->arg1:I
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_2
+    const-string p1, "data_options"
+
+    invoke-virtual {v5, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ld09;->q(Landroid/os/Bundle;)V
+
+    const-string p1, "data_notify_children_changed_options"
+
+    invoke-virtual {v5, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ld09;->q(Landroid/os/Bundle;)V
+
+    const-string p1, "data_media_item_id"
+
+    invoke-virtual {v5, p1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "data_media_item_list"
+
+    invoke-virtual {v5, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    sget-object v2, Ldo8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {v1, v2}, Llv7;->b(Ljava/util/List;Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
+
+    iget-object v1, v4, Lco8;->g:Landroid/os/Messenger;
+
+    if-eq v1, v3, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    if-nez p1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v1, v4, Lco8;->e:Let;
+
+    invoke-virtual {v1, p1}, Lzoe;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_5
+
+    :goto_0
+    sget-boolean v1, Leo8;->b:Z
+
+    if-eqz v1, :cond_6
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "onLoadChildren for id that isn\'t subscribed id="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_5
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Landroid/os/BadParcelableException; {:try_start_0 .. :try_end_0} :catch_0
 
-    throw p0
+    :catch_0
+    const-string p1, "Could not unparcel the data."
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_6
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -127,7 +127,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto/16 :goto_4
 
@@ -384,7 +384,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/ByteBuffer;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/nio/ByteBuffer;
 
     iget-object p1, p0, Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->this$0:Lorg/webrtc/audio/WebRtcAudioRecord;
 
@@ -438,9 +442,9 @@
 
     iput-boolean v3, p0, Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->keepAlive:Z
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->this$0:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->this$0:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    invoke-static {p0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->q(Lorg/webrtc/audio/WebRtcAudioRecord;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->q(Lorg/webrtc/audio/WebRtcAudioRecord;Ljava/lang/String;)V
 
     :cond_7
     :goto_3
@@ -452,7 +456,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 .method private trySendDeviceAudioSamples(Landroid/media/AudioTimestamp;)V
@@ -564,7 +568,7 @@
     :catchall_0
     move-exception v0
 
-    move-object p0, v0
+    move-object p1, v0
 
     goto :goto_2
 
@@ -656,9 +660,9 @@
 
     if-ne v5, v2, :cond_5
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->this$0:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->this$0:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    invoke-static {p0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->q(Lorg/webrtc/audio/WebRtcAudioRecord;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lorg/webrtc/audio/WebRtcAudioRecord;->q(Lorg/webrtc/audio/WebRtcAudioRecord;Ljava/lang/String;)V
 
     :cond_5
     :goto_1
@@ -670,7 +674,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -732,7 +736,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_3
 
@@ -844,9 +848,9 @@
 
     invoke-static {v0, v3}, Lorg/webrtc/audio/WebRtcAudioRecord;->n(Lorg/webrtc/audio/WebRtcAudioRecord;Z)V
 
-    iget-object p0, p0, Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->this$0:Lorg/webrtc/audio/WebRtcAudioRecord;
+    iget-object v0, p0, Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->this$0:Lorg/webrtc/audio/WebRtcAudioRecord;
 
-    invoke-static {p0, v2}, Lorg/webrtc/audio/WebRtcAudioRecord;->n(Lorg/webrtc/audio/WebRtcAudioRecord;Z)V
+    invoke-static {v0, v2}, Lorg/webrtc/audio/WebRtcAudioRecord;->n(Lorg/webrtc/audio/WebRtcAudioRecord;Z)V
 
     return-void
 
@@ -856,7 +860,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
 .method public stopThread()V

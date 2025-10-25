@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lji6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lzr6;
+.field public final synthetic b:Lb91;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzr6;I)V
+.method public synthetic constructor <init>(Lb91;I)V
     .locals 0
 
     iput p2, p0, Lv81;->a:I
 
-    iput-object p1, p0, Lv81;->b:Lzr6;
+    iput-object p1, p0, Lv81;->b:Lb91;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,62 +34,53 @@
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lj81;->c:Lj81;
+    iget-object v0, p0, Lv81;->b:Lb91;
 
-    iget-object p0, p0, Lv81;->b:Lzr6;
+    iget-object v0, v0, Lb91;->J0:Lm9b;
 
-    check-cast p0, Lwr6;
+    iget v0, v0, Lm9b;->a:I
 
-    iget-object p0, p0, Lwr6;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Lx2;->F0()Lza4;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-string v1, ":call-join-link?link="
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-object v0
 
     :pswitch_0
-    sget-object v0, Lj81;->c:Lj81;
+    iget-object v0, p0, Lv81;->b:Lb91;
 
-    iget-object p0, p0, Lv81;->b:Lzr6;
+    iget-object v0, v0, Lb91;->K0:Lji6;
 
-    check-cast p0, Lvr6;
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lvr6;->e:Ljava/lang/String;
-
-    invoke-virtual {v0}, Lx2;->F0()Lza4;
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ":call-join-link?link="
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    check-cast v0, Llpg;
 
     goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lz81;
+
+    iget-object v1, p0, Lv81;->b:Lb91;
+
+    invoke-direct {v0, v1}, Lz81;-><init>(Lb91;)V
+
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

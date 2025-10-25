@@ -7,54 +7,58 @@
 .method public abstract a()V
 .end method
 
-.method public b(Lure;)Ljava/lang/Object;
-    .locals 2
+.method public b(Lsgf;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p0, Lru/ok/tamtam/logout/LogoutEventsByBus;
+    move-object v0, p0
 
-    new-instance v0, Lhic;
+    check-cast v0, Lru/ok/tamtam/logout/LogoutEventsByBus;
 
-    iget-object p0, p0, Lru/ok/tamtam/logout/LogoutEventsByBus;->b:Lnxd;
+    new-instance v1, Lm0d;
 
-    invoke-direct {v0, p0}, Lhic;-><init>(Lqo9;)V
+    iget-object v0, v0, Lru/ok/tamtam/logout/LogoutEventsByBus;->b:Lnje;
 
-    new-instance p0, Lzv2;
+    invoke-direct {v1, v0}, Lm0d;-><init>(Li1a;)V
 
-    const/16 v1, 0xc
+    new-instance v0, Lx23;
 
-    invoke-direct {p0, v0, v1}, Lzv2;-><init>(Lis5;I)V
+    const/16 v2, 0xa
 
-    invoke-static {p0, p1}, Lo97;->Z(Lis5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Lx23;-><init>(Lty5;I)V
 
-    move-result-object p0
+    invoke-static {v0, p1}, Ltq;->o(Lty5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public c(Lon7;)Liic;
-    .locals 2
+.method public c(Ltw7;)Ln0d;
+    .locals 3
 
-    check-cast p0, Lru/ok/tamtam/logout/LogoutEventsByBus;
+    move-object v0, p0
 
-    new-instance v0, Lhic;
+    check-cast v0, Lru/ok/tamtam/logout/LogoutEventsByBus;
 
-    iget-object p0, p0, Lru/ok/tamtam/logout/LogoutEventsByBus;->b:Lnxd;
+    new-instance v1, Lm0d;
 
-    invoke-direct {v0, p0}, Lhic;-><init>(Lqo9;)V
+    iget-object v0, v0, Lru/ok/tamtam/logout/LogoutEventsByBus;->b:Lnje;
 
-    new-instance p0, Lm31;
+    invoke-direct {v1, v0}, Lm0d;-><init>(Li1a;)V
 
-    const/4 v1, 0x2
+    new-instance v0, Lwu2;
 
-    invoke-direct {p0, v0, v1}, Lm31;-><init>(Lhic;I)V
+    const/4 v2, 0x1
 
-    sget-object v0, Lzxd;->b:Lh2a;
+    invoke-direct {v0, v1, v2}, Lwu2;-><init>(Lm0d;I)V
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v1, Ldke;->b:Lux6;
 
-    invoke-static {p0, p1, v0, v1}, Lo97;->V0(Lis5;Ly04;Layd;Ljava/lang/Object;)Liic;
+    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    move-result-object p0
+    invoke-static {v0, p1, v1, v2}, Ltq;->E(Lty5;Lq54;Leke;Ljava/lang/Object;)Ln0d;
 
-    return-object p0
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -4,13 +4,13 @@ usesFramework:
   ids:
   - 1
 sdkInfo:
-  minSdkVersion: 29
+  minSdkVersion: 26
   targetSdkVersion: 35
 packageInfo:
   forcedPackageId: 127
 versionInfo:
-  versionCode: 6409
-  versionName: 25.11.0
+  versionCode: 6432
+  versionName: 25.13.2
 doNotCompress:
 - arsc
 - mp3
@@ -28,6 +28,7 @@ doNotCompress:
 - META-INF/androidx.camera_camera-camera2.version
 - META-INF/androidx.camera_camera-core.version
 - META-INF/androidx.camera_camera-lifecycle.version
+- META-INF/androidx.camera_camera-mlkit-vision.version
 - META-INF/androidx.camera_camera-video.version
 - META-INF/androidx.camera_camera-view.version
 - META-INF/androidx.cardview_cardview.version
@@ -104,9 +105,14 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_reactive.version
 - META-INF/kotlinx_coroutines_rx3.version
 - META-INF/kotlinx_coroutines_test.version
-- META-INF/services/cbf
-- META-INF/services/mh7
-- META-INF/services/y9a
+- META-INF/services/gq7
+- META-INF/services/ru.ok.android.onelog.OneLogAppender
+- META-INF/services/y0g
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
+- assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant.tflite
+- assets/mlkit_barcode_models/oned_auto_regressor_mobile.tflite
+- assets/mlkit_barcode_models/oned_feature_extractor_mobile.tflite
 - okhttp3/internal/publicsuffix/publicsuffixes.gz
+- tech/kwik/agent15/version.properties
+- tech/kwik/core/version.properties

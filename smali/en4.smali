@@ -1,48 +1,33 @@
 .class public final Len4;
-.super Ljx3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lk92;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Len4;
 
 
 # direct methods
-.method public constructor <init>(Lk92;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Len4;->Y:Lk92;
+    new-instance v0, Len4;
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Len4;->a:Len4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Landroid/animation/AnimatorSet;)J
+    .locals 2
 
-    iput-object p1, p0, Len4;->o:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->getTotalDuration()J
 
-    iget p1, p0, Len4;->X:I
+    move-result-wide v0
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Len4;->X:I
-
-    iget-object p1, p0, Len4;->Y:Lk92;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lk92;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-wide v0
 .end method

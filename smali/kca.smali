@@ -1,160 +1,203 @@
 .class public final Lkca;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic X:Llca;
+.field public final a:Landroid/os/Bundle;
+
+.field public b:Landroidx/core/graphics/drawable/IconCompat;
+
+.field public final c:[Lp9d;
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:I
+
+.field public final g:Z
+
+.field public final h:I
+
+.field public final i:Ljava/lang/CharSequence;
+
+.field public final j:Landroid/app/PendingIntent;
+
+.field public final k:Z
 
 
 # direct methods
-.method public constructor <init>(Llca;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    .locals 2
 
-    iput-object p1, p0, Lkca;->X:Llca;
+    const/4 v0, 0x0
 
-    const/4 p1, 0x2
+    if-nez p1, :cond_0
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    goto :goto_0
+
+    .line 1
+    :cond_0
+    const-string v1, ""
+
+    invoke-static {v0, v1, p1}, Landroidx/core/graphics/drawable/IconCompat;->d(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-direct {p0, v0, p2, p3}, Lkca;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    .locals 12
+
+    .line 2
+    new-instance v4, Landroid/os/Bundle;
+
+    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v11}, Lkca;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lp9d;[Lp9d;ZIZZZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lp9d;[Lp9d;ZIZZZ)V
+    .locals 1
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 p6, 0x1
+
+    .line 4
+    iput-boolean p6, p0, Lkca;->e:Z
+
+    .line 5
+    iput-object p1, p0, Lkca;->b:Landroidx/core/graphics/drawable/IconCompat;
+
+    if-eqz p1, :cond_1
+
+    .line 6
+    iget p6, p1, Landroidx/core/graphics/drawable/IconCompat;->a:I
+
+    const/4 v0, -0x1
+
+    if-ne p6, v0, :cond_0
+
+    .line 7
+    iget-object p6, p1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+
+    invoke-static {p6}, Le77;->d(Ljava/lang/Object;)I
+
+    move-result p6
+
+    :cond_0
+    const/4 v0, 0x2
+
+    if-ne p6, v0, :cond_1
+
+    .line 8
+    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->e()I
+
+    move-result p1
+
+    iput p1, p0, Lkca;->h:I
+
+    .line 9
+    :cond_1
+    invoke-static {p2}, Lyca;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lkca;->i:Ljava/lang/CharSequence;
+
+    .line 10
+    iput-object p3, p0, Lkca;->j:Landroid/app/PendingIntent;
+
+    if-eqz p4, :cond_2
+
+    goto :goto_0
+
+    .line 11
+    :cond_2
+    new-instance p4, Landroid/os/Bundle;
+
+    invoke-direct {p4}, Landroid/os/Bundle;-><init>()V
+
+    :goto_0
+    iput-object p4, p0, Lkca;->a:Landroid/os/Bundle;
+
+    .line 12
+    iput-object p5, p0, Lkca;->c:[Lp9d;
+
+    .line 13
+    iput-boolean p7, p0, Lkca;->d:Z
+
+    .line 14
+    iput p8, p0, Lkca;->f:I
+
+    .line 15
+    iput-boolean p9, p0, Lkca;->e:Z
+
+    .line 16
+    iput-boolean p10, p0, Lkca;->g:Z
+
+    .line 17
+    iput-boolean p11, p0, Lkca;->k:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Landroidx/core/graphics/drawable/IconCompat;
+    .locals 3
 
-    check-cast p1, Ly04;
+    iget-object v0, p0, Lkca;->b:Landroidx/core/graphics/drawable/IconCompat;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lkca;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lkca;->h:I
 
-    move-result-object p0
-
-    check-cast p0, Lkca;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lkca;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lkca;
-
-    iget-object p0, p0, Lkca;->X:Llca;
-
-    invoke-direct {p1, p0, p2}, Lkca;-><init>(Llca;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lkca;->X:Llca;
-
-    iget-object p0, p0, Llca;->f:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Llga;
-
-    invoke-virtual {p0}, Llga;->f()Lxzc;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lxzc;->H()Lrzc;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lrzc;->d()Landroid/app/Activity;
-
-    move-result-object p0
-
-    instance-of p1, p0, Lone/me/android/MainActivity;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    check-cast p0, Lone/me/android/MainActivity;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p0, v0
-
-    :goto_0
-    sget-object p1, Lylf;->a:Lylf;
-
-    if-nez p0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {p0}, Lo97;->X(Lt5;)Lone/me/android/root/RootController;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lxzc;->y()Lxx3;
-
-    move-result-object v1
-
-    instance-of v1, v1, Lone/me/appupdate/forceupdate/ForceUpdateScreen;
-
-    if-eqz v1, :cond_2
-
-    :goto_1
-    return-object p1
-
-    :cond_2
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H()Lrzc;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lrzc;->e()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    new-instance v0, Lxu6;
+    if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lxu6;-><init>(I)V
+    const-string v2, ""
 
-    :cond_3
-    new-instance v1, Lone/me/appupdate/forceupdate/ForceUpdateScreen;
-
-    invoke-direct {v1}, Lone/me/appupdate/forceupdate/ForceUpdateScreen;-><init>()V
-
-    invoke-static {v1, v0, v0}, Lcb7;->d(Lxx3;Leh;Leh;)Luzc;
+    invoke-static {v1, v2, v0}, Landroidx/core/graphics/drawable/IconCompat;->d(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H()Lrzc;
+    iput-object v0, p0, Lkca;->b:Landroidx/core/graphics/drawable/IconCompat;
 
-    move-result-object p0
+    :cond_0
+    iget-object v0, p0, Lkca;->b:Landroidx/core/graphics/drawable/IconCompat;
 
-    invoke-virtual {p0, v0}, Lrzc;->S(Luzc;)V
-
-    return-object p1
+    return-object v0
 .end method

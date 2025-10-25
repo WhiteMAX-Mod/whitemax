@@ -1,59 +1,89 @@
-.class public final Ltje;
-.super Ljx3;
+.class public final synthetic Ltje;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Ljava/util/Collection;
+.field public final synthetic a:I
 
-.field public Y:Ljava/util/Iterator;
+.field public final synthetic b:Lvje;
 
-.field public Z:Lufe;
-
-.field public o:Lvje;
-
-.field public r0:Ljava/util/Collection;
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Lvje;
-
-.field public u0:I
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Lvje;Ljx3;)V
+.method public synthetic constructor <init>(Lvje;ZI)V
     .locals 0
 
-    iput-object p1, p0, Ltje;->t0:Lvje;
+    iput p3, p0, Ltje;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ltje;->b:Lvje;
+
+    iput-boolean p2, p0, Ltje;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iput-object p1, p0, Ltje;->s0:Ljava/lang/Object;
+    iget v0, p0, Ltje;->a:I
 
-    iget p1, p0, Ltje;->u0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Ltje;->b:Lvje;
 
-    or-int/2addr p1, v0
+    iget-object v0, v0, Lvje;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
-    iput p1, p0, Ltje;->u0:I
+    if-eqz v0, :cond_0
 
-    iget-object p1, p0, Ltje;->t0:Lvje;
+    iget-boolean v1, p0, Ltje;->c:Z
 
-    const/4 v0, 0x0
+    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setSpeakerMute(Z)V
 
-    invoke-virtual {p1, v0, p0}, Lvje;->t(Ljava/util/List;Ljx3;)Ljava/lang/Object;
+    :cond_0
+    return-void
 
-    move-result-object p0
+    :pswitch_0
+    iget-object v0, p0, Ltje;->b:Lvje;
 
-    return-object p0
+    iget-object v0, v0, Lvje;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v1, p0, Ltje;->c:Z
+
+    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setMicrophoneMute(Z)V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ltje;->b:Lvje;
+
+    iget-object v0, v0, Lvje;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v1, p0, Ltje;->c:Z
+
+    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setNoiseSuppressorEnabled(Z)Z
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

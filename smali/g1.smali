@@ -1,31 +1,61 @@
-.class public abstract synthetic Lg1;
+.class public final Lg1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Lg1;
+
+
+# instance fields
+.field public final a:Ljava/lang/Runnable;
+
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public c:Lg1;
+
+
 # direct methods
-.method public static synthetic a(Lsun/misc/Unsafe;Ln1;JLl1;Ll1;)Z
+.method static constructor <clinit>()V
     .locals 1
 
-    :cond_0
-    invoke-virtual/range {p0 .. p5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v0, Lg1;
 
-    move-result v0
+    invoke-direct {v0}, Lg1;-><init>()V
 
-    if-eqz v0, :cond_1
+    sput-object v0, Lg1;->d:Lg1;
 
-    const/4 p0, 0x1
+    return-void
+.end method
 
-    return p0
+.method public constructor <init>()V
+    .locals 1
 
-    :cond_1
-    invoke-virtual {p0, p1, p2, p3}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    if-eq v0, p4, :cond_0
+    .line 5
+    iput-object v0, p0, Lg1;->a:Ljava/lang/Runnable;
 
-    const/4 p0, 0x0
+    .line 6
+    iput-object v0, p0, Lg1;->b:Ljava/util/concurrent/Executor;
 
-    return p0
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lg1;->a:Ljava/lang/Runnable;
+
+    .line 3
+    iput-object p2, p0, Lg1;->b:Ljava/util/concurrent/Executor;
+
+    return-void
 .end method

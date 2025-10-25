@@ -25,9 +25,9 @@
 .method public newInstance(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/auth/AuthScheme;
     .locals 0
 
-    new-instance p0, Lorg/apache/http/impl/auth/BasicScheme;
+    new-instance p1, Lorg/apache/http/impl/auth/BasicScheme;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/auth/BasicScheme;-><init>()V
+    invoke-direct {p1}, Lorg/apache/http/impl/auth/BasicScheme;-><init>()V
 
-    return-object p0
+    return-object p1
 .end method

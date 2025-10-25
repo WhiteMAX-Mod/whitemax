@@ -1,55 +1,61 @@
 .class public final Lngg;
-.super Ljx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lsgg;
+.field public final a:Ljava/lang/String;
 
-.field public Y:Lpg7;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lpgg;
-
-.field public final synthetic r0:Lpgg;
-
-.field public s0:I
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lpgg;Ljx3;)V
-    .locals 0
+.method public constructor <init>(Lmgg;)V
+    .locals 2
 
-    iput-object p1, p0, Lngg;->r0:Lpgg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p1, Lmgg;->a:Ljava/lang/String;
+
+    iput-object v0, p0, Lngg;->a:Ljava/lang/String;
+
+    iget-wide v0, p1, Lmgg;->b:J
+
+    iput-wide v0, p0, Lngg;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iput-object p1, p0, Lngg;->Z:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lngg;->s0:I
+    const-string v1, "UploadResult{token=\'"
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lngg;->a:Ljava/lang/String;
 
-    iput p1, p0, Lngg;->s0:I
+    invoke-static {v1}, Li79;->e(Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    iget-object p1, p0, Lngg;->r0:Lpgg;
+    move-result-object v1
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, p0}, Lpgg;->e(Ljava/lang/String;Ljx3;)Ljava/lang/Object;
+    const-string v1, "\', attachId="
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    iget-wide v1, p0, Lngg;->b:J
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Laab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

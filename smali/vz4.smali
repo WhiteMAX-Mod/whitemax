@@ -1,19 +1,14 @@
-.class public abstract Lvz4;
-.super Luz4;
+.class public interface abstract Lvz4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public b(Landroid/view/Window;)V
-    .locals 0
+.method public abstract a(Lkz4;)V
+.end method
 
-    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+.method public abstract cancel()V
+.end method
 
-    move-result-object p0
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
-
-    return-void
+.method public abstract remove()V
 .end method

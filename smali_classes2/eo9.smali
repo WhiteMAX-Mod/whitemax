@@ -1,154 +1,80 @@
 .class public final Leo9;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:Z
-
-.field public c:Z
-
-.field public d:Z
-
-.field public e:Z
-
-.field public f:Z
-
-.field public g:Z
+.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p2, p0, Leo9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    const/4 v1, 0x0
+    const/4 p2, 0x2
 
-    .line 1
-    invoke-direct {p0, v0, v1, v1, v1}, Leo9;-><init>(ZZZZ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZ)V
-    .locals 1
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Leo9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    .line 4
-    iput-boolean p1, p0, Leo9;->e:Z
-
-    .line 5
-    iput-boolean p2, p0, Leo9;->f:Z
-
-    .line 6
-    iput-boolean p3, p0, Leo9;->b:Z
-
-    .line 7
-    iput-boolean p4, p0, Leo9;->g:Z
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
-
-    iget-object v0, p0, Leo9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ldo9;
-
-    invoke-interface {v1, p0}, Ldo9;->j(Leo9;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b()Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-boolean p0, p0, Leo9;->f:Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return p0
+    invoke-virtual {p0, p1, p2}, Leo9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Leo9;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Leo9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Leo9;
 
-    const-string v1, "MediaSettings{"
+    iget-object v1, p0, Leo9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p2, v1}, Leo9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    iget-boolean v1, p0, Leo9;->e:Z
+    iput-object p1, v0, Leo9;->X:Ljava/lang/Object;
 
-    if-eqz v1, :cond_0
+    return-object v0
+.end method
 
-    const-string v1, "|audio"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    :cond_0
-    iget-boolean v1, p0, Leo9;->f:Z
+    iget-object p1, p0, Leo9;->X:Ljava/lang/Object;
 
-    if-eqz v1, :cond_1
+    check-cast p1, Luy6;
 
-    const-string v1, "|video"
+    iget-object v0, p0, Leo9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->x0:Lxy6;
 
-    :cond_1
-    iget-boolean v1, p0, Leo9;->b:Z
+    invoke-virtual {v0, p1}, Lxy6;->a(Luy6;)V
 
-    if-eqz v1, :cond_2
+    sget-object p1, Lccg;->a:Lccg;
 
-    const-string v1, "|screen capture"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_2
-    iget-boolean p0, p0, Leo9;->g:Z
-
-    if-eqz p0, :cond_3
-
-    const-string p0, "|animoji"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

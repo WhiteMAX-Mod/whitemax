@@ -1,65 +1,77 @@
-.class public final Lfig;
-.super Liig;
+.class public final synthetic Lfig;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
-# static fields
-.field public static final c:Lfig;
+
+# instance fields
+.field public final synthetic a:Lgig;
+
+.field public final synthetic b:Ld46;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lgig;Ld46;)V
+    .locals 0
 
-    new-instance v0, Lfig;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "invalid_impact_style"
+    iput-object p1, p0, Lfig;->a:Lgig;
 
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Liig;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lfig;->c:Lfig;
+    iput-object p2, p0, Lfig;->b:Ld46;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object p1, p0, Lfig;->a:Lgig;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v0
+    if-nez p2, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p0, p1, Lfig;
+    const-string v0, "app.messages.calls.menu.item"
 
-    if-nez p0, :cond_1
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/4 p0, 0x0
+    move-result p2
 
-    return p0
+    if-eqz p2, :cond_1
+
+    const/4 p2, 0x1
+
+    iget-object p1, p1, Lw3;->h:Llu7;
+
+    invoke-virtual {p1, v0, p2}, Llu7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    iget-object p2, p0, Lfig;->b:Ld46;
+
+    iget-object p2, p2, Ld46;->b:Ljava/lang/Object;
+
+    check-cast p2, Lwe8;
+
+    iget-object p2, p2, Lwe8;->Y:Lx0f;
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, v0, p1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x277c48f0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "InvalidImpactStyle"
-
-    return-object p0
+    :goto_0
+    return-void
 .end method

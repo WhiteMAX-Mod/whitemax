@@ -1,210 +1,324 @@
-.class public Ll58;
-.super Ljava/lang/Object;
+.class public final Ll58;
+.super Lu58;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Map$Entry;
-.implements Lmi7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public final d:Landroid/content/ContentResolver;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lkxb;Landroid/content/ContentResolver;I)V
     .locals 0
 
-    iput p2, p0, Ll58;->a:I
+    iput p4, p0, Ll58;->c:I
 
-    iput-object p1, p0, Ll58;->b:Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Lu58;-><init>(Ljava/util/concurrent/Executor;Lkxb;)V
 
-    iput-object p3, p0, Ll58;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Ll58;->d:Landroid/content/ContentResolver;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final d(Lab7;)Lfb5;
+    .locals 8
 
-    iget v0, p0, Ll58;->a:I
+    iget v0, p0, Ll58;->c:I
+
+    const/4 v1, -0x1
+
+    iget-object v2, p0, Ll58;->d:Landroid/content/ContentResolver;
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object p1, p1, Lab7;->b:Landroid/net/Uri;
 
-    move-result p0
+    invoke-virtual {v2, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
-    return p0
+    move-result-object p1
 
-    :pswitch_0
-    instance-of v0, p1, Ljava/util/Map$Entry;
+    if-eqz p1, :cond_0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, p1, v1}, Lu58;->c(Ljava/io/InputStream;I)Lfb5;
 
-    check-cast p1, Ljava/util/Map$Entry;
+    move-result-object p1
 
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    const/4 p1, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    if-nez p1, :cond_1
+    const-string v0, "ContentResolver returned null InputStream"
 
-    goto :goto_1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    throw p1
+
+    :pswitch_0
+    iget-object p1, p1, Lab7;->b:Landroid/net/Uri;
+
+    sget-object v0, Lbhg;->a:Landroid/net/Uri;
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Ll58;->b:Ljava/lang/Object;
+    const-string v3, "r"
 
-    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v4, "Required value was null."
+
+    if-nez v0, :cond_1
+
+    goto/16 :goto_1
+
+    :cond_1
+    invoke-static {p1}, Lbhg;->b(Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "content"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    const-string v0, "com.android.contacts"
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v5, Lbhg;->a:Landroid/net/Uri;
+
+    invoke-virtual {v5}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "/photo"
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Ll58;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    const/4 p0, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x0
-
-    :goto_2
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Ll58;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Ll58;->b:Ljava/lang/Object;
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Ll58;->b:Ljava/lang/Object;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public getValue()Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Ll58;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Ll58;->c:Ljava/lang/Object;
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Ll58;->c:Ljava/lang/Object;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public hashCode()I
-    .locals 2
-
-    iget v0, p0, Ll58;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Ll58;->b:Ljava/lang/Object;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    :cond_2
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    move-result v1
+    move-result-object v0
 
-    :goto_0
-    invoke-virtual {p0}, Ll58;->getValue()Ljava/lang/Object;
+    const-string v5, "/display_photo"
 
-    move-result-object p0
-
-    if-nez p0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
 
+    const-string v5, "Contact photo does not exist: "
+
+    if-eqz v0, :cond_4
+
+    :try_start_0
+    invoke-virtual {v2, p1, v3}, Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->createInputStream()Ljava/io/FileInputStream;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_3
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    new-instance v0, Ljava/io/IOException;
+
+    invoke-static {p1, v5}, Lzdf;->q(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_4
+    invoke-static {v2, p1}, Landroid/provider/ContactsContract$Contacts;->openContactPhotoInputStream(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/io/InputStream;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    move-object p1, v0
+
+    :goto_0
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p0, p1, v1}, Lu58;->c(Ljava/io/InputStream;I)Lfb5;
+
+    move-result-object p1
+
+    goto :goto_3
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_6
+    new-instance v0, Ljava/io/IOException;
+
+    invoke-static {p1, v5}, Lzdf;->q(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_7
     :goto_1
-    xor-int p0, v1, v0
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    return p0
+    move-result-object v0
 
-    nop
+    sget-object v5, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    invoke-virtual {v5}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_8
+
+    sget-object v5, Landroid/provider/MediaStore$Images$Media;->INTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    invoke-virtual {v5}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    :cond_8
+    :try_start_1
+    invoke-virtual {v2, p1, v3}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
+
+    move-result-object v0
+    :try_end_1
+    .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+
+    if-eqz v0, :cond_9
+
+    invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
+
+    move-result-object v3
+
+    new-instance v5, Ljava/io/FileInputStream;
+
+    invoke-direct {v5, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
+
+    invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->getStatSize()J
+
+    move-result-wide v6
+
+    long-to-int v3, v6
+
+    invoke-virtual {p0, v5, v3}, Lu58;->c(Ljava/io/InputStream;I)Lfb5;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
+
+    move-object v0, v3
+
+    goto :goto_2
+
+    :cond_9
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :catch_1
+    const/4 v0, 0x0
+
+    :goto_2
+    if-eqz v0, :cond_a
+
+    move-object p1, v0
+
+    goto :goto_3
+
+    :cond_a
+    invoke-virtual {v2, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_b
+
+    invoke-virtual {p0, p1, v1}, Lu58;->c(Ljava/io/InputStream;I)Lfb5;
+
+    move-result-object p1
+
+    :goto_3
+    return-object p1
+
+    :cond_b
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -212,75 +326,21 @@
     .end packed-switch
 .end method
 
-.method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final e()Ljava/lang/String;
+    .locals 1
 
-    iget p0, p0, Ll58;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_0
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    iget v0, p0, Ll58;->a:I
+    iget v0, p0, Ll58;->c:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const-string v0, "QualifiedResourceFetchProducer"
 
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 
     :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "LocalContentUriFetchProducer"
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Ll58;->b:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x3d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ll58;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 
     nop
 

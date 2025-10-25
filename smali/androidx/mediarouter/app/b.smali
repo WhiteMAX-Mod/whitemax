@@ -36,58 +36,58 @@
 .end method
 
 .method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 4
+    .locals 5
 
-    iget-object p0, p0, Landroidx/mediarouter/app/b;->a:Landroidx/mediarouter/app/d;
+    iget-object p1, p0, Landroidx/mediarouter/app/b;->a:Landroidx/mediarouter/app/d;
 
-    iget-object p1, p0, Landroidx/mediarouter/app/d;->N0:Landroidx/mediarouter/app/OverlayListView;
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->M0:Landroidx/mediarouter/app/OverlayListView;
 
-    iget-object v0, p1, Landroidx/mediarouter/app/OverlayListView;->a:Ljava/util/ArrayList;
+    iget-object v1, v0, Landroidx/mediarouter/app/OverlayListView;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    check-cast v1, Lhwa;
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-boolean v2, v1, Lhwa;->j:Z
+    move-result v2
 
-    if-nez v2, :cond_0
+    if-eqz v2, :cond_1
 
-    invoke-virtual {p1}, Landroid/view/View;->getDrawingTime()J
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-wide v2
+    move-result-object v2
 
-    iput-wide v2, v1, Lhwa;->i:J
+    check-cast v2, Ldbb;
 
-    const/4 v2, 0x1
+    iget-boolean v3, v2, Ldbb;->j:Z
 
-    iput-boolean v2, v1, Lhwa;->j:Z
+    if-nez v3, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getDrawingTime()J
+
+    move-result-wide v3
+
+    iput-wide v3, v2, Ldbb;->i:J
+
+    const/4 v3, 0x1
+
+    iput-boolean v3, v2, Ldbb;->j:Z
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, p0, Landroidx/mediarouter/app/d;->N0:Landroidx/mediarouter/app/OverlayListView;
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->M0:Landroidx/mediarouter/app/OverlayListView;
 
-    iget-object v0, p0, Landroidx/mediarouter/app/d;->x1:Lrs7;
+    iget-object v1, p1, Landroidx/mediarouter/app/d;->w1:Ldt7;
 
-    iget p0, p0, Landroidx/mediarouter/app/d;->q1:I
+    iget p1, p1, Landroidx/mediarouter/app/d;->p1:I
 
-    int-to-long v1, p0
+    int-to-long v2, p1
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method

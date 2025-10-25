@@ -1,59 +1,81 @@
 .class public final Lrqe;
-.super Ljava/lang/Object;
+.super Lwpe;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Landroid/util/Size;
-
-.field public static final c:Lqb3;
-
-
 # instance fields
-.field public final a:Landroidx/camera/camera2/internal/compat/quirk/RepeatingStreamConstraintForVideoRecordingQuirk;
+.field public final synthetic a:I
+
+.field public final b:Lwpe;
+
+.field public final c:Lxod;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lwpe;Lxod;I)V
+    .locals 0
 
-    new-instance v0, Landroid/util/Size;
+    iput p3, p0, Lrqe;->a:I
 
-    const/16 v1, 0x140
+    iput-object p1, p0, Lrqe;->b:Lwpe;
 
-    const/16 v2, 0xf0
+    iput-object p2, p0, Lrqe;->c:Lxod;
 
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v0, Lrqe;->b:Landroid/util/Size;
-
-    new-instance v0, Lqb3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lqb3;-><init>(Z)V
-
-    sput-object v0, Lrqe;->c:Lqb3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final l(Lsqe;)V
+    .locals 3
 
-    const-class v0, Landroidx/camera/camera2/internal/compat/quirk/RepeatingStreamConstraintForVideoRecordingQuirk;
+    iget v0, p0, Lrqe;->a:I
 
-    sget-object v1, Lsn4;->a:Lkga;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v1, v0}, Lkga;->e(Ljava/lang/Class;)Lt1c;
+    new-instance v0, Leh3;
 
-    move-result-object v0
+    iget-object v1, p0, Lrqe;->b:Lwpe;
 
-    check-cast v0, Landroidx/camera/camera2/internal/compat/quirk/RepeatingStreamConstraintForVideoRecordingQuirk;
+    invoke-direct {v0, p1, v1}, Leh3;-><init>(Lsqe;Lwpe;)V
 
-    iput-object v0, p0, Lrqe;->a:Landroidx/camera/camera2/internal/compat/quirk/RepeatingStreamConstraintForVideoRecordingQuirk;
+    invoke-interface {p1, v0}, Lsqe;->c(Lvv4;)V
+
+    iget-object p1, p0, Lrqe;->c:Lxod;
+
+    invoke-virtual {p1, v0}, Lxod;->b(Ljava/lang/Runnable;)Lvv4;
+
+    move-result-object p1
+
+    iget-object v0, v0, Leh3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lq32;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, p1}, Lzv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
 
     return-void
+
+    :pswitch_0
+    new-instance v0, Llk8;
+
+    iget-object v1, p0, Lrqe;->c:Lxod;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, p1, v1, v2}, Llk8;-><init>(Ljava/lang/Object;Lxod;I)V
+
+    iget-object p1, p0, Lrqe;->b:Lwpe;
+
+    invoke-virtual {p1, v0}, Lwpe;->k(Lsqe;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

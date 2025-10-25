@@ -1,82 +1,43 @@
-.class public interface abstract Lxjd;
+.class public abstract Lxjd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lwr;
+.field public static final a:I
 
-.field public static final b:[Ljava/lang/String;
+.field public static final b:I
 
-.field public static final c:[J
+.field public static final c:I
 
-.field public static final d:[I
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 1
 
-    new-instance v0, Lwr;
+    sget v0, Ltkc;->accent:I
 
-    const-string v5, "error.message.like.unknown.like"
+    sput v0, Lxjd;->a:I
 
-    const-string v6, "error.message.like.unknown.reaction"
+    sget v0, Ltkc;->gray_66:I
 
-    const-string v1, "error.comment.chat.access"
+    sput v0, Lxjd;->b:I
 
-    const-string v2, "error.comment.invalid"
+    sget v0, Ltkc;->range_seek_bar_border_shadow_color:I
 
-    const-string v3, "error.message.invalid"
+    sput v0, Lxjd;->c:I
 
-    const-string v4, "error.message.chat.access"
+    sget v0, Ltkc;->white:I
 
-    filled-new-array/range {v1 .. v6}, [Ljava/lang/String;
+    sput v0, Lxjd;->d:I
 
-    move-result-object v1
+    sget v0, Ltkc;->white_50:I
 
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lwr;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lxjd;->a:Lwr;
-
-    const-string v0, "modifiers"
-
-    const-string v1, "accessFlags"
-
-    filled-new-array {v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lxjd;->b:[Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    new-array v1, v0, [J
-
-    fill-array-data v1, :array_0
-
-    sput-object v1, Lxjd;->c:[J
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x4
-
-    filled-new-array {v1, v0, v2}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lxjd;->d:[I
+    sput v0, Lxjd;->e:I
 
     return-void
-
-    :array_0
-    .array-data 8
-        0x3a98
-        0x2710
-        0x1388
-    .end array-data
 .end method

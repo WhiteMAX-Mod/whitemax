@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final a:Lqj5;
+.field public final a:Lcq5;
 
 
 # direct methods
-.method public constructor <init>(Lqj5;)V
+.method public constructor <init>(Lcq5;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/common/api/UnsupportedApiCallException;->a:Lqj5;
+    iput-object p1, p0, Lcom/google/android/gms/common/api/UnsupportedApiCallException;->a:Lcq5;
 
     return-void
 .end method
@@ -21,19 +21,19 @@
 
 # virtual methods
 .method public final getMessage()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lcom/google/android/gms/common/api/UnsupportedApiCallException;->a:Lqj5;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/UnsupportedApiCallException;->a:Lcq5;
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "Missing "
+    const-string v1, "Missing "
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

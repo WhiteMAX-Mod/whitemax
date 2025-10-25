@@ -3,36 +3,56 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Ltr3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/ConversationImpl;
+.field public final synthetic b:Ltr3;
 
 .field public final synthetic c:Ljava/io/Serializable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/io/Serializable;I)V
-    .locals 0
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;)V
+    .locals 1
 
-    iput p3, p0, Lru/ok/android/externcalls/sdk/e;->a:I
+    .line 2
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/e;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/e;->c:Ljava/io/Serializable;
+    iput v0, p0, Lru/ok/android/externcalls/sdk/e;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/e;->c:Ljava/io/Serializable;
+
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/e;->b:Ltr3;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ltr3;Ljava/util/ArrayList;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Lru/ok/android/externcalls/sdk/e;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/e;->b:Ltr3;
+
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/e;->c:Ljava/io/Serializable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
     iget v0, p0, Lru/ok/android/externcalls/sdk/e;->a:I
 
@@ -42,26 +62,26 @@
 
     check-cast v0, Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/e;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/e;->b:Ltr3;
 
-    invoke-static {p0, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->L(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ljava/util/Map;
+    check-cast p1, Ljava/util/Map;
 
-    move-result-object p0
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->y(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;Ljava/util/Map;)V
 
-    return-object p0
+    return-void
 
     :pswitch_0
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/e;->c:Ljava/io/Serializable;
 
     check-cast v0, Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/e;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
+    check-cast p1, Ljava/util/Map;
 
-    invoke-static {p0, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->c(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/util/ArrayList;)Ljava/util/Map;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/e;->b:Ltr3;
 
-    move-result-object p0
+    invoke-static {v1, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->L(Ltr3;Ljava/util/ArrayList;Ljava/util/Map;)V
 
-    return-object p0
+    return-void
 
     nop
 

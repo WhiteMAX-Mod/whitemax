@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;
-.super Lnk7;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lji6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->enableFeatureForRoles(Ld71;Ljava/util/Set;Lzb6;Lbc6;)V
+    value = Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->enableFeatureForRoles(Lh81;Ljava/util/Set;Lji6;Lli6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lnk7;",
-        "Lzb6;"
+        "Lst7;",
+        "Lji6;"
     }
 .end annotation
 
@@ -43,13 +43,13 @@
 
 
 # instance fields
-.field final synthetic $feature:Ld71;
+.field final synthetic $feature:Lh81;
 
 .field final synthetic $roles:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lvg1;",
+            "Lki1;",
             ">;"
         }
     .end annotation
@@ -59,29 +59,29 @@
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;Ld71;Ljava/util/Set;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;Lh81;Ljava/util/Set;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;",
-            "Ld71;",
+            "Lh81;",
             "Ljava/util/Set<",
             "+",
-            "Lvg1;",
+            "Lki1;",
             ">;)V"
         }
     .end annotation
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->this$0:Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$feature:Ld71;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$feature:Lh81;
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$roles:Ljava/util/Set;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lnk7;-><init>(I)V
+    invoke-direct {p0, p1}, Lst7;-><init>(I)V
 
     return-void
 .end method
@@ -89,29 +89,29 @@
 
 # virtual methods
 .method public bridge synthetic invoke()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->invoke()Lorg/json/JSONObject;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final invoke()Lorg/json/JSONObject;
-    .locals 7
+    .locals 8
 
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->this$0:Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->access$getParamsCreator$p(Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;)Lf71;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->access$getParamsCreator$p(Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;)Lj81;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$feature:Ld71;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$feature:Lh81;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$roles:Ljava/util/Set;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$roles:Ljava/util/Set;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -121,36 +121,36 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 4
-    const-string v2, "command"
+    const-string v3, "command"
 
-    const-string v3, "enable-feature-for-roles"
+    const-string v4, "enable-feature-for-roles"
 
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 5
-    sget-object v2, Le71;->$EnumSwitchMapping$0:[I
+    sget-object v3, Li81;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    aget v1, v2, v1
+    aget v1, v3, v1
 
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    if-eq v1, v4, :cond_3
+    if-eq v1, v5, :cond_3
 
-    if-eq v1, v3, :cond_2
+    if-eq v1, v4, :cond_2
 
-    if-eq v1, v2, :cond_1
+    if-eq v1, v3, :cond_1
 
-    const/4 v5, 0x4
+    const/4 v6, 0x4
 
-    if-ne v1, v5, :cond_0
+    if-ne v1, v6, :cond_0
 
     .line 6
     const-string v1, "ASR"
@@ -158,11 +158,11 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    throw p0
+    throw v0
 
     .line 7
     :cond_1
@@ -182,9 +182,9 @@
 
     .line 10
     :goto_0
-    const-string v5, "feature"
+    const-string v6, "feature"
 
-    invoke-virtual {v0, v5, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v6, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 11
     new-instance v1, Lorg/json/JSONArray;
@@ -192,71 +192,71 @@
     invoke-direct {v1}, Lorg/json/JSONArray;-><init>()V
 
     .line 12
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v2
 
     :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_7
+    if-eqz v6, :cond_7
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v6
 
-    check-cast v5, Lvg1;
+    check-cast v6, Lki1;
 
     .line 13
-    sget-object v6, Le71;->$EnumSwitchMapping$1:[I
+    sget-object v7, Li81;->$EnumSwitchMapping$1:[I
 
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v5
+    move-result v6
 
-    aget v5, v6, v5
+    aget v6, v7, v6
 
-    if-eq v5, v4, :cond_6
+    if-eq v6, v5, :cond_6
 
-    if-eq v5, v3, :cond_5
+    if-eq v6, v4, :cond_5
 
-    if-ne v5, v2, :cond_4
+    if-ne v6, v3, :cond_4
 
     .line 14
-    const-string v5, "SPEAKER"
+    const-string v6, "SPEAKER"
 
     goto :goto_2
 
     :cond_4
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    throw p0
+    throw v0
 
     .line 15
     :cond_5
-    const-string v5, "ADMIN"
+    const-string v6, "ADMIN"
 
     goto :goto_2
 
     .line 16
     :cond_6
-    const-string v5, "CREATOR"
+    const-string v6, "CREATOR"
 
     .line 17
     :goto_2
-    invoke-virtual {v1, v5}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+    invoke-virtual {v1, v6}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     goto :goto_1
 
     .line 18
     :cond_7
-    const-string p0, "roles"
+    const-string v2, "roles"
 
-    invoke-virtual {v0, p0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     return-object v0
 .end method

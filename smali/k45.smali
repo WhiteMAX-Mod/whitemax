@@ -1,163 +1,55 @@
-.class public final enum Lk45;
-.super Ljava/lang/Enum;
+.class public final Lk45;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr0c;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final enum a:Lk45;
+.field public final b:Z
 
-.field public static final synthetic b:[Lk45;
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:Landroid/util/SparseArray;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(IZIIIIIIILandroid/util/SparseArray;)V
+    .locals 0
 
-    new-instance v0, Lk45;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "INSTANCE"
+    iput p1, p0, Lk45;->a:I
 
-    const/4 v2, 0x0
+    iput-boolean p2, p0, Lk45;->b:Z
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p3, p0, Lk45;->c:I
 
-    sput-object v0, Lk45;->a:Lk45;
+    iput p4, p0, Lk45;->d:I
 
-    new-instance v1, Lk45;
+    iput p5, p0, Lk45;->e:I
 
-    const-string v2, "NEVER"
+    iput p6, p0, Lk45;->f:I
 
-    const/4 v3, 0x1
+    iput p7, p0, Lk45;->g:I
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p8, p0, Lk45;->h:I
 
-    filled-new-array {v0, v1}, [Lk45;
+    iput p9, p0, Lk45;->i:I
 
-    move-result-object v0
-
-    sput-object v0, Lk45;->b:[Lk45;
+    iput-object p10, p0, Lk45;->j:Landroid/util/SparseArray;
 
     return-void
-.end method
-
-.method public static a(Ld8a;)V
-    .locals 1
-
-    sget-object v0, Lk45;->a:Lk45;
-
-    invoke-interface {p0, v0}, Ld8a;->c(Loq4;)V
-
-    invoke-interface {p0}, Ld8a;->b()V
-
-    return-void
-.end method
-
-.method public static b(Ljava/lang/Throwable;Ld8a;)V
-    .locals 1
-
-    sget-object v0, Lk45;->a:Lk45;
-
-    invoke-interface {p1, v0}, Ld8a;->c(Loq4;)V
-
-    invoke-interface {p1, p0}, Ld8a;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lk45;
-    .locals 1
-
-    const-class v0, Lk45;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lk45;
-
-    return-object p0
-.end method
-
-.method public static values()[Lk45;
-    .locals 1
-
-    sget-object v0, Lk45;->b:[Lk45;
-
-    invoke-virtual {v0}, [Lk45;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lk45;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final clear()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 1
-
-    sget-object v0, Lk45;->a:Lk45;
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Should not be called!"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final q(I)I
-    .locals 0
-
-    const/4 p0, 0x2
-
-    return p0
 .end method

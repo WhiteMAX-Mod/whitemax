@@ -32,7 +32,7 @@
         "movieId",
         "",
         "albumId",
-        "Lvmd;",
+        "Ls7e;",
         "sessionRoomId",
         "",
         "name",
@@ -41,12 +41,12 @@
         "privacy",
         "Lkotlin/Function1;",
         "Lru/ok/android/externcalls/sdk/record/RecordManager$StartRecordInfo;",
-        "Lylf;",
+        "Lccg;",
         "onSuccess",
         "",
         "onError",
         "<init>",
-        "(ZLjava/lang/Long;Ljava/lang/String;Lvmd;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/String;Lbc6;Lbc6;)V",
+        "(ZLjava/lang/Long;Ljava/lang/String;Ls7e;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/String;Lli6;Lli6;)V",
         "Z",
         "()Z",
         "Ljava/lang/Long;",
@@ -55,18 +55,18 @@
         "Ljava/lang/String;",
         "getAlbumId",
         "()Ljava/lang/String;",
-        "Lvmd;",
+        "Ls7e;",
         "getSessionRoomId",
-        "()Lvmd;",
+        "()Ls7e;",
         "Ljava/lang/CharSequence;",
         "getName",
         "()Ljava/lang/CharSequence;",
         "getDescription",
         "getGroupId",
         "getPrivacy",
-        "Lbc6;",
+        "Lli6;",
         "getOnSuccess",
-        "()Lbc6;",
+        "()Lli6;",
         "getOnError",
         "Builder",
         "calls-sdk_release"
@@ -94,42 +94,42 @@
 
 .field private final name:Ljava/lang/CharSequence;
 
-.field private final onError:Lbc6;
+.field private final onError:Lli6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lbc6;"
+            "Lli6;"
         }
     .end annotation
 .end field
 
-.field private final onSuccess:Lbc6;
+.field private final onSuccess:Lli6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lbc6;"
+            "Lli6;"
         }
     .end annotation
 .end field
 
 .field private final privacy:Ljava/lang/String;
 
-.field private final sessionRoomId:Lvmd;
+.field private final sessionRoomId:Ls7e;
 
 
 # direct methods
-.method private constructor <init>(ZLjava/lang/Long;Ljava/lang/String;Lvmd;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/String;Lbc6;Lbc6;)V
+.method private constructor <init>(ZLjava/lang/Long;Ljava/lang/String;Ls7e;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/String;Lli6;Lli6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
             "Ljava/lang/Long;",
             "Ljava/lang/String;",
-            "Lvmd;",
+            "Ls7e;",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/Long;",
             "Ljava/lang/String;",
-            "Lbc6;",
-            "Lbc6;",
+            "Lli6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
@@ -147,7 +147,7 @@
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->albumId:Ljava/lang/String;
 
     .line 6
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->sessionRoomId:Lvmd;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->sessionRoomId:Ls7e;
 
     .line 7
     iput-object p5, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->name:Ljava/lang/CharSequence;
@@ -162,19 +162,19 @@
     iput-object p8, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->privacy:Ljava/lang/String;
 
     .line 11
-    iput-object p9, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->onSuccess:Lbc6;
+    iput-object p9, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->onSuccess:Lli6;
 
     .line 12
-    iput-object p10, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->onError:Lbc6;
+    iput-object p10, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->onError:Lli6;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZLjava/lang/Long;Ljava/lang/String;Lvmd;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/String;Lbc6;Lbc6;Lld4;)V
+.method public synthetic constructor <init>(ZLjava/lang/Long;Ljava/lang/String;Ls7e;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/String;Lli6;Lli6;Lki4;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p10}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;-><init>(ZLjava/lang/Long;Ljava/lang/String;Lvmd;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/String;Lbc6;Lbc6;)V
+    invoke-direct/range {p0 .. p10}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;-><init>(ZLjava/lang/Long;Ljava/lang/String;Ls7e;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/String;Lli6;Lli6;)V
 
     return-void
 .end method
@@ -182,93 +182,93 @@
 
 # virtual methods
 .method public final getAlbumId()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->albumId:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->albumId:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getDescription()Ljava/lang/CharSequence;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->description:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->description:Ljava/lang/CharSequence;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getGroupId()Ljava/lang/Long;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->groupId:Ljava/lang/Long;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->groupId:Ljava/lang/Long;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getMovieId()Ljava/lang/Long;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->movieId:Ljava/lang/Long;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->movieId:Ljava/lang/Long;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getName()Ljava/lang/CharSequence;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->name:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->name:Ljava/lang/CharSequence;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final getOnError()Lbc6;
-    .locals 0
+.method public final getOnError()Lli6;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lbc6;"
+            "Lli6;"
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->onError:Lbc6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->onError:Lli6;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final getOnSuccess()Lbc6;
-    .locals 0
+.method public final getOnSuccess()Lli6;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lbc6;"
+            "Lli6;"
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->onSuccess:Lbc6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->onSuccess:Lli6;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getPrivacy()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->privacy:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->privacy:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final getSessionRoomId()Lvmd;
-    .locals 0
+.method public final getSessionRoomId()Ls7e;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->sessionRoomId:Lvmd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->sessionRoomId:Ls7e;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final isStream()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->isStream:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->isStream:Z
 
-    return p0
+    return v0
 .end method

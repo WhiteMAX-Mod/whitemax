@@ -33,41 +33,41 @@
 
 # virtual methods
 .method public assertNotOpen()V
-    .locals 1
+    .locals 2
 
-    iget-boolean p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->open:Z
+    iget-boolean v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->open:Z
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Connection is already open"
+    const-string v1, "Connection is already open"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public assertOpen()V
-    .locals 1
+    .locals 2
 
-    iget-boolean p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->open:Z
+    iget-boolean v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->open:Z
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Connection is not open"
+    const-string v1, "Connection is not open"
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method
 
 .method public bind(Ljava/net/Socket;Lorg/apache/http/params/HttpParams;)V
@@ -105,22 +105,22 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP parameters may not be null"
+    const-string p2, "HTTP parameters may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Socket may not be null"
+    const-string p2, "Socket may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public close()V
@@ -160,169 +160,169 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
     :catch_1
-    iget-object p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
+    iget-object v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
 
-    invoke-virtual {p0}, Ljava/net/Socket;->close()V
+    invoke-virtual {v0}, Ljava/net/Socket;->close()V
 
     return-void
 .end method
 
 .method public createHttpDataReceiver(Ljava/net/Socket;ILorg/apache/http/params/HttpParams;)Lorg/apache/http/io/SessionInputBuffer;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    new-instance p0, Lorg/apache/http/impl/io/SocketInputBuffer;
+    new-instance v0, Lorg/apache/http/impl/io/SocketInputBuffer;
 
-    invoke-direct {p0, p1, p2, p3}, Lorg/apache/http/impl/io/SocketInputBuffer;-><init>(Ljava/net/Socket;ILorg/apache/http/params/HttpParams;)V
+    invoke-direct {v0, p1, p2, p3}, Lorg/apache/http/impl/io/SocketInputBuffer;-><init>(Ljava/net/Socket;ILorg/apache/http/params/HttpParams;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createHttpDataTransmitter(Ljava/net/Socket;ILorg/apache/http/params/HttpParams;)Lorg/apache/http/io/SessionOutputBuffer;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    new-instance p0, Lorg/apache/http/impl/io/SocketOutputBuffer;
+    new-instance v0, Lorg/apache/http/impl/io/SocketOutputBuffer;
 
-    invoke-direct {p0, p1, p2, p3}, Lorg/apache/http/impl/io/SocketOutputBuffer;-><init>(Ljava/net/Socket;ILorg/apache/http/params/HttpParams;)V
+    invoke-direct {v0, p1, p2, p3}, Lorg/apache/http/impl/io/SocketOutputBuffer;-><init>(Ljava/net/Socket;ILorg/apache/http/params/HttpParams;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getLocalAddress()Ljava/net/InetAddress;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
+    iget-object v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ljava/net/Socket;->getLocalAddress()Ljava/net/InetAddress;
+    invoke-virtual {v0}, Ljava/net/Socket;->getLocalAddress()Ljava/net/InetAddress;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getLocalPort()I
-    .locals 0
-
-    iget-object p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/net/Socket;->getLocalPort()I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method public getRemoteAddress()Ljava/net/InetAddress;
-    .locals 0
-
-    iget-object p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/net/Socket;->getInetAddress()Ljava/net/InetAddress;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getRemotePort()I
-    .locals 0
-
-    iget-object p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/net/Socket;->getPort()I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method public getSocket()Ljava/net/Socket;
-    .locals 0
-
-    iget-object p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
-
-    return-object p0
-.end method
-
-.method public getSocketTimeout()I
     .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
+    iget-object v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
 
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/net/Socket;->getLocalPort()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
     const/4 v0, -0x1
 
-    if-eqz p0, :cond_0
-
-    :try_start_0
-    invoke-virtual {p0}, Ljava/net/Socket;->getSoTimeout()I
-
-    move-result p0
-    :try_end_0
-    .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return p0
-
-    :catch_0
-    :cond_0
     return v0
 .end method
 
+.method public getRemoteAddress()Ljava/net/InetAddress;
+    .locals 1
+
+    iget-object v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/net/Socket;->getInetAddress()Ljava/net/InetAddress;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getRemotePort()I
+    .locals 1
+
+    iget-object v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/net/Socket;->getPort()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    return v0
+.end method
+
+.method public getSocket()Ljava/net/Socket;
+    .locals 1
+
+    iget-object v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
+
+    return-object v0
+.end method
+
+.method public getSocketTimeout()I
+    .locals 2
+
+    iget-object v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
+
+    const/4 v1, -0x1
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/net/Socket;->getSoTimeout()I
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    :cond_0
+    return v1
+.end method
+
 .method public isOpen()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->open:Z
+    iget-boolean v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->open:Z
 
-    return p0
+    return v0
 .end method
 
 .method public setSocketTimeout(I)V
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Lorg/apache/http/impl/SocketHttpServerConnection;->assertOpen()V
 
-    iget-object p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
+    iget-object v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     :try_start_0
-    invoke-virtual {p0, p1}, Ljava/net/Socket;->setSoTimeout(I)V
+    invoke-virtual {v0, p1}, Ljava/net/Socket;->setSoTimeout(I)V
     :try_end_0
     .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -343,11 +343,11 @@
 
     iput-boolean v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->open:Z
 
-    iget-object p0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
+    iget-object v0, p0, Lorg/apache/http/impl/SocketHttpServerConnection;->socket:Ljava/net/Socket;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ljava/net/Socket;->close()V
+    invoke-virtual {v0}, Ljava/net/Socket;->close()V
 
     :cond_0
     return-void

@@ -41,7 +41,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILld4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
 
     return-void
 .end method
@@ -49,83 +49,83 @@
 
 # virtual methods
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object p0
-
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 p2, -0x1
-
-    invoke-direct {p1, p2, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    new-instance p2, Landroid/widget/FrameLayout;
-
-    invoke-direct {p2, p0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance p0, Ldha;
-
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
     move-result-object p1
 
-    const/4 p3, 0x0
+    new-instance p2, Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-direct {p0, p1, p3}, Ldha;-><init>(Landroid/content/Context;I)V
+    const/4 p3, -0x1
 
-    sget p1, Lnea;->b:I
+    invoke-direct {p2, p3, p3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+    new-instance p3, Landroid/widget/FrameLayout;
 
-    sget p1, Loea;->e:I
+    invoke-direct {p3, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    new-instance p3, Lp2f;
+    invoke-virtual {p3, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-direct {p3, p1}, Lp2f;-><init>(I)V
+    new-instance p1, Lwua;
 
-    invoke-virtual {p0, p3}, Ldha;->setTitle(Lu2f;)V
+    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    sget p1, Loea;->d:I
+    move-result-object p2
 
-    new-instance p3, Lp2f;
+    const/4 v0, 0x0
 
-    invoke-direct {p3, p1}, Lp2f;-><init>(I)V
+    invoke-direct {p1, p2, v0}, Lwua;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {p0, p3}, Ldha;->setSubtitle(Lu2f;)V
+    sget p2, Lesa;->b:I
 
-    sget p1, Lq0d;->V:I
+    invoke-virtual {p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    invoke-virtual {p0, p1}, Ldha;->setIcon(I)V
+    sget p2, Lfsa;->e:I
 
-    sget-object p1, Lyu4;->t0:Lbx9;
+    new-instance v0, Lorf;
 
-    invoke-virtual {p1, p0}, Lbx9;->l(Landroid/view/View;)Lera;
+    invoke-direct {v0, p2}, Lorf;-><init>(I)V
 
-    move-result-object p3
+    invoke-virtual {p1, v0}, Lwua;->setTitle(Ltrf;)V
 
-    invoke-interface {p3}, Lera;->b()Lie0;
+    sget p2, Lfsa;->d:I
 
-    move-result-object p3
+    new-instance v0, Lorf;
 
-    iget-object p3, p3, Lie0;->a:Lhe0;
+    invoke-direct {v0, p2}, Lorf;-><init>(I)V
 
-    iget p3, p3, Lhe0;->h:I
+    invoke-virtual {p1, v0}, Lwua;->setSubtitle(Ltrf;)V
 
-    invoke-virtual {p0, p3}, Landroid/view/View;->setBackgroundColor(I)V
+    sget p2, Lpjd;->W:I
 
-    invoke-virtual {p1, p0}, Lbx9;->q(Landroid/view/View;)Llia;
+    invoke-virtual {p1, p2}, Lwua;->setIcon(I)V
 
-    move-result-object p1
+    sget-object p2, Ll05;->s0:Lk82;
 
-    iget-object p1, p1, Llia;->c:Lera;
+    invoke-virtual {p2, p1}, Lk82;->n(Landroid/view/View;)Lv5b;
 
-    invoke-virtual {p0, p1}, Ldha;->setCustomTheme(Lera;)V
+    move-result-object v0
 
-    invoke-virtual {p2, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-interface {v0}, Lv5b;->b()Lff0;
 
-    return-object p2
+    move-result-object v0
+
+    iget-object v0, v0, Lff0;->a:Lef0;
+
+    iget v0, v0, Lef0;->h:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    invoke-virtual {p2, p1}, Lk82;->q(Landroid/view/View;)Lewa;
+
+    move-result-object p2
+
+    iget-object p2, p2, Lewa;->c:Lv5b;
+
+    invoke-virtual {p1, p2}, Lwua;->setCustomTheme(Lv5b;)V
+
+    invoke-virtual {p3, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    return-object p3
 .end method

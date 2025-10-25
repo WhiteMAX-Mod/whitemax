@@ -3,136 +3,161 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljwf;
+.implements Lzq9;
 
 
 # instance fields
-.field public final a:Ljwf;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ljwf;)V
-    .locals 1
+.method public constructor <init>(Ljava/util/ArrayList;)V
+    .locals 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1}, Ljwf;->b0()Z
+    iput-object p1, p0, Lbte;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
-    invoke-static {v0}, Ln4e;->i(Z)V
+    const/4 v1, 0x1
 
-    iput-object p1, p0, Lbte;->a:Ljwf;
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzse;
+
+    iget-wide v3, v0, Lzse;->b:J
+
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-ge v0, v5, :cond_2
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lzse;
+
+    iget-wide v5, v5, Lzse;->a:J
+
+    cmp-long v3, v5, v3
+
+    if-gez v3, :cond_1
+
+    move v2, v1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lzse;
+
+    iget-wide v3, v3, Lzse;->b:J
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    xor-int/lit8 p1, v2, 0x1
+
+    invoke-static {p1}, Lsgi;->d(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final U()I
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object p0, p0, Lbte;->a:Ljwf;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {p0}, Ljwf;->o0()I
+    const/4 p1, 0x1
 
-    move-result p0
+    return p1
 
-    return p0
+    :cond_0
+    if-eqz p1, :cond_2
+
+    const-class v0, Lbte;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lbte;
+
+    iget-object v0, p0, Lbte;->a:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lbte;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final V()Landroid/util/Range;
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    iget-object p0, p0, Lbte;->a:Ljwf;
+    iget-object v0, p0, Lbte;->a:Ljava/util/ArrayList;
 
-    invoke-interface {p0}, Ljwf;->V()Landroid/util/Range;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->hashCode()I
 
-    move-result-object p0
+    move-result v0
 
-    return-object p0
+    return v0
 .end method
 
-.method public final b0()Z
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object p0, p0, Lbte;->a:Ljwf;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {p0}, Ljwf;->b0()Z
+    const-string v1, "SlowMotion: segments="
 
-    move-result p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return p0
-.end method
+    iget-object v1, p0, Lbte;->a:Ljava/util/ArrayList;
 
-.method public final j0(I)Landroid/util/Range;
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lbte;->a:Ljwf;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-interface {p0, p1}, Ljwf;->n0(I)Landroid/util/Range;
+    move-result-object v0
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final n0(I)Landroid/util/Range;
-    .locals 0
-
-    iget-object p0, p0, Lbte;->a:Ljwf;
-
-    invoke-interface {p0, p1}, Ljwf;->j0(I)Landroid/util/Range;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final o0()I
-    .locals 0
-
-    iget-object p0, p0, Lbte;->a:Ljwf;
-
-    invoke-interface {p0}, Ljwf;->U()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final p0()Landroid/util/Range;
-    .locals 0
-
-    iget-object p0, p0, Lbte;->a:Ljwf;
-
-    invoke-interface {p0}, Ljwf;->s0()Landroid/util/Range;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final q0(II)Z
-    .locals 0
-
-    iget-object p0, p0, Lbte;->a:Ljwf;
-
-    invoke-interface {p0, p2, p1}, Ljwf;->q0(II)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final s0()Landroid/util/Range;
-    .locals 0
-
-    iget-object p0, p0, Lbte;->a:Ljwf;
-
-    invoke-interface {p0}, Ljwf;->p0()Landroid/util/Range;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrtf;
+.implements Lrkg;
 
 
 # virtual methods

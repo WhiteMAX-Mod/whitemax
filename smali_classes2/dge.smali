@@ -1,99 +1,32 @@
 .class public final Ldge;
-.super Ljava/lang/Object;
+.super Lvpe;
 .source "SourceFile"
 
-# interfaces
-.implements Lege;
 
+# virtual methods
+.method public final A(Ly18;)V
+    .locals 1
 
-# instance fields
-.field public final a:I
+    instance-of v0, p1, Lkxd;
 
+    if-nez v0, :cond_0
 
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
+    return-void
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :cond_0
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    iput p1, p0, Ldge;->a:I
+    check-cast v0, Lcde;
+
+    check-cast p1, Ltce;
+
+    invoke-virtual {v0, p1}, Lcde;->setModelItem(Ltce;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Ldge;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ldge;
-
-    iget p0, p0, Ldge;->a:I
-
-    iget p1, p1, Ldge;->a:I
-
-    if-eq p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public final F()V
     .locals 0
 
-    iget p0, p0, Ldge;->a:I
-
-    invoke-static {p0}, Lmw1;->t(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "TypeChange(newType="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget p0, p0, Ldge;->a:I
-
-    invoke-static {p0}, Lz7e;->D(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

@@ -1,31 +1,31 @@
 .class public final Lvid;
-.super Lw7;
+.super Lq7d;
 .source "SourceFile"
 
 
 # static fields
-.field public static final s:Lvid;
+.field public static final synthetic I0:I
 
-.field public static final t:Lvid;
+
+# instance fields
+.field public final D0:Le72;
+
+.field public E0:Lqid;
+
+.field public F0:I
+
+.field public G0:J
+
+.field public H0:Z
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Le72;)V
+    .locals 0
 
-    new-instance v0, Lvid;
+    invoke-direct {p0, p1}, Lq7d;-><init>(Landroid/view/View;)V
 
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Lw7;-><init>(I)V
-
-    sput-object v0, Lvid;->s:Lvid;
-
-    new-instance v0, Lvid;
-
-    invoke-direct {v0, v1}, Lw7;-><init>(I)V
-
-    sput-object v0, Lvid;->t:Lvid;
+    iput-object p1, p0, Lvid;->D0:Le72;
 
     return-void
 .end method

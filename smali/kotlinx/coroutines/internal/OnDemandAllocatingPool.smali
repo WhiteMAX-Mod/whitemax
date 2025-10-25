@@ -26,7 +26,7 @@
         "Lkotlin/Function1;",
         "create",
         "<init>",
-        "(ILbc6;)V",
+        "(ILli6;)V",
         "tryForbidNewElements",
         "()I",
         "",
@@ -43,7 +43,7 @@
         "stateRepresentation",
         "toString",
         "I",
-        "Lbc6;",
+        "Lli6;",
         "Lkotlinx/atomicfu/AtomicInt;",
         "controlState",
         "Lkotlinx/atomicfu/AtomicArray;",
@@ -67,10 +67,10 @@
 # instance fields
 .field private volatile synthetic controlState$volatile:I
 
-.field private final create:Lbc6;
+.field private final create:Lli6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lbc6;"
+            "Lli6;"
         }
     .end annotation
 .end field
@@ -97,12 +97,12 @@
     return-void
 .end method
 
-.method public constructor <init>(ILbc6;)V
+.method public constructor <init>(ILli6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lbc6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
@@ -111,7 +111,7 @@
 
     iput p1, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->maxCapacity:I
 
-    iput-object p2, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->create:Lbc6;
+    iput-object p2, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->create:Lli6;
 
     new-instance p2, Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
@@ -123,11 +123,11 @@
 .end method
 
 .method private final synthetic getControlState$volatile()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->controlState$volatile:I
+    iget v0, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->controlState$volatile:I
 
-    return p0
+    return v0
 .end method
 
 .method private static final synthetic getControlState$volatile$FU()Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
@@ -139,40 +139,40 @@
 .end method
 
 .method private final synthetic getElements()Ljava/util/concurrent/atomic/AtomicReferenceArray;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->elements:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->elements:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private final isClosed(I)Z
-    .locals 0
+    .locals 1
 
-    const/high16 p0, -0x80000000
+    const/high16 v0, -0x80000000
 
-    and-int/2addr p0, p1
+    and-int/2addr p1, v0
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
-.method private final synthetic loop$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;Lbc6;)V
-    .locals 0
+.method private final synthetic loop$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;Lli6;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Object;",
             "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;",
-            "Lbc6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
@@ -180,13 +180,13 @@
     :goto_0
     invoke-virtual {p2, p1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
 
-    move-result p0
+    move-result v0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p3, p0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -217,9 +217,9 @@
 
     if-eqz v3, :cond_1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 
     :cond_1
     invoke-static {}, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->getControlState$volatile$FU()Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
@@ -257,9 +257,9 @@
 
     if-eqz v2, :cond_1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 
     :cond_1
     iget v2, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->maxCapacity:I
@@ -287,17 +287,17 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->create:Lbc6;
+    iget-object v2, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->create:Lli6;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    move-result-object v4
+
+    invoke-interface {v2, v4}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
     move-result-object v2
 
-    invoke-interface {p0, v2}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
 
     return v3
 .end method
@@ -347,7 +347,7 @@
     if-eqz v2, :cond_0
 
     :goto_0
-    invoke-static {v4, v1}, Lkp;->M(II)Lw97;
+    invoke-static {v4, v1}, Llwi;->i(II)Lti7;
 
     move-result-object v0
 
@@ -355,7 +355,7 @@
 
     const/16 v2, 0xa
 
-    invoke-static {v0, v2}, Ls73;->O(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v2}, Lpb3;->l(Ljava/lang/Iterable;I)I
 
     move-result v2
 
@@ -374,9 +374,9 @@
 
     move-object v2, v0
 
-    check-cast v2, Lv97;
+    check-cast v2, Lsi7;
 
-    invoke-virtual {v2}, Lv97;->nextInt()I
+    invoke-virtual {v2}, Lsi7;->nextInt()I
 
     move-result v2
 
@@ -418,7 +418,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v1}, Lkp;->M(II)Lw97;
+    invoke-static {v2, v1}, Llwi;->i(II)Lti7;
 
     move-result-object v1
 
@@ -426,7 +426,7 @@
 
     const/16 v3, 0xa
 
-    invoke-static {v1, v3}, Ls73;->O(Ljava/lang/Iterable;I)I
+    invoke-static {v1, v3}, Lpb3;->l(Ljava/lang/Iterable;I)I
 
     move-result v3
 
@@ -445,9 +445,9 @@
 
     move-object v3, v1
 
-    check-cast v3, Lv97;
+    check-cast v3, Lsi7;
 
-    invoke-virtual {v3}, Lv97;->nextInt()I
+    invoke-virtual {v3}, Lsi7;->nextInt()I
 
     move-result v3
 
@@ -466,11 +466,11 @@
     :cond_0
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    const/high16 v1, -0x80000000
+    const/high16 v2, -0x80000000
 
-    and-int/2addr v0, v1
+    and-int/2addr v0, v2
 
     if-eqz v0, :cond_1
 
@@ -482,11 +482,11 @@
     const-string v0, ""
 
     :goto_1
-    invoke-static {p0, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -500,17 +500,17 @@
 
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->stateRepresentation$kotlinx_coroutines_core()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 p0, 0x29
+    const/16 v1, 0x29
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

@@ -129,105 +129,105 @@
 
 # virtual methods
 .method public appendProtocolVersion(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/ProtocolVersion;)Lorg/apache/http/util/CharArrayBuffer;
-    .locals 0
+    .locals 1
 
     if-eqz p2, :cond_1
 
     invoke-virtual {p0, p2}, Lorg/apache/http/message/BasicLineFormatter;->estimateProtocolVersionLen(Lorg/apache/http/ProtocolVersion;)I
 
-    move-result p0
+    move-result v0
 
     if-nez p1, :cond_0
 
     new-instance p1, Lorg/apache/http/util/CharArrayBuffer;
 
-    invoke-direct {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;-><init>(I)V
+    invoke-direct {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;-><init>(I)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->ensureCapacity(I)V
+    invoke-virtual {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;->ensureCapacity(I)V
 
     :goto_0
     invoke-virtual {p2}, Lorg/apache/http/ProtocolVersion;->getProtocol()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
-    const/16 p0, 0x2f
+    const/16 v0, 0x2f
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
+    invoke-virtual {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
 
     invoke-virtual {p2}, Lorg/apache/http/ProtocolVersion;->getMajor()I
 
-    move-result p0
+    move-result v0
 
-    invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
-    const/16 p0, 0x2e
+    const/16 v0, 0x2e
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
+    invoke-virtual {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
 
     invoke-virtual {p2}, Lorg/apache/http/ProtocolVersion;->getMinor()I
 
-    move-result p0
+    move-result p2
 
-    invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
     return-object p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Protocol version may not be null"
+    const-string p2, "Protocol version may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public doFormatHeader(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/Header;)V
-    .locals 2
+    .locals 3
 
     invoke-interface {p2}, Lorg/apache/http/Header;->getName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
     invoke-interface {p2}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result v0
+    move-result v1
 
-    add-int/lit8 v0, v0, 0x2
+    add-int/lit8 v1, v1, 0x2
 
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-    move-result v1
+    move-result v2
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v2
 
     :cond_0
-    invoke-virtual {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;->ensureCapacity(I)V
+    invoke-virtual {p1, v1}, Lorg/apache/http/util/CharArrayBuffer;->ensureCapacity(I)V
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
-    const-string p0, ": "
+    const-string v0, ": "
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
     if-eqz p2, :cond_1
 
@@ -327,9 +327,9 @@
 
     invoke-virtual {p0, p1, v0}, Lorg/apache/http/message/BasicLineFormatter;->appendProtocolVersion(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/ProtocolVersion;)Lorg/apache/http/util/CharArrayBuffer;
 
-    const/16 p0, 0x20
+    const/16 v0, 0x20
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
+    invoke-virtual {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
 
     invoke-interface {p2}, Lorg/apache/http/StatusLine;->getStatusCode()I
 
@@ -341,7 +341,7 @@
 
     invoke-virtual {p1, p2}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
+    invoke-virtual {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;->append(C)V
 
     if-eqz v1, :cond_1
 
@@ -356,15 +356,15 @@
 
     invoke-virtual {p1}, Lorg/apache/http/ProtocolVersion;->getProtocol()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result p0
+    move-result p1
 
-    add-int/lit8 p0, p0, 0x4
+    add-int/lit8 p1, p1, 0x4
 
-    return p0
+    return p1
 .end method
 
 .method public formatHeader(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/Header;)Lorg/apache/http/util/CharArrayBuffer;
@@ -382,9 +382,9 @@
 
     invoke-interface {p2}, Lorg/apache/http/FormattedHeader;->getBuffer()Lorg/apache/http/util/CharArrayBuffer;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     .line 5
     :cond_0
@@ -399,13 +399,13 @@
 
     .line 7
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Header may not be null"
+    const-string p2, "Header may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public formatRequestLine(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/RequestLine;)Lorg/apache/http/util/CharArrayBuffer;
@@ -425,13 +425,13 @@
 
     .line 5
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Request line may not be null"
+    const-string p2, "Request line may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public formatStatusLine(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/StatusLine;)Lorg/apache/http/util/CharArrayBuffer;
@@ -451,17 +451,17 @@
 
     .line 5
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Status line may not be null"
+    const-string p2, "Status line may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public initBuffer(Lorg/apache/http/util/CharArrayBuffer;)Lorg/apache/http/util/CharArrayBuffer;
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
@@ -470,11 +470,11 @@
     return-object p1
 
     :cond_0
-    new-instance p0, Lorg/apache/http/util/CharArrayBuffer;
+    new-instance p1, Lorg/apache/http/util/CharArrayBuffer;
 
-    const/16 p1, 0x40
+    const/16 v0, 0x40
 
-    invoke-direct {p0, p1}, Lorg/apache/http/util/CharArrayBuffer;-><init>(I)V
+    invoke-direct {p1, v0}, Lorg/apache/http/util/CharArrayBuffer;-><init>(I)V
 
-    return-object p0
+    return-object p1
 .end method

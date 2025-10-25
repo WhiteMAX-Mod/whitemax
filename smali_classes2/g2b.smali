@@ -1,94 +1,199 @@
-.class public final Lg2b;
-.super Lure;
+.class public abstract Lg2b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final B:I
 
-.field public final synthetic Y:Ll2b;
+.field public static final C:I
+
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>(Ll2b;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lg2b;->Y:Ll2b;
+    sget v0, Lepc;->oneme_settings_media_auto_play_video_always:I
 
-    const/4 p1, 0x2
+    sput v0, Lg2b;->a:I
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget v0, Lepc;->oneme_settings_media_auto_play_video_disable:I
+
+    sput v0, Lg2b;->b:I
+
+    sget v0, Lepc;->oneme_settings_media_auto_play_video_wifi:I
+
+    sput v0, Lg2b;->c:I
+
+    sget v0, Lepc;->oneme_settings_media_gif_always:I
+
+    sput v0, Lg2b;->d:I
+
+    sget v0, Lepc;->oneme_settings_media_gif_dont_load:I
+
+    sput v0, Lg2b;->e:I
+
+    sget v0, Lepc;->oneme_settings_media_gif_wifi:I
+
+    sput v0, Lg2b;->f:I
+
+    sget v0, Lepc;->oneme_settings_media_item_animoji_enabled:I
+
+    sput v0, Lg2b;->g:I
+
+    sget v0, Lepc;->oneme_settings_media_item_gif:I
+
+    sput v0, Lg2b;->h:I
+
+    sget v0, Lepc;->oneme_settings_media_item_gif_available:I
+
+    sput v0, Lg2b;->i:I
+
+    sget v0, Lepc;->oneme_settings_media_item_load_in_roaming:I
+
+    sput v0, Lg2b;->j:I
+
+    sget v0, Lepc;->oneme_settings_media_item_photo:I
+
+    sput v0, Lg2b;->k:I
+
+    sget v0, Lepc;->oneme_settings_media_item_playlist_enabled:I
+
+    sput v0, Lg2b;->l:I
+
+    sget v0, Lepc;->oneme_settings_media_item_video:I
+
+    sput v0, Lg2b;->m:I
+
+    sget v0, Lepc;->oneme_settings_media_item_video_caching:I
+
+    sput v0, Lg2b;->n:I
+
+    sget v0, Lepc;->oneme_settings_media_item_video_messages:I
+
+    sput v0, Lg2b;->o:I
+
+    sget v0, Lepc;->oneme_settings_media_item_video_quality:I
+
+    sput v0, Lg2b;->p:I
+
+    sget v0, Lepc;->oneme_settings_media_photo_always:I
+
+    sput v0, Lg2b;->q:I
+
+    sget v0, Lepc;->oneme_settings_media_photo_dont_load:I
+
+    sput v0, Lg2b;->r:I
+
+    sget v0, Lepc;->oneme_settings_media_photo_wifi:I
+
+    sput v0, Lg2b;->s:I
+
+    sget v0, Lepc;->oneme_settings_media_quality_1080:I
+
+    sput v0, Lg2b;->t:I
+
+    sget v0, Lepc;->oneme_settings_media_quality_480:I
+
+    sput v0, Lg2b;->u:I
+
+    sget v0, Lepc;->oneme_settings_media_quality_720:I
+
+    sput v0, Lg2b;->v:I
+
+    sget v0, Lepc;->oneme_settings_media_screen_autoplaying_section_header:I
+
+    sput v0, Lg2b;->w:I
+
+    sget v0, Lepc;->oneme_settings_media_screen_datapressing_section_header:I
+
+    sput v0, Lg2b;->x:I
+
+    sget v0, Lepc;->oneme_settings_media_screen_list:I
+
+    sput v0, Lg2b;->y:I
+
+    sget v0, Lepc;->oneme_settings_media_screen_settings_header_vh:I
+
+    sput v0, Lg2b;->z:I
+
+    sget v0, Lepc;->oneme_settings_media_screen_settings_item_vh:I
+
+    sput v0, Lg2b;->A:I
+
+    sget v0, Lepc;->oneme_settings_media_screen_toolbar:I
+
+    sput v0, Lg2b;->B:I
+
+    sget v0, Lepc;->oneme_settings_media_video_messages_always:I
+
+    sput v0, Lg2b;->C:I
+
+    sget v0, Lepc;->oneme_settings_media_video_messages_dont_load:I
+
+    sput v0, Lg2b;->D:I
+
+    sget v0, Lepc;->oneme_settings_media_video_messages_wifi:I
+
+    sput v0, Lg2b;->E:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lm2b;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lg2b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lg2b;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lg2b;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lg2b;
-
-    iget-object p0, p0, Lg2b;->Y:Ll2b;
-
-    invoke-direct {v0, p0, p2}, Lg2b;-><init>(Ll2b;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lg2b;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lg2b;->X:Ljava/lang/Object;
-
-    check-cast p1, Lm2b;
-
-    sget-object v0, Lm2b;->a:Lm2b;
-
-    if-ne p1, v0, :cond_0
-
-    const-string p1, "allowed"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "denied"
-
-    :goto_0
-    iget-object p0, p0, Lg2b;->Y:Ll2b;
-
-    const-string v0, "contacts"
-
-    invoke-static {p0, v0, p1}, Ll2b;->a(Ll2b;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
 .end method

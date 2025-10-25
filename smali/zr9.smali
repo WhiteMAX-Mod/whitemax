@@ -1,4 +1,4 @@
-.class public final Lzr9;
+.class public abstract Lzr9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -8,11 +8,9 @@
 
 .field public final b:I
 
-.field public final c:I
-
 
 # direct methods
-.method public constructor <init>(III)V
+.method public constructor <init>(II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -21,7 +19,10 @@
 
     iput p2, p0, Lzr9;->b:I
 
-    iput p3, p0, Lzr9;->c:I
-
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(Ltg6;)V
 .end method

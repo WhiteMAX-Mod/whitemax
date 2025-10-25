@@ -1,62 +1,64 @@
-.class public final Lb40;
+.class public final synthetic Lb40;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkz;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:[B
-
-.field public final h:Ljava/lang/String;
-
-.field public final i:J
-
-.field public final j:Lrce;
-
-.field public final k:Lrce;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[BLjava/lang/String;JLyce;Lrce;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
     .locals 0
+
+    iput p2, p0, Lb40;->a:I
+
+    iput-object p1, p0, Lb40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lb40;->a:J
+    return-void
+.end method
 
-    iput-wide p3, p0, Lb40;->b:J
 
-    iput-object p5, p0, Lb40;->c:Ljava/lang/String;
+# virtual methods
+.method public final run()V
+    .locals 1
 
-    iput-object p6, p0, Lb40;->d:Ljava/lang/String;
+    iget v0, p0, Lb40;->a:I
 
-    iput-object p7, p0, Lb40;->e:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iput-object p8, p0, Lb40;->f:Ljava/lang/String;
+    iget-object v0, p0, Lb40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
-    iput-object p9, p0, Lb40;->g:[B
-
-    iput-object p10, p0, Lb40;->h:Ljava/lang/String;
-
-    iput-wide p11, p0, Lb40;->i:J
-
-    iput-object p13, p0, Lb40;->j:Lrce;
-
-    iput-object p14, p0, Lb40;->k:Lrce;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->d(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lb40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->b(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lb40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->c(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

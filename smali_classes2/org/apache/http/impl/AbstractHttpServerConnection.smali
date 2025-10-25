@@ -71,78 +71,78 @@
 .end method
 
 .method public createEntityDeserializer()Lorg/apache/http/impl/entity/EntityDeserializer;
-    .locals 1
+    .locals 2
 
-    new-instance p0, Lorg/apache/http/impl/entity/EntityDeserializer;
+    new-instance v0, Lorg/apache/http/impl/entity/EntityDeserializer;
 
-    new-instance v0, Lorg/apache/http/impl/entity/LaxContentLengthStrategy;
+    new-instance v1, Lorg/apache/http/impl/entity/LaxContentLengthStrategy;
 
-    invoke-direct {v0}, Lorg/apache/http/impl/entity/LaxContentLengthStrategy;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/impl/entity/LaxContentLengthStrategy;-><init>()V
 
-    invoke-direct {p0, v0}, Lorg/apache/http/impl/entity/EntityDeserializer;-><init>(Lorg/apache/http/entity/ContentLengthStrategy;)V
+    invoke-direct {v0, v1}, Lorg/apache/http/impl/entity/EntityDeserializer;-><init>(Lorg/apache/http/entity/ContentLengthStrategy;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createEntitySerializer()Lorg/apache/http/impl/entity/EntitySerializer;
-    .locals 1
+    .locals 2
 
-    new-instance p0, Lorg/apache/http/impl/entity/EntitySerializer;
+    new-instance v0, Lorg/apache/http/impl/entity/EntitySerializer;
 
-    new-instance v0, Lorg/apache/http/impl/entity/StrictContentLengthStrategy;
+    new-instance v1, Lorg/apache/http/impl/entity/StrictContentLengthStrategy;
 
-    invoke-direct {v0}, Lorg/apache/http/impl/entity/StrictContentLengthStrategy;-><init>()V
+    invoke-direct {v1}, Lorg/apache/http/impl/entity/StrictContentLengthStrategy;-><init>()V
 
-    invoke-direct {p0, v0}, Lorg/apache/http/impl/entity/EntitySerializer;-><init>(Lorg/apache/http/entity/ContentLengthStrategy;)V
+    invoke-direct {v0, v1}, Lorg/apache/http/impl/entity/EntitySerializer;-><init>(Lorg/apache/http/entity/ContentLengthStrategy;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createHttpRequestFactory()Lorg/apache/http/HttpRequestFactory;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lorg/apache/http/impl/DefaultHttpRequestFactory;
+    new-instance v0, Lorg/apache/http/impl/DefaultHttpRequestFactory;
 
-    invoke-direct {p0}, Lorg/apache/http/impl/DefaultHttpRequestFactory;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/impl/DefaultHttpRequestFactory;-><init>()V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createRequestParser(Lorg/apache/http/io/SessionInputBuffer;Lorg/apache/http/HttpRequestFactory;Lorg/apache/http/params/HttpParams;)Lorg/apache/http/io/HttpMessageParser;
-    .locals 1
+    .locals 2
 
-    new-instance p0, Lorg/apache/http/impl/io/HttpRequestParser;
+    new-instance v0, Lorg/apache/http/impl/io/HttpRequestParser;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1, v0, p2, p3}, Lorg/apache/http/impl/io/HttpRequestParser;-><init>(Lorg/apache/http/io/SessionInputBuffer;Lorg/apache/http/message/LineParser;Lorg/apache/http/HttpRequestFactory;Lorg/apache/http/params/HttpParams;)V
+    invoke-direct {v0, p1, v1, p2, p3}, Lorg/apache/http/impl/io/HttpRequestParser;-><init>(Lorg/apache/http/io/SessionInputBuffer;Lorg/apache/http/message/LineParser;Lorg/apache/http/HttpRequestFactory;Lorg/apache/http/params/HttpParams;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public createResponseWriter(Lorg/apache/http/io/SessionOutputBuffer;Lorg/apache/http/params/HttpParams;)Lorg/apache/http/io/HttpMessageWriter;
-    .locals 1
+    .locals 2
 
-    new-instance p0, Lorg/apache/http/impl/io/HttpResponseWriter;
+    new-instance v0, Lorg/apache/http/impl/io/HttpResponseWriter;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1, v0, p2}, Lorg/apache/http/impl/io/HttpResponseWriter;-><init>(Lorg/apache/http/io/SessionOutputBuffer;Lorg/apache/http/message/LineFormatter;Lorg/apache/http/params/HttpParams;)V
+    invoke-direct {v0, p1, v1, p2}, Lorg/apache/http/impl/io/HttpResponseWriter;-><init>(Lorg/apache/http/io/SessionOutputBuffer;Lorg/apache/http/message/LineFormatter;Lorg/apache/http/params/HttpParams;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public doFlush()V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->outbuffer:Lorg/apache/http/io/SessionOutputBuffer;
+    iget-object v0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->outbuffer:Lorg/apache/http/io/SessionOutputBuffer;
 
-    invoke-interface {p0}, Lorg/apache/http/io/SessionOutputBuffer;->flush()V
+    invoke-interface {v0}, Lorg/apache/http/io/SessionOutputBuffer;->flush()V
 
     return-void
 .end method
@@ -163,11 +163,11 @@
 .end method
 
 .method public getMetrics()Lorg/apache/http/HttpConnectionMetrics;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->metrics:Lorg/apache/http/impl/HttpConnectionMetricsImpl;
+    iget-object v0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->metrics:Lorg/apache/http/impl/HttpConnectionMetricsImpl;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public init(Lorg/apache/http/io/SessionInputBuffer;Lorg/apache/http/io/SessionOutputBuffer;Lorg/apache/http/params/HttpParams;)V
@@ -214,48 +214,46 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Output session buffer may not be null"
+    const-string p2, "Output session buffer may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Input session buffer may not be null"
+    const-string p2, "Input session buffer may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public isStale()Z
-    .locals 1
+    .locals 2
 
     invoke-virtual {p0}, Lorg/apache/http/impl/AbstractHttpServerConnection;->assertOpen()V
 
     const/4 v0, 0x1
 
     :try_start_0
-    iget-object p0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->inbuffer:Lorg/apache/http/io/SessionInputBuffer;
+    iget-object v1, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->inbuffer:Lorg/apache/http/io/SessionInputBuffer;
 
-    invoke-interface {p0, v0}, Lorg/apache/http/io/SessionInputBuffer;->isDataAvailable(I)Z
+    invoke-interface {v1, v0}, Lorg/apache/http/io/SessionInputBuffer;->isDataAvailable(I)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 p0, 0x0
-
-    return p0
+    const/4 v0, 0x0
 
     :catch_0
     return v0
 .end method
 
 .method public receiveRequestEntity(Lorg/apache/http/HttpEntityEnclosingRequest;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/HttpException;,
@@ -269,28 +267,28 @@
 
     iget-object v0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->entitydeserializer:Lorg/apache/http/impl/entity/EntityDeserializer;
 
-    iget-object p0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->inbuffer:Lorg/apache/http/io/SessionInputBuffer;
+    iget-object v1, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->inbuffer:Lorg/apache/http/io/SessionInputBuffer;
 
-    invoke-virtual {v0, p0, p1}, Lorg/apache/http/impl/entity/EntityDeserializer;->deserialize(Lorg/apache/http/io/SessionInputBuffer;Lorg/apache/http/HttpMessage;)Lorg/apache/http/HttpEntity;
+    invoke-virtual {v0, v1, p1}, Lorg/apache/http/impl/entity/EntityDeserializer;->deserialize(Lorg/apache/http/io/SessionInputBuffer;Lorg/apache/http/HttpMessage;)Lorg/apache/http/HttpEntity;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p1, p0}, Lorg/apache/http/HttpEntityEnclosingRequest;->setEntity(Lorg/apache/http/HttpEntity;)V
+    invoke-interface {p1, v0}, Lorg/apache/http/HttpEntityEnclosingRequest;->setEntity(Lorg/apache/http/HttpEntity;)V
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP request may not be null"
+    const-string v0, "HTTP request may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public receiveRequestHeader()Lorg/apache/http/HttpRequest;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/HttpException;,
@@ -308,15 +306,15 @@
 
     check-cast v0, Lorg/apache/http/HttpRequest;
 
-    iget-object p0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->metrics:Lorg/apache/http/impl/HttpConnectionMetricsImpl;
+    iget-object v1, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->metrics:Lorg/apache/http/impl/HttpConnectionMetricsImpl;
 
-    invoke-virtual {p0}, Lorg/apache/http/impl/HttpConnectionMetricsImpl;->incrementRequestCount()V
+    invoke-virtual {v1}, Lorg/apache/http/impl/HttpConnectionMetricsImpl;->incrementRequestCount()V
 
     return-object v0
 .end method
 
 .method public sendResponseEntity(Lorg/apache/http/HttpResponse;)V
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/HttpException;,
@@ -335,13 +333,13 @@
     :cond_0
     iget-object v0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->entityserializer:Lorg/apache/http/impl/entity/EntitySerializer;
 
-    iget-object p0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->outbuffer:Lorg/apache/http/io/SessionOutputBuffer;
+    iget-object v1, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->outbuffer:Lorg/apache/http/io/SessionOutputBuffer;
 
     invoke-interface {p1}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, p0, p1, v1}, Lorg/apache/http/impl/entity/EntitySerializer;->serialize(Lorg/apache/http/io/SessionOutputBuffer;Lorg/apache/http/HttpMessage;Lorg/apache/http/HttpEntity;)V
+    invoke-virtual {v0, v1, p1, v2}, Lorg/apache/http/impl/entity/EntitySerializer;->serialize(Lorg/apache/http/io/SessionOutputBuffer;Lorg/apache/http/HttpMessage;Lorg/apache/http/HttpEntity;)V
 
     return-void
 .end method
@@ -375,19 +373,19 @@
 
     if-lt p1, v0, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->metrics:Lorg/apache/http/impl/HttpConnectionMetricsImpl;
+    iget-object p1, p0, Lorg/apache/http/impl/AbstractHttpServerConnection;->metrics:Lorg/apache/http/impl/HttpConnectionMetricsImpl;
 
-    invoke-virtual {p0}, Lorg/apache/http/impl/HttpConnectionMetricsImpl;->incrementResponseCount()V
+    invoke-virtual {p1}, Lorg/apache/http/impl/HttpConnectionMetricsImpl;->incrementResponseCount()V
 
     :cond_0
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP response may not be null"
+    const-string v0, "HTTP response may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

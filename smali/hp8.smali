@@ -1,76 +1,36 @@
-.class public final synthetic Lhp8;
+.class public abstract Lhp8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltp8;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lzh8;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lzh8;I)V
-    .locals 0
+.method public static a(Lxo8;Liub;)V
+    .locals 1
 
-    iput p2, p0, Lhp8;->a:I
+    iget-object p1, p1, Liub;->a:Lhub;
 
-    iput-object p1, p0, Lhp8;->b:Lzh8;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p1, Lhub;->a:Landroid/media/metrics/LogSessionId;
 
+    invoke-static {}, Lqu8;->f()Landroid/media/metrics/LogSessionId;
+
+    invoke-static {p1}, Lqu8;->z(Landroid/media/metrics/LogSessionId;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object p0, p0, Lxo8;->b:Landroid/media/MediaFormat;
+
+    const-string v0, "log-session-id"
+
+    invoke-static {p1}, Lm04;->o(Landroid/media/metrics/LogSessionId;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v0, p1}, Landroid/media/MediaFormat;->setString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
     return-void
-.end method
-
-
-# virtual methods
-.method public final l(Llo8;Ltn8;I)Ljava/lang/Object;
-    .locals 0
-
-    iget p3, p0, Lhp8;->a:I
-
-    iget-object p0, p0, Lhp8;->b:Lzh8;
-
-    packed-switch p3, :pswitch_data_0
-
-    invoke-static {p0}, Ll37;->m(Ljava/lang/Object;)Llqc;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p2, p0}, Llo8;->j(Ltn8;Ljava/util/List;)Lgt7;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    invoke-static {p0}, Ll37;->m(Ljava/lang/Object;)Llqc;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p2, p0}, Llo8;->j(Ltn8;Ljava/util/List;)Lgt7;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    invoke-static {p0}, Ll37;->m(Ljava/lang/Object;)Llqc;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p2, p0}, Llo8;->j(Ltn8;Ljava/util/List;)Lgt7;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

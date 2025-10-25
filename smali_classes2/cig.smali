@@ -1,160 +1,55 @@
 .class public final Lcig;
-.super Leig;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public a:Ljava/lang/Boolean;
 
-.field public final d:Ll2a;
+.field public b:Ljava/lang/Long;
 
-.field public final e:Z
+.field public c:Ljava/lang/String;
 
+.field public d:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ll2a;Z)V
-    .locals 0
+.field public e:Ljava/lang/String;
 
-    invoke-direct {p0}, Lpg7;-><init>()V
+.field public f:Ljava/lang/String;
 
-    iput-object p1, p0, Lcig;->c:Ljava/lang/String;
+.field public g:Ljava/lang/String;
 
-    iput-object p2, p0, Lcig;->d:Ll2a;
+.field public h:Ljava/lang/Boolean;
 
-    iput-boolean p3, p0, Lcig;->e:Z
+.field public i:Ljava/lang/Integer;
 
-    return-void
-.end method
+.field public j:Ljava/lang/Integer;
 
+.field public k:Ljava/lang/Integer;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.field public l:Ljava/lang/Boolean;
 
-    const/4 v0, 0x1
+.field public m:Ljava/lang/Boolean;
 
-    if-ne p0, p1, :cond_0
+.field public n:Ljava/lang/Boolean;
 
-    return v0
+.field public o:I
 
-    :cond_0
-    instance-of v1, p1, Lcig;
+.field public p:I
 
-    const/4 v2, 0x0
+.field public q:Ldig;
 
-    if-nez v1, :cond_1
+.field public r:I
 
-    return v2
+.field public s:I
 
-    :cond_1
-    check-cast p1, Lcig;
+.field public t:Ljava/lang/Boolean;
 
-    iget-object v1, p0, Lcig;->c:Ljava/lang/String;
+.field public u:Ljava/lang/Boolean;
 
-    iget-object v3, p1, Lcig;->c:Ljava/lang/String;
+.field public v:Ljava/lang/Boolean;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public w:I
 
-    move-result v1
+.field public x:Ljava/lang/Boolean;
 
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lcig;->d:Ll2a;
-
-    iget-object v3, p1, Lcig;->d:Ll2a;
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean p0, p0, Lcig;->e:Z
-
-    iget-boolean p1, p1, Lcig;->e:Z
-
-    if-eq p0, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcig;->e:Z
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lcig;->c:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lcig;->d:Ll2a;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean p0, p0, Lcig;->e:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v1
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Notification(queryId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcig;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", notificationType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcig;->d:Ll2a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", disableVibrationFallback="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lcig;->e:Z
-
-    invoke-static {v0, p0, v1}, Lmw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public y:Ljava/lang/Boolean;

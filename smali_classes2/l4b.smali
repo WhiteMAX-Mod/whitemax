@@ -1,77 +1,157 @@
-.class public final synthetic Ll4b;
+.class public abstract Ll4b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lm4b;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lm4b;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Ll4b;->a:I
+    sget v0, Lauc;->oneme_startconversation_channel_add_subscribers_error:I
 
-    iput-object p1, p0, Ll4b;->b:Lm4b;
+    sput v0, Ll4b;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lauc;->oneme_startconversation_channel_create_error:I
+
+    sput v0, Ll4b;->b:I
+
+    sget v0, Lauc;->oneme_startconversation_channel_limit_add_subscribers_error:I
+
+    sput v0, Ll4b;->c:I
+
+    sget v0, Lauc;->oneme_startconversation_channel_select_subscribers_skip_button:I
+
+    sput v0, Ll4b;->d:I
+
+    sget v0, Lauc;->oneme_startconversation_channel_select_subscribers_toolbar_title:I
+
+    sput v0, Ll4b;->e:I
+
+    sget v0, Lauc;->oneme_startconversation_title:I
+
+    sput v0, Ll4b;->f:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_members:I
+
+    sput v0, Ll4b;->g:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_avatar_bottomsheet_title:I
+
+    sput v0, Ll4b;->h:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_avatars_load_from_gallery_action:I
+
+    sput v0, Ll4b;->i:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_avatars_take_photo_action:I
+
+    sput v0, Ll4b;->j:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_confirm_button_title:I
+
+    sput v0, Ll4b;->k:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_confirm_button_title_channel:I
+
+    sput v0, Ll4b;->l:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_hint:I
+
+    sput v0, Ll4b;->m:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_hint_channel:I
+
+    sput v0, Ll4b;->n:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_input_description_hint:I
+
+    sput v0, Ll4b;->o:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_input_hint:I
+
+    sput v0, Ll4b;->p:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_input_hint_channel:I
+
+    sput v0, Ll4b;->q:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_toolbar_title:I
+
+    sput v0, Ll4b;->r:I
+
+    sget v0, Lauc;->oneme_startconversations_chat_titleicon_toolbar_title_channel:I
+
+    sput v0, Ll4b;->s:I
+
+    sget v0, Lauc;->oneme_startconversations_continue_create_chat:I
+
+    sput v0, Ll4b;->t:I
+
+    sget v0, Lauc;->oneme_startconversations_create_empty_chat:I
+
+    sput v0, Ll4b;->u:I
+
+    sget v0, Lauc;->oneme_startconversations_member_search_hint:I
+
+    sput v0, Ll4b;->v:I
+
+    sget v0, Lauc;->oneme_startconversations_phonebook_section_header:I
+
+    sput v0, Ll4b;->w:I
+
+    sget v0, Lauc;->oneme_startconversations_search_hint:I
+
+    sput v0, Ll4b;->x:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    iget v0, p0, Ll4b;->a:I
-
-    iget-object p0, p0, Ll4b;->b:Lm4b;
-
-    packed-switch v0, :pswitch_data_0
-
-    :try_start_0
-    invoke-virtual {p0}, Lm4b;->d()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "m4b"
-
-    const-string v2, "syncInternal: exception"
-
-    invoke-static {v1, v2, v0}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object p0, p0, Lm4b;->h:Lq95;
-
-    new-instance v1, Lru/ok/tamtam/util/HandledException;
-
-    invoke-direct {v1, v0}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
-
-    check-cast p0, Leha;
-
-    invoke-virtual {p0, v1}, Leha;->c(Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p0}, Lm4b;->d()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

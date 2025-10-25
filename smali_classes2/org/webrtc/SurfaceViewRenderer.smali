@@ -70,9 +70,9 @@
     .line 6
     invoke-virtual {p0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-interface {p0, v0}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
+    invoke-interface {p1, v0}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
     return-void
 .end method
@@ -114,9 +114,9 @@
     .line 12
     invoke-virtual {p0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-interface {p0, p2}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
+    invoke-interface {p1, p2}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
     return-void
 .end method
@@ -130,7 +130,7 @@
 .end method
 
 .method private getResourceName()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     :try_start_0
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -139,20 +139,20 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getId()I
 
-    move-result p0
+    move-result v1
 
-    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p0
+    return-object v0
 
     :catch_0
-    const-string p0, ""
+    const-string v0, ""
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private synthetic lambda$onFrameResolutionChanged$0(II)V
@@ -170,29 +170,29 @@
 .end method
 
 .method private logD(Ljava/lang/String;)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->resourceName:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->resourceName:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p0, ": "
+    const-string v0, ": "
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "SurfaceViewRenderer"
+    const-string v0, "SurfaceViewRenderer"
 
-    invoke-static {p1, p0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -335,17 +335,17 @@
 
     const-string v10, "x"
 
-    invoke-static {v8, v2, v10, v3, v9}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v2, v10, v3, v9}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
     const-string v3, ", requested surface size: "
 
-    invoke-static {v2, v4, v10, v5, v3}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v2, v4, v10, v5, v3}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     const-string v3, ", old surface size: "
 
-    invoke-static {v2, v0, v10, v1, v3}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v2, v0, v10, v1, v3}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -380,9 +380,9 @@
 
     invoke-virtual {p0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-interface {p0, v0, v1}, Landroid/view/SurfaceHolder;->setFixedSize(II)V
+    invoke-interface {v2, v0, v1}, Landroid/view/SurfaceHolder;->setFixedSize(II)V
 
     return-void
 
@@ -395,9 +395,9 @@
 
     invoke-virtual {p0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0}, Landroid/view/SurfaceHolder;->setSizeFromLayout()V
+    invoke-interface {v0}, Landroid/view/SurfaceHolder;->setSizeFromLayout()V
 
     return-void
 .end method
@@ -405,43 +405,43 @@
 
 # virtual methods
 .method public addFrameListener(Lorg/webrtc/EglRenderer$FrameListener;F)V
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
 
-    invoke-virtual {p0, p1, p2}, Lorg/webrtc/EglRenderer;->addFrameListener(Lorg/webrtc/EglRenderer$FrameListener;F)V
+    invoke-virtual {v0, p1, p2}, Lorg/webrtc/EglRenderer;->addFrameListener(Lorg/webrtc/EglRenderer$FrameListener;F)V
 
     return-void
 .end method
 
 .method public addFrameListener(Lorg/webrtc/EglRenderer$FrameListener;FLorg/webrtc/RendererCommon$GlDrawer;)V
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
 
-    invoke-virtual {p0, p1, p2, p3}, Lorg/webrtc/EglRenderer;->addFrameListener(Lorg/webrtc/EglRenderer$FrameListener;FLorg/webrtc/RendererCommon$GlDrawer;)V
+    invoke-virtual {v0, p1, p2, p3}, Lorg/webrtc/EglRenderer;->addFrameListener(Lorg/webrtc/EglRenderer$FrameListener;FLorg/webrtc/RendererCommon$GlDrawer;)V
 
     return-void
 .end method
 
 .method public clearImage()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
 
-    invoke-virtual {p0}, Lorg/webrtc/EglRenderer;->clearImage()V
+    invoke-virtual {v0}, Lorg/webrtc/EglRenderer;->clearImage()V
 
     return-void
 .end method
 
 .method public disableFpsReduction()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
 
-    invoke-virtual {p0}, Lorg/webrtc/SurfaceEglRenderer;->disableFpsReduction()V
+    invoke-virtual {v0}, Lorg/webrtc/SurfaceEglRenderer;->disableFpsReduction()V
 
     return-void
 .end method
@@ -487,24 +487,24 @@
 .end method
 
 .method public onFirstFrameRendered()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->rendererEvents:Lorg/webrtc/RendererCommon$RendererEvents;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->rendererEvents:Lorg/webrtc/RendererCommon$RendererEvents;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0}, Lorg/webrtc/RendererCommon$RendererEvents;->onFirstFrameRendered()V
+    invoke-interface {v0}, Lorg/webrtc/RendererCommon$RendererEvents;->onFirstFrameRendered()V
 
     :cond_0
     return-void
 .end method
 
 .method public onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/SurfaceEglRenderer;->onFrame(Lorg/webrtc/VideoFrame;)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/SurfaceEglRenderer;->onFrame(Lorg/webrtc/VideoFrame;)V
 
     return-void
 .end method
@@ -545,11 +545,11 @@
     move p1, p2
 
     :cond_4
-    new-instance p2, Ljt0;
+    new-instance p2, Lsu0;
 
-    const/4 p3, 0x6
+    const/4 p3, 0x7
 
-    invoke-direct {p2, p0, v1, p1, p3}, Ljt0;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {p2, p0, v1, p1, p3}, Lsu0;-><init>(Ljava/lang/Object;III)V
 
     invoke-direct {p0, p2}, Lorg/webrtc/SurfaceViewRenderer;->postOrRun(Ljava/lang/Runnable;)V
 
@@ -609,7 +609,7 @@
 
     const-string v1, "x"
 
-    invoke-static {v0, p2, p1, v1}, Lyv7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2, p1, v1}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -619,31 +619,31 @@
 .end method
 
 .method public pauseVideo()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
 
-    invoke-virtual {p0}, Lorg/webrtc/SurfaceEglRenderer;->pauseVideo()V
+    invoke-virtual {v0}, Lorg/webrtc/SurfaceEglRenderer;->pauseVideo()V
 
     return-void
 .end method
 
 .method public release()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
 
-    invoke-virtual {p0}, Lorg/webrtc/EglRenderer;->release()V
+    invoke-virtual {v0}, Lorg/webrtc/EglRenderer;->release()V
 
     return-void
 .end method
 
 .method public removeFrameListener(Lorg/webrtc/EglRenderer$FrameListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/EglRenderer;->removeFrameListener(Lorg/webrtc/EglRenderer$FrameListener;)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/EglRenderer;->removeFrameListener(Lorg/webrtc/EglRenderer$FrameListener;)V
 
     return-void
 .end method
@@ -661,21 +661,21 @@
 .end method
 
 .method public setFpsReduction(F)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/SurfaceEglRenderer;->setFpsReduction(F)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/SurfaceEglRenderer;->setFpsReduction(F)V
 
     return-void
 .end method
 
 .method public setMirror(Z)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
+    iget-object v0, p0, Lorg/webrtc/SurfaceViewRenderer;->eglRenderer:Lorg/webrtc/SurfaceEglRenderer;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/EglRenderer;->setMirror(Z)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/EglRenderer;->setMirror(Z)V
 
     return-void
 .end method

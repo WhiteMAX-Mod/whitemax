@@ -1,54 +1,118 @@
-.class public final Lru1;
+.class public final synthetic Lru1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
-.field public volatile X:Z
+.field public final synthetic a:I
 
-.field public final Y:Lgj7;
-
-.field public a:Lnb2;
-
-.field public b:J
-
-.field public c:J
-
-.field public volatile o:Z
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lru1;->a:I
+
+    iput-object p2, p0, Lru1;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lnb2;
+    return-void
+.end method
 
-    const-wide/16 v1, 0x0
 
-    invoke-direct {v0, v1, v2, v1, v2}, Lnb2;-><init>(JJ)V
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
 
-    iput-object v0, p0, Lru1;->a:Lnb2;
+    iget v0, p0, Lru1;->a:I
 
-    iput-wide v1, p0, Lru1;->b:J
+    packed-switch v0, :pswitch_data_0
 
-    iput-wide v1, p0, Lru1;->c:J
+    iget-object v0, p0, Lru1;->b:Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    check-cast v0, Lew6;
 
-    iput-boolean v0, p0, Lru1;->o:Z
+    check-cast v0, Lkjf;
 
-    iput-boolean v0, p0, Lru1;->X:Z
-
-    new-instance v0, Lgj7;
-
-    invoke-direct {v0}, Lgj7;-><init>()V
-
-    iput-object v0, p0, Lru1;->Y:Lgj7;
+    invoke-virtual {v0, p1}, Lkjf;->d(Ljava/lang/Runnable;)Z
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lru1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkjf;
+
+    invoke-virtual {v0, p1}, Lkjf;->d(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lru1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lj09;
+
+    iget-object v0, v0, Lj09;->l:Landroid/os/Handler;
+
+    invoke-static {v0, p1}, Lnig;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lru1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lxu8;
+
+    iget-object v0, v0, Lxu8;->o:Landroid/os/Handler;
+
+    invoke-static {v0, p1}, Lnig;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lru1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lqq8;
+
+    iget-object v0, v0, Lqq8;->q0:Landroid/os/Handler;
+
+    invoke-static {v0, p1}, Lnig;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lru1;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Handler;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lru1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;->f(Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

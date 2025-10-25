@@ -3,88 +3,48 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwpe;
+.implements Lwvb;
 
 
 # static fields
-.field public static final a:J
+.field public static final a:Lnw0;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+    new-instance v0, Lnw0;
 
-    const-wide/16 v1, 0x5
+    const/4 v1, 0x3
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-direct {v0, v1}, Lnw0;-><init>(I)V
 
-    move-result-wide v0
-
-    sput-wide v0, Lxe4;->a:J
+    sput-object v0, Lxe4;->a:Lnw0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 7
+.method public final a()Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    sget-object v0, Lxe4;->a:Lnw0;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/Runtime;->maxMemory()J
+    move-result-object v0
 
-    move-result-wide v0
-
-    const-wide/32 v2, 0x7fffffff
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    long-to-int p0, v0
-
-    const/high16 v0, 0x1000000
-
-    if-ge p0, v0, :cond_0
-
-    const/high16 p0, 0x100000
-
-    :goto_0
-    move v1, p0
-
-    goto :goto_1
-
-    :cond_0
-    const/high16 v0, 0x2000000
-
-    if-ge p0, v0, :cond_1
-
-    const/high16 p0, 0x200000
-
-    goto :goto_0
-
-    :cond_1
-    const/high16 p0, 0x400000
-
-    goto :goto_0
-
-    :goto_1
-    div-int/lit8 v6, v1, 0x8
-
-    new-instance v0, Lfw8;
-
-    const v2, 0x7fffffff
-
-    sget-wide v4, Lxe4;->a:J
-
-    move v3, v1
-
-    invoke-direct/range {v0 .. v6}, Lfw8;-><init>(IIIJI)V
+    check-cast v0, Ljava/nio/ByteBuffer;
 
     return-object v0
+.end method
+
+.method public final bridge synthetic c(Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

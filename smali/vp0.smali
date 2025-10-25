@@ -1,202 +1,99 @@
-.class public final Lvp0;
+.class public final synthetic Lvp0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lof5;
+.implements Lnog;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Lk3e;
+.field public final synthetic b:Lxp0;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 3
-
-    iput p1, p0, Lvp0;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p1, Lk3e;
-
-    const/4 v0, 0x2
-
-    const-string v1, "image/bmp"
-
-    const/16 v2, 0x424d
-
-    invoke-direct {p1, v2, v0, v1}, Lk3e;-><init>(IILjava/lang/String;)V
-
-    iput-object p1, p0, Lvp0;->b:Lk3e;
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p1, Lk3e;
-
-    const/4 v0, 0x2
-
-    const-string v1, "image/png"
-
-    const v2, 0x8950
-
-    invoke-direct {p1, v2, v0, v1}, Lk3e;-><init>(IILjava/lang/String;)V
-
-    iput-object p1, p0, Lvp0;->b:Lk3e;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method private final a()V
+.method public synthetic constructor <init>(Lxp0;I)V
     .locals 0
 
-    return-void
-.end method
+    iput p2, p0, Lvp0;->a:I
 
-.method private final b()V
-    .locals 0
+    iput-object p1, p0, Lvp0;->b:Lxp0;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(JJ)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
     iget v0, p0, Lvp0;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lvp0;->b:Lk3e;
+    iget-object v0, p0, Lvp0;->b:Lxp0;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lk3e;->d(JJ)V
+    iget-object v1, v0, Lxp0;->q0:Lxq6;
 
-    return-void
+    if-eqz v1, :cond_0
 
-    :pswitch_0
-    iget-object p0, p0, Lvp0;->b:Lk3e;
+    invoke-virtual {v1}, Lxq6;->a()V
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lk3e;->d(JJ)V
+    :cond_0
+    iget-object v0, v0, Lxp0;->o:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final i(Lqf5;)Z
-    .locals 1
-
-    iget v0, p0, Lvp0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lvp0;->b:Lk3e;
-
-    invoke-virtual {p0, p1}, Lk3e;->i(Lqf5;)Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    iget-object p0, p0, Lvp0;->b:Lk3e;
-
-    invoke-virtual {p0, p1}, Lk3e;->i(Lqf5;)Z
-
-    move-result p0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Lsf5;)V
-    .locals 1
-
-    iget v0, p0, Lvp0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lvp0;->b:Lk3e;
-
-    invoke-virtual {p0, p1}, Lk3e;->n(Lsf5;)V
+    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->clear()V
 
     return-void
 
     :pswitch_0
-    iget-object p0, p0, Lvp0;->b:Lk3e;
+    iget-object v0, p0, Lvp0;->b:Lxp0;
 
-    invoke-virtual {p0, p1}, Lk3e;->n(Lsf5;)V
+    iget v1, v0, Lxp0;->r0:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, v0, Lxp0;->r0:I
+
+    invoke-virtual {v0}, Lxp0;->B()V
 
     return-void
 
-    nop
+    :pswitch_1
+    iget-object v0, p0, Lvp0;->b:Lxp0;
+
+    iget-object v1, v0, Lxp0;->o:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Lxp0;->Z:Lxm4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lvj0;->c()V
+
+    invoke-static {}, Lte4;->a()V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lxp0;->s0:Z
+
+    :goto_0
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final o(Lqf5;Lj7;)I
-    .locals 1
-
-    iget v0, p0, Lvp0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lvp0;->b:Lk3e;
-
-    invoke-virtual {p0, p1, p2}, Lk3e;->o(Lqf5;Lj7;)I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    iget-object p0, p0, Lvp0;->b:Lk3e;
-
-    invoke-virtual {p0, p1, p2}, Lk3e;->o(Lqf5;Lj7;)I
-
-    move-result p0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final release()V
-    .locals 0
-
-    iget p0, p0, Lvp0;->a:I
-
-    return-void
 .end method

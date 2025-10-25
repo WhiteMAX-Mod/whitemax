@@ -2,79 +2,34 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Ljava/lang/Boolean;
+
+.field public final e:Lz25;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;I)V
+.method public constructor <init>(JJJLjava/lang/Boolean;Lz25;)V
     .locals 0
-
-    iput p2, p0, Lzga;->a:I
-
-    iput-object p1, p0, Lzga;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-wide p1, p0, Lzga;->a:J
 
+    iput-wide p3, p0, Lzga;->b:J
 
-# virtual methods
-.method public final run()V
-    .locals 1
+    iput-wide p5, p0, Lzga;->c:J
 
-    iget v0, p0, Lzga;->a:I
+    iput-object p7, p0, Lzga;->d:Ljava/lang/Boolean;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lzga;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    iput-object p8, p0, Lzga;->e:Lz25;
 
     return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lzga;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lzga;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lzga;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

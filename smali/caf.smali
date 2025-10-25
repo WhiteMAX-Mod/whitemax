@@ -1,81 +1,205 @@
-.class public final synthetic Lcaf;
+.class public abstract Lcaf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldw1;
-
 
 # instance fields
-.field public final synthetic a:Ldaf;
+.field public final synthetic a:I
+
+.field public b:J
+
+.field public c:J
+
+.field public d:J
+
+.field public e:I
+
+.field public f:I
+
+.field public g:J
+
+.field public h:Z
+
+.field public i:Z
+
+.field public final j:Ljava/lang/Object;
+
+.field public k:Ljava/lang/Object;
+
+.field public l:Ljava/lang/Object;
+
+.field public m:Ljava/lang/Object;
+
+.field public n:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldaf;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
+
+    iput p1, p0, Lcaf;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcaf;->a:Ldaf;
+    new-instance p1, Lnla;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Lnla;-><init>(I)V
+
+    iput-object p1, p0, Lcaf;->j:Ljava/lang/Object;
+
+    new-instance p1, Lfqe;
+
+    invoke-direct {p1}, Lfqe;-><init>()V
+
+    iput-object p1, p0, Lcaf;->n:Ljava/lang/Object;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lnla;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0}, Lnla;-><init>(I)V
+
+    iput-object p1, p0, Lcaf;->j:Ljava/lang/Object;
+
+    new-instance p1, Liqe;
+
+    invoke-direct {p1, v0}, Liqe;-><init>(I)V
+
+    iput-object p1, p0, Lcaf;->n:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
-    .locals 2
+.method public a(J)V
+    .locals 1
 
-    iget-object p0, p0, Lcaf;->a:Ldaf;
+    iget v0, p0, Lcaf;->a:I
 
-    iget-object v0, p0, Ldaf;->f:Lqs1;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v1, 0x0
+    iput-wide p1, p0, Lcaf;->d:J
 
-    if-eqz v0, :cond_1
+    return-void
 
-    invoke-virtual {p1}, Landroid/hardware/camera2/CaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
+    :pswitch_0
+    iput-wide p1, p0, Lcaf;->d:J
 
-    move-result-object p1
+    return-void
 
-    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
+    nop
 
-    invoke-virtual {p1, v0}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object p1
+.method public abstract b(Ledb;)J
+.end method
 
-    check-cast p1, Ljava/lang/Integer;
+.method public abstract c(Ldjg;)J
+.end method
+
+.method public abstract d(Ledb;JLiqe;)Z
+.end method
+
+.method public abstract e(Ldjg;JLfqe;)Z
+.end method
+
+.method public f(Z)V
+    .locals 4
+
+    iget v0, p0, Lcaf;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-wide/16 v0, 0x0
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    new-instance p1, Liqe;
 
-    move-result p1
+    const/4 v2, 0x1
 
-    const/4 v0, 0x2
+    invoke-direct {p1, v2}, Liqe;-><init>(I)V
 
-    if-ne p1, v0, :cond_0
+    iput-object p1, p0, Lcaf;->n:Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    iput-wide v0, p0, Lcaf;->c:J
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcaf;->e:I
 
     goto :goto_0
 
     :cond_0
-    move p1, v1
+    const/4 p1, 0x1
+
+    iput p1, p0, Lcaf;->e:I
 
     :goto_0
-    iget-boolean v0, p0, Ldaf;->g:Z
+    const-wide/16 v2, -0x1
 
-    if-ne p1, v0, :cond_1
+    iput-wide v2, p0, Lcaf;->b:J
 
-    iget-object p1, p0, Ldaf;->f:Lqs1;
+    iput-wide v0, p0, Lcaf;->d:J
 
-    const/4 v0, 0x0
+    return-void
 
-    invoke-virtual {p1, v0}, Lqs1;->b(Ljava/lang/Object;)Z
+    :pswitch_0
+    const-wide/16 v0, 0x0
 
-    iput-object v0, p0, Ldaf;->f:Lqs1;
+    if-eqz p1, :cond_1
+
+    new-instance p1, Lfqe;
+
+    invoke-direct {p1}, Lfqe;-><init>()V
+
+    iput-object p1, p0, Lcaf;->n:Ljava/lang/Object;
+
+    iput-wide v0, p0, Lcaf;->c:J
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcaf;->e:I
+
+    goto :goto_1
 
     :cond_1
-    return v1
+    const/4 p1, 0x1
+
+    iput p1, p0, Lcaf;->e:I
+
+    :goto_1
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Lcaf;->b:J
+
+    iput-wide v0, p0, Lcaf;->d:J
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,54 +1,37 @@
 .class public final Lk16;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Le16;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public X:Le16;
 
-.field public final b:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:J
+.field public Z:I
 
-
-# direct methods
-.method public constructor <init>(Ljava/util/ArrayList;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lk16;->a:Ljava/util/ArrayList;
-
-    sget p1, Lw5c;->oneme_folder_widget_section_view_type:I
-
-    iput p1, p0, Lk16;->b:I
-
-    sget p1, Lw5c;->oneme_folder_widget_section_id:I
-
-    int-to-long v0, p1
-
-    iput-wide v0, p0, Lk16;->c:J
-
-    return-void
-.end method
+.field public o:Ly7d;
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v0, p0, Lk16;->c:J
+    iput-object p1, p0, Lk16;->Y:Ljava/lang/Object;
 
-    return-wide v0
-.end method
+    iget p1, p0, Lk16;->Z:I
 
-.method public final m()I
-    .locals 0
+    const/high16 v0, -0x80000000
 
-    iget p0, p0, Lk16;->b:I
+    or-int/2addr p1, v0
 
-    return p0
+    iput p1, p0, Lk16;->Z:I
+
+    const/4 p1, 0x0
+
+    invoke-static {p1, p0}, Ltq;->p(Lty5;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

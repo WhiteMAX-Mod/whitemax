@@ -1,26 +1,52 @@
-.class public abstract Lt3c;
-.super Ljava/lang/Object;
+.class public final synthetic Lt3c;
+.super Lb9;
+.source "SourceFile"
+
+# interfaces
+.implements Lbj6;
 
 
 # static fields
-.field public static size_border_radius_new_banner:I = 0x7f0703fe
+.field public static final q0:Lt3c;
 
-.field public static size_border_radius_semantic_border_radius_card:I = 0x7f0703ff
 
-.field public static spacing_size_2xl:I = 0x7f070402
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-.field public static spacing_size_2xs:I = 0x7f070403
+    new-instance v0, Lt3c;
 
-.field public static spacing_size_3xl:I = 0x7f070404
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-.field public static spacing_size_4xl:I = 0x7f070405
+    const/4 v2, 0x4
 
-.field public static spacing_size_l:I = 0x7f070406
+    const/4 v3, 0x3
 
-.field public static spacing_size_m:I = 0x7f070407
+    const-class v4, Ltcb;
 
-.field public static spacing_size_s:I = 0x7f070408
+    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
 
-.field public static spacing_size_xl:I = 0x7f070409
+    sput-object v0, Lt3c;->q0:Lt3c;
 
-.field public static spacing_size_xs:I = 0x7f07040a
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lla2;
+
+    check-cast p2, Lwr3;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    sget-object p3, Ld4c;->D0:[Ltr7;
+
+    new-instance p3, Ltcb;
+
+    invoke-direct {p3, p1, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object p3
+.end method

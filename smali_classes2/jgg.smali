@@ -1,61 +1,55 @@
 .class public final Ljgg;
-.super Lpg7;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ljgg;
+# instance fields
+.field public X:Ljava/lang/Object;
+
+.field public Y:Lq1a;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Llgg;
+
+.field public final synthetic q0:Llgg;
+
+.field public r0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Llgg;Ly14;)V
+    .locals 0
 
-    new-instance v0, Ljgg;
+    iput-object p1, p0, Ljgg;->q0:Llgg;
 
-    invoke-direct {v0}, Lpg7;-><init>()V
-
-    sput-object v0, Ljgg;->c:Ljgg;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ljgg;->Z:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Ljgg;->r0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p0, p1, Ljgg;
+    or-int/2addr p1, v0
 
-    if-nez p0, :cond_1
+    iput p1, p0, Ljgg;->r0:I
 
-    const/4 p0, 0x0
+    iget-object p1, p0, Ljgg;->q0:Llgg;
 
-    return p0
+    const/4 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1, v0, p0}, Llgg;->i(Lv57;Ly14;)Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 0
+    move-result-object p1
 
-    const p0, 0x15a8525c
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "RequestScreenMaxBrightness"
-
-    return-object p0
+    return-object p1
 .end method

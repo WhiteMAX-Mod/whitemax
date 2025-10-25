@@ -1,162 +1,112 @@
-.class public final Ldaf;
+.class public final synthetic Ldaf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lp6e;
+
 
 # instance fields
-.field public final a:Lew1;
+.field public final synthetic a:Leaf;
 
-.field public final b:Lwn9;
+.field public final synthetic b:Ljava/lang/String;
 
-.field public final c:Z
+.field public final synthetic c:Ljava/lang/String;
 
-.field public final d:Lpid;
+.field public final synthetic d:Lmhg;
 
-.field public e:Z
+.field public final synthetic e:Lvb0;
 
-.field public f:Lqs1;
-
-.field public g:Z
+.field public final synthetic f:Lvb0;
 
 
 # direct methods
-.method public constructor <init>(Lew1;Lly1;Lpid;)V
-    .locals 1
+.method public synthetic constructor <init>(Leaf;Ljava/lang/String;Ljava/lang/String;Lmhg;Lvb0;Lvb0;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldaf;->a:Lew1;
+    iput-object p1, p0, Ldaf;->a:Leaf;
 
-    iput-object p3, p0, Ldaf;->d:Lpid;
+    iput-object p2, p0, Ldaf;->b:Ljava/lang/String;
 
-    new-instance p3, Lqzc;
+    iput-object p3, p0, Ldaf;->c:Ljava/lang/String;
 
-    const/16 v0, 0x1a
+    iput-object p4, p0, Ldaf;->d:Lmhg;
 
-    invoke-direct {p3, v0, p2}, Lqzc;-><init>(ILjava/lang/Object;)V
+    iput-object p5, p0, Ldaf;->e:Lvb0;
 
-    invoke-static {p3}, Lr94;->M(Lqzc;)Z
-
-    move-result p2
-
-    iput-boolean p2, p0, Ldaf;->c:Z
-
-    new-instance p2, Lwn9;
-
-    const/4 p3, 0x0
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p3
-
-    invoke-direct {p2, p3}, Lcu7;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Ldaf;->b:Lwn9;
-
-    new-instance p2, Lcaf;
-
-    invoke-direct {p2, p0}, Lcaf;-><init>(Ldaf;)V
-
-    invoke-virtual {p1, p2}, Lew1;->p(Ldw1;)V
-
-    return-void
-.end method
-
-.method public static b(Lwn9;Ljava/lang/Integer;)V
-    .locals 1
-
-    invoke-static {}, Les;->n()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lcu7;->k(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcu7;->i(Ljava/lang/Object;)V
+    iput-object p6, p0, Ldaf;->f:Lvb0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lqs1;Z)V
-    .locals 2
+.method public final a(Lr6e;)V
+    .locals 6
 
-    iget-boolean v0, p0, Ldaf;->c:Z
+    iget-object v0, p0, Ldaf;->a:Leaf;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Ljhg;->c()Ls12;
 
-    if-eqz p1, :cond_1
+    move-result-object p1
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    if-nez p1, :cond_0
 
-    const-string p2, "No flash unit"
-
-    invoke-direct {p0, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Lqs1;->d(Ljava/lang/Throwable;)Z
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    iget-boolean v0, p0, Ldaf;->e:Z
+    invoke-virtual {v0}, Leaf;->F()V
 
-    iget-object v1, p0, Ldaf;->b:Lwn9;
+    iget-object v1, p0, Ldaf;->b:Ljava/lang/String;
 
-    if-nez v0, :cond_2
+    iget-object v2, p0, Ldaf;->c:Ljava/lang/String;
 
-    const/4 p0, 0x0
+    iget-object v3, p0, Ldaf;->d:Lmhg;
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v4, p0, Ldaf;->e:Lvb0;
 
-    move-result-object p0
+    iget-object v5, p0, Ldaf;->f:Lvb0;
 
-    invoke-static {v1, p0}, Ldaf;->b(Lwn9;Ljava/lang/Integer;)V
+    invoke-virtual/range {v0 .. v5}, Leaf;->G(Ljava/lang/String;Ljava/lang/String;Lmhg;Lvb0;Lvb0;)Ljava/util/List;
 
-    if-eqz p1, :cond_1
+    move-result-object p1
 
-    new-instance p0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+    invoke-virtual {v0, p1}, Ljhg;->E(Ljava/util/List;)V
 
-    const-string p2, "Camera is not active."
+    invoke-virtual {v0}, Ljhg;->q()V
 
-    invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    iget-object p1, v0, Leaf;->q:Lk2h;
 
-    invoke-virtual {p1, p0}, Lqs1;->d(Ljava/lang/Throwable;)Z
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Laud;->a()V
+
+    iget-object v0, p1, Lk2h;->a:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljhg;
+
+    invoke-virtual {p1, v1}, Lk2h;->b(Ljhg;)V
+
+    goto :goto_0
 
     :cond_1
-    return-void
-
-    :cond_2
-    iput-boolean p2, p0, Ldaf;->g:Z
-
-    iget-object v0, p0, Ldaf;->a:Lew1;
-
-    invoke-virtual {v0, p2}, Lew1;->r(Z)V
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-static {v1, p2}, Ldaf;->b(Lwn9;Ljava/lang/Integer;)V
-
-    iget-object p2, p0, Ldaf;->f:Lqs1;
-
-    if-eqz p2, :cond_3
-
-    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
-
-    const-string v1, "There is a new enableTorch being set"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, v0}, Lqs1;->d(Ljava/lang/Throwable;)Z
-
-    :cond_3
-    iput-object p1, p0, Ldaf;->f:Lqs1;
-
+    :goto_1
     return-void
 .end method

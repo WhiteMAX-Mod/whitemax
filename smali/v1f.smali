@@ -1,106 +1,137 @@
-.class public final Lv1f;
+.class public abstract Lv1f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/text/TextWatcher;
 
+# static fields
+.field public static a:Z
 
-# instance fields
-.field public a:I
-
-.field public final synthetic b:Landroid/widget/EditText;
-
-.field public final synthetic c:Lcom/google/android/material/textfield/TextInputLayout;
+.field public static final b:Lv97;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;Landroid/widget/EditText;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lv97;
+
+    const-string v1, "SVG"
+
+    const-string v2, ".svg"
+
+    invoke-direct {v0, v1, v2}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v0, Lv1f;->b:Lv97;
+
+    return-void
+.end method
+
+.method public static declared-synchronized a()V
+    .locals 2
+
+    const-class v0, Lv1f;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-boolean v1, Lv1f;->a:Z
+
+    if-nez v1, :cond_0
+
+    const-string v1, "static-webp"
+
+    invoke-static {v1}, Lp4a;->d(Ljava/lang/String;)Z
+
+    const/4 v1, 0x1
+
+    sput-boolean v1, Lv1f;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public static final b(ILjava/lang/Object;)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    mul-int/lit8 p0, p0, 0x1f
 
-    iput-object p1, p0, Lv1f;->c:Lcom/google/android/material/textfield/TextInputLayout;
+    if-eqz p1, :cond_0
 
-    iput-object p2, p0, Lv1f;->b:Landroid/widget/EditText;
-
-    invoke-virtual {p2}, Landroid/widget/TextView;->getLineCount()I
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result p1
 
-    iput p1, p0, Lv1f;->a:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 3
-
-    iget-object v0, p0, Lv1f;->c:Lcom/google/android/material/textfield/TextInputLayout;
-
-    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->K1:Z
-
-    xor-int/lit8 v1, v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/material/textfield/TextInputLayout;->u(ZZ)V
-
-    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->x0:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->n(Landroid/text/Editable;)V
+    goto :goto_0
 
     :cond_0
-    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->F0:Z
+    const/4 p1, 0x0
 
-    if-eqz v1, :cond_1
+    :goto_0
+    add-int/2addr p0, p1
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->v(Landroid/text/Editable;)V
+    return p0
+.end method
 
-    :cond_1
-    iget-object p1, p0, Lv1f;->b:Landroid/widget/EditText;
+.method public static c(Ljava/lang/Throwable;)V
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/widget/TextView;->getLineCount()I
+    const-class v0, Ljava/lang/Error;
+
+    invoke-virtual {v0, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v1
 
-    iget v2, p0, Lv1f;->a:I
+    if-nez v1, :cond_1
 
-    if-eq v1, v2, :cond_3
+    const-class v0, Ljava/lang/RuntimeException;
 
-    if-ge v1, v2, :cond_2
+    invoke-virtual {v0, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
-    sget-object v2, Lh7g;->a:Ljava/util/WeakHashMap;
+    move-result v1
 
-    invoke-virtual {p1}, Landroid/view/View;->getMinimumHeight()I
+    if-nez v1, :cond_0
 
-    move-result v2
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    iget v0, v0, Lcom/google/android/material/textfield/TextInputLayout;->D1:I
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    if-eq v2, v0, :cond_2
+    throw v0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setMinimumHeight(I)V
+    :cond_0
+    invoke-virtual {v0, p0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2
-    iput v1, p0, Lv1f;->a:I
+    move-result-object p0
 
-    :cond_3
-    return-void
-.end method
+    check-cast p0, Ljava/lang/Throwable;
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    throw p0
 
-    return-void
-.end method
+    :cond_1
+    invoke-virtual {v0, p0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    move-result-object p0
 
-    return-void
+    check-cast p0, Ljava/lang/Throwable;
+
+    throw p0
 .end method

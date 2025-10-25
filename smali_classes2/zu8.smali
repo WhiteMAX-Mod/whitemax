@@ -1,94 +1,97 @@
-.class public final synthetic Lzu8;
-.super Ljava/lang/Object;
+.class public final enum Lzu8;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lbc6;
 
+# static fields
+.field public static final synthetic X:[Lzu8;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum a:Lzu8;
 
-.field public final synthetic b:Lar7;
+.field public static final enum b:Lzu8;
+
+.field public static final enum c:Lzu8;
+
+.field public static final enum o:Lzu8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lar7;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Lzu8;->a:I
+    new-instance v0, Lzu8;
 
-    iput-object p1, p0, Lzu8;->b:Lar7;
+    const-string v1, "UNMUTED"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzu8;->a:Lzu8;
+
+    new-instance v1, Lzu8;
+
+    const-string v2, "UNMUTED_BUT_MUTED_ONCE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lzu8;->b:Lzu8;
+
+    new-instance v2, Lzu8;
+
+    const-string v3, "MUTED_PERMANENT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lzu8;->c:Lzu8;
+
+    new-instance v3, Lzu8;
+
+    const-string v4, "MUTED_PERMANENT_BUT_UNMUTED_ONCE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lzu8;->o:Lzu8;
+
+    filled-new-array {v0, v1, v2, v3}, [Lzu8;
+
+    move-result-object v0
+
+    sput-object v0, Lzu8;->X:[Lzu8;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lzu8;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    const-class v0, Lzu8;
 
-    iget v0, p0, Lzu8;->a:I
-
-    const/4 v1, 0x0
-
-    iget-object p0, p0, Lzu8;->b:Lar7;
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/members/list/MembersListWidget;->C0:[Lxi7;
-
-    invoke-virtual {p0, p1}, Lar7;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    check-cast p0, Lht8;
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-boolean v1, p0, Lht8;->u0:Z
-
-    :goto_0
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
+    check-cast p0, Lzu8;
 
     return-object p0
+.end method
 
-    :pswitch_0
-    sget-object v0, Lone/me/members/list/MembersListWidget;->C0:[Lxi7;
+.method public static values()[Lzu8;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lar7;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Lzu8;->X:[Lzu8;
 
-    move-result-object p0
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    check-cast p0, Lht8;
+    move-result-object v0
 
-    if-nez p0, :cond_1
+    check-cast v0, [Lzu8;
 
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x1
-
-    :goto_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

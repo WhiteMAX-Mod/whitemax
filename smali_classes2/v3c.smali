@@ -1,50 +1,40 @@
-.class public abstract Lv3c;
+.class public final Lv3c;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static onechat_react_add_tension:I = 0x7f0703c0
+# instance fields
+.field public final a:Ljava/util/List;
 
-.field public static onechat_react_animation_drawable_size:I = 0x7f0703c1
+.field public final b:Z
 
-.field public static onechat_react_badge_corners_radius:I = 0x7f0703c2
 
-.field public static onechat_react_bubble_width_tension:I = 0x7f0703c3
+# direct methods
+.method public synthetic constructor <init>()V
+    .locals 2
 
-.field public static onechat_react_change_tension:I = 0x7f0703c4
+    .line 4
+    sget-object v0, Lka5;->a:Lka5;
 
-.field public static onechat_react_counter_padding:I = 0x7f0703c5
+    const/4 v1, 0x0
 
-.field public static onechat_react_default_small_height_fallback:I = 0x7f0703c6
+    .line 5
+    invoke-direct {p0, v0, v1}, Lv3c;-><init>(Ljava/util/List;Z)V
 
-.field public static onechat_react_default_small_width_fallback:I = 0x7f0703c7
+    return-void
+.end method
 
-.field public static onechat_react_move_tension:I = 0x7f0703c8
+.method public constructor <init>(Ljava/util/List;Z)V
+    .locals 0
 
-.field public static onechat_react_next_change_delay_coef:I = 0x7f0703c9
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static onechat_react_next_move_delay_coef:I = 0x7f0703ca
+    .line 2
+    iput-object p1, p0, Lv3c;->a:Ljava/util/List;
 
-.field public static onechat_react_panel_corner_radius:I = 0x7f0703cb
+    .line 3
+    iput-boolean p2, p0, Lv3c;->b:Z
 
-.field public static onechat_react_panel_popup_side_margin:I = 0x7f0703cc
-
-.field public static onechat_react_panel_selected_text_size:I = 0x7f0703cd
-
-.field public static onechat_react_panel_side_margin:I = 0x7f0703ce
-
-.field public static onechat_react_panel_size:I = 0x7f0703cf
-
-.field public static onechat_react_panel_text_size:I = 0x7f0703d0
-
-.field public static onechat_react_panel_vertical_margin:I = 0x7f0703d1
-
-.field public static onechat_react_scale_1_step:I = 0x7f0703d2
-
-.field public static onechat_react_scale_2_step:I = 0x7f0703d3
-
-.field public static onechat_react_scale_3_step:I = 0x7f0703d4
-
-.field public static onechat_react_side_margin:I = 0x7f0703d5
-
-.field public static onechat_react_text_size_small:I = 0x7f0703d6
+    return-void
+.end method

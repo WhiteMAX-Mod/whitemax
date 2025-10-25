@@ -1,37 +1,85 @@
-.class public abstract synthetic Lsza;
+.class public abstract Lsza;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:J
+
+.field public static final b:J
+
+.field public static final c:J
+
+.field public static final d:J
+
+.field public static final e:J
+
+.field public static final f:J
+
+.field public static final g:J
+
+.field public static final h:J
+
+.field public static final i:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    const/4 v0, 0x3
+    sget v0, Lmoc;->profile_edit_admin_move_rights:I
 
-    invoke-static {v0}, Lmw1;->w(I)[I
+    int-to-long v0, v0
 
-    move-result-object v0
+    sput-wide v0, Lsza;->a:J
 
-    array-length v0, v0
+    sget v0, Lmoc;->profile_edit_admin_permissions_change_chat_info:I
 
-    new-array v0, v0, [I
+    int-to-long v0, v0
 
-    const/4 v1, 0x1
+    sput-wide v0, Lsza;->b:J
 
-    const/4 v2, 0x0
+    sget v0, Lmoc;->profile_edit_admin_permissions_control_admin:I
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    int-to-long v0, v0
 
-    :catch_0
-    sput-object v0, Lsza;->$EnumSwitchMapping$0:[I
+    sput-wide v0, Lsza;->c:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_delete_messages:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->d:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_edit_chat_link:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->e:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_edit_chat_members:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->f:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_edit_messages:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->g:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_pin_messages:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->h:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_send_messages:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->i:J
 
     return-void
 .end method

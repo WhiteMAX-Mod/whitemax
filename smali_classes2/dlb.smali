@@ -2,283 +2,896 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+.implements Lfc3;
+
+
+# static fields
+.field public static final v0:[I
+
 
 # instance fields
-.field public final a:Lzte;
+.field public final X:Landroid/widget/ImageButton;
+
+.field public final Y:Landroid/widget/ImageButton;
+
+.field public final Z:Landroid/widget/TextView;
+
+.field public final a:Ljava/util/HashSet;
+
+.field public final b:Landroid/view/View;
+
+.field public final c:Lgig;
+
+.field public final o:Landroid/widget/ImageButton;
+
+.field public final q0:Landroid/widget/ImageButton;
+
+.field public final r0:Llt0;
+
+.field public final s0:Landroidx/appcompat/widget/AppCompatTextView;
+
+.field public t0:Lclb;
+
+.field public u0:Landroid/widget/Toast;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/16 v0, 0x1b
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Ldlb;->v0:[I
+
+    return-void
+
+    :array_0
+    .array-data 4
+        -0x1
+        -0x1000000
+        -0x12b6aa
+        -0x272ce
+        -0x234a4
+        -0x8f3fb0
+        -0xc76810
+        -0x968301
+        -0x5cf846
+        -0x2ef797
+        -0x127a72
+        -0x2d2d
+        -0x22549
+        -0x3c7e
+        -0x2d70ba
+        -0x669bc7
+        -0xbcdcdc
+        -0xe3b5d7
+        -0xd9d9da
+        -0xc9c9ca
+        -0xaaaaab
+        -0x8c8c8d
+        -0x666667
+        -0x4d4d4e
+        -0x383839
+        -0x242425
+        -0x101011
+    .end array-data
+.end method
+
+.method public constructor <init>(Landroid/view/View;Lgig;)V
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lksa;
+    new-instance v0, Ljava/util/HashSet;
 
-    const/16 v1, 0x16
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    invoke-direct {v0, v1}, Lksa;-><init>(I)V
+    iput-object v0, p0, Ldlb;->a:Ljava/util/HashSet;
 
-    new-instance v1, Lzte;
+    iput-object p1, p0, Ldlb;->b:Landroid/view/View;
 
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
+    iput-object p2, p0, Ldlb;->c:Lgig;
 
-    iput-object v1, p0, Ldlb;->a:Lzte;
+    sget p2, Lvpc;->act_photo_editor__btn_sticker:I
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/ImageButton;
+
+    iput-object p2, p0, Ldlb;->o:Landroid/widget/ImageButton;
+
+    invoke-virtual {p2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget p2, Lvpc;->act_photo_editor__btn_undo:I
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/ImageButton;
+
+    iput-object p2, p0, Ldlb;->X:Landroid/widget/ImageButton;
+
+    invoke-virtual {p2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget v0, Lvpc;->act_photo_editor__btn_done:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageButton;
+
+    iput-object v0, p0, Ldlb;->Y:Landroid/widget/ImageButton;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget v1, Lvpc;->act_photo_editor__btn_close:I
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageButton;
+
+    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget v2, Lvpc;->act_photo_editor__btn_clear:I
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iput-object v2, p0, Ldlb;->Z:Landroid/widget/TextView;
+
+    invoke-virtual {v2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget v3, Lvpc;->act_photo_editor__btn_line_width:I
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/ImageButton;
+
+    iput-object v3, p0, Ldlb;->q0:Landroid/widget/ImageButton;
+
+    invoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget v3, Lvpc;->act_photo_editor__fl_line_width:I
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget v3, Lvpc;->act_photo_editor__view_color_selector:I
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Lru/ok/tamtam/photoeditor/view/colorselector/ColorSelectorView;
+
+    sget-object v4, Ldlb;->v0:[I
+
+    invoke-virtual {v3, v4}, Lru/ok/tamtam/photoeditor/view/colorselector/ColorSelectorView;->setColors([I)V
+
+    invoke-virtual {v3, p0}, Lru/ok/tamtam/photoeditor/view/colorselector/ColorSelectorView;->setListener(Lfc3;)V
+
+    sget v3, Lvpc;->act_photo_editor__view_brush_width:I
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Llt0;
+
+    iput-object v3, p0, Ldlb;->r0:Llt0;
+
+    check-cast v3, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;
+
+    iget-object v3, v3, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->B0:Ljava/util/HashSet;
+
+    invoke-virtual {v3, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    sget-object v4, Lynf;->a0:Lwif;
+
+    invoke-static {v3}, Laa4;->c(Landroid/content/Context;)Lynf;
+
+    move-result-object v3
+
+    iget v4, v3, Lynf;->m:I
+
+    invoke-virtual {p1, v4}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget v4, Lvpc;->act_photo_editor__rl_buttons:I
+
+    invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    iget v5, v3, Lynf;->H:I
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget v4, Lvpc;->act_photo_editor__rl_controls:I
+
+    invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget v4, Lvpc;->act_photo_editor__editor:I
+
+    invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->setBackgroundColor(I)V
+
+    iget v4, v3, Lynf;->w:I
+
+    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    invoke-virtual {v3}, Lynf;->a()Landroid/graphics/drawable/RippleDrawable;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v5}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    iget v1, v3, Lynf;->k:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    invoke-virtual {v3}, Lynf;->a()Landroid/graphics/drawable/RippleDrawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {p2, v4}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    invoke-virtual {v3}, Lynf;->a()Landroid/graphics/drawable/RippleDrawable;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    iget p2, v3, Lynf;->F:I
+
+    iget v0, v3, Lynf;->M:I
+
+    const v1, -0x101009e
+
+    filled-new-array {v1}, [I
+
+    move-result-object v1
+
+    const/4 v4, 0x0
+
+    new-array v5, v4, [I
+
+    filled-new-array {v1, v5}, [[I
+
+    move-result-object v1
+
+    filled-new-array {v0, p2}, [I
+
+    move-result-object p2
+
+    new-instance v0, Landroid/content/res/ColorStateList;
+
+    invoke-direct {v0, v1, p2}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
+
+    iget p2, v3, Lynf;->i:I
+
+    invoke-static {v4, p2}, Lba4;->b(II)Landroid/graphics/drawable/RippleDrawable;
+
+    move-result-object p2
+
+    invoke-virtual {v2, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {}, Lwt4;->a()Lwt4;
+
+    move-result-object p2
+
+    new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    iput-object v0, p0, Ldlb;->s0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    const-string v2, "#404040"
+
+    invoke-static {v2}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setBackgroundColor(I)V
+
+    iget-object v0, p0, Ldlb;->s0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    const/4 v3, -0x1
+
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v0, p0, Ldlb;->s0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    iget v5, p2, Lwt4;->k:I
+
+    invoke-virtual {v0, v5, v5, v5, v5}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget v0, Lzjd;->h0:I
+
+    sget-object v5, Lgdd;->a:Ljava/lang/ThreadLocal;
+
+    invoke-static {p1, v0, v1}, Lbdd;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {p1, v3, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    iget-object v0, p0, Ldlb;->s0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {v0, p1, v1, v1, v1}, Landroidx/appcompat/widget/AppCompatTextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    iget-object p1, p0, Ldlb;->s0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    iget v0, p2, Lwt4;->h:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
+
+    new-instance p1, Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-direct {p1}, Landroid/graphics/drawable/ShapeDrawable;-><init>()V
+
+    iget p2, p2, Lwt4;->i:I
+
+    int-to-float p2, p2
+
+    const/16 v0, 0x8
+
+    new-array v0, v0, [F
+
+    aput p2, v0, v4
+
+    const/4 v3, 0x1
+
+    aput p2, v0, v3
+
+    const/4 v3, 0x2
+
+    aput p2, v0, v3
+
+    const/4 v3, 0x3
+
+    aput p2, v0, v3
+
+    const/4 v3, 0x4
+
+    aput p2, v0, v3
+
+    const/4 v3, 0x5
+
+    aput p2, v0, v3
+
+    const/4 v3, 0x6
+
+    aput p2, v0, v3
+
+    const/4 v3, 0x7
+
+    aput p2, v0, v3
+
+    new-instance p2, Landroid/graphics/drawable/shapes/RoundRectShape;
+
+    invoke-direct {p2, v0, v1, v1}, Landroid/graphics/drawable/shapes/RoundRectShape;-><init>([FLandroid/graphics/RectF;[F)V
+
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/ShapeDrawable;->setShape(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-static {v2}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result p2
+
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    iget-object p2, p0, Ldlb;->s0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/CharSequence;Z)Levb;
-    .locals 9
+.method public final a(Lclb;)V
+    .locals 10
 
-    invoke-static {p1}, Lmw1;->t(I)I
+    iget-boolean v0, p1, Lclb;->b:Z
 
-    move-result p1
+    iget-boolean v1, p1, Lclb;->X:Z
 
-    const/16 v0, 0x38
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x3
+    iget-boolean v2, p1, Lclb;->o:Z
 
     const/4 v3, 0x1
 
-    if-eqz p1, :cond_4
+    xor-int/2addr v0, v3
 
-    if-eq p1, v3, :cond_4
+    iget-object v4, p0, Ldlb;->X:Landroid/widget/ImageButton;
 
-    const/4 v4, 0x2
+    invoke-static {v4, v0}, Lubi;->i(Landroid/view/View;Z)V
 
-    if-eq p1, v4, :cond_1
+    iget-boolean v0, p1, Lclb;->c:Z
 
-    if-ne p1, v2, :cond_0
+    const/4 v4, 0x0
 
-    invoke-virtual {p0}, Ldlb;->c()Levb;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    if-eqz p3, :cond_2
-
-    sget p0, Lsla;->g1:I
-
-    new-instance p1, Lp2f;
-
-    invoke-direct {p1, p0}, Lp2f;-><init>(I)V
-
-    sget p0, Lsla;->e1:I
-
-    sget p2, Lsla;->i1:I
+    move v0, v4
 
     goto :goto_0
 
-    :cond_2
-    sget p0, Lsla;->F2:I
-
-    filled-new-array {p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    new-instance p2, Lr2f;
-
-    invoke-static {p1}, Lxr;->X([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-direct {p2, p0, p1}, Lr2f;-><init>(ILjava/util/List;)V
-
-    sget p0, Lsla;->E2:I
-
-    sget p1, Ld1d;->r:I
-
-    move-object v8, p2
-
-    move p2, p1
-
-    move-object p1, v8
+    :cond_0
+    const/4 v0, 0x4
 
     :goto_0
-    if-eqz p3, :cond_3
+    iget-object v5, p0, Ldlb;->Z:Landroid/widget/TextView;
 
-    sget p3, Lsla;->d1:I
+    invoke-virtual {v5, v0}, Landroid/view/View;->setVisibility(I)V
 
-    new-instance v4, Lp2f;
+    iget-boolean v0, p1, Lclb;->Y:Z
 
-    invoke-direct {v4, p3}, Lp2f;-><init>(I)V
+    iget-object v5, p0, Ldlb;->Y:Landroid/widget/ImageButton;
+
+    invoke-virtual {v5, v0}, Landroid/view/View;->setEnabled(Z)V
+
+    if-eqz v0, :cond_1
+
+    const/high16 v0, 0x3f800000    # 1.0f
 
     goto :goto_1
 
-    :cond_3
-    move-object v4, v1
+    :cond_1
+    const v0, 0x3e99999a    # 0.3f
 
     :goto_1
-    invoke-static {}, Lgs3;->m()Los7;
+    invoke-virtual {v5, v0}, Landroid/view/View;->setAlpha(F)V
 
-    move-result-object p3
+    iget-object v0, p0, Ldlb;->t0:Lclb;
 
-    new-instance v5, Lmj3;
+    const/4 v6, 0x0
 
-    sget v6, Lqla;->U:I
+    iget-object v7, p0, Ldlb;->o:Landroid/widget/ImageButton;
 
-    new-instance v7, Lp2f;
+    if-eqz v0, :cond_4
 
-    invoke-direct {v7, p0}, Lp2f;-><init>(I)V
+    iget-boolean v8, v0, Lclb;->X:Z
 
-    invoke-direct {v5, v6, v7, v3, v0}, Lmj3;-><init>(ILu2f;II)V
+    if-eqz v8, :cond_2
 
-    invoke-virtual {p3, v5}, Los7;->add(Ljava/lang/Object;)Z
+    iget-boolean v8, v0, Lclb;->o:Z
 
-    new-instance p0, Lmj3;
+    if-eqz v8, :cond_2
 
-    sget v3, Lqla;->z:I
+    move v8, v3
 
-    new-instance v5, Lp2f;
+    goto :goto_2
 
-    invoke-direct {v5, p2}, Lp2f;-><init>(I)V
+    :cond_2
+    move v8, v4
 
-    invoke-direct {p0, v3, v5, v2, v0}, Lmj3;-><init>(ILu2f;II)V
+    :goto_2
+    if-eqz v2, :cond_3
 
-    invoke-virtual {p3, p0}, Los7;->add(Ljava/lang/Object;)Z
+    if-eqz v1, :cond_3
 
-    invoke-static {p3}, Lgs3;->f(Ljava/util/List;)Los7;
+    move v9, v3
 
-    move-result-object p0
+    goto :goto_3
 
-    new-instance p2, Levb;
+    :cond_3
+    move v9, v4
 
-    invoke-direct {p2, p1, v4, p0, v1}, Levb;-><init>(Lu2f;Lu2f;Ljava/util/List;Landroid/os/Bundle;)V
-
-    return-object p2
+    :goto_3
+    if-eq v8, v9, :cond_b
 
     :cond_4
-    sget p0, Lsla;->k1:I
+    if-eqz v2, :cond_5
 
-    filled-new-array {p2}, [Ljava/lang/Object;
+    if-eqz v1, :cond_5
 
-    move-result-object p1
+    goto :goto_4
 
-    new-instance p2, Lr2f;
+    :cond_5
+    move v3, v4
 
-    invoke-static {p1}, Lxr;->X([Ljava/lang/Object;)Ljava/util/List;
+    :goto_4
+    iget-boolean v1, p1, Lclb;->Z:Z
 
-    move-result-object p1
+    if-eqz v0, :cond_8
 
-    invoke-direct {p2, p0, p1}, Lr2f;-><init>(ILjava/util/List;)V
+    iget-object v0, p0, Ldlb;->u0:Landroid/widget/Toast;
 
-    invoke-static {}, Lgs3;->m()Los7;
+    if-eqz v0, :cond_6
 
-    move-result-object p0
+    invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
 
-    new-instance p1, Lmj3;
+    iput-object v6, p0, Ldlb;->u0:Landroid/widget/Toast;
 
-    sget p3, Lqla;->U:I
+    :cond_6
+    if-eqz v3, :cond_7
 
-    sget v4, Lsla;->j1:I
+    sget v0, Ldkd;->i2:I
 
-    new-instance v5, Lp2f;
+    goto :goto_5
 
-    invoke-direct {v5, v4}, Lp2f;-><init>(I)V
+    :cond_7
+    sget v0, Ldkd;->h2:I
 
-    invoke-direct {p1, p3, v5, v3, v0}, Lmj3;-><init>(ILu2f;II)V
+    :goto_5
+    iget-object v8, p0, Ldlb;->s0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-virtual {p0, p1}, Los7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v0}, Landroid/widget/TextView;->setText(I)V
 
-    new-instance p1, Lmj3;
+    new-instance v0, Landroid/widget/Toast;
 
-    sget p3, Lqla;->z:I
+    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    sget v3, Lsla;->i1:I
+    move-result-object v8
 
-    new-instance v4, Lp2f;
+    invoke-direct {v0, v8}, Landroid/widget/Toast;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v4, v3}, Lp2f;-><init>(I)V
+    iput-object v0, p0, Ldlb;->u0:Landroid/widget/Toast;
 
-    invoke-direct {p1, p3, v4, v2, v0}, Lmj3;-><init>(ILu2f;II)V
+    const/16 v8, 0x11
 
-    invoke-virtual {p0, p1}, Los7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v8, v4, v4}, Landroid/widget/Toast;->setGravity(III)V
 
-    invoke-static {p0}, Lgs3;->f(Ljava/util/List;)Los7;
+    iget-object v0, p0, Ldlb;->u0:Landroid/widget/Toast;
 
-    move-result-object p0
+    iget-object v8, p0, Ldlb;->s0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    new-instance p1, Levb;
+    invoke-virtual {v0, v8}, Landroid/widget/Toast;->setView(Landroid/view/View;)V
 
-    invoke-direct {p1, p2, v1, p0, v1}, Levb;-><init>(Lu2f;Lu2f;Ljava/util/List;Landroid/os/Bundle;)V
+    iget-object v0, p0, Ldlb;->u0:Landroid/widget/Toast;
 
-    return-object p1
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    :cond_8
+    if-eqz v3, :cond_a
+
+    sget v0, Lzjd;->Q:I
+
+    invoke-virtual {v7, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    if-eqz v1, :cond_9
+
+    sget v0, Lzjd;->G0:I
+
+    goto :goto_6
+
+    :cond_9
+    sget v0, Lzjd;->r0:I
+
+    :goto_6
+    invoke-virtual {v5, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    goto :goto_7
+
+    :cond_a
+    invoke-virtual {v7, v4}, Landroid/view/View;->setBackgroundColor(I)V
+
+    const/4 v0, -0x1
+
+    invoke-virtual {v7, v0}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    sget v0, Lzjd;->P:I
+
+    invoke-virtual {v7, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    sget v0, Lzjd;->E:I
+
+    invoke-virtual {v5, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    :cond_b
+    :goto_7
+    iget-object v0, p0, Ldlb;->t0:Lclb;
+
+    if-eqz v0, :cond_c
+
+    iget-boolean v0, v0, Lclb;->o:Z
+
+    if-eq v0, v2, :cond_f
+
+    :cond_c
+    if-eqz v2, :cond_d
+
+    goto :goto_8
+
+    :cond_d
+    const/16 v4, 0x8
+
+    :goto_8
+    invoke-virtual {v7, v4}, Landroid/view/View;->setVisibility(I)V
+
+    if-eqz v2, :cond_e
+
+    move-object v6, p0
+
+    :cond_e
+    invoke-virtual {v7, v6}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_f
+    iput-object p1, p0, Ldlb;->t0:Lclb;
+
+    return-void
 .end method
 
-.method public final b()Lmj3;
-    .locals 0
+.method public final b(Lvr3;)V
+    .locals 2
 
-    iget-object p0, p0, Ldlb;->a:Lzte;
+    iget-object v0, p0, Ldlb;->a:Ljava/util/HashSet;
 
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lmj3;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object p0
-.end method
+    move-result v1
 
-.method public final c()Levb;
-    .locals 7
+    if-eqz v1, :cond_0
 
-    new-instance v0, Lt2f;
-
-    const-string v1, "Unsupported chat type"
-
-    invoke-direct {v0, v1}, Lt2f;-><init>(Ljava/lang/CharSequence;)V
-
-    invoke-static {}, Lgs3;->m()Los7;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    new-instance v2, Lmj3;
+    check-cast v1, Lykb;
 
-    sget v3, Lqla;->C:I
+    invoke-interface {p1, v1}, Lvr3;->accept(Ljava/lang/Object;)V
 
-    sget v4, Lsla;->J0:I
+    goto :goto_0
 
-    new-instance v5, Lp2f;
+    :cond_0
+    return-void
+.end method
 
-    invoke-direct {v5, v4}, Lp2f;-><init>(I)V
+.method public final c(I)V
+    .locals 4
 
-    const/4 v4, 0x1
+    const/4 v0, 0x3
 
-    const/16 v6, 0x38
+    new-array v0, v0, [F
 
-    invoke-direct {v2, v3, v5, v4, v6}, Lmj3;-><init>(ILu2f;II)V
+    sget-object v1, Ljc3;->a:Ljava/lang/ThreadLocal;
 
-    invoke-virtual {v1, v2}, Los7;->add(Ljava/lang/Object;)Z
+    invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
-    invoke-virtual {p0}, Ldlb;->b()Lmj3;
+    move-result v1
 
-    move-result-object p0
+    invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
-    invoke-virtual {v1, p0}, Los7;->add(Ljava/lang/Object;)Z
+    move-result v2
 
-    invoke-static {v1}, Lgs3;->f(Ljava/util/List;)Los7;
+    invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
-    move-result-object p0
+    move-result v3
 
-    new-instance v1, Levb;
+    invoke-static {v1, v2, v3, v0}, Ljc3;->a(III[F)V
+
+    const/4 v1, 0x2
+
+    aget v0, v0, v1
+
+    const v1, 0x3f666666    # 0.9f
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_0
+
+    const/4 v0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v0, -0x1000000
+
+    :goto_0
+    iget-object v1, p0, Ldlb;->q0:Landroid/widget/ImageButton;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v0, v2, p0, v2}, Levb;-><init>(Lu2f;Lu2f;Ljava/util/List;Landroid/os/Bundle;)V
+    invoke-static {v0, v2, v2}, Lba4;->c(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
 
-    return-object v1
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    iget-object v0, p0, Ldlb;->r0:Llt0;
+
+    invoke-interface {v0, p1}, Llt0;->setPreviewColor(I)V
+
+    iget-object v0, p0, Ldlb;->a:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lykb;
+
+    iget-object v1, v1, Lykb;->b:Lp65;
+
+    iput p1, v1, Lp65;->f:I
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p0, Ldlb;->c:Lgig;
+
+    const-string v1, "app.editor.color"
+
+    invoke-virtual {v0, p1, v1}, Lw3;->g(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
+
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
+
+    move-result p1
+
+    sget v0, Lvpc;->act_photo_editor__btn_undo:I
+
+    if-ne p1, v0, :cond_0
+
+    new-instance p1, Lo3a;
+
+    const/4 v0, 0x6
+
+    invoke-direct {p1, v0}, Lo3a;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Ldlb;->b(Lvr3;)V
+
+    return-void
+
+    :cond_0
+    sget v0, Lvpc;->act_photo_editor__btn_close:I
+
+    if-ne p1, v0, :cond_1
+
+    new-instance p1, Lo3a;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p1, v0}, Lo3a;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Ldlb;->b(Lvr3;)V
+
+    return-void
+
+    :cond_1
+    sget v0, Lvpc;->act_photo_editor__btn_done:I
+
+    if-ne p1, v0, :cond_2
+
+    new-instance p1, Lo3a;
+
+    const/16 v0, 0x8
+
+    invoke-direct {p1, v0}, Lo3a;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Ldlb;->b(Lvr3;)V
+
+    return-void
+
+    :cond_2
+    sget v0, Lvpc;->act_photo_editor__btn_clear:I
+
+    if-ne p1, v0, :cond_3
+
+    new-instance p1, Lo3a;
+
+    const/16 v0, 0x9
+
+    invoke-direct {p1, v0}, Lo3a;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Ldlb;->b(Lvr3;)V
+
+    return-void
+
+    :cond_3
+    sget v0, Lvpc;->act_photo_editor__btn_line_width:I
+
+    if-ne p1, v0, :cond_5
+
+    iget-object p1, p0, Ldlb;->r0:Llt0;
+
+    check-cast p1, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;
+
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    const/16 v0, 0x8
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :cond_5
+    sget v0, Lvpc;->act_photo_editor__btn_sticker:I
+
+    if-ne p1, v0, :cond_6
+
+    new-instance p1, Lo3a;
+
+    const/16 v0, 0xa
+
+    invoke-direct {p1, v0}, Lo3a;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Ldlb;->b(Lvr3;)V
+
+    :cond_6
+    return-void
 .end method

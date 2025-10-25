@@ -2,33 +2,114 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lis5;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Ln45;
+.field public final b:I
+
+.field public final c:Landroid/util/SparseArray;
+
+.field public final d:Landroid/util/SparseArray;
+
+.field public final e:Landroid/util/SparseArray;
+
+.field public final f:Landroid/util/SparseArray;
+
+.field public final g:Landroid/util/SparseArray;
+
+.field public h:Ljava/lang/Object;
+
+.field public i:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ln45;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ln45;->a:Ln45;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public constructor <init>(III)V
     .locals 0
 
-    sget-object p0, Lylf;->a:Lylf;
+    packed-switch p3, :pswitch_data_0
 
-    return-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ln45;->a:I
+
+    iput p2, p0, Ln45;->b:I
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ln45;->c:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ln45;->d:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ln45;->e:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ln45;->f:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ln45;->g:Landroid/util/SparseArray;
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ln45;->a:I
+
+    iput p2, p0, Ln45;->b:I
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ln45;->c:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ln45;->d:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ln45;->e:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ln45;->f:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ln45;->g:Landroid/util/SparseArray;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

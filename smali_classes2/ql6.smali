@@ -1,88 +1,85 @@
-.class public final synthetic Lql6;
+.class public final Lql6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll9a;
-.implements Ln9a;
-.implements Lk9a;
+.implements Lsl6;
 
 
 # instance fields
-.field public final synthetic a:Lul6;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lul6;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lql6;->a:Lul6;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lql6;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 2
-
-    iget-object p0, p0, Lql6;->a:Lul6;
-
-    iget-object v0, p0, Lul6;->e:Ljava/lang/String;
-
-    const-string v1, "startRetriever: canceled"
-
-    invoke-static {v0, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lul6;->h:Lz8h;
-
-    return-void
-.end method
-
-.method public onFailure(Ljava/lang/Exception;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget-object p0, p0, Lql6;->a:Lul6;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lul6;->e:Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Le14;
+    return v0
 
-    const-string v2, "startRetriever: failed"
-
-    invoke-direct {v1, v2, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p1, 0x0
-
-    new-array p1, p1, [Ljava/lang/Object;
+    :cond_0
+    instance-of v1, p1, Lql6;
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2, p1}, Ljtg;->o(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    if-nez v1, :cond_1
 
-    iput-object v2, p0, Lul6;->h:Lz8h;
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Lql6;
+
+    iget v1, p0, Lql6;->a:I
+
+    iget p1, p1, Lql6;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public p(Lcom/google/android/gms/tasks/Task;)V
+.method public final hashCode()I
     .locals 1
 
-    iget-object p0, p0, Lql6;->a:Lul6;
+    iget v0, p0, Lql6;->a:I
 
-    iget-object p1, p0, Lul6;->e:Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    const-string v0, "retriever is complete"
+    move-result v0
 
-    invoke-static {p1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    return v0
+.end method
 
-    const/4 p1, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput-object p1, p0, Lul6;->h:Lz8h;
+    const-string v0, "UpdateCameraLayoutParams(size="
 
-    return-void
+    const-string v1, ")"
+
+    iget v2, p0, Lql6;->a:I
+
+    invoke-static {v2, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

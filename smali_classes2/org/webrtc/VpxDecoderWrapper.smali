@@ -193,9 +193,9 @@
 
     invoke-static {p1}, Lorg/webrtc/VpxDecoderWrapper$DecoderKind;->a(Lorg/webrtc/VpxDecoderWrapper$DecoderKind;)B
 
-    move-result p0
+    move-result p1
 
-    invoke-static {v0, v1, p0}, Lorg/webrtc/VpxDecoderWrapper;->nativeInit(JB)V
+    invoke-static {v0, v1, p1}, Lorg/webrtc/VpxDecoderWrapper;->nativeInit(JB)V
 
     return-void
 .end method

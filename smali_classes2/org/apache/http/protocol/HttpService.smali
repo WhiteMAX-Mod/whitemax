@@ -54,7 +54,7 @@
 
 # virtual methods
 .method public doService(Lorg/apache/http/HttpRequest;Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/http/HttpException;,
@@ -74,98 +74,98 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lorg/apache/http/protocol/HttpService;->handlerResolver:Lorg/apache/http/protocol/HttpRequestHandlerResolver;
+    iget-object v1, p0, Lorg/apache/http/protocol/HttpService;->handlerResolver:Lorg/apache/http/protocol/HttpRequestHandlerResolver;
 
-    invoke-interface {p0, v0}, Lorg/apache/http/protocol/HttpRequestHandlerResolver;->lookup(Ljava/lang/String;)Lorg/apache/http/protocol/HttpRequestHandler;
+    invoke-interface {v1, v0}, Lorg/apache/http/protocol/HttpRequestHandlerResolver;->lookup(Ljava/lang/String;)Lorg/apache/http/protocol/HttpRequestHandler;
 
-    move-result-object p0
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-interface {p0, p1, p2, p3}, Lorg/apache/http/protocol/HttpRequestHandler;->handle(Lorg/apache/http/HttpRequest;Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)V
+    invoke-interface {v0, p1, p2, p3}, Lorg/apache/http/protocol/HttpRequestHandler;->handle(Lorg/apache/http/HttpRequest;Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)V
 
     return-void
 
     :cond_1
-    const/16 p0, 0x1f5
+    const/16 p1, 0x1f5
 
-    invoke-interface {p2, p0}, Lorg/apache/http/HttpResponse;->setStatusCode(I)V
+    invoke-interface {p2, p1}, Lorg/apache/http/HttpResponse;->setStatusCode(I)V
 
     return-void
 .end method
 
 .method public getParams()Lorg/apache/http/params/HttpParams;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/protocol/HttpService;->params:Lorg/apache/http/params/HttpParams;
+    iget-object v0, p0, Lorg/apache/http/protocol/HttpService;->params:Lorg/apache/http/params/HttpParams;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public handleException(Lorg/apache/http/HttpException;Lorg/apache/http/HttpResponse;)V
-    .locals 0
+    .locals 1
 
-    instance-of p0, p1, Lorg/apache/http/MethodNotSupportedException;
+    instance-of v0, p1, Lorg/apache/http/MethodNotSupportedException;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/16 p0, 0x1f5
+    const/16 v0, 0x1f5
 
-    invoke-interface {p2, p0}, Lorg/apache/http/HttpResponse;->setStatusCode(I)V
+    invoke-interface {p2, v0}, Lorg/apache/http/HttpResponse;->setStatusCode(I)V
 
     goto :goto_0
 
     :cond_0
-    instance-of p0, p1, Lorg/apache/http/UnsupportedHttpVersionException;
+    instance-of v0, p1, Lorg/apache/http/UnsupportedHttpVersionException;
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    const/16 p0, 0x1f9
+    const/16 v0, 0x1f9
 
-    invoke-interface {p2, p0}, Lorg/apache/http/HttpResponse;->setStatusCode(I)V
+    invoke-interface {p2, v0}, Lorg/apache/http/HttpResponse;->setStatusCode(I)V
 
     goto :goto_0
 
     :cond_1
-    instance-of p0, p1, Lorg/apache/http/ProtocolException;
+    instance-of v0, p1, Lorg/apache/http/ProtocolException;
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
-    const/16 p0, 0x190
+    const/16 v0, 0x190
 
-    invoke-interface {p2, p0}, Lorg/apache/http/HttpResponse;->setStatusCode(I)V
+    invoke-interface {p2, v0}, Lorg/apache/http/HttpResponse;->setStatusCode(I)V
 
     goto :goto_0
 
     :cond_2
-    const/16 p0, 0x1f4
+    const/16 v0, 0x1f4
 
-    invoke-interface {p2, p0}, Lorg/apache/http/HttpResponse;->setStatusCode(I)V
+    invoke-interface {p2, v0}, Lorg/apache/http/HttpResponse;->setStatusCode(I)V
 
     :goto_0
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {p0}, Lorg/apache/http/util/EncodingUtils;->getAsciiBytes(Ljava/lang/String;)[B
+    invoke-static {p1}, Lorg/apache/http/util/EncodingUtils;->getAsciiBytes(Ljava/lang/String;)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    new-instance p1, Lorg/apache/http/entity/ByteArrayEntity;
+    new-instance v0, Lorg/apache/http/entity/ByteArrayEntity;
 
-    invoke-direct {p1, p0}, Lorg/apache/http/entity/ByteArrayEntity;-><init>([B)V
+    invoke-direct {v0, p1}, Lorg/apache/http/entity/ByteArrayEntity;-><init>([B)V
 
-    const-string p0, "text/plain; charset=US-ASCII"
+    const-string p1, "text/plain; charset=US-ASCII"
 
-    invoke-virtual {p1, p0}, Lorg/apache/http/entity/AbstractHttpEntity;->setContentType(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lorg/apache/http/entity/AbstractHttpEntity;->setContentType(Ljava/lang/String;)V
 
-    invoke-interface {p2, p1}, Lorg/apache/http/HttpResponse;->setEntity(Lorg/apache/http/HttpEntity;)V
+    invoke-interface {p2, v0}, Lorg/apache/http/HttpResponse;->setEntity(Lorg/apache/http/HttpEntity;)V
 
     return-void
 .end method
@@ -433,13 +433,13 @@
 
     invoke-interface {p1}, Lorg/apache/http/HttpServerConnection;->flush()V
 
-    iget-object p0, p0, Lorg/apache/http/protocol/HttpService;->connStrategy:Lorg/apache/http/ConnectionReuseStrategy;
+    iget-object v0, p0, Lorg/apache/http/protocol/HttpService;->connStrategy:Lorg/apache/http/ConnectionReuseStrategy;
 
-    invoke-interface {p0, v5, p2}, Lorg/apache/http/ConnectionReuseStrategy;->keepAlive(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)Z
+    invoke-interface {v0, v5, p2}, Lorg/apache/http/ConnectionReuseStrategy;->keepAlive(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)Z
 
-    move-result p0
+    move-result p2
 
-    if-nez p0, :cond_7
+    if-nez p2, :cond_7
 
     invoke-interface {p1}, Lorg/apache/http/HttpConnection;->close()V
 
@@ -448,7 +448,7 @@
 .end method
 
 .method public setConnReuseStrategy(Lorg/apache/http/ConnectionReuseStrategy;)V
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
@@ -457,13 +457,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Connection reuse strategy may not be null"
+    const-string v0, "Connection reuse strategy may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setExpectationVerifier(Lorg/apache/http/protocol/HttpExpectationVerifier;)V
@@ -483,7 +483,7 @@
 .end method
 
 .method public setHttpProcessor(Lorg/apache/http/protocol/HttpProcessor;)V
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
@@ -492,13 +492,13 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP processor may not be null."
+    const-string v0, "HTTP processor may not be null."
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setParams(Lorg/apache/http/params/HttpParams;)V
@@ -510,7 +510,7 @@
 .end method
 
 .method public setResponseFactory(Lorg/apache/http/HttpResponseFactory;)V
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
@@ -519,11 +519,11 @@
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Response factory may not be null"
+    const-string v0, "Response factory may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

@@ -1,43 +1,91 @@
-.class public final Ljya;
+.class public abstract Ljya;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lsg1;
+# static fields
+.field public static final a:I
 
-.field public final b:Lxxa;
+.field public static final b:I
 
-.field public final c:Lxxa;
+.field public static final c:I
 
-.field public final d:Lxxa;
+.field public static final d:I
 
-.field public final e:Lxxa;
+.field public static final e:I
 
-.field public final f:Lxxa;
+.field public static final f:I
 
-.field public final g:Lxxa;
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
-.method public constructor <init>(Lsg1;Lxxa;Lxxa;Lxxa;Lxxa;Lxxa;Lxxa;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lxlc;->contact_icon_corner:I
 
-    iput-object p1, p0, Ljya;->a:Lsg1;
+    sput v0, Ljya;->a:I
 
-    iput-object p2, p0, Ljya;->b:Lxxa;
+    sget v0, Lxlc;->geo_icon_corner:I
 
-    iput-object p3, p0, Ljya;->c:Lxxa;
+    sput v0, Ljya;->b:I
 
-    iput-object p4, p0, Ljya;->d:Lxxa;
+    sget v0, Lxlc;->ic_call_incoming_audio_24:I
 
-    iput-object p5, p0, Ljya;->e:Lxxa;
+    sput v0, Ljya;->c:I
 
-    iput-object p6, p0, Ljya;->f:Lxxa;
+    sget v0, Lxlc;->ic_call_incoming_audio_missed_24:I
 
-    iput-object p7, p0, Ljya;->g:Lxxa;
+    sput v0, Ljya;->d:I
+
+    sget v0, Lxlc;->ic_call_incoming_video_missed_24:I
+
+    sput v0, Ljya;->e:I
+
+    sget v0, Lxlc;->ic_call_incomnig_video_24:I
+
+    sput v0, Ljya;->f:I
+
+    sget v0, Lxlc;->ic_call_outgoing_audio_24:I
+
+    sput v0, Ljya;->g:I
+
+    sget v0, Lxlc;->ic_call_outgoing_video_24:I
+
+    sput v0, Ljya;->h:I
+
+    sget v0, Lxlc;->ic_chat_16:I
+
+    sput v0, Ljya;->i:I
+
+    sget v0, Lxlc;->ic_contact_16:I
+
+    sput v0, Ljya;->j:I
+
+    sget v0, Lxlc;->ic_geolocation_filled_28:I
+
+    sput v0, Ljya;->k:I
+
+    sget v0, Lxlc;->link_icon_corner:I
+
+    sput v0, Ljya;->l:I
+
+    sget v0, Lxlc;->miniapp_icon_corner:I
+
+    sput v0, Ljya;->m:I
 
     return-void
 .end method

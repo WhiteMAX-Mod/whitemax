@@ -1,244 +1,106 @@
 .class public final Lbw6;
-.super Lwze;
+.super Lvod;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic e:I
+.field public final a:Landroid/os/Handler;
 
-.field public final synthetic f:Lew6;
-
-.field public final synthetic g:I
+.field public volatile b:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lew6;II)V
+.method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
-    const/4 p4, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p4, p0, Lbw6;->e:I
-
-    iput-object p2, p0, Lbw6;->f:Lew6;
-
-    iput p3, p0, Lbw6;->g:I
-
-    const/4 p2, 0x1
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Lwze;-><init>(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lew6;ILjava/util/List;)V
-    .locals 0
-
-    const/4 p4, 0x1
-
-    iput p4, p0, Lbw6;->e:I
-
-    iput-object p2, p0, Lbw6;->f:Lew6;
-
-    iput p3, p0, Lbw6;->g:I
-
-    const/4 p2, 0x1
-
-    .line 2
-    invoke-direct {p0, p1, p2}, Lwze;-><init>(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lew6;ILjava/util/List;Z)V
-    .locals 0
-
-    const/4 p4, 0x0
-
-    iput p4, p0, Lbw6;->e:I
-
-    iput-object p2, p0, Lbw6;->f:Lew6;
-
-    iput p3, p0, Lbw6;->g:I
-
-    const/4 p2, 0x1
-
-    .line 3
-    invoke-direct {p0, p1, p2}, Lwze;-><init>(Ljava/lang/String;Z)V
+    iput-object p1, p0, Lbw6;->a:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
     .locals 3
 
-    iget v0, p0, Lbw6;->e:I
+    sget-object v0, Lfa5;->a:Lfa5;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz p4, :cond_2
 
-    iget-object v0, p0, Lbw6;->f:Lew6;
+    iget-boolean v1, p0, Lbw6;->b:Z
 
-    iget-object v0, v0, Lew6;->u0:Lp3a;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
 
-    iget-object v0, p0, Lbw6;->f:Lew6;
+    :cond_0
+    new-instance v1, Lcw6;
 
-    monitor-enter v0
+    iget-object v2, p0, Lbw6;->a:Landroid/os/Handler;
 
-    :try_start_0
-    iget-object v1, p0, Lbw6;->f:Lew6;
+    invoke-direct {v1, v2, p1}, Lcw6;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    iget-object v1, v1, Lew6;->I0:Ljava/util/LinkedHashSet;
+    invoke-static {v2, v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
 
-    iget p0, p0, Lbw6;->g:I
+    move-result-object p1
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    move-result-object p0
+    const/4 v2, 0x1
 
-    invoke-interface {v1, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1, v2}, Landroid/os/Message;->setAsynchronous(Z)V
 
-    monitor-exit v0
+    iget-object v2, p0, Lbw6;->a:Landroid/os/Handler;
 
-    const-wide/16 v0, -0x1
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    return-wide v0
+    move-result-wide p2
 
-    :catchall_0
-    move-exception p0
+    invoke-virtual {v2, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    monitor-exit v0
+    iget-boolean p1, p0, Lbw6;->b:Z
 
-    throw p0
+    if-eqz p1, :cond_1
 
-    :pswitch_0
-    iget-object v0, p0, Lbw6;->f:Lew6;
+    iget-object p1, p0, Lbw6;->a:Landroid/os/Handler;
 
-    iget-object v0, v0, Lew6;->u0:Lp3a;
+    invoke-virtual {p1, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
 
-    :try_start_1
-    iget-object v0, p0, Lbw6;->f:Lew6;
+    :cond_1
+    return-object v1
 
-    iget-object v0, v0, Lew6;->G0:Lmw6;
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    iget v1, p0, Lbw6;->g:I
+    const-string p2, "unit == null"
 
-    const/16 v2, 0x9
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2}, Lmw6;->W(II)V
+    throw p1
+.end method
 
-    iget-object v0, p0, Lbw6;->f:Lew6;
+.method public final g()V
+    .locals 1
 
-    monitor-enter v0
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    const/4 v0, 0x1
 
-    :try_start_2
-    iget-object v1, p0, Lbw6;->f:Lew6;
+    iput-boolean v0, p0, Lbw6;->b:Z
 
-    iget-object v1, v1, Lew6;->I0:Ljava/util/LinkedHashSet;
+    iget-object v0, p0, Lbw6;->a:Landroid/os/Handler;
 
-    iget p0, p0, Lbw6;->g:I
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
+.end method
 
-    move-result-object p0
+.method public final h()Z
+    .locals 1
 
-    invoke-interface {v1, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    iget-boolean v0, p0, Lbw6;->b:Z
 
-    :try_start_3
-    monitor-exit v0
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception p0
-
-    monitor-exit v0
-
-    throw p0
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
-
-    :catch_0
-    :goto_0
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-
-    :pswitch_1
-    iget-object v0, p0, Lbw6;->f:Lew6;
-
-    iget-object v0, v0, Lew6;->u0:Lp3a;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_4
-    iget-object v0, p0, Lbw6;->f:Lew6;
-
-    iget-object v0, v0, Lew6;->G0:Lmw6;
-
-    iget v1, p0, Lbw6;->g:I
-
-    const/16 v2, 0x9
-
-    invoke-virtual {v0, v1, v2}, Lmw6;->W(II)V
-
-    iget-object v0, p0, Lbw6;->f:Lew6;
-
-    monitor-enter v0
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
-
-    :try_start_5
-    iget-object v1, p0, Lbw6;->f:Lew6;
-
-    iget-object v1, v1, Lew6;->I0:Ljava/util/LinkedHashSet;
-
-    iget p0, p0, Lbw6;->g:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-interface {v1, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    :try_start_6
-    monitor-exit v0
-
-    goto :goto_1
-
-    :catchall_2
-    move-exception p0
-
-    monitor-exit v0
-
-    throw p0
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
-
-    :catch_1
-    :goto_1
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

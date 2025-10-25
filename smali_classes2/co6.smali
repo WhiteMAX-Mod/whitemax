@@ -2,100 +2,68 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final b:Lco6;
-
 
 # instance fields
-.field public final a:Z
+.field public final a:Liu7;
+
+.field public final b:Liu7;
+
+.field public final c:Liu7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lco6;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lco6;-><init>(Z)V
-
-    sput-object v0, Lco6;->b:Lco6;
-
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
+.method public constructor <init>(Liu7;Liu7;Liu7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lco6;->a:Z
+    iput-object p1, p0, Lco6;->a:Liu7;
+
+    iput-object p2, p0, Lco6;->b:Liu7;
+
+    iput-object p3, p0, Lco6;->c:Liu7;
 
     return-void
 .end method
 
+.method public static a(Lco6;JLy14;)Ljava/lang/Object;
+    .locals 9
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    sget v0, Lu35;->o:I
 
-    const/4 v0, 0x1
+    const/4 v0, 0x3
 
-    if-ne p0, p1, :cond_0
+    sget-object v1, Lz35;->o:Lz35;
 
-    return v0
+    invoke-static {v0, v1}, Ltzi;->d(ILz35;)J
 
-    :cond_0
-    instance-of v1, p1, Lco6;
+    move-result-wide v6
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lco6;->c:Liu7;
 
-    if-nez v1, :cond_1
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    return v2
+    move-result-object v0
 
-    :cond_1
-    check-cast p1, Lco6;
+    check-cast v0, Lulf;
 
-    iget-boolean p0, p0, Lco6;->a:Z
+    check-cast v0, Lqta;
 
-    iget-boolean p1, p1, Lco6;->a:Z
+    invoke-virtual {v0}, Lqta;->b()Lk54;
 
-    if-eq p0, p1, :cond_2
+    move-result-object v0
 
-    return v2
+    new-instance v2, Lbo6;
 
-    :cond_2
-    return v0
-.end method
+    const/4 v8, 0x0
 
-.method public final hashCode()I
-    .locals 0
+    move-object v3, p0
 
-    iget-boolean p0, p0, Lco6;->a:Z
+    move-wide v4, p1
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-direct/range {v2 .. v8}, Lbo6;-><init>(Lco6;JJLkotlin/coroutines/Continuation;)V
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "GroupOptions(isPremium="
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lco6;->a:Z
-
-    invoke-static {v0, v1, p0}, Lz7e;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v2, p3}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 

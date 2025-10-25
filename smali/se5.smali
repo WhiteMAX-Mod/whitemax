@@ -1,45 +1,34 @@
 .class public final Lse5;
-.super Lcb4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lve5;
 
-# static fields
-.field public static final b:Lse5;
 
-.field public static final c:Lxa4;
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Lqx4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(JJLjava/lang/String;Lqx4;)V
+    .locals 0
 
-    new-instance v0, Lse5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lcb4;-><init>()V
+    iput-wide p1, p0, Lse5;->a:J
 
-    sput-object v0, Lse5;->b:Lse5;
+    iput-wide p3, p0, Lse5;->b:J
 
-    const/4 v1, 0x0
+    iput-object p5, p0, Lse5;->c:Ljava/lang/String;
 
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v1, "params"
-
-    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v3
-
-    const/16 v5, 0xc
-
-    const/4 v4, 0x0
-
-    const-string v1, ":external_callback"
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v0
-
-    sput-object v0, Lse5;->c:Lxa4;
+    iput-object p6, p0, Lse5;->d:Lqx4;
 
     return-void
 .end method

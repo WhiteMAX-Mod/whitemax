@@ -145,23 +145,23 @@
 
     iget p1, p0, Lorg/webrtc/YuvConverter$ShaderCallbacks;->xUnitLoc:I
 
-    iget p0, p0, Lorg/webrtc/YuvConverter$ShaderCallbacks;->stepSize:F
+    iget p4, p0, Lorg/webrtc/YuvConverter$ShaderCallbacks;->stepSize:F
 
-    aget p4, p2, p6
+    aget p6, p2, p6
 
-    mul-float/2addr p4, p0
+    mul-float/2addr p6, p4
 
     int-to-float p3, p3
 
-    div-float/2addr p4, p3
+    div-float/2addr p6, p3
 
     aget p2, p2, p5
 
-    mul-float/2addr p0, p2
+    mul-float/2addr p4, p2
 
-    div-float/2addr p0, p3
+    div-float/2addr p4, p3
 
-    invoke-static {p1, p4, p0}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
+    invoke-static {p1, p6, p4}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
     return-void
 .end method

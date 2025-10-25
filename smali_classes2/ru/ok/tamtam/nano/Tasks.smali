@@ -28,6 +28,7 @@
         Lru/ok/tamtam/nano/Tasks$LocationRequest;,
         Lru/ok/tamtam/nano/Tasks$SuspendBot;,
         Lru/ok/tamtam/nano/Tasks$MsgSendCallback;,
+        Lru/ok/tamtam/nano/Tasks$Complain;,
         Lru/ok/tamtam/nano/Tasks$ChatComplain;,
         Lru/ok/tamtam/nano/Tasks$ConfirmPresent;,
         Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;,

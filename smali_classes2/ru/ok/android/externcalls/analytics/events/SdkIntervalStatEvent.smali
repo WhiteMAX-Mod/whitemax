@@ -84,15 +84,15 @@
 
 # virtual methods
 .method public getApiMethodName()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent;->apiMethodName:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent;->apiMethodName:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getItems()Ljava/util/Map;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -103,13 +103,13 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent;->items:Ljava/util/Map;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent;->items:Ljava/util/Map;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent;->getApiMethodName()Ljava/lang/String;
 
@@ -117,33 +117,33 @@
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent;->getItems()Ljava/util/Map;
 
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
     move-result-object v1
 
-    sget-object v5, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent$toString$1;->INSTANCE:Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent$toString$1;
+    invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    const/16 v6, 0x1e
+    move-result-object v2
 
-    const-string v2, ", "
+    sget-object v6, Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent$toString$1;->INSTANCE:Lru/ok/android/externcalls/analytics/events/SdkIntervalStatEvent$toString$1;
 
-    const/4 v3, 0x0
+    const/16 v7, 0x1e
+
+    const-string v3, ", "
 
     const/4 v4, 0x0
 
-    invoke-static/range {v1 .. v6}, Lq73;->l0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbc6;I)Ljava/lang/String;
+    const/4 v5, 0x0
 
-    move-result-object p0
+    invoke-static/range {v2 .. v7}, Lnb3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lli6;I)Ljava/lang/String;
 
-    const-string v1, "SdkIntervalStatEvent apiMethod="
+    move-result-object v1
 
-    const-string v2, " "
+    const-string v2, "SdkIntervalStatEvent apiMethod="
 
-    invoke-static {v1, v0, v2, p0}, Lee5;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v3, " "
 
-    move-result-object p0
+    invoke-static {v2, v0, v3, v1}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 .end method

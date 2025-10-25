@@ -10,7 +10,7 @@
 .method public abstract release()V
 .end method
 
-.method public abstract restartAudioRecording()V
+.method public abstract restartAudioRecording(Z)V
 .end method
 
 .method public abstract setMicrophoneMute(Z)V
@@ -19,9 +19,9 @@
 .method public setNoiseSuppressorEnabled(Z)Z
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public abstract setOneAnnNoiseSuppressorEnabled(Z)V
@@ -30,9 +30,9 @@
 .method public setPreferredMicrophoneFieldDimension(F)Z
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public abstract setSpeakerMute(Z)V

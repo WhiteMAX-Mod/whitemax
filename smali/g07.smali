@@ -1,43 +1,93 @@
 .class public final Lg07;
-.super Lf07;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a(Lc27;)La27;
+# instance fields
+.field public final a:J
+
+.field public final b:I
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/Comparable;
+
+
+# direct methods
+.method public constructor <init>(La17;JI)V
     .locals 0
 
-    invoke-interface {p1}, Lc27;->x()La27;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    .line 2
+    iput-object p1, p0, Lg07;->d:Ljava/lang/Comparable;
 
-    return-object p0
-.end method
+    .line 3
+    iput-wide p2, p0, Lg07;->a:J
 
-.method public final c()V
-    .locals 0
+    .line 4
+    iput p4, p0, Lg07;->b:I
+
+    .line 5
+    instance-of p2, p1, Lu07;
+
+    if-eqz p2, :cond_0
+
+    check-cast p1, Lu07;
+
+    iget-boolean p1, p1, Lu07;->v0:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lg07;->c:Z
 
     return-void
 .end method
 
-.method public final e(La27;)V
-    .locals 2
+.method public constructor <init>(Lb17;JI)V
+    .locals 0
 
-    invoke-virtual {p0, p1}, Lf07;->b(La27;)Lgt7;
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    .line 7
+    iput-object p1, p0, Lg07;->d:Ljava/lang/Comparable;
 
-    new-instance v0, Lq02;
+    .line 8
+    iput-wide p2, p0, Lg07;->a:J
 
-    const/16 v1, 0x10
+    .line 9
+    iput p4, p0, Lg07;->b:I
 
-    invoke-direct {v0, v1, p1}, Lq02;-><init>(ILjava/lang/Object;)V
+    .line 10
+    instance-of p2, p1, Lv07;
 
-    invoke-static {}, Ln4e;->q()Lep4;
+    if-eqz p2, :cond_0
 
-    move-result-object p1
+    check-cast p1, Lv07;
 
-    invoke-static {p0, v0, p1}, Lf4h;->a(Lgt7;Lpd6;Ljava/util/concurrent/Executor;)V
+    iget-boolean p1, p1, Lv07;->v0:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lg07;->c:Z
 
     return-void
 .end method

@@ -51,7 +51,7 @@
 
 .field private useLowLatency:Z
 
-.field private useSilenceProvider:Z
+.field private useSilenceProviderIfMutedOnInit:Z
 
 .field private useStereoInput:Z
 
@@ -246,7 +246,7 @@
 
     iget-boolean v12, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$Builder;->useHardwareNoiseSuppressor:Z
 
-    iget-boolean v13, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$Builder;->useSilenceProvider:Z
+    iget-boolean v13, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$Builder;->useSilenceProviderIfMutedOnInit:Z
 
     invoke-direct/range {v1 .. v13}, Lorg/webrtc/audio/WebRtcAudioRecord;-><init>(Landroid/content/Context;Ljava/util/concurrent/ScheduledExecutorService;Landroid/media/AudioManager;IILorg/webrtc/audio/JavaAudioDeviceModule$AudioRecordErrorCallback;Lorg/webrtc/audio/JavaAudioDeviceModule$AudioRecordStateCallback;Lorg/webrtc/audio/JavaAudioDeviceModule$SamplesReadyCallback;Lorg/webrtc/audio/JavaAudioDeviceModule$AudioRecordSampleHook;ZZZ)V
 
@@ -511,10 +511,10 @@
     return-object p0
 .end method
 
-.method public setUseSilenceProvider(Z)Lorg/webrtc/audio/JavaAudioDeviceModule$Builder;
+.method public setUseSilenceProviderIfMutedOnInit(Z)Lorg/webrtc/audio/JavaAudioDeviceModule$Builder;
     .locals 0
 
-    iput-boolean p1, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$Builder;->useSilenceProvider:Z
+    iput-boolean p1, p0, Lorg/webrtc/audio/JavaAudioDeviceModule$Builder;->useSilenceProviderIfMutedOnInit:Z
 
     return-object p0
 .end method

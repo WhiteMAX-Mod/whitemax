@@ -1,23 +1,31 @@
-.class public final Lo1b;
+.class public abstract Lo1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Integer;
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget v0, Lzoc;->oneme_permissions_positive:I
 
-    move-result-object p1
+    sput v0, Lo1b;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lzoc;->oneme_permissions_rationale:I
 
-    iput-object p1, p0, Lo1b;->a:Ljava/lang/Integer;
+    sput v0, Lo1b;->b:I
+
+    sget v0, Lzoc;->oneme_permissions_title:I
+
+    sput v0, Lo1b;->c:I
 
     return-void
 .end method

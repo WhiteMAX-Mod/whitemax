@@ -1,202 +1,121 @@
-.class public final Lxwa;
-.super Lzwa;
+.class public abstract Lxwa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic d:I
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
 
 
 # direct methods
-.method public synthetic constructor <init>(III[B)V
-    .locals 0
-
-    iput p3, p0, Lxwa;->d:I
-
-    invoke-direct {p0, p4, p1, p2}, Lzwa;-><init>([BII)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(I)S
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lxwa;->d:I
+    sget v0, Lwsc;->oneme_media_keyboard_emoji_animals_and_plants:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lxwa;->a:I
 
-    iget v0, p0, Lzwa;->c:I
+    sget v0, Lwsc;->oneme_media_keyboard_emoji_classic:I
 
-    add-int/2addr p1, v0
+    sput v0, Lxwa;->b:I
 
-    iget-object p0, p0, Lzwa;->b:[B
+    sget v0, Lwsc;->oneme_media_keyboard_emoji_flags:I
 
-    aget-byte p0, p0, p1
+    sput v0, Lxwa;->c:I
 
-    mul-int/lit16 p0, p0, 0x101
+    sget v0, Lwsc;->oneme_media_keyboard_emoji_food_and_drink:I
 
-    add-int/lit16 p0, p0, 0x80
+    sput v0, Lxwa;->d:I
 
-    :goto_0
-    int-to-short p0, p0
+    sget v0, Lwsc;->oneme_media_keyboard_emoji_gestures_and_people:I
 
-    return p0
+    sput v0, Lxwa;->e:I
 
-    :pswitch_0
-    shl-int/lit8 p1, p1, 0x1
+    sget v0, Lwsc;->oneme_media_keyboard_emoji_objects:I
 
-    iget v0, p0, Lzwa;->c:I
+    sput v0, Lxwa;->f:I
 
-    add-int/2addr p1, v0
+    sget v0, Lwsc;->oneme_media_keyboard_emoji_sport_and_activity:I
 
-    iget-object p0, p0, Lzwa;->b:[B
+    sput v0, Lxwa;->g:I
 
-    aget-byte v0, p0, p1
+    sget v0, Lwsc;->oneme_media_keyboard_emoji_symbols:I
 
-    add-int/lit8 p1, p1, 0x1
+    sput v0, Lxwa;->h:I
 
-    aget-byte p0, p0, p1
+    sget v0, Lwsc;->oneme_media_keyboard_emoji_travels_and_transport:I
 
-    shl-int/lit8 p0, p0, 0x8
+    sput v0, Lxwa;->i:I
 
-    const p1, 0xff00
+    sget v0, Lwsc;->oneme_media_keyboard_favorite:I
 
-    and-int/2addr p0, p1
+    sput v0, Lxwa;->j:I
 
-    and-int/lit16 p1, v0, 0xff
+    sget v0, Lwsc;->oneme_media_keyboard_popular:I
 
-    add-int/2addr p0, p1
+    sput v0, Lxwa;->k:I
 
-    goto :goto_0
+    sget v0, Lwsc;->oneme_media_keyboard_recent:I
 
-    nop
+    sput v0, Lxwa;->l:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    sget v0, Lwsc;->oneme_media_keyboard_recent_clear_action:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    sput v0, Lxwa;->m:I
 
-    iget v0, p0, Lxwa;->d:I
+    sget v0, Lwsc;->oneme_media_keyboard_recent_clear_cancel:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lxwa;->n:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget v0, Lwsc;->oneme_media_keyboard_recent_clear_title:I
 
-    const-string v1, "PCM 8 bit ("
+    sput v0, Lxwa;->o:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget v0, Lwsc;->oneme_media_keyboard_tab_emoji:I
 
-    iget v1, p0, Lzwa;->a:I
+    sput v0, Lxwa;->p:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v0, Lwsc;->oneme_media_keyboard_tab_gifs:I
 
-    const-string v2, ") {"
+    sput v0, Lxwa;->q:I
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v0, Lwsc;->oneme_media_keyboard_tab_stickers:I
 
-    if-lez v1, :cond_0
+    sput v0, Lxwa;->r:I
 
-    iget-object v2, p0, Lzwa;->b:[B
-
-    iget p0, p0, Lzwa;->c:I
-
-    aget-byte v3, v2, p0
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/4 v3, 0x1
-
-    :goto_0
-    if-ge v3, v1, :cond_0
-
-    const-string v4, ", "
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    add-int v4, v3, p0
-
-    aget-byte v4, v2, v4
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PCM 16 bit ("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lzwa;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ") {"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-lez v1, :cond_1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v2}, Lxwa;->a(I)S
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x1
-
-    :goto_1
-    if-ge v2, v1, :cond_1
-
-    const-string v3, ", "
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v2}, Lxwa;->a(I)S
-
-    move-result v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -3,22 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lybe;
+.implements Lcce;
 
 
-# static fields
-.field public static final a:Lxbe;
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lxbe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lxbe;->a:Lxbe;
+    iput-object p1, p0, Lxbe;->a:Ljava/lang/String;
 
     return-void
 .end method

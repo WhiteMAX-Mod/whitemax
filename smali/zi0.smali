@@ -3,197 +3,254 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwd8;
-.implements Lxd8;
+.implements Lt50;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public b:Lq50;
 
-.field public final b:J
+.field public c:Lq50;
 
-.field public final c:J
+.field public d:Lq50;
 
-.field public o:J
+.field public e:Lq50;
+
+.field public f:Ljava/nio/ByteBuffer;
+
+.field public g:Ljava/nio/ByteBuffer;
+
+.field public h:Z
 
 
 # direct methods
-.method public constructor <init>(IJJ)V
-    .locals 0
-
-    iput p1, p0, Lzi0;->a:I
-
-    packed-switch p1, :pswitch_data_0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lzi0;->b:J
+    sget-object v0, Lt50;->a:Ljava/nio/ByteBuffer;
 
-    iput-wide p4, p0, Lzi0;->c:J
+    iput-object v0, p0, Lzi0;->f:Ljava/nio/ByteBuffer;
 
-    const-wide/16 p4, 0x1
+    iput-object v0, p0, Lzi0;->g:Ljava/nio/ByteBuffer;
 
-    sub-long/2addr p2, p4
+    sget-object v0, Lq50;->e:Lq50;
 
-    iput-wide p2, p0, Lzi0;->o:J
+    iput-object v0, p0, Lzi0;->d:Lq50;
 
-    return-void
+    iput-object v0, p0, Lzi0;->e:Lq50;
 
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, Lzi0;->b:Lq50;
 
-    iput-wide p2, p0, Lzi0;->b:J
-
-    iput-wide p4, p0, Lzi0;->c:J
-
-    const-wide/16 p4, 0x1
-
-    sub-long/2addr p2, p4
-
-    iput-wide p2, p0, Lzi0;->o:J
+    iput-object v0, p0, Lzi0;->c:Lq50;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 4
+.method public a()Z
+    .locals 2
 
-    iget v0, p0, Lzi0;->a:I
+    iget-boolean v0, p0, Lzi0;->h:Z
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    iget-wide v0, p0, Lzi0;->o:J
+    iget-object v0, p0, Lzi0;->g:Ljava/nio/ByteBuffer;
 
-    iget-wide v2, p0, Lzi0;->b:J
+    sget-object v1, Lt50;->a:Ljava/nio/ByteBuffer;
 
-    cmp-long v2, v0, v2
-
-    if-ltz v2, :cond_0
-
-    iget-wide v2, p0, Lzi0;->c:J
-
-    cmp-long p0, v0, v2
-
-    if-gtz p0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw p0
-
-    :pswitch_0
-    iget-wide v0, p0, Lzi0;->o:J
-
-    iget-wide v2, p0, Lzi0;->b:J
-
-    cmp-long v2, v0, v2
-
-    if-ltz v2, :cond_1
-
-    iget-wide v2, p0, Lzi0;->c:J
-
-    cmp-long p0, v0, v2
-
-    if-gtz p0, :cond_1
-
-    return-void
-
-    :cond_1
-    new-instance p0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final next()Z
-    .locals 4
-
-    iget v0, p0, Lzi0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-wide v0, p0, Lzi0;->o:J
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lzi0;->o:J
-
-    iget-wide v2, p0, Lzi0;->c:J
-
-    cmp-long p0, v0, v2
+    if-ne v0, v1, :cond_0
 
     const/4 v0, 0x1
 
-    if-lez p0, :cond_0
+    return v0
 
-    move p0, v0
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public b()Ljava/nio/ByteBuffer;
+    .locals 2
+
+    iget-object v0, p0, Lzi0;->g:Ljava/nio/ByteBuffer;
+
+    sget-object v1, Lt50;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v1, p0, Lzi0;->g:Ljava/nio/ByteBuffer;
+
+    return-object v0
+.end method
+
+.method public final d()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lzi0;->h:Z
+
+    invoke-virtual {p0}, Lzi0;->i()V
+
+    return-void
+.end method
+
+.method public final e(Lq50;)Lq50;
+    .locals 0
+
+    iput-object p1, p0, Lzi0;->d:Lq50;
+
+    invoke-virtual {p0, p1}, Lzi0;->g(Lq50;)Lq50;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lzi0;->e:Lq50;
+
+    invoke-virtual {p0}, Lzi0;->isActive()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lzi0;->e:Lq50;
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lq50;->e:Lq50;
+
+    return-object p1
+.end method
+
+.method public final flush()V
+    .locals 1
+
+    sget-object v0, Lt50;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v0, p0, Lzi0;->g:Ljava/nio/ByteBuffer;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lzi0;->h:Z
+
+    iget-object v0, p0, Lzi0;->d:Lq50;
+
+    iput-object v0, p0, Lzi0;->b:Lq50;
+
+    iget-object v0, p0, Lzi0;->e:Lq50;
+
+    iput-object v0, p0, Lzi0;->c:Lq50;
+
+    invoke-virtual {p0}, Lzi0;->h()V
+
+    return-void
+.end method
+
+.method public abstract g(Lq50;)Lq50;
+.end method
+
+.method public h()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public i()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public isActive()Z
+    .locals 2
+
+    iget-object v0, p0, Lzi0;->e:Lq50;
+
+    sget-object v1, Lq50;->e:Lq50;
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public j()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final k(I)Ljava/nio/ByteBuffer;
+    .locals 1
+
+    iget-object v0, p0, Lzi0;->f:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+
+    move-result v0
+
+    if-ge v0, p1, :cond_0
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lzi0;->f:Ljava/nio/ByteBuffer;
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    iget-object p1, p0, Lzi0;->f:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
     :goto_0
-    xor-int/2addr p0, v0
+    iget-object p1, p0, Lzi0;->f:Ljava/nio/ByteBuffer;
 
-    return p0
+    iput-object p1, p0, Lzi0;->g:Ljava/nio/ByteBuffer;
 
-    :pswitch_0
-    iget-wide v0, p0, Lzi0;->o:J
+    return-object p1
+.end method
 
-    const-wide/16 v2, 0x1
+.method public final reset()V
+    .locals 2
 
-    add-long/2addr v0, v2
+    sget-object v0, Lt50;->a:Ljava/nio/ByteBuffer;
 
-    iput-wide v0, p0, Lzi0;->o:J
+    iput-object v0, p0, Lzi0;->g:Ljava/nio/ByteBuffer;
 
-    iget-wide v2, p0, Lzi0;->c:J
+    const/4 v1, 0x0
 
-    cmp-long p0, v0, v2
+    iput-boolean v1, p0, Lzi0;->h:Z
 
-    const/4 v0, 0x1
+    iput-object v0, p0, Lzi0;->f:Ljava/nio/ByteBuffer;
 
-    if-lez p0, :cond_1
+    sget-object v0, Lq50;->e:Lq50;
 
-    move p0, v0
+    iput-object v0, p0, Lzi0;->d:Lq50;
 
-    goto :goto_1
+    iput-object v0, p0, Lzi0;->e:Lq50;
 
-    :cond_1
-    const/4 p0, 0x0
+    iput-object v0, p0, Lzi0;->b:Lq50;
 
-    :goto_1
-    xor-int/2addr p0, v0
+    iput-object v0, p0, Lzi0;->c:Lq50;
 
-    return p0
+    invoke-virtual {p0}, Lzi0;->j()V
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

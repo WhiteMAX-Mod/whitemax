@@ -48,7 +48,7 @@
     :cond_0
     const-string p2, "Camera error: "
 
-    invoke-static {p1, p2}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -61,7 +61,7 @@
 
     const-string v1, "error: "
 
-    invoke-static {v1, p2}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p2}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -77,9 +77,9 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/webrtc/Camera1Session$2;->this$0:Lorg/webrtc/Camera1Session;
+    iget-object p2, p0, Lorg/webrtc/Camera1Session$2;->this$0:Lorg/webrtc/Camera1Session;
 
-    invoke-interface {p1, p0}, Lorg/webrtc/CameraSession$Events;->onCameraDisconnected(Lorg/webrtc/CameraSession;)V
+    invoke-interface {p1, p2}, Lorg/webrtc/CameraSession$Events;->onCameraDisconnected(Lorg/webrtc/CameraSession;)V
 
     return-void
 
@@ -90,9 +90,9 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/webrtc/Camera1Session$2;->this$0:Lorg/webrtc/Camera1Session;
+    iget-object v0, p0, Lorg/webrtc/Camera1Session$2;->this$0:Lorg/webrtc/Camera1Session;
 
-    invoke-interface {p1, p0, p2}, Lorg/webrtc/CameraSession$Events;->onCameraError(Lorg/webrtc/CameraSession;Ljava/lang/String;)V
+    invoke-interface {p1, v0, p2}, Lorg/webrtc/CameraSession$Events;->onCameraError(Lorg/webrtc/CameraSession;Ljava/lang/String;)V
 
     return-void
 .end method

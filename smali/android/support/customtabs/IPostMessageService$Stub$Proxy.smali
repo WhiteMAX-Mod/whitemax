@@ -39,23 +39,23 @@
 
 # virtual methods
 .method public asBinder()Landroid/os/IBinder;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroid/support/customtabs/IPostMessageService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v0, p0, Landroid/support/customtabs/IPostMessageService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getInterfaceDescriptor()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "android.support.customtabs.IPostMessageService"
+    const-string v0, "android.support.customtabs.IPostMessageService"
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public onMessageChannelReady(Landroid/support/customtabs/ICustomTabsCallback;Landroid/os/Bundle;)V
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -84,7 +84,7 @@
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_3
 
@@ -110,27 +110,27 @@
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     :goto_1
-    iget-object p0, p0, Landroid/support/customtabs/IPostMessageService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Landroid/support/customtabs/IPostMessageService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    invoke-interface {p0, v3, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-interface {v3, v4, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result p0
+    move-result v2
 
-    if-nez p0, :cond_2
-
-    invoke-static {}, Landroid/support/customtabs/IPostMessageService$Stub;->getDefaultImpl()Landroid/support/customtabs/IPostMessageService;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
+    if-nez v2, :cond_2
 
     invoke-static {}, Landroid/support/customtabs/IPostMessageService$Stub;->getDefaultImpl()Landroid/support/customtabs/IPostMessageService;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-interface {p0, p1, p2}, Landroid/support/customtabs/IPostMessageService;->onMessageChannelReady(Landroid/support/customtabs/ICustomTabsCallback;Landroid/os/Bundle;)V
+    if-eqz v2, :cond_2
+
+    invoke-static {}, Landroid/support/customtabs/IPostMessageService$Stub;->getDefaultImpl()Landroid/support/customtabs/IPostMessageService;
+
+    move-result-object v2
+
+    invoke-interface {v2, p1, p2}, Landroid/support/customtabs/IPostMessageService;->onMessageChannelReady(Landroid/support/customtabs/ICustomTabsCallback;Landroid/os/Bundle;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -154,11 +154,11 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    throw p0
+    throw p1
 .end method
 
 .method public onPostMessage(Landroid/support/customtabs/ICustomTabsCallback;Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -187,7 +187,7 @@
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_3
 
@@ -215,27 +215,27 @@
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     :goto_1
-    iget-object p0, p0, Landroid/support/customtabs/IPostMessageService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Landroid/support/customtabs/IPostMessageService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/4 v3, 0x3
+    const/4 v4, 0x3
 
-    invoke-interface {p0, v3, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-interface {v3, v4, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result p0
+    move-result v2
 
-    if-nez p0, :cond_2
-
-    invoke-static {}, Landroid/support/customtabs/IPostMessageService$Stub;->getDefaultImpl()Landroid/support/customtabs/IPostMessageService;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
+    if-nez v2, :cond_2
 
     invoke-static {}, Landroid/support/customtabs/IPostMessageService$Stub;->getDefaultImpl()Landroid/support/customtabs/IPostMessageService;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-interface {p0, p1, p2, p3}, Landroid/support/customtabs/IPostMessageService;->onPostMessage(Landroid/support/customtabs/ICustomTabsCallback;Ljava/lang/String;Landroid/os/Bundle;)V
+    if-eqz v2, :cond_2
+
+    invoke-static {}, Landroid/support/customtabs/IPostMessageService$Stub;->getDefaultImpl()Landroid/support/customtabs/IPostMessageService;
+
+    move-result-object v2
+
+    invoke-interface {v2, p1, p2, p3}, Landroid/support/customtabs/IPostMessageService;->onPostMessage(Landroid/support/customtabs/ICustomTabsCallback;Ljava/lang/String;Landroid/os/Bundle;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -259,5 +259,5 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    throw p0
+    throw p1
 .end method

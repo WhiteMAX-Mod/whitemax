@@ -36,23 +36,23 @@
 
 # virtual methods
 .method public getApplyAlignmentToAllSimulcastLayers()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "EncoderInfo"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/VideoEncoder$EncoderInfo;->applyAlignmentToAllSimulcastLayers:Z
+    iget-boolean v0, p0, Lorg/webrtc/VideoEncoder$EncoderInfo;->applyAlignmentToAllSimulcastLayers:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getRequestedResolutionAlignment()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "EncoderInfo"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/VideoEncoder$EncoderInfo;->requestedResolutionAlignment:I
+    iget v0, p0, Lorg/webrtc/VideoEncoder$EncoderInfo;->requestedResolutionAlignment:I
 
-    return p0
+    return v0
 .end method

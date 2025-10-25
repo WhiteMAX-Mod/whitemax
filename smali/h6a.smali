@@ -1,60 +1,121 @@
-.class public final Lh6a;
-.super Lhc3;
+.class public abstract Lh6a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmd6;
 
-
-# instance fields
-.field public final a:Ly4a;
-
-.field public final b:Lqc6;
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ly4a;Lqc6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "NetworkStateTracker"
 
-    iput-object p1, p0, Lh6a;->a:Ly4a;
+    invoke-static {v0}, Lxyh;->l(Ljava/lang/String;)Ljava/lang/String;
 
-    iput-object p2, p0, Lh6a;->b:Lqc6;
+    move-result-object v0
+
+    sput-object v0, Lh6a;->a:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static final a(Landroid/net/ConnectivityManager;)Lf6a;
+    .locals 8
 
-# virtual methods
-.method public final d()Ly4a;
-    .locals 3
+    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
-    new-instance v0, Lr5a;
+    move-result-object v0
 
-    iget-object v1, p0, Lh6a;->b:Lqc6;
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    iget-object p0, p0, Lh6a;->a:Ly4a;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, p0, v1, v2}, Lr5a;-><init>(Ly4a;Lqc6;I)V
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    move v3, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v2
+
+    :goto_0
+    :try_start_0
+    invoke-static {p0}, Lx5a;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
+
+    move-result-object v4
+
+    invoke-static {p0, v4}, Lw5a;->a(Landroid/net/ConnectivityManager;Landroid/net/Network;)Landroid/net/NetworkCapabilities;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    const/16 v5, 0x10
+
+    invoke-static {v4, v5}, Lw5a;->b(Landroid/net/NetworkCapabilities;I)Z
+
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v4
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    move v4, v2
+
+    goto :goto_3
+
+    :goto_2
+    invoke-static {}, Lxyh;->e()Lxyh;
+
+    move-result-object v5
+
+    sget-object v6, Lh6a;->a:Ljava/lang/String;
+
+    const-string v7, "Unable to validate active network"
+
+    invoke-virtual {v5, v6, v7, v4}, Lxyh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :goto_3
+    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
+
+    move-result p0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isRoaming()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_4
+
+    :cond_2
+    move v1, v2
+
+    :goto_4
+    new-instance v0, Lf6a;
+
+    invoke-direct {v0, v3, v4, p0, v1}, Lf6a;-><init>(ZZZZ)V
 
     return-object v0
-.end method
-
-.method public final i(Lrc3;)V
-    .locals 2
-
-    new-instance v0, Lg6a;
-
-    iget-object v1, p0, Lh6a;->b:Lqc6;
-
-    invoke-direct {v0, p1, v1}, Lg6a;-><init>(Lrc3;Lqc6;)V
-
-    iget-object p0, p0, Lh6a;->a:Ly4a;
-
-    invoke-virtual {p0, v0}, Ly4a;->a(Ld8a;)V
-
-    return-void
 .end method

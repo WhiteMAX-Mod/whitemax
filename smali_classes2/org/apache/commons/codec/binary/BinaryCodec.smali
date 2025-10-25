@@ -436,7 +436,7 @@
 
 # virtual methods
 .method public decode(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/commons/codec/DecoderException;
@@ -446,68 +446,68 @@
     if-nez p1, :cond_0
 
     .line 1
-    sget-object p0, Lorg/apache/commons/codec/binary/BinaryCodec;->EMPTY_BYTE_ARRAY:[B
+    sget-object p1, Lorg/apache/commons/codec/binary/BinaryCodec;->EMPTY_BYTE_ARRAY:[B
 
-    return-object p0
+    return-object p1
 
     .line 2
     :cond_0
-    instance-of p0, p1, [B
+    instance-of v0, p1, [B
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
     .line 3
     check-cast p1, [B
 
     invoke-static {p1}, Lorg/apache/commons/codec/binary/BinaryCodec;->fromAscii([B)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     .line 4
     :cond_1
-    instance-of p0, p1, [C
+    instance-of v0, p1, [C
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
     .line 5
     check-cast p1, [C
 
     invoke-static {p1}, Lorg/apache/commons/codec/binary/BinaryCodec;->fromAscii([C)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     .line 6
     :cond_2
-    instance-of p0, p1, Ljava/lang/String;
+    instance-of v0, p1, Ljava/lang/String;
 
-    if-eqz p0, :cond_3
+    if-eqz v0, :cond_3
 
     .line 7
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {p0}, Lorg/apache/commons/codec/binary/BinaryCodec;->fromAscii([C)[B
+    invoke-static {p1}, Lorg/apache/commons/codec/binary/BinaryCodec;->fromAscii([C)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     .line 8
     :cond_3
-    new-instance p0, Lorg/apache/commons/codec/DecoderException;
+    new-instance p1, Lorg/apache/commons/codec/DecoderException;
 
-    const-string p1, "argument not a byte array"
+    const-string v0, "argument not a byte array"
 
-    invoke-direct {p0, p1}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public decode([B)[B
@@ -516,13 +516,13 @@
     .line 9
     invoke-static {p1}, Lorg/apache/commons/codec/binary/BinaryCodec;->fromAscii([B)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public encode(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/apache/commons/codec/EncoderException;
@@ -530,28 +530,28 @@
     .end annotation
 
     .line 2
-    instance-of p0, p1, [B
+    instance-of v0, p1, [B
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     .line 3
     check-cast p1, [B
 
     invoke-static {p1}, Lorg/apache/commons/codec/binary/BinaryCodec;->toAsciiChars([B)[C
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     .line 4
     :cond_0
-    new-instance p0, Lorg/apache/commons/codec/EncoderException;
+    new-instance p1, Lorg/apache/commons/codec/EncoderException;
 
-    const-string p1, "argument not a byte array"
+    const-string v0, "argument not a byte array"
 
-    invoke-direct {p0, p1}, Lorg/apache/commons/codec/EncoderException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/apache/commons/codec/EncoderException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public encode([B)[B
@@ -560,9 +560,9 @@
     .line 1
     invoke-static {p1}, Lorg/apache/commons/codec/binary/BinaryCodec;->toAsciiBytes([B)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public toByteArray(Ljava/lang/String;)[B
@@ -570,18 +570,18 @@
 
     if-nez p1, :cond_0
 
-    sget-object p0, Lorg/apache/commons/codec/binary/BinaryCodec;->EMPTY_BYTE_ARRAY:[B
+    sget-object p1, Lorg/apache/commons/codec/binary/BinaryCodec;->EMPTY_BYTE_ARRAY:[B
 
-    return-object p0
+    return-object p1
 
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {p0}, Lorg/apache/commons/codec/binary/BinaryCodec;->fromAscii([C)[B
+    invoke-static {p1}, Lorg/apache/commons/codec/binary/BinaryCodec;->fromAscii([C)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

@@ -1,44 +1,90 @@
-.class public abstract Lj6c;
-.super Ljava/lang/Object;
+.class public final Lj6c;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static oneme_media_keyboard:I = 0x7f0a073d
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static oneme_media_keyboard_bottom_panel:I = 0x7f0a073e
+.field public final synthetic Y:Lu6c;
 
-.field public static oneme_media_keyboard_emoji_container:I = 0x7f0a073f
 
-.field public static oneme_media_keyboard_emoji_list:I = 0x7f0a0740
+# direct methods
+.method public constructor <init>(Lu6c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_media_keyboard_emoji_tabs:I = 0x7f0a0741
+    iput-object p1, p0, Lj6c;->Y:Lu6c;
 
-.field public static oneme_media_keyboard_fake_search_view:I = 0x7f0a0742
+    const/4 p1, 0x2
 
-.field public static oneme_media_keyboard_pager:I = 0x7f0a0743
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_action:I = 0x7f0a0744
+    return-void
+.end method
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_cancel:I = 0x7f0a0745
 
-.field public static oneme_media_keyboard_remove_action:I = 0x7f0a0746
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_media_keyboard_settings_action:I = 0x7f0a0747
+    check-cast p1, Lb65;
 
-.field public static oneme_media_keyboard_showcase_action:I = 0x7f0a0748
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_media_keyboard_stickers_container:I = 0x7f0a0749
+    invoke-virtual {p0, p1, p2}, Lj6c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_media_keyboard_stickers_header_title:I = 0x7f0a074a
+    move-result-object p1
 
-.field public static oneme_media_keyboard_stickers_list:I = 0x7f0a074b
+    check-cast p1, Lj6c;
 
-.field public static oneme_media_keyboard_stickers_tabs:I = 0x7f0a074c
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static oneme_media_keyboard_tabs:I = 0x7f0a074d
+    invoke-virtual {p1, p2}, Lj6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_media_keyboard_top_panel:I = 0x7f0a074e
+    return-object p2
+.end method
 
-.field public static oneme_media_keyboard_view_type_category_emoji:I = 0x7f0a074f
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static oneme_media_keyboard_view_type_fake_search:I = 0x7f0a0750
+    new-instance v0, Lj6c;
+
+    iget-object v1, p0, Lj6c;->Y:Lu6c;
+
+    invoke-direct {v0, v1, p2}, Lj6c;-><init>(Lu6c;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lj6c;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lj6c;->X:Ljava/lang/Object;
+
+    check-cast p1, Lb65;
+
+    iget-object v0, p0, Lj6c;->Y:Lu6c;
+
+    iget-object v1, v0, Lu6c;->t0:Lx0f;
+
+    iget-object v2, p1, Lb65;->a:Lk4c;
+
+    invoke-virtual {v1, v2}, Lx0f;->setValue(Ljava/lang/Object;)V
+
+    iget-object v0, v0, Lu6c;->r0:Lx0f;
+
+    iget-object p1, p1, Lb65;->b:Ljava/util/List;
+
+    invoke-virtual {v0, p1}, Lx0f;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method

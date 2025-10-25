@@ -33,30 +33,30 @@
 
 # virtual methods
 .method public flush()V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->out:Lorg/apache/http/io/SessionOutputBuffer;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->out:Lorg/apache/http/io/SessionOutputBuffer;
 
-    invoke-interface {p0}, Lorg/apache/http/io/SessionOutputBuffer;->flush()V
+    invoke-interface {v0}, Lorg/apache/http/io/SessionOutputBuffer;->flush()V
 
     return-void
 .end method
 
 .method public getMetrics()Lorg/apache/http/io/HttpTransportMetrics;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->out:Lorg/apache/http/io/SessionOutputBuffer;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->out:Lorg/apache/http/io/SessionOutputBuffer;
 
-    invoke-interface {p0}, Lorg/apache/http/io/SessionOutputBuffer;->getMetrics()Lorg/apache/http/io/HttpTransportMetrics;
+    invoke-interface {v0}, Lorg/apache/http/io/SessionOutputBuffer;->getMetrics()Lorg/apache/http/io/HttpTransportMetrics;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public write(I)V
@@ -82,9 +82,9 @@
     if-eqz v0, :cond_0
 
     .line 6
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
 
-    invoke-virtual {p0, p1}, Lorg/apache/http/impl/conn/Wire;->output(I)V
+    invoke-virtual {v0, p1}, Lorg/apache/http/impl/conn/Wire;->output(I)V
 
     :cond_0
     return-void
@@ -113,9 +113,9 @@
     if-eqz v0, :cond_0
 
     .line 9
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
 
-    invoke-virtual {p0, p1}, Lorg/apache/http/impl/conn/Wire;->output([B)V
+    invoke-virtual {v0, p1}, Lorg/apache/http/impl/conn/Wire;->output([B)V
 
     :cond_0
     return-void
@@ -144,16 +144,16 @@
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
 
-    invoke-virtual {p0, p1, p2, p3}, Lorg/apache/http/impl/conn/Wire;->output([BII)V
+    invoke-virtual {v0, p1, p2, p3}, Lorg/apache/http/impl/conn/Wire;->output([BII)V
 
     :cond_0
     return-void
 .end method
 
 .method public writeLine(Ljava/lang/String;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -175,23 +175,23 @@
     if-eqz v0, :cond_0
 
     .line 7
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
+    iget-object v0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, "[EOL]"
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lorg/apache/http/impl/conn/Wire;->output(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lorg/apache/http/impl/conn/Wire;->output(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -235,15 +235,15 @@
     invoke-direct {v0, v1, v2, p1}, Ljava/lang/String;-><init>([CII)V
 
     .line 4
-    iget-object p0, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
+    iget-object p1, p0, Lorg/apache/http/impl/conn/LoggingSessionOutputBuffer;->wire:Lorg/apache/http/impl/conn/Wire;
 
-    const-string p1, "[EOL]"
+    const-string v1, "[EOL]"
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lorg/apache/http/impl/conn/Wire;->output(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lorg/apache/http/impl/conn/Wire;->output(Ljava/lang/String;)V
 
     :cond_0
     return-void

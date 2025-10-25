@@ -1,73 +1,100 @@
-.class public abstract Lgla;
-.super Ljava/lang/Object;
+.class public Lgla;
+.super Landroid/widget/TextView;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+# instance fields
+.field public a:Lj0h;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    sget v0, Ls6c;->pinbars_group_call_bar:I
+    const/4 v0, 0x0
 
-    sput v0, Lgla;->a:I
+    const/4 v1, 0x0
 
-    sget v0, Ls6c;->pinbars_group_call_bar_button:I
-
-    sput v0, Lgla;->b:I
-
-    sget v0, Ls6c;->pinbars_group_call_bar_divider:I
-
-    sput v0, Lgla;->c:I
-
-    sget v0, Ls6c;->pinbars_group_call_bar_stack:I
-
-    sput v0, Lgla;->d:I
-
-    sget v0, Ls6c;->pinbars_group_call_bar_subtitle:I
-
-    sput v0, Lgla;->e:I
-
-    sget v0, Ls6c;->pinbars_group_call_bar_title:I
-
-    sput v0, Lgla;->f:I
-
-    sget v0, Ls6c;->pinbars_message:I
-
-    sput v0, Lgla;->g:I
-
-    sget v0, Ls6c;->pinbars_miniplayer:I
-
-    sput v0, Lgla;->h:I
-
-    sget v0, Ls6c;->pinbars_root:I
-
-    sput v0, Lgla;->i:I
-
-    sget v0, Ls6c;->unknown_contact:I
-
-    sput v0, Lgla;->j:I
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getObserverSpanListener()Lj0h;
+    .locals 1
+
+    iget-object v0, p0, Lgla;->a:Lj0h;
+
+    return-object v0
+.end method
+
+.method public final onWindowVisibilityChanged(I)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
+
+    if-eqz p1, :cond_1
+
+    const/16 v0, 0x8
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lgla;->a:Lj0h;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1, p0}, Lj0h;->onViewDetachedFromWindow(Landroid/view/View;)V
+
+    return-void
+
+    :cond_1
+    iget-object p1, p0, Lgla;->a:Lj0h;
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p0}, Lj0h;->a(Landroid/widget/TextView;)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final setObserverSpanListener(Lj0h;)V
+    .locals 0
+
+    iput-object p1, p0, Lgla;->a:Lj0h;
+
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

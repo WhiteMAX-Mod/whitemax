@@ -3,130 +3,142 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lob0;
-
-.field public static final e:Lob0;
-
-.field public static final f:Lob0;
-
-.field public static final g:Lob0;
-
-
 # instance fields
-.field public final a:I
+.field public final a:J
 
-.field public final b:I
+.field public final b:J
 
-.field public final c:I
+.field public final c:Lo90;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lob0;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, v1, v1}, Lob0;-><init>(III)V
-
-    sput-object v0, Lob0;->d:Lob0;
-
-    new-instance v0, Lob0;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x2
-
-    invoke-direct {v0, v1, v2, v3}, Lob0;-><init>(III)V
-
-    sput-object v0, Lob0;->e:Lob0;
-
-    new-instance v0, Lob0;
-
-    const/4 v2, 0x6
-
-    const/4 v3, 0x7
-
-    invoke-direct {v0, v2, v3, v1}, Lob0;-><init>(III)V
-
-    sput-object v0, Lob0;->f:Lob0;
-
-    new-instance v0, Lob0;
-
-    invoke-direct {v0, v2, v2, v1}, Lob0;-><init>(III)V
-
-    sput-object v0, Lob0;->g:Lob0;
-
-    return-void
-.end method
-
-.method public constructor <init>(III)V
+.method public constructor <init>(JJLo90;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lob0;->a:I
+    iput-wide p1, p0, Lob0;->a:J
 
-    iput p2, p0, Lob0;->b:I
+    iput-wide p3, p0, Lob0;->b:J
 
-    iput p3, p0, Lob0;->c:I
+    iput-object p5, p0, Lob0;->c:Lo90;
 
     return-void
+.end method
+
+.method public static a(JJLo90;)Lob0;
+    .locals 10
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p0, v0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-ltz v2, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v3
+
+    :goto_0
+    const-string v5, "duration must be positive value."
+
+    invoke-static {v5, v2}, Ldvi;->a(Ljava/lang/String;Z)V
+
+    cmp-long v0, p2, v0
+
+    if-ltz v0, :cond_1
+
+    move v3, v4
+
+    :cond_1
+    const-string v0, "bytes must be positive value."
+
+    invoke-static {v0, v3}, Ldvi;->a(Ljava/lang/String;Z)V
+
+    new-instance v4, Lob0;
+
+    move-wide v5, p0
+
+    move-wide v7, p2
+
+    move-object v9, p4
+
+    invoke-direct/range {v4 .. v9}, Lob0;-><init>(JJLo90;)V
+
+    return-object v4
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 7
+
+    const/4 v0, 0x1
 
     if-ne p1, p0, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lob0;
+    instance-of v1, p1, Lob0;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
 
     check-cast p1, Lob0;
 
-    iget v0, p0, Lob0;->a:I
+    iget-wide v3, p0, Lob0;->a:J
 
-    iget v1, p1, Lob0;->a:I
+    iget-wide v5, p1, Lob0;->a:J
 
-    if-ne v0, v1, :cond_1
+    cmp-long v1, v3, v5
 
-    iget v0, p0, Lob0;->b:I
+    if-nez v1, :cond_1
 
-    iget v1, p1, Lob0;->b:I
+    iget-wide v3, p0, Lob0;->b:J
 
-    if-ne v0, v1, :cond_1
+    iget-wide v5, p1, Lob0;->b:J
 
-    iget p0, p0, Lob0;->c:I
+    cmp-long v1, v3, v5
 
-    iget p1, p1, Lob0;->c:I
+    if-nez v1, :cond_1
 
-    if-ne p0, p1, :cond_1
+    iget-object v1, p0, Lob0;->c:Lo90;
 
-    :goto_0
-    const/4 p0, 0x1
+    iget-object p1, p1, Lob0;->c:Lo90;
 
-    return p0
+    invoke-virtual {v1, p1}, Lo90;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    return v0
 
     :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 7
 
-    iget v0, p0, Lob0;->a:I
+    iget-wide v0, p0, Lob0;->a:J
+
+    const/16 v2, 0x20
+
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
 
     const v1, 0xf4243
 
@@ -134,51 +146,65 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lob0;->b:I
+    iget-wide v3, p0, Lob0;->b:J
+
+    ushr-long v5, v3, v2
+
+    xor-long v2, v5, v3
+
+    long-to-int v2, v2
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    iget p0, p0, Lob0;->c:I
+    iget-object v1, p0, Lob0;->c:Lo90;
 
-    xor-int/2addr p0, v0
+    invoke-virtual {v1}, Lo90;->hashCode()I
 
-    return p0
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "VideoEncoderDataSpace{standard="
+    const-string v1, "RecordingStats{recordedDurationNanos="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lob0;->a:I
+    iget-wide v1, p0, Lob0;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", transfer="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lob0;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", range="
+    const-string v1, ", numBytesRecorded="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lob0;->c:I
+    iget-wide v1, p0, Lob0;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", audioStats="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lob0;->c:Lo90;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, "}"
 
-    invoke-static {v0, p0, v1}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 .end method

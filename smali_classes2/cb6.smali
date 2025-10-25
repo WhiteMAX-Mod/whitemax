@@ -1,79 +1,49 @@
-.class public final synthetic Lcb6;
-.super Ljava/lang/Object;
+.class public final Lcb6;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+.field public final synthetic Y:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+
+.field public Z:I
+
+.field public o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;I)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/ForegroundWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lcb6;->a:I
+    iput-object p1, p0, Lcb6;->Y:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    iput-object p1, p0, Lcb6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lcb6;->a:I
+    iput-object p1, p0, Lcb6;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lcb6;->Z:I
 
-    iget-object p0, p0, Lcb6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
+    or-int/2addr p1, v0
 
-    move-result-object p0
+    iput p1, p0, Lcb6;->Z:I
 
-    if-eqz p0, :cond_0
+    iget-object p1, p0, Lcb6;->Y:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    sget v1, Ld2c;->fullscreen_to_pip:I
-
-    invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lcb6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
-
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->t1()V
-
-    return-void
-
-    :pswitch_1
-    const/4 v0, 0x1
-
-    sget v1, Ld1d;->Q:I
-
-    iget-object p0, p0, Lcb6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
-
-    invoke-virtual {p0, v1, v0}, Lru/ok/messages/views/fragments/base/FrgBase;->d1(IZ)Lru/ok/messages/views/dialogs/ProgressDialog;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

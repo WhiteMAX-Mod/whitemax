@@ -3,78 +3,94 @@
 .source "SourceFile"
 
 # interfaces
-.implements La9a;
+.implements Lmhg;
 
 
-# static fields
-.field public static final a:Lsr9;
-
-.field public static final b:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public static final c:Lnxd;
-
-.field public static final d:Lhic;
+# instance fields
+.field public final a:Lc1a;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 3
 
-    new-instance v0, Lsr9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lsr9;->a:Lsr9;
-
-    sget-object v0, Lone/me/android/di/ConcurrentComponent;->INSTANCE:Lone/me/android/di/ConcurrentComponent;
-
-    invoke-virtual {v0}, Lone/me/android/di/ConcurrentComponent;->getDispatchers()Lxwe;
+    invoke-static {}, Lc1a;->c()Lc1a;
 
     move-result-object v0
 
-    check-cast v0, Laga;
+    new-instance v1, Lkz1;
 
-    invoke-virtual {v0}, Laga;->a()Ls04;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    sget-object v2, Lmhg;->h0:Lz90;
 
-    const-string v1, "mytracker"
+    invoke-virtual {v0, v2, v1}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    const/4 v2, 0x1
+    const/16 v1, 0x22
 
-    invoke-virtual {v0, v2, v1}, Ls04;->limitedParallelism(ILjava/lang/String;)Ls04;
-
-    move-result-object v0
-
-    invoke-static {}, Lmu0;->a()Lre7;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lf0;->plus(Lq04;)Lq04;
+    sget-object v2, Laa7;->w:Lz90;
 
-    move-result-object v0
+    invoke-virtual {v0, v2, v1}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    invoke-static {v0}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
+    sget-object v1, Liof;->d0:Lz90;
 
-    move-result-object v0
+    const-class v2, Ltr9;
 
-    sput-object v0, Lsr9;->b:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {v0, v1, v2}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x2
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v2, v0, v1}, Loxd;->b(III)Lnxd;
+    invoke-virtual {v2}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    sput-object v0, Lsr9;->c:Lnxd;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Lhic;
+    const-string v2, "-"
 
-    invoke-direct {v1, v0}, Lhic;-><init>(Lqo9;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sput-object v1, Lsr9;->d:Lhic;
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Liof;->c0:Lz90;
+
+    invoke-virtual {v0, v2, v1}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lsr9;->a:Lc1a;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getConfig()Lpk3;
+    .locals 1
+
+    iget-object v0, p0, Lsr9;->a:Lc1a;
+
+    return-object v0
+.end method
+
+.method public final y()Lohg;
+    .locals 1
+
+    sget-object v0, Lohg;->Y:Lohg;
+
+    return-object v0
 .end method

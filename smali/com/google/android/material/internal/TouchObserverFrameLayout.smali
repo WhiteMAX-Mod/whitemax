@@ -30,9 +30,9 @@
     :cond_0
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public setOnTouchListener(Landroid/view/View$OnTouchListener;)V

@@ -4,94 +4,142 @@
 
 
 # instance fields
-.field public final a:Lcl7;
+.field public final a:Ltrf;
 
-.field public final b:Lcl7;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:Lyce;
-
-.field public final e:Liic;
-
-.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public g:Lcae;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lwee;Lxwe;)V
-    .locals 2
+.method public constructor <init>(Ltrf;Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Loie;->a:Lcl7;
+    iput-object p1, p0, Loie;->a:Ltrf;
 
-    iput-object p2, p0, Loie;->b:Lcl7;
-
-    check-cast p4, Laga;
-
-    invoke-virtual {p4}, Laga;->b()Ls04;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Loie;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object p2, Lp45;->a:Lp45;
-
-    invoke-static {p2}, Lzce;->a(Ljava/lang/Object;)Lyce;
-
-    move-result-object p2
-
-    iput-object p2, p0, Loie;->d:Lyce;
-
-    new-instance p4, Liic;
-
-    invoke-direct {p4, p2}, Liic;-><init>(Lro9;)V
-
-    iput-object p4, p0, Loie;->e:Liic;
-
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicReference;
-
-    const-wide/16 v0, 0x0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p4
-
-    invoke-direct {p2, p4}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Loie;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iget-object p2, p3, Lwee;->l:Lnl0;
-
-    invoke-static {p2}, Lz48;->e(Lt7a;)Lps1;
-
-    move-result-object p2
-
-    new-instance p3, Lprb;
-
-    const/16 p4, 0xa
-
-    invoke-direct {p3, p2, p0, p4}, Lprb;-><init>(Lis5;Ljava/lang/Object;I)V
-
-    new-instance p2, Lkie;
-
-    const/4 p4, 0x0
-
-    invoke-direct {p2, p0, p4}, Lkie;-><init>(Loie;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p0, Lnu5;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p0, p3, p2, p4}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-static {p0, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
+    iput-object p2, p0, Loie;->b:Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Loie;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Loie;
+
+    iget-object v1, p0, Loie;->a:Ltrf;
+
+    iget-object v3, p1, Loie;->a:Ltrf;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Loie;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Loie;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Loie;->a:Ltrf;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Loie;->b:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "QuoteContent(body="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Loie;->a:Ltrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", imageUri="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Loie;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

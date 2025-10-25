@@ -1,132 +1,98 @@
 .class public final Lw2g;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lg54;
+
+
+# static fields
+.field public static final c:Lftd;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lz14;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Llmc;
-
-.field public final synthetic r0:Ly2g;
+.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Llmc;Lkotlin/coroutines/Continuation;Ly2g;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lw2g;->Z:Llmc;
+    new-instance v0, Lftd;
 
-    iput-object p3, p0, Lw2g;->r0:Ly2g;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    sput-object v0, Lw2g;->c:Lftd;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
+.end method
+
+.method public constructor <init>(Lz14;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lw2g;->a:Lz14;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Lw2g;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final fold(Ljava/lang/Object;Lzi6;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lks5;
+    invoke-interface {p2, p1, p0}, Lzi6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p1
 
-    invoke-virtual {p0, p1, p2}, Lw2g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lw2g;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lw2g;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final get(Lh54;)Lg54;
+    .locals 0
 
-    new-instance v0, Lw2g;
+    invoke-static {p0, p1}, Lkwi;->a(Lg54;Lh54;)Lg54;
 
-    iget-object v1, p0, Lw2g;->Z:Llmc;
+    move-result-object p1
 
-    iget-object p0, p0, Lw2g;->r0:Ly2g;
+    return-object p1
+.end method
 
-    invoke-direct {v0, v1, p2, p0}, Lw2g;-><init>(Llmc;Lkotlin/coroutines/Continuation;Ly2g;)V
+.method public final getKey()Lh54;
+    .locals 1
 
-    iput-object p1, v0, Lw2g;->Y:Ljava/lang/Object;
+    sget-object v0, Lw2g;->c:Lftd;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final minusKey(Lh54;)Li54;
+    .locals 0
 
-    iget v0, p0, Lw2g;->X:I
+    invoke-static {p0, p1}, Lkwi;->c(Lg54;Lh54;)Li54;
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lw2g;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lks5;
-
-    new-instance v0, Lk92;
-
-    iget-object v2, p0, Lw2g;->r0:Ly2g;
-
-    const/16 v3, 0xa
-
-    invoke-direct {v0, p1, v2, v3}, Lk92;-><init>(Lks5;Ljava/lang/Object;I)V
-
-    iput v1, p0, Lw2g;->X:I
-
-    iget-object p1, p0, Lw2g;->Z:Llmc;
-
-    invoke-virtual {p1, v0, p0}, Llmc;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
+    move-result-object p1
 
     return-object p1
+.end method
 
-    :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
+.method public final plus(Li54;)Li54;
+    .locals 0
 
-    return-object p0
+    invoke-static {p0, p1}, Ljwi;->a(Li54;Li54;)Li54;
+
+    move-result-object p1
+
+    return-object p1
 .end method

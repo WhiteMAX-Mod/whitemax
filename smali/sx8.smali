@@ -1,1034 +1,1909 @@
 .class public final Lsx8;
-.super Ljava/lang/Object;
+.super Landroid/view/View;
 .source "SourceFile"
 
-# interfaces
-.implements Lek8;
-.implements Lck8;
+
+# static fields
+.field public static C0:Lpx8;
+
+.field public static final D0:Landroid/util/SparseArray;
+
+.field public static final E0:[I
+
+.field public static final F0:[I
 
 
 # instance fields
-.field public final X:Ljava/util/HashMap;
+.field public A0:Z
 
-.field public Y:Lck8;
+.field public B0:Z
 
-.field public Z:Lwbf;
+.field public final a:Lhz8;
 
-.field public final a:[Lek8;
+.field public final b:Lqx8;
 
-.field public final b:Ljava/util/IdentityHashMap;
+.field public c:Lzy8;
 
-.field public final c:Lh2a;
+.field public o:Ley8;
 
-.field public final o:Ljava/util/ArrayList;
+.field public q0:Z
 
-.field public r0:[Lek8;
+.field public r0:I
 
-.field public s0:Lke3;
+.field public s0:Lrx8;
+
+.field public t0:Landroid/graphics/drawable/Drawable;
+
+.field public u0:I
+
+.field public v0:I
+
+.field public w0:I
+
+.field public final x0:Landroid/content/res/ColorStateList;
+
+.field public final y0:I
+
+.field public final z0:I
 
 
 # direct methods
-.method public varargs constructor <init>(Lh2a;[J[Lek8;)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/util/SparseArray;
 
-    iput-object p1, p0, Lsx8;->c:Lh2a;
+    const/4 v1, 0x2
 
-    iput-object p3, p0, Lsx8;->a:[Lek8;
+    invoke-direct {v0, v1}, Landroid/util/SparseArray;-><init>(I)V
 
-    new-instance v0, Ljava/util/ArrayList;
+    sput-object v0, Lsx8;->D0:Landroid/util/SparseArray;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const v0, 0x10100a0
 
-    iput-object v0, p0, Lsx8;->o:Ljava/util/ArrayList;
+    filled-new-array {v0}, [I
 
-    new-instance v0, Ljava/util/HashMap;
+    move-result-object v0
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    sput-object v0, Lsx8;->E0:[I
 
-    iput-object v0, p0, Lsx8;->X:Ljava/util/HashMap;
+    const v0, 0x101009f
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    filled-new-array {v0}, [I
 
-    new-instance p1, Lke3;
+    move-result-object v0
 
-    sget-object v0, Ll37;->b:Lgx5;
+    sput-object v0, Lsx8;->F0:[I
 
-    sget-object v0, Llqc;->X:Llqc;
+    return-void
+.end method
 
-    invoke-direct {p1, v0, v0}, Lke3;-><init>(Ljava/util/List;Ljava/util/List;)V
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 7
 
-    iput-object p1, p0, Lsx8;->s0:Lke3;
+    sget v5, Ldkc;->mediaRouteButtonStyle:I
 
-    new-instance p1, Ljava/util/IdentityHashMap;
+    sget v0, Lnz8;->a:I
 
-    invoke-direct {p1}, Ljava/util/IdentityHashMap;-><init>()V
+    new-instance v0, Landroid/view/ContextThemeWrapper;
 
-    iput-object p1, p0, Lsx8;->b:Ljava/util/IdentityHashMap;
+    invoke-static {p1}, Lnz8;->e(Landroid/content/Context;)I
+
+    move-result v1
+
+    invoke-direct {v0, p1, v1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    sget p1, Ldkc;->mediaRouteTheme:I
+
+    invoke-static {v0, p1}, Lnz8;->g(Landroid/content/Context;I)I
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    new-instance v1, Landroid/view/ContextThemeWrapper;
+
+    invoke-direct {v1, v0, p1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    move-object v0, v1
+
+    :cond_0
+    const/4 v3, 0x0
+
+    invoke-direct {p0, v0, v3, v5}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    sget-object p1, Lzy8;->c:Lzy8;
+
+    iput-object p1, p0, Lsx8;->c:Lzy8;
+
+    sget-object p1, Ley8;->a:Ley8;
+
+    iput-object p1, p0, Lsx8;->o:Ley8;
 
     const/4 p1, 0x0
 
-    new-array v0, p1, [Lek8;
+    iput p1, p0, Lsx8;->r0:I
 
-    iput-object v0, p0, Lsx8;->r0:[Lek8;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget-object v0, Luvc;->MediaRouteButton:[I
+
+    invoke-virtual {v1, v3, v0, v5, p1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object v4
+
+    sget-object v2, Luvc;->MediaRouteButton:[I
+
+    const/4 v6, 0x0
+
+    move-object v0, p0
+
+    invoke-static/range {v0 .. v6}, Lhzg;->m(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+
+    invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v2, 0x0
+
+    iput-object v2, v0, Lsx8;->a:Lhz8;
+
+    iput-object v2, v0, Lsx8;->b:Lqx8;
+
+    sget v2, Luvc;->MediaRouteButton_externalRouteEnabledDrawableStatic:I
+
+    invoke-virtual {v4, v2, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p1
+
+    invoke-static {v1, p1}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    return-void
+
+    :cond_1
+    invoke-static {v1}, Lhz8;->d(Landroid/content/Context;)Lhz8;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lsx8;->a:Lhz8;
+
+    new-instance v2, Lqx8;
+
+    invoke-direct {v2, p0, p1}, Lqx8;-><init>(Landroid/view/KeyEvent$Callback;I)V
+
+    iput-object v2, v0, Lsx8;->b:Lqx8;
+
+    invoke-static {}, Lhz8;->b()V
+
+    invoke-static {}, Lhz8;->c()Ldz8;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ldz8;->e()Lgz8;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lgz8;->d()Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    iget v2, v2, Lgz8;->h:I
+
+    goto :goto_0
+
+    :cond_2
+    move v2, p1
 
     :goto_0
-    array-length v0, p3
+    iput v2, v0, Lsx8;->w0:I
 
-    if-ge p1, v0, :cond_1
+    iput v2, v0, Lsx8;->v0:I
 
-    aget-wide v0, p2, p1
+    sget-object v2, Lsx8;->C0:Lpx8;
 
-    const-wide/16 v2, 0x0
+    if-nez v2, :cond_3
 
-    cmp-long v2, v0, v2
+    new-instance v2, Lpx8;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    iget-object v2, p0, Lsx8;->a:[Lek8;
+    move-result-object v1
 
-    new-instance v3, Lx5f;
+    invoke-direct {v2, v1}, Lpx8;-><init>(Landroid/content/Context;)V
 
-    aget-object v4, p3, p1
+    sput-object v2, Lsx8;->C0:Lpx8;
 
-    invoke-direct {v3, v4, v0, v1}, Lx5f;-><init>(Lek8;J)V
+    :cond_3
+    sget v1, Luvc;->MediaRouteButton_mediaRouteButtonTint:I
 
-    aput-object v3, v2, p1
+    invoke-virtual {v4, v1}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lsx8;->x0:Landroid/content/res/ColorStateList;
+
+    sget v1, Luvc;->MediaRouteButton_android_minWidth:I
+
+    invoke-virtual {v4, v1, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v1
+
+    iput v1, v0, Lsx8;->y0:I
+
+    sget v1, Luvc;->MediaRouteButton_android_minHeight:I
+
+    invoke-virtual {v4, v1, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v1
+
+    iput v1, v0, Lsx8;->z0:I
+
+    sget v1, Luvc;->MediaRouteButton_externalRouteEnabledDrawableStatic:I
+
+    invoke-virtual {v4, v1, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v1
+
+    sget v2, Luvc;->MediaRouteButton_externalRouteEnabledDrawable:I
+
+    invoke-virtual {v4, v2, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v2
+
+    iput v2, v0, Lsx8;->u0:I
+
+    invoke-virtual {v4}, Landroid/content/res/TypedArray;->recycle()V
+
+    iget v2, v0, Lsx8;->u0:I
+
+    sget-object v3, Lsx8;->D0:Landroid/util/SparseArray;
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v3, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/drawable/Drawable$ConstantState;
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lsx8;->setRemoteIndicatorDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_4
+    iget-object v2, v0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    if-nez v2, :cond_7
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/drawable/Drawable$ConstantState;
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lsx8;->setRemoteIndicatorDrawableInternal(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_1
+
+    :cond_5
+    new-instance v2, Lrx8;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-direct {v2, p0, v1, v3}, Lrx8;-><init>(Lsx8;ILandroid/content/Context;)V
+
+    iput-object v2, v0, Lsx8;->s0:Lrx8;
+
+    sget-object v1, Landroid/os/AsyncTask;->SERIAL_EXECUTOR:Ljava/util/concurrent/Executor;
+
+    new-array p1, p1, [Ljava/lang/Void;
+
+    invoke-virtual {v2, v1, p1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    goto :goto_1
+
+    :cond_6
+    invoke-virtual {p0}, Lsx8;->a()V
+
+    :cond_7
+    :goto_1
+    invoke-virtual {p0}, Lsx8;->e()V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+
+    return-void
+.end method
+
+.method private getActivity()Landroid/app/Activity;
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    :goto_0
+    instance-of v1, v0, Landroid/content/ContextWrapper;
+
+    if-eqz v1, :cond_1
+
+    instance-of v1, v0, Landroid/app/Activity;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/app/Activity;
+
+    return-object v0
 
     :cond_0
-    add-int/lit8 p1, p1, 0x1
+    check-cast v0, Landroid/content/ContextWrapper;
+
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v0
 
     goto :goto_0
 
     :cond_1
-    return-void
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method private getFragmentManager()Landroidx/fragment/app/c;
+    .locals 2
+
+    invoke-direct {p0}, Lsx8;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroidx/fragment/app/b;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroidx/fragment/app/b;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/b;->F()Lxe6;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Lek8;)V
-    .locals 16
+.method public final a()V
+    .locals 4
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lsx8;->u0:I
 
-    iget-object v1, v0, Lsx8;->o:Ljava/util/ArrayList;
+    if-lez v0, :cond_1
 
-    move-object/from16 v2, p1
+    iget-object v0, p0, Lsx8;->s0:Lrx8;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
+
+    :cond_0
+    new-instance v0, Lrx8;
+
+    iget v2, p0, Lsx8;->u0:I
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-direct {v0, p0, v2, v3}, Lrx8;-><init>(Lsx8;ILandroid/content/Context;)V
+
+    iput-object v0, p0, Lsx8;->s0:Lrx8;
+
+    iput v1, p0, Lsx8;->u0:I
+
+    sget-object v2, Landroid/os/AsyncTask;->SERIAL_EXECUTOR:Ljava/util/concurrent/Executor;
+
+    new-array v1, v1, [Ljava/lang/Void;
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final b()V
+    .locals 4
+
+    iget-object v0, p0, Lsx8;->a:Lhz8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lhz8;->b()V
+
+    invoke-static {}, Lhz8;->c()Ldz8;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ldz8;->e()Lgz8;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lgz8;->d()Z
 
     move-result v1
 
+    const/4 v2, 0x0
+
     if-nez v1, :cond_0
 
-    return-void
-
-    :cond_0
-    iget-object v1, v0, Lsx8;->a:[Lek8;
-
-    array-length v2, v1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    :goto_0
-    if-ge v4, v2, :cond_1
-
-    aget-object v6, v1, v4
-
-    invoke-interface {v6}, Lek8;->k()Lwbf;
-
-    move-result-object v6
-
-    iget v6, v6, Lwbf;->a:I
-
-    add-int/2addr v5, v6
-
-    add-int/lit8 v4, v4, 0x1
+    iget v0, v0, Lgz8;->h:I
 
     goto :goto_0
 
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    iget v3, p0, Lsx8;->w0:I
+
+    if-eq v3, v0, :cond_1
+
+    iput v0, p0, Lsx8;->w0:I
+
+    invoke-virtual {p0}, Lsx8;->e()V
+
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
+
     :cond_1
-    new-array v2, v5, [Lubf;
+    const/4 v3, 0x1
 
-    const/4 v4, 0x0
+    if-ne v0, v3, :cond_2
 
-    const/4 v5, 0x0
-
-    :goto_1
-    array-length v6, v1
-
-    if-ge v4, v6, :cond_5
-
-    aget-object v6, v1, v4
-
-    invoke-interface {v6}, Lek8;->k()Lwbf;
-
-    move-result-object v6
-
-    iget v7, v6, Lwbf;->a:I
-
-    const/4 v8, 0x0
-
-    :goto_2
-    if-ge v8, v7, :cond_4
-
-    invoke-virtual {v6, v8}, Lwbf;->a(I)Lubf;
-
-    move-result-object v9
-
-    iget v10, v9, Lubf;->a:I
-
-    new-array v11, v10, [Lx46;
-
-    const/4 v12, 0x0
-
-    :goto_3
-    const-string v13, ":"
-
-    if-ge v12, v10, :cond_3
-
-    iget-object v14, v9, Lubf;->d:[Lx46;
-
-    aget-object v14, v14, v12
-
-    invoke-virtual {v14}, Lx46;->a()Lu46;
-
-    move-result-object v15
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v13, v14, Lx46;->a:Ljava/lang/String;
-
-    if-nez v13, :cond_2
-
-    const-string v13, ""
+    invoke-virtual {p0}, Lsx8;->a()V
 
     :cond_2
-    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v0, p0, Lsx8;->q0:Z
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v0, :cond_5
 
-    move-result-object v3
+    iget-boolean v0, p0, Lsx8;->A0:Z
 
-    iput-object v3, v15, Lu46;->a:Ljava/lang/String;
+    if-nez v0, :cond_3
 
-    new-instance v3, Lx46;
+    if-eqz v1, :cond_3
 
-    invoke-direct {v3, v15}, Lx46;-><init>(Lu46;)V
+    iget-object v0, p0, Lsx8;->c:Lzy8;
 
-    aput-object v3, v11, v12
+    invoke-static {v0}, Lhz8;->e(Lzy8;)Z
 
-    add-int/lit8 v12, v12, 0x1
+    move-result v0
 
-    goto :goto_3
+    if-eqz v0, :cond_4
 
     :cond_3
-    new-instance v3, Lubf;
-
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v10, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v12, v9, Lubf;->b:Ljava/lang/String;
-
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-direct {v3, v10, v11}, Lubf;-><init>(Ljava/lang/String;[Lx46;)V
-
-    iget-object v10, v0, Lsx8;->X:Ljava/util/HashMap;
-
-    invoke-virtual {v10, v3, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v9, v5, 0x1
-
-    aput-object v3, v2, v5
-
-    add-int/lit8 v8, v8, 0x1
-
-    move v5, v9
-
-    goto :goto_2
+    move v2, v3
 
     :cond_4
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
+    invoke-virtual {p0, v2}, Landroid/view/View;->setEnabled(Z)V
 
     :cond_5
-    new-instance v1, Lwbf;
-
-    invoke-direct {v1, v2}, Lwbf;-><init>([Lubf;)V
-
-    iput-object v1, v0, Lsx8;->Z:Lwbf;
-
-    iget-object v1, v0, Lsx8;->Y:Lck8;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v1, v0}, Lck8;->a(Lek8;)V
-
     return-void
 .end method
 
-.method public final c()J
-    .locals 2
-
-    iget-object p0, p0, Lsx8;->s0:Lke3;
-
-    invoke-virtual {p0}, Lke3;->c()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final d(JLvdd;)J
+.method public final c()V
     .locals 3
 
-    iget-object v0, p0, Lsx8;->r0:[Lek8;
+    iget v0, p0, Lsx8;->r0:I
 
-    array-length v1, v0
+    if-nez v0, :cond_0
+
+    iget-boolean v1, p0, Lsx8;->A0:Z
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Lsx8;->C0:Lpx8;
+
+    iget-boolean v1, v1, Lpx8;->b:Z
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x4
+
+    :cond_0
+    invoke-super {p0, v0}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+
+    move-result v1
 
     const/4 v2, 0x0
 
-    if-lez v1, :cond_0
+    if-nez v1, :cond_1
 
-    aget-object p0, v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lsx8;->a:[Lek8;
-
-    aget-object p0, p0, v2
-
-    :goto_0
-    invoke-interface {p0, p1, p2, p3}, Lek8;->d(JLvdd;)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final e(Liid;)V
-    .locals 0
-
-    check-cast p1, Lek8;
-
-    iget-object p1, p0, Lsx8;->Y:Lck8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p1, p0}, Lgid;->e(Liid;)V
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 3
-
-    iget-object p0, p0, Lsx8;->a:[Lek8;
-
-    array-length v0, p0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    aget-object v2, p0, v1
-
-    invoke-interface {v2}, Lek8;->f()V
-
-    add-int/lit8 v1, v1, 0x1
+    const/4 v1, 0x1
 
     goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g(J)J
-    .locals 3
-
-    iget-object v0, p0, Lsx8;->r0:[Lek8;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    invoke-interface {v0, p1, p2}, Lek8;->g(J)J
-
-    move-result-wide p1
-
-    const/4 v0, 0x1
-
-    :goto_0
-    iget-object v1, p0, Lsx8;->r0:[Lek8;
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_1
-
-    aget-object v1, v1, v0
-
-    invoke-interface {v1, p1, p2}, Lek8;->g(J)J
-
-    move-result-wide v1
-
-    cmp-long v1, v1, p1
-
-    if-nez v1, :cond_0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Unexpected child seekToUs result."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 
     :cond_1
-    return-wide p1
-.end method
-
-.method public final i()Z
-    .locals 0
-
-    iget-object p0, p0, Lsx8;->s0:Lke3;
-
-    invoke-virtual {p0}, Lke3;->i()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final j()J
-    .locals 15
-
-    iget-object v0, p0, Lsx8;->r0:[Lek8;
-
-    array-length v1, v0
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/4 v4, 0x0
-
-    move-wide v6, v2
-
-    move v5, v4
+    move v1, v2
 
     :goto_0
-    if-ge v5, v1, :cond_8
-
-    aget-object v8, v0, v5
-
-    invoke-interface {v8}, Lek8;->j()J
-
-    move-result-wide v9
-
-    cmp-long v11, v9, v2
-
-    const-string v12, "Unexpected child seekToUs result."
-
-    if-eqz v11, :cond_5
-
-    cmp-long v11, v6, v2
-
-    if-nez v11, :cond_3
-
-    iget-object v6, p0, Lsx8;->r0:[Lek8;
-
-    array-length v7, v6
-
-    move v11, v4
-
-    :goto_1
-    if-ge v11, v7, :cond_2
-
-    aget-object v13, v6, v11
-
-    if-ne v13, v8, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    invoke-interface {v13, v9, v10}, Lek8;->g(J)J
-
-    move-result-wide v13
-
-    cmp-long v13, v13, v9
-
-    if-nez v13, :cond_1
-
-    add-int/lit8 v11, v11, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0, v12}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
     :cond_2
-    :goto_2
-    move-wide v6, v9
+    return-void
+.end method
 
-    goto :goto_3
+.method public final d()Z
+    .locals 10
+
+    iget-boolean v0, p0, Lsx8;->q0:Z
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    iget-object v0, p0, Lsx8;->a:Lhz8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lhz8;->b()V
+
+    invoke-static {}, Lhz8;->c()Ldz8;
+
+    invoke-direct {p0}, Lsx8;->getFragmentManager()Landroidx/fragment/app/c;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_e
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lhz8;->b()V
+
+    invoke-static {}, Lhz8;->c()Ldz8;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ldz8;->e()Lgz8;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lgz8;->d()Z
+
+    move-result v0
+
+    const-string v3, "selector must not be null"
+
+    const-string v4, "selector"
+
+    const-string v5, "MediaRouteButton"
+
+    const/4 v6, 0x1
+
+    if-eqz v0, :cond_6
+
+    const-string v0, "android.support.v7.mediarouter:MediaRouteChooserDialogFragment"
+
+    invoke-virtual {v2, v0}, Landroidx/fragment/app/c;->E(Ljava/lang/String;)Landroidx/fragment/app/a;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_1
+
+    const-string v0, "showDialog(): Route chooser dialog already showing!"
+
+    invoke-static {v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+
+    :cond_1
+    iget-object v5, p0, Lsx8;->o:Ley8;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v5, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;
+
+    invoke-direct {v5}, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;-><init>()V
+
+    iget-object v7, p0, Lsx8;->c:Lzy8;
+
+    if-eqz v7, :cond_5
+
+    invoke-virtual {v5}, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->G0()V
+
+    iget-object v3, v5, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Lzy8;
+
+    invoke-virtual {v3, v7}, Lzy8;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    iput-object v7, v5, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Lzy8;
+
+    iget-object v3, v5, Landroidx/fragment/app/a;->Y:Landroid/os/Bundle;
+
+    if-nez v3, :cond_2
+
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    :cond_2
+    iget-object v8, v7, Lzy8;->a:Landroid/os/Bundle;
+
+    invoke-virtual {v3, v4, v8}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    invoke-virtual {v5, v3}, Landroidx/fragment/app/a;->w0(Landroid/os/Bundle;)V
+
+    iget-object v3, v5, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->y1:Lpo;
+
+    if-eqz v3, :cond_4
+
+    iget-boolean v4, v5, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->x1:Z
+
+    if-eqz v4, :cond_3
+
+    check-cast v3, Lky8;
+
+    invoke-virtual {v3, v7}, Lky8;->g(Lzy8;)V
+
+    goto :goto_0
 
     :cond_3
-    cmp-long v8, v9, v6
+    check-cast v3, Lux8;
 
-    if-nez v8, :cond_4
-
-    goto :goto_3
+    invoke-virtual {v3, v7}, Lux8;->g(Lzy8;)V
 
     :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :goto_0
+    new-instance v3, Lze0;
 
-    const-string v0, "Conflicting discontinuities."
+    invoke-direct {v3, v2}, Lze0;-><init>(Landroidx/fragment/app/c;)V
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v1, v5, v0, v6}, Lze0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
 
-    throw p0
+    invoke-virtual {v3, v6}, Lze0;->d(Z)I
+
+    return v6
 
     :cond_5
-    cmp-long v9, v6, v2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    if-eqz v9, :cond_7
+    invoke-direct {v0, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v8, v6, v7}, Lek8;->g(J)J
-
-    move-result-wide v8
-
-    cmp-long v8, v8, v6
-
-    if-nez v8, :cond_6
-
-    goto :goto_3
+    throw v0
 
     :cond_6
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-string v0, "android.support.v7.mediarouter:MediaRouteControllerDialogFragment"
 
-    invoke-direct {p0, v12}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v0}, Landroidx/fragment/app/c;->E(Ljava/lang/String;)Landroidx/fragment/app/a;
 
-    throw p0
+    move-result-object v7
+
+    if-eqz v7, :cond_7
+
+    const-string v0, "showDialog(): Route controller dialog already showing!"
+
+    invoke-static {v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
 
     :cond_7
-    :goto_3
-    add-int/lit8 v5, v5, 0x1
+    iget-object v5, p0, Lsx8;->o:Ley8;
 
-    goto :goto_0
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_8
-    return-wide v6
-.end method
+    new-instance v5, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;
 
-.method public final k()Lwbf;
-    .locals 0
+    invoke-direct {v5}, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;-><init>()V
 
-    iget-object p0, p0, Lsx8;->Z:Lwbf;
+    iget-object v7, p0, Lsx8;->c:Lzy8;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v7, :cond_d
 
-    return-object p0
-.end method
+    iget-object v3, v5, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
 
-.method public final l()J
-    .locals 2
+    if-nez v3, :cond_a
 
-    iget-object p0, p0, Lsx8;->s0:Lke3;
+    iget-object v3, v5, Landroidx/fragment/app/a;->Y:Landroid/os/Bundle;
 
-    invoke-virtual {p0}, Lke3;->l()J
+    if-eqz v3, :cond_9
 
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final m(J)V
-    .locals 0
-
-    iget-object p0, p0, Lsx8;->s0:Lke3;
-
-    invoke-virtual {p0, p1, p2}, Lke3;->m(J)V
-
-    return-void
-.end method
-
-.method public final n([Lpd5;[Z[Lz2d;[ZJ)J
-    .locals 22
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move-object/from16 v2, p3
-
-    array-length v3, v1
-
-    new-array v3, v3, [I
-
-    array-length v4, v1
-
-    new-array v4, v4, [I
-
-    const/4 v5, 0x0
-
-    move v6, v5
-
-    :goto_0
-    array-length v7, v1
-
-    iget-object v8, v0, Lsx8;->b:Ljava/util/IdentityHashMap;
-
-    if-ge v6, v7, :cond_3
-
-    aget-object v7, v2, v6
-
-    if-nez v7, :cond_0
-
-    const/4 v9, 0x0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v8, v7}, Ljava/util/IdentityHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    move-object v9, v7
-
-    check-cast v9, Ljava/lang/Integer;
-
-    :goto_1
-    const/4 v7, -0x1
-
-    if-nez v9, :cond_1
-
-    move v8, v7
-
-    goto :goto_2
-
-    :cond_1
-    invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
-
-    move-result v8
-
-    :goto_2
-    aput v8, v3, v6
-
-    aget-object v8, v1, v6
-
-    if-eqz v8, :cond_2
-
-    invoke-interface {v8}, Lpd5;->a()Lubf;
-
-    move-result-object v7
-
-    iget-object v7, v7, Lubf;->b:Ljava/lang/String;
-
-    const-string v8, ":"
-
-    invoke-virtual {v7, v8}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v8
-
-    invoke-virtual {v7, v5, v8}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v7
-
-    aput v7, v4, v6
-
-    goto :goto_3
-
-    :cond_2
-    aput v7, v4, v6
-
-    :goto_3
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v8}, Ljava/util/IdentityHashMap;->clear()V
-
-    array-length v6, v1
-
-    new-array v7, v6, [Lz2d;
-
-    array-length v10, v1
-
-    new-array v14, v10, [Lz2d;
-
-    array-length v10, v1
-
-    new-array v12, v10, [Lpd5;
-
-    new-instance v10, Ljava/util/ArrayList;
-
-    iget-object v11, v0, Lsx8;->a:[Lek8;
-
-    array-length v13, v11
-
-    invoke-direct {v10, v13}, Ljava/util/ArrayList;-><init>(I)V
-
-    move-wide/from16 v16, p5
-
-    move v13, v5
-
-    :goto_4
-    array-length v15, v11
-
-    if-ge v13, v15, :cond_e
-
-    move v15, v5
-
-    const/16 v18, 0x0
-
-    :goto_5
-    array-length v9, v1
-
-    if-ge v15, v9, :cond_6
-
-    aget v9, v3, v15
-
-    if-ne v9, v13, :cond_4
-
-    aget-object v9, v2, v15
-
-    goto :goto_6
-
-    :cond_4
-    move-object/from16 v9, v18
-
-    :goto_6
-    aput-object v9, v14, v15
-
-    aget v9, v4, v15
-
-    if-ne v9, v13, :cond_5
-
-    aget-object v9, v1, v15
-
-    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v9}, Lpd5;->a()Lubf;
-
-    move-result-object v5
-
-    move-object/from16 v19, v3
-
-    iget-object v3, v0, Lsx8;->X:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v3
 
-    check-cast v3, Lubf;
+    const/4 v8, 0x0
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v3, :cond_8
 
-    new-instance v5, Lox8;
+    new-instance v9, Lzy8;
 
-    invoke-direct {v5, v9, v3}, Lox8;-><init>(Lpd5;Lubf;)V
+    invoke-direct {v9, v3, v8}, Lzy8;-><init>(Landroid/os/Bundle;Ljava/util/ArrayList;)V
 
-    aput-object v5, v12, v15
+    move-object v8, v9
 
-    goto :goto_7
-
-    :cond_5
-    move-object/from16 v19, v3
-
-    aput-object v18, v12, v15
-
-    :goto_7
-    add-int/lit8 v15, v15, 0x1
-
-    move-object/from16 v3, v19
-
-    const/4 v5, 0x0
-
-    goto :goto_5
-
-    :cond_6
-    move-object/from16 v19, v3
-
-    move-object v3, v11
-
-    aget-object v11, v3, v13
-
-    move-object/from16 v15, p4
-
-    move v5, v13
-
-    move-object/from16 v13, p2
-
-    invoke-interface/range {v11 .. v17}, Lek8;->n([Lpd5;[Z[Lz2d;[ZJ)J
-
-    move-result-wide v20
-
-    if-nez v5, :cond_7
-
-    move-wide/from16 v16, v20
-
-    goto :goto_8
-
-    :cond_7
-    cmp-long v9, v20, v16
-
-    if-nez v9, :cond_d
-
-    :goto_8
-    const/4 v9, 0x0
-
-    const/4 v11, 0x0
-
-    :goto_9
-    array-length v13, v1
-
-    if-ge v9, v13, :cond_b
-
-    aget v13, v4, v9
-
-    const/4 v15, 0x1
-
-    if-ne v13, v5, :cond_8
-
-    aget-object v11, v14, v9
-
-    invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    aget-object v13, v14, v9
-
-    aput-object v13, v7, v9
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v13
-
-    invoke-virtual {v8, v11, v13}, Ljava/util/IdentityHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move v11, v15
-
-    goto :goto_b
+    goto :goto_1
 
     :cond_8
-    aget v13, v19, v9
+    sget-object v3, Lzy8;->c:Lzy8;
 
-    if-ne v13, v5, :cond_a
-
-    aget-object v13, v14, v9
-
-    if-nez v13, :cond_9
-
-    goto :goto_a
+    :goto_1
+    iput-object v8, v5, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
 
     :cond_9
-    const/4 v15, 0x0
+    iget-object v3, v5, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
 
-    :goto_a
-    invoke-static {v15}, Lmq0;->h(Z)V
+    if-nez v3, :cond_a
+
+    sget-object v3, Lzy8;->c:Lzy8;
+
+    iput-object v3, v5, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
 
     :cond_a
-    :goto_b
-    add-int/lit8 v9, v9, 0x1
+    iget-object v3, v5, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
 
-    goto :goto_9
+    invoke-virtual {v3, v7}, Lzy8;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_c
+
+    iput-object v7, v5, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
+
+    iget-object v3, v5, Landroidx/fragment/app/a;->Y:Landroid/os/Bundle;
+
+    if-nez v3, :cond_b
+
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
     :cond_b
-    if-eqz v11, :cond_c
+    iget-object v8, v7, Lzy8;->a:Landroid/os/Bundle;
 
-    aget-object v9, v3, v5
+    invoke-virtual {v3, v4, v8}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    invoke-virtual {v10, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v3}, Landroidx/fragment/app/a;->w0(Landroid/os/Bundle;)V
+
+    iget-object v3, v5, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->y1:Lpo;
+
+    if-eqz v3, :cond_c
+
+    iget-boolean v4, v5, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->x1:Z
+
+    if-eqz v4, :cond_c
+
+    check-cast v3, Lty8;
+
+    invoke-virtual {v3, v7}, Lty8;->i(Lzy8;)V
 
     :cond_c
-    add-int/lit8 v13, v5, 0x1
+    new-instance v3, Lze0;
 
-    move-object v11, v3
+    invoke-direct {v3, v2}, Lze0;-><init>(Landroidx/fragment/app/c;)V
 
-    move-object/from16 v3, v19
+    invoke-virtual {v3, v1, v5, v0, v6}, Lze0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
 
-    const/4 v5, 0x0
+    invoke-virtual {v3, v6}, Lze0;->d(Z)I
 
-    goto/16 :goto_4
+    return v6
 
     :cond_d
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Children enabled at different positions."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_e
-    move v1, v5
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-static {v7, v1, v2, v1, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    const-string v1, "The activity must be a subclass of FragmentActivity"
 
-    new-array v1, v1, [Lek8;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v10, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Lek8;
-
-    iput-object v1, v0, Lsx8;->r0:[Lek8;
-
-    new-instance v1, Ljp8;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v1, v2}, Ljp8;-><init>(I)V
-
-    invoke-static {v1, v10}, Lzyd;->I(Llc6;Ljava/util/List;)Ljava/util/AbstractList;
-
-    move-result-object v1
-
-    iget-object v2, v0, Lsx8;->c:Lh2a;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lke3;
-
-    invoke-direct {v2, v10, v1}, Lke3;-><init>(Ljava/util/List;Ljava/util/List;)V
-
-    iput-object v2, v0, Lsx8;->s0:Lke3;
-
-    return-wide v16
+    throw v0
 .end method
 
-.method public final s(Lck8;J)V
-    .locals 3
+.method public final drawableStateChanged()V
+    .locals 4
 
-    iput-object p1, p0, Lsx8;->Y:Lck8;
+    invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
 
-    iget-object p1, p0, Lsx8;->o:Ljava/util/ArrayList;
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
 
-    iget-object v0, p0, Lsx8;->a:[Lek8;
+    if-eqz v0, :cond_3
 
-    invoke-static {p1, v0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
 
-    array-length p1, v0
+    move-result-object v0
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
 
-    :goto_0
-    if-ge v1, p1, :cond_0
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    aget-object v2, v0, v1
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
 
-    invoke-interface {v2, p0, p2, p3}, Lek8;->s(Lck8;J)V
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
-    add-int/lit8 v1, v1, 0x1
+    move-result-object v0
+
+    instance-of v0, v0, Landroid/graphics/drawable/AnimationDrawable;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
+
+    iget v1, p0, Lsx8;->w0:I
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_1
+
+    iget v3, p0, Lsx8;->v0:I
+
+    if-eq v3, v1, :cond_0
 
     goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x2
+
+    if-ne v1, v3, :cond_2
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->isRunning()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
+
+    move-result v1
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/DrawableContainer;->selectDrawable(I)Z
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->isRunning()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
+
+    :cond_2
+    :goto_1
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    :cond_3
+    iget v0, p0, Lsx8;->w0:I
+
+    iput v0, p0, Lsx8;->v0:I
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 2
+
+    iget v0, p0, Lsx8;->w0:I
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    sget v0, Lotc;->mr_cast_button_disconnected:I
+
+    goto :goto_0
+
+    :cond_0
+    sget v0, Lotc;->mr_cast_button_connected:I
+
+    goto :goto_0
+
+    :cond_1
+    sget v0, Lotc;->mr_cast_button_connecting:I
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    iget-boolean v1, p0, Lsx8;->B0:Z
+
+    if-eqz v1, :cond_2
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_1
+    invoke-static {p0, v0}, Llyf;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public getDialogFactory()Ley8;
+    .locals 1
+
+    iget-object v0, p0, Lsx8;->o:Ley8;
+
+    return-object v0
+.end method
+
+.method public getRouteSelector()Lzy8;
+    .locals 1
+
+    iget-object v0, p0, Lsx8;->c:Lzy8;
+
+    return-object v0
+.end method
+
+.method public final jumpDrawablesToCurrentState()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/view/View;->jumpDrawablesToCurrentState()V
+
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
     :cond_0
     return-void
 .end method
 
-.method public final t(Lwv7;)Z
+.method public final onAttachedToWindow()V
     .locals 4
 
-    iget-object v0, p0, Lsx8;->o:Ljava/util/ArrayList;
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lsx8;->q0:Z
+
+    iget-object v0, p0, Lsx8;->c:Lzy8;
+
+    invoke-virtual {v0}, Lzy8;->c()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lsx8;->c:Lzy8;
+
+    iget-object v1, p0, Lsx8;->b:Lqx8;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lsx8;->a:Lhz8;
+
+    invoke-virtual {v3, v0, v1, v2}, Lhz8;->a(Lzy8;Lqx8;I)V
+
+    :cond_1
+    invoke-virtual {p0}, Lsx8;->b()V
+
+    sget-object v0, Lsx8;->C0:Lpx8;
+
+    iget-object v1, v0, Lpx8;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    new-instance v2, Landroid/content/IntentFilter;
+
+    invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v3, "android.net.conn.CONNECTIVITY_CHANGE"
+
+    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    iget-object v3, v0, Lpx8;->a:Landroid/content/Context;
+
+    invoke-virtual {v3, v0, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    :cond_2
+    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final onCreateDrawableState(I)[I
+    .locals 2
+
+    const/4 v0, 0x1
+
+    add-int/2addr p1, v0
+
+    invoke-super {p0, p1}, Landroid/view/View;->onCreateDrawableState(I)[I
+
+    move-result-object p1
+
+    iget-object v1, p0, Lsx8;->a:Lhz8;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget v1, p0, Lsx8;->w0:I
+
+    if-eq v1, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq v1, v0, :cond_1
+
+    :goto_0
+    return-object p1
+
+    :cond_1
+    sget-object v0, Lsx8;->E0:[I
+
+    invoke-static {p1, v0}, Landroid/view/View;->mergeDrawableStates([I[I)[I
+
+    return-object p1
+
+    :cond_2
+    sget-object v0, Lsx8;->F0:[I
+
+    invoke-static {p1, v0}, Landroid/view/View;->mergeDrawableStates([I[I)[I
+
+    return-object p1
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lsx8;->q0:Z
+
+    iget-object v0, p0, Lsx8;->c:Lzy8;
+
+    invoke-virtual {v0}, Lzy8;->c()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lsx8;->a:Lhz8;
+
+    iget-object v1, p0, Lsx8;->b:Lqx8;
+
+    invoke-virtual {v0, v1}, Lhz8;->f(Lqx8;)V
+
+    :cond_0
+    sget-object v0, Lsx8;->C0:Lpx8;
+
+    iget-object v1, v0, Lpx8;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    iget-object v1, v0, Lpx8;->a:Landroid/content/Context;
 
-    move-result p0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, p0, :cond_0
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lek8;
-
-    invoke-interface {v3, p1}, Liid;->t(Lwv7;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v1
+    invoke-virtual {v1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     :cond_1
-    iget-object p0, p0, Lsx8;->s0:Lke3;
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    invoke-virtual {p0, p1}, Lke3;->t(Lwv7;)Z
-
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public final u(JZ)V
-    .locals 3
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 6
 
-    iget-object p0, p0, Lsx8;->r0:[Lek8;
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    array-length v0, p0
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    :goto_0
-    if-ge v1, v0, :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    aget-object v2, p0, v1
+    move-result v0
 
-    invoke-interface {v2, p1, p2, p3}, Lek8;->u(JZ)V
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
-    add-int/lit8 v1, v1, 0x1
+    move-result v1
 
-    goto :goto_0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v4
+
+    sub-int/2addr v3, v4
+
+    iget-object v4, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v4
+
+    iget-object v5, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v5
+
+    sub-int/2addr v1, v0
+
+    sub-int/2addr v1, v4
+
+    div-int/lit8 v1, v1, 0x2
+
+    add-int/2addr v1, v0
+
+    sub-int/2addr v3, v2
+
+    sub-int/2addr v3, v5
+
+    div-int/lit8 v3, v3, 0x2
+
+    add-int/2addr v3, v2
+
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    add-int/2addr v4, v1
+
+    add-int/2addr v5, v3
+
+    invoke-virtual {v0, v1, v3, v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     :cond_0
     return-void
+.end method
+
+.method public final onMeasure(II)V
+    .locals 6
+
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v0
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v1
+
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result p1
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result p2
+
+    iget-object v2, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v4
+
+    add-int/2addr v4, v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v2
+
+    add-int/2addr v2, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v3
+
+    :goto_0
+    iget v4, p0, Lsx8;->y0:I
+
+    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    iget-object v4, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v4
+
+    add-int/2addr v4, v3
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v3
+
+    add-int/2addr v3, v4
+
+    :cond_1
+    iget v4, p0, Lsx8;->z0:I
+
+    invoke-static {v4, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v3
+
+    const/high16 v4, 0x40000000    # 2.0f
+
+    const/high16 v5, -0x80000000
+
+    if-eq p1, v5, :cond_2
+
+    if-eq p1, v4, :cond_3
+
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    :cond_3
+    :goto_1
+    if-eq p2, v5, :cond_4
+
+    if-eq p2, v4, :cond_5
+
+    move v1, v3
+
+    goto :goto_2
+
+    :cond_4
+    invoke-static {v1, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    :cond_5
+    :goto_2
+    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setMeasuredDimension(II)V
+
+    return-void
+.end method
+
+.method public final performClick()Z
+    .locals 10
+
+    invoke-super {p0}, Landroid/view/View;->performClick()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->playSoundEffect(I)V
+
+    :cond_0
+    invoke-virtual {p0}, Lsx8;->a()V
+
+    iget-boolean v2, p0, Lsx8;->q0:Z
+
+    const/4 v3, 0x1
+
+    if-nez v2, :cond_1
+
+    goto/16 :goto_1
+
+    :cond_1
+    iget-object v2, p0, Lsx8;->a:Lhz8;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lhz8;->b()V
+
+    invoke-static {}, Lhz8;->c()Ldz8;
+
+    invoke-direct {p0}, Lsx8;->getFragmentManager()Landroidx/fragment/app/c;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_10
+
+    invoke-static {}, Lhz8;->b()V
+
+    invoke-static {}, Lhz8;->c()Ldz8;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ldz8;->e()Lgz8;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lgz8;->d()Z
+
+    move-result v4
+
+    const-string v5, "selector must not be null"
+
+    const-string v6, "selector"
+
+    const-string v7, "MediaRouteButton"
+
+    if-eqz v4, :cond_7
+
+    const-string v4, "android.support.v7.mediarouter:MediaRouteChooserDialogFragment"
+
+    invoke-virtual {v2, v4}, Landroidx/fragment/app/c;->E(Ljava/lang/String;)Landroidx/fragment/app/a;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_2
+
+    const-string v2, "showDialog(): Route chooser dialog already showing!"
+
+    invoke-static {v7, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v0, p0, Lsx8;->o:Ley8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;
+
+    invoke-direct {v0}, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;-><init>()V
+
+    iget-object v7, p0, Lsx8;->c:Lzy8;
+
+    if-eqz v7, :cond_6
+
+    invoke-virtual {v0}, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->G0()V
+
+    iget-object v5, v0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Lzy8;
+
+    invoke-virtual {v5, v7}, Lzy8;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_5
+
+    iput-object v7, v0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Lzy8;
+
+    iget-object v5, v0, Landroidx/fragment/app/a;->Y:Landroid/os/Bundle;
+
+    if-nez v5, :cond_3
+
+    new-instance v5, Landroid/os/Bundle;
+
+    invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
+
+    :cond_3
+    iget-object v8, v7, Lzy8;->a:Landroid/os/Bundle;
+
+    invoke-virtual {v5, v6, v8}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    invoke-virtual {v0, v5}, Landroidx/fragment/app/a;->w0(Landroid/os/Bundle;)V
+
+    iget-object v5, v0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->y1:Lpo;
+
+    if-eqz v5, :cond_5
+
+    iget-boolean v6, v0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->x1:Z
+
+    if-eqz v6, :cond_4
+
+    check-cast v5, Lky8;
+
+    invoke-virtual {v5, v7}, Lky8;->g(Lzy8;)V
+
+    goto :goto_0
+
+    :cond_4
+    check-cast v5, Lux8;
+
+    invoke-virtual {v5, v7}, Lux8;->g(Lzy8;)V
+
+    :cond_5
+    :goto_0
+    new-instance v5, Lze0;
+
+    invoke-direct {v5, v2}, Lze0;-><init>(Landroidx/fragment/app/c;)V
+
+    invoke-virtual {v5, v1, v0, v4, v3}, Lze0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
+
+    invoke-virtual {v5, v3}, Lze0;->d(Z)I
+
+    goto/16 :goto_3
+
+    :cond_6
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_7
+    const-string v4, "android.support.v7.mediarouter:MediaRouteControllerDialogFragment"
+
+    invoke-virtual {v2, v4}, Landroidx/fragment/app/c;->E(Ljava/lang/String;)Landroidx/fragment/app/a;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_9
+
+    const-string v2, "showDialog(): Route controller dialog already showing!"
+
+    invoke-static {v7, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    if-eqz v0, :cond_8
+
+    goto :goto_3
+
+    :cond_8
+    return v1
+
+    :cond_9
+    iget-object v0, p0, Lsx8;->o:Ley8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;
+
+    invoke-direct {v0}, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;-><init>()V
+
+    iget-object v7, p0, Lsx8;->c:Lzy8;
+
+    if-eqz v7, :cond_f
+
+    iget-object v5, v0, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
+
+    if-nez v5, :cond_c
+
+    iget-object v5, v0, Landroidx/fragment/app/a;->Y:Landroid/os/Bundle;
+
+    if-eqz v5, :cond_b
+
+    invoke-virtual {v5, v6}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v5
+
+    const/4 v8, 0x0
+
+    if-eqz v5, :cond_a
+
+    new-instance v9, Lzy8;
+
+    invoke-direct {v9, v5, v8}, Lzy8;-><init>(Landroid/os/Bundle;Ljava/util/ArrayList;)V
+
+    move-object v8, v9
+
+    goto :goto_2
+
+    :cond_a
+    sget-object v5, Lzy8;->c:Lzy8;
+
+    :goto_2
+    iput-object v8, v0, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
+
+    :cond_b
+    iget-object v5, v0, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
+
+    if-nez v5, :cond_c
+
+    sget-object v5, Lzy8;->c:Lzy8;
+
+    iput-object v5, v0, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
+
+    :cond_c
+    iget-object v5, v0, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
+
+    invoke-virtual {v5, v7}, Lzy8;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_e
+
+    iput-object v7, v0, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->z1:Lzy8;
+
+    iget-object v5, v0, Landroidx/fragment/app/a;->Y:Landroid/os/Bundle;
+
+    if-nez v5, :cond_d
+
+    new-instance v5, Landroid/os/Bundle;
+
+    invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
+
+    :cond_d
+    iget-object v8, v7, Lzy8;->a:Landroid/os/Bundle;
+
+    invoke-virtual {v5, v6, v8}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    invoke-virtual {v0, v5}, Landroidx/fragment/app/a;->w0(Landroid/os/Bundle;)V
+
+    iget-object v5, v0, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->y1:Lpo;
+
+    if-eqz v5, :cond_e
+
+    iget-boolean v6, v0, Landroidx/mediarouter/app/MediaRouteControllerDialogFragment;->x1:Z
+
+    if-eqz v6, :cond_e
+
+    check-cast v5, Lty8;
+
+    invoke-virtual {v5, v7}, Lty8;->i(Lzy8;)V
+
+    :cond_e
+    new-instance v5, Lze0;
+
+    invoke-direct {v5, v2}, Lze0;-><init>(Landroidx/fragment/app/c;)V
+
+    invoke-virtual {v5, v1, v0, v4, v3}, Lze0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
+
+    invoke-virtual {v5, v3}, Lze0;->d(Z)I
+
+    :goto_3
+    return v3
+
+    :cond_f
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_10
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "The activity must be a subclass of FragmentActivity"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public setAlwaysVisible(Z)V
+    .locals 1
+
+    iget-boolean v0, p0, Lsx8;->A0:Z
+
+    if-eq p1, v0, :cond_0
+
+    iput-boolean p1, p0, Lsx8;->A0:Z
+
+    invoke-virtual {p0}, Lsx8;->c()V
+
+    invoke-virtual {p0}, Lsx8;->b()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setCheatSheetEnabled(Z)V
+    .locals 1
+
+    iget-boolean v0, p0, Lsx8;->B0:Z
+
+    if-eq p1, v0, :cond_0
+
+    iput-boolean p1, p0, Lsx8;->B0:Z
+
+    invoke-virtual {p0}, Lsx8;->e()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setDialogFactory(Ley8;)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    iput-object p1, p0, Lsx8;->o:Ley8;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "factory must not be null"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public setRemoteIndicatorDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lsx8;->u0:I
+
+    invoke-virtual {p0, p1}, Lsx8;->setRemoteIndicatorDrawableInternal(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public setRemoteIndicatorDrawableInternal(Landroid/graphics/drawable/Drawable;)V
+    .locals 3
+
+    iget-object v0, p0, Lsx8;->s0:Lrx8;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
+
+    :cond_0
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_1
+    if-eqz p1, :cond_4
+
+    iget-object v0, p0, Lsx8;->x0:Landroid/content/res/ColorStateList;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-static {p1, v0}, Lv05;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+
+    :cond_2
+    invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+
+    :cond_4
+    iput-object p1, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
+
+    return-void
+.end method
+
+.method public setRouteSelector(Lzy8;)V
+    .locals 3
+
+    if-eqz p1, :cond_3
+
+    iget-object v0, p0, Lsx8;->c:Lzy8;
+
+    invoke-virtual {v0, p1}, Lzy8;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-boolean v0, p0, Lsx8;->q0:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lsx8;->c:Lzy8;
+
+    invoke-virtual {v0}, Lzy8;->c()Z
+
+    move-result v0
+
+    iget-object v1, p0, Lsx8;->b:Lqx8;
+
+    iget-object v2, p0, Lsx8;->a:Lhz8;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {v2, v1}, Lhz8;->f(Lqx8;)V
+
+    :cond_0
+    invoke-virtual {p1}, Lzy8;->c()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v2, p1, v1, v0}, Lhz8;->a(Lzy8;Lqx8;I)V
+
+    :cond_1
+    iput-object p1, p0, Lsx8;->c:Lzy8;
+
+    invoke-virtual {p0}, Lsx8;->b()V
+
+    :cond_2
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "selector must not be null"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public setVisibility(I)V
+    .locals 0
+
+    iput p1, p0, Lsx8;->r0:I
+
+    invoke-virtual {p0}, Lsx8;->c()V
+
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lsx8;->t0:Landroid/graphics/drawable/Drawable;
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

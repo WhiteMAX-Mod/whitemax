@@ -1,25 +1,14 @@
-.class public final Lyue;
+.class public interface abstract Lyue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Ljava/lang/String;
-
-.field public c:Lgm8;
+# interfaces
+.implements Ljava/io/Closeable;
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 0
+# virtual methods
+.method public abstract b(Lnu0;J)J
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lyue;->a:Ljava/lang/Object;
-
-    iput-object p2, p0, Lyue;->b:Ljava/lang/String;
-
-    return-void
+.method public abstract p()Lvvf;
 .end method

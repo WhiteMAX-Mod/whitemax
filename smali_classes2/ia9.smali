@@ -1,128 +1,53 @@
 .class public final Lia9;
-.super Lure;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public X:J
 
-.field public final synthetic Y:Lfb9;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic Z:Ljava/util/List;
+.field public final synthetic Z:Lla9;
+
+.field public o:Lla9;
+
+.field public q0:I
 
 
 # direct methods
-.method public constructor <init>(Lfb9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lla9;Ly14;)V
     .locals 0
 
-    iput-object p1, p0, Lia9;->Y:Lfb9;
+    iput-object p1, p0, Lia9;->Z:Lla9;
 
-    iput-object p2, p0, Lia9;->Z:Ljava/util/List;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lia9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lia9;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lia9;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lia9;
-
-    iget-object v0, p0, Lia9;->Y:Lfb9;
-
-    iget-object p0, p0, Lia9;->Z:Ljava/util/List;
-
-    invoke-direct {p1, v0, p0, p2}, Lia9;-><init>(Lfb9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lia9;->X:I
+    iput-object p1, p0, Lia9;->Y:Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    iget p1, p0, Lia9;->q0:I
 
-    if-eqz v0, :cond_1
+    const/high16 v0, -0x80000000
 
-    if-ne v0, v1, :cond_0
+    or-int/2addr p1, v0
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iput p1, p0, Lia9;->q0:I
 
-    goto :goto_0
+    iget-object p1, p0, Lia9;->Z:Lla9;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-wide/16 v0, 0x0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lia9;->Y:Lfb9;
-
-    iget-object p1, p1, Lfb9;->M0:Lcl7;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1, p0}, Lla9;->c(JLy14;)Ljava/io/Serializable;
 
     move-result-object p1
 
-    check-cast p1, Lzz8;
-
-    iput v1, p0, Lia9;->X:I
-
-    iget-object v0, p0, Lia9;->Z:Ljava/util/List;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, p0, v0, v1}, Lzz8;->a(Ljx3;Ljava/util/List;Z)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
     return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
 .end method

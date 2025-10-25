@@ -1,47 +1,77 @@
-.class public final Llkb;
-.super Ljx3;
+.class public final synthetic Llkb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lmkb;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lmkb;
 
 
 # direct methods
-.method public constructor <init>(Lmkb;Ljx3;)V
+.method public synthetic constructor <init>(Lmkb;I)V
     .locals 0
 
-    iput-object p1, p0, Llkb;->X:Lmkb;
+    iput p2, p0, Llkb;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llkb;->b:Lmkb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    iput-object p1, p0, Llkb;->o:Ljava/lang/Object;
+    iget v0, p0, Llkb;->a:I
 
-    iget p1, p0, Llkb;->Y:I
+    iget-object v1, p0, Llkb;->b:Lmkb;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    :try_start_0
+    invoke-virtual {v1}, Lmkb;->d()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput p1, p0, Llkb;->Y:I
+    goto :goto_0
 
-    iget-object p1, p0, Llkb;->X:Lmkb;
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {p1, p0}, Lmkb;->f(Ljx3;)Ljava/lang/Object;
+    const-string v2, "mkb"
 
-    move-result-object p0
+    const-string v3, "syncInternal: exception"
 
-    return-object p0
+    invoke-static {v2, v3, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v1, v1, Lmkb;->h:Lsf5;
+
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
+
+    invoke-direct {v2, v0}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+
+    check-cast v1, Lxua;
+
+    invoke-virtual {v1, v2}, Lxua;->c(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {v1}, Lmkb;->d()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

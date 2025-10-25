@@ -1,231 +1,180 @@
 .class public final Locd;
-.super Ljava/lang/Object;
+.super Leic;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lyz4;
+.field public a:I
 
-.field public final b:Ljava/lang/String;
+.field public b:J
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/util/List;
-
-.field public final e:Ljava/util/List;
-
-.field public final f:Ljava/util/List;
-
-.field public final g:J
-
-.field public final h:I
-
-.field public final i:Z
-
-.field public final j:J
-
-.field public final k:Ljava/util/List;
-
-.field public final l:Ljava/util/List;
-
-.field public final m:Ljava/lang/String;
-
-.field public final n:Ljava/util/List;
+.field public c:J
 
 
-# direct methods
-.method public constructor <init>(Lncd;)V
-    .locals 2
+# virtual methods
+.method public final a(Lcic;Lfic;Lfj;)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    iget-object p2, p1, Lcic;->N0:Lv9f;
 
-    iget-object v0, p1, Lncd;->a:Lyz4;
+    iget-object p3, p2, Lv9f;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iput-object v0, p0, Locd;->a:Lyz4;
+    iget v0, p0, Locd;->a:I
 
-    iget-object v0, p1, Lncd;->b:Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object v0, p0, Locd;->b:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v0, p1, Lncd;->c:Ljava/lang/String;
+    invoke-virtual {p3, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object v0, p0, Locd;->c:Ljava/lang/String;
+    move-result-object p3
 
-    iget-object v0, p1, Lncd;->d:Ljava/util/List;
+    check-cast p3, Lgic;
 
-    iput-object v0, p0, Locd;->d:Ljava/util/List;
+    if-eqz p3, :cond_0
 
-    iget-object v0, p1, Lncd;->e:Ljava/util/List;
+    iget-wide v0, p2, Lv9f;->y:J
 
-    iput-object v0, p0, Locd;->e:Ljava/util/List;
+    iget-wide v2, p0, Locd;->c:J
 
-    iget-object v0, p1, Lncd;->f:Ljava/util/List;
+    iget-object p3, p3, Lgic;->e:Lo9f;
 
-    iput-object v0, p0, Locd;->f:Ljava/util/List;
+    invoke-virtual {p3, v2, v3}, Lo9f;->Q(J)J
 
-    iget-wide v0, p1, Lncd;->g:J
+    move-result-wide v2
 
-    iput-wide v0, p0, Locd;->g:J
+    add-long/2addr v2, v0
 
-    iget-boolean v0, p1, Lncd;->i:Z
+    iput-wide v2, p2, Lv9f;->y:J
+    :try_end_0
+    .catch Ltech/kwik/core/impl/TransportError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-boolean v0, p0, Locd;->i:Z
+    :cond_0
+    return-void
 
-    iget v0, p1, Lncd;->h:I
+    :catch_0
+    move-exception p2
 
-    iput v0, p0, Locd;->h:I
+    iget p2, p2, Ltech/kwik/core/impl/TransportError;->a:I
 
-    iget-wide v0, p1, Lncd;->j:J
+    invoke-static {p2}, Laab;->g(I)I
 
-    iput-wide v0, p0, Locd;->j:J
+    move-result p2
 
-    iget-object v0, p1, Lncd;->k:Ljava/util/List;
+    int-to-long p2, p2
 
-    iput-object v0, p0, Locd;->k:Ljava/util/List;
+    const/4 v0, 0x0
 
-    iget-object v0, p1, Lncd;->l:Ljava/util/List;
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Locd;->l:Ljava/util/List;
-
-    iget-object v0, p1, Lncd;->m:Ljava/lang/String;
-
-    iput-object v0, p0, Locd;->m:Ljava/lang/String;
-
-    iget-object p1, p1, Lncd;->n:Ljava/util/List;
-
-    iput-object p1, p0, Locd;->n:Ljava/util/List;
+    invoke-virtual {p1, p2, p3, v0, v1}, Lcic;->g(JLjava/lang/String;I)V
 
     return-void
 .end method
 
+.method public final c()I
+    .locals 4
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 8
+    iget v0, p0, Locd;->a:I
 
-    iget-object v0, p0, Locd;->d:Ljava/util/List;
+    int-to-long v0, v0
 
-    invoke-static {v0}, Lf4h;->h(Ljava/util/Collection;)I
+    invoke-static {v0, v1}, Lubi;->a(J)I
 
     move-result v0
 
-    iget-object v1, p0, Locd;->e:Ljava/util/List;
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-static {v1}, Lf4h;->h(Ljava/util/Collection;)I
+    iget-wide v1, p0, Locd;->b:J
+
+    invoke-static {v1, v2}, Lubi;->a(J)I
 
     move-result v1
 
-    iget-object v2, p0, Locd;->k:Ljava/util/List;
+    add-int/2addr v1, v0
 
-    invoke-static {v2}, Lf4h;->h(Ljava/util/Collection;)I
+    iget-wide v2, p0, Locd;->c:J
 
-    move-result v2
+    invoke-static {v2, v3}, Lubi;->a(J)I
 
-    iget-object v3, p0, Locd;->l:Ljava/util/List;
+    move-result v0
 
-    invoke-static {v3}, Lf4h;->h(Ljava/util/Collection;)I
+    add-int/2addr v0, v1
 
-    move-result v3
+    return v0
+.end method
 
-    iget-object v4, p0, Locd;->n:Ljava/util/List;
+.method public final f(Ljava/nio/ByteBuffer;)V
+    .locals 2
 
-    invoke-static {v4}, Lf4h;->h(Ljava/util/Collection;)I
+    const/4 v0, 0x4
 
-    move-result v4
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    iget v0, p0, Locd;->a:I
 
-    const-string v6, "Section{type="
+    invoke-static {v0, p1}, Lubi;->f(ILjava/nio/ByteBuffer;)I
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v0, p0, Locd;->b:J
 
-    iget-object v6, p0, Locd;->a:Lyz4;
+    invoke-static {v0, v1, p1}, Lubi;->g(JLjava/nio/ByteBuffer;)I
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Locd;->c:J
 
-    const-string v6, ", id=\'"
+    invoke-static {v0, v1, p1}, Lubi;->g(JLjava/nio/ByteBuffer;)I
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    iget-object v6, p0, Locd;->b:Ljava/lang/String;
+.method public final g(Ljava/nio/ByteBuffer;)V
+    .locals 2
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
-    const-string v6, "\', title=\'"
+    invoke-static {p1}, Leic;->e(Ljava/nio/ByteBuffer;)I
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    iget-object v6, p0, Locd;->c:Ljava/lang/String;
+    iput v0, p0, Locd;->a:I
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lubi;->p(Ljava/nio/ByteBuffer;)J
 
-    const-string v6, "\', stickers="
+    move-result-wide v0
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-wide v0, p0, Locd;->b:J
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lubi;->p(Ljava/nio/ByteBuffer;)J
 
-    const-string v0, ", stickerSets="
+    move-result-wide v0
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-wide v0, p0, Locd;->c:J
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v0, ", marker="
+.method public final toString()Ljava/lang/String;
+    .locals 7
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Locd;->a:I
 
-    iget-wide v0, p0, Locd;->g:J
+    iget-wide v1, p0, Locd;->b:J
 
-    invoke-virtual {v5, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-wide v3, p0, Locd;->c:J
 
-    const-string v0, ", totalCount="
+    const-string v5, "ResetStreamFrame["
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v6, "|"
 
-    iget v0, p0, Locd;->h:I
+    invoke-static {v0, v1, v2, v5, v6}, Lu15;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v0, ", collapsed="
+    const-string v1, "]"
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v4, v6, v1, v0}, Lu15;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
-    iget-boolean v0, p0, Locd;->i:Z
+    move-result-object v0
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, ", updateTime="
-
-    const-string v1, ", recentEmojiList="
-
-    iget-wide v6, p0, Locd;->j:J
-
-    invoke-static {v6, v7, v0, v1, v5}, Lmw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string v0, ", recentsList="
-
-    const-string v1, ", animojiSets="
-
-    invoke-static {v5, v2, v0, v3, v1}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ", mode=\'"
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Locd;->m:Ljava/lang/String;
-
-    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "\'}"
-
-    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

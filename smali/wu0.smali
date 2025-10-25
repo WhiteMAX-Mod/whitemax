@@ -1,8 +1,11 @@
-.class public interface abstract Lwu0;
+.class public final Lwu0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract f(Landroid/os/Bundle;)Lxu0;
-.end method
+# instance fields
+.field public a:I
+
+.field public b:J
+
+.field public c:I

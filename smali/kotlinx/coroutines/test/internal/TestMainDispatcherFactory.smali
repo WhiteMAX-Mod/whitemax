@@ -39,8 +39,8 @@
 
 
 # virtual methods
-.method public final createDispatcher(Ljava/util/List;)Lt38;
-    .locals 4
+.method public final createDispatcher(Ljava/util/List;)Lce8;
+    .locals 5
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -75,110 +75,110 @@
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result p1
+    move-result v1
 
-    if-nez p1, :cond_2
+    if-nez v1, :cond_2
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
     goto :goto_2
 
     :cond_2
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_3
+    if-nez v2, :cond_3
 
     :goto_1
-    move-object p0, p1
+    move-object p1, v1
 
     goto :goto_2
 
     :cond_3
-    move-object v1, p1
+    move-object v2, v1
 
-    check-cast v1, Lkotlinx/coroutines/internal/MainDispatcherFactory;
+    check-cast v2, Lkotlinx/coroutines/internal/MainDispatcherFactory;
 
-    invoke-interface {v1}, Lkotlinx/coroutines/internal/MainDispatcherFactory;->getLoadPriority()I
-
-    move-result v1
-
-    :cond_4
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v3, v2
-
-    check-cast v3, Lkotlinx/coroutines/internal/MainDispatcherFactory;
-
-    invoke-interface {v3}, Lkotlinx/coroutines/internal/MainDispatcherFactory;->getLoadPriority()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_5
-
-    move-object p1, v2
-
-    move v1, v3
-
-    :cond_5
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v2}, Lkotlinx/coroutines/internal/MainDispatcherFactory;->getLoadPriority()I
 
     move-result v2
 
-    if-nez v2, :cond_4
+    :cond_4
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v4, v3
+
+    check-cast v4, Lkotlinx/coroutines/internal/MainDispatcherFactory;
+
+    invoke-interface {v4}, Lkotlinx/coroutines/internal/MainDispatcherFactory;->getLoadPriority()I
+
+    move-result v4
+
+    if-ge v2, v4, :cond_5
+
+    move-object v1, v3
+
+    move v2, v4
+
+    :cond_5
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
 
     goto :goto_1
 
     :goto_2
-    check-cast p0, Lkotlinx/coroutines/internal/MainDispatcherFactory;
+    check-cast p1, Lkotlinx/coroutines/internal/MainDispatcherFactory;
 
-    if-nez p0, :cond_6
+    if-nez p1, :cond_6
 
-    sget-object p0, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcherFactory;->INSTANCE:Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcherFactory;
+    sget-object p1, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcherFactory;->INSTANCE:Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcherFactory;
 
     :cond_6
-    invoke-static {p0, v0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->tryCreateDispatcher(Lkotlinx/coroutines/internal/MainDispatcherFactory;Ljava/util/List;)Lt38;
+    invoke-static {p1, v0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->tryCreateDispatcher(Lkotlinx/coroutines/internal/MainDispatcherFactory;Ljava/util/List;)Lce8;
 
-    move-result-object p0
+    move-result-object p1
 
-    new-instance p1, La1f;
+    new-instance v0, Lwpf;
 
-    invoke-direct {p1}, Ls04;-><init>()V
+    invoke-direct {v0}, Lk54;-><init>()V
 
-    new-instance v0, Lz0f;
+    new-instance v1, Lvpf;
 
-    invoke-direct {v0, p0}, Lz0f;-><init>(Lt38;)V
+    invoke-direct {v1, p1}, Lvpf;-><init>(Lce8;)V
 
-    iput-object v0, p1, La1f;->a:Lz0f;
+    iput-object v1, v0, Lwpf;->a:Lvpf;
 
-    return-object p1
+    return-object v0
 .end method
 
 .method public final getLoadPriority()I
-    .locals 0
+    .locals 1
 
-    const p0, 0x7fffffff
+    const v0, 0x7fffffff
 
-    return p0
+    return v0
 .end method
 
 .method public final hintOnError()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     invoke-static {p0}, Lkotlinx/coroutines/internal/MainDispatcherFactory$DefaultImpls;->hintOnError(Lkotlinx/coroutines/internal/MainDispatcherFactory;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

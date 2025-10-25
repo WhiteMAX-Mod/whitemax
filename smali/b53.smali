@@ -1,5 +1,5 @@
 .class public final Lb53;
-.super Lr3;
+.super Lg0;
 .source "SourceFile"
 
 
@@ -16,143 +16,58 @@
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
+.field public c:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lfvf;
+    new-instance v0, Lf0;
 
-    const/16 v1, 0x8
+    const/4 v1, 0x2
 
-    invoke-direct {v0, v1}, Lfvf;-><init>(I)V
+    invoke-direct {v0, v1}, Lf0;-><init>(I)V
 
     sput-object v0, Lb53;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;)V
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lg0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    iput p1, p0, Lb53;->a:I
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    iput-object p2, p0, Lb53;->b:Ljava/lang/String;
+    move-result p1
+
+    const/4 p2, 0x1
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    :goto_0
+    iput-boolean p2, p0, Lb53;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lb53;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lb53;
-
-    iget v1, p1, Lb53;->a:I
-
-    iget v3, p0, Lb53;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object p1, p1, Lb53;->b:Ljava/lang/String;
-
-    iget-object p0, p0, Lb53;->b:Ljava/lang/String;
-
-    invoke-static {p1, p0}, Lhv8;->l(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    iget p0, p0, Lb53;->a:I
+    invoke-super {p0, p1, p2}, Lg0;->writeToParcel(Landroid/os/Parcel;I)V
 
-    return p0
-.end method
+    iget-boolean p2, p0, Lb53;->c:Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget v1, p0, Lb53;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ":"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lb53;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Ljs9;->U(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x4
-
-    invoke-static {p1, v0, v1}, Ljs9;->W(Landroid/os/Parcel;II)V
-
-    iget v0, p0, Lb53;->a:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x2
-
-    iget-object p0, p0, Lb53;->b:Ljava/lang/String;
-
-    invoke-static {p1, v0, p0}, Ljs9;->P(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    invoke-static {p1, p2}, Ljs9;->V(Landroid/os/Parcel;I)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

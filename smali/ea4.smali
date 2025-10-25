@@ -2,280 +2,167 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
+
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:I
+.field public final b:Ljava/lang/String;
 
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:I
-
-.field public l:J
-
-.field public m:I
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
-    iput p1, p0, Lea4;->a:I
+    iput p2, p0, Lea4;->a:I
+
+    packed-switch p2, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    new-instance p2, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p2, p0, Lea4;->c:Ljava/lang/Object;
+
+    iput-object p1, p0, Lea4;->b:Ljava/lang/String;
+
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lea4;->c:Ljava/lang/Object;
+
+    iput-object p1, p0, Lea4;->b:Ljava/lang/String;
+
+    return-void
+
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lea4;->b:Ljava/lang/String;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Lea4;->c:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 27
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 4
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lea4;->a:I
 
-    iget v1, v0, Lea4;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "\n}"
+    new-instance v0, Lhld;
 
-    const-string v3, "\n videoFrameProcessingOffsetCount="
+    const/4 v1, 0x3
 
-    const-string v4, "\n totalVideoFrameProcessingOffsetUs="
+    invoke-direct {v0, p1, v1}, Lhld;-><init>(Ljava/lang/Runnable;I)V
 
-    const-string v5, "\n droppedToKeyframeEvents="
+    iget-object p1, p0, Lea4;->c:Ljava/lang/Object;
 
-    const-string v6, "\n maxConsecutiveDroppedBuffers="
+    check-cast p1, Ljava/util/concurrent/ThreadFactory;
 
-    const-string v7, "\n droppedInputBuffers="
+    invoke-interface {p1, v0}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
-    const-string v8, "\n droppedBuffers="
+    move-result-object p1
 
-    const-string v9, "\n skippedOutputBuffers="
+    iget-object v0, p0, Lea4;->b:Ljava/lang/String;
 
-    const-string v10, "\n renderedOutputBuffers="
+    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    const-string v11, "\n skippedInputBuffers="
+    return-object p1
 
-    const-string v12, "\n queuedInputBuffers="
+    :pswitch_0
+    new-instance v0, Lvxb;
 
-    const-string v13, ",\n decoderReleases="
+    const/4 v1, 0x4
 
-    const-string v14, "DecoderCounters {\n decoderInits="
+    invoke-direct {v0, p0, v1, p1}, Lvxb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    packed-switch v1, :pswitch_data_0
+    iget-object p1, p0, Lea4;->c:Ljava/lang/Object;
 
-    iget v1, v0, Lea4;->b:I
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget v15, v0, Lea4;->c:I
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    move-object/from16 v16, v2
+    move-result p1
 
-    iget v2, v0, Lea4;->d:I
+    const-string v1, "-"
 
-    move-object/from16 v17, v3
+    iget-object v2, p0, Lea4;->b:Ljava/lang/String;
 
-    iget v3, v0, Lea4;->e:I
+    invoke-static {p1, v2, v1}, Lfd0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-object/from16 v18, v4
+    move-result-object p1
 
-    iget v4, v0, Lea4;->f:I
+    new-instance v1, Ljava/lang/Thread;
 
-    move-object/from16 v19, v5
+    invoke-direct {v1, v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    iget v5, v0, Lea4;->g:I
+    return-object v1
 
-    move-object/from16 v20, v6
+    :pswitch_1
+    new-instance v0, Ljava/lang/Thread;
 
-    iget v6, v0, Lea4;->h:I
+    iget-object v1, p0, Lea4;->c:Ljava/lang/Object;
 
-    move/from16 v21, v6
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget v6, v0, Lea4;->i:I
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    move/from16 v22, v6
+    move-result v1
 
-    iget v6, v0, Lea4;->j:I
+    const-string v2, "-"
 
-    move/from16 v23, v6
+    iget-object v3, p0, Lea4;->b:Ljava/lang/String;
 
-    iget v6, v0, Lea4;->k:I
-
-    move/from16 v25, v6
-
-    move-object/from16 v24, v7
-
-    iget-wide v6, v0, Lea4;->l:J
-
-    iget v0, v0, Lea4;->m:I
-
-    sget v26, Lnrf;->a:I
-
-    sget-object v26, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-static {v14, v1, v13, v15, v12}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v3, v2}, Lfd0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1, v2, v11, v3, v10}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    invoke-static {v1, v4, v9, v5, v8}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    const/4 p1, 0x1
 
-    move-object/from16 v4, v20
-
-    move/from16 v2, v21
-
-    move/from16 v3, v22
-
-    move-object/from16 v5, v24
-
-    invoke-static {v1, v2, v5, v3, v4}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v15, v18
-
-    move-object/from16 v4, v19
-
-    move/from16 v2, v23
-
-    move/from16 v3, v25
-
-    invoke-static {v1, v2, v4, v3, v15}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v2, v17
-
-    invoke-static {v1, v6, v7, v2, v0}, Lsq3;->p(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
-
-    move-object/from16 v3, v16
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setDaemon(Z)V
 
     return-object v0
 
-    :pswitch_0
-    move-object v1, v3
-
-    move-object v3, v2
-
-    move-object v2, v1
-
-    move-object v15, v4
-
-    move-object v1, v5
-
-    move-object v4, v6
-
-    move-object v5, v7
-
-    iget v6, v0, Lea4;->b:I
-
-    iget v7, v0, Lea4;->c:I
-
-    move-object/from16 v16, v3
-
-    iget v3, v0, Lea4;->d:I
-
-    move-object/from16 v17, v2
-
-    iget v2, v0, Lea4;->e:I
-
-    move-object/from16 v19, v1
-
-    iget v1, v0, Lea4;->f:I
-
-    move-object/from16 v18, v15
-
-    iget v15, v0, Lea4;->g:I
-
-    move-object/from16 v20, v4
-
-    iget v4, v0, Lea4;->h:I
-
-    move/from16 v21, v4
-
-    iget v4, v0, Lea4;->i:I
-
-    move/from16 v22, v4
-
-    iget v4, v0, Lea4;->j:I
-
-    move/from16 v23, v4
-
-    iget v4, v0, Lea4;->k:I
-
-    move/from16 v25, v4
-
-    move-object/from16 v24, v5
-
-    iget-wide v4, v0, Lea4;->l:J
-
-    iget v0, v0, Lea4;->m:I
-
-    sget v26, Llrf;->a:I
-
-    sget-object v26, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-static {v14, v6, v13, v7, v12}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-static {v6, v3, v11, v2, v10}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    invoke-static {v6, v1, v9, v15, v8}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v3, v20
-
-    move/from16 v1, v21
-
-    move/from16 v2, v22
-
-    move-object/from16 v7, v24
-
-    invoke-static {v6, v1, v7, v2, v3}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v15, v18
-
-    move-object/from16 v3, v19
-
-    move/from16 v1, v23
-
-    move/from16 v2, v25
-
-    invoke-static {v6, v1, v3, v2, v15}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v2, v17
-
-    invoke-static {v6, v4, v5, v2, v0}, Lsq3;->p(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
-
-    move-object/from16 v3, v16
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

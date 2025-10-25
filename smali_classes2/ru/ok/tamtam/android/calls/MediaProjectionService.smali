@@ -13,7 +13,7 @@
         "Landroid/app/Service;",
         "<init>",
         "()V",
-        "kl8",
+        "hx8",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -31,11 +31,11 @@
 
 
 # instance fields
-.field public final a:Lzte;
+.field public final a:Lwif;
 
-.field public final b:Lzte;
+.field public final b:Lwif;
 
-.field public final c:Lkl8;
+.field public final c:Lhx8;
 
 .field public final o:Ljava/lang/String;
 
@@ -46,35 +46,35 @@
 
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    new-instance v0, Ljl8;
+    new-instance v0, Lgx8;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Ljl8;-><init>(Lru/ok/tamtam/android/calls/MediaProjectionService;I)V
+    invoke-direct {v0, p0, v1}, Lgx8;-><init>(Lru/ok/tamtam/android/calls/MediaProjectionService;I)V
 
-    new-instance v1, Lzte;
+    new-instance v1, Lwif;
 
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->a:Lzte;
+    iput-object v1, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->a:Lwif;
 
-    new-instance v0, Ljl8;
+    new-instance v0, Lgx8;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Ljl8;-><init>(Lru/ok/tamtam/android/calls/MediaProjectionService;I)V
+    invoke-direct {v0, p0, v1}, Lgx8;-><init>(Lru/ok/tamtam/android/calls/MediaProjectionService;I)V
 
-    new-instance v1, Lzte;
+    new-instance v1, Lwif;
 
-    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->b:Lzte;
+    iput-object v1, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->b:Lwif;
 
-    new-instance v0, Lkl8;
+    new-instance v0, Lhx8;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
-    iput-object v0, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->c:Lkl8;
+    iput-object v0, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->c:Lhx8;
 
     const-class v0, Lru/ok/tamtam/android/calls/MediaProjectionService;
 
@@ -92,9 +92,9 @@
 .method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->c:Lkl8;
+    iget-object p1, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->c:Lhx8;
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final onCreate()V
@@ -106,69 +106,69 @@
 
     iget-object v1, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->o:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->a:Lzte;
+    iget-object v0, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->a:Lwif;
 
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljn4;
-
-    invoke-virtual {v0, v1}, Ljn4;->f(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->b:Lzte;
-
-    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lvxe;
+    check-cast v0, Los4;
 
-    check-cast v0, Lep;
+    invoke-virtual {v0, v1}, Los4;->f(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lep;->p:Ljava/lang/Object;
+    iget-object v0, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->b:Lwif;
 
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lil8;
+    check-cast v0, Lsmf;
 
-    iget-object v1, v0, Lil8;->b:Lzte;
+    check-cast v0, Lpq;
 
-    invoke-virtual {v1}, Lzte;->getValue()Ljava/lang/Object;
+    iget-object v0, v0, Lpq;->p:Ljava/lang/Object;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lfx8;
+
+    iget-object v1, v0, Lfx8;->b:Lwif;
+
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lvka;
+    check-cast v1, Lxya;
 
-    iget-object v2, v0, Lil8;->a:Ljava/lang/String;
+    iget-object v2, v0, Lfx8;->a:Ljava/lang/String;
 
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v2, v3, v3}, Lvka;->g(Ljava/lang/String;ZZ)Lk0a;
+    invoke-virtual {v1, v2, v3, v3}, Lxya;->g(Ljava/lang/String;ZZ)Lyca;
 
     move-result-object v1
 
-    iget-object v0, v0, Lil8;->c:Ldp;
+    iget-object v0, v0, Lfx8;->c:Loq;
 
-    iget-object v0, v0, Ldp;->a:Landroid/content/Context;
+    iget-object v0, v0, Loq;->a:Landroid/content/Context;
 
-    sget v2, Ld1d;->O2:I
+    sget v2, Ldkd;->v2:I
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lk0a;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v0}, Lyca;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    iput-object v0, v1, Lk0a;->f:Ljava/lang/CharSequence;
+    iput-object v0, v1, Lyca;->f:Ljava/lang/CharSequence;
 
-    invoke-virtual {v1}, Lk0a;->a()Landroid/app/Notification;
+    invoke-virtual {v1}, Lyca;->a()Landroid/app/Notification;
 
     move-result-object v0
 
@@ -188,17 +188,17 @@
 
     iget-object v1, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->o:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->a:Lzte;
+    iget-object v0, p0, Lru/ok/tamtam/android/calls/MediaProjectionService;->a:Lwif;
 
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Ljn4;
+    check-cast v0, Los4;
 
-    invoke-virtual {p0, v1}, Ljn4;->g(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Los4;->g(Ljava/lang/String;)V
 
     return-void
 .end method

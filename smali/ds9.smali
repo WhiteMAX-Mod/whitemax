@@ -1,99 +1,39 @@
-.class public final Lds9;
+.class public abstract Lds9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final a:Landroid/webkit/MimeTypeMap;
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:F
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:Z
-
-.field public final k:Z
-
-.field public final l:I
-
-.field public final m:I
-
-.field public final n:I
-
-.field public final o:Z
-
-.field public final p:I
-
-.field public final q:I
-
-.field public final r:I
-
-.field public final s:I
+.field public static final b:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(IIIIIIFIIZZIIIZIIII)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
 
-    iput p1, p0, Lds9;->a:I
+    move-result-object v0
 
-    iput p2, p0, Lds9;->b:I
+    sput-object v0, Lds9;->a:Landroid/webkit/MimeTypeMap;
 
-    iput p3, p0, Lds9;->c:I
+    const-string v0, "image/heif"
 
-    iput p4, p0, Lds9;->d:I
+    const-string v1, "heif"
 
-    iput p5, p0, Lds9;->e:I
+    const-string v2, "image/heic"
 
-    iput p6, p0, Lds9;->f:I
+    const-string v3, "heic"
 
-    iput p7, p0, Lds9;->g:F
+    invoke-static {v0, v1, v2, v3}, Ljc7;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
-    iput p8, p0, Lds9;->h:I
+    invoke-static {v1, v0, v3, v2}, Ljc7;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
-    iput p9, p0, Lds9;->i:I
+    move-result-object v0
 
-    iput-boolean p10, p0, Lds9;->j:Z
-
-    iput-boolean p11, p0, Lds9;->k:Z
-
-    iput p12, p0, Lds9;->l:I
-
-    iput p13, p0, Lds9;->m:I
-
-    iput p14, p0, Lds9;->n:I
-
-    iput-boolean p15, p0, Lds9;->o:Z
-
-    move/from16 p1, p16
-
-    iput p1, p0, Lds9;->p:I
-
-    move/from16 p1, p17
-
-    iput p1, p0, Lds9;->q:I
-
-    move/from16 p1, p18
-
-    iput p1, p0, Lds9;->r:I
-
-    move/from16 p1, p19
-
-    iput p1, p0, Lds9;->s:I
+    sput-object v0, Lds9;->b:Ljava/util/Map;
 
     return-void
 .end method

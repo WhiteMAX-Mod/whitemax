@@ -1,41 +1,74 @@
 .class public final Ldx7;
-.super Loi0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxw7;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final synthetic a:Lon;
+
+.field public final synthetic b:Lex7;
+
+.field public final synthetic c:Lhx7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Lon;Lex7;Lhx7;)V
     .locals 0
 
-    invoke-direct {p0}, Loi0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldx7;->b:Ljava/lang/String;
+    iput-object p1, p0, Ldx7;->a:Lon;
+
+    iput-object p2, p0, Ldx7;->b:Lex7;
+
+    iput-object p3, p0, Ldx7;->c:Lhx7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final d(Lfx7;Lgw7;)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p2}, Lgw7;->a()Lhw7;
 
-    const-string v1, "LocalMediaEvent{albumId=\'"
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object p2, Lhw7;->a:Lhw7;
 
-    iget-object p0, p0, Ldx7;->b:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
-    const-string v1, "\'}"
+    move-result p1
 
-    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-gtz p1, :cond_1
 
-    move-result-object p0
+    const-string p1, "handle ON_DESTROY state"
 
-    return-object p0
+    const/4 p2, 0x0
+
+    const-string v0, "LifecycleOnOffsetChangedListener"
+
+    invoke-static {v0, p1, p2}, Ltei;->i(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+
+    iget-object p1, p0, Ldx7;->a:Lon;
+
+    iget-object p1, p1, Lon;->t0:Ljava/util/ArrayList;
+
+    if-eqz p1, :cond_0
+
+    iget-object p2, p0, Ldx7;->b:Lex7;
+
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    :cond_0
+    iget-object p1, p0, Ldx7;->c:Lhx7;
+
+    invoke-virtual {p1, p0}, Lhx7;->f(Lbx7;)V
+
+    :cond_1
+    return-void
 .end method

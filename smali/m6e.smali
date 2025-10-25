@@ -1,69 +1,61 @@
-.class public final Lm6e;
-.super Lpoc;
+.class public abstract Lm6e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public final a:Ljava/util/LinkedHashSet;
 
-.field public final synthetic b:Lt74;
+.field public final b:Le40;
+
+.field public final c:Ljava/util/ArrayList;
+
+.field public final d:Ljava/util/ArrayList;
+
+.field public final e:Ljava/util/ArrayList;
+
+.field public f:Lo6e;
+
+.field public g:Landroid/hardware/camera2/params/InputConfiguration;
+
+.field public h:Lrb0;
 
 
 # direct methods
-.method public constructor <init>(Lt74;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm6e;->b:Lt74;
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    const/4 p1, 0x0
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    iput-boolean p1, p0, Lm6e;->a:Z
+    iput-object v0, p0, Lm6e;->a:Ljava/util/LinkedHashSet;
 
-    return-void
-.end method
+    new-instance v0, Le40;
 
+    invoke-direct {v0}, Le40;-><init>()V
 
-# virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
+    iput-object v0, p0, Lm6e;->b:Le40;
 
-    if-nez p2, :cond_0
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-boolean p1, p0, Lm6e;->a:Z
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    if-eqz p1, :cond_0
+    iput-object v0, p0, Lm6e;->c:Ljava/util/ArrayList;
 
-    const/4 p1, 0x0
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-boolean p1, p0, Lm6e;->a:Z
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object p0, p0, Lm6e;->b:Lt74;
+    iput-object v0, p0, Lm6e;->d:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Lt74;->l()V
+    new-instance v0, Ljava/util/ArrayList;
 
-    :cond_0
-    return-void
-.end method
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 0
-
-    if-nez p2, :cond_1
-
-    if-eqz p3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lm6e;->a:Z
+    iput-object v0, p0, Lm6e;->e:Ljava/util/ArrayList;
 
     return-void
 .end method

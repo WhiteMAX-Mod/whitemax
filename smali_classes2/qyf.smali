@@ -1,81 +1,66 @@
-.class public final Lqyf;
-.super Lure;
+.class public final synthetic Lqyf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lji6;
 
 
 # instance fields
-.field public final synthetic X:Lwyf;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lsyf;
 
 
 # direct methods
-.method public constructor <init>(Lwyf;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lsyf;I)V
     .locals 0
 
-    iput-object p1, p0, Lqyf;->X:Lwyf;
+    iput p2, p0, Lqyf;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lqyf;->b:Lsyf;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    check-cast p1, Ly04;
+    iget v0, p0, Lqyf;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lqyf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lmyf;
 
-    move-result-object p0
+    iget-object v1, p0, Lqyf;->b:Lsyf;
 
-    check-cast p0, Lqyf;
+    iget-object v2, v1, Lsyf;->c:Lji6;
 
-    sget-object p1, Lylf;->a:Lylf;
+    iget v3, v1, Lsyf;->X:I
 
-    invoke-virtual {p0, p1}, Lqyf;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v1, v1, Lsyf;->Y:I
 
-    return-object p1
-.end method
+    invoke-direct {v0, v2, v3, v1}, Lmyf;-><init>(Lji6;II)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    return-object v0
 
-    new-instance p1, Lqyf;
+    :pswitch_0
+    iget-object v0, p0, Lqyf;->b:Lsyf;
 
-    iget-object p0, p0, Lqyf;->X:Lwyf;
+    invoke-virtual {v0}, Lsyf;->dismiss()V
 
-    invoke-direct {p1, p0, p2}, Lqyf;-><init>(Lwyf;Lkotlin/coroutines/Continuation;)V
+    sget-object v0, Lccg;->a:Lccg;
 
-    return-object p1
-.end method
+    return-object v0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    nop
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lqyf;->X:Lwyf;
-
-    invoke-virtual {p0}, Lwyf;->c()Lx0g;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lx0g;->e:Ld4g;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Ld4g;->stop()V
-
-    :cond_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

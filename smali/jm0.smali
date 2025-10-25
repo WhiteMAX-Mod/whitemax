@@ -1,219 +1,167 @@
 .class public final Ljm0;
-.super Ljava/lang/Object;
+.super Lhf4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public s0:J
 
-.field public final b:J
+.field public t0:I
 
-.field public final c:J
-
-.field public d:J
-
-.field public e:J
-
-.field public f:J
-
-.field public g:J
-
-.field public h:J
+.field public u0:I
 
 
-# direct methods
-.method public constructor <init>(JJJJJJI)V
-    .locals 12
-
-    move-wide v0, p3
-
-    move-wide/from16 v4, p5
-
-    move-wide/from16 v6, p7
-
-    move-wide/from16 v8, p9
-
-    move-wide/from16 v10, p11
-
-    packed-switch p13, :pswitch_data_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Ljm0;->a:J
-
-    iput-wide v0, p0, Ljm0;->b:J
-
-    const-wide/16 v2, 0x0
-
-    iput-wide v2, p0, Ljm0;->d:J
-
-    iput-wide v4, p0, Ljm0;->e:J
-
-    iput-wide v6, p0, Ljm0;->f:J
-
-    iput-wide v8, p0, Ljm0;->g:J
-
-    iput-wide v10, p0, Ljm0;->c:J
-
-    invoke-static/range {v0 .. v11}, Ljm0;->a(JJJJJJ)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Ljm0;->h:J
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Ljm0;->a:J
-
-    iput-wide v0, p0, Ljm0;->b:J
-
-    const-wide/16 v2, 0x0
-
-    iput-wide v2, p0, Ljm0;->d:J
-
-    iput-wide v4, p0, Ljm0;->e:J
-
-    iput-wide v6, p0, Ljm0;->f:J
-
-    iput-wide v8, p0, Ljm0;->g:J
-
-    iput-wide v10, p0, Ljm0;->c:J
-
-    invoke-static/range {v0 .. v11}, Ljm0;->b(JJJJJJ)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Ljm0;->h:J
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static a(JJJJJJ)J
+# virtual methods
+.method public final A(Lhf4;)Z
     .locals 4
 
-    const-wide/16 v0, 0x1
+    const/high16 v0, 0x40000000    # 2.0f
 
-    add-long v2, p6, v0
+    invoke-virtual {p1, v0}, Lvy;->i(I)Z
 
-    cmp-long v2, v2, p8
+    move-result v0
 
-    if-gez v2, :cond_1
+    const/4 v1, 0x1
 
-    add-long v2, p2, v0
+    xor-int/2addr v0, v1
 
-    cmp-long v2, v2, p4
+    invoke-static {v0}, Lsgi;->d(Z)V
 
-    if-ltz v2, :cond_0
+    const/high16 v0, 0x10000000
+
+    invoke-virtual {p1, v0}, Lvy;->i(I)Z
+
+    move-result v0
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lsgi;->d(Z)V
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p1, v0}, Lvy;->i(I)Z
+
+    move-result v0
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lsgi;->d(Z)V
+
+    invoke-virtual {p0}, Ljm0;->B()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget v0, p0, Ljm0;->t0:I
+
+    iget v2, p0, Ljm0;->u0:I
+
+    if-lt v0, v2, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    sub-long/2addr p0, p2
-
-    sub-long v2, p8, p6
-
-    long-to-float v2, v2
-
-    sub-long/2addr p4, p2
-
-    long-to-float p2, p4
-
-    div-float/2addr v2, p2
-
-    long-to-float p0, p0
-
-    mul-float/2addr p0, v2
-
-    float-to-long p0, p0
-
-    const-wide/16 p2, 0x14
-
-    div-long p2, p0, p2
-
-    add-long/2addr p0, p6
-
-    sub-long/2addr p0, p10
-
-    sub-long p4, p0, p2
-
-    sub-long/2addr p8, v0
-
-    invoke-static/range {p4 .. p9}, Llrf;->j(JJJ)J
-
-    move-result-wide p0
-
-    return-wide p0
-
     :cond_1
+    iget-object v0, p1, Lhf4;->X:Ljava/nio/ByteBuffer;
+
+    if-eqz v0, :cond_2
+
+    iget-object v2, p0, Lhf4;->X:Ljava/nio/ByteBuffer;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    const v2, 0x2ee000
+
+    if-le v0, v2, :cond_2
+
     :goto_0
-    return-wide p6
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    iget v0, p0, Ljm0;->t0:I
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Ljm0;->t0:I
+
+    if-nez v0, :cond_3
+
+    iget-wide v2, p1, Lhf4;->Z:J
+
+    iput-wide v2, p0, Lhf4;->Z:J
+
+    invoke-virtual {p1, v1}, Lvy;->i(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iput v1, p0, Lvy;->b:I
+
+    :cond_3
+    iget-object v0, p1, Lhf4;->X:Ljava/nio/ByteBuffer;
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v2
+
+    invoke-virtual {p0, v2}, Lhf4;->y(I)V
+
+    iget-object v2, p0, Lhf4;->X:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    :cond_4
+    iget-wide v2, p1, Lhf4;->Z:J
+
+    iput-wide v2, p0, Ljm0;->s0:J
+
+    return v1
 .end method
 
-.method public static b(JJJJJJ)J
-    .locals 4
+.method public final B()Z
+    .locals 1
 
-    const-wide/16 v0, 0x1
+    iget v0, p0, Ljm0;->t0:I
 
-    add-long v2, p6, v0
+    if-lez v0, :cond_0
 
-    cmp-long v2, v2, p8
+    const/4 v0, 0x1
 
-    if-gez v2, :cond_1
-
-    add-long v2, p2, v0
-
-    cmp-long v2, v2, p4
-
-    if-ltz v2, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    sub-long/2addr p0, p2
+    const/4 v0, 0x0
 
-    sub-long v2, p8, p6
+    return v0
+.end method
 
-    long-to-float v2, v2
+.method public final w()V
+    .locals 1
 
-    sub-long/2addr p4, p2
+    invoke-super {p0}, Lhf4;->w()V
 
-    long-to-float p2, p4
+    const/4 v0, 0x0
 
-    div-float/2addr v2, p2
+    iput v0, p0, Ljm0;->t0:I
 
-    long-to-float p0, p0
-
-    mul-float/2addr p0, v2
-
-    float-to-long p0, p0
-
-    const-wide/16 p2, 0x14
-
-    div-long p2, p0, p2
-
-    add-long/2addr p0, p6
-
-    sub-long/2addr p0, p10
-
-    sub-long p4, p0, p2
-
-    sub-long/2addr p8, v0
-
-    invoke-static/range {p4 .. p9}, Lnrf;->j(JJJ)J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_1
-    :goto_0
-    return-wide p6
+    return-void
 .end method

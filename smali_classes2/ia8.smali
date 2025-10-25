@@ -3,163 +3,264 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# instance fields
+.field public final a:Liu7;
 
-    const/4 v0, 0x1
+.field public final b:Liu7;
 
-    if-ne p0, p1, :cond_0
+.field public final c:Liu7;
 
-    return v0
+.field public final d:Liu7;
 
-    :cond_0
-    instance-of p0, p1, Lia8;
+.field public final e:Liu7;
 
-    if-nez p0, :cond_1
+.field public final f:Liu7;
 
-    goto :goto_0
 
-    :cond_1
-    check-cast p1, Lia8;
+# direct methods
+.method public constructor <init>(Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
+    .locals 0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/high16 p0, 0x405e000000000000L    # 120.0
+    iput-object p1, p0, Lia8;->a:Liu7;
 
-    invoke-static {p0, p1, p0, p1}, Ljava/lang/Double;->compare(DD)I
+    iput-object p2, p0, Lia8;->b:Liu7;
 
-    move-result p0
+    iput-object p3, p0, Lia8;->c:Liu7;
 
-    if-eqz p0, :cond_2
+    iput-object p4, p0, Lia8;->d:Liu7;
 
-    goto :goto_0
+    iput-object p5, p0, Lia8;->e:Liu7;
 
-    :cond_2
-    const-wide p0, 0x3fa47ae147ae147bL    # 0.04
+    iput-object p6, p0, Lia8;->f:Liu7;
 
-    invoke-static {p0, p1, p0, p1}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {p0, p1, p0, p1}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p0
-
-    if-eqz p0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const-wide p0, 0x408f400000000000L    # 1000.0
-
-    invoke-static {p0, p1, p0, p1}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p0
-
-    if-eqz p0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    const-wide p0, 0x4085e00000000000L    # 700.0
-
-    invoke-static {p0, p1, p0, p1}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p0
-
-    if-eqz p0, :cond_6
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_6
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
 
-    const-wide/high16 v0, 0x405e000000000000L    # 120.0
+# virtual methods
+.method public final a(Lzlf;)V
+    .locals 4
 
-    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
+    const-string v0, "onLoginFail"
 
-    move-result p0
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    const/16 v0, 0x1f
+    move-result-object v1
 
-    mul-int/2addr p0, v0
+    const-string v2, "ia8"
 
-    const-wide v1, 0x3fa47ae147ae147bL    # 0.04
+    invoke-static {v2, v0, v1}, Ltei;->g(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {p0, v1, v2}, Lqe5;->a(ID)I
+    const-string v0, "login.blocked"
 
-    move-result p0
+    iget-object v1, p1, Lzlf;->b:Ljava/lang/String;
 
-    invoke-static {p0, v1, v2}, Lqe5;->a(ID)I
-
-    move-result p0
-
-    const-wide v1, 0x408f400000000000L    # 1000.0
-
-    invoke-static {p0, v1, v2}, Lqe5;->a(ID)I
-
-    move-result p0
-
-    const-wide v1, 0x4085e00000000000L    # 700.0
-
-    invoke-static {p0, v1, v2}, Lqe5;->a(ID)I
-
-    move-result p0
-
-    const/16 v1, 0x1f4
-
-    invoke-static {v1, p0}, Lr94;->a(II)I
-
-    move-result p0
-
-    const/16 v1, 0x12c
-
-    invoke-static {v1, p0}, Lr94;->a(II)I
-
-    move-result p0
-
-    const/4 v1, 0x1
-
-    invoke-static {p0, v0, v1}, Lsq3;->e(IIZ)I
-
-    move-result p0
-
-    const/4 v2, 0x0
-
-    invoke-static {p0, v0, v2}, Lsq3;->e(IIZ)I
-
-    move-result p0
-
-    invoke-static {p0, v0, v2}, Lsq3;->e(IIZ)I
-
-    move-result p0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    add-int/2addr v0, p0
+    if-nez v0, :cond_5
 
-    return v0
-.end method
+    const-string v0, "login.flood"
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    iget-object v1, p1, Lzlf;->b:Ljava/lang/String;
 
-    const-string p0, "BadNetworkCondition(rttThreshold=120.0, lostPacketsLimitForRttBelowLowBound=0.04, lostPacketsLimitForRttAboveLowBound=0.04, rttEnterLevel2Mode=1000.0, rttLeaveLevel2Mode=700.0, videoBitrateLevel1K=500, videoBitrateLevel2K=300, preferHardwareVPXEncoder=true, limitFrameSize=false, limitBitrate=false, setTemporalLayers=true)"
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    return-object p0
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    const-string v0, "login.token"
+
+    iget-object v1, p1, Lzlf;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto/16 :goto_0
+
+    :cond_0
+    const-string v0, "session.state"
+
+    iget-object v1, p1, Lzlf;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p1, Lzlf;->c:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "session state error: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " do nothing"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_1
+    instance-of v0, p1, Lqlf;
+
+    if-nez v0, :cond_3
+
+    const-string v0, "proto.state"
+
+    iget-object v1, p1, Lzlf;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lia8;->c:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsf5;
+
+    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
+
+    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lzlf;)V
+
+    check-cast v0, Lxua;
+
+    invoke-virtual {v0, v1}, Lxua;->c(Ljava/lang/Throwable;)V
+
+    :cond_2
+    sget-object p1, Lra8;->j:Lra8;
+
+    sget-object v0, Lqa8;->Z:Lqa8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lra8;->k(Lqa8;)V
+
+    iget-object p1, p0, Lia8;->f:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcnf;
+
+    check-cast p1, Lenf;
+
+    invoke-virtual {p1}, Lenf;->h()V
+
+    return-void
+
+    :cond_3
+    iget-object p1, p0, Lia8;->b:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljoa;
+
+    invoke-virtual {p1}, Ljoa;->d()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lia8;->d:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, La8e;
+
+    check-cast p1, Lc8e;
+
+    iget p1, p1, Lc8e;->h:I
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_4
+
+    iget-object p1, p0, Lia8;->e:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lna8;
+
+    invoke-virtual {p1}, Lna8;->d()V
+
+    :cond_4
+    return-void
+
+    :cond_5
+    :goto_0
+    sget-object v0, Lra8;->j:Lra8;
+
+    sget-object v1, Lqa8;->Y:Lqa8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1}, Lra8;->k(Lqa8;)V
+
+    iget-object v0, p0, Lia8;->a:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpxb;
+
+    check-cast v0, Lrxb;
+
+    iget-object v0, v0, Lrxb;->a:Ld78;
+
+    iget-object p1, p1, Lzlf;->b:Ljava/lang/String;
+
+    iget-object v1, v0, Ld78;->r0:Lq4e;
+
+    sget-object v2, Ld78;->P0:[Ltr7;
+
+    const/4 v3, 0x6
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lq4e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lia8;->b:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljoa;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Ljoa;->g(Z)V
+
+    return-void
 .end method

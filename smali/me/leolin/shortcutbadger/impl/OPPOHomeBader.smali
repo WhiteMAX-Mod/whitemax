@@ -38,7 +38,7 @@
 .end method
 
 .method private executeBadgeByBroadcast(Landroid/content/Context;Landroid/content/ComponentName;I)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lme/leolin/shortcutbadger/ShortcutBadgeException;
@@ -50,35 +50,35 @@
     const/4 p3, -0x1
 
     :cond_0
-    new-instance p0, Landroid/content/Intent;
+    new-instance v0, Landroid/content/Intent;
 
-    const-string v0, "com.oppo.unsettledevent"
+    const-string v1, "com.oppo.unsettledevent"
 
-    invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "pakeageName"
+    const-string v1, "pakeageName"
 
     invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-virtual {p0, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p2, "number"
 
-    invoke-virtual {p0, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v0, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string p2, "upgradeNumber"
 
-    invoke-virtual {p0, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v0, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    invoke-static {p1, p0}, Lme/leolin/shortcutbadger/util/BroadcastHelper;->sendIntentExplicitly(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p1, v0}, Lme/leolin/shortcutbadger/util/BroadcastHelper;->sendIntentExplicitly(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 .end method
 
 .method private executeBadgeByContentProvider(Landroid/content/Context;I)V
-    .locals 2
+    .locals 3
     .annotation build Landroid/annotation/TargetApi;
         value = 0xb
     .end annotation
@@ -90,13 +90,13 @@
     .end annotation
 
     :try_start_0
-    new-instance p0, Landroid/os/Bundle;
+    new-instance v0, Landroid/os/Bundle;
 
-    invoke-direct {p0}, Landroid/os/Bundle;-><init>()V
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    const-string v0, "app_badge_count"
+    const-string v1, "app_badge_count"
 
-    invoke-virtual {p0, v0, p2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, p2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -108,24 +108,24 @@
 
     move-result-object p2
 
-    const-string v0, "setAppBadgeCount"
+    const-string v1, "setAppBadgeCount"
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p2, v0, v1, p0}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    invoke-virtual {p1, p2, v1, v2, v0}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
     :catchall_0
-    new-instance p0, Lme/leolin/shortcutbadger/ShortcutBadgeException;
+    new-instance p1, Lme/leolin/shortcutbadger/ShortcutBadgeException;
 
-    const-string p1, "Unable to execute Badge By Content Provider"
+    const-string p2, "Unable to execute Badge By Content Provider"
 
-    invoke-direct {p0, p1}, Lme/leolin/shortcutbadger/ShortcutBadgeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lme/leolin/shortcutbadger/ShortcutBadgeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 
@@ -153,7 +153,7 @@
 .end method
 
 .method public getSupportLaunchers()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -163,11 +163,11 @@
         }
     .end annotation
 
-    const-string p0, "com.oppo.launcher"
+    const-string v0, "com.oppo.launcher"
 
-    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

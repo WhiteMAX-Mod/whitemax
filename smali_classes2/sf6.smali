@@ -3,56 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljgd;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lqg6;
+.field public final synthetic a:I
+
+.field public final synthetic b:Luf6;
+
+.field public final synthetic c:Lig6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqg6;)V
+.method public synthetic constructor <init>(Luf6;Lig6;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lsf6;->a:I
 
-    iput-object p1, p0, Lsf6;->a:Lqg6;
+    iput-object p1, p0, Lsf6;->b:Luf6;
+
+    iput-object p2, p0, Lsf6;->c:Lig6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k0(Logd;)V
-    .locals 3
+.method public final run()V
+    .locals 2
 
-    iget-object p0, p0, Lsf6;->a:Lqg6;
+    iget v0, p0, Lsf6;->a:I
 
-    invoke-virtual {p0}, Lqg6;->s()Lxwe;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lsf6;->b:Luf6;
 
-    check-cast v0, Laga;
+    iget-object v1, p0, Lsf6;->c:Lig6;
 
-    invoke-virtual {v0}, Laga;->f()Ls04;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqg6;->o:Lsj;
-
-    invoke-virtual {v0, v1}, Lf0;->plus(Lq04;)Lq04;
-
-    move-result-object v0
-
-    new-instance v1, Lig6;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Lig6;-><init>(Lqg6;Logd;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {p0, v0, v1, p1}, Lx7g;->n(Lx7g;Lq04;Lpc6;I)Lcae;
+    iput-object v1, v0, Luf6;->q0:Lig6;
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lsf6;->b:Luf6;
+
+    iget-object v1, p0, Lsf6;->c:Lig6;
+
+    iput-object v1, v0, Luf6;->Z:Lig6;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

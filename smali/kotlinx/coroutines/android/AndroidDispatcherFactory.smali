@@ -39,49 +39,49 @@
 
 
 # virtual methods
-.method public final createDispatcher(Ljava/util/List;)Lt38;
-    .locals 1
+.method public final createDispatcher(Ljava/util/List;)Lce8;
+    .locals 2
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object p0
+    move-result-object p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    new-instance p1, Luo6;
+    new-instance v0, Lxv6;
 
-    invoke-static {p0}, Lvo6;->a(Landroid/os/Looper;)Landroid/os/Handler;
+    invoke-static {p1}, Lyv6;->a(Landroid/os/Looper;)Landroid/os/Handler;
 
-    move-result-object p0
+    move-result-object p1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {p1, p0, v0}, Luo6;-><init>(Landroid/os/Handler;Z)V
+    invoke-direct {v0, p1, v1}, Lxv6;-><init>(Landroid/os/Handler;Z)V
 
-    return-object p1
+    return-object v0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "The main looper is not available"
+    const-string v0, "The main looper is not available"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public final getLoadPriority()I
-    .locals 0
+    .locals 1
 
-    const p0, 0x3fffffff    # 1.9999999f
+    const v0, 0x3fffffff    # 1.9999999f
 
-    return p0
+    return v0
 .end method
 
 .method public final hintOnError()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "For tests Dispatchers.setMain from kotlinx-coroutines-test module can be used"
+    const-string v0, "For tests Dispatchers.setMain from kotlinx-coroutines-test module can be used"
 
-    return-object p0
+    return-object v0
 .end method

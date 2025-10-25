@@ -1,505 +1,404 @@
-.class public abstract Lnad;
-.super Li3;
+.class public final Lnad;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final h:Lpad;
+.field public final a:Lcqe;
+
+.field public final b:Lq4e;
+
+.field public final c:Ltna;
+
+.field public final d:Lla;
+
+.field public e:Z
+
+.field public f:I
+
+.field public final g:Lpg6;
+
+.field public final h:Lhsb;
+
+.field public final i:Lmad;
+
+.field public j:Landroid/util/Size;
+
+.field public k:Lxh4;
+
+.field public l:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lzm5;Lpad;)V
-    .locals 1
+.method public constructor <init>(Lcqe;Lq4e;Landroid/os/Looper;Ls79;Ltna;Lla;)V
+    .locals 5
 
-    const-string v0, "features_prefs"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0, p2}, Li3;-><init>(Landroid/content/Context;Ljava/lang/String;Lzm5;)V
+    iput-object p1, p0, Lnad;->a:Lcqe;
 
-    iput-object p3, p0, Lnad;->h:Lpad;
+    iput-object p2, p0, Lnad;->b:Lq4e;
+
+    iput-object p5, p0, Lnad;->c:Ltna;
+
+    iput-object p6, p0, Lnad;->d:Lla;
+
+    new-instance p1, Lpg6;
+
+    new-instance p2, Llad;
+
+    const/4 p5, 0x1
+
+    invoke-direct {p2, p0, p5}, Llad;-><init>(Lnad;I)V
+
+    const/16 p5, 0xb
+
+    const/4 p6, 0x0
+
+    invoke-direct {p1, p6, p5}, Lpg6;-><init>(CI)V
+
+    const/4 p5, 0x1
+
+    new-array p6, p5, [I
+
+    const/4 v0, 0x0
+
+    invoke-static {p5, p6, v0}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
+
+    const-string p5, "glGenTextures"
+
+    new-array v1, v0, [I
+
+    invoke-static {p5, v1}, Lot7;->b(Ljava/lang/String;[I)V
+
+    aget p5, p6, v0
+
+    const p6, 0x8d65
+
+    invoke-static {p6, p5}, Landroid/opengl/GLES20;->glBindTexture(II)V
+
+    new-array v1, v0, [I
+
+    const-string v2, "glBindTexture"
+
+    invoke-static {v2, v1}, Lot7;->b(Ljava/lang/String;[I)V
+
+    const/16 v1, 0x2800
+
+    const/16 v3, 0x2601
+
+    invoke-static {p6, v1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    new-array v1, v0, [I
+
+    const-string v4, "glTexParameteri"
+
+    invoke-static {v4, v1}, Lot7;->b(Ljava/lang/String;[I)V
+
+    const/16 v1, 0x2801
+
+    invoke-static {p6, v1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    new-array v1, v0, [I
+
+    invoke-static {v4, v1}, Lot7;->b(Ljava/lang/String;[I)V
+
+    const/16 v1, 0x2802
+
+    const v3, 0x812f
+
+    invoke-static {p6, v1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    new-array v1, v0, [I
+
+    invoke-static {v4, v1}, Lot7;->b(Ljava/lang/String;[I)V
+
+    const/16 v1, 0x2803
+
+    invoke-static {p6, v1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    new-array v1, v0, [I
+
+    invoke-static {v4, v1}, Lot7;->b(Ljava/lang/String;[I)V
+
+    invoke-static {p6, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
+
+    new-array p6, v0, [I
+
+    invoke-static {v2, p6}, Lot7;->b(Ljava/lang/String;[I)V
+
+    iput p5, p1, Lpg6;->b:I
+
+    new-instance p5, Landroid/graphics/SurfaceTexture;
+
+    iget p6, p1, Lpg6;->b:I
+
+    invoke-direct {p5, p6}, Landroid/graphics/SurfaceTexture;-><init>(I)V
+
+    new-instance p6, Lik6;
+
+    invoke-direct {p6, v0, p2}, Lik6;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p5, p6}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
+
+    iput-object p5, p1, Lpg6;->c:Ljava/lang/Object;
+
+    new-instance p2, Landroid/view/Surface;
+
+    iget-object p5, p1, Lpg6;->c:Ljava/lang/Object;
+
+    check-cast p5, Landroid/graphics/SurfaceTexture;
+
+    invoke-direct {p2, p5}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+
+    invoke-virtual {p4, p2}, Ls79;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object p2, p1, Lpg6;->o:Ljava/lang/Object;
+
+    iput-object p1, p0, Lnad;->g:Lpg6;
+
+    new-instance p1, Lhsb;
+
+    invoke-direct {p1}, Lhsb;-><init>()V
+
+    iput-object p1, p0, Lnad;->h:Lhsb;
+
+    new-instance p1, Lmad;
+
+    invoke-direct {p1, p0, p3}, Lmad;-><init>(Lnad;Landroid/os/Looper;)V
+
+    iput-object p1, p0, Lnad;->i:Lmad;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final l(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+.method public final a()V
     .locals 4
 
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object v0, p0, Lnad;->h:Lhsb;
 
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    iget-object v0, p0, Lnad;->g:Lpg6;
 
-    move-result-object v1
+    iget-object v1, v0, Lpg6;->o:Ljava/lang/Object;
 
-    iget-object v2, p0, Li3;->g:Lfl7;
-
-    invoke-virtual {v2, v1}, Lfl7;->contains(Ljava/lang/String;)Z
-
-    move-result v1
+    check-cast v1, Landroid/view/Surface;
 
     if-eqz v1, :cond_0
 
-    goto :goto_0
+    invoke-virtual {v1}, Landroid/view/Surface;->release()V
 
     :cond_0
-    iget-object p0, p0, Lnad;->h:Lpad;
+    const/4 v1, 0x0
 
-    :goto_0
-    const-class v1, Ljava/lang/Boolean;
+    iput-object v1, v0, Lpg6;->o:Ljava/lang/Object;
 
-    invoke-static {v1}, Ljpc;->a(Ljava/lang/Class;)Ly33;
+    iget-object v2, v0, Lpg6;->c:Ljava/lang/Object;
 
-    move-result-object v2
-
-    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    invoke-static {v3}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ly33;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Li3;->d(Ljava/lang/String;Z)Z
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    invoke-static {p2}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object p2
-
-    invoke-virtual {v2, p2}, Ly33;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p0, p0, Li3;->g:Lfl7;
-
-    invoke-virtual {p0, p1, v0, v1}, Lfl7;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Boolean;
-
-    goto :goto_1
-
-    :cond_2
-    const-class p2, Ljava/lang/String;
-
-    invoke-static {p2}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object p2
-
-    invoke-virtual {v2, p2}, Ly33;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    check-cast v0, Ljava/lang/String;
-
-    iget-object p0, p0, Li3;->g:Lfl7;
-
-    invoke-virtual {p0, p1, v0}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    check-cast p0, Ljava/lang/Boolean;
-
-    :goto_1
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_3
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "null cannot be cast to non-null type kotlin.Boolean"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {v1}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v0, "Unsupported type: "
-
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final m(Lru/ok/tamtam/android/prefs/PmsKey;J)J
-    .locals 4
-
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Li3;->g:Lfl7;
-
-    invoke-virtual {v2, v1}, Lfl7;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lnad;->h:Lpad;
-
-    :goto_0
-    const-class v1, Ljava/lang/Long;
-
-    invoke-static {v1}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object v2
-
-    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    invoke-static {v3}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ly33;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    invoke-virtual {p0, p1, p2}, Li3;->d(Ljava/lang/String;Z)Z
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Long;
-
-    goto :goto_1
-
-    :cond_1
-    sget-object v3, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    invoke-static {v3}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ly33;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Li3;->g:Lfl7;
-
-    invoke-virtual {p0, p1, p2, p3}, Lfl7;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    goto :goto_1
-
-    :cond_2
-    const-class p2, Ljava/lang/String;
-
-    invoke-static {p2}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object p2
-
-    invoke-virtual {v2, p2}, Ly33;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    check-cast v0, Ljava/lang/String;
-
-    iget-object p0, p0, Li3;->g:Lfl7;
-
-    invoke-virtual {p0, p1, v0}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    check-cast p0, Ljava/lang/Long;
-
-    :goto_1
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_3
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "null cannot be cast to non-null type kotlin.Long"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {v1}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string p3, "Unsupported type: "
-
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final n(Lru/ok/tamtam/android/prefs/PmsKey;Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Li3;->g:Lfl7;
-
-    invoke-virtual {v1, v0}, Lfl7;->contains(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lnad;->h:Lpad;
-
-    :goto_0
-    const-class v0, Ljava/lang/String;
-
-    invoke-static {v0}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object v1
-
-    sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    invoke-static {v2}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ly33;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
+    check-cast v2, Landroid/graphics/SurfaceTexture;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    invoke-virtual {p0, p1, p2}, Li3;->d(Ljava/lang/String;Z)Z
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/String;
-
-    return-object p0
+    invoke-virtual {v2, v1}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
     :cond_1
-    sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+    iget-object v2, v0, Lpg6;->c:Ljava/lang/Object;
 
-    invoke-static {v2}, Ljpc;->a(Ljava/lang/Class;)Ly33;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ly33;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
+    check-cast v2, Landroid/graphics/SurfaceTexture;
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    check-cast p2, Ljava/lang/Long;
-
-    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p0, p0, Li3;->g:Lfl7;
-
-    invoke-virtual {p0, p1, v0, v1}, Lfl7;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/String;
-
-    return-object p0
+    invoke-virtual {v2}, Landroid/graphics/SurfaceTexture;->release()V
 
     :cond_2
-    invoke-static {v0}, Ljpc;->a(Ljava/lang/Class;)Ly33;
+    iput-object v1, v0, Lpg6;->c:Ljava/lang/Object;
 
-    move-result-object v2
+    iget v1, v0, Lpg6;->b:I
 
-    invoke-virtual {v1, v2}, Ly33;->equals(Ljava/lang/Object;)Z
+    filled-new-array {v1}, [I
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-static {v2, v1, v3}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
+
+    const-string v1, "glDeleteTextures"
+
+    new-array v2, v3, [I
+
+    invoke-static {v1, v2}, Lot7;->b(Ljava/lang/String;[I)V
+
+    const/4 v1, -0x1
+
+    iput v1, v0, Lpg6;->b:I
+
+    iget-object v0, p0, Lnad;->k:Lxh4;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Lxh4;->g()V
+
+    :cond_3
+    return-void
+.end method
+
+.method public final b()V
+    .locals 4
+
+    iget-object v0, p0, Lnad;->i:Lmad;
+
+    iget v1, v0, Lmad;->a:I
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object v0, p0, Lnad;->j:Landroid/util/Size;
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v1, p0, Lnad;->e:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
 
     move-result v1
 
+    if-lez v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Lnad;->k:Lxh4;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v1, Lxh4;->a:Ljava/lang/Object;
+
+    check-cast v1, Landroid/view/Surface;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroid/view/Surface;->isValid()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, p0, Lnad;->k:Lxh4;
+
     if-eqz v1, :cond_4
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    new-instance v2, Lgv1;
 
-    move-result-object p1
+    const/16 v3, 0xa
 
-    iget-object p0, p0, Li3;->g:Lfl7;
+    invoke-direct {v2, p0, v0, v1, v3}, Lgv1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-virtual {p0, p1, p2}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lxh4;->f(Lli6;)V
 
-    move-result-object p0
+    return-void
 
-    if-eqz p0, :cond_3
+    :cond_2
+    iget-object v0, p0, Lnad;->k:Lxh4;
 
-    return-object p0
+    if-eqz v0, :cond_3
+
+    iget-object v0, v0, Lxh4;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/Surface;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Landroid/view/Surface;->isValid()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_1
 
     :cond_3
-    new-instance p0, Ljava/lang/NullPointerException;
+    iget-object v0, p0, Lnad;->k:Lxh4;
 
-    const-string p1, "null cannot be cast to non-null type kotlin.String"
+    if-eqz v0, :cond_4
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    new-instance v1, Lanb;
 
-    throw p0
+    const/16 v2, 0x10
+
+    invoke-direct {v1, v2, v0}, Lanb;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Lxh4;->f(Lli6;)V
 
     :cond_4
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    :goto_1
+    return-void
+.end method
 
-    invoke-static {v0}, Ljpc;->a(Ljava/lang/Class;)Ly33;
+.method public final c(Landroid/view/Surface;)V
+    .locals 2
 
-    move-result-object p1
+    iget-object v0, p0, Lnad;->k:Lxh4;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    const-string v0, "Unsupported type: "
+    iget-object v0, v0, Lxh4;->a:Ljava/lang/Object;
 
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v0, Landroid/view/Surface;
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    const/4 v0, 0x0
 
-    move-result-object p1
+    :goto_0
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    throw p0
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lnad;->l:Z
+
+    :cond_1
+    new-instance v0, Ltna;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, p0, v1, p1}, Ltna;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lnad;->b:Lq4e;
+
+    invoke-virtual {p1, v0}, Lq4e;->x(Lji6;)V
+
+    iget-object p1, p0, Lnad;->k:Lxh4;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Lnad;->b()V
+
+    :cond_2
+    return-void
 .end method

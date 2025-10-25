@@ -1,185 +1,128 @@
-.class public final Ly3f;
-.super Landroid/graphics/drawable/DrawableWrapper;
+.class public final synthetic Ly3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lx3f;
-.implements Landroid/graphics/drawable/Animatable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;I)V
+    .locals 0
 
-    sget v0, Lpma;->S:I
+    iput p2, p0, Ly3f;->a:I
 
-    invoke-direct {p0, p1}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
+    iput-object p1, p0, Ly3f;->b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
 
-    iput v0, p0, Ly3f;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p2, :cond_0
-
-    sget-object p1, Lyu4;->t0:Lbx9;
-
-    invoke-virtual {p1, p2}, Lbx9;->k(Landroid/content/Context;)Lyu4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lyu4;->j()Lera;
-
-    move-result-object p1
-
-    invoke-interface {p1, v0}, Lera;->f(I)I
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final isRunning()Z
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    iget p1, p0, Ly3f;->a:I
 
-    move-result-object p0
+    iget-object v0, p0, Ly3f;->b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
 
-    instance-of v0, p0, Landroid/graphics/drawable/Animatable;
+    packed-switch p1, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    sget-object p1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->C0:[Ltr7;
 
-    check-cast p0, Landroid/graphics/drawable/Animatable;
+    iget-object p1, v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->u0:Liu7;
 
-    goto :goto_0
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    const/4 p0, 0x0
+    move-result-object p1
 
-    :goto_0
-    if-eqz p0, :cond_1
+    check-cast p1, Ls3f;
 
-    invoke-interface {p0}, Landroid/graphics/drawable/Animatable;->isRunning()Z
+    iget-object v0, p1, Ls3f;->A0:Ln0d;
 
-    move-result p0
+    iget-object v0, v0, Ln0d;->a:Lq0f;
 
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final onThemeChanged(Lera;)V
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-interface {v0}, Lq0f;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v0, v0, Lx3f;
+    check-cast v0, Lh4f;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    iget-object v1, p1, Ls3f;->E0:Lcye;
 
-    move-result-object p0
+    if-eqz v1, :cond_0
 
-    instance-of v0, p0, Lx3f;
+    invoke-virtual {v1}, Lo0;->isActive()Z
 
-    if-eqz v0, :cond_0
+    move-result v1
 
-    check-cast p0, Lx3f;
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    iget-object v1, p1, Ls3f;->c:Lulf;
 
-    :goto_0
-    if-eqz p0, :cond_2
+    check-cast v1, Lqta;
 
-    invoke-interface {p0, p1}, Lx3f;->onThemeChanged(Lera;)V
+    invoke-virtual {v1}, Lqta;->b()Lk54;
 
-    return-void
+    move-result-object v1
 
-    :cond_1
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    new-instance v2, Lr3f;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, p1, v3}, Lr3f;-><init>(Lh4f;Ls3f;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v0, 0x2
+
+    invoke-static {p1, v1, v2, v0}, Lxzg;->m(Lxzg;Li54;Lzi6;I)Lcye;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    iput-object v0, p1, Ls3f;->E0:Lcye;
 
-    iget p0, p0, Ly3f;->a:I
+    :cond_1
+    :goto_0
+    return-void
 
-    invoke-interface {p1, p0}, Lera;->f(I)I
+    :pswitch_0
+    sget-object p1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->C0:[Ltr7;
 
-    move-result p0
+    invoke-virtual {v0}, Ll24;->getParentController()Ll24;
 
-    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Ll24;->getRouter()Lqid;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lqid;->C()Z
 
     :cond_2
     return-void
-.end method
 
-.method public final start()V
-    .locals 1
+    nop
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    instance-of v0, p0, Landroid/graphics/drawable/Animatable;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroid/graphics/drawable/Animatable;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Landroid/graphics/drawable/Animatable;->start()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final stop()V
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    instance-of v0, p0, Landroid/graphics/drawable/Animatable;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroid/graphics/drawable/Animatable;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Landroid/graphics/drawable/Animatable;->stop()V
-
-    :cond_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

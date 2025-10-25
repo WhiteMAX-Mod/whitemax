@@ -290,11 +290,11 @@
 
 # virtual methods
 .method public getNumber()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/VideoCodecStatus;->number:I
+    iget v0, p0, Lorg/webrtc/VideoCodecStatus;->number:I
 
-    return p0
+    return v0
 .end method

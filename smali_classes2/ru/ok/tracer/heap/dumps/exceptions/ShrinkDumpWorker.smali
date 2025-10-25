@@ -40,16 +40,16 @@
 
 
 # virtual methods
-.method public final a()Lkt7;
+.method public final a()Lp28;
     .locals 10
 
-    invoke-virtual {p0}, Llt7;->getInputData()Lp64;
+    invoke-virtual {p0}, Lq28;->getInputData()Lnb4;
 
     move-result-object v0
 
     const-string v1, "param_dump_path"
 
-    invoke-virtual {v0, v1}, Lp64;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lnb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -64,13 +64,13 @@
     goto/16 :goto_2
 
     :cond_0
-    invoke-virtual {p0}, Llt7;->getInputData()Lp64;
+    invoke-virtual {p0}, Lq28;->getInputData()Lnb4;
 
     move-result-object v1
 
     const-string v2, "param_tag"
 
-    invoke-virtual {v1, v2}, Lp64;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lnb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -90,16 +90,16 @@
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    invoke-static {}, Lkt7;->b()Ljt7;
+    invoke-static {}, Lp28;->b()Lo28;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_1
-    sget-object v4, Lrde;->b:Luaf;
+    sget-object v4, Lawc;->a:Lnw4;
 
-    invoke-static {v4}, Lh2a;->k(Luaf;)Z
+    invoke-static {v4}, Lj9a;->i(Lnw4;)Z
 
     move-result v0
 
@@ -107,19 +107,19 @@
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    invoke-static {}, Lkt7;->b()Ljt7;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    :try_start_0
-    invoke-virtual {p0}, Llt7;->getApplicationContext()Landroid/content/Context;
+    invoke-static {}, Lp28;->b()Lo28;
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Lh2a;->i(Landroid/content/Context;Luaf;)Ljava/io/File;
+    return-object v0
+
+    :cond_2
+    :try_start_0
+    invoke-virtual {p0}, Lq28;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0, v4}, Lp9a;->k(Landroid/content/Context;Lnw4;)Ljava/io/File;
 
     move-result-object v5
     :try_end_0
@@ -134,7 +134,7 @@
 
     invoke-direct {v0, v7}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
-    sget v7, Lpv6;->v0:I
+    sget v7, Ll37;->u0:I
 
     new-instance v7, Ljava/io/DataInputStream;
 
@@ -144,9 +144,9 @@
 
     invoke-direct {v7, v8}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    new-instance v8, Lpv6;
+    new-instance v8, Ll37;
 
-    invoke-direct {v8, v7}, Lpv6;-><init>(Ljava/io/DataInputStream;)V
+    invoke-direct {v8, v7}, Ll37;-><init>(Ljava/io/DataInputStream;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -162,7 +162,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     :try_start_3
-    invoke-static {v8, v7}, Lmq0;->n(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    invoke-static {v8, v7}, Lyli;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
@@ -172,17 +172,19 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     :try_start_5
-    invoke-virtual {v8}, Lpv6;->close()V
+    invoke-virtual {v8}, Ll37;->close()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    invoke-virtual {p0}, Llt7;->getApplicationContext()Landroid/content/Context;
+    move-wide v0, v2
 
-    move-result-object p0
+    invoke-virtual {p0}, Lq28;->getApplicationContext()Landroid/content/Context;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v3
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
 
@@ -190,37 +192,33 @@
 
     const/16 v9, 0xc8
 
-    move-object v3, p0
+    invoke-static/range {v3 .. v9}, Lr55;->p(Landroid/content/Context;Lnw4;Ljava/io/File;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;I)V
 
-    invoke-static/range {v3 .. v9}, Lss3;->k(Landroid/content/Context;Luaf;Ljava/io/File;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;I)V
+    invoke-static {}, Lp28;->b()Lo28;
 
-    invoke-static {}, Lkt7;->b()Ljt7;
+    move-result-object v0
 
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 
     :catchall_0
     move-exception v0
-
-    move-object p0, v0
 
     goto :goto_1
 
     :catchall_1
     move-exception v0
 
-    move-object p0, v0
+    move-object v2, v0
 
     goto :goto_0
 
     :catchall_2
     move-exception v0
 
-    move-object p0, v0
+    move-object v2, v0
 
     :try_start_6
-    throw p0
+    throw v2
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
@@ -228,7 +226,7 @@
     move-exception v0
 
     :try_start_7
-    invoke-static {v7, p0}, Lmu0;->e(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v7, v2}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v0
     :try_end_7
@@ -236,7 +234,7 @@
 
     :goto_0
     :try_start_8
-    throw p0
+    throw v2
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_4
 
@@ -244,7 +242,7 @@
     move-exception v0
 
     :try_start_9
-    invoke-static {v8, p0}, Lmu0;->e(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v8, v2}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v0
     :try_end_9
@@ -253,20 +251,20 @@
     :goto_1
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    throw p0
+    throw v0
 
     :catch_0
-    invoke-static {}, Lkt7;->a()Lht7;
+    invoke-static {}, Lp28;->a()Lm28;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_3
     :goto_2
-    invoke-static {}, Lkt7;->a()Lht7;
+    invoke-static {}, Lp28;->a()Lm28;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

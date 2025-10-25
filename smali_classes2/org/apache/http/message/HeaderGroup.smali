@@ -35,32 +35,32 @@
 
 # virtual methods
 .method public addHeader(Lorg/apache/http/Header;)V
-    .locals 0
+    .locals 1
 
     if-nez p1, :cond_0
 
     return-void
 
     :cond_0
-    iget-object p0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
+    iget-object v0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public clear()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
+    iget-object v0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->clear()V
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
     return-void
 .end method
 
 .method public clone()Ljava/lang/Object;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/CloneNotSupportedException;
@@ -75,9 +75,9 @@
 
     new-instance v1, Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
+    iget-object v2, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v1, v0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
@@ -118,9 +118,9 @@
 
     if-eqz v2, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
     add-int/lit8 v1, v1, 0x1
@@ -132,7 +132,7 @@
 .end method
 
 .method public copy()Lorg/apache/http/message/HeaderGroup;
-    .locals 2
+    .locals 3
 
     new-instance v0, Lorg/apache/http/message/HeaderGroup;
 
@@ -140,115 +140,115 @@
 
     iget-object v1, v0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    iget-object p0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
+    iget-object v2, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    invoke-interface {v1, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    invoke-interface {v1, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     return-object v0
 .end method
 
 .method public getAllHeaders()[Lorg/apache/http/Header;
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
+    iget-object v0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result v0
+    move-result v1
 
-    new-array v0, v0, [Lorg/apache/http/Header;
+    new-array v1, v1, [Lorg/apache/http/Header;
 
-    invoke-interface {p0, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, [Lorg/apache/http/Header;
+    check-cast v0, [Lorg/apache/http/Header;
 
-    check-cast p0, [Lorg/apache/http/Header;
+    check-cast v0, [Lorg/apache/http/Header;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getCondensedHeader(Ljava/lang/String;)Lorg/apache/http/Header;
-    .locals 4
+    .locals 5
 
     invoke-virtual {p0, p1}, Lorg/apache/http/message/HeaderGroup;->getHeaders(Ljava/lang/String;)[Lorg/apache/http/Header;
 
-    move-result-object p0
+    move-result-object v0
 
-    array-length v0, p0
+    array-length v1, v0
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    array-length v0, p0
+    array-length v1, v0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    if-ne v0, v2, :cond_1
+    if-ne v1, v3, :cond_1
 
-    aget-object p0, p0, v1
+    aget-object p1, v0, v2
 
-    return-object p0
+    return-object p1
 
     :cond_1
-    new-instance v0, Lorg/apache/http/util/CharArrayBuffer;
+    new-instance v1, Lorg/apache/http/util/CharArrayBuffer;
 
-    const/16 v3, 0x80
+    const/16 v4, 0x80
 
-    invoke-direct {v0, v3}, Lorg/apache/http/util/CharArrayBuffer;-><init>(I)V
+    invoke-direct {v1, v4}, Lorg/apache/http/util/CharArrayBuffer;-><init>(I)V
 
-    aget-object v1, p0, v1
+    aget-object v2, v0, v2
 
-    invoke-interface {v1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+    invoke-interface {v2}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
     :goto_0
-    array-length v1, p0
+    array-length v2, v0
 
-    if-ge v2, v1, :cond_2
+    if-ge v3, v2, :cond_2
 
-    const-string v1, ", "
+    const-string v2, ", "
 
-    invoke-virtual {v0, v1}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
-    aget-object v1, p0, v2
+    aget-object v2, v0, v3
 
-    invoke-interface {v1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+    invoke-interface {v2}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lorg/apache/http/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_2
-    new-instance p0, Lorg/apache/http/message/BasicHeader;
+    new-instance v0, Lorg/apache/http/message/BasicHeader;
 
-    sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {p1, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Lorg/apache/http/util/CharArrayBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/apache/http/util/CharArrayBuffer;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-direct {p0, p1, v0}, Lorg/apache/http/message/BasicHeader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lorg/apache/http/message/BasicHeader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
@@ -291,9 +291,9 @@
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getHeaders(Ljava/lang/String;)[Lorg/apache/http/Header;
@@ -342,19 +342,19 @@
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    move-result p0
+    move-result p1
 
-    new-array p0, p0, [Lorg/apache/http/Header;
+    new-array p1, p1, [Lorg/apache/http/Header;
 
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, [Lorg/apache/http/Header;
+    check-cast p1, [Lorg/apache/http/Header;
 
-    check-cast p0, [Lorg/apache/http/Header;
+    check-cast p1, [Lorg/apache/http/Header;
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getLastHeader(Ljava/lang/String;)Lorg/apache/http/Header;
@@ -397,50 +397,50 @@
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public iterator()Lorg/apache/http/HeaderIterator;
-    .locals 2
+    .locals 3
 
     .line 1
     new-instance v0, Lorg/apache/http/message/BasicListHeaderIterator;
 
-    iget-object p0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
+    iget-object v1, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {v0, p0, v1}, Lorg/apache/http/message/BasicListHeaderIterator;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lorg/apache/http/message/BasicListHeaderIterator;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
 .method public iterator(Ljava/lang/String;)Lorg/apache/http/HeaderIterator;
-    .locals 1
+    .locals 2
 
     .line 2
     new-instance v0, Lorg/apache/http/message/BasicListHeaderIterator;
 
-    iget-object p0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
+    iget-object v1, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    invoke-direct {v0, p0, p1}, Lorg/apache/http/message/BasicListHeaderIterator;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lorg/apache/http/message/BasicListHeaderIterator;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
 .method public removeHeader(Lorg/apache/http/Header;)V
-    .locals 0
+    .locals 1
 
     if-nez p1, :cond_0
 
     return-void
 
     :cond_0
-    iget-object p0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
+    iget-object v0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -518,9 +518,9 @@
 
     if-eqz v1, :cond_1
 
-    iget-object p0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
+    iget-object v1, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    invoke-interface {p0, v0, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
@@ -530,9 +530,9 @@
     goto :goto_0
 
     :cond_2
-    iget-object p0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
+    iget-object v0, p0, Lorg/apache/http/message/HeaderGroup;->headers:Ljava/util/List;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

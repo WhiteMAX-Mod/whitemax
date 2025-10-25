@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lorg/webrtc/EglRenderer$1;->this$0:Lorg/webrtc/EglRenderer;
 
@@ -46,20 +46,20 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object p0, p0, Lorg/webrtc/EglRenderer$1;->this$0:Lorg/webrtc/EglRenderer;
+    iget-object v1, p0, Lorg/webrtc/EglRenderer$1;->this$0:Lorg/webrtc/EglRenderer;
 
-    invoke-static {p0}, Lorg/webrtc/EglRenderer;->l(Lorg/webrtc/EglRenderer;)V
+    invoke-static {v1}, Lorg/webrtc/EglRenderer;->l(Lorg/webrtc/EglRenderer;)V
 
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method

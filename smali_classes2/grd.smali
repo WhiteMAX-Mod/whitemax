@@ -1,105 +1,94 @@
 .class public final Lgrd;
-.super Lx2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly68;
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
+
+# instance fields
+.field public X:Luf6;
+
+.field public volatile Y:Lig6;
+
+.field public volatile Z:Z
+
+.field public final a:Lfwc;
+
+.field public final b:Ld24;
+
+.field public volatile c:Z
+
+.field public o:Lqf6;
+
+.field public final q0:Lfrd;
+
+
+# direct methods
+.method public constructor <init>(Lorg/webrtc/EglBase$Context;Landroid/content/Context;Lfwc;Lahf;Luhd;)V
     .locals 10
 
-    iget-object p0, p0, Lx2;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/BitSet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Ljava/util/BitSet;->get(I)Z
+    iput-boolean v0, p0, Lgrd;->Z:Z
 
-    move-result v0
+    new-instance v0, Lfrd;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
-    invoke-virtual {p0, v1}, Ljava/util/BitSet;->get(I)Z
+    invoke-direct {v0, p0, v1}, Lfrd;-><init>(Lgrd;I)V
 
-    move-result v1
+    iput-object v0, p0, Lgrd;->q0:Lfrd;
 
-    const/4 v2, 0x2
+    new-instance v0, Ld24;
 
-    invoke-virtual {p0, v2}, Ljava/util/BitSet;->get(I)Z
+    const-string v1, "SSSendControl"
 
-    move-result v2
+    invoke-direct {v0, v1}, Ld24;-><init>(Ljava/lang/String;)V
 
-    const/4 v3, 0x3
+    iput-object v0, p0, Lgrd;->b:Ld24;
 
-    invoke-virtual {p0, v3}, Ljava/util/BitSet;->get(I)Z
+    iput-object p3, p0, Lgrd;->a:Lfwc;
 
-    move-result v3
+    new-instance v2, Ll35;
 
-    const/4 v4, 0x4
+    const/4 v9, 0x1
 
-    invoke-virtual {p0, v4}, Ljava/util/BitSet;->get(I)Z
+    move-object v3, p0
 
-    move-result v4
+    move-object v4, p1
 
-    const/4 v5, 0x5
+    move-object v5, p2
 
-    invoke-virtual {p0, v5}, Ljava/util/BitSet;->get(I)Z
+    move-object v7, p3
 
-    move-result v5
+    move-object v6, p4
 
-    const/4 v6, 0x6
+    move-object v8, p5
 
-    invoke-virtual {p0, v6}, Ljava/util/BitSet;->get(I)Z
+    invoke-direct/range {v2 .. v9}, Ll35;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    move-result v6
+    invoke-virtual {v0, v2}, Ld24;->c(Ljava/lang/Runnable;)V
 
-    const/4 v7, 0x7
+    return-void
+.end method
 
-    invoke-virtual {p0, v7}, Ljava/util/BitSet;->get(I)Z
 
-    move-result p0
+# virtual methods
+.method public final a(II)V
+    .locals 2
 
-    const-string v7, ",\n                isTitleChanged="
+    new-instance v0, Lsu0;
 
-    const-string v8, ",\n                isTypeChanged="
+    const/4 v1, 0x3
 
-    const-string v9, "\n            Payload(\n                isSectionChanged="
+    invoke-direct {v0, p0, p1, p2, v1}, Lsu0;-><init>(Ljava/lang/Object;III)V
 
-    invoke-static {v9, v0, v7, v1, v8}, Lyv7;->n(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lgrd;->b:Ld24;
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Ld24;->c(Ljava/lang/Runnable;)V
 
-    const-string v1, ",\n                isDescriptionResChanged="
-
-    const-string v7, ",\n                isEndViewChanged="
-
-    invoke-static {v1, v7, v0, v2, v3}, Lmw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ",\n                isCounterTypeChanged="
-
-    const-string v2, ",\n                isUpperTextChanged="
-
-    invoke-static {v1, v2, v0, v4, v5}, Lmw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ",\n                isStartIconChanged="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ",\n            )\n        "
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lkme;->P(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

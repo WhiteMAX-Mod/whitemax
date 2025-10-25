@@ -3,123 +3,70 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxoa;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lyoa;
+
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+
+.field public final synthetic o:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lba8;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lba8;-><init>(I)V
-
-    sput-object v0, Lxoa;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lyoa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Lxoa;->a:I
 
-    iput p1, p0, Lxoa;->a:I
+    iput-object p1, p0, Lxoa;->b:Lyoa;
+
+    iput-object p2, p0, Lxoa;->c:Landroid/graphics/drawable/Drawable;
+
+    iput-object p3, p0, Lxoa;->o:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
+.method public final run()V
+    .locals 3
 
-    const/4 p0, 0x0
+    iget v0, p0, Lxoa;->a:I
 
-    return p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    iget-object v0, p0, Lxoa;->c:Landroid/graphics/drawable/Drawable;
 
-    instance-of v0, p1, Lxoa;
+    iget-object v1, p0, Lxoa;->o:Ljava/lang/Runnable;
 
-    if-nez v0, :cond_0
+    iget-object v2, p0, Lxoa;->b:Lyoa;
 
-    goto :goto_0
-
-    :cond_0
-    check-cast p1, Lxoa;
-
-    iget p1, p1, Lxoa;->a:I
-
-    iget p0, p0, Lxoa;->a:I
-
-    if-eq p0, p1, :cond_1
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget p0, p0, Lxoa;->a:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "ContainerGravity(value="
-
-    const-string v1, ")"
-
-    iget p0, p0, Lxoa;->a:I
-
-    invoke-static {p0, v0, v1}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p0, p0, Lxoa;->a:I
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {v2, v0, v1}, Lyoa;->e(Lyoa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lxoa;->c:Landroid/graphics/drawable/Drawable;
+
+    iget-object v1, p0, Lxoa;->o:Ljava/lang/Runnable;
+
+    iget-object v2, p0, Lxoa;->b:Lyoa;
+
+    invoke-static {v2, v0, v1}, Lyoa;->e(Lyoa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

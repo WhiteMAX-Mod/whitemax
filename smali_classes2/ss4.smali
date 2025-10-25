@@ -1,87 +1,122 @@
-.class public final Lss4;
-.super Ljava/lang/Object;
+.class public final enum Lss4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lvs4;
+
+# static fields
+.field public static final enum X:Lss4;
+
+.field public static final synthetic Y:[Lss4;
+
+.field public static volatile b:Lss4;
+
+.field public static final enum c:Lss4;
+
+.field public static final enum o:Lss4;
 
 
 # instance fields
-.field public final a:Z
+.field public final a:B
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lss4;
 
-    iput-boolean p1, p0, Lss4;->a:Z
+    const-string v1, "LOW"
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Lss4;-><init>(Ljava/lang/String;IB)V
+
+    sput-object v0, Lss4;->c:Lss4;
+
+    new-instance v1, Lss4;
+
+    const-string v2, "AVERAGE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v2, v3, v4}, Lss4;-><init>(Ljava/lang/String;IB)V
+
+    sput-object v1, Lss4;->o:Lss4;
+
+    new-instance v2, Lss4;
+
+    const-string v3, "HIGH"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v2, v3, v4, v5}, Lss4;-><init>(Ljava/lang/String;IB)V
+
+    sput-object v2, Lss4;->X:Lss4;
+
+    filled-new-array {v0, v1, v2}, [Lss4;
+
+    move-result-object v0
+
+    sput-object v0, Lss4;->Y:[Lss4;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lss4;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lss4;
-
-    iget-boolean p0, p0, Lss4;->a:Z
-
-    iget-boolean p1, p1, Lss4;->a:Z
-
-    if-eq p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public constructor <init>(Ljava/lang/String;IB)V
     .locals 0
 
-    iget-boolean p0, p0, Lss4;->a:Z
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iput-byte p3, p0, Lss4;->a:B
 
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lss4;
+    .locals 1
 
-    const-string v0, "FileDownloadInterrupted(shouldRetry="
+    const-class v0, Lss4;
 
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lss4;->a:Z
-
-    invoke-static {v0, v1, p0}, Lz7e;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lss4;
+
     return-object p0
+.end method
+
+.method public static values()[Lss4;
+    .locals 1
+
+    sget-object v0, Lss4;->Y:[Lss4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lss4;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 1
+
+    sget-object v0, Lss4;->c:Lss4;
+
+    if-ne p0, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

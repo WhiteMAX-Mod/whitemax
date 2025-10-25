@@ -1,75 +1,34 @@
-.class public final Lmqc;
-.super Ll37;
-.source "SourceFile"
+.class public abstract Lmqc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final synthetic c:Lnqc;
+# static fields
+.field public static mr_cast_dialog:I = 0x7f0d00b1
 
+.field public static mr_cast_group_item:I = 0x7f0d00b2
 
-# direct methods
-.method public constructor <init>(Lnqc;)V
-    .locals 0
+.field public static mr_cast_group_volume_item:I = 0x7f0d00b3
 
-    iput-object p1, p0, Lmqc;->c:Lnqc;
+.field public static mr_cast_header_item:I = 0x7f0d00b4
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+.field public static mr_cast_media_metadata:I = 0x7f0d00b5
 
-    return-void
-.end method
+.field public static mr_cast_route_item:I = 0x7f0d00b6
 
+.field public static mr_chooser_dialog:I = 0x7f0d00b7
 
-# virtual methods
-.method public final f()Z
-    .locals 0
+.field public static mr_chooser_list_item:I = 0x7f0d00b8
 
-    const/4 p0, 0x1
+.field public static mr_controller_material_dialog_b:I = 0x7f0d00b9
 
-    return p0
-.end method
+.field public static mr_controller_volume_item:I = 0x7f0d00ba
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 2
+.field public static mr_picker_dialog:I = 0x7f0d00bb
 
-    iget-object p0, p0, Lmqc;->c:Lnqc;
+.field public static mr_picker_header_item:I = 0x7f0d00bc
 
-    iget v0, p0, Lnqc;->Z:I
+.field public static mr_picker_route_item:I = 0x7f0d00bd
 
-    invoke-static {p1, v0}, Lgy7;->m(II)V
+.field public static mr_playback_control:I = 0x7f0d00be
 
-    iget-object v0, p0, Lnqc;->X:[Ljava/lang/Object;
-
-    mul-int/lit8 p1, p1, 0x2
-
-    iget p0, p0, Lnqc;->Y:I
-
-    add-int v1, p1, p0
-
-    aget-object v1, v0, v1
-
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    xor-int/lit8 p0, p0, 0x1
-
-    add-int/2addr p1, p0
-
-    aget-object p0, v0, p1
-
-    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p1, Ljava/util/AbstractMap$SimpleImmutableEntry;
-
-    invoke-direct {p1, v1, p0}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 0
-
-    iget-object p0, p0, Lmqc;->c:Lnqc;
-
-    iget p0, p0, Lnqc;->Z:I
-
-    return p0
-.end method
+.field public static mr_volume_control:I = 0x7f0d00bf

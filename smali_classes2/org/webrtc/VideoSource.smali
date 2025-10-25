@@ -99,11 +99,11 @@
 .end method
 
 .method private synthetic lambda$setVideoProcessor$0(Lorg/webrtc/VideoFrame;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/VideoSource;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
+    iget-object v0, p0, Lorg/webrtc/VideoSource;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/NativeAndroidVideoTrackSource;->onFrameCaptured(Lorg/webrtc/VideoFrame;)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/NativeAndroidVideoTrackSource;->onFrameCaptured(Lorg/webrtc/VideoFrame;)V
 
     return-void
 .end method
@@ -111,11 +111,11 @@
 .method private synthetic lambda$setVideoProcessor$1(Lorg/webrtc/VideoFrame;)V
     .locals 2
 
-    new-instance v0, Lz5e;
+    new-instance v0, Ltlg;
 
-    const/16 v1, 0x19
+    const/16 v1, 0xb
 
-    invoke-direct {v0, p0, v1, p1}, Lz5e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Ltlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {p0, v0}, Lorg/webrtc/MediaSource;->runWithReference(Ljava/lang/Runnable;)V
 
@@ -152,52 +152,60 @@
 .end method
 
 .method public adaptOutputFormat(IIIII)V
-    .locals 1
-
-    move v0, p1
+    .locals 6
 
     .line 4
-    new-instance p1, Lorg/webrtc/VideoSource$AspectRatio;
+    new-instance v1, Lorg/webrtc/VideoSource$AspectRatio;
 
-    invoke-direct {p1, v0, p2}, Lorg/webrtc/VideoSource$AspectRatio;-><init>(II)V
+    invoke-direct {v1, p1, p2}, Lorg/webrtc/VideoSource$AspectRatio;-><init>(II)V
 
-    mul-int/2addr p2, v0
+    mul-int/2addr p1, p2
 
     .line 5
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p2
+    move-result-object v2
 
-    move v0, p3
+    new-instance v3, Lorg/webrtc/VideoSource$AspectRatio;
 
-    new-instance p3, Lorg/webrtc/VideoSource$AspectRatio;
+    invoke-direct {v3, p3, p4}, Lorg/webrtc/VideoSource$AspectRatio;-><init>(II)V
 
-    invoke-direct {p3, v0, p4}, Lorg/webrtc/VideoSource$AspectRatio;-><init>(II)V
-
-    mul-int/2addr p4, v0
+    mul-int/2addr p3, p4
 
     .line 6
-    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p4
+    move-result-object v4
 
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p5
+    move-result-object v5
+
+    move-object v0, p0
 
     .line 7
-    invoke-virtual/range {p0 .. p5}, Lorg/webrtc/VideoSource;->adaptOutputFormat(Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-virtual/range {v0 .. v5}, Lorg/webrtc/VideoSource;->adaptOutputFormat(Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     return-void
 .end method
 
 .method public adaptOutputFormat(Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Ljava/lang/Integer;)V
-    .locals 0
+    .locals 6
 
     .line 8
-    iget-object p0, p0, Lorg/webrtc/VideoSource;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
+    iget-object v0, p0, Lorg/webrtc/VideoSource;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
 
-    invoke-virtual/range {p0 .. p5}, Lorg/webrtc/NativeAndroidVideoTrackSource;->adaptOutputFormat(Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Ljava/lang/Integer;)V
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    invoke-virtual/range {v0 .. v5}, Lorg/webrtc/NativeAndroidVideoTrackSource;->adaptOutputFormat(Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Lorg/webrtc/VideoSource$AspectRatio;Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     return-void
 .end method
@@ -215,11 +223,11 @@
 .end method
 
 .method public getCapturerObserver()Lorg/webrtc/CapturerObserver;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/VideoSource;->capturerObserver:Lorg/webrtc/CapturerObserver;
+    iget-object v0, p0, Lorg/webrtc/VideoSource;->capturerObserver:Lorg/webrtc/CapturerObserver;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getNativeVideoTrackSource()J
@@ -233,11 +241,11 @@
 .end method
 
 .method public setIsScreencast(Z)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/VideoSource;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
+    iget-object v0, p0, Lorg/webrtc/VideoSource;->nativeAndroidVideoTrackSource:Lorg/webrtc/NativeAndroidVideoTrackSource;
 
-    invoke-virtual {p0, p1}, Lorg/webrtc/NativeAndroidVideoTrackSource;->setIsScreencast(Z)V
+    invoke-virtual {v0, p1}, Lorg/webrtc/NativeAndroidVideoTrackSource;->setIsScreencast(Z)V
 
     return-void
 .end method
@@ -269,7 +277,7 @@
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_1
 
@@ -279,19 +287,19 @@
 
     if-eqz p1, :cond_1
 
-    new-instance v1, Lo5g;
+    new-instance v1, Lkxg;
 
-    invoke-direct {v1, p0}, Lo5g;-><init>(Lorg/webrtc/VideoSource;)V
+    invoke-direct {v1, p0}, Lkxg;-><init>(Lorg/webrtc/VideoSource;)V
 
     invoke-interface {p1, v1}, Lorg/webrtc/VideoProcessor;->setSink(Lorg/webrtc/VideoSink;)V
 
-    iget-boolean p0, p0, Lorg/webrtc/VideoSource;->isCapturerRunning:Z
+    iget-boolean v1, p0, Lorg/webrtc/VideoSource;->isCapturerRunning:Z
 
-    if-eqz p0, :cond_1
+    if-eqz v1, :cond_1
 
-    const/4 p0, 0x1
+    const/4 v1, 0x1
 
-    invoke-interface {p1, p0}, Lorg/webrtc/CapturerObserver;->onCapturerStarted(Z)V
+    invoke-interface {p1, v1}, Lorg/webrtc/CapturerObserver;->onCapturerStarted(Z)V
 
     :cond_1
     monitor-exit v0
@@ -303,5 +311,5 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw p1
 .end method

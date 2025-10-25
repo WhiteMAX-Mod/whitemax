@@ -1,344 +1,305 @@
 .class public final Lahe;
-.super Lq1e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/opengl/GLSurfaceView$Renderer;
 
 
 # instance fields
-.field public final X:Ljava/util/concurrent/ExecutorService;
+.field public X:Ljava/nio/FloatBuffer;
 
-.field public final Y:Lxj7;
+.field public Y:J
 
-.field public Z:La38;
+.field public Z:I
 
-.field public final r0:Lxge;
+.field public a:I
 
-.field public final s0:Lq2e;
+.field public b:I
+
+.field public c:I
+
+.field public o:I
+
+.field public q0:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lxj7;)V
-    .locals 1
+.method public static a(ILjava/lang/String;)I
+    .locals 2
 
-    invoke-direct {p0, p1}, Lq1e;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-static {p0}, Landroid/opengl/GLES20;->glCreateShader(I)I
 
-    iput-object p1, p0, Lahe;->X:Ljava/util/concurrent/ExecutorService;
+    move-result p0
 
-    iput-object p2, p0, Lahe;->Y:Lxj7;
+    invoke-static {p0, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
 
-    new-instance p1, Lxge;
+    invoke-static {p0}, Landroid/opengl/GLES20;->glCompileShader(I)V
 
-    new-instance p2, Lzge;
+    const/4 p1, 0x1
 
-    const/4 v0, 0x0
+    new-array p1, p1, [I
 
-    invoke-direct {p2, v0, p0}, Lzge;-><init>(ILjava/lang/Object;)V
+    const v0, 0x8b81
 
-    invoke-direct {p1, v0, p2}, Lxge;-><init>(ILjava/lang/Object;)V
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Lahe;->r0:Lxge;
+    invoke-static {p0, v0, p1, v1}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
 
-    new-instance p1, Lq2e;
+    aget p1, p1, v1
 
-    invoke-direct {p1, p0}, Lq2e;-><init>(Ljava/lang/Object;)V
+    if-eqz p1, :cond_0
 
-    iput-object p1, p0, Lahe;->s0:Lq2e;
+    return p0
 
-    return-void
+    :cond_0
+    invoke-static {p0}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
+
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    const-string v0, "Error compiling shader: "
+
+    invoke-static {v0, p1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final l(I)I
-    .locals 0
+.method public final onDrawFrame(Ljavax/microedition/khronos/opengles/GL10;)V
+    .locals 6
 
-    invoke-virtual {p0, p1}, Lls7;->C(I)Ljava/lang/Object;
+    const/16 p1, 0x4000
 
-    move-result-object p0
+    invoke-static {p1}, Landroid/opengl/GLES20;->glClear(I)V
 
-    check-cast p0, Lts7;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-interface {p0}, Lts7;->m()I
+    move-result-wide v0
 
-    move-result p0
+    iget-wide v2, p0, Lahe;->Y:J
 
-    return p0
-.end method
+    sub-long/2addr v0, v2
 
-.method public final t(Landroid/view/ViewGroup;I)Lzoc;
-    .locals 8
+    long-to-float p1, v0
 
-    sget v0, Lcja;->r:I
+    const/high16 v0, 0x447a0000    # 1000.0f
 
-    if-ne p2, v0, :cond_0
+    div-float/2addr p1, v0
 
-    new-instance p2, Lez0;
+    iget v0, p0, Lahe;->b:I
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    move-result-object p1
+    iget p1, p0, Lahe;->c:I
 
-    new-instance v0, Loa6;
+    iget v0, p0, Lahe;->Z:I
 
-    const/4 v6, 0x0
+    int-to-float v0, v0
 
-    const/16 v7, 0x14
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lahe;->Y:Lxj7;
-
-    const-class v3, Lxj7;
-
-    const-string v4, "onFakeSearchClick"
-
-    const-string v5, "onFakeSearchClick()V"
-
-    invoke-direct/range {v0 .. v7}, Loa6;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance p0, Landroid/widget/TextView;
-
-    invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    sget v1, Lcja;->e:I
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->setId(I)V
-
-    const/16 v1, 0xa
+    iget v1, p0, Lahe;->q0:I
 
     int-to-float v1, v1
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    invoke-static {p1, v0, v1}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
-    move-result-object v2
+    iget p1, p0, Lahe;->o:I
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {p1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    move-result-object v2
+    iget v0, p0, Lahe;->o:I
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    iget-object p1, p0, Lahe;->X:Ljava/nio/FloatBuffer;
 
-    mul-float/2addr v1, v2
+    if-nez p1, :cond_0
 
-    invoke-static {v1}, Lya6;->G(F)I
+    const/4 p1, 0x0
 
-    move-result v1
+    :cond_0
+    move-object v5, p1
 
-    const/16 v2, 0xc
+    const/4 v1, 0x2
 
-    int-to-float v2, v2
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lya6;->G(F)I
-
-    move-result v2
-
-    new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v4, -0x1
-
-    const/4 v5, -0x2
-
-    invoke-direct {v3, v4, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/16 v4, 0x10
-
-    iput v4, v3, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    const/4 v4, 0x2
-
-    int-to-float v4, v4
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v5
-
-    invoke-static {v4}, Lya6;->G(F)I
-
-    move-result v4
-
-    iput v4, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    invoke-virtual {p0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 v3, 0x1
-
-    invoke-virtual {p0, v3}, Landroid/view/View;->setClipToOutline(Z)V
-
-    new-instance v3, Ln04;
-
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v5, 0x41200000    # 10.0f
-
-    mul-float/2addr v4, v5
-
-    invoke-direct {v3, v4}, Ln04;-><init>(F)V
-
-    invoke-virtual {p0, v3}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    sget v3, Ls0d;->z0:I
-
-    invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    sget v3, Lrma;->q:I
-
-    invoke-static {p1, v3}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    sget-object v3, Le3f;->a:Ljava/util/ArrayList;
+    const/16 v2, 0x1406
 
     const/4 v3, 0x0
 
-    invoke-virtual {p0, p1, v3, v3, v3}, Landroid/widget/TextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x4
+
+    const/4 v1, 0x5
+
+    invoke-static {v1, p1, v0}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+
+    iget p1, p0, Lahe;->o:I
+
+    invoke-static {p1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
+
+    return-void
+.end method
+
+.method public final onSurfaceChanged(Ljavax/microedition/khronos/opengles/GL10;II)V
+    .locals 0
+
+    const/4 p1, 0x0
+
+    invoke-static {p1, p1, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
+
+    iput p2, p0, Lahe;->Z:I
+
+    iput p3, p0, Lahe;->q0:I
+
+    return-void
+.end method
+
+.method public final onSurfaceCreated(Ljavax/microedition/khronos/opengles/GL10;Ljavax/microedition/khronos/egl/EGLConfig;)V
+    .locals 2
 
     const/16 p1, 0x8
 
-    int-to-float p1, p1
+    new-array p1, p1, [F
 
-    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+    fill-array-data p1, :array_0
 
-    move-result-object v4
+    const/16 p2, 0x20
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
-    move-result-object v4
+    move-result-object p2
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
-    mul-float/2addr p1, v4
+    move-result-object v0
 
-    invoke-static {p1}, Lya6;->G(F)I
+    invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p2, p1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    iput-object p2, p0, Lahe;->X:Ljava/nio/FloatBuffer;
+
+    const p2, 0x8b31
+
+    const-string v0, "\n            attribute vec4 vPosition;\n            void main() {\n                gl_Position = vPosition;\n            }\n        "
+
+    invoke-static {p2, v0}, Lahe;->a(ILjava/lang/String;)I
+
+    move-result p2
+
+    const v0, 0x8b30
+
+    const-string v1, "\n            #define PI 3.14159\n            \n            precision mediump float;\n            \n            uniform float time;\n            uniform vec2 resolution;\n            \n            // \u0423\u043d\u0438\u0444\u043e\u0440\u043c\u044b \u0434\u043b\u044f \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432\n            const float numBeams = 128.0;        // \u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043b\u0443\u0447\u0435\u0439\n            const float tunnelStretch = 0.05;   // \u0420\u0430\u0441\u0442\u044f\u0436\u0435\u043d\u0438\u0435 \u0442\u0443\u043d\u043d\u0435\u043b\u044f\n            const float offsetFreq = 215.4;      // \u0427\u0430\u0441\u0442\u043e\u0442\u0430 \u0441\u043c\u0435\u0449\u0435\u043d\u0438\u044f\n            const float speedFreq = 33.1;       // \u0427\u0430\u0441\u0442\u043e\u0442\u0430 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u0438\n            const float trailStart = 6.0;      // \u041d\u0430\u0447\u0430\u043b\u043e \u043b\u0443\u0447\u0430\n            const float trailEnd = 33.0;        // \u041a\u043e\u043d\u0435\u0446 \u043b\u0443\u0447\u0430\n            const float amplitude = 5.0;       // \u0410\u043c\u043f\u043b\u0438\u0442\u0443\u0434\u0430 \u043b\u0443\u0447\u0435\u0439\n            const vec3 color1 = vec3(1.55, 0.65, 2.25);           // \u041f\u0435\u0440\u0432\u044b\u0439 \u0446\u0432\u0435\u0442\n            const vec3 color2 = vec3(0.55, 0.75, 1.225);           // \u0412\u0442\u043e\u0440\u043e\u0439 \u0446\u0432\u0435\u0442\n            const vec3 color3 = vec3(0.85, 0.25, 1.425);           // \u0422\u0440\u0435\u0442\u0438\u0439 \u0446\u0432\u0435\u0442\n            const float timeMultiplier = 0.4;  // \u041c\u043d\u043e\u0436\u0438\u0442\u0435\u043b\u044c \u0432\u0440\u0435\u043c\u0435\u043d\u0438\n            const float distanceOffset = 0.078;  // \u0421\u043c\u0435\u0449\u0435\u043d\u0438\u0435 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u044f\n            \n            \n            const float nebulaIntensity = 0.5; // \u0418\u043d\u0442\u0435\u043d\u0441\u0438\u0432\u043d\u043e\u0441\u0442\u044c \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const vec3 nebulaColor1 = vec3(0.2, 0.0, 0.5);     // \u041f\u0435\u0440\u0432\u044b\u0439 \u0446\u0432\u0435\u0442 \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const vec3 nebulaColor2 = vec3(0.8, 0.2, 1.0);     // \u0412\u0442\u043e\u0440\u043e\u0439 \u0446\u0432\u0435\u0442 \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const float nebulaSpeed = 0.1;     // \u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0434\u0432\u0438\u0436\u0435\u043d\u0438\u044f \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const float nebulaScale = 1.0;     // \u041c\u0430\u0441\u0448\u0442\u0430\u0431 \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            \n            // \u041f\u0441\u0435\u0432\u0434\u043e\u0441\u043b\u0443\u0447\u0430\u0439\u043d\u0430\u044f \u0444\u0443\u043d\u043a\u0446\u0438\u044f\n            float hash(vec2 p) {\n                return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);\n            }\n            \n            // \u0418\u043d\u0442\u0435\u0440\u043f\u043e\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0448\u0443\u043c\n            float noise(vec2 p) {\n                vec2 i = floor(p);\n                vec2 f = fract(p);\n            \n                float a = hash(i);\n                float b = hash(i + vec2(1.0, 0.0));\n                float c = hash(i + vec2(0.0, 1.0));\n                float d = hash(i + vec2(1.0, 1.0));\n            \n                vec2 u = f * f * (3.0 - 2.0 * f);\n            \n                return mix(a, b, u.x) +\n                    (c - a) * u.y * (1.0 - u.x) +\n                    (d - b) * u.x * u.y;\n            }\n            \n            // \u0424\u0440\u0430\u043a\u0442\u0430\u043b\u044c\u043d\u044b\u0439 \u0448\u0443\u043c\n            float fbm(vec2 p) {\n                float value = 0.0;\n                float amplitude = 0.5;\n                for (int i = 0; i < 4; i++) {\n                    value += amplitude * noise(p);\n                    p *= 2.0;\n                    amplitude *= 0.5;\n                }\n                return value;\n            }\n            \n            // \u0424\u043e\u0440\u043c\u0438\u0440\u0443\u0435\u043c \u043b\u0443\u0447\u0438\n            float vDrop(vec2 uv, float t) {\n                uv.x = uv.x * numBeams;\n                float dx = fract(uv.x);\n                uv.x = floor(uv.x);\n                uv.y *= tunnelStretch;\n                float o = sin(uv.x * offsetFreq);\n                float s = cos(uv.x * speedFreq) * 0.3 + 0.2;\n                float trail = mix(trailStart, trailEnd, s);\n                float yv = fract(uv.y + t * s + o) * trail;\n                yv = 1.0 / yv;\n                yv = smoothstep(0.0, 1.0, yv * yv);\n                yv = sin(yv * PI) * (s * amplitude);\n                float d2 = sin(dx * PI);\n                return yv * (d2 * d2);\n            }\n            \n            void main() {\n                // \u041d\u043e\u0440\u043c\u0430\u043b\u0438\u0437\u0443\u0435\u043c \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442\u044b \u0441 \u0443\u0447\u0435\u0442\u043e\u043c \u0441\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044f \u0441\u0442\u043e\u0440\u043e\u043d\n                vec2 uv = (gl_FragCoord.xy / resolution.xy) * 2.0 - 1.0;\n                uv.x *= resolution.x / resolution.y; // \u041a\u043e\u0440\u0440\u0435\u043a\u0442\u0438\u0440\u0443\u0435\u043c \u043f\u043e \u0441\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044e \u0441\u0442\u043e\u0440\u043e\u043d\n            \n                float d = length(uv) + distanceOffset;\n                vec2 uvPolar = vec2(atan(uv.x, uv.y) / PI, 2.5 / d);\n            \n                float t = time * timeMultiplier;\n                vec3 col = color1 * vDrop(uvPolar, t);\n                col += color2 * vDrop(uvPolar, t + 0.33);\n                col += color3 * vDrop(uvPolar, t + 0.66);\n            \n                col *= d * d;\n            \n                // \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442 \u0434\u043b\u044f \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n                vec2 nebulaUV = uv * nebulaScale + vec2(0.0, t * nebulaSpeed);\n            \n                float nebulaValue = fbm(nebulaUV) * nebulaIntensity;\n                vec3 nebulaColor = mix(nebulaColor1, nebulaColor2, nebulaValue);\n            \n                col += nebulaColor * nebulaValue;\n            \n                gl_FragColor = vec4(col, 1.0);\n            }\n        "
+
+    invoke-static {v0, v1}, Lahe;->a(ILjava/lang/String;)I
+
+    move-result v0
+
+    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
+
+    move-result v1
+
+    invoke-static {v1, p2}, Landroid/opengl/GLES20;->glAttachShader(II)V
+
+    invoke-static {v1, v0}, Landroid/opengl/GLES20;->glAttachShader(II)V
+
+    invoke-static {v1}, Landroid/opengl/GLES20;->glLinkProgram(I)V
+
+    const/4 p2, 0x1
+
+    new-array p2, p2, [I
+
+    const v0, 0x8b82
+
+    invoke-static {v1, v0, p2, p1}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
+
+    aget p1, p2, p1
+
+    if-eqz p1, :cond_0
+
+    iput v1, p0, Lahe;->a:I
+
+    invoke-static {v1}, Landroid/opengl/GLES20;->glUseProgram(I)V
+
+    iget p1, p0, Lahe;->a:I
+
+    const-string p2, "time"
+
+    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
+    iput p1, p0, Lahe;->b:I
 
-    invoke-virtual {p0, v2, v1, v2, v1}, Landroid/widget/TextView;->setPadding(IIII)V
+    iget p1, p0, Lahe;->a:I
 
-    sget-object p1, Lclf;->m:Lv2f;
+    const-string p2, "resolution"
 
-    invoke-static {p1, p0}, Lv2f;->d(Lv2f;Landroid/widget/TextView;)V
+    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
-    new-instance p1, Lt9;
+    move-result p1
 
-    const/4 v1, 0x3
+    iput p1, p0, Lahe;->c:I
 
-    const/16 v2, 0x1c
+    iget p1, p0, Lahe;->a:I
 
-    invoke-direct {p1, v1, v3, v2}, Lt9;-><init>(ILkotlin/coroutines/Continuation;I)V
+    const-string p2, "vPosition"
 
-    invoke-static {p1, p0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
+    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
 
-    new-instance p1, Lfsa;
+    move-result p1
 
-    const/16 v1, 0x15
+    iput p1, p0, Lahe;->o:I
 
-    invoke-direct {p1, v1, v0}, Lfsa;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p0, p1}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    const/16 p1, 0x14
-
-    invoke-direct {p2, p0, p1}, Lez0;-><init>(Landroid/view/View;I)V
-
-    return-object p2
+    return-void
 
     :cond_0
-    sget v0, Lmna;->k:I
-
-    if-ne p2, v0, :cond_1
-
-    new-instance p2, Lq22;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {v1}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
 
     move-result-object p1
 
-    new-instance v0, Loa6;
+    invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
-    const/4 v6, 0x0
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    const/16 v7, 0x15
+    const-string v0, "Error linking program: "
 
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lahe;->Y:Lxj7;
-
-    const-class v3, Lxj7;
-
-    const-string v4, "onRecentClearClick"
-
-    const-string v5, "onRecentClearClick()V"
-
-    invoke-direct/range {v0 .. v7}, Loa6;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    invoke-direct {p2, p1, v0}, Lq22;-><init>(Landroid/content/Context;Lzb6;)V
-
-    return-object p2
-
-    :cond_1
-    sget v0, Lmna;->l:I
-
-    if-ne p2, v0, :cond_2
-
-    new-instance p2, Lww3;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {v0, p1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    iget-object v0, p0, Lahe;->Z:La38;
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lahe;->X:Ljava/util/concurrent/ExecutorService;
+    throw p2
 
-    iget-object p0, p0, Lahe;->s0:Lq2e;
-
-    invoke-direct {p2, p1, v0, v1, p0}, Lww3;-><init>(Landroid/content/Context;La38;Ljava/util/concurrent/ExecutorService;Liie;)V
-
-    return-object p2
-
-    :cond_2
-    iget-object p0, p0, Lahe;->r0:Lxge;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p0, p1, p2}, Lxge;->a(Lxge;Landroid/content/Context;I)Lj2e;
-
-    move-result-object p0
-
-    return-object p0
+    :array_0
+    .array-data 4
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
 .end method

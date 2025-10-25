@@ -1,80 +1,49 @@
-.class public final synthetic Lab6;
-.super Ljava/lang/Object;
+.class public final Lab6;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+.field public final synthetic Y:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+
+.field public Z:I
+
+.field public o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;I)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/ForegroundWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lab6;->a:I
+    iput-object p1, p0, Lab6;->Y:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    iput-object p1, p0, Lab6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lab6;->a:I
+    iput-object p1, p0, Lab6;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lab6;->Z:I
 
-    iget-object p0, p0, Lab6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->h1()Lgb6;
+    or-int/2addr p1, v0
 
-    move-result-object p0
+    iput p1, p0, Lab6;->Z:I
 
-    if-eqz p0, :cond_0
+    iget-object p1, p0, Lab6;->Y:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    check-cast p0, Lru/ok/messages/media/attaches/ActAttachesView;
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/ActAttachesView;->d()V
+    move-result-object p1
 
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lab6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
-
-    iget-object v0, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->I1:Lru/ok/messages/media/attaches/AttachPhotoView;
-
-    iget-object v1, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->C1:Ld10;
-
-    iget-object v2, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->B1:Lxx8;
-
-    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/attaches/AttachPhotoView;->r(Ld10;Lxx8;)V
-
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
-
-    move-result-object p0
-
-    instance-of v0, p0, Lkm;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/app/Activity;->invalidateOptionsMenu()V
-
-    :cond_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

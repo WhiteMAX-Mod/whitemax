@@ -1,5 +1,5 @@
 .class public final Lt;
-.super Lys9;
+.super Le5a;
 .source "SourceFile"
 
 
@@ -11,9 +11,9 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    sget-object v0, Lylf;->a:Lylf;
+    sget-object v0, Lccg;->a:Lccg;
 
-    invoke-direct {p0, v0}, Lys9;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Le5a;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lt;->b:Ljava/lang/String;
 

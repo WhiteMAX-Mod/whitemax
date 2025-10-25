@@ -1,346 +1,135 @@
-.class public final Ll2b;
+.class public abstract Ll2b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lcl7;
+# static fields
+.field public static final a:J
 
-.field public final b:Lcl7;
+.field public static final b:J
 
-.field public final c:Lcl7;
+.field public static final c:J
 
-.field public final d:Lo2b;
+.field public static final d:J
 
-.field public final e:Lo2b;
+.field public static final e:J
 
-.field public final f:Lo2b;
+.field public static final f:J
 
-.field public final g:Lo2b;
+.field public static final g:J
 
-.field public final h:Lo2b;
+.field public static final h:J
 
-.field public final i:Lo2b;
+.field public static final i:J
 
-.field public final j:Lo2b;
+.field public static final j:J
+
+.field public static final k:J
+
+.field public static final l:J
+
+.field public static final m:J
+
+.field public static final n:J
+
+.field public static final o:J
+
+.field public static final synthetic p:I
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lcl7;Lxwe;)V
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lfpc;->oneme_settings_privacy_content_level_access:I
 
-    iput-object p1, p0, Ll2b;->a:Lcl7;
+    int-to-long v0, v0
 
-    iput-object p2, p0, Ll2b;->b:Lcl7;
+    sput-wide v0, Ll2b;->a:J
 
-    iput-object p3, p0, Ll2b;->c:Lcl7;
+    sget v0, Lfpc;->oneme_settings_privacy_info_header:I
 
-    check-cast p4, Laga;
+    int-to-long v0, v0
 
-    invoke-virtual {p4}, Laga;->b()Ls04;
+    sput-wide v0, Ll2b;->b:J
 
-    move-result-object p1
+    sget v0, Lfpc;->oneme_settings_privacy_safe_files:I
 
-    invoke-static {p1}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
+    int-to-long v0, v0
 
-    move-result-object p1
+    sput-wide v0, Ll2b;->c:J
 
-    new-instance p2, Lo2b;
+    sget v0, Lfpc;->oneme_settings_privacy_screen_add_me_to_chat:I
 
-    sget-object p3, Lp2b;->l:[Ljava/lang/String;
+    int-to-long v0, v0
 
-    invoke-direct {p2, p3}, Lo2b;-><init>([Ljava/lang/String;)V
+    sput-wide v0, Ll2b;->d:J
 
-    iput-object p2, p0, Ll2b;->d:Lo2b;
+    sget v0, Lfpc;->oneme_settings_privacy_screen_black_list:I
 
-    new-instance p3, Lo2b;
+    int-to-long v0, v0
 
-    sget-object p4, Lp2b;->f:[Ljava/lang/String;
+    sput-wide v0, Ll2b;->e:J
 
-    invoke-direct {p3, p4}, Lo2b;-><init>([Ljava/lang/String;)V
+    sget v0, Lfpc;->oneme_settings_privacy_screen_call_me:I
 
-    iput-object p3, p0, Ll2b;->e:Lo2b;
+    int-to-long v0, v0
 
-    new-instance p4, Lo2b;
+    sput-wide v0, Ll2b;->f:J
 
-    sget-object v0, Lp2b;->n:[Ljava/lang/String;
+    sget v0, Lfpc;->oneme_settings_privacy_screen_finished_sessions:I
 
-    invoke-direct {p4, v0}, Lo2b;-><init>([Ljava/lang/String;)V
+    int-to-long v0, v0
 
-    iput-object p4, p0, Ll2b;->f:Lo2b;
+    sput-wide v0, Ll2b;->g:J
 
-    new-instance v0, Lo2b;
+    sget v0, Lfpc;->oneme_settings_privacy_screen_how_session:I
 
-    const-string v1, "android.permission.READ_MEDIA_VISUAL_USER_SELECTED"
+    int-to-long v0, v0
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    sput-wide v0, Ll2b;->h:J
 
-    move-result-object v1
+    sget v0, Lfpc;->oneme_settings_privacy_screen_safe_mode:I
 
-    invoke-direct {v0, v1}, Lo2b;-><init>([Ljava/lang/String;)V
+    int-to-long v0, v0
 
-    iput-object v0, p0, Ll2b;->g:Lo2b;
+    sput-wide v0, Ll2b;->i:J
 
-    new-instance v1, Lo2b;
+    sget v0, Lfpc;->oneme_settings_privacy_screen_search_by_phone:I
 
-    sget-object v2, Lp2b;->m:[Ljava/lang/String;
+    int-to-long v0, v0
 
-    invoke-direct {v1, v2}, Lo2b;-><init>([Ljava/lang/String;)V
+    sput-wide v0, Ll2b;->j:J
 
-    iput-object v1, p0, Ll2b;->h:Lo2b;
+    sget v0, Lfpc;->oneme_settings_privacy_screen_see_online_state:I
 
-    new-instance v2, Lo2b;
+    int-to-long v0, v0
 
-    sget-object v3, Lp2b;->h:[Ljava/lang/String;
+    sput-wide v0, Ll2b;->k:J
 
-    invoke-direct {v2, v3}, Lo2b;-><init>([Ljava/lang/String;)V
+    sget v0, Lfpc;->oneme_settings_privacy_screen_twofa:I
 
-    iput-object v2, p0, Ll2b;->i:Lo2b;
+    int-to-long v0, v0
 
-    new-instance v3, Lo2b;
+    sput-wide v0, Ll2b;->l:J
 
-    sget-object v4, Lp2b;->k:[Ljava/lang/String;
+    sget v0, Lfpc;->oneme_settings_privacy_screen_twofa_profile_delete:I
 
-    invoke-direct {v3, v4}, Lo2b;-><init>([Ljava/lang/String;)V
+    int-to-long v0, v0
 
-    iput-object v3, p0, Ll2b;->j:Lo2b;
+    sput-wide v0, Ll2b;->m:J
 
-    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget v0, Lfpc;->oneme_settings_privacy_screen_twofa_warning_item:I
 
-    const/16 v5, 0x21
+    int-to-long v0, v0
 
-    const/4 v6, 0x0
+    sput-wide v0, Ll2b;->n:J
 
-    if-lt v4, v5, :cond_0
+    sget v0, Lfpc;->oneme_settings_privacy_screen_web_apps:I
 
-    new-instance v5, Lf2b;
+    int-to-long v0, v0
 
-    invoke-direct {v5, p0, v6}, Lf2b;-><init>(Ll2b;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v7, Lnu5;
-
-    const/4 v8, 0x1
-
-    invoke-direct {v7, p2, v5, v8}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-static {v7, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    :cond_0
-    new-instance p2, Lg2b;
-
-    invoke-direct {p2, p0, v6}, Lg2b;-><init>(Ll2b;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v5, Lnu5;
-
-    const/4 v7, 0x1
-
-    invoke-direct {v5, p3, p2, v7}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-static {v5, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    const/16 p2, 0x22
-
-    if-lt v4, p2, :cond_1
-
-    new-instance p2, Lg3;
-
-    const/16 p3, 0x15
-
-    invoke-direct {p2, p0, v6, p3}, Lg3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    new-instance p3, Lq31;
-
-    const/4 v4, 0x4
-
-    invoke-direct {p3, p4, v0, p2, v4}, Lq31;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-static {p3, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p2, Lh2b;
-
-    invoke-direct {p2, p0, v6}, Lh2b;-><init>(Ll2b;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Lnu5;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p3, p4, p2, v0}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-static {p3, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    :goto_0
-    new-instance p2, Li2b;
-
-    invoke-direct {p2, p0, v6}, Li2b;-><init>(Ll2b;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Lnu5;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p3, v1, p2, p4}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-static {p3, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    new-instance p2, Lj2b;
-
-    invoke-direct {p2, p0, v6}, Lj2b;-><init>(Ll2b;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Lnu5;
-
-    invoke-direct {p3, v2, p2, p4}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-static {p3, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    new-instance p2, Lk2b;
-
-    invoke-direct {p2, p0, v6}, Lk2b;-><init>(Ll2b;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p0, Lnu5;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p0, v3, p2, p3}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-static {p0, p1}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    return-void
-.end method
-
-.method public static final a(Ll2b;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    iget-object v0, p0, Ll2b;->c:Lcl7;
-
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldt9;
-
-    invoke-virtual {v0}, Ldt9;->d()Ljava/lang/Integer;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Lg58;
-
-    invoke-direct {v1}, Lg58;-><init>()V
-
-    const-string v2, "pType"
-
-    invoke-virtual {v1, v2, p1}, Lg58;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string p1, "screen"
-
-    invoke-virtual {v1, p1, v0}, Lg58;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string p1, "pStatus"
-
-    invoke-virtual {v1, p1, p2}, Lg58;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v1}, Lg58;->b()Lg58;
-
-    move-result-object p1
-
-    const-string p2, "permission_changed_state"
-
-    invoke-virtual {p0, p2, p1}, Ll2b;->c(Ljava/lang/String;Lg58;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static b(Lo2b;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Lo2b;->i()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const-string p0, "allowed"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "denied"
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final c(Ljava/lang/String;Lg58;)V
-    .locals 4
-
-    new-instance v0, Lxa7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const-string v1, "PERMISSION"
-
-    iput-object v1, v0, Lxa7;->c:Ljava/lang/String;
-
-    iget-object v1, p0, Ll2b;->b:Lcl7;
-
-    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lf53;
-
-    check-cast v2, Lgad;
-
-    invoke-virtual {v2}, Lgad;->q()J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Lxa7;->b:J
-
-    iput-object p1, v0, Lxa7;->o:Ljava/lang/String;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Lxa7;->a:J
-
-    invoke-virtual {v0, p2}, Lxa7;->b(Ljava/util/Map;)V
-
-    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lf53;
-
-    check-cast p1, Lh53;
-
-    invoke-virtual {p1}, Lh53;->z()J
-
-    move-result-wide p1
-
-    iput-wide p1, v0, Lxa7;->X:J
-
-    invoke-virtual {v0}, Lxa7;->d()Llz7;
-
-    move-result-object p1
-
-    iget-object p0, p0, Ll2b;->a:Lcl7;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzc;
-
-    invoke-virtual {p0, p1}, Lzc;->j(Llz7;)Z
+    sput-wide v0, Ll2b;->o:J
 
     return-void
 .end method

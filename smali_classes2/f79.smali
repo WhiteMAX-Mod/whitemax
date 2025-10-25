@@ -1,213 +1,175 @@
 .class public final Lf79;
-.super Ly2;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic o:I
+.field public final synthetic X:Lone/me/members/list/MembersListWidget;
+
+.field public final synthetic Y:J
+
+.field public final synthetic Z:Landroid/view/View;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lexc;I)V
+.method public constructor <init>(Lone/me/members/list/MembersListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lf79;->o:I
+    iput-object p1, p0, Lf79;->X:Lone/me/members/list/MembersListWidget;
 
-    invoke-direct {p0, p1}, Ly2;-><init>(Lexc;)V
+    iput-wide p2, p0, Lf79;->Y:J
+
+    iput-object p4, p0, Lf79;->Z:Landroid/view/View;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()Ljava/lang/String;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget p0, p0, Lf79;->o:I
+    check-cast p1, Lq54;
 
-    packed-switch p0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string p0, "UPDATE chat_folder SET title = ?, emoji = ? WHERE id = ?"
+    invoke-virtual {p0, p1, p2}, Lf79;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
 
-    :pswitch_0
-    const-string p0, "DELETE FROM folder_and_chats"
+    check-cast p1, Lf79;
 
-    return-object p0
+    sget-object p2, Lccg;->a:Lccg;
 
-    :pswitch_1
-    const-string p0, "INSERT OR REPLACE INTO folder_and_chats VALUES (?, ?)"
+    invoke-virtual {p1, p2}, Lf79;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p0
+    return-object p2
+.end method
 
-    :pswitch_2
-    const-string p0, "DELETE FROM folder_and_chats WHERE folderId = ?"
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    return-object p0
+    new-instance v0, Lf79;
 
-    :pswitch_3
-    const-string p0, "DELETE FROM chat_folder"
+    iget-wide v2, p0, Lf79;->Y:J
 
-    return-object p0
+    iget-object v4, p0, Lf79;->Z:Landroid/view/View;
 
-    :pswitch_4
-    const-string p0, "DELETE FROM recent"
+    iget-object v1, p0, Lf79;->X:Lone/me/members/list/MembersListWidget;
 
-    return-object p0
+    move-object v5, p2
 
-    :pswitch_5
-    const-string p0, "DELETE FROM reactions_section"
+    invoke-direct/range {v0 .. v5}, Lf79;-><init>(Lone/me/members/list/MembersListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
 
-    return-object p0
+    return-object v0
+.end method
 
-    :pswitch_6
-    const-string p0, "DELETE FROM profile"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    return-object p0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    :pswitch_7
-    const-string p0, "DELETE FROM phones WHERE id = ?"
+    sget-object p1, Lone/me/members/list/MembersListWidget;->B0:[Ltr7;
 
-    return-object p0
+    iget-object p1, p0, Lf79;->X:Lone/me/members/list/MembersListWidget;
 
-    :pswitch_8
-    const-string p0, "DELETE FROM phones"
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->E0()Lp69;
 
-    return-object p0
+    move-result-object v0
 
-    :pswitch_9
-    const-string p0, "UPDATE phones SET server_phone = ?, type = ? WHERE phone = ?"
+    iget-object v0, v0, Lp69;->b:Lli6;
 
-    return-object p0
+    iget-wide v1, p0, Lf79;->Y:J
 
-    :pswitch_a
-    const-string p0, "DELETE FROM notifications_tracker_messages"
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-object p0
+    move-result-object v3
 
-    :pswitch_b
-    const-string p0, "DELETE FROM notifications_tracker_messages WHERE time<=?"
+    invoke-interface {v0, v3}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v0
 
-    :pswitch_c
-    const-string p0, "DELETE FROM notifications_read_marks"
+    check-cast v0, Ljava/util/List;
 
-    return-object p0
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->C0()Ld69;
 
-    :pswitch_d
-    const-string p0, "DELETE FROM fcm_notifications WHERE chat_id = ?"
+    move-result-object v3
 
-    return-object p0
+    iget-boolean v3, v3, Ld69;->c:Z
 
-    :pswitch_e
-    const-string p0, "DELETE FROM fcm_notifications"
+    sget-object v4, Lccg;->a:Lccg;
 
-    return-object p0
+    if-eqz v3, :cond_1
 
-    :pswitch_f
-    const-string p0, "DELETE FROM fcm_notifications WHERE time <= ? AND chat_id = ?"
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
-    return-object p0
+    move-result v3
 
-    :pswitch_10
-    const-string p0, "DELETE FROM fcm_notifications WHERE time <= ?"
+    if-eqz v3, :cond_0
 
-    return-object p0
+    goto :goto_0
 
-    :pswitch_11
-    const-string p0, "UPDATE messages SET delivery_status = ? WHERE id = ?"
+    :cond_0
+    new-instance v3, Ljava/lang/Long;
 
-    return-object p0
+    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
-    :pswitch_12
-    const-string p0, "UPDATE messages SET chat_id = ? WHERE id = ?"
+    iget-object v1, p1, Lone/me/members/list/MembersListWidget;->Z:Lqs;
 
-    return-object p0
+    sget-object v2, Lone/me/members/list/MembersListWidget;->B0:[Ltr7;
 
-    :pswitch_13
-    const-string p0, "DELETE FROM messages WHERE media_type = ?"
+    const/4 v5, 0x2
 
-    return-object p0
+    aget-object v2, v2, v5
 
-    :pswitch_14
-    const-string p0, "DELETE FROM messages WHERE chat_id = ? AND server_id = 0 AND time_local >= ? AND time_local <= ?"
+    invoke-virtual {v1, p1, v3}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
-    return-object p0
+    invoke-static {v5}, Ldwi;->a(I)Lg14;
 
-    :pswitch_15
-    const-string p0, "DELETE FROM messages WHERE chat_id = ? AND delayed_attrs_time_to_fire <= ? AND inserted_from_msg_link = 0 AND delayed_attrs_time_to_fire IS NOT NULL AND delayed_attrs_notify_sender IS NOT NULL"
+    move-result-object v1
 
-    return-object p0
+    invoke-interface {v1, v0}, Lg14;->i(Ljava/util/Collection;)Lg14;
 
-    :pswitch_16
-    const-string p0, "DELETE FROM messages WHERE chat_id = ? AND time <= ? AND inserted_from_msg_link = 0 AND delayed_attrs_time_to_fire IS NULL AND delayed_attrs_notify_sender IS NULL"
+    move-result-object v0
 
-    return-object p0
+    iget-object v1, p0, Lf79;->Z:Landroid/view/View;
 
-    :pswitch_17
-    const-string p0, "DELETE FROM messages"
+    invoke-interface {v0, v1}, Lg14;->t(Landroid/view/View;)Lg14;
 
-    return-object p0
+    move-result-object v0
 
-    :pswitch_18
-    const-string p0, "DELETE FROM messages WHERE chat_id = ?"
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    return-object p0
+    move-result-object v1
 
-    :pswitch_19
-    const-string p0, "UPDATE messages SET delayed_attrs_time_to_fire = ? AND delayed_attrs_notify_sender = ? WHERE id = ?"
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    return-object p0
+    move-result-object v1
 
-    :pswitch_1a
-    const-string p0, "UPDATE messages SET reactions = ? WHERE server_id = ?"
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    return-object p0
+    const/high16 v2, 0x41400000    # 12.0f
 
-    :pswitch_1b
-    const-string p0, "UPDATE messages SET channel_views = ?, channel_forwards = ? WHERE server_id = ?"
+    mul-float/2addr v1, v2
 
-    return-object p0
+    invoke-interface {v0, v1}, Lg14;->m(F)Lg14;
 
-    :pswitch_1c
-    const-string p0, "UPDATE messages SET status = ? WHERE chat_id = ? AND time >= ? AND time <= ?"
+    move-result-object v0
 
-    return-object p0
+    invoke-interface {v0}, Lg14;->build()Lh14;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-interface {v0, p1}, Lh14;->v(Lone/me/sdk/arch/Widget;)V
+
+    :cond_1
+    :goto_0
+    return-object v4
 .end method

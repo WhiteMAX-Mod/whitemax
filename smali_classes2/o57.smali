@@ -1,48 +1,61 @@
 .class public final Lo57;
-.super Ljx3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Lp57;
 
-.field public final synthetic Y:Lwb;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lwb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lo57;->Y:Lwb;
-
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lp57;)V
     .locals 1
 
-    iput-object p1, p0, Lo57;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lo57;->X:I
+    iput-object p4, p0, Lo57;->a:Lp57;
 
-    const/high16 v0, -0x80000000
+    new-instance p4, Ljava/lang/StringBuilder;
 
-    or-int/2addr p1, v0
+    invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput p1, p0, Lo57;->X:I
+    const-string v0, "Content-Disposition: form-data; name="
 
-    iget-object p1, p0, Lo57;->Y:Lwb;
+    invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    invoke-static {p4, p1}, Lm57;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0, p0}, Lwb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-eqz p2, :cond_0
 
-    move-result-object p0
+    const-string p1, "; filename="
 
-    return-object p0
+    invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {p4, p2}, Lm57;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+
+    :cond_0
+    const-string p1, "\r\n"
+
+    invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p3, :cond_1
+
+    const-string p2, "Content-Type: "
+
+    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lo57;->b:Ljava/lang/String;
+
+    return-void
 .end method

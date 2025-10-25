@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lb74;)V
+.method public constructor <init>(Lbc4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

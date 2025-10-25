@@ -1,62 +1,35 @@
-.class public final synthetic Ldu0;
-.super Led6;
+.class public final Ldu0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
 
+# instance fields
+.field public a:Ldu0;
 
-# static fields
-.field public static final a:Ldu0;
+.field public b:I
 
+.field public c:Ljava/util/LinkedList;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Ldu0;
-
-    const-string v4, "createSegment(JLkotlinx/coroutines/channels/ChannelSegment;)Lkotlinx/coroutines/channels/ChannelSegment;"
-
-    const/4 v5, 0x1
-
-    const/4 v1, 0x2
-
-    const-class v2, Leu0;
-
-    const-string v3, "createSegment"
-
-    invoke-direct/range {v0 .. v5}, Led6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Ldu0;->a:Ldu0;
-
-    return-void
-.end method
+.field public d:Ldu0;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Ljava/lang/Number;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    const-string v1, "LinkedEntry(key: "
 
-    move-result-wide v1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-object v3, p2
+    iget v1, p0, Ldu0;->b:I
 
-    check-cast v3, Lu62;
+    const-string v2, ")"
 
-    sget-object p0, Leu0;->a:Lu62;
+    invoke-static {v0, v1, v2}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    new-instance v0, Lu62;
-
-    iget-object v4, v3, Lu62;->a:Lcu0;
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lu62;-><init>(JLu62;Lcu0;I)V
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,33 +1,58 @@
-.class public abstract synthetic Lghg;
+.class public final Lghg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrr1;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lghg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onUrlSharingInfoUpdated(Lqr1;)V
     .locals 2
 
-    invoke-static {}, Lwgg;->values()[Lwgg;
+    iget-object v0, p0, Lghg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    array-length v0, v0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    new-array v0, v0, [I
+    move-result v1
 
-    const/4 v1, 0x1
+    if-eqz v1, :cond_0
 
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :catch_0
-    sput-object v0, Lghg;->$EnumSwitchMapping$0:[I
+    move-result-object v1
 
+    check-cast v1, Lrr1;
+
+    invoke-interface {v1, p1}, Lrr1;->onUrlSharingInfoUpdated(Lqr1;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

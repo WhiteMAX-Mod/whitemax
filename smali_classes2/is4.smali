@@ -1,82 +1,61 @@
 .class public final Lis4;
-.super Loi0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lty5;
 
 
 # instance fields
-.field public final X:J
+.field public final synthetic a:Lty5;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Lone/me/devmenu/DevMenuScreen;
 
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lq0f;Lone/me/devmenu/DevMenuScreen;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Loi0;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p5, p0, Lis4;->b:Ljava/lang/String;
+    iput-object p1, p0, Lis4;->a:Lty5;
 
-    iput-object p6, p0, Lis4;->c:Ljava/lang/String;
+    iput-object p2, p0, Lis4;->b:Lone/me/devmenu/DevMenuScreen;
 
-    if-nez p7, :cond_0
-
-    const-string p7, ""
-
-    :cond_0
-    iput-object p7, p0, Lis4;->o:Ljava/lang/String;
-
-    iput-wide p3, p0, Lis4;->X:J
+    iput p3, p0, Lis4;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lec2;
 
-    const-string v1, "DownloadCompleteEvent{url=\'"
+    iget-object v1, p0, Lis4;->b:Lone/me/devmenu/DevMenuScreen;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v2, p0, Lis4;->c:I
 
-    iget-object v1, p0, Lis4;->b:Ljava/lang/String;
+    invoke-direct {v0, p1, v1, v2}, Lec2;-><init>(Lvy5;Lone/me/devmenu/DevMenuScreen;I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lis4;->a:Lty5;
 
-    const-string v1, "\', path=\'"
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget-object v1, p0, Lis4;->c:Ljava/lang/String;
+    sget-object p2, Lr54;->a:Lr54;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne p1, p2, :cond_0
 
-    const-string v1, "\', attachLocalId=\'"
+    return-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
 
-    iget-object v1, p0, Lis4;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', messageId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lis4;->X:J
-
-    const/16 p0, 0x7d
-
-    invoke-static {v0, v1, v2, p0}, Lbg9;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

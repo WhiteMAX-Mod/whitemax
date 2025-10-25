@@ -1,64 +1,130 @@
-.class public final synthetic Ltaf;
+.class public abstract Ltaf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
 
-
-# instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final synthetic b:Ljava/lang/String;
+# static fields
+.field public static final a:Ljava/text/DecimalFormat;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicInteger;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/text/DecimalFormat;
 
-    iput-object p1, p0, Ltaf;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    const-string v1, "#.#"
 
-    iput-object p2, p0, Ltaf;->b:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
+
+    sput-object v0, Ltaf;->a:Ljava/text/DecimalFormat;
+
+    new-instance v0, Ljava/text/DecimalFormat;
+
+    const-string v2, "0.0"
+
+    invoke-direct {v0, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
 
     return-void
 .end method
 
+.method public static final a(I)Ljava/lang/String;
+    .locals 5
 
-# virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 4
+    int-to-long v0, p0
 
-    iget-object v0, p0, Ltaf;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    const-wide/32 v2, 0x3b9aca00
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    cmp-long p0, v0, v2
 
-    move-result v0
+    sget-object v2, Ltaf;->a:Ljava/text/DecimalFormat;
 
-    new-instance v1, Ljava/lang/Thread;
+    if-ltz p0, :cond_0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    long-to-double v0, v0
 
-    const-string v3, "tracer-io-"
+    const-wide v3, 0x41cdcd6500000000L    # 1.0E9
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    div-double/2addr v0, v3
 
-    iget-object p0, p0, Ltaf;->b:Ljava/lang/String;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x2d
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-direct {v1, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    const-string v0, "B"
 
-    return-object v1
+    invoke-static {p0, v0}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-wide/32 v3, 0xf4240
+
+    cmp-long p0, v0, v3
+
+    if-ltz p0, :cond_1
+
+    long-to-double v0, v0
+
+    const-wide v3, 0x412e848000000000L    # 1000000.0
+
+    div-double/2addr v0, v3
+
+    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "M"
+
+    invoke-static {p0, v0}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    const-wide/16 v3, 0x3e8
+
+    cmp-long p0, v0, v3
+
+    if-ltz p0, :cond_2
+
+    long-to-double v0, v0
+
+    const-wide v3, 0x408f400000000000L    # 1000.0
+
+    div-double/2addr v0, v3
+
+    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "K"
+
+    invoke-static {p0, v0}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

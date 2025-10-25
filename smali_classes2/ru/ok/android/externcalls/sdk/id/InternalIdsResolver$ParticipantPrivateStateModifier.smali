@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract setInternalId(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lsg1;)V
+.method public abstract setInternalId(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lhi1;)V
 .end method

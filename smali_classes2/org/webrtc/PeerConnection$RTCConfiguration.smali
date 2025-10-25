@@ -237,205 +237,205 @@
 
 # virtual methods
 .method public getActiveResetSrtpParams()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->activeResetSrtpParams:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->activeResetSrtpParams:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getAudioJitterBufferFastAccelerate()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->audioJitterBufferFastAccelerate:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->audioJitterBufferFastAccelerate:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getAudioJitterBufferMaxPackets()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->audioJitterBufferMaxPackets:I
+    iget v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->audioJitterBufferMaxPackets:I
 
-    return p0
+    return v0
 .end method
 
 .method public getBundlePolicy()Lorg/webrtc/PeerConnection$BundlePolicy;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->bundlePolicy:Lorg/webrtc/PeerConnection$BundlePolicy;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->bundlePolicy:Lorg/webrtc/PeerConnection$BundlePolicy;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getCandidateNetworkPolicy()Lorg/webrtc/PeerConnection$CandidateNetworkPolicy;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->candidateNetworkPolicy:Lorg/webrtc/PeerConnection$CandidateNetworkPolicy;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->candidateNetworkPolicy:Lorg/webrtc/PeerConnection$CandidateNetworkPolicy;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getCertificate()Lorg/webrtc/RtcCertificatePem;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->certificate:Lorg/webrtc/RtcCertificatePem;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->certificate:Lorg/webrtc/RtcCertificatePem;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getContinualGatheringPolicy()Lorg/webrtc/PeerConnection$ContinualGatheringPolicy;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->continualGatheringPolicy:Lorg/webrtc/PeerConnection$ContinualGatheringPolicy;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->continualGatheringPolicy:Lorg/webrtc/PeerConnection$ContinualGatheringPolicy;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getCryptoOptions()Lorg/webrtc/CryptoOptions;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->cryptoOptions:Lorg/webrtc/CryptoOptions;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->cryptoOptions:Lorg/webrtc/CryptoOptions;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getDisableIPv6OnWifi()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->disableIPv6OnWifi:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->disableIPv6OnWifi:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getEnableCpuOveruseDetection()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->enableCpuOveruseDetection:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->enableCpuOveruseDetection:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getEnableDscp()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->enableDscp:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->enableDscp:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getEnableImplicitRollback()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->enableImplicitRollback:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->enableImplicitRollback:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getIceBackupCandidatePairPingInterval()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceBackupCandidatePairPingInterval:I
+    iget v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceBackupCandidatePairPingInterval:I
 
-    return p0
+    return v0
 .end method
 
 .method public getIceCandidatePoolSize()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceCandidatePoolSize:I
+    iget v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceCandidatePoolSize:I
 
-    return p0
+    return v0
 .end method
 
 .method public getIceCheckIntervalStrongConnectivity()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceCheckIntervalStrongConnectivityMs:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceCheckIntervalStrongConnectivityMs:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getIceCheckIntervalWeakConnectivity()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceCheckIntervalWeakConnectivityMs:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceCheckIntervalWeakConnectivityMs:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getIceCheckMinInterval()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceCheckMinInterval:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceCheckMinInterval:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getIceConnectionReceivingTimeout()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceConnectionReceivingTimeout:I
+    iget v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceConnectionReceivingTimeout:I
 
-    return p0
+    return v0
 .end method
 
 .method public getIceServers()Ljava/util/List;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -449,238 +449,238 @@
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceServers:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceServers:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getIceTransportsType()Lorg/webrtc/PeerConnection$IceTransportsType;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceTransportsType:Lorg/webrtc/PeerConnection$IceTransportsType;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceTransportsType:Lorg/webrtc/PeerConnection$IceTransportsType;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getIceUnwritableMinChecks()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceUnwritableMinChecks:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceUnwritableMinChecks:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getIceUnwritableTimeout()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceUnwritableTimeMs:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceUnwritableTimeMs:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getKeyType()Lorg/webrtc/PeerConnection$KeyType;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->keyType:Lorg/webrtc/PeerConnection$KeyType;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->keyType:Lorg/webrtc/PeerConnection$KeyType;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getMaxIPv6Networks()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->maxIPv6Networks:I
+    iget v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->maxIPv6Networks:I
 
-    return p0
+    return v0
 .end method
 
 .method public getNetworkPreference()Lorg/webrtc/PeerConnection$AdapterType;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->networkPreference:Lorg/webrtc/PeerConnection$AdapterType;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->networkPreference:Lorg/webrtc/PeerConnection$AdapterType;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getOfferExtmapAllowMixed()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->offerExtmapAllowMixed:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->offerExtmapAllowMixed:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getPresumeWritableWhenFullyRelayed()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->presumeWritableWhenFullyRelayed:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->presumeWritableWhenFullyRelayed:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getPruneTurnPorts()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->pruneTurnPorts:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->pruneTurnPorts:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getRtcpMuxPolicy()Lorg/webrtc/PeerConnection$RtcpMuxPolicy;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->rtcpMuxPolicy:Lorg/webrtc/PeerConnection$RtcpMuxPolicy;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->rtcpMuxPolicy:Lorg/webrtc/PeerConnection$RtcpMuxPolicy;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getScreencastMinBitrate()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->screencastMinBitrate:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->screencastMinBitrate:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSdpSemantics()Lorg/webrtc/PeerConnection$SdpSemantics;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->sdpSemantics:Lorg/webrtc/PeerConnection$SdpSemantics;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->sdpSemantics:Lorg/webrtc/PeerConnection$SdpSemantics;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getStableWritableConnectionPingIntervalMs()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->stableWritableConnectionPingIntervalMs:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->stableWritableConnectionPingIntervalMs:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getStunCandidateKeepaliveInterval()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->stunCandidateKeepaliveIntervalMs:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->stunCandidateKeepaliveIntervalMs:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSurfaceIceCandidatesOnIceTransportTypeChanged()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->surfaceIceCandidatesOnIceTransportTypeChanged:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->surfaceIceCandidatesOnIceTransportTypeChanged:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getSuspendBelowMinBitrate()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->suspendBelowMinBitrate:Z
+    iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->suspendBelowMinBitrate:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getTcpCandidatePolicy()Lorg/webrtc/PeerConnection$TcpCandidatePolicy;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->tcpCandidatePolicy:Lorg/webrtc/PeerConnection$TcpCandidatePolicy;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->tcpCandidatePolicy:Lorg/webrtc/PeerConnection$TcpCandidatePolicy;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getTurnCustomizer()Lorg/webrtc/TurnCustomizer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->turnCustomizer:Lorg/webrtc/TurnCustomizer;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->turnCustomizer:Lorg/webrtc/TurnCustomizer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getTurnLoggingId()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->turnLoggingId:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->turnLoggingId:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getTurnPortPrunePolicy()Lorg/webrtc/PeerConnection$PortPrunePolicy;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->turnPortPrunePolicy:Lorg/webrtc/PeerConnection$PortPrunePolicy;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->turnPortPrunePolicy:Lorg/webrtc/PeerConnection$PortPrunePolicy;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getVpnPreference()Lorg/webrtc/PeerConnection$VpnPreference;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "RTCConfiguration"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->vpnPreference:Lorg/webrtc/PeerConnection$VpnPreference;
+    iget-object v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->vpnPreference:Lorg/webrtc/PeerConnection$VpnPreference;
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,131 +1,79 @@
 .class public final Lf7f;
-.super Lure;
+.super Ldg4;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
 
+# static fields
+.field public static final b:Lf7f;
 
-# instance fields
-.field public X:I
+.field public static final c:Lyf4;
 
-.field public final synthetic Y:Lv7f;
+.field public static final d:Lyf4;
 
-.field public final synthetic Z:Ljava/nio/ByteBuffer;
+.field public static final e:Lyf4;
+
+.field public static final f:Lyf4;
 
 
 # direct methods
-.method public constructor <init>(Lv7f;Ljava/nio/ByteBuffer;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Lf7f;->Y:Lv7f;
+    new-instance v0, Lf7f;
 
-    iput-object p2, p0, Lf7f;->Z:Ljava/nio/ByteBuffer;
+    invoke-direct {v0}, Ldg4;-><init>()V
 
-    const/4 p1, 0x2
+    sput-object v0, Lf7f;->b:Lf7f;
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    new-array v2, v1, [Ljava/lang/String;
 
+    const-string v3, ":stickers/settings"
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const/4 v4, 0x0
 
-    check-cast p1, Ly04;
+    const/16 v5, 0xe
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lf7f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lf7f;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lf7f;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lf7f;
-
-    iget-object v0, p0, Lf7f;->Y:Lv7f;
-
-    iget-object p0, p0, Lf7f;->Z:Ljava/nio/ByteBuffer;
-
-    invoke-direct {p1, v0, p0, p2}, Lf7f;-><init>(Lv7f;Ljava/nio/ByteBuffer;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lf7f;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lf7f;->Y:Lv7f;
-
-    iget-object p1, p1, Lv7f;->b:Ljava/nio/channels/AsynchronousByteChannel;
-
-    iput v1, p0, Lf7f;->X:I
-
-    new-instance v0, Lf12;
-
-    invoke-static {p0}, Lf4h;->x(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lf12;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v2, Lf7f;->c:Lyf4;
 
-    invoke-virtual {v0}, Lf12;->o()V
+    const-string v2, ":stickers/recent"
 
-    sget-object v1, Lcu;->b:Lcu;
+    new-array v3, v1, [Ljava/lang/String;
 
-    iget-object p0, p0, Lf7f;->Z:Ljava/nio/ByteBuffer;
+    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    invoke-interface {p1, p0, v0, v1}, Ljava/nio/channels/AsynchronousByteChannel;->read(Ljava/nio/ByteBuffer;Ljava/lang/Object;Ljava/nio/channels/CompletionHandler;)V
+    move-result-object v2
 
-    invoke-virtual {v0}, Lf12;->m()Ljava/lang/Object;
+    sput-object v2, Lf7f;->d:Lyf4;
 
-    move-result-object p0
+    const-string v2, ":stickers/favorite"
 
-    sget-object p1, Lz04;->a:Lz04;
+    new-array v1, v1, [Ljava/lang/String;
 
-    if-ne p0, p1, :cond_2
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    return-object p1
+    move-result-object v1
 
-    :cond_2
-    return-object p0
+    sput-object v1, Lf7f;->e:Lyf4;
+
+    const-string v1, "set_id"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":stickers/set"
+
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v0
+
+    sput-object v0, Lf7f;->f:Lyf4;
+
+    return-void
 .end method

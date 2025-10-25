@@ -1,134 +1,82 @@
 .class public final Lyx7;
-.super Ljava/lang/Object;
+.super Lvk0;
 .source "SourceFile"
-
-# interfaces
-.implements Ldjb;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public h:I
 
-.field public final b:Ljava/util/concurrent/Executor;
+.field public i:I
 
-.field public final c:Landroid/content/ContentResolver;
+.field public j:Z
 
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Landroid/content/ContentResolver;I)V
-    .locals 0
-
-    iput p3, p0, Lyx7;->a:I
-
-    iput-object p1, p0, Lyx7;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Lyx7;->c:Landroid/content/ContentResolver;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public k:I
 
 
 # virtual methods
-.method public final a(Ldi0;Lejb;)V
-    .locals 10
+.method public final a()V
+    .locals 2
 
-    iget v0, p0, Lyx7;->a:I
+    invoke-super {p0}, Lvk0;->a()V
 
-    packed-switch v0, :pswitch_data_0
+    iget v0, p0, Lyx7;->k:I
 
-    move-object v8, p2
+    if-ltz v0, :cond_4
 
-    check-cast v8, Lmj0;
+    iget v0, p0, Lyx7;->h:I
 
-    iget-object v3, v8, Lmj0;->c:Lhjb;
+    if-nez v0, :cond_3
 
-    iget-object v7, v8, Lmj0;->a:Li27;
+    iget v0, p0, Lvk0;->b:I
 
-    const-string v0, "local"
+    if-lez v0, :cond_1
 
-    const-string v2, "video"
+    iget v0, p0, Lvk0;->g:I
 
-    invoke-virtual {v8, v0, v2}, Lmj0;->h(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    new-instance v0, Low7;
+    goto :goto_0
 
-    move-object v5, v3
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    move-object v6, p2
+    const-string v1, "Rounded corners without gap are not supported in contiguous indeterminate animation."
 
-    move-object v1, p0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-object v2, p1
+    throw v0
 
-    move-object v4, p2
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lvk0;->c:[I
 
-    invoke-direct/range {v0 .. v7}, Low7;-><init>(Lyx7;Ldi0;Lhjb;Lejb;Lhjb;Lejb;Li27;)V
+    array-length v0, v0
 
-    new-instance v2, Lz94;
+    const/4 v1, 0x3
 
-    const/4 v3, 0x5
+    if-lt v0, v1, :cond_2
 
-    invoke-direct {v2, v3, v0}, Lz94;-><init>(ILjava/lang/Object;)V
+    goto :goto_1
 
-    invoke-virtual {v8, v2}, Lmj0;->a(Lnj0;)V
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    iget-object v1, p0, Lyx7;->b:Ljava/util/concurrent/Executor;
+    const-string v1, "Contiguous indeterminate animation must be used with 3 or more indicator colors."
 
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
+    throw v0
+
+    :cond_3
+    :goto_1
     return-void
 
-    :pswitch_0
-    move-object v9, p2
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    check-cast v9, Lmj0;
+    const-string v1, "Stop indicator size must be >= 0."
 
-    iget-object v3, v9, Lmj0;->c:Lhjb;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object v7, v9, Lmj0;->a:Li27;
-
-    const-string v0, "local"
-
-    const-string v2, "thumbnail_bitmap"
-
-    invoke-virtual {v9, v0, v2}, Lmj0;->h(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v8, Landroid/os/CancellationSignal;
-
-    invoke-direct {v8}, Landroid/os/CancellationSignal;-><init>()V
-
-    new-instance v0, Lxx7;
-
-    move-object v5, v3
-
-    move-object v6, p2
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v4, p2
-
-    invoke-direct/range {v0 .. v8}, Lxx7;-><init>(Lyx7;Ldi0;Lhjb;Lejb;Lhjb;Lejb;Li27;Landroid/os/CancellationSignal;)V
-
-    new-instance v2, Lz94;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, v3, v0}, Lz94;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v9, v2}, Lmj0;->a(Lnj0;)V
-
-    iget-object v1, p0, Lyx7;->b:Ljava/util/concurrent/Executor;
-
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

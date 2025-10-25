@@ -1,32 +1,116 @@
-.class public final synthetic Ljk5;
+.class public abstract Ljk5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;
-
 
 # virtual methods
-.method public final load(Ljava/lang/String;)V
-    .locals 0
+.method public abstract a()[B
+.end method
 
-    :try_start_0
-    const-string p0, "ffmpg"
+.method public final b(Ljava/nio/ByteBuffer;II)I
+    .locals 3
 
-    invoke-static {p0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    return-void
+    move-result v0
 
-    :catchall_0
-    move-exception p0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    invoke-static {}, Lone/me/sdk/media/ffmpeg/WebmConfig;->getLogger()Lns9;
+    move-result v1
 
-    move-result-object p1
+    sub-int/2addr v0, v1
 
-    invoke-interface {p1, p0}, Lns9;->F(Ljava/lang/Throwable;)V
+    const/4 v1, 0x4
 
-    return-void
+    const-string v2, "extension underflow"
+
+    if-lt v0, v1, :cond_3
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v0
+
+    const v1, 0xffff
+
+    and-int/2addr v0, v1
+
+    if-ne v0, p2, :cond_2
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result p2
+
+    and-int/2addr p2, v1
+
+    if-lt p2, p3, :cond_1
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result p3
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result p1
+
+    sub-int/2addr p3, p1
+
+    if-lt p3, p2, :cond_0
+
+    return p2
+
+    :cond_0
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-direct {p1, v2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " can\'t be less than "
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p2, " bytes"
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-direct {p1, v2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

@@ -1,176 +1,110 @@
-.class public final enum Lgqg;
-.super Ljava/lang/Enum;
+.class public final Lgqg;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lxjg;
-
-
-# static fields
-.field public static final synthetic c:[Lgqg;
-
-.field public static final synthetic o:Ly75;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Liqg;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:J
+
+.field public final synthetic Z:J
+
+.field public final synthetic q0:Ljava/lang/String;
+
+.field public final synthetic r0:Lqmg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 10
-
-    new-instance v0, Lgqg;
-
-    const-string v1, "WebAppReady"
-
-    const-string v2, "ready"
-
-    const-string v3, "READY"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lgqg;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    new-instance v1, Lgqg;
-
-    const-string v2, "WebAppClose"
-
-    const-string v3, "close"
-
-    const-string v4, "CLOSE"
-
-    const/4 v5, 0x1
-
-    invoke-direct {v1, v4, v5, v2, v3}, Lgqg;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    new-instance v2, Lgqg;
-
-    const-string v3, "WebAppSetupBackButton"
-
-    const-string v4, "setup_back_button"
-
-    const-string v5, "SETUP_BACK_BUTTON"
-
-    const/4 v6, 0x2
-
-    invoke-direct {v2, v5, v6, v3, v4}, Lgqg;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    new-instance v3, Lgqg;
-
-    const-string v4, "WebAppSetupClosingBehavior"
-
-    const-string v5, "setup_closing_behaviour"
-
-    const-string v6, "SETUP_CLOSING_BEHAVIOUR"
-
-    const/4 v7, 0x3
-
-    invoke-direct {v3, v6, v7, v4, v5}, Lgqg;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    new-instance v4, Lgqg;
-
-    const-string v5, "WebAppBackButtonPressed"
-
-    const-string v6, "back_button_pressed"
-
-    const-string v7, "ON_CLICK_BACK"
-
-    const/4 v8, 0x4
-
-    invoke-direct {v4, v7, v8, v5, v6}, Lgqg;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    new-instance v5, Lgqg;
-
-    const-string v6, "WebAppSetupScreenCaptureBehavior"
-
-    const-string v7, "setup_screen_capture_behavior"
-
-    const-string v8, "SETUP_SCREEN_CAPTURE_BEHAVIOR"
-
-    const/4 v9, 0x5
-
-    invoke-direct {v5, v8, v9, v6, v7}, Lgqg;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    filled-new-array/range {v0 .. v5}, [Lgqg;
-
-    move-result-object v0
-
-    sput-object v0, Lgqg;->c:[Lgqg;
-
-    new-instance v1, Ly75;
-
-    invoke-direct {v1, v0}, Ly75;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lgqg;->o:Ly75;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Liqg;JJLjava/lang/String;Lqmg;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lgqg;->X:Liqg;
 
-    iput-object p3, p0, Lgqg;->a:Ljava/lang/String;
+    iput-wide p2, p0, Lgqg;->Y:J
 
-    iput-object p4, p0, Lgqg;->b:Ljava/lang/String;
+    iput-wide p4, p0, Lgqg;->Z:J
+
+    iput-object p6, p0, Lgqg;->q0:Ljava/lang/String;
+
+    iput-object p7, p0, Lgqg;->r0:Lqmg;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p8}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lgqg;
-    .locals 1
-
-    const-class v0, Lgqg;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lgqg;
-
-    return-object p0
-.end method
-
-.method public static values()[Lgqg;
-    .locals 1
-
-    sget-object v0, Lgqg;->c:[Lgqg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lgqg;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x0
+    check-cast p1, Lq54;
 
-    return-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lgqg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lgqg;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lgqg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final b()Ljava/lang/String;
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 9
 
-    iget-object p0, p0, Lgqg;->a:Ljava/lang/String;
+    new-instance v0, Lgqg;
 
-    return-object p0
+    iget-object v6, p0, Lgqg;->q0:Ljava/lang/String;
+
+    iget-object v7, p0, Lgqg;->r0:Lqmg;
+
+    iget-object v1, p0, Lgqg;->X:Liqg;
+
+    iget-wide v2, p0, Lgqg;->Y:J
+
+    iget-wide v4, p0, Lgqg;->Z:J
+
+    move-object v8, p2
+
+    invoke-direct/range {v0 .. v8}, Lgqg;-><init>(Liqg;JJLjava/lang/String;Lqmg;Lkotlin/coroutines/Continuation;)V
+
+    return-object v0
 .end method
 
-.method public final c()Ljava/lang/String;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object p0, p0, Lgqg;->b:Ljava/lang/String;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    return-object p0
+    iget-object p1, p0, Lgqg;->X:Liqg;
+
+    invoke-static {p1}, Liqg;->a(Liqg;)Ljsg;
+
+    move-result-object v0
+
+    iget-object v5, p0, Lgqg;->q0:Ljava/lang/String;
+
+    iget-object v6, p0, Lgqg;->r0:Lqmg;
+
+    iget-wide v1, p0, Lgqg;->Y:J
+
+    iget-wide v3, p0, Lgqg;->Z:J
+
+    invoke-virtual/range {v0 .. v6}, Ljsg;->f(JJLjava/lang/String;Lqmg;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

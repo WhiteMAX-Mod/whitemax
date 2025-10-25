@@ -41,19 +41,19 @@
 .end method
 
 .method private final zza()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/google/android/gms/ads/identifier/zzb;->zzb:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/google/android/gms/ads/identifier/zzb;->zzb:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;
+    check-cast v0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->zza()V
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->zza()V
 
     :cond_0
     return-void

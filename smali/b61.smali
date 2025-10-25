@@ -3,95 +3,66 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld61;
+.implements Lji6;
 
 
 # instance fields
-.field public final a:Ljava/util/Set;
+.field public final synthetic a:I
+
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Set;)V
+.method public synthetic constructor <init>(II)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lb61;->a:I
 
-    iput-object p1, p0, Lb61;->a:Ljava/util/Set;
+    iput p1, p0, Lb61;->b:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lb61;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v0, Lh41;
 
-    :cond_0
-    instance-of v1, p1, Lb61;
+    const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    const/4 v2, 0x4
 
-    if-nez v1, :cond_1
+    iget v3, p0, Lb61;->b:I
 
-    return v2
+    invoke-direct {v0, v3, v2, v1}, Lh41;-><init>(IIZ)V
 
-    :cond_1
-    check-cast p1, Lb61;
+    return-object v0
 
-    iget-object p0, p0, Lb61;->a:Ljava/util/Set;
+    :pswitch_0
+    new-instance v0, Lh41;
 
-    iget-object p1, p1, Lb61;->a:Ljava/util/Set;
+    const/4 v1, 0x0
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v2, 0x4
 
-    move-result p0
+    iget v3, p0, Lb61;->b:I
 
-    if-nez p0, :cond_2
+    invoke-direct {v0, v3, v2, v1}, Lh41;-><init>(IIZ)V
 
-    return v2
+    return-object v0
 
-    :cond_2
-    return v0
-.end method
+    nop
 
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lb61;->a:Ljava/util/Set;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UpdateContacts(contactIds="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lb61;->a:Ljava/util/Set;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

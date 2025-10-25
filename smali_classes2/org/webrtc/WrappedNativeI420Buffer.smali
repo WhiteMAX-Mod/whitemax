@@ -64,85 +64,85 @@
 
     invoke-static/range {p0 .. p6}, Lorg/webrtc/JavaI420Buffer;->cropAndScaleI420(Lorg/webrtc/VideoFrame$I420Buffer;IIIIII)Lorg/webrtc/VideoFrame$Buffer;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public getDataU()Ljava/nio/ByteBuffer;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->dataU:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->dataU:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getDataV()Ljava/nio/ByteBuffer;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->dataV:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->dataV:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getDataY()Ljava/nio/ByteBuffer;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->dataY:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->dataY:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getHeight()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->height:I
+    iget v0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->height:I
 
-    return p0
+    return v0
 .end method
 
 .method public getStrideU()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->strideU:I
+    iget v0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->strideU:I
 
-    return p0
+    return v0
 .end method
 
 .method public getStrideV()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->strideV:I
+    iget v0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->strideV:I
 
-    return p0
+    return v0
 .end method
 
 .method public getStrideY()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->strideY:I
+    iget v0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->strideY:I
 
-    return p0
+    return v0
 .end method
 
 .method public getWidth()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->width:I
+    iget v0, p0, Lorg/webrtc/WrappedNativeI420Buffer;->width:I
 
-    return p0
+    return v0
 .end method
 
 .method public release()V

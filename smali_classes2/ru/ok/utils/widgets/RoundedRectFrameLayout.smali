@@ -26,13 +26,13 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lndc;->RoundedRectFrameLayout:[I
+    sget-object v0, Lmvc;->RoundedRectFrameLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lndc;->RoundedRectFrameLayout_cornersRadius:I
+    sget p2, Lmvc;->RoundedRectFrameLayout_cornersRadius:I
 
     const/4 v0, -0x1
 
@@ -56,7 +56,7 @@
 
 # virtual methods
 .method public final dispatchDraw(Landroid/graphics/Canvas;)V
-    .locals 1
+    .locals 2
 
     invoke-super {p0, p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
 
@@ -66,9 +66,9 @@
 
     iget-object v0, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->a:Landroid/graphics/Path;
 
-    iget-object p0, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->b:Landroid/graphics/Paint;
+    iget-object v1, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->b:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v0, p0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     :cond_0
     return-void
@@ -80,16 +80,16 @@
     :try_start_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
-    move-result p0
+    move-result p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return p0
+    return p1
 
     :catchall_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public final onSizeChanged(IIII)V
@@ -136,24 +136,24 @@
 
     if-nez p1, :cond_1
 
-    iget-object p0, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->a:Landroid/graphics/Path;
+    iget-object p1, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->a:Landroid/graphics/Path;
 
-    invoke-virtual {p0}, Landroid/graphics/Path;->toggleInverseFillType()V
+    invoke-virtual {p1}, Landroid/graphics/Path;->toggleInverseFillType()V
 
     :cond_1
     :goto_0
     return-void
 
     :cond_2
-    new-instance p1, Lmzc;
+    new-instance p1, Lmid;
 
     iget-object p2, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->c:[F
 
     aget p2, p2, p4
 
-    const/4 p4, 0x1
+    const/4 p4, 0x0
 
-    invoke-direct {p1, p3, p2, p4}, Lmzc;-><init>(Landroid/graphics/Rect;FI)V
+    invoke-direct {p1, p3, p2, p4}, Lmid;-><init>(Landroid/graphics/Rect;FI)V
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
@@ -218,13 +218,13 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "radii must be array with size == 8"
+    const-string v0, "radii must be array with size == 8"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
     :goto_0
@@ -329,15 +329,15 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p0, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->b:Landroid/graphics/Paint;
+    iget-object p1, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->b:Landroid/graphics/Paint;
 
-    new-instance p1, Landroid/graphics/PorterDuffXfermode;
+    new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
-    sget-object v0, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
+    sget-object v1, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-direct {p1, v0}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-direct {v0, v1}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
 
-    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
     return-void
 

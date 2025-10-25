@@ -111,13 +111,13 @@
 .end method
 
 .method public bridge synthetic getCameraName()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Lorg/webrtc/CameraCapturer;->getCameraName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public bridge synthetic initialize(Lorg/webrtc/SurfaceTextureHelper;Landroid/content/Context;Lorg/webrtc/CapturerObserver;)V
@@ -129,13 +129,13 @@
 .end method
 
 .method public bridge synthetic isScreencast()Z
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Lorg/webrtc/CameraCapturer;->isScreencast()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public bridge synthetic printStackTrace()V

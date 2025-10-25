@@ -1,310 +1,149 @@
-.class public final Lhn;
+.class public final synthetic Lhn;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Landroid/graphics/PorterDuff$Mode;
-
-.field public static c:Lhn;
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public a:Lfuc;
+.field public final synthetic X:Ljava/lang/Integer;
+
+.field public final synthetic a:Lon;
+
+.field public final synthetic b:Landroid/content/res/ColorStateList;
+
+.field public final synthetic c:Landroid/content/res/ColorStateList;
+
+.field public final synthetic o:Lcj8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lon;Landroid/content/res/ColorStateList;Landroid/content/res/ColorStateList;Lcj8;Ljava/lang/Integer;)V
+    .locals 0
 
-    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lhn;->b:Landroid/graphics/PorterDuff$Mode;
+    iput-object p1, p0, Lhn;->a:Lon;
 
-    return-void
-.end method
+    iput-object p2, p0, Lhn;->b:Landroid/content/res/ColorStateList;
 
-.method public static declared-synchronized a()Lhn;
-    .locals 2
+    iput-object p3, p0, Lhn;->c:Landroid/content/res/ColorStateList;
 
-    const-class v0, Lhn;
+    iput-object p4, p0, Lhn;->o:Lcj8;
 
-    monitor-enter v0
+    iput-object p5, p0, Lhn;->X:Ljava/lang/Integer;
 
-    :try_start_0
-    sget-object v1, Lhn;->c:Lhn;
-
-    if-nez v1, :cond_0
-
-    invoke-static {}, Lhn;->d()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    sget-object v1, Lhn;->c:Lhn;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object v1
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public static declared-synchronized c(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
-    .locals 1
-
-    const-class v0, Lhn;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-static {p0, p1}, Lfuc;->e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
-
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-.end method
-
-.method public static declared-synchronized d()V
-    .locals 4
-
-    const-class v0, Lhn;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lhn;->c:Lhn;
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Lhn;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    sput-object v1, Lhn;->c:Lhn;
-
-    invoke-static {}, Lfuc;->b()Lfuc;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhn;->a:Lfuc;
-
-    sget-object v1, Lhn;->c:Lhn;
-
-    iget-object v1, v1, Lhn;->a:Lfuc;
-
-    new-instance v2, Le30;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v3}, Le30;-><init>(I)V
-
-    monitor-enter v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    iput-object v2, v1, Lfuc;->e:Le30;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v2
-
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    throw v2
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    :catchall_1
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    :try_start_5
-    monitor-exit v0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    throw v1
-.end method
-
-.method public static e(Landroid/graphics/drawable/Drawable;Lsk3;[I)V
-    .locals 4
-
-    sget-object v0, Lfuc;->f:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    if-ne v1, p0, :cond_7
-
-    instance-of v1, p0, Landroid/graphics/drawable/LayerDrawable;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    new-array v1, v2, [I
-
-    invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    :cond_0
-    iget-boolean v0, p1, Lsk3;->c:Z
-
-    if-nez v0, :cond_2
-
-    iget-boolean v1, p1, Lsk3;->b:Z
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
-
-    return-void
-
-    :cond_2
-    :goto_0
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p1, Lsk3;->d:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/res/ColorStateList;
-
-    goto :goto_1
-
-    :cond_3
-    move-object v0, v1
-
-    :goto_1
-    iget-boolean v3, p1, Lsk3;->b:Z
-
-    if-eqz v3, :cond_4
-
-    iget-object p1, p1, Lsk3;->e:Ljava/io/Serializable;
-
-    check-cast p1, Landroid/graphics/PorterDuff$Mode;
-
-    goto :goto_2
-
-    :cond_4
-    sget-object p1, Lfuc;->f:Landroid/graphics/PorterDuff$Mode;
-
-    :goto_2
-    if-eqz v0, :cond_6
-
-    if-nez p1, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    invoke-virtual {v0, p2, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result p2
-
-    invoke-static {p2, p1}, Lfuc;->e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
-
-    move-result-object v1
-
-    :cond_6
-    :goto_3
-    invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    :cond_7
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 5
 
-    monitor-enter p0
+    iget-object v0, p0, Lhn;->a:Lon;
 
-    :try_start_0
-    iget-object v0, p0, Lhn;->a:Lfuc;
+    iget-object v1, v0, Lon;->D0:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p1, p2}, Lfuc;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit p0
+    check-cast p1, Ljava/lang/Float;
 
-    return-object p1
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    :catchall_0
-    move-exception p1
+    move-result p1
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v2, p0, Lhn;->b:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v2}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v2
+
+    iget-object v3, p0, Lhn;->c:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v3}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v3
+
+    invoke-static {v2, p1, v3}, Lzgi;->i(IFI)I
+
+    move-result p1
+
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lhn;->o:Lcj8;
+
+    invoke-virtual {v3, v2}, Lcj8;->k(Landroid/content/res/ColorStateList;)V
+
+    iget-object v2, v0, Lon;->H0:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v0, Lon;->I0:Ljava/lang/Integer;
+
+    if-eqz v2, :cond_0
+
+    iget-object v4, p0, Lhn;->X:Ljava/lang/Integer;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v0, v0, Lon;->H0:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, p1}, Lv05;->g(Landroid/graphics/drawable/Drawable;I)V
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, v3, Lcj8;->a:Lbj8;
+
+    iget-object v0, v0, Lbj8;->c:Landroid/content/res/ColorStateList;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
 
     throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    return-void
 .end method

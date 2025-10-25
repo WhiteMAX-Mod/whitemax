@@ -3,290 +3,108 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Handler$Callback;
+.implements Ls48;
 
 
 # instance fields
-.field public X:Z
+.field public final X:Lhdb;
 
-.field public Y:Z
+.field public volatile Y:Ljava/lang/Object;
 
-.field public final Z:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic a:I
+.field public final b:Lmc4;
 
-.field public final b:Landroid/os/Handler;
+.field public final c:I
 
-.field public final c:Ljava/util/TreeMap;
-
-.field public o:Z
-
-.field public final r0:Ljava/lang/Object;
-
-.field public final s0:Ljava/lang/Object;
-
-.field public t0:Ljava/lang/Object;
+.field public final o:Le2f;
 
 
 # direct methods
-.method public constructor <init>(Lq54;Lg8h;Lhb4;)V
+.method public constructor <init>(Lfc4;Lmc4;ILhdb;)V
     .locals 1
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Ljdb;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Ljdb;->t0:Ljava/lang/Object;
+    new-instance v0, Le2f;
 
-    .line 3
-    iput-object p2, p0, Ljdb;->r0:Ljava/lang/Object;
+    invoke-direct {v0, p1}, Le2f;-><init>(Lfc4;)V
 
-    .line 4
-    iput-object p3, p0, Ljdb;->Z:Ljava/lang/Object;
+    iput-object v0, p0, Ljdb;->o:Le2f;
 
-    .line 5
-    new-instance p1, Ljava/util/TreeMap;
+    iput-object p2, p0, Ljdb;->b:Lmc4;
 
-    invoke-direct {p1}, Ljava/util/TreeMap;-><init>()V
+    iput p3, p0, Ljdb;->c:I
 
-    iput-object p1, p0, Ljdb;->c:Ljava/util/TreeMap;
+    iput-object p4, p0, Ljdb;->X:Lhdb;
 
-    .line 6
-    invoke-static {p0}, Llrf;->l(Landroid/os/Handler$Callback;)Landroid/os/Handler;
+    sget-object p1, Lj48;->c:Ljava/util/concurrent/atomic/AtomicLong;
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
 
-    iput-object p1, p0, Ljdb;->b:Landroid/os/Handler;
+    move-result-wide p1
 
-    .line 7
-    new-instance p1, Lvo;
-
-    const/4 p2, 0x1
-
-    .line 8
-    invoke-direct {p1, p2}, Lvo;-><init>(I)V
-
-    .line 9
-    iput-object p1, p0, Ljdb;->s0:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lr54;Lnyc;Lib4;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Ljdb;->a:I
-
-    .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 11
-    iput-object p1, p0, Ljdb;->t0:Ljava/lang/Object;
-
-    .line 12
-    iput-object p2, p0, Ljdb;->r0:Ljava/lang/Object;
-
-    .line 13
-    iput-object p3, p0, Ljdb;->Z:Ljava/lang/Object;
-
-    .line 14
-    new-instance p1, Ljava/util/TreeMap;
-
-    invoke-direct {p1}, Ljava/util/TreeMap;-><init>()V
-
-    iput-object p1, p0, Ljdb;->c:Ljava/util/TreeMap;
-
-    .line 15
-    invoke-static {p0}, Lnrf;->n(Landroid/os/Handler$Callback;)Landroid/os/Handler;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljdb;->b:Landroid/os/Handler;
-
-    .line 16
-    new-instance p1, Lwo;
-
-    const/4 p2, 0x1
-
-    .line 17
-    invoke-direct {p1, p2}, Lwo;-><init>(I)V
-
-    .line 18
-    iput-object p1, p0, Ljdb;->s0:Ljava/lang/Object;
+    iput-wide p1, p0, Ljdb;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 8
+.method public final a()V
+    .locals 0
 
-    iget v0, p0, Ljdb;->a:I
+    return-void
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public final load()V
+    .locals 3
 
-    iget-boolean v0, p0, Ljdb;->Y:Z
+    iget-object v0, p0, Ljdb;->o:Le2f;
 
-    const/4 v1, 0x1
+    const-wide/16 v1, 0x0
 
-    if-eqz v0, :cond_0
+    iput-wide v1, v0, Le2f;->b:J
 
-    goto :goto_0
+    new-instance v0, Lic4;
 
-    :cond_0
-    iget v0, p1, Landroid/os/Message;->what:I
+    iget-object v1, p0, Ljdb;->o:Le2f;
 
-    if-eq v0, v1, :cond_1
+    iget-object v2, p0, Ljdb;->b:Lmc4;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1, v2}, Lic4;-><init>(Lfc4;Lmc4;)V
 
-    goto :goto_0
+    :try_start_0
+    invoke-virtual {v0}, Lic4;->m()V
 
-    :cond_1
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    iget-object v1, p0, Ljdb;->o:Le2f;
 
-    check-cast p1, Lgdb;
+    iget-object v1, v1, Le2f;->a:Lfc4;
 
-    iget-wide v2, p1, Lgdb;->a:J
+    invoke-interface {v1}, Lfc4;->getUri()Landroid/net/Uri;
 
-    iget-wide v4, p1, Lgdb;->b:J
+    move-result-object v1
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p1
+    iget-object v2, p0, Ljdb;->X:Lhdb;
 
-    iget-object p0, p0, Ljdb;->c:Ljava/util/TreeMap;
+    invoke-interface {v2, v1, v0}, Lhdb;->l(Landroid/net/Uri;Lic4;)Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    iput-object v1, p0, Ljdb;->Y:Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast p1, Ljava/lang/Long;
+    invoke-static {v0}, Lnig;->g(Ljava/io/Closeable;)V
 
-    if-nez p1, :cond_2
+    return-void
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :catchall_0
+    move-exception v1
 
-    move-result-object p1
+    invoke-static {v0}, Lnig;->g(Ljava/io/Closeable;)V
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p1, v0}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v6
-
-    cmp-long p1, v6, v2
-
-    if-lez p1, :cond_3
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p1, v0}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    :goto_0
-    return v1
-
-    :pswitch_0
-    iget-boolean v0, p0, Ljdb;->Y:Z
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    if-eq v0, v1, :cond_5
-
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :cond_5
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Lfdb;
-
-    iget-wide v2, p1, Lfdb;->a:J
-
-    iget-wide v4, p1, Lfdb;->b:J
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iget-object p0, p0, Ljdb;->c:Ljava/util/TreeMap;
-
-    invoke-virtual {p0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
-
-    if-nez p1, :cond_6
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p1, v0}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_6
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v6
-
-    cmp-long p1, v6, v2
-
-    if-lez p1, :cond_7
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p1, v0}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_7
-    :goto_1
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v1
 .end method

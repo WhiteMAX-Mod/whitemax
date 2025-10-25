@@ -17,7 +17,7 @@
 
     new-instance v0, Lmo3;
 
-    const-string v1, "USER_LIST"
+    const-string v1, "POSITIVE"
 
     const/4 v2, 0x0
 
@@ -27,7 +27,7 @@
 
     new-instance v1, Lmo3;
 
-    const-string v2, "EXTERNAL"
+    const-string v2, "NEGATIVE"
 
     const/4 v3, 0x1
 
@@ -63,7 +63,7 @@
 
     sget-object v0, Lmo3;->c:[Lmo3;
 
-    invoke-virtual {v0}, [Lmo3;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

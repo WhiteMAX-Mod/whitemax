@@ -100,67 +100,67 @@
 
 # virtual methods
 .method public getClockRate()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "CodecCapability"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->clockRate:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->clockRate:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getKind()Lorg/webrtc/MediaStreamTrack$MediaType;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "CodecCapability"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->kind:Lorg/webrtc/MediaStreamTrack$MediaType;
+    iget-object v0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->kind:Lorg/webrtc/MediaStreamTrack$MediaType;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getName()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "CodecCapability"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->name:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->name:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getNumChannels()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "CodecCapability"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->numChannels:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->numChannels:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getParameters()Ljava/util/Map;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "CodecCapability"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->parameters:Ljava/util/Map;
+    iget-object v0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->parameters:Ljava/util/Map;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getPreferredPayloadType()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "CodecCapability"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->preferredPayloadType:I
+    iget v0, p0, Lorg/webrtc/RtpCapabilities$CodecCapability;->preferredPayloadType:I
 
-    return p0
+    return v0
 .end method

@@ -1,215 +1,129 @@
-.class public final Lqg4;
+.class public final synthetic Lqg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lu28;
+.implements Lyj4;
+.implements Lhu1;
+
 
 # instance fields
-.field public final a:Lhb4;
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final synthetic b:I
 
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:I
-
-.field public final g:J
-
-.field public h:I
-
-.field public i:Z
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lhb4;IIII)V
-    .locals 5
+.method public synthetic constructor <init>(Ljava/lang/Object;II)V
+    .locals 0
+
+    iput-object p1, p0, Lqg4;->c:Ljava/lang/Object;
+
+    iput p2, p0, Lqg4;->a:I
+
+    iput p3, p0, Lqg4;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string v0, "bufferForPlaybackMs"
-
-    const/4 v1, 0x0
-
-    const-string v2, "0"
-
-    invoke-static {v0, p4, v1, v2}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    const-string v3, "bufferForPlaybackAfterRebufferMs"
-
-    invoke-static {v3, p5, v1, v2}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    const-string v4, "minBufferMs"
-
-    invoke-static {v4, p2, p4, v0}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    invoke-static {v4, p2, p5, v3}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    const-string v0, "maxBufferMs"
-
-    invoke-static {v0, p3, p2, v4}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    const-string v0, "backBufferDurationMs"
-
-    invoke-static {v0, v1, v1, v2}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    iput-object p1, p0, Lqg4;->a:Lhb4;
-
-    int-to-long p1, p2
-
-    invoke-static {p1, p2}, Llrf;->B(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lqg4;->b:J
-
-    int-to-long p1, p3
-
-    invoke-static {p1, p2}, Llrf;->B(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lqg4;->c:J
-
-    int-to-long p1, p4
-
-    invoke-static {p1, p2}, Llrf;->B(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lqg4;->d:J
-
-    int-to-long p1, p5
-
-    invoke-static {p1, p2}, Llrf;->B(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lqg4;->e:J
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lqg4;->f:I
-
-    const/high16 p1, 0xc80000
-
-    iput p1, p0, Lqg4;->h:I
-
-    int-to-long p1, v1
-
-    invoke-static {p1, p2}, Llrf;->B(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lqg4;->g:J
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 1
-
-    if-lt p1, p2, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p2
-
-    add-int/lit8 p2, p2, 0x15
-
-    invoke-virtual {p3}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    add-int/2addr v0, p2
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " cannot be less than "
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0, p1}, Lxnd;->j(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Z)V
-    .locals 2
+.method public a(Landroid/media/MediaCodecInfo;)I
+    .locals 3
 
-    iget v0, p0, Lqg4;->f:I
+    iget-object v0, p0, Lqg4;->c:Ljava/lang/Object;
 
-    const/4 v1, -0x1
+    check-cast v0, Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    iget v1, p0, Lqg4;->a:I
 
-    const/high16 v0, 0xc80000
+    iget v2, p0, Lqg4;->b:I
+
+    invoke-static {p1, v0, v1, v2}, Lgc5;->g(Landroid/media/MediaCodecInfo;Ljava/lang/String;II)Landroid/util/Size;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const p1, 0x7fffffff
+
+    return p1
 
     :cond_0
-    iput v0, p0, Lqg4;->h:I
+    mul-int/2addr v1, v2
 
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
-    iput-boolean v0, p0, Lqg4;->i:Z
+    move-result v0
 
-    if-eqz p1, :cond_2
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
-    iget-object p0, p0, Lqg4;->a:Lhb4;
+    move-result p1
 
-    monitor-enter p0
+    mul-int/2addr p1, v0
 
-    :try_start_0
-    iget-boolean p1, p0, Lhb4;->e:Z
+    sub-int/2addr v1, p1
 
-    if-eqz p1, :cond_1
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
-    invoke-virtual {p0, v0}, Lhb4;->b(I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result p1
 
-    goto :goto_0
+    return p1
+.end method
 
-    :catchall_0
-    move-exception p1
+.method public invoke(Ljava/lang/Object;)V
+    .locals 3
 
-    goto :goto_1
+    iget-object v0, p0, Lqg4;->c:Ljava/lang/Object;
 
-    :cond_1
-    :goto_0
-    monitor-exit p0
+    check-cast v0, Lnd;
+
+    iget v1, p0, Lqg4;->b:I
+
+    check-cast p1, Lod;
+
+    iget v2, p0, Lqg4;->a:I
+
+    invoke-interface {p1, v0, v2, v1}, Lod;->M(Lnd;II)V
 
     return-void
+.end method
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+.method public o(Lgu1;)Ljava/lang/String;
+    .locals 4
 
-    throw p1
+    iget-object v0, p0, Lqg4;->c:Ljava/lang/Object;
 
-    :cond_2
-    return-void
+    check-cast v0, Lnn4;
+
+    new-instance v1, Lba0;
+
+    iget v2, p0, Lqg4;->a:I
+
+    iget v3, p0, Lqg4;->b:I
+
+    invoke-direct {v1, v2, v3, p1}, Lba0;-><init>(IILgu1;)V
+
+    new-instance v2, Lqx1;
+
+    const/16 v3, 0x1b
+
+    invoke-direct {v2, v0, v3, v1}, Lqx1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v1, Ljn4;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, p1, v3}, Ljn4;-><init>(Lgu1;I)V
+
+    invoke-virtual {v0, v2, v1}, Lnn4;->c(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+
+    const-string p1, "DefaultSurfaceProcessor#snapshot"
+
+    return-object p1
 .end method

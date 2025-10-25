@@ -1,111 +1,61 @@
-.class public final synthetic Li0b;
-.super Ljava/lang/Object;
+.class public final Li0b;
+.super Lk0b;
 .source "SourceFile"
 
-# interfaces
-.implements Lqm3;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ly0b;
-
-.field public final synthetic c:Z
+# static fields
+.field public static final a:Li0b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly0b;ZI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Li0b;->a:I
+    new-instance v0, Li0b;
 
-    iput-object p1, p0, Li0b;->b:Ly0b;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Li0b;->c:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Li0b;->a:Li0b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Li0b;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Lorg/webrtc/PeerConnection;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Li0b;->b:Ly0b;
-
-    iget-boolean p0, p0, Li0b;->c:Z
-
-    invoke-virtual {v0, p1, p0}, Ly0b;->t(Lorg/webrtc/PeerConnection;Z)V
-
-    invoke-virtual {v0, p1, p0}, Ly0b;->k(Lorg/webrtc/PeerConnection;Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Li0b;->b:Ly0b;
-
-    iget-object v1, v0, Ly0b;->M:Lorg/webrtc/MediaConstraints;
-
-    iget-boolean p0, p0, Li0b;->c:Z
-
-    if-eqz p0, :cond_0
-
-    new-instance v1, Lorg/webrtc/MediaConstraints;
-
-    invoke-direct {v1}, Lorg/webrtc/MediaConstraints;-><init>()V
-
-    iget-object p0, v1, Lorg/webrtc/MediaConstraints;->optional:Ljava/util/List;
-
-    iget-object v2, v0, Ly0b;->M:Lorg/webrtc/MediaConstraints;
-
-    iget-object v2, v2, Lorg/webrtc/MediaConstraints;->optional:Ljava/util/List;
-
-    invoke-interface {p0, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    iget-object p0, v1, Lorg/webrtc/MediaConstraints;->mandatory:Ljava/util/List;
-
-    iget-object v2, v0, Ly0b;->M:Lorg/webrtc/MediaConstraints;
-
-    iget-object v2, v2, Lorg/webrtc/MediaConstraints;->mandatory:Ljava/util/List;
-
-    invoke-interface {p0, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    iget-object p0, v1, Lorg/webrtc/MediaConstraints;->mandatory:Ljava/util/List;
-
-    new-instance v2, Lorg/webrtc/MediaConstraints$KeyValuePair;
-
-    const-string v3, "IceRestart"
-
-    const-string v4, "true"
-
-    invoke-direct {v2, v3, v4}, Lorg/webrtc/MediaConstraints$KeyValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {p0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    return v0
 
     :cond_0
-    new-instance p0, Lv0b;
+    instance-of p1, p1, Li0b;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    invoke-direct {p0, v0, v2}, Lv0b;-><init>(Ly0b;I)V
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p0, v1}, Lorg/webrtc/PeerConnection;->createOffer(Lorg/webrtc/SdpObserver;Lorg/webrtc/MediaConstraints;)V
+    return p1
 
-    return-void
+    :cond_1
+    return v0
+.end method
 
-    nop
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const v0, 0xb05fa03
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Small"
+
+    return-object v0
 .end method

@@ -6,11 +6,11 @@
 # instance fields
 .field public final a:Z
 
-.field public final b:Lv46;
+.field public final b:Lkb6;
 
 
 # direct methods
-.method public constructor <init>(ILv46;Z)V
+.method public constructor <init>(ILkb6;Z)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -33,7 +33,7 @@
 
     iput-boolean p3, p0, Lcom/google/android/exoplayer2/audio/AudioSink$WriteException;->a:Z
 
-    iput-object p2, p0, Lcom/google/android/exoplayer2/audio/AudioSink$WriteException;->b:Lv46;
+    iput-object p2, p0, Lcom/google/android/exoplayer2/audio/AudioSink$WriteException;->b:Lkb6;
 
     return-void
 .end method

@@ -162,9 +162,9 @@
 
     invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/analytics/events/EventItemValue$LongValue;->equals-impl(JLjava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final getValue()J
@@ -182,9 +182,9 @@
 
     invoke-static {v0, v1}, Lru/ok/android/externcalls/analytics/events/EventItemValue$LongValue;->hashCode-impl(J)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -194,9 +194,9 @@
 
     invoke-static {v0, v1}, Lru/ok/android/externcalls/analytics/events/EventItemValue$LongValue;->toString-impl(J)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final synthetic unbox-impl()J

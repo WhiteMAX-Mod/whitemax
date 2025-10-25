@@ -1,58 +1,40 @@
 .class public final Lie7;
-.super Lgmf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpe7;
 
 
 # instance fields
-.field public final b:Ljava/lang/Object;
-
-.field public c:Z
+.field public final a:Lq9a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 1
+.method public constructor <init>(Lq9a;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lgmf;-><init>(I)V
-
-    iput-object p1, p0, Lie7;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lie7;->a:Lq9a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lie7;->c:Z
-
-    xor-int/lit8 p0, p0, 0x1
-
-    return p0
-.end method
-
-.method public final next()Ljava/lang/Object;
+.method public final b()Lq9a;
     .locals 1
 
-    iget-boolean v0, p0, Lie7;->c:Z
+    iget-object v0, p0, Lie7;->a:Lq9a;
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    const/4 v0, 0x1
+.method public final isActive()Z
+    .locals 1
 
-    iput-boolean v0, p0, Lie7;->c:Z
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lie7;->b:Ljava/lang/Object;
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw p0
+    return v0
 .end method

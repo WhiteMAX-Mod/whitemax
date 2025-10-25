@@ -1,65 +1,85 @@
-.class public Lwz4;
-.super Lvz4;
+.class public final enum Lwz4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# virtual methods
-.method public a(Leue;Leue;Landroid/view/Window;Landroid/view/View;ZZ)V
-    .locals 0
+# static fields
+.field public static final enum a:Lwz4;
 
-    const/4 p0, 0x0
+.field public static final enum b:Lwz4;
 
-    invoke-static {p3, p0}, Li4h;->S(Landroid/view/Window;Z)V
+.field public static final enum c:Lwz4;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static final synthetic o:[Lwz4;
 
-    invoke-virtual {p3, p0}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-virtual {p3, p0}, Landroid/view/Window;->setNavigationBarColor(I)V
+    new-instance v0, Lwz4;
 
-    invoke-virtual {p3, p0}, Landroid/view/Window;->setStatusBarContrastEnforced(Z)V
+    const-string v1, "ALWAYS"
 
-    const/4 p0, 0x1
+    const/4 v2, 0x0
 
-    invoke-virtual {p3, p0}, Landroid/view/Window;->setNavigationBarContrastEnforced(Z)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance p1, Lq2e;
+    sput-object v0, Lwz4;->a:Lwz4;
 
-    invoke-direct {p1, p4}, Lq2e;-><init>(Landroid/view/View;)V
+    new-instance v1, Lwz4;
 
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-string v2, "AUTO"
 
-    const/16 p4, 0x1e
+    const/4 v3, 0x1
 
-    if-lt p2, p4, :cond_0
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance p2, Lxug;
+    sput-object v1, Lwz4;->b:Lwz4;
 
-    invoke-static {p3}, Lrug;->e(Landroid/view/Window;)Landroid/view/WindowInsetsController;
+    new-instance v2, Lwz4;
 
-    move-result-object p4
+    const-string v3, "NEVER"
 
-    invoke-direct {p2, p4, p1}, Lxug;-><init>(Landroid/view/WindowInsetsController;Lq2e;)V
+    const/4 v4, 0x2
 
-    iput-object p3, p2, Lxug;->u:Landroid/view/Window;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    goto :goto_0
+    sput-object v2, Lwz4;->c:Lwz4;
 
-    :cond_0
-    new-instance p2, Lwug;
+    filled-new-array {v0, v1, v2}, [Lwz4;
 
-    invoke-direct {p2, p3, p1}, Lwug;-><init>(Landroid/view/Window;Lq2e;)V
+    move-result-object v0
 
-    :goto_0
-    xor-int/lit8 p1, p5, 0x1
-
-    invoke-virtual {p2, p1}, Lw7;->L(Z)V
-
-    xor-int/2addr p0, p6
-
-    invoke-virtual {p2, p0}, Lw7;->K(Z)V
+    sput-object v0, Lwz4;->o:[Lwz4;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lwz4;
+    .locals 1
+
+    const-class v0, Lwz4;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lwz4;
+
+    return-object p0
+.end method
+
+.method public static values()[Lwz4;
+    .locals 1
+
+    sget-object v0, Lwz4;->o:[Lwz4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lwz4;
+
+    return-object v0
 .end method

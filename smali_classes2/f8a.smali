@@ -1,100 +1,67 @@
-.class public Lf8a;
-.super Landroid/widget/TextView;
+.class public final synthetic Lf8a;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public a:Li8g;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ln8a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public synthetic constructor <init>(Ln8a;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lf8a;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lf8a;->b:Ln8a;
 
-    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getObserverSpanListener()Li8g;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iget-object p0, p0, Lf8a;->a:Li8g;
+    iget v0, p0, Lf8a;->a:I
 
-    return-object p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final onWindowVisibilityChanged(I)V
-    .locals 1
+    iget-object v0, p0, Lf8a;->b:Ln8a;
 
-    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
+    iget-object v0, v0, Ln8a;->q0:Lxe5;
 
-    if-eqz p1, :cond_1
+    sget-object v1, Ls93;->b:Ls93;
 
-    const/16 v0, 0x8
+    invoke-static {v0, v1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    if-eq p1, v0, :cond_0
+    :goto_0
+    sget-object v0, Lccg;->a:Lccg;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lf8a;->b:Ln8a;
+
+    iget-object v0, v0, Ln8a;->q0:Lxe5;
+
+    sget-object v1, Lk7a;->b:Lk7a;
+
+    invoke-static {v0, v1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    iget-object p1, p0, Lf8a;->a:Li8g;
+    nop
 
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1, p0}, Li8g;->onViewDetachedFromWindow(Landroid/view/View;)V
-
-    return-void
-
-    :cond_1
-    iget-object p1, p0, Lf8a;->a:Li8g;
-
-    if-eqz p1, :cond_2
-
-    invoke-static {p0}, Li8g;->a(Landroid/widget/TextView;)V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final setObserverSpanListener(Li8g;)V
-    .locals 0
-
-    iput-object p1, p0, Lf8a;->a:Li8g;
-
-    return-void
-.end method
-
-.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-    .locals 1
-
-    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
-
-    if-nez v0, :cond_1
-
-    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

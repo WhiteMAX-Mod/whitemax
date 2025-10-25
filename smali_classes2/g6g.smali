@@ -1,93 +1,120 @@
-.class public final Lg6g;
-.super Lx2;
+.class public final synthetic Lg6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic a:I
 
-.field public final synthetic o:Lh6g;
+.field public final synthetic b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
 
 # direct methods
-.method public constructor <init>(Lh6g;I)V
+.method public synthetic constructor <init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
     .locals 0
 
-    iput p2, p0, Lg6g;->c:I
+    iput p2, p0, Lg6g;->a:I
 
-    iput-object p1, p0, Lg6g;->o:Lh6g;
+    iput-object p1, p0, Lg6g;->b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    const/16 p1, 0x9
-
-    packed-switch p2, :pswitch_data_0
-
-    const/4 p2, 0x0
-
-    invoke-direct {p0, p1, p2}, Lx2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :pswitch_0
-    sget-object p2, Lb6g;->a:Lb6g;
-
-    invoke-direct {p0, p1, p2}, Lx2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lg6g;->c:I
+    iget v0, p0, Lg6g;->a:I
+
+    iget-object v1, p0, Lg6g;->b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1, p2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Ltr7;
 
-    move-result v0
+    iget-object v0, v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    check-cast p2, Lb6g;
+    move-result-object v0
 
-    check-cast p1, Lb6g;
+    check-cast v0, Lmj7;
 
-    iget-object p0, p0, Lg6g;->o:Lh6g;
+    sget-object v2, Lmj7;->b:Lmj7;
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    if-ne v0, v2, :cond_0
+
+    invoke-virtual {v1}, Ll24;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkci;->b(Landroid/app/Activity;)V
 
     :cond_0
-    return-void
+    sget-object v0, Lccg;->a:Lccg;
+
+    return-object v0
 
     :pswitch_0
-    invoke-static {p1, p2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Ltr7;
+
+    new-instance v0, Lnj7;
+
+    invoke-virtual {v1}, Ll24;->getRouter()Lqid;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lnj7;-><init>(Lqid;)V
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Ltr7;
+
+    iget-object v0, v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmj7;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_2
 
-    check-cast p2, Le6g;
+    const/4 v1, 0x1
 
-    check-cast p1, Le6g;
+    if-ne v0, v1, :cond_1
 
-    iget-object p0, p0, Lg6g;->o:Lh6g;
+    sget-object v0, Lupd;->N1:Lupd;
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    goto :goto_0
 
     :cond_1
-    return-void
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    nop
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_2
+    sget-object v0, Lupd;->b2:Lupd;
+
+    :goto_0
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -44,45 +44,45 @@
 
 # virtual methods
 .method public getFrameSizePixels()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "ResolutionBitrateLimits"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;->frameSizePixels:I
+    iget v0, p0, Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;->frameSizePixels:I
 
-    return p0
+    return v0
 .end method
 
 .method public getMaxBitrateBps()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "ResolutionBitrateLimits"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;->maxBitrateBps:I
+    iget v0, p0, Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;->maxBitrateBps:I
 
-    return p0
+    return v0
 .end method
 
 .method public getMinBitrateBps()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "ResolutionBitrateLimits"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;->minBitrateBps:I
+    iget v0, p0, Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;->minBitrateBps:I
 
-    return p0
+    return v0
 .end method
 
 .method public getMinStartBitrateBps()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "ResolutionBitrateLimits"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;->minStartBitrateBps:I
+    iget v0, p0, Lorg/webrtc/VideoEncoder$ResolutionBitrateLimits;->minStartBitrateBps:I
 
-    return p0
+    return v0
 .end method

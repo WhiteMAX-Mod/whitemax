@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Tasks$ConfirmPresent;
-.super Lj29;
+.super Lee9;
 .source "SourceFile"
 
 
@@ -42,7 +42,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lj29;-><init>()V
+    invoke-direct {p0}, Lee9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->clear()Lru/ok/tamtam/nano/Tasks$ConfirmPresent;
 
@@ -56,7 +56,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lla7;->b:Ljava/lang/Object;
+    sget-object v0, Lij7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -98,7 +98,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Lq63;)Lru/ok/tamtam/nano/Tasks$ConfirmPresent;
+.method public static parseFrom(Loa3;)Lru/ok/tamtam/nano/Tasks$ConfirmPresent;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -111,7 +111,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->mergeFrom(Lq63;)Lru/ok/tamtam/nano/Tasks$ConfirmPresent;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->mergeFrom(Loa3;)Lru/ok/tamtam/nano/Tasks$ConfirmPresent;
 
     move-result-object p0
 
@@ -131,7 +131,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;-><init>()V
 
-    invoke-static {v0, p0}, Lj29;->mergeFrom(Lj29;[B)Lj29;
+    invoke-static {v0, p0}, Lee9;->mergeFrom(Lee9;[B)Lee9;
 
     move-result-object p0
 
@@ -169,7 +169,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lj29;->cachedSize:I
+    iput v0, p0, Lee9;->cachedSize:I
 
     return-object p0
 .end method
@@ -187,7 +187,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v4, v0, v1}, Lr63;->h(IJ)I
+    invoke-static {v4, v0, v1}, Lpa3;->h(IJ)I
 
     move-result v0
 
@@ -205,7 +205,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {v1, v4, v5}, Lr63;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lpa3;->h(IJ)I
 
     move-result v1
 
@@ -220,7 +220,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v4, v5}, Lr63;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lpa3;->h(IJ)I
 
     move-result v1
 
@@ -235,7 +235,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v1, v4, v5}, Lr63;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lpa3;->h(IJ)I
 
     move-result v1
 
@@ -250,7 +250,7 @@
 
     const/4 v1, 0x5
 
-    invoke-static {v1, v4, v5}, Lr63;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lpa3;->h(IJ)I
 
     move-result v1
 
@@ -265,7 +265,7 @@
 
     const/4 v1, 0x6
 
-    invoke-static {v1, v4, v5}, Lr63;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lpa3;->h(IJ)I
 
     move-result v1
 
@@ -280,7 +280,7 @@
 
     const/4 v1, 0x7
 
-    invoke-static {v1, v4, v5}, Lr63;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lpa3;->h(IJ)I
 
     move-result v1
 
@@ -293,32 +293,32 @@
 
     const/16 v1, 0x8
 
-    invoke-static {v1}, Lr63;->a(I)I
+    invoke-static {v1}, Lpa3;->a(I)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
     :cond_7
-    iget-boolean p0, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->asPrivate:Z
+    iget-boolean v1, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->asPrivate:Z
 
-    if-eqz p0, :cond_8
+    if-eqz v1, :cond_8
 
-    const/16 p0, 0x9
+    const/16 v1, 0x9
 
-    invoke-static {p0}, Lr63;->a(I)I
+    invoke-static {v1}, Lpa3;->a(I)I
 
-    move-result p0
+    move-result v1
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    return p0
+    return v1
 
     :cond_8
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Lq63;)Lj29;
+.method public bridge synthetic mergeFrom(Loa3;)Lee9;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -327,14 +327,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->mergeFrom(Lq63;)Lru/ok/tamtam/nano/Tasks$ConfirmPresent;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->mergeFrom(Loa3;)Lru/ok/tamtam/nano/Tasks$ConfirmPresent;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public mergeFrom(Lq63;)Lru/ok/tamtam/nano/Tasks$ConfirmPresent;
+.method public mergeFrom(Loa3;)Lru/ok/tamtam/nano/Tasks$ConfirmPresent;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -345,7 +345,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Lq63;->s()I
+    invoke-virtual {p1}, Loa3;->s()I
 
     move-result v0
 
@@ -388,7 +388,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Lq63;->u(I)Z
+    invoke-virtual {p1, v0}, Loa3;->u(I)Z
 
     move-result v0
 
@@ -398,7 +398,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Lq63;->f()Z
+    invoke-virtual {p1}, Loa3;->f()Z
 
     move-result v0
 
@@ -408,7 +408,7 @@
 
     .line 5
     :cond_2
-    invoke-virtual {p1}, Lq63;->f()Z
+    invoke-virtual {p1}, Loa3;->f()Z
 
     move-result v0
 
@@ -418,7 +418,7 @@
 
     .line 6
     :cond_3
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     move-result-wide v0
 
@@ -429,7 +429,7 @@
 
     .line 8
     :cond_4
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     move-result-wide v0
 
@@ -440,7 +440,7 @@
 
     .line 10
     :cond_5
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     move-result-wide v0
 
@@ -451,7 +451,7 @@
 
     .line 12
     :cond_6
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     move-result-wide v0
 
@@ -462,7 +462,7 @@
 
     .line 14
     :cond_7
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     move-result-wide v0
 
@@ -473,7 +473,7 @@
 
     .line 16
     :cond_8
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     move-result-wide v0
 
@@ -484,7 +484,7 @@
 
     .line 18
     :cond_9
-    invoke-virtual {p1}, Lq63;->q()J
+    invoke-virtual {p1}, Loa3;->q()J
 
     move-result-wide v0
 
@@ -498,7 +498,7 @@
     return-object p0
 .end method
 
-.method public writeTo(Lr63;)V
+.method public writeTo(Lpa3;)V
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -516,7 +516,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p1, v4, v0, v1}, Lr63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lpa3;->x(IJ)V
 
     :cond_0
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->presentId:J
@@ -527,7 +527,7 @@
 
     const/4 v4, 0x2
 
-    invoke-virtual {p1, v4, v0, v1}, Lr63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lpa3;->x(IJ)V
 
     :cond_1
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->metadataId:J
@@ -538,7 +538,7 @@
 
     const/4 v4, 0x3
 
-    invoke-virtual {p1, v4, v0, v1}, Lr63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lpa3;->x(IJ)V
 
     :cond_2
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->chatId:J
@@ -549,7 +549,7 @@
 
     const/4 v4, 0x4
 
-    invoke-virtual {p1, v4, v0, v1}, Lr63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lpa3;->x(IJ)V
 
     :cond_3
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->chatServerId:J
@@ -560,7 +560,7 @@
 
     const/4 v4, 0x5
 
-    invoke-virtual {p1, v4, v0, v1}, Lr63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lpa3;->x(IJ)V
 
     :cond_4
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->messageId:J
@@ -571,7 +571,7 @@
 
     const/4 v4, 0x6
 
-    invoke-virtual {p1, v4, v0, v1}, Lr63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lpa3;->x(IJ)V
 
     :cond_5
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->messageServerId:J
@@ -582,7 +582,7 @@
 
     const/4 v2, 0x7
 
-    invoke-virtual {p1, v2, v0, v1}, Lr63;->x(IJ)V
+    invoke-virtual {p1, v2, v0, v1}, Lpa3;->x(IJ)V
 
     :cond_6
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->accept:Z
@@ -591,16 +591,16 @@
 
     const/16 v1, 0x8
 
-    invoke-virtual {p1, v1, v0}, Lr63;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lpa3;->r(IZ)V
 
     :cond_7
-    iget-boolean p0, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->asPrivate:Z
+    iget-boolean v0, p0, Lru/ok/tamtam/nano/Tasks$ConfirmPresent;->asPrivate:Z
 
-    if-eqz p0, :cond_8
+    if-eqz v0, :cond_8
 
-    const/16 v0, 0x9
+    const/16 v1, 0x9
 
-    invoke-virtual {p1, v0, p0}, Lr63;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lpa3;->r(IZ)V
 
     :cond_8
     return-void

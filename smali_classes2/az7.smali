@@ -1,70 +1,76 @@
 .class public final Laz7;
-.super Lsxe;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkz7;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Laz7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public c:Lyx8;
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lt39;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ldu7;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Ldu7;-><init>(I)V
+
+    sput-object v0, Laz7;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lsxe;-><init>(Lt39;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Laz7;->a:J
+
+    iput-object p3, p0, Laz7;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lt39;Ljava/lang/String;)V
+.method public final describeContents()I
     .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x0
 
-    const-string v0, "message"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lt39;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lvyg;->w(Lt39;)Lyx8;
-
-    move-result-object p1
-
-    iput-object p1, p0, Laz7;->c:Lyx8;
-
-    return-void
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    iget-object p0, p0, Laz7;->c:Lyx8;
+    iget-wide v0, p0, Laz7;->a:J
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    const-string v1, "{message="
+    iget-object p2, p0, Laz7;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

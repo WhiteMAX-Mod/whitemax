@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li77;
+.implements Ldg7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Li77;"
+        "Ldg7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/performance/metrics/PerformanceMetricsInitializer;",
-        "Li77;",
-        "Lhbf;",
+        "Ldg7;",
+        "Lc1g;",
         "<init>",
         "()V",
         "tracer-performance-metrics_release"
@@ -48,86 +48,84 @@
 
 # virtual methods
 .method public final a()Ljava/util/List;
-    .locals 0
+    .locals 1
 
-    const-class p0, Lru/ok/tracer/TracerInitializer;
+    const-class v0, Lru/ok/tracer/TracerInitializer;
 
-    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 2
 
-    sget-object p0, Lhbf;->a:Lhbf;
+    sget-object v0, Lc1g;->a:Lc1g;
 
-    sget-object p0, Lmaf;->a:Lmaf;
+    sget-object v0, Lj0g;->a:Lj0g;
 
-    invoke-static {}, Lmaf;->c()Ljava/util/Map;
+    invoke-static {}, Lj0g;->c()Ljava/util/Map;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v0, Ll1h;->b:Luaf;
+    sget-object v1, Layc;->a:Lnw4;
 
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    instance-of v0, p0, Ls1b;
+    instance-of v1, v0, Lmhb;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    check-cast p0, Ls1b;
+    check-cast v0, Lmhb;
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    if-nez p0, :cond_1
+    if-nez v0, :cond_1
 
-    new-instance p0, Lrh0;
+    new-instance v0, Lfj;
 
-    const/16 v0, 0xb
+    const/16 v1, 0xd
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1}, Lfj;-><init>(I)V
 
-    invoke-direct {p0, v0, v1}, Lrh0;-><init>(IB)V
+    new-instance v1, Lmhb;
 
-    new-instance v0, Ls1b;
+    invoke-direct {v1, v0}, Lmhb;-><init>(Lfj;)V
 
-    invoke-direct {v0, p0}, Ls1b;-><init>(Lrh0;)V
-
-    move-object p0, v0
+    move-object v0, v1
 
     :cond_1
-    iget-boolean p0, p0, Ls1b;->a:Z
+    iget-boolean v0, v0, Lmhb;->a:Z
 
-    if-nez p0, :cond_2
+    if-nez v0, :cond_2
 
     goto :goto_1
 
     :cond_2
-    new-instance p0, Lebf;
+    new-instance v0, Lz0g;
 
-    invoke-direct {p0}, Lebf;-><init>()V
+    invoke-direct {v0}, Lz0g;-><init>()V
 
-    sput-object p0, Lhbf;->b:Lgbf;
+    sput-object v0, Lc1g;->b:Lb1g;
 
-    new-instance p0, Lpm;
+    new-instance v0, Lwn;
 
-    const/4 v0, 0x7
+    const/4 v1, 0x6
 
-    invoke-direct {p0, p1, v0}, Lpm;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p1, v1}, Lwn;-><init>(Landroid/content/Context;I)V
 
-    invoke-static {p0}, Lkbf;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lf1g;->a(Ljava/lang/Runnable;)V
 
     :goto_1
-    sget-object p0, Lhbf;->a:Lhbf;
+    sget-object p1, Lc1g;->a:Lc1g;
 
-    return-object p0
+    return-object p1
 .end method

@@ -3,78 +3,113 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lts7;
+.implements Landroid/graphics/drawable/Drawable$Callback;
 
 
-# static fields
-.field public static final a:Loy5;
+# instance fields
+.field public final a:Lgj4;
+
+.field public final b:Lqv5;
+
+.field public final synthetic c:Lpy5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lpy5;)V
+    .locals 2
 
-    new-instance v0, Loy5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Loy5;->c:Lpy5;
 
-    sput-object v0, Loy5;->a:Loy5;
+    new-instance v0, Lgj4;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1, p1}, Lgj4;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Loy5;->a:Lgj4;
+
+    new-instance v0, Lqv5;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, p1, v1, p0}, Lqv5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iput-object v0, p0, Loy5;->b:Lqv5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Loy5;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final getItemId()J
+.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
-    const-wide v0, 0x7ffffffffffffffdL
+    iget-object p1, p0, Loy5;->c:Lpy5;
 
-    return-wide v0
+    iget-object v0, p1, Lpy5;->r0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    iget-object v1, p0, Loy5;->b:Lqv5;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    iget-object p1, p1, Lpy5;->r0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 3
 
-    const p0, 0xb62c3a2
+    iget-object p1, p0, Loy5;->c:Lpy5;
 
-    return p0
+    iget-object p2, p1, Lpy5;->r0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    iget-object v0, p0, Loy5;->b:Lqv5;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    iget-object p1, p1, Lpy5;->r0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    if-eqz p1, :cond_1
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    sub-long/2addr p3, v1
+
+    invoke-virtual {p1, v0, p3, p4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_1
+    return-void
 .end method
 
-.method public final m()I
+.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
     .locals 0
 
-    const/16 p0, 0x8
+    iget-object p1, p0, Loy5;->c:Lpy5;
 
-    return p0
-.end method
+    iget-object p1, p1, Lpy5;->r0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    if-eqz p1, :cond_0
 
-    const-string p0, "FolderEditDeleteItem"
+    iget-object p2, p0, Loy5;->b:Lqv5;
 
-    return-object p0
+    invoke-virtual {p1, p2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    return-void
 .end method

@@ -1,131 +1,73 @@
-.class public final Le4b;
-.super Lure;
+.class public final synthetic Le4b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lji6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lk4b;
+.field public final synthetic b:Lh4b;
 
 
 # direct methods
-.method public constructor <init>(Lk4b;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lh4b;I)V
     .locals 0
 
-    iput-object p1, p0, Le4b;->Y:Lk4b;
+    iput p2, p0, Le4b;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Le4b;->b:Lh4b;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Ljava/lang/Number;
+    iget v0, p0, Le4b;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result p1
+    iget-object v0, p0, Le4b;->b:Lh4b;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lh4b;->t0:Lf4b;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    check-cast v0, Lcs8;
 
-    invoke-virtual {p0, p1, p2}, Le4b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lcs8;->c:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v0, Ldv6;
 
-    check-cast p0, Le4b;
+    iget-object v0, v0, Ldv6;->E0:Lgfd;
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Le4b;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Le4b;
-
-    iget-object p0, p0, Le4b;->Y:Lk4b;
-
-    invoke-direct {p1, p0, p2}, Le4b;-><init>(Lk4b;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Le4b;->X:I
-
-    sget-object v1, Lylf;->a:Lylf;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    return-object v1
+    invoke-virtual {v0}, Lgfd;->stop()V
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    sget-object v0, Lccg;->a:Lccg;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    return-object v0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_0
+    iget-object v0, p0, Le4b;->b:Lh4b;
 
-    throw p0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    sget-object v0, Lccg;->a:Lccg;
 
-    iput v2, p0, Le4b;->X:I
+    return-object v0
 
-    new-instance p1, Lf4b;
+    nop
 
-    const/4 v0, 0x0
-
-    iget-object v2, p0, Le4b;->Y:Lk4b;
-
-    invoke-direct {p1, v2, v0}, Lf4b;-><init>(Lk4b;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, p0}, Lb0b;->f(Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-object p0, v1
-
-    :goto_0
-    if-ne p0, p1, :cond_3
-
-    return-object p1
-
-    :cond_3
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

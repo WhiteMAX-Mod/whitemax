@@ -41,27 +41,29 @@
 
 # virtual methods
 .method public final control(Ljava/lang/CharSequence;J)Lone/me/messages/list/loader/MessageModel;
-    .locals 30
+    .locals 31
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    sget-object v26, La09;->X:La09;
+    sget-object v13, Lsz;->d:Lsz;
 
-    new-instance v0, Li29;
+    sget-object v27, Lub9;->X:Lub9;
+
+    new-instance v0, Lde9;
 
     move-wide/from16 v1, p2
 
-    invoke-direct {v0, v1, v2}, Li29;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Lde9;-><init>(J)V
 
-    sget-object v10, Lg9g;->b:Lg9g;
+    sget-object v10, Lf1h;->b:Lf1h;
 
     move-object/from16 v18, v0
 
     new-instance v0, Lone/me/messages/list/loader/MessageModel;
 
-    const/16 v27, 0x0
+    const/16 v28, 0x0
 
-    const v29, 0x182bc00
+    const v30, 0x306bc00
 
     const-wide/16 v1, 0x0
 
@@ -76,8 +78,6 @@
     const/4 v11, 0x0
 
     const/4 v12, 0x0
-
-    sget-object v13, Lny;->f:Lny;
 
     const/4 v14, 0x0
 
@@ -95,15 +95,17 @@
 
     const/16 v22, 0x0
 
-    const-wide/16 v23, 0x0
+    const/16 v23, 0x0
 
-    const/16 v25, 0x1
+    const-wide/16 v24, 0x0
 
-    const/16 v28, 0x0
+    const/16 v26, 0x1
+
+    const/16 v29, 0x0
 
     move-object/from16 v7, p1
 
-    invoke-direct/range {v0 .. v29}, Lone/me/messages/list/loader/MessageModel;-><init>(JJJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/CharSequence;Lg9g;ZZLny;ZZLp39;Lv19;Li29;Lz13;ILjava/lang/String;Lb39;JZLa09;Lh29;II)V
+    invoke-direct/range {v0 .. v30}, Lone/me/messages/list/loader/MessageModel;-><init>(JJJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/CharSequence;Lf1h;ZZLsz;ZZLlf9;Lrd9;Lde9;Lg53;ILjava/lang/String;ZLwe9;JZLub9;Lce9;II)V
 
     return-object v0
 .end method

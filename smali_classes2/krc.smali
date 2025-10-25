@@ -1,84 +1,12 @@
-.class public final Lkrc;
-.super Lsxe;
-.source "SourceFile"
+.class public abstract Lkrc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final c:J
+# static fields
+.field public static channel_screen_confirmation_delete_description:I = 0x7f110008
 
+.field public static channel_screen_confirmation_delete_title:I = 0x7f110009
 
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.field public static chat_screen_action_copy_success:I = 0x7f11000b
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lkrc;->c:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkrc;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkrc;
-
-    iget-wide v3, p0, Lkrc;->c:J
-
-    iget-wide p0, p1, Lkrc;->c:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lkrc;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Response(timestampRemoveProfile="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lkrc;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static chat_screen_confirmation_delete_title:I = 0x7f11000c

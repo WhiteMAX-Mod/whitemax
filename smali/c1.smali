@@ -1,205 +1,64 @@
 .class public final Lc1;
-.super Lf54;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final A(Ll1;Ljava/lang/Thread;)V
-    .locals 0
+# static fields
+.field public static final c:Lc1;
 
-    iput-object p2, p1, Ll1;->a:Ljava/lang/Thread;
+.field public static final d:Lc1;
+
+
+# instance fields
+.field public final a:Z
+
+.field public final b:Ljava/lang/Throwable;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    sget-boolean v0, Ly1;->o:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    sput-object v1, Lc1;->d:Lc1;
+
+    sput-object v1, Lc1;->c:Lc1;
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lc1;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lc1;-><init>(Ljava/lang/Throwable;Z)V
+
+    sput-object v0, Lc1;->d:Lc1;
+
+    new-instance v0, Lc1;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lc1;-><init>(Ljava/lang/Throwable;Z)V
+
+    sput-object v0, Lc1;->c:Lc1;
 
     return-void
 .end method
 
-.method public final c(Ln1;Lw0;Lw0;)Z
+.method public constructor <init>(Ljava/lang/Throwable;Z)V
     .locals 0
 
-    monitor-enter p1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    iget-object p0, p1, Ln1;->b:Lw0;
+    iput-boolean p2, p0, Lc1;->a:Z
 
-    if-ne p0, p2, :cond_0
-
-    iput-object p3, p1, Ln1;->b:Lw0;
-
-    const/4 p0, 0x1
-
-    monitor-exit p1
-
-    return p0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    monitor-exit p1
-
-    return p0
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final d(Ln1;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object p0, p1, Ln1;->a:Ljava/lang/Object;
-
-    if-ne p0, p2, :cond_0
-
-    iput-object p3, p1, Ln1;->a:Ljava/lang/Object;
-
-    const/4 p0, 0x1
-
-    monitor-exit p1
-
-    return p0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    monitor-exit p1
-
-    return p0
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final e(Ln1;Ll1;Ll1;)Z
-    .locals 0
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object p0, p1, Ln1;->c:Ll1;
-
-    if-ne p0, p2, :cond_0
-
-    iput-object p3, p1, Ln1;->c:Ll1;
-
-    const/4 p0, 0x1
-
-    monitor-exit p1
-
-    return p0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    monitor-exit p1
-
-    return p0
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final j(Ln1;)Lw0;
-    .locals 1
-
-    sget-object p0, Lw0;->d:Lw0;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Ln1;->b:Lw0;
-
-    if-eq v0, p0, :cond_0
-
-    iput-object p0, p1, Ln1;->b:Lw0;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p1
-
-    return-object v0
-
-    :goto_1
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final k(Ln1;)Ll1;
-    .locals 1
-
-    sget-object p0, Ll1;->c:Ll1;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Ln1;->c:Ll1;
-
-    if-eq v0, p0, :cond_0
-
-    iput-object p0, p1, Ln1;->c:Ll1;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p1
-
-    return-object v0
-
-    :goto_1
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final z(Ll1;Ll1;)V
-    .locals 0
-
-    iput-object p2, p1, Ll1;->b:Ll1;
+    iput-object p1, p0, Lc1;->b:Ljava/lang/Throwable;
 
     return-void
 .end method

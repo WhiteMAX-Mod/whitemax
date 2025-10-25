@@ -3,68 +3,64 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Lf76;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lmta;
+.field public final synthetic b:Lli6;
 
-.field public final synthetic c:F
+.field public final synthetic c:Luhg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lf76;Lmta;F)V
+.method public synthetic constructor <init>(Loj6;Luhg;I)V
     .locals 0
 
+    iput p3, p0, Lw66;->a:I
+
+    check-cast p1, Lli6;
+
+    iput-object p1, p0, Lw66;->b:Lli6;
+
+    iput-object p2, p0, Lw66;->c:Luhg;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lw66;->a:Lf76;
-
-    iput-object p2, p0, Lw66;->b:Lmta;
-
-    iput p3, p0, Lw66;->c:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lw66;->a:Lf76;
+    iget p1, p0, Lw66;->a:I
 
-    iget-object v0, v0, Lf76;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    iget-object p1, p0, Lw66;->b:Lli6;
 
-    move-result-object v0
+    iget-object v0, p0, Lw66;->c:Luhg;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    return-void
 
-    if-eqz v1, :cond_0
+    :pswitch_0
+    iget-object p1, p0, Lw66;->b:Lli6;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, p0, Lw66;->c:Luhg;
 
-    move-result-object v1
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v1, Lkta;
+    return-void
 
-    iget-object v2, p0, Lw66;->b:Lmta;
+    nop
 
-    iget v3, p0, Lw66;->c:F
-
-    invoke-interface {v1, v2, v3}, Lkta;->g(Lmta;F)V
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

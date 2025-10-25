@@ -1,87 +1,138 @@
 .class public final Lvi4;
-.super Ljj4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
+.implements Lbc4;
 
 
 # instance fields
-.field public final X:I
+.field public final synthetic a:I
 
-.field public final Y:I
+.field public final b:Lb3g;
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ILubf;ILaj4;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lth4;)V
+    .locals 1
 
-    invoke-direct {p0, p1, p2, p3}, Ljj4;-><init>(ILubf;I)V
+    const/4 v0, 0x0
 
-    iget-boolean p1, p4, Laj4;->t0:Z
+    iput v0, p0, Lvi4;->a:I
 
-    invoke-static {p5, p1}, Ltj0;->j(IZ)Z
+    .line 1
+    new-instance v0, Ltk4;
 
-    move-result p1
+    invoke-direct {v0}, Ltk4;-><init>()V
 
-    iput p1, p0, Lvi4;->X:I
+    .line 2
+    iput-object p2, v0, Ltk4;->b:Ljava/lang/String;
 
-    iget-object p1, p0, Ljj4;->o:Lx46;
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p2, p1, Lx46;->u:I
+    .line 4
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    const/4 p3, -0x1
+    move-result-object p1
 
-    if-eq p2, p3, :cond_1
+    iput-object p1, p0, Lvi4;->c:Ljava/lang/Object;
 
-    iget p1, p1, Lx46;->v:I
+    .line 5
+    iput-object p3, p0, Lvi4;->b:Lb3g;
 
-    if-ne p1, p3, :cond_0
+    .line 6
+    iput-object v0, p0, Lvi4;->d:Ljava/lang/Object;
 
-    goto :goto_0
+    return-void
+.end method
 
-    :cond_0
-    mul-int p3, p2, p1
+.method public constructor <init>(Lzla;Lth4;)V
+    .locals 1
 
-    :cond_1
-    :goto_0
-    iput p3, p0, Lvi4;->Y:I
+    const/4 v0, 0x1
+
+    iput v0, p0, Lvi4;->a:I
+
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    .line 9
+    iput-object p1, p0, Lvi4;->c:Ljava/lang/Object;
+
+    .line 10
+    const-string p1, "ExoPlayer"
+
+    iput-object p1, p0, Lvi4;->d:Ljava/lang/Object;
+
+    .line 11
+    iput-object p2, p0, Lvi4;->b:Lb3g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 0
+.method public final a()Ldc4;
+    .locals 4
 
-    iget p0, p0, Lvi4;->X:I
+    iget v0, p0, Lvi4;->a:I
 
-    return p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final bridge synthetic b(Ljj4;)Z
-    .locals 0
+    new-instance v0, Lfmf;
 
-    check-cast p1, Lvi4;
+    iget-object v1, p0, Lvi4;->c:Ljava/lang/Object;
 
-    const/4 p0, 0x0
+    check-cast v1, Le01;
 
-    return p0
-.end method
+    iget-object v2, p0, Lvi4;->d:Ljava/lang/Object;
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 0
+    check-cast v2, Ljava/lang/String;
 
-    check-cast p1, Lvi4;
+    iget-object v3, p0, Lvi4;->b:Lb3g;
 
-    iget p0, p0, Lvi4;->Y:I
+    invoke-direct {v0, v1, v2, v3}, Lfmf;-><init>(Le01;Ljava/lang/String;Lb3g;)V
 
-    iget p1, p1, Lvi4;->Y:I
+    return-object v0
 
-    invoke-static {p0, p1}, Ljava/lang/Integer;->compare(II)I
+    :pswitch_0
+    new-instance v0, Lti4;
 
-    move-result p0
+    iget-object v1, p0, Lvi4;->c:Ljava/lang/Object;
 
-    return p0
+    check-cast v1, Landroid/content/Context;
+
+    iget-object v2, p0, Lvi4;->d:Ljava/lang/Object;
+
+    check-cast v2, Ltk4;
+
+    invoke-virtual {v2}, Ltk4;->a()Ldc4;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lti4;-><init>(Landroid/content/Context;Ldc4;)V
+
+    iget-object v1, p0, Lvi4;->b:Lb3g;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, v1}, Lti4;->S(Lb3g;)V
+
+    :cond_0
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

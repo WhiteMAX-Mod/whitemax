@@ -69,9 +69,9 @@
 
     invoke-static {p2}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    const-string p0, "Creating GlShader"
+    const-string p1, "Creating GlShader"
 
-    invoke-static {p0}, Lorg/webrtc/GlUtil;->checkNoGLES2Error(Ljava/lang/String;)V
+    invoke-static {p1}, Lorg/webrtc/GlUtil;->checkNoGLES2Error(Ljava/lang/String;)V
 
     return-void
 
@@ -100,32 +100,32 @@
 
     new-instance p1, Ljava/lang/RuntimeException;
 
-    iget p0, p0, Lorg/webrtc/GlShader;->program:I
+    iget p2, p0, Lorg/webrtc/GlShader;->program:I
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
+    invoke-static {p2}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-static {}, Landroid/opengl/GLES20;->glGetError()I
 
-    move-result p1
+    move-result p2
 
-    const-string p2, "glCreateProgram() failed. GLES20 error: "
+    const-string v0, "glCreateProgram() failed. GLES20 error: "
 
-    invoke-static {p1, p2}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method private static compileShader(ILjava/lang/String;)I
@@ -209,7 +209,7 @@
 
     const-string v0, "glCreateShader() failed. GLES20 error: "
 
-    invoke-static {p1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -221,87 +221,87 @@
 
 # virtual methods
 .method public getAttribLocation(Ljava/lang/String;)I
-    .locals 2
+    .locals 3
 
-    iget p0, p0, Lorg/webrtc/GlShader;->program:I
+    iget v0, p0, Lorg/webrtc/GlShader;->program:I
 
-    const/4 v0, -0x1
+    const/4 v1, -0x1
 
-    if-eq p0, v0, :cond_1
+    if-eq v0, v1, :cond_1
 
-    invoke-static {p0, p1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
 
-    move-result p0
+    move-result v0
 
-    if-ltz p0, :cond_0
+    if-ltz v0, :cond_0
 
-    return p0
+    return v0
 
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "Could not locate \'"
+    const-string v1, "Could not locate \'"
 
-    const-string v1, "\' in program"
+    const-string v2, "\' in program"
 
-    invoke-static {v0, p1, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_1
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string p1, "The program has been released"
+    const-string v0, "The program has been released"
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public getUniformLocation(Ljava/lang/String;)I
-    .locals 2
+    .locals 3
 
-    iget p0, p0, Lorg/webrtc/GlShader;->program:I
+    iget v0, p0, Lorg/webrtc/GlShader;->program:I
 
-    const/4 v0, -0x1
+    const/4 v1, -0x1
 
-    if-eq p0, v0, :cond_1
+    if-eq v0, v1, :cond_1
 
-    invoke-static {p0, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
+    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
-    move-result p0
+    move-result v0
 
-    if-ltz p0, :cond_0
+    if-ltz v0, :cond_0
 
-    return p0
+    return v0
 
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "Could not locate uniform \'"
+    const-string v1, "Could not locate uniform \'"
 
-    const-string v1, "\' in program"
+    const-string v2, "\' in program"
 
-    invoke-static {v0, p1, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_1
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string p1, "The program has been released"
+    const-string v0, "The program has been released"
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public release()V
@@ -359,21 +359,21 @@
     invoke-static/range {v2 .. v7}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
     .line 6
-    const-string p0, "setVertexAttribArray"
+    const-string p1, "setVertexAttribArray"
 
-    invoke-static {p0}, Lorg/webrtc/GlUtil;->checkNoGLES2Error(Ljava/lang/String;)V
+    invoke-static {p1}, Lorg/webrtc/GlUtil;->checkNoGLES2Error(Ljava/lang/String;)V
 
     return-void
 
     .line 7
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string p1, "The program has been released"
+    const-string p2, "The program has been released"
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public setVertexAttribArray(Ljava/lang/String;ILjava/nio/FloatBuffer;)V
@@ -401,36 +401,36 @@
     monitor-enter v0
 
     :try_start_0
-    iget p0, p0, Lorg/webrtc/GlShader;->program:I
+    iget v1, p0, Lorg/webrtc/GlShader;->program:I
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glUseProgram(I)V
+    invoke-static {v1}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string p0, "glUseProgram"
+    const-string v0, "glUseProgram"
 
-    invoke-static {p0}, Lorg/webrtc/GlUtil;->checkNoGLES2Error(Ljava/lang/String;)V
+    invoke-static {v0}, Lorg/webrtc/GlUtil;->checkNoGLES2Error(Ljava/lang/String;)V
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p0
+    throw v1
 
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v0, "The program has been released"
+    const-string v1, "The program has been released"
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 .end method

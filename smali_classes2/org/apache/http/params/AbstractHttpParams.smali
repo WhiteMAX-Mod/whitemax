@@ -27,20 +27,20 @@
 
     invoke-interface {p0, p1}, Lorg/apache/http/params/HttpParams;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    if-nez p0, :cond_0
+    if-nez p1, :cond_0
 
     return p2
 
     :cond_0
-    check-cast p0, Ljava/lang/Boolean;
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public getDoubleParameter(Ljava/lang/String;D)D
@@ -48,20 +48,20 @@
 
     invoke-interface {p0, p1}, Lorg/apache/http/params/HttpParams;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    if-nez p0, :cond_0
+    if-nez p1, :cond_0
 
     return-wide p2
 
     :cond_0
-    check-cast p0, Ljava/lang/Double;
+    check-cast p1, Ljava/lang/Double;
 
-    invoke-virtual {p0}, Ljava/lang/Double;->doubleValue()D
+    invoke-virtual {p1}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide p0
+    move-result-wide p1
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public getIntParameter(Ljava/lang/String;I)I
@@ -69,20 +69,20 @@
 
     invoke-interface {p0, p1}, Lorg/apache/http/params/HttpParams;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    if-nez p0, :cond_0
+    if-nez p1, :cond_0
 
     return p2
 
     :cond_0
-    check-cast p0, Ljava/lang/Integer;
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public getLongParameter(Ljava/lang/String;J)J
@@ -90,20 +90,20 @@
 
     invoke-interface {p0, p1}, Lorg/apache/http/params/HttpParams;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    if-nez p0, :cond_0
+    if-nez p1, :cond_0
 
     return-wide p2
 
     :cond_0
-    check-cast p0, Ljava/lang/Long;
+    check-cast p1, Ljava/lang/Long;
 
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    return-wide p0
+    return-wide p1
 .end method
 
 .method public isParameterFalse(Ljava/lang/String;)Z
@@ -113,11 +113,11 @@
 
     invoke-virtual {p0, p1, v0}, Lorg/apache/http/params/AbstractHttpParams;->getBooleanParameter(Ljava/lang/String;Z)Z
 
-    move-result p0
+    move-result p1
 
-    xor-int/lit8 p0, p0, 0x1
+    xor-int/lit8 p1, p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public isParameterTrue(Ljava/lang/String;)Z
@@ -127,9 +127,9 @@
 
     invoke-virtual {p0, p1, v0}, Lorg/apache/http/params/AbstractHttpParams;->getBooleanParameter(Ljava/lang/String;Z)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public setBooleanParameter(Ljava/lang/String;Z)Lorg/apache/http/params/HttpParams;

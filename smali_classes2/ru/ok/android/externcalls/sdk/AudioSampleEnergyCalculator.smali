@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Luf9;
+.implements Lvr9;
 
 
 # instance fields
 .field private final mainThreadHandler:Landroid/os/Handler;
 
-.field private final processor:Lc50;
+.field private final processor:Ls50;
 
 
 # direct methods
@@ -20,11 +20,11 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->mainThreadHandler:Landroid/os/Handler;
 
-    new-instance p1, Lc50;
+    new-instance p1, Ls50;
 
-    invoke-direct {p1}, Lc50;-><init>()V
+    invoke-direct {p1}, Ls50;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->processor:Lc50;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->processor:Ls50;
 
     return-void
 .end method
@@ -38,26 +38,26 @@
 .end method
 
 .method private synthetic lambda$onSample$0(J)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->processor:Lc50;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->processor:Ls50;
 
-    invoke-virtual {p0, p1, p2}, Lc50;->a(J)V
+    invoke-virtual {v0, p1, p2}, Ls50;->a(J)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getProcessor()Lc50;
-    .locals 0
+.method public getProcessor()Ls50;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->processor:Lc50;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->processor:Ls50;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public onSample(IIILzwa;)V
+.method public onSample(IIILvbb;)V
     .locals 2
 
     const-wide/16 p1, 0x0
@@ -65,11 +65,11 @@
     const/4 p3, 0x0
 
     :goto_0
-    iget v0, p4, Lzwa;->a:I
+    iget v0, p4, Lvbb;->a:I
 
     if-ge p3, v0, :cond_0
 
-    invoke-virtual {p4, p3}, Lzwa;->a(I)S
+    invoke-virtual {p4, p3}, Lvbb;->a(I)S
 
     move-result v0
 
@@ -98,11 +98,11 @@
 
     iget-object p3, p0, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->mainThreadHandler:Landroid/os/Handler;
 
-    new-instance p4, Lp50;
+    new-instance p4, Lb60;
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    invoke-direct {p4, p0, p1, p2, v0}, Lp50;-><init>(Ljava/lang/Object;JI)V
+    invoke-direct {p4, p0, p1, p2, v0}, Lb60;-><init>(Ljava/lang/Object;JI)V
 
     invoke-virtual {p3, p4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

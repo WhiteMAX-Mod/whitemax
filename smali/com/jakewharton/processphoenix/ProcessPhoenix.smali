@@ -144,7 +144,7 @@
 
     const-string v2, ". Does an activity specify the DEFAULT category in its intent filter?"
 
-    invoke-static {v1, v0, v2}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -202,11 +202,11 @@
 
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    move-result-object p0
+    move-result-object p1
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1}, Ljava/lang/Runtime;->exit(I)V
+    invoke-virtual {p1, v0}, Ljava/lang/Runtime;->exit(I)V
 
     return-void
 .end method

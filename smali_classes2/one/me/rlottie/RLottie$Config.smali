@@ -28,18 +28,18 @@
         "nativeLibraryLoader",
         "",
         "screenRefreshRate",
-        "Lns9;",
+        "Lt4a;",
         "logger",
         "<init>",
-        "(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLns9;)V",
+        "(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;)V",
         "Z",
         "Lone/me/rlottie/NativeLibraryLoader;",
         "getNativeLibraryLoader",
         "()Lone/me/rlottie/NativeLibraryLoader;",
         "F",
-        "Lns9;",
+        "Lt4a;",
         "getLogger",
-        "()Lns9;",
+        "()Lt4a;",
         "rlottie_release"
     }
     k = 0x1
@@ -55,7 +55,7 @@
 # instance fields
 .field public final isEnabled:Z
 
-.field private final logger:Lns9;
+.field private final logger:Lt4a;
 
 .field private final nativeLibraryLoader:Lone/me/rlottie/NativeLibraryLoader;
 
@@ -83,7 +83,7 @@
 
     move v2, p2
 
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLns9;ILld4;)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;ILki4;)V
 
     return-void
 .end method
@@ -108,7 +108,7 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLns9;ILld4;)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;ILki4;)V
 
     return-void
 .end method
@@ -133,12 +133,12 @@
 
     move v4, p4
 
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLns9;ILld4;)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;ILki4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLns9;)V
+.method public constructor <init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;)V
     .locals 0
 
     .line 4
@@ -154,12 +154,12 @@
     iput p4, p0, Lone/me/rlottie/RLottie$Config;->screenRefreshRate:F
 
     .line 8
-    iput-object p5, p0, Lone/me/rlottie/RLottie$Config;->logger:Lns9;
+    iput-object p5, p0, Lone/me/rlottie/RLottie$Config;->logger:Lt4a;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLns9;ILld4;)V
+.method public constructor <init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;ILki4;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x4
@@ -235,7 +235,7 @@
     if-eqz p3, :cond_4
 
     .line 15
-    sget-object p5, Lms9;->a:Lc3e;
+    sget-object p5, Ls4a;->a:Lnh2;
 
     :cond_4
     move-object v0, p0
@@ -247,25 +247,25 @@
     move-object v5, p5
 
     .line 16
-    invoke-direct/range {v0 .. v5}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLns9;)V
+    invoke-direct/range {v0 .. v5}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getLogger()Lns9;
-    .locals 0
+.method public final getLogger()Lt4a;
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottie$Config;->logger:Lns9;
+    iget-object v0, p0, Lone/me/rlottie/RLottie$Config;->logger:Lt4a;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getNativeLibraryLoader()Lone/me/rlottie/NativeLibraryLoader;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottie$Config;->nativeLibraryLoader:Lone/me/rlottie/NativeLibraryLoader;
+    iget-object v0, p0, Lone/me/rlottie/RLottie$Config;->nativeLibraryLoader:Lone/me/rlottie/NativeLibraryLoader;
 
-    return-object p0
+    return-object v0
 .end method

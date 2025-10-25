@@ -1,86 +1,19 @@
 .class public final Llf1;
-.super Lj2e;
+.super Lqf1;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic E0:I
-
-.field public final F0:Ljava/lang/Object;
-
-.field public final G0:Landroid/view/ViewGroup;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkga;)V
+.method public constructor <init>(Llu6;)V
     .locals 1
 
-    const/4 v0, 0x1
+    if-eqz p1, :cond_0
 
-    iput v0, p0, Llf1;->E0:I
-
-    .line 4
-    new-instance v0, Leea;
-
-    invoke-direct {v0, p1}, Leea;-><init>(Landroid/content/Context;)V
-
-    .line 5
-    invoke-direct {p0, v0}, Lzoc;-><init>(Landroid/view/View;)V
-
-    .line 6
-    iput-object p2, p0, Llf1;->F0:Ljava/lang/Object;
-
-    .line 7
-    iput-object v0, p0, Llf1;->G0:Landroid/view/ViewGroup;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/widget/FrameLayout;Ljn1;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Llf1;->E0:I
-
-    .line 1
-    invoke-direct {p0, p1}, Lzoc;-><init>(Landroid/view/View;)V
-
-    .line 2
-    iput-object p2, p0, Llf1;->F0:Ljava/lang/Object;
-
-    .line 3
-    sget p2, Lt5c;->call_copy_link_preview:I
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Lkn1;
-
-    iput-object p1, p0, Llf1;->G0:Landroid/view/ViewGroup;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final y(Lts7;)V
-    .locals 3
-
-    iget v0, p0, Llf1;->E0:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Llf1;->G0:Landroid/view/ViewGroup;
-
-    check-cast v0, Leea;
-
-    instance-of v1, p1, Lp1e;
-
-    if-eqz v1, :cond_0
-
-    check-cast p1, Lp1e;
+    iget-object p1, p1, Llu6;->a:Ljava/util/List;
 
     goto :goto_0
 
@@ -90,90 +23,154 @@
     :goto_0
     if-nez p1, :cond_1
 
-    goto :goto_2
+    sget-object p1, Lka5;->a:Lka5;
 
     :cond_1
-    iget-object v1, p1, Lp1e;->b:Lp2f;
+    sget-object v0, Lvzg;->c:Lvzg;
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-direct {p0, v0}, Lqf1;-><init>(Lvzg;)V
 
-    move-result-object v2
+    iput-object p1, p0, Llf1;->b:Ljava/util/List;
 
-    invoke-virtual {v1, v2}, Lu2f;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    return-void
+.end method
 
-    move-result-object v1
 
-    const-string v2, ""
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    if-nez v1, :cond_2
+    const/4 v0, 0x1
 
-    move-object v1, v2
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Llf1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Llf1;
+
+    iget-object v1, p0, Llf1;->b:Ljava/util/List;
+
+    iget-object p1, p1, Llf1;->b:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-virtual {v0, v1}, Leea;->setTextTitle(Ljava/lang/CharSequence;)V
+    return v0
+.end method
 
-    iget-object p1, p1, Lp1e;->c:Lt2f;
+.method public final getItemId()J
+    .locals 2
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const-wide/16 v0, 0xde
 
-    move-result-object v1
+    return-wide v0
+.end method
 
-    invoke-virtual {p1, v1}, Lu2f;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object p1
+    iget-object v0, p0, Llf1;->b:Ljava/util/List;
 
-    if-nez p1, :cond_3
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    goto :goto_1
+    move-result v0
 
-    :cond_3
-    move-object v2, p1
+    return v0
+.end method
 
-    :goto_1
-    invoke-virtual {v0, v2}, Leea;->setTextSubtitle(Ljava/lang/CharSequence;)V
+.method public final k(Ly18;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance p1, Lqb;
-
-    const/16 v1, 0xb
-
-    invoke-direct {p1, p0, v1, v2}, Lqb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v0, p1}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLongClickable(Z)V
-
-    new-instance p1, Lr32;
+    instance-of v0, p1, Llf1;
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, p0, v1, v2}, Lr32;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    check-cast p1, Llf1;
 
-    :goto_2
-    return-void
+    goto :goto_0
 
-    :pswitch_0
-    check-cast p1, Lwb1;
+    :cond_0
+    move-object p1, v1
 
-    iget-object p1, p0, Llf1;->G0:Landroid/view/ViewGroup;
+    :goto_0
+    if-nez p1, :cond_1
 
-    check-cast p1, Lkn1;
+    return-object v1
 
-    iget-object p0, p0, Llf1;->F0:Ljava/lang/Object;
+    :cond_1
+    new-instance v0, Lkf1;
 
-    check-cast p0, Ljn1;
+    const/16 v1, 0x9
 
-    invoke-virtual {p1, p0}, Lkn1;->setListener(Ljn1;)V
+    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
 
-    return-void
+    iget-object v1, p0, Llf1;->b:Ljava/util/List;
 
-    nop
+    iget-object p1, p1, Llf1;->b:Ljava/util/List;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    iget-object v1, v0, Lrdi;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/BitSet;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2, p1}, Ljava/util/BitSet;->set(IZ)V
+
+    return-object v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/16 v0, 0xde
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Grid(opponentsPages="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Llf1;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

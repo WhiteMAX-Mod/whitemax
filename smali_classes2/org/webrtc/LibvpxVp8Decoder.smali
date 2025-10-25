@@ -22,7 +22,7 @@
 
     invoke-static {p1, p2}, Lorg/webrtc/LibvpxVp8Decoder;->nativeCreateDecoder(J)J
 
-    move-result-wide p0
+    move-result-wide p1
 
-    return-wide p0
+    return-wide p1
 .end method

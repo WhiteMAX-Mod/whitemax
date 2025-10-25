@@ -1,132 +1,76 @@
-.class public final synthetic Lpd9;
+.class public final Lpd9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/String;
 
-.field public final synthetic b:J
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:I
+
+.field public final a:I
+
+.field public final b:J
+
+.field public final c:Lda9;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(JI)V
+.method public constructor <init>(IJLda9;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    iput p3, p0, Lpd9;->a:I
-
-    iput-wide p1, p0, Lpd9;->b:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lpd9;->a:I
+
+    iput-wide p2, p0, Lpd9;->b:J
+
+    iput-object p4, p0, Lpd9;->c:Lda9;
+
+    iput-object p5, p0, Lpd9;->o:Ljava/lang/String;
+
+    iput-object p6, p0, Lpd9;->X:Ljava/lang/String;
+
+    iput-object p7, p0, Lpd9;->Y:Ljava/lang/String;
+
+    iput p8, p0, Lpd9;->Z:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Lpd9;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "{type="
 
-    check-cast p1, Ljava/util/Set;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    iget v1, p0, Lpd9;->a:I
 
-    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+    invoke-static {v1}, Lrv8;->m(I)Ljava/lang/String;
 
-    new-instance p1, Lsi2;
+    move-result-object v1
 
-    const/4 v1, 0x4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lpd9;->b:J
+    const-string v1, "}"
 
-    invoke-direct {p1, v2, v3, v1}, Lsi2;-><init>(JI)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance p0, Ldz5;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v1, 0x3
-
-    invoke-direct {p0, v1, p1}, Ldz5;-><init>(ILbc6;)V
-
-    invoke-interface {v0, p0}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    check-cast p1, Lsd9;
-
-    new-instance v0, Lsd9;
-
-    const-wide/16 v4, 0x0
-
-    const/16 v8, 0x1a
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    iget-wide v6, p0, Lpd9;->b:J
-
-    invoke-direct/range {v0 .. v8}, Lsd9;-><init>(IZZJJI)V
-
-    return-object v0
-
-    :pswitch_1
-    check-cast p1, Lsd9;
-
-    new-instance v0, Lsd9;
-
-    const-wide/16 v6, 0x0
-
-    const/16 v8, 0x26
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    iget-wide v4, p0, Lpd9;->b:J
-
-    invoke-direct/range {v0 .. v8}, Lsd9;-><init>(IZZJJI)V
-
-    return-object v0
-
-    :pswitch_2
-    check-cast p1, Lsd9;
-
-    new-instance v0, Lsd9;
-
-    const-wide/16 v6, 0x0
-
-    const/16 v8, 0x2e
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    iget-wide v4, p0, Lpd9;->b:J
-
-    invoke-direct/range {v0 .. v8}, Lsd9;-><init>(IZZJJI)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

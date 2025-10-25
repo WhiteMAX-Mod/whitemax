@@ -1,77 +1,53 @@
 .class public final Lzqg;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Ltqg;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/webapp/settings/WebAppsSettingScreen;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Larg;
+
+.field public Z:I
+
+.field public o:Larg;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/webapp/settings/WebAppsSettingScreen;)V
+.method public constructor <init>(Larg;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzqg;->Y:Larg;
 
-    iput-object p1, p0, Lzqg;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lsqg;)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->X:[Lxi7;
+    iput-object p1, p0, Lzqg;->X:Ljava/lang/Object;
 
-    iget-object p0, p0, Lzqg;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
+    iget p1, p0, Lzqg;->Z:I
 
-    iget-object p0, p0, Lone/me/webapp/settings/WebAppsSettingScreen;->b:Lcl7;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    move-result-object p0
+    iput p1, p0, Lzqg;->Z:I
 
-    check-cast p0, Lcrg;
+    const/4 p1, 0x0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x0
 
-    instance-of v0, p1, Lqqg;
+    iget-object v1, p0, Lzqg;->Y:Larg;
 
-    if-nez v0, :cond_2
+    invoke-virtual {v1, p1, v0, v0, p0}, Larg;->c(Ljava/util/List;IILy14;)Ljava/lang/Object;
 
-    instance-of v0, p1, Lpqg;
+    move-result-object p1
 
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    instance-of v0, p1, Lrqg;
-
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Lcrg;->Z:Lv85;
-
-    check-cast p1, Lrqg;
-
-    iget-object p1, p1, Lrqg;->b:Lva4;
-
-    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    return-void
+    return-object p1
 .end method

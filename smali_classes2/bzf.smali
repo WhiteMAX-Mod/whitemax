@@ -1,80 +1,199 @@
-.class public final synthetic Lbzf;
+.class public final Lbzf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lyyf;
 
-.field public final synthetic b:Lezf;
+.field public final b:Lczf;
+
+.field public final c:Lfzf;
+
+.field public final d:Lizf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lezf;I)V
+.method public constructor <init>(Lyyf;Lczf;Lfzf;Lizf;)V
     .locals 0
 
-    iput p2, p0, Lbzf;->a:I
-
-    iput-object p1, p0, Lbzf;->b:Lezf;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbzf;->a:Lyyf;
+
+    iput-object p2, p0, Lbzf;->b:Lczf;
+
+    iput-object p3, p0, Lbzf;->c:Lfzf;
+
+    iput-object p4, p0, Lbzf;->d:Lizf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lbzf;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lbzf;
 
-    check-cast p1, Ljava/lang/Float;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lbzf;
+
+    iget-object v1, p0, Lbzf;->a:Lyyf;
+
+    iget-object v3, p1, Lbzf;->a:Lyyf;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lbzf;->b:Lczf;
+
+    iget-object v3, p1, Lbzf;->b:Lczf;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lbzf;->c:Lfzf;
+
+    iget-object v3, p1, Lbzf;->c:Lfzf;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lbzf;->d:Lizf;
+
+    iget-object p1, p1, Lbzf;->d:Lizf;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object p0, p0, Lbzf;->b:Lezf;
+    if-nez p1, :cond_5
 
-    iput p1, p0, Lezf;->A0:F
+    return v2
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    :cond_5
+    return v0
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 2
 
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget-object v0, p0, Lbzf;->a:Lyyf;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lyyf;->hashCode()I
 
-    check-cast p1, Ljava/lang/Float;
+    move-result v0
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result p1
+    iget-object v1, p0, Lbzf;->b:Lczf;
 
-    iget-object p0, p0, Lbzf;->b:Lezf;
+    invoke-virtual {v1}, Lczf;->hashCode()I
 
-    iput p1, p0, Lezf;->y0:F
+    move-result v1
 
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
+    add-int/2addr v1, v0
 
-    return-void
+    mul-int/lit8 v1, v1, 0x1f
 
-    nop
+    iget-object v0, p0, Lbzf;->c:Lfzf;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Lfzf;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lbzf;->d:Lizf;
+
+    invoke-virtual {v1}, Lizf;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "TopbarColors(background="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lbzf;->a:Lyyf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbzf;->b:Lczf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", stroke="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbzf;->c:Lfzf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", text="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbzf;->d:Lizf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

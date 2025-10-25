@@ -1,157 +1,354 @@
-.class public final Ljnf;
+.class public final synthetic Ljnf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Laj6;
+
 
 # instance fields
-.field public final a:Lcl7;
+.field public final synthetic a:I
 
-.field public final b:Lcl7;
+.field public final synthetic b:Llnf;
 
-.field public final c:Lcl7;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lcl7;)V
+.method public synthetic constructor <init>(Llnf;II)V
     .locals 0
 
+    iput p3, p0, Ljnf;->a:I
+
+    iput-object p1, p0, Ljnf;->b:Llnf;
+
+    iput p2, p0, Ljnf;->c:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljnf;->a:Lcl7;
-
-    iput-object p2, p0, Ljnf;->b:Lcl7;
-
-    iput-object p3, p0, Ljnf;->c:Lcl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JJLjava/lang/String;Lw00;Ljx3;)Ljava/lang/Object;
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    instance-of v0, p7, Linf;
+    iget v0, p0, Ljnf;->a:I
 
-    if-eqz v0, :cond_0
+    const-string v1, "lnf"
 
-    move-object v0, p7
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Linf;
+    iget-object v0, p0, Ljnf;->b:Llnf;
 
-    iget v1, v0, Linf;->s0:I
+    iget v2, p0, Ljnf;->c:I
 
-    const/high16 v2, -0x80000000
+    check-cast p1, Ljava/lang/Throwable;
 
-    and-int v3, v1, v2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Llnf;->d(Ljava/lang/Throwable;)Z
+
+    move-result v3
 
     if-eqz v3, :cond_0
 
-    sub-int/2addr v1, v2
+    iget-object v3, v0, Llnf;->a:Liu7;
 
-    iput v1, v0, Linf;->s0:I
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, La8e;
+
+    check-cast v3, Lc8e;
+
+    iget v3, v3, Lc8e;->h:I
+
+    invoke-static {v3}, Llnf;->a(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    const-string p1, "retryWhenCommonErrorObs: no connection, await for connection available"
+
+    invoke-static {v1, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Llnf;->b()Lvka;
+
+    move-result-object p1
+
+    new-instance v0, Lo4f;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lo4f;-><init>(I)V
+
+    sget-object v1, Louf;->d:Lxo6;
+
+    sget-object v2, Louf;->c:Lqj6;
+
+    new-instance v3, Lvia;
+
+    invoke-direct {v3, p1, v0, v1, v2}, Lvia;-><init>(Lyha;Lsr3;Lsr3;Lr6;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Linf;
+    invoke-static {p1}, Llnf;->c(Ljava/lang/Throwable;)Z
 
-    invoke-direct {v0, p0, p7}, Linf;-><init>(Ljnf;Ljx3;)V
+    move-result v0
 
-    :goto_0
-    iget-object p7, v0, Linf;->Z:Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    iget v1, v0, Linf;->s0:I
+    const-string v0, "retryWhenCommonErrorObs: common error"
 
-    sget-object v2, Lylf;->a:Lylf;
+    invoke-static {v1, v0, p1}, Ltei;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 v3, 0x1
+    int-to-long v0, v2
 
-    if-eqz v1, :cond_3
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    if-ne v1, v3, :cond_2
+    invoke-static {}, Lkpd;->a()Lxod;
 
-    iget-wide p3, v0, Linf;->Y:J
+    move-result-object v2
 
-    iget-wide p1, v0, Linf;->X:J
+    invoke-static {v0, v1, p1, v2}, Lyha;->r(JLjava/util/concurrent/TimeUnit;Lxod;)Lcla;
 
-    iget-object p0, v0, Linf;->o:Ljnf;
+    move-result-object v3
 
-    invoke-static {p7}, Lqe5;->V(Ljava/lang/Object;)V
+    goto :goto_0
 
     :cond_1
-    move-wide p5, p3
+    invoke-static {p1}, Lyha;->f(Ljava/lang/Throwable;)Lmh3;
 
-    move-wide p3, p1
+    move-result-object v3
+
+    :goto_0
+    return-object v3
+
+    :pswitch_0
+    iget-object v0, p0, Ljnf;->b:Llnf;
+
+    iget v1, p0, Ljnf;->c:I
+
+    check-cast p1, Lyha;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Ljnf;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v0, v1, v3}, Ljnf;-><init>(Llnf;II)V
+
+    const v0, 0x7fffffff
+
+    invoke-virtual {p1, v2, v0}, Lyha;->h(Laj6;I)Lyha;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Ljnf;->b:Llnf;
+
+    iget v2, p0, Ljnf;->c:I
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Llnf;->d(Ljava/lang/Throwable;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v3, v0, Llnf;->a:Liu7;
+
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, La8e;
+
+    check-cast v3, Lc8e;
+
+    iget v3, v3, Lc8e;->h:I
+
+    invoke-static {v3}, Llnf;->a(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    const-string p1, "retryWhenCommonError: no connection, await for connection available"
+
+    invoke-static {v1, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Llnf;->b()Lvka;
+
+    move-result-object p1
+
+    new-instance v0, Lo4f;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lo4f;-><init>(I)V
+
+    sget-object v1, Louf;->d:Lxo6;
+
+    sget-object v2, Louf;->c:Lqj6;
+
+    new-instance v3, Lvia;
+
+    invoke-direct {v3, p1, v0, v1, v2}, Lvia;-><init>(Lyha;Lsr3;Lsr3;Lr6;)V
+
+    new-instance p1, Lp26;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, v3}, Lp26;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Lc36;
+
+    invoke-direct {v0, p1}, La1;-><init>(Lf26;)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-static {p1}, Llnf;->c(Ljava/lang/Throwable;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    int-to-long v0, v2
+
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    sget v2, Lf26;->a:I
+
+    invoke-static {}, Lkpd;->a()Lxod;
+
+    move-result-object v2
+
+    const-string v3, "unit is null"
+
+    invoke-static {p1, v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    const-string p1, "scheduler is null"
+
+    invoke-static {v2, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance p1, Ls36;
+
+    const-wide/16 v3, 0x0
+
+    invoke-static {v3, v4, v0, v1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    invoke-direct {p1, v0, v1, v2}, Ls36;-><init>(JLxod;)V
+
+    :goto_1
+    move-object v0, p1
+
+    goto :goto_2
+
+    :cond_3
+    sget v0, Lf26;->a:I
+
+    const-string v0, "throwable is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Lsj6;
+
+    invoke-direct {v0, p1}, Lsj6;-><init>(Ljava/lang/Object;)V
+
+    new-instance p1, Lp26;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Lp26;-><init>(ILjava/lang/Object;)V
 
     goto :goto_1
 
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :goto_2
+    return-object v0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :pswitch_2
+    iget-object v0, p0, Ljnf;->b:Llnf;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget v1, p0, Ljnf;->c:I
 
-    throw p0
+    check-cast p1, Lf26;
 
-    :cond_3
-    invoke-static {p7}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p7, p0, Ljnf;->a:Lcl7;
+    new-instance v2, Ljnf;
 
-    invoke-interface {p7}, Lcl7;->getValue()Ljava/lang/Object;
+    const/4 v3, 0x1
 
-    move-result-object p7
+    invoke-direct {v2, v0, v1, v3}, Ljnf;-><init>(Llnf;II)V
 
-    check-cast p7, Lld9;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v1, Lxrc;
+    sget v0, Lf26;->a:I
 
-    const/16 v4, 0xb
+    const-string v1, "maxConcurrency"
 
-    invoke-direct {v1, p6, v4, p0}, Lxrc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {v0, v1}, Ll0i;->e(ILjava/lang/String;)V
 
-    iput-object p0, v0, Linf;->o:Ljnf;
+    const-string v1, "bufferSize"
 
-    iput-wide p1, v0, Linf;->X:J
+    invoke-static {v0, v1}, Ll0i;->e(ILjava/lang/String;)V
 
-    iput-wide p3, v0, Linf;->Y:J
+    instance-of v1, p1, Lcnd;
 
-    iput v3, v0, Linf;->s0:I
+    if-eqz v1, :cond_5
 
-    iget-object p6, p7, Lld9;->a:Ltxc;
+    check-cast p1, Lcnd;
 
-    new-instance p7, Lgp8;
+    invoke-interface {p1}, Lxef;->get()Ljava/lang/Object;
 
-    const/16 v0, 0xa
+    move-result-object p1
 
-    invoke-direct {p7, p5, v0, v1}, Lgp8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-nez p1, :cond_4
 
-    invoke-virtual {p6, p3, p4, p7}, Ltxc;->n(JLpm3;)V
+    sget-object p1, Lo26;->b:Lo26;
 
-    sget-object p5, Lz04;->a:Lz04;
+    goto :goto_3
 
-    if-ne v2, p5, :cond_1
+    :cond_4
+    new-instance v0, Lm26;
 
-    return-object p5
+    invoke-direct {v0, p1, v2, v3}, Lm26;-><init>(Ljava/lang/Object;Laj6;I)V
 
-    :goto_1
-    iget-object p0, p0, Ljnf;->b:Lcl7;
+    move-object p1, v0
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    goto :goto_3
 
-    move-result-object p0
+    :cond_5
+    new-instance v1, Ls26;
 
-    check-cast p0, Lfv0;
+    invoke-direct {v1, p1, v2, v0, v0}, Ls26;-><init>(Lf26;Ljnf;II)V
 
-    new-instance p1, Lknf;
+    move-object p1, v1
 
-    const/4 p2, 0x0
+    :goto_3
+    return-object p1
 
-    invoke-direct/range {p1 .. p6}, Lknf;-><init>(IJJ)V
+    nop
 
-    invoke-virtual {p0, p1}, Lfv0;->c(Ljava/lang/Object;)V
-
-    return-object v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

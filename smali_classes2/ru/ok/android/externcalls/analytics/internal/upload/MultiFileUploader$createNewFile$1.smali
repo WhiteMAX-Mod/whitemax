@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;
-.super Lnk7;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lji6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lnk7;",
-        "Lzb6;"
+        "Lst7;",
+        "Lji6;"
     }
 .end annotation
 
@@ -54,7 +54,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lnk7;-><init>(I)V
+    invoke-direct {p0, p1}, Lst7;-><init>(I)V
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 
 # virtual methods
 .method public final invoke()Ljava/io/File;
-    .locals 6
+    .locals 8
 
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;->this$0:Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
@@ -143,54 +143,89 @@
 
     move-result-object v1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;->this$0:Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
+    iget-object v3, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;->this$0:Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
 
     .line 11
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+    invoke-virtual {v3}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
-    move-result-object p0
+    move-result-object v3
 
-    invoke-static {v2}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/util/Collection;)J
+    sget-object v4, Lhv5;->a:[B
 
-    move-result-wide v2
+    const-wide/16 v4, 0x0
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    if-nez v2, :cond_3
 
-    const-string v5, "Propose new file for upload cache: "
+    goto :goto_2
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, ", total files size: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 12
+    :cond_3
+    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    const-string v3, "CallAnalyticsUploaderV2"
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {p0, v3, v2}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v6
 
-    .line 12
-    new-instance p0, Ljava/io/File;
+    if-eqz v6, :cond_4
 
-    invoke-direct {p0, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v6
+
+    check-cast v6, Ljava/io/File;
+
+    .line 13
+    invoke-static {v6}, Lhv5;->d(Ljava/io/File;)J
+
+    move-result-wide v6
+
+    add-long/2addr v4, v6
+
+    goto :goto_1
+
+    .line 14
+    :cond_4
+    :goto_2
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v6, "Propose new file for upload cache: "
+
+    invoke-direct {v2, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, ", total files size: "
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v4, "CallAnalyticsUploaderV2"
+
+    invoke-interface {v3, v4, v2}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 15
+    new-instance v2, Ljava/io/File;
+
+    invoke-direct {v2, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    return-object v2
 .end method
 
 .method public bridge synthetic invoke()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;->invoke()Ljava/io/File;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

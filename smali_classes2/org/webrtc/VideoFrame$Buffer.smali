@@ -25,14 +25,14 @@
 .end method
 
 .method public getBufferType()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Buffer"
     .end annotation
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public abstract getHeight()I

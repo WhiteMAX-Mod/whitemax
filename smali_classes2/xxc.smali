@@ -1,84 +1,117 @@
 .class public final Lxxc;
-.super Ljava/lang/Object;
+.super Lzxc;
 .source "SourceFile"
-
-# interfaces
-.implements Lcee;
 
 
 # instance fields
-.field public final a:Lfxc;
+.field public final a:J
 
-.field public final b:Lzte;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Ljma;)V
-    .locals 1
+.method public constructor <init>(JJ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxxc;->a:Lfxc;
+    iput-wide p1, p0, Lxxc;->a:J
 
-    new-instance p1, Lkra;
-
-    const/16 v0, 0x1d
-
-    invoke-direct {p1, v0, p0}, Lkra;-><init>(ILjava/lang/Object;)V
-
-    new-instance v0, Lzte;
-
-    invoke-direct {v0, p1}, Lzte;-><init>(Lzb6;)V
-
-    iput-object v0, p0, Lxxc;->b:Lzte;
+    iput-wide p3, p0, Lxxc;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Liz7;)Ljava/lang/Object;
-    .locals 5
-
-    iget-object p0, p0, Lxxc;->b:Lzte;
-
-    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzde;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    const-string v1, "\n            SELECT * FROM stat_events\n            ORDER BY id ASC\n            LIMIT ?\n        "
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v0, v1}, Lvxc;->c(ILjava/lang/String;)Lvxc;
+    return v0
 
-    move-result-object v1
+    :cond_0
+    instance-of v1, p1, Lxxc;
 
-    const/16 v2, 0x32
+    const/4 v2, 0x0
 
-    int-to-long v2, v2
+    if-nez v1, :cond_1
 
-    invoke-virtual {v1, v0, v2, v3}, Lvxc;->k(IJ)V
+    return v2
 
-    new-instance v0, Landroid/os/CancellationSignal;
+    :cond_1
+    check-cast p1, Lxxc;
 
-    invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
+    iget-wide v3, p0, Lxxc;->a:J
 
-    iget-object v2, p0, Lzde;->a:Lexc;
+    iget-wide v5, p1, Lxxc;->a:J
 
-    new-instance v3, Lrwc;
+    cmp-long v1, v3, v5
 
-    const/4 v4, 0x7
+    if-eqz v1, :cond_2
 
-    invoke-direct {v3, p0, v4, v1}, Lrwc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    return v2
 
-    invoke-static {v2, v0, v3, p1}, Lmu0;->h(Lexc;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_2
+    iget-wide v3, p0, Lxxc;->b:J
 
-    move-result-object p0
+    iget-wide v5, p1, Lxxc;->b:J
 
-    return-object p0
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lxxc;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lxxc;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Success(messageId="
+
+    const-string v1, ", totalBytes="
+
+    iget-wide v2, p0, Lxxc;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lxxc;->b:J
+
+    invoke-static {v0, v2, v3, v1}, Lrv8;->g(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

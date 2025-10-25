@@ -1,125 +1,112 @@
 .class public final Lmm6;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:[I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:[I
+.field public final synthetic Y:Lan6;
 
 
 # direct methods
-.method public constructor <init>([I[I)V
+.method public constructor <init>(Lan6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmm6;->Y:Lan6;
 
-    iput-object p1, p0, Lmm6;->a:[I
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lmm6;->b:[I
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ltcb;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lmm6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lmm6;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lmm6;
 
-    iget-object v1, p0, Lmm6;->a:[I
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-object v3, p1, Lmm6;->a:[I
+    invoke-virtual {p1, p2}, Lmm6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lmm6;
+
+    iget-object v1, p0, Lmm6;->Y:Lan6;
+
+    invoke-direct {v0, v1, p2}, Lmm6;-><init>(Lan6;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lmm6;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lmm6;->X:Ljava/lang/Object;
+
+    check-cast p1, Ltcb;
+
+    iget-object v0, p1, Ltcb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcl6;
+
+    iget-object p1, p1, Ltcb;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    if-nez v1, :cond_2
+    const-string v2, "got album and items, items size = "
 
-    return v2
+    const-string v3, "an6"
 
-    :cond_2
-    iget-object p0, p0, Lmm6;->b:[I
+    invoke-static {v1, v2, v3}, Lzb3;->f(ILjava/lang/String;Ljava/lang/String;)V
 
-    iget-object p1, p1, Lmm6;->b:[I
+    iget-object v1, p0, Lmm6;->Y:Lan6;
 
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v2, v1, Lan6;->x0:Lx0f;
 
-    move-result p0
+    sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    if-nez p0, :cond_3
+    const/4 v4, 0x0
 
-    return v2
+    invoke-virtual {v2, v4, v3}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :cond_3
-    return v0
-.end method
+    iget-object v2, v1, Lan6;->z0:Lx0f;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {v2, v0}, Lx0f;->setValue(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lmm6;->a:[I
+    iget-object v0, v1, Lan6;->u0:Lx0f;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+    invoke-virtual {v0, v4, p1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v0
+    sget-object p1, Lccg;->a:Lccg;
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lmm6;->b:[I
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    iget-object v0, p0, Lmm6;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object p0, p0, Lmm6;->b:[I
-
-    invoke-static {p0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, ", surfacePrimaryGradient="
-
-    const-string v2, ")"
-
-    const-string v3, "GradientsOverlayColors(surfaceGroundGradient="
-
-    invoke-static {v3, v0, v1, p0, v2}, Lz7e;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

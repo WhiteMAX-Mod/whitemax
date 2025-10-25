@@ -1,298 +1,491 @@
 .class public final Lg2h;
-.super Lb2h;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ldl6;
-.implements Lel6;
 
 
 # static fields
-.field public static final k:Ll1h;
+.field public static final k:Lg2h;
 
 
 # instance fields
-.field public final d:Landroid/content/Context;
+.field public final a:F
 
-.field public final e:Landroid/os/Handler;
+.field public final b:F
 
-.field public final f:Ll1h;
+.field public final c:F
 
-.field public final g:Ljava/util/Set;
+.field public final d:F
 
-.field public final h:Lsf9;
+.field public final e:F
 
-.field public i:Lk0e;
+.field public final f:F
 
-.field public j:Lvg4;
+.field public final g:[F
+
+.field public final h:F
+
+.field public final i:F
+
+.field public final j:F
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 24
 
-    sget-object v0, Lk2h;->a:Ll1h;
+    invoke-static {}, Lbx3;->g()F
 
-    sput-object v0, Lg2h;->k:Ll1h;
+    move-result v0
 
-    return-void
-.end method
+    float-to-double v0, v0
 
-.method public constructor <init>(Landroid/content/Context;Lzh9;Lsf9;)V
-    .locals 2
+    const-wide v2, 0x404fd4bbab8b494cL    # 63.66197723675813
 
-    const-string v0, "com.google.android.gms.signin.internal.ISignInCallbacks"
+    mul-double/2addr v0, v2
 
-    const/4 v1, 0x0
+    const-wide/high16 v2, 0x4059000000000000L    # 100.0
 
-    invoke-direct {p0, v0, v1}, Lq1h;-><init>(Ljava/lang/String;I)V
+    div-double/2addr v0, v2
 
-    iput-object p1, p0, Lg2h;->d:Landroid/content/Context;
+    double-to-float v0, v0
 
-    iput-object p2, p0, Lg2h;->e:Landroid/os/Handler;
-
-    iput-object p3, p0, Lg2h;->h:Lsf9;
-
-    iget-object p1, p3, Lsf9;->a:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Set;
-
-    iput-object p1, p0, Lg2h;->g:Ljava/util/Set;
-
-    sget-object p1, Lg2h;->k:Ll1h;
-
-    iput-object p1, p0, Lg2h;->f:Ll1h;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final B(I)V
-    .locals 1
-
-    iget-object p0, p0, Lg2h;->j:Lvg4;
-
-    iget-object v0, p0, Lvg4;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lfl6;
-
-    iget-object v0, v0, Lfl6;->t0:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object p0, p0, Lvg4;->c:Ljava/lang/Object;
-
-    check-cast p0, Lbl;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lt1h;
-
-    if-eqz p0, :cond_1
-
-    iget-boolean v0, p0, Lt1h;->k:Z
-
-    if-eqz v0, :cond_0
-
-    new-instance p1, Lrk3;
-
-    const/16 v0, 0x11
-
-    invoke-direct {p1, v0}, Lrk3;-><init>(I)V
-
-    invoke-virtual {p0, p1}, Lt1h;->n(Lrk3;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lt1h;->B(I)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final k(Lrk3;)V
-    .locals 0
-
-    iget-object p0, p0, Lg2h;->j:Lvg4;
-
-    invoke-virtual {p0, p1}, Lvg4;->h(Lrk3;)V
-
-    return-void
-.end method
-
-.method public final onConnected()V
-    .locals 8
-
-    iget-object v0, p0, Lg2h;->i:Lk0e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v1, "<<default account>>"
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
+    sget-object v1, Lbx3;->c:[F
 
     const/4 v4, 0x0
 
-    :try_start_0
-    iget-object v5, v0, Lk0e;->J0:Lsf9;
+    aget v5, v1, v4
 
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v6, Lbx3;->a:[[F
 
-    new-instance v5, Landroid/accounts/Account;
+    aget-object v7, v6, v4
 
-    const-string v6, "com.google"
+    aget v8, v7, v4
 
-    invoke-direct {v5, v1, v6}, Landroid/accounts/Account;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    mul-float/2addr v8, v5
 
-    iget-object v6, v5, Landroid/accounts/Account;->name:Ljava/lang/String;
+    const/4 v9, 0x1
 
-    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    aget v10, v1, v9
 
-    move-result v1
+    aget v11, v7, v9
 
-    if-eqz v1, :cond_0
+    mul-float/2addr v11, v10
 
-    iget-object v1, v0, Lcom/google/android/gms/common/internal/a;->c:Landroid/content/Context;
+    add-float/2addr v11, v8
 
-    invoke-static {v1}, Lyke;->a(Landroid/content/Context;)Lyke;
+    const/4 v8, 0x2
 
-    move-result-object v1
+    aget v12, v1, v8
 
-    invoke-virtual {v1}, Lyke;->b()Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+    aget v7, v7, v8
 
-    move-result-object v1
+    mul-float/2addr v7, v12
 
-    goto :goto_0
+    add-float/2addr v7, v11
 
-    :catch_0
-    move-exception v0
+    aget-object v11, v6, v9
+
+    aget v13, v11, v4
+
+    mul-float/2addr v13, v5
+
+    aget v14, v11, v9
+
+    mul-float/2addr v14, v10
+
+    add-float/2addr v14, v13
+
+    aget v11, v11, v8
+
+    mul-float/2addr v11, v12
+
+    add-float/2addr v11, v14
+
+    aget-object v6, v6, v8
+
+    aget v13, v6, v4
+
+    mul-float/2addr v5, v13
+
+    aget v13, v6, v9
+
+    mul-float/2addr v10, v13
+
+    add-float/2addr v10, v5
+
+    aget v5, v6, v8
+
+    mul-float/2addr v12, v5
+
+    add-float/2addr v12, v10
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    float-to-double v13, v5
+
+    const-wide v15, 0x3feccccccccccccdL    # 0.9
+
+    cmpl-double v6, v13, v15
+
+    if-ltz v6, :cond_0
+
+    const v6, 0x3f30a3d7    # 0.69f
+
+    :goto_0
+    move/from16 v18, v6
 
     goto :goto_1
 
     :cond_0
-    move-object v1, v4
+    const v6, 0x3f27ae14    # 0.655f
 
-    :goto_0
-    new-instance v6, La3h;
-
-    iget-object v7, v0, Lk0e;->L0:Ljava/lang/Integer;
-
-    invoke-static {v7}, Ljk7;->t(Ljava/lang/Object;)V
-
-    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
-
-    move-result v7
-
-    invoke-direct {v6, v2, v5, v7, v1}, La3h;-><init>(ILandroid/accounts/Account;ILcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
-
-    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
-
-    move-result-object v0
-
-    check-cast v0, Lo2h;
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    iget-object v5, v0, Lk1h;->e:Ljava/lang/String;
-
-    invoke-virtual {v1, v5}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    sget v5, La2h;->a:I
-
-    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/16 v5, 0x4f45
-
-    invoke-static {v1, v5}, Ljs9;->U(Landroid/os/Parcel;I)I
-
-    move-result v5
-
-    const/4 v7, 0x4
-
-    invoke-static {v1, v3, v7}, Ljs9;->W(Landroid/os/Parcel;II)V
-
-    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v7, 0x0
-
-    invoke-static {v1, v2, v6, v7}, Ljs9;->O(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    invoke-static {v1, v5}, Ljs9;->V(Landroid/os/Parcel;I)V
-
-    invoke-virtual {v1, p0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v5
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :try_start_1
-    iget-object v0, v0, Lk1h;->d:Landroid/os/IBinder;
-
-    const/16 v6, 0xc
-
-    invoke-interface {v0, v6, v1, v5, v7}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    invoke-virtual {v5}, Landroid/os/Parcel;->readException()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
-
-    throw v0
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
+    goto :goto_0
 
     :goto_1
-    :try_start_3
-    new-instance v1, Lw2h;
+    neg-float v6, v0
 
-    new-instance v5, Lrk3;
+    const/high16 v10, 0x42280000    # 42.0f
 
-    const/16 v6, 0x8
+    sub-float/2addr v6, v10
 
-    invoke-direct {v5, v6, v4}, Lrk3;-><init>(ILandroid/app/PendingIntent;)V
+    const/high16 v10, 0x42b80000    # 92.0f
 
-    invoke-direct {v1, v3, v5, v4}, Lw2h;-><init>(ILrk3;Lb3h;)V
+    div-float/2addr v6, v10
 
-    new-instance v3, Lvwg;
+    float-to-double v13, v6
 
-    invoke-direct {v3, p0, v2, v1}, Lvwg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {v13, v14}, Ljava/lang/Math;->exp(D)D
 
-    iget-object p0, p0, Lg2h;->e:Landroid/os/Handler;
+    move-result-wide v13
 
-    invoke-virtual {p0, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-    :try_end_3
-    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
+    double-to-float v6, v13
+
+    const v10, 0x3e8e38e4
+
+    mul-float/2addr v6, v10
+
+    const/high16 v10, 0x3f800000    # 1.0f
+
+    sub-float v6, v10, v6
+
+    mul-float/2addr v6, v5
+
+    float-to-double v13, v6
+
+    const-wide/high16 v15, 0x3ff0000000000000L    # 1.0
+
+    cmpl-double v15, v13, v15
+
+    if-lez v15, :cond_1
+
+    move v6, v10
 
     goto :goto_2
 
-    :catch_1
-    const-string p0, "SignInClientImpl"
+    :cond_1
+    const-wide/16 v15, 0x0
 
-    const-string v1, "ISignInCallbacks#onSignInComplete should be executed from the same process, unexpected RemoteException."
+    cmpg-double v13, v13, v15
 
-    invoke-static {p0, v1, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    if-gez v13, :cond_2
 
+    const/4 v6, 0x0
+
+    :cond_2
     :goto_2
+    const/high16 v13, 0x42c80000    # 100.0f
+
+    div-float v14, v13, v7
+
+    mul-float/2addr v14, v6
+
+    add-float/2addr v14, v10
+
+    sub-float/2addr v14, v6
+
+    div-float v15, v13, v11
+
+    mul-float/2addr v15, v6
+
+    add-float/2addr v15, v10
+
+    sub-float/2addr v15, v6
+
+    div-float/2addr v13, v12
+
+    mul-float/2addr v13, v6
+
+    add-float/2addr v13, v10
+
+    sub-float/2addr v13, v6
+
+    const/4 v6, 0x3
+
+    move-wide/from16 v16, v2
+
+    new-array v2, v6, [F
+
+    aput v14, v2, v4
+
+    aput v15, v2, v9
+
+    aput v13, v2, v8
+
+    const/high16 v3, 0x40a00000    # 5.0f
+
+    mul-float/2addr v3, v0
+
+    add-float/2addr v3, v10
+
+    div-float v3, v10, v3
+
+    mul-float v13, v3, v3
+
+    mul-float/2addr v13, v3
+
+    mul-float/2addr v13, v3
+
+    sub-float/2addr v10, v13
+
+    mul-float/2addr v13, v0
+
+    const v3, 0x3dcccccd    # 0.1f
+
+    mul-float/2addr v3, v10
+
+    mul-float/2addr v3, v10
+
+    const-wide/high16 v14, 0x4014000000000000L    # 5.0
+
+    move v10, v4
+
+    float-to-double v4, v0
+
+    mul-double/2addr v4, v14
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->cbrt(D)D
+
+    move-result-wide v4
+
+    double-to-float v0, v4
+
+    mul-float/2addr v3, v0
+
+    add-float/2addr v3, v13
+
+    invoke-static {}, Lbx3;->g()F
+
+    move-result v0
+
+    aget v1, v1, v9
+
+    div-float v14, v0, v1
+
+    float-to-double v0, v14
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    double-to-float v4, v4
+
+    const v5, 0x3fbd70a4    # 1.48f
+
+    add-float v23, v4, v5
+
+    const-wide v4, 0x3fc999999999999aL    # 0.2
+
+    invoke-static {v0, v1, v4, v5}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v0
+
+    double-to-float v0, v0
+
+    const v1, 0x3f39999a    # 0.725f
+
+    div-float/2addr v1, v0
+
+    aget v0, v2, v10
+
+    mul-float/2addr v0, v3
+
+    mul-float/2addr v0, v7
+
+    float-to-double v4, v0
+
+    div-double v4, v4, v16
+
+    move v7, v8
+
+    move v0, v9
+
+    const-wide v8, 0x3fdae147ae147ae1L    # 0.42
+
+    invoke-static {v4, v5, v8, v9}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v4
+
+    double-to-float v4, v4
+
+    aget v5, v2, v0
+
+    mul-float/2addr v5, v3
+
+    mul-float/2addr v5, v11
+
+    move v13, v0
+
+    move v11, v1
+
+    float-to-double v0, v5
+
+    div-double v0, v0, v16
+
+    invoke-static {v0, v1, v8, v9}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v0
+
+    double-to-float v0, v0
+
+    aget v1, v2, v7
+
+    mul-float/2addr v1, v3
+
+    mul-float/2addr v1, v12
+
+    move v5, v10
+
+    move v12, v11
+
+    float-to-double v10, v1
+
+    div-double v10, v10, v16
+
+    invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v8
+
+    double-to-float v1, v8
+
+    new-array v8, v6, [F
+
+    aput v4, v8, v5
+
+    aput v0, v8, v13
+
+    aput v1, v8, v7
+
+    aget v0, v8, v5
+
+    const/high16 v1, 0x43c80000    # 400.0f
+
+    mul-float v4, v0, v1
+
+    const v9, 0x41d90a3d    # 27.13f
+
+    add-float/2addr v0, v9
+
+    div-float/2addr v4, v0
+
+    aget v0, v8, v13
+
+    mul-float v10, v0, v1
+
+    add-float/2addr v0, v9
+
+    div-float/2addr v10, v0
+
+    aget v0, v8, v7
+
+    mul-float/2addr v1, v0
+
+    add-float/2addr v0, v9
+
+    div-float/2addr v1, v0
+
+    new-array v0, v6, [F
+
+    aput v4, v0, v5
+
+    aput v10, v0, v13
+
+    aput v1, v0, v7
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    aget v4, v0, v5
+
+    mul-float/2addr v4, v1
+
+    aget v1, v0, v13
+
+    add-float/2addr v4, v1
+
+    const v1, 0x3d4ccccd    # 0.05f
+
+    aget v0, v0, v7
+
+    mul-float/2addr v0, v1
+
+    add-float/2addr v0, v4
+
+    mul-float v15, v0, v12
+
+    new-instance v13, Lg2h;
+
+    float-to-double v0, v3
+
+    const-wide/high16 v4, 0x3fd0000000000000L    # 0.25
+
+    invoke-static {v0, v1, v4, v5}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v0
+
+    double-to-float v0, v0
+
+    move/from16 v17, v12
+
+    move/from16 v22, v0
+
+    move-object/from16 v20, v2
+
+    move/from16 v21, v3
+
+    move/from16 v16, v12
+
+    const/high16 v19, 0x3f800000    # 1.0f
+
+    invoke-direct/range {v13 .. v23}, Lg2h;-><init>(FFFFFF[FFFF)V
+
+    sput-object v13, Lg2h;->k:Lg2h;
+
+    return-void
+.end method
+
+.method public constructor <init>(FFFFFF[FFFF)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lg2h;->f:F
+
+    iput p2, p0, Lg2h;->a:F
+
+    iput p3, p0, Lg2h;->b:F
+
+    iput p4, p0, Lg2h;->c:F
+
+    iput p5, p0, Lg2h;->d:F
+
+    iput p6, p0, Lg2h;->e:F
+
+    iput-object p7, p0, Lg2h;->g:[F
+
+    iput p8, p0, Lg2h;->h:F
+
+    iput p9, p0, Lg2h;->i:F
+
+    iput p10, p0, Lg2h;->j:F
+
     return-void
 .end method

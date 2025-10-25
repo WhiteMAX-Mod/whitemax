@@ -1,101 +1,80 @@
-.class public final Lpra;
+.class public final synthetic Lpra;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrra;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Lwra;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lli6;
 
 
 # direct methods
-.method public constructor <init>(Lwra;)V
+.method public synthetic constructor <init>(ILli6;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lpra;->a:I
 
-    iput-object p1, p0, Lpra;->a:Lwra;
+    iput-object p2, p0, Lpra;->b:Lli6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lpra;->a:I
 
-    goto :goto_1
+    packed-switch p1, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lpra;
+    iget-object p1, p0, Lpra;->b:Lli6;
 
-    if-nez v0, :cond_1
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    goto :goto_0
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lpra;
+    return-void
 
-    iget-object p0, p0, Lpra;->a:Lwra;
+    :pswitch_0
+    iget-object p1, p0, Lpra;->b:Lli6;
 
-    iget-object p1, p1, Lpra;->a:Lwra;
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-virtual {p0, p1}, Lwra;->equals(Ljava/lang/Object;)Z
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p0
+    return-void
 
-    if-nez p0, :cond_2
+    :pswitch_1
+    iget-object p1, p0, Lpra;->b:Lli6;
 
-    :goto_0
-    const/4 p0, 0x0
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    return p0
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
+    return-void
 
-    return p0
-.end method
+    :pswitch_2
+    iget-object p1, p0, Lpra;->b:Lli6;
 
-.method public final hashCode()I
-    .locals 0
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iget-object p0, p0, Lpra;->a:Lwra;
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget p0, p0, Lwra;->a:I
+    return-void
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    nop
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Icon(icon="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lpra;->a:Lwra;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

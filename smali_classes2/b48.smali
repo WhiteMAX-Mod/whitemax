@@ -1,212 +1,168 @@
 .class public final Lb48;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
-
-
-# instance fields
-.field public synthetic X:Z
-
-.field public final synthetic Y:Lone/me/main/MainScreen;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/main/MainScreen;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static a(Lwoh;Z)V
+    .locals 15
 
-    iput-object p1, p0, Lb48;->Y:Lone/me/main/MainScreen;
+    const-string v0, "start"
 
-    const/4 p1, 0x2
+    const-string v1, "LoadEmojiFontWorker"
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-void
-.end method
+    new-instance v0, Li7b;
 
+    const-class v2, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-direct {v0, v2}, Li7b;-><init>(Ljava/lang/Class;)V
 
-    check-cast p1, Ljava/lang/Boolean;
+    const-wide/16 v2, 0x2710
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v5, Lgg0;->a:Lgg0;
 
-    invoke-virtual {p0, p1, p2}, Lb48;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0, v5, v2, v3, v4}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Lgg0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lb48;
+    check-cast v0, Li7b;
 
-    sget-object p1, Lylf;->a:Lylf;
+    new-instance v2, Ljava/util/LinkedHashSet;
 
-    invoke-virtual {p0, p1}, Lb48;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
 
-    return-object p1
-.end method
+    if-eqz p1, :cond_0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lb48;
-
-    iget-object p0, p0, Lb48;->Y:Lone/me/main/MainScreen;
-
-    invoke-direct {v0, p0, p2}, Lb48;-><init>(Lone/me/main/MainScreen;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    iput-boolean p0, v0, Lb48;->X:Z
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lb48;->X:Z
-
-    sget-object v0, Lone/me/main/MainScreen;->Z:Ld6d;
-
-    iget-object p0, p0, Lb48;->Y:Lone/me/main/MainScreen;
-
-    invoke-virtual {p0}, Lone/me/main/MainScreen;->A0()Lsca;
-
-    move-result-object p0
-
-    sget v0, Lqja;->c:I
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    move v2, v1
+    const/4 v3, 0x2
 
     :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    if-ge v2, v3, :cond_0
-
-    move v3, v4
+    move v5, v3
 
     goto :goto_1
 
     :cond_0
-    move v3, v1
-
-    :goto_1
-    if-eqz v3, :cond_8
-
-    add-int/lit8 v3, v2, 0x1
-
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_7
-
-    sget v5, Lz7c;->tag_tab_item:I
-
-    invoke-static {v2, v5}, Lhs9;->u(Landroid/view/View;I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    instance-of v6, v5, Lrca;
-
-    if-eqz v6, :cond_1
-
-    check-cast v5, Lrca;
-
-    goto :goto_2
-
-    :cond_1
-    const/4 v5, 0x0
-
-    :goto_2
-    if-eqz v5, :cond_6
-
-    iget v5, v5, Lrca;->c:I
-
-    if-ne v5, v0, :cond_6
-
-    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    move v5, v4
-
-    goto :goto_3
-
-    :cond_2
-    move v5, v1
-
-    :goto_3
-    if-ne v5, p1, :cond_3
-
-    goto :goto_6
-
-    :cond_3
-    if-eqz p1, :cond_4
-
-    move v5, v1
-
-    goto :goto_4
-
-    :cond_4
-    const/16 v5, 0x8
-
-    :goto_4
-    invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getWeightSum()F
-
-    move-result v2
-
-    int-to-float v4, v4
-
-    if-eqz p1, :cond_5
-
-    add-float/2addr v2, v4
-
-    goto :goto_5
-
-    :cond_5
-    sub-float/2addr v2, v4
-
-    :goto_5
-    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->setWeightSum(F)V
-
-    :cond_6
-    move v2, v3
+    const/4 v3, 0x3
 
     goto :goto_0
 
-    :cond_7
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    :goto_1
+    invoke-static {v2}, Lnb3;->c0(Ljava/lang/Iterable;)Ljava/util/Set;
 
-    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    move-result-object v14
 
-    throw p0
+    new-instance v4, Lnr3;
 
-    :cond_8
-    :goto_6
-    sget-object p0, Lylf;->a:Lylf;
+    const/4 v6, 0x0
 
-    return-object p0
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const-wide/16 v10, -0x1
+
+    const-wide/16 v12, -0x1
+
+    invoke-direct/range {v4 .. v14}, Lnr3;-><init>(IZZZZJJLjava/util/Set;)V
+
+    invoke-virtual {v0, v4}, Landroidx/work/WorkRequest$Builder;->setConstraints(Lnr3;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Li7b;
+
+    sget-object v2, Liab;->a:Liab;
+
+    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->setExpedited(Liab;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Li7b;
+
+    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Li7b;
+
+    invoke-static/range {p1 .. p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    new-instance v3, Ltcb;
+
+    const-string v4, "waiting_for_wifi"
+
+    invoke-direct {v3, v4, v2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v3}, [Ltcb;
+
+    move-result-object v2
+
+    new-instance v3, Lcqe;
+
+    const/16 v4, 0xb
+
+    invoke-direct {v3, v4}, Lcqe;-><init>(I)V
+
+    const/4 v4, 0x0
+
+    aget-object v2, v2, v4
+
+    iget-object v4, v2, Ltcb;->a:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/String;
+
+    iget-object v2, v2, Ltcb;->b:Ljava/lang/Object;
+
+    invoke-virtual {v3, v2, v4}, Lcqe;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Lcqe;->h()Lnb4;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->setInputData(Lnb4;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Li7b;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
+
+    move-result-object v0
+
+    check-cast v0, Lj7b;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "work "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Loh5;->b:Loh5;
+
+    invoke-virtual {p0, v1, v2, v0}, Lwoh;->b(Ljava/lang/String;Loh5;Lj7b;)Lnx7;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lnx7;->c()Lmk3;
+
+    return-void
 .end method

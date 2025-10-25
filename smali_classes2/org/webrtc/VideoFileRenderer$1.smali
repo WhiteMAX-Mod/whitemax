@@ -74,13 +74,13 @@
 
     invoke-interface {v0}, Lorg/webrtc/EglBase;->makeCurrent()V
 
-    iget-object p0, p0, Lorg/webrtc/VideoFileRenderer$1;->this$0:Lorg/webrtc/VideoFileRenderer;
+    iget-object v0, p0, Lorg/webrtc/VideoFileRenderer$1;->this$0:Lorg/webrtc/VideoFileRenderer;
 
-    new-instance v0, Lorg/webrtc/YuvConverter;
+    new-instance v1, Lorg/webrtc/YuvConverter;
 
-    invoke-direct {v0}, Lorg/webrtc/YuvConverter;-><init>()V
+    invoke-direct {v1}, Lorg/webrtc/YuvConverter;-><init>()V
 
-    invoke-static {p0, v0}, Lorg/webrtc/VideoFileRenderer;->g(Lorg/webrtc/VideoFileRenderer;Lorg/webrtc/YuvConverter;)V
+    invoke-static {v0, v1}, Lorg/webrtc/VideoFileRenderer;->g(Lorg/webrtc/VideoFileRenderer;Lorg/webrtc/YuvConverter;)V
 
     return-void
 .end method

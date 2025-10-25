@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxpe;
+.implements Lu28;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lnd;
+
+.field public final synthetic c:Lmb6;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lnd;Lmb6;Lkf4;I)V
     .locals 0
 
-    iput p1, p0, Lug4;->a:I
+    iput p4, p0, Lug4;->a:I
 
-    iput-object p2, p0, Lug4;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lug4;->b:Lnd;
+
+    iput-object p2, p0, Lug4;->c:Lmb6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,118 +31,38 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
     iget v0, p0, Lug4;->a:I
 
-    iget-object p0, p0, Lug4;->b:Ljava/lang/Object;
-
     packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Lug4;->c:Lmb6;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    check-cast p1, Lod;
 
-    move-result p0
+    iget-object v1, p0, Lug4;->b:Lnd;
 
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-interface {p1, v1, v0}, Lod;->L(Lnd;Lmb6;)V
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 
     :pswitch_0
-    check-cast p0, Lgd5;
+    iget-object v0, p0, Lug4;->c:Lmb6;
 
-    iget-boolean p0, p0, Lgd5;->O0:Z
+    check-cast p1, Lod;
 
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object v1, p0, Lug4;->b:Lnd;
 
-    move-result-object p0
+    invoke-interface {p1, v1, v0}, Lod;->b0(Lnd;Lmb6;)V
 
-    return-object p0
+    return-void
 
-    :pswitch_1
-    check-cast p0, Lwsa;
-
-    return-object p0
-
-    :pswitch_2
-    check-cast p0, Loj4;
-
-    return-object p0
-
-    :pswitch_3
-    check-cast p0, Ltu7;
-
-    return-object p0
-
-    :pswitch_4
-    check-cast p0, Lbkd;
-
-    return-object p0
-
-    :pswitch_5
-    check-cast p0, Lnj4;
-
-    return-object p0
-
-    :pswitch_6
-    check-cast p0, Lasc;
-
-    return-object p0
-
-    :pswitch_7
-    check-cast p0, Lwp8;
-
-    return-object p0
-
-    :pswitch_8
-    check-cast p0, Lqg4;
-
-    return-object p0
-
-    :pswitch_9
-    check-cast p0, Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    invoke-virtual {p0, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lwp8;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

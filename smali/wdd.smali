@@ -1,143 +1,57 @@
-.class public final Lwdd;
-.super Ljava/lang/Object;
+.class public abstract Lwdd;
+.super Lvdd;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lwdd;
+# interfaces
+.implements Lmj6;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:J
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lwdd;
-
-    const-wide/16 v1, 0x0
-
-    invoke-direct {v0, v1, v2, v1, v2}, Lwdd;-><init>(JJ)V
-
-    sput-object v0, Lwdd;->c:Lwdd;
-
-    return-void
-.end method
-
-.method public constructor <init>(JJ)V
+.method public constructor <init>(ILkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lvdd;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    iput-wide p1, p0, Lwdd;->a:J
-
-    iput-wide p3, p0, Lwdd;->b:J
+    iput p1, p0, Lwdd;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final getArity()I
+    .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lwdd;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lwdd;
-
-    iget-wide v2, p0, Lwdd;->a:J
-
-    iget-wide v4, p1, Lwdd;->a:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lwdd;->b:J
-
-    iget-wide p0, p1, Lwdd;->b:J
-
-    cmp-long p0, v2, p0
-
-    if-nez p0, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lwdd;->a:J
-
-    long-to-int v0, v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lwdd;->b:J
-
-    long-to-int p0, v1
-
-    add-int/2addr v0, p0
+    iget v0, p0, Lwdd;->b:I
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lkj0;->a:Lkotlin/coroutines/Continuation;
 
-    const/16 v1, 0x3c
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    sget-object v0, Lz7d;->a:La8d;
 
-    const-string v1, "[timeUs="
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, La8d;->a(Lmj6;)Ljava/lang/String;
 
-    iget-wide v1, p0, Lwdd;->a:J
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    return-object v0
 
-    const-string v1, ", position="
+    :cond_0
+    invoke-super {p0}, Lkj0;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, "]"
-
-    iget-wide v2, p0, Lwdd;->b:J
-
-    invoke-static {v0, v2, v3, v1}, Lyv7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

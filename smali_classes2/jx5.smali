@@ -2,60 +2,55 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw1e;
 
-# static fields
-.field public static final a:Ljx5;
+
+# instance fields
+.field public final a:Leic;
+
+.field public final b:Ljava/util/function/Consumer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Leic;Ljava/util/function/Consumer;)V
+    .locals 0
 
-    new-instance v0, Ljx5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljx5;->a:Leic;
 
-    sput-object v0, Ljx5;->a:Ljx5;
+    iput-object p2, p0, Ljx5;->b:Ljava/util/function/Consumer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()I
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Ljx5;->a:Leic;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Leic;->c()I
 
-    return v0
+    move-result v0
 
-    :cond_0
-    instance-of p0, p1, Ljx5;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public final b()Ljava/util/function/Consumer;
+    .locals 1
 
-    const p0, 0x333710ea
+    iget-object v0, p0, Ljx5;->b:Ljava/util/function/Consumer;
 
-    return p0
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final c(I)Leic;
     .locals 0
 
-    const-string p0, "FlushSignal"
+    iget-object p1, p0, Ljx5;->a:Leic;
 
-    return-object p0
+    return-object p1
 .end method

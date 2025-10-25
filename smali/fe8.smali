@@ -1,61 +1,173 @@
-.class public interface abstract Lfe8;
+.class public final Lfe8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract d(JIII)V
-.end method
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.method public abstract flush()V
-.end method
+.field public final b:J
 
-.method public abstract getInputBuffer(I)Ljava/nio/ByteBuffer;
-.end method
+.field public final c:J
 
-.method public abstract getOutputBuffer(I)Ljava/nio/ByteBuffer;
-.end method
+.field public final d:J
 
-.method public abstract getOutputFormat()Landroid/media/MediaFormat;
-.end method
 
-.method public abstract h(IJ)V
-.end method
-
-.method public abstract i()I
-.end method
-
-.method public abstract k(Landroid/media/MediaCodec$BufferInfo;)I
-.end method
-
-.method public abstract l(I)V
-.end method
-
-.method public abstract o(ILx34;JI)V
-.end method
-
-.method public abstract p(Landroid/view/Surface;)V
-.end method
-
-.method public abstract release()V
-.end method
-
-.method public abstract setParameters(Landroid/os/Bundle;)V
-.end method
-
-.method public abstract t(I)V
-.end method
-
-.method public abstract v()V
-.end method
-
-.method public y(Lq2e;)Z
+# direct methods
+.method public constructor <init>(Ljava/lang/String;JJJ)V
     .locals 0
 
-    const/4 p0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p0
+    iput-object p1, p0, Lfe8;->a:Ljava/lang/String;
+
+    iput-wide p2, p0, Lfe8;->b:J
+
+    iput-wide p4, p0, Lfe8;->c:J
+
+    iput-wide p6, p0, Lfe8;->d:J
+
+    return-void
 .end method
 
-.method public abstract z(Lbf8;Landroid/os/Handler;)V
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lfe8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lfe8;
+
+    iget-object v1, p0, Lfe8;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lfe8;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lfe8;->b:J
+
+    iget-wide v5, p1, Lfe8;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Lfe8;->c:J
+
+    iget-wide v5, p1, Lfe8;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-wide v3, p0, Lfe8;->d:J
+
+    iget-wide v5, p1, Lfe8;->d:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lfe8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lfe8;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfe8;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lfe8;->d:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "LooperMessage(message="
+
+    const-string v1, ", startTime="
+
+    iget-wide v2, p0, Lfe8;->b:J
+
+    iget-object v4, p0, Lfe8;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v1}, Lzdf;->u(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", endTime="
+
+    const-string v2, ", messageQueueSize="
+
+    iget-wide v3, p0, Lfe8;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lfe8;->d:J
+
+    invoke-static {v0, v2, v3, v1}, Lrv8;->g(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

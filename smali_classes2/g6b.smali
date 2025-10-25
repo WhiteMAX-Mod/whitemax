@@ -1,184 +1,101 @@
-.class public final synthetic Lg6b;
+.class public final Lg6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Li6b;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/startconversation/channel/PickSubscribersScreen;
+.field public final a:Ln6b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
+.method public constructor <init>(Ln6b;)V
     .locals 0
 
-    iput p2, p0, Lg6b;->a:I
-
-    iput-object p1, p0, Lg6b;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lg6b;->a:Ln6b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget p1, p0, Lg6b;->a:I
+    if-ne p0, p1, :cond_0
 
-    const/4 v0, 0x0
+    goto :goto_1
 
-    iget-object p0, p0, Lg6b;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+    :cond_0
+    instance-of v0, p1, Lg6b;
 
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lxi7;
-
-    invoke-virtual {p0}, Lone/me/startconversation/channel/PickSubscribersScreen;->J0()Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
-
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Ls6b;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ls6b;->c:Lr8b;
-
-    check-cast p1, Lw5b;
-
-    iget-object v1, p0, Lone/me/startconversation/channel/PickSubscribersScreen;->t0:Lfr;
-
-    sget-object v2, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lxi7;
-
-    const/4 v3, 0x0
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [J
-
-    iget-object v1, p1, Lw5b;->d:Lcl7;
-
-    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lyz2;
-
-    iget-wide v4, p1, Lw5b;->a:J
-
-    check-cast v1, Ly03;
-
-    invoke-virtual {v1, v4, v5}, Ly03;->N(J)Liic;
-
-    move-result-object v1
-
-    iget-object v1, v1, Liic;->a:Lrce;
-
-    invoke-interface {v1}, Lrce;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls72;
-
-    if-nez v1, :cond_0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    iget-object v2, p1, Lw5b;->f:Lcl7;
+    :cond_1
+    check-cast p1, Lg6b;
 
-    invoke-interface {v2}, Lcl7;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Lg6b;->a:Ln6b;
 
-    move-result-object v2
+    iget-object p1, p1, Lg6b;->a:Ln6b;
 
-    check-cast v2, Lik3;
+    invoke-virtual {v0, p1}, Ln6b;->equals(Ljava/lang/Object;)Z
 
-    invoke-interface {v2}, Lik3;->f()Z
+    move-result p1
 
-    iget-object v2, p1, Lw5b;->k:Ly04;
+    if-nez p1, :cond_2
 
-    if-eqz v2, :cond_1
+    :goto_0
+    const/4 p1, 0x0
 
-    iget-object v4, p1, Lw5b;->c:Lcl7;
+    return p1
 
-    invoke-interface {v4}, Lcl7;->getValue()Ljava/lang/Object;
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    move-result-object v4
+    return p1
+.end method
 
-    check-cast v4, Lxwe;
+.method public final hashCode()I
+    .locals 1
 
-    check-cast v4, Laga;
+    iget-object v0, p0, Lg6b;->a:Ln6b;
 
-    invoke-virtual {v4}, Laga;->b()Ls04;
+    iget v0, v0, Ln6b;->a:I
 
-    move-result-object v4
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    new-instance v5, Lt5b;
+    move-result v0
 
-    invoke-direct {v5, p1, v1, p0, v0}, Lt5b;-><init>(Lw5b;Ls72;[JLkotlin/coroutines/Continuation;)V
+    return v0
+.end method
 
-    const/4 p0, 0x2
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {v2, v4, v0, v5, p0}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Icon(icon="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lg6b;->a:Ln6b;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_1
-    iget-object p0, p1, Lw5b;->j:Lncb;
-
-    sget-object v1, Lw5b;->l:[Lxi7;
-
-    aget-object v1, v1, v3
-
-    invoke-virtual {p0, p1, v1, v0}, Lncb;->h0(Ljava/lang/Object;Lxi7;Ljava/lang/Object;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lxi7;
-
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Ls6b;
-
-    move-result-object p0
-
-    iget-object p0, p0, Ls6b;->c:Lr8b;
-
-    check-cast p0, Lw5b;
-
-    iget-object p1, p0, Lw5b;->k:Ly04;
-
-    if-eqz p1, :cond_2
-
-    new-instance v1, Lv5b;
-
-    invoke-direct {v1, p0, v0}, Lv5b;-><init>(Lw5b;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p0, 0x3
-
-    invoke-static {p1, v0, v0, v1, p0}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
-
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

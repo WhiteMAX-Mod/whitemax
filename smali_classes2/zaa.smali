@@ -1,281 +1,193 @@
 .class public final Lzaa;
-.super Ljava/lang/Object;
+.super Lpmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lcl7;
+.field public final X:Ljava/util/List;
 
-.field public final b:Lcl7;
+.field public final Y:Lh1a;
 
-.field public final c:Lcl7;
+.field public final c:J
 
-.field public final d:Lcl7;
+.field public final o:Lb1a;
 
 
 # direct methods
-.method public constructor <init>(Lcl7;Lcl7;Lcl7;Lcl7;)V
+.method public constructor <init>(JLb1a;Ljava/util/List;Lh1a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzaa;->a:Lcl7;
+    iput-wide p1, p0, Lzaa;->c:J
 
-    iput-object p2, p0, Lzaa;->b:Lcl7;
+    iput-object p3, p0, Lzaa;->o:Lb1a;
 
-    iput-object p3, p0, Lzaa;->c:Lcl7;
+    iput-object p4, p0, Lzaa;->X:Ljava/util/List;
 
-    iput-object p4, p0, Lzaa;->d:Lcl7;
+    iput-object p5, p0, Lzaa;->Y:Lh1a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lf53;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object p0, p0, Lzaa;->b:Lcl7;
+    const/4 v0, 0x1
 
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
-
-    check-cast p0, Lf53;
-
-    return-object p0
-.end method
-
-.method public final b(Ljava/lang/String;Ld18;)Ljava/lang/Object;
-    .locals 23
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0}, Lzaa;->a()Lf53;
-
-    move-result-object v1
-
-    check-cast v1, Lgad;
-
-    invoke-virtual {v1}, Lgad;->n()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0}, Lzaa;->a()Lf53;
-
-    move-result-object v3
-
-    check-cast v3, Lgad;
-
-    iget-object v3, v3, Li3;->g:Lfl7;
-
-    const-string v4, "user.contactsLastSync"
-
-    const-wide/16 v5, 0x0
-
-    invoke-virtual {v3, v4, v5, v6}, Lfl7;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v12
-
-    invoke-virtual {v0}, Lzaa;->a()Lf53;
-
-    move-result-object v3
-
-    check-cast v3, Lgad;
-
-    const-string v4, "user.presenceLastSync"
-
-    iget-object v3, v3, Li3;->g:Lfl7;
-
-    invoke-virtual {v3, v4, v5, v6}, Lfl7;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v14
-
-    const-class v3, Lzaa;
-
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v3
-
-    new-instance v4, Ljava/lang/Long;
-
-    invoke-direct {v4, v1, v2}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-static {v4}, Lgy7;->F(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v7, Ljava/lang/Long;
-
-    invoke-direct {v7, v12, v13}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-static {v7}, Lgy7;->F(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v7
-
-    new-instance v8, Ljava/lang/Long;
-
-    invoke-direct {v8, v14, v15}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-static {v8}, Lgy7;->F(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v8
-
-    const-string v9, ", contactLastSync = "
-
-    const-string v10, ", presenceLastSync = "
-
-    const-string v11, "LoginTamTask: chatsLastSync = "
-
-    invoke-static {v11, v4, v9, v7, v10}, Lz7e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v3, v0, Lzaa;->c:Lcl7;
-
-    invoke-interface {v3}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lxjd;
-
-    check-cast v4, Lpad;
-
-    const-string v7, "hash"
-
-    iget-object v4, v4, Li3;->g:Lfl7;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v4, v7, v8}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v3}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lxjd;
-
-    check-cast v7, Lpad;
-
-    const/4 v9, 0x1
-
-    iget-object v7, v7, Li3;->g:Lfl7;
-
-    const-string v10, "version"
-
-    invoke-virtual {v7, v10, v9}, Lfl7;->getInt(Ljava/lang/String;I)I
-
-    move-result v7
-
-    const/4 v9, 0x6
-
-    if-ge v7, v9, :cond_0
-
-    invoke-interface {v3}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lxjd;
-
-    check-cast v1, Lpad;
-
-    invoke-virtual {v1, v9, v10}, Li3;->i(ILjava/lang/String;)V
-
-    move-wide v10, v5
-
-    move-object/from16 v16, v8
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-wide v10, v1
+    instance-of v1, p1, Lzaa;
 
-    move-object/from16 v16, v4
+    const/4 v2, 0x0
 
-    :goto_0
-    new-instance v7, Lf08;
+    if-nez v1, :cond_1
 
-    iget-object v1, v0, Lzaa;->d:Lcl7;
+    return v2
 
-    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lzaa;
 
-    move-result-object v1
+    iget-wide v3, p0, Lzaa;->c:J
 
-    check-cast v1, Ljn4;
+    iget-wide v5, p1, Lzaa;->c:J
 
-    invoke-virtual {v1}, Ljn4;->d()Z
+    cmp-long v1, v3, v5
 
-    move-result v9
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v0}, Lzaa;->a()Lf53;
+    return v2
 
-    move-result-object v1
+    :cond_2
+    iget-object v1, p0, Lzaa;->o:Lb1a;
 
-    check-cast v1, Lgad;
+    iget-object v3, p1, Lzaa;->o:Lb1a;
 
-    const-string v2, "user.callsLastSync"
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v1, v1, Li3;->g:Lfl7;
+    move-result v1
 
-    invoke-virtual {v1, v2, v5, v6}, Lfl7;->getLong(Ljava/lang/String;J)J
+    if-nez v1, :cond_3
 
-    move-result-wide v17
+    return v2
 
-    invoke-virtual {v0}, Lzaa;->a()Lf53;
+    :cond_3
+    iget-object v1, p0, Lzaa;->X:Ljava/util/List;
 
-    move-result-object v1
+    iget-object v3, p1, Lzaa;->X:Ljava/util/List;
 
-    check-cast v1, Lgad;
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v2, "app.last.login.time"
+    move-result v1
 
-    iget-object v1, v1, Li3;->g:Lfl7;
+    if-nez v1, :cond_4
 
-    invoke-virtual {v1, v2, v5, v6}, Lfl7;->getLong(Ljava/lang/String;J)J
+    return v2
 
-    move-result-wide v19
+    :cond_4
+    iget-object v1, p0, Lzaa;->Y:Lh1a;
 
-    invoke-virtual {v0}, Lzaa;->a()Lf53;
+    iget-object p1, p1, Lzaa;->Y:Lh1a;
 
-    move-result-object v1
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast v1, Lgad;
+    move-result p1
 
-    const-wide/16 v2, -0x1
+    if-nez p1, :cond_5
 
-    iget-object v1, v1, Li3;->g:Lfl7;
+    return v2
 
-    const-string v4, "user.draftsLastSync"
+    :cond_5
+    return v0
+.end method
 
-    invoke-virtual {v1, v4, v2, v3}, Lfl7;->getLong(Ljava/lang/String;J)J
+.method public final hashCode()I
+    .locals 3
 
-    move-result-wide v21
+    iget-wide v0, p0, Lzaa;->c:J
 
-    move-object/from16 v8, p1
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-direct/range {v7 .. v22}, Lf08;-><init>(Ljava/lang/String;ZJJJLjava/lang/String;JJJ)V
+    move-result v0
 
-    iget-object v0, v0, Lzaa;->a:Lcl7;
+    const/16 v1, 0x1f
 
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+    mul-int/2addr v0, v1
 
-    move-result-object v0
+    iget-object v2, p0, Lzaa;->o:Lb1a;
 
-    check-cast v0, Lyye;
+    invoke-virtual {v2}, Lb1a;->hashCode()I
 
-    move-object/from16 v1, p2
+    move-result v2
 
-    invoke-virtual {v0, v7, v1}, Lyye;->e(Lpxe;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lzaa;->X:Ljava/util/List;
+
+    invoke-static {v0, v2, v1}, Lzdf;->n(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lzaa;->Y:Lh1a;
+
+    invoke-virtual {v1}, Lh1a;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Response(folderSync="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lzaa;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", folders="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzaa;->o:Lb1a;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", foldersOrder="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzaa;->X:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", allFilterExcludeFolders="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzaa;->Y:Lh1a;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

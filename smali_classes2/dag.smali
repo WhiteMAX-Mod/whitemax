@@ -1,51 +1,48 @@
 .class public final Ldag;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/ViewTreeObserver;
+.field public X:I
 
-.field public final synthetic b:Lv5;
+.field public final synthetic Y:Ls3a;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewTreeObserver;Lv5;)V
+.method public constructor <init>(Ls3a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldag;->Y:Ls3a;
 
-    iput-object p1, p0, Ldag;->a:Landroid/view/ViewTreeObserver;
-
-    iput-object p2, p0, Ldag;->b:Lv5;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPreDraw()Z
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Ldag;->a:Landroid/view/ViewTreeObserver;
+    iput-object p1, p0, Ldag;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
+    iget p1, p0, Ldag;->X:I
 
-    move-result v1
+    const/high16 v0, -0x80000000
 
-    if-eqz v1, :cond_0
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+    iput p1, p0, Ldag;->X:I
 
-    :cond_0
-    iget-object p0, p0, Ldag;->b:Lv5;
+    iget-object p1, p0, Ldag;->Y:Ls3a;
 
-    invoke-virtual {p0}, Lv5;->run()V
+    const/4 v0, 0x0
 
-    const/4 p0, 0x1
+    invoke-virtual {p1, v0, p0}, Ls3a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return p0
+    move-result-object p1
+
+    return-object p1
 .end method

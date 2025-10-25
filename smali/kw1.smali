@@ -1,89 +1,116 @@
 .class public final Lkw1;
-.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public b:Z
-
-.field public final synthetic c:Lqw1;
+.field public final synthetic X:Lh78;
 
 
 # direct methods
-.method public constructor <init>(Lqw1;Ljava/lang/String;)V
+.method public constructor <init>(Lh78;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lkw1;->c:Lqw1;
+    iput-object p1, p0, Lkw1;->X:Lh78;
 
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
+    const/4 p1, 0x2
 
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lkw1;->b:Z
-
-    iput-object p2, p0, Lkw1;->a:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCameraAvailable(Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lkw1;->a:Ljava/lang/String;
+    check-cast p1, Lq54;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result p1
+    invoke-virtual {p0, p1, p2}, Lkw1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez p1, :cond_0
+    move-result-object p1
 
-    goto :goto_0
+    check-cast p1, Lkw1;
 
-    :cond_0
-    const/4 p1, 0x1
+    sget-object p2, Lccg;->a:Lccg;
 
-    iput-boolean p1, p0, Lkw1;->b:Z
+    invoke-virtual {p1, p2}, Lkw1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lkw1;->c:Lqw1;
+    move-result-object p1
 
-    iget p1, p1, Lqw1;->R0:I
-
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_1
-
-    iget-object p0, p0, Lkw1;->c:Lqw1;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lqw1;->I(Z)V
-
-    :cond_1
-    :goto_0
-    return-void
+    return-object p1
 .end method
 
-.method public final onCameraUnavailable(Ljava/lang/String;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Lkw1;->a:Ljava/lang/String;
+    new-instance p1, Lkw1;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lkw1;->X:Lh78;
 
-    move-result p1
+    invoke-direct {p1, v0, p2}, Lkw1;-><init>(Lh78;Lkotlin/coroutines/Continuation;)V
 
-    if-nez p1, :cond_0
+    return-object p1
+.end method
 
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iput-boolean p1, p0, Lkw1;->b:Z
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
-    return-void
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lkw1;->X:Lh78;
+
+    iget-object v0, v0, Lh78;->c:Ljava/lang/Object;
+
+    check-cast v0, Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lll;
+
+    check-cast v0, Lmna;
+
+    new-instance v1, Lkq1;
+
+    invoke-virtual {v0}, Lmna;->x()Lpxb;
+
+    move-result-object v2
+
+    check-cast v2, Lrxb;
+
+    iget-object v2, v2, Lrxb;->a:Ld78;
+
+    invoke-virtual {v2}, Lntd;->k()J
+
+    move-result-wide v2
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v2, v3, p1, v4}, Lkq1;-><init>(JLjava/lang/String;I)V
+
+    invoke-static {v0, v1}, Lmna;->u(Lmna;Lym;)J
+
+    move-result-wide v0
+
+    new-instance p1, Ljava/lang/Long;
+
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p1
 .end method

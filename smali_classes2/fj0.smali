@@ -1,404 +1,120 @@
-.class public final synthetic Lfj0;
-.super Ljava/lang/Object;
+.class public final Lfj0;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm3;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lz68;
+.field public final synthetic Y:Lgj0;
+
+.field public final synthetic Z:Lvx2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lz68;I)V
+.method public constructor <init>(Lgj0;Lvx2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lfj0;->a:I
+    iput-object p1, p0, Lfj0;->Y:Lgj0;
 
-    iput-object p1, p0, Lfj0;->b:Lz68;
+    iput-object p2, p0, Lfj0;->Z:Lvx2;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 18
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-object/from16 v0, p0
+    check-cast p1, Lq54;
 
-    iget v1, v0, Lfj0;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v1, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lfj0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-object/from16 v1, p1
+    move-result-object p1
 
-    check-cast v1, Lly7;
+    check-cast p1, Lfj0;
 
-    iget-object v0, v0, Lfj0;->b:Lz68;
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-wide v2, v0, Lz68;->j:J
+    invoke-virtual {p1, p2}, Lfj0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-wide v2, v1, Lly7;->o:J
+    move-result-object p1
 
-    return-void
+    return-object p1
+.end method
 
-    :pswitch_0
-    move-object/from16 v1, p1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    check-cast v1, Lly7;
+    new-instance p1, Lfj0;
 
-    iget-object v0, v0, Lfj0;->b:Lz68;
+    iget-object v0, p0, Lfj0;->Y:Lgj0;
 
-    iget-wide v2, v0, Lz68;->c:J
+    iget-object v1, p0, Lfj0;->Z:Lvx2;
 
-    iput-wide v2, v1, Lly7;->h:J
+    invoke-direct {p1, v0, v1, p2}, Lfj0;-><init>(Lgj0;Lvx2;Lkotlin/coroutines/Continuation;)V
 
-    const-wide/16 v2, -0x1
+    return-object p1
+.end method
 
-    iput-wide v2, v1, Lly7;->o:J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    return-void
+    iget v0, p0, Lfj0;->X:I
 
-    :pswitch_1
-    move-object/from16 v1, p1
+    const/4 v1, 0x1
 
-    check-cast v1, Lly7;
+    if-eqz v0, :cond_1
 
-    iget-object v0, v0, Lfj0;->b:Lz68;
+    if-ne v0, v1, :cond_0
 
-    iget-wide v2, v0, Lz68;->c:J
-
-    iput-wide v2, v1, Lly7;->h:J
-
-    return-void
-
-    :pswitch_2
-    move-object/from16 v1, p1
-
-    check-cast v1, Ldq9;
-
-    iget-object v2, v1, Lx2;->b:Ljava/lang/Object;
-
-    check-cast v2, Liq9;
-
-    iget-object v0, v0, Lfj0;->b:Lz68;
-
-    iget-wide v3, v0, Lz68;->j:J
-
-    iget-object v5, v0, Lz68;->a:Ljy7;
-
-    iget-object v6, v1, Ldq9;->B0:Lny7;
-
-    iget-wide v6, v6, Lny7;->o:J
-
-    cmp-long v6, v3, v6
-
-    if-nez v6, :cond_0
-
-    move-object v7, v2
-
-    check-cast v7, Lcr9;
-
-    iget-wide v8, v5, Ljy7;->a:D
-
-    iget-wide v10, v5, Ljy7;->b:D
-
-    const/4 v12, 0x0
-
-    invoke-virtual/range {v7 .. v12}, Lcr9;->C(DDZ)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v6, v1, Ldq9;->o:Ljava/util/concurrent/ConcurrentHashMap;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-wide v7, v0, Lz68;->c:J
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v7
-
-    invoke-virtual {v6, v7}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/util/List;
-
-    if-nez v6, :cond_1
-
-    goto :goto_0
+    throw p1
 
     :cond_1
-    new-instance v6, Lfj0;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const/4 v7, 0x4
+    iget-object p1, p0, Lfj0;->Y:Lgj0;
 
-    invoke-direct {v6, v0, v7}, Lfj0;-><init>(Lz68;I)V
+    iget-object p1, p1, Lgj0;->a:Lnje;
 
-    invoke-virtual {v1, v6}, Ldq9;->Y0(Lsm3;)V
+    iput v1, p0, Lfj0;->X:I
 
-    const/4 v6, 0x0
+    iget-object v0, p0, Lfj0;->Z:Lvx2;
 
-    invoke-virtual {v1, v6}, Ldq9;->e1(Lzp9;)V
+    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-object v7, v2
+    move-result-object p1
 
-    check-cast v7, Lcr9;
+    sget-object v0, Lr54;->a:Lr54;
 
-    iget-boolean v0, v0, Lz68;->k:Z
+    if-ne p1, v0, :cond_2
 
-    invoke-virtual {v7, v3, v4, v0}, Lcr9;->B(JZ)V
-
-    iget-object v0, v1, Ldq9;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v2, v1, Ldq9;->B0:Lny7;
-
-    iget-wide v2, v2, Lny7;->h:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lz68;
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, v1, Ldq9;->G0:Ljzb;
-
-    invoke-virtual {v1, v0}, Ljzb;->s(Ljava/lang/Object;)V
+    return-object v0
 
     :cond_2
-    iget-wide v8, v5, Ljy7;->a:D
-
-    iget-wide v10, v5, Ljy7;->b:D
-
-    const/4 v12, 0x0
-
-    invoke-virtual/range {v7 .. v12}, Lcr9;->C(DDZ)V
-
     :goto_0
-    return-void
+    sget-object p1, Lccg;->a:Lccg;
 
-    :pswitch_3
-    move-object/from16 v1, p1
-
-    check-cast v1, Ldq9;
-
-    iget-object v2, v1, Lx2;->b:Ljava/lang/Object;
-
-    check-cast v2, Liq9;
-
-    iget-object v3, v1, Ldq9;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v0, v0, Lfj0;->b:Lz68;
-
-    iget-wide v4, v0, Lz68;->c:J
-
-    iget-object v6, v0, Lz68;->a:Ljy7;
-
-    iget-object v7, v1, Ldq9;->B0:Lny7;
-
-    iget-wide v7, v7, Lny7;->h:J
-
-    cmp-long v9, v4, v7
-
-    const-wide/16 v10, -0x1
-
-    if-nez v9, :cond_4
-
-    new-instance v4, Lej0;
-
-    const/16 v5, 0xf
-
-    invoke-direct {v4, v5}, Lej0;-><init>(I)V
-
-    invoke-virtual {v1, v4}, Ldq9;->Y0(Lsm3;)V
-
-    iget-object v4, v1, Ldq9;->B0:Lny7;
-
-    iget-wide v4, v4, Lny7;->h:J
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lz68;
-
-    if-eqz v3, :cond_3
-
-    iget-object v4, v1, Ldq9;->G0:Ljzb;
-
-    invoke-virtual {v4, v3}, Ljzb;->s(Ljava/lang/Object;)V
-
-    :cond_3
-    move-object v12, v2
-
-    check-cast v12, Lcr9;
-
-    iget-wide v13, v6, Ljy7;->a:D
-
-    iget-wide v3, v6, Ljy7;->b:D
-
-    const/16 v17, 0x0
-
-    move-wide v15, v3
-
-    invoke-virtual/range {v12 .. v17}, Lcr9;->C(DDZ)V
-
-    goto :goto_1
-
-    :cond_4
-    cmp-long v9, v7, v10
-
-    if-eqz v9, :cond_5
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v7
-
-    invoke-virtual {v3, v7}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lz68;
-
-    if-eqz v7, :cond_5
-
-    invoke-virtual {v7}, Lz68;->a()Ly68;
-
-    move-result-object v8
-
-    sget-object v9, Lc78;->b:Lc78;
-
-    iput-object v9, v8, Ly68;->d:Lc78;
-
-    iget-wide v12, v7, Lz68;->c:J
-
-    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v7
-
-    new-instance v9, Lz68;
-
-    invoke-direct {v9, v8}, Lz68;-><init>(Ly68;)V
-
-    invoke-virtual {v3, v7, v9}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_5
-    iget-object v7, v1, Ldq9;->B0:Lny7;
-
-    iget-wide v7, v7, Lny7;->h:J
-
-    cmp-long v7, v4, v7
-
-    if-eqz v7, :cond_7
-
-    new-instance v7, Lfj0;
-
-    const/4 v8, 0x3
-
-    invoke-direct {v7, v0, v8}, Lfj0;-><init>(Lz68;I)V
-
-    invoke-virtual {v1, v7}, Ldq9;->Y0(Lsm3;)V
-
-    iget-object v7, v1, Ldq9;->B0:Lny7;
-
-    iget-wide v7, v7, Lny7;->h:J
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v7
-
-    invoke-virtual {v3, v7}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lz68;
-
-    if-eqz v7, :cond_6
-
-    invoke-virtual {v7}, Lz68;->a()Ly68;
-
-    move-result-object v8
-
-    sget-object v9, Lc78;->c:Lc78;
-
-    iput-object v9, v8, Ly68;->d:Lc78;
-
-    iget-wide v12, v7, Lz68;->c:J
-
-    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v9
-
-    new-instance v12, Lz68;
-
-    invoke-direct {v12, v8}, Lz68;-><init>(Ly68;)V
-
-    invoke-virtual {v3, v9, v12}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v3, v1, Ldq9;->G0:Ljzb;
-
-    invoke-virtual {v3, v7}, Ljzb;->s(Ljava/lang/Object;)V
-
-    :cond_6
-    invoke-virtual {v1, v4, v5}, Ldq9;->d1(J)V
-
-    move-object v12, v2
-
-    check-cast v12, Lcr9;
-
-    iget-wide v13, v6, Ljy7;->a:D
-
-    iget-wide v3, v6, Ljy7;->b:D
-
-    const/16 v17, 0x0
-
-    move-wide v15, v3
-
-    invoke-virtual/range {v12 .. v17}, Lcr9;->C(DDZ)V
-
-    :cond_7
-    :goto_1
-    check-cast v2, Lcr9;
-
-    iget-boolean v0, v0, Lz68;->k:Z
-
-    invoke-virtual {v2, v10, v11, v0}, Lcr9;->B(JZ)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, v1, Ldq9;->E0:Z
-
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, v0}, Ldq9;->e1(Lzp9;)V
-
-    invoke-virtual {v1}, Ldq9;->b1()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

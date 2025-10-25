@@ -3,187 +3,408 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxg6;
+.implements Lji6;
 
 
-# static fields
-.field public static final a:Lyeg;
+# instance fields
+.field public final synthetic a:I
 
-.field private static final descriptor:Lqid;
+.field public final synthetic b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;I)V
+    .locals 0
 
-    new-instance v0, Lyeg;
+    iput p2, p0, Lyeg;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
 
-    sput-object v0, Lyeg;->a:Lyeg;
-
-    new-instance v1, Ljeb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryGetInfoRequest"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Ljeb;-><init>(Ljava/lang/String;Lxg6;I)V
-
-    const-string v0, "queryId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Ljeb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "requestId"
-
-    invoke-virtual {v1, v0, v2}, Ljeb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lyeg;->descriptor:Lqid;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu8;)Ljava/lang/Object;
-    .locals 8
+.method public final invoke()Ljava/lang/Object;
+    .locals 10
 
-    sget-object p0, Lyeg;->descriptor:Lqid;
+    iget v0, p0, Lyeg;->a:I
 
-    invoke-virtual {p1, p0}, Lu8;->k(Lqid;)Lu8;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
 
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    const/4 v2, 0x0
+    check-cast v0, Lptd;
 
-    move v4, v0
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    move v5, v1
+    move-result-object v0
 
-    move-object v3, v2
+    const-class v1, Lqmf;
 
-    :goto_0
-    if-eqz v4, :cond_3
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {p1, p0}, Lu8;->q(Lqid;)I
+    move-result-object v0
 
-    move-result v6
+    check-cast v0, Lqmf;
 
-    const/4 v7, -0x1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eq v6, v7, :cond_2
+    check-cast v0, Lrmf;
 
-    if-eqz v6, :cond_1
+    invoke-virtual {v0}, Lrmf;->a()Lxod;
 
-    if-ne v6, v0, :cond_0
+    move-result-object v0
 
-    invoke-virtual {p1, p0, v0}, Lu8;->w(Lqid;I)Ljava/lang/String;
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
+
+    move-result-object v0
+
+    check-cast v0, Lptd;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Lbgg;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbgg;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
+
+    move-result-object v0
+
+    check-cast v0, Lptd;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Ljpf;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljpf;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
+
+    move-result-object v0
+
+    check-cast v0, Lptd;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Le05;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Le05;
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
+
+    move-result-object v0
+
+    check-cast v0, Lptd;
+
+    invoke-virtual {v0}, Lptd;->c()Lsd2;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
+
+    move-result-object v0
+
+    check-cast v0, Lptd;
+
+    invoke-virtual {v0}, Lptd;->m()Ltph;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
+
+    move-result-object v0
+
+    check-cast v0, Lptd;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Lp05;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lp05;
+
+    return-object v0
+
+    :pswitch_6
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
+
+    move-result-object v0
+
+    check-cast v0, Lptd;
+
+    invoke-virtual {v0}, Lptd;->l()Lulf;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_7
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
+
+    move-result-object v0
+
+    check-cast v0, Lptd;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Lqr5;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lqr5;
+
+    return-object v0
+
+    :pswitch_8
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
+
+    move-result-object v0
+
+    check-cast v0, Lptd;
+
+    invoke-virtual {v0}, Lptd;->g()Lus5;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_9
+    iget-object v0, p0, Lyeg;->b:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    invoke-virtual {v0}, Lq28;->getInputData()Lnb4;
+
+    move-result-object v0
+
+    new-instance v2, Lzz4;
+
+    const-string v1, "chatId"
+
+    const-wide/16 v3, 0x0
+
+    invoke-virtual {v0, v1, v3, v4}, Lnb4;->d(Ljava/lang/String;J)J
+
+    move-result-wide v5
+
+    const-string v1, "attachLocalId"
+
+    invoke-virtual {v0, v1}, Lnb4;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v7, ""
+
+    if-nez v1, :cond_0
+
+    move-object v1, v7
+
+    :cond_0
+    invoke-direct {v2, v5, v6, v1}, Lzz4;-><init>(JLjava/lang/String;)V
+
+    const-string v1, "draft.path"
+
+    invoke-virtual {v0, v1}, Lnb4;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    move-object v1, v7
+
+    :cond_1
+    const-string v5, "draft.lastModified"
+
+    invoke-virtual {v0, v5, v3, v4}, Lnb4;->d(Ljava/lang/String;J)J
+
+    move-result-wide v4
+
+    const-string v3, "draft.uploadType"
+
+    invoke-virtual {v0, v3}, Lnb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    or-int/lit8 v5, v5, 0x2
+    if-nez v3, :cond_2
 
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p0, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p0
-
-    :cond_1
-    sget-object v6, Lfme;->a:Lfme;
-
-    invoke-virtual {p1, p0, v1, v2}, Lu8;->s(Lqid;ILjava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    or-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
+    move-object v3, v7
 
     :cond_2
-    move v4, v1
+    invoke-static {v3}, Lzdf;->F(Ljava/lang/String;)I
+
+    move-result v6
+
+    iget-object v3, v0, Lnb4;->a:Ljava/util/HashMap;
+
+    invoke-static {v3}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object v3
+
+    const-string v8, "draft.videoConvertOptions"
+
+    invoke-interface {v3, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_4
+
+    new-instance v3, Lc20;
+
+    const/4 v8, 0x2
+
+    invoke-direct {v3, v8}, Lc20;-><init>(I)V
+
+    const-string v8, "draft.videoConvertOptions.mute"
+
+    const/4 v9, 0x0
+
+    invoke-virtual {v0, v8, v9}, Lnb4;->b(Ljava/lang/String;Z)Z
+
+    move-result v8
+
+    iput-boolean v8, v3, Lc20;->d:Z
+
+    const-string v8, "draft.videoConvertOptions.quality"
+
+    invoke-virtual {v0, v8}, Lnb4;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    if-nez v8, :cond_3
 
     goto :goto_0
 
     :cond_3
-    invoke-virtual {p1, p0}, Lu8;->z(Lqid;)V
+    move-object v7, v8
 
-    new-instance p0, Lafg;
+    :goto_0
+    invoke-static {v7}, Llhc;->valueOf(Ljava/lang/String;)Llhc;
 
-    invoke-direct {p0, v5, v2, v3}, Lafg;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    move-result-object v7
 
-    return-object p0
-.end method
+    iput-object v7, v3, Lc20;->c:Llhc;
 
-.method public final b(Lay3;Ljava/lang/Object;)V
-    .locals 2
+    const-string v7, "draft.videoConvertOptions.startTrimPosition"
 
-    check-cast p2, Lafg;
+    invoke-virtual {v0, v7}, Lnb4;->c(Ljava/lang/String;)F
 
-    sget-object p0, Lyeg;->descriptor:Lqid;
+    move-result v7
 
-    invoke-virtual {p1, p0}, Lay3;->b(Lqid;)Lay3;
+    iput v7, v3, Lc20;->a:F
 
-    move-result-object p1
+    const-string v7, "draft.videoConvertOptions.endTrimPosition"
 
-    sget-object v0, Lfme;->a:Lfme;
+    invoke-virtual {v0, v7}, Lnb4;->c(Ljava/lang/String;)F
 
-    iget-object v0, p2, Lafg;->a:Ljava/lang/String;
+    move-result v0
 
-    const/4 v1, 0x0
+    iput v0, v3, Lc20;->b:F
 
-    invoke-virtual {p1, p0, v1, v0}, Lay3;->h(Lqid;ILjava/lang/Object;)V
+    new-instance v0, Lbng;
 
-    iget-object p2, p2, Lafg;->b:Ljava/lang/String;
+    invoke-direct {v0, v3}, Lbng;-><init>(Lc20;)V
 
-    const/4 v0, 0x1
+    :goto_1
+    move-object v7, v0
 
-    invoke-virtual {p1, p0, v0, p2}, Lay3;->l(Lqid;ILjava/lang/String;)V
+    move-object v3, v1
 
-    invoke-virtual {p1}, Lay3;->m()V
+    goto :goto_2
 
-    return-void
-.end method
+    :cond_4
+    const/4 v0, 0x0
 
-.method public final c()[Lyi7;
-    .locals 2
+    goto :goto_1
 
-    invoke-static {}, Li4h;->E()Lyi7;
+    :goto_2
+    new-instance v1, Lg05;
 
-    move-result-object p0
+    invoke-direct/range {v1 .. v7}, Lg05;-><init>(Lzz4;Ljava/lang/String;JILbng;)V
 
-    const/4 v0, 0x2
+    return-object v1
 
-    new-array v0, v0, [Lyi7;
+    nop
 
-    const/4 v1, 0x0
-
-    aput-object p0, v0, v1
-
-    sget-object p0, Lfme;->a:Lfme;
-
-    const/4 v1, 0x1
-
-    aput-object p0, v0, v1
-
-    return-object v0
-.end method
-
-.method public final d()Lqid;
-    .locals 0
-
-    sget-object p0, Lyeg;->descriptor:Lqid;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

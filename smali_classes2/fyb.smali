@@ -1,298 +1,316 @@
 .class public final Lfyb;
-.super Lj29;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfyb;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public a:Lkyb;
+.field public final a:Ljava/util/LinkedHashMap;
 
-.field public b:F
+.field public final b:Ljava/util/ArrayList;
 
-.field public c:[F
+.field public final c:Lz6a;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lx3b;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Lx3b;-><init>(I)V
+
+    sput-object v0, Lfyb;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/LinkedHashMap;Ljava/util/ArrayList;Lz6a;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfyb;->a:Ljava/util/LinkedHashMap;
+
+    iput-object p2, p0, Lfyb;->b:Ljava/util/ArrayList;
+
+    iput-object p3, p0, Lfyb;->c:Lz6a;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    iget-object v0, p0, Lfyb;->a:Lkyb;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Lr63;->i(ILj29;)I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
-    iget v1, p0, Lfyb;->b:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    if-eq v1, v2, :cond_1
-
-    const/4 v1, 0x2
-
-    invoke-static {v1}, Lr63;->e(I)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_1
-    iget-object p0, p0, Lfyb;->c:[F
-
-    array-length v1, p0
-
-    if-lez v1, :cond_2
-
-    array-length v1, p0
-
-    mul-int/lit8 v1, v1, 0x4
-
-    add-int/2addr v1, v0
-
-    array-length p0, p0
-
-    add-int/2addr v1, p0
-
-    return v1
-
-    :cond_2
     return v0
 .end method
 
-.method public final mergeFrom(Lq63;)Lj29;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lq63;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_8
-
-    const/16 v1, 0x15
-
-    if-eq v0, v1, :cond_7
-
-    const/16 v1, 0x1a
-
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x1d
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lq63;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
-
-    :cond_1
-    invoke-static {p1, v1}, Lxnd;->F(Lq63;I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lfyb;->c:[F
-
-    array-length v3, v1
-
-    add-int/2addr v0, v3
-
-    new-array v4, v0, [F
-
-    if-eqz v3, :cond_2
-
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v1, v0, -0x1
-
-    if-ge v3, v1, :cond_3
-
-    invoke-virtual {p1}, Lq63;->i()F
-
-    move-result v1
-
-    aput v1, v4, v3
-
-    invoke-virtual {p1}, Lq63;->s()I
-
-    add-int/lit8 v3, v3, 0x1
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
-    :cond_3
-    invoke-virtual {p1}, Lq63;->i()F
-
-    move-result v0
-
-    aput v0, v4, v3
-
-    iput-object v4, p0, Lfyb;->c:[F
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Lq63;->p()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lq63;->e(I)I
-
-    move-result v1
-
-    div-int/lit8 v0, v0, 0x4
-
-    iget-object v3, p0, Lfyb;->c:[F
-
-    array-length v4, v3
-
-    add-int/2addr v0, v4
-
-    new-array v5, v0, [F
-
-    if-eqz v4, :cond_5
-
-    invoke-static {v3, v2, v5, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_5
-    :goto_2
-    if-ge v4, v0, :cond_6
-
-    invoke-virtual {p1}, Lq63;->i()F
-
-    move-result v2
-
-    aput v2, v5, v4
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_2
-
-    :cond_6
-    iput-object v5, p0, Lfyb;->c:[F
-
-    invoke-virtual {p1, v1}, Lq63;->d(I)V
-
-    goto :goto_0
-
-    :cond_7
-    invoke-virtual {p1}, Lq63;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lfyb;->b:F
-
-    goto :goto_0
-
-    :cond_8
-    iget-object v0, p0, Lfyb;->a:Lkyb;
-
-    if-nez v0, :cond_9
-
-    new-instance v0, Lkyb;
-
-    invoke-direct {v0}, Lkyb;-><init>()V
-
-    iput-object v0, p0, Lfyb;->a:Lkyb;
-
-    :cond_9
-    iget-object v0, p0, Lfyb;->a:Lkyb;
-
-    invoke-virtual {p1, v0}, Lq63;->j(Lj29;)V
-
-    goto/16 :goto_0
-
-    :cond_a
-    :goto_3
-    return-object p0
-.end method
-
-.method public final writeTo(Lr63;)V
-    .locals 3
-
-    iget-object v0, p0, Lfyb;->a:Lkyb;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1, v0}, Lr63;->y(ILj29;)V
-
     :cond_0
-    iget v0, p0, Lfyb;->b:F
+    instance-of v0, p1, Lfyb;
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    if-nez v0, :cond_1
 
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v0, 0x2
-
-    iget v1, p0, Lfyb;->b:F
-
-    invoke-virtual {p1, v0, v1}, Lr63;->v(IF)V
+    goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lfyb;->c:[F
+    check-cast p1, Lfyb;
 
-    array-length v0, v0
+    iget-object v0, p0, Lfyb;->a:Ljava/util/LinkedHashMap;
 
-    if-lez v0, :cond_2
+    iget-object v1, p1, Lfyb;->a:Ljava/util/LinkedHashMap;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    :goto_0
-    iget-object v1, p0, Lfyb;->c:[F
+    move-result v0
 
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_2
-
-    const/4 v2, 0x3
-
-    aget v1, v1, v0
-
-    invoke-virtual {p1, v2, v1}, Lr63;->v(IF)V
-
-    add-int/lit8 v0, v0, 0x1
+    if-nez v0, :cond_2
 
     goto :goto_0
 
     :cond_2
+    iget-object v0, p0, Lfyb;->b:Ljava/util/ArrayList;
+
+    iget-object v1, p1, Lfyb;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lfyb;->c:Lz6a;
+
+    iget-object p1, p1, Lfyb;->c:Lz6a;
+
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lfyb;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lfyb;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lfyb;->c:Lz6a;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lz6a;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "PresetAvatarsModel(categories="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lfyb;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", avatars="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfyb;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", selectedAvatar="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfyb;->c:Lz6a;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
+
+    iget-object v0, p0, Lfyb;->a:Ljava/util/LinkedHashMap;
+
+    invoke-interface {v0}, Ljava/util/Map;->size()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+
+    move-result v2
+
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lfyb;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz6a;
+
+    invoke-virtual {v1, p1, p2}, Lz6a;->writeToParcel(Landroid/os/Parcel;I)V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lfyb;->c:Lz6a;
+
+    if-nez v0, :cond_2
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
+
+    :cond_2
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0, p1, p2}, Lz6a;->writeToParcel(Landroid/os/Parcel;I)V
+
     return-void
 .end method

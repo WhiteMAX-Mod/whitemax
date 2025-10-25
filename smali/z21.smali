@@ -1,285 +1,206 @@
 .class public final Lz21;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lms4;
 
 
 # instance fields
-.field public final a:Lthb;
+.field public final synthetic a:I
 
-.field public b:Z
-
-.field public c:Z
-
-.field public final o:Ljava/lang/Object;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.method public constructor <init>(I)V
+    .locals 8
 
-    const/4 v0, 0x0
+    iput p1, p0, Lz21;->a:I
 
-    const/4 v1, 0x0
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {p0, p1, v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lthb;
+    new-instance v0, Lre4;
 
-    invoke-direct {v0, p1}, Lthb;-><init>(Landroid/content/Context;)V
+    sget-object p1, Las4;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    iput-object v0, p0, Lz21;->a:Lthb;
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    new-instance v2, Ly21;
+    move-result-wide v1
 
-    invoke-direct {v2, p0, v1}, Ly21;-><init>(Lz21;I)V
+    new-instance v3, Lsrf;
 
-    const/4 v1, 0x3
+    const-string p1, "125.1.0.70.6"
 
-    invoke-static {v1, v2}, Lcb7;->G(ILzb6;)Lcl7;
+    invoke-direct {v3, p1}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
 
-    move-result-object v1
+    sget v4, Lkmc;->ic_statusbar_call_24:I
 
-    iput-object v1, p0, Lz21;->o:Ljava/lang/Object;
+    new-instance v5, Lsrf;
 
-    const/4 v1, -0x1
+    const-string p1, "\u0412\u0435\u0440\u0441\u0438\u044f SDK \u0417\u0432\u043e\u043d\u043a\u043e\u0432"
 
-    invoke-virtual {p0, v0, v1, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
+    invoke-direct {v5, p1}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-direct {p0}, Lz21;->getCameraPreviewController()Lx21;
+    const/4 v6, 0x0
 
-    move-result-object v0
+    const/16 v7, 0x10
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct/range {v0 .. v7}, Lre4;-><init>(JLtrf;ILtrf;Liyi;I)V
 
-    sget-object v1, Lmib;->f:Lmib;
-
-    invoke-static {p1}, Lhv8;->n(Landroid/content/Context;)Lz32;
-
-    move-result-object v1
-
-    new-instance v2, Lc;
-
-    const/16 v3, 0x10
-
-    invoke-direct {v2, v0, v3, v1}, Lc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p1}, Lpw3;->a(Landroid/content/Context;)Ljava/util/concurrent/Executor;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {v1, v2, p1}, Lqd6;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    invoke-direct {p0}, Lz21;->getCameraPreviewController()Lx21;
+    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
 
     move-result-object p1
 
-    new-instance v0, Ly21;
+    iput-object p1, p0, Lz21;->b:Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    return-void
 
-    invoke-direct {v0, p0, v1}, Ly21;-><init>(Lz21;I)V
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p1, Lx21;->c:Lzb6;
+    sget-object p1, Lka5;->a:Lka5;
+
+    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
+
+    move-result-object p1
+
+    new-instance v0, Ln0d;
+
+    invoke-direct {v0, p1}, Ln0d;-><init>(Lj1a;)V
+
+    iput-object v0, p0, Lz21;->b:Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object p1, Las4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v1
+
+    new-instance v3, Lsrf;
+
+    const-string p1, "Test crash"
+
+    invoke-direct {v3, p1}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v5, Lsrf;
+
+    const-string p1, "\u0422\u0435\u0441\u0442\u043e\u0432\u044b\u0439 \u043a\u0440\u0435\u0448 \u0434\u043b\u044f \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438 \u0432 tracer"
+
+    invoke-direct {v5, p1}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
+
+    sget v4, Lzjd;->w:I
+
+    new-instance v0, Lre4;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x10
+
+    invoke-direct/range {v0 .. v7}, Lre4;-><init>(JLtrf;ILtrf;Liyi;I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz21;->b:Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final e(Lre4;)V
+    .locals 0
 
     return-void
 .end method
 
-.method private final getCameraPreviewController()Lx21;
+.method private final f(Lre4;)V
     .locals 0
 
-    iget-object p0, p0, Lz21;->o:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lx21;
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(ZZ)V
-    .locals 6
+.method public final c()Lq0f;
+    .locals 1
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lz21;->a:I
 
-    invoke-direct {p0}, Lz21;->getCameraPreviewController()Lx21;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v0, p0, Lz21;->b:Ljava/lang/Object;
 
-    iget-object p0, p0, Lx21;->b:Lmib;
+    check-cast v0, Ln0d;
 
-    if-eqz p0, :cond_1
+    return-object v0
 
-    invoke-virtual {p0}, Lmib;->f()V
+    :pswitch_0
+    iget-object v0, p0, Lz21;->b:Ljava/lang/Object;
+
+    check-cast v0, Lx0f;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lz21;->b:Ljava/lang/Object;
+
+    check-cast v0, Lx0f;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Lre4;)V
+    .locals 0
+
+    iget p1, p0, Lz21;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     return-void
 
-    :cond_0
-    invoke-direct {p0}, Lz21;->getCameraPreviewController()Lx21;
+    :pswitch_0
+    new-instance p1, Lone/me/devmenu/TestCrash;
 
-    move-result-object p1
+    invoke-direct {p1}, Lone/me/devmenu/TestCrash;-><init>()V
 
-    iget-object v0, p1, Lx21;->b:Lmib;
+    throw p1
 
-    if-nez v0, :cond_2
-
-    :cond_1
+    :pswitch_1
     return-void
 
-    :cond_2
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Lmib;->f()V
-
-    :cond_3
-    const/4 v1, 0x1
-
-    xor-int/2addr p2, v1
-
-    new-instance v2, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
-
-    const/4 v3, -0x1
-
-    const/4 v4, 0x0
-
-    if-eq p2, v3, :cond_4
-
-    move v3, v1
-
-    goto :goto_0
-
-    :cond_4
-    move v3, v4
-
-    :goto_0
-    const-string v5, "The specified lens facing is invalid."
-
-    invoke-static {v5, v3}, Ln4e;->n(Ljava/lang/String;Z)V
-
-    new-instance v3, Lqm7;
-
-    invoke-direct {v3, p2}, Lqm7;-><init>(I)V
-
-    invoke-virtual {v2, v3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    move-object p2, v2
-
-    new-instance v2, Lc02;
-
-    invoke-direct {v2, p2}, Lc02;-><init>(Ljava/util/LinkedHashSet;)V
-
-    new-instance p2, Lb07;
-
-    const/4 v3, 0x2
-
-    invoke-direct {p2, v3}, Lb07;-><init>(I)V
-
-    invoke-virtual {p2}, Lb07;->b()Lkhb;
-
-    move-result-object p2
-
-    iget-object p0, p0, Lz21;->a:Lthb;
-
-    invoke-virtual {p0}, Lthb;->getSurfaceProvider()Ljhb;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Lkhb;->G(Ljhb;)V
-
-    iget-object p0, p1, Lx21;->a:Lzn7;
-
-    new-array p1, v1, [Llqf;
-
-    aput-object p2, p1, v4
-
-    const-string p2, "CX:bindToLifecycle"
-
-    invoke-static {p2}, Lr94;->e0(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
-
-    :try_start_0
-    iget-object p2, v0, Lmib;->d:Lm02;
-
-    if-nez p2, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    iget-object p2, p2, Lm02;->f:Lgi2;
-
-    if-eqz p2, :cond_7
-
-    iget-object p2, p2, Lgi2;->c:Ljava/lang/Object;
-
-    check-cast p2, Lpcf;
-
-    iget v4, p2, Lpcf;->b:I
-
-    :goto_1
-    if-eq v4, v3, :cond_6
-
-    invoke-static {v0, v1}, Lmib;->b(Lmib;I)V
-
-    sget-object v4, Lp45;->a:Lp45;
-
-    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v5, p1
-
-    check-cast v5, [Llqf;
-
-    const/4 v3, 0x0
-
-    move-object v1, p0
-
-    invoke-virtual/range {v0 .. v5}, Lmib;->d(Lzn7;Lc02;Lb9g;Ljava/util/List;[Llqf;)Len7;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    return-void
-
-    :cond_6
-    :try_start_1
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "bindToLifecycle for single camera is not supported in concurrent camera mode, call unbindAll() first"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :catchall_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_2
-
-    :cond_7
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "CameraX not initialized yet."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_2
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    throw p0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

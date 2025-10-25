@@ -48,44 +48,44 @@
 
 # virtual methods
 .method public getWifiSSID()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$WifiManagerDelegate;->context:Landroid/content/Context;
+    iget-object v0, p0, Lorg/webrtc/NetworkMonitorAutoDetect$WifiManagerDelegate;->context:Landroid/content/Context;
 
-    new-instance v0, Landroid/content/IntentFilter;
+    new-instance v1, Landroid/content/IntentFilter;
 
-    const-string v1, "android.net.wifi.STATE_CHANGE"
+    const-string v2, "android.net.wifi.STATE_CHANGE"
 
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {v0, v2, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const-string v0, "wifiInfo"
+    const-string v1, "wifiInfo"
 
-    invoke-virtual {p0, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Landroid/net/wifi/WifiInfo;
+    check-cast v0, Landroid/net/wifi/WifiInfo;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    const-string p0, ""
+    const-string v0, ""
 
-    return-object p0
+    return-object v0
 .end method

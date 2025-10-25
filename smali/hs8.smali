@@ -1,76 +1,328 @@
-.class public final Lhs8;
+.class public Lhs8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final i:Lhs8;
+
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
+.field public static final l:Ljava/lang/String;
+
+.field public static final m:Ljava/lang/String;
+
+.field public static final n:Ljava/lang/String;
+
+.field public static final o:Ljava/lang/String;
+
+.field public static final p:Ljava/lang/String;
+
+.field public static final q:Ljava/lang/String;
+
+
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lfs8;
+
+    invoke-direct {v0}, Lfs8;-><init>()V
+
+    new-instance v1, Lhs8;
+
+    invoke-direct {v1, v0}, Lhs8;-><init>(Lfs8;)V
+
+    sput-object v1, Lhs8;->i:Lhs8;
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lhs8;->j:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lhs8;->k:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lhs8;->l:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lhs8;->m:Ljava/lang/String;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lhs8;->n:Ljava/lang/String;
+
+    const/4 v0, 0x5
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lhs8;->o:Ljava/lang/String;
+
+    const/4 v0, 0x6
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lhs8;->p:Ljava/lang/String;
+
+    const/4 v0, 0x7
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lhs8;->q:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lfs8;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-wide v0, p1, Lfs8;->a:J
+
+    invoke-static {v0, v1}, Lnig;->l0(J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lhs8;->a:J
+
+    iget-wide v0, p1, Lfs8;->b:J
+
+    invoke-static {v0, v1}, Lnig;->l0(J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lhs8;->c:J
+
+    iget-wide v0, p1, Lfs8;->a:J
+
+    iput-wide v0, p0, Lhs8;->b:J
+
+    iget-wide v0, p1, Lfs8;->b:J
+
+    iput-wide v0, p0, Lhs8;->d:J
+
+    iget-boolean v0, p1, Lfs8;->c:Z
+
+    iput-boolean v0, p0, Lhs8;->e:Z
+
+    iget-boolean v0, p1, Lfs8;->d:Z
+
+    iput-boolean v0, p0, Lhs8;->f:Z
+
+    iget-boolean v0, p1, Lfs8;->e:Z
+
+    iput-boolean v0, p0, Lhs8;->g:Z
+
+    iget-boolean p1, p1, Lfs8;->f:Z
+
+    iput-boolean p1, p0, Lhs8;->h:Z
+
+    return-void
+.end method
+
+
 # virtual methods
+.method public final a()Lfs8;
+    .locals 3
+
+    new-instance v0, Lfs8;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-wide v1, p0, Lhs8;->b:J
+
+    iput-wide v1, v0, Lfs8;->a:J
+
+    iget-wide v1, p0, Lhs8;->d:J
+
+    iput-wide v1, v0, Lfs8;->b:J
+
+    iget-boolean v1, p0, Lhs8;->e:Z
+
+    iput-boolean v1, v0, Lfs8;->c:Z
+
+    iget-boolean v1, p0, Lhs8;->f:Z
+
+    iput-boolean v1, v0, Lfs8;->d:Z
+
+    iget-boolean v1, p0, Lhs8;->g:Z
+
+    iput-boolean v1, v0, Lfs8;->e:Z
+
+    iget-boolean v1, p0, Lhs8;->h:Z
+
+    iput-boolean v1, v0, Lfs8;->f:Z
+
+    return-object v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 0
+    .locals 7
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of p0, p1, Lhs8;
+    instance-of v1, p1, Lhs8;
 
-    if-nez p0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lhs8;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-wide v3, p0, Lhs8;->b:J
 
-    sget-object p0, Lds8;->a:Lds8;
+    iget-wide v5, p1, Lhs8;->b:J
 
-    invoke-virtual {p0, p0}, Lds8;->equals(Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result p0
+    if-nez v1, :cond_2
 
-    if-nez p0, :cond_2
+    iget-wide v3, p0, Lhs8;->d:J
 
-    :goto_0
-    const/4 p0, 0x0
+    iget-wide v5, p1, Lhs8;->d:J
 
-    return p0
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-boolean v1, p0, Lhs8;->e:Z
+
+    iget-boolean v3, p1, Lhs8;->e:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Lhs8;->f:Z
+
+    iget-boolean v3, p1, Lhs8;->f:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Lhs8;->g:Z
+
+    iget-boolean v3, p1, Lhs8;->g:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Lhs8;->h:Z
+
+    iget-boolean p1, p1, Lhs8;->h:Z
+
+    if-ne v1, p1, :cond_2
+
+    return v0
 
     :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 5
 
-    const p0, 0x72d9d95f
+    iget-wide v0, p0, Lhs8;->b:J
 
-    return p0
-.end method
+    const/16 v2, 0x20
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    ushr-long v3, v0, v2
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    xor-long/2addr v0, v3
 
-    const-string v0, "MediaTypePickerViewState(selectedButton="
+    long-to-int v0, v0
 
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    sget-object v0, Lds8;->a:Lds8;
+    iget-wide v3, p0, Lhs8;->d:J
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    ushr-long v1, v3, v2
 
-    const-string v0, ")"
+    xor-long/2addr v1, v3
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    long-to-int v1, v1
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    add-int/2addr v0, v1
 
-    move-result-object p0
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object p0
+    iget-boolean v1, p0, Lhs8;->e:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lhs8;->f:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lhs8;->g:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lhs8;->h:Z
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

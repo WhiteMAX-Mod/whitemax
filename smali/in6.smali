@@ -1,157 +1,118 @@
 .class public abstract Lin6;
-.super Ljava/lang/Object;
+.super Liq7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/util/SparseIntArray;
+.field public a:I
 
-.field public final b:Landroid/util/SparseIntArray;
+.field public b:Z
+
+.field public c:Lbr7;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lhq7;->r0:Lhq7;
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    iget v0, v0, Lhq7;->b:I
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+    sget-object v0, Lhq7;->q0:Lhq7;
 
-    iput-object v0, p0, Lin6;->a:Landroid/util/SparseIntArray;
+    iget v0, v0, Lhq7;->b:I
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    sget-object v0, Lhq7;->t0:Lhq7;
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
-
-    iput-object v0, p0, Lin6;->b:Landroid/util/SparseIntArray;
+    iget v0, v0, Lhq7;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)I
-    .locals 6
+.method public final o0(Ljava/math/BigDecimal;)Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {p0, p1}, Lin6;->c(I)I
+    const/16 v0, 0x270f
 
-    move-result v0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    move v2, v1
+    sget-object v2, Lhq7;->s0:Lhq7;
 
-    move v3, v2
+    iget v3, p0, Lin6;->a:I
 
-    move v4, v3
+    iget v2, v2, Lhq7;->b:I
 
-    :goto_0
-    if-ge v2, p1, :cond_2
+    and-int/2addr v2, v3
 
-    invoke-virtual {p0, v2}, Lin6;->c(I)I
+    if-eqz v2, :cond_1
 
-    move-result v5
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->scale()I
 
-    add-int/2addr v3, v5
+    move-result v2
 
-    if-ne v3, p2, :cond_0
+    const/16 v3, -0x270f
 
-    add-int/lit8 v4, v4, 0x1
+    if-lt v2, v3, :cond_0
 
-    move v3, v1
+    if-gt v2, v0, :cond_0
 
-    goto :goto_1
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toPlainString()Ljava/lang/String;
 
-    :cond_0
-    if-le v3, p2, :cond_1
+    move-result-object p1
 
-    add-int/lit8 v4, v4, 0x1
-
-    move v3, v5
-
-    :cond_1
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    add-int/2addr v3, v0
-
-    if-le v3, p2, :cond_3
-
-    add-int/lit8 v4, v4, 0x1
-
-    :cond_3
-    return v4
-.end method
-
-.method public b(II)I
-    .locals 5
-
-    invoke-virtual {p0, p1}, Lin6;->c(I)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-ne v0, p2, :cond_0
-
-    return v1
+    return-object p1
 
     :cond_0
-    move v2, v1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move v3, v2
+    move-result-object p1
 
-    :goto_0
-    if-ge v2, p1, :cond_3
+    filled-new-array {p1, v1, v1}, [Ljava/lang/Object;
 
-    invoke-virtual {p0, v2}, Lin6;->c(I)I
+    move-result-object p1
 
-    move-result v4
+    const-string v0, "Attempt to write plain `java.math.BigDecimal` (see JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN) with illegal scale (%d): needs to be between [-%d, %d]"
 
-    add-int/2addr v3, v4
+    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    if-ne v3, p2, :cond_1
+    move-result-object p1
 
-    move v3, v1
+    invoke-static {p1}, Liq7;->d(Ljava/lang/String;)V
 
-    goto :goto_1
+    const/4 p1, 0x0
+
+    throw p1
 
     :cond_1
-    if-le v3, p2, :cond_2
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
 
-    move v3, v4
+    move-result-object p1
 
-    :cond_2
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    add-int/2addr v0, v3
-
-    if-gt v0, p2, :cond_4
-
-    return v3
-
-    :cond_4
-    return v1
+    return-object p1
 .end method
 
-.method public abstract c(I)I
-.end method
+.method public final p0(Lhq7;)Z
+    .locals 1
 
-.method public final d()V
-    .locals 0
+    iget v0, p0, Lin6;->a:I
 
-    iget-object p0, p0, Lin6;->a:Landroid/util/SparseIntArray;
+    iget p1, p1, Lhq7;->b:I
 
-    invoke-virtual {p0}, Landroid/util/SparseIntArray;->clear()V
+    and-int/2addr p1, v0
 
-    return-void
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

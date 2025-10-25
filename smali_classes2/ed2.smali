@@ -1,57 +1,62 @@
-.class public final Led2;
-.super Ljx3;
+.class public final synthetic Led2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lur3;
 
 
 # instance fields
-.field public X:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public Y:Ls72;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lgd2;
-
-.field public final synthetic r0:Lgd2;
-
-.field public s0:I
+.field public final synthetic b:Z
 
 
 # direct methods
-.method public constructor <init>(Lgd2;Ljx3;)V
+.method public synthetic constructor <init>(ZI)V
     .locals 0
 
-    iput-object p1, p0, Led2;->r0:Lgd2;
+    iput p2, p0, Led2;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Led2;->b:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iput-object p1, p0, Led2;->Z:Ljava/lang/Object;
+    iget v0, p0, Led2;->a:I
 
-    iget p1, p0, Led2;->s0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    check-cast p1, Lla2;
 
-    or-int/2addr p1, v0
+    iget-object p1, p1, Lla2;->b:Lne2;
 
-    iput p1, p0, Led2;->s0:I
+    iget-boolean v0, p0, Led2;->b:Z
 
-    const/4 p1, 0x0
+    iput-boolean v0, p1, Lne2;->f0:Z
 
-    const-wide/16 v0, 0x0
+    return-void
 
-    iget-object v2, p0, Led2;->r0:Lgd2;
+    :pswitch_0
+    iget-boolean v0, p0, Led2;->b:Z
 
-    invoke-virtual {v2, v0, v1, p0, p1}, Lgd2;->g(JLjx3;Ljava/lang/String;)Ljava/lang/Object;
+    check-cast p1, Lxd2;
 
-    move-result-object p0
+    iput-boolean v0, p1, Lxd2;->i0:Z
 
-    return-object p0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

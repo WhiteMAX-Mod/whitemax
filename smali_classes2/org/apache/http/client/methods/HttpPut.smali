@@ -53,9 +53,9 @@
 
 # virtual methods
 .method public getMethod()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "PUT"
+    const-string v0, "PUT"
 
-    return-object p0
+    return-object v0
 .end method

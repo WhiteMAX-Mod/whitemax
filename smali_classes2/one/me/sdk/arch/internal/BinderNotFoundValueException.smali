@@ -33,25 +33,25 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v1}, Lone/me/sdk/arch/internal/BinderNotFoundValueException;-><init>(Ljava/lang/Throwable;I)V
+    invoke-direct {p0, v1, v0}, Lone/me/sdk/arch/internal/BinderNotFoundValueException;-><init>(ILjava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Throwable;I)V
+.method public constructor <init>(ILjava/lang/Throwable;)V
     .locals 0
 
-    and-int/lit8 p2, p2, 0x2
+    and-int/lit8 p1, p1, 0x2
 
-    if-eqz p2, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
     .line 2
     :cond_0
-    const-string p2, "could not extract value"
+    const-string p1, "could not extract value"
 
-    invoke-direct {p0, p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

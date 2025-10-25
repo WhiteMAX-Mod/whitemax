@@ -28,7 +28,7 @@
         "",
         "width",
         "height",
-        "Lylf;",
+        "Lccg;",
         "onSurfaceTextureAvailable",
         "(Landroid/graphics/SurfaceTexture;II)V",
         "onSurfaceTextureSizeChanged",
@@ -104,9 +104,9 @@
 
     invoke-static {v0, v1}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->access$setSurface$p(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;Landroid/view/Surface;)V
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$1;->this$0:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$1;->this$0:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    invoke-static {p0, p2, p3}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->access$updateTextureSize(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;II)V
+    invoke-static {p1, p2, p3}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->access$updateTextureSize(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;II)V
 
     return-void
 .end method
@@ -132,7 +132,7 @@
 
     invoke-direct {v2, p1}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$1$onSurfaceTextureDestroyed$1;-><init>(Ljava/util/concurrent/CountDownLatch;)V
 
-    invoke-interface {v1, v2}, Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface;->releaseEglSurface(Lzb6;)V
+    invoke-interface {v1, v2}, Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface;->releaseEglSurface(Lji6;)V
 
     invoke-static {p1}, Lorg/webrtc/ThreadUtils;->awaitUninterruptibly(Ljava/util/concurrent/CountDownLatch;)V
 
@@ -153,11 +153,11 @@
 
     invoke-static {p1, v1}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->access$setSurface$p(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;Landroid/view/Surface;)V
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$1;->this$0:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$1;->this$0:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    const/4 p1, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {p0, p1, p1}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->access$updateTextureSize(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;II)V
+    invoke-static {p1, v1, v1}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->access$updateTextureSize(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;II)V
 
     return v0
 .end method
@@ -201,11 +201,11 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$1;->this$0:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$1;->this$0:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    const/4 p1, 0x1
+    const/4 p2, 0x1
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->access$setNeedsClearImage$p(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;Z)V
+    invoke-static {p1, p2}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->access$setNeedsClearImage$p(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;Z)V
 
     :cond_0
     return-void

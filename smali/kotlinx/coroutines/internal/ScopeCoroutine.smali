@@ -1,9 +1,9 @@
 .class public Lkotlinx/coroutines/internal/ScopeCoroutine;
-.super Le0;
+.super Lo0;
 .source "SourceFile"
 
 # interfaces
-.implements La14;
+.implements Ls54;
 
 
 # annotations
@@ -12,8 +12,8 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Le0;",
-        "La14;"
+        "Lo0;",
+        "Ls54;"
     }
 .end annotation
 
@@ -24,28 +24,28 @@
     d2 = {
         "Lkotlinx/coroutines/internal/ScopeCoroutine;",
         "T",
-        "Le0;",
-        "La14;",
+        "Lo0;",
+        "Ls54;",
         "Lkotlinx/coroutines/internal/CoroutineStackFrame;",
-        "Lq04;",
+        "Li54;",
         "context",
         "Lkotlin/coroutines/Continuation;",
         "uCont",
         "<init>",
-        "(Lq04;Lkotlin/coroutines/Continuation;)V",
+        "(Li54;Lkotlin/coroutines/Continuation;)V",
         "Ljava/lang/StackTraceElement;",
         "Lkotlinx/coroutines/internal/StackTraceElement;",
         "getStackTraceElement",
         "()Ljava/lang/StackTraceElement;",
         "",
         "state",
-        "Lylf;",
+        "Lccg;",
         "afterCompletion",
         "(Ljava/lang/Object;)V",
         "afterResume",
         "Lkotlin/coroutines/Continuation;",
         "getCallerFrame",
-        "()La14;",
+        "()Ls54;",
         "callerFrame",
         "",
         "isScopedCoroutine",
@@ -74,12 +74,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lq04;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Li54;Lkotlin/coroutines/Continuation;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lq04;",
+            "Li54;",
             "Lkotlin/coroutines/Continuation<",
             "-TT;>;)V"
         }
@@ -87,7 +87,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, p1, v0, v0}, Le0;-><init>(Lq04;ZZ)V
+    invoke-direct {p0, p1, v0, v0}, Lo0;-><init>(Li54;ZZ)V
 
     iput-object p2, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
@@ -97,72 +97,72 @@
 
 # virtual methods
 .method public afterCompletion(Ljava/lang/Object;)V
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
-    invoke-static {p0}, Lf4h;->x(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p1}, Lo97;->M0(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lyui;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    invoke-static {p0, p1, v0, v1, v0}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lbc6;ILjava/lang/Object;)V
+    invoke-static {v0, p1, v1, v2, v1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lli6;ILjava/lang/Object;)V
 
     return-void
 .end method
 
 .method public afterResume(Ljava/lang/Object;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
-    invoke-static {p1}, Lo97;->M0(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lyui;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {p0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final getCallerFrame()La14;
-    .locals 1
+.method public final getCallerFrame()Ls54;
+    .locals 2
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
-    instance-of v0, p0, La14;
+    instance-of v1, v0, Ls54;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    check-cast p0, La14;
+    check-cast v0, Ls54;
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getStackTraceElement()Ljava/lang/StackTraceElement;
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final isScopedCoroutine()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method

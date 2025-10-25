@@ -1,48 +1,80 @@
 .class public final Lrua;
-.super Ljx3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Leia;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
 
 # direct methods
-.method public constructor <init>(Leia;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;I)V
     .locals 0
 
-    iput-object p1, p0, Lrua;->Y:Leia;
+    iput p2, p0, Lrua;->a:I
 
-    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lrua;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
-    iput-object p1, p0, Lrua;->o:Ljava/lang/Object;
+    iget v0, p0, Lrua;->a:I
 
-    iget p1, p0, Lrua;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lrua;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    iput p1, p0, Lrua;->X:I
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    iget-object p1, p0, Lrua;->Y:Leia;
+    return-void
 
-    const/4 v0, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lrua;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    invoke-virtual {p1, v0, p0}, Leia;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    move-result-object p0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    return-object p0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lrua;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lrua;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

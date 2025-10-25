@@ -1,67 +1,118 @@
-.class public abstract La2h;
-.super Ljava/lang/Object;
+.class public La2h;
+.super Lfei;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static f:Z = true
+
+.field public static g:Z = true
+
+.field public static h:Z = true
+
+.field public static i:Z = true
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, La2h;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    return-void
-.end method
-
-.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Parcelable;
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/os/Parcel;)V
+# virtual methods
+.method public c(Landroid/view/View;I)V
     .locals 2
 
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result p0
+    const/16 v1, 0x1c
 
-    if-gtz p0, :cond_0
+    if-ne v0, v1, :cond_0
+
+    invoke-super {p0, p1, p2}, Lfei;->c(Landroid/view/View;I)V
 
     return-void
 
     :cond_0
-    new-instance v0, Landroid/os/BadParcelableException;
+    sget-boolean v0, La2h;->i:Z
 
-    const-string v1, "Parcel data not fully consumed, unread size: "
+    if-eqz v0, :cond_1
 
-    invoke-static {p0, v1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    :try_start_0
+    invoke-static {p1, p2}, Lz1h;->a(Landroid/view/View;I)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p0
+    return-void
 
-    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
+    :catch_0
+    const/4 p1, 0x0
 
-    throw v0
+    sput-boolean p1, La2h;->i:Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public f(Landroid/view/View;IIII)V
+    .locals 1
+
+    sget-boolean v0, La2h;->h:Z
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-static {p1, p2, p3, p4, p5}, Ly1h;->a(Landroid/view/View;IIII)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    const/4 p1, 0x0
+
+    sput-boolean p1, La2h;->h:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public g(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 1
+
+    sget-boolean v0, La2h;->f:Z
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-static {p1, p2}, Lx1h;->b(Landroid/view/View;Landroid/graphics/Matrix;)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    const/4 p1, 0x0
+
+    sput-boolean p1, La2h;->f:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public h(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 1
+
+    sget-boolean v0, La2h;->g:Z
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-static {p1, p2}, Lx1h;->c(Landroid/view/View;Landroid/graphics/Matrix;)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    const/4 p1, 0x0
+
+    sput-boolean p1, La2h;->g:Z
+
+    :cond_0
+    return-void
 .end method

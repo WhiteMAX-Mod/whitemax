@@ -1,53 +1,141 @@
 .class public final Lmif;
-.super Ljava/lang/Object;
+.super Lpmf;
 .source "SourceFile"
-
-# interfaces
-.implements Loif;
 
 
 # instance fields
-.field public final a:Lu2f;
+.field public c:Ljava/util/List;
 
-.field public final b:I
-
-.field public final c:Z
+.field public o:Ljava/util/Map;
 
 
 # direct methods
-.method public synthetic constructor <init>(IILu2f;)V
+.method public constructor <init>(Lpf9;)V
     .locals 0
 
-    and-int/lit8 p2, p2, 0x2
+    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
 
-    if-eqz p2, :cond_0
+    iget-object p1, p0, Lmif;->c:Ljava/util/List;
 
-    .line 5
-    sget p1, La1d;->Q0:I
+    if-nez p1, :cond_0
+
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object p1, p0, Lmif;->c:Ljava/util/List;
 
     :cond_0
-    const/4 p2, 0x1
+    iget-object p1, p0, Lmif;->o:Ljava/util/Map;
 
-    .line 6
-    invoke-direct {p0, p1, p3, p2}, Lmif;-><init>(ILu2f;Z)V
+    if-nez p1, :cond_1
 
+    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    iput-object p1, p0, Lmif;->o:Ljava/util/Map;
+
+    :cond_1
     return-void
 .end method
 
-.method public constructor <init>(ILu2f;Z)V
-    .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 5
 
-    .line 2
-    iput-object p2, p0, Lmif;->a:Lu2f;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 3
-    iput p1, p0, Lmif;->b:I
+    const-string v0, "phones"
 
-    .line 4
-    iput-boolean p3, p0, Lmif;->c:Z
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "contacts"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lpf9;->y()V
 
     return-void
+
+    :cond_0
+    invoke-static {p1}, Lzz;->d(Lpf9;)Lzz;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmif;->c:Ljava/util/List;
+
+    return-void
+
+    :cond_1
+    new-instance p2, Ljava/util/HashMap;
+
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p2, p0, Lmif;->o:Ljava/util/Map;
+
+    invoke-static {p1}, Lg0i;->n(Lpf9;)I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p2, :cond_2
+
+    iget-object v1, p0, Lmif;->o:Ljava/util/Map;
+
+    invoke-virtual {p1}, Lpf9;->u0()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Lpf9;->r0()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Lmif;->c:Ljava/util/List;
+
+    invoke-static {v0}, Lhuh;->c(Ljava/util/Collection;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lmif;->o:Ljava/util/Map;
+
+    invoke-static {v1}, Lhuh;->d(Ljava/util/Map;)I
+
+    move-result v1
+
+    const-string v2, ", phones="
+
+    const-string v3, "}"
+
+    const-string v4, "{contacts="
+
+    invoke-static {v4, v0, v2, v1, v3}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

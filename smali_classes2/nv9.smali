@@ -1,135 +1,71 @@
-.class public final Lnv9;
-.super Lure;
+.class public abstract synthetic Lnv9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpc6;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
-    .locals 0
-
-    iput-object p2, p0, Lnv9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnv9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lnv9;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lnv9;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lnv9;
-
-    iget-object p0, p0, Lnv9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    invoke-direct {v0, p2, p0}, Lnv9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
-
-    iput-object p1, v0, Lnv9;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 4
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnv9;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object p0, p0, Lnv9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    iget-object v0, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->v0:Lcic;
-
-    sget-object v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lxi7;
-
-    const/4 v2, 0x7
-
-    aget-object v1, v1, v2
-
-    invoke-interface {v0, p0, v1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+    invoke-static {}, Lmv9;->values()[Lmv9;
 
     move-result-object v0
 
-    check-cast v0, Lvv9;
+    array-length v0, v0
 
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    new-array v0, v0, [I
 
-    move-result v1
+    const/4 v1, 0x1
 
-    const/16 v2, 0x8
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v1, :cond_0
+    :catch_0
+    const/4 v2, 0x2
 
-    move v1, v3
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto :goto_0
+    :catch_1
+    sput-object v0, Lnv9;->$EnumSwitchMapping$0:[I
 
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    invoke-virtual {v0, v1}, Lvv9;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Ltqa;
+    invoke-static {}, Ltxg;->values()[Ltxg;
 
     move-result-object v0
 
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    array-length v0, v0
 
-    move-result v1
+    new-array v0, v0, [I
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x3
 
-    move v2, v3
+    :try_start_2
+    aput v1, v0, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    :cond_1
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    :catch_2
+    const/4 v1, 0x4
 
-    iget-object v0, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->I0:Lx9d;
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Ltqa;
+    :catch_3
+    sput-object v0, Lnv9;->$EnumSwitchMapping$1:[I
 
-    move-result-object p0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p0, p1}, Lx9d;->e(Ltqa;Ljava/util/List;)V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-void
 .end method

@@ -3,26 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqm3;
+.implements Lji6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-.field public final synthetic c:Z
+.field public final synthetic c:Ljava/io/Serializable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ZI)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/io/Serializable;I)V
     .locals 0
 
     iput p3, p0, Lru/ok/android/externcalls/sdk/d;->a:I
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/d;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/d;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/d;->c:Z
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/d;->c:Ljava/io/Serializable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,56 +31,42 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
     iget v0, p0, Lru/ok/android/externcalls/sdk/d;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/d;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/d;->c:Ljava/io/Serializable;
 
-    check-cast v0, Lt0e;
+    check-cast v0, Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/d;->c:Z
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/d;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    check-cast p1, Lsg1;
+    invoke-static {v1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->d(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ljava/util/Map;
 
-    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->w(Lt0e;ZLsg1;)V
+    move-result-object v0
 
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/d;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/d;->c:Ljava/io/Serializable;
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+    check-cast v0, Ljava/util/ArrayList;
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/d;->c:Z
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/d;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    check-cast p1, Lsg1;
+    invoke-static {v1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->D(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/util/ArrayList;)Ljava/util/Map;
 
-    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->O(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLsg1;)V
+    move-result-object v0
 
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/d;->b:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/d;->c:Z
-
-    check-cast p1, Lsg1;
-
-    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->a(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLsg1;)V
-
-    return-void
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

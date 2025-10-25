@@ -3,100 +3,130 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ll6b;
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.field public final a:Landroid/view/View;
+
+.field public b:Landroid/view/ViewTreeObserver;
+
+.field public final c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;)V
+.method public constructor <init>(Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh7b;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    iput-object p1, p0, Lh7b;->a:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lh7b;->b:Landroid/view/ViewTreeObserver;
+
+    iput-object p2, p0, Lh7b;->c:Ljava/lang/Runnable;
 
     return-void
 .end method
 
+.method public static a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    new-instance v0, Lh7b;
+
+    invoke-direct {v0, p0, p1}, Lh7b;-><init>(Landroid/view/View;Ljava/lang/Runnable;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "view == null"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
 
 # virtual methods
-.method public final W(Lg8b;Z)Z
-    .locals 3
+.method public final b()V
+    .locals 2
 
-    sget-object v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->B0:[Lxi7;
+    iget-object v0, p0, Lh7b;->b:Landroid/view/ViewTreeObserver;
 
-    iget-object p0, p0, Lh7b;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    iget-object v0, p0, Lone/me/chats/picker/chats/PickerChatsListWidget;->X:Lfr;
-
-    sget-object v1, Lone/me/chats/picker/chats/PickerChatsListWidget;->B0:[Lxi7;
-
-    const/4 v2, 0x2
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v0, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
 
     move-result v0
 
+    iget-object v1, p0, Lh7b;->a:Landroid/view/View;
+
     if-eqz v0, :cond_0
 
-    const/4 p0, 0x0
+    iget-object v0, p0, Lh7b;->b:Landroid/view/ViewTreeObserver;
 
-    return p0
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lone/me/chats/picker/chats/PickerChatsListWidget;->Y:Lbc6;
-
-    if-eqz v0, :cond_1
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {v0, v1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->B0()Ls6b;
+    invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->A0()Lzc2;
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    move-result-object p0
+    :goto_0
+    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p1, p2, p0, v1}, Ls6b;->q(Lg8b;ZLzc2;Z)V
-
-    return v1
+    return-void
 .end method
 
-.method public final g0(Lg8b;Z)V
-    .locals 2
+.method public final onPreDraw()Z
+    .locals 1
 
-    sget-object v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->B0:[Lxi7;
+    invoke-virtual {p0}, Lh7b;->b()V
 
-    iget-object p0, p0, Lh7b;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    iget-object v0, p0, Lh7b;->c:Ljava/lang/Runnable;
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->B0()Ls6b;
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->A0()Lzc2;
+    return v0
+.end method
 
-    move-result-object p0
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
 
-    const/4 v1, 0x1
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    invoke-virtual {v0, p1, p2, p0, v1}, Ls6b;->q(Lg8b;ZLzc2;Z)V
+    move-result-object p1
+
+    iput-object p1, p0, Lh7b;->b:Landroid/view/ViewTreeObserver;
+
+    return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lh7b;->b()V
 
     return-void
 .end method

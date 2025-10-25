@@ -46,13 +46,13 @@
 .end method
 
 .method private add(Ljava/lang/String;Lorg/webrtc/Metrics$HistogramInfo;)V
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/Metrics;->map:Ljava/util/Map;
+    iget-object v0, p0, Lorg/webrtc/Metrics;->map:Ljava/util/Map;
 
-    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

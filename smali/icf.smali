@@ -1,102 +1,136 @@
 .class public final Licf;
-.super Ljava/lang/Object;
+.super Lnje;
 .source "SourceFile"
 
 # interfaces
-.implements Lxu0;
-
-
-# static fields
-.field public static final b:Licf;
-
-
-# instance fields
-.field public final a:Lp37;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Licf;
-
-    sget-object v1, Lqqc;->Z:Lqqc;
-
-    invoke-direct {v0, v1}, Licf;-><init>(Lqqc;)V
-
-    sput-object v0, Licf;->b:Licf;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqqc;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {p1}, Lp37;->a(Ljava/util/Map;)Lp37;
-
-    move-result-object p1
-
-    iput-object p1, p0, Licf;->a:Lp37;
-
-    return-void
-.end method
+.implements Lq0f;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final getValue()Ljava/lang/Object;
+    .locals 7
 
-    if-ne p0, p1, :cond_0
+    monitor-enter p0
 
-    const/4 p0, 0x1
+    :try_start_0
+    iget-object v0, p0, Lnje;->q0:[Ljava/lang/Object;
 
-    return p0
+    iget-wide v1, p0, Lnje;->r0:J
 
-    :cond_0
-    if-eqz p1, :cond_2
+    invoke-virtual {p0}, Lnje;->s()J
 
-    const-class v0, Licf;
+    move-result-wide v3
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v5, p0, Lnje;->t0:I
 
-    move-result-object v1
+    int-to-long v5, v5
 
-    if-eq v0, v1, :cond_1
+    add-long/2addr v3, v5
 
-    goto :goto_0
+    iget-wide v5, p0, Lnje;->r0:J
 
-    :cond_1
-    check-cast p1, Licf;
+    sub-long/2addr v3, v5
 
-    iget-object p1, p1, Licf;->a:Lp37;
+    long-to-int v3, v3
 
-    iget-object p0, p0, Licf;->a:Lp37;
+    int-to-long v3, v3
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    add-long/2addr v1, v3
 
-    invoke-static {p0, p1}, Lte2;->k(Ljava/util/Map;Ljava/lang/Object;)Z
+    const-wide/16 v3, 0x1
 
-    move-result p0
+    sub-long/2addr v1, v3
 
-    return p0
+    invoke-static {v0, v1, v2}, Loje;->c([Ljava/lang/Object;J)Ljava/lang/Object;
 
-    :cond_2
-    :goto_0
-    const/4 p0, 0x0
+    move-result-object v0
 
-    return p0
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public final z(I)V
+    .locals 7
 
-    iget-object p0, p0, Licf;->a:Lp37;
+    monitor-enter p0
 
-    invoke-virtual {p0}, Lp37;->hashCode()I
+    :try_start_0
+    iget-object v0, p0, Lnje;->q0:[Ljava/lang/Object;
 
-    move-result p0
+    iget-wide v1, p0, Lnje;->r0:J
 
-    return p0
+    invoke-virtual {p0}, Lnje;->s()J
+
+    move-result-wide v3
+
+    iget v5, p0, Lnje;->t0:I
+
+    int-to-long v5, v5
+
+    add-long/2addr v3, v5
+
+    iget-wide v5, p0, Lnje;->r0:J
+
+    sub-long/2addr v3, v5
+
+    long-to-int v3, v3
+
+    int-to-long v3, v3
+
+    add-long/2addr v1, v3
+
+    const-wide/16 v3, 0x1
+
+    sub-long/2addr v1, v3
+
+    invoke-static {v0, v1, v2}, Loje;->c([Ljava/lang/Object;J)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lnje;->h(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
 .end method

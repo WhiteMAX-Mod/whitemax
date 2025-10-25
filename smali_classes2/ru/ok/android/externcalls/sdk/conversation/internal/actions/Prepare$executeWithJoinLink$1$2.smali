@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqc6;
+.implements Laj6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;->invoke()Lk2e;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;->invoke()Lwpe;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lqc6;"
+        "Laj6;"
     }
 .end annotation
 
@@ -35,9 +35,9 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
         "it",
-        "Lzua;",
+        "Ln9b;",
         "apply",
-        "(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lzua;",
+        "(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Ln9b;",
         "<anonymous>"
     }
     k = 0x3
@@ -89,28 +89,28 @@
     .line 2
     check-cast p1, Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1$2;->apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lzua;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1$2;->apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Ln9b;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public final apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lzua;
-    .locals 0
+.method public final apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Ln9b;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
             ")",
-            "Lzua;"
+            "Ln9b;"
         }
     .end annotation
 
     .line 1
-    new-instance p0, Lzua;
+    new-instance v0, Ln9b;
 
-    invoke-direct {p0, p1}, Lzua;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
+    invoke-direct {v0, p1}, Ln9b;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
 
-    return-object p0
+    return-object v0
 .end method

@@ -7,11 +7,11 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    sget v0, Lq2c;->preferenceScreenStyle:I
+    sget v0, Lekc;->preferenceScreenStyle:I
 
     const v1, 0x101008b
 
-    invoke-static {v0, v1, p1}, Ln2e;->k(IILandroid/content/Context;)I
+    invoke-static {v0, v1, p1}, Lt0i;->d(IILandroid/content/Context;)I
 
     move-result v0
 

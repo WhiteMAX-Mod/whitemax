@@ -1,8 +1,7 @@
-.class public interface abstract Ljbg;
+.class public abstract Ljbg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract a(Lkotlinx/coroutines/internal/Segment;I)V
-.end method
+# interfaces
+.implements Ljava/util/Collection;
+.implements Lir7;

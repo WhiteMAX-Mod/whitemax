@@ -44,15 +44,15 @@
 
     if-ne v0, v2, :cond_1
 
-    iget p0, p0, Lorg/webrtc/Size;->height:I
+    iget v0, p0, Lorg/webrtc/Size;->height:I
 
     iget p1, p1, Lorg/webrtc/Size;->height:I
 
-    if-ne p0, p1, :cond_1
+    if-ne v0, p1, :cond_1
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_1
     return v1
@@ -69,35 +69,35 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    iget p0, p0, Lorg/webrtc/Size;->height:I
+    iget v0, p0, Lorg/webrtc/Size;->height:I
 
-    add-int/2addr v1, p0
+    add-int/2addr v1, v0
 
     return v1
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     iget v0, p0, Lorg/webrtc/Size;->width:I
 
-    iget p0, p0, Lorg/webrtc/Size;->height:I
+    iget v1, p0, Lorg/webrtc/Size;->height:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v0, "x"
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

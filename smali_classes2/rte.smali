@@ -1,84 +1,134 @@
 .class public final Lrte;
-.super Loi0;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final b:Z
+.field public X:I
+
+.field public final synthetic Y:I
+
+.field public final synthetic Z:Lote;
+
+.field public final synthetic q0:Ltg7;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(ILote;Ltg7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Loi0;-><init>()V
+    iput p1, p0, Lrte;->Y:I
 
-    iput-boolean p1, p0, Lrte;->b:Z
+    iput-object p2, p0, Lrte;->Z:Lote;
+
+    iput-object p3, p0, Lrte;->q0:Ltg7;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lq54;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lrte;
+    invoke-virtual {p0, p1, p2}, Lrte;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
+
+    check-cast p1, Lrte;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lrte;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lrte;
+
+    iget-object v0, p0, Lrte;->Z:Lote;
+
+    iget-object v1, p0, Lrte;->q0:Ltg7;
+
+    iget v2, p0, Lrte;->Y:I
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lrte;-><init>(ILote;Ltg7;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lrte;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    check-cast p1, Lrte;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-boolean p0, p0, Lrte;->b:Z
+    iget p1, p0, Lrte;->Y:I
 
-    iget-boolean p1, p1, Lrte;->b:Z
+    int-to-long v2, p1
 
-    if-eq p0, p1, :cond_2
+    const-wide/16 v4, 0x64
 
-    :goto_0
-    const/4 p0, 0x0
+    mul-long/2addr v2, v4
 
-    return p0
+    iput v1, p0, Lrte;->X:I
+
+    invoke-static {v2, v3, p0}, Lqyi;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    :goto_1
-    const/4 p0, 0x1
+    :goto_0
+    iget-object p1, p0, Lrte;->Z:Lote;
 
-    return p0
-.end method
+    iget-object v0, p0, Lrte;->q0:Ltg7;
 
-.method public final hashCode()I
-    .locals 0
+    invoke-virtual {p1, v0}, Lote;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-boolean p0, p0, Lrte;->b:Z
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "SyncMutedChatsEvent(isSuccessful="
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lrte;->b:Z
-
-    invoke-static {v0, v1, p0}, Lz7e;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

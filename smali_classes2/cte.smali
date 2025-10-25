@@ -1,193 +1,176 @@
 .class public final Lcte;
-.super Lcy3;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public X:I
 
-.field public final o:Lo88;
+.field public final synthetic Y:Liu7;
+
+.field public final synthetic Z:Lete;
+
+.field public final synthetic q0:Liu7;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Liu7;Lete;Liu7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcte;->Y:Liu7;
 
-    .line 1
-    invoke-direct {p0, v0}, Lcte;-><init>(I)V
+    iput-object p2, p0, Lcte;->Z:Lete;
 
-    return-void
-.end method
+    iput-object p3, p0, Lcte;->q0:Liu7;
 
-.method public constructor <init>(I)V
-    .locals 1
+    const/4 p1, 0x2
 
-    .line 2
-    new-instance p1, Lo88;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lo88;-><init>(I)V
-
-    .line 3
-    invoke-direct {p0}, Lcy3;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Lcte;->o:Lo88;
-
-    .line 5
-    const-class p1, Lcte;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 6
-    iput-object p1, p0, Lcte;->X:Ljava/lang/String;
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-object p0, p0, Lcte;->o:Lo88;
+    check-cast p1, Lq54;
 
-    invoke-virtual {p0}, Leh;->a()V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lcte;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lcte;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lcte;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final f(Lcy3;Lxx3;)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-object p0, p0, Lcte;->o:Lo88;
+    new-instance p1, Lcte;
 
-    invoke-virtual {p0, p1, p2}, Leh;->f(Lcy3;Lxx3;)V
+    iget-object v0, p0, Lcte;->Z:Lete;
 
-    return-void
+    iget-object v1, p0, Lcte;->q0:Liu7;
+
+    iget-object v2, p0, Lcte;->Y:Liu7;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lcte;-><init>(Liu7;Lete;Liu7;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLay3;)V
-    .locals 11
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    sget-object v0, Lqz7;->o:Lqz7;
+    iget v0, p0, Lcte;->X:I
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
-    if-nez p2, :cond_2
+    const/4 v2, 0x1
 
-    if-nez p4, :cond_2
+    sget-object v3, Lr54;->a:Lr54;
 
-    iget-object p0, p0, Lcte;->X:Ljava/lang/String;
+    if-eqz v0, :cond_2
 
-    sget-object p1, Ljtg;->g:Loja;
+    if-eq v0, v2, :cond_1
 
-    if-nez p1, :cond_0
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p1, v0}, Loja;->a(Lqz7;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    const-string p2, "Already swiped controller manually, skip performChange"
-
-    invoke-virtual {p1, v0, p0, p2, v1}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    invoke-virtual/range {p5 .. p5}, Lay3;->n()V
-
-    return-void
-
     :cond_2
-    if-nez p2, :cond_5
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    if-eqz p4, :cond_5
+    iget-object p1, p0, Lcte;->Y:Liu7;
 
-    iget-object p0, p0, Lcte;->X:Ljava/lang/String;
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
-    sget-object v2, Ljtg;->g:Loja;
+    move-result-object p1
 
-    if-nez v2, :cond_3
+    check-cast p1, Ld33;
+
+    iget-object v0, p0, Lcte;->Z:Lete;
+
+    iget-wide v4, v0, Lete;->a:J
+
+    check-cast p1, Ld43;
+
+    invoke-virtual {p1, v4, v5}, Ld43;->N(J)Ln0d;
+
+    move-result-object p1
+
+    new-instance v0, Lx23;
+
+    const/16 v4, 0xa
+
+    invoke-direct {v0, p1, v4}, Lx23;-><init>(Lty5;I)V
+
+    iput v2, p0, Lcte;->X:I
+
+    invoke-static {v0, p0}, Ltq;->o(Lty5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v3, :cond_3
 
     goto :goto_1
 
     :cond_3
-    invoke-virtual {v2, v0}, Loja;->a(Lqz7;)Z
+    :goto_0
+    check-cast p1, Lla2;
 
-    move-result v3
+    iget-object v0, p0, Lcte;->q0:Liu7;
 
-    if-eqz v3, :cond_4
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    const-string v3, "Showing controller without animation"
+    move-result-object v0
 
-    invoke-virtual {v2, v0, p0, v3, v1}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v0, Lst9;
+
+    iput v1, p0, Lcte;->X:I
+
+    invoke-virtual {v0, p1, p0}, Lst9;->R(Lla2;Lsgf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v3, :cond_4
+
+    :goto_1
+    return-object v3
 
     :cond_4
-    :goto_1
-    new-instance v4, Li2e;
+    :goto_2
+    sget-object p1, Lccg;->a:Lccg;
 
-    const/4 p0, 0x1
-
-    invoke-direct {v4, p0}, Li2e;-><init>(Z)V
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    move-object v7, p3
-
-    move v8, p4
-
-    move-object/from16 v9, p5
-
-    invoke-virtual/range {v4 .. v9}, Li2e;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLay3;)V
-
-    return-void
-
-    :cond_5
-    iget-object v5, p0, Lcte;->o:Lo88;
-
-    move-object v6, p1
-
-    move-object v7, p2
-
-    move-object v8, p3
-
-    move v9, p4
-
-    move-object/from16 v10, p5
-
-    invoke-virtual/range {v5 .. v10}, Leh;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLay3;)V
-
-    return-void
-.end method
-
-.method public final h(Landroid/os/Bundle;)V
-    .locals 0
-
-    iget-object p0, p0, Lcte;->o:Lo88;
-
-    invoke-virtual {p0, p1}, Leh;->h(Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public final i(Landroid/os/Bundle;)V
-    .locals 0
-
-    iget-object p0, p0, Lcte;->o:Lo88;
-
-    invoke-virtual {p0, p1}, Leh;->i(Landroid/os/Bundle;)V
-
-    return-void
+    return-object p1
 .end method

@@ -69,13 +69,13 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lorg/json/JSONException;
+    new-instance p1, Lorg/json/JSONException;
 
-    const-string p1, "Value out of sequence."
+    const-string v0, "Value out of sequence."
 
-    invoke-direct {p0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
     :goto_0
@@ -92,7 +92,15 @@
 
     invoke-interface {v0, v1}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
 
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
+
     :cond_2
+    :goto_1
     iget-object v0, p0, Lorg/json/JSONWriter;->writer:Ljava/lang/Appendable;
 
     invoke-interface {v0, p1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
@@ -114,23 +122,21 @@
 
     return-object p0
 
-    :catch_0
-    move-exception p0
+    :goto_2
+    new-instance v0, Lorg/json/JSONException;
 
-    new-instance p1, Lorg/json/JSONException;
+    invoke-direct {v0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-direct {p1, p0}, Lorg/json/JSONException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
+    throw v0
 
     :cond_4
-    new-instance p0, Lorg/json/JSONException;
+    new-instance p1, Lorg/json/JSONException;
 
-    const-string p1, "Null pointer"
+    const-string v0, "Null pointer"
 
-    invoke-direct {p0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method private end(CC)Lorg/json/JSONWriter;
@@ -145,11 +151,11 @@
 
     if-eq v0, p1, :cond_1
 
-    new-instance p0, Lorg/json/JSONException;
+    new-instance p2, Lorg/json/JSONException;
 
-    const/16 p2, 0x61
+    const/16 v0, 0x61
 
-    if-ne p1, p2, :cond_0
+    if-ne p1, v0, :cond_0
 
     const-string p1, "Misplaced endArray."
 
@@ -159,9 +165,9 @@
     const-string p1, "Misplaced endObject."
 
     :goto_0
-    invoke-direct {p0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p2
 
     :cond_1
     invoke-direct {p0, p1}, Lorg/json/JSONWriter;->pop(C)V
@@ -180,13 +186,13 @@
     return-object p0
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    new-instance p1, Lorg/json/JSONException;
+    new-instance p2, Lorg/json/JSONException;
 
-    invoke-direct {p1, p0}, Lorg/json/JSONException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {p2, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/Throwable;)V
 
-    throw p1
+    throw p2
 .end method
 
 .method private pop(C)V
@@ -251,18 +257,18 @@
     return-void
 
     :cond_3
-    new-instance p0, Lorg/json/JSONException;
+    new-instance p1, Lorg/json/JSONException;
 
-    invoke-direct {p0, v1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_4
-    new-instance p0, Lorg/json/JSONException;
+    new-instance p1, Lorg/json/JSONException;
 
-    invoke-direct {p0, v1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method private push(Lorg/json/JSONObject;)V
@@ -302,13 +308,13 @@
     return-void
 
     :cond_1
-    new-instance p0, Lorg/json/JSONException;
+    new-instance p1, Lorg/json/JSONException;
 
-    const-string p1, "Nesting too deep."
+    const-string v0, "Nesting too deep."
 
-    invoke-direct {p0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public static valueToString(Ljava/lang/Object;)Ljava/lang/String;
@@ -544,13 +550,13 @@
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lorg/json/JSONException;
+    new-instance v0, Lorg/json/JSONException;
 
-    const-string v0, "Misplaced array."
+    const-string v1, "Misplaced array."
 
-    invoke-direct {p0, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_1
     :goto_0
@@ -583,9 +589,9 @@
 
     invoke-direct {p0, v0, v1}, Lorg/json/JSONWriter;->end(CC)Lorg/json/JSONWriter;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public endObject()Lorg/json/JSONWriter;
@@ -602,9 +608,9 @@
 
     invoke-direct {p0, v0, v1}, Lorg/json/JSONWriter;->end(CC)Lorg/json/JSONWriter;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public key(Ljava/lang/String;)Lorg/json/JSONWriter;
@@ -654,7 +660,15 @@
 
     invoke-interface {v0, v1}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
 
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
+
     :cond_0
+    :goto_0
     iget-object v0, p0, Lorg/json/JSONWriter;->writer:Ljava/lang/Appendable;
 
     invoke-static {p1}, Lorg/json/JSONObject;->quote(Ljava/lang/String;)Ljava/lang/String;
@@ -680,54 +694,52 @@
     return-object p0
 
     :cond_1
-    new-instance p0, Lorg/json/JSONException;
+    new-instance v1, Lorg/json/JSONException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, "\""
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v1
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :catch_0
-    move-exception p0
+    :goto_1
+    new-instance v0, Lorg/json/JSONException;
 
+    invoke-direct {v0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_2
     new-instance p1, Lorg/json/JSONException;
 
-    invoke-direct {p1, p0}, Lorg/json/JSONException;-><init>(Ljava/lang/Throwable;)V
+    const-string v0, "Misplaced key."
+
+    invoke-direct {p1, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :cond_2
-    new-instance p0, Lorg/json/JSONException;
-
-    const-string p1, "Misplaced key."
-
-    invoke-direct {p0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
     :cond_3
-    new-instance p0, Lorg/json/JSONException;
+    new-instance p1, Lorg/json/JSONException;
 
-    const-string p1, "Null key."
+    const-string v0, "Null key."
 
-    invoke-direct {p0, p1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public object()Lorg/json/JSONWriter;
@@ -760,13 +772,13 @@
     goto :goto_0
 
     :cond_1
-    new-instance p0, Lorg/json/JSONException;
+    new-instance v0, Lorg/json/JSONException;
 
-    const-string v0, "Misplaced object."
+    const-string v1, "Misplaced object."
 
-    invoke-direct {p0, v0}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lorg/json/JSONException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :cond_2
     :goto_0
@@ -802,9 +814,9 @@
 
     invoke-virtual {p0, p1}, Lorg/json/JSONWriter;->value(Ljava/lang/Object;)Lorg/json/JSONWriter;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public value(J)Lorg/json/JSONWriter;
@@ -822,9 +834,9 @@
 
     invoke-direct {p0, p1}, Lorg/json/JSONWriter;->append(Ljava/lang/String;)Lorg/json/JSONWriter;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public value(Ljava/lang/Object;)Lorg/json/JSONWriter;
@@ -842,9 +854,9 @@
 
     invoke-direct {p0, p1}, Lorg/json/JSONWriter;->append(Ljava/lang/String;)Lorg/json/JSONWriter;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public value(Z)Lorg/json/JSONWriter;
@@ -868,7 +880,7 @@
     :goto_0
     invoke-direct {p0, p1}, Lorg/json/JSONWriter;->append(Ljava/lang/String;)Lorg/json/JSONWriter;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

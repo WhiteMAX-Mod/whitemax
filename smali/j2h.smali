@@ -3,172 +3,158 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt2h;
+.implements Ls12;
 
 
 # instance fields
-.field public final synthetic a:Landroid/widget/FrameLayout;
+.field public final a:Ls12;
 
-.field public final synthetic b:Landroid/view/LayoutInflater;
+.field public final b:Lsdd;
 
-.field public final synthetic c:Landroid/view/ViewGroup;
+.field public final c:Ll2h;
 
-.field public final synthetic d:Landroid/os/Bundle;
-
-.field public final synthetic e:Lrwa;
+.field public final o:Lk2h;
 
 
 # direct methods
-.method public constructor <init>(Lrwa;Landroid/widget/FrameLayout;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)V
-    .locals 0
+.method public constructor <init>(Ls12;Lk2h;Le2d;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj2h;->e:Lrwa;
+    iput-object p1, p0, Lj2h;->a:Ls12;
 
-    iput-object p2, p0, Lj2h;->a:Landroid/widget/FrameLayout;
+    iput-object p2, p0, Lj2h;->o:Lk2h;
 
-    iput-object p3, p0, Lj2h;->b:Landroid/view/LayoutInflater;
+    new-instance p2, Lsdd;
 
-    iput-object p4, p0, Lj2h;->c:Landroid/view/ViewGroup;
+    invoke-interface {p1}, Ls12;->f()Lx02;
 
-    iput-object p5, p0, Lj2h;->d:Landroid/os/Bundle;
+    move-result-object v0
+
+    invoke-direct {p2, v0, p3}, Lsdd;-><init>(Lx02;Le2d;)V
+
+    iput-object p2, p0, Lj2h;->b:Lsdd;
+
+    new-instance p2, Ll2h;
+
+    invoke-interface {p1}, Ls12;->n()Lq12;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ll2h;-><init>(Lq12;)V
+
+    iput-object p2, p0, Lj2h;->c:Ll2h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 0
+.method public final b(Ljhg;)V
+    .locals 1
 
-    const/4 p0, 0x2
+    invoke-static {}, Laud;->a()V
 
-    return p0
-.end method
+    iget-object v0, p0, Lj2h;->o:Lk2h;
 
-.method public final b()V
-    .locals 7
-
-    iget-object v0, p0, Lj2h;->a:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
-
-    iget-object v1, p0, Lj2h;->e:Lrwa;
-
-    iget-object v1, v1, Lrwa;->a:Ljava/lang/Object;
-
-    check-cast v1, Lz0b;
-
-    iget-object v2, p0, Lj2h;->b:Landroid/view/LayoutInflater;
-
-    iget-object v3, p0, Lj2h;->c:Landroid/view/ViewGroup;
-
-    iget-object p0, p0, Lj2h;->d:Landroid/os/Bundle;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    new-instance v4, Landroid/os/Bundle;
-
-    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
-
-    invoke-static {p0, v4}, Lx4h;->C(Landroid/os/Bundle;Landroid/os/Bundle;)V
-
-    invoke-static {}, Landroid/os/StrictMode;->getThreadPolicy()Landroid/os/StrictMode$ThreadPolicy;
-
-    move-result-object v5
-
-    new-instance v6, Landroid/os/StrictMode$ThreadPolicy$Builder;
-
-    invoke-direct {v6, v5}, Landroid/os/StrictMode$ThreadPolicy$Builder;-><init>(Landroid/os/StrictMode$ThreadPolicy;)V
-
-    invoke-virtual {v6}, Landroid/os/StrictMode$ThreadPolicy$Builder;->permitAll()Landroid/os/StrictMode$ThreadPolicy$Builder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/os/StrictMode$ThreadPolicy$Builder;->build()Landroid/os/StrictMode$ThreadPolicy;
-
-    move-result-object v6
-
-    invoke-static {v6}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :try_start_1
-    iget-object v1, v1, Lz0b;->c:Ljava/lang/Object;
-
-    check-cast v1, Lg7h;
-
-    new-instance v6, Lw4a;
-
-    invoke-direct {v6, v2}, Lw4a;-><init>(Ljava/lang/Object;)V
-
-    new-instance v2, Lw4a;
-
-    invoke-direct {v2, v3}, Lw4a;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Lk1h;->Y()Landroid/os/Parcel;
-
-    move-result-object v3
-
-    invoke-static {v3, v6}, Ll4h;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-static {v3, v2}, Ll4h;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-static {v3, v4}, Ll4h;->b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v1, v3, v2}, Lk1h;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lw4a;->c0(Landroid/os/IBinder;)Lny6;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    invoke-static {v5}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
-
-    invoke-static {v4, p0}, Lx4h;->C(Landroid/os/Bundle;Landroid/os/Bundle;)V
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
-
-    invoke-static {v2}, Lw4a;->d0(Lny6;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/view/View;
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lk2h;->b(Ljhg;)V
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception p0
+.method public final d(Ljhg;)V
+    .locals 1
 
-    :try_start_3
-    invoke-static {v5}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
+    invoke-static {}, Laud;->a()V
 
-    throw p0
-    :try_end_3
-    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
+    iget-object v0, p0, Lj2h;->o:Lk2h;
 
-    :catch_0
-    move-exception p0
+    invoke-virtual {v0, p1}, Lk2h;->d(Ljhg;)V
 
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+    return-void
+.end method
 
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+.method public final e()Lzha;
+    .locals 1
 
-    throw v0
+    iget-object v0, p0, Lj2h;->a:Ls12;
+
+    invoke-interface {v0}, Ls12;->e()Lzha;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final f()Lx02;
+    .locals 1
+
+    iget-object v0, p0, Lj2h;->b:Lsdd;
+
+    return-object v0
+.end method
+
+.method public final h(Ljhg;)V
+    .locals 1
+
+    invoke-static {}, Laud;->a()V
+
+    iget-object v0, p0, Lj2h;->o:Lk2h;
+
+    invoke-virtual {v0, p1}, Lk2h;->h(Ljhg;)V
+
+    return-void
+.end method
+
+.method public final j(Ljava/util/ArrayList;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation not supported by VirtualCamera."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final k(Ljava/util/ArrayList;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation not supported by VirtualCamera."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final l()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final n()Lq12;
+    .locals 1
+
+    iget-object v0, p0, Lj2h;->c:Ll2h;
+
+    return-object v0
+.end method
+
+.method public final o(Ljhg;)V
+    .locals 1
+
+    invoke-static {}, Laud;->a()V
+
+    iget-object v0, p0, Lj2h;->o:Lk2h;
+
+    invoke-virtual {v0, p1}, Lk2h;->o(Ljhg;)V
+
+    return-void
 .end method

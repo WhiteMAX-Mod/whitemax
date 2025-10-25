@@ -18,26 +18,26 @@
 
 # virtual methods
 .method public executeBadge(Landroid/content/Context;Landroid/content/ComponentName;I)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lme/leolin/shortcutbadger/ShortcutBadgeException;
         }
     .end annotation
 
-    const-string p0, "app_badge_count"
+    const-string v0, "app_badge_count"
 
-    invoke-static {p3, p0}, Lyv7;->d(ILjava/lang/String;)Landroid/os/Bundle;
+    invoke-static {p3, v0}, Li57;->e(ILjava/lang/String;)Landroid/os/Bundle;
 
-    move-result-object p0
+    move-result-object p3
 
-    const-string p3, "app_badge_component_name"
+    const-string v0, "app_badge_component_name"
 
     invoke-virtual {p2}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-virtual {p0, p3, p2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p3, v0, p2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -49,17 +49,17 @@
 
     move-result-object p2
 
-    const-string p3, "setAppUnreadCount"
+    const-string v0, "setAppUnreadCount"
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, p2, p3, v0, p0}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    invoke-virtual {p1, p2, v0, v1, p3}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     return-void
 .end method
 
 .method public getSupportLaunchers()Ljava/util/List;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -69,11 +69,11 @@
         }
     .end annotation
 
-    new-instance p0, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/ArrayList;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {p0, v0}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    return-object p0
+    return-object v0
 .end method

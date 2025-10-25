@@ -147,45 +147,45 @@
 .end method
 
 .method private a(Ljava/lang/String;Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;Lcom/my/tracker/obfuscated/l;)Lcom/my/tracker/obfuscated/c0$b;
-    .locals 2
+    .locals 3
 
     .line 94
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/t;->i:Lcom/my/tracker/obfuscated/l0;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/t;->i:Lcom/my/tracker/obfuscated/l0;
 
     .line 95
     invoke-static {}, Lcom/my/tracker/obfuscated/x0;->a()J
 
-    move-result-wide v0
+    move-result-wide v1
 
     .line 96
-    invoke-virtual {p0, p3, v0, v1}, Lcom/my/tracker/obfuscated/l0;->a(Lcom/my/tracker/obfuscated/r0;J)Z
+    invoke-virtual {v0, p3, v1, v2}, Lcom/my/tracker/obfuscated/l0;->a(Lcom/my/tracker/obfuscated/r0;J)Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     .line 97
-    new-instance p0, Lcom/my/tracker/obfuscated/m;
+    new-instance v0, Lcom/my/tracker/obfuscated/m;
 
-    invoke-direct {p0, p3}, Lcom/my/tracker/obfuscated/m;-><init>(Lcom/my/tracker/obfuscated/l;)V
+    invoke-direct {v0, p3}, Lcom/my/tracker/obfuscated/m;-><init>(Lcom/my/tracker/obfuscated/l;)V
 
     const/4 p3, 0x1
 
-    invoke-static {p0, p2, p3}, Lcom/my/tracker/obfuscated/c0;->a(Lcom/my/tracker/obfuscated/c0$a;Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;Z)Lcom/my/tracker/obfuscated/c0;
+    invoke-static {v0, p2, p3}, Lcom/my/tracker/obfuscated/c0;->a(Lcom/my/tracker/obfuscated/c0$a;Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;Z)Lcom/my/tracker/obfuscated/c0;
 
-    move-result-object p0
+    move-result-object p2
 
     .line 98
-    invoke-virtual {p0, p1}, Lcom/my/tracker/obfuscated/c0;->a(Ljava/lang/String;)Lcom/my/tracker/obfuscated/c0$b;
+    invoke-virtual {p2, p1}, Lcom/my/tracker/obfuscated/c0;->a(Ljava/lang/String;)Lcom/my/tracker/obfuscated/c0$b;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public static a(Lcom/my/tracker/obfuscated/z0;Lcom/my/tracker/obfuscated/t$a;Landroid/content/Context;)Lcom/my/tracker/obfuscated/t;
@@ -302,9 +302,9 @@
 
     .line 93
     :goto_1
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/t;->h:Lcom/my/tracker/obfuscated/l;
+    iget-object p2, p0, Lcom/my/tracker/obfuscated/t;->h:Lcom/my/tracker/obfuscated/l;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/l;->d()V
+    invoke-virtual {p2}, Lcom/my/tracker/obfuscated/l;->d()V
 
     return-object p1
 .end method
@@ -1140,11 +1140,11 @@
     .locals 2
 
     .line 3
-    new-instance v0, Lrvg;
+    new-instance v0, Ltlg;
 
-    const/16 v1, 0xc
+    const/16 v1, 0x19
 
-    invoke-direct {v0, p0, v1, p1}, Lrvg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Ltlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1208,9 +1208,9 @@
     if-eqz v0, :cond_0
 
     .line 3
-    const-string p0, "EventTracker error: tracker has already been initialized"
+    const-string v0, "EventTracker error: tracker has already been initialized"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
 
     return-void
 
@@ -1272,17 +1272,17 @@
 
     move-result-object v0
 
-    new-instance v1, Ls0h;
+    new-instance v1, Lith;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, p0, v2}, Ls0h;-><init>(Lcom/my/tracker/obfuscated/t;I)V
+    invoke-direct {v1, p0, v2}, Lith;-><init>(Lcom/my/tracker/obfuscated/t;I)V
 
-    new-instance v2, Ls0h;
+    new-instance v2, Lith;
 
     const/4 v3, 0x3
 
-    invoke-direct {v2, p0, v3}, Ls0h;-><init>(Lcom/my/tracker/obfuscated/t;I)V
+    invoke-direct {v2, p0, v3}, Lith;-><init>(Lcom/my/tracker/obfuscated/t;I)V
 
     .line 10
     invoke-virtual {v0, v1, v2}, Lcom/my/tracker/MyTrackerParams;->a(Lcom/my/tracker/obfuscated/n;Lcom/my/tracker/obfuscated/n;)V
@@ -1389,11 +1389,11 @@
     .locals 2
 
     .line 16
-    new-instance v0, Lh1h;
+    new-instance v0, Lzth;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lh1h;-><init>(Lcom/my/tracker/obfuscated/t;I)V
+    invoke-direct {v0, p0, v1}, Lzth;-><init>(Lcom/my/tracker/obfuscated/t;I)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1409,7 +1409,7 @@
     move-result-wide v6
 
     .line 32
-    new-instance v0, Lf1h;
+    new-instance v0, Lyz1;
 
     move-object v1, p0
 
@@ -1419,7 +1419,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v7}, Lf1h;-><init>(Lcom/my/tracker/obfuscated/t;JLjava/lang/String;Lcom/my/tracker/obfuscated/o0$a;J)V
+    invoke-direct/range {v0 .. v7}, Lyz1;-><init>(Lcom/my/tracker/obfuscated/t;JLjava/lang/String;Lcom/my/tracker/obfuscated/o0$a;J)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1435,7 +1435,7 @@
     move-result-wide v4
 
     .line 71
-    new-instance v0, Lx7d;
+    new-instance v0, Lard;
 
     const/4 v6, 0x1
 
@@ -1445,7 +1445,7 @@
 
     move-object v3, p2
 
-    invoke-direct/range {v0 .. v6}, Lx7d;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JI)V
+    invoke-direct/range {v0 .. v6}, Lard;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JI)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1461,7 +1461,7 @@
     move-result-wide v8
 
     .line 50
-    new-instance v0, Ld1h;
+    new-instance v0, Lwth;
 
     const/4 v10, 0x1
 
@@ -1475,7 +1475,7 @@
 
     move-wide/from16 v6, p5
 
-    invoke-direct/range {v0 .. v10}, Ld1h;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;JJJI)V
+    invoke-direct/range {v0 .. v10}, Lwth;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;JJJI)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1491,7 +1491,7 @@
     move-result-wide v4
 
     .line 42
-    new-instance v0, Le1h;
+    new-instance v0, Lb02;
 
     move-object v1, p0
 
@@ -1501,7 +1501,7 @@
 
     move-object v6, p3
 
-    invoke-direct/range {v0 .. v6}, Le1h;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;JLjava/lang/Runnable;)V
+    invoke-direct/range {v0 .. v6}, Lb02;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;JLjava/lang/Runnable;)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1517,7 +1517,7 @@
     move-result-wide v7
 
     .line 62
-    new-instance v0, Lg1h;
+    new-instance v0, Lyth;
 
     move-object v1, p0
 
@@ -1531,7 +1531,7 @@
 
     move-object v6, p5
 
-    invoke-direct/range {v0 .. v8}, Lg1h;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-direct/range {v0 .. v8}, Lyth;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1552,7 +1552,7 @@
     move-result-object v2
 
     .line 24
-    new-instance v0, Le1h;
+    new-instance v0, Lxth;
 
     const/4 v7, 0x1
 
@@ -1562,7 +1562,7 @@
 
     move-object v4, p2
 
-    invoke-direct/range {v0 .. v7}, Le1h;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;JI)V
+    invoke-direct/range {v0 .. v7}, Lxth;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;JI)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1658,15 +1658,15 @@
 
     move-result-object v2
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     if-nez v2, :cond_1
 
     .line 41
     :try_start_1
-    const-string p0, "EventTracker error: iterator is null"
+    const-string p1, "EventTracker error: iterator is null"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     if-eqz v2, :cond_0
 
@@ -1676,7 +1676,7 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_2
 
@@ -1761,9 +1761,14 @@
     :try_start_2
     invoke-interface {v2}, Ljava/io/Closeable;->close()V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     return-void
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_4
 
     :goto_2
     if-eqz v2, :cond_5
@@ -1772,29 +1777,27 @@
     :try_start_3
     invoke-interface {v2}, Ljava/io/Closeable;->close()V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     goto :goto_3
 
-    :catchall_1
-    move-exception p1
+    :catchall_2
+    move-exception v0
 
     :try_start_4
-    invoke-virtual {p0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_5
     :goto_3
-    throw p0
+    throw p1
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    :catchall_2
-    move-exception p0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     .line 55
-    const-string p1, "EventTracker error: "
+    :goto_4
+    const-string v0, "EventTracker error: "
 
-    invoke-static {p1, p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -1821,7 +1824,7 @@
     move-result-wide v3
 
     .line 14
-    new-instance v0, Lrd2;
+    new-instance v0, Llg2;
 
     const/16 v5, 0x8
 
@@ -1829,7 +1832,7 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v0 .. v5}, Lrd2;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
+    invoke-direct/range {v0 .. v5}, Llg2;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1845,7 +1848,7 @@
     move-result-wide v8
 
     .line 16
-    new-instance v0, Ld1h;
+    new-instance v0, Lwth;
 
     const/4 v10, 0x0
 
@@ -1859,7 +1862,7 @@
 
     move-wide/from16 v6, p5
 
-    invoke-direct/range {v0 .. v10}, Ld1h;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;JJJI)V
+    invoke-direct/range {v0 .. v10}, Lwth;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;JJJI)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1880,7 +1883,7 @@
     move-result-object v2
 
     .line 6
-    new-instance v0, Le1h;
+    new-instance v0, Lxth;
 
     const/4 v7, 0x0
 
@@ -1890,7 +1893,7 @@
 
     move-object v4, p2
 
-    invoke-direct/range {v0 .. v7}, Le1h;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;JI)V
+    invoke-direct/range {v0 .. v7}, Lxth;-><init>(Lcom/my/tracker/obfuscated/t;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;JI)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -1987,9 +1990,9 @@
 
     .line 37
     :goto_0
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/t;->h:Lcom/my/tracker/obfuscated/l;
+    iget-object p1, p0, Lcom/my/tracker/obfuscated/t;->h:Lcom/my/tracker/obfuscated/l;
 
-    invoke-virtual {p0}, Lcom/my/tracker/obfuscated/l;->d()V
+    invoke-virtual {p1}, Lcom/my/tracker/obfuscated/l;->d()V
 
     return-void
 .end method
@@ -2024,9 +2027,9 @@
     if-nez v0, :cond_1
 
     .line 7
-    const-string p0, "MyTrackerRepository: no network connection"
+    const-string v0, "MyTrackerRepository: no network connection"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -2062,11 +2065,11 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lrvg;
+    new-instance v0, Ltlg;
 
-    const/16 v1, 0xd
+    const/16 v1, 0x1a
 
-    invoke-direct {v0, p0, v1, p1}, Lrvg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Ltlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -2077,11 +2080,11 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lh1h;
+    new-instance v0, Lzth;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lh1h;-><init>(Lcom/my/tracker/obfuscated/t;I)V
+    invoke-direct {v0, p0, v1}, Lzth;-><init>(Lcom/my/tracker/obfuscated/t;I)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 
@@ -2097,11 +2100,11 @@
     move-result-wide v0
 
     .line 3
-    new-instance v2, Lp50;
+    new-instance v2, Lb60;
 
     const/16 v3, 0x8
 
-    invoke-direct {v2, p0, v0, v1, v3}, Lp50;-><init>(Ljava/lang/Object;JI)V
+    invoke-direct {v2, p0, v0, v1, v3}, Lb60;-><init>(Ljava/lang/Object;JI)V
 
     invoke-static {v2}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/Runnable;)V
 

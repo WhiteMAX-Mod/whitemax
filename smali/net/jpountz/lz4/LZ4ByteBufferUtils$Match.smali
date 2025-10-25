@@ -34,13 +34,13 @@
 
 # virtual methods
 .method public end()I
-    .locals 1
+    .locals 2
 
     iget v0, p0, Lnet/jpountz/lz4/LZ4ByteBufferUtils$Match;->start:I
 
-    iget p0, p0, Lnet/jpountz/lz4/LZ4ByteBufferUtils$Match;->len:I
+    iget v1, p0, Lnet/jpountz/lz4/LZ4ByteBufferUtils$Match;->len:I
 
-    add-int/2addr v0, p0
+    add-int/2addr v0, v1
 
     return v0
 .end method

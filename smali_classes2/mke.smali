@@ -1,201 +1,250 @@
 .class public final Lmke;
-.super Lure;
+.super Landroid/widget/TextView;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic X:Lbc6;
+.field public final a:Landroid/graphics/Paint;
 
-.field public final synthetic Y:J
+.field public final b:Like;
 
-.field public final synthetic Z:Loke;
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Lbc6;JLoke;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 7
 
-    iput-object p1, p0, Lmke;->X:Lbc6;
+    const/4 v0, 0x0
 
-    iput-wide p2, p0, Lmke;->Y:J
+    invoke-direct {p0, p1, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput-object p4, p0, Lmke;->Z:Loke;
+    new-instance p1, Landroid/graphics/Paint;
 
-    const/4 p1, 0x2
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    invoke-direct {p0, p1, p5}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmke;->a:Landroid/graphics/Paint;
+
+    new-instance v1, Like;
+
+    invoke-direct {v1}, Like;-><init>()V
+
+    iput-object v1, p0, Lmke;->b:Like;
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lmke;->c:Z
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v2}, Landroid/view/View;->setWillNotDraw(Z)V
+
+    invoke-virtual {v1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    new-instance v3, Lk4e;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v4}, Lk4e;-><init>(I)V
+
+    iget-object v4, v3, Lk4e;->b:Ljava/lang/Object;
+
+    check-cast v4, Lfke;
+
+    iput-boolean v2, v4, Lfke;->j:Z
+
+    sget-object v5, Ll05;->s0:Lk82;
+
+    invoke-virtual {v5, p0}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object v6
+
+    invoke-interface {v6}, Lv5b;->getText()Leqf;
+
+    move-result-object v6
+
+    iget v6, v6, Leqf;->h:I
+
+    invoke-virtual {v3, v6}, Lk4e;->f(I)V
+
+    invoke-virtual {v5, p0}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lv5b;->getText()Leqf;
+
+    const/4 v5, -0x1
+
+    iput v5, v4, Lfke;->d:I
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    invoke-virtual {v3, v4}, Lk4e;->c(F)V
+
+    const/16 v4, 0x168
+
+    int-to-float v4, v4
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v5
+
+    invoke-static {v4}, Lfhi;->b(F)I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Lk4e;->i(I)V
+
+    invoke-virtual {v3}, Lk4e;->b()Lfke;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Like;->b(Lfke;)V
+
+    iget-boolean v1, v3, Lfke;->i:Z
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, v2, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Z)V
+    .locals 2
 
-    check-cast p1, Ly04;
+    iget-object v0, p0, Lmke;->b:Like;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-eqz p1, :cond_1
 
-    invoke-virtual {p0, p1, p2}, Lmke;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x1
 
-    move-result-object p0
+    iput-boolean v1, p0, Lmke;->c:Z
 
-    check-cast p0, Lmke;
+    if-eqz p1, :cond_0
 
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lmke;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
-
-    new-instance v0, Lmke;
-
-    iget-wide v2, p0, Lmke;->Y:J
-
-    iget-object v4, p0, Lmke;->Z:Loke;
-
-    iget-object v1, p0, Lmke;->X:Lbc6;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lmke;-><init>(Lbc6;JLoke;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    iget-object v0, p0, Lmke;->Z:Loke;
-
-    iget-object v0, v0, Loke;->s0:Lyce;
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-wide v1, p0, Lmke;->Y:J
-
-    iget-object p0, p0, Lmke;->X:Lbc6;
-
-    if-eqz p0, :cond_0
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v1, v2}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-interface {p0, p1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Like;->c()V
 
     :cond_0
-    invoke-virtual {v0}, Lyce;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lyje;
-
-    iget-object p0, p0, Lyje;->a:Ljava/util/List;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    const/16 v3, 0xa
-
-    invoke-static {p0, v3}, Ls73;->O(Ljava/lang/Iterable;I)I
-
-    move-result v3
-
-    invoke-direct {p1, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lt22;
-
-    iget-object v5, v3, Lt22;->b:Lfge;
-
-    iget-wide v6, v3, Lt22;->a:J
-
-    iget-wide v8, v5, Lfge;->a:J
-
-    cmp-long v8, v8, v1
-
-    const/16 v9, 0xbf
-
-    const/4 v10, 0x0
-
-    if-nez v8, :cond_1
-
-    const/4 v3, 0x1
-
-    invoke-static {v5, v4, v3, v10, v9}, Lfge;->l(Lfge;Ljava/util/ArrayList;ZZI)Lfge;
-
-    move-result-object v3
-
-    new-instance v4, Lt22;
-
-    invoke-direct {v4, v6, v7, v3}, Lt22;-><init>(JLfge;)V
-
-    :goto_1
-    move-object v3, v4
-
-    goto :goto_2
+    return-void
 
     :cond_1
-    iget-boolean v8, v5, Lfge;->Z:Z
+    invoke-virtual {v0}, Like;->d()V
 
-    if-eqz v8, :cond_2
+    const/4 p1, 0x0
 
-    invoke-static {v5, v4, v10, v10, v9}, Lfge;->l(Lfge;Ljava/util/ArrayList;ZZI)Lfge;
+    iput-boolean p1, p0, Lmke;->c:Z
 
-    move-result-object v3
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    new-instance v4, Lt22;
+    return-void
+.end method
 
-    invoke-direct {v4, v6, v7, v3}, Lt22;-><init>(JLfge;)V
+.method public final dispatchDraw(Landroid/graphics/Canvas;)V
+    .locals 1
 
-    goto :goto_1
+    invoke-super {p0, p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    :cond_2
-    :goto_2
-    invoke-virtual {p1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-boolean v0, p0, Lmke;->c:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lmke;->b:Like;
+
+    invoke-virtual {v0, p1}, Like;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onAttachedToWindow()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/widget/TextView;->onAttachedToWindow()V
+
+    iget-object v0, p0, Lmke;->b:Like;
+
+    invoke-virtual {v0}, Like;->a()V
+
+    return-void
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+
+    iget-object v0, p0, Lmke;->b:Like;
+
+    invoke-virtual {v0}, Like;->d()V
+
+    return-void
+.end method
+
+.method public final onLayout(ZIIII)V
+    .locals 0
+
+    invoke-super/range {p0 .. p5}, Landroid/widget/TextView;->onLayout(ZIIII)V
+
+    move-object p1, p0
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result p2
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result p3
+
+    iget-object p4, p1, Lmke;->b:Like;
+
+    const/4 p5, 0x0
+
+    invoke-virtual {p4, p5, p5, p2, p3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lmke;->b:Like;
+
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
-    :cond_3
-    new-instance p0, Lyje;
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Lyce;->getValue()Ljava/lang/Object;
+    return p1
 
-    move-result-object v1
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    check-cast v1, Lyje;
-
-    iget-object v1, v1, Lyje;->b:Ljava/util/List;
-
-    invoke-direct {p0, p1, v1}, Lyje;-><init>(Ljava/util/List;Ljava/util/List;)V
-
-    invoke-virtual {v0, v4, p0}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return p1
 .end method

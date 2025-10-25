@@ -242,7 +242,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lx4h;->l()Landroid/app/Application;
+    invoke-static {}, Lxfi;->b()Landroid/app/Application;
 
     move-result-object v0
 
@@ -362,15 +362,15 @@
 
     if-eqz v2, :cond_1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->uploader:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->uploader:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
+    check-cast v0, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private getWorker()Lru/ok/android/externcalls/analytics/internal/upload/Worker;
@@ -431,15 +431,15 @@
 
     if-eqz v2, :cond_1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->worker:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->worker:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;
+    check-cast v0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private isContentCompressionEnabled()Z
@@ -457,9 +457,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 
     :cond_0
     sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
@@ -512,23 +512,23 @@
 
     if-eqz v3, :cond_2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->compressionEnabled:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->compressionEnabled:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Ljava/lang/Boolean;
+    check-cast v0, Ljava/lang/Boolean;
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public static setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProvider;)V
-    .locals 2
+    .locals 3
 
     if-nez p0, :cond_0
 
@@ -537,11 +537,11 @@
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lnx3;
+    new-instance v0, Le44;
 
-    const/16 v1, 0x11
+    const/16 v1, 0xe
 
-    invoke-direct {v0, v1, p0}, Lnx3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Le44;-><init>(ILjava/lang/Object;)V
 
     move-object p0, v0
 
@@ -564,7 +564,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -574,15 +574,24 @@
 
     invoke-direct {v1}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getUploader()Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
 
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v2, p0}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;)V
+
+    :cond_2
+    invoke-direct {v1}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getWorker()Lru/ok/android/externcalls/analytics/internal/upload/Worker;
+
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1, p0}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;)V
+    invoke-virtual {v1, p0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;)V
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -605,24 +614,24 @@
 
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getWorker()Lru/ok/android/externcalls/analytics/internal/upload/Worker;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->scheduleEventSend(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->scheduleEventSend(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Unexpected apiMethod "
+    const-string v1, "Unexpected apiMethod "
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public drop()V
@@ -636,26 +645,26 @@
 
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getUploader()Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->drop()V
+    invoke-interface {v0}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->drop()V
 
     return-void
 .end method
 
 .method public flush()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getWorker()Lru/ok/android/externcalls/analytics/internal/upload/Worker;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->flush()V
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->flush()V
 
     return-void
 .end method
 
-.method public upload()V
+.method public grabAndUpload()V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -678,11 +687,11 @@
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lnx3;
+    new-instance v2, Le44;
 
-    const/16 v3, 0x10
+    const/16 v3, 0xf
 
-    invoke-direct {v2, v3, v1}, Lnx3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Le44;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v2}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->grab(Ljavax/inject/Provider;)V
     :try_end_0
@@ -694,18 +703,35 @@
 
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getUploader()Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->upload()V
+    invoke-interface {v0}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->upload()V
 
     return-void
 
     :catchall_0
     move-exception v0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->uploadLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->uploadLock:Ljava/util/concurrent/locks/Lock;
 
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0
+.end method
+
+.method public uploadGrabbed()V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getUploader()Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->upload()V
+
+    return-void
 .end method

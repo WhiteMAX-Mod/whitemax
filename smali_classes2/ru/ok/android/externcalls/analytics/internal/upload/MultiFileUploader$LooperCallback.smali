@@ -62,11 +62,11 @@
 
 # virtual methods
 .method public final getUploader()Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$LooperCallback;->uploader:Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$LooperCallback;->uploader:Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public handleMessage(Landroid/os/Message;)Z
@@ -78,16 +78,16 @@
 
     if-ne p1, v0, :cond_0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$LooperCallback;->uploader:Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
+    iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$LooperCallback;->uploader:Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->access$triggerUpload(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
+    invoke-static {p1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->access$requestContinueUpload(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method

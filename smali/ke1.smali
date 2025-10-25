@@ -1,61 +1,107 @@
 .class public final Lke1;
-.super Lj2e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lumc;
+.implements Lme1;
 
 
 # instance fields
-.field public final E0:Lvmc;
+.field public final a:Lsrf;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lvmc;)V
-    .locals 2
+.method public constructor <init>(Lsrf;)V
+    .locals 0
 
-    new-instance v0, Lsrd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lsrd;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p0, v0}, Lzoc;-><init>(Landroid/view/View;)V
-
-    iput-object p2, p0, Lke1;->E0:Lvmc;
-
-    sget-object p0, Lnrd;->b:Lnrd;
-
-    invoke-virtual {v0, p0}, Lsrd;->setThemeDepended(Lnrd;)V
+    iput-object p1, p0, Lke1;->a:Lsrf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final y(Lts7;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lke1;->E0:Lvmc;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, v0, Lvmc;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    instance-of v0, p1, Lwy0;
-
-    if-nez v0, :cond_0
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+    instance-of v0, p1, Lke1;
 
-    check-cast p0, Lsrd;
+    if-nez v0, :cond_1
 
-    check-cast p1, Lird;
+    goto :goto_0
 
-    invoke-virtual {p0, p1}, Lsrd;->setModelItem(Lird;)V
+    :cond_1
+    check-cast p1, Lke1;
 
-    return-void
+    iget-object v0, p0, Lke1;->a:Lsrf;
+
+    iget-object p1, p1, Lke1;->a:Lsrf;
+
+    invoke-virtual {v0, p1}, Lsrf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getText()Ltrf;
+    .locals 1
+
+    iget-object v0, p0, Lke1;->a:Lsrf;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lke1;->a:Lsrf;
+
+    invoke-virtual {v0}, Lsrf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Loading(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lke1;->a:Lsrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

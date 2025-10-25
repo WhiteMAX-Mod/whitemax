@@ -133,7 +133,7 @@
 
     const-string v1, "Unknown native media type: "
 
-    invoke-static {p0, v1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -173,12 +173,12 @@
 
 # virtual methods
 .method public getNative()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "MediaType"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/MediaStreamTrack$MediaType;->nativeIndex:I
+    iget v0, p0, Lorg/webrtc/MediaStreamTrack$MediaType;->nativeIndex:I
 
-    return p0
+    return v0
 .end method

@@ -50,18 +50,18 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/http/impl/client/AbstractAuthenticationHandler;->parseChallenges([Lorg/apache/http/Header;)Ljava/util/Map;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP response may not be null"
+    const-string p2, "HTTP response may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method
 
 .method public isAuthenticationRequested(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)Z
@@ -71,31 +71,31 @@
 
     invoke-interface {p1}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-interface {p0}, Lorg/apache/http/StatusLine;->getStatusCode()I
+    invoke-interface {p1}, Lorg/apache/http/StatusLine;->getStatusCode()I
 
-    move-result p0
+    move-result p1
 
-    const/16 p1, 0x197
+    const/16 p2, 0x197
 
-    if-ne p0, p1, :cond_0
+    if-ne p1, p2, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP response may not be null"
+    const-string p2, "HTTP response may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

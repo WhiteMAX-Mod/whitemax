@@ -115,25 +115,25 @@
 
 # virtual methods
 .method public getActive()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Encoding"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/RtpParameters$Encoding;->active:Z
+    iget-boolean v0, p0, Lorg/webrtc/RtpParameters$Encoding;->active:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getAdaptivePTime()Z
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Encoding"
     .end annotation
 
-    iget-boolean p0, p0, Lorg/webrtc/RtpParameters$Encoding;->adaptiveAudioPacketTime:Z
+    iget-boolean v0, p0, Lorg/webrtc/RtpParameters$Encoding;->adaptiveAudioPacketTime:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getBitratePriority()D
@@ -148,89 +148,89 @@
 .end method
 
 .method public getMaxBitrateBps()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Encoding"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters$Encoding;->maxBitrateBps:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters$Encoding;->maxBitrateBps:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getMaxFramerate()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Encoding"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters$Encoding;->maxFramerate:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters$Encoding;->maxFramerate:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getMinBitrateBps()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Encoding"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters$Encoding;->minBitrateBps:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters$Encoding;->minBitrateBps:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getNetworkPriority()I
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Encoding"
     .end annotation
 
-    iget p0, p0, Lorg/webrtc/RtpParameters$Encoding;->networkPriority:I
+    iget v0, p0, Lorg/webrtc/RtpParameters$Encoding;->networkPriority:I
 
-    return p0
+    return v0
 .end method
 
 .method public getNumTemporalLayers()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Encoding"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters$Encoding;->numTemporalLayers:Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters$Encoding;->numTemporalLayers:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getRid()Ljava/lang/String;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Encoding"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters$Encoding;->rid:Ljava/lang/String;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters$Encoding;->rid:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getScaleResolutionDownBy()Ljava/lang/Double;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Encoding"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters$Encoding;->scaleResolutionDownBy:Ljava/lang/Double;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters$Encoding;->scaleResolutionDownBy:Ljava/lang/Double;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSsrc()Ljava/lang/Long;
-    .locals 0
+    .locals 1
     .annotation build Lorg/webrtc/CalledByNative;
         value = "Encoding"
     .end annotation
 
-    iget-object p0, p0, Lorg/webrtc/RtpParameters$Encoding;->ssrc:Ljava/lang/Long;
+    iget-object v0, p0, Lorg/webrtc/RtpParameters$Encoding;->ssrc:Ljava/lang/Long;
 
-    return-object p0
+    return-object v0
 .end method

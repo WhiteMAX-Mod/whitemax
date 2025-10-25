@@ -1,69 +1,61 @@
-.class public final synthetic Lo0b;
+.class public abstract Lo0b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqm3;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Ly0b;
+.field public static final b:I
 
-.field public final synthetic b:Z
+.field public static final c:I
 
-.field public final synthetic c:Lorg/webrtc/SessionDescription;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly0b;ZLorg/webrtc/SessionDescription;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Litc;->oneme_qrscanner_camera_request_description:I
 
-    iput-object p1, p0, Lo0b;->a:Ly0b;
+    sput v0, Lo0b;->a:I
 
-    iput-boolean p2, p0, Lo0b;->b:Z
+    sget v0, Litc;->oneme_qrscanner_context_menu_title:I
 
-    iput-object p3, p0, Lo0b;->c:Lorg/webrtc/SessionDescription;
+    sput v0, Lo0b;->b:I
 
-    return-void
-.end method
+    sget v0, Litc;->oneme_qrscanner_error_snackbar_description:I
 
+    sput v0, Lo0b;->c:I
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+    sget v0, Litc;->oneme_qrscanner_error_snackbar_title:I
 
-    check-cast p1, Lorg/webrtc/PeerConnection;
+    sput v0, Lo0b;->d:I
 
-    iget-object p1, p0, Lo0b;->a:Ly0b;
+    sget v0, Litc;->oneme_qrscanner_hint_with_gallery:I
 
-    iget-object v0, p1, Ly0b;->r:Landroid/os/Handler;
+    sput v0, Lo0b;->e:I
 
-    iget-boolean v1, p0, Lo0b;->b:Z
+    sget v0, Litc;->oneme_qrscanner_hint_without_gallery:I
 
-    iget-object p0, p0, Lo0b;->c:Lorg/webrtc/SessionDescription;
+    sput v0, Lo0b;->f:I
 
-    if-eqz v1, :cond_0
+    sget v0, Litc;->oneme_qrscanner_storage_request_description:I
 
-    new-instance v1, Lt0b;
+    sput v0, Lo0b;->g:I
 
-    const/4 v2, 0x0
+    sget v0, Litc;->oneme_qrscanner_toolbar_title:I
 
-    invoke-direct {v1, p1, p0, v2}, Lt0b;-><init>(Ly0b;Lorg/webrtc/SessionDescription;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_0
-    new-instance v1, Lt0b;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p1, p0, v2}, Lt0b;-><init>(Ly0b;Lorg/webrtc/SessionDescription;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sput v0, Lo0b;->h:I
 
     return-void
 .end method

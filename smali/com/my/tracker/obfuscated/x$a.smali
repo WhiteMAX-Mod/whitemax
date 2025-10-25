@@ -39,12 +39,12 @@
 
 # virtual methods
 .method public a()V
-    .locals 0
+    .locals 1
 
     .line 4
-    const-string p0, "FirebaseAppInstanceIdProvider: retrieving firebase app instance id finished unsuccessfully"
+    const-string v0, "FirebaseAppInstanceIdProvider: retrieving firebase app instance id finished unsuccessfully"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -73,19 +73,19 @@
 
     invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/x$a;->b:Lcom/my/tracker/obfuscated/x;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/x$a;->b:Lcom/my/tracker/obfuscated/x;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/x;->a:Lcom/my/tracker/obfuscated/w;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/x;->a:Lcom/my/tracker/obfuscated/w;
 
-    iget-object p0, p0, Lcom/my/tracker/obfuscated/w;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/my/tracker/obfuscated/w;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 .end method

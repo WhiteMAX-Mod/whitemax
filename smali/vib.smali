@@ -1,106 +1,174 @@
-.class public final synthetic Lvib;
-.super Ljava/lang/Object;
+.class public final Lvib;
+.super Ll2;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm3;
+
+# static fields
+.field public static final c:Lvib;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ly4g;
 
-.field public final synthetic b:Lxib;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxib;I)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lvib;
+
+    sget-object v1, Ly4g;->e:Ly4g;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lvib;-><init>(Ly4g;I)V
+
+    sput-object v0, Lvib;->c:Lvib;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ly4g;I)V
     .locals 0
 
-    iput p2, p0, Lvib;->a:I
-
-    iput-object p1, p0, Lvib;->b:Lxib;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvib;->a:Ly4g;
+
+    iput p2, p0, Lvib;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final containsKey(Ljava/lang/Object;)Z
     .locals 3
 
-    iget v0, p0, Lvib;->a:I
+    const/4 v0, 0x0
 
-    check-cast p1, Loa0;
+    if-nez p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p1, Loa0;->a:Lyib;
-
-    iget-object v0, v0, Lyib;->f:Lntc;
-
-    iget-boolean v0, v0, Lntc;->g:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p1, Loa0;->b:La27;
-
-    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
+    move v1, v0
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lvib;->b:Lxib;
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
-    iget-object v0, p0, Lxib;->a:Ljava/util/concurrent/Executor;
-
-    new-instance v1, Lwib;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Lwib;-><init>(Lxib;Loa0;I)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    move-result v1
 
     :goto_0
-    return-void
+    iget-object v2, p0, Lvib;->a:Ly4g;
 
-    :pswitch_0
-    iget-object v0, p1, Loa0;->a:Lyib;
+    invoke-virtual {v2, v1, v0, p1}, Ly4g;->d(IILjava/lang/Object;)Z
 
-    iget-object v0, v0, Lyib;->f:Lntc;
+    move-result p1
 
-    iget-boolean v0, v0, Lntc;->g:Z
+    return p1
+.end method
 
-    if-eqz v0, :cond_1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object p0, p1, Loa0;->b:La27;
+    if-ne p1, p0, :cond_0
 
-    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
+    const/4 p1, 0x1
 
-    goto :goto_1
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Ljava/util/Map;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    return v1
 
     :cond_1
-    iget-object p0, p0, Lvib;->b:Lxib;
+    move-object v0, p1
 
-    iget-object v0, p0, Lxib;->a:Ljava/util/concurrent/Executor;
+    check-cast v0, Ljava/util/Map;
 
-    new-instance v1, Lwib;
+    invoke-interface {v0}, Ljava/util/Map;->size()I
 
-    const/4 v2, 0x1
+    move-result v2
 
-    invoke-direct {v1, p0, p1, v2}, Lwib;-><init>(Lxib;Loa0;I)V
+    iget v3, p0, Lvib;->b:I
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    if-eq v3, v2, :cond_2
 
-    :goto_1
-    return-void
+    return v1
 
-    nop
+    :cond_2
+    instance-of v1, v0, Lvib;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v2, p0, Lvib;->a:Ly4g;
+
+    if-eqz v1, :cond_3
+
+    check-cast p1, Lvib;
+
+    iget-object p1, p1, Lvib;->a:Ly4g;
+
+    sget-object v0, Lpc3;->X:Lpc3;
+
+    invoke-virtual {v2, p1, v0}, Ly4g;->g(Ly4g;Lzi6;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    instance-of v0, v0, Lxib;
+
+    if-eqz v0, :cond_4
+
+    check-cast p1, Lxib;
+
+    iget-object p1, p1, Lxib;->c:Ly4g;
+
+    sget-object v0, Lpc3;->Y:Lpc3;
+
+    invoke-virtual {v2, p1, v0}, Ly4g;->g(Ly4g;Lzi6;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_4
+    invoke-super {p0, p1}, Ll2;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    iget-object v2, p0, Lvib;->a:Ly4g;
+
+    invoke-virtual {v2, v1, v0, p1}, Ly4g;->h(IILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -25,11 +25,11 @@
 
 # virtual methods
 .method public getBaseline()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lcom/google/android/material/internal/BaselineLayout;->a:I
+    iget v0, p0, Lcom/google/android/material/internal/BaselineLayout;->a:I
 
-    return p0
+    return v0
 .end method
 
 .method public final onLayout(ZIIII)V

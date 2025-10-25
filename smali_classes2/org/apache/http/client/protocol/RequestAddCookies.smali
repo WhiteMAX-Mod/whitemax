@@ -59,11 +59,11 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lorg/apache/http/client/protocol/RequestAddCookies;->log:Lorg/apache/commons/logging/Log;
+    iget-object p1, p0, Lorg/apache/http/client/protocol/RequestAddCookies;->log:Lorg/apache/commons/logging/Log;
 
-    const-string p1, "Cookie store not available in HTTP context"
+    const-string p2, "Cookie store not available in HTTP context"
 
-    invoke-interface {p0, p1}, Lorg/apache/commons/logging/Log;->info(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Lorg/apache/commons/logging/Log;->info(Ljava/lang/Object;)V
 
     return-void
 
@@ -78,11 +78,11 @@
 
     if-nez v1, :cond_1
 
-    iget-object p0, p0, Lorg/apache/http/client/protocol/RequestAddCookies;->log:Lorg/apache/commons/logging/Log;
+    iget-object p1, p0, Lorg/apache/http/client/protocol/RequestAddCookies;->log:Lorg/apache/commons/logging/Log;
 
-    const-string p1, "CookieSpec registry not available in HTTP context"
+    const-string p2, "CookieSpec registry not available in HTTP context"
 
-    invoke-interface {p0, p1}, Lorg/apache/commons/logging/Log;->info(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Lorg/apache/commons/logging/Log;->info(Ljava/lang/Object;)V
 
     return-void
 
@@ -280,104 +280,104 @@
     :cond_7
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    move-result p0
+    move-result v2
 
-    if-nez p0, :cond_8
+    if-nez v2, :cond_8
 
     invoke-interface {v1, v0}, Lorg/apache/http/cookie/CookieSpec;->formatCookies(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_8
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    check-cast v2, Lorg/apache/http/Header;
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {p1, v2}, Lorg/apache/http/HttpMessage;->addHeader(Lorg/apache/http/Header;)V
+    move-result v3
+
+    if-eqz v3, :cond_8
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lorg/apache/http/Header;
+
+    invoke-interface {p1, v3}, Lorg/apache/http/HttpMessage;->addHeader(Lorg/apache/http/Header;)V
 
     goto :goto_2
 
     :cond_8
     invoke-interface {v1}, Lorg/apache/http/cookie/CookieSpec;->getVersion()I
 
-    move-result p0
+    move-result v2
 
-    if-lez p0, :cond_b
+    if-lez v2, :cond_b
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     :cond_9
     :goto_3
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_a
+    if-eqz v4, :cond_a
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Lorg/apache/http/cookie/Cookie;
+    check-cast v4, Lorg/apache/http/cookie/Cookie;
 
-    invoke-interface {v3}, Lorg/apache/http/cookie/Cookie;->getVersion()I
+    invoke-interface {v4}, Lorg/apache/http/cookie/Cookie;->getVersion()I
 
-    move-result v3
+    move-result v4
 
-    if-eq p0, v3, :cond_9
+    if-eq v2, v4, :cond_9
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     goto :goto_3
 
     :cond_a
-    if-eqz v2, :cond_b
+    if-eqz v3, :cond_b
 
     invoke-interface {v1}, Lorg/apache/http/cookie/CookieSpec;->getVersionHeader()Lorg/apache/http/Header;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_b
+    if-eqz v0, :cond_b
 
-    invoke-interface {p1, p0}, Lorg/apache/http/HttpMessage;->addHeader(Lorg/apache/http/Header;)V
+    invoke-interface {p1, v0}, Lorg/apache/http/HttpMessage;->addHeader(Lorg/apache/http/Header;)V
 
     :cond_b
-    const-string p0, "http.cookie-spec"
+    const-string p1, "http.cookie-spec"
 
-    invoke-interface {p2, p0, v1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {p2, p1, v1}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
 
-    const-string p0, "http.cookie-origin"
+    const-string p1, "http.cookie-origin"
 
-    invoke-interface {p2, p0, v7}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {p2, p1, v7}, Lorg/apache/http/protocol/HttpContext;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 
     :catch_0
-    move-exception p0
+    move-exception p2
 
-    new-instance p2, Lorg/apache/http/ProtocolException;
+    new-instance v0, Lorg/apache/http/ProtocolException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "Invalid request URI: "
+    const-string v2, "Invalid request URI: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-interface {p1}, Lorg/apache/http/HttpRequest;->getRequestLine()Lorg/apache/http/RequestLine;
 
@@ -387,49 +387,49 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p2, p1, p0}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, p1, p2}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    throw p2
+    throw v0
 
     :cond_c
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Client connection not specified in HTTP context"
+    const-string p2, "Client connection not specified in HTTP context"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_d
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Target host not specified in HTTP context"
+    const-string p2, "Target host not specified in HTTP context"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_e
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP context may not be null"
+    const-string p2, "HTTP context may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_f
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "HTTP request may not be null"
+    const-string p2, "HTTP request may not be null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

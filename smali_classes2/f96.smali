@@ -1,74 +1,98 @@
-.class public final synthetic Lf96;
-.super Ljava/lang/Object;
+.class public final Lf96;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lg96;
+.field public final synthetic Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lg96;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
     .locals 0
 
-    iput p2, p0, Lf96;->a:I
+    iput-object p2, p0, Lf96;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    iput-object p1, p0, Lf96;->b:Lg96;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lf96;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Lf96;->b:Lg96;
+    invoke-virtual {p0, p1, p2}, Lf96;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    invoke-virtual {p0}, Lg96;->a()V
+    check-cast p1, Lf96;
 
-    const/4 v0, 0x0
+    sget-object p2, Lccg;->a:Lccg;
 
-    iput-object v0, p0, Lg96;->Z:Lu96;
+    invoke-virtual {p1, p2}, Lf96;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object v0, p0, Lg96;->r0:Lu96;
+    return-object p2
+.end method
 
-    return-void
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    :pswitch_0
-    invoke-virtual {p0}, Lg96;->a()V
+    new-instance v0, Lf96;
 
-    return-void
+    iget-object v1, p0, Lf96;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    :pswitch_1
-    const/4 v0, 0x1
+    invoke-direct {v0, p2, v1}, Lf96;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
 
-    iput-boolean v0, p0, Lg96;->w0:Z
+    iput-object p1, v0, Lf96;->X:Ljava/lang/Object;
 
-    new-instance v0, Lorg/webrtc/VpxEncoderWrapper;
+    return-object v0
+.end method
 
-    invoke-direct {v0}, Lorg/webrtc/VpxEncoderWrapper;-><init>()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-virtual {v0, p0}, Lorg/webrtc/VpxEncoderWrapper;->setConsumerCallback(Lorg/webrtc/EncoderCallback;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lg96;->Y:Lorg/webrtc/VpxEncoderWrapper;
+    iget-object p1, p0, Lf96;->X:Ljava/lang/Object;
 
-    return-void
+    check-cast p1, Ljava/lang/Boolean;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->q0:[Ltr7;
+
+    iget-object v0, p0, Lf96;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+
+    iget-object v1, v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Y:Lh0d;
+
+    sget-object v2, Lone/me/folders/pickerfolders/FoldersPickerScreen;->q0:[Ltr7;
+
+    const/4 v3, 0x3
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, v0, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

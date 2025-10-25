@@ -1,331 +1,216 @@
 .class public final Lzv5;
-.super Ljava/lang/Object;
+.super Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Lbx5;
-.implements Lt0c;
 
 
 # instance fields
-.field public X:I
-
-.field public final Y:Ljava/util/Collection;
-
-.field public final Z:Lqc6;
-
-.field public final a:Ljne;
-
-.field public b:Llne;
-
-.field public c:Lt0c;
-
-.field public o:Z
+.field public final synthetic a:Lbua;
 
 
 # direct methods
-.method public constructor <init>(Ljne;Lip9;Ljava/util/Collection;)V
+.method public constructor <init>(Lbua;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzv5;->a:Lbua;
 
-    iput-object p1, p0, Lzv5;->a:Ljne;
-
-    iput-object p2, p0, Lzv5;->Z:Lqc6;
-
-    iput-object p3, p0, Lzv5;->Y:Ljava/util/Collection;
+    invoke-direct {p0}, Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public final onAuthenticationError(ILjava/lang/CharSequence;)V
     .locals 1
 
-    iget-boolean v0, p0, Lzv5;->o:Z
+    iget-object v0, p0, Lzv5;->a:Lbua;
 
-    if-nez v0, :cond_0
+    iget-object v0, v0, Lbua;->b:Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    check-cast v0, Lo39;
 
-    iput-boolean v0, p0, Lzv5;->o:Z
+    iget-object v0, v0, Lo39;->o:Ljava/lang/Object;
 
-    iget-object v0, p0, Lzv5;->Y:Ljava/util/Collection;
+    check-cast v0, Lmo0;
 
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
-
-    iget-object p0, p0, Lzv5;->a:Ljne;
-
-    invoke-interface {p0}, Ljne;->b()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 0
-
-    iget-object p0, p0, Lzv5;->b:Llne;
-
-    invoke-interface {p0}, Llne;->cancel()V
+    invoke-virtual {v0, p1, p2}, Lmo0;->a(ILjava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public final clear()V
-    .locals 1
+.method public final onAuthenticationFailed()V
+    .locals 2
 
-    iget-object v0, p0, Lzv5;->Y:Ljava/util/Collection;
+    iget-object v0, p0, Lzv5;->a:Lbua;
 
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
+    iget-object v0, v0, Lbua;->b:Ljava/lang/Object;
 
-    iget-object p0, p0, Lzv5;->c:Lt0c;
+    check-cast v0, Lo39;
 
-    invoke-interface {p0}, Lf2e;->clear()V
+    iget-object v0, v0, Lo39;->o:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v0, Lmo0;
 
-.method public final d(Llne;)V
-    .locals 1
+    iget-object v0, v0, Lmo0;->a:Ljava/lang/ref/WeakReference;
 
-    iget-object v0, p0, Lzv5;->b:Llne;
-
-    invoke-static {v0, p1}, Lnne;->e(Llne;Llne;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iput-object p1, p0, Lzv5;->b:Llne;
-
-    instance-of v0, p1, Lt0c;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lt0c;
-
-    iput-object p1, p0, Lzv5;->c:Lt0c;
-
-    :cond_0
-    iget-object p1, p0, Lzv5;->a:Ljne;
-
-    invoke-interface {p1, p0}, Ljne;->d(Llne;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final h(J)V
-    .locals 0
-
-    iget-object p0, p0, Lzv5;->b:Llne;
-
-    invoke-interface {p0, p1, p2}, Llne;->h(J)V
-
-    return-void
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    iget-object p0, p0, Lzv5;->c:Lt0c;
-
-    invoke-interface {p0}, Lf2e;->isEmpty()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Should not be called!"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lzv5;->o:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Ln4e;->D(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lzv5;->o:Z
-
-    iget-object v0, p0, Lzv5;->Y:Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
-
-    iget-object p0, p0, Lzv5;->a:Ljne;
-
-    invoke-interface {p0, p1}, Ljne;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 3
-
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lzv5;->c:Lt0c;
-
-    invoke-interface {v0}, Lf2e;->poll()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lzv5;->Z:Lqc6;
-
-    invoke-interface {v1, v0}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    const-string v2, "The keySelector returned a null key"
+    if-eqz v1, :cond_1
 
-    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    iget-object v2, p0, Lzv5;->Y:Ljava/util/Collection;
+    move-result-object v1
 
-    invoke-interface {v2, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    check-cast v1, Landroidx/biometric/BiometricViewModel;
 
-    move-result v1
+    iget-boolean v1, v1, Landroidx/biometric/BiometricViewModel;->k:Z
 
     if-eqz v1, :cond_1
 
-    goto :goto_1
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/biometric/BiometricViewModel;
+
+    iget-object v1, v0, Landroidx/biometric/BiometricViewModel;->r:Lo0a;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lo0a;
+
+    invoke-direct {v1}, Lh38;-><init>()V
+
+    iput-object v1, v0, Landroidx/biometric/BiometricViewModel;->r:Lo0a;
+
+    :cond_0
+    iget-object v0, v0, Landroidx/biometric/BiometricViewModel;->r:Lo0a;
+
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {v0, v1}, Landroidx/biometric/BiometricViewModel;->j(Lo0a;Ljava/lang/Object;)V
 
     :cond_1
-    iget v0, p0, Lzv5;->X:I
+    return-void
+.end method
 
-    const/4 v1, 0x2
+.method public final onAuthenticationHelp(ILjava/lang/CharSequence;)V
+    .locals 1
 
-    if-ne v0, v1, :cond_0
+    iget-object p1, p0, Lzv5;->a:Lbua;
 
-    iget-object v0, p0, Lzv5;->b:Llne;
+    iget-object p1, p1, Lbua;->b:Ljava/lang/Object;
 
-    const-wide/16 v1, 0x1
+    check-cast p1, Lo39;
 
-    invoke-interface {v0, v1, v2}, Llne;->h(J)V
+    iget-object p1, p1, Lo39;->o:Ljava/lang/Object;
+
+    check-cast p1, Lmo0;
+
+    iget-object p1, p1, Lmo0;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/biometric/BiometricViewModel;
+
+    iget-object v0, p1, Landroidx/biometric/BiometricViewModel;->q:Lo0a;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lo0a;
+
+    invoke-direct {v0}, Lh38;-><init>()V
+
+    iput-object v0, p1, Landroidx/biometric/BiometricViewModel;->q:Lo0a;
+
+    :cond_0
+    iget-object p1, p1, Landroidx/biometric/BiometricViewModel;->q:Lo0a;
+
+    invoke-static {p1, p2}, Landroidx/biometric/BiometricViewModel;->j(Lo0a;Ljava/lang/Object;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onAuthenticationSucceeded(Landroid/hardware/fingerprint/FingerprintManager$AuthenticationResult;)V
+    .locals 3
+
+    invoke-static {p1}, Law5;->b(Ljava/lang/Object;)Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;
+
+    move-result-object p1
+
+    invoke-static {p1}, Law5;->f(Ljava/lang/Object;)Lbw5;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lzv5;->a:Lbua;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v2, p1, Lbw5;->b:Ljavax/crypto/Cipher;
+
+    if-eqz v2, :cond_1
+
+    new-instance v1, Lq4e;
+
+    invoke-direct {v1, v2}, Lq4e;-><init>(Ljavax/crypto/Cipher;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v2, p1, Lbw5;->a:Ljava/security/Signature;
+
+    if-eqz v2, :cond_2
+
+    new-instance v1, Lq4e;
+
+    invoke-direct {v1, v2}, Lq4e;-><init>(Ljava/security/Signature;)V
 
     goto :goto_0
 
     :cond_2
-    :goto_1
-    return-object v0
-.end method
+    iget-object p1, p1, Lbw5;->c:Ljavax/crypto/Mac;
 
-.method public final q(I)I
-    .locals 2
+    if-eqz p1, :cond_3
 
-    iget-object v0, p0, Lzv5;->c:Lt0c;
+    new-instance v1, Lq4e;
 
-    if-eqz v0, :cond_1
+    invoke-direct {v1, p1}, Lq4e;-><init>(Ljavax/crypto/Mac;)V
 
-    and-int/lit8 v1, p1, 0x4
+    :cond_3
+    :goto_0
+    new-instance p1, Ljo0;
 
-    if-nez v1, :cond_1
+    const/4 v2, 0x2
 
-    invoke-interface {v0, p1}, Ls0c;->q(I)I
+    invoke-direct {p1, v1, v2}, Ljo0;-><init>(Lq4e;I)V
 
-    move-result p1
+    iget-object v0, v0, Lbua;->b:Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    check-cast v0, Lo39;
 
-    iput p1, p0, Lzv5;->X:I
+    iget-object v0, v0, Lo39;->o:Ljava/lang/Object;
 
-    :cond_0
-    return p1
+    check-cast v0, Lmo0;
 
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final s(Ljava/lang/Object;)V
-    .locals 3
-
-    iget-boolean v0, p0, Lzv5;->o:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget v0, p0, Lzv5;->X:I
-
-    iget-object v1, p0, Lzv5;->a:Ljne;
-
-    if-nez v0, :cond_2
-
-    :try_start_0
-    iget-object v0, p0, Lzv5;->Z:Lqc6;
-
-    invoke-interface {v0, p1}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v2, "The keySelector returned a null key"
-
-    invoke-static {v0, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    iget-object v2, p0, Lzv5;->Y:Ljava/util/Collection;
-
-    invoke-interface {v2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1, p1}, Ljne;->s(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    iget-object p0, p0, Lzv5;->b:Llne;
-
-    const-wide/16 v0, 0x1
-
-    invoke-interface {p0, v0, v1}, Llne;->h(J)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lzyd;->F(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lzv5;->b:Llne;
-
-    invoke-interface {v0}, Llne;->cancel()V
-
-    invoke-virtual {p0, p1}, Lzv5;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    const/4 p0, 0x0
-
-    invoke-interface {v1, p0}, Ljne;->s(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lmo0;->b(Ljo0;)V
 
     return-void
 .end method

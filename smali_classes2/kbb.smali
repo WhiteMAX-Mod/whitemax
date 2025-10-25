@@ -1,89 +1,45 @@
 .class public final Lkbb;
-.super Ljava/lang/Object;
+.super Lx6d;
 .source "SourceFile"
-
-# interfaces
-.implements Llbb;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
+
+.field public final b:F
+
+.field public final c:F
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkbb;->a:Ljava/lang/String;
+    iput p1, p0, Lkbb;->a:I
+
+    const/high16 p1, 0x3f000000    # 0.5f
+
+    iput p1, p0, Lkbb;->b:F
+
+    iput p1, p0, Lkbb;->c:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkbb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkbb;
-
-    iget-object p0, p0, Lkbb;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lkbb;->a:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lkbb;->a:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
     .locals 2
 
-    const-string v0, "UserPhoto(url="
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const-string v1, ")"
+    move-result-object v0
 
-    iget-object p0, p0, Lkbb;->a:Ljava/lang/String;
+    new-instance v1, Ljbb;
 
-    invoke-static {v0, p0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v1, p2, p0, p1, v0}, Ljbb;-><init>(ILkbb;Landroidx/recyclerview/widget/RecyclerView;Landroid/content/Context;)V
 
-    move-result-object p0
-
-    return-object p0
+    return-object v1
 .end method

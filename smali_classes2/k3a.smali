@@ -1,130 +1,116 @@
-.class public final Lk3a;
-.super Lure;
+.class public final synthetic Lk3a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lo3a;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lm3a;
 
 
 # direct methods
-.method public constructor <init>(Lo3a;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lm3a;I)V
     .locals 0
 
-    iput-object p1, p0, Lk3a;->X:Lo3a;
+    iput p2, p0, Lk3a;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lk3a;->b:Lm3a;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lk3a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lk3a;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lk3a;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lk3a;
-
-    iget-object p0, p0, Lk3a;->X:Lo3a;
-
-    invoke-direct {p1, p0, p2}, Lk3a;-><init>(Lo3a;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    iget p1, p0, Lk3a;->a:I
 
-    sget-object p1, Lo3a;->B0:[Lxi7;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object p0, p0, Lk3a;->X:Lo3a;
+    iget-object p1, p0, Lk3a;->b:Lm3a;
 
-    invoke-virtual {p0}, Lo3a;->q()Lhp;
+    iget-object p1, p1, Lf3;->a:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast p1, Ljava/util/Set;
 
-    check-cast p1, Ljp;
-
-    iget-object p1, p1, Li3;->g:Lfl7;
-
-    const-string v0, "app.notification.show.text"
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v0, v1}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    xor-int/2addr p1, v1
-
-    invoke-virtual {p0}, Lo3a;->q()Lhp;
-
-    move-result-object v2
-
-    check-cast v2, Ljp;
-
-    invoke-virtual {v2, v0, p1}, Li3;->h(Ljava/lang/String;Z)V
-
-    iget-object p1, p0, Lo3a;->Y:Lcl7;
-
-    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    check-cast p1, Lwka;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p1}, Lwka;->c()V
+    move-result v0
 
-    iget-object p0, p0, Lo3a;->w0:Lyce;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj3a;
+
+    new-instance v1, Lgk0;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2}, Lgk0;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lf3;->l(Lvr3;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lk3a;->b:Lm3a;
+
+    iget-object p1, p1, Lf3;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Number;
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    move-result v0
 
-    move-result p1
+    if-eqz v0, :cond_1
 
-    add-int/2addr p1, v1
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/Integer;
+    move-result-object v0
 
-    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
+    check-cast v0, Lj3a;
 
-    const/4 p1, 0x0
+    new-instance v1, Lgk0;
 
-    invoke-virtual {p0, p1, v0}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v2, 0x3
 
-    sget-object p0, Lylf;->a:Lylf;
+    invoke-direct {v1, v2}, Lgk0;-><init>(I)V
 
-    return-object p0
+    invoke-virtual {v0, v1}, Lf3;->l(Lvr3;)V
+
+    goto :goto_1
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

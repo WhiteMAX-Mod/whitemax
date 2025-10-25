@@ -1,76 +1,132 @@
-.class public abstract Lf7c;
-.super Ljava/lang/Object;
+.class public final Lf7c;
+.super Lsgf;
+.source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
-# static fields
-.field public static audio_record__action_view:I = 0x7f0a00e7
+# instance fields
+.field public X:I
 
-.field public static audio_record__action_view_background:I = 0x7f0a00e8
+.field public final synthetic Y:Lg7c;
 
-.field public static audio_record__action_view_bg_container:I = 0x7f0a00e9
+.field public final synthetic Z:Lw6c;
 
-.field public static audio_record__action_view_container:I = 0x7f0a00ea
 
-.field public static audio_record__audio_hand_free_record_view:I = 0x7f0a00eb
+# direct methods
+.method public constructor <init>(Lg7c;Lw6c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static audio_record__audio_record_root:I = 0x7f0a00ec
+    iput-object p1, p0, Lf7c;->Y:Lg7c;
 
-.field public static audio_record__cancel_view:I = 0x7f0a00ed
+    iput-object p2, p0, Lf7c;->Z:Lw6c;
 
-.field public static audio_record__dot_view:I = 0x7f0a00ee
+    const/4 p1, 0x2
 
-.field public static audio_record__duration_view:I = 0x7f0a00ef
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static audio_record__hand_free_dot_view:I = 0x7f0a00f0
+    return-void
+.end method
 
-.field public static audio_record__hand_free_duration_view:I = 0x7f0a00f1
 
-.field public static audio_record__lock_view:I = 0x7f0a00f2
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static audio_record__pause_recording_button:I = 0x7f0a00f3
+    check-cast p1, Lq54;
 
-.field public static audio_record__play_pause_listening_button:I = 0x7f0a00f4
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static audio_record__play_recording_button:I = 0x7f0a00f5
+    invoke-virtual {p0, p1, p2}, Lf7c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static audio_record__recording_panel:I = 0x7f0a00f6
+    move-result-object p1
 
-.field public static audio_record__remove_button:I = 0x7f0a00f7
+    check-cast p1, Lf7c;
 
-.field public static audio_record__swipe_remove_button:I = 0x7f0a00f8
+    sget-object p2, Lccg;->a:Lccg;
 
-.field public static audio_record__wave_container:I = 0x7f0a00f9
+    invoke-virtual {p1, p2}, Lf7c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static audio_record__wave_view:I = 0x7f0a00fa
+    move-result-object p1
 
-.field public static writebar__add_link_bottom_sheet_button_add:I = 0x7f0a0d92
+    return-object p1
+.end method
 
-.field public static writebar__add_link_bottom_sheet_input:I = 0x7f0a0d93
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static writebar__container:I = 0x7f0a0d94
+    new-instance p1, Lf7c;
 
-.field public static writebar__record_controls:I = 0x7f0a0d95
+    iget-object v0, p0, Lf7c;->Y:Lg7c;
 
-.field public static writebar__root:I = 0x7f0a0d96
+    iget-object v1, p0, Lf7c;->Z:Lw6c;
 
-.field public static writebar__suggestion_close_button:I = 0x7f0a0d97
+    invoke-direct {p1, v0, v1, p2}, Lf7c;-><init>(Lg7c;Lw6c;Lkotlin/coroutines/Continuation;)V
 
-.field public static writebar__suggestion_close_panel:I = 0x7f0a0d98
+    return-object p1
+.end method
 
-.field public static writebar__suggestion_container:I = 0x7f0a0d99
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-.field public static writebar__suggestion_item:I = 0x7f0a0d9a
+    iget v0, p0, Lf7c;->X:I
 
-.field public static writebar__suggestion_not_found:I = 0x7f0a0d9b
+    const/4 v1, 0x1
 
-.field public static writebar__suggestion_panel:I = 0x7f0a0d9c
+    if-eqz v0, :cond_1
 
-.field public static writebar__suggestion_popup_drag_layout:I = 0x7f0a0d9d
+    if-ne v0, v1, :cond_0
 
-.field public static writebar__suggestion_popup_layout:I = 0x7f0a0d9e
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.field public static writebar__suggestion_popup_layout_content:I = 0x7f0a0d9f
+    goto :goto_0
 
-.field public static writebar__suggestion_popup_layout_list:I = 0x7f0a0da0
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.field public static writebar__suggestion_title:I = 0x7f0a0da1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lf7c;->Y:Lg7c;
+
+    iget-object v0, p1, Lg7c;->a:Lnje;
+
+    new-instance v2, Lx6c;
+
+    iget-object v3, p0, Lf7c;->Z:Lw6c;
+
+    iget-object v3, v3, Ltj0;->b:Lzlf;
+
+    invoke-static {p1, v3}, Lg7c;->a(Lg7c;Lzlf;)Ltrf;
+
+    move-result-object p1
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3, p1}, Lx6c;-><init>(Ljava/lang/Long;Ltrf;)V
+
+    iput v1, p0, Lf7c;->X:I
+
+    invoke-virtual {v0, v2, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method

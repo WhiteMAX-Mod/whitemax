@@ -17,7 +17,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/audio/ProximityTracker;",
         "",
-        "Lylf;",
+        "Lccg;",
         "stopTrackingProximity",
         "()V",
         "startTrackingProximity",
@@ -56,11 +56,11 @@
 
 # virtual methods
 .method public getCanUseSpeaker()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
 .method public startTrackingProximity()V

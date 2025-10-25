@@ -1,357 +1,138 @@
 .class public final Lpf2;
-.super Lr9;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public X:I
 
-.field public final synthetic d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
+.field public final synthetic Y:Lq49;
+
+.field public final synthetic Z:Lqf2;
+
+.field public final synthetic q0:Llj2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;I)V
+.method public constructor <init>(Lq49;Lqf2;Llj2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lpf2;->c:I
+    iput-object p1, p0, Lpf2;->Y:Lq49;
 
-    iput-object p1, p0, Lpf2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
+    iput-object p2, p0, Lpf2;->Z:Lqf2;
 
-    const/4 p2, 0x1
+    iput-object p3, p0, Lpf2;->q0:Llj2;
 
-    invoke-direct {p0, p1, p2}, Lr9;-><init>(Lone/me/sdk/arch/Widget;I)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lpf2;->c:I
+    check-cast p1, Lq54;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-super {p0}, Lr9;->a()I
+    invoke-virtual {p0, p1, p2}, Lpf2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result p0
+    move-result-object p1
 
-    return p0
+    check-cast p1, Lpf2;
 
-    :pswitch_0
-    iget-object v0, p0, Lpf2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
+    sget-object p2, Lccg;->a:Lccg;
 
-    check-cast v0, Lone/me/webapp/rootscreen/WebAppRootScreen;
+    invoke-virtual {p1, p2}, Lpf2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->L0:[Lxi7;
+    sget-object p1, Lr54;->a:Lr54;
 
-    invoke-virtual {v0}, Lone/me/webapp/rootscreen/WebAppRootScreen;->O0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lpf2;->c()I
-
-    move-result p0
-
-    :goto_0
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public b()I
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget v0, p0, Lpf2;->c:I
+    new-instance p1, Lpf2;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lpf2;->Z:Lqf2;
 
-    invoke-super {p0}, Lffb;->b()I
+    iget-object v1, p0, Lpf2;->q0:Llj2;
 
-    move-result p0
+    iget-object v2, p0, Lpf2;->Y:Lq49;
 
-    return p0
+    invoke-direct {p1, v2, v0, v1, p2}, Lpf2;-><init>(Lq49;Lqf2;Llj2;Lkotlin/coroutines/Continuation;)V
 
-    :pswitch_0
-    const/4 p0, 0x2
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public c()I
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget v0, p0, Lpf2;->c:I
+    iget v0, p0, Lpf2;->X:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x1
 
-    invoke-super {p0}, Lr9;->c()I
+    if-eqz v0, :cond_1
 
-    move-result p0
+    if-eq v0, v1, :cond_0
 
-    return p0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :pswitch_0
-    iget-object v0, p0, Lpf2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    check-cast v0, Lone/me/webapp/rootscreen/WebAppRootScreen;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->L0:[Lxi7;
-
-    invoke-virtual {v0}, Lone/me/webapp/rootscreen/WebAppRootScreen;->O0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
+    throw p1
 
     :cond_0
-    invoke-super {p0}, Lr9;->c()I
-
-    move-result p0
-
-    :goto_0
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public g(Ljfb;Ljfb;)Ljfb;
-    .locals 1
-
-    iget v0, p0, Lpf2;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1, p2}, Lr9;->g(Ljfb;Ljfb;)Ljfb;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    sget-object v0, Ljfb;->c:Ljfb;
-
-    if-eq p1, v0, :cond_1
-
-    sget-object v0, Ljfb;->b:Ljfb;
-
-    if-ne p2, v0, :cond_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
-
-    :cond_0
-    move-object p1, p2
-
-    goto :goto_1
 
     :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpf2;->Y:Lq49;
+
+    iget-object v0, p1, Lq49;->v0:Ln0d;
+
+    new-instance v2, Li40;
+
+    iget-object v3, p0, Lpf2;->q0:Llj2;
+
+    const/4 v4, 0x2
+
+    iget-object v5, p0, Lpf2;->Z:Lqf2;
+
+    invoke-direct {v2, v5, v3, p1, v4}, Li40;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iput v1, p0, Lpf2;->X:I
+
+    iget-object p1, v0, Ln0d;->a:Lq0f;
+
+    invoke-interface {p1, v2, p0}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
     :goto_0
-    iget-object p0, p0, Lpf2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
+    new-instance p1, Lkotlin/KotlinNothingValueException;
 
-    check-cast p0, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+    invoke-direct {p1}, Lkotlin/KotlinNothingValueException;-><init>()V
 
-    invoke-virtual {p0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->G0()Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    :goto_1
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public j()Z
-    .locals 1
-
-    iget v0, p0, Lpf2;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lffb;->j()Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    iget-object p0, p0, Lpf2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    check-cast p0, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    invoke-virtual {p0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->G0()Z
-
-    move-result p0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public k()V
-    .locals 4
-
-    iget v0, p0, Lpf2;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lffb;->k()V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lpf2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    check-cast p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
-
-    sget-object v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->F0:[Lxi7;
-
-    iget-object v0, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->z0:Lcl7;
-
-    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfg2;
-
-    iget-object v0, v0, Lfg2;->v0:Lhic;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lzn7;->L()Lbo7;
-
-    move-result-object v1
-
-    sget-object v2, Lcn7;->X:Lcn7;
-
-    invoke-static {v0, v1, v2}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
-
-    move-result-object v0
-
-    new-instance v1, Lof2;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2, p0}, Lof2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
-
-    new-instance v2, Lnu5;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v1, v3}, Lnu5;-><init>(Lis5;Lpc6;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
-
-    move-result-object p0
-
-    invoke-static {v2, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public n(FF)Z
-    .locals 2
-
-    iget v0, p0, Lpf2;->c:I
-
-    iget-object v1, p0, Lpf2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1, p2}, Lffb;->n(FF)Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    check-cast v1, Lone/me/webapp/rootscreen/WebAppRootScreen;
-
-    sget-object p0, Lone/me/webapp/rootscreen/WebAppRootScreen;->L0:[Lxi7;
-
-    invoke-virtual {v1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->O0()Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    invoke-virtual {v1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->N0()Le9d;
-
-    move-result-object p0
-
-    iget-boolean p0, p0, Le9d;->b:Z
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-
-    :pswitch_1
-    check-cast v1, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->G0()Z
-
-    move-result p0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

@@ -1,78 +1,48 @@
 .class public final Lphf;
-.super Lure;
-.source "SourceFile"
-
-# interfaces
-.implements Lpc6;
+.super Ly14;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lqkf;
+.field public final synthetic Y:Ls3a;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lqkf;)V
+.method public constructor <init>(Ls3a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lphf;->Y:Lqkf;
+    iput-object p1, p0, Lphf;->Y:Ls3a;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lphf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lphf;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lphf;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Lphf;
+    iput-object p1, p0, Lphf;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lphf;->Y:Lqkf;
+    iget p1, p0, Lphf;->X:I
 
-    invoke-direct {v0, p2, p0}, Lphf;-><init>(Lkotlin/coroutines/Continuation;Lqkf;)V
+    const/high16 v0, -0x80000000
 
-    iput-object p1, v0, Lphf;->X:Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    return-object v0
-.end method
+    iput p1, p0, Lphf;->X:I
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iget-object p1, p0, Lphf;->Y:Ls3a;
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lphf;->X:Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Ls3a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    check-cast p1, Lnkf;
+    move-result-object p1
 
-    iget-object p0, p0, Lphf;->Y:Lqkf;
-
-    invoke-virtual {p0, p1}, Lqkf;->f(Lnkf;)V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-object p1
 .end method

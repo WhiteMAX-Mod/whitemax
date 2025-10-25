@@ -1,21 +1,23 @@
-.class public final Lkt0;
+.class public abstract Lkt0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lid4;
-
-.field public b:Z
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lid4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "BrdcstRcvrCnstrntTrckr"
 
-    iput-object p1, p0, Lkt0;->a:Lid4;
+    invoke-static {v0}, Lxyh;->l(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lkt0;->a:Ljava/lang/String;
 
     return-void
 .end method

@@ -1,114 +1,55 @@
 .class public final Lbf5;
-.super Lure;
+.super Lcf5;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lcf5;
+.field public final c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Lcf5;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/Runnable;J)V
     .locals 0
 
-    iput-object p1, p0, Lbf5;->Y:Lcf5;
+    invoke-direct {p0, p2, p3}, Lcf5;-><init>(J)V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbf5;->c:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    check-cast p1, Ly04;
+    iget-object v0, p0, Lbf5;->c:Ljava/lang/Runnable;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    invoke-virtual {p0, p1, p2}, Lbf5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lbf5;
-
-    sget-object p1, Lylf;->a:Lylf;
-
-    invoke-virtual {p0, p1}, Lbf5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lbf5;
-
-    iget-object p0, p0, Lbf5;->Y:Lcf5;
-
-    invoke-direct {p1, p0, p2}, Lbf5;-><init>(Lcf5;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget v0, p0, Lbf5;->X:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eqz v0, :cond_1
+    invoke-super {p0}, Lcf5;->toString()Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    iget-object v1, p0, Lbf5;->c:Ljava/lang/Runnable;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lbf5;->Y:Lcf5;
-
-    iget-object p1, p1, Lcf5;->b:Lnxd;
-
-    iput v1, p0, Lbf5;->X:I
-
-    sget-object v0, Laf5;->a:Laf5;
-
-    invoke-virtual {p1, v0, p0}, Lnxd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lz04;->a:Lz04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-object v0
 .end method

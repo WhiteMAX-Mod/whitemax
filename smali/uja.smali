@@ -1,437 +1,550 @@
 .class public final Luja;
-.super Lbj0;
+.super Lam0;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic o:I
+# interfaces
+.implements Lela;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final h:Lq95;
+.field public X:Lvv4;
 
-.field public final i:Lq6d;
+.field public Y:Ljava/lang/Throwable;
 
-.field public final j:Lxwe;
+.field public volatile Z:Z
 
-.field public final k:Lzte;
+.field public final a:Lela;
 
-.field public final l:Lzte;
+.field public final b:Lvod;
 
-.field public final m:Lzte;
+.field public final c:I
 
-.field public final n:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public o:Lope;
+
+.field public volatile q0:Z
+
+.field public r0:I
+
+.field public s0:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lq95;Lcp5;Lxjd;Lcca;Lq6d;Lxwe;)V
-    .locals 7
+.method public constructor <init>(Lela;Lvod;I)V
+    .locals 0
 
-    iget-object v2, p3, Lcp5;->b:Len5;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    move-object v0, p0
+    iput-object p1, p0, Luja;->a:Lela;
 
-    move-object v1, p1
+    iput-object p2, p0, Luja;->b:Lvod;
 
-    move-object v6, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-direct/range {v0 .. v6}, Lbj0;-><init>(Landroid/content/Context;Len5;Lcp5;Lxjd;Lcca;Lq95;)V
-
-    iput-object v6, v0, Luja;->h:Lq95;
-
-    iput-object p6, v0, Luja;->i:Lq6d;
-
-    iput-object p7, v0, Luja;->j:Lxwe;
-
-    new-instance p0, Lsja;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, v0, p1}, Lsja;-><init>(Luja;I)V
-
-    new-instance p1, Lzte;
-
-    invoke-direct {p1, p0}, Lzte;-><init>(Lzb6;)V
-
-    iput-object p1, v0, Luja;->k:Lzte;
-
-    new-instance p0, Lq47;
-
-    const/16 p1, 0x1b
-
-    invoke-direct {p0, p1, v4}, Lq47;-><init>(ILjava/lang/Object;)V
-
-    new-instance p1, Lzte;
-
-    invoke-direct {p1, p0}, Lzte;-><init>(Lzb6;)V
-
-    iput-object p1, v0, Luja;->l:Lzte;
-
-    new-instance p0, Lsja;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, v0, p1}, Lsja;-><init>(Luja;I)V
-
-    new-instance p1, Lzte;
-
-    invoke-direct {p1, p0}, Lzte;-><init>(Lzb6;)V
-
-    iput-object p1, v0, Luja;->m:Lzte;
-
-    new-instance p0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
-
-    iput-object p0, v0, Luja;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput p3, p0, Luja;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Ljava/lang/String;Ljava/lang/String;FFLg0c;ZLeef;)Z
-    .locals 14
+.method public final b()V
+    .locals 1
 
-    iget-object v1, p0, Luja;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-boolean v0, p0, Luja;->Z:Z
 
-    const/4 v0, 0x1
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    iget-object v2, p0, Lbj0;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArraySet;->isEmpty()Z
-
-    move-result v3
-
-    iget-object v4, p0, Lbj0;->f:Landroid/os/Handler;
-
-    if-nez v3, :cond_0
-
-    new-instance v3, Laj0;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v3, p0, v5}, Laj0;-><init>(Luja;I)V
-
-    invoke-virtual {v4, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    const/4 v3, 0x0
-
-    :try_start_0
-    iget-object v5, p0, Luja;->l:Lzte;
-
-    invoke-virtual {v5}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ler8;
-
-    iget-object v5, v5, Ler8;->d:Lzte;
-
-    invoke-virtual {v5}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Boolean;
-
-    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual/range {p0 .. p7}, Luja;->g(Ljava/lang/String;Ljava/lang/String;FFLg0c;ZLeef;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    const/4 v0, 0x1
 
-    move-object p1, v0
+    iput-boolean v0, p0, Luja;->Z:Z
 
-    goto :goto_1
-
-    :cond_1
-    new-instance v13, Lb7;
-
-    const/16 v0, 0x16
-
-    move-object/from16 v5, p7
-
-    invoke-direct {v13, v0, v5}, Lb7;-><init>(ILjava/lang/Object;)V
-
-    iget-object v5, p0, Lbj0;->a:Landroid/content/Context;
-
-    iget-object v6, p0, Luja;->h:Lq95;
-
-    move-object v7, p1
-
-    move-object/from16 v8, p2
-
-    move/from16 v9, p3
-
-    move/from16 v10, p4
-
-    move-object/from16 v11, p5
-
-    move/from16 v12, p6
-
-    invoke-static/range {v5 .. v13}, Lcwf;->a(Landroid/content/Context;Lq95;Ljava/lang/String;Ljava/lang/String;FFLg0c;ZLb7;)Z
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
     move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Luja;->b:Lvod;
+
+    invoke-virtual {v0, p0}, Lvod;->b(Ljava/lang/Runnable;)Lvv4;
+
+    :cond_1
     :goto_0
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    return-void
+.end method
 
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArraySet;->isEmpty()Z
+.method public final c(Lvv4;)V
+    .locals 2
+
+    iget-object v0, p0, Luja;->X:Lvv4;
+
+    invoke-static {v0, p1}, Lzv4;->i(Lvv4;Lvv4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iput-object p1, p0, Luja;->X:Lvv4;
+
+    instance-of v0, p1, Lshc;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lshc;
+
+    const/4 v0, 0x7
+
+    invoke-interface {p1, v0}, Lthc;->q(I)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iput v0, p0, Luja;->r0:I
+
+    iput-object p1, p0, Luja;->o:Lope;
+
+    iput-boolean v1, p0, Luja;->Z:Z
+
+    iget-object p1, p0, Luja;->a:Lela;
+
+    invoke-interface {p1, p0}, Lela;->c(Lvv4;)V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    new-instance p1, Laj0;
+    iget-object p1, p0, Luja;->b:Lvod;
 
-    const/4 v1, 0x0
-
-    invoke-direct {p1, p0, v1}, Laj0;-><init>(Luja;I)V
-
-    invoke-virtual {v4, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_2
-    return v0
-
-    :goto_1
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArraySet;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    new-instance v0, Laj0;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Laj0;-><init>(Luja;I)V
-
-    invoke-virtual {v4, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_3
-    throw p1
-.end method
-
-.method public final f(Ljava/lang/String;Z)V
-    .locals 0
-
-    if-eqz p2, :cond_0
-
-    invoke-static {}, Lla6;->t()Lv17;
-
-    move-result-object p0
-
-    invoke-static {p1}, Li27;->b(Ljava/lang/String;)Li27;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lv17;->f(Li27;)Lh0;
+    invoke-virtual {p1, p0}, Lvod;->b(Ljava/lang/Runnable;)Lvv4;
 
     return-void
 
     :cond_0
-    invoke-static {}, Lla6;->t()Lv17;
+    const/4 v1, 0x2
 
-    move-result-object p0
+    if-ne v0, v1, :cond_1
 
-    invoke-static {p1}, Li27;->b(Ljava/lang/String;)Li27;
+    iput v0, p0, Luja;->r0:I
 
-    move-result-object p1
+    iput-object p1, p0, Luja;->o:Lope;
 
-    const/4 p2, 0x0
+    iget-object p1, p0, Luja;->a:Lela;
 
-    invoke-virtual {p0, p1, p2}, Lv17;->e(Li27;Ljg9;)Lh0;
+    invoke-interface {p1, p0}, Lela;->c(Lvv4;)V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Lswe;
+
+    iget v0, p0, Luja;->c:I
+
+    invoke-direct {p1, v0}, Lswe;-><init>(I)V
+
+    iput-object p1, p0, Luja;->o:Lope;
+
+    iget-object p1, p0, Luja;->a:Lela;
+
+    invoke-interface {p1, p0}, Lela;->c(Lvv4;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    iget-object v0, p0, Luja;->o:Lope;
+
+    invoke-interface {v0}, Lope;->clear()V
 
     return-void
 .end method
 
-.method public final g(Ljava/lang/String;Ljava/lang/String;FFLg0c;ZLeef;)Z
-    .locals 5
+.method public final d(Ljava/lang/Object;)V
+    .locals 2
 
-    sget-object v0, Ljtg;->g:Loja;
+    iget-boolean v0, p0, Luja;->Z:Z
 
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lqz7;->o:Lqz7;
+    iget v0, p0, Luja;->r0:I
 
-    invoke-virtual {v0, v2}, Loja;->a(Lqz7;)Z
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v0, p0, Luja;->o:Lope;
+
+    invoke-interface {v0, p1}, Lope;->offer(Ljava/lang/Object;)Z
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Luja;->b:Lvod;
+
+    invoke-virtual {p1, p0}, Lvod;->b(Ljava/lang/Runnable;)Lvv4;
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final e(ZZLela;)Z
+    .locals 2
+
+    iget-boolean v0, p0, Luja;->q0:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Luja;->o:Lope;
+
+    invoke-interface {p1}, Lope;->clear()V
+
+    return v1
+
+    :cond_0
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Luja;->Y:Ljava/lang/Throwable;
+
+    if-eqz p1, :cond_1
+
+    iput-boolean v1, p0, Luja;->q0:Z
+
+    iget-object p2, p0, Luja;->o:Lope;
+
+    invoke-interface {p2}, Lope;->clear()V
+
+    invoke-interface {p3, p1}, Lela;->onError(Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Luja;->b:Lvod;
+
+    invoke-interface {p1}, Lvv4;->g()V
+
+    return v1
+
+    :cond_1
+    if-eqz p2, :cond_2
+
+    iput-boolean v1, p0, Luja;->q0:Z
+
+    invoke-interface {p3}, Lela;->b()V
+
+    iget-object p1, p0, Luja;->b:Lvod;
+
+    invoke-interface {p1}, Lvv4;->g()V
+
+    return v1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget-boolean v0, p0, Luja;->q0:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Luja;->q0:Z
+
+    iget-object v0, p0, Luja;->X:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    iget-object v0, p0, Luja;->b:Lvod;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    iget-boolean v0, p0, Luja;->s0:Z
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Luja;->o:Lope;
+
+    invoke-interface {v0}, Lope;->clear()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget-boolean v0, p0, Luja;->q0:Z
+
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Luja;->o:Lope;
+
+    invoke-interface {v0}, Lope;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Luja;->Z:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    iput-object p1, p0, Luja;->Y:Ljava/lang/Throwable;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Luja;->Z:Z
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Luja;->b:Lvod;
+
+    invoke-virtual {p1, p0}, Lvod;->b(Ljava/lang/Runnable;)Lvv4;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Luja;->o:Lope;
+
+    invoke-interface {v0}, Lope;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final q(I)I
+    .locals 0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Luja;->s0:Z
+
+    const/4 p1, 0x2
+
+    return p1
+.end method
+
+.method public final run()V
+    .locals 7
+
+    iget-boolean v0, p0, Luja;->s0:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_5
+
+    move v0, v1
+
+    :cond_0
+    iget-boolean v2, p0, Luja;->q0:Z
+
+    if-eqz v2, :cond_1
+
+    goto/16 :goto_3
+
+    :cond_1
+    iget-boolean v2, p0, Luja;->Z:Z
+
+    iget-object v3, p0, Luja;->Y:Ljava/lang/Throwable;
+
+    if-eqz v2, :cond_2
+
+    if-eqz v3, :cond_2
+
+    iput-boolean v1, p0, Luja;->q0:Z
+
+    iget-object v0, p0, Luja;->a:Lela;
+
+    iget-object v1, p0, Luja;->Y:Ljava/lang/Throwable;
+
+    invoke-interface {v0, v1}, Lela;->onError(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Luja;->b:Lvod;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    return-void
+
+    :cond_2
+    iget-object v3, p0, Luja;->a:Lela;
+
+    const/4 v4, 0x0
+
+    invoke-interface {v3, v4}, Lela;->d(Ljava/lang/Object;)V
+
+    if-eqz v2, :cond_4
+
+    iput-boolean v1, p0, Luja;->q0:Z
+
+    iget-object v0, p0, Luja;->Y:Ljava/lang/Throwable;
+
+    if-eqz v0, :cond_3
+
+    iget-object v1, p0, Luja;->a:Lela;
+
+    invoke-interface {v1, v0}, Lela;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Luja;->a:Lela;
+
+    invoke-interface {v0}, Lela;->b()V
+
+    :goto_0
+    iget-object v0, p0, Luja;->b:Lvod;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    return-void
+
+    :cond_4
+    neg-int v0, v0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_3
+
+    :cond_5
+    iget-object v0, p0, Luja;->o:Lope;
+
+    iget-object v2, p0, Luja;->a:Lela;
+
+    move v3, v1
+
+    :cond_6
+    iget-boolean v4, p0, Luja;->Z:Z
+
+    invoke-interface {v0}, Lope;->isEmpty()Z
+
+    move-result v5
+
+    invoke-virtual {p0, v4, v5, v2}, Luja;->e(ZZLela;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_7
+
+    goto :goto_3
+
+    :cond_7
+    :goto_1
+    iget-boolean v4, p0, Luja;->Z:Z
+
+    :try_start_0
+    invoke-interface {v0}, Lope;->poll()Ljava/lang/Object;
+
+    move-result-object v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v5, :cond_8
+
+    move v6, v1
+
+    goto :goto_2
+
+    :cond_8
+    const/4 v6, 0x0
+
+    :goto_2
+    invoke-virtual {p0, v4, v6, v2}, Luja;->e(ZZLela;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_9
+
+    goto :goto_3
+
+    :cond_9
+    if-eqz v6, :cond_a
+
+    neg-int v3, v3
+
+    invoke-virtual {p0, v3}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-nez v3, :cond_6
 
-    const-string v3, "transformMedia"
+    :goto_3
+    return-void
 
-    const-string v4, "uja"
+    :cond_a
+    invoke-interface {v2, v5}, Lela;->d(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v2, v4, v3, v1}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_1
 
-    :cond_1
-    :goto_0
-    new-instance v0, Ljava/io/File;
+    :catchall_0
+    move-exception v3
 
-    invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-static {v3}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    iput-boolean v1, p0, Luja;->q0:Z
 
-    move-result-object p1
+    iget-object v1, p0, Luja;->X:Lvv4;
 
-    new-instance v0, Lcr8;
+    invoke-interface {v1}, Lvv4;->g()V
 
-    iget-object v2, p0, Lbj0;->a:Landroid/content/Context;
+    invoke-interface {v0}, Lope;->clear()V
 
-    invoke-direct {v0, v2}, Lcr8;-><init>(Landroid/content/Context;)V
+    invoke-interface {v2, v3}, Lela;->onError(Ljava/lang/Throwable;)V
 
-    iget-object v2, v0, Lcr8;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Luja;->b:Lvod;
 
-    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Lvv4;->g()V
 
-    iput-object p2, v0, Lcr8;->c:Ljava/lang/String;
-
-    iput p3, v0, Lcr8;->g:F
-
-    iput p4, v0, Lcr8;->h:F
-
-    iget p1, p5, Lg0c;->b:I
-
-    iget p2, p5, Lg0c;->c:I
-
-    iput p1, v0, Lcr8;->d:I
-
-    iput p2, v0, Lcr8;->e:I
-
-    iget p1, p5, Lg0c;->d:I
-
-    iput p1, v0, Lcr8;->f:I
-
-    iput-boolean p6, v0, Lcr8;->k:Z
-
-    iget-object p1, p0, Luja;->l:Lzte;
-
-    invoke-virtual {p1}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ler8;
-
-    iget-object p1, p1, Ler8;->e:Lzte;
-
-    invoke-virtual {p1}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Lcr8;->m:Z
-
-    iget-object p1, p0, Luja;->l:Lzte;
-
-    invoke-virtual {p1}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ler8;
-
-    iget-object p1, p1, Ler8;->f:Lzte;
-
-    invoke-virtual {p1}, Lzte;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Lcr8;->l:Z
-
-    new-instance p1, Lar7;
-
-    const/16 p2, 0x13
-
-    invoke-direct {p1, p2, p7}, Lar7;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, v0, Lcr8;->n:Lar7;
-
-    invoke-virtual {v0}, Lcr8;->a()Lmr8;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lmr8;->s()Lir8;
-
-    move-result-object p1
-
-    instance-of p2, p1, Lhr8;
-
-    const/4 p3, 0x1
-
-    if-eqz p2, :cond_2
-
-    return p3
-
-    :cond_2
-    instance-of p2, p1, Lgr8;
-
-    if-eqz p2, :cond_3
-
-    iget-object p0, p0, Luja;->h:Lq95;
-
-    new-instance p2, Lru/ok/tamtam/ExceptionHandler$HandledException;
-
-    check-cast p1, Lgr8;
-
-    iget-object p1, p1, Lgr8;->e:Lone/me/sdk/media/transformer/MediaTransformException;
-
-    const-string p4, "ONEME-9916"
-
-    invoke-direct {p2, v1, p1, p3, p4}, Lru/ok/tamtam/ExceptionHandler$HandledException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
-
-    check-cast p0, Leha;
-
-    invoke-virtual {p0, p2}, Leha;->c(Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_3
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    return-void
 .end method

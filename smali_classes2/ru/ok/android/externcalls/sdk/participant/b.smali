@@ -3,15 +3,15 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls0e;
+.implements Lone;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic c:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
 
 
 # direct methods
@@ -20,9 +20,9 @@
 
     iput p3, p0, Lru/ok/android/externcalls/sdk/participant/b;->a:I
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/b;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/b;->b:Ljava/lang/Object;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/b;->b:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/b;->c:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,31 +31,42 @@
 
 
 # virtual methods
-.method public final k(Lorg/json/JSONObject;)V
-    .locals 1
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 2
 
     iget v0, p0, Lru/ok/android/externcalls/sdk/participant/b;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/b;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/b;->b:Ljava/lang/Object;
 
-    check-cast v0, Lbc6;
+    check-cast v0, Ltr3;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/b;->b:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/b;->c:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
 
-    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipants$1;->a(Lbc6;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$2;->c(Ltr3;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/b;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/b;->b:Ljava/lang/Object;
 
-    check-cast v0, Lqm3;
+    check-cast v0, Lli6;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/b;->b:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/b;->c:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
 
-    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$2;->c(Lqm3;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantsExtIds$1;->a(Lli6;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/b;->b:Ljava/lang/Object;
+
+    check-cast v0, Lli6;
+
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/b;->c:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipants$1;->a(Lli6;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
 
     return-void
 
@@ -63,6 +74,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

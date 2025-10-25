@@ -1,92 +1,409 @@
 .class public final Lef0;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/workmanager/BacklogWorker;
+.field public final a:I
 
-.field public final synthetic Y:Ljava/util/HashSet;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:I
+
+.field public final k:I
+
+.field public final l:I
+
+.field public final m:I
+
+.field public final n:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljava/util/HashSet;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(IIIIIIIIIIIIII)V
     .locals 0
 
-    iput-object p1, p0, Lef0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lef0;->Y:Ljava/util/HashSet;
+    iput p1, p0, Lef0;->a:I
 
-    const/4 p1, 0x2
+    iput p2, p0, Lef0;->b:I
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p3, p0, Lef0;->c:I
+
+    iput p4, p0, Lef0;->d:I
+
+    iput p5, p0, Lef0;->e:I
+
+    iput p6, p0, Lef0;->f:I
+
+    iput p7, p0, Lef0;->g:I
+
+    iput p8, p0, Lef0;->h:I
+
+    iput p9, p0, Lef0;->i:I
+
+    iput p10, p0, Lef0;->j:I
+
+    iput p11, p0, Lef0;->k:I
+
+    iput p12, p0, Lef0;->l:I
+
+    iput p13, p0, Lef0;->m:I
+
+    iput p14, p0, Lef0;->n:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Ly04;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto/16 :goto_1
 
-    invoke-virtual {p0, p1, p2}, Lef0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Lef0;
 
-    move-result-object p0
+    if-nez v0, :cond_1
 
-    check-cast p0, Lef0;
+    goto/16 :goto_0
 
-    sget-object p1, Lylf;->a:Lylf;
+    :cond_1
+    check-cast p1, Lef0;
 
-    invoke-virtual {p0, p1}, Lef0;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Lef0;->a:I
 
-    return-object p1
+    iget v1, p1, Lef0;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto/16 :goto_0
+
+    :cond_2
+    iget v0, p0, Lef0;->b:I
+
+    iget v1, p1, Lef0;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lef0;->c:I
+
+    iget v1, p1, Lef0;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lef0;->d:I
+
+    iget v1, p1, Lef0;->d:I
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, Lef0;->e:I
+
+    iget v1, p1, Lef0;->e:I
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget v0, p0, Lef0;->f:I
+
+    iget v1, p1, Lef0;->f:I
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget v0, p0, Lef0;->g:I
+
+    iget v1, p1, Lef0;->g:I
+
+    if-eq v0, v1, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget v0, p0, Lef0;->h:I
+
+    iget v1, p1, Lef0;->h:I
+
+    if-eq v0, v1, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget v0, p0, Lef0;->i:I
+
+    iget v1, p1, Lef0;->i:I
+
+    if-eq v0, v1, :cond_a
+
+    goto :goto_0
+
+    :cond_a
+    iget v0, p0, Lef0;->j:I
+
+    iget v1, p1, Lef0;->j:I
+
+    if-eq v0, v1, :cond_b
+
+    goto :goto_0
+
+    :cond_b
+    iget v0, p0, Lef0;->k:I
+
+    iget v1, p1, Lef0;->k:I
+
+    if-eq v0, v1, :cond_c
+
+    goto :goto_0
+
+    :cond_c
+    iget v0, p0, Lef0;->l:I
+
+    iget v1, p1, Lef0;->l:I
+
+    if-eq v0, v1, :cond_d
+
+    goto :goto_0
+
+    :cond_d
+    iget v0, p0, Lef0;->m:I
+
+    iget v1, p1, Lef0;->m:I
+
+    if-eq v0, v1, :cond_e
+
+    goto :goto_0
+
+    :cond_e
+    iget v0, p0, Lef0;->n:I
+
+    iget p1, p1, Lef0;->n:I
+
+    if-eq v0, p1, :cond_f
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_f
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    new-instance p1, Lef0;
+    iget v0, p0, Lef0;->a:I
 
-    iget-object v0, p0, Lef0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object p0, p0, Lef0;->Y:Ljava/util/HashSet;
+    move-result v0
 
-    invoke-direct {p1, v0, p0, p2}, Lef0;-><init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljava/util/HashSet;Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0x1f
 
-    return-object p1
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lef0;->b:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->d:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    const/4 v2, -0x1
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->e:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->f:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->g:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->h:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->i:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->j:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->k:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->l:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lef0;->m:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, Lef0;->n:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    const-string v0, ", attentionSecondary="
 
-    iget-object p1, p0, Lef0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
+    const-string v1, ", contrast="
 
-    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Luvg;
+    const-string v2, "BackgroundAccentColors(attentionPrimary="
 
-    move-result-object p1
+    iget v3, p0, Lef0;->a:I
 
-    invoke-virtual {p1}, Luvg;->g()Landroidx/work/impl/model/WorkersQueueDao;
+    iget v4, p0, Lef0;->b:I
 
-    move-result-object p1
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lef0;->Y:Ljava/util/HashSet;
+    move-result-object v0
 
-    invoke-static {p0}, Lq73;->B0(Ljava/lang/Iterable;)Ljava/util/List;
+    const-string v1, ", contrastSecondary="
 
-    move-result-object p0
+    const-string v2, ", contrastStatic=-1, contrastTertiary="
 
-    invoke-interface {p1, p0}, Landroidx/work/impl/model/WorkersQueueDao;->delete(Ljava/util/List;)V
+    iget v3, p0, Lef0;->c:I
 
-    sget-object p0, Lylf;->a:Lylf;
+    iget v4, p0, Lef0;->d:I
 
-    return-object p0
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", negative="
+
+    const-string v2, ", neutral="
+
+    iget v3, p0, Lef0;->e:I
+
+    iget v4, p0, Lef0;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", neutralFade="
+
+    const-string v2, ", neutralFadeSecondary="
+
+    iget v3, p0, Lef0;->g:I
+
+    iget v4, p0, Lef0;->h:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", neutralSecondary="
+
+    const-string v2, ", neutralStatic="
+
+    iget v3, p0, Lef0;->i:I
+
+    iget v4, p0, Lef0;->j:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", neutralThemed="
+
+    const-string v2, ", positive="
+
+    iget v3, p0, Lef0;->k:I
+
+    iget v4, p0, Lef0;->l:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", themed="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lef0;->m:I
+
+    iget v4, p0, Lef0;->n:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lfd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

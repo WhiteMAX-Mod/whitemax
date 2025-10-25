@@ -42,9 +42,9 @@
 
     invoke-virtual/range {v1 .. v7}, Lnet/jpountz/lz4/LZ4SafeDecompressor;->decompress([BII[BII)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public abstract decompress([BII[BII)I
@@ -68,9 +68,9 @@
 
     invoke-virtual/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4SafeDecompressor;->decompress([BII[BI)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final decompress(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
@@ -101,23 +101,23 @@
 
     invoke-virtual/range {v0 .. v6}, Lnet/jpountz/lz4/LZ4SafeDecompressor;->decompress(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I
 
-    move-result p0
+    move-result p1
 
     .line 8
     invoke-virtual {v1}, Ljava/nio/Buffer;->limit()I
 
-    move-result p1
+    move-result p2
 
-    invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v1, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     .line 9
     invoke-virtual {v4}, Ljava/nio/Buffer;->position()I
 
-    move-result p1
+    move-result p2
 
-    add-int/2addr p1, p0
+    add-int/2addr p2, p1
 
-    invoke-virtual {v4, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v4, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-void
 .end method
@@ -132,9 +132,9 @@
 
     invoke-virtual {p0, p1, v0, v1, p2}, Lnet/jpountz/lz4/LZ4SafeDecompressor;->decompress([BIII)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final decompress([BIII)[B
@@ -158,31 +158,31 @@
     .line 4
     invoke-virtual/range {v0 .. v6}, Lnet/jpountz/lz4/LZ4SafeDecompressor;->decompress([BII[BII)I
 
-    move-result p0
+    move-result p1
 
-    if-eq p0, v6, :cond_0
+    if-eq p1, v6, :cond_0
 
     .line 5
-    invoke-static {v4, p0}, Ljava/util/Arrays;->copyOf([BI)[B
+    invoke-static {v4, p1}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_0
     return-object v4
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

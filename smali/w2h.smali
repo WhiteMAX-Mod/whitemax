@@ -1,5 +1,5 @@
 .class public final Lw2h;
-.super Lr3;
+.super Lf4;
 .source "SourceFile"
 
 
@@ -16,76 +16,237 @@
 
 
 # instance fields
-.field public final a:I
+.field public final X:Lcom/google/android/gms/maps/model/LatLngBounds;
 
-.field public final b:Lrk3;
+.field public final a:Lcom/google/android/gms/maps/model/LatLng;
 
-.field public final c:Lb3h;
+.field public final b:Lcom/google/android/gms/maps/model/LatLng;
+
+.field public final c:Lcom/google/android/gms/maps/model/LatLng;
+
+.field public final o:Lcom/google/android/gms/maps/model/LatLng;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lfvf;
+    new-instance v0, Lnwh;
 
-    const/16 v1, 0xe
+    const/16 v1, 0x10
 
-    invoke-direct {v0, v1}, Lfvf;-><init>(I)V
+    invoke-direct {v0, v1}, Lnwh;-><init>(I)V
 
     sput-object v0, Lw2h;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(ILrk3;Lb3h;)V
+.method public constructor <init>(Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLngBounds;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lw2h;->a:I
+    iput-object p1, p0, Lw2h;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    iput-object p2, p0, Lw2h;->b:Lrk3;
+    iput-object p2, p0, Lw2h;->b:Lcom/google/android/gms/maps/model/LatLng;
 
-    iput-object p3, p0, Lw2h;->c:Lb3h;
+    iput-object p3, p0, Lw2h;->c:Lcom/google/android/gms/maps/model/LatLng;
+
+    iput-object p4, p0, Lw2h;->o:Lcom/google/android/gms/maps/model/LatLng;
+
+    iput-object p5, p0, Lw2h;->X:Lcom/google/android/gms/maps/model/LatLngBounds;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lw2h;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lw2h;
+
+    iget-object v1, p0, Lw2h;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v3, p1, Lw2h;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v1, v3}, Lcom/google/android/gms/maps/model/LatLng;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lw2h;->b:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v3, p1, Lw2h;->b:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v1, v3}, Lcom/google/android/gms/maps/model/LatLng;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lw2h;->c:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v3, p1, Lw2h;->c:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v1, v3}, Lcom/google/android/gms/maps/model/LatLng;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lw2h;->o:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v3, p1, Lw2h;->o:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v1, v3}, Lcom/google/android/gms/maps/model/LatLng;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lw2h;->X:Lcom/google/android/gms/maps/model/LatLngBounds;
+
+    iget-object p1, p1, Lw2h;->X:Lcom/google/android/gms/maps/model/LatLngBounds;
+
+    invoke-virtual {v1, p1}, Lcom/google/android/gms/maps/model/LatLngBounds;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-object v0, p0, Lw2h;->o:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v1, p0, Lw2h;->X:Lcom/google/android/gms/maps/model/LatLngBounds;
+
+    iget-object v2, p0, Lw2h;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v3, p0, Lw2h;->b:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v4, p0, Lw2h;->c:Lcom/google/android/gms/maps/model/LatLng;
+
+    filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Lzgd;
+
+    invoke-direct {v0, p0}, Lzgd;-><init>(Ljava/lang/Object;)V
+
+    const-string v1, "nearLeft"
+
+    iget-object v2, p0, Lw2h;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "nearRight"
+
+    iget-object v2, p0, Lw2h;->b:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "farLeft"
+
+    iget-object v2, p0, Lw2h;->c:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "farRight"
+
+    iget-object v2, p0, Lw2h;->o:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "latLngBounds"
+
+    iget-object v2, p0, Lw2h;->X:Lcom/google/android/gms/maps/model/LatLngBounds;
+
+    invoke-virtual {v0, v2, v1}, Lzgd;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lzgd;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
     const/16 v0, 0x4f45
 
-    invoke-static {p1, v0}, Ljs9;->U(Landroid/os/Parcel;I)I
+    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    const/4 v1, 0x4
-
-    const/4 v2, 0x1
-
-    invoke-static {p1, v2, v1}, Ljs9;->W(Landroid/os/Parcel;II)V
-
-    iget v1, p0, Lw2h;->a:I
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
     const/4 v1, 0x2
 
-    iget-object v2, p0, Lw2h;->b:Lrk3;
+    iget-object v2, p0, Lw2h;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    invoke-static {p1, v1, v2, p2}, Ljs9;->O(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
     const/4 v1, 0x3
 
-    iget-object p0, p0, Lw2h;->c:Lb3h;
+    iget-object v2, p0, Lw2h;->b:Lcom/google/android/gms/maps/model/LatLng;
 
-    invoke-static {p1, v1, p0, p2}, Ljs9;->O(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-static {p1, v0}, Ljs9;->V(Landroid/os/Parcel;I)V
+    const/4 v1, 0x4
+
+    iget-object v2, p0, Lw2h;->c:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    const/4 v1, 0x5
+
+    iget-object v2, p0, Lw2h;->o:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    const/4 v1, 0x6
+
+    iget-object v2, p0, Lw2h;->X:Lcom/google/android/gms/maps/model/LatLngBounds;
+
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
 
     return-void
 .end method

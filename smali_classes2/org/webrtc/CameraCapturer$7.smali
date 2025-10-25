@@ -44,11 +44,11 @@
 
 # virtual methods
 .method public run()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer$7;->val$oldSession:Lorg/webrtc/CameraSession;
+    iget-object v0, p0, Lorg/webrtc/CameraCapturer$7;->val$oldSession:Lorg/webrtc/CameraSession;
 
-    invoke-interface {p0}, Lorg/webrtc/CameraSession;->stop()V
+    invoke-interface {v0}, Lorg/webrtc/CameraSession;->stop()V
 
     return-void
 .end method

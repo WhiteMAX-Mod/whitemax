@@ -3,60 +3,97 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgxf;
+.implements Lmcb;
 
 
-# static fields
-.field public static final a:Lxpe;
+# instance fields
+.field public final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/util/LinkedHashMap;)V
+    .locals 0
 
-    new-instance v0, Lg74;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lg74;-><init>(I)V
-
-    invoke-static {v0}, Lr94;->R(Lxpe;)Lxpe;
-
-    move-result-object v0
-
-    sput-object v0, Lkcb;->a:Lxpe;
+    iput-object p1, p0, Lkcb;->a:Ljava/util/LinkedHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lbx0;Lc83;ZLz13;)Lixf;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    sget-object p0, Lkcb;->a:Lxpe;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {p0}, Lxpe;->get()Ljava/lang/Object;
+    goto :goto_1
 
-    move-result-object p0
+    :cond_0
+    instance-of v0, p1, Lkcb;
 
-    move-object v0, p0
+    if-nez v0, :cond_1
 
-    check-cast v0, Lgxf;
+    goto :goto_0
 
-    move-object v1, p1
+    :cond_1
+    check-cast p1, Lkcb;
 
-    move-object v2, p2
+    iget-object v0, p0, Lkcb;->a:Ljava/util/LinkedHashMap;
 
-    move-object v3, p3
+    iget-object p1, p1, Lkcb;->a:Ljava/util/LinkedHashMap;
 
-    move v4, p4
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-object v5, p5
+    move-result p1
 
-    invoke-interface/range {v0 .. v5}, Lgxf;->a(Landroid/content/Context;Lbx0;Lc83;ZLz13;)Lixf;
+    if-nez p1, :cond_2
 
-    move-result-object p0
+    :goto_0
+    const/4 p1, 0x0
 
-    return-object p0
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lkcb;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CallHistoryPageState(callsHistory="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lkcb;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

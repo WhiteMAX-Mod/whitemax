@@ -1,72 +1,60 @@
 .class public final Ll38;
-.super Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lfla;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/android/MainActivity;
+.field public final synthetic X:Ly49;
+
+.field public a:Ljava/lang/Object;
+
+.field public final synthetic b:Lbpf;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic o:Lkj6;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lw9c;Ljava/lang/Object;Lkj6;Ly49;)V
     .locals 0
 
-    iput-object p1, p0, Ll38;->X:Lone/me/android/MainActivity;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ll38;->b:Lbpf;
 
-    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ll38;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Ll38;->o:Lkj6;
+
+    iput-object p4, p0, Ll38;->X:Ly49;
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Ll38;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/lang/Object;)V
+    .locals 3
 
-    check-cast p1, Ljava/lang/Boolean;
+    new-instance v0, Lhk6;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/16 v1, 0xb
 
-    invoke-virtual {p0, p1, p2}, Ll38;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v2, 0x0
 
-    move-result-object p0
+    invoke-direct {v0, p0, p1, v2, v1}, Lhk6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    check-cast p0, Ll38;
+    iget-object p1, p0, Ll38;->b:Lbpf;
 
-    sget-object p1, Lylf;->a:Lylf;
+    invoke-interface {p1, v0}, Lbpf;->f(Ljava/lang/Runnable;)V
 
-    invoke-virtual {p0, p1}, Ll38;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Ll38;
-
-    iget-object p0, p0, Ll38;->X:Lone/me/android/MainActivity;
-
-    invoke-direct {p1, p0, p2}, Ll38;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Ll38;->X:Lone/me/android/MainActivity;
-
-    invoke-virtual {p0}, Lt5;->W()V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-void
 .end method

@@ -1,61 +1,67 @@
-.class public final Lzs8;
+.class public interface abstract Lzs8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Lzs8;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lzs8;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lzs8;->a:Lzs8;
-
-    return-void
-.end method
+# interfaces
+.implements Ly18;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public h(Ly18;)Z
+    .locals 4
 
-    const/4 v0, 0x1
+    instance-of v0, p1, Lzs8;
 
-    if-ne p0, p1, :cond_0
+    if-nez v0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of p0, p1, Lzs8;
+    invoke-interface {p0}, Lzs8;->j()J
 
-    if-nez p0, :cond_1
+    move-result-wide v0
 
-    const/4 p0, 0x0
+    check-cast p1, Lzs8;
 
-    return p0
+    invoke-interface {p1}, Lzs8;->j()J
+
+    move-result-wide v2
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p0}, Lzs8;->i()J
+
+    move-result-wide v0
+
+    invoke-interface {p1}, Lzs8;->i()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_1
-    return v0
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final hashCode()I
-    .locals 0
-
-    const p0, 0x388508e4
-
-    return p0
+.method public abstract i()J
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+.method public abstract j()J
+.end method
 
-    const-string p0, "InvalidateAll"
+.method public abstract v()Lt00;
+.end method
 
-    return-object p0
+.method public abstract w()Ljava/lang/String;
 .end method

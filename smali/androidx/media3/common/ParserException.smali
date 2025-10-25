@@ -105,13 +105,13 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Landroidx/media3/common/ParserException;->b:I
+    iget v0, p0, Landroidx/media3/common/ParserException;->b:I
 
-    const-string v0, "}"
+    const-string v2, "}"
 
-    invoke-static {v1, p0, v0}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

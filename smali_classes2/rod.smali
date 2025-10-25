@@ -1,28 +1,24 @@
 .class public final Lrod;
-.super Lure;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lpc6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lyod;
-
-.field public final synthetic Y:Landroid/graphics/RectF;
+.field public final synthetic X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
 
 # direct methods
-.method public constructor <init>(Lyod;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lrod;->X:Lyod;
-
-    iput-object p2, p0, Lrod;->Y:Landroid/graphics/RectF;
+    iput-object p1, p0, Lrod;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,21 +28,21 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ly04;
+    check-cast p1, Lq54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lrod;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lrod;
+    check-cast p1, Lrod;
 
-    sget-object p1, Lylf;->a:Lylf;
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p0, p1}, Lrod;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lrod;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -54,49 +50,27 @@
 
     new-instance p1, Lrod;
 
-    iget-object v0, p0, Lrod;->X:Lyod;
+    iget-object v0, p0, Lrod;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    iget-object p0, p0, Lrod;->Y:Landroid/graphics/RectF;
-
-    invoke-direct {p1, v0, p0, p2}, Lrod;-><init>(Lyod;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lrod;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    sget-object p1, Lyod;->J0:[Lxi7;
+    iget-object p1, p0, Lrod;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    iget-object p1, p0, Lrod;->X:Lyod;
-
-    invoke-virtual {p1}, Lyod;->s()Lcp5;
+    invoke-static {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Lcod;
 
     move-result-object v0
 
-    iget-object v1, p1, Lyod;->E0:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {p1, v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->g(Lcod;)V
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    sget-object p1, Lccg;->a:Lccg;
 
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcp5;->r(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object p0, p0, Lrod;->Y:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, v0, p0}, Lyod;->v(Ljava/lang/String;Landroid/graphics/RectF;)V
-
-    sget-object p0, Lylf;->a:Lylf;
-
-    return-object p0
+    return-object p1
 .end method

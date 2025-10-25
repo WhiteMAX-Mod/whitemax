@@ -1,41 +1,51 @@
 .class public final Lorg;
-.super Lcb4;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lorg;
+# instance fields
+.field public X:Lq1a;
 
-.field public static final c:Lxa4;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lyrg;
+
+.field public o:Lyrg;
+
+.field public q0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lyrg;Ly14;)V
+    .locals 0
 
-    new-instance v0, Lorg;
+    iput-object p1, p0, Lorg;->Z:Lyrg;
 
-    invoke-direct {v0}, Lcb4;-><init>()V
-
-    sput-object v0, Lorg;->b:Lorg;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x2
-
-    const-string v1, ":webview/faq"
-
-    const/4 v3, 0x0
-
-    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
-
-    move-result-object v0
-
-    sput-object v0, Lorg;->c:Lxa4;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lorg;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lorg;->q0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lorg;->q0:I
+
+    iget-object p1, p0, Lorg;->Z:Lyrg;
+
+    invoke-static {p1, p0}, Lyrg;->a(Lyrg;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

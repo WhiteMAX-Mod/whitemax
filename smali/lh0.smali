@@ -1,178 +1,114 @@
 .class public final Llh0;
-.super Lj2e;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final E0:Lih0;
+.field public X:I
 
-.field public final F0:Lut3;
+.field public final synthetic Y:Lsh0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ltt3;)V
-    .locals 3
+.method public constructor <init>(Lsh0;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Lbh0;->a:Lbh0;
+    iput-object p1, p0, Llh0;->Y:Lsh0;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
+    const/4 p1, 0x2
 
-    move-result-object v0
-
-    const-class v1, Lih0;
-
-    invoke-virtual {v0, v1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lih0;
-
-    new-instance v1, Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-direct {v1, p1}, Landroidx/viewpager2/widget/ViewPager2;-><init>(Landroid/content/Context;)V
-
-    invoke-static {v1}, Lz48;->n(Landroidx/viewpager2/widget/ViewPager2;)V
-
-    invoke-direct {p0, v1}, Lzoc;-><init>(Landroid/view/View;)V
-
-    iput-object v0, p0, Llh0;->E0:Lih0;
-
-    new-instance p1, Lut3;
-
-    invoke-direct {p1, p2}, Lut3;-><init>(Ltt3;)V
-
-    iput-object p1, p0, Llh0;->F0:Lut3;
-
-    sget p2, Lpba;->a:I
-
-    invoke-virtual {v1, p2}, Landroid/view/View;->setId(I)V
-
-    new-instance p2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v0, -0x1
-
-    const/4 v2, -0x2
-
-    invoke-direct {p2, v0, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v1, p1}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lcoc;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Landroidx/viewpager2/widget/ViewPager2;->setOrientation(I)V
-
-    const/4 p2, 0x2
-
-    invoke-virtual {v1, p2}, Landroidx/viewpager2/widget/ViewPager2;->setOffscreenPageLimit(I)V
-
-    invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
-
-    invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
-
-    new-instance p1, Lc9;
-
-    invoke-direct {p1, v1, p2, p0}, Lc9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, p1}, Landroidx/viewpager2/widget/ViewPager2;->setPageTransformer(Lw8g;)V
-
-    new-instance p1, Lkh0;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2, p0}, Lkh0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, p1}, Landroidx/viewpager2/widget/ViewPager2;->b(Lv8g;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lah0;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object p1, p1, Lah0;->b:Ljava/util/List;
+    check-cast p1, Lq54;
 
-    new-instance v0, Lb;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/16 v1, 0x11
+    invoke-virtual {p0, p1, p2}, Llh0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1, p0}, Lb;-><init>(ILjava/lang/Object;)V
+    move-result-object p1
 
-    iget-object v1, p0, Llh0;->F0:Lut3;
+    check-cast p1, Llh0;
 
-    invoke-virtual {v1, p1, v0}, Lls7;->F(Ljava/util/List;Ljava/lang/Runnable;)V
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+    invoke-virtual {p1, p2}, Llh0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p0, Landroidx/viewpager2/widget/ViewPager2;
+    move-result-object p1
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    return-object p1
+.end method
 
-    move-result v0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    const/4 v1, 0x0
+    new-instance p1, Llh0;
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Llh0;->Y:Lsh0;
 
-    if-le v0, v2, :cond_0
+    invoke-direct {p1, v0, p2}, Llh0;-><init>(Lsh0;Lkotlin/coroutines/Continuation;)V
 
-    move v0, v2
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Llh0;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    move v0, v1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    invoke-virtual {p0, v0}, Landroidx/viewpager2/widget/ViewPager2;->setUserInputEnabled(Z)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    throw p1
 
-    const/4 v3, -0x1
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    if-ne v0, v2, :cond_1
+    iget-object p1, p0, Llh0;->Y:Lsh0;
 
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object p1, p1, Lsh0;->b:Lnje;
+
+    iput v1, p0, Llh0;->X:I
+
+    sget-object v0, Lfh0;->a:Lfh0;
+
+    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lvt3;
+    sget-object v0, Lr54;->a:Lr54;
 
-    iget p1, p1, Lvt3;->a:I
+    if-ne p1, v0, :cond_2
 
-    if-ne p1, v2, :cond_1
+    return-object v0
 
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-direct {p1, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-
-    :cond_1
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v0, -0x2
-
-    invoke-direct {p1, v3, v0}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic y(Lts7;)V
-    .locals 0
-
-    check-cast p1, Lah0;
-
-    invoke-virtual {p0, p1}, Llh0;->F(Lah0;)V
-
-    return-void
+    return-object p1
 .end method

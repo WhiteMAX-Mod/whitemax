@@ -1,37 +1,58 @@
 .class public final Lyzf;
-.super Lc2e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxzf;
 
 
 # instance fields
-.field public final X:J
-
-.field public final Y:Ljava/lang/String;
-
-.field public final Z:Lzxc;
-
-.field public final c:I
-
-.field public final o:I
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IIJLjava/lang/String;Lzxc;)V
+.method public constructor <init>()V
     .locals 1
 
-    const/16 v0, 0xb
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p1}, Lc2e;-><init>(ILjava/lang/String;)V
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput p2, p0, Lyzf;->c:I
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    iput p3, p0, Lyzf;->o:I
+    iput-object v0, p0, Lyzf;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput-wide p4, p0, Lyzf;->X:J
+    return-void
+.end method
 
-    iput-object p6, p0, Lyzf;->Y:Ljava/lang/String;
 
-    iput-object p7, p0, Lyzf;->Z:Lzxc;
+# virtual methods
+.method public final a(Ltzf;)V
+    .locals 2
 
+    iget-object v0, p0, Lyzf;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lxzf;
+
+    invoke-interface {v1, p1}, Lxzf;->a(Ltzf;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

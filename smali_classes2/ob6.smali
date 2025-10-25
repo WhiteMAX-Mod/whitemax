@@ -1,117 +1,154 @@
-.class public final synthetic Lob6;
+.class public abstract Lob6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/GestureDetector;
+# static fields
+.field public static final a:Lvib;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/GestureDetector;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p2, p0, Lob6;->a:I
+    new-instance v0, Ltcb;
 
-    iput-object p1, p0, Lob6;->b:Landroid/view/GestureDetector;
+    const/4 v1, 0x4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-void
-.end method
+    move-result-object v1
 
+    sget-object v2, Lnb6;->a:Lnb6;
 
-# virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 1
+    invoke-direct {v0, v1, v2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget p1, p0, Lob6;->a:I
+    new-instance v1, Ltcb;
 
-    const/4 v0, 0x0
+    const/4 v2, 0x3
 
-    iget-object p0, p0, Lob6;->b:Landroid/view/GestureDetector;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    packed-switch p1, :pswitch_data_0
+    move-result-object v2
 
-    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    sget-object v3, Lnb6;->b:Lnb6;
 
-    move-result p0
+    invoke-direct {v1, v2, v3}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return p0
+    new-instance v2, Ltcb;
 
-    :pswitch_0
-    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    const/4 v3, 0x2
 
-    move-result p0
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return p0
+    move-result-object v3
 
-    :pswitch_1
-    sget-object p1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->X:[Lxi7;
+    sget-object v4, Lnb6;->c:Lnb6;
 
-    if-eqz p2, :cond_0
+    invoke-direct {v2, v3, v4}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    new-instance v3, Ltcb;
 
-    return v0
+    const/4 v4, 0x1
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    sget-object v5, Lnb6;->o:Lnb6;
+
+    invoke-direct {v3, v4, v5}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v4, Ltcb;
+
+    const/4 v5, 0x0
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    sget-object v6, Lnb6;->X:Lnb6;
+
+    invoke-direct {v4, v5, v6}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Ltcb;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ly0j;->b([Ltcb;)Lvib;
+
+    move-result-object v0
+
+    sput-object v0, Lob6;->a:Lvib;
+
+    invoke-virtual {v0}, Ll2;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-static {v1}, Lzg8;->i(I)I
+
+    move-result v1
+
+    const/16 v2, 0x10
+
+    if-ge v1, v2, :cond_0
+
+    move v1, v2
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance v2, Ljava/util/LinkedHashMap;
 
-    const-string p1, "Required value was null."
+    invoke-direct {v2, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    check-cast v0, Lcjb;
 
-    throw p0
+    invoke-virtual {v0}, Lcjb;->iterator()Ljava/util/Iterator;
 
-    :pswitch_2
-    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:[Lxi7;
+    move-result-object v0
 
-    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result p0
+    move-result v1
 
-    return p0
+    if-eqz v1, :cond_1
 
-    :pswitch_3
-    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result p0
+    move-result-object v1
 
-    return p0
+    check-cast v1, Ljava/util/Map$Entry;
 
-    :pswitch_4
-    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    move-result p0
+    move-result-object v3
 
-    return p0
+    check-cast v3, Lnb6;
 
-    :pswitch_5
-    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result p0
+    move-result-object v1
 
-    return p0
+    check-cast v1, Ljava/lang/Number;
 
-    :pswitch_6
-    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
-    return v0
+    move-result v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v1}, Lnig;->C(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method

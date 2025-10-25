@@ -18,10 +18,10 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;",
         "",
-        "Lfec;",
+        "Lfwc;",
         "log",
         "<init>",
-        "(Lfec;)V",
+        "(Lfwc;)V",
         "Lru/ok/android/api/core/ApiInvocationException;",
         "exception",
         "",
@@ -33,7 +33,7 @@
         "Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$ErrorDescription;",
         "parse",
         "(Lru/ok/android/api/core/ApiInvocationException;)Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$ErrorDescription;",
-        "Lfec;",
+        "Lfwc;",
         "Companion",
         "ErrorDescription",
         "calls-sdk_release"
@@ -55,7 +55,7 @@
 
 
 # instance fields
-.field private final log:Lfec;
+.field private final log:Lfwc;
 
 
 # direct methods
@@ -66,19 +66,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$Companion;-><init>(Lld4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->Companion:Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lfec;)V
+.method public constructor <init>(Lfwc;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->log:Lfec;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->log:Lfwc;
 
     return-void
 .end method
@@ -98,6 +98,8 @@
     invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v1
+
+    invoke-static {v0}, Lzaf;->V(I)V
 
     invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -214,7 +216,7 @@
 
     add-int/2addr v1, v2
 
-    invoke-static {p1, v1}, Lq73;->w0(Ljava/lang/Iterable;I)Ljava/util/List;
+    invoke-static {p1, v1}, Lnb3;->T(Ljava/lang/Iterable;I)Ljava/util/List;
 
     move-result-object p1
 
@@ -226,7 +228,7 @@
     goto :goto_3
 
     :cond_3
-    sget-object p1, Lp45;->a:Lp45;
+    sget-object p1, Lka5;->a:Lka5;
 
     :goto_2
     new-array v1, v0, [Ljava/lang/String;
@@ -255,60 +257,62 @@
 
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result p0
+    move-result p1
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return p0
+    return p1
 
     :cond_4
     return v0
 
     :goto_3
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->log:Lfec;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->log:Lfwc;
 
-    const-string v1, "ExternErrorParser"
+    const-string v2, "ExternErrorParser"
 
-    const-string v2, "errorcode.parse.failed"
+    const-string v3, "errorcode.parse.failed"
 
-    invoke-interface {p0, v1, v2, p1}, Lfec;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v2, v3, p1}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v0
 .end method
 
 .method private final parseExtendedError(Lru/ok/android/api/core/ApiInvocationException;)Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :try_start_0
     iget-object p1, p1, Lru/ok/android/api/core/ApiInvocationException;->Y:Ljava/lang/String;
 
     if-eqz p1, :cond_0
 
-    new-instance v0, Lorg/json/JSONObject;
+    new-instance v1, Lorg/json/JSONObject;
 
-    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
-    move-object v0, p0
+    move-object v1, v0
 
     :goto_0
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
     const-string p1, "extended_code"
 
-    invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
+    return-object p1
+
     :catch_0
     :cond_1
-    return-object p0
+    return-object v0
 .end method
 
 
@@ -324,9 +328,9 @@
 
     invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->parseExtendedError(Lru/ok/android/api/core/ApiInvocationException;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-direct {v0, v1, p0}, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$ErrorDescription;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$ErrorDescription;-><init>(ILjava/lang/String;)V
 
     return-object v0
 .end method
