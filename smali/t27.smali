@@ -66,19 +66,19 @@
 
     iget-object p1, p0, Lt27;->X:Lx27;
 
-    const-string v5, "https://api.ipify.org"
+    const-string v5, "https://0.0.0.0"
 
-    const-string v6, "https://checkip.amazonaws.com"
+    const-string v6, "https://0.0.0.0"
 
-    const-string v0, "https://vk.ru/upload.php?act=myip"
+    const-string v0, "https://0.0.0.0"
 
-    const-string v1, "https://vk.com/upload.php?act=myip"
+    const-string v1, "https://0.0.0.0"
 
-    const-string v2, "https://ipv4-internet.yandex.net/api/v0/ip"
+    const-string v2, "https://0.0.0.0"
 
-    const-string v3, "https://ipv6-internet.yandex.net/api/v0/ip"
+    const-string v3, "https://0.0.0.0"
 
-    const-string v4, "https://ifconfig.me/ip"
+    const-string v4, "https://0.0.0.0"
 
     filled-new-array/range {v0 .. v6}, [Ljava/lang/String;
 
