@@ -5149,7 +5149,6 @@
     <public type="drawable" name="ic_incoming_video_call_fill_16" id="0x7f080656" />
     <public type="drawable" name="ic_info_24" id="0x7f080657" />
     <public type="drawable" name="ic_keyboard_black_24dp" id="0x7f08065f" />
-    <public type="drawable" name="ic_launcher_foreground" id="0x7f080660" />
     <public type="drawable" name="ic_light_theme_24" id="0x7f080661" />
     <public type="drawable" name="ic_light_theme_small_24" id="0x7f080662" />
     <public type="drawable" name="ic_lighting_24" id="0x7f080663" />
@@ -9481,7 +9480,6 @@
     <public type="menu" name="menu_empty" id="0x7f0f000b" />
     <public type="menu" name="menu_local_photo" id="0x7f0f000e" />
     <public type="mipmap" name="ic_launcher" id="0x7f100003" />
-    <public type="mipmap" name="ic_launcher_background" id="0x7f100004" />
     <public type="plurals" name="call_history_item_call_count_users" id="0x7f110005" />
     <public type="plurals" name="call_users_in_wait_room_count" id="0x7f110006" />
     <public type="plurals" name="call_users_info_count" id="0x7f110007" />

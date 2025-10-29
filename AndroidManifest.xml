@@ -128,14 +128,14 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:pathPattern="/..*"/>
                 <data android:scheme="http"/>
-                <data android:scheme="@string/web_scheme"/>
+                <data android:scheme="https"/>
                 <data android:host="@string/app_host"/>
             </intent-filter>
             <intent-filter android:label="max">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="@string/app_scheme"/>
+                <data android:scheme="max"/>
                 <data android:host="@string/app_host"/>
             </intent-filter>
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
