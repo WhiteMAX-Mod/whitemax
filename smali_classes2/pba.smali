@@ -70,6 +70,8 @@
 
     invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    return-void
+
     if-nez p1, :cond_0
 
     goto/16 :goto_2

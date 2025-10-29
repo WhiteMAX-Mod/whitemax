@@ -126,6 +126,8 @@
 
     invoke-static {v1, v2, v6}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    return-void
+
     iget-object v1, v0, Lrba;->a:Lpw4;
 
     sget-object v2, Lrba;->c:[Ltr7;
