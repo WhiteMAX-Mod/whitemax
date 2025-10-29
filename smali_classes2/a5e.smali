@@ -178,7 +178,7 @@
 
     iget-object v14, v0, Lp5e;->s0:Ljava/lang/String;
 
-    const/16 v18, 0x1
+    const/16 v18, 0x0
 
     move-object/from16 v19, v2
 
