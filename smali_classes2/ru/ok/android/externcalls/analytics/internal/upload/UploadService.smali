@@ -219,63 +219,7 @@
 
 # virtual methods
 .method public onHandleWork(Landroid/content/Intent;)V
-    .locals 2
+    .locals 0
 
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
-    move-result-object p1
-
-    if-nez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "ru.ok.android.onelog.action.UPLOAD_NEW"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadService;->onHandleUploadNew(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_3
-    const-string v1, "ru.ok.android.onelog.action.UPLOAD_CONTINUE"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadService;->onHandleUploadContinue(Ljava/lang/String;)V
-
-    :cond_4
-    :goto_0
     return-void
 .end method

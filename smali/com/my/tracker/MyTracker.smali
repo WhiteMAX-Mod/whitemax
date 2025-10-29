@@ -137,37 +137,19 @@
 .end method
 
 .method public static trackLaunchManually(Landroid/app/Activity;)V
-    .locals 1
-
-    sget-object v0, Lcom/my/tracker/MyTracker;->a:Lcom/my/tracker/obfuscated/i0;
-
-    if-nez v0, :cond_0
-
-    const-string p0, "MyTracker hasn\'t been initialized yet. You should call MyTracker.initTracker() method first"
-
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0, p0}, Lcom/my/tracker/obfuscated/i0;->a(Landroid/app/Activity;)V
+    .locals 0
 
     return-void
 .end method
 
 .method public static trackLoginEvent(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 4
-    invoke-static {p0, p1, v0}, Lcom/my/tracker/MyTracker;->trackLoginEvent(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    .locals 0
 
     return-void
 .end method
 
 .method public static trackLoginEvent(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -179,39 +161,18 @@
             ">;)V"
         }
     .end annotation
-
-    .line 1
-    sget-object v0, Lcom/my/tracker/MyTracker;->a:Lcom/my/tracker/obfuscated/i0;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    const-string p0, "MyTracker hasn\'t been initialized yet. You should call MyTracker.initTracker() method first"
-
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
-
-    return-void
-
-    .line 3
-    :cond_0
-    invoke-virtual {v0, p0, p1, p2}, Lcom/my/tracker/obfuscated/i0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
 
 .method public static trackRegistrationEvent(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 4
-    invoke-static {p0, p1, v0}, Lcom/my/tracker/MyTracker;->trackRegistrationEvent(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    .locals 0
 
     return-void
 .end method
 
 .method public static trackRegistrationEvent(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -223,22 +184,6 @@
             ">;)V"
         }
     .end annotation
-
-    .line 1
-    sget-object v0, Lcom/my/tracker/MyTracker;->a:Lcom/my/tracker/obfuscated/i0;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    const-string p0, "MyTracker hasn\'t been initialized yet. You should call MyTracker.initTracker() method first"
-
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
-
-    return-void
-
-    .line 3
-    :cond_0
-    invoke-virtual {v0, p0, p1, p2}, Lcom/my/tracker/obfuscated/i0;->b(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method

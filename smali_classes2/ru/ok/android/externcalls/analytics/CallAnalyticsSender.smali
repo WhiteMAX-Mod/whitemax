@@ -136,52 +136,7 @@
 .end method
 
 .method public final send(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
-    .locals 3
-
-    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
-
-    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "CallAnalyticsSender is not initialized, event="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " is skipped"
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "CallAnalyticsSender"
-
-    invoke-interface {v0, v1, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;->getApiMethodName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getInstance(Ljava/lang/String;)Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->addEvent(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+    .locals 0
 
     return-void
 .end method
