@@ -205,30 +205,9 @@
 .end method
 
 .method public final onEvent(Lww9;)V
-    .locals 4
+    .locals 0
     .annotation runtime Lzbf;
     .end annotation
-
-    .line 18
-    iget-wide v0, p1, Lww9;->b:J
-
-    iget-wide v2, p0, Lkj2;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 19
-    :cond_0
-    new-instance v0, Lgj2;
-
-    iget-object p1, p1, Lww9;->X:Ljava/util/List;
-
-    invoke-direct {v0, p1}, Lgj2;-><init>(Ljava/util/List;)V
-
-    invoke-virtual {p0, v0}, Lkj2;->a(Lij2;)V
 
     return-void
 .end method

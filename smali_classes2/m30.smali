@@ -935,45 +935,10 @@
 .end method
 
 .method public final onEvent(Lww9;)V
-    .locals 3
+    .locals 0
     .annotation runtime Lzbf;
     .end annotation
 
-    iget-object p1, p1, Lww9;->X:Ljava/util/List;
-
-    iget-object v0, p0, Lm30;->c:Lg0a;
-
-    invoke-virtual {v0}, Lg0a;->k()J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-interface {p1, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, v0, Lg0a;->C:Lat8;
-
-    if-nez p1, :cond_0
-
-    const-string p1, "m30"
-
-    const-string v1, "stop"
-
-    invoke-static {p1, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lm30;->u()V
-
-    invoke-virtual {v0}, Lg0a;->s()V
-
-    invoke-virtual {p0}, Lm30;->n()V
-
-    :cond_0
     return-void
 .end method
 

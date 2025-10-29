@@ -363,81 +363,9 @@
 .end method
 
 .method public final onEvent(Lww9;)V
-    .locals 7
+    .locals 0
     .annotation runtime Lzbf;
     .end annotation
 
-    iget-object v0, p1, Lww9;->X:Ljava/util/List;
-
-    .line 31
-    iget-wide v1, p1, Lww9;->b:J
-
-    iget-wide v3, p0, Lpj9;->b:J
-
-    cmp-long v1, v1, v3
-
-    if-eqz v1, :cond_0
-
-    goto :goto_1
-
-    .line 32
-    :cond_0
-    iget-wide v1, p1, Lww9;->c:J
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v3, v1, v3
-
-    const/4 v4, 0x0
-
-    if-ltz v3, :cond_1
-
-    iget-wide v5, p1, Lww9;->o:J
-
-    cmp-long p1, v1, v5
-
-    if-gez p1, :cond_1
-
-    .line 33
-    new-instance p1, Lic9;
-
-    invoke-direct {p1, v1, v2, v5, v6}, Lic9;-><init>(JJ)V
-
-    goto :goto_0
-
-    .line 34
-    :cond_1
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    .line 35
-    new-instance p1, Lhc9;
-
-    invoke-direct {p1, v0}, Lhc9;-><init>(Ljava/util/Collection;)V
-
-    goto :goto_0
-
-    :cond_2
-    move-object p1, v4
-
-    :goto_0
-    if-eqz p1, :cond_3
-
-    .line 36
-    new-instance v0, Ljj9;
-
-    invoke-direct {v0, p0, p1, v4}, Ljj9;-><init>(Lpj9;Llc9;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v1, p0, Lpj9;->d:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v1, v4, v4, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
-
-    :cond_3
-    :goto_1
     return-void
 .end method

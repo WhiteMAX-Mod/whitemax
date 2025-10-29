@@ -796,6 +796,10 @@
 
     :goto_b
     :sswitch_b
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->notDeleteMessageFromDb:Z
+
     return-object p0
 
     :sswitch_data_0
